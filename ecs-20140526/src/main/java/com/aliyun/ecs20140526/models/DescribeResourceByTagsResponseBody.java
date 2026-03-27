@@ -31,9 +31,6 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Details about the resources to which the tags are bound.</p>
-     */
     @NameInMap("Resources")
     public DescribeResourceByTagsResponseBodyResources resources;
 
@@ -92,30 +89,12 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
     }
 
     public static class DescribeResourceByTagsResponseBodyResourcesResource extends TeaModel {
-        /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The resource ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-bp16t2cgmiiy7t1c****</p>
-         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <p>The type of the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>instance</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 

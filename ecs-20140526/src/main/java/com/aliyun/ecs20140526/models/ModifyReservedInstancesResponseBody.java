@@ -13,9 +13,6 @@ public class ModifyReservedInstancesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The IDs of the reserved instances.</p>
-     */
     @NameInMap("ReservedInstanceIdSets")
     public ModifyReservedInstancesResponseBodyReservedInstanceIdSets reservedInstanceIdSets;
 

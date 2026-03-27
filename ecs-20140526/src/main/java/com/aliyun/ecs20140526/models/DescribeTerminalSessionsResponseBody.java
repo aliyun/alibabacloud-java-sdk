@@ -22,9 +22,6 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information of the sessions.</p>
-     */
     @NameInMap("Sessions")
     public DescribeTerminalSessionsResponseBodySessions sessions;
 
@@ -58,73 +55,21 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
     }
 
     public static class DescribeTerminalSessionsResponseBodySessionsSessionConnectionsConnection extends TeaModel {
-        /**
-         * <p>The reason why the connection was closed. This parameter is returned only when the <code>Status</code> value is <code>Disconnected</code>, <code>Terminated</code>, or <code>Failed</code>. Valid values:</p>
-         * <ul>
-         * <li>InstanceNotExists: The specified instance did not exist or was released.</li>
-         * <li>InstanceNotRunning: The specified instance was not running.</li>
-         * <li>DeliveryTimeout: The connection timed out.</li>
-         * <li>AgentNeedUpgrade: Cloud Assistant Agent required an upgrade.</li>
-         * <li>AgentNotOnline: Cloud Assistant Agent was not connected to the Cloud Assistant server.</li>
-         * <li>MessageFormatInvalid: The message format was invalid.</li>
-         * <li>AgentSocketClosed: The connection was closed as expected.</li>
-         * <li>ClientClosed: Session Manager Client closed the connection.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>AgentNeedUpgrade</p>
-         */
         @NameInMap("ClosedReason")
         public String closedReason;
 
-        /**
-         * <p>The time when the connection was closed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2024-01-19T09:16:46Z</p>
-         */
         @NameInMap("EndTime")
         public String endTime;
 
-        /**
-         * <p>Cause of the connection failure. This parameter is returned only when the Status parameter is Failed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>The Session Manager is closed normally.</p>
-         */
         @NameInMap("FailedDetail")
         public String failedDetail;
 
-        /**
-         * <p>The instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-bp1i7gg30r52z2em****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The time when the connection started to be established.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2024-01-19T09:16:40Z</p>
-         */
         @NameInMap("StartTime")
         public String startTime;
 
-        /**
-         * <p>The state of the session. Valid values:</p>
-         * <ul>
-         * <li>Connecting: The connection is being established.</li>
-         * <li>Connected: The connection is established.</li>
-         * <li>Terminated: The session is terminated.</li>
-         * <li>Failed: The connection failed.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Connecting</p>
-         */
         @NameInMap("Status")
         public String status;
 
@@ -203,91 +148,30 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
     }
 
     public static class DescribeTerminalSessionsResponseBodySessionsSession extends TeaModel {
-        /**
-         * <p>The IP address of the client used to establish connections.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>192.168.1.1</p>
-         */
         @NameInMap("ClientIP")
         public String clientIP;
 
-        /**
-         * <p>The information of the connections.</p>
-         */
         @NameInMap("Connections")
         public DescribeTerminalSessionsResponseBodySessionsSessionConnections connections;
 
-        /**
-         * <p>The time when the session was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2024-01-19T09:15:46Z</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>The principal type. Valid values:</p>
-         * <ul>
-         * <li>Account: an Alibaba Cloud account</li>
-         * <li>RAMUser: a RAM user</li>
-         * <li>AssumedRoleUser: a RAM role</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>RAMUser</p>
-         */
         @NameInMap("IdentityType")
         public String identityType;
 
-        /**
-         * <p>The port number of the instance, which is used for data forwarding. If no port number was specified for data forwarding when the session was created, this parameter is empty.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>22</p>
-         */
         @NameInMap("PortNumber")
         public Integer portNumber;
 
-        /**
-         * <p>The ID of the principal. Valid values based on the <code>IdentityType</code> value:</p>
-         * <ul>
-         * <li>If the requester uses an Alibaba Cloud account to call the operation, the ID of the Alibaba Cloud account is returned.</li>
-         * <li>If the requester uses a Resource Access Management (RAM) user to call the operation, the ID of the RAM user is returned.</li>
-         * <li>If the requester uses a RAM role to call the operation, the ID of the principal that actually calls the operation is returned.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>123456xxxx</p>
-         */
         @NameInMap("PrincipalId")
         public String principalId;
 
-        /**
-         * <p>The session ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>s-hz023od0x9****</p>
-         */
         @NameInMap("SessionId")
         public String sessionId;
 
-        /**
-         * <p>The address of the service that was accessed in a virtual private cloud (VPC) from the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>192.168.0.246</p>
-         */
         @NameInMap("TargetServer")
         public String targetServer;
 
-        /**
-         * <p>The username used to establish connections.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>root</p>
-         */
         @NameInMap("Username")
         public String username;
 

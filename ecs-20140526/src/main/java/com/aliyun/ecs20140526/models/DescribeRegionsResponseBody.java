@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
-    /**
-     * <p>The information of the regions.</p>
-     */
     @NameInMap("Regions")
     public DescribeRegionsResponseBodyRegions regions;
 
@@ -41,44 +38,15 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionsRegion extends TeaModel {
-        /**
-         * <p>The name of the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>China (Qingdao)</p>
-         */
         @NameInMap("LocalName")
         public String localName;
 
-        /**
-         * <p>The endpoint of the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ecs.cn-qingdao.aliyuncs.com</p>
-         */
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 
-        /**
-         * <p>The ID of the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-qingdao</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>Indicates whether clusters are sold out. 
-         * Valid values:</p>
-         * <ul>
-         * <li>available</li>
-         * <li>soldOut</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>available</p>
-         */
         @NameInMap("Status")
         public String status;
 

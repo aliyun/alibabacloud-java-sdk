@@ -41,21 +41,9 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRulesRule extends TeaModel {
-        /**
-         * <p>The description of the pricing rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Receive a 15% discount on a 1-year subscription.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the pricing rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1234567890</p>
-         */
         @NameInMap("RuleId")
         public Long ruleId;
 
@@ -102,45 +90,18 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo extends TeaModel {
-        /**
-         * <p>The discount.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>655.2</p>
-         */
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
-        /**
-         * <p>The original price.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4368</p>
-         */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
-        /**
-         * <p>The name of the resource that corresponds to the price.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>instance</p>
-         */
         @NameInMap("Resource")
         public String resource;
 
-        /**
-         * <p>The pricing rules.</p>
-         */
         @NameInMap("SubRules")
         public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRules subRules;
 
-        /**
-         * <p>The transaction price.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3712.8</p>
-         */
         @NameInMap("TradePrice")
         public Float tradePrice;
 
@@ -222,9 +183,6 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         @NameInMap("Currency")
         public String currency;
 
-        /**
-         * <p>Details about the resource prices.</p>
-         */
         @NameInMap("DetailInfos")
         public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfos detailInfos;
 
@@ -303,21 +261,9 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenewalPriceResponseBodyPriceInfoRulesRule extends TeaModel {
-        /**
-         * <p>The description of the promotion rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Receive a 15% discount on a 1-year subscription</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the promotion rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1234567890</p>
-         */
         @NameInMap("RuleId")
         public Long ruleId;
 
@@ -370,9 +316,6 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         @NameInMap("Price")
         public DescribeRenewalPriceResponseBodyPriceInfoPrice price;
 
-        /**
-         * <p>The information about the promotion rules.</p>
-         */
         @NameInMap("Rules")
         public DescribeRenewalPriceResponseBodyPriceInfoRules rules;
 

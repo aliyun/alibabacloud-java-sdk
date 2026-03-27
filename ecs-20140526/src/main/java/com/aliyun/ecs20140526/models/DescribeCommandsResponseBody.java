@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeCommandsResponseBody extends TeaModel {
-    /**
-     * <p>The queried commands.</p>
-     */
     @NameInMap("Commands")
     public DescribeCommandsResponseBodyCommands commands;
 
@@ -128,59 +125,21 @@ public class DescribeCommandsResponseBody extends TeaModel {
     }
 
     public static class DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinition extends TeaModel {
-        /**
-         * <p>The default value of the custom parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="https://aliyun-client-assist.oss-accelerate.aliyuncs.com/linux/aliyun_assist_latest.rpm">https://aliyun-client-assist.oss-accelerate.aliyuncs.com/linux/aliyun_assist_latest.rpm</a></p>
-         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
-        /**
-         * <p>The description of the custom parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Download path of the Cloud Assistant Agent installation package.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The name of the custom parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DownloadUrl</p>
-         */
         @NameInMap("ParameterName")
         public String parameterName;
 
-        /**
-         * <p>The regular expression of the custom parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>^[a-zA-Z0-9_-]{4,32}$</p>
-         */
         @NameInMap("PatternRegex")
         public String patternRegex;
 
-        /**
-         * <p>The valid values of the custom parameter of the enumeration type.</p>
-         */
         @NameInMap("PossibleValues")
         public DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinitionPossibleValues possibleValues;
 
-        /**
-         * <p>Indicates whether the custom parameter is required. Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
-         * <p>Default value: false.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Required")
         public Boolean required;
 
@@ -278,21 +237,9 @@ public class DescribeCommandsResponseBody extends TeaModel {
     }
 
     public static class DescribeCommandsResponseBodyCommandsCommandTagsTag extends TeaModel {
-        /**
-         * <p>The tag key of the command.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>owner</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag value of the command.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>zhangsan</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -339,169 +286,60 @@ public class DescribeCommandsResponseBody extends TeaModel {
     }
 
     public static class DescribeCommandsResponseBodyCommandsCommand extends TeaModel {
-        /**
-         * <p>The category of the common command.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>“”</p>
-         */
         @NameInMap("Category")
         public String category;
 
-        /**
-         * <p>The content of the command, which is Base64-encoded.</p>
-         * <ul>
-         * <li>If ContentEncoding is set to PlainText in the request, the original command content is returned.</li>
-         * <li>If ContentEncoding is set to Base64 in the request, the Base64-encoded command content is returned.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Y2QgL3Jvb3Q=</p>
-         */
         @NameInMap("CommandContent")
         public String commandContent;
 
-        /**
-         * <p>The command ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>c-hz01272yr52****</p>
-         */
         @NameInMap("CommandId")
         public String commandId;
 
-        /**
-         * <p>The time when the command was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-11-17T06:52Z</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>The description of the command.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testDescription</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>Indicates whether the custom parameter feature is enabled for the command.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("EnableParameter")
         public Boolean enableParameter;
 
-        /**
-         * <p>The number of tasks created by using the command.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("InvokeTimes")
         public Integer invokeTimes;
 
-        /**
-         * <p>Indicates whether the common command is of the latest version. If multiple common commands from the same provider (<code>Provider</code>) belong to the same category and have the same name, these commands are different versions of the same command. This parameter is not returned for the Cloud Assistant commands that you created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Latest")
         public Boolean latest;
 
-        /**
-         * <p>The launcher for script execution. The value cannot exceed 1 KB in length.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>python3 -u {{ACS::ScriptFileName|Ext(&quot;.py&quot;)}}</p>
-         */
         @NameInMap("Launcher")
         public String launcher;
 
-        /**
-         * <p>The name of the command.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testName</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The custom parameters of the command.</p>
-         */
         @NameInMap("ParameterDefinitions")
         public DescribeCommandsResponseBodyCommandsCommandParameterDefinitions parameterDefinitions;
 
-        /**
-         * <p>The custom parameter names that are parsed from the command content specified when the command was created. If the custom parameter feature is disabled, an empty list is returned.</p>
-         */
         @NameInMap("ParameterNames")
         public DescribeCommandsResponseBodyCommandsCommandParameterNames parameterNames;
 
-        /**
-         * <p>The provider of the common command.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>AlibabaCloud.ECS.GuestOS</p>
-         */
         @NameInMap("Provider")
         public String provider;
 
-        /**
-         * <p>The ID of the resource group to which the command belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-123******</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        /**
-         * <p>The tags of the command.</p>
-         */
         @NameInMap("Tags")
         public DescribeCommandsResponseBodyCommandsCommandTags tags;
 
-        /**
-         * <p>The timeout period. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3600</p>
-         */
         @NameInMap("Timeout")
         public Long timeout;
 
-        /**
-         * <p>The type of the command.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>RunShellScript</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>The version of the common command. If multiple common commands from the same provider (<code>Provider</code>) belong to the same category and have the same name, these commands are different versions of the same command. This parameter is not returned for the Cloud Assistant commands that you created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Version")
         public Integer version;
 
-        /**
-         * <p>The execution path of the command.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>/home/</p>
-         */
         @NameInMap("WorkingDir")
         public String workingDir;
 

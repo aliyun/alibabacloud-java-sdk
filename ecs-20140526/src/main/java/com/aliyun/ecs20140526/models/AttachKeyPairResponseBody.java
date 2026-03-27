@@ -31,9 +31,6 @@ public class AttachKeyPairResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>An array that contains the results of the operation.</p>
-     */
     @NameInMap("Results")
     public AttachKeyPairResponseBodyResults results;
 
@@ -92,39 +89,15 @@ public class AttachKeyPairResponseBody extends TeaModel {
     }
 
     public static class AttachKeyPairResponseBodyResultsResult extends TeaModel {
-        /**
-         * <p>The operation status code returned. 200 indicates that the operation was successful.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <p>The instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-m5eg7be9ndloji64****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The operation information returned. When the value of Code is 200, the value of Message is successful.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>successful</p>
-         */
         @NameInMap("Message")
         public String message;
 
-        /**
-         * <p>Indicates whether the request was successful.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Success")
         public String success;
 

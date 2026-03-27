@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
-    /**
-     * <p>The deleted launch template versions.</p>
-     */
     @NameInMap("LaunchTemplateVersions")
     public DeleteLaunchTemplateVersionResponseBodyLaunchTemplateVersions launchTemplateVersions;
 
@@ -41,21 +38,9 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
     }
 
     public static class DeleteLaunchTemplateVersionResponseBodyLaunchTemplateVersionsLaunchTemplateVersion extends TeaModel {
-        /**
-         * <p>The ID of the launch template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>lt-m5eiaupmvm2op9d****</p>
-         */
         @NameInMap("LaunchTemplateId")
         public String launchTemplateId;
 
-        /**
-         * <p>The version number of the launch template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("LaunchTemplateVersionNumber")
         public Long launchTemplateVersionNumber;
 

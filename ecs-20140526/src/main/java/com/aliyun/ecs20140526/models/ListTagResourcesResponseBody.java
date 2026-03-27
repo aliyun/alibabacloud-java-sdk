@@ -22,9 +22,6 @@ public class ListTagResourcesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information about the resource and its tags, including the resource ID, the resource type, and the keys and values of the tags.</p>
-     */
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
 
@@ -58,60 +55,15 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
-        /**
-         * <p>The resource ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-bp1j6qtvdm8w0z1o****</p>
-         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <p>The resource type. Valid values:</p>
-         * <ul>
-         * <li>instance: ECS instance</li>
-         * <li>disk: disk</li>
-         * <li>snapshot: snapshot</li>
-         * <li>image: image</li>
-         * <li>securitygroup: security group</li>
-         * <li>volume: storage volume</li>
-         * <li>eni: ENI</li>
-         * <li>ddh: dedicated host</li>
-         * <li>ddhcluster: dedicated host cluster</li>
-         * <li>keypair: SSH key pair</li>
-         * <li>launchtemplate: launch template</li>
-         * <li>reservedinstance: reserved instance</li>
-         * <li>snapshotpolicy: automatic snapshot policy</li>
-         * <li>elasticityassurance: elasticity assurance</li>
-         * <li>capacityreservation: capacity reservation</li>
-         * <li>command: Cloud Assistant command</li>
-         * <li>invocation: Cloud Assistant command execution result</li>
-         * <li>activation: activation code for a Cloud Assistant managed instance</li>
-         * <li>managedinstance: Cloud Assistant managed instance</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>instance</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        /**
-         * <p>The tag key of the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestKey</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag value of the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestValue</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 

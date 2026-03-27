@@ -4,12 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesFullStatusResponseBody extends TeaModel {
-    /**
-     * <p>The queried instances.</p>
-     * <blockquote>
-     * <p> If no instances exist, this parameter is empty.</p>
-     * </blockquote>
-     */
     @NameInMap("InstanceFullStatusSet")
     public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSet instanceFullStatusSet;
 
@@ -95,21 +89,9 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeHealthStatus extends TeaModel {
-        /**
-         * <p>The code of the health state.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>64</p>
-         */
         @NameInMap("Code")
         public Integer code;
 
-        /**
-         * <p>The name of the health state.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Warning</p>
-         */
         @NameInMap("Name")
         public String name;
 
@@ -137,21 +119,9 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventCycleStatus extends TeaModel {
-        /**
-         * <p>The code of the system event state.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>24</p>
-         */
         @NameInMap("Code")
         public Integer code;
 
-        /**
-         * <p>The name of the system event state.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Scheduled</p>
-         */
         @NameInMap("Name")
         public String name;
 
@@ -179,21 +149,9 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventType extends TeaModel {
-        /**
-         * <p>The code of the system event type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Code")
         public Integer code;
 
-        /**
-         * <p>The name of the system event type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>SystemMaintenance.Reboot</p>
-         */
         @NameInMap("Name")
         public String name;
 
@@ -221,62 +179,18 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttributeInactiveDisksInactiveDisk extends TeaModel {
-        /**
-         * <p>The time when the disk was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-07-27T13:53:25Z</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>The category of the disk. Valid values:</p>
-         * <ul>
-         * <li>cloud: basic disk</li>
-         * <li>cloud_efficiency: ultra disk</li>
-         * <li>cloud_ssd: standard SSD</li>
-         * <li>cloud_essd: Enterprise SSD (ESSD)</li>
-         * <li>local_ssd_pro: I/O-intensive local disk</li>
-         * <li>local_hdd_pro: throughput-intensive local disk</li>
-         * <li>ephemeral: retired local disk</li>
-         * <li>ephemeral_ssd: retired local SSD</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>cloud_ssd</p>
-         */
         @NameInMap("DeviceCategory")
         public String deviceCategory;
 
-        /**
-         * <p>The size of the disk. Unit: GiB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>80</p>
-         */
         @NameInMap("DeviceSize")
         public String deviceSize;
 
-        /**
-         * <p>The type of the disk. Valid values:</p>
-         * <ul>
-         * <li>system</li>
-         * <li>data</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>system</p>
-         */
         @NameInMap("DeviceType")
         public String deviceType;
 
-        /**
-         * <p>The time when the disk was released. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-07-27T13:53:25Z</p>
-         */
         @NameInMap("ReleaseTime")
         public String releaseTime;
 
@@ -347,27 +261,12 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttribute extends TeaModel {
-        /**
-         * <p>The device name of the local disk.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>/dev/vdb</p>
-         */
         @NameInMap("Device")
         public String device;
 
-        /**
-         * <p>The ID of the local disk.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>d-bp67acfmxazb4p****</p>
-         */
         @NameInMap("DiskId")
         public String diskId;
 
-        /**
-         * <p>The inactive disks that have been released and must be cleared.</p>
-         */
         @NameInMap("InactiveDisks")
         public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttributeInactiveDisks inactiveDisks;
 
@@ -403,85 +302,27 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventType extends TeaModel {
-        /**
-         * <p>The state of the system event.</p>
-         */
         @NameInMap("EventCycleStatus")
         public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventCycleStatus eventCycleStatus;
 
-        /**
-         * <p>The system event ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>e-bp1hygp5b04o56l0****</p>
-         */
         @NameInMap("EventId")
         public String eventId;
 
-        /**
-         * <p>The time when the system event was published. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2017-11-30T06:32:31Z</p>
-         */
         @NameInMap("EventPublishTime")
         public String eventPublishTime;
 
-        /**
-         * <p>The type of the system event.</p>
-         */
         @NameInMap("EventType")
         public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventType eventType;
 
-        /**
-         * <p>The extended attributes of system events generated for instances that have local disks attached.</p>
-         * <p>The return values vary based on the system event type.</p>
-         * <p>If the system event type is not one of the following types, this parameter is empty:</p>
-         * <ul>
-         * <li>SystemMaintenance.StopAndRepair</li>
-         * <li>SystemMaintenance.CleanInactiveDisks</li>
-         * <li>SecurityPunish.Locked</li>
-         * <li>SecurityPunish.WebsiteBanned</li>
-         * <li>SystemUpgrade.Migrate</li>
-         * <li>SystemMaintenance.RebootAndIsolateErrorDisk</li>
-         * <li>SystemMaintenance.RebootAndReInitErrorDisk</li>
-         * <li>SystemMaintenance.ReInitErrorDisk</li>
-         * <li>SystemMaintenance.IsolateErrorDisk</li>
-         * </ul>
-         */
         @NameInMap("ExtendedAttribute")
         public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttribute extendedAttribute;
 
-        /**
-         * <p>The impact level of the system event.</p>
-         * <blockquote>
-         * <p> If the user is not in a whitelist, this parameter is empty.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("ImpactLevel")
         public String impactLevel;
 
-        /**
-         * <p>The scheduled time at which to execute the O\&amp;M task related to the system event. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2017-12-07T00:00:00Z</p>
-         */
         @NameInMap("NotBefore")
         public String notBefore;
 
-        /**
-         * <p>The reason why the system event was scheduled.</p>
-         * <blockquote>
-         * <p> If the exception cause is not detected, this parameter is empty.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>A simulated event.</p>
-         */
         @NameInMap("Reason")
         public String reason;
 
@@ -576,21 +417,9 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeStatus extends TeaModel {
-        /**
-         * <p>The code of the instance lifecycle state.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Code")
         public Integer code;
 
-        /**
-         * <p>The name of the instance lifecycle state.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Running</p>
-         */
         @NameInMap("Name")
         public String name;
 
@@ -618,30 +447,15 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusType extends TeaModel {
-        /**
-         * <p>The health state of the instance.</p>
-         */
         @NameInMap("HealthStatus")
         public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeHealthStatus healthStatus;
 
-        /**
-         * <p>The instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-bp67acfmxazb4p****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The system events that are in the Scheduled or Inquiring state.</p>
-         */
         @NameInMap("ScheduledSystemEventSet")
         public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSet scheduledSystemEventSet;
 
-        /**
-         * <p>The lifecycle state of the instance.</p>
-         */
         @NameInMap("Status")
         public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeStatus status;
 

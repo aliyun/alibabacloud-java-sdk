@@ -31,9 +31,6 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Details about the reserved instances.</p>
-     */
     @NameInMap("ReservedInstances")
     public DescribeReservedInstancesResponseBodyReservedInstances reservedInstances;
 
@@ -92,12 +89,6 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocksOperationLock extends TeaModel {
-        /**
-         * <p>The reason why the instance is locked.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>security</p>
-         */
         @NameInMap("LockReason")
         public String lockReason;
 
@@ -136,21 +127,9 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTagsTag extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestKey</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestValue</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -197,167 +176,57 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance extends TeaModel {
-        /**
-         * <p>Indicates the sharing status of the reserved instance when the AllocationType parameter is set to Shared. Valid values:</p>
-         * <ul>
-         * <li>allocated: The reserved instance is allocated to another account.</li>
-         * <li>beAllocated: The reserved instance is allocated by another account.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>allocated</p>
-         */
         @NameInMap("AllocationStatus")
         public String allocationStatus;
 
-        /**
-         * <p>The creation time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-12-10T12:07Z</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>The description.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testDescription</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The expiration time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-12-10T12:07Z</p>
-         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
-        /**
-         * <p>The number of pay-as-you-go instances that are of the same instance type as the reserved instance and can be matched to the reserved instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("InstanceAmount")
         public Integer instanceAmount;
 
-        /**
-         * <p>The instance type of the pay-as-you-go instances that can be matched to the reserved instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ecs.g5.large</p>
-         */
         @NameInMap("InstanceType")
         public String instanceType;
 
-        /**
-         * <p>The payment option.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>All Upfront</p>
-         */
         @NameInMap("OfferingType")
         public String offeringType;
 
-        /**
-         * <p>Details about the lock status of the reserved instance.</p>
-         */
         @NameInMap("OperationLocks")
         public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocks operationLocks;
 
-        /**
-         * <p>The operating system of the image used by the instance. Valid values:</p>
-         * <ul>
-         * <li>Windows</li>
-         * <li>Linux</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Linux</p>
-         */
         @NameInMap("Platform")
         public String platform;
 
-        /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The reserved instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ri-bpzhex2ulpzf53****</p>
-         */
         @NameInMap("ReservedInstanceId")
         public String reservedInstanceId;
 
-        /**
-         * <p>The name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>riZbpzhex2ulpzf53****</p>
-         */
         @NameInMap("ReservedInstanceName")
         public String reservedInstanceName;
 
-        /**
-         * <p>The resource group ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>EcsDocTest</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        /**
-         * <p>The scope.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>region</p>
-         */
         @NameInMap("Scope")
         public String scope;
 
-        /**
-         * <p>The effective time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-12-10T12:00Z</p>
-         */
         @NameInMap("StartTime")
         public String startTime;
 
-        /**
-         * <p>The status.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Active</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The tags of the reserved instance.</p>
-         */
         @NameInMap("Tags")
         public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTags tags;
 
-        /**
-         * <p>The zone ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-z</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 

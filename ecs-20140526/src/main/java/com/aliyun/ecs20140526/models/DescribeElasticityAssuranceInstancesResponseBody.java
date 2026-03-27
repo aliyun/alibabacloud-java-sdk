@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
-    /**
-     * <p>Details about the instances that match and use the elasticity assurance.</p>
-     */
     @NameInMap("ElasticityAssuranceItem")
     public DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItem elasticityAssuranceItem;
 
@@ -92,12 +89,6 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItemInstanceIdSet extends TeaModel {
-        /**
-         * <p>The instance ID</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-bp67acfmxazb4****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 

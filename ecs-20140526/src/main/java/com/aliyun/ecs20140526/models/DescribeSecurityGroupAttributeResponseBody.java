@@ -35,9 +35,6 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <p>Details about the security group rules.</p>
-     */
     @NameInMap("Permissions")
     public DescribeSecurityGroupAttributeResponseBodyPermissions permissions;
 
@@ -175,237 +172,81 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityGroupAttributeResponseBodyPermissionsPermission extends TeaModel {
-        /**
-         * <p>The time when the security group rule was created. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-12-12T07:28:38Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The description of the security group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Description Sample 01</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The destination CIDR block for outbound access control.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0.0.0.0/0</p>
-         */
         @NameInMap("DestCidrIp")
         public String destCidrIp;
 
-        /**
-         * <p>The ID of the destination security group for outbound access control.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sg-bp1czdx84jd88i7v****</p>
-         */
         @NameInMap("DestGroupId")
         public String destGroupId;
 
-        /**
-         * <p>The name of the destination security group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testDestGroupName</p>
-         */
         @NameInMap("DestGroupName")
         public String destGroupName;
 
-        /**
-         * <p>The ID of the Alibaba Cloud account to which the destination security group belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1234567890</p>
-         */
         @NameInMap("DestGroupOwnerAccount")
         public String destGroupOwnerAccount;
 
-        /**
-         * <p>The ID of the destination prefix list for outbound access control.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>pl-x1j1k5ykzqlixabc****</p>
-         */
         @NameInMap("DestPrefixListId")
         public String destPrefixListId;
 
-        /**
-         * <p>The name of the destination prefix list.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DestPrefixListName Sample</p>
-         */
         @NameInMap("DestPrefixListName")
         public String destPrefixListName;
 
-        /**
-         * <p>The direction in which the security group rule is applied.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ingress</p>
-         */
         @NameInMap("Direction")
         public String direction;
 
-        /**
-         * <p>The transport layer protocol.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TCP</p>
-         */
         @NameInMap("IpProtocol")
         public String ipProtocol;
 
-        /**
-         * <p>The destination IPv6 CIDR block.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2001:db8:1233:1a00::***</p>
-         */
         @NameInMap("Ipv6DestCidrIp")
         public String ipv6DestCidrIp;
 
-        /**
-         * <p>The source IPv6 CIDR block.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2001:db8:1234:1a00::***</p>
-         */
         @NameInMap("Ipv6SourceCidrIp")
         public String ipv6SourceCidrIp;
 
-        /**
-         * <p>The network type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>intranet</p>
-         */
         @NameInMap("NicType")
         public String nicType;
 
-        /**
-         * <p>The access control policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Accept</p>
-         */
         @NameInMap("Policy")
         public String policy;
 
-        /**
-         * <p>The port range.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>80/80</p>
-         */
         @NameInMap("PortRange")
         public String portRange;
 
-        /**
-         * <p>The ID of the port list.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>prl-2ze9743****</p>
-         */
         @NameInMap("PortRangeListId")
         public String portRangeListId;
 
-        /**
-         * <p>The name of the port list.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PortRangeListNameSample</p>
-         */
         @NameInMap("PortRangeListName")
         public String portRangeListName;
 
-        /**
-         * <p>The priority of the rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Priority")
         public String priority;
 
-        /**
-         * <p>The ID of the security group rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sgr-bp12kewq32dfwrdi****</p>
-         */
         @NameInMap("SecurityGroupRuleId")
         public String securityGroupRuleId;
 
-        /**
-         * <p>The source CIDR block for inbound access control.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0.0.0.0/0</p>
-         */
         @NameInMap("SourceCidrIp")
         public String sourceCidrIp;
 
-        /**
-         * <p>The source security group for inbound access control.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sg-bp12kc4rqohaf2js****</p>
-         */
         @NameInMap("SourceGroupId")
         public String sourceGroupId;
 
-        /**
-         * <p>The name of the source security group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testSourceGroupName1</p>
-         */
         @NameInMap("SourceGroupName")
         public String sourceGroupName;
 
-        /**
-         * <p>The ID of the Alibaba Cloud account to which the source security group belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1234567890</p>
-         */
         @NameInMap("SourceGroupOwnerAccount")
         public String sourceGroupOwnerAccount;
 
-        /**
-         * <p>The source port range.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>80/80</p>
-         */
         @NameInMap("SourcePortRange")
         public String sourcePortRange;
 
-        /**
-         * <p>The ID of the source prefix list for inbound access control.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>pl-x1j1k5ykzqlixdcy****</p>
-         */
         @NameInMap("SourcePrefixListId")
         public String sourcePrefixListId;
 
-        /**
-         * <p>The name of the source prefix list.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>SourcePrefixListName Sample</p>
-         */
         @NameInMap("SourcePrefixListName")
         public String sourcePrefixListName;
 

@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
-    /**
-     * <p>An array consisting of AutoProvisioningGroupHistory data.</p>
-     */
     @NameInMap("AutoProvisioningGroupHistories")
     public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistories autoProvisioningGroupHistories;
 
@@ -92,27 +89,9 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetail extends TeaModel {
-        /**
-         * <p>The execution details of instance creation performed by the single scheduling task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>New ECS instances &quot;i-bp67acfmxazb4p****, i-bp67acfmxazb5p****&quot; created.</p>
-         */
         @NameInMap("Detail")
         public String detail;
 
-        /**
-         * <p>The execution status of instance creation performed by the single scheduling task. Valid values:</p>
-         * <ul>
-         * <li>Successful: Instances are created.</li>
-         * <li>Failed: Instances failed to be created.</li>
-         * <li>InProgress: Instances are being created.</li>
-         * <li>Warning: Some instances are created.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Successful</p>
-         */
         @NameInMap("Status")
         public String status;
 
@@ -159,50 +138,18 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistory extends TeaModel {
-        /**
-         * <p>An array consisting of ActivityDetail data.</p>
-         */
         @NameInMap("ActivityDetails")
         public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetails activityDetails;
 
-        /**
-         * <p>The execution time of the last instance creation performed by the single scheduling task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-04-01T15:10:20Z</p>
-         */
         @NameInMap("LastEventTime")
         public String lastEventTime;
 
-        /**
-         * <p>The start time of executing the single scheduling task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-04-01T15:10:20Z</p>
-         */
         @NameInMap("StartTime")
         public String startTime;
 
-        /**
-         * <p>The execution status of the single scheduling task. Valid values:</p>
-         * <ul>
-         * <li>prepare: The scheduling task is being executed.</li>
-         * <li>success: The scheduling task is executed.</li>
-         * <li>failed: The scheduling task failed to be executed.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>success</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The ID of the scheduling task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>apg-task-bp67acfmxazb4p****</p>
-         */
         @NameInMap("TaskId")
         public String taskId;
 

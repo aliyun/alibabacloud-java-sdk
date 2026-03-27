@@ -13,9 +13,6 @@ public class DescribeReservedInstanceAutoRenewAttributeResponseBody extends TeaM
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Details about the auto-renewal settings of the reserved instances.</p>
-     */
     @NameInMap("ReservedInstanceRenewAttributes")
     public DescribeReservedInstanceAutoRenewAttributeResponseBodyReservedInstanceRenewAttributes reservedInstanceRenewAttributes;
 
@@ -41,44 +38,15 @@ public class DescribeReservedInstanceAutoRenewAttributeResponseBody extends TeaM
     }
 
     public static class DescribeReservedInstanceAutoRenewAttributeResponseBodyReservedInstanceRenewAttributesReservedInstanceRenewAttribute extends TeaModel {
-        /**
-         * <p>The auto-renewal duration.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Duration")
         public Integer duration;
 
-        /**
-         * <p>The unit of the auto-renewal duration.</p>
-         * <p>Valid values: Year and Month.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Month</p>
-         */
         @NameInMap("PeriodUnit")
         public String periodUnit;
 
-        /**
-         * <p>The auto-renewal status of the reserved instance. Valid values:</p>
-         * <ul>
-         * <li>AutoRenewal: automatically renews the reserved instance.</li>
-         * <li>Normal: manually renews the reserved instances.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>AutoRenewal</p>
-         */
         @NameInMap("RenewalStatus")
         public String renewalStatus;
 
-        /**
-         * <p>The ID of the reserved instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ecsri-ajdfaj****</p>
-         */
         @NameInMap("ReservedInstanceId")
         public String reservedInstanceId;
 

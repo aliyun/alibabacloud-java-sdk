@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class StopInstancesResponseBody extends TeaModel {
-    /**
-     * <p>The instance-specific responses, which contain the status of each instance before and after the operation was called and the results of the operation.</p>
-     */
     @NameInMap("InstanceResponses")
     public StopInstancesResponseBodyInstanceResponses instanceResponses;
 
@@ -41,48 +38,18 @@ public class StopInstancesResponseBody extends TeaModel {
     }
 
     public static class StopInstancesResponseBodyInstanceResponsesInstanceResponse extends TeaModel {
-        /**
-         * <p>The error code returned for the instance. A return value of 200 indicates that the operation was successful. For more information, see the &quot;Error codes&quot; section of this topic.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <p>The current status of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Stopping</p>
-         */
         @NameInMap("CurrentStatus")
         public String currentStatus;
 
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-bp67acfmxazb4p****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The error message returned for the instance. The return value <code>success</code> indicates that the operation is successful. For more information, see the &quot;Error codes&quot; section of this topic.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>success</p>
-         */
         @NameInMap("Message")
         public String message;
 
-        /**
-         * <p>The status of the instance before the operation was called.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Running</p>
-         */
         @NameInMap("PreviousStatus")
         public String previousStatus;
 

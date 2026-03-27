@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
-    /**
-     * <p>The total number of returned image components.</p>
-     */
     @NameInMap("ImagePipelineExecution")
     public DescribeImagePipelineExecutionsResponseBodyImagePipelineExecution imagePipelineExecution;
 
@@ -93,21 +90,9 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
     }
 
     public static class DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSetTagsTag extends TeaModel {
-        /**
-         * <p>The tag of the image creation task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestValue</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tags of the image creation task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestKey</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -154,95 +139,30 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
     }
 
     public static class DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSet extends TeaModel {
-        /**
-         * <p>Details of the image creation tasks.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-11-24T06:00:00Z</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>The data returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>exec-5fb8facb8ed7427c****</p>
-         */
         @NameInMap("ExecutionId")
         public String executionId;
 
-        /**
-         * <p>The ID of the resource group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>m-bp67acfmxazb4p****</p>
-         */
         @NameInMap("ImageId")
         public String imageId;
 
-        /**
-         * <p>Details of the image creation task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ip-2ze5tsl5bp6nf2b3****</p>
-         */
         @NameInMap("ImagePipelineId")
         public String imagePipelineId;
 
-        /**
-         * <p>The last modification time of the image creation task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Create transition vpc &quot;vpc-2ze70rc7093j9idu6****&quot; success!</p>
-         */
         @NameInMap("Message")
         public String message;
 
-        /**
-         * <p>The ID of the image template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-11-25T06:00:00Z</p>
-         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
-        /**
-         * <p>The status of the image creation task. Valid values:</p>
-         * <ul>
-         * <li>PREPARING: Resources, such as intermediate instances, are being created.</li>
-         * <li>REPAIRING: The source image is being repaired.</li>
-         * <li>BUILDING: The user-defined commands are being run and an image is being created.</li>
-         * <li>TESTING: The user-defined test commands are being run.</li>
-         * <li>DISTRIBUTING: The created image is being copied and shared.</li>
-         * <li>RELEASING: The temporary resources generated during the image creation process are being released.</li>
-         * <li>SUCCESS The image creation task is completed.</li>
-         * <li>PARTITION_SUCCESS: The image creation task is partially completed. The image is created, but exceptions may occur when the image was copied or shared or when temporary resources were released.</li>
-         * <li>FAILED: The image creation task fails.</li>
-         * <li>TEST_FAILED: The image is created, but the test fails.</li>
-         * <li>CANCELLING: The image creation task is being canceled.</li>
-         * <li>CANCELLED: The image creation task is canceled.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-bp67acfmxazb4p****</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        /**
-         * <p>The time when the image creation task was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>BUILDING</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The ID of the image.</p>
-         */
         @NameInMap("Tags")
         public DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSetTags tags;
 

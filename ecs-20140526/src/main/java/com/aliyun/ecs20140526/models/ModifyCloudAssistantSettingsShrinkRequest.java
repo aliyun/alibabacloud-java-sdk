@@ -38,6 +38,9 @@ public class ModifyCloudAssistantSettingsShrinkRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("ResourceUsageConfig")
+    public String resourceUsageConfigShrink;
+
     /**
      * <p>Cloud Assistant Session Manager configuration.</p>
      */
@@ -125,6 +128,14 @@ public class ModifyCloudAssistantSettingsShrinkRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public ModifyCloudAssistantSettingsShrinkRequest setResourceUsageConfigShrink(String resourceUsageConfigShrink) {
+        this.resourceUsageConfigShrink = resourceUsageConfigShrink;
+        return this;
+    }
+    public String getResourceUsageConfigShrink() {
+        return this.resourceUsageConfigShrink;
     }
 
     public ModifyCloudAssistantSettingsShrinkRequest setSessionManagerConfigShrink(String sessionManagerConfigShrink) {

@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
-    /**
-     * <p>The renewal attributes of instances.</p>
-     */
     @NameInMap("InstanceRenewAttributes")
     public DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes instanceRenewAttributes;
 
@@ -92,56 +89,21 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute extends TeaModel {
-        /**
-         * <p>Indicates whether auto-renewal is enabled.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("AutoRenewEnabled")
         public Boolean autoRenewEnabled;
 
-        /**
-         * <p>The auto-renewal duration.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Duration")
         public Integer duration;
 
         @NameInMap("EnableExpectedRenewDay")
         public Boolean enableExpectedRenewDay;
 
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-bp18x3z4hc7bixhx****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The unit of the auto-renewal duration.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>week</p>
-         */
         @NameInMap("PeriodUnit")
         public String periodUnit;
 
-        /**
-         * <p>The auto-renewal state of the instance. Valid values:</p>
-         * <ul>
-         * <li>AutoRenewal: Auto-renewal is enabled for the instance.</li>
-         * <li>Normal: Auto-renewal is disabled for the instance.</li>
-         * <li>NotRenewal: The instance is not to be renewed. The system sends no more expiration reminders, but sends only a non-renewal reminder three days before the expiration date. For an instance that is not to be renewed, you can call the <a href="https://help.aliyun.com/document_detail/52843.html">ModifyInstanceAutoRenewAttribute</a> operation to change its auto-renewal status to <code>Normal</code>. Then, you can manually renew the instance or enable auto-renewal for the instance.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Normal</p>
-         */
         @NameInMap("RenewalStatus")
         public String renewalStatus;
 

@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateSimulatedSystemEventsResponseBody extends TeaModel {
-    /**
-     * <p>The IDs of the simulated events.</p>
-     */
     @NameInMap("EventIdSet")
     public CreateSimulatedSystemEventsResponseBodyEventIdSet eventIdSet;
 

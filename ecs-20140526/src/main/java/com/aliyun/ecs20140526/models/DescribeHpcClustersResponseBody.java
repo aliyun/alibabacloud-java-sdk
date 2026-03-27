@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeHpcClustersResponseBody extends TeaModel {
-    /**
-     * <p>The name of the HPC cluster.</p>
-     */
     @NameInMap("HpcClusters")
     public DescribeHpcClustersResponseBodyHpcClusters hpcClusters;
 
@@ -92,30 +89,12 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeHpcClustersResponseBodyHpcClustersHpcCluster extends TeaModel {
-        /**
-         * <p>The description of the HPC cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testDescription</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The description of the HPC cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>hpc-bp1a5zr3u7nq9cx****</p>
-         */
         @NameInMap("HpcClusterId")
         public String hpcClusterId;
 
-        /**
-         * <p>The name of the HPC cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testName</p>
-         */
         @NameInMap("Name")
         public String name;
 

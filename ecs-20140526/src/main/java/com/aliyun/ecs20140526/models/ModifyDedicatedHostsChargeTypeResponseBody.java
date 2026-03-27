@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
-    /**
-     * <p>Details about the charges for the order.</p>
-     */
     @NameInMap("FeeOfInstances")
     public ModifyDedicatedHostsChargeTypeResponseBodyFeeOfInstances feeOfInstances;
 
@@ -58,32 +55,12 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
     }
 
     public static class ModifyDedicatedHostsChargeTypeResponseBodyFeeOfInstancesFeeOfInstance extends TeaModel {
-        /**
-         * <p>The unit of currency for the bill.</p>
-         * <p>Alibaba Cloud China site (aliyun.com): CNY</p>
-         * <p>Alibaba Cloud International site (alibabacloud.com): USD</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CNY</p>
-         */
         @NameInMap("Currency")
         public String currency;
 
-        /**
-         * <p>The charged amount.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Fee")
         public String fee;
 
-        /**
-         * <p>The IDs of the dedicated hosts.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dh-bp181e5064b5sotrr****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 

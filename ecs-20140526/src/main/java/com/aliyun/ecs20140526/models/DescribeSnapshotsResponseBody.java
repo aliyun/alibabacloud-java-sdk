@@ -44,9 +44,6 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Details about the snapshots.</p>
-     */
     @NameInMap("Snapshots")
     public DescribeSnapshotsResponseBodySnapshots snapshots;
 
@@ -116,21 +113,9 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     }
 
     public static class DescribeSnapshotsResponseBodySnapshotsSnapshotTagsTag extends TeaModel {
-        /**
-         * <p>The tag key of the snapshot.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestKey</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag value of the snapshot.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestValue</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -177,249 +162,76 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     }
 
     public static class DescribeSnapshotsResponseBodySnapshotsSnapshot extends TeaModel {
-        /**
-         * <p>Indicates whether the snapshot can be shared and be used to create or roll back a cloud disk. Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("Available")
         public Boolean available;
 
-        /**
-         * <p>The category of the snapshot. Valid values:</p>
-         * <ul>
-         * <li>Standard: standard snapshot.</li>
-         * <li>Flash: local snapshot. This value will be deprecated. The local snapshot feature is replaced by the instant access feature.</li>
-         * <li>archive: archive snapshot.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>standard</p>
-         */
         @NameInMap("Category")
         public String category;
 
-        /**
-         * <p>The time when the snapshot was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-08-20T14:52:28Z</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>The description of the snapshot.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testDescription</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>Indicates whether the snapshot was encrypted. Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("Encrypted")
         public Boolean encrypted;
 
-        /**
-         * <p>Indicates whether the instant access feature is enabled. Valid values:</p>
-         * <ul>
-         * <li>true: The instant access feature is enabled. By default, the instant access feature is enabled for Enterprise SSDs (ESSDs) and ESSD Entry disks.</li>
-         * <li>false: The instant access feature is disabled. The snapshot is a standard snapshot for which the instant access feature is disabled.</li>
-         * </ul>
-         * <blockquote>
-         * <p> This parameter is deprecated. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("InstantAccess")
         public Boolean instantAccess;
 
-        /**
-         * <p>Indicates the validity period of the instant access feature. When the validity period ends, the instant access feature is automatically disabled.</p>
-         * <p>By default, the value of this parameter is the same as the value of <code>RetentionDays</code>.</p>
-         * <blockquote>
-         * <p> This parameter is deprecated. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>30</p>
-         */
         @NameInMap("InstantAccessRetentionDays")
         public Integer instantAccessRetentionDays;
 
-        /**
-         * <p>The ID of the KMS key used for the data disk.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
-         */
         @NameInMap("KMSKeyId")
         public String KMSKeyId;
 
-        /**
-         * <p>The time when the snapshot was last modified. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-08-25T14:18:09Z</p>
-         */
         @NameInMap("LastModifiedTime")
         public String lastModifiedTime;
 
-        /**
-         * <p>The product code of the Alibaba Cloud Marketplace image.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>jxsc000****</p>
-         */
         @NameInMap("ProductCode")
         public String productCode;
 
-        /**
-         * <p>The progress of the snapshot creation task. Unit: percent (%).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100%</p>
-         */
         @NameInMap("Progress")
         public String progress;
 
-        /**
-         * <p>The region ID of the snapshot.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The amount of remaining time required to create the snapshot. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>38</p>
-         */
         @NameInMap("RemainTime")
         public Integer remainTime;
 
-        /**
-         * <p>The ID of the resource group to which the snapshot belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-bp67acfmxazb4p****</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        /**
-         * <p>The retention period of the automatic snapshot. Unit: days.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>30</p>
-         */
         @NameInMap("RetentionDays")
         public Integer retentionDays;
 
-        /**
-         * <p>The ID of the snapshot.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>s-bp67acfmxazb4p****</p>
-         */
         @NameInMap("SnapshotId")
         public String snapshotId;
 
-        /**
-         * <p>The ID of the snapshot chain that is associated with the snapshot.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sl-bp1grgphbcc9brb5****</p>
-         */
         @NameInMap("SnapshotLinkId")
         public String snapshotLinkId;
 
-        /**
-         * <p>The name of the snapshot. This parameter is returned only if a snapshot name was specified when the snapshot was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testSnapshotName</p>
-         */
         @NameInMap("SnapshotName")
         public String snapshotName;
 
-        /**
-         * <p>The serial number of the snapshot.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>64472-116742336-61976****</p>
-         */
         @NameInMap("SnapshotSN")
         public String snapshotSN;
 
-        /**
-         * <p>The type of the snapshot. Valid values:</p>
-         * <ul>
-         * <li>auto or timer: automatic snapshot</li>
-         * <li>user: manual snapshot</li>
-         * <li>all: all snapshot types</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>all</p>
-         */
         @NameInMap("SnapshotType")
         public String snapshotType;
 
-        /**
-         * <p>The ID of the source disk. This parameter is retained even after the source disk is released.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>d-bp67acfmxazb4ph****</p>
-         */
         @NameInMap("SourceDiskId")
         public String sourceDiskId;
 
-        /**
-         * <p>The capacity of the source disk. Unit: GiB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>40</p>
-         */
         @NameInMap("SourceDiskSize")
         public String sourceDiskSize;
 
-        /**
-         * <p>The type of the source disk. Valid values:</p>
-         * <ul>
-         * <li>system</li>
-         * <li>data</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>system</p>
-         */
         @NameInMap("SourceDiskType")
         public String sourceDiskType;
 
         /**
-         * <p>The region ID of the source snapshot.</p>
-         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -427,58 +239,21 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String sourceRegionId;
 
         /**
-         * <p>The ID of the source snapshot.</p>
-         * 
          * <strong>example:</strong>
          * <p>s-bp67acfmxazb4p****</p>
          */
         @NameInMap("SourceSnapshotId")
         public String sourceSnapshotId;
 
-        /**
-         * <p>The category of the source disk.</p>
-         * <blockquote>
-         * <p> This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>disk</p>
-         */
         @NameInMap("SourceStorageType")
         public String sourceStorageType;
 
-        /**
-         * <p>The status of the snapshot. Valid values:</p>
-         * <ul>
-         * <li>progressing: The snapshot is being created.</li>
-         * <li>accomplished: The snapshot is created.</li>
-         * <li>failed: The snapshot failed to be created.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>accomplished</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The tags of the snapshot.</p>
-         */
         @NameInMap("Tags")
         public DescribeSnapshotsResponseBodySnapshotsSnapshotTags tags;
 
-        /**
-         * <p>Indicates whether the snapshot was used to create images or cloud disks. Valid values:</p>
-         * <ul>
-         * <li>image: The snapshot was used to create custom images.</li>
-         * <li>disk: The snapshot was used to create cloud disks.</li>
-         * <li>image_disk: The snapshot was used to create custom images and data disks.</li>
-         * <li>none: The snapshot was not used to create custom images or cloud disks.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>image</p>
-         */
         @NameInMap("Usage")
         public String usage;
 

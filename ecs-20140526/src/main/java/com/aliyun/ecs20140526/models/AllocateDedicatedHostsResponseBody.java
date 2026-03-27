@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AllocateDedicatedHostsResponseBody extends TeaModel {
-    /**
-     * <p>A list of dedicated host IDs.</p>
-     */
     @NameInMap("DedicatedHostIdSets")
     public AllocateDedicatedHostsResponseBodyDedicatedHostIdSets dedicatedHostIdSets;
 

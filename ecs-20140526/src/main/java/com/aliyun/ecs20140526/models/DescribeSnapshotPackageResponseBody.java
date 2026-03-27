@@ -31,9 +31,6 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Details about the OSS storage plans.</p>
-     */
     @NameInMap("SnapshotPackages")
     public DescribeSnapshotPackageResponseBodySnapshotPackages snapshotPackages;
 
@@ -92,39 +89,15 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
     }
 
     public static class DescribeSnapshotPackageResponseBodySnapshotPackagesSnapshotPackage extends TeaModel {
-        /**
-         * <p>The name of the OSS storage plan.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testDisplayName</p>
-         */
         @NameInMap("DisplayName")
         public String displayName;
 
-        /**
-         * <p>The time when the OSS storage plan expires. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-11-30T06:32:31Z</p>
-         */
         @NameInMap("EndTime")
         public String endTime;
 
-        /**
-         * <p>The maximum storage capacity offered by the OSS storage plan.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>500</p>
-         */
         @NameInMap("InitCapacity")
         public Long initCapacity;
 
-        /**
-         * <p>The time when the OSS storage plan was purchased. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2017-11-30T06:32:31Z</p>
-         */
         @NameInMap("StartTime")
         public String startTime;
 

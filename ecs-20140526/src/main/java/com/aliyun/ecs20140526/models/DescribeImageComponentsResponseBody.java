@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageComponentsResponseBody extends TeaModel {
-    /**
-     * <p>The information about the image components.</p>
-     */
     @NameInMap("ImageComponent")
     public DescribeImageComponentsResponseBodyImageComponent imageComponent;
 
@@ -92,36 +89,12 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
     }
 
     public static class DescribeImageComponentsResponseBodyImageComponentImageComponentSetParametersParameter extends TeaModel {
-        /**
-         * <p>The default value of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
-         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
-        /**
-         * <p>The name of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The type of the parameter.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>String</li>
-         * <li>Number</li>
-         * <li>Boolean</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -176,21 +149,9 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
     }
 
     public static class DescribeImageComponentsResponseBodyImageComponentImageComponentSetTagsTag extends TeaModel {
-        /**
-         * <p>The key of the tag.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestKey</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The value of the tag.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestValue</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -237,109 +198,39 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
     }
 
     public static class DescribeImageComponentsResponseBodyImageComponentImageComponentSet extends TeaModel {
-        /**
-         * <p>The type of the image component.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Build</p>
-         */
         @NameInMap("ComponentType")
         public String componentType;
 
-        /**
-         * <p>The version number of the image component.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
-         */
         @NameInMap("ComponentVersion")
         public String componentVersion;
 
-        /**
-         * <p>The content of the image component.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>RESTART</p>
-         */
         @NameInMap("Content")
         public String content;
 
-        /**
-         * <p>The time when the image component was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-11-24T06:00:00Z</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>The description of the image component.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>This is description.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the image component.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ic-bp67acfmxazb4p****</p>
-         */
         @NameInMap("ImageComponentId")
         public String imageComponentId;
 
-        /**
-         * <p>The name of the image component.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testComponent</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The type of the image component. Valid values:</p>
-         * <ul>
-         * <li>SELF: the custom component that you created.</li>
-         * <li>ALIYUN: the system component provided by Alibaba Cloud.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>SELF</p>
-         */
         @NameInMap("Owner")
         public String owner;
 
-        /**
-         * <p>The parameters contained in the image component.</p>
-         */
         @NameInMap("Parameters")
         public DescribeImageComponentsResponseBodyImageComponentImageComponentSetParameters parameters;
 
-        /**
-         * <p>The ID of the resource group to which the image component belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-bp67acfmxazb4p****</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        /**
-         * <p>The type of the operating system supported by the image component.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Linux</p>
-         */
         @NameInMap("SystemType")
         public String systemType;
 
-        /**
-         * <p>The tags of the image component.</p>
-         */
         @NameInMap("Tags")
         public DescribeImageComponentsResponseBodyImageComponentImageComponentSetTags tags;
 

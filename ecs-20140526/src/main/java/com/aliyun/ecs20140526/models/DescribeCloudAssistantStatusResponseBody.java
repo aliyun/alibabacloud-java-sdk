@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
-    /**
-     * <p>Details about the installation status of Cloud Assistant on the instances.</p>
-     */
     @NameInMap("InstanceCloudAssistantStatusSet")
     public DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSet instanceCloudAssistantStatusSet;
 
@@ -109,98 +106,30 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSetInstanceCloudAssistantStatus extends TeaModel {
-        /**
-         * <p>The number of tasks that Cloud Assistant was running on the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("ActiveTaskCount")
         public Long activeTaskCount;
 
-        /**
-         * <p>Indicates whether Cloud Assistant is running on the instance. Valid values:</p>
-         * <ul>
-         * <li>true: Heartbeats are detected in the last 2 minutes.</li>
-         * <li>false: No heartbeats are detected in the last 2 minutes.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("CloudAssistantStatus")
         public String cloudAssistantStatus;
 
-        /**
-         * <p>The version number of Cloud Assistant Agent. This parameter is empty if Cloud Assistant Agent is not installed or is not running on the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2.2.0.106</p>
-         */
         @NameInMap("CloudAssistantVersion")
         public String cloudAssistantVersion;
 
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-bp1iudwa5b1tqa****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The number of tasks that Cloud Assistant completed on the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("InvocationCount")
         public Long invocationCount;
 
-        /**
-         * <p>The last heartbeat time of Cloud Assistant. The value is updated every minute on average. The interval can be 55, 60, or 65 seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-03-15T09:00:00Z</p>
-         */
         @NameInMap("LastHeartbeatTime")
         public String lastHeartbeatTime;
 
-        /**
-         * <p>The time when commands were last run.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-03-15T08:00:00Z</p>
-         */
         @NameInMap("LastInvokedTime")
         public String lastInvokedTime;
 
-        /**
-         * <p>The operating system type of the instance. Valid values:</p>
-         * <ul>
-         * <li>Windows</li>
-         * <li>Linux</li>
-         * <li>FreeBSD</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Linux</p>
-         */
         @NameInMap("OSType")
         public String OSType;
 
-        /**
-         * <p>Indicates whether Cloud Assistant supports Session Manager on the instance. If Session Manager is not supported, the version of Cloud Assistant Agent is outdated. Update Cloud Assistant Agent to the latest version.</p>
-         * <p>To support Session Manager, the version of Cloud Assistant Agent cannot be earlier than the following versions:</p>
-         * <ul>
-         * <li>Linux: 2.2.3.189</li>
-         * <li>Windows: 2.1.3.189</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("SupportSessionManager")
         public Boolean supportSessionManager;
 

@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
-    /**
-     * <p>The instance families.</p>
-     */
     @NameInMap("InstanceTypeFamilies")
     public DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamilies instanceTypeFamilies;
 
@@ -41,21 +38,9 @@ public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamiliesInstanceTypeFamily extends TeaModel {
-        /**
-         * <p>The series of the instance family.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ecs-5</p>
-         */
         @NameInMap("Generation")
         public String generation;
 
-        /**
-         * <p>The ID of the instance family.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ecs.g6</p>
-         */
         @NameInMap("InstanceTypeFamilyId")
         public String instanceTypeFamilyId;
 

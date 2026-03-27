@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteSnapshotGroupResponseBody extends TeaModel {
-    /**
-     * <p>Details about the delete operation.</p>
-     */
     @NameInMap("OperationProgressSet")
     public DeleteSnapshotGroupResponseBodyOperationProgressSet operationProgressSet;
 
@@ -41,21 +38,9 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
     }
 
     public static class DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem extends TeaModel {
-        /**
-         * <p>The name of the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>SnapshotId</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The ID of the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>s-j6c9lpuyxo2uxxnx****</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -102,38 +87,15 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
     }
 
     public static class DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgress extends TeaModel {
-        /**
-         * <p>The error code. This parameter is empty when the operation is successful.</p>
-         * <p>For information about error codes and error messages, visit the <a href="https://error-center.aliyun.com/status/product/Ecs">API error center</a>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>400</p>
-         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        /**
-         * <p>The error message. This parameter is empty when the operation is successful.</p>
-         * <p>For information about error codes and error messages, visit the <a href="https://error-center.aliyun.com/status/product/Ecs">API error center</a>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testErrorMsg</p>
-         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
-        /**
-         * <p>Indicates whether the operation was successful. If the operation was successful, a value of Success is returned. If the operation failed, an error code and an error message are returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Success</p>
-         */
         @NameInMap("OperationStatus")
         public String operationStatus;
 
-        /**
-         * <p>Details about the resources.</p>
-         */
         @NameInMap("RelatedItemSet")
         public DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgressRelatedItemSet relatedItemSet;
 

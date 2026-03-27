@@ -31,9 +31,6 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The zone ID of the spot instance.</p>
-     */
     @NameInMap("SpotPrices")
     public DescribeSpotPriceHistoryResponseBodySpotPrices spotPrices;
 
@@ -75,68 +72,24 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeSpotPriceHistoryResponseBodySpotPricesSpotPriceType extends TeaModel {
-        /**
-         * <p>The instance type of the spot instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ecs.g5.large</p>
-         */
         @NameInMap("InstanceType")
         public String instanceType;
 
-        /**
-         * <p>Details about the price history of the spot instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>optimized</p>
-         */
         @NameInMap("IoOptimized")
         public String ioOptimized;
 
-        /**
-         * <p>Queries the price history of a spot instance within the last 30 days.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc</p>
-         */
         @NameInMap("NetworkType")
         public String networkType;
 
-        /**
-         * <p>The price for a pay-as-you-go instance that has the same configuration as the specified spot instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0.354</p>
-         */
         @NameInMap("OriginPrice")
         public Float originPrice;
 
-        /**
-         * <p>The price for a pay-as-you-go instance that has the same configurations as the spot instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0.036</p>
-         */
         @NameInMap("SpotPrice")
         public Float spotPrice;
 
-        /**
-         * <p>The currency unit of the price.</p>
-         * <p>Alibaba Cloud China site (aliyun.com): CNY.</p>
-         * <p>Alibaba Cloud International site (alibabacloud.com): USD.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-11-19T06:00:00Z</p>
-         */
         @NameInMap("Timestamp")
         public String timestamp;
 
-        /**
-         * <p>The ID of the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-c</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 

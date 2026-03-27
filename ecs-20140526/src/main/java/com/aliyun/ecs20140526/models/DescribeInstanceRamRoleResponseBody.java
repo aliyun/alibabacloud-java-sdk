@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceRamRoleResponseBody extends TeaModel {
-    /**
-     * <p>The IDs of the ECS instances and the names of the corresponding instance RAM roles.</p>
-     */
     @NameInMap("InstanceRamRoleSets")
     public DescribeInstanceRamRoleResponseBodyInstanceRamRoleSets instanceRamRoleSets;
 
@@ -75,21 +72,9 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceRamRoleResponseBodyInstanceRamRoleSetsInstanceRamRoleSet extends TeaModel {
-        /**
-         * <p>The ID of the instance</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-bp67acfmxazb4p****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The name of the instance RAM role.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>EcsServiceRole-EcsDocGuideTest</p>
-         */
         @NameInMap("RamRoleName")
         public String ramRoleName;
 

@@ -42,9 +42,6 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     @NameInMap("FinishedTime")
     public String finishedTime;
 
-    /**
-     * <p>The results of all diagnostic metrics in the diagnostic metric set.</p>
-     */
     @NameInMap("MetricResults")
     public DescribeDiagnosticReportAttributesResponseBodyMetricResults metricResults;
 
@@ -242,39 +239,12 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnosticReportAttributesResponseBodyMetricResultsMetricResultIssuesIssue extends TeaModel {
-        /**
-         * <p>The additional data about the diagnosed issue. The value is a JSON string.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{
-         *   &quot;TotalPercent&quot;: 95,
-         *   &quot;TopUtilizationProcesses&quot;: [
-         *     {
-         *       &quot;Pid&quot;: &quot;1223&quot;,
-         *       &quot;CommandName&quot;: &quot;/usr/bin/mem.py&quot;,
-         *       &quot;PhysicalMemoryPercent&quot;: 50
-         *     }
-         *   ]
-         * }</p>
-         */
         @NameInMap("Additional")
         public String additional;
 
-        /**
-         * <p>The ID of the diagnosed issue, which is the unique identifier of the issue.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>GuestOS.CPU.HighUtiliz*****</p>
-         */
         @NameInMap("IssueId")
         public String issueId;
 
-        /**
-         * <p>The time when the diagnosed issue occurred.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-07-11T14:00:00Z</p>
-         */
         @NameInMap("OccurrenceTime")
         public String occurrenceTime;
 
@@ -284,17 +254,6 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         @NameInMap("Repairable")
         public Boolean repairable;
 
-        /**
-         * <p>The severity level of the diagnosed issue. Valid values:</p>
-         * <ul>
-         * <li>Info: Diagnostic information was recorded and may be related to exceptions.</li>
-         * <li>Warn: Diagnostic information was recorded and may indicate potential exceptions.</li>
-         * <li>Critical: Critical exceptions were detected.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Info</p>
-         */
         @NameInMap("Severity")
         public String severity;
 
@@ -373,58 +332,18 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnosticReportAttributesResponseBodyMetricResultsMetricResult extends TeaModel {
-        /**
-         * <p>The diagnosed issues.</p>
-         */
         @NameInMap("Issues")
         public DescribeDiagnosticReportAttributesResponseBodyMetricResultsMetricResultIssues issues;
 
-        /**
-         * <p>The category of the diagnostic metric.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CPU</p>
-         */
         @NameInMap("MetricCategory")
         public String metricCategory;
 
-        /**
-         * <p>The ID of the diagnostic metric.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>GuestOS.WinFirewall</p>
-         */
         @NameInMap("MetricId")
         public String metricId;
 
-        /**
-         * <p>The severity level of the diagnostic metric. Valid values:</p>
-         * <ul>
-         * <li>Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.</li>
-         * <li>Normal: No exceptions were detected.</li>
-         * <li>Info: Diagnostic information was recorded and may be related to exceptions.</li>
-         * <li>NotSupport: The version of the guest operating system does support diagnosing the metric.</li>
-         * <li>Warn: Diagnostic information was recorded and may indicate potential exceptions.</li>
-         * <li>Critical: Critical exceptions were detected.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Normal</p>
-         */
         @NameInMap("Severity")
         public String severity;
 
-        /**
-         * <p>The state of the diagnostic metric. Valid values:</p>
-         * <ul>
-         * <li>InProgress.</li>
-         * <li>Finished.</li>
-         * <li>Failed.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Finished</p>
-         */
         @NameInMap("Status")
         public String status;
 

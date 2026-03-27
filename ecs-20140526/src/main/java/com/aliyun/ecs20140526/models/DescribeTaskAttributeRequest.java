@@ -4,12 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeTaskAttributeRequest extends TeaModel {
-    /**
-     * <p>RAM用户的虚拟账号ID。</p>
-     * 
-     * <strong>example:</strong>
-     * <p>155780923770</p>
-     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -23,21 +17,9 @@ public class DescribeTaskAttributeRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>资源主账号的账号名称。</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ECSforCloud</p>
-     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    /**
-     * <p>资源主账号的ID，亦即UID。</p>
-     * 
-     * <strong>example:</strong>
-     * <p>155780923770</p>
-     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 

@@ -35,9 +35,6 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <p>Details about the entries in the prefix list.</p>
-     */
     @NameInMap("Entries")
     public DescribePrefixListAttributesResponseBodyEntries entries;
 
@@ -147,21 +144,9 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribePrefixListAttributesResponseBodyEntriesEntry extends TeaModel {
-        /**
-         * <p>The CIDR block in entry N.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>192.168.1.0/24</p>
-         */
         @NameInMap("Cidr")
         public String cidr;
 
-        /**
-         * <p>The description in entry N.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Description Sample 01</p>
-         */
         @NameInMap("Description")
         public String description;
 

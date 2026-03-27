@@ -13,9 +13,6 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Details about the references to the specified security groups.</p>
-     */
     @NameInMap("SecurityGroupReferences")
     public DescribeSecurityGroupReferencesResponseBodySecurityGroupReferences securityGroupReferences;
 
@@ -41,21 +38,9 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroupsReferencingSecurityGroup extends TeaModel {
-        /**
-         * <p>The ID of the Alibaba Cloud account to which the security group whose rules reference the specified security group belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123456****</p>
-         */
         @NameInMap("AliUid")
         public String aliUid;
 
-        /**
-         * <p>The ID of the security group whose rules reference the specified security group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sg-bp67acfmxazb4j****</p>
-         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
@@ -102,18 +87,9 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReference extends TeaModel {
-        /**
-         * <p>Details about the security groups whose rules reference the specified security group.</p>
-         */
         @NameInMap("ReferencingSecurityGroups")
         public DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroups referencingSecurityGroups;
 
-        /**
-         * <p>The ID of the specified security group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sg-bp67acfmxazb4p****</p>
-         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 

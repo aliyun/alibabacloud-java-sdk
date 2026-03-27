@@ -31,9 +31,6 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
     @NameInMap("FinishedTime")
     public String finishedTime;
 
-    /**
-     * <p>The return data of the task.</p>
-     */
     @NameInMap("OperationProgressSet")
     public DescribeTaskAttributeResponseBodyOperationProgressSet operationProgressSet;
 
@@ -232,21 +229,9 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem extends TeaModel {
-        /**
-         * <p>The name of the related item.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>OSSObject</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The value of the related item.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>MYOSSPRE_m-23f8tcp***_t-23ym6mv***.vhd</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -293,36 +278,15 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgress extends TeaModel {
-        /**
-         * <p>The error code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ParameterInvalid</p>
-         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        /**
-         * <p>The error message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>The specified RegionId parameter is invalid.</p>
-         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
-        /**
-         * <p>The status of the operation.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Success</p>
-         */
         @NameInMap("OperationStatus")
         public String operationStatus;
 
-        /**
-         * <p>The type of resource information.</p>
-         */
         @NameInMap("RelatedItemSet")
         public DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSet relatedItemSet;
 

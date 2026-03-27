@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoSnapshotPolicyAssociationsResponseBody extends TeaModel {
-    /**
-     * <p>The association of automatic snapshot policies.</p>
-     */
     @NameInMap("AutoSnapshotPolicyAssociations")
     public DescribeAutoSnapshotPolicyAssociationsResponseBodyAutoSnapshotPolicyAssociations autoSnapshotPolicyAssociations;
 
@@ -58,21 +55,9 @@ public class DescribeAutoSnapshotPolicyAssociationsResponseBody extends TeaModel
     }
 
     public static class DescribeAutoSnapshotPolicyAssociationsResponseBodyAutoSnapshotPolicyAssociationsAutoSnapshotPolicyAssociation extends TeaModel {
-        /**
-         * <p>The ID of the automatic snapshot policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sp-bp12quk7gqhhuu1f****</p>
-         */
         @NameInMap("AutoSnapshotPolicyId")
         public String autoSnapshotPolicyId;
 
-        /**
-         * <p>The ID of the cloud disk.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>d-bp67acfmxazb4p****</p>
-         */
         @NameInMap("DiskId")
         public String diskId;
 

@@ -14,9 +14,6 @@ public class DeleteLaunchTemplateResponseBody extends TeaModel {
     @NameInMap("LaunchTemplateId")
     public String launchTemplateId;
 
-    /**
-     * <p>The versions of the deleted launch template.</p>
-     */
     @NameInMap("LaunchTemplateVersionNumbers")
     public DeleteLaunchTemplateResponseBodyLaunchTemplateVersionNumbers launchTemplateVersionNumbers;
 

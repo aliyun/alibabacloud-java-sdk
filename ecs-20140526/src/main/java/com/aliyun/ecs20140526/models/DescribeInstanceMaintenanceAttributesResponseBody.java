@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel {
-    /**
-     * <p>The maintenance attributes.</p>
-     */
     @NameInMap("MaintenanceAttributes")
     public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributes maintenanceAttributes;
 
@@ -111,32 +108,12 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
     }
 
     public static class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance extends TeaModel {
-        /**
-         * <p>The default maintenance action.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>AutoRecover</p>
-         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
-        /**
-         * <p>The supported maintenance actions.</p>
-         */
         @NameInMap("SupportedValues")
         public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenanceSupportedValues supportedValues;
 
-        /**
-         * <p>The current maintenance action. Valid values:</p>
-         * <ul>
-         * <li>Stop: stops the instance.</li>
-         * <li>AutoRecover: automatically recovers the instance.</li>
-         * <li>AutoRedeploy: redeploys the instance, which may damage the data disks attached to the instance.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Stop</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -172,21 +149,9 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
     }
 
     public static class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindowsMaintenanceWindow extends TeaModel {
-        /**
-         * <p>The end time of the maintenance window.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>18:00:00</p>
-         */
         @NameInMap("EndTime")
         public String endTime;
 
-        /**
-         * <p>The start time of the maintenance window.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>02:00:00</p>
-         */
         @NameInMap("StartTime")
         public String startTime;
 
@@ -233,33 +198,15 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
     }
 
     public static class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttribute extends TeaModel {
-        /**
-         * <p>The attributes of the maintenance action of the instance.</p>
-         */
         @NameInMap("ActionOnMaintenance")
         public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance actionOnMaintenance;
 
-        /**
-         * <p>The instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-bp67acfmxazb4p****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The maintenance windows.</p>
-         */
         @NameInMap("MaintenanceWindows")
         public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindows maintenanceWindows;
 
-        /**
-         * <p>Indicates whether an event notification was sent before maintenance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("NotifyOnMaintenance")
         public Boolean notifyOnMaintenance;
 

@@ -40,9 +40,6 @@ public class DescribeTasksResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Details about the tasks.</p>
-     */
     @NameInMap("TaskSet")
     public DescribeTasksResponseBodyTaskSet taskSet;
 
@@ -109,66 +106,24 @@ public class DescribeTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeTasksResponseBodyTaskSetTask extends TeaModel {
-        /**
-         * <p>The time when the task was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-11-24T12:50Z</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>The time when the task ended.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-11-24T12:50Z</p>
-         */
         @NameInMap("FinishedTime")
         public String finishedTime;
 
-        /**
-         * <p>The resource ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>m-bp1i8huqm5u7****</p>
-         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <p>Indicates whether the task can be canceled.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("SupportCancel")
         public String supportCancel;
 
-        /**
-         * <p>The name of the operation that generates the task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ImportImage</p>
-         */
         @NameInMap("TaskAction")
         public String taskAction;
 
-        /**
-         * <p>The task ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>t-bp1hvgwromzv32iq****</p>
-         */
         @NameInMap("TaskId")
         public String taskId;
 
-        /**
-         * <p>The task status.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Finished</p>
-         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 

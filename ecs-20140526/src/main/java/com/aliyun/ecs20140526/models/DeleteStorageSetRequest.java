@@ -13,17 +13,9 @@ public class DeleteStorageSetRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    /**
-     * <strong>example:</strong>
-     * <p>hide</p>
-     */
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    /**
-     * <strong>example:</strong>
-     * <p>111</p>
-     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -37,17 +29,9 @@ public class DeleteStorageSetRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>hide</p>
-     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    /**
-     * <strong>example:</strong>
-     * <p>111</p>
-     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 

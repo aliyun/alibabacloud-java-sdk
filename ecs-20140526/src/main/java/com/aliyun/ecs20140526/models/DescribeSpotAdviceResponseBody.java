@@ -4,12 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSpotAdviceResponseBody extends TeaModel {
-    /**
-     * <p>Details about spot instances in the zones of the specified region.</p>
-     * <blockquote>
-     * <p> The return values are sorted based on the historical percentages of average spot instance prices relative to pay-as-you-go instance prices for instance types.</p>
-     * </blockquote>
-     */
     @NameInMap("AvailableSpotZones")
     public DescribeSpotAdviceResponseBodyAvailableSpotZones availableSpotZones;
 
@@ -61,46 +55,15 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
     }
 
     public static class DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResourcesAvailableSpotResource extends TeaModel {
-        /**
-         * <p>The percentage of the average spot instance price relative to the pay-as-you-go instance price in the previous 30 days. Unit: %. Valid values: 1 to 100.</p>
-         * <p>You can calculate the average spot instance price based on the return value. For example, if the pay-as-you-go instance price is 1 and the return value of this parameter is 20, the average spot instance price in the previous 30 days is 0.2.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("AverageSpotDiscount")
         public Integer averageSpotDiscount;
 
-        /**
-         * <p>The instance type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ecs.c5.large</p>
-         */
         @NameInMap("InstanceType")
         public String instanceType;
 
-        /**
-         * <p>The release rate range of spot instances in the previous 30 days, which corresponds to the <code>InterruptionRate</code> value. Valid values:</p>
-         * <ul>
-         * <li>0-3%</li>
-         * <li>3-5%</li>
-         * <li>5-10%</li>
-         * <li>10-100%</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0-3%</p>
-         */
         @NameInMap("InterruptRateDesc")
         public String interruptRateDesc;
 
-        /**
-         * <p>The average release rate of spot instances in the previous 30 days. Unit: %.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("InterruptionRate")
         public Float interruptionRate;
 
@@ -163,18 +126,9 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
     }
 
     public static class DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZone extends TeaModel {
-        /**
-         * <p>Details about spot instances in the previous 30 days, including the release rate of spot instances and percentages of average spot instance prices relative to pay-as-you-go instance prices.</p>
-         */
         @NameInMap("AvailableSpotResources")
         public DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResources availableSpotResources;
 
-        /**
-         * <p>The zone ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-i</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 

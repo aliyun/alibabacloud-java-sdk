@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
-    /**
-     * <p>The monitoring data of the instance.</p>
-     */
     @NameInMap("MonitorData")
     public DescribeInstanceMonitorDataResponseBodyMonitorData monitorData;
 
@@ -41,156 +38,54 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData extends TeaModel {
-        /**
-         * <p>The read bandwidth of the cloud disks (system disk and data disks). Unit: Byte/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1000</p>
-         */
         @NameInMap("BPSRead")
         public Integer BPSRead;
 
-        /**
-         * <p>The write bandwidth of the cloud disks (system disk and data disks). Unit: Byte/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>13585</p>
-         */
         @NameInMap("BPSWrite")
         public Integer BPSWrite;
 
-        /**
-         * <p>The vCPU utilization of the instance. Unit: percent (%).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("CPU")
         public Integer CPU;
 
-        /**
-         * <p>The overdrawn CPU credits of the burstable instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0.4</p>
-         */
         @NameInMap("CPUAdvanceCreditBalance")
         public Float CPUAdvanceCreditBalance;
 
-        /**
-         * <p>The total number of CPU credits of the burstable instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>120</p>
-         */
         @NameInMap("CPUCreditBalance")
         public Float CPUCreditBalance;
 
-        /**
-         * <p>The number of CPU credits consumed by the burstable instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>30</p>
-         */
         @NameInMap("CPUCreditUsage")
         public Float CPUCreditUsage;
 
-        /**
-         * <p>The unpaid overdrawn CPU credits.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0.5</p>
-         */
         @NameInMap("CPUNotpaidSurplusCreditUsage")
         public Float CPUNotpaidSurplusCreditUsage;
 
-        /**
-         * <p>The number of read I/O operations per second on the cloud disks (system disk and data disks).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1000</p>
-         */
         @NameInMap("IOPSRead")
         public Integer IOPSRead;
 
-        /**
-         * <p>The number of write I/O operations per second on the cloud disks (system disk and data disks).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
-         */
         @NameInMap("IOPSWrite")
         public Integer IOPSWrite;
 
-        /**
-         * <p>The instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-bp1a36962lrhj4****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The public bandwidth of the instance. Unit: Kbit/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("InternetBandwidth")
         public Integer internetBandwidth;
 
-        /**
-         * <p>The Internet traffic received by the instance during the period that is specified by the <code>Period</code> parameter. The period starts from the point in time that is specified by the <code>TimeStamp</code> parameter. Unit: Kbit.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>122</p>
-         */
         @NameInMap("InternetRX")
         public Integer internetRX;
 
-        /**
-         * <p>The Internet traffic sent by the instance during the period that is specified by the <code>Period</code> parameter. The period starts from the point in time that is specified by the <code>TimeStamp</code> parameter. Unit: Kbit.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>343</p>
-         */
         @NameInMap("InternetTX")
         public Integer internetTX;
 
-        /**
-         * <p>The internal bandwidth of the instance. Unit: Kbit/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("IntranetBandwidth")
         public Integer intranetBandwidth;
 
-        /**
-         * <p>The internal data traffic received by the instance during the period that is specified by the <code>Period</code> parameter. The period starts from the point in time that is specified by the <code>TimeStamp</code> parameter. Unit: Kbit.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>122</p>
-         */
         @NameInMap("IntranetRX")
         public Integer intranetRX;
 
-        /**
-         * <p>The internal data traffic sent by the instance during the period that is specified by the <code>Period</code> parameter. The period starts from the point in time that is specified by the <code>TimeStamp</code> parameter. Unit: Kbit.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>343</p>
-         */
         @NameInMap("IntranetTX")
         public Integer intranetTX;
 
-        /**
-         * <p>The timestamp of the monitoring data.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2014-10-30T05:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

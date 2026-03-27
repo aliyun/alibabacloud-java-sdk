@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ListPluginStatusResponseBody extends TeaModel {
-    /**
-     * <p>The states of Cloud Assistant plug-ins on the instances.</p>
-     */
     @NameInMap("InstancePluginStatusSet")
     public ListPluginStatusResponseBodyInstancePluginStatusSet instancePluginStatusSet;
 
@@ -109,57 +106,18 @@ public class ListPluginStatusResponseBody extends TeaModel {
     }
 
     public static class ListPluginStatusResponseBodyInstancePluginStatusSetInstancePluginStatusPluginStatusSetPluginStatus extends TeaModel {
-        /**
-         * <p>The first time when Cloud Assistant reported the state of the plug-in.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-01-19T09:15:46Z</p>
-         */
         @NameInMap("FirstHeartbeatTime")
         public String firstHeartbeatTime;
 
-        /**
-         * <p>The last time when Cloud Assistant reported the state of the plug-in.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-01-19T09:15:46Z</p>
-         */
         @NameInMap("LastHeartbeatTime")
         public String lastHeartbeatTime;
 
-        /**
-         * <p>The name of the plug-in.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testName</p>
-         */
         @NameInMap("PluginName")
         public String pluginName;
 
-        /**
-         * <p>The state of the Cloud Assistant plug-in. Valid values:</p>
-         * <ul>
-         * <li>NotInstalled: The plug-in is not installed.</li>
-         * <li>Installed: The one-time plug-in is installed.</li>
-         * <li>Running: The long-running plug-in is running.</li>
-         * <li>Stopped: The long-running plug-in is not running.</li>
-         * <li>Crashed: The plug-in is abnormal.</li>
-         * <li>Removed: The plug-in is uninstalled.</li>
-         * <li>Unknown: The state of the plug-in is unknown.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Running</p>
-         */
         @NameInMap("PluginStatus")
         public String pluginStatus;
 
-        /**
-         * <p>The version of the plug-in.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1.1</p>
-         */
         @NameInMap("PluginVersion")
         public String pluginVersion;
 
@@ -230,18 +188,9 @@ public class ListPluginStatusResponseBody extends TeaModel {
     }
 
     public static class ListPluginStatusResponseBodyInstancePluginStatusSetInstancePluginStatus extends TeaModel {
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-xxxxx</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The queried Cloud Assistant plug-ins.</p>
-         */
         @NameInMap("PluginStatusSet")
         public ListPluginStatusResponseBodyInstancePluginStatusSetInstancePluginStatusPluginStatusSet pluginStatusSet;
 

@@ -65,7 +65,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>dubbo</p>
+     * <p>Accepts the default operation for a system event in the Inquiring state and authorizes the system to perform the operation.</p>
      * 
      * @param request AcceptInquiredSystemEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -125,7 +125,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>dubbo</p>
+     * <p>Accepts the default operation for a system event in the Inquiring state and authorizes the system to perform the operation.</p>
      * 
      * @param request AcceptInquiredSystemEventRequest
      * @return AcceptInquiredSystemEventResponse
@@ -650,7 +650,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Assigns a static public IP address (also called system-assigned public IP address or auto-assigned public IP address) to an Elastic Compute Service (ECS) instance.</p>
+     * <p>Assigns a static public IP address to an Elastic Compute Service (ECS) instance. We recommend using ModifyInstanceNetworkSpec to assign public IP addresses.</p>
      * 
      * @param request AllocatePublicIpAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -721,7 +721,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Assigns a static public IP address (also called system-assigned public IP address or auto-assigned public IP address) to an Elastic Compute Service (ECS) instance.</p>
+     * <p>Assigns a static public IP address to an Elastic Compute Service (ECS) instance. We recommend using ModifyInstanceNetworkSpec to assign public IP addresses.</p>
      * 
      * @param request AllocatePublicIpAddressRequest
      * @return AllocatePublicIpAddressResponse
@@ -2215,7 +2215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables automatic snapshot policies for one or more disks.</p>
+     * <p>Disables an automatic snapshot policy for one or more cloud disks.</p>
      * 
      * @param request CancelAutoSnapshotPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2267,7 +2267,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables automatic snapshot policies for one or more disks.</p>
+     * <p>Disables an automatic snapshot policy for one or more cloud disks.</p>
      * 
      * @param request CancelAutoSnapshotPolicyRequest
      * @return CancelAutoSnapshotPolicyResponse
@@ -3946,6 +3946,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.strategy)) {
             query.put("Strategy", request.strategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -9887,7 +9891,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an elastic network interface (ENI) in a region. DeleteNetworkInterface is an asynchronous operation.</p>
+     * <p>Deletes an ENI.</p>
      * 
      * @param request DeleteNetworkInterfaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9963,7 +9967,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an elastic network interface (ENI) in a region. DeleteNetworkInterface is an asynchronous operation.</p>
+     * <p>Deletes an ENI.</p>
      * 
      * @param request DeleteNetworkInterfaceRequest
      * @return DeleteNetworkInterfaceResponse
@@ -10131,7 +10135,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除运维窗口</p>
+     * <p>Delete O\\\&amp;M window</p>
      * 
      * @param request DeletePlanMaintenanceWindowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10167,7 +10171,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除运维窗口</p>
+     * <p>Delete O\\\&amp;M window</p>
      * 
      * @param request DeletePlanMaintenanceWindowRequest
      * @return DeletePlanMaintenanceWindowResponse
@@ -11743,7 +11747,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询可用资源</p>
+     * <p>Query the inventory status of resources in a specified zone. This API is primarily used to confirm whether the target resources (such as instance types or system disk types) have sufficient inventory in a specific zone before creating an instance (RunInstances) or modifying an instance specification (ModifyInstanceSpec).</p>
      * 
      * @param request DescribeAvailableResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11851,7 +11855,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询可用资源</p>
+     * <p>Query the inventory status of resources in a specified zone. This API is primarily used to confirm whether the target resources (such as instance types or system disk types) have sufficient inventory in a specific zone before creating an instance (RunInstances) or modifying an instance specification (ModifyInstanceSpec).</p>
      * 
      * @param request DescribeAvailableResourceRequest
      * @return DescribeAvailableResourceResponse
@@ -11945,14 +11949,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>DescribeBandwidthPackages</p>
      * 
-     * @deprecated OpenAPI DescribeBandwidthPackages is deprecated, please use Vpc::2016-04-28::DescribeBandwidthPackages instead.
-     * 
      * @param request DescribeBandwidthPackagesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeBandwidthPackagesResponse
      */
-    @Deprecated
-    // Deprecated
     public DescribeBandwidthPackagesResponse describeBandwidthPackagesWithOptions(DescribeBandwidthPackagesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -12013,13 +12013,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>DescribeBandwidthPackages</p>
      * 
-     * @deprecated OpenAPI DescribeBandwidthPackages is deprecated, please use Vpc::2016-04-28::DescribeBandwidthPackages instead.
-     * 
      * @param request DescribeBandwidthPackagesRequest
      * @return DescribeBandwidthPackagesResponse
      */
-    @Deprecated
-    // Deprecated
     public DescribeBandwidthPackagesResponse describeBandwidthPackages(DescribeBandwidthPackagesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeBandwidthPackagesWithOptions(request, runtime);
@@ -13154,6 +13150,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.strategy)) {
             query.put("Strategy", request.strategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -14649,7 +14649,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The \<em>\<em>token\</em>\</em> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence]\(<del>25693</del>).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The \\<em>\\<em>token\\</em>\\</em> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see \[How to ensure idempotence]\\(<del>25693</del>).</p>
      * 
      * @param request DescribeHpcClustersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14717,7 +14717,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The \<em>\<em>token\</em>\</em> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence]\(<del>25693</del>).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The \\<em>\\<em>token\\</em>\\</em> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see \[How to ensure idempotence]\\(<del>25693</del>).</p>
      * 
      * @param request DescribeHpcClustersRequest
      * @return DescribeHpcClustersResponse
@@ -17096,31 +17096,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>DescribeInvocationResults</p>
      * 
      * <b>summary</b> : 
-     * <p>The execution status of the command. Valid values:</p>
-     * <ul>
-     * <li>Running:<ul>
-     * <li>Scheduled task: Before you stop the scheduled execution of the command, the execution state is always Running.</li>
-     * <li>One-time task: If the command is being run on instances, the execution state is Running.</li>
-     * </ul>
-     * </li>
-     * <li>Finished:<ul>
-     * <li>Scheduled task: The execution state can never be Finished.</li>
-     * <li>One-time task: The execution was complete on all instances, or the execution was stopped on some instances and was complete on the other instances.</li>
-     * </ul>
-     * </li>
-     * <li>Failed:<ul>
-     * <li>Scheduled task: The execution state can never be Failed.</li>
-     * <li>One-time task: The execution failed on all instances.</li>
-     * </ul>
-     * </li>
-     * <li>PartialFailed:<ul>
-     * <li>Scheduled task: The execution state can never be PartialFailed.</li>
-     * <li>One-time task: The execution failed on some instances.</li>
-     * </ul>
-     * </li>
-     * <li>Stopped: The task was stopped.</li>
-     * <li>Stopping: The task is being stopped.</li>
-     * </ul>
+     * <p>The execution status of the command. Valid values:
+     * \*   Running:
+     *     \*   Scheduled task: Before you stop the scheduled execution of the command, the execution state is always Running.
+     *     \*   One-time task: If the command is being run on instances, the execution state is Running.
+     * \*   Finished:
+     *     \*   Scheduled task: The execution state can never be Finished.
+     *     \*   One-time task: The execution was complete on all instances, or the execution was stopped on some instances and was complete on the other instances.
+     * \*   Failed:
+     *     \*   Scheduled task: The execution state can never be Failed.
+     *     \*   One-time task: The execution failed on all instances.
+     * \*   PartialFailed:
+     *     \*   Scheduled task: The execution state can never be PartialFailed.
+     *     \*   One-time task: The execution failed on some instances.
+     * \*   Stopped: The task was stopped.
+     * \*   Stopping: The task is being stopped.</p>
      * 
      * @param request DescribeInvocationResultsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17223,31 +17213,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>DescribeInvocationResults</p>
      * 
      * <b>summary</b> : 
-     * <p>The execution status of the command. Valid values:</p>
-     * <ul>
-     * <li>Running:<ul>
-     * <li>Scheduled task: Before you stop the scheduled execution of the command, the execution state is always Running.</li>
-     * <li>One-time task: If the command is being run on instances, the execution state is Running.</li>
-     * </ul>
-     * </li>
-     * <li>Finished:<ul>
-     * <li>Scheduled task: The execution state can never be Finished.</li>
-     * <li>One-time task: The execution was complete on all instances, or the execution was stopped on some instances and was complete on the other instances.</li>
-     * </ul>
-     * </li>
-     * <li>Failed:<ul>
-     * <li>Scheduled task: The execution state can never be Failed.</li>
-     * <li>One-time task: The execution failed on all instances.</li>
-     * </ul>
-     * </li>
-     * <li>PartialFailed:<ul>
-     * <li>Scheduled task: The execution state can never be PartialFailed.</li>
-     * <li>One-time task: The execution failed on some instances.</li>
-     * </ul>
-     * </li>
-     * <li>Stopped: The task was stopped.</li>
-     * <li>Stopping: The task is being stopped.</li>
-     * </ul>
+     * <p>The execution status of the command. Valid values:
+     * \*   Running:
+     *     \*   Scheduled task: Before you stop the scheduled execution of the command, the execution state is always Running.
+     *     \*   One-time task: If the command is being run on instances, the execution state is Running.
+     * \*   Finished:
+     *     \*   Scheduled task: The execution state can never be Finished.
+     *     \*   One-time task: The execution was complete on all instances, or the execution was stopped on some instances and was complete on the other instances.
+     * \*   Failed:
+     *     \*   Scheduled task: The execution state can never be Failed.
+     *     \*   One-time task: The execution failed on all instances.
+     * \*   PartialFailed:
+     *     \*   Scheduled task: The execution state can never be PartialFailed.
+     *     \*   One-time task: The execution failed on some instances.
+     * \*   Stopped: The task was stopped.
+     * \*   Stopping: The task is being stopped.</p>
      * 
      * @param request DescribeInvocationResultsRequest
      * @return DescribeInvocationResultsResponse
@@ -17262,7 +17242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>DescribeInvocations</p>
      * 
      * <b>summary</b> : 
-     * <p>The command type.</p>
+     * <p>Invoke the DescribeInvocations API to query the execution list and status of Cloud Assistant commands.</p>
      * 
      * @param request DescribeInvocationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17381,7 +17361,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>DescribeInvocations</p>
      * 
      * <b>summary</b> : 
-     * <p>The command type.</p>
+     * <p>Invoke the DescribeInvocations API to query the execution list and status of Cloud Assistant commands.</p>
      * 
      * @param request DescribeInvocationsRequest
      * @return DescribeInvocationsResponse
@@ -23110,7 +23090,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Detach an elastic network interface (ENI) from an Elastic Compute Service (ECS) instance.</p>
+     * <p>Detaches an ENI from an ECS instance.</p>
      * 
      * @param request DetachNetworkInterfaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23189,7 +23169,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Detach an elastic network interface (ENI) from an Elastic Compute Service (ECS) instance.</p>
+     * <p>Detaches an ENI from an ECS instance.</p>
      * 
      * @param request DetachNetworkInterfaceRequest
      * @return DetachNetworkInterfaceResponse
@@ -23527,7 +23507,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启用或修改弹性网卡QoS限速设置</p>
+     * <p>Enable or modify Elastic Network Interface (ENI) QoS rate limit settings</p>
      * 
      * @param request EnableNetworkInterfaceQoSRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23587,7 +23567,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启用或修改弹性网卡QoS限速设置</p>
+     * <p>Enable or modify Elastic Network Interface (ENI) QoS rate limit settings</p>
      * 
      * @param request EnableNetworkInterfaceQoSRequest
      * @return EnableNetworkInterfaceQoSResponse
@@ -24520,7 +24500,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Imports the public key of a Rivest-Shamir-Adleman (RSA) key pair that is generated by a third-party tool. After the key pair is imported, Alibaba Cloud stores the public key. You must securely lock away the private key.</p>
+     * <p>Imports the public key of a Rivest-Shamir-Adleman (RSA) key pair that is generated by a third-party tool. After the key pair is imported, Alibaba Cloud stores the public key. You must securely store the private key.</p>
      * 
      * @param request ImportKeyPairRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24601,7 +24581,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Imports the public key of a Rivest-Shamir-Adleman (RSA) key pair that is generated by a third-party tool. After the key pair is imported, Alibaba Cloud stores the public key. You must securely lock away the private key.</p>
+     * <p>Imports the public key of a Rivest-Shamir-Adleman (RSA) key pair that is generated by a third-party tool. After the key pair is imported, Alibaba Cloud stores the public key. You must securely store the private key.</p>
      * 
      * @param request ImportKeyPairRequest
      * @return ImportKeyPairResponse
@@ -24617,7 +24597,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>After you call the InstallCloudAssistant operation to install Cloud Assistant Agent on an ECS instance, call the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation to restart the instance to make the installation take effect.</p>
      * 
      * <b>summary</b> : 
-     * <p>Installs Cloud Assistant Agent on Elastic Compute Service (ECS) instances. After you install Cloud Assistant Agent on ECS instances, restart the instances for the installation to take effect.</p>
+     * <p>Installs Cloud Assistant Agent on Elastic Compute Service (ECS) instances. After installing Cloud Assistant Agent on ECS instances, restart the instances for the installation to take effect.</p>
      * 
      * @param request InstallCloudAssistantRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24677,7 +24657,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>After you call the InstallCloudAssistant operation to install Cloud Assistant Agent on an ECS instance, call the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation to restart the instance to make the installation take effect.</p>
      * 
      * <b>summary</b> : 
-     * <p>Installs Cloud Assistant Agent on Elastic Compute Service (ECS) instances. After you install Cloud Assistant Agent on ECS instances, restart the instances for the installation to take effect.</p>
+     * <p>Installs Cloud Assistant Agent on Elastic Compute Service (ECS) instances. After installing Cloud Assistant Agent on ECS instances, restart the instances for the installation to take effect.</p>
      * 
      * @param request InstallCloudAssistantRequest
      * @return InstallCloudAssistantResponse
@@ -25873,6 +25853,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.ossDeliveryConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ossDeliveryConfig, "OssDeliveryConfig", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.resourceUsageConfig)) {
+            request.resourceUsageConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceUsageConfig, "ResourceUsageConfig", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.sessionManagerConfig)) {
             request.sessionManagerConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sessionManagerConfig, "SessionManagerConfig", "json");
         }
@@ -25908,6 +25892,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceUsageConfigShrink)) {
+            query.put("ResourceUsageConfig", request.resourceUsageConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sessionManagerConfigShrink)) {
@@ -36690,8 +36678,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>\*   If you stop the process of a command that runs only once, the executions that have started are not interrupted. The executions that have not started are canceled.
-     * \*   If you stop the process of a scheduled invocation command, the executions that have started are not interrupted. However, the execution does not start in the next period.</p>
+     * <p>\\*   If you stop the process of a command that runs only once, the executions that have started are not interrupted. The executions that have not started are canceled.
+     * \\*   If you stop the process of a scheduled invocation command, the executions that have started are not interrupted. However, the execution does not start in the next period.</p>
      * 
      * @param request StopInvocationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -36758,8 +36746,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>\*   If you stop the process of a command that runs only once, the executions that have started are not interrupted. The executions that have not started are canceled.
-     * \*   If you stop the process of a scheduled invocation command, the executions that have started are not interrupted. However, the execution does not start in the next period.</p>
+     * <p>\\*   If you stop the process of a command that runs only once, the executions that have started are not interrupted. The executions that have not started are canceled.
+     * \\*   If you stop the process of a scheduled invocation command, the executions that have started are not interrupted. However, the execution does not start in the next period.</p>
      * 
      * @param request StopInvocationRequest
      * @return StopInvocationResponse
@@ -37110,7 +37098,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Unassigns secondary private IP addresses from an elastic network interface (ENI).</p>
+     * <p>Unassigns one or more secondary private IP addresses from an ENI.</p>
      * 
      * @param request UnassignPrivateIpAddressesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -37181,7 +37169,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Unassigns secondary private IP addresses from an elastic network interface (ENI).</p>
+     * <p>Unassigns one or more secondary private IP addresses from an ENI.</p>
      * 
      * @param request UnassignPrivateIpAddressesRequest
      * @return UnassignPrivateIpAddressesResponse

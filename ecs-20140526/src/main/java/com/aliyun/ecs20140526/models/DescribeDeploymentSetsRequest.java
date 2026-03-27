@@ -112,6 +112,9 @@ public class DescribeDeploymentSetsRequest extends TeaModel {
     @NameInMap("Strategy")
     public String strategy;
 
+    @NameInMap("Type")
+    public String type;
+
     public static DescribeDeploymentSetsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDeploymentSetsRequest self = new DescribeDeploymentSetsRequest();
         return TeaModel.build(map, self);
@@ -219,6 +222,14 @@ public class DescribeDeploymentSetsRequest extends TeaModel {
     }
     public String getStrategy() {
         return this.strategy;
+    }
+
+    public DescribeDeploymentSetsRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

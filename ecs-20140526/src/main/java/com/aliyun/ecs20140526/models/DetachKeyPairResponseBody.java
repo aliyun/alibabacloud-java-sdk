@@ -31,9 +31,6 @@ public class DetachKeyPairResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The result set of the unbind operation.</p>
-     */
     @NameInMap("Results")
     public DetachKeyPairResponseBodyResults results;
 
@@ -92,39 +89,15 @@ public class DetachKeyPairResponseBody extends TeaModel {
     }
 
     public static class DetachKeyPairResponseBodyResultsResult extends TeaModel {
-        /**
-         * <p>The operation status code that is returned. 200 indicates that the operation is successful.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-bp1d6tsvznfghy7y****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The result of the operation. For example, if the value of <code>Code</code> is 200, the value of <code>Message</code> is <code>successful</code>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>successful</p>
-         */
         @NameInMap("Message")
         public String message;
 
-        /**
-         * <p>Indicates whether the operation is successful.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Success")
         public String success;
 

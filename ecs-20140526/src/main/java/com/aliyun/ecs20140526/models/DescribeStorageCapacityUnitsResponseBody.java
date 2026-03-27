@@ -31,9 +31,6 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Details about the SCUs.</p>
-     */
     @NameInMap("StorageCapacityUnits")
     public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits storageCapacityUnits;
 
@@ -92,21 +89,9 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
     }
 
     public static class DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTagsTag extends TeaModel {
-        /**
-         * <p>The key of tag N.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestValue</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The value of tag N.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestKey</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -153,109 +138,36 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
     }
 
     public static class DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit extends TeaModel {
-        /**
-         * <p>Indicates the allocation state of the SCU when the AllocationType parameter is set to Shared. Valid values:</p>
-         * <ul>
-         * <li>allocated: The SCU is allocated to other accounts.</li>
-         * <li>BeAllocated: The SCU is allocated from another account.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>allocated</p>
-         */
         @NameInMap("AllocationStatus")
         public String allocationStatus;
 
-        /**
-         * <p>The capacity of the SCU.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("Capacity")
         public Integer capacity;
 
-        /**
-         * <p>The time when the SCU was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-08-17T02:55Z</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>The description of the SCU.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testScuDescription</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The time when the SCU expires.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-09-17T16:00Z</p>
-         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
-        /**
-         * <p>The name of the SCU.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testScuName</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The region ID of the SCU.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The time when the SCU took effect.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-08-17T02:55Z</p>
-         */
         @NameInMap("StartTime")
         public String startTime;
 
-        /**
-         * <p>The status of the SCU. Valid values:</p>
-         * <ul>
-         * <li>Creating: The SCUs are being created.</li>
-         * <li>Active: The SCUs are in effect.</li>
-         * <li>Expired: The SCUs have expired.</li>
-         * <li>Pending: The SCUs have not taken effect.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Active</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The ID of the SCU.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>scu-bp67acfmxazb4p****</p>
-         */
         @NameInMap("StorageCapacityUnitId")
         public String storageCapacityUnitId;
 
-        /**
-         * <p>The tag key-value pairs of the SCU.</p>
-         */
         @NameInMap("Tags")
         public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTags tags;
 

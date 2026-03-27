@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceStatusResponseBody extends TeaModel {
-    /**
-     * <p>The IDs and status of the ECS instances.</p>
-     */
     @NameInMap("InstanceStatuses")
     public DescribeInstanceStatusResponseBodyInstanceStatuses instanceStatuses;
 
@@ -92,28 +89,9 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceStatusResponseBodyInstanceStatusesInstanceStatus extends TeaModel {
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-bp1j4i2jdf3owlhe****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The status of the instance. Valid values:</p>
-         * <ul>
-         * <li>Pending: The instance is being created.</li>
-         * <li>Running: The instance is running.</li>
-         * <li>Starting: The instance is being started.</li>
-         * <li>Stopping: The instance is being stopped.</li>
-         * <li>Stopped: The instance is stopped.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Running</p>
-         */
         @NameInMap("Status")
         public String status;
 

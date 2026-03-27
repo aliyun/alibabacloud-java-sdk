@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class RunInstancesResponseBody extends TeaModel {
-    /**
-     * <p>The instance IDs.</p>
-     */
     @NameInMap("InstanceIdSets")
     public RunInstancesResponseBodyInstanceIdSets instanceIdSets;
 

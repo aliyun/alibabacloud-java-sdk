@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
-    /**
-     * <p>Details about the ENI permissions.</p>
-     */
     @NameInMap("NetworkInterfacePermissions")
     public DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissions networkInterfacePermissions;
 
@@ -92,63 +89,21 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissionsNetworkInterfacePermission extends TeaModel {
-        /**
-         * <p>The ID of the Alibaba Cloud partner (a certified ISV) or individual user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1234567890</p>
-         */
         @NameInMap("AccountId")
         public Long accountId;
 
-        /**
-         * <p>The ID of ENI N.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>eni-bp14v2sdd3v8htln****</p>
-         */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
-        /**
-         * <p>The ID of the ENI permission.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>eni-perm-bp1cs4lwn56lfb****</p>
-         */
         @NameInMap("NetworkInterfacePermissionId")
         public String networkInterfacePermissionId;
 
-        /**
-         * <p>The ENI permission.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>InstanceAttach</p>
-         */
         @NameInMap("Permission")
         public String permission;
 
-        /**
-         * <p>The status of the ENI permission. Valid values:</p>
-         * <ul>
-         * <li>Pending: The permission is being granted.</li>
-         * <li>Granted: The permission is granted.</li>
-         * <li>Revoking: The permission is being revoked.</li>
-         * <li>Revoked: The permission is revoked.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Granted</p>
-         */
         @NameInMap("PermissionState")
         public String permissionState;
 
-        /**
-         * <p>The name of the Alibaba Cloud service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Elastic Compute Service</p>
-         */
         @NameInMap("ServiceName")
         public String serviceName;
 

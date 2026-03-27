@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
-    /**
-     * <p>An array consisting of host group information.</p>
-     */
     @NameInMap("DedicatedHostClusters")
     public DescribeDedicatedHostClustersResponseBodyDedicatedHostClusters dedicatedHostClusters;
 
@@ -92,21 +89,9 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityAvailableInstanceTypesAvailableInstanceType extends TeaModel {
-        /**
-         * <p>The available capacity of the ECS instance type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("AvailableInstanceCapacity")
         public Integer availableInstanceCapacity;
 
-        /**
-         * <p>The ECS instance type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ecs.c6.26xlarge</p>
-         */
         @NameInMap("InstanceType")
         public String instanceType;
 
@@ -153,37 +138,12 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityLocalStorageCapacitiesLocalStorageCapacity extends TeaModel {
-        /**
-         * <p>The available capacity of the local disk. Unit: GiB</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("AvailableDisk")
         public Integer availableDisk;
 
-        /**
-         * <p>The category of data disks. Valid values:</p>
-         * <ul>
-         * <li>cloud: basic disk</li>
-         * <li>cloud_efficiency: ultra disk</li>
-         * <li>cloud_ssd: standard SSD</li>
-         * <li>ephemeral_ssd: local SSD</li>
-         * <li>cloud_essd: Enterprise SSD (ESSD)</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>cloud</p>
-         */
         @NameInMap("DataDiskCategory")
         public String dataDiskCategory;
 
-        /**
-         * <p>The total capacity of the local disk. Unit: GiB</p>
-         * 
-         * <strong>example:</strong>
-         * <p>40</p>
-         */
         @NameInMap("TotalDisk")
         public Integer totalDisk;
 
@@ -238,51 +198,21 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacity extends TeaModel {
-        /**
-         * <p>The available capacity of ECS instances in the host group.</p>
-         */
         @NameInMap("AvailableInstanceTypes")
         public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityAvailableInstanceTypes availableInstanceTypes;
 
-        /**
-         * <p>The size of available memory. Unit: GiB</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4</p>
-         */
         @NameInMap("AvailableMemory")
         public Integer availableMemory;
 
-        /**
-         * <p>The number of available vCPUs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("AvailableVcpus")
         public Integer availableVcpus;
 
-        /**
-         * <p>The local storage capacity.</p>
-         */
         @NameInMap("LocalStorageCapacities")
         public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityLocalStorageCapacities localStorageCapacities;
 
-        /**
-         * <p>The total memory size. Unit: GiB</p>
-         * 
-         * <strong>example:</strong>
-         * <p>8</p>
-         */
         @NameInMap("TotalMemory")
         public Integer totalMemory;
 
-        /**
-         * <p>The total number of vCPUs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4</p>
-         */
         @NameInMap("TotalVcpus")
         public Integer totalVcpus;
 
@@ -361,21 +291,9 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterTagsTag extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestKey</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestValue</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -422,75 +340,30 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostCluster extends TeaModel {
-        /**
-         * <p>The capacity of the host group.</p>
-         */
         @NameInMap("DedicatedHostClusterCapacity")
         public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacity dedicatedHostClusterCapacity;
 
-        /**
-         * <p>The ID of the host group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dc-bp12wlf6am0vz9v2****</p>
-         */
         @NameInMap("DedicatedHostClusterId")
         public String dedicatedHostClusterId;
 
-        /**
-         * <p>The name of the host group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>myDDHCluster</p>
-         */
         @NameInMap("DedicatedHostClusterName")
         public String dedicatedHostClusterName;
 
-        /**
-         * <p>The IDs of dedicated hosts in the host group.</p>
-         */
         @NameInMap("DedicatedHostIds")
         public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostIds dedicatedHostIds;
 
-        /**
-         * <p>The description of the host group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>This-is-my-DDHCluster</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The region ID of the host group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The resource group ID of the host group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-bp67acfmxazb4p****</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        /**
-         * <p>The tags of the host group.</p>
-         */
         @NameInMap("Tags")
         public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterTags tags;
 
-        /**
-         * <p>The zone ID of the host group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-f</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 

@@ -13,9 +13,6 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <p>The diagnostic reports.</p>
-     */
     @NameInMap("Reports")
     public DescribeDiagnosticReportsResponseBodyReports reports;
 
@@ -58,44 +55,15 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnosticReportsResponseBodyReportsReportIssuesIssue extends TeaModel {
-        /**
-         * <p>The ID of the diagnosed issue, which is the unique identifier of the issue.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>GuestOS.CPU.HighUtiliz*****</p>
-         */
         @NameInMap("IssueId")
         public String issueId;
 
-        /**
-         * <p>The category of the diagnostic metric.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ECSService.GuestOS</p>
-         */
         @NameInMap("MetricCategory")
         public String metricCategory;
 
-        /**
-         * <p>The ID of the diagnostic metric.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>GuestOS.WinFirewall</p>
-         */
         @NameInMap("MetricId")
         public String metricId;
 
-        /**
-         * <p>The severity level of the diagnostic metric. Valid values:</p>
-         * <ul>
-         * <li>Info: Diagnostic information was recorded and may be related to exceptions.</li>
-         * <li>Warn: Diagnostic information was recorded and may indicate exceptions.</li>
-         * <li>Critical: Critical exceptions were detected.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Info</p>
-         */
         @NameInMap("Severity")
         public String severity;
 
@@ -158,106 +126,36 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnosticReportsResponseBodyReportsReport extends TeaModel {
-        /**
-         * <p>The time when the diagnostic report was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-07-11T12:00:00Z</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>The end of the time range during which data was queried. The value is the EndTime value that was passed in when you called the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create the diagnostic report.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-07-11T14:00:00Z</p>
-         */
         @NameInMap("EndTime")
         public String endTime;
 
-        /**
-         * <p>The time when the diagnostic was complete.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-07-11T14:00:00Z</p>
-         */
         @NameInMap("FinishedTime")
         public String finishedTime;
 
-        /**
-         * <p>The diagnosed issues.</p>
-         */
         @NameInMap("Issues")
         public DescribeDiagnosticReportsResponseBodyReportsReportIssues issues;
 
-        /**
-         * <p>The ID of the diagnostic metric set.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dms-bp17p0qwtr72zmu*****</p>
-         */
         @NameInMap("MetricSetId")
         public String metricSetId;
 
-        /**
-         * <p>The ID of the diagnostic report.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dr-uf6i0tv2refv8wz*****</p>
-         */
         @NameInMap("ReportId")
         public String reportId;
 
-        /**
-         * <p>The ID of the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-uf6i0tv2refv8wz*****</p>
-         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <p>The type of the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>instance</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        /**
-         * <p>The severity level of the diagnostic report. Valid values:</p>
-         * <ul>
-         * <li>Unknown: The diagnostic did not start, failed to run, or unexpectedly exited without a diagnosis.</li>
-         * <li>Normal: No exceptions were detected.</li>
-         * <li>Info: Diagnostic information was recorded and may be related to exceptions.</li>
-         * <li>Warn: Diagnostic information was recorded and may indicate exceptions.</li>
-         * <li>Critical: Critical exceptions were detected.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Normal</p>
-         */
         @NameInMap("Severity")
         public String severity;
 
-        /**
-         * <p>The beginning of the time range during which data was queried. The value is the StartTime value that was passed in when you called the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create the diagnostic report.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-07-11T12:00:00Z</p>
-         */
         @NameInMap("StartTime")
         public String startTime;
 
-        /**
-         * <p>The status of the diagnostic report.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Finished</p>
-         */
         @NameInMap("Status")
         public String status;
 

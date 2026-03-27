@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkInterfacesResponseBody extends TeaModel {
-    /**
-     * <p>Details of the ENIs.</p>
-     */
     @NameInMap("NetworkInterfaceSets")
     public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets networkInterfaceSets;
 
@@ -118,23 +115,9 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAssociatedPublicIp extends TeaModel {
-        /**
-         * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
-         */
         @NameInMap("AllocationId")
         public String allocationId;
 
-        /**
-         * <p>The EIP.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><code>116.62.**.**</code></p>
-         */
         @NameInMap("PublicIpAddress")
         public String publicIpAddress;
 
@@ -162,49 +145,15 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAttachment extends TeaModel {
-        /**
-         * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("DeviceIndex")
         public Integer deviceIndex;
 
-        /**
-         * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The index of the network card.</p>
-         * <ul>
-         * <li>If the ENI is in the Available state or if no network card index was specified when the ENI was attached, this parameter is empty.</li>
-         * <li>If the ENI is in the InUse state and a network card index was specified when the ENI was attached, the specified network card index is returned as the value of this parameter.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("NetworkCardIndex")
         public Integer networkCardIndex;
 
-        /**
-         * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
-         */
         @NameInMap("TrunkNetworkInterfaceId")
         public String trunkNetworkInterfaceId;
 
@@ -248,12 +197,6 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv4PrefixSetsIpv4PrefixSet extends TeaModel {
-        /**
-         * <p>The IPv4 prefix of the ENI.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>hide</p>
-         */
         @NameInMap("Ipv4Prefix")
         public String ipv4Prefix;
 
@@ -292,12 +235,6 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6PrefixSetsIpv6PrefixSet extends TeaModel {
-        /**
-         * <p>The IPv6 prefix of the ENI.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>hide</p>
-         */
         @NameInMap("Ipv6Prefix")
         public String ipv6Prefix;
 
@@ -336,12 +273,6 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6SetsIpv6Set extends TeaModel {
-        /**
-         * <p>The IPv6 address of the ENI.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2408:4321:180:1701:94c7:bc38:3bfa:****</p>
-         */
         @NameInMap("Ipv6Address")
         public String ipv6Address;
 
@@ -380,23 +311,9 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSetAssociatedPublicIp extends TeaModel {
-        /**
-         * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
-         */
         @NameInMap("AllocationId")
         public String allocationId;
 
-        /**
-         * <p>The EIP.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><code>116.62.**.**</code></p>
-         */
         @NameInMap("PublicIpAddress")
         public String publicIpAddress;
 
@@ -424,43 +341,15 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet extends TeaModel {
-        /**
-         * <p>The elastic IP address (EIP) that is associated with the private IP address.</p>
-         */
         @NameInMap("AssociatedPublicIp")
         public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSetAssociatedPublicIp associatedPublicIp;
 
-        /**
-         * <p>Indicates whether the private IP address is the primary private IP address. Valid values:</p>
-         * <ul>
-         * <li>true: The IP address is the primary private IP address.</li>
-         * <li>false: The IP address is a secondary private IP address.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Primary")
         public Boolean primary;
 
-        /**
-         * <p>The private domain name of the ECS instance.</p>
-         * <blockquote>
-         * <p> A private domain name can be returned in a specific format only when <code>HostnameType</code> is set to <code>IP</code> or <code>InstanceId</code>.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>DnsTestName</p>
-         */
         @NameInMap("PrivateDnsName")
         public String privateDnsName;
 
-        /**
-         * <p>The private IP address of the ENI.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><code>172.17.**.**</code></p>
-         */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
 
@@ -542,21 +431,9 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetTagsTag extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestKey</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestValue</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -603,272 +480,90 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet extends TeaModel {
-        /**
-         * <p>The EIPs that are associated with the secondary private IP addresses of the ENI.</p>
-         */
         @NameInMap("AssociatedPublicIp")
         public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAssociatedPublicIp associatedPublicIp;
 
-        /**
-         * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
-         * </blockquote>
-         */
         @NameInMap("Attachment")
         public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAttachment attachment;
 
-        /**
-         * <p>The time when the security group was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-12-25T12:31:31Z</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>Indicates whether to retain the ENI when the associated instance is released. Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("DeleteOnRelease")
         public Boolean deleteOnRelease;
 
-        /**
-         * <p>The description of the ENI.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DescriptionTest</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the Elastic Compute Service (ECS) instance to which the ENI is attached.</p>
-         * <blockquote>
-         * <p> If the ENI is managed by other Alibaba Cloud services, no instance ID is returned.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>i-bp1e2l6djkndyuli****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The IPv4 prefixes of the ENI.</p>
-         */
         @NameInMap("Ipv4PrefixSets")
         public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv4PrefixSets ipv4PrefixSets;
 
-        /**
-         * <p>The IPv6 prefixes of the ENI.</p>
-         */
         @NameInMap("Ipv6PrefixSets")
         public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6PrefixSets ipv6PrefixSets;
 
-        /**
-         * <p>The IPv6 addresses of the ENI.</p>
-         */
         @NameInMap("Ipv6Sets")
         public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6Sets ipv6Sets;
 
-        /**
-         * <p>The MAC address of the ENI.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>00:16:3e:12:<strong>:</strong></p>
-         */
         @NameInMap("MacAddress")
         public String macAddress;
 
-        /**
-         * <p>The ID of the ENI.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>eni-bp125p95hhdhn3ot****</p>
-         */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
-        /**
-         * <p>The name of the ENI.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>my-eni-name</p>
-         */
         @NameInMap("NetworkInterfaceName")
         public String networkInterfaceName;
 
-        /**
-         * <p>The communication mode of the ENI. Valid values:</p>
-         * <ul>
-         * <li>Standard: The TCP communication mode is used.</li>
-         * <li>HighPerformance: The Elastic RDMA Interface (ERI) is enabled and the remote direct memory access (RDMA) communication mode is used.</li>
-         * </ul>
-         * <blockquote>
-         * <p> This parameter can have a value of HighPerformance only when the ENI is attached to a c7re RDMA-enhanced instance that resides in Beijing Zone K.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>Standard</p>
-         */
         @NameInMap("NetworkInterfaceTrafficMode")
         public String networkInterfaceTrafficMode;
 
-        /**
-         * <p>The ID of the account to which the ENI belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123456****</p>
-         */
         @NameInMap("OwnerId")
         public String ownerId;
 
-        /**
-         * <p>The primary private IP address of the ENI.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><code>172.17.**.**</code></p>
-         */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
 
-        /**
-         * <p>Details about the private IP addresses of the ENI.</p>
-         */
         @NameInMap("PrivateIpSets")
         public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSets privateIpSets;
 
-        /**
-         * <p>The number of queues supported by the ENI.</p>
-         * <ul>
-         * <li>If the ENI is a secondary ENI in the InUse state and the number of queues supported by the ENI has never been modified, the default number of queues per secondary ENI that the instance type supports is returned.</li>
-         * <li>If the ENI is a secondary ENI and the number of queues supported by the ENI has been modified, the new number of queues is returned.</li>
-         * <li>If the ENI is a secondary ENI in the Available state and the number of queues supported by the ENI has never been modified, an empty value is returned.</li>
-         * <li>If the ENI is a primary ENI, the default number of queues per primary ENI that the instance type supports is returned.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>8</p>
-         */
         @NameInMap("QueueNumber")
         public Integer queueNumber;
 
-        /**
-         * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("QueuePairNumber")
         public Integer queuePairNumber;
 
-        /**
-         * <p>The ID of the resource group to which the ENI belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-2ze88m67qx5z****</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        /**
-         * <p>The security groups to which the ENI belongs.</p>
-         */
         @NameInMap("SecurityGroupIds")
         public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetSecurityGroupIds securityGroupIds;
 
-        /**
-         * <p>The ID of the distributor to which the ENI belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>12345678910</p>
-         */
         @NameInMap("ServiceID")
         public Long serviceID;
 
-        /**
-         * <p>Indicates whether the user of the ENI is an Alibaba Cloud service or a distributor.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("ServiceManaged")
         public Boolean serviceManaged;
 
-        /**
-         * <p>Indicates whether the source and destination IP address check feature is enabled. To improve network security, enable this feature. Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
-         * <p>Default value: false.</p>
-         * <blockquote>
-         * <p> Before you use this parameter, read <a href="https://help.aliyun.com/document_detail/2863210.html">Source and destination IP address check</a>.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("SourceDestCheck")
         public Boolean sourceDestCheck;
 
-        /**
-         * <p>The state of the ENI.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Available</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The tags of the ENI.</p>
-         */
         @NameInMap("Tags")
         public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetTags tags;
 
-        /**
-         * <p>The type of the ENI.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Secondary</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>The ID of the vSwitch.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vsw-bp16usj2p27htro3****</p>
-         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        /**
-         * <p>The ID of the VPC to which the ENI belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-bp1j7w3gc1cexjqd****</p>
-         */
         @NameInMap("VpcId")
         public String vpcId;
 
-        /**
-         * <p>The zone ID of the ENI.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-e</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 

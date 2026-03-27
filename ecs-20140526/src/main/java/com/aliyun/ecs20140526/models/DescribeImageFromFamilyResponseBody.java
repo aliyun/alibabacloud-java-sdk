@@ -41,69 +41,24 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
     }
 
     public static class DescribeImageFromFamilyResponseBodyImageDiskDeviceMappingsDiskDeviceMapping extends TeaModel {
-        /**
-         * <p>The device name of the disk. Example: /dev/xvdb.</p>
-         * <blockquote>
-         * <p> This parameter will be removed in the future. To ensure compatibility, we recommend that you use other parameters.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>/dev/xvdb</p>
-         */
         @NameInMap("Device")
         public String device;
 
-        /**
-         * <p>The image format.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>qcow2</p>
-         */
         @NameInMap("Format")
         public String format;
 
-        /**
-         * <p>The OSS bucket that contains the imported image file.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testEcsImport</p>
-         */
         @NameInMap("ImportOSSBucket")
         public String importOSSBucket;
 
-        /**
-         * <p>The OSS object to which the imported image belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>imageImport</p>
-         */
         @NameInMap("ImportOSSObject")
         public String importOSSObject;
 
-        /**
-         * <p>The size of the disk. Unit: GiB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>80</p>
-         */
         @NameInMap("Size")
         public String size;
 
-        /**
-         * <p>The snapshot ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>s-bp17ot2q7x72ggtw****</p>
-         */
         @NameInMap("SnapshotId")
         public String snapshotId;
 
-        /**
-         * <p>The image type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>custom</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -190,21 +145,9 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
     }
 
     public static class DescribeImageFromFamilyResponseBodyImageTagsTag extends TeaModel {
-        /**
-         * <p>The tag key of the custom image.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestKey</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag value of the custom image.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestValue</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -282,9 +225,6 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The mappings between the disk and the snapshot in the image.</p>
-         */
         @NameInMap("DiskDeviceMappings")
         public DescribeImageFromFamilyResponseBodyImageDiskDeviceMappings diskDeviceMappings;
 
@@ -457,9 +397,6 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The tags of the image.</p>
-         */
         @NameInMap("Tags")
         public DescribeImageFromFamilyResponseBodyImageTags tags;
 

@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeploymentSetsResponseBody extends TeaModel {
-    /**
-     * <p>Details about the deployment sets.</p>
-     */
     @NameInMap("DeploymentSets")
     public DescribeDeploymentSetsResponseBodyDeploymentSets deploymentSets;
 
@@ -109,30 +106,12 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
     }
 
     public static class DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetCapacitiesCapacity extends TeaModel {
-        /**
-         * <p>The number of ECS instances that can be added to the deployment set within the zone.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>18</p>
-         */
         @NameInMap("AvailableAmount")
         public Integer availableAmount;
 
-        /**
-         * <p>The number of ECS instances that reside in the zone in the deployment set.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("UsedAmount")
         public Integer usedAmount;
 
-        /**
-         * <p>The ID of the zone. Only the zone IDs of existing ECS instances in the deployment set are returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-i</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -209,110 +188,44 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         @NameInMap("AccountId")
         public Long accountId;
 
-        /**
-         * <p>Details of the capacities of the deployment set. This parameter is valid only when the deployment set contains ECS instances. The value contains information about the capacities of the deployment set in different zones.</p>
-         */
         @NameInMap("Capacities")
         public DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetCapacities capacities;
 
-        /**
-         * <p>The time when the deployment set was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-12-07T06:01:46Z</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>The description of the deployment set.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testDeploymentSetDescription</p>
-         */
         @NameInMap("DeploymentSetDescription")
         public String deploymentSetDescription;
 
-        /**
-         * <p>The ID of the deployment set.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ds-bp67acfmxazb4ph****</p>
-         */
         @NameInMap("DeploymentSetId")
         public String deploymentSetId;
 
-        /**
-         * <p>The name of the deployment set.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testDeploymentSetName</p>
-         */
         @NameInMap("DeploymentSetName")
         public String deploymentSetName;
 
-        /**
-         * <p>The deployment strategy. The return value of this parameter is the value of the <code>Strategy</code> request parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Availability</p>
-         */
         @NameInMap("DeploymentStrategy")
         public String deploymentStrategy;
 
-        /**
-         * <p>The deployment domain.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>default</p>
-         */
         @NameInMap("Domain")
         public String domain;
 
-        /**
-         * <p>The deployment granularity.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>host</p>
-         */
         @NameInMap("Granularity")
         public String granularity;
 
-        /**
-         * <p>The number of deployment set groups in the deployment set.</p>
-         * <blockquote>
-         * <p> This parameter is valid only when the Strategy request parameter is set to AvailabilityGroup.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("GroupCount")
         public Integer groupCount;
 
-        /**
-         * <p>The number of instances in the deployment set.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("InstanceAmount")
         public Integer instanceAmount;
 
-        /**
-         * <p>The IDs of the Elastic Compute Service (ECS) instances in the deployment set.</p>
-         */
         @NameInMap("InstanceIds")
         public DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetInstanceIds instanceIds;
 
-        /**
-         * <p>The deployment strategy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>LooseDispersion</p>
-         */
         @NameInMap("Strategy")
         public String strategy;
+
+        @NameInMap("Type")
+        public String type;
 
         public static DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSet build(java.util.Map<String, ?> map) throws Exception {
             DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSet self = new DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSet();
@@ -421,6 +334,14 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         }
         public String getStrategy() {
             return this.strategy;
+        }
+
+        public DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSet setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeLaunchTemplatesResponseBody extends TeaModel {
-    /**
-     * <p>The queried launch templates.</p>
-     */
     @NameInMap("LaunchTemplateSets")
     public DescribeLaunchTemplatesResponseBodyLaunchTemplateSets launchTemplateSets;
 
@@ -92,21 +89,9 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTagsTag extends TeaModel {
-        /**
-         * <p>The tag value of the launch template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestKey</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag key of the launch template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestValue</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -153,86 +138,30 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet extends TeaModel {
-        /**
-         * <p>The time when the launch template was created.</p>
-         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-05-14T14:18:00Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The ID of the Alibaba Cloud account that created the launch template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1234567890</p>
-         */
         @NameInMap("CreatedBy")
         public String createdBy;
 
-        /**
-         * <p>The default version number of the launch template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("DefaultVersionNumber")
         public Long defaultVersionNumber;
 
-        /**
-         * <p>The latest version number of the launch template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("LatestVersionNumber")
         public Long latestVersionNumber;
 
-        /**
-         * <p>The ID of the launch template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>lt-m5e3ofjr1zn1aw7q****</p>
-         */
         @NameInMap("LaunchTemplateId")
         public String launchTemplateId;
 
-        /**
-         * <p>The name of the launch template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>wd-152630748****</p>
-         */
         @NameInMap("LaunchTemplateName")
         public String launchTemplateName;
 
-        /**
-         * <p>The time when a version was added to or deleted from the launch template.</p>
-         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-05-14T14:18:00Z</p>
-         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
-        /**
-         * <p>The ID of the resource group to which the launch template belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-acfmxazb4p****</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        /**
-         * <p>The tags of the launch template.</p>
-         * <blockquote>
-         * <p> You can only call API operations to add tags to and query the tags of a launch template. You cannot add tags to or view the tags of a launch template in the ECS console.</p>
-         * </blockquote>
-         */
         @NameInMap("Tags")
         public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTags tags;
 

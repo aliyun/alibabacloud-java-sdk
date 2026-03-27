@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityGroupAttributeRequest extends TeaModel {
     /**
-     * <p>The attributes of the security group. Valid value: snapshotPolicyIds: queries information about snapshot policies associated with a security group.</p>
+     * <p>The attributes of the security group. Valid value:</p>
+     * <ul>
+     * <li>snapshotPolicyIds: queries information about snapshot policies associated with a security group.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>snapshotPolicyIds</p>

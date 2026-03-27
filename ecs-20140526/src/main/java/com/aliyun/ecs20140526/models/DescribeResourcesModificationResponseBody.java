@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeResourcesModificationResponseBody extends TeaModel {
-    /**
-     * <p>The information about the queried zones.</p>
-     */
     @NameInMap("AvailableZones")
     public DescribeResourcesModificationResponseBodyAvailableZones availableZones;
 
@@ -41,13 +38,6 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
     }
 
     public static class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceConditionSupportedResourcesConditionSupportedResourceConditionsCondition extends TeaModel {
-        /**
-         * <p>The condition name. Valid value:</p>
-         * <p>DiskCategory, which indicates a disk category change.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DiskCategory</p>
-         */
         @NameInMap("Key")
         public String key;
 
@@ -86,75 +76,24 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
     }
 
     public static class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceConditionSupportedResourcesConditionSupportedResource extends TeaModel {
-        /**
-         * <p>The conditions.</p>
-         */
         @NameInMap("Conditions")
         public DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceConditionSupportedResourcesConditionSupportedResourceConditions conditions;
 
-        /**
-         * <p>The maximum disk capacity.</p>
-         * <p>This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("Max")
         public Integer max;
 
-        /**
-         * <p>The minimum disk capacity.</p>
-         * <p>This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Min")
         public Integer min;
 
-        /**
-         * <p>The stock state of the resource. Valid values:</p>
-         * <ul>
-         * <li>Available</li>
-         * <li>SoldOut</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Available</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The category of the resource based on stock status. Valid values:</p>
-         * <ul>
-         * <li>WithStock: resources that are in sufficient stock</li>
-         * <li>ClosedWithStock: resources that are in insufficient stock</li>
-         * <li>WithoutStock: resources that are out of stock</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>WithStock</p>
-         */
         @NameInMap("StatusCategory")
         public String statusCategory;
 
-        /**
-         * <p>The unit of the disk capacity.</p>
-         * <p>This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
-         */
         @NameInMap("Unit")
         public String unit;
 
-        /**
-         * <p>The resource type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ecs.g5.large</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -241,68 +180,21 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
     }
 
     public static class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource extends TeaModel {
-        /**
-         * <p>The maximum disk capacity.</p>
-         * <p>This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("Max")
         public Integer max;
 
-        /**
-         * <p>The minimum disk capacity.</p>
-         * <p>This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Min")
         public Integer min;
 
-        /**
-         * <p>The state of the resource. Valid values:</p>
-         * <ul>
-         * <li>Available</li>
-         * <li>SoldOut</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Available</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The category of the resource based on stock status. Valid values:</p>
-         * <ul>
-         * <li>WithStock: resources that are in sufficient stock</li>
-         * <li>ClosedWithStock: resources that are in insufficient stock</li>
-         * <li>WithoutStock: resources that are out of stock</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>WithStock</p>
-         */
         @NameInMap("StatusCategory")
         public String statusCategory;
 
-        /**
-         * <p>The unit of the disk capacity. This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
-         */
         @NameInMap("Unit")
         public String unit;
 
-        /**
-         * <p>The resource type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ecs.g5.large</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -381,28 +273,12 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
     }
 
     public static class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource extends TeaModel {
-        /**
-         * <p>The resource types that resources can be changed to after the resources meet specified conditions. If the conditions are met, you can change the current resource to a resource in the list.</p>
-         */
         @NameInMap("ConditionSupportedResources")
         public DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceConditionSupportedResources conditionSupportedResources;
 
-        /**
-         * <p>The information about the supported resources.</p>
-         */
         @NameInMap("SupportedResources")
         public DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResources supportedResources;
 
-        /**
-         * <p>The resource type. Valid values:</p>
-         * <ul>
-         * <li>InstanceType</li>
-         * <li>SystemDisk</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>InstanceType</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -457,54 +333,18 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
     }
 
     public static class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZone extends TeaModel {
-        /**
-         * <p>The resources that are available in the zone.</p>
-         */
         @NameInMap("AvailableResources")
         public DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResources availableResources;
 
-        /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The state of the resource. Valid values:</p>
-         * <ul>
-         * <li>Available</li>
-         * <li>SoldOut</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Available</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The category of the resource based on stock status. Valid values:</p>
-         * <ul>
-         * <li>WithStock: resources that are in sufficient stock</li>
-         * <li>ClosedWithStock: resources that are in insufficient stock</li>
-         * <li>WithoutStock: resources that are out of stock</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>WithStock</p>
-         */
         @NameInMap("StatusCategory")
         public String statusCategory;
 
-        /**
-         * <p>The zone ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-e</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 

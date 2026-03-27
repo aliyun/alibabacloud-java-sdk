@@ -118,6 +118,9 @@ public class CreateDeploymentSetRequest extends TeaModel {
     @NameInMap("Strategy")
     public String strategy;
 
+    @NameInMap("Type")
+    public String type;
+
     public static CreateDeploymentSetRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDeploymentSetRequest self = new CreateDeploymentSetRequest();
         return TeaModel.build(map, self);
@@ -225,6 +228,14 @@ public class CreateDeploymentSetRequest extends TeaModel {
     }
     public String getStrategy() {
         return this.strategy;
+    }
+
+    public CreateDeploymentSetRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

@@ -33,21 +33,9 @@ public class CreateHpcClusterRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    /**
-     * <p>RAM用户的账号登录名称。</p>
-     * 
-     * <strong>example:</strong>
-     * <p><a href="mailto:ECSforCloud@Alibaba.com">ECSforCloud@Alibaba.com</a></p>
-     */
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    /**
-     * <p>RAM用户的虚拟账号ID。</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1234567890</p>
-     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -61,21 +49,9 @@ public class CreateHpcClusterRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>资源主账号的账号名称。</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ECSforCloud</p>
-     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    /**
-     * <p>资源主账号的ID，亦即UID。</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1234567890</p>
-     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 

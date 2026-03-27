@@ -13,9 +13,6 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <p>Details about the resources that are associated with the prefix list.</p>
-     */
     @NameInMap("PrefixListAssociations")
     public DescribePrefixListAssociationsResponseBodyPrefixListAssociations prefixListAssociations;
 
@@ -58,21 +55,9 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
     }
 
     public static class DescribePrefixListAssociationsResponseBodyPrefixListAssociationsPrefixListAssociation extends TeaModel {
-        /**
-         * <p>The ID of the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sg-bp11ujym6xsff6l0****</p>
-         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <p>The type of the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>securitygroup</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 

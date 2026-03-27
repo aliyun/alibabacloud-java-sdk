@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeElasticityAssurancesResponseBody extends TeaModel {
-    /**
-     * <p>Details about the elasticity assurances.</p>
-     */
     @NameInMap("ElasticityAssuranceSet")
     public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSet elasticityAssuranceSet;
 
@@ -92,36 +89,12 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
     }
 
     public static class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsagesElasticityAssuranceUsage extends TeaModel {
-        /**
-         * <blockquote>
-         * <p> This parameter is not publicly available.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>1144775968548340</p>
-         */
         @NameInMap("AccountId")
         public String accountId;
 
-        /**
-         * <blockquote>
-         * <p> This parameter is not publicly available.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>name</p>
-         */
         @NameInMap("ServiceName")
         public String serviceName;
 
-        /**
-         * <blockquote>
-         * <p> This parameter is not publicly available.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("UsedAmount")
         public Integer usedAmount;
 
@@ -176,58 +149,21 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
     }
 
     public static class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource extends TeaModel {
-        /**
-         * <blockquote>
-         * <p> This parameter is not publicly available.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>5</p>
-         */
         @NameInMap("AvailableAmount")
         public Integer availableAmount;
 
-        /**
-         * <blockquote>
-         * <p> This parameter is not publicly available.</p>
-         * </blockquote>
-         */
         @NameInMap("ElasticityAssuranceUsages")
         public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsages elasticityAssuranceUsages;
 
-        /**
-         * <p>The instance type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ecs.c6.large</p>
-         */
         @NameInMap("InstanceType")
         public String instanceType;
 
-        /**
-         * <p>The total number of instances for which capacity of an instance type is reserved.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("TotalAmount")
         public Integer totalAmount;
 
-        /**
-         * <p>The number of instances that have used the elasticity assurance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("UsedAmount")
         public Integer usedAmount;
 
-        /**
-         * <p>The zone ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-h</p>
-         */
         @NameInMap("zoneId")
         public String zoneId;
 
@@ -306,49 +242,15 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
     }
 
     public static class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemRecurrenceRulesRecurrenceRule extends TeaModel {
-        /**
-         * <p>The time when the time-segmented assurance ends.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("EndHour")
         public Integer endHour;
 
-        /**
-         * <p>The type of the recurrence rule. Valid values:</p>
-         * <ul>
-         * <li>Daily</li>
-         * <li>Weekly</li>
-         * <li>Monthly</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Daily</p>
-         */
         @NameInMap("RecurrenceType")
         public String recurrenceType;
 
-        /**
-         * <p>The recurrence value of the time-segmented assurance. Valid values:</p>
-         * <ul>
-         * <li>If you set <code>RecurrenceType</code> to <code>Daily</code>, you can set RecurrenceValue to only one value. Valid values: 1 to 31. The time-segmented assurance is performed every few days.</li>
-         * <li>If you set <code>RecurrenceType</code> to <code>Weekly</code>, you can set RecurrenceValue to one or more values. Separate the values with commas (,). The values that correspond to Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday are 0, 1, 2, 3, 4, 5, and 6. For example, <code>1,2</code> indicates that the time-segmented assurance is performed on Monday and Tuesday of every week.</li>
-         * <li>If you set <code>RecurrenceType</code> to <code>Monthly</code>, you can set RecurrenceValue to two values in the <code>A-B</code> format. Valid values of A and B: 1 to 31. B must be greater than or equal to A. For example, <code>1-5</code> indicates that the time-segmented assurance is performed from the 1st to the 5th of each month.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("RecurrenceValue")
         public String recurrenceValue;
 
-        /**
-         * <p>The time when the time-segmented assurance takes effect.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4</p>
-         */
         @NameInMap("StartHour")
         public Integer startHour;
 
@@ -411,21 +313,9 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
     }
 
     public static class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemTagsTag extends TeaModel {
-        /**
-         * <p>The key of the tag.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestKey</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The value of the tag.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestValue</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -472,189 +362,60 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
     }
 
     public static class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem extends TeaModel {
-        /**
-         * <p>Details of the allocated resources.</p>
-         */
         @NameInMap("AllocatedResources")
         public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResources allocatedResources;
 
-        /**
-         * <p>The description of the elasticity assurance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>This is description.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <blockquote>
-         * <p> This parameter is not publicly available.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>e114477596854834</p>
-         */
         @NameInMap("ElasticityAssuranceOwnerId")
         public String elasticityAssuranceOwnerId;
 
-        /**
-         * <p>The time when the elasticity assurance expires.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-12-03T16:00Z</p>
-         */
         @NameInMap("EndTime")
         public String endTime;
 
-        /**
-         * <p>The billing method of the instance. The value can be only PostPaid. Only pay-as-you-go instances can be created by using elasticity assurances.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PostPaid</p>
-         */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
-        /**
-         * <blockquote>
-         * <p>This parameter is not publicly available.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
-         */
         @NameInMap("LatestStartTime")
         public String latestStartTime;
 
-        /**
-         * <p>The type of the elasticity assurance. Valid values:</p>
-         * <ul>
-         * <li>ElasticityAssurance: the general-purpose elasticity assurance.</li>
-         * <li>TimeDivisionElasticityAssurance: the time-segmented assurance of the elasticity assurance.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ElasticityAssurance</p>
-         */
         @NameInMap("PackageType")
         public String packageType;
 
-        /**
-         * <p>The ID of the elasticity assurance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>eap-bp1ir35kqtn8ywci****</p>
-         */
         @NameInMap("PrivatePoolOptionsId")
         public String privatePoolOptionsId;
 
-        /**
-         * <p>The type of the private pool associated with the elasticity assurance. Valid values:</p>
-         * <ul>
-         * <li>Open: open private pool</li>
-         * <li>Target: specific private pool</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Target</p>
-         */
         @NameInMap("PrivatePoolOptionsMatchCriteria")
         public String privatePoolOptionsMatchCriteria;
 
-        /**
-         * <p>The name of the elasticity assurance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>eapTestName</p>
-         */
         @NameInMap("PrivatePoolOptionsName")
         public String privatePoolOptionsName;
 
-        /**
-         * <p>The recurrence rules of the time-segmented assurances.</p>
-         */
         @NameInMap("RecurrenceRules")
         public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemRecurrenceRules recurrenceRules;
 
-        /**
-         * <p>The region ID of the elasticity assurance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The ID of the resource group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-bp67acfmxazb4p****</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        /**
-         * <p>The time when the elasticity assurance takes effect.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-12-03T05:25Z</p>
-         */
         @NameInMap("StartTime")
         public String startTime;
 
-        /**
-         * <p>Indicates when the elasticity assurance takes effect. Valid values:</p>
-         * <ul>
-         * <li>Now: The elasticity assurance takes effect immediately after it is created.</li>
-         * <li>Later: The elasticity assurance takes effect at a specified time.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Now</p>
-         */
         @NameInMap("StartTimeType")
         public String startTimeType;
 
-        /**
-         * <p>The status of the elasticity assurance. Valid values:</p>
-         * <ul>
-         * <li>Preparing</li>
-         * <li>Prepared</li>
-         * <li>Active</li>
-         * <li>Released</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Active</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The tags of the elasticity assurance.</p>
-         */
         @NameInMap("Tags")
         public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemTags tags;
 
-        /**
-         * <p>The total number of times that the elasticity assurance is applied.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Unlimited</p>
-         */
         @NameInMap("TotalAssuranceTimes")
         public String totalAssuranceTimes;
 
-        /**
-         * <blockquote>
-         * <p>This parameter is not publicly available.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("UsedAssuranceTimes")
         public Integer usedAssuranceTimes;
 

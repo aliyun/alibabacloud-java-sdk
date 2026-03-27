@@ -113,6 +113,13 @@ public class DescribeLockedSnapshotsResponseBody extends TeaModel {
         public String lockExpiredTime;
 
         /**
+         * <strong>example:</strong>
+         * <p>compliance</p>
+         */
+        @NameInMap("LockMode")
+        public String lockMode;
+
+        /**
          * <p>The lock status. Valid values:</p>
          * <ul>
          * <li>compliance-cooloff: The snapshot is locked in compliance mode but is still in a cooling-off period. Snapshots cannot be deleted. However, users with the corresponding RAM permissions can unlock snapshots, extend or shorten the cooling-off period, and extend or shorten the lock duration.</li>
@@ -186,6 +193,14 @@ public class DescribeLockedSnapshotsResponseBody extends TeaModel {
         }
         public String getLockExpiredTime() {
             return this.lockExpiredTime;
+        }
+
+        public DescribeLockedSnapshotsResponseBodyLockedSnapshotsInfo setLockMode(String lockMode) {
+            this.lockMode = lockMode;
+            return this;
+        }
+        public String getLockMode() {
+            return this.lockMode;
         }
 
         public DescribeLockedSnapshotsResponseBodyLockedSnapshotsInfo setLockStatus(String lockStatus) {

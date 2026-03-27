@@ -31,9 +31,6 @@ public class DescribeTagsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The tags that match all filter conditions.</p>
-     */
     @NameInMap("Tags")
     public DescribeTagsResponseBodyTags tags;
 
@@ -92,111 +89,39 @@ public class DescribeTagsResponseBody extends TeaModel {
     }
 
     public static class DescribeTagsResponseBodyTagsTagResourceTypeCount extends TeaModel {
-        /**
-         * <p>The number of dedicated hosts to which the tag is added.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Ddh")
         public Integer ddh;
 
-        /**
-         * <p>The number of disks to which the tag is added.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>15</p>
-         */
         @NameInMap("Disk")
         public Integer disk;
 
-        /**
-         * <p>The number of ENIs to which the tag is added.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5</p>
-         */
         @NameInMap("Eni")
         public Integer eni;
 
-        /**
-         * <p>The number of images to which the tag is added.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6</p>
-         */
         @NameInMap("Image")
         public Integer image;
 
-        /**
-         * <p>The number of instances to which the tag is added.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>45</p>
-         */
         @NameInMap("Instance")
         public Integer instance;
 
-        /**
-         * <p>The number of key pairs to which the tag is added.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>17</p>
-         */
         @NameInMap("KeyPair")
         public Integer keyPair;
 
-        /**
-         * <p>The number of launch templates to which the tag is added.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6</p>
-         */
         @NameInMap("LaunchTemplate")
         public Integer launchTemplate;
 
-        /**
-         * <p>The number of reserved instances to which the tag is added.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4</p>
-         */
         @NameInMap("ReservedInstance")
         public Integer reservedInstance;
 
-        /**
-         * <p>The number of security groups to which the tag is added.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4</p>
-         */
         @NameInMap("Securitygroup")
         public Integer securitygroup;
 
-        /**
-         * <p>The number of snapshots to which the tag is added.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>15</p>
-         */
         @NameInMap("Snapshot")
         public Integer snapshot;
 
-        /**
-         * <p>The number of automatic snapshot policies to which the tag is added.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4</p>
-         */
         @NameInMap("SnapshotPolicy")
         public Integer snapshotPolicy;
 
-        /**
-         * <p>The number of storage volumes to which the tag is added.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6</p>
-         */
         @NameInMap("Volume")
         public Integer volume;
 
@@ -304,27 +229,12 @@ public class DescribeTagsResponseBody extends TeaModel {
     }
 
     public static class DescribeTagsResponseBodyTagsTag extends TeaModel {
-        /**
-         * <p>The number of resource types.</p>
-         */
         @NameInMap("ResourceTypeCount")
         public DescribeTagsResponseBodyTagsTagResourceTypeCount resourceTypeCount;
 
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestKey</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestValue</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 

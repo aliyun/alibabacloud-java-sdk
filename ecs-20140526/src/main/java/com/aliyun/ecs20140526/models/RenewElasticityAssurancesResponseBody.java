@@ -13,9 +13,6 @@ public class RenewElasticityAssurancesResponseBody extends TeaModel {
     @NameInMap("OrderId")
     public String orderId;
 
-    /**
-     * <p>The IDs of the elasticity assurances.</p>
-     */
     @NameInMap("PrivatePoolOptionsIdSet")
     public RenewElasticityAssurancesResponseBodyPrivatePoolOptionsIdSet privatePoolOptionsIdSet;
 

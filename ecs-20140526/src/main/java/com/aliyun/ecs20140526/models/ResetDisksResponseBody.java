@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ResetDisksResponseBody extends TeaModel {
-    /**
-     * <p>Details about the rollback operation.</p>
-     */
     @NameInMap("OperationProgressSet")
     public ResetDisksResponseBodyOperationProgressSet operationProgressSet;
 
@@ -41,21 +38,9 @@ public class ResetDisksResponseBody extends TeaModel {
     }
 
     public static class ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem extends TeaModel {
-        /**
-         * <p>The resource name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>SnapshotId</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The resource ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>s-j6cdofbycydvg7ey****</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -102,38 +87,15 @@ public class ResetDisksResponseBody extends TeaModel {
     }
 
     public static class ResetDisksResponseBodyOperationProgressSetOperationProgress extends TeaModel {
-        /**
-         * <p>The error code that is returned if the request failed. This parameter is empty if the request is successful.</p>
-         * <p>For information about error codes and error messages, see <a href="https://error-center.alibabacloud.com/status/product/Ecs">Service error codes</a>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>400</p>
-         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        /**
-         * <p>The error message that is returned if the request failed. This parameter is empty if the request is successful.</p>
-         * <p>For information about error codes and error messages, see <a href="https://error-center.alibabacloud.com/status/product/Ecs">Service error codes</a>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testErrorMsg</p>
-         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
-        /**
-         * <p>Indicates whether the request is successful. If the request is successful, Success is returned. If the request failed, an error code and an error message are returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Success</p>
-         */
         @NameInMap("OperationStatus")
         public String operationStatus;
 
-        /**
-         * <p>Details about the resources.</p>
-         */
         @NameInMap("RelatedItemSet")
         public ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSet relatedItemSet;
 

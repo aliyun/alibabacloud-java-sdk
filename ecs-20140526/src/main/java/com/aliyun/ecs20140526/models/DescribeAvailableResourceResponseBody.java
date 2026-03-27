@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceResponseBody extends TeaModel {
-    /**
-     * <p>The information about the availability of resources in the zones.</p>
-     */
     @NameInMap("AvailableZones")
     public DescribeAvailableResourceResponseBodyAvailableZones availableZones;
 
@@ -39,45 +36,21 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2048</p>
-         */
         @NameInMap("Max")
         public Integer max;
 
-        /**
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("Min")
         public Integer min;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Available</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <strong>example:</strong>
-         * <p>WithStock</p>
-         */
         @NameInMap("StatusCategory")
         public String statusCategory;
 
-        /**
-         * <strong>example:</strong>
-         * <p>GiB</p>
-         */
         @NameInMap("Unit")
         public String unit;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ecs.d1ne.xlarge</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -159,10 +132,6 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         @NameInMap("SupportedResources")
         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResources supportedResources;
 
-        /**
-         * <strong>example:</strong>
-         * <p>InstanceType</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -212,39 +181,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         @NameInMap("AvailableResources")
         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResources availableResources;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Available</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The resource status based on the stock level in the zone. Valid value:</p>
-         * <ul>
-         * <li>WithStock: The resources are available and can be continuously replenished.</li>
-         * <li>ClosedWithStock: Inventory is available, but resources will not be replenished. The ability to guarantee the supply of inventory is low. We recommend selecting a product specification in the WithStock state.</li>
-         * <li>WithoutStock: The resource is out of stock and will be replenished. We recommend using other resources that are in stock.</li>
-         * <li>ClosedWithoutStock: The resource is out of stock and will no longer be replenished. We recommend using other resources that are in stock.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>WithStock</p>
-         */
         @NameInMap("StatusCategory")
         public String statusCategory;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-e</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 

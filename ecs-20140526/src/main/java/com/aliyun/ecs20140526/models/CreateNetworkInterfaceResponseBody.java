@@ -13,21 +13,12 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <p>The IPv4 prefixes assigned to the ENI.</p>
-     */
     @NameInMap("Ipv4PrefixSets")
     public CreateNetworkInterfaceResponseBodyIpv4PrefixSets ipv4PrefixSets;
 
-    /**
-     * <p>The IPv6 prefixes assigned to the ENI.</p>
-     */
     @NameInMap("Ipv6PrefixSets")
     public CreateNetworkInterfaceResponseBodyIpv6PrefixSets ipv6PrefixSets;
 
-    /**
-     * <p>The IPv6 addresses assigned to the ENI.</p>
-     */
     @NameInMap("Ipv6Sets")
     public CreateNetworkInterfaceResponseBodyIpv6Sets ipv6Sets;
 
@@ -76,9 +67,6 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
-    /**
-     * <p>The private IP addresses.</p>
-     */
     @NameInMap("PrivateIpSets")
     public CreateNetworkInterfaceResponseBodyPrivateIpSets privateIpSets;
 
@@ -100,9 +88,6 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    /**
-     * <p>The IDs of the security groups to which the ENI belongs.</p>
-     */
     @NameInMap("SecurityGroupIds")
     public CreateNetworkInterfaceResponseBodySecurityGroupIds securityGroupIds;
 
@@ -144,9 +129,6 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
-    /**
-     * <p>The tags of the ENI.</p>
-     */
     @NameInMap("Tags")
     public CreateNetworkInterfaceResponseBodyTags tags;
 
@@ -368,12 +350,6 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     }
 
     public static class CreateNetworkInterfaceResponseBodyIpv4PrefixSetsIpv4PrefixSet extends TeaModel {
-        /**
-         * <p>The IPv4 prefix assigned to the ENI.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>hide</p>
-         */
         @NameInMap("Ipv4Prefix")
         public String ipv4Prefix;
 
@@ -412,12 +388,6 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     }
 
     public static class CreateNetworkInterfaceResponseBodyIpv6PrefixSetsIpv6PrefixSet extends TeaModel {
-        /**
-         * <p>The IPv6 prefix assigned to the ENI.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>hide</p>
-         */
         @NameInMap("Ipv6Prefix")
         public String ipv6Prefix;
 
@@ -456,12 +426,6 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     }
 
     public static class CreateNetworkInterfaceResponseBodyIpv6SetsIpv6Set extends TeaModel {
-        /**
-         * <p>The IPv6 address assigned to the ENI.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2001:db8:1234:1a00::****</p>
-         */
         @NameInMap("Ipv6Address")
         public String ipv6Address;
 
@@ -500,21 +464,9 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     }
 
     public static class CreateNetworkInterfaceResponseBodyPrivateIpSetsPrivateIpSet extends TeaModel {
-        /**
-         * <p>Indicates whether the private IP address is the primary private IP address.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Primary")
         public Boolean primary;
 
-        /**
-         * <p>The private IP address of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><code>172.17.**.**</code></p>
-         */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
 
@@ -580,21 +532,9 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     }
 
     public static class CreateNetworkInterfaceResponseBodyTagsTag extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestKey</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestValue</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 

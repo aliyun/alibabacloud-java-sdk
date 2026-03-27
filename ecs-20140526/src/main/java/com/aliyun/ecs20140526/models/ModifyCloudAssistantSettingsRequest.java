@@ -38,6 +38,9 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("ResourceUsageConfig")
+    public ModifyCloudAssistantSettingsRequestResourceUsageConfig resourceUsageConfig;
+
     /**
      * <p>Cloud Assistant Session Manager configuration.</p>
      */
@@ -127,6 +130,14 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public ModifyCloudAssistantSettingsRequest setResourceUsageConfig(ModifyCloudAssistantSettingsRequestResourceUsageConfig resourceUsageConfig) {
+        this.resourceUsageConfig = resourceUsageConfig;
+        return this;
+    }
+    public ModifyCloudAssistantSettingsRequestResourceUsageConfig getResourceUsageConfig() {
+        return this.resourceUsageConfig;
+    }
+
     public ModifyCloudAssistantSettingsRequest setSessionManagerConfig(ModifyCloudAssistantSettingsRequestSessionManagerConfig sessionManagerConfig) {
         this.sessionManagerConfig = sessionManagerConfig;
         return this;
@@ -160,6 +171,12 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
          */
         @NameInMap("AllowedUpgradeWindow")
         public java.util.List<String> allowedUpgradeWindow;
+
+        @NameInMap("BootstrapUpgrade")
+        public Boolean bootstrapUpgrade;
+
+        @NameInMap("DisableUpgrade")
+        public Boolean disableUpgrade;
 
         /**
          * <p>Specifies whether to enable custom upgrade for Cloud Assistant Agent. If you set this parameter to false, an upgrade attempt is performed for Cloud Assistant Agent every 30 minutes.</p>
@@ -195,6 +212,22 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
         }
         public java.util.List<String> getAllowedUpgradeWindow() {
             return this.allowedUpgradeWindow;
+        }
+
+        public ModifyCloudAssistantSettingsRequestAgentUpgradeConfig setBootstrapUpgrade(Boolean bootstrapUpgrade) {
+            this.bootstrapUpgrade = bootstrapUpgrade;
+            return this;
+        }
+        public Boolean getBootstrapUpgrade() {
+            return this.bootstrapUpgrade;
+        }
+
+        public ModifyCloudAssistantSettingsRequestAgentUpgradeConfig setDisableUpgrade(Boolean disableUpgrade) {
+            this.disableUpgrade = disableUpgrade;
+            return this;
+        }
+        public Boolean getDisableUpgrade() {
+            return this.disableUpgrade;
         }
 
         public ModifyCloudAssistantSettingsRequestAgentUpgradeConfig setEnabled(Boolean enabled) {
@@ -335,6 +368,80 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
         }
         public String getPrefix() {
             return this.prefix;
+        }
+
+    }
+
+    public static class ModifyCloudAssistantSettingsRequestResourceUsageConfig extends TeaModel {
+        @NameInMap("CpuLimit")
+        public Integer cpuLimit;
+
+        @NameInMap("KeepScriptFile")
+        public Boolean keepScriptFile;
+
+        @NameInMap("LogFileCountLimit")
+        public Integer logFileCountLimit;
+
+        @NameInMap("LogSizeLimit")
+        public String logSizeLimit;
+
+        @NameInMap("MemoryLimit")
+        public String memoryLimit;
+
+        @NameInMap("OverloadLimit")
+        public Integer overloadLimit;
+
+        public static ModifyCloudAssistantSettingsRequestResourceUsageConfig build(java.util.Map<String, ?> map) throws Exception {
+            ModifyCloudAssistantSettingsRequestResourceUsageConfig self = new ModifyCloudAssistantSettingsRequestResourceUsageConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyCloudAssistantSettingsRequestResourceUsageConfig setCpuLimit(Integer cpuLimit) {
+            this.cpuLimit = cpuLimit;
+            return this;
+        }
+        public Integer getCpuLimit() {
+            return this.cpuLimit;
+        }
+
+        public ModifyCloudAssistantSettingsRequestResourceUsageConfig setKeepScriptFile(Boolean keepScriptFile) {
+            this.keepScriptFile = keepScriptFile;
+            return this;
+        }
+        public Boolean getKeepScriptFile() {
+            return this.keepScriptFile;
+        }
+
+        public ModifyCloudAssistantSettingsRequestResourceUsageConfig setLogFileCountLimit(Integer logFileCountLimit) {
+            this.logFileCountLimit = logFileCountLimit;
+            return this;
+        }
+        public Integer getLogFileCountLimit() {
+            return this.logFileCountLimit;
+        }
+
+        public ModifyCloudAssistantSettingsRequestResourceUsageConfig setLogSizeLimit(String logSizeLimit) {
+            this.logSizeLimit = logSizeLimit;
+            return this;
+        }
+        public String getLogSizeLimit() {
+            return this.logSizeLimit;
+        }
+
+        public ModifyCloudAssistantSettingsRequestResourceUsageConfig setMemoryLimit(String memoryLimit) {
+            this.memoryLimit = memoryLimit;
+            return this;
+        }
+        public String getMemoryLimit() {
+            return this.memoryLimit;
+        }
+
+        public ModifyCloudAssistantSettingsRequestResourceUsageConfig setOverloadLimit(Integer overloadLimit) {
+            this.overloadLimit = overloadLimit;
+            return this;
+        }
+        public Integer getOverloadLimit() {
+            return this.overloadLimit;
         }
 
     }

@@ -31,9 +31,6 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Details about the storage sets. The value of this parameter is an array that consists of StorageSet data.</p>
-     */
     @NameInMap("StorageSets")
     public DescribeStorageSetsResponseBodyStorageSets storageSets;
 
@@ -141,72 +138,30 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
     }
 
     public static class DescribeStorageSetsResponseBodyStorageSetsStorageSet extends TeaModel {
-        /**
-         * <p>The time when the storage set was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-06-01T00:00:00Z</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>The description of the storage set.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testDescription</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the region to which the storage set belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        /**
-         * <p>The ID of the storage set.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ss-bp1d6tsvznfghy7y****</p>
-         */
         @NameInMap("StorageSetId")
         public String storageSetId;
 
-        /**
-         * <p>The name of the storage set.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testStorageSetName</p>
-         */
         @NameInMap("StorageSetName")
         public String storageSetName;
 
-        /**
-         * <p>The maximum number of partitions supported by the storage set.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("StorageSetPartitionNumber")
         public Integer storageSetPartitionNumber;
 
         @NameInMap("Tags")
         public DescribeStorageSetsResponseBodyStorageSetsStorageSetTags tags;
 
-        /**
-         * <p>The ID of the zone to which the storage set belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-g</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 

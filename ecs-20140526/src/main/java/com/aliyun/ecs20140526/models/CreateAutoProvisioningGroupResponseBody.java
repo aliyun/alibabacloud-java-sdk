@@ -13,9 +13,6 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
     @NameInMap("AutoProvisioningGroupId")
     public String autoProvisioningGroupId;
 
-    /**
-     * <p>The instances created by the auto provisioning group. The values of the parameters in this array are returned only when AutoProvisioningGroupType is set to <code>instant</code>.</p>
-     */
     @NameInMap("LaunchResults")
     public CreateAutoProvisioningGroupResponseBodyLaunchResults launchResults;
 
@@ -77,68 +74,24 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
     }
 
     public static class CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResult extends TeaModel {
-        /**
-         * <p>The number of created instances.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Amount")
         public Integer amount;
 
-        /**
-         * <p>The error code returned when the instance cannot be created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>InvalidParameter</p>
-         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        /**
-         * <p>The error message returned when the instance cannot be created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Specific parameter is not valid.</p>
-         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
-        /**
-         * <p>The IDs of created instances.</p>
-         */
         @NameInMap("InstanceIds")
         public CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResultInstanceIds instanceIds;
 
-        /**
-         * <p>The instance type of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ecs.g5.large</p>
-         */
         @NameInMap("InstanceType")
         public String instanceType;
 
-        /**
-         * <p>The bidding policy for the pay-as-you-go instance. Valid values:</p>
-         * <ul>
-         * <li>NoSpot: The instance is a regular pay-as-you-go instance.</li>
-         * <li>SpotWithPriceLimit: The instance is a spot instance for which you specify the maximum hourly price.</li>
-         * <li>SpotAsPriceGo: The instance is a spot instance for which the market price at the time of purchase is used as the bid price.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>NoSpot</p>
-         */
         @NameInMap("SpotStrategy")
         public String spotStrategy;
 
-        /**
-         * <p>The zone ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-g</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 

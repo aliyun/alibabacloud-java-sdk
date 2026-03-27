@@ -13,9 +13,6 @@ public class DescribePrefixListsResponseBody extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <p>Details about the prefix lists.</p>
-     */
     @NameInMap("PrefixLists")
     public DescribePrefixListsResponseBodyPrefixLists prefixLists;
 
@@ -58,22 +55,9 @@ public class DescribePrefixListsResponseBody extends TeaModel {
     }
 
     public static class DescribePrefixListsResponseBodyPrefixListsPrefixListTagsTag extends TeaModel {
-        /**
-         * <p>The tag value. A prefix list can have 1 to 20 tags. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http:// or https://</code>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestValue</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag key. A prefix list can have 1 to 20 tags. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestKey</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -120,85 +104,30 @@ public class DescribePrefixListsResponseBody extends TeaModel {
     }
 
     public static class DescribePrefixListsResponseBodyPrefixListsPrefixList extends TeaModel {
-        /**
-         * <p>The IP address family of the prefix list. Valid values:</p>
-         * <ul>
-         * <li>IPv4</li>
-         * <li>IPv6</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>IPv4</p>
-         */
         @NameInMap("AddressFamily")
         public String addressFamily;
 
-        /**
-         * <p>The number of associated resources.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("AssociationCount")
         public Integer associationCount;
 
-        /**
-         * <p>The time when the prefix list was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-02-20T07:11Z</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>The description of the prefix list.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>This is description.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The maximum number of entries that the prefix list can contain.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("MaxEntries")
         public Integer maxEntries;
 
-        /**
-         * <p>The ID of the prefix list.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>pl-x1j1k5ykzqlixdcy****</p>
-         */
         @NameInMap("PrefixListId")
         public String prefixListId;
 
-        /**
-         * <p>The name of the prefix list.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PrefixListNameSample</p>
-         */
         @NameInMap("PrefixListName")
         public String prefixListName;
 
-        /**
-         * <p>The ID of the resource group to which the prefix list belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-bp67acfmxazb4p****</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        /**
-         * <p>The tags of the prefix list.</p>
-         */
         @NameInMap("Tags")
         public DescribePrefixListsResponseBodyPrefixListsPrefixListTags tags;
 

@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageSharePermissionResponseBody extends TeaModel {
-    /**
-     * <p>The Alibaba Cloud accounts.</p>
-     */
     @NameInMap("Accounts")
     public DescribeImageSharePermissionResponseBodyAccounts accounts;
 
@@ -55,9 +52,6 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The shared groups.</p>
-     */
     @NameInMap("ShareGroups")
     public DescribeImageSharePermissionResponseBodyShareGroups shareGroups;
 
@@ -140,21 +134,9 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
     }
 
     public static class DescribeImageSharePermissionResponseBodyAccountsAccount extends TeaModel {
-        /**
-         * <p>The ID of the Alibaba Cloud account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1234567890</p>
-         */
         @NameInMap("AliyunId")
         public String aliyunId;
 
-        /**
-         * <p>The time when the image was shared. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2023-01-01T12:05:00Z</p>
-         */
         @NameInMap("SharedTime")
         public String sharedTime;
 
@@ -201,12 +183,6 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
     }
 
     public static class DescribeImageSharePermissionResponseBodyShareGroupsShareGroup extends TeaModel {
-        /**
-         * <p>The shared group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>all</p>
-         */
         @NameInMap("Group")
         public String group;
 

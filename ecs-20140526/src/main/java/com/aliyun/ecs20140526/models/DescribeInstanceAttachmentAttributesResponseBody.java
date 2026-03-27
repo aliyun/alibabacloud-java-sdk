@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
-    /**
-     * <p>The information about the association between private pools and instances.</p>
-     */
     @NameInMap("Instances")
     public DescribeInstanceAttachmentAttributesResponseBodyInstances instances;
 
@@ -92,35 +89,12 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceAttachmentAttributesResponseBodyInstancesInstance extends TeaModel {
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-bp67acfmxazb4****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The ID of the private pool. If the value of <code>PrivatePoolOptionsMatchCriteria</code> is <code>Open</code>, the value of PrivatePoolOptionsId is the ID of the private pool that is automatically matched to the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>eap-bp67acfmxazb4****</p>
-         */
         @NameInMap("PrivatePoolOptionsId")
         public String privatePoolOptionsId;
 
-        /**
-         * <p>The match mode of the private pool. Valid values:</p>
-         * <ul>
-         * <li>Open: open private pool. Instances automatically match an open private pool.</li>
-         * <li>Target: specified private pool. Instances match a specified private pool.</li>
-         * <li>None: no private pool. Instances do not use private pools.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Open</p>
-         */
         @NameInMap("PrivatePoolOptionsMatchCriteria")
         public String privatePoolOptionsMatchCriteria;
 

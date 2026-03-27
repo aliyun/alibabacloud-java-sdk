@@ -85,21 +85,12 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <p>The IPv4 prefixes of the ENI.</p>
-     */
     @NameInMap("Ipv4PrefixSets")
     public DescribeNetworkInterfaceAttributeResponseBodyIpv4PrefixSets ipv4PrefixSets;
 
-    /**
-     * <p>The IPv6 prefixes of the ENI.</p>
-     */
     @NameInMap("Ipv6PrefixSets")
     public DescribeNetworkInterfaceAttributeResponseBodyIpv6PrefixSets ipv6PrefixSets;
 
-    /**
-     * <p>The IPv6 addresses of the ENI.</p>
-     */
     @NameInMap("Ipv6Sets")
     public DescribeNetworkInterfaceAttributeResponseBodyIpv6Sets ipv6Sets;
 
@@ -170,9 +161,6 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
-    /**
-     * <p>The private IP addresses of the ENI.</p>
-     */
     @NameInMap("PrivateIpSets")
     public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSets privateIpSets;
 
@@ -243,9 +231,6 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    /**
-     * <p>The IDs of the security groups to which the ENI belongs.</p>
-     */
     @NameInMap("SecurityGroupIds")
     public DescribeNetworkInterfaceAttributeResponseBodySecurityGroupIds securityGroupIds;
 
@@ -301,9 +286,6 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
-    /**
-     * <p>The tags of the ENI.</p>
-     */
     @NameInMap("Tags")
     public DescribeNetworkInterfaceAttributeResponseBodyTags tags;
 
@@ -743,11 +725,6 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <blockquote>
-         * <p> This parameter is in invitational preview and unavailable for general users.</p>
-         * </blockquote>
-         */
         @NameInMap("MemberNetworkInterfaceIds")
         public DescribeNetworkInterfaceAttributeResponseBodyAttachmentMemberNetworkInterfaceIds memberNetworkInterfaceIds;
 
@@ -823,36 +800,12 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyBondInterfaceSpecificationSlaveInterfaceSpecificationSlaveInterfaceSpecificationSet extends TeaModel {
-        /**
-         * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
-         */
         @NameInMap("BondNetworkInterfaceId")
         public String bondNetworkInterfaceId;
 
-        /**
-         * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
-         */
         @NameInMap("SlaveNetworkInterfaceId")
         public String slaveNetworkInterfaceId;
 
-        /**
-         * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
-         */
         @NameInMap("WorkState")
         public String workState;
 
@@ -918,11 +871,6 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         @NameInMap("BondMode")
         public String bondMode;
 
-        /**
-         * <blockquote>
-         * <p> This parameter is in invitational preview and unavailable for general users.</p>
-         * </blockquote>
-         */
         @NameInMap("SlaveInterfaceSpecification")
         public DescribeNetworkInterfaceAttributeResponseBodyBondInterfaceSpecificationSlaveInterfaceSpecification slaveInterfaceSpecification;
 
@@ -1081,12 +1029,6 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyIpv4PrefixSetsIpv4PrefixSet extends TeaModel {
-        /**
-         * <p>The IPv4 prefix of the ENI.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>192.168.**.0/28</p>
-         */
         @NameInMap("Ipv4Prefix")
         public String ipv4Prefix;
 
@@ -1125,12 +1067,6 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyIpv6PrefixSetsIpv6PrefixSet extends TeaModel {
-        /**
-         * <p>The IPv6 prefix of the ENI.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2001:db8:1234:1a00:****::/80</p>
-         */
         @NameInMap("Ipv6Prefix")
         public String ipv6Prefix;
 
@@ -1169,12 +1105,6 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyIpv6SetsIpv6Set extends TeaModel {
-        /**
-         * <p>The IPv6 address of the ENI.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2001:db8:1234:1a00::****</p>
-         */
         @NameInMap("Ipv6Address")
         public String ipv6Address;
 
@@ -1272,23 +1202,9 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp extends TeaModel {
-        /**
-         * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
-         */
         @NameInMap("AllocationId")
         public String allocationId;
 
-        /**
-         * <p>The EIP.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><code>116.62.**.**</code></p>
-         */
         @NameInMap("PublicIpAddress")
         public String publicIpAddress;
 
@@ -1316,31 +1232,12 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet extends TeaModel {
-        /**
-         * <p>The EIP that is associated with the secondary private IP address of the ENI.</p>
-         */
         @NameInMap("AssociatedPublicIp")
         public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp associatedPublicIp;
 
-        /**
-         * <p>Indicates whether the IP address is the primary private IP address. Valid values:</p>
-         * <ul>
-         * <li>true: The IP address is the primary private IP address.</li>
-         * <li>false: The IP address is a secondary private IP address.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Primary")
         public Boolean primary;
 
-        /**
-         * <p>The private IP address of the ENI.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><code>172.17.**.**</code></p>
-         */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
 
@@ -1608,21 +1505,9 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyTagsTag extends TeaModel {
-        /**
-         * <p>The tag key of the ENI.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestKey</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag value of the ENI.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestValue</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 

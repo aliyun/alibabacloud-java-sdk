@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeElasticityAssuranceAutoRenewAttributeResponseBody extends TeaModel {
-    /**
-     * <p>The auto-renewal attribute of the elasticity assurances.</p>
-     */
     @NameInMap("ElasticityAssuranceRenewAttributes")
     public DescribeElasticityAssuranceAutoRenewAttributeResponseBodyElasticityAssuranceRenewAttributes elasticityAssuranceRenewAttributes;
 
@@ -41,48 +38,15 @@ public class DescribeElasticityAssuranceAutoRenewAttributeResponseBody extends T
     }
 
     public static class DescribeElasticityAssuranceAutoRenewAttributeResponseBodyElasticityAssuranceRenewAttributesElasticityAssuranceRenewAttribute extends TeaModel {
-        /**
-         * <p>The auto-renewal period. Valid values: Valid values: 1, 2, 3, 6, 12, 24, and 36.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Period")
         public Integer period;
 
-        /**
-         * <p>The unit of the auto-renewal period. Valid values:</p>
-         * <ul>
-         * <li>Month (default)</li>
-         * <li>Year</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Month</p>
-         */
         @NameInMap("PeriodUnit")
         public String periodUnit;
 
-        /**
-         * <p>The ID of the elasticity assurance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>eap-bp67acfmxazb4****</p>
-         */
         @NameInMap("PrivatePoolOptionsId")
         public String privatePoolOptionsId;
 
-        /**
-         * <p>Indicates whether auto-renewal is enabled for the elasticity assurance. Valid values:</p>
-         * <ul>
-         * <li>AutoRenewal: Auto-renewal is enabled for the elasticity assurance.</li>
-         * <li>Normal: Auto-renewal is disabled for the elasticity assurance.</li>
-         * <li>NotRenewal: The elasticity assurance is not renewed.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Normal</p>
-         */
         @NameInMap("RenewalStatus")
         public String renewalStatus;
 

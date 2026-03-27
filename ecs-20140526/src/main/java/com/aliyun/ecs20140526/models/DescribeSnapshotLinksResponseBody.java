@@ -40,9 +40,6 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information about the snapshot chains.</p>
-     */
     @NameInMap("SnapshotLinks")
     public DescribeSnapshotLinksResponseBodySnapshotLinks snapshotLinks;
 
@@ -112,127 +109,39 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
     }
 
     public static class DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink extends TeaModel {
-        /**
-         * <p>The type of the snapshot chain. Valid values:</p>
-         * <ul>
-         * <li>standard: standard snapshot chain.</li>
-         * <li>archive: archive snapshot chain.</li>
-         * <li>flash: instant access snapshot chain.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>standard</p>
-         */
         @NameInMap("Category")
         public String category;
 
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-bp1h6jmbefj2cyqs****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The name of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testInstanceName</p>
-         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        /**
-         * <p>Indicates whether the instant access feature is enabled. Valid values:</p>
-         * <ul>
-         * <li>true: The instant access feature is enabled. The feature can be enabled only for Enterprise SSDs (ESSDs).</li>
-         * <li>false: The instant access feature is disabled. The snapshot is a standard snapshot for which the instant access feature is disabled.</li>
-         * </ul>
-         * <blockquote>
-         * <p> This parameter is no longer used. By default, standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("InstantAccess")
         public Boolean instantAccess;
 
-        /**
-         * <p>The region ID of the source disk.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The ID of the snapshot chain.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sl-2ze0y1jwzpb1geqx****</p>
-         */
         @NameInMap("SnapshotLinkId")
         public String snapshotLinkId;
 
-        /**
-         * <p>The ID of the source disk. This parameter is retained even if the source disk is deleted.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>d-bp1d6tsvznfghy7y****</p>
-         */
         @NameInMap("SourceDiskId")
         public String sourceDiskId;
 
-        /**
-         * <p>The name of the source disk.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testSourceDiskName</p>
-         */
         @NameInMap("SourceDiskName")
         public String sourceDiskName;
 
-        /**
-         * <p>The capacity of the source disk. Unit: GiB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>40</p>
-         */
         @NameInMap("SourceDiskSize")
         public Integer sourceDiskSize;
 
-        /**
-         * <p>The type of the source disk. Valid values:</p>
-         * <ul>
-         * <li>system: system disk</li>
-         * <li>data: data disk</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>data</p>
-         */
         @NameInMap("SourceDiskType")
         public String sourceDiskType;
 
-        /**
-         * <p>The total number of snapshots.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        /**
-         * <p>The total size of all snapshots in the snapshot chain. Unit: byte.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2097152</p>
-         */
         @NameInMap("TotalSize")
         public Long totalSize;
 

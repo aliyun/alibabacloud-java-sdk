@@ -41,21 +41,9 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRulesRule extends TeaModel {
-        /**
-         * <p>The description of the pricing rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Receive a 15% discount on a 1-year subscription</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the pricing rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>587</p>
-         */
         @NameInMap("RuleId")
         public Long ruleId;
 
@@ -102,52 +90,18 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyPriceInfoPriceDetailInfosDetailInfo extends TeaModel {
-        /**
-         * <p>The discount.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>655.2</p>
-         */
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
-        /**
-         * <p>The original price.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4368</p>
-         */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
-        /**
-         * <p>The resource name. Valid values:</p>
-         * <ul>
-         * <li>InstanceType</li>
-         * <li>bandwidth</li>
-         * <li>image</li>
-         * <li>SystemDisk</li>
-         * <li>DataDisk</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>instance</p>
-         */
         @NameInMap("Resource")
         public String resource;
 
-        /**
-         * <p>Details about the pricing rules.</p>
-         */
         @NameInMap("SubRules")
         public DescribePriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRules subRules;
 
-        /**
-         * <p>The transaction price.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3712.8</p>
-         */
         @NameInMap("TradePrice")
         public Float tradePrice;
 
@@ -229,12 +183,6 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("Currency")
         public String currency;
 
-        /**
-         * <p>The information about the price.</p>
-         * <blockquote>
-         * <p> This parameter is returned only when ResourceType is set to instance.</p>
-         * </blockquote>
-         */
         @NameInMap("DetailInfos")
         public DescribePriceResponseBodyPriceInfoPriceDetailInfos detailInfos;
 
@@ -430,21 +378,9 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyPriceInfoRulesRule extends TeaModel {
-        /**
-         * <p>The description of the promotion rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Receive a 15% discount on a 1-year subscription</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the pricing rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>587</p>
-         */
         @NameInMap("RuleId")
         public Long ruleId;
 
@@ -503,9 +439,6 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("RelatedPrice")
         public DescribePriceResponseBodyPriceInfoRelatedPrice relatedPrice;
 
-        /**
-         * <p>The information about the promotion rules.</p>
-         */
         @NameInMap("Rules")
         public DescribePriceResponseBodyPriceInfoRules rules;
 

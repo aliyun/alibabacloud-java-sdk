@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiskMonitorDataResponseBody extends TeaModel {
-    /**
-     * <p>The monitoring data of the disk.</p>
-     */
     @NameInMap("MonitorData")
     public DescribeDiskMonitorDataResponseBodyMonitorData monitorData;
 
@@ -58,93 +55,33 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDiskMonitorDataResponseBodyMonitorDataDiskMonitorData extends TeaModel {
-        /**
-         * <p>The read bandwidth of the disk. Unit: byte/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("BPSRead")
         public Integer BPSRead;
 
-        /**
-         * <p>The total read and write bandwidth of the disk. Unit: byte/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>204</p>
-         */
         @NameInMap("BPSTotal")
         public Integer BPSTotal;
 
-        /**
-         * <p>The write bandwidth of the disk. Unit: byte/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>204</p>
-         */
         @NameInMap("BPSWrite")
         public Integer BPSWrite;
 
-        /**
-         * <p>The ID of the disk.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>d-bp1bq5g3dxxo1x4o****</p>
-         */
         @NameInMap("DiskId")
         public String diskId;
 
-        /**
-         * <p>The number of read I/O operations per second on the disk.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("IOPSRead")
         public Integer IOPSRead;
 
-        /**
-         * <p>The total number of read and write I/O operations per second on the disk.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("IOPSTotal")
         public Integer IOPSTotal;
 
-        /**
-         * <p>The number of write I/O operations per second on the disk.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("IOPSWrite")
         public Integer IOPSWrite;
 
-        /**
-         * <p>The read latency of the disk. Unit: microseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("LatencyRead")
         public Integer latencyRead;
 
-        /**
-         * <p>The write latency of the disk. Unit: microseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("LatencyWrite")
         public Integer latencyWrite;
 
-        /**
-         * <p>The timestamp of the monitoring data. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2014-07-23T12:07:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

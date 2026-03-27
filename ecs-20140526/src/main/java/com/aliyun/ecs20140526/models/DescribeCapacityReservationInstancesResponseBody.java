@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
-    /**
-     * <p>Details about the instances that match the capacity reservation.</p>
-     */
     @NameInMap("CapacityReservationItem")
     public DescribeCapacityReservationInstancesResponseBodyCapacityReservationItem capacityReservationItem;
 
@@ -92,12 +89,6 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeCapacityReservationInstancesResponseBodyCapacityReservationItemInstanceIdSet extends TeaModel {
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-bp67acfmxazb4****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 

@@ -116,9 +116,6 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("ImageId")
     public String imageId;
 
-    /**
-     * <p>The internal IP address of the instance located in the classic network.</p>
-     */
     @NameInMap("InnerIpAddress")
     public DescribeInstanceAttributeResponseBodyInnerIpAddress innerIpAddress;
 
@@ -240,22 +237,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("NetworkOptions")
     public DescribeInstanceAttributeResponseBodyNetworkOptions networkOptions;
 
-    /**
-     * <p>The reason why the instance was locked. Valid values:</p>
-     * <ul>
-     * <li>financial: The dedicated host was locked due to overdue payments.</li>
-     * <li>security: The instance was locked due to security reasons.</li>
-     * <li>recycling: The spot instance was locked and pending release.</li>
-     * <li>dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.</li>
-     * <li>refunded: The instance was locked because a refund was made for the instance.</li>
-     * </ul>
-     */
     @NameInMap("OperationLocks")
     public DescribeInstanceAttributeResponseBodyOperationLocks operationLocks;
 
-    /**
-     * <p>The public IP address of the instance.</p>
-     */
     @NameInMap("PublicIpAddress")
     public DescribeInstanceAttributeResponseBodyPublicIpAddress publicIpAddress;
 
@@ -277,9 +261,6 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The IDs of the security groups to which the instance belongs.</p>
-     */
     @NameInMap("SecurityGroupIds")
     public DescribeInstanceAttributeResponseBodySecurityGroupIds securityGroupIds;
 
@@ -843,19 +824,6 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceAttributeResponseBodyOperationLocksLockReason extends TeaModel {
-        /**
-         * <p>The reason why the instance was locked. Valid values:</p>
-         * <ul>
-         * <li>financial: The instance was locked due to overdue payments.</li>
-         * <li>security: The instance was locked due to security reasons.</li>
-         * <li>recycling: The spot instance was locked and pending release.</li>
-         * <li>dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.</li>
-         * <li>refunded: The instance was locked because a refund is made for the instance.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>financial</p>
-         */
         @NameInMap("LockReason")
         public String lockReason;
 
@@ -960,9 +928,6 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("NatIpAddress")
         public String natIpAddress;
 
-        /**
-         * <p>The private IP address of the instance.</p>
-         */
         @NameInMap("PrivateIpAddress")
         public DescribeInstanceAttributeResponseBodyVpcAttributesPrivateIpAddress privateIpAddress;
 

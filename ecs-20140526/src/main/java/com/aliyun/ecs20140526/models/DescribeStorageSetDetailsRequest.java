@@ -22,17 +22,9 @@ public class DescribeStorageSetDetailsRequest extends TeaModel {
     @NameInMap("DiskIds")
     public String diskIds;
 
-    /**
-     * <strong>example:</strong>
-     * <p>hide</p>
-     */
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    /**
-     * <strong>example:</strong>
-     * <p>111</p>
-     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -68,17 +60,9 @@ public class DescribeStorageSetDetailsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>hide</p>
-     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    /**
-     * <strong>example:</strong>
-     * <p>111</p>
-     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 

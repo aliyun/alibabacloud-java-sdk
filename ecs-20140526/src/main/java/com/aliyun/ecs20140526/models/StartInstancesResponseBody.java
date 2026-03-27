@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class StartInstancesResponseBody extends TeaModel {
-    /**
-     * <p>The information about the ECS instance, such as the status of each instance before and after the operation is called and the operation results.</p>
-     */
     @NameInMap("InstanceResponses")
     public StartInstancesResponseBodyInstanceResponses instanceResponses;
 
@@ -41,48 +38,18 @@ public class StartInstancesResponseBody extends TeaModel {
     }
 
     public static class StartInstancesResponseBodyInstanceResponsesInstanceResponse extends TeaModel {
-        /**
-         * <p>The error code that is returned for the operation on the ECS instance. The value 200 indicates that the operation is successful. For more information, see the &quot;Error codes&quot; section in this topic.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <p>The status of the ECS instance after the operation is called.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Starting</p>
-         */
         @NameInMap("CurrentStatus")
         public String currentStatus;
 
-        /**
-         * <p>The ID of the ECS instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-bp67acfmxazb4p****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The error message that is returned for the operation on the ECS instance. The value success indicates that the operation is successful. For more information, see the &quot;Error codes&quot; section in this topic.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>success</p>
-         */
         @NameInMap("Message")
         public String message;
 
-        /**
-         * <p>The status of the ECS instance before the operation is called.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Stopped</p>
-         */
         @NameInMap("PreviousStatus")
         public String previousStatus;
 

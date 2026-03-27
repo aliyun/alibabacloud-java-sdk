@@ -41,21 +41,9 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRulesRule extends TeaModel {
-        /**
-         * <p>The description of the pricing rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>If you subscribe to an instance for one year, you can receive a 15% discount off the list price.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the pricing rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>315716429631488</p>
-         */
         @NameInMap("RuleId")
         public Long ruleId;
 
@@ -102,52 +90,18 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo extends TeaModel {
-        /**
-         * <p>The discount.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>655.2</p>
-         */
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
-        /**
-         * <p>The original price.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4368</p>
-         */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
-        /**
-         * <p>The resource name. Valid values:</p>
-         * <ul>
-         * <li>InstanceType</li>
-         * <li>bandwidth</li>
-         * <li>image</li>
-         * <li>SystemDisk</li>
-         * <li>DataDisk</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>instanceType</p>
-         */
         @NameInMap("Resource")
         public String resource;
 
-        /**
-         * <p>The pricing rules.</p>
-         */
         @NameInMap("SubRules")
         public DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRules subRules;
 
-        /**
-         * <p>The transaction price.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3712.8</p>
-         */
         @NameInMap("TradePrice")
         public Float tradePrice;
 
@@ -231,12 +185,6 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
         @NameInMap("Currency")
         public String currency;
 
-        /**
-         * <p>The information about the price.</p>
-         * <blockquote>
-         * <p> This parameter is returned only when ResourceType is set to instance.</p>
-         * </blockquote>
-         */
         @NameInMap("DetailInfos")
         public DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfos detailInfos;
 
@@ -315,21 +263,9 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceModificationPriceResponseBodyPriceInfoRulesRule extends TeaModel {
-        /**
-         * <p>The description of the promotion rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Upgrade offers</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the promotion rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1234567890</p>
-         */
         @NameInMap("RuleId")
         public Long ruleId;
 
@@ -382,9 +318,6 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
         @NameInMap("Price")
         public DescribeInstanceModificationPriceResponseBodyPriceInfoPrice price;
 
-        /**
-         * <p>The information about the promotion rules.</p>
-         */
         @NameInMap("Rules")
         public DescribeInstanceModificationPriceResponseBodyPriceInfoRules rules;
 

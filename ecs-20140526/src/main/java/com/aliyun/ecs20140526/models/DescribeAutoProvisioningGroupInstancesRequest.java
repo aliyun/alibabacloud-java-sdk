@@ -14,17 +14,9 @@ public class DescribeAutoProvisioningGroupInstancesRequest extends TeaModel {
     @NameInMap("AutoProvisioningGroupId")
     public String autoProvisioningGroupId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>123456</p>
-     */
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    /**
-     * <strong>example:</strong>
-     * <p>123456</p>
-     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -60,17 +52,9 @@ public class DescribeAutoProvisioningGroupInstancesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>123456</p>
-     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    /**
-     * <strong>example:</strong>
-     * <p>123456</p>
-     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
