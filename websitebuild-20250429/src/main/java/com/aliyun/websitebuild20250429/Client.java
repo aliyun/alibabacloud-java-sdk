@@ -1193,6 +1193,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BizId", request.bizId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.extend)) {
+            query.put("Extend", request.extend);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceConditions)) {
             query.put("ResourceConditions", request.resourceConditions);
         }
