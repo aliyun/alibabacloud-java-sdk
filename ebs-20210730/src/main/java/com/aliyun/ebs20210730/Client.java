@@ -581,6 +581,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Triggers a diagnostic.</p>
+     * 
+     * @param request CreateDiagnoseReportRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDiagnoseReportResponse
+     */
+    public CreateDiagnoseReportResponse createDiagnoseReportWithOptions(CreateDiagnoseReportRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.diagnoseType)) {
+            query.put("DiagnoseType", request.diagnoseType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDiagnoseReport"),
+            new TeaPair("version", "2021-07-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDiagnoseReportResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Triggers a diagnostic.</p>
+     * 
+     * @param request CreateDiagnoseReportRequest
+     * @return CreateDiagnoseReportResponse
+     */
+    public CreateDiagnoseReportResponse createDiagnoseReport(CreateDiagnoseReportRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDiagnoseReportWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h2><a href="#"></a>Usage notes</h2>
      * <p>The replication pair-consistent group feature allows you to batch manage multiple disks in disaster recovery scenarios. You can restore the data of all disks in the same replication pair-consistent group to the same point in time to allow for disaster recovery of instances.
@@ -1422,6 +1490,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDedicatedBlockStorageClustersResponse describeDedicatedBlockStorageClusters(DescribeDedicatedBlockStorageClustersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDedicatedBlockStorageClustersWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries diagnostic reports.</p>
+     * 
+     * @param request DescribeDiagnoseReportRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDiagnoseReportResponse
+     */
+    public DescribeDiagnoseReportResponse describeDiagnoseReportWithOptions(DescribeDiagnoseReportRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.diagnoseType)) {
+            query.put("DiagnoseType", request.diagnoseType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reportIds)) {
+            query.put("ReportIds", request.reportIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceIds)) {
+            query.put("ResourceIds", request.resourceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDiagnoseReport"),
+            new TeaPair("version", "2021-07-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDiagnoseReportResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries diagnostic reports.</p>
+     * 
+     * @param request DescribeDiagnoseReportRequest
+     * @return DescribeDiagnoseReportResponse
+     */
+    public DescribeDiagnoseReportResponse describeDiagnoseReport(DescribeDiagnoseReportRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDiagnoseReportWithOptions(request, runtime);
     }
 
     /**
