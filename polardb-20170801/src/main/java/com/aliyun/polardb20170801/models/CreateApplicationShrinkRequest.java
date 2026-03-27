@@ -155,6 +155,25 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    @NameInMap("SecurityIPArrayName")
+    public String securityIPArrayName;
+
+    @NameInMap("SecurityIPList")
+    public String securityIPList;
+
+    @NameInMap("SecurityIPType")
+    public String securityIPType;
+
+    @NameInMap("Tag")
+    public java.util.List<CreateApplicationShrinkRequestTag> tag;
+
+    /**
+     * <strong>example:</strong>
+     * <p>latest</p>
+     */
+    @NameInMap("TargetVersion")
+    public String targetVersion;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -384,6 +403,46 @@ public class CreateApplicationShrinkRequest extends TeaModel {
         return this.securityGroupId;
     }
 
+    public CreateApplicationShrinkRequest setSecurityIPArrayName(String securityIPArrayName) {
+        this.securityIPArrayName = securityIPArrayName;
+        return this;
+    }
+    public String getSecurityIPArrayName() {
+        return this.securityIPArrayName;
+    }
+
+    public CreateApplicationShrinkRequest setSecurityIPList(String securityIPList) {
+        this.securityIPList = securityIPList;
+        return this;
+    }
+    public String getSecurityIPList() {
+        return this.securityIPList;
+    }
+
+    public CreateApplicationShrinkRequest setSecurityIPType(String securityIPType) {
+        this.securityIPType = securityIPType;
+        return this;
+    }
+    public String getSecurityIPType() {
+        return this.securityIPType;
+    }
+
+    public CreateApplicationShrinkRequest setTag(java.util.List<CreateApplicationShrinkRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateApplicationShrinkRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public CreateApplicationShrinkRequest setTargetVersion(String targetVersion) {
+        this.targetVersion = targetVersion;
+        return this;
+    }
+    public String getTargetVersion() {
+        return this.targetVersion;
+    }
+
     public CreateApplicationShrinkRequest setUsedTime(String usedTime) {
         this.usedTime = usedTime;
         return this;
@@ -414,6 +473,44 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public static class CreateApplicationShrinkRequestTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>testKey</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <strong>example:</strong>
+         * <p>testValue</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateApplicationShrinkRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateApplicationShrinkRequestTag self = new CreateApplicationShrinkRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateApplicationShrinkRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateApplicationShrinkRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

@@ -1920,6 +1920,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SecurityGroupId", request.securityGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.securityIPArrayName)) {
+            query.put("SecurityIPArrayName", request.securityIPArrayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityIPList)) {
+            query.put("SecurityIPList", request.securityIPList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityIPType)) {
+            query.put("SecurityIPType", request.securityIPType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetVersion)) {
+            query.put("TargetVersion", request.targetVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.usedTime)) {
             query.put("UsedTime", request.usedTime);
         }
@@ -5749,6 +5769,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteParameterGroupResponse deleteParameterGroup(DeleteParameterGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteParameterGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><code>PolarFsInstanceId</code> 是必须提供的参数，用来指定要操作的PolarFS实例。</li>
+     * <li><code>DBClusterId</code> 参数是可选的，如果提供，则表示与特定PolarDB集群关联的操作。</li>
+     * <li><code>Objects</code> 参数是一个字符串数组，列出了所有需要被删除的对象路径，并且是必需的。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>删除PolarFs文件</p>
+     * 
+     * @param tmpReq DeletePolarFsObjectsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeletePolarFsObjectsResponse
+     */
+    public DeletePolarFsObjectsResponse deletePolarFsObjectsWithOptions(DeletePolarFsObjectsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DeletePolarFsObjectsShrinkRequest request = new DeletePolarFsObjectsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.objectsToDelete)) {
+            request.objectsToDeleteShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.objectsToDelete, "ObjectsToDelete", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectsToDeleteShrink)) {
+            query.put("ObjectsToDelete", request.objectsToDeleteShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.polarFsInstanceId)) {
+            query.put("PolarFsInstanceId", request.polarFsInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeletePolarFsObjects"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePolarFsObjectsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><code>PolarFsInstanceId</code> 是必须提供的参数，用来指定要操作的PolarFS实例。</li>
+     * <li><code>DBClusterId</code> 参数是可选的，如果提供，则表示与特定PolarDB集群关联的操作。</li>
+     * <li><code>Objects</code> 参数是一个字符串数组，列出了所有需要被删除的对象路径，并且是必需的。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>删除PolarFs文件</p>
+     * 
+     * @param request DeletePolarFsObjectsRequest
+     * @return DeletePolarFsObjectsResponse
+     */
+    public DeletePolarFsObjectsResponse deletePolarFsObjects(DeletePolarFsObjectsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deletePolarFsObjectsWithOptions(request, runtime);
     }
 
     /**
@@ -21941,5 +22035,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpgradeDBClusterVersionZonalResponse upgradeDBClusterVersionZonal(UpgradeDBClusterVersionZonalRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.upgradeDBClusterVersionZonalWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>执行自定义命令</p>
+     * 
+     * @param request UpgradePolarClawSkillsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpgradePolarClawSkillsResponse
+     */
+    public UpgradePolarClawSkillsResponse upgradePolarClawSkillsWithOptions(UpgradePolarClawSkillsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationType)) {
+            query.put("ApplicationType", request.applicationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.upgradeMethod)) {
+            query.put("UpgradeMethod", request.upgradeMethod);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpgradePolarClawSkills"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpgradePolarClawSkillsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>执行自定义命令</p>
+     * 
+     * @param request UpgradePolarClawSkillsRequest
+     * @return UpgradePolarClawSkillsResponse
+     */
+    public UpgradePolarClawSkillsResponse upgradePolarClawSkills(UpgradePolarClawSkillsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.upgradePolarClawSkillsWithOptions(request, runtime);
     }
 }

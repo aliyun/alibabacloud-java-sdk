@@ -143,6 +143,9 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("Storages")
+    public java.util.List<DescribeApplicationAttributeResponseBodyStorages> storages;
+
     /**
      * <strong>example:</strong>
      * <p>false</p>
@@ -385,6 +388,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public DescribeApplicationAttributeResponseBody setStorages(java.util.List<DescribeApplicationAttributeResponseBodyStorages> storages) {
+        this.storages = storages;
+        return this;
+    }
+    public java.util.List<DescribeApplicationAttributeResponseBodyStorages> getStorages() {
+        return this.storages;
     }
 
     public DescribeApplicationAttributeResponseBody setUpgradeAvailable(String upgradeAvailable) {
@@ -1099,6 +1110,58 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
         public String getSecurityIPType() {
             return this.securityIPType;
+        }
+
+    }
+
+    public static class DescribeApplicationAttributeResponseBodyStorages extends TeaModel {
+        @NameInMap("StorageCapacity")
+        public String storageCapacity;
+
+        @NameInMap("StorageInstanceId")
+        public String storageInstanceId;
+
+        @NameInMap("StoragePerformanceLevel")
+        public String storagePerformanceLevel;
+
+        @NameInMap("StorageType")
+        public String storageType;
+
+        public static DescribeApplicationAttributeResponseBodyStorages build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApplicationAttributeResponseBodyStorages self = new DescribeApplicationAttributeResponseBodyStorages();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationAttributeResponseBodyStorages setStorageCapacity(String storageCapacity) {
+            this.storageCapacity = storageCapacity;
+            return this;
+        }
+        public String getStorageCapacity() {
+            return this.storageCapacity;
+        }
+
+        public DescribeApplicationAttributeResponseBodyStorages setStorageInstanceId(String storageInstanceId) {
+            this.storageInstanceId = storageInstanceId;
+            return this;
+        }
+        public String getStorageInstanceId() {
+            return this.storageInstanceId;
+        }
+
+        public DescribeApplicationAttributeResponseBodyStorages setStoragePerformanceLevel(String storagePerformanceLevel) {
+            this.storagePerformanceLevel = storagePerformanceLevel;
+            return this;
+        }
+        public String getStoragePerformanceLevel() {
+            return this.storagePerformanceLevel;
+        }
+
+        public DescribeApplicationAttributeResponseBodyStorages setStorageType(String storageType) {
+            this.storageType = storageType;
+            return this;
+        }
+        public String getStorageType() {
+            return this.storageType;
         }
 
     }

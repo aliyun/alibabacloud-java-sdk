@@ -6,6 +6,13 @@ import com.aliyun.tea.*;
 public class DescribePolarFsAttributeResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>alluxio</p>
+     */
+    @NameInMap("AccelerateType")
+    public String accelerateType;
+
+    /**
+     * <strong>example:</strong>
      * <p>1000</p>
      */
     @NameInMap("AcceleratedStorageSpace")
@@ -58,6 +65,9 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
      */
     @NameInMap("CustomBucketPath")
     public String customBucketPath;
+
+    @NameInMap("CustomBucketPathList")
+    public java.util.List<DescribePolarFsAttributeResponseBodyCustomBucketPathList> customBucketPathList;
 
     /**
      * <strong>example:</strong>
@@ -221,6 +231,14 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribePolarFsAttributeResponseBody setAccelerateType(String accelerateType) {
+        this.accelerateType = accelerateType;
+        return this;
+    }
+    public String getAccelerateType() {
+        return this.accelerateType;
+    }
+
     public DescribePolarFsAttributeResponseBody setAcceleratedStorageSpace(Double acceleratedStorageSpace) {
         this.acceleratedStorageSpace = acceleratedStorageSpace;
         return this;
@@ -291,6 +309,14 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     }
     public String getCustomBucketPath() {
         return this.customBucketPath;
+    }
+
+    public DescribePolarFsAttributeResponseBody setCustomBucketPathList(java.util.List<DescribePolarFsAttributeResponseBodyCustomBucketPathList> customBucketPathList) {
+        this.customBucketPathList = customBucketPathList;
+        return this;
+    }
+    public java.util.List<DescribePolarFsAttributeResponseBodyCustomBucketPathList> getCustomBucketPathList() {
+        return this.customBucketPathList;
     }
 
     public DescribePolarFsAttributeResponseBody setDBType(String DBType) {
@@ -491,6 +517,44 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public static class DescribePolarFsAttributeResponseBodyCustomBucketPathList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>pfs-xxx.oss-[regionId]-internal.aliyuncs.com</p>
+         */
+        @NameInMap("Bucket")
+        public String bucket;
+
+        /**
+         * <strong>example:</strong>
+         * <p>/data</p>
+         */
+        @NameInMap("Path")
+        public String path;
+
+        public static DescribePolarFsAttributeResponseBodyCustomBucketPathList build(java.util.Map<String, ?> map) throws Exception {
+            DescribePolarFsAttributeResponseBodyCustomBucketPathList self = new DescribePolarFsAttributeResponseBodyCustomBucketPathList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePolarFsAttributeResponseBodyCustomBucketPathList setBucket(String bucket) {
+            this.bucket = bucket;
+            return this;
+        }
+        public String getBucket() {
+            return this.bucket;
+        }
+
+        public DescribePolarFsAttributeResponseBodyCustomBucketPathList setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
     }
 
     public static class DescribePolarFsAttributeResponseBodyMountInfo extends TeaModel {
