@@ -335,6 +335,9 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         @NameInMap("ResourceType")
         public String resourceType;
 
+        @NameInMap("SceneType")
+        public String sceneType;
+
         /**
          * <p>Service code.</p>
          * 
@@ -440,6 +443,14 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         }
         public String getResourceType() {
             return this.resourceType;
+        }
+
+        public ListServiceConfigsResponseBodyData setSceneType(String sceneType) {
+            this.sceneType = sceneType;
+            return this;
+        }
+        public String getSceneType() {
+            return this.sceneType;
         }
 
         public ListServiceConfigsResponseBodyData setServiceCode(String serviceCode) {
