@@ -584,10 +584,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.columnsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.columns, "Columns", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dataSource)) {
-            request.dataSourceShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dataSource, "DataSource", "json");
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.documentIds)) {
             request.documentIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.documentIds, "DocumentIds", "json");
         }
@@ -615,10 +611,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.createIndexType)) {
             query.put("CreateIndexType", request.createIndexType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceShrink)) {
-            query.put("DataSource", request.dataSourceShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
@@ -707,6 +699,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.knowledgeScene)) {
             query.put("knowledgeScene", request.knowledgeScene);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeType)) {
+            query.put("knowledgeType", request.knowledgeType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.metaExtractColumnsShrink)) {

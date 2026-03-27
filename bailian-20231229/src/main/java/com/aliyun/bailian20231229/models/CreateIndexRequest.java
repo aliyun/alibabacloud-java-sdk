@@ -40,14 +40,6 @@ public class CreateIndexRequest extends TeaModel {
     public String createIndexType;
 
     /**
-     * <blockquote>
-     * <p> This parameter is not available. Do not specify this parameter.</p>
-     * </blockquote>
-     */
-    @NameInMap("DataSource")
-    public CreateIndexRequestDataSource dataSource;
-
-    /**
      * <p>The description of the knowledge base. The description must be 0 to 1,000 characters in length. This parameter is empty by default.</p>
      */
     @NameInMap("Description")
@@ -280,6 +272,9 @@ public class CreateIndexRequest extends TeaModel {
     @NameInMap("knowledgeScene")
     public String knowledgeScene;
 
+    @NameInMap("knowledgeType")
+    public String knowledgeType;
+
     /**
      * <p>The metadata extraction configurations. Metadata refers to a set of additional attributes associated with unstructured data, which are integrated into text chunks in key-value pairs. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>.</p>
      */
@@ -345,14 +340,6 @@ public class CreateIndexRequest extends TeaModel {
     }
     public String getCreateIndexType() {
         return this.createIndexType;
-    }
-
-    public CreateIndexRequest setDataSource(CreateIndexRequestDataSource dataSource) {
-        this.dataSource = dataSource;
-        return this;
-    }
-    public CreateIndexRequestDataSource getDataSource() {
-        return this.dataSource;
     }
 
     public CreateIndexRequest setDescription(String description) {
@@ -531,6 +518,14 @@ public class CreateIndexRequest extends TeaModel {
         return this.knowledgeScene;
     }
 
+    public CreateIndexRequest setKnowledgeType(String knowledgeType) {
+        this.knowledgeType = knowledgeType;
+        return this;
+    }
+    public String getKnowledgeType() {
+        return this.knowledgeType;
+    }
+
     public CreateIndexRequest setMetaExtractColumns(java.util.List<CreateIndexRequestMetaExtractColumns> metaExtractColumns) {
         this.metaExtractColumns = metaExtractColumns;
         return this;
@@ -665,174 +660,6 @@ public class CreateIndexRequest extends TeaModel {
         }
 
         public CreateIndexRequestColumns setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-    }
-
-    public static class CreateIndexRequestDataSource extends TeaModel {
-        /**
-         * <blockquote>
-         * <p> This parameter is not available. Do not specify this parameter.</p>
-         * </blockquote>
-         */
-        @NameInMap("CredentialId")
-        public String credentialId;
-
-        /**
-         * <blockquote>
-         * <p> This parameter is not available. Do not specify this parameter.</p>
-         * </blockquote>
-         */
-        @NameInMap("CredentialKey")
-        public String credentialKey;
-
-        /**
-         * <blockquote>
-         * <p> This parameter is not available. Do not specify this parameter.</p>
-         * </blockquote>
-         */
-        @NameInMap("Database")
-        public String database;
-
-        /**
-         * <blockquote>
-         * <p> This parameter is not available. Do not specify this parameter.</p>
-         * </blockquote>
-         */
-        @NameInMap("Endpoint")
-        public String endpoint;
-
-        /**
-         * <blockquote>
-         * <p> This parameter is not available. Do not specify this parameter.</p>
-         * </blockquote>
-         */
-        @NameInMap("IsPrivateLink")
-        public Boolean isPrivateLink;
-
-        /**
-         * <blockquote>
-         * <p> This parameter is not available. Do not specify this parameter.</p>
-         * </blockquote>
-         */
-        @NameInMap("Region")
-        public String region;
-
-        /**
-         * <blockquote>
-         * <p> This parameter is not available. Do not specify this parameter.</p>
-         * </blockquote>
-         */
-        @NameInMap("SubPath")
-        public String subPath;
-
-        /**
-         * <blockquote>
-         * <p> This parameter is not available. Do not specify this parameter.</p>
-         * </blockquote>
-         */
-        @NameInMap("SubType")
-        public String subType;
-
-        /**
-         * <blockquote>
-         * <p> This parameter is not available. Do not specify this parameter.</p>
-         * </blockquote>
-         */
-        @NameInMap("Table")
-        public String table;
-
-        /**
-         * <blockquote>
-         * <p> This parameter is not available. Do not specify this parameter.</p>
-         * </blockquote>
-         */
-        @NameInMap("Type")
-        public String type;
-
-        public static CreateIndexRequestDataSource build(java.util.Map<String, ?> map) throws Exception {
-            CreateIndexRequestDataSource self = new CreateIndexRequestDataSource();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateIndexRequestDataSource setCredentialId(String credentialId) {
-            this.credentialId = credentialId;
-            return this;
-        }
-        public String getCredentialId() {
-            return this.credentialId;
-        }
-
-        public CreateIndexRequestDataSource setCredentialKey(String credentialKey) {
-            this.credentialKey = credentialKey;
-            return this;
-        }
-        public String getCredentialKey() {
-            return this.credentialKey;
-        }
-
-        public CreateIndexRequestDataSource setDatabase(String database) {
-            this.database = database;
-            return this;
-        }
-        public String getDatabase() {
-            return this.database;
-        }
-
-        public CreateIndexRequestDataSource setEndpoint(String endpoint) {
-            this.endpoint = endpoint;
-            return this;
-        }
-        public String getEndpoint() {
-            return this.endpoint;
-        }
-
-        public CreateIndexRequestDataSource setIsPrivateLink(Boolean isPrivateLink) {
-            this.isPrivateLink = isPrivateLink;
-            return this;
-        }
-        public Boolean getIsPrivateLink() {
-            return this.isPrivateLink;
-        }
-
-        public CreateIndexRequestDataSource setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
-        }
-
-        public CreateIndexRequestDataSource setSubPath(String subPath) {
-            this.subPath = subPath;
-            return this;
-        }
-        public String getSubPath() {
-            return this.subPath;
-        }
-
-        public CreateIndexRequestDataSource setSubType(String subType) {
-            this.subType = subType;
-            return this;
-        }
-        public String getSubType() {
-            return this.subType;
-        }
-
-        public CreateIndexRequestDataSource setTable(String table) {
-            this.table = table;
-            return this;
-        }
-        public String getTable() {
-            return this.table;
-        }
-
-        public CreateIndexRequestDataSource setType(String type) {
             this.type = type;
             return this;
         }

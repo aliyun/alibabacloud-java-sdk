@@ -40,14 +40,6 @@ public class CreateIndexShrinkRequest extends TeaModel {
     public String createIndexType;
 
     /**
-     * <blockquote>
-     * <p> This parameter is not available. Do not specify this parameter.</p>
-     * </blockquote>
-     */
-    @NameInMap("DataSource")
-    public String dataSourceShrink;
-
-    /**
      * <p>The description of the knowledge base. The description must be 0 to 1,000 characters in length. This parameter is empty by default.</p>
      */
     @NameInMap("Description")
@@ -280,6 +272,9 @@ public class CreateIndexShrinkRequest extends TeaModel {
     @NameInMap("knowledgeScene")
     public String knowledgeScene;
 
+    @NameInMap("knowledgeType")
+    public String knowledgeType;
+
     /**
      * <p>The metadata extraction configurations. Metadata refers to a set of additional attributes associated with unstructured data, which are integrated into text chunks in key-value pairs. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>.</p>
      */
@@ -345,14 +340,6 @@ public class CreateIndexShrinkRequest extends TeaModel {
     }
     public String getCreateIndexType() {
         return this.createIndexType;
-    }
-
-    public CreateIndexShrinkRequest setDataSourceShrink(String dataSourceShrink) {
-        this.dataSourceShrink = dataSourceShrink;
-        return this;
-    }
-    public String getDataSourceShrink() {
-        return this.dataSourceShrink;
     }
 
     public CreateIndexShrinkRequest setDescription(String description) {
@@ -529,6 +516,14 @@ public class CreateIndexShrinkRequest extends TeaModel {
     }
     public String getKnowledgeScene() {
         return this.knowledgeScene;
+    }
+
+    public CreateIndexShrinkRequest setKnowledgeType(String knowledgeType) {
+        this.knowledgeType = knowledgeType;
+        return this;
+    }
+    public String getKnowledgeType() {
+        return this.knowledgeType;
     }
 
     public CreateIndexShrinkRequest setMetaExtractColumnsShrink(String metaExtractColumnsShrink) {
