@@ -14,8 +14,17 @@ public class UpdateDIJobShrinkRequest extends TeaModel {
     @Deprecated
     public Long DIJobId;
 
+    /**
+     * <p>The task description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The description of the synchronization task.</p>
+     */
     @NameInMap("Description")
     public String description;
+
+    @NameInMap("FileSpec")
+    public String fileSpec;
 
     /**
      * <p>The ID of the synchronization task.</p>
@@ -26,8 +35,20 @@ public class UpdateDIJobShrinkRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The task-level settings, including DDL handling policies, column data type mapping between source and destination, and runtime parameters.</p>
+     */
     @NameInMap("JobSettings")
     public String jobSettingsShrink;
+
+    /**
+     * <p>The task owner.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>95279527</p>
+     */
+    @NameInMap("Owner")
+    public String owner;
 
     /**
      * <p>The DataWorks workspace ID. You can call the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation to obtain the ID.</p>
@@ -38,12 +59,27 @@ public class UpdateDIJobShrinkRequest extends TeaModel {
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>The resource settings.</p>
+     */
     @NameInMap("ResourceSettings")
     public String resourceSettingsShrink;
 
+    /**
+     * <p>The list of synchronization object transformation mappings. Each element describes a set of source object selection rules and the transformation rules applied to those objects.</p>
+     * <blockquote>
+     * <p> [ { &quot;SourceObjectSelectionRules&quot;:[ { &quot;ObjectType&quot;:&quot;Database&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;biz_db&quot; }, { &quot;ObjectType&quot;:&quot;Schema&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;s1&quot; }, { &quot;ObjectType&quot;:&quot;Table&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;table1&quot; } ], &quot;TransformationRuleNames&quot;:[ { &quot;RuleName&quot;:&quot;my_database_rename_rule&quot;, &quot;RuleActionType&quot;:&quot;Rename&quot;, &quot;RuleTargetType&quot;:&quot;Schema&quot; } ] } ]</p>
+     * </blockquote>
+     */
     @NameInMap("TableMappings")
     public String tableMappingsShrink;
 
+    /**
+     * <p>The list of synchronization object transformation rule definitions.</p>
+     * <blockquote>
+     * <p> [ { &quot;RuleName&quot;:&quot;my_database_rename_rule&quot;, &quot;RuleActionType&quot;:&quot;Rename&quot;, &quot;RuleTargetType&quot;:&quot;Schema&quot;, &quot;RuleExpression&quot;:&quot;{&quot;expression&quot;:&quot;${srcDatasoureName}_${srcDatabaseName}&quot;}&quot; } ]</p>
+     * </blockquote>
+     */
     @NameInMap("TransformationRules")
     public String transformationRulesShrink;
 
@@ -69,6 +105,14 @@ public class UpdateDIJobShrinkRequest extends TeaModel {
         return this.description;
     }
 
+    public UpdateDIJobShrinkRequest setFileSpec(String fileSpec) {
+        this.fileSpec = fileSpec;
+        return this;
+    }
+    public String getFileSpec() {
+        return this.fileSpec;
+    }
+
     public UpdateDIJobShrinkRequest setId(Long id) {
         this.id = id;
         return this;
@@ -83,6 +127,14 @@ public class UpdateDIJobShrinkRequest extends TeaModel {
     }
     public String getJobSettingsShrink() {
         return this.jobSettingsShrink;
+    }
+
+    public UpdateDIJobShrinkRequest setOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    public String getOwner() {
+        return this.owner;
     }
 
     public UpdateDIJobShrinkRequest setProjectId(Long projectId) {

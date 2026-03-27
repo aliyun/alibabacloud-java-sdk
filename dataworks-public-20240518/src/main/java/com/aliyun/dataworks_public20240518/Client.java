@@ -249,7 +249,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>从集合中移除实体对象</p>
+     * <p>Adds an entity to a collection in Data Map. Collections include categories and data albums. Entities can be only tables. If you want to add an entity to a data album, the account that you use must be attached the AliyunDataWorksFullAccess policy, or you are the data album creator or administrator.</p>
      * 
      * @param request AddEntityIntoMetaCollectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -289,7 +289,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>从集合中移除实体对象</p>
+     * <p>Adds an entity to a collection in Data Map. Collections include categories and data albums. Entities can be only tables. If you want to add an entity to a data album, the account that you use must be attached the AliyunDataWorksFullAccess policy, or you are the data album creator or administrator.</p>
      * 
      * @param request AddEntityIntoMetaCollectionRequest
      * @return AddEntityIntoMetaCollectionResponse
@@ -369,10 +369,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Associates monitoring rules with a data quality monitoring task.</p>
      * 
+     * @deprecated OpenAPI AttachDataQualityRulesToEvaluationTask is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
+     * 
      * @param tmpReq AttachDataQualityRulesToEvaluationTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AttachDataQualityRulesToEvaluationTaskResponse
      */
+    @Deprecated
+    // Deprecated
     public AttachDataQualityRulesToEvaluationTaskResponse attachDataQualityRulesToEvaluationTaskWithOptions(AttachDataQualityRulesToEvaluationTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         AttachDataQualityRulesToEvaluationTaskShrinkRequest request = new AttachDataQualityRulesToEvaluationTaskShrinkRequest();
@@ -415,9 +419,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Associates monitoring rules with a data quality monitoring task.</p>
      * 
+     * @deprecated OpenAPI AttachDataQualityRulesToEvaluationTask is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
+     * 
      * @param request AttachDataQualityRulesToEvaluationTaskRequest
      * @return AttachDataQualityRulesToEvaluationTaskResponse
      */
+    @Deprecated
+    // Deprecated
     public AttachDataQualityRulesToEvaluationTaskResponse attachDataQualityRulesToEvaluationTask(AttachDataQualityRulesToEvaluationTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.attachDataQualityRulesToEvaluationTaskWithOptions(request, runtime);
@@ -620,6 +628,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a workflow in DataStudio.</p>
+     * 
      * @param request CreateBusinessRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateBusinessResponse
@@ -669,6 +680,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a workflow in DataStudio.</p>
+     * 
      * @param request CreateBusinessRequest
      * @return CreateBusinessResponse
      */
@@ -731,7 +745,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>验证用</p>
+     * <p>Creates a computing resource in the specified workspace. The resource can be for a development environment or a production environment.</p>
      * 
      * @param request CreateComputeResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -783,7 +797,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>验证用</p>
+     * <p>Creates a computing resource in the specified workspace. The resource can be for a development environment or a production environment.</p>
      * 
      * @param request CreateComputeResourceRequest
      * @return CreateComputeResourceResponse
@@ -906,6 +920,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Name", request.name);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.owner)) {
+            query.put("Owner", request.owner);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
             query.put("ProjectId", request.projectId);
         }
@@ -921,6 +939,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.destinationDataSourceSettingsShrink)) {
             body.put("DestinationDataSourceSettings", request.destinationDataSourceSettingsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSpec)) {
+            body.put("FileSpec", request.fileSpec);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.jobSettingsShrink)) {
@@ -1134,10 +1156,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates a monitor in DataWorks Data Quality.</p>
      * 
+     * @deprecated OpenAPI CreateDataQualityEvaluationTask is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.
+     * 
      * @param tmpReq CreateDataQualityEvaluationTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDataQualityEvaluationTaskResponse
      */
+    @Deprecated
+    // Deprecated
     public CreateDataQualityEvaluationTaskResponse createDataQualityEvaluationTaskWithOptions(CreateDataQualityEvaluationTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateDataQualityEvaluationTaskShrinkRequest request = new CreateDataQualityEvaluationTaskShrinkRequest();
@@ -1227,9 +1253,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates a monitor in DataWorks Data Quality.</p>
      * 
+     * @deprecated OpenAPI CreateDataQualityEvaluationTask is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.
+     * 
      * @param request CreateDataQualityEvaluationTaskRequest
      * @return CreateDataQualityEvaluationTaskResponse
      */
+    @Deprecated
+    // Deprecated
     public CreateDataQualityEvaluationTaskResponse createDataQualityEvaluationTask(CreateDataQualityEvaluationTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDataQualityEvaluationTaskWithOptions(request, runtime);
@@ -1239,10 +1269,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates a monitor instance.</p>
      * 
+     * @deprecated OpenAPI CreateDataQualityEvaluationTaskInstance is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScanRun instead.
+     * 
      * @param tmpReq CreateDataQualityEvaluationTaskInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDataQualityEvaluationTaskInstanceResponse
      */
+    @Deprecated
+    // Deprecated
     public CreateDataQualityEvaluationTaskInstanceResponse createDataQualityEvaluationTaskInstanceWithOptions(CreateDataQualityEvaluationTaskInstanceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateDataQualityEvaluationTaskInstanceShrinkRequest request = new CreateDataQualityEvaluationTaskInstanceShrinkRequest();
@@ -1289,9 +1323,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates a monitor instance.</p>
      * 
+     * @deprecated OpenAPI CreateDataQualityEvaluationTaskInstance is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScanRun instead.
+     * 
      * @param request CreateDataQualityEvaluationTaskInstanceRequest
      * @return CreateDataQualityEvaluationTaskInstanceResponse
      */
+    @Deprecated
+    // Deprecated
     public CreateDataQualityEvaluationTaskInstanceResponse createDataQualityEvaluationTaskInstance(CreateDataQualityEvaluationTaskInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDataQualityEvaluationTaskInstanceWithOptions(request, runtime);
@@ -1301,10 +1339,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates a data quality monitoring rule.</p>
      * 
+     * @deprecated OpenAPI CreateDataQualityRule is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.
+     * 
      * @param tmpReq CreateDataQualityRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDataQualityRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public CreateDataQualityRuleResponse createDataQualityRuleWithOptions(CreateDataQualityRuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateDataQualityRuleShrinkRequest request = new CreateDataQualityRuleShrinkRequest();
@@ -1387,9 +1429,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates a data quality monitoring rule.</p>
      * 
+     * @deprecated OpenAPI CreateDataQualityRule is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.
+     * 
      * @param request CreateDataQualityRuleRequest
      * @return CreateDataQualityRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public CreateDataQualityRuleResponse createDataQualityRule(CreateDataQualityRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDataQualityRuleWithOptions(request, runtime);
@@ -1399,10 +1445,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates a data quality monitoring rule template.</p>
      * 
+     * @deprecated OpenAPI CreateDataQualityRuleTemplate is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityTemplate instead.
+     * 
      * @param tmpReq CreateDataQualityRuleTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDataQualityRuleTemplateResponse
      */
+    @Deprecated
+    // Deprecated
     public CreateDataQualityRuleTemplateResponse createDataQualityRuleTemplateWithOptions(CreateDataQualityRuleTemplateRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateDataQualityRuleTemplateShrinkRequest request = new CreateDataQualityRuleTemplateShrinkRequest();
@@ -1461,9 +1511,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates a data quality monitoring rule template.</p>
      * 
+     * @deprecated OpenAPI CreateDataQualityRuleTemplate is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityTemplate instead.
+     * 
      * @param request CreateDataQualityRuleTemplateRequest
      * @return CreateDataQualityRuleTemplateResponse
      */
+    @Deprecated
+    // Deprecated
     public CreateDataQualityRuleTemplateResponse createDataQualityRuleTemplate(CreateDataQualityRuleTemplateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDataQualityRuleTemplateWithOptions(request, runtime);
@@ -2008,6 +2062,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a file in DataStudio. You cannot call this operation to create Data Integration nodes.</p>
+     * 
      * @param request CreateFileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateFileResponse
@@ -2169,6 +2226,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a file in DataStudio. You cannot call this operation to create Data Integration nodes.</p>
+     * 
      * @param request CreateFileRequest
      * @return CreateFileResponse
      */
@@ -2178,6 +2238,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a folder.</p>
+     * 
      * @param request CreateFolderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateFolderResponse
@@ -2215,6 +2278,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a folder.</p>
+     * 
      * @param request CreateFolderRequest
      * @return CreateFolderResponse
      */
@@ -2343,7 +2409,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a lineage between a source entity and a destination entity. Either the source or destination entity must be a custom entity.</p>
+     * <p>Registers lineage relationships in Data Map. At least one end of the relationship must be a custom object. This interface allows you to connect custom objects (such as external reports or third-party system tables) with metadata entities managed by DataWorks.</p>
      * 
      * @param tmpReq CreateLineageRelationshipRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2397,7 +2463,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a lineage between a source entity and a destination entity. Either the source or destination entity must be a custom entity.</p>
+     * <p>Registers lineage relationships in Data Map. At least one end of the relationship must be a custom object. This interface allows you to connect custom objects (such as external reports or third-party system tables) with metadata entities managed by DataWorks.</p>
      * 
      * @param request CreateLineageRelationshipRequest
      * @return CreateLineageRelationshipResponse
@@ -2812,9 +2878,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Private</p>
      * 
      * <b>summary</b> : 
-     * <blockquote>
-     * <p> You cannot use this API operation to create multiple file resources at a time. If you specify multiple file resources by using FlowSpec, the system creates only the first specified resource.</p>
-     * </blockquote>
+     * <p>\&gt;  You cannot use this API operation to create multiple file resources at a time. If you specify multiple file resources by using FlowSpec, the system creates only the first specified resource.</p>
      * 
      * @param request CreateResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2857,9 +2921,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Private</p>
      * 
      * <b>summary</b> : 
-     * <blockquote>
-     * <p> You cannot use this API operation to create multiple file resources at a time. If you specify multiple file resources by using FlowSpec, the system creates only the first specified resource.</p>
-     * </blockquote>
+     * <p>\&gt;  You cannot use this API operation to create multiple file resources at a time. If you specify multiple file resources by using FlowSpec, the system creates only the first specified resource.</p>
      * 
      * @param request CreateResourceRequest
      * @return CreateResourceResponse
@@ -3298,6 +3360,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a file for a function in DataStudio.</p>
+     * 
      * @param request CreateUdfFileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateUdfFileResponse
@@ -3375,6 +3440,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a file for a function in DataStudio.</p>
+     * 
      * @param request CreateUdfFileRequest
      * @return CreateUdfFileResponse
      */
@@ -3592,6 +3660,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a workflow.</p>
+     * 
      * @param request DeleteBusinessRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteBusinessResponse
@@ -3629,6 +3700,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a workflow.</p>
+     * 
      * @param request DeleteBusinessRequest
      * @return DeleteBusinessResponse
      */
@@ -3764,7 +3838,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>验证用</p>
+     * <p>Deletes the specified computing resource based on the computing resource ID.</p>
      * 
      * @param request DeleteComputeResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3807,7 +3881,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>验证用</p>
+     * <p>Deletes the specified computing resource based on the computing resource ID.</p>
      * 
      * @param request DeleteComputeResourceRequest
      * @return DeleteComputeResourceResponse
@@ -4017,10 +4091,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Deletes a data quality monitoring task.</p>
      * 
+     * @deprecated OpenAPI DeleteDataQualityEvaluationTask is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityScan instead.
+     * 
      * @param request DeleteDataQualityEvaluationTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDataQualityEvaluationTaskResponse
      */
+    @Deprecated
+    // Deprecated
     public DeleteDataQualityEvaluationTaskResponse deleteDataQualityEvaluationTaskWithOptions(DeleteDataQualityEvaluationTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4053,9 +4131,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Deletes a data quality monitoring task.</p>
      * 
+     * @deprecated OpenAPI DeleteDataQualityEvaluationTask is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityScan instead.
+     * 
      * @param request DeleteDataQualityEvaluationTaskRequest
      * @return DeleteDataQualityEvaluationTaskResponse
      */
+    @Deprecated
+    // Deprecated
     public DeleteDataQualityEvaluationTaskResponse deleteDataQualityEvaluationTask(DeleteDataQualityEvaluationTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDataQualityEvaluationTaskWithOptions(request, runtime);
@@ -4113,10 +4195,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Deletes a data quality monitoring rule template.</p>
      * 
+     * @deprecated OpenAPI DeleteDataQualityRuleTemplate is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityTemplate instead.
+     * 
      * @param request DeleteDataQualityRuleTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDataQualityRuleTemplateResponse
      */
+    @Deprecated
+    // Deprecated
     public DeleteDataQualityRuleTemplateResponse deleteDataQualityRuleTemplateWithOptions(DeleteDataQualityRuleTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4149,9 +4235,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Deletes a data quality monitoring rule template.</p>
      * 
+     * @deprecated OpenAPI DeleteDataQualityRuleTemplate is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityTemplate instead.
+     * 
      * @param request DeleteDataQualityRuleTemplateRequest
      * @return DeleteDataQualityRuleTemplateResponse
      */
+    @Deprecated
+    // Deprecated
     public DeleteDataQualityRuleTemplateResponse deleteDataQualityRuleTemplate(DeleteDataQualityRuleTemplateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDataQualityRuleTemplateWithOptions(request, runtime);
@@ -4480,6 +4570,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a file from DataStudio. If the file has been committed, an asynchronous process is triggered to delete the file in the scheduling system. The value of the DeploymentId parameter returned is used to call the GetDeployment operation to poll the status of the asynchronous process.</p>
+     * 
      * @param request DeleteFileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteFileResponse
@@ -4517,6 +4610,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a file from DataStudio. If the file has been committed, an asynchronous process is triggered to delete the file in the scheduling system. The value of the DeploymentId parameter returned is used to call the GetDeployment operation to poll the status of the asynchronous process.</p>
+     * 
      * @param request DeleteFileRequest
      * @return DeleteFileResponse
      */
@@ -4631,7 +4727,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除血缘关系</p>
+     * <p>Deletes a lineage in Data Map.</p>
      * 
      * @param request DeleteLineageRelationshipRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4663,7 +4759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除血缘关系</p>
+     * <p>Deletes a lineage in Data Map.</p>
      * 
      * @param request DeleteLineageRelationshipRequest
      * @return DeleteLineageRelationshipResponse
@@ -4675,7 +4771,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除集合</p>
+     * <p>Deletes a collection in Data Map. Collections include categories and data albums. If you want to delete a data album, the account that you use must be attached the AliyunDataWorksFullAccess policy, or you are the data album creator or administrator.</p>
      * 
      * @param request DeleteMetaCollectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4707,7 +4803,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除集合</p>
+     * <p>Deletes a collection in Data Map. Collections include categories and data albums. If you want to delete a data album, the account that you use must be attached the AliyunDataWorksFullAccess policy, or you are the data album creator or administrator.</p>
      * 
      * @param request DeleteMetaCollectionRequest
      * @return DeleteMetaCollectionResponse
@@ -5323,10 +5419,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Disassociates monitoring rules from a data quality monitoring task.</p>
      * 
+     * @deprecated OpenAPI DetachDataQualityRulesFromEvaluationTask is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
+     * 
      * @param tmpReq DetachDataQualityRulesFromEvaluationTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DetachDataQualityRulesFromEvaluationTaskResponse
      */
+    @Deprecated
+    // Deprecated
     public DetachDataQualityRulesFromEvaluationTaskResponse detachDataQualityRulesFromEvaluationTaskWithOptions(DetachDataQualityRulesFromEvaluationTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         DetachDataQualityRulesFromEvaluationTaskShrinkRequest request = new DetachDataQualityRulesFromEvaluationTaskShrinkRequest();
@@ -5369,9 +5469,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Disassociates monitoring rules from a data quality monitoring task.</p>
      * 
+     * @deprecated OpenAPI DetachDataQualityRulesFromEvaluationTask is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
+     * 
      * @param request DetachDataQualityRulesFromEvaluationTaskRequest
      * @return DetachDataQualityRulesFromEvaluationTaskResponse
      */
+    @Deprecated
+    // Deprecated
     public DetachDataQualityRulesFromEvaluationTaskResponse detachDataQualityRulesFromEvaluationTask(DetachDataQualityRulesFromEvaluationTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.detachDataQualityRulesFromEvaluationTaskWithOptions(request, runtime);
@@ -5444,6 +5548,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Imports a table to a workflow. The call to this API operation is equivalent to performing the following operations: Go to the DataStudio page, find the desired workflow, and then click the workflow name. Right-click Table under the desired folder and select Import Table.</p>
+     * 
      * @param request EstablishRelationTableToBusinessRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EstablishRelationTableToBusinessResponse
@@ -5489,6 +5596,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Imports a table to a workflow. The call to this API operation is equivalent to performing the following operations: Go to the DataStudio page, find the desired workflow, and then click the workflow name. Right-click Table under the desired folder and select Import Table.</p>
+     * 
      * @param request EstablishRelationTableToBusinessRequest
      * @return EstablishRelationTableToBusinessResponse
      */
@@ -5680,6 +5790,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a workflow.</p>
+     * 
      * @param request GetBusinessRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetBusinessResponse
@@ -5717,6 +5830,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a workflow.</p>
+     * 
      * @param request GetBusinessRequest
      * @return GetBusinessResponse
      */
@@ -5727,7 +5843,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据目录详情</p>
+     * <p>Queries the information about a catalog in Data Map. Only catalogs of the Data Lake Formation (DLF) and StarRocks metadata crawlers are supported.</p>
      * 
      * @param request GetCatalogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5755,7 +5871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据目录详情</p>
+     * <p>Queries the information about a catalog in Data Map. Only catalogs of the Data Lake Formation (DLF) and StarRocks metadata crawlers are supported.</p>
      * 
      * @param request GetCatalogRequest
      * @return GetCatalogResponse
@@ -5773,7 +5889,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries a certificate file.</p>
+     * <p>View certificate details.</p>
      * 
      * @param request GetCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5807,7 +5923,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries a certificate file.</p>
+     * <p>View certificate details.</p>
      * 
      * @param request GetCertificateRequest
      * @return GetCertificateResponse
@@ -5819,7 +5935,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取字段详情</p>
+     * <p>Queries the information about a specific field of a table in Data Map.</p>
      * 
      * @param request GetColumnRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5847,7 +5963,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取字段详情</p>
+     * <p>Queries the information about a specific field of a table in Data Map.</p>
      * 
      * @param request GetColumnRequest
      * @return GetColumnResponse
@@ -5917,7 +6033,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>验证用</p>
+     * <p>Queries the specified computing resource based on the computing resource ID.</p>
      * 
      * @param request GetComputeResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5953,7 +6069,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>验证用</p>
+     * <p>Queries the specified computing resource based on the computing resource ID.</p>
      * 
      * @param request GetComputeResourceRequest
      * @return GetComputeResourceResponse
@@ -6155,10 +6271,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the details of a monitor.</p>
      * 
+     * @deprecated OpenAPI GetDataQualityEvaluationTask is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.
+     * 
      * @param request GetDataQualityEvaluationTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDataQualityEvaluationTaskResponse
      */
+    @Deprecated
+    // Deprecated
     public GetDataQualityEvaluationTaskResponse getDataQualityEvaluationTaskWithOptions(GetDataQualityEvaluationTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -6183,9 +6303,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the details of a monitor.</p>
      * 
+     * @deprecated OpenAPI GetDataQualityEvaluationTask is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.
+     * 
      * @param request GetDataQualityEvaluationTaskRequest
      * @return GetDataQualityEvaluationTaskResponse
      */
+    @Deprecated
+    // Deprecated
     public GetDataQualityEvaluationTaskResponse getDataQualityEvaluationTask(GetDataQualityEvaluationTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getDataQualityEvaluationTaskWithOptions(request, runtime);
@@ -6195,10 +6319,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the details of a monitor instance.</p>
      * 
+     * @deprecated OpenAPI GetDataQualityEvaluationTaskInstance is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScanRun instead.
+     * 
      * @param request GetDataQualityEvaluationTaskInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDataQualityEvaluationTaskInstanceResponse
      */
+    @Deprecated
+    // Deprecated
     public GetDataQualityEvaluationTaskInstanceResponse getDataQualityEvaluationTaskInstanceWithOptions(GetDataQualityEvaluationTaskInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -6223,9 +6351,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the details of a monitor instance.</p>
      * 
+     * @deprecated OpenAPI GetDataQualityEvaluationTaskInstance is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScanRun instead.
+     * 
      * @param request GetDataQualityEvaluationTaskInstanceRequest
      * @return GetDataQualityEvaluationTaskInstanceResponse
      */
+    @Deprecated
+    // Deprecated
     public GetDataQualityEvaluationTaskInstanceResponse getDataQualityEvaluationTaskInstance(GetDataQualityEvaluationTaskInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getDataQualityEvaluationTaskInstanceWithOptions(request, runtime);
@@ -6238,10 +6370,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the information about a data quality monitoring rule.</p>
      * 
+     * @deprecated OpenAPI GetDataQualityRule is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.
+     * 
      * @param request GetDataQualityRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDataQualityRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public GetDataQualityRuleResponse getDataQualityRuleWithOptions(GetDataQualityRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -6269,9 +6405,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the information about a data quality monitoring rule.</p>
      * 
+     * @deprecated OpenAPI GetDataQualityRule is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.
+     * 
      * @param request GetDataQualityRuleRequest
      * @return GetDataQualityRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public GetDataQualityRuleResponse getDataQualityRule(GetDataQualityRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getDataQualityRuleWithOptions(request, runtime);
@@ -6284,10 +6424,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the information about a data quality monitoring rule template.</p>
      * 
+     * @deprecated OpenAPI GetDataQualityRuleTemplate is deprecated, please use dataworks-public::2024-05-18::GetDataQualityTemplate instead.
+     * 
      * @param request GetDataQualityRuleTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDataQualityRuleTemplateResponse
      */
+    @Deprecated
+    // Deprecated
     public GetDataQualityRuleTemplateResponse getDataQualityRuleTemplateWithOptions(GetDataQualityRuleTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -6315,9 +6459,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the information about a data quality monitoring rule template.</p>
      * 
+     * @deprecated OpenAPI GetDataQualityRuleTemplate is deprecated, please use dataworks-public::2024-05-18::GetDataQualityTemplate instead.
+     * 
      * @param request GetDataQualityRuleTemplateRequest
      * @return GetDataQualityRuleTemplateResponse
      */
+    @Deprecated
+    // Deprecated
     public GetDataQualityRuleTemplateResponse getDataQualityRuleTemplate(GetDataQualityRuleTemplateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getDataQualityRuleTemplateWithOptions(request, runtime);
@@ -6587,7 +6735,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据库详情</p>
+     * <p>Queries the information about a specific database in Data Map.</p>
      * 
      * @param request GetDatabaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6615,7 +6763,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据库详情</p>
+     * <p>Queries the information about a specific database in Data Map.</p>
      * 
      * @param request GetDatabaseRequest
      * @return GetDatabaseResponse
@@ -6627,7 +6775,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据集详情</p>
+     * <p>Gets the details of a dataset.</p>
      * 
      * @param request GetDatasetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6659,7 +6807,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据集详情</p>
+     * <p>Gets the details of a dataset.</p>
      * 
      * @param request GetDatasetRequest
      * @return GetDatasetResponse
@@ -6714,6 +6862,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a deployment package.</p>
+     * 
      * @param request GetDeploymentPackageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDeploymentPackageResponse
@@ -6751,6 +6902,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a deployment package.</p>
+     * 
      * @param request GetDeploymentPackageRequest
      * @return GetDeploymentPackageResponse
      */
@@ -6872,6 +7026,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a folder.</p>
+     * 
      * @param request GetFolderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetFolderResponse
@@ -6913,6 +7070,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a folder.</p>
+     * 
      * @param request GetFolderRequest
      * @return GetFolderResponse
      */
@@ -7051,7 +7211,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取血缘关系详情</p>
+     * <p>Queries the information about a lineage in Data Map.</p>
      * 
      * @param request GetLineageRelationshipRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7079,7 +7239,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取血缘关系详情</p>
+     * <p>Queries the information about a lineage in Data Map.</p>
      * 
      * @param request GetLineageRelationshipRequest
      * @return GetLineageRelationshipResponse
@@ -7691,7 +7851,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取表详情</p>
+     * <p>Queries the information about a specific table in Data Map.</p>
      * 
      * @param request GetTableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7719,7 +7879,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取表详情</p>
+     * <p>Queries the information about a specific table in Data Map.</p>
      * 
      * @param request GetTableRequest
      * @return GetTableResponse
@@ -8344,6 +8504,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of workflows.</p>
+     * 
      * @param request ListBusinessRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListBusinessResponse
@@ -8389,6 +8552,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of workflows.</p>
+     * 
      * @param request ListBusinessRequest
      * @return ListBusinessResponse
      */
@@ -8399,7 +8565,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询数据目录列表</p>
+     * <p>Queries a list of catalogs in Data Map. Only catalogs of the Data Lake Formation (DLF) and StarRocks metadata crawler types are supported. For the DLF metadata crawler type, all supported data catalogs are returned. For the StarRocks metadata crawler type, data catalogs in a specific instance are returned.</p>
      * 
      * @param tmpReq ListCatalogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8433,7 +8599,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询数据目录列表</p>
+     * <p>Queries a list of catalogs in Data Map. Only catalogs of the Data Lake Formation (DLF) and StarRocks metadata crawler types are supported. For the DLF metadata crawler type, all supported data catalogs are returned. For the StarRocks metadata crawler type, data catalogs in a specific instance are returned.</p>
      * 
      * @param request ListCatalogsRequest
      * @return ListCatalogsResponse
@@ -8497,7 +8663,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询字段列表</p>
+     * <p>Queries a list of fields in a data table in Data Map.</p>
      * 
      * @param request ListColumnsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8525,7 +8691,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询字段列表</p>
+     * <p>Queries a list of fields in a data table in Data Map.</p>
      * 
      * @param request ListColumnsRequest
      * @return ListColumnsResponse
@@ -8599,7 +8765,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>验证用</p>
+     * <p>Queries the list of computing resources that meet the specified business information.</p>
      * 
      * @param tmpReq ListComputeResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8665,7 +8831,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>验证用</p>
+     * <p>Queries the list of computing resources that meet the specified business information.</p>
      * 
      * @param request ListComputeResourcesRequest
      * @return ListComputeResourcesResponse
@@ -8677,7 +8843,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询元数据采集器类型列表</p>
+     * <p>Queries a list of metadata crawler types supported in Data Map. The subtypes of the types and the hierarchical relationship between the subtypes are also returned.</p>
      * 
      * @param request ListCrawlerTypesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8701,7 +8867,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询元数据采集器类型列表</p>
+     * <p>Queries a list of metadata crawler types supported in Data Map. The subtypes of the types and the hierarchical relationship between the subtypes are also returned.</p>
      * @return ListCrawlerTypesResponse
      */
     public ListCrawlerTypesResponse listCrawlerTypes() throws Exception {
@@ -9114,10 +9280,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries a list of instances generated by a data quality monitoring task by page.</p>
      * 
+     * @deprecated OpenAPI ListDataQualityEvaluationTaskInstances is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.
+     * 
      * @param request ListDataQualityEvaluationTaskInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDataQualityEvaluationTaskInstancesResponse
      */
+    @Deprecated
+    // Deprecated
     public ListDataQualityEvaluationTaskInstancesResponse listDataQualityEvaluationTaskInstancesWithOptions(ListDataQualityEvaluationTaskInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -9145,9 +9315,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries a list of instances generated by a data quality monitoring task by page.</p>
      * 
+     * @deprecated OpenAPI ListDataQualityEvaluationTaskInstances is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.
+     * 
      * @param request ListDataQualityEvaluationTaskInstancesRequest
      * @return ListDataQualityEvaluationTaskInstancesResponse
      */
+    @Deprecated
+    // Deprecated
     public ListDataQualityEvaluationTaskInstancesResponse listDataQualityEvaluationTaskInstances(ListDataQualityEvaluationTaskInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDataQualityEvaluationTaskInstancesWithOptions(request, runtime);
@@ -9160,10 +9334,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries a list of data quality monitoring tasks by page.</p>
      * 
+     * @deprecated OpenAPI ListDataQualityEvaluationTasks is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScans instead.
+     * 
      * @param request ListDataQualityEvaluationTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDataQualityEvaluationTasksResponse
      */
+    @Deprecated
+    // Deprecated
     public ListDataQualityEvaluationTasksResponse listDataQualityEvaluationTasksWithOptions(ListDataQualityEvaluationTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -9191,9 +9369,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries a list of data quality monitoring tasks by page.</p>
      * 
+     * @deprecated OpenAPI ListDataQualityEvaluationTasks is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScans instead.
+     * 
      * @param request ListDataQualityEvaluationTasksRequest
      * @return ListDataQualityEvaluationTasksResponse
      */
+    @Deprecated
+    // Deprecated
     public ListDataQualityEvaluationTasksResponse listDataQualityEvaluationTasks(ListDataQualityEvaluationTasksRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDataQualityEvaluationTasksWithOptions(request, runtime);
@@ -9203,10 +9385,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>This API operation is available for all DataWorks editions.</p>
      * 
+     * <b>summary</b> : 
+     * <p>查询数据质量规则校验结果列表</p>
+     * 
+     * @deprecated OpenAPI ListDataQualityResults is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.
+     * 
      * @param request ListDataQualityResultsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDataQualityResultsResponse
      */
+    @Deprecated
+    // Deprecated
     public ListDataQualityResultsResponse listDataQualityResultsWithOptions(ListDataQualityResultsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -9231,9 +9420,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>This API operation is available for all DataWorks editions.</p>
      * 
+     * <b>summary</b> : 
+     * <p>查询数据质量规则校验结果列表</p>
+     * 
+     * @deprecated OpenAPI ListDataQualityResults is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.
+     * 
      * @param request ListDataQualityResultsRequest
      * @return ListDataQualityResultsResponse
      */
+    @Deprecated
+    // Deprecated
     public ListDataQualityResultsResponse listDataQualityResults(ListDataQualityResultsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDataQualityResultsWithOptions(request, runtime);
@@ -9243,10 +9439,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries a list of data quality monitoring rule templates.</p>
      * 
+     * @deprecated OpenAPI ListDataQualityRuleTemplates is deprecated, please use dataworks-public::2024-05-18::ListDataQualityTemplates instead.
+     * 
      * @param request ListDataQualityRuleTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDataQualityRuleTemplatesResponse
      */
+    @Deprecated
+    // Deprecated
     public ListDataQualityRuleTemplatesResponse listDataQualityRuleTemplatesWithOptions(ListDataQualityRuleTemplatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -9271,9 +9471,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries a list of data quality monitoring rule templates.</p>
      * 
+     * @deprecated OpenAPI ListDataQualityRuleTemplates is deprecated, please use dataworks-public::2024-05-18::ListDataQualityTemplates instead.
+     * 
      * @param request ListDataQualityRuleTemplatesRequest
      * @return ListDataQualityRuleTemplatesResponse
      */
+    @Deprecated
+    // Deprecated
     public ListDataQualityRuleTemplatesResponse listDataQualityRuleTemplates(ListDataQualityRuleTemplatesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDataQualityRuleTemplatesWithOptions(request, runtime);
@@ -9286,10 +9490,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries a list of data quality monitoring rules by page.</p>
      * 
+     * @deprecated OpenAPI ListDataQualityRules is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScans instead.
+     * 
      * @param request ListDataQualityRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDataQualityRulesResponse
      */
+    @Deprecated
+    // Deprecated
     public ListDataQualityRulesResponse listDataQualityRulesWithOptions(ListDataQualityRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -9317,9 +9525,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries a list of data quality monitoring rules by page.</p>
      * 
+     * @deprecated OpenAPI ListDataQualityRules is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScans instead.
+     * 
      * @param request ListDataQualityRulesRequest
      * @return ListDataQualityRulesResponse
      */
+    @Deprecated
+    // Deprecated
     public ListDataQualityRulesResponse listDataQualityRules(ListDataQualityRulesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDataQualityRulesWithOptions(request, runtime);
@@ -9673,7 +9885,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询数据库列表</p>
+     * <p>Queries a list of databases in an instance, cluster, or data catalog in Data Map. For DLF or StarRocks data sources, you can call this API operation to query databases in a data catalog. For StarRocks data sources, you can call this API operation to query databases in internal catalogs. For other types of data sources, you can call this API operation to query databases in an instance or cluster.</p>
      * 
      * @param request ListDatabasesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9701,7 +9913,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询数据库列表</p>
+     * <p>Queries a list of databases in an instance, cluster, or data catalog in Data Map. For DLF or StarRocks data sources, you can call this API operation to query databases in a data catalog. For StarRocks data sources, you can call this API operation to query databases in internal catalogs. For other types of data sources, you can call this API operation to query databases in an instance or cluster.</p>
      * 
      * @param request ListDatabasesRequest
      * @return ListDatabasesResponse
@@ -10166,6 +10378,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of file versions.</p>
+     * 
      * @param request ListFileVersionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListFileVersionsResponse
@@ -10211,6 +10426,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of file versions.</p>
+     * 
      * @param request ListFileVersionsRequest
      * @return ListFileVersionsResponse
      */
@@ -10220,6 +10438,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of files.</p>
+     * 
      * @param request ListFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListFilesResponse
@@ -10309,6 +10530,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of files.</p>
+     * 
      * @param request ListFilesRequest
      * @return ListFilesResponse
      */
@@ -10318,6 +10542,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of folders.</p>
+     * 
      * @param request ListFoldersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListFoldersResponse
@@ -10363,6 +10590,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of folders.</p>
+     * 
      * @param request ListFoldersRequest
      * @return ListFoldersResponse
      */
@@ -10413,7 +10643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询血缘关系</p>
+     * <p>Queries the lineage between two entities, such as tables, fields, and Object Storage Service (OSS) files, in Data Map.</p>
      * 
      * @param request ListLineageRelationshipsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10441,7 +10671,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询血缘关系</p>
+     * <p>Queries the lineage between two entities, such as tables, fields, and Object Storage Service (OSS) files, in Data Map.</p>
      * 
      * @param request ListLineageRelationshipsRequest
      * @return ListLineageRelationshipsResponse
@@ -10453,7 +10683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实体血缘</p>
+     * <p>Queries a list of ancestor and descendant entities of an entity in Data Map. You can specify whether to return the lineage between the entities.</p>
      * 
      * @param request ListLineagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10481,7 +10711,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实体血缘</p>
+     * <p>Queries a list of ancestor and descendant entities of an entity in Data Map. You can specify whether to return the lineage between the entities.</p>
      * 
      * @param request ListLineagesRequest
      * @return ListLineagesResponse
@@ -10659,7 +10889,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询数据表的分区列表</p>
+     * <p>Queries a list of partitions in a table in Data Map. Only tables of the MaxCompute and E-MapReduce (EMR)-type Hive Metastore Service (HMS) metadata crawlers are supported.</p>
      * 
      * @param request ListPartitionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10687,7 +10917,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询数据表的分区列表</p>
+     * <p>Queries a list of partitions in a table in Data Map. Only tables of the MaxCompute and E-MapReduce (EMR)-type Hive Metastore Service (HMS) metadata crawlers are supported.</p>
      * 
      * @param request ListPartitionsRequest
      * @return ListPartitionsResponse
@@ -11035,7 +11265,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Query the list of workspaces with which a resource group is associated</p>
+     * <p>Gets the list of workspaces bound to a resource group.</p>
      * 
      * @param request ListResourceGroupAssociateProjectsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11073,7 +11303,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Query the list of workspaces with which a resource group is associated</p>
+     * <p>Gets the list of workspaces bound to a resource group.</p>
      * 
      * @param request ListResourceGroupAssociateProjectsRequest
      * @return ListResourceGroupAssociateProjectsResponse
@@ -11085,7 +11315,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定资源组的监控指标数据</p>
+     * <p>Queries the metric data of a resource group.</p>
      * 
      * @param request ListResourceGroupMetricDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11141,7 +11371,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定资源组的监控指标数据</p>
+     * <p>Queries the metric data of a resource group.</p>
      * 
      * @param request ListResourceGroupMetricDataRequest
      * @return ListResourceGroupMetricDataResponse
@@ -12305,7 +12535,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>从集合中移除实体对象</p>
+     * <p>Removes an entity from a collection in Data Map. Collections include categories and data albums. Entities can be only tables. If you want to remove an entity from a data album, the account that you use must be attached the AliyunDataWorksFullAccess policy, or you are the data album creator or administrator.</p>
      * 
      * @param request RemoveEntityFromMetaCollectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12341,7 +12571,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>从集合中移除实体对象</p>
+     * <p>Removes an entity from a collection in Data Map. Collections include categories and data albums. Entities can be only tables. If you want to remove an entity from a data album, the account that you use must be attached the AliyunDataWorksFullAccess policy, or you are the data album creator or administrator.</p>
      * 
      * @param request RemoveEntityFromMetaCollectionRequest
      * @return RemoveEntityFromMetaCollectionResponse
@@ -13242,6 +13472,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Commits a file to the development environment of the scheduling system to generate a task.</p>
+     * 
      * @param request SubmitFileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SubmitFileResponse
@@ -13287,6 +13520,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Commits a file to the development environment of the scheduling system to generate a task.</p>
+     * 
      * @param request SubmitFileRequest
      * @return SubmitFileResponse
      */
@@ -13775,7 +14011,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新字段业务元数据</p>
+     * <p>Updates the business metadata of a column in a table in Data Map. Only the business description of a column can be updated.</p>
      * 
      * @param request UpdateColumnBusinessMetadataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13811,7 +14047,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新字段业务元数据</p>
+     * <p>Updates the business metadata of a column in a table in Data Map. Only the business description of a column can be updated.</p>
      * 
      * @param request UpdateColumnBusinessMetadataRequest
      * @return UpdateColumnBusinessMetadataResponse
@@ -13883,7 +14119,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>验证用</p>
+     * <p>Modifies the specified computing resource based on the computing resource ID.</p>
      * 
      * @param request UpdateComputeResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13931,7 +14167,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>验证用</p>
+     * <p>Modifies the specified computing resource based on the computing resource ID.</p>
      * 
      * @param request UpdateComputeResourceRequest
      * @return UpdateComputeResourceResponse
@@ -14031,6 +14267,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Id", request.id);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.owner)) {
+            query.put("Owner", request.owner);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
             query.put("ProjectId", request.projectId);
         }
@@ -14038,6 +14278,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSpec)) {
+            body.put("FileSpec", request.fileSpec);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.jobSettingsShrink)) {
@@ -14244,10 +14488,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Updates a monitor.</p>
      * 
+     * @deprecated OpenAPI UpdateDataQualityEvaluationTask is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
+     * 
      * @param tmpReq UpdateDataQualityEvaluationTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateDataQualityEvaluationTaskResponse
      */
+    @Deprecated
+    // Deprecated
     public UpdateDataQualityEvaluationTaskResponse updateDataQualityEvaluationTaskWithOptions(UpdateDataQualityEvaluationTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateDataQualityEvaluationTaskShrinkRequest request = new UpdateDataQualityEvaluationTaskShrinkRequest();
@@ -14341,9 +14589,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Updates a monitor.</p>
      * 
+     * @deprecated OpenAPI UpdateDataQualityEvaluationTask is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
+     * 
      * @param request UpdateDataQualityEvaluationTaskRequest
      * @return UpdateDataQualityEvaluationTaskResponse
      */
+    @Deprecated
+    // Deprecated
     public UpdateDataQualityEvaluationTaskResponse updateDataQualityEvaluationTask(UpdateDataQualityEvaluationTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateDataQualityEvaluationTaskWithOptions(request, runtime);
@@ -14353,10 +14605,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Updates a data quality monitoring rule.</p>
      * 
+     * @deprecated OpenAPI UpdateDataQualityRule is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
+     * 
      * @param tmpReq UpdateDataQualityRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateDataQualityRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public UpdateDataQualityRuleResponse updateDataQualityRuleWithOptions(UpdateDataQualityRuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateDataQualityRuleShrinkRequest request = new UpdateDataQualityRuleShrinkRequest();
@@ -14437,9 +14693,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Updates a data quality monitoring rule.</p>
      * 
+     * @deprecated OpenAPI UpdateDataQualityRule is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
+     * 
      * @param request UpdateDataQualityRuleRequest
      * @return UpdateDataQualityRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public UpdateDataQualityRuleResponse updateDataQualityRule(UpdateDataQualityRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateDataQualityRuleWithOptions(request, runtime);
@@ -14449,10 +14709,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Updates a data quality monitoring rule template.</p>
      * 
+     * @deprecated OpenAPI UpdateDataQualityRuleTemplate is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityTemplate instead.
+     * 
      * @param tmpReq UpdateDataQualityRuleTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateDataQualityRuleTemplateResponse
      */
+    @Deprecated
+    // Deprecated
     public UpdateDataQualityRuleTemplateResponse updateDataQualityRuleTemplateWithOptions(UpdateDataQualityRuleTemplateRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateDataQualityRuleTemplateShrinkRequest request = new UpdateDataQualityRuleTemplateShrinkRequest();
@@ -14513,9 +14777,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Updates a data quality monitoring rule template.</p>
      * 
+     * @deprecated OpenAPI UpdateDataQualityRuleTemplate is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityTemplate instead.
+     * 
      * @param request UpdateDataQualityRuleTemplateRequest
      * @return UpdateDataQualityRuleTemplateResponse
      */
+    @Deprecated
+    // Deprecated
     public UpdateDataQualityRuleTemplateResponse updateDataQualityRuleTemplate(UpdateDataQualityRuleTemplateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateDataQualityRuleTemplateWithOptions(request, runtime);
@@ -14880,6 +15148,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Updates a file.</p>
+     * 
      * @param request UpdateFileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateFileResponse
@@ -15037,6 +15308,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Updates a file.</p>
+     * 
      * @param request UpdateFileRequest
      * @return UpdateFileResponse
      */
@@ -15149,7 +15423,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>回调扩展点消息的检查结果</p>
+     * <p>Recalls the check result of the message of an extension point event.</p>
      * 
      * @param request UpdateIDEEventResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15193,7 +15467,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>回调扩展点消息的检查结果</p>
+     * <p>Recalls the check result of the message of an extension point event.</p>
      * 
      * @param request UpdateIDEEventResultRequest
      * @return UpdateIDEEventResultResponse
@@ -15904,6 +16178,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Updates the file information about a function.</p>
+     * 
      * @param request UpdateUdfFileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateUdfFileResponse
@@ -15977,6 +16254,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Updates the file information about a function.</p>
+     * 
      * @param request UpdateUdfFileRequest
      * @return UpdateUdfFileResponse
      */

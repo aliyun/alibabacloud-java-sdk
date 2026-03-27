@@ -4,39 +4,110 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class DatasetVersion extends TeaModel {
+    /**
+     * <p>The dataset version description.</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>Creation time (milliseconds)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1736756055000</p>
+     */
     @NameInMap("CreateTime")
     public Long createTime;
 
+    /**
+     * <p>The creator ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>17815XXX61016173</p>
+     */
     @NameInMap("CreatorId")
     public String creatorId;
 
+    /**
+     * <p>The corresponding dataset ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dataworks-datasetVersion:0gfxxxjx155usz3hrv</p>
+     */
     @NameInMap("DatasetId")
     public String datasetId;
 
+    /**
+     * <p>The dataset version ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dataworks-datasetVersion:0gfxxxjx155usz3hrv:1</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <p>The storage import configuration for the dataset; required configuration varies by storage type.</p>
+     * <p><strong>NAS</strong></p>
+     * <p>Refer to the return values from the file storage API DescribeFileSystems.</p>
+     * <pre><code class="language-JSON">{
+     * &quot;fileSystemId&quot;: &quot;3b6XXX89c9&quot;, // The file system ID.
+     * &quot;fileSystemStorageType&quot;:  &quot;Performance&quot; // The file system storage type.
+     * &quot;vpcId&quot;: &quot;vpc-uf66oxxxrqge1t2gson7s&quot; // The VPC ID of the mount point.
+     * }
+     * </code></pre>
+     */
     @NameInMap("ImportInfo")
     public java.util.Map<String, String> importInfo;
 
+    /**
+     * <p>The PAI dataset label.</p>
+     */
     @NameInMap("Labels")
     public java.util.List<DatasetLabel> labels;
 
+    /**
+     * <p>Modification time (milliseconds)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1736756055000</p>
+     */
     @NameInMap("ModifyTime")
     public Long modifyTime;
 
+    /**
+     * <p>The mount path. Defaults to /mnt/data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/mnt/data</p>
+     */
     @NameInMap("MountPath")
     public String mountPath;
 
+    /**
+     * <p>Storage type (read-only); consistent with the corresponding property of the parent dataset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OSS</p>
+     */
     @NameInMap("StorageType")
     public String storageType;
 
+    /**
+     * <p>URL</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://test-oss-bucket/test_dir/</p>
+     */
     @NameInMap("Url")
     public String url;
 
+    /**
+     * <p>The dataset version number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("VersionNumber")
     public Integer versionNumber;
 

@@ -111,6 +111,9 @@ public class ListDIJobsResponseBody extends TeaModel {
         @NameInMap("MigrationType")
         public String migrationType;
 
+        @NameInMap("Owner")
+        public String owner;
+
         /**
          * <p>The ID of the DataWorks workspace to which the synchronization task belongs.</p>
          * 
@@ -181,6 +184,14 @@ public class ListDIJobsResponseBody extends TeaModel {
         }
         public String getMigrationType() {
             return this.migrationType;
+        }
+
+        public ListDIJobsResponseBodyPagingInfoDIJobs setOwner(String owner) {
+            this.owner = owner;
+            return this;
+        }
+        public String getOwner() {
+            return this.owner;
         }
 
         public ListDIJobsResponseBodyPagingInfoDIJobs setProjectId(Long projectId) {

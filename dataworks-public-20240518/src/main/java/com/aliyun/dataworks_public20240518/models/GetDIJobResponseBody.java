@@ -1059,6 +1059,9 @@ public class GetDIJobResponseBody extends TeaModel {
         @NameInMap("MigrationType")
         public String migrationType;
 
+        @NameInMap("Owner")
+        public String owner;
+
         /**
          * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
          * <p>This parameter indicates the DataWorks workspace to which the API operation is applied.</p>
@@ -1192,6 +1195,14 @@ public class GetDIJobResponseBody extends TeaModel {
         }
         public String getMigrationType() {
             return this.migrationType;
+        }
+
+        public GetDIJobResponseBodyPagingInfo setOwner(String owner) {
+            this.owner = owner;
+            return this;
+        }
+        public String getOwner() {
+            return this.owner;
         }
 
         public GetDIJobResponseBodyPagingInfo setProjectId(Long projectId) {

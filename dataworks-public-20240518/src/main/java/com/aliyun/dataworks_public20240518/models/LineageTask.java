@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class LineageTask extends TeaModel {
+    /**
+     * <p>The properties of the task.</p>
+     */
     @NameInMap("Attributes")
     public java.util.Map<String, String> attributes;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12345</p>
      */
@@ -15,6 +20,8 @@ public class LineageTask extends TeaModel {
     public String id;
 
     /**
+     * <p>The type of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>custom-sql</p>
      */

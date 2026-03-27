@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Partition extends TeaModel {
     /**
+     * <p>The creation time. This value is a UNIX timestamp. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1700192563000</p>
      */
@@ -12,6 +14,8 @@ public class Partition extends TeaModel {
     public Long createTime;
 
     /**
+     * <p>The storage size of the partition. Unit: bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>4096</p>
      */
@@ -19,6 +23,8 @@ public class Partition extends TeaModel {
     public Long dataSize;
 
     /**
+     * <p>The modification time. This value is a UNIX timestamp. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1700192563000</p>
      */
@@ -26,6 +32,8 @@ public class Partition extends TeaModel {
     public Long modifyTime;
 
     /**
+     * <p>The partition name.</p>
+     * 
      * <strong>example:</strong>
      * <p>ds=20250101</p>
      */
@@ -33,6 +41,8 @@ public class Partition extends TeaModel {
     public String name;
 
     /**
+     * <p>The number of records in the partition.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000000</p>
      */
@@ -40,6 +50,8 @@ public class Partition extends TeaModel {
     public Long recordCount;
 
     /**
+     * <p>The ID of the table to which the partition belongs. You can configure this parameter by referring to the <code>Table</code> topic.</p>
+     * 
      * <strong>example:</strong>
      * <p>maxcompute-table:accountId::project::table</p>
      */

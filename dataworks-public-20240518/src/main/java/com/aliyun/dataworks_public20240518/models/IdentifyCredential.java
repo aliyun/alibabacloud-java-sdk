@@ -4,15 +4,40 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class IdentifyCredential extends TeaModel {
+    /**
+     * <p>The data source.</p>
+     */
     @NameInMap("DataSource")
     public IdentifyCredentialDataSource dataSource;
 
+    /**
+     * <p>The workspace ID (optional).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 
+    /**
+     * <p>The user ID. If it is a role, the ROLE_ prefix must be added.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ROLE_300888674340307309</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <ul>
+     * <li>Alibaba Cloud account</li>
+     * <li>RAM user</li>
+     * <li>Role</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>primaryAccount</p>
+     */
     @NameInMap("UserType")
     public String userType;
 
@@ -54,21 +79,71 @@ public class IdentifyCredential extends TeaModel {
     }
 
     public static class IdentifyCredentialDataSource extends TeaModel {
+        /**
+         * <p>The instance ID of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>710007423244</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The instance name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2zez82ho69yex7s7g</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The password for the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("Password")
         public String password;
 
+        /**
+         * <p>The user type of the data source.</p>
+         * <ul>
+         * <li>Admin</li>
+         * <li>RegularUser</li>
+         * </ul>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>RegularUser: Normal user.</li>
+         * <li>Admin: Administrator.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>The type of the data source. Supported types:</p>
+         * <ul>
+         * <li>hive</li>
+         * <li>lindorm_for_engine</li>
+         * <li>starrocks</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>hologres</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The username for the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tom</p>
+         */
         @NameInMap("UserName")
         public String userName;
 

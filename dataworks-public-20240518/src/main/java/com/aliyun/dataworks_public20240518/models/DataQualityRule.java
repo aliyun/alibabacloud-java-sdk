@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class DataQualityRule extends TeaModel {
+    /**
+     * <p>The check settings for sample data.</p>
+     */
     @NameInMap("CheckingConfig")
     public DataQualityRuleCheckingConfig checkingConfig;
 
     /**
+     * <p>The description of the rule. The description can be up to 500 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>this is a odps _sql task</p>
      */
@@ -15,16 +20,23 @@ public class DataQualityRule extends TeaModel {
     public String description;
 
     /**
+     * <p>Indicates whether the rule is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Enabled")
     public Boolean enabled;
 
+    /**
+     * <p>The operations that you can perform after the rule-based check fails.</p>
+     */
     @NameInMap("ErrorHandlers")
     public java.util.List<DataQualityRuleErrorHandlers> errorHandlers;
 
     /**
+     * <p>The rule ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -32,40 +44,57 @@ public class DataQualityRule extends TeaModel {
     public Long id;
 
     /**
-     * <strong>example:</strong>
-     * <p>表不能为空</p>
+     * <p>The rule name. The name can be up to 255 characters in length and can contain digits, letters, and punctuation marks.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The DataWorks workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>The settings for sampling.</p>
+     */
     @NameInMap("SamplingConfig")
     public DataQualityRuleSamplingConfig samplingConfig;
 
     /**
+     * <p>The strength of the rule. Valid values:</p>
+     * <ul>
+     * <li>Normal</li>
+     * <li>High</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>High</p>
      */
     @NameInMap("Severity")
     public String severity;
 
+    /**
+     * <p>The monitored object of the rule.</p>
+     */
     @NameInMap("Target")
     public DataQualityRuleTarget target;
 
     /**
+     * <p>The template used by the rule.</p>
+     * 
      * <strong>example:</strong>
-     * <p>SYSTEM:user_defined_sql</p>
+     * <p>system::user_defined</p>
      */
     @NameInMap("TemplateCode")
     public String templateCode;
 
     /**
+     * <p>The DataWorks tenant ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -182,6 +211,16 @@ public class DataQualityRule extends TeaModel {
         public String expression;
 
         /**
+         * <p>The comparison operator. Valid values:</p>
+         * <ul>
+         * <li>/&gt;</li>
+         * <li>/&gt;=</li>
+         * <li>&lt;</li>
+         * <li>&lt;=</li>
+         * <li>!=</li>
+         * <li>\=</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <blockquote>
          * </blockquote>
@@ -190,6 +229,8 @@ public class DataQualityRule extends TeaModel {
         public String operator;
 
         /**
+         * <p>The threshold value.</p>
+         * 
          * <strong>example:</strong>
          * <p>100.0</p>
          */
@@ -236,6 +277,16 @@ public class DataQualityRule extends TeaModel {
         public String expression;
 
         /**
+         * <p>The comparison operator. Valid values:</p>
+         * <ul>
+         * <li>/&gt;</li>
+         * <li>/&gt;=</li>
+         * <li>&lt;</li>
+         * <li>&lt;=</li>
+         * <li>!=</li>
+         * <li>\=</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <blockquote>
          * </blockquote>
@@ -244,6 +295,8 @@ public class DataQualityRule extends TeaModel {
         public String operator;
 
         /**
+         * <p>The threshold value.</p>
+         * 
          * <strong>example:</strong>
          * <p>100.0</p>
          */
@@ -290,6 +343,16 @@ public class DataQualityRule extends TeaModel {
         public String expression;
 
         /**
+         * <p>The comparison operator. Valid values:</p>
+         * <ul>
+         * <li>/&gt;</li>
+         * <li>/&gt;=</li>
+         * <li>&lt;</li>
+         * <li>&lt;=</li>
+         * <li>!=</li>
+         * <li>\=</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <blockquote>
          * </blockquote>
@@ -298,6 +361,8 @@ public class DataQualityRule extends TeaModel {
         public String operator;
 
         /**
+         * <p>The threshold value.</p>
+         * 
          * <strong>example:</strong>
          * <p>100.0</p>
          */
@@ -336,12 +401,21 @@ public class DataQualityRule extends TeaModel {
     }
 
     public static class DataQualityRuleCheckingConfigThresholds extends TeaModel {
+        /**
+         * <p>The threshold settings for critical alerts.</p>
+         */
         @NameInMap("Critical")
         public DataQualityRuleCheckingConfigThresholdsCritical critical;
 
+        /**
+         * <p>The expected threshold setting.</p>
+         */
         @NameInMap("Expected")
         public DataQualityRuleCheckingConfigThresholdsExpected expected;
 
+        /**
+         * <p>The threshold settings for normal alerts.</p>
+         */
         @NameInMap("Warned")
         public DataQualityRuleCheckingConfigThresholdsWarned warned;
 
@@ -378,16 +452,31 @@ public class DataQualityRule extends TeaModel {
 
     public static class DataQualityRuleCheckingConfig extends TeaModel {
         /**
+         * <p>The method that is used to query the referenced samples. To obtain some types of thresholds, you need to query reference values. In this example, an expression is used to indicate the query method of referenced samples.</p>
+         * 
          * <strong>example:</strong>
          * <p>{ &quot;bizdate&quot;: [ &quot;-1&quot;, &quot;-7&quot;, &quot;-1m&quot; ] }</p>
          */
         @NameInMap("ReferencedSamplesFilter")
         public String referencedSamplesFilter;
 
+        /**
+         * <p>The threshold settings.</p>
+         */
         @NameInMap("Thresholds")
         public DataQualityRuleCheckingConfigThresholds thresholds;
 
         /**
+         * <p>The threshold calculation method. Valid values:</p>
+         * <ul>
+         * <li>Fixed</li>
+         * <li>Fluctation</li>
+         * <li>FluctationDiscreate</li>
+         * <li>Auto</li>
+         * <li>Average</li>
+         * <li>Variance</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Fixed</p>
          */
@@ -427,6 +516,8 @@ public class DataQualityRule extends TeaModel {
 
     public static class DataQualityRuleErrorHandlers extends TeaModel {
         /**
+         * <p>The SQL statement that is used to filter failed tasks. If the rule is defined by custom SQL statements, you must specify an SQL statement to filter failed tasks.</p>
+         * 
          * <strong>example:</strong>
          * <p>SELECT * FROM tb_api_log WHERE id IS NULL</p>
          */
@@ -434,6 +525,11 @@ public class DataQualityRule extends TeaModel {
         public String errorDataFilter;
 
         /**
+         * <p>The type of the operation. Valid values:</p>
+         * <ul>
+         * <li>SaveErrorData</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SaveErrorData</p>
          */
@@ -465,6 +561,25 @@ public class DataQualityRule extends TeaModel {
 
     public static class DataQualityRuleSamplingConfig extends TeaModel {
         /**
+         * <p>The metrics used for sampling. Valid values:</p>
+         * <ul>
+         * <li>Count: the number of rows in the table.</li>
+         * <li>Min: the minimum value of the field.</li>
+         * <li>Max: the maximum value of the field.</li>
+         * <li>Avg: the average value of the field.</li>
+         * <li>DistinctCount: the number of unique values of the field after deduplication.</li>
+         * <li>DistinctPercent: the percentage of the number of unique values of the field after deduplication to the number of rows in the table.</li>
+         * <li>DuplicatedCount: the number of duplicated values in the field.</li>
+         * <li>DuplicatedPercent: the percentage of the number of duplicated values of the field to the number of rows in the table.</li>
+         * <li>TableSize: the table size.</li>
+         * <li>NullValueCount: the number of rows in which the field is set to null.</li>
+         * <li>NullValuePercent: the percentage of the number of rows in which the field is set to null to the number of rows in the table.</li>
+         * <li>GroupCount: the field value and the number of rows for each field value.</li>
+         * <li>CountNotIn: the number of rows in which the field values are different from the referenced values that you specified in the rule.</li>
+         * <li>CountDistinctNotIn: the number of unique values that are different from the referenced values that you specified in the rule after deduplication.</li>
+         * <li>UserDefinedSql: indicates that the data is sampled by executing custom SQL statements.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Min</p>
          */
@@ -472,6 +587,8 @@ public class DataQualityRule extends TeaModel {
         public String metric;
 
         /**
+         * <p>The parameters required for sampling.</p>
+         * 
          * <strong>example:</strong>
          * <p>{ &quot;Columns&quot;: [ &quot;id&quot;, &quot;name&quot; ] }</p>
          */
@@ -479,6 +596,8 @@ public class DataQualityRule extends TeaModel {
         public String metricParameters;
 
         /**
+         * <p>The statements that are used to filter unnecessary data during sampling. The statements can be up to 16,777,215 characters in length.</p>
+         * 
          * <strong>example:</strong>
          * <p>id IS NULL</p>
          */
@@ -486,6 +605,8 @@ public class DataQualityRule extends TeaModel {
         public String samplingFilter;
 
         /**
+         * <p>The statements that are used to configure the parameters required for sampling before you execute the sampling statements. The statements can be up to 1,000 characters in length. Only the MaxCompute database is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>SET odps.sql.udf.timeout=600s;</p>
          */
@@ -533,6 +654,17 @@ public class DataQualityRule extends TeaModel {
 
     public static class DataQualityRuleTarget extends TeaModel {
         /**
+         * <p>The type of the database to which the table belongs. Valid values:</p>
+         * <ul>
+         * <li>maxcompute</li>
+         * <li>emr</li>
+         * <li>cdh</li>
+         * <li>hologres</li>
+         * <li>analyticdb_for_postgresql</li>
+         * <li>analyticdb_for_mysql</li>
+         * <li>starrocks</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>maxcompute</p>
          */
@@ -540,6 +672,8 @@ public class DataQualityRule extends TeaModel {
         public String databaseType;
 
         /**
+         * <p>The configuration of the partitioned table.</p>
+         * 
          * <strong>example:</strong>
          * <p>ds=$[yyyymmdd-1]</p>
          */
@@ -547,6 +681,8 @@ public class DataQualityRule extends TeaModel {
         public String partitionSpec;
 
         /**
+         * <p>The ID of the table in Data Map.</p>
+         * 
          * <strong>example:</strong>
          * <p>odps.unit_test.tb_unit_test</p>
          */
@@ -554,6 +690,11 @@ public class DataQualityRule extends TeaModel {
         public String tableGuid;
 
         /**
+         * <p>The type of the monitored object. Valid values:</p>
+         * <ul>
+         * <li>Table</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Table</p>
          */

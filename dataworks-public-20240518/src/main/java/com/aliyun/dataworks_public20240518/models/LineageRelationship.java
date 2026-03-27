@@ -5,25 +5,38 @@ import com.aliyun.tea.*;
 
 public class LineageRelationship extends TeaModel {
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1743040581000</p>
      */
     @NameInMap("CreateTime")
     public Long createTime;
 
+    /**
+     * <p>The destination entity.</p>
+     */
     @NameInMap("DstEntity")
     public LineageEntity dstEntity;
 
     /**
+     * <p>The ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>maxcompute-table.p.table:custom-table.xxx:custom-sql.123</p>
      */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <p>The source entity.</p>
+     */
     @NameInMap("SrcEntity")
     public LineageEntity srcEntity;
 
+    /**
+     * <p>The task.</p>
+     */
     @NameInMap("Task")
     public LineageTask task;
 

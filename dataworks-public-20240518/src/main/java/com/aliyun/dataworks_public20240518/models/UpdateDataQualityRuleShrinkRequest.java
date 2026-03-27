@@ -54,7 +54,11 @@ public class UpdateDataQualityRuleShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The DataWorks workspace ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

@@ -4,9 +4,21 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class DatasetLabel extends TeaModel {
+    /**
+     * <p>Dataset label keys</p>
+     * 
+     * <strong>example:</strong>
+     * <p>key1</p>
+     */
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <p>Dataset label values</p>
+     * 
+     * <strong>example:</strong>
+     * <p>value1</p>
+     */
     @NameInMap("Value")
     public String value;
 
