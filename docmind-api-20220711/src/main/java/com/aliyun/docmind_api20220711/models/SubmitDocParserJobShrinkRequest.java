@@ -58,6 +58,9 @@ public class SubmitDocParserJobShrinkRequest extends TeaModel {
     @NameInMap("OssEndpoint")
     public String ossEndpoint;
 
+    @NameInMap("OutputFormat")
+    public String outputFormatShrink;
+
     @NameInMap("OutputHtmlTable")
     public Boolean outputHtmlTable;
 
@@ -179,6 +182,14 @@ public class SubmitDocParserJobShrinkRequest extends TeaModel {
     }
     public String getOssEndpoint() {
         return this.ossEndpoint;
+    }
+
+    public SubmitDocParserJobShrinkRequest setOutputFormatShrink(String outputFormatShrink) {
+        this.outputFormatShrink = outputFormatShrink;
+        return this;
+    }
+    public String getOutputFormatShrink() {
+        return this.outputFormatShrink;
     }
 
     public SubmitDocParserJobShrinkRequest setOutputHtmlTable(Boolean outputHtmlTable) {

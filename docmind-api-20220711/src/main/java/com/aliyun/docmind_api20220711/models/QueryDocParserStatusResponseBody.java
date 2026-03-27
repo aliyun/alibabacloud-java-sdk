@@ -65,12 +65,119 @@ public class QueryDocParserStatusResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class QueryDocParserStatusResponseBodyDataOutputFormatResultPages extends TeaModel {
+        @NameInMap("ImageHeight")
+        public Integer imageHeight;
+
+        @NameInMap("ImageUrl")
+        public String imageUrl;
+
+        @NameInMap("ImageWidth")
+        public Integer imageWidth;
+
+        @NameInMap("PageIdAllDocs")
+        public Integer pageIdAllDocs;
+
+        @NameInMap("PageIdCurDoc")
+        public Integer pageIdCurDoc;
+
+        public static QueryDocParserStatusResponseBodyDataOutputFormatResultPages build(java.util.Map<String, ?> map) throws Exception {
+            QueryDocParserStatusResponseBodyDataOutputFormatResultPages self = new QueryDocParserStatusResponseBodyDataOutputFormatResultPages();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryDocParserStatusResponseBodyDataOutputFormatResultPages setImageHeight(Integer imageHeight) {
+            this.imageHeight = imageHeight;
+            return this;
+        }
+        public Integer getImageHeight() {
+            return this.imageHeight;
+        }
+
+        public QueryDocParserStatusResponseBodyDataOutputFormatResultPages setImageUrl(String imageUrl) {
+            this.imageUrl = imageUrl;
+            return this;
+        }
+        public String getImageUrl() {
+            return this.imageUrl;
+        }
+
+        public QueryDocParserStatusResponseBodyDataOutputFormatResultPages setImageWidth(Integer imageWidth) {
+            this.imageWidth = imageWidth;
+            return this;
+        }
+        public Integer getImageWidth() {
+            return this.imageWidth;
+        }
+
+        public QueryDocParserStatusResponseBodyDataOutputFormatResultPages setPageIdAllDocs(Integer pageIdAllDocs) {
+            this.pageIdAllDocs = pageIdAllDocs;
+            return this;
+        }
+        public Integer getPageIdAllDocs() {
+            return this.pageIdAllDocs;
+        }
+
+        public QueryDocParserStatusResponseBodyDataOutputFormatResultPages setPageIdCurDoc(Integer pageIdCurDoc) {
+            this.pageIdCurDoc = pageIdCurDoc;
+            return this;
+        }
+        public Integer getPageIdCurDoc() {
+            return this.pageIdCurDoc;
+        }
+
+    }
+
+    public static class QueryDocParserStatusResponseBodyDataOutputFormatResult extends TeaModel {
+        @NameInMap("OutputFileUrl")
+        public String outputFileUrl;
+
+        @NameInMap("OutputType")
+        public String outputType;
+
+        @NameInMap("Pages")
+        public java.util.List<QueryDocParserStatusResponseBodyDataOutputFormatResultPages> pages;
+
+        public static QueryDocParserStatusResponseBodyDataOutputFormatResult build(java.util.Map<String, ?> map) throws Exception {
+            QueryDocParserStatusResponseBodyDataOutputFormatResult self = new QueryDocParserStatusResponseBodyDataOutputFormatResult();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryDocParserStatusResponseBodyDataOutputFormatResult setOutputFileUrl(String outputFileUrl) {
+            this.outputFileUrl = outputFileUrl;
+            return this;
+        }
+        public String getOutputFileUrl() {
+            return this.outputFileUrl;
+        }
+
+        public QueryDocParserStatusResponseBodyDataOutputFormatResult setOutputType(String outputType) {
+            this.outputType = outputType;
+            return this;
+        }
+        public String getOutputType() {
+            return this.outputType;
+        }
+
+        public QueryDocParserStatusResponseBodyDataOutputFormatResult setPages(java.util.List<QueryDocParserStatusResponseBodyDataOutputFormatResultPages> pages) {
+            this.pages = pages;
+            return this;
+        }
+        public java.util.List<QueryDocParserStatusResponseBodyDataOutputFormatResultPages> getPages() {
+            return this.pages;
+        }
+
+    }
+
     public static class QueryDocParserStatusResponseBodyData extends TeaModel {
         @NameInMap("ImageCount")
         public Integer imageCount;
 
         @NameInMap("NumberOfSuccessfulParsing")
         public Integer numberOfSuccessfulParsing;
+
+        @NameInMap("OutputFormatResult")
+        public java.util.List<QueryDocParserStatusResponseBodyDataOutputFormatResult> outputFormatResult;
 
         @NameInMap("PageCountEstimate")
         public Integer pageCountEstimate;
@@ -109,6 +216,14 @@ public class QueryDocParserStatusResponseBody extends TeaModel {
         }
         public Integer getNumberOfSuccessfulParsing() {
             return this.numberOfSuccessfulParsing;
+        }
+
+        public QueryDocParserStatusResponseBodyData setOutputFormatResult(java.util.List<QueryDocParserStatusResponseBodyDataOutputFormatResult> outputFormatResult) {
+            this.outputFormatResult = outputFormatResult;
+            return this;
+        }
+        public java.util.List<QueryDocParserStatusResponseBodyDataOutputFormatResult> getOutputFormatResult() {
+            return this.outputFormatResult;
         }
 
         public QueryDocParserStatusResponseBodyData setPageCountEstimate(Integer pageCountEstimate) {

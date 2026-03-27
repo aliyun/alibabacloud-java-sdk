@@ -40,6 +40,9 @@ public class SubmitDocStructureJobRequest extends TeaModel {
     @NameInMap("OssEndpoint")
     public String ossEndpoint;
 
+    @NameInMap("OutputFormat")
+    public java.util.List<String> outputFormat;
+
     @NameInMap("PageIndex")
     public String pageIndex;
 
@@ -113,6 +116,14 @@ public class SubmitDocStructureJobRequest extends TeaModel {
     }
     public String getOssEndpoint() {
         return this.ossEndpoint;
+    }
+
+    public SubmitDocStructureJobRequest setOutputFormat(java.util.List<String> outputFormat) {
+        this.outputFormat = outputFormat;
+        return this;
+    }
+    public java.util.List<String> getOutputFormat() {
+        return this.outputFormat;
     }
 
     public SubmitDocStructureJobRequest setPageIndex(String pageIndex) {

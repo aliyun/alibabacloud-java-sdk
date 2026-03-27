@@ -58,6 +58,9 @@ public class SubmitDocParserJobRequest extends TeaModel {
     @NameInMap("OssEndpoint")
     public String ossEndpoint;
 
+    @NameInMap("OutputFormat")
+    public java.util.List<String> outputFormat;
+
     @NameInMap("OutputHtmlTable")
     public Boolean outputHtmlTable;
 
@@ -179,6 +182,14 @@ public class SubmitDocParserJobRequest extends TeaModel {
     }
     public String getOssEndpoint() {
         return this.ossEndpoint;
+    }
+
+    public SubmitDocParserJobRequest setOutputFormat(java.util.List<String> outputFormat) {
+        this.outputFormat = outputFormat;
+        return this;
+    }
+    public java.util.List<String> getOutputFormat() {
+        return this.outputFormat;
     }
 
     public SubmitDocParserJobRequest setOutputHtmlTable(Boolean outputHtmlTable) {

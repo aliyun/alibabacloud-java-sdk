@@ -1724,6 +1724,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.multimediaParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.multimediaParameters, "MultimediaParameters", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.outputFormat)) {
+            request.outputFormatShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.outputFormat, "OutputFormat", "simple");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.customOssConfigShrink)) {
             query.put("CustomOssConfig", request.customOssConfigShrink);
@@ -1779,6 +1783,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ossEndpoint)) {
             query.put("OssEndpoint", request.ossEndpoint);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputFormatShrink)) {
+            query.put("OutputFormat", request.outputFormatShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.outputHtmlTable)) {
@@ -1910,12 +1918,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>文档智能解析</p>
      * 
-     * @param request SubmitDocStructureJobRequest
+     * @param tmpReq SubmitDocStructureJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SubmitDocStructureJobResponse
      */
-    public SubmitDocStructureJobResponse submitDocStructureJobWithOptions(SubmitDocStructureJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public SubmitDocStructureJobResponse submitDocStructureJobWithOptions(SubmitDocStructureJobRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SubmitDocStructureJobShrinkRequest request = new SubmitDocStructureJobShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.outputFormat)) {
+            request.outputFormatShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.outputFormat, "OutputFormat", "simple");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.allowPptFormat)) {
             query.put("AllowPptFormat", request.allowPptFormat);
@@ -1947,6 +1961,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ossEndpoint)) {
             query.put("OssEndpoint", request.ossEndpoint);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputFormatShrink)) {
+            query.put("OutputFormat", request.outputFormatShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageIndex)) {

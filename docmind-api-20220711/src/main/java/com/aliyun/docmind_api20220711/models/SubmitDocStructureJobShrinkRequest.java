@@ -3,7 +3,7 @@ package com.aliyun.docmind_api20220711.models;
 
 import com.aliyun.tea.*;
 
-public class SubmitDocStructureJobAdvanceRequest extends TeaModel {
+public class SubmitDocStructureJobShrinkRequest extends TeaModel {
     @NameInMap("AllowPptFormat")
     public Boolean allowPptFormat;
 
@@ -29,7 +29,7 @@ public class SubmitDocStructureJobAdvanceRequest extends TeaModel {
      * <p><a href="https://gw.alipayobjects.com/os/basement_prod/598b9edf-5287-4065-9e36-464305c60698.pdf">https://gw.alipayobjects.com/os/basement_prod/598b9edf-5287-4065-9e36-464305c60698.pdf</a></p>
      */
     @NameInMap("FileUrl")
-    public java.io.InputStream fileUrlObject;
+    public String fileUrl;
 
     @NameInMap("FormulaEnhancement")
     public Boolean formulaEnhancement;
@@ -41,7 +41,7 @@ public class SubmitDocStructureJobAdvanceRequest extends TeaModel {
     public String ossEndpoint;
 
     @NameInMap("OutputFormat")
-    public java.util.List<String> outputFormat;
+    public String outputFormatShrink;
 
     @NameInMap("PageIndex")
     public String pageIndex;
@@ -49,12 +49,12 @@ public class SubmitDocStructureJobAdvanceRequest extends TeaModel {
     @NameInMap("StructureType")
     public String structureType;
 
-    public static SubmitDocStructureJobAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
-        SubmitDocStructureJobAdvanceRequest self = new SubmitDocStructureJobAdvanceRequest();
+    public static SubmitDocStructureJobShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        SubmitDocStructureJobShrinkRequest self = new SubmitDocStructureJobShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public SubmitDocStructureJobAdvanceRequest setAllowPptFormat(Boolean allowPptFormat) {
+    public SubmitDocStructureJobShrinkRequest setAllowPptFormat(Boolean allowPptFormat) {
         this.allowPptFormat = allowPptFormat;
         return this;
     }
@@ -62,7 +62,7 @@ public class SubmitDocStructureJobAdvanceRequest extends TeaModel {
         return this.allowPptFormat;
     }
 
-    public SubmitDocStructureJobAdvanceRequest setEnableEventCallback(Boolean enableEventCallback) {
+    public SubmitDocStructureJobShrinkRequest setEnableEventCallback(Boolean enableEventCallback) {
         this.enableEventCallback = enableEventCallback;
         return this;
     }
@@ -70,7 +70,7 @@ public class SubmitDocStructureJobAdvanceRequest extends TeaModel {
         return this.enableEventCallback;
     }
 
-    public SubmitDocStructureJobAdvanceRequest setFileName(String fileName) {
+    public SubmitDocStructureJobShrinkRequest setFileName(String fileName) {
         this.fileName = fileName;
         return this;
     }
@@ -78,7 +78,7 @@ public class SubmitDocStructureJobAdvanceRequest extends TeaModel {
         return this.fileName;
     }
 
-    public SubmitDocStructureJobAdvanceRequest setFileNameExtension(String fileNameExtension) {
+    public SubmitDocStructureJobShrinkRequest setFileNameExtension(String fileNameExtension) {
         this.fileNameExtension = fileNameExtension;
         return this;
     }
@@ -86,15 +86,15 @@ public class SubmitDocStructureJobAdvanceRequest extends TeaModel {
         return this.fileNameExtension;
     }
 
-    public SubmitDocStructureJobAdvanceRequest setFileUrlObject(java.io.InputStream fileUrlObject) {
-        this.fileUrlObject = fileUrlObject;
+    public SubmitDocStructureJobShrinkRequest setFileUrl(String fileUrl) {
+        this.fileUrl = fileUrl;
         return this;
     }
-    public java.io.InputStream getFileUrlObject() {
-        return this.fileUrlObject;
+    public String getFileUrl() {
+        return this.fileUrl;
     }
 
-    public SubmitDocStructureJobAdvanceRequest setFormulaEnhancement(Boolean formulaEnhancement) {
+    public SubmitDocStructureJobShrinkRequest setFormulaEnhancement(Boolean formulaEnhancement) {
         this.formulaEnhancement = formulaEnhancement;
         return this;
     }
@@ -102,7 +102,7 @@ public class SubmitDocStructureJobAdvanceRequest extends TeaModel {
         return this.formulaEnhancement;
     }
 
-    public SubmitDocStructureJobAdvanceRequest setOssBucket(String ossBucket) {
+    public SubmitDocStructureJobShrinkRequest setOssBucket(String ossBucket) {
         this.ossBucket = ossBucket;
         return this;
     }
@@ -110,7 +110,7 @@ public class SubmitDocStructureJobAdvanceRequest extends TeaModel {
         return this.ossBucket;
     }
 
-    public SubmitDocStructureJobAdvanceRequest setOssEndpoint(String ossEndpoint) {
+    public SubmitDocStructureJobShrinkRequest setOssEndpoint(String ossEndpoint) {
         this.ossEndpoint = ossEndpoint;
         return this;
     }
@@ -118,15 +118,15 @@ public class SubmitDocStructureJobAdvanceRequest extends TeaModel {
         return this.ossEndpoint;
     }
 
-    public SubmitDocStructureJobAdvanceRequest setOutputFormat(java.util.List<String> outputFormat) {
-        this.outputFormat = outputFormat;
+    public SubmitDocStructureJobShrinkRequest setOutputFormatShrink(String outputFormatShrink) {
+        this.outputFormatShrink = outputFormatShrink;
         return this;
     }
-    public java.util.List<String> getOutputFormat() {
-        return this.outputFormat;
+    public String getOutputFormatShrink() {
+        return this.outputFormatShrink;
     }
 
-    public SubmitDocStructureJobAdvanceRequest setPageIndex(String pageIndex) {
+    public SubmitDocStructureJobShrinkRequest setPageIndex(String pageIndex) {
         this.pageIndex = pageIndex;
         return this;
     }
@@ -134,7 +134,7 @@ public class SubmitDocStructureJobAdvanceRequest extends TeaModel {
         return this.pageIndex;
     }
 
-    public SubmitDocStructureJobAdvanceRequest setStructureType(String structureType) {
+    public SubmitDocStructureJobShrinkRequest setStructureType(String structureType) {
         this.structureType = structureType;
         return this;
     }
