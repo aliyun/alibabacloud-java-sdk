@@ -5,11 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdatePrometheusUserSettingRequest extends TeaModel {
     /**
-     * <p>The value of the user setting.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ap-southeast-1</p>
+     * <p>abc</p>
      */
     @NameInMap("settingValue")
     public String settingValue;

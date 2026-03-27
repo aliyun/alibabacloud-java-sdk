@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateUmodelResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>234324-123-123-123-23423</p>
@@ -14,7 +14,7 @@ public class UpdateUmodelResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The name of the workspace.</p>
+     * <p>Workspace name</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test</p>

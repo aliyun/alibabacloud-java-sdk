@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateIntegrationPolicyRequest extends TeaModel {
     /**
-     * <p>The type of the paid plan. Valid values: CS_Pro, CS_Basic, and empty.</p>
+     * <p>Fee package type, CS_Pro/CS_Basic/empty.</p>
      * 
      * <strong>example:</strong>
      * <p>CS_Pro</p>
@@ -14,7 +14,7 @@ public class UpdateIntegrationPolicyRequest extends TeaModel {
     public String feePackage;
 
     /**
-     * <p>The name of the rule. The name must be 3 to 63 characters in length and start with a letter.</p>
+     * <p>Rule name, minimum 3 characters, maximum 63 characters, must start with a letter.</p>
      * 
      * <strong>example:</strong>
      * <p>metrics-inner-manage</p>
@@ -23,7 +23,7 @@ public class UpdateIntegrationPolicyRequest extends TeaModel {
     public String policyName;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs.</p>
+     * <p>Resource group ID of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekzoiafjtr7zyq</p>
@@ -32,7 +32,7 @@ public class UpdateIntegrationPolicyRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tags of the resource.</p>
+     * <p>Resource tags.</p>
      */
     @NameInMap("tags")
     public java.util.List<UpdateIntegrationPolicyRequestTags> tags;
@@ -76,7 +76,7 @@ public class UpdateIntegrationPolicyRequest extends TeaModel {
 
     public static class UpdateIntegrationPolicyRequestTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>Tag <code>key</code> value.</p>
          * 
          * <strong>example:</strong>
          * <p>algo_bhv_expose_in_airec_exposure</p>
@@ -85,7 +85,7 @@ public class UpdateIntegrationPolicyRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>Tag <code>value</code> value.</p>
          * 
          * <strong>example:</strong>
          * <p>[{\&quot;Id\&quot;: \&quot;kgqie6hm\&quot;, \&quot;Name\&quot;: \&quot;Sheet1\&quot;}]</p>

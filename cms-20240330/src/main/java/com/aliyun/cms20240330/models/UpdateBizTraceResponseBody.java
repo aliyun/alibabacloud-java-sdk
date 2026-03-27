@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class UpdateBizTraceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the business trace.</p>
-     * 
      * <strong>example:</strong>
      * <p>e339260ed64c95d</p>
      */
@@ -14,8 +12,6 @@ public class UpdateBizTraceResponseBody extends TeaModel {
     public String bizTraceId;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
      */

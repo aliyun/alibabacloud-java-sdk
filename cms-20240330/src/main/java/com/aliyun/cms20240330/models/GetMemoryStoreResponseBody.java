@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetMemoryStoreResponseBody extends TeaModel {
     /**
-     * <p>Creation time.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
      * <strong>example:</strong>
@@ -14,30 +13,20 @@ public class GetMemoryStoreResponseBody extends TeaModel {
     @NameInMap("createTime")
     public String createTime;
 
-    /**
-     * <p>Custom extraction strategies.</p>
-     */
     @NameInMap("customExtractionStrategies")
     public java.util.List<CustomExtractionStrategy> customExtractionStrategies;
 
     /**
-     * <p>Description.</p>
-     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
     @NameInMap("description")
     public String description;
 
-    /**
-     * <p>Supported values: Episodic, Summary, and Fact.</p>
-     */
     @NameInMap("extractionStrategies")
     public java.util.List<String> extractionStrategies;
 
     /**
-     * <p>Memory store name.</p>
-     * 
      * <strong>example:</strong>
      * <p>test-memory-store</p>
      */
@@ -45,8 +34,6 @@ public class GetMemoryStoreResponseBody extends TeaModel {
     public String memoryStoreName;
 
     /**
-     * <p>Region ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -54,23 +41,16 @@ public class GetMemoryStoreResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>0B9377D9-C56B-5C2E-A8A4-A01D6CC3F4B8</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <p>Short-term memory storage.</p>
-     */
     @NameInMap("shortTermStorage")
     public GetMemoryStoreResponseBodyShortTermStorage shortTermStorage;
 
     /**
-     * <p>Short-term memory retention time, in seconds.</p>
-     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -78,7 +58,16 @@ public class GetMemoryStoreResponseBody extends TeaModel {
     public Integer shortTermTtl;
 
     /**
-     * <p>Update time.</p>
+     * <strong>example:</strong>
+     * <p>Trace</p>
+     */
+    @NameInMap("sourceType")
+    public String sourceType;
+
+    @NameInMap("traceSourceConfig")
+    public GetMemoryStoreResponseBodyTraceSourceConfig traceSourceConfig;
+
+    /**
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
      * <strong>example:</strong>
@@ -88,8 +77,6 @@ public class GetMemoryStoreResponseBody extends TeaModel {
     public String updateTime;
 
     /**
-     * <p>Workspace name.</p>
-     * 
      * <strong>example:</strong>
      * <p>default-cms-xxxxxx-cn-beijing</p>
      */
@@ -173,6 +160,22 @@ public class GetMemoryStoreResponseBody extends TeaModel {
         return this.shortTermTtl;
     }
 
+    public GetMemoryStoreResponseBody setSourceType(String sourceType) {
+        this.sourceType = sourceType;
+        return this;
+    }
+    public String getSourceType() {
+        return this.sourceType;
+    }
+
+    public GetMemoryStoreResponseBody setTraceSourceConfig(GetMemoryStoreResponseBodyTraceSourceConfig traceSourceConfig) {
+        this.traceSourceConfig = traceSourceConfig;
+        return this;
+    }
+    public GetMemoryStoreResponseBodyTraceSourceConfig getTraceSourceConfig() {
+        return this.traceSourceConfig;
+    }
+
     public GetMemoryStoreResponseBody setUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -190,21 +193,9 @@ public class GetMemoryStoreResponseBody extends TeaModel {
     }
 
     public static class GetMemoryStoreResponseBodyShortTermStorage extends TeaModel {
-        /**
-         * <p>Simple Log Service Logstore name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>memory-store</p>
-         */
         @NameInMap("logstore")
         public String logstore;
 
-        /**
-         * <p>Simple Log Service Project name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>wk_cms_data_warehouse</p>
-         */
         @NameInMap("project")
         public String project;
 
@@ -227,6 +218,55 @@ public class GetMemoryStoreResponseBody extends TeaModel {
         }
         public String getProject() {
             return this.project;
+        }
+
+    }
+
+    public static class GetMemoryStoreResponseBodyTraceSourceConfig extends TeaModel {
+        @NameInMap("includeOutput")
+        public Boolean includeOutput;
+
+        /**
+         * <strong>example:</strong>
+         * <p>(serviceName : &quot;langchain-rag&quot; or serviceName : &quot;agentscope-code-correction&quot;) and hostname = frontend-proxy-999c48c8d-hvk6c</p>
+         */
+        @NameInMap("query")
+        public String query;
+
+        /**
+         * <strong>example:</strong>
+         * <p>test-workspace</p>
+         */
+        @NameInMap("workspace")
+        public String workspace;
+
+        public static GetMemoryStoreResponseBodyTraceSourceConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetMemoryStoreResponseBodyTraceSourceConfig self = new GetMemoryStoreResponseBodyTraceSourceConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetMemoryStoreResponseBodyTraceSourceConfig setIncludeOutput(Boolean includeOutput) {
+            this.includeOutput = includeOutput;
+            return this;
+        }
+        public Boolean getIncludeOutput() {
+            return this.includeOutput;
+        }
+
+        public GetMemoryStoreResponseBodyTraceSourceConfig setQuery(String query) {
+            this.query = query;
+            return this;
+        }
+        public String getQuery() {
+            return this.query;
+        }
+
+        public GetMemoryStoreResponseBodyTraceSourceConfig setWorkspace(String workspace) {
+            this.workspace = workspace;
+            return this;
+        }
+        public String getWorkspace() {
+            return this.workspace;
         }
 
     }

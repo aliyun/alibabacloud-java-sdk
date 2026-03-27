@@ -14,18 +14,12 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
     public String alertEventIntegrationPolicyId;
 
     /**
-     * <p>名称</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>集成名</p>
      */
     @NameInMap("alertEventIntegrationPolicyName")
     public String alertEventIntegrationPolicyName;
 
     /**
-     * <p>创建时间</p>
-     * 
      * <strong>example:</strong>
      * <p>2025-03-11T08:21:58Z</p>
      */
@@ -33,8 +27,6 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
     public String createTime;
 
     /**
-     * <p>描述</p>
-     * 
      * <strong>example:</strong>
      * <p>workspace test</p>
      */
@@ -42,23 +34,16 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
     public String description;
 
     /**
-     * <p>是否启用</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("enable")
     public Boolean enable;
 
-    /**
-     * <p>过滤配置</p>
-     */
     @NameInMap("filterSetting")
     public FilterSetting filterSetting;
 
     /**
-     * <p>订阅设置</p>
-     * 
      * <strong>example:</strong>
      * <p>{&quot;region&quot;:&quot;cn-hangzhou&quot;}</p>
      */
@@ -66,23 +51,16 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
     public String integrationSetting;
 
     /**
-     * <p>集成的上报入口key</p>
-     * 
      * <strong>example:</strong>
      * <p>10-16818f1445e10a1d012922b285bfb334</p>
      */
     @NameInMap("token")
     public String token;
 
-    /**
-     * <p>转换设置</p>
-     */
     @NameInMap("transformerSetting")
     public java.util.List<TransformAction> transformerSetting;
 
     /**
-     * <p>类型</p>
-     * 
      * <strong>example:</strong>
      * <p>ALERT_CUSTOM</p>
      */
@@ -90,8 +68,6 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
     public String type;
 
     /**
-     * <p>更新时间</p>
-     * 
      * <strong>example:</strong>
      * <p>2024-12-16T02:00:23Z</p>
      */
@@ -99,8 +75,6 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
     public String updateTime;
 
     /**
-     * <p>用户id</p>
-     * 
      * <strong>example:</strong>
      * <p>123123</p>
      */

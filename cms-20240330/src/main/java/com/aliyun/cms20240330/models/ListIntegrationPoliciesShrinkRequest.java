@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIntegrationPoliciesShrinkRequest extends TeaModel {
     /**
-     * <p>The add-on name.</p>
+     * <p>Addon name.</p>
      * 
      * <strong>example:</strong>
      * <p>cs-default</p>
@@ -14,7 +14,7 @@ public class ListIntegrationPoliciesShrinkRequest extends TeaModel {
     public String addonName;
 
     /**
-     * <p>The ID of the attached resource.</p>
+     * <p>Bound resource ID</p>
      * 
      * <strong>example:</strong>
      * <p>622d27c2e87d49debceeebc7c642610e</p>
@@ -23,7 +23,7 @@ public class ListIntegrationPoliciesShrinkRequest extends TeaModel {
     public String bindResourceId;
 
     /**
-     * <p>The IDs of the entity groups to filter by. Separate multiple IDs with commas.</p>
+     * <p>Filter for entity IDs, separated by commas</p>
      * 
      * <strong>example:</strong>
      * <p>eg-1,eg-2,eg-3</p>
@@ -32,7 +32,7 @@ public class ListIntegrationPoliciesShrinkRequest extends TeaModel {
     public String entityGroupIds;
 
     /**
-     * <p>The IDs of the regions to query. Separate multiple region IDs with commas.</p>
+     * <p>Used for Region query, separated by commas</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing,cn-hangzhou</p>
@@ -41,7 +41,7 @@ public class ListIntegrationPoliciesShrinkRequest extends TeaModel {
     public String filterRegionIds;
 
     /**
-     * <p>The maximum number of entries to return on each page. The default value is 30. The maximum value is 100.</p>
+     * <p>Maximum number of results to return. Default is 30, with a maximum of 100.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -50,7 +50,7 @@ public class ListIntegrationPoliciesShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to retrieve the next page of results. You do not need to specify this parameter for the first request. You can obtain the token from the response to the previous request.</p>
+     * <p>Used to return more results. This parameter is not required for the first query. For subsequent queries, use the Token obtained from the response.</p>
      * 
      * <strong>example:</strong>
      * <p>mvnX6zqg3P</p>
@@ -59,7 +59,7 @@ public class ListIntegrationPoliciesShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The policy ID.</p>
+     * <p>Policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>policy-93817a401f78435596d745a97d2e85a1</p>
@@ -68,7 +68,7 @@ public class ListIntegrationPoliciesShrinkRequest extends TeaModel {
     public String policyId;
 
     /**
-     * <p>The policy name.</p>
+     * <p>Rule name.</p>
      * 
      * <strong>example:</strong>
      * <p>prod-database</p>
@@ -77,7 +77,7 @@ public class ListIntegrationPoliciesShrinkRequest extends TeaModel {
     public String policyName;
 
     /**
-     * <p>The policy type.</p>
+     * <p>Policy type</p>
      * 
      * <strong>example:</strong>
      * <p>CS</p>
@@ -86,7 +86,7 @@ public class ListIntegrationPoliciesShrinkRequest extends TeaModel {
     public String policyType;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>Instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cmee-622d27c2e87d49debceeebc7c642610e</p>
@@ -95,7 +95,7 @@ public class ListIntegrationPoliciesShrinkRequest extends TeaModel {
     public String prometheusInstanceId;
 
     /**
-     * <p>A general-purpose query string.</p>
+     * <p>Used for general queries</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -104,7 +104,7 @@ public class ListIntegrationPoliciesShrinkRequest extends TeaModel {
     public String query;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>Resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-xxxxx</p>
@@ -113,13 +113,13 @@ public class ListIntegrationPoliciesShrinkRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>Tag list.</p>
      */
     @NameInMap("tag")
     public String tagShrink;
 
     /**
-     * <p>The workspace.</p>
+     * <p>Workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>demo</p>

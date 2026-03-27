@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAddonReleaseResponseBody extends TeaModel {
     /**
-     * <p>The configuration of the component.</p>
+     * <p>Component configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;install&quot;:{&quot;mode&quot;:&quot;auto-install&quot;,&quot;listenPort&quot;:&quot;9400&quot;},&quot;discoverMode&quot;:&quot;instances&quot;,&quot;discover&quot;:{&quot;instances&quot;:&quot;worker-k8s-for-cs-c126d87c76218487e83ab322017f11b44&quot;},&quot;scrapeInterval&quot;:&quot;15&quot;,&quot;enableSecuritecs-nodeyGroupInjection&quot;:&quot;true&quot;,&quot;metricTags&quot;:&quot;&quot;}</p>
@@ -14,13 +14,13 @@ public class GetAddonReleaseResponseBody extends TeaModel {
     public String config;
 
     /**
-     * <p>The details of the release.</p>
+     * <p>Detailed information.</p>
      */
     @NameInMap("release")
     public GetAddonReleaseResponseBodyRelease release;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0B9377D9-C56B-5C2E-A8A4-A01D6CC3F4B8</p>
@@ -59,7 +59,7 @@ public class GetAddonReleaseResponseBody extends TeaModel {
 
     public static class GetAddonReleaseResponseBodyReleaseConditions extends TeaModel {
         /**
-         * <p>The time when the phase first transitioned.</p>
+         * <p>First transition time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-04T16:10:22+08:00</p>
@@ -68,7 +68,7 @@ public class GetAddonReleaseResponseBody extends TeaModel {
         public String firstTransitionTime;
 
         /**
-         * <p>The time when the phase last transitioned.</p>
+         * <p>Last transition time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-04T16:10:22+08:00</p>
@@ -77,7 +77,7 @@ public class GetAddonReleaseResponseBody extends TeaModel {
         public String lastTransitionTime;
 
         /**
-         * <p>The detailed message.</p>
+         * <p>Details.</p>
          * 
          * <strong>example:</strong>
          * <p>The addon loaded successfully</p>
@@ -86,7 +86,7 @@ public class GetAddonReleaseResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The status of the phase.</p>
+         * <p>Phase status.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -95,7 +95,7 @@ public class GetAddonReleaseResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The type of the phase.</p>
+         * <p>Phase type.</p>
          * 
          * <strong>example:</strong>
          * <p>Loaded</p>
@@ -152,7 +152,7 @@ public class GetAddonReleaseResponseBody extends TeaModel {
 
     public static class GetAddonReleaseResponseBodyRelease extends TeaModel {
         /**
-         * <p>The name of the add-on component.</p>
+         * <p>Addon component name.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-gpu</p>
@@ -161,7 +161,7 @@ public class GetAddonReleaseResponseBody extends TeaModel {
         public String addonName;
 
         /**
-         * <p>The number of alert rules.</p>
+         * <p>Number of alert rules.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -170,13 +170,13 @@ public class GetAddonReleaseResponseBody extends TeaModel {
         public Long alertRuleCount;
 
         /**
-         * <p>Information about the installation phases.</p>
+         * <p>Installation phase information.</p>
          */
         @NameInMap("conditions")
         public java.util.List<GetAddonReleaseResponseBodyReleaseConditions> conditions;
 
         /**
-         * <p>The configuration information of the component.</p>
+         * <p>Component configuration information.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;install&quot;:{&quot;mode&quot;:&quot;auto-install&quot;,&quot;listenPort&quot;:&quot;9400&quot;},&quot;discoverMode&quot;:&quot;instances&quot;,&quot;discover&quot;:{&quot;instances&quot;:&quot;worker-k8s-for-cs-c126d87c76218487e83ab322017f11b44&quot;},&quot;scrapeInterval&quot;:&quot;15&quot;,&quot;enableSecuritecs-nodeyGroupInjection&quot;:&quot;true&quot;,&quot;metricTags&quot;:&quot;&quot;}</p>
@@ -185,7 +185,7 @@ public class GetAddonReleaseResponseBody extends TeaModel {
         public String config;
 
         /**
-         * <p>The time when the add-on was accessed.</p>
+         * <p>Connection time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-04T16:10:12+08:00</p>
@@ -194,7 +194,7 @@ public class GetAddonReleaseResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The number of dashboards.</p>
+         * <p>Number of dashboards.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -203,13 +203,13 @@ public class GetAddonReleaseResponseBody extends TeaModel {
         public Long dashboardCount;
 
         /**
-         * <p>The details of the entity.</p>
+         * <p>Entity details.</p>
          */
         @NameInMap("entityRules")
         public EntityGroupBase entityRules;
 
         /**
-         * <p>The type of the environment.</p>
+         * <p>Environment type.</p>
          * 
          * <strong>example:</strong>
          * <p>CS</p>
@@ -218,7 +218,7 @@ public class GetAddonReleaseResponseBody extends TeaModel {
         public String envType;
 
         /**
-         * <p>The ID of the environment.</p>
+         * <p>Environment ID.</p>
          * 
          * <strong>example:</strong>
          * <p>policy-xxxxxxxxxxx</p>
@@ -227,7 +227,7 @@ public class GetAddonReleaseResponseBody extends TeaModel {
         public String environmentId;
 
         /**
-         * <p>The number of plug-ins.</p>
+         * <p>Number of plugins.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -236,7 +236,7 @@ public class GetAddonReleaseResponseBody extends TeaModel {
         public Long exporterCount;
 
         /**
-         * <p>Indicates whether a configuration exists.</p>
+         * <p>Whether there is a configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -245,7 +245,7 @@ public class GetAddonReleaseResponseBody extends TeaModel {
         public Boolean haveConfig;
 
         /**
-         * <p>The ID of the user who accessed the add-on.</p>
+         * <p>User ID for connection.</p>
          * 
          * <strong>example:</strong>
          * <p>1707xxxxxxxxxxxx</p>
@@ -254,7 +254,7 @@ public class GetAddonReleaseResponseBody extends TeaModel {
         public String installUserId;
 
         /**
-         * <p>The language.</p>
+         * <p>Language.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -263,7 +263,7 @@ public class GetAddonReleaseResponseBody extends TeaModel {
         public String language;
 
         /**
-         * <p>Indicates whether the component is a managed component.</p>
+         * <p>Whether it is a managed component.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -272,7 +272,7 @@ public class GetAddonReleaseResponseBody extends TeaModel {
         public Boolean managed;
 
         /**
-         * <p>The ID of the parent add-on release.</p>
+         * <p>Parent AddonRelease ID.</p>
          * 
          * <strong>example:</strong>
          * <p>policy-xxxxxxxxxxxxx</p>
@@ -281,7 +281,7 @@ public class GetAddonReleaseResponseBody extends TeaModel {
         public String parentAddonReleaseId;
 
         /**
-         * <p>The ID of the policy.</p>
+         * <p>Policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>policy-xxxxxxxxxxxxx</p>
@@ -290,7 +290,7 @@ public class GetAddonReleaseResponseBody extends TeaModel {
         public String policyId;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>Region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -299,7 +299,7 @@ public class GetAddonReleaseResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the release.</p>
+         * <p>Release ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7339d808-66f9-4d40-83fa-xxxxxxxxxxx</p>
@@ -308,7 +308,7 @@ public class GetAddonReleaseResponseBody extends TeaModel {
         public String releaseId;
 
         /**
-         * <p>The name of the release.</p>
+         * <p>The name of the Release.</p>
          * 
          * <strong>example:</strong>
          * <p>test-gpu-integration-name</p>
@@ -317,7 +317,7 @@ public class GetAddonReleaseResponseBody extends TeaModel {
         public String releaseName;
 
         /**
-         * <p>The scenario of the component.</p>
+         * <p>Component scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>container</p>
@@ -326,7 +326,7 @@ public class GetAddonReleaseResponseBody extends TeaModel {
         public String scene;
 
         /**
-         * <p>The status of the component.</p>
+         * <p>Component status.</p>
          * 
          * <strong>example:</strong>
          * <p>running</p>
@@ -335,7 +335,7 @@ public class GetAddonReleaseResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the release was last updated.</p>
+         * <p>Update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-04T16:10:12+08:00</p>
@@ -344,7 +344,7 @@ public class GetAddonReleaseResponseBody extends TeaModel {
         public String updateTime;
 
         /**
-         * <p>The ID of the user to which the release belongs.</p>
+         * <p>Owner user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1707xxxxxxxxxxxx</p>
@@ -353,7 +353,7 @@ public class GetAddonReleaseResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>The version of the component.</p>
+         * <p>Component version.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.2</p>
@@ -362,7 +362,7 @@ public class GetAddonReleaseResponseBody extends TeaModel {
         public String version;
 
         /**
-         * <p>The workspace.</p>
+         * <p>Workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

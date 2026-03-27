@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MaintainWindowForModify extends TeaModel {
     /**
-     * <p>描述</p>
+     * <p>Description.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace test</p>
@@ -14,13 +14,13 @@ public class MaintainWindowForModify extends TeaModel {
     public String description;
 
     /**
-     * <p>生效时间范围</p>
+     * <p>Effective time range.</p>
      */
     @NameInMap("effectTimeRange")
     public MaintainWindowForModifyEffectTimeRange effectTimeRange;
 
     /**
-     * <p>Crontab 表达式</p>
+     * <p>Crontab expression.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -34,7 +34,7 @@ public class MaintainWindowForModify extends TeaModel {
     public String effective;
 
     /**
-     * <p>生效结束时间</p>
+     * <p>Effective end time.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-09-05 09:30:40</p>
@@ -43,13 +43,13 @@ public class MaintainWindowForModify extends TeaModel {
     public String endTime;
 
     /**
-     * <p>筛选条件</p>
+     * <p>Filtering conditions.</p>
      */
     @NameInMap("filterSetting")
     public FilterSetting filterSetting;
 
     /**
-     * <p>名称</p>
+     * <p>Name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class MaintainWindowForModify extends TeaModel {
     public String maintainWindowName;
 
     /**
-     * <p>生效开始时间</p>
+     * <p>Effective start time.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-04-11 07:55:00</p>
@@ -130,13 +130,13 @@ public class MaintainWindowForModify extends TeaModel {
 
     public static class MaintainWindowForModifyEffectTimeRange extends TeaModel {
         /**
-         * <p>生效天(周一到周日)</p>
+         * <p>Effective days (Monday to Sunday).</p>
          */
         @NameInMap("dayInWeek")
         public java.util.List<Integer> dayInWeek;
 
         /**
-         * <p>结束时间(分钟数)</p>
+         * <p>End time (in minutes).</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -145,7 +145,7 @@ public class MaintainWindowForModify extends TeaModel {
         public Integer endTimeInMinute;
 
         /**
-         * <p>开始时间(分钟数)</p>
+         * <p>Start time (in minutes).</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -154,7 +154,7 @@ public class MaintainWindowForModify extends TeaModel {
         public Integer startTimeInMinute;
 
         /**
-         * <p>时区</p>
+         * <p>Time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>+08:00</p>

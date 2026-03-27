@@ -4,33 +4,65 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class IncidentTimelineForView extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;Open -&gt; In Progress&quot;</p>
+     */
     @NameInMap("changeType")
     public String changeType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;{&quot;action&quot;:&quot;restart&quot;,&quot;resourceId&quot;:&quot;i-bp123456&quot;}&quot;</p>
+     */
     @NameInMap("content")
     public Object content;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;a1b2c3d4-e5f6-7890-1234-567890abcdef&quot;</p>
+     */
     @NameInMap("incidentUuid")
     public String incidentUuid;
 
     @NameInMap("operator")
     public ContactForIncidentView operator;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1743876000000</p>
+     */
     @NameInMap("time")
     public Long time;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;x1y2z3a4-b5c6-d7e8-f9g0-h1i2j3k4l5m6&quot;</p>
+     */
     @NameInMap("timelineUuid")
     public String timelineUuid;
 
     @NameInMap("title")
     public String title;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;Comment&quot;</p>
+     */
     @NameInMap("type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;user-abc123&quot;</p>
+     */
     @NameInMap("userId")
     public String userId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;ws-xyz789&quot;</p>
+     */
     @NameInMap("workspace")
     public String workspace;
 

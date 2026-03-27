@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateIntegrationPolicyRequest extends TeaModel {
     /**
-     * <p>The entity group used to create the policy. You can quickly create a policy using an entity group. The clusterId and vpcId parameters are independent of each other.</p>
+     * <p>Entity group for creating the policy. Policies can be quickly created using the entity group, and <code>clusterId</code> and <code>vpcId</code> are independent of each other.</p>
      */
     @NameInMap("entityGroup")
     public CreateIntegrationPolicyRequestEntityGroup entityGroup;
 
     /**
-     * <p>The policy name.</p>
+     * <p>Policy name</p>
      * 
      * <strong>example:</strong>
      * <p>prod-database</p>
@@ -20,7 +20,7 @@ public class CreateIntegrationPolicyRequest extends TeaModel {
     public String policyName;
 
     /**
-     * <p>The policy type. Valid values: CS, ECS, and Cloud.</p>
+     * <p>Policy type: CS/ECS/Cloud</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +30,7 @@ public class CreateIntegrationPolicyRequest extends TeaModel {
     public String policyType;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>Resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekz2km4kmhtbii</p>
@@ -39,13 +39,13 @@ public class CreateIntegrationPolicyRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The resource tags.</p>
+     * <p>Resource tags.</p>
      */
     @NameInMap("tags")
     public java.util.List<CreateIntegrationPolicyRequestTags> tags;
 
     /**
-     * <p>The workspace.</p>
+     * <p>Workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>prometheus</p>
@@ -108,7 +108,7 @@ public class CreateIntegrationPolicyRequest extends TeaModel {
 
     public static class CreateIntegrationPolicyRequestEntityGroup extends TeaModel {
         /**
-         * <p>The cluster entity type. Examples: acs.ack.cluster, acs.one.cluster, and acs.asi.cluster.</p>
+         * <p>Cluster entity type, such as acs.ack.cluster/acs.one.cluster/acs.asi.cluster or others.</p>
          * 
          * <strong>example:</strong>
          * <p>acs.ack.cluster</p>
@@ -117,7 +117,7 @@ public class CreateIntegrationPolicyRequest extends TeaModel {
         public String clusterEntityType;
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>Cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>na61prod3-na61cloudhdfsssd</p>
@@ -129,7 +129,7 @@ public class CreateIntegrationPolicyRequest extends TeaModel {
         public String clusterNamespace;
 
         /**
-         * <p>Specifies whether to disable unique policy binding. If this parameter is set to true, you can create multiple policies for a container cluster.</p>
+         * <p>Whether to disable the unique binding of the Policy. If enabled, multiple Policies can be created for a single container cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>ture</p>
@@ -138,7 +138,7 @@ public class CreateIntegrationPolicyRequest extends TeaModel {
         public Boolean disablePolicyShare;
 
         /**
-         * <p>The entity group ID.</p>
+         * <p>Entity group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>eg-b79f65d11fb94e779867cf937c3a3002</p>
@@ -147,7 +147,7 @@ public class CreateIntegrationPolicyRequest extends TeaModel {
         public String entityGroupId;
 
         /**
-         * <p>The ID of the user who owns the cluster.</p>
+         * <p>User ID to which the cluster belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>12xxxx</p>
@@ -156,7 +156,7 @@ public class CreateIntegrationPolicyRequest extends TeaModel {
         public String entityUserId;
 
         /**
-         * <p>The virtual private cloud (VPC) ID.</p>
+         * <p>VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp18fgg3ffxa9czna40xt</p>
@@ -229,7 +229,7 @@ public class CreateIntegrationPolicyRequest extends TeaModel {
 
     public static class CreateIntegrationPolicyRequestTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>Tag <code>key</code> value.</p>
          * 
          * <strong>example:</strong>
          * <p>use</p>
@@ -238,7 +238,7 @@ public class CreateIntegrationPolicyRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>Tag <code>value</code> value.</p>
          * 
          * <strong>example:</strong>
          * <p>database</p>

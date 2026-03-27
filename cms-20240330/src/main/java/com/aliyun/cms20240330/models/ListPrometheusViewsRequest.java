@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusViewsRequest extends TeaModel {
     /**
-     * <p>The region IDs by which to filter the results.</p>
+     * <p>Filter by RegionID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-zhangjiakou,cn-beijing</p>
@@ -14,7 +14,7 @@ public class ListPrometheusViewsRequest extends TeaModel {
     public String filterRegionIds;
 
     /**
-     * <p>The maximum number of records to return.</p>
+     * <p>Maximum number of records to return.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -26,7 +26,7 @@ public class ListPrometheusViewsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The query token.</p>
+     * <p>Query token.</p>
      * 
      * <strong>example:</strong>
      * <p>44ANBjKZmQeKnaB1fXRq06w7sFYK3MUcCALMD9qQbmEiE</p>
@@ -38,7 +38,7 @@ public class ListPrometheusViewsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The IDs of the Prometheus view instances.</p>
+     * <p>List of Prometheus view instance IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>view-xxx</p>
@@ -47,7 +47,7 @@ public class ListPrometheusViewsRequest extends TeaModel {
     public String prometheusViewIds;
 
     /**
-     * <p>The name of the Prometheus view.</p>
+     * <p>Prometheus view name.</p>
      * 
      * <strong>example:</strong>
      * <p>view1</p>
@@ -56,7 +56,7 @@ public class ListPrometheusViewsRequest extends TeaModel {
     public String prometheusViewName;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>Resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm3gn5i6bigbi</p>
@@ -65,7 +65,7 @@ public class ListPrometheusViewsRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The resource type.</p>
+     * <p>Resource type.</p>
      * 
      * <strong>example:</strong>
      * <p>PROMETHEUSVIEW</p>
@@ -74,13 +74,13 @@ public class ListPrometheusViewsRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>List of tags.</p>
      */
     @NameInMap("tag")
     public java.util.List<ListPrometheusViewsRequestTag> tag;
 
     /**
-     * <p>The instance version. Valid values: V1 and V2.</p>
+     * <p>Instance version: V1 or V2</p>
      * 
      * <strong>example:</strong>
      * <p>V2</p>
@@ -89,7 +89,7 @@ public class ListPrometheusViewsRequest extends TeaModel {
     public String version;
 
     /**
-     * <p>The name of the workspace.</p>
+     * <p>Workspace name</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test</p>
@@ -184,7 +184,7 @@ public class ListPrometheusViewsRequest extends TeaModel {
 
     public static class ListPrometheusViewsRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>Tag key</p>
          * 
          * <strong>example:</strong>
          * <p>key1</p>
@@ -193,7 +193,7 @@ public class ListPrometheusViewsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>Match value.</p>
          * 
          * <strong>example:</strong>
          * <p>value1</p>

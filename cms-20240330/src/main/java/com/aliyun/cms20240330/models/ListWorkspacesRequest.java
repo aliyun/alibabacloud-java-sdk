@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListWorkspacesRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page. Default value: 50. Maximum value: 50.</p>
+     * <p>Page size
+     * Default value:
+     *     50
+     * Maximum value:
+     *     50</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,7 +18,7 @@ public class ListWorkspacesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next page of results.</p>
+     * <p>Pagination Token</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxxxxxxx</p>
@@ -23,7 +27,7 @@ public class ListWorkspacesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region.</p>
+     * <p>Region</p>
      * 
      * <strong>example:</strong>
      * <p>cn-heyuan</p>
@@ -35,7 +39,7 @@ public class ListWorkspacesRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The name of the workspace. This parameter supports fuzzy search.</p>
+     * <p>Workspace name, fuzzy search</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test-001</p>
@@ -44,7 +48,7 @@ public class ListWorkspacesRequest extends TeaModel {
     public String workspaceName;
 
     /**
-     * <p>The names of the workspaces. This parameter supports exact search.</p>
+     * <p>Workspace name, exact match</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test-001</p>

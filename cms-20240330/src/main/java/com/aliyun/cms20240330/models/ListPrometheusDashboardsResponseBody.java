@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusDashboardsResponseBody extends TeaModel {
     /**
-     * <p>A list of dashboards for the Prometheus instance.</p>
+     * <p>List of Prometheus instance dashboards.</p>
      */
     @NameInMap("prometheusDashboards")
     public java.util.List<ListPrometheusDashboardsResponseBodyPrometheusDashboards> prometheusDashboards;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A*****</p>
@@ -20,7 +20,7 @@ public class ListPrometheusDashboardsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of instances.</p>
+     * <p>Total number of instances</p>
      * 
      * <strong>example:</strong>
      * <p>66</p>
@@ -59,7 +59,7 @@ public class ListPrometheusDashboardsResponseBody extends TeaModel {
 
     public static class ListPrometheusDashboardsResponseBodyPrometheusDashboards extends TeaModel {
         /**
-         * <p>The dashboard ID.</p>
+         * <p>Dashboard ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -68,7 +68,7 @@ public class ListPrometheusDashboardsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The dashboard name.</p>
+         * <p>Dashboard name.</p>
          * 
          * <strong>example:</strong>
          * <p>pod</p>
@@ -77,13 +77,13 @@ public class ListPrometheusDashboardsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The tags.</p>
+         * <p>Tags.</p>
          */
         @NameInMap("tags")
         public java.util.List<String> tags;
 
         /**
-         * <p>The dashboard title.</p>
+         * <p>Dashboard title.</p>
          * 
          * <strong>example:</strong>
          * <p>ceshi</p>
@@ -92,7 +92,7 @@ public class ListPrometheusDashboardsResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>The dashboard UID.</p>
+         * <p>Dashboard UID.</p>
          * 
          * <strong>example:</strong>
          * <p>1987395500251724</p>
@@ -101,7 +101,7 @@ public class ListPrometheusDashboardsResponseBody extends TeaModel {
         public String uid;
 
         /**
-         * <p>The URL of the dashboard.</p>
+         * <p>Dashboard URL address.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://gnew.console.aliyun.com/d/xxx-17460385-807-7-6/cs-cost-application">https://gnew.console.aliyun.com/d/xxx-17460385-807-7-6/cs-cost-application</a></p>

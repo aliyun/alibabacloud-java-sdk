@@ -10,6 +10,10 @@ public class PushingSetting extends TeaModel {
     @NameInMap("restoreActionIds")
     public java.util.List<String> restoreActionIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;template-abc123&quot;</p>
+     */
     @NameInMap("templateUuid")
     public String templateUuid;
 

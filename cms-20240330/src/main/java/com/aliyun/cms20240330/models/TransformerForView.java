@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class TransformerForView extends TeaModel {
     /**
-     * <p>转换操作</p>
+     * <p>Transformation operation.</p>
      */
     @NameInMap("actions")
     public java.util.List<TransformAction> actions;
 
     /**
-     * <p>创建时间</p>
+     * <p>Create Time.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-03-11T08:21:58Z</p>
@@ -20,7 +20,7 @@ public class TransformerForView extends TeaModel {
     public String createTime;
 
     /**
-     * <p>描述</p>
+     * <p>Description.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace test</p>
@@ -29,7 +29,7 @@ public class TransformerForView extends TeaModel {
     public String description;
 
     /**
-     * <p>是否启用</p>
+     * <p>Whether enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -38,13 +38,13 @@ public class TransformerForView extends TeaModel {
     public Boolean enable;
 
     /**
-     * <p>筛选设置</p>
+     * <p>Filter Setting.</p>
      */
     @NameInMap("filterSetting")
     public FilterSetting filterSetting;
 
     /**
-     * <p>匹配处理后退出</p>
+     * <p>Exit after matching processing.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -53,7 +53,7 @@ public class TransformerForView extends TeaModel {
     public Boolean quitAfterMatch;
 
     /**
-     * <p>排序数</p>
+     * <p>Sort order.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -71,17 +71,17 @@ public class TransformerForView extends TeaModel {
     public String transformerId;
 
     /**
-     * <p>名称</p>
+     * <p>Name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试处理流</p>
+     * <p>Test processing flow.</p>
      */
     @NameInMap("transformerName")
     public String transformerName;
 
     /**
-     * <p>更新时间</p>
+     * <p>Update Time.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-01-16T02:27:01Z</p>
@@ -90,7 +90,7 @@ public class TransformerForView extends TeaModel {
     public String updateTime;
 
     /**
-     * <p>用户id</p>
+     * <p>User ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123123123**</p>

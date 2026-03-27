@@ -4,15 +4,10 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class GetAddonSchemaResponseBody extends TeaModel {
-    /**
-     * <p>A list of data table fields.</p>
-     */
     @NameInMap("fields")
     public java.util.List<GetAddonSchemaResponseBodyFields> fields;
 
     /**
-     * <p>The ID of the request.</p>
-     * 
      * <strong>example:</strong>
      * <p>E5B1D3D4-BB28-5996-8AD2-***********</p>
      */
@@ -20,10 +15,8 @@ public class GetAddonSchemaResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The type of the schema.</p>
-     * 
      * <strong>example:</strong>
-     * <p>common</p>
+     * <p>response_time</p>
      */
     @NameInMap("type")
     public String type;
@@ -59,37 +52,21 @@ public class GetAddonSchemaResponseBody extends TeaModel {
 
     public static class GetAddonSchemaResponseBodyFieldsConditions extends TeaModel {
         /**
-         * <p>The control mode of the field.</p>
-         * 
          * <strong>example:</strong>
-         * <p>show</p>
+         * <p>redeploy</p>
          */
         @NameInMap("action")
         public String action;
 
-        /**
-         * <p>The name of the field.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>store.storageTarget</p>
-         */
         @NameInMap("field")
         public String field;
 
-        /**
-         * <p>The operator for the condition.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>==</p>
-         */
         @NameInMap("op")
         public String op;
 
         /**
-         * <p>The target value for the condition.</p>
-         * 
          * <strong>example:</strong>
-         * <p>Custom</p>
+         * <p>[{\&quot;count\&quot;: \&quot;1\&quot;, \&quot;max\&quot;: \&quot;358.106\&quot;, \&quot;sum\&quot;: \&quot;358.106\&quot;, \&quot;ts\&quot;: \&quot;1755049815000000\&quot;, \&quot;min\&quot;: \&quot;358.106\&quot;}, {\&quot;count\&quot;: \&quot;1\&quot;, \&quot;max\&quot;: \&quot;326.311\&quot;, \&quot;sum\&quot;: \&quot;326.311\&quot;, \&quot;ts\&quot;: \&quot;1755049830000000\&quot;, \&quot;min\&quot;: \&quot;326.311\&quot;}]</p>
          */
         @NameInMap("value")
         public Object value;
@@ -134,20 +111,12 @@ public class GetAddonSchemaResponseBody extends TeaModel {
     }
 
     public static class GetAddonSchemaResponseBodyFieldsPropsDataSource extends TeaModel {
-        /**
-         * <p>The label.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>tagKey</p>
-         */
         @NameInMap("label")
         public String label;
 
         /**
-         * <p>The value of the label.</p>
-         * 
          * <strong>example:</strong>
-         * <p>tagValue</p>
+         * <p>[]</p>
          */
         @NameInMap("value")
         public String value;
@@ -177,23 +146,14 @@ public class GetAddonSchemaResponseBody extends TeaModel {
 
     public static class GetAddonSchemaResponseBodyFieldsProps extends TeaModel {
         /**
-         * <p>The information about the data source.</p>
+         * <p>AK</p>
          */
         @NameInMap("dataSource")
         public java.util.List<GetAddonSchemaResponseBodyFieldsPropsDataSource> dataSource;
 
-        /**
-         * <p>A collection of related data.</p>
-         */
         @NameInMap("related")
         public java.util.List<String> related;
 
-        /**
-         * <p>The mode.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>single</p>
-         */
         @NameInMap("selectMode")
         public String selectMode;
 
@@ -229,66 +189,28 @@ public class GetAddonSchemaResponseBody extends TeaModel {
     }
 
     public static class GetAddonSchemaResponseBodyFieldsValidation extends TeaModel {
-        /**
-         * <p>The maximum value. The value is inclusive.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2000</p>
-         */
         @NameInMap("max")
         public Integer max;
 
-        /**
-         * <p>The maximum length that is supported by the text control.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("maxLength")
         public Integer maxLength;
 
         /**
-         * <p>The details.</p>
-         * 
          * <strong>example:</strong>
-         * <p>length limit</p>
+         * <p>ok</p>
          */
         @NameInMap("message")
         public String message;
 
-        /**
-         * <p>The minimum value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("min")
         public Integer min;
 
-        /**
-         * <p>The minimum length.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>16</p>
-         */
         @NameInMap("minLength")
         public Integer minLength;
 
-        /**
-         * <p>The regular expression.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>^(http|https)://</p>
-         */
         @NameInMap("regular")
         public String regular;
 
-        /**
-         * <p>Specifies whether the parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("required")
         public Boolean required;
 
@@ -356,102 +278,51 @@ public class GetAddonSchemaResponseBody extends TeaModel {
     }
 
     public static class GetAddonSchemaResponseBodyFields extends TeaModel {
-        /**
-         * <p>A list of display conditions.</p>
-         */
         @NameInMap("conditions")
         public java.util.List<GetAddonSchemaResponseBodyFieldsConditions> conditions;
 
-        /**
-         * <p>The default value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>mysql.default</p>
-         */
         @NameInMap("defaultValue")
         public Object defaultValue;
 
         /**
-         * <p>The description.</p>
-         * 
          * <strong>example:</strong>
-         * <p>MySQL datasource</p>
+         * <p>o11y-demo-cn-heyuan</p>
          */
         @NameInMap("description")
         public String description;
 
-        /**
-         * <p>Specifies whether the field is hidden. Valid values: \<code>true\\</code> (hidden) and \<code>false\\</code> (displayed).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("disabled")
         public Boolean disabled;
 
-        /**
-         * <p>The type of the element.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>input</p>
-         */
         @NameInMap("element")
         public String element;
 
-        /**
-         * <p>The path of the field.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>mysql.host</p>
-         */
         @NameInMap("fieldPath")
         public String fieldPath;
 
-        /**
-         * <p>The display name of the field.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>mysql</p>
-         */
         @NameInMap("label")
         public String label;
 
         /**
-         * <p>The name of the field.</p>
-         * 
          * <strong>example:</strong>
-         * <p>host</p>
+         * <p>rum_api_dashboard_explorer_link_metric_set</p>
          */
         @NameInMap("name")
         public String name;
 
-        /**
-         * <p>The placeholder text.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Please enter the metrics collection interval</p>
-         */
         @NameInMap("placeholder")
         public String placeholder;
 
-        /**
-         * <p>Other properties of the component.</p>
-         */
         @NameInMap("props")
         public GetAddonSchemaResponseBodyFieldsProps props;
 
         /**
-         * <p>The type of the field.</p>
-         * 
          * <strong>example:</strong>
-         * <p>string</p>
+         * <p>xtrace</p>
          */
         @NameInMap("type")
         public String type;
 
-        /**
-         * <p>The validation rule for the field.</p>
-         */
         @NameInMap("validation")
         public GetAddonSchemaResponseBodyFieldsValidation validation;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusInstancesShrinkRequest extends TeaModel {
     /**
-     * <p>A list of region IDs to filter by, separated by commas.</p>
+     * <p>Specified list of regionIds to filter (comma-separated).</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shenzhen</p>
@@ -17,7 +17,7 @@ public class ListPrometheusInstancesShrinkRequest extends TeaModel {
     public String filterRegionIds;
 
     /**
-     * <p>The maximum number of records to return.</p>
+     * <p>Maximum number of records to return.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class ListPrometheusInstancesShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The query token.</p>
+     * <p>Query token.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxxxxxxx</p>
@@ -41,7 +41,7 @@ public class ListPrometheusInstancesShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>A list of instance IDs, separated by commas.</p>
+     * <p>List of instance IDs (comma-separated)</p>
      * 
      * <strong>example:</strong>
      * <p>rw-00001,rw-00002,rw-00003</p>
@@ -53,7 +53,7 @@ public class ListPrometheusInstancesShrinkRequest extends TeaModel {
     public String prometheusInstanceIds;
 
     /**
-     * <p>The instance name. Partial match is supported.</p>
+     * <p>Instance name (partial match supported)</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -65,7 +65,7 @@ public class ListPrometheusInstancesShrinkRequest extends TeaModel {
     public String prometheusInstanceName;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>Resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aek2bhocin5e2na</p>
@@ -74,7 +74,7 @@ public class ListPrometheusInstancesShrinkRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The resource type of the instance.</p>
+     * <p>Resource type of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>Prometheus</p>
@@ -86,13 +86,13 @@ public class ListPrometheusInstancesShrinkRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>List of tags.</p>
      */
     @NameInMap("tag")
     public String tagShrink;
 
     /**
-     * <p>The instance version. Valid values: V1 and V2.</p>
+     * <p>Instance version: V1 or V2</p>
      * 
      * <strong>example:</strong>
      * <p>V2</p>

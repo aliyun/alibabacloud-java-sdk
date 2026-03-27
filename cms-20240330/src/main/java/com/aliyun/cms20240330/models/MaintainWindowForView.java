@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MaintainWindowForView extends TeaModel {
     /**
-     * <p>创建时间</p>
+     * <p>Creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-03-11T08:21:58Z</p>
@@ -14,7 +14,7 @@ public class MaintainWindowForView extends TeaModel {
     public String createTime;
 
     /**
-     * <p>描述</p>
+     * <p>Description.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -23,13 +23,13 @@ public class MaintainWindowForView extends TeaModel {
     public String description;
 
     /**
-     * <p>生效时间范围</p>
+     * <p>Effective time range.</p>
      */
     @NameInMap("effectTimeRange")
     public MaintainWindowForViewEffectTimeRange effectTimeRange;
 
     /**
-     * <p>Crontab 表达式</p>
+     * <p>Crontab expression.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -43,7 +43,7 @@ public class MaintainWindowForView extends TeaModel {
     public String effective;
 
     /**
-     * <p>是否启用</p>
+     * <p>Whether enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -52,7 +52,7 @@ public class MaintainWindowForView extends TeaModel {
     public Boolean enable;
 
     /**
-     * <p>生效结束时间</p>
+     * <p>Effective end time.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-11-26 12:02:01</p>
@@ -61,7 +61,7 @@ public class MaintainWindowForView extends TeaModel {
     public String endTime;
 
     /**
-     * <p>筛选条件</p>
+     * <p>Filtering conditions.</p>
      */
     @NameInMap("filterSetting")
     public FilterSetting filterSetting;
@@ -76,17 +76,17 @@ public class MaintainWindowForView extends TeaModel {
     public String maintainWindowId;
 
     /**
-     * <p>名称</p>
+     * <p>Name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试策略</p>
+     * <p>Test policy.</p>
      */
     @NameInMap("maintainWindowName")
     public String maintainWindowName;
 
     /**
-     * <p>生效开始时间</p>
+     * <p>Effective start time.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-11-26 10:02:01</p>
@@ -95,7 +95,7 @@ public class MaintainWindowForView extends TeaModel {
     public String startTime;
 
     /**
-     * <p>更新时间</p>
+     * <p>Update time.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-05-07T02:19:05Z</p>
@@ -104,7 +104,7 @@ public class MaintainWindowForView extends TeaModel {
     public String updateTime;
 
     /**
-     * <p>用户id</p>
+     * <p>User ID.</p>
      * 
      * <strong>example:</strong>
      * <p>12312312***</p>
@@ -232,13 +232,13 @@ public class MaintainWindowForView extends TeaModel {
 
     public static class MaintainWindowForViewEffectTimeRange extends TeaModel {
         /**
-         * <p>生效天(周一到周日)</p>
+         * <p>Effective days (Monday to Sunday).</p>
          */
         @NameInMap("dayInWeek")
         public java.util.List<Integer> dayInWeek;
 
         /**
-         * <p>结束时间(分钟数)</p>
+         * <p>End time (in minutes).</p>
          * 
          * <strong>example:</strong>
          * <p>360</p>
@@ -247,7 +247,7 @@ public class MaintainWindowForView extends TeaModel {
         public Integer endTimeInMinute;
 
         /**
-         * <p>开始时间(分钟数)</p>
+         * <p>Start time (in minutes).</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -256,7 +256,7 @@ public class MaintainWindowForView extends TeaModel {
         public Integer startTimeInMinute;
 
         /**
-         * <p>时区</p>
+         * <p>Time Zone.</p>
          * 
          * <strong>example:</strong>
          * <p>+08:00</p>

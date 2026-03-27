@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class IncidentEventStruct extends TeaModel {
     /**
-     * <p>自动恢复时间。</p>
+     * <p>Automatic recovery time.</p>
      * 
      * <strong>example:</strong>
      * <p>1741234567890</p>
@@ -14,16 +14,16 @@ public class IncidentEventStruct extends TeaModel {
     public Long autoRecoverTime;
 
     /**
-     * <p>内容。</p>
+     * <p>Content.</p>
      * 
      * <strong>example:</strong>
-     * <p>检测到 user-service 实例 i-abc123 的 CPU 使用率达到 95%，已触发告警。</p>
+     * <p>Detected that the CPU usage of the user-service instance i-abc123 has reached 95%, triggering an alert.</p>
      */
     @NameInMap("content")
     public String content;
 
     /**
-     * <p>统计数量。</p>
+     * <p>Count.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -32,19 +32,19 @@ public class IncidentEventStruct extends TeaModel {
     public Integer count;
 
     /**
-     * <p>维度。</p>
+     * <p>Dimension.</p>
      */
     @NameInMap("dimension")
     public java.util.Map<String, String> dimension;
 
     /**
-     * <p>用于分组维度。</p>
+     * <p>Used for grouping dimensions.</p>
      */
     @NameInMap("groupBy")
     public java.util.Map<String, String> groupBy;
 
     /**
-     * <p>事件事件ID。</p>
+     * <p>Incident Event Id.</p>
      * 
      * <strong>example:</strong>
      * <p>event-001</p>
@@ -53,7 +53,7 @@ public class IncidentEventStruct extends TeaModel {
     public String incidentEventId;
 
     /**
-     * <p>事件ID。</p>
+     * <p>Incident Id.</p>
      * 
      * <strong>example:</strong>
      * <p>incident-001</p>
@@ -62,7 +62,7 @@ public class IncidentEventStruct extends TeaModel {
     public String incidentId;
 
     /**
-     * <p>最后时间。</p>
+     * <p>Last time.</p>
      * 
      * <strong>example:</strong>
      * <p>1741234567890</p>
@@ -71,7 +71,7 @@ public class IncidentEventStruct extends TeaModel {
     public Long lastTime;
 
     /**
-     * <p>手动恢复时间。</p>
+     * <p>Manual recovery time.</p>
      * 
      * <strong>example:</strong>
      * <p>1741234567890</p>
@@ -80,13 +80,13 @@ public class IncidentEventStruct extends TeaModel {
     public Long recoverTime;
 
     /**
-     * <p>描述事件关联的资源信息。</p>
+     * <p>Describes the resource information associated with the event.</p>
      */
     @NameInMap("resource")
     public java.util.Map<String, String> resource;
 
     /**
-     * <p>状态。</p>
+     * <p>Status.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -95,7 +95,7 @@ public class IncidentEventStruct extends TeaModel {
     public Long status;
 
     /**
-     * <p>时间。</p>
+     * <p>Time.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-03-11T08:21:58Z</p>
@@ -104,16 +104,16 @@ public class IncidentEventStruct extends TeaModel {
     public String time;
 
     /**
-     * <p>标题。</p>
+     * <p>Title.</p>
      * 
      * <strong>example:</strong>
-     * <p>用户服务 CPU 使用率过高</p>
+     * <p>User service CPU usage is too high.</p>
      */
     @NameInMap("title")
     public String title;
 
     /**
-     * <p>用户ID。</p>
+     * <p>User ID.</p>
      * 
      * <strong>example:</strong>
      * <p>user-12345</p>

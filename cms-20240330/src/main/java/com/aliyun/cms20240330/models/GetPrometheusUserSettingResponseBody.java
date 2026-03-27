@@ -4,14 +4,11 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class GetPrometheusUserSettingResponseBody extends TeaModel {
-    /**
-     * <p>The details of the user settings for Prometheus.</p>
-     */
     @NameInMap("prometheusUserSetting")
     public java.util.Map<String, String> prometheusUserSetting;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>058550FA-DDBE-519E-9C6D-93521B9A5E90</p>

@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of results to return. The maximum value is 200.</p>
-     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -14,8 +12,6 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to start the next query.</p>
-     * 
      * <strong>example:</strong>
      * <p>xxxxxxxxxx</p>
      */
@@ -23,17 +19,12 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>0CEC5375-C554-562B-A65F-***</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <p>A list of tags.</p>
-     */
     @NameInMap("tagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
 
@@ -76,8 +67,6 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
         /**
-         * <p>The resource ID.</p>
-         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -85,8 +74,6 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The resource type.</p>
-         * 
          * <strong>example:</strong>
          * <p>Service</p>
          */
@@ -94,8 +81,6 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The tag key.</p>
-         * 
          * <strong>example:</strong>
          * <p>env</p>
          */
@@ -103,8 +88,6 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value.</p>
-         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

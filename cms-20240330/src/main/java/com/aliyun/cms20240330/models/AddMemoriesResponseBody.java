@@ -5,17 +5,12 @@ import com.aliyun.tea.*;
 
 public class AddMemoriesResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A*****</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <p>Request results.</p>
-     */
     @NameInMap("results")
     public java.util.List<AddMemoriesResponseBodyResults> results;
 
@@ -42,8 +37,6 @@ public class AddMemoriesResponseBody extends TeaModel {
 
     public static class AddMemoriesResponseBodyResults extends TeaModel {
         /**
-         * <p>Event ID.</p>
-         * 
          * <strong>example:</strong>
          * <p>897294a7-67a4-4f60-976c-e136edc5f97e</p>
          */
@@ -51,8 +44,6 @@ public class AddMemoriesResponseBody extends TeaModel {
         public String eventId;
 
         /**
-         * <p>Details.</p>
-         * 
          * <strong>example:</strong>
          * <p>Memory processing has been queued for background execution</p>
          */
@@ -60,8 +51,6 @@ public class AddMemoriesResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>Processing status.</p>
-         * 
          * <strong>example:</strong>
          * <p>Pending</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIntegrationPolicyStorageRequirementsRequest extends TeaModel {
     /**
-     * <p>The name of the add-on release.</p>
+     * <p>Addon Release Name</p>
      * 
      * <strong>example:</strong>
      * <p>release-1234357</p>
@@ -14,7 +14,7 @@ public class ListIntegrationPolicyStorageRequirementsRequest extends TeaModel {
     public String addonName;
 
     /**
-     * <p>The name of the AddonRelease.</p>
+     * <p>Name of AddonRelease.</p>
      * 
      * <strong>example:</strong>
      * <p>kafka-17201012937917</p>
@@ -23,7 +23,7 @@ public class ListIntegrationPolicyStorageRequirementsRequest extends TeaModel {
     public String addonReleaseName;
 
     /**
-     * <p>The storage type. Valid values: LogStore, Prometheus, TraceStore, EventStore, and EntityStore.</p>
+     * <p>Storage Type, LogStore/Prometheus/TraceStore/EventStore/EntityStore.</p>
      * 
      * <strong>example:</strong>
      * <p>LogStore</p>

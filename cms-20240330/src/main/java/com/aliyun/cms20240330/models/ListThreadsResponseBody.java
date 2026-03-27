@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class ListThreadsResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of results returned. The maximum value is 200.</p>
-     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -14,8 +12,6 @@ public class ListThreadsResponseBody extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The paging token.</p>
-     * 
      * <strong>example:</strong>
      * <p>xxxxxxxxxx</p>
      */
@@ -23,32 +19,25 @@ public class ListThreadsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
-     * <p>CD8BA7D6-995D-578D-9941-xxxx</p>
+     * <p>CD8BA7D6-995D-578D-9941-78B0FECD14B5</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>The session ID.</p>
-     * 
      * <strong>example:</strong>
-     * <p>thread-123123</p>
+     * <p>thread_id01</p>
      */
     @NameInMap("threadId")
     public String threadId;
 
-    /**
-     * <p>The sessions.</p>
-     */
     @NameInMap("threads")
     public java.util.List<ListThreadsResponseBodyThreads> threads;
 
     /**
-     * <p>The total number of entries.</p>
-     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -110,19 +99,17 @@ public class ListThreadsResponseBody extends TeaModel {
 
     public static class ListThreadsResponseBodyThreadsVariables extends TeaModel {
         /**
-         * <p>The Simple Log Service (SLS) project.</p>
+         * <p>SLS project。</p>
          * 
          * <strong>example:</strong>
-         * <p>project</p>
+         * <p>ciec_rl_ads</p>
          */
         @NameInMap("project")
         public String project;
 
         /**
-         * <p>The workspace.</p>
-         * 
          * <strong>example:</strong>
-         * <p>workspace</p>
+         * <p>hd1-np</p>
          */
         @NameInMap("workspace")
         public String workspace;
@@ -155,17 +142,13 @@ public class ListThreadsResponseBody extends TeaModel {
         public java.util.Map<String, String> attributes;
 
         /**
-         * <p>The time when the session was created.</p>
-         * 
          * <strong>example:</strong>
-         * <p>2025-12-19T15:19:55.040403272+08:00</p>
+         * <p>2025-04-22T12:46:34Z</p>
          */
         @NameInMap("createTime")
         public String createTime;
 
         /**
-         * <p>The name of the digital employee.</p>
-         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -173,8 +156,6 @@ public class ListThreadsResponseBody extends TeaModel {
         public String digitalEmployeeName;
 
         /**
-         * <p>The session status.</p>
-         * 
          * <strong>example:</strong>
          * <p>active</p>
          */
@@ -182,17 +163,13 @@ public class ListThreadsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The session ID.</p>
-         * 
          * <strong>example:</strong>
-         * <p>thread-123123</p>
+         * <p>thread-t71rrw-1s7r7z9gu0v2s</p>
          */
         @NameInMap("threadId")
         public String threadId;
 
         /**
-         * <p>The session title.</p>
-         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -200,25 +177,20 @@ public class ListThreadsResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>The time when the session was last updated.</p>
-         * 
          * <strong>example:</strong>
-         * <p>2025-12-19T15:19:55.040403272+08:00</p>
+         * <p>2025-06-24 10:05:21</p>
          */
         @NameInMap("updateTime")
         public String updateTime;
 
-        /**
-         * <p>The session properties.</p>
-         */
         @NameInMap("variables")
         public ListThreadsResponseBodyThreadsVariables variables;
 
         /**
-         * <p>The version number.</p>
-         * 
          * <strong>example:</strong>
-         * <p>123123</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("version")
         public Long version;

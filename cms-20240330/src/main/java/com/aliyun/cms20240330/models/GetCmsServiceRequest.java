@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetCmsServiceRequest extends TeaModel {
     /**
-     * <p>prometheus: Checks the activation status of the Prometheus service. The service is billed by reported data volume or written data volume.</p>
-     * 
      * <strong>example:</strong>
      * <p>prometheus</p>
      * 
@@ -17,8 +15,6 @@ public class GetCmsServiceRequest extends TeaModel {
     public String product;
 
     /**
-     * <p>prometheus: Checks whether the Prometheus product that is billed by reported data volume is activated.prometheusgb: Checks whether the Prometheus product that is billed by written data volume is activated.</p>
-     * 
      * <strong>example:</strong>
      * <p>prometheus</p>
      * 

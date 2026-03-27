@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePrometheusUserSettingResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A*****</p>

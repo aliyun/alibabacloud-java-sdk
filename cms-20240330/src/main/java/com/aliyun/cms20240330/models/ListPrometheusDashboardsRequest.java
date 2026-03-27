@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusDashboardsRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values: zh and en. The default value is zh.</p>
+     * <p>Language environment, default is Chinese zh | en</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -14,7 +14,7 @@ public class ListPrometheusDashboardsRequest extends TeaModel {
     public String aliyunLang;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>Resource Group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm3gn5i6bigbi</p>

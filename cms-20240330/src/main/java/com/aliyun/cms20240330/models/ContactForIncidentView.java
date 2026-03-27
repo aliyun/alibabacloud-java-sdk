@@ -4,6 +4,10 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class ContactForIncidentView extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;contact-123456&quot;</p>
+     */
     @NameInMap("contactId")
     public String contactId;
 

@@ -14,19 +14,15 @@ public class UpdateThreadResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The session ID.</p>
-     * 
      * <strong>example:</strong>
-     * <p>thread-12313</p>
+     * <p>thread_id01</p>
      */
     @NameInMap("threadId")
     public String threadId;
 
     /**
-     * <p>The version number.</p>
-     * 
      * <strong>example:</strong>
-     * <p>123123</p>
+     * <p>0.1.0</p>
      */
     @NameInMap("version")
     public Long version;

@@ -4,21 +4,13 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class GetCloudResourceDataResponseBody extends TeaModel {
-    /**
-     * <p>The returned data.</p>
-     */
     @NameInMap("data")
     public java.util.List<java.util.List<String>> data;
 
-    /**
-     * <p>The list of column headers.</p>
-     */
     @NameInMap("header")
     public java.util.List<String> header;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
      */

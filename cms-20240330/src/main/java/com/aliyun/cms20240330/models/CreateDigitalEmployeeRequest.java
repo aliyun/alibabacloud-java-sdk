@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateDigitalEmployeeRequest extends TeaModel {
     /**
-     * <p>The default rule.</p>
-     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -14,8 +12,6 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
     public String defaultRule;
 
     /**
-     * <p>The description of the digital employee.</p>
-     * 
      * <strong>example:</strong>
      * <p>aaa</p>
      */
@@ -23,22 +19,16 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The display name of the digital employee.</p>
-     * 
      * <strong>example:</strong>
      * <p>digial-employee-test</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
-    /**
-     * <p>The list of knowledge bases.</p>
-     */
     @NameInMap("knowledges")
     public CreateDigitalEmployeeRequestKnowledges knowledges;
 
     /**
-     * <p>The name of the digital employee.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,8 +38,6 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the resource group.</p>
-     * 
      * <strong>example:</strong>
      * <p>rg-ae******ey</p>
      */
@@ -57,7 +45,6 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,9 +53,6 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
     @NameInMap("roleArn")
     public String roleArn;
 
-    /**
-     * <p>The tags.</p>
-     */
     @NameInMap("tags")
     public java.util.List<Tag> tags;
 
@@ -143,8 +127,6 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
 
     public static class CreateDigitalEmployeeRequestKnowledgesBailian extends TeaModel {
         /**
-         * <p>The properties of the knowledge base.</p>
-         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -152,8 +134,6 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
         public String attributes;
 
         /**
-         * <p>The ID of the Bailian index.</p>
-         * 
          * <strong>example:</strong>
          * <p>index-xxxx</p>
          */
@@ -161,8 +141,6 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
         public String indexId;
 
         /**
-         * <p>The region of the Bailian knowledge base.</p>
-         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -170,8 +148,6 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
         public String region;
 
         /**
-         * <p>The ID of the Bailian workspace.</p>
-         * 
          * <strong>example:</strong>
          * <p>llm-xxxxx</p>
          */
@@ -218,15 +194,9 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
     }
 
     public static class CreateDigitalEmployeeRequestKnowledges extends TeaModel {
-        /**
-         * <p>The list of Bailian knowledge bases.</p>
-         */
         @NameInMap("bailian")
         public java.util.List<CreateDigitalEmployeeRequestKnowledgesBailian> bailian;
 
-        /**
-         * <p>The list of Standard Operating Procedure (SOP) knowledge bases.</p>
-         */
         @NameInMap("sop")
         public java.util.List<java.util.Map<String, ?>> sop;
 

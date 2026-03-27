@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetUmodelResponseBody extends TeaModel {
     /**
-     * <p>This parameter is reserved.</p>
+     * <p>This field does not need to be filled currently</p>
      */
     @NameInMap("commonSchemaRef")
     public java.util.List<GetUmodelResponseBodyCommonSchemaRef> commonSchemaRef;
 
     /**
-     * <p>The Umodel description.</p>
+     * <p>Umodel description</p>
      * 
      * <strong>example:</strong>
      * <p>workspace test</p>
@@ -20,7 +20,7 @@ public class GetUmodelResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The region of the resource.</p>
+     * <p>Region</p>
      * 
      * <strong>example:</strong>
      * <p>cn-heyuan</p>
@@ -29,7 +29,7 @@ public class GetUmodelResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>123-123123-sdf-435-3123</p>
@@ -38,7 +38,7 @@ public class GetUmodelResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The workspace name.</p>
+     * <p>Workspace name</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test</p>
@@ -93,7 +93,7 @@ public class GetUmodelResponseBody extends TeaModel {
 
     public static class GetUmodelResponseBodyCommonSchemaRef extends TeaModel {
         /**
-         * <p>The public Umodel schema group.</p>
+         * <p>Common Umodel Schema group</p>
          * 
          * <strong>example:</strong>
          * <p>test-job-123123</p>
@@ -102,7 +102,7 @@ public class GetUmodelResponseBody extends TeaModel {
         public String group;
 
         /**
-         * <p>The version.</p>
+         * <p>Version</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

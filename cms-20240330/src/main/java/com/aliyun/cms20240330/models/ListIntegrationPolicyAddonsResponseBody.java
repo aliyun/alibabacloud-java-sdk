@@ -4,14 +4,11 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
-    /**
-     * <p>A list of add-ons.</p>
-     */
     @NameInMap("addons")
     public java.util.List<ListIntegrationPolicyAddonsResponseBodyAddons> addons;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>7E00EF90-CEF9-57C9-9AE9-5AA937D37C03</p>
@@ -20,8 +17,6 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
-     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -58,18 +53,10 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
     }
 
     public static class ListIntegrationPolicyAddonsResponseBodyAddonsDashboards extends TeaModel {
-        /**
-         * <p>The description.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>用于mysql的监控大盘</p>
-         */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The name.</p>
-         * 
          * <strong>example:</strong>
          * <p>MySQL Overview</p>
          */
@@ -77,8 +64,6 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The URL of the dashboard.</p>
-         * 
          * <strong>example:</strong>
          * <p><a href="http://xxxxxxx">http://xxxxxxx</a></p>
          */
@@ -117,21 +102,12 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
     }
 
     public static class ListIntegrationPolicyAddonsResponseBodyAddonsEnvironmentsDependencies extends TeaModel {
-        /**
-         * <p>The dependencies on cluster types.</p>
-         */
         @NameInMap("clusterTypes")
         public java.util.List<String> clusterTypes;
 
-        /**
-         * <p>The dependencies on probes.</p>
-         */
         @NameInMap("features")
         public java.util.Map<String, Boolean> features;
 
-        /**
-         * <p>The dependencies on product codes.</p>
-         */
         @NameInMap("services")
         public java.util.List<String> services;
 
@@ -167,9 +143,6 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
     }
 
     public static class ListIntegrationPolicyAddonsResponseBodyAddonsEnvironmentsPoliciesMetricCheckRule extends TeaModel {
-        /**
-         * <p>The PromQL search statements.</p>
-         */
         @NameInMap("promQl")
         public java.util.List<String> promQl;
 
@@ -190,8 +163,6 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
 
     public static class ListIntegrationPolicyAddonsResponseBodyAddonsEnvironmentsPoliciesProtocols extends TeaModel {
         /**
-         * <p>The description.</p>
-         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -199,8 +170,6 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The icon.</p>
-         * 
          * <strong>example:</strong>
          * <p><a href="https://img.alixxxx">https://img.alixxxx</a></p>
          */
@@ -208,8 +177,6 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
         public String icon;
 
         /**
-         * <p>The display name.</p>
-         * 
          * <strong>example:</strong>
          * <p>Golang</p>
          */
@@ -217,8 +184,6 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The protocol name.</p>
-         * 
          * <strong>example:</strong>
          * <p>golang</p>
          */
@@ -266,8 +231,6 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
 
     public static class ListIntegrationPolicyAddonsResponseBodyAddonsEnvironmentsPolicies extends TeaModel {
         /**
-         * <p>The default status of the alert rule policy.</p>
-         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -275,8 +238,6 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
         public String alertDefaultStatus;
 
         /**
-         * <p>Indicates whether the add-on is installed by default.</p>
-         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -284,38 +245,26 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
         public Boolean defaultInstall;
 
         /**
-         * <p>Indicates whether to assign a Service Account for communication with the console API.</p>
-         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("enableServiceAccount")
         public Boolean enableServiceAccount;
 
-        /**
-         * <p>The metric check rule.</p>
-         */
         @NameInMap("metricCheckRule")
         public ListIntegrationPolicyAddonsResponseBodyAddonsEnvironmentsPoliciesMetricCheckRule metricCheckRule;
 
         /**
-         * <p>Indicates whether a pod restart is required after the add-on is installed.</p>
-         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("needRestartAfterIntegration")
         public Boolean needRestartAfterIntegration;
 
-        /**
-         * <p>The protocols.</p>
-         */
         @NameInMap("protocols")
         public java.util.List<ListIntegrationPolicyAddonsResponseBodyAddonsEnvironmentsPoliciesProtocols> protocols;
 
         /**
-         * <p>The name of the target add-on.</p>
-         * 
          * <strong>example:</strong>
          * <p>mysql</p>
          */
@@ -386,15 +335,10 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
     }
 
     public static class ListIntegrationPolicyAddonsResponseBodyAddonsEnvironments extends TeaModel {
-        /**
-         * <p>The dependencies.</p>
-         */
         @NameInMap("dependencies")
         public ListIntegrationPolicyAddonsResponseBodyAddonsEnvironmentsDependencies dependencies;
 
         /**
-         * <p>The description.</p>
-         * 
          * <strong>example:</strong>
          * <p>o11y-demo-cn-heyuan</p>
          */
@@ -402,8 +346,6 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether the feature is enabled.</p>
-         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -411,8 +353,6 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The display name of the environment.</p>
-         * 
          * <strong>example:</strong>
          * <p>Cloud</p>
          */
@@ -420,17 +360,12 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The name of the environment.</p>
-         * 
          * <strong>example:</strong>
          * <p>Cloud</p>
          */
         @NameInMap("name")
         public String name;
 
-        /**
-         * <p>The policy.</p>
-         */
         @NameInMap("policies")
         public ListIntegrationPolicyAddonsResponseBodyAddonsEnvironmentsPolicies policies;
 
@@ -491,59 +426,39 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
 
     public static class ListIntegrationPolicyAddonsResponseBodyAddons extends TeaModel {
         /**
-         * <p>The display name.</p>
-         * 
          * <strong>example:</strong>
          * <p>MySQL</p>
          */
         @NameInMap("alias")
         public String alias;
 
-        /**
-         * <p>The categories.</p>
-         */
         @NameInMap("categories")
         public java.util.List<String> categories;
 
-        /**
-         * <p>A list of dashboards.</p>
-         */
         @NameInMap("dashboards")
         public java.util.List<ListIntegrationPolicyAddonsResponseBodyAddonsDashboards> dashboards;
 
         /**
-         * <p>The description.</p>
-         * 
          * <strong>example:</strong>
          * <p>Observability integration.</p>
          */
         @NameInMap("description")
         public String description;
 
-        /**
-         * <p>A list of supported environments.</p>
-         */
         @NameInMap("environments")
         public java.util.List<ListIntegrationPolicyAddonsResponseBodyAddonsEnvironments> environments;
 
         /**
-         * <p>The icon of the add-on.</p>
-         * 
          * <strong>example:</strong>
          * <p>asert/mysql.svg</p>
          */
         @NameInMap("icon")
         public String icon;
 
-        /**
-         * <p>The keywords.</p>
-         */
         @NameInMap("keywords")
         public java.util.List<String> keywords;
 
         /**
-         * <p>The language.</p>
-         * 
          * <strong>example:</strong>
          * <p>zh</p>
          */
@@ -551,8 +466,6 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
         public String language;
 
         /**
-         * <p>The time when the latest version was created.</p>
-         * 
          * <strong>example:</strong>
          * <p>2025-09-03T03:15:56Z</p>
          */
@@ -560,8 +473,6 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
         public String latestReleaseCreateTime;
 
         /**
-         * <p>The name of the add-on.</p>
-         * 
          * <strong>example:</strong>
          * <p>mysql</p>
          */
@@ -569,8 +480,6 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Indicates whether the add-on can be installed only once.</p>
-         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -578,8 +487,6 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
         public Boolean once;
 
         /**
-         * <p>The scenario of the add-on.</p>
-         * 
          * <strong>example:</strong>
          * <p>container</p>
          */
@@ -587,8 +494,6 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
         public String scene;
 
         /**
-         * <p>The version of the add-on.</p>
-         * 
          * <strong>example:</strong>
          * <p>0.1.1</p>
          */
@@ -596,8 +501,6 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
         public String version;
 
         /**
-         * <p>The weight.</p>
-         * 
          * <strong>example:</strong>
          * <p>99</p>
          */

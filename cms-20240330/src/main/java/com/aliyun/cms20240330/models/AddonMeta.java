@@ -4,64 +4,36 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class AddonMeta extends TeaModel {
-    /**
-     * <p>组件别名，显示名称</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ECS 监控</p>
-     */
     @NameInMap("alias")
     public String alias;
 
-    /**
-     * <p>组件分类信息</p>
-     */
     @NameInMap("categories")
     public java.util.List<String> categories;
 
-    /**
-     * <p>组件示意图列表</p>
-     */
     @NameInMap("dashboards")
     public java.util.List<AddonMetaDashboards> dashboards;
 
     /**
-     * <p>描述信息。</p>
-     * 
      * <strong>example:</strong>
      * <p>The out-of-the-box and comprehensive ECS observe dashboards and alarm rules. Based on AliYun CloudMonitor agentless metrics, exporter agent metrics, host audit logs, host events and other data.</p>
      */
     @NameInMap("description")
     public String description;
 
-    /**
-     * <p>支持的环境类型列表</p>
-     */
     @NameInMap("environments")
     public java.util.List<AddonMetaEnvironments> environments;
 
     /**
-     * <p>组件图标。</p>
-     * 
      * <strong>example:</strong>
      * <p>assets/logos/ecs.svg</p>
      */
     @NameInMap("icon")
     public String icon;
 
-    /**
-     * <p>关键词列表</p>
-     */
     @NameInMap("keywords")
     public java.util.List<String> keywords;
 
     /**
-     * <p>语言，取值：</p>
-     * <ul>
-     * <li>zh：中文（默认值）</li>
-     * <li>en：英文</li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -69,8 +41,6 @@ public class AddonMeta extends TeaModel {
     public String language;
 
     /**
-     * <p>该组件上一次接入时间</p>
-     * 
      * <strong>example:</strong>
      * <p>2025-10-25 09:12:12</p>
      */
@@ -78,8 +48,6 @@ public class AddonMeta extends TeaModel {
     public String latestReleaseCreateTime;
 
     /**
-     * <p>组件名称</p>
-     * 
      * <strong>example:</strong>
      * <p>cloud-acs-ecs</p>
      */
@@ -87,8 +55,6 @@ public class AddonMeta extends TeaModel {
     public String name;
 
     /**
-     * <p>Policy 下是否只能安装一次</p>
-     * 
      * <strong>example:</strong>
      * <p>true/false</p>
      */
@@ -96,8 +62,6 @@ public class AddonMeta extends TeaModel {
     public Boolean once;
 
     /**
-     * <p>场景</p>
-     * 
      * <strong>example:</strong>
      * <p>feature</p>
      */
@@ -105,8 +69,6 @@ public class AddonMeta extends TeaModel {
     public String scene;
 
     /**
-     * <p>版本号</p>
-     * 
      * <strong>example:</strong>
      * <p>0.0.1</p>
      */
@@ -114,8 +76,6 @@ public class AddonMeta extends TeaModel {
     public String version;
 
     /**
-     * <p>组件排序权重</p>
-     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -240,27 +200,13 @@ public class AddonMeta extends TeaModel {
     }
 
     public static class AddonMetaDashboards extends TeaModel {
-        /**
-         * <p>描述信息</p>
-         * 
-         * <strong>example:</strong>
-         * <p>描述信息</p>
-         */
         @NameInMap("description")
         public String description;
 
-        /**
-         * <p>示意图名称</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ECS 监控概览大盘</p>
-         */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>示意图 URL</p>
-         * 
          * <strong>example:</strong>
          * <p>assets/dashboards/ecs.png</p>
          */
@@ -300,8 +246,6 @@ public class AddonMeta extends TeaModel {
 
     public static class AddonMetaEnvironmentsCommonSchemaRefs extends TeaModel {
         /**
-         * <p>CommonSchema 的分组名称</p>
-         * 
          * <strong>example:</strong>
          * <p>acs-ecs</p>
          */
@@ -309,8 +253,6 @@ public class AddonMeta extends TeaModel {
         public String group;
 
         /**
-         * <p>CommonSchema 的分组版本</p>
-         * 
          * <strong>example:</strong>
          * <p>0.1.0</p>
          */
@@ -341,21 +283,12 @@ public class AddonMeta extends TeaModel {
     }
 
     public static class AddonMetaEnvironmentsDependencies extends TeaModel {
-        /**
-         * <p>支持的集群类型</p>
-         */
         @NameInMap("clusterTypes")
         public java.util.List<String> clusterTypes;
 
-        /**
-         * <p>探针依赖描述，组件名称。新版已由 collectors 字段替换</p>
-         */
         @NameInMap("features")
         public java.util.Map<String, Boolean> features;
 
-        /**
-         * <p>依赖的服务列表</p>
-         */
         @NameInMap("services")
         public java.util.List<String> services;
 
@@ -392,8 +325,6 @@ public class AddonMeta extends TeaModel {
 
     public static class AddonMetaEnvironmentsPoliciesBindEntity extends TeaModel {
         /**
-         * <p>是否是组模式</p>
-         * 
          * <strong>example:</strong>
          * <p>true/false</p>
          */
@@ -401,8 +332,6 @@ public class AddonMeta extends TeaModel {
         public Boolean entityGroupMode;
 
         /**
-         * <p>实体类型</p>
-         * 
          * <strong>example:</strong>
          * <p>acs.ecs.instance</p>
          */
@@ -410,8 +339,6 @@ public class AddonMeta extends TeaModel {
         public String entityType;
 
         /**
-         * <p>是否是单实体模式</p>
-         * 
          * <strong>example:</strong>
          * <p>true/false</p>
          */
@@ -419,8 +346,6 @@ public class AddonMeta extends TeaModel {
         public Boolean singleEntityMode;
 
         /**
-         * <p>实体中提取VPC ID 信息的字段</p>
-         * 
          * <strong>example:</strong>
          * <p>vpcId</p>
          */
@@ -467,9 +392,6 @@ public class AddonMeta extends TeaModel {
     }
 
     public static class AddonMetaEnvironmentsPoliciesMetricCheckRule extends TeaModel {
-        /**
-         * <p>检测规则 PromQL</p>
-         */
         @NameInMap("promQL")
         public java.util.List<String> promQL;
 
@@ -489,36 +411,20 @@ public class AddonMeta extends TeaModel {
     }
 
     public static class AddonMetaEnvironmentsPoliciesProtocols extends TeaModel {
-        /**
-         * <p>协议描述</p>
-         * 
-         * <strong>example:</strong>
-         * <p>使用 Prometheus 协议写入指标数据</p>
-         */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>协议显示icon</p>
-         * 
          * <strong>example:</strong>
          * <p>assets/logos/ecs.svg</p>
          */
         @NameInMap("icon")
         public String icon;
 
-        /**
-         * <p>协议显示名称</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Prometheus 协议</p>
-         */
         @NameInMap("label")
         public String label;
 
         /**
-         * <p>协议名称</p>
-         * 
          * <strong>example:</strong>
          * <p>Prometheus</p>
          */
@@ -566,8 +472,6 @@ public class AddonMeta extends TeaModel {
 
     public static class AddonMetaEnvironmentsPolicies extends TeaModel {
         /**
-         * <p>告警规则默认安装后是否启用</p>
-         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -575,23 +479,16 @@ public class AddonMeta extends TeaModel {
         public String alertDefaultStatus;
 
         /**
-         * <p>默认模式，即无需绑定实体的接入模式。</p>
-         * 
          * <strong>example:</strong>
          * <p>true/false</p>
          */
         @NameInMap("bindDefaultPolicy")
         public Boolean bindDefaultPolicy;
 
-        /**
-         * <p>绑定的目标实体信息</p>
-         */
         @NameInMap("bindEntity")
         public AddonMetaEnvironmentsPoliciesBindEntity bindEntity;
 
         /**
-         * <p>是否默认安装</p>
-         * 
          * <strong>example:</strong>
          * <p>true/false</p>
          */
@@ -599,38 +496,26 @@ public class AddonMeta extends TeaModel {
         public Boolean defaultInstall;
 
         /**
-         * <p>是否启用内部授权Token分配</p>
-         * 
          * <strong>example:</strong>
          * <p>true/false</p>
          */
         @NameInMap("enableServiceAccount")
         public Boolean enableServiceAccount;
 
-        /**
-         * <p>组件接入后的数据检查规则</p>
-         */
         @NameInMap("metricCheckRule")
         public AddonMetaEnvironmentsPoliciesMetricCheckRule metricCheckRule;
 
         /**
-         * <p>是否需要在接入后提示重启工作负载</p>
-         * 
          * <strong>example:</strong>
          * <p>true/false</p>
          */
         @NameInMap("needRestartAfterIntegration")
         public Boolean needRestartAfterIntegration;
 
-        /**
-         * <p>支持的客户端协议信息列表</p>
-         */
         @NameInMap("protocols")
         public java.util.List<AddonMetaEnvironmentsPoliciesProtocols> protocols;
 
         /**
-         * <p>跳转的目标组件名称</p>
-         * 
          * <strong>example:</strong>
          * <p>cloud-acs-ecs</p>
          */
@@ -717,63 +602,36 @@ public class AddonMeta extends TeaModel {
     }
 
     public static class AddonMetaEnvironments extends TeaModel {
-        /**
-         * <p>绑定的CommonSchema 列表</p>
-         */
         @NameInMap("commonSchemaRefs")
         public java.util.List<AddonMetaEnvironmentsCommonSchemaRefs> commonSchemaRefs;
 
-        /**
-         * <p>依赖描述信息</p>
-         */
         @NameInMap("dependencies")
         public AddonMetaEnvironmentsDependencies dependencies;
 
-        /**
-         * <p>环境类型的描述</p>
-         * 
-         * <strong>example:</strong>
-         * <p>支持容器集群的工作覆盖监控</p>
-         */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>是否启用</p>
-         * 
          * <strong>example:</strong>
          * <p>true/false</p>
          */
         @NameInMap("enable")
         public Boolean enable;
 
-        /**
-         * <p>环境类型显示名称</p>
-         * 
-         * <strong>example:</strong>
-         * <p>容器环境</p>
-         */
         @NameInMap("label")
         public String label;
 
         /**
-         * <p>环境类型名称</p>
-         * 
          * <strong>example:</strong>
          * <p>CS/ECS/Cloud/Client</p>
          */
         @NameInMap("name")
         public String name;
 
-        /**
-         * <p>组件的控制策略组合信息</p>
-         */
         @NameInMap("policies")
         public AddonMetaEnvironmentsPolicies policies;
 
         /**
-         * <p>策略类型</p>
-         * 
          * <strong>example:</strong>
          * <p>ECS</p>
          */

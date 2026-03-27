@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class UpsertUmodelCommonSchemaRefRequest extends TeaModel {
     /**
-     * <p>The group of the common Umodel schema.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +14,6 @@ public class UpsertUmodelCommonSchemaRefRequest extends TeaModel {
     public String group;
 
     /**
-     * <p>The version number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListWorkspacesResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned per page. Default value: 50. Maximum value: 50.</p>
+     * <p>Page size
+     * Default value:
+     *     50
+     * Maximum value:
+     *     50</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,7 +18,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next page of results.</p>
+     * <p>Pagination Token</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxxxxxxx</p>
@@ -23,7 +27,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
@@ -32,7 +36,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>Total count</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +45,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public Integer total;
 
     /**
-     * <p>The list of workspaces.</p>
+     * <p>List of workspaces</p>
      */
     @NameInMap("workspaces")
     public java.util.List<ListWorkspacesResponseBodyWorkspaces> workspaces;
@@ -93,7 +97,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
 
     public static class ListWorkspacesResponseBodyWorkspaces extends TeaModel {
         /**
-         * <p>The time when the workspace was created.</p>
+         * <p>Creation time</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +107,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The description of the workspace.</p>
+         * <p>Workspace description</p>
          * 
          * <strong>example:</strong>
          * <p>workspace test</p>
@@ -112,7 +116,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The display name of the workspace.</p>
+         * <p>Workspace display name</p>
          * 
          * <strong>example:</strong>
          * <p>workspace-test</p>
@@ -121,7 +125,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The time when the workspace was last modified.</p>
+         * <p>Last modified time</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +135,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String lastModifyTime;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>Region ID</p>
          * 
          * <strong>example:</strong>
          * <p>cn-heyuan</p>
@@ -140,7 +144,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The name of the Simple Log Service project.</p>
+         * <p>Log Service project name</p>
          * 
          * <strong>example:</strong>
          * <p>sls-project-test-001</p>
@@ -149,7 +153,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String slsProject;
 
         /**
-         * <p>The name of the workspace.</p>
+         * <p>Workspace name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

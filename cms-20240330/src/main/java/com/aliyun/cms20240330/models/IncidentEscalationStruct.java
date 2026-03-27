@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class IncidentEscalationStruct extends TeaModel {
     /**
-     * <p>创建时间</p>
+     * <p>Creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-03-11T08:21:58Z</p>
@@ -14,16 +14,16 @@ public class IncidentEscalationStruct extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>描述。</p>
+     * <p>Description.</p>
      * 
      * <strong>example:</strong>
-     * <p>当告警未响应时，依次通知运维团队、值班经理、CTO</p>
+     * <p>When an alert is not acknowledged, notify the operations team, on-duty manager, and CTO sequentially.</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>事件升级ID</p>
+     * <p>Event Escalation ID.</p>
      * 
      * <strong>example:</strong>
      * <p>52631388567</p>
@@ -32,7 +32,7 @@ public class IncidentEscalationStruct extends TeaModel {
     public String incidentEscalationId;
 
     /**
-     * <p>修改时间</p>
+     * <p>Modification time.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-03-11T08:21:58Z</p>
@@ -41,16 +41,16 @@ public class IncidentEscalationStruct extends TeaModel {
     public Long modifyTime;
 
     /**
-     * <p>名称。</p>
+     * <p>Name.</p>
      * 
      * <strong>example:</strong>
-     * <p>生产环境告警升级策略</p>
+     * <p>Production Environment Alert Escalation Policy.</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>地域 ID</p>
+     * <p>Region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -59,13 +59,13 @@ public class IncidentEscalationStruct extends TeaModel {
     public String regionId;
 
     /**
-     * <p>阶段。</p>
+     * <p>Phase.</p>
      */
     @NameInMap("stage")
     public java.util.List<IncidentEscalationStageStruct> stage;
 
     /**
-     * <p>工作空间</p>
+     * <p>Workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test</p>

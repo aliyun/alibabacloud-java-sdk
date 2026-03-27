@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class IncidentEscalationStageStruct extends TeaModel {
     /**
-     * <p>联系人列表</p>
+     * <p>Contact list.</p>
      */
     @NameInMap("contact")
     public java.util.List<IncidentContactStruct> contact;
 
     /**
-     * <p>周期通知统计次数</p>
+     * <p>Number of recurring notification attempts.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -20,7 +20,7 @@ public class IncidentEscalationStageStruct extends TeaModel {
     public Integer cycleNotifyCount;
 
     /**
-     * <p>周期通知时间</p>
+     * <p>Recurring notification interval.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -29,16 +29,16 @@ public class IncidentEscalationStageStruct extends TeaModel {
     public Integer cycleNotifyTime;
 
     /**
-     * <p>描述</p>
+     * <p>Description.</p>
      * 
      * <strong>example:</strong>
-     * <p>负责处理生产环境告警的主负责人</p>
+     * <p>Primary owner responsible for handling production environment alerts.</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>有效时间</p>
+     * <p>Effective time period.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-04-05T00:00:00Z</p>
@@ -47,16 +47,16 @@ public class IncidentEscalationStageStruct extends TeaModel {
     public String effectTime;
 
     /**
-     * <p>名称</p>
+     * <p>Name.</p>
      * 
      * <strong>example:</strong>
-     * <p>运维团队</p>
+     * <p>Operations team.</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>阶段指数</p>
+     * <p>Phase index.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -65,7 +65,7 @@ public class IncidentEscalationStageStruct extends TeaModel {
     public Integer stageIndex;
 
     /**
-     * <p>时区</p>
+     * <p>Time zone.</p>
      * 
      * <strong>example:</strong>
      * <p>Asia/Shanghai</p>
@@ -74,7 +74,7 @@ public class IncidentEscalationStageStruct extends TeaModel {
     public String timeZone;
 
     /**
-     * <p>等待进入下一阶段的时间</p>
+     * <p>Time to wait before proceeding to the next phase.</p>
      * 
      * <strong>example:</strong>
      * <p>600</p>

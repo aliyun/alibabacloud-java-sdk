@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteUmodelCommonSchemaRefRequest extends TeaModel {
     /**
-     * <p>The public Umodel schema group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

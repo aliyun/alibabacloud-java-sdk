@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAddonReleasesRequest extends TeaModel {
     /**
-     * <p>The name of the add-on component.</p>
+     * <p>Addon component name.</p>
      * 
      * <strong>example:</strong>
      * <p>cs-gpu</p>
@@ -14,7 +14,7 @@ public class ListAddonReleasesRequest extends TeaModel {
     public String addonName;
 
     /**
-     * <p>The ID of the parent AddonRelease.</p>
+     * <p>Parent AddonReleaseId.</p>
      * 
      * <strong>example:</strong>
      * <p>policy-xxxxxxxxxxxxx</p>

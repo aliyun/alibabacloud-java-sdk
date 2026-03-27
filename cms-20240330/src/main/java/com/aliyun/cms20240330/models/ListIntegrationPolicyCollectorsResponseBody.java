@@ -4,15 +4,10 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
-    /**
-     * <p>The list of collectors.</p>
-     */
     @NameInMap("collectors")
     public java.util.List<ListIntegrationPolicyCollectorsResponseBodyCollectors> collectors;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>0B9377D9-C56B-5C2E-A8A4-A01D6CC3F4B8</p>
      */
@@ -42,8 +37,6 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
 
     public static class ListIntegrationPolicyCollectorsResponseBodyCollectorsConditions extends TeaModel {
         /**
-         * <p>The time of the first transition.</p>
-         * 
          * <strong>example:</strong>
          * <p>2024-08-27T13:59:23+08:00</p>
          */
@@ -51,8 +44,6 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
         public String firstTransitionTime;
 
         /**
-         * <p>The time of the last transition.</p>
-         * 
          * <strong>example:</strong>
          * <p>2024-08-27T13:59:23+08:00</p>
          */
@@ -60,8 +51,6 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
         public String lastTransitionTime;
 
         /**
-         * <p>The details.</p>
-         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -69,8 +58,6 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The reason for the failure.</p>
-         * 
          * <strong>example:</strong>
          * <p>Probe</p>
          */
@@ -78,8 +65,6 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
         public String reason;
 
         /**
-         * <p>The phase status.</p>
-         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -87,8 +72,6 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The phase type.</p>
-         * 
          * <strong>example:</strong>
          * <p>Ready</p>
          */
@@ -152,8 +135,6 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
 
     public static class ListIntegrationPolicyCollectorsResponseBodyCollectorsWorkloadsManagedInfo extends TeaModel {
         /**
-         * <p>The security group ID.</p>
-         * 
          * <strong>example:</strong>
          * <p>sg-xxxxx</p>
          */
@@ -161,8 +142,6 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The vSwitch ID.</p>
-         * 
          * <strong>example:</strong>
          * <p>vsw-xxxxxx</p>
          */
@@ -194,8 +173,6 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
 
     public static class ListIntegrationPolicyCollectorsResponseBodyCollectorsWorkloads extends TeaModel {
         /**
-         * <p>The host IP address.</p>
-         * 
          * <strong>example:</strong>
          * <p>10.10.10.10</p>
          */
@@ -203,8 +180,6 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
         public String hostIp;
 
         /**
-         * <p>The IP address of the workload.</p>
-         * 
          * <strong>example:</strong>
          * <p>11.193.82.198</p>
          */
@@ -212,23 +187,16 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
         public String ip;
 
         /**
-         * <p>Indicates whether the component is a managed component.</p>
-         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("managed")
         public Boolean managed;
 
-        /**
-         * <p>The policy management information.</p>
-         */
         @NameInMap("managedInfo")
         public ListIntegrationPolicyCollectorsResponseBodyCollectorsWorkloadsManagedInfo managedInfo;
 
         /**
-         * <p>The details.</p>
-         * 
          * <strong>example:</strong>
          * <p>ok</p>
          */
@@ -236,8 +204,6 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The workload name.</p>
-         * 
          * <strong>example:</strong>
          * <p>exporter-xxx</p>
          */
@@ -245,8 +211,6 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The workload namespace.</p>
-         * 
          * <strong>example:</strong>
          * <p>prod-db</p>
          */
@@ -254,8 +218,6 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The kind of the parent reference.</p>
-         * 
          * <strong>example:</strong>
          * <p>Deployment</p>
          */
@@ -263,8 +225,6 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
         public String ownerReferenceKind;
 
         /**
-         * <p>The name of the parent reference.</p>
-         * 
          * <strong>example:</strong>
          * <p>exporter</p>
          */
@@ -272,8 +232,6 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
         public String ownerReferenceName;
 
         /**
-         * <p>The start time.</p>
-         * 
          * <strong>example:</strong>
          * <p>2024-08-27T13:59:23+08:00</p>
          */
@@ -281,8 +239,6 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The status.</p>
-         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -290,8 +246,6 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The workload version.</p>
-         * 
          * <strong>example:</strong>
          * <p>v2.4.4</p>
          */
@@ -402,15 +356,10 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
     }
 
     public static class ListIntegrationPolicyCollectorsResponseBodyCollectors extends TeaModel {
-        /**
-         * <p>The add-on details.</p>
-         */
         @NameInMap("addonMeta")
         public AddonMeta addonMeta;
 
         /**
-         * <p>The collector name.</p>
-         * 
          * <strong>example:</strong>
          * <p>collector-kkxx</p>
          */
@@ -418,41 +367,26 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
         public String collectorName;
 
         /**
-         * <p>The collector type.</p>
-         * 
          * <strong>example:</strong>
          * <p>Exporter</p>
          */
         @NameInMap("collectorType")
         public String collectorType;
 
-        /**
-         * <p>The phase status.</p>
-         */
         @NameInMap("conditions")
         public java.util.List<ListIntegrationPolicyCollectorsResponseBodyCollectorsConditions> conditions;
 
         /**
-         * <p>Indicates whether the component is a managed component.</p>
-         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("managed")
         public Boolean managed;
 
-        /**
-         * <p>The name of the add-on release.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ecs-loong-collector-i-f8z1176fg57rlwmc1rfi</p>
-         */
         @NameInMap("releaseName")
         public String releaseName;
 
         /**
-         * <p>The collector status.</p>
-         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -460,17 +394,12 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The component version.</p>
-         * 
          * <strong>example:</strong>
          * <p>2.6.2</p>
          */
         @NameInMap("version")
         public String version;
 
-        /**
-         * <p>The list of workloads.</p>
-         */
         @NameInMap("workloads")
         public java.util.List<ListIntegrationPolicyCollectorsResponseBodyCollectorsWorkloads> workloads;
 

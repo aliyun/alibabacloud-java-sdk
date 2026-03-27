@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreatePrometheusInstanceRequest extends TeaModel {
     /**
-     * <p>The number of days that data is automatically archived after the storage duration expires. A value of 0 indicates that data is not archived. Valid values:</p>
+     * <p>The number of days to automatically archive and save after the storage expires, 0 means no archiving. The range of archiving days is as follows:</p>
      * <ul>
-     * <li><p>V1 instances: 60 to 365.</p>
-     * </li>
-     * <li><p>V2 instances: 60 to 3650. A value of 3650 indicates that the data is permanently stored.</p>
-     * </li>
+     * <li>V1: 60~365 days.</li>
+     * <li>V2: 60~3650 days (3650 indicates permanent storage).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -23,7 +21,7 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public Integer archiveDuration;
 
     /**
-     * <p>The policy for password-free read access. IP address ranges and VPC IDs are supported.</p>
+     * <p>Password-free read policy (supports IP segments and VpcId).</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -41,7 +39,7 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public String authFreeReadPolicy;
 
     /**
-     * <p>The policy for password-free write access.</p>
+     * <p>Password-free write policy.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -59,7 +57,7 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public String authFreeWritePolicy;
 
     /**
-     * <p>Specifies whether to enable password-free read access. This feature is supported only for V2 instances.</p>
+     * <p>Whether to enable password-free read (only supported in V2 version).</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -68,7 +66,7 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public Boolean enableAuthFreeRead;
 
     /**
-     * <p>Specifies whether to enable password-free write access. This feature is supported only for V2 instances.</p>
+     * <p>Whether to enable password-free write (only supported in V2 version).</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -77,7 +75,7 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public Boolean enableAuthFreeWrite;
 
     /**
-     * <p>Specifies whether to enable an authorization token. This feature is supported only for V1 instances.</p>
+     * <p>Whether to enable authorization Token (only supported in V1 version).</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -86,12 +84,11 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public Boolean enableAuthToken;
 
     /**
-     * <p>The billing method.</p>
+     * <p>Billing method:</p>
      * <ul>
-     * <li><p>POSTPAY: pay-as-you-go based on the volume of reported metrics.</p>
-     * </li>
-     * <li><p>Note: If you leave this parameter empty, the default billing method is used. If a default billing method is not configured, POSTPAY is used.</p>
-     * </li>
+     * <li>POSTPAY: Postpaid by metric reporting volume.</li>
+     * <li>POSTPAY_GB: Postpaid by metric write volume.
+     * Note, if left blank, the user\&quot;s default billing method configuration will be used. If the user has not configured a default, the system defaults to billing by metric reporting volume.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -101,7 +98,7 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public String paymentType;
 
     /**
-     * <p>The name of the instance.</p>
+     * <p>Instance name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -111,7 +108,7 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public String prometheusInstanceName;
 
     /**
-     * <p>The instance status.</p>
+     * <p>Instance status.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -120,12 +117,10 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The storage duration of the instance in days. The valid values depend on the billing method:</p>
+     * <p>Storage duration (days):</p>
      * <ul>
-     * <li><p>For instances billed based on data written: 90 and 180.</p>
-     * </li>
-     * <li><p>For instances billed based on reported metrics: 15, 30, 60, 90, and 180.</p>
-     * </li>
+     * <li>By write volume: 90, 180.</li>
+     * <li>By metric reporting volume: 15, 30, 60, 90, 180.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -135,13 +130,13 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public Integer storageDuration;
 
     /**
-     * <p>The tags.</p>
+     * <p>Tag values.</p>
      */
     @NameInMap("tags")
     public java.util.List<CreatePrometheusInstanceRequestTags> tags;
 
     /**
-     * <p>The workspace to which the instance belongs. The default value is default-cms-{userId}-{regionId}.</p>
+     * <p>Belonging workspace, default value: default-cms-{userId}-{regionId}.</p>
      * 
      * <strong>example:</strong>
      * <p>wokspace1</p>
@@ -252,7 +247,7 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
 
     public static class CreatePrometheusInstanceRequestTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>Tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>key1</p>
@@ -261,7 +256,7 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>Tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>110109200001214284</p>

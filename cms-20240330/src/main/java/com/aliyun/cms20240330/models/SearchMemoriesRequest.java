@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class SearchMemoriesRequest extends TeaModel {
     /**
-     * <p>Agent ID</p>
-     * 
      * <strong>example:</strong>
      * <p>972772996913709056</p>
      */
@@ -14,8 +12,6 @@ public class SearchMemoriesRequest extends TeaModel {
     public String agentId;
 
     /**
-     * <p>App key assigned by the merchant</p>
-     * 
      * <strong>example:</strong>
      * <p>mm_480d961a1b5e4efe84603f4cbc0f</p>
      */
@@ -23,8 +19,6 @@ public class SearchMemoriesRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>Resource metadata</p>
-     * 
      * <strong>example:</strong>
      * <p>{&quot;sessionId&quot;:&quot;test_session_001&quot;}</p>
      */
@@ -32,8 +26,6 @@ public class SearchMemoriesRequest extends TeaModel {
     public java.util.Map<String, ?> metadata;
 
     /**
-     * <p>Query text</p>
-     * 
      * <strong>example:</strong>
      * <p>What I like</p>
      */
@@ -41,8 +33,6 @@ public class SearchMemoriesRequest extends TeaModel {
     public String query;
 
     /**
-     * <p>Rerank the search results.</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,8 +40,6 @@ public class SearchMemoriesRequest extends TeaModel {
     public Boolean rerank;
 
     /**
-     * <p>Run ID</p>
-     * 
      * <strong>example:</strong>
      * <p>test_session_001</p>
      */
@@ -59,8 +47,6 @@ public class SearchMemoriesRequest extends TeaModel {
     public String runId;
 
     /**
-     * <p>Number of top results to return</p>
-     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -68,8 +54,6 @@ public class SearchMemoriesRequest extends TeaModel {
     public Integer topK;
 
     /**
-     * <p>User ID</p>
-     * 
      * <strong>example:</strong>
      * <p>test_session_001</p>
      */

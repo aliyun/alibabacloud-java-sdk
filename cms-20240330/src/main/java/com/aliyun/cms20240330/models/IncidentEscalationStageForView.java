@@ -4,9 +4,17 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class IncidentEscalationStageForView extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("cycleNotifyCount")
     public Integer cycleNotifyCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("cycleNotifyInterval")
     public Integer cycleNotifyInterval;
 
@@ -15,6 +23,9 @@ public class IncidentEscalationStageForView extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("index")
     public Integer index;
@@ -22,9 +33,17 @@ public class IncidentEscalationStageForView extends TeaModel {
     @NameInMap("notifyChannels")
     public java.util.List<NotifyChannel> notifyChannels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;Open&quot;</p>
+     */
     @NameInMap("targetIncidentState")
     public String targetIncidentState;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("triggerDelay")
     public Integer triggerDelay;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePrometheusViewRequest extends TeaModel {
     /**
-     * <p>The policy for password-free read access. IP address segments and VPC IDs are supported.</p>
+     * <p>Password-free read policy (supports IP segments and VpcId).</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -23,7 +23,7 @@ public class UpdatePrometheusViewRequest extends TeaModel {
     public String authFreeReadPolicy;
 
     /**
-     * <p>Specifies whether to enable password-free read access.</p>
+     * <p>Whether to support password-free read.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -32,7 +32,7 @@ public class UpdatePrometheusViewRequest extends TeaModel {
     public Boolean enableAuthFreeRead;
 
     /**
-     * <p>Specifies whether to enable authentication tokens.</p>
+     * <p>Whether to support authToken.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -41,13 +41,13 @@ public class UpdatePrometheusViewRequest extends TeaModel {
     public Boolean enableAuthToken;
 
     /**
-     * <p>A list of Prometheus instances.</p>
+     * <p>List of Prometheus instances.</p>
      */
     @NameInMap("prometheusInstances")
     public java.util.List<UpdatePrometheusViewRequestPrometheusInstances> prometheusInstances;
 
     /**
-     * <p>The name of the Prometheus view.</p>
+     * <p>Prometheus view name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-prom-view-name</p>
@@ -56,7 +56,7 @@ public class UpdatePrometheusViewRequest extends TeaModel {
     public String prometheusViewName;
 
     /**
-     * <p>The status of the Prometheus view.</p>
+     * <p>Running status.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -65,7 +65,7 @@ public class UpdatePrometheusViewRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The workspace to which the view belongs.</p>
+     * <p>Belonging workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>default-cms-108490012345-cn-heyuan</p>
@@ -136,7 +136,7 @@ public class UpdatePrometheusViewRequest extends TeaModel {
 
     public static class UpdatePrometheusViewRequestPrometheusInstances extends TeaModel {
         /**
-         * <p>The instance ID.</p>
+         * <p>Instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c7ba84651c71e442c8d0653085d862164</p>
@@ -145,7 +145,7 @@ public class UpdatePrometheusViewRequest extends TeaModel {
         public String prometheusInstanceId;
 
         /**
-         * <p>The region ID.</p>
+         * <p>Region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-north-2-gov-1</p>
@@ -154,7 +154,7 @@ public class UpdatePrometheusViewRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The user ID.</p>
+         * <p>User ID.</p>
          * 
          * <strong>example:</strong>
          * <p>16727123456789</p>

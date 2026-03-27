@@ -4,15 +4,10 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class ListThreadsShrinkRequest extends TeaModel {
-    /**
-     * <p>The filter conditions for the query. If you do not specify this parameter, all threads in the instance are queried.</p>
-     */
     @NameInMap("filter")
     public String filterShrink;
 
     /**
-     * <p>The maximum number of results to return. The maximum value is 200.</p>
-     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -20,8 +15,6 @@ public class ListThreadsShrinkRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The paging token.</p>
-     * 
      * <strong>example:</strong>
      * <p>xxxxxx</p>
      */
@@ -29,19 +22,15 @@ public class ListThreadsShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The session status.</p>
-     * 
      * <strong>example:</strong>
-     * <p>active</p>
+     * <p>Running</p>
      */
     @NameInMap("status")
     public String status;
 
     /**
-     * <p>The session ID.</p>
-     * 
      * <strong>example:</strong>
-     * <p>thread-123123</p>
+     * <p>thread_id01</p>
      */
     @NameInMap("threadId")
     public String threadId;

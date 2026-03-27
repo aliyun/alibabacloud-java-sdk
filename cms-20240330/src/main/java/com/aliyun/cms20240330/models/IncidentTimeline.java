@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class IncidentTimeline extends TeaModel {
     /**
-     * <p>子类型。</p>
+     * <p>Subtype.</p>
      * 
      * <strong>example:</strong>
      * <p>comment</p>
@@ -14,16 +14,16 @@ public class IncidentTimeline extends TeaModel {
     public String childType;
 
     /**
-     * <p>内容。</p>
+     * <p>Content.</p>
      * 
      * <strong>example:</strong>
-     * <p>已通知运维团队进行排查</p>
+     * <p>The operations team has been notified to investigate.</p>
      */
     @NameInMap("content")
     public String content;
 
     /**
-     * <p>所属事件 ID。</p>
+     * <p>Incident ID.</p>
      * 
      * <strong>example:</strong>
      * <p>incident-001</p>
@@ -32,7 +32,7 @@ public class IncidentTimeline extends TeaModel {
     public String incidentId;
 
     /**
-     * <p>时间线节点唯一 ID。</p>
+     * <p>Timeline node unique ID.</p>
      * 
      * <strong>example:</strong>
      * <p>timeline-001</p>
@@ -41,7 +41,7 @@ public class IncidentTimeline extends TeaModel {
     public String incidentTimelineId;
 
     /**
-     * <p>时间戳。</p>
+     * <p>Time.</p>
      * 
      * <strong>example:</strong>
      * <p>1741234567890</p>
@@ -50,7 +50,7 @@ public class IncidentTimeline extends TeaModel {
     public Long time;
 
     /**
-     * <p>所属时间线 ID。</p>
+     * <p>Parent timeline ID.</p>
      * 
      * <strong>example:</strong>
      * <p>timeline-main-001</p>
@@ -59,16 +59,16 @@ public class IncidentTimeline extends TeaModel {
     public String timelineId;
 
     /**
-     * <p>时间线标题。</p>
+     * <p>Title.</p>
      * 
      * <strong>example:</strong>
-     * <p>已联系运维团队</p>
+     * <p>The operations team has been contacted.</p>
      */
     @NameInMap("title")
     public String title;
 
     /**
-     * <p>类型。</p>
+     * <p>Type.</p>
      * 
      * <strong>example:</strong>
      * <p>ACTION</p>
@@ -77,7 +77,7 @@ public class IncidentTimeline extends TeaModel {
     public String type;
 
     /**
-     * <p>用户 ID。</p>
+     * <p>User ID.</p>
      * 
      * <strong>example:</strong>
      * <p>user-12345</p>

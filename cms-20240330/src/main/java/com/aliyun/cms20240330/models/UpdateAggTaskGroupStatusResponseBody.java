@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAggTaskGroupStatusResponseBody extends TeaModel {
     /**
-     * <p>The summary of the aggregation task group configuration.</p>
+     * <p>Summary of the aggregation task group configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>a54136014dc386a92c83a6ef1e97ff22</p>
@@ -14,7 +14,7 @@ public class UpdateAggTaskGroupStatusResponseBody extends TeaModel {
     public String aggTaskGroupConfigHash;
 
     /**
-     * <p>The ID of the aggregation task group.</p>
+     * <p>Aggregation task group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>aggTaskGroup-xxx</p>
@@ -23,7 +23,7 @@ public class UpdateAggTaskGroupStatusResponseBody extends TeaModel {
     public String aggTaskGroupId;
 
     /**
-     * <p>The name of the aggregation task group.</p>
+     * <p>Aggregation task group name.</p>
      * 
      * <strong>example:</strong>
      * <p>pipeline-aggtask-group</p>
@@ -32,7 +32,7 @@ public class UpdateAggTaskGroupStatusResponseBody extends TeaModel {
     public String aggTaskGroupName;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0CEC5375-C554-562B-A65F-***</p>
@@ -41,7 +41,7 @@ public class UpdateAggTaskGroupStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the source Prometheus instance for the aggregation task group.</p>
+     * <p>Source Prometheus instance ID of the aggregation task group.</p>
      * 
      * <strong>example:</strong>
      * <p>rw-xxx</p>
@@ -50,7 +50,7 @@ public class UpdateAggTaskGroupStatusResponseBody extends TeaModel {
     public String sourcePrometheusId;
 
     /**
-     * <p>The current status of the aggregation task group.</p>
+     * <p>The current status of the aggregated task group.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>

@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteAlertWebhooksShrinkRequest extends TeaModel {
     /**
-     * <p>Unique webhook identifiers.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("webhookIds")

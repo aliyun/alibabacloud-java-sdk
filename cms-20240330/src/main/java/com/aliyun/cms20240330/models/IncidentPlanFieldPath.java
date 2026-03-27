@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class IncidentPlanFieldPath extends TeaModel {
     /**
-     * <p>字段别名。</p>
+     * <p>Field alias.</p>
      * 
      * <strong>example:</strong>
-     * <p>服务名称</p>
+     * <p>Service name.</p>
      */
     @NameInMap("fieldAlias")
     public String fieldAlias;
 
     /**
-     * <p>字段路径的列表。</p>
+     * <p>List of field paths.</p>
      */
     @NameInMap("fieldPath")
     public java.util.List<String> fieldPath;

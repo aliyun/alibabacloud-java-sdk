@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePrometheusViewRequest extends TeaModel {
     /**
-     * <p>This parameter is not in use.</p>
+     * <p>Not enabled yet</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -23,7 +23,7 @@ public class CreatePrometheusViewRequest extends TeaModel {
     public String authFreeReadPolicy;
 
     /**
-     * <p>Specifies whether to enable password-free read access.</p>
+     * <p>Whether to support password-free read</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -32,7 +32,7 @@ public class CreatePrometheusViewRequest extends TeaModel {
     public Boolean enableAuthFreeRead;
 
     /**
-     * <p>Specifies whether to enable an authentication token.</p>
+     * <p>Whether to support authToken</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,14 +41,14 @@ public class CreatePrometheusViewRequest extends TeaModel {
     public Boolean enableAuthToken;
 
     /**
-     * <p>The list of Prometheus instances.</p>
+     * <p>List of Prometheus instances.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("prometheusInstances")
     public java.util.List<CreatePrometheusViewRequestPrometheusInstances> prometheusInstances;
 
     /**
-     * <p>The name of the Prometheus view.</p>
+     * <p>Prometheus view name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,7 +58,7 @@ public class CreatePrometheusViewRequest extends TeaModel {
     public String prometheusViewName;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>Resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm3gn5i6bigbi</p>
@@ -67,7 +67,7 @@ public class CreatePrometheusViewRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>This parameter is not in use.</p>
+     * <p>Not enabled yet.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -76,17 +76,15 @@ public class CreatePrometheusViewRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>Specifies the operation to execute.</p>
+     * <p>The operation to be performed.</p>
      */
     @NameInMap("tags")
     public java.util.List<CreatePrometheusViewRequestTags> tags;
 
     /**
      * <ul>
-     * <li><p>V1: The old version.</p>
-     * </li>
-     * <li><p>V2: The new version.</p>
-     * </li>
+     * <li>V1: Old version</li>
+     * <li>V2: New version</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -97,7 +95,7 @@ public class CreatePrometheusViewRequest extends TeaModel {
     public String version;
 
     /**
-     * <p>The default value is default-cms-{userId}-{regionId}.</p>
+     * <p>Default value: default-cms-{userId}-{regionId}</p>
      * 
      * <strong>example:</strong>
      * <p>cms-monitor-test-aysls-pub-cn-zhangjiakou-spe-monitor</p>
@@ -192,7 +190,7 @@ public class CreatePrometheusViewRequest extends TeaModel {
 
     public static class CreatePrometheusViewRequestPrometheusInstances extends TeaModel {
         /**
-         * <p>The instance ID.</p>
+         * <p>Instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>arms-1d581fac20a462dcde743d9628</p>
@@ -201,7 +199,7 @@ public class CreatePrometheusViewRequest extends TeaModel {
         public String prometheusInstanceId;
 
         /**
-         * <p>The region ID.</p>
+         * <p>Region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-wulanchabu</p>
@@ -210,7 +208,7 @@ public class CreatePrometheusViewRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The user ID.</p>
+         * <p>User ID.</p>
          * 
          * <strong>example:</strong>
          * <p>167271234567890</p>
@@ -251,7 +249,7 @@ public class CreatePrometheusViewRequest extends TeaModel {
 
     public static class CreatePrometheusViewRequestTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>Tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>test-key</p>
@@ -260,7 +258,7 @@ public class CreatePrometheusViewRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>Tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>test-value</p>

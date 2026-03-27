@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class TransformerForModify extends TeaModel {
     /**
-     * <p>转换操作</p>
+     * <p>Transformation operation.</p>
      */
     @NameInMap("actions")
     public java.util.List<TransformAction> actions;
 
     /**
-     * <p>描述</p>
+     * <p>Description.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace test</p>
@@ -20,13 +20,13 @@ public class TransformerForModify extends TeaModel {
     public String description;
 
     /**
-     * <p>筛选条件</p>
+     * <p>Filter Setting.</p>
      */
     @NameInMap("filterSetting")
     public FilterSetting filterSetting;
 
     /**
-     * <p>匹配处理后退出</p>
+     * <p>Exit after matching processing.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -35,7 +35,7 @@ public class TransformerForModify extends TeaModel {
     public Boolean quitAfterMatch;
 
     /**
-     * <p>排序数</p>
+     * <p>Sort order.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,7 +44,7 @@ public class TransformerForModify extends TeaModel {
     public Integer sortId;
 
     /**
-     * <p>名称</p>
+     * <p>Name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

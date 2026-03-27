@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAggTaskGroupsRequest extends TeaModel {
     /**
-     * <p>A list of aggregation task group IDs. The value must be a string that can be parsed as a JSON array.</p>
+     * <p>List of IDs for the aggregation task groups, which must be JSON parseable.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;aggTaskGroup-xxx&quot;]</p>
@@ -14,7 +14,7 @@ public class ListAggTaskGroupsRequest extends TeaModel {
     public String filterAggTaskGroupIds;
 
     /**
-     * <p>A list of aggregation task group names. The value must be a string that can be parsed as a JSON array.</p>
+     * <p>List of names for the aggregation task groups, which must be JSON parseable.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;apiserver_request_total&quot;]</p>
@@ -23,7 +23,7 @@ public class ListAggTaskGroupsRequest extends TeaModel {
     public String filterAggTaskGroupNames;
 
     /**
-     * <p>The maximum number of entries to return on each page.</p>
+     * <p>Maximum number of records to return.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,7 +32,7 @@ public class ListAggTaskGroupsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to retrieve the next page of results.</p>
+     * <p>Query token.</p>
      * 
      * <strong>example:</strong>
      * <p>28036394xxx</p>
@@ -41,7 +41,7 @@ public class ListAggTaskGroupsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The name to search for. Fuzzy search is supported.</p>
+     * <p>Name search, supports fuzzy matching.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -50,7 +50,7 @@ public class ListAggTaskGroupsRequest extends TeaModel {
     public String query;
 
     /**
-     * <p>The status of the aggregation task group. Valid values are \<code>Running\\</code> and \<code>Stopped\\</code>. The default value is \<code>Running\\</code>.</p>
+     * <p>Status of the aggregation task group, either \&quot;Running\&quot; or \&quot;Stopped\&quot;. Default is Running.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -59,13 +59,13 @@ public class ListAggTaskGroupsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags of the resource group.</p>
+     * <p>Resource group tags.</p>
      */
     @NameInMap("tags")
     public java.util.List<ListAggTaskGroupsRequestTags> tags;
 
     /**
-     * <p>The ID of the target Prometheus instance for the aggregation task group.</p>
+     * <p>The target Prometheus instance ID for the aggregation task group.</p>
      * 
      * <strong>example:</strong>
      * <p>rw-pq4apob9jm</p>
@@ -144,7 +144,7 @@ public class ListAggTaskGroupsRequest extends TeaModel {
 
     public static class ListAggTaskGroupsRequestTags extends TeaModel {
         /**
-         * <p>The key of the resource group tag.</p>
+         * <p>Key of the resource group tag.</p>
          * 
          * <strong>example:</strong>
          * <p>key1</p>
@@ -153,7 +153,7 @@ public class ListAggTaskGroupsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the resource group tag.</p>
+         * <p>Value of the resource group tag.</p>
          * 
          * <strong>example:</strong>
          * <p>value1</p>

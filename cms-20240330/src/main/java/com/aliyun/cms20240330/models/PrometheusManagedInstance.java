@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class PrometheusManagedInstance extends TeaModel {
     /**
-     * <p>创建时间</p>
-     * 
      * <strong>example:</strong>
      * <p>2025-03-11T08:21:58Z</p>
      */
@@ -14,8 +12,6 @@ public class PrometheusManagedInstance extends TeaModel {
     public String createTime;
 
     /**
-     * <p>实例类型</p>
-     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -23,8 +19,6 @@ public class PrometheusManagedInstance extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>RUM关联的Prometheus实例ID</p>
-     * 
      * <strong>example:</strong>
      * <p>rum-xxx</p>
      */
@@ -32,8 +26,6 @@ public class PrometheusManagedInstance extends TeaModel {
     public String prometheusInstanceId;
 
     /**
-     * <p>RUM关联的Prometheus实例名称</p>
-     * 
      * <strong>example:</strong>
      * <p>rum-xxx</p>
      */
@@ -41,8 +33,6 @@ public class PrometheusManagedInstance extends TeaModel {
     public String prometheusInstanceName;
 
     /**
-     * <p>阿里云RegionId</p>
-     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -50,8 +40,6 @@ public class PrometheusManagedInstance extends TeaModel {
     public String regionId;
 
     /**
-     * <p>实例状态</p>
-     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */
@@ -59,8 +47,6 @@ public class PrometheusManagedInstance extends TeaModel {
     public String status;
 
     /**
-     * <p>云监控2.0 workspace</p>
-     * 
      * <strong>example:</strong>
      * <p>workspace-test</p>
      */

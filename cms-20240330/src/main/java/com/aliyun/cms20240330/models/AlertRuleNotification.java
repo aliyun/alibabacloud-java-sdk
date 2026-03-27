@@ -4,33 +4,63 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class AlertRuleNotification extends TeaModel {
+    /**
+     * <p>List of contact IDs.</p>
+     */
     @NameInMap("contacts")
     public java.util.List<String> contacts;
 
+    /**
+     * <p>List of custom webhook notification object IDs.</p>
+     */
     @NameInMap("customWebhooks")
     public java.util.List<String> customWebhooks;
 
     @NameInMap("dingCoolAppWebhooks")
     public java.util.List<String> dingCoolAppWebhooks;
 
+    /**
+     * <p>List of DingTalk webhook notification object IDs.</p>
+     */
     @NameInMap("dingWebhooks")
     public java.util.List<String> dingWebhooks;
 
+    /**
+     * <p>List of Feishu webhook notification object IDs.</p>
+     */
     @NameInMap("fsWebhooks")
     public java.util.List<String> fsWebhooks;
 
+    /**
+     * <p>List of contact group IDs.</p>
+     */
     @NameInMap("groups")
     public java.util.List<String> groups;
 
+    /**
+     * <p>Notification time window; notifications are sent only during this period.</p>
+     */
     @NameInMap("notifyTime")
     public AlertRuleTimeSpan notifyTime;
 
+    /**
+     * <p>Notification silence duration, in seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>86400</p>
+     */
     @NameInMap("silenceTime")
     public Long silenceTime;
 
+    /**
+     * <p>List of Slack webhook notification object IDs.</p>
+     */
     @NameInMap("slackWebhooks")
     public java.util.List<String> slackWebhooks;
 
+    /**
+     * <p>List of WeChat webhook notification object IDs.</p>
+     */
     @NameInMap("wxWebhooks")
     public java.util.List<String> wxWebhooks;
 

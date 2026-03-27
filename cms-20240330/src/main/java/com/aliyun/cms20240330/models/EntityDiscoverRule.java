@@ -4,60 +4,34 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class EntityDiscoverRule extends TeaModel {
-    /**
-     * <p>注解匹配集合。</p>
-     */
     @NameInMap("annotations")
     public java.util.List<EntityDiscoverRuleAnnotations> annotations;
 
-    /**
-     * <p>实体类型集合。</p>
-     */
     @NameInMap("entityTypes")
     public java.util.List<String> entityTypes;
 
-    /**
-     * <p>属性匹配规则。</p>
-     */
     @NameInMap("fieldRules")
     public java.util.List<EntityDiscoverRuleFieldRules> fieldRules;
 
-    /**
-     * <p>实例ID集合。</p>
-     */
     @NameInMap("instanceIds")
     public java.util.List<String> instanceIds;
 
-    /**
-     * <p>IP匹配规则集合。</p>
-     */
     @NameInMap("ipMatchRule")
     public java.util.List<EntityDiscoverRuleIpMatchRule> ipMatchRule;
 
-    /**
-     * <p>标签匹配集合。</p>
-     */
     @NameInMap("labels")
     public java.util.List<EntityDiscoverRuleLabels> labels;
 
-    /**
-     * <p>地域ID集合。</p>
-     */
     @NameInMap("regionIds")
     public java.util.List<String> regionIds;
 
     /**
-     * <p>资源组ID。</p>
-     * 
      * <strong>example:</strong>
      * <p>rg-acfm2m7atreujs1</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
-    /**
-     * <p>通过Tag进行服务发现。</p>
-     */
     @NameInMap("tags")
     public java.util.List<EntityDiscoverRuleTags> tags;
 
@@ -140,8 +114,6 @@ public class EntityDiscoverRule extends TeaModel {
 
     public static class EntityDiscoverRuleAnnotations extends TeaModel {
         /**
-         * <p>操作。</p>
-         * 
          * <strong>example:</strong>
          * <p>in</p>
          */
@@ -149,17 +121,12 @@ public class EntityDiscoverRule extends TeaModel {
         public String op;
 
         /**
-         * <p>注解的Key。</p>
-         * 
          * <strong>example:</strong>
          * <p>instanceId</p>
          */
         @NameInMap("tagKey")
         public String tagKey;
 
-        /**
-         * <p>注解的值集合。</p>
-         */
         @NameInMap("tagValues")
         public java.util.List<String> tagValues;
 
@@ -196,23 +163,16 @@ public class EntityDiscoverRule extends TeaModel {
 
     public static class EntityDiscoverRuleFieldRules extends TeaModel {
         /**
-         * <p>属性的Key。</p>
-         * 
          * <strong>example:</strong>
          * <p>instanceId</p>
          */
         @NameInMap("fieldKey")
         public String fieldKey;
 
-        /**
-         * <p>属性的值集合。</p>
-         */
         @NameInMap("fieldValues")
         public java.util.List<String> fieldValues;
 
         /**
-         * <p>操作。</p>
-         * 
          * <strong>example:</strong>
          * <p>in</p>
          */
@@ -252,8 +212,6 @@ public class EntityDiscoverRule extends TeaModel {
 
     public static class EntityDiscoverRuleIpMatchRule extends TeaModel {
         /**
-         * <p>IP的CIDR。</p>
-         * 
          * <strong>example:</strong>
          * <p>192.168.0.1/10</p>
          */
@@ -261,8 +219,6 @@ public class EntityDiscoverRule extends TeaModel {
         public String ipCIDR;
 
         /**
-         * <p>IP字段的Key。</p>
-         * 
          * <strong>example:</strong>
          * <p>hostIp</p>
          */
@@ -294,8 +250,6 @@ public class EntityDiscoverRule extends TeaModel {
 
     public static class EntityDiscoverRuleLabels extends TeaModel {
         /**
-         * <p>操作。</p>
-         * 
          * <strong>example:</strong>
          * <p>in</p>
          */
@@ -303,17 +257,12 @@ public class EntityDiscoverRule extends TeaModel {
         public String op;
 
         /**
-         * <p>标签的Key。</p>
-         * 
          * <strong>example:</strong>
          * <p>project</p>
          */
         @NameInMap("tagKey")
         public String tagKey;
 
-        /**
-         * <p>标签的值集合。</p>
-         */
         @NameInMap("tagValues")
         public java.util.List<String> tagValues;
 
@@ -350,8 +299,6 @@ public class EntityDiscoverRule extends TeaModel {
 
     public static class EntityDiscoverRuleTags extends TeaModel {
         /**
-         * <p>操作。</p>
-         * 
          * <strong>example:</strong>
          * <p>in</p>
          */
@@ -359,17 +306,12 @@ public class EntityDiscoverRule extends TeaModel {
         public String op;
 
         /**
-         * <p>Tag的Key。</p>
-         * 
          * <strong>example:</strong>
          * <p>project</p>
          */
         @NameInMap("tagKey")
         public String tagKey;
 
-        /**
-         * <p>Tag的值集合。</p>
-         */
         @NameInMap("tagValues")
         public java.util.List<String> tagValues;
 

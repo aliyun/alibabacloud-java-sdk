@@ -6,12 +6,9 @@ import com.aliyun.tea.*;
 public class CreateTicketRequest extends TeaModel {
     /**
      * <ul>
-     * <li><p>The expiration time of the access token, in seconds. This is the period during which a user can access the page APIs. The value can range from 0 to 86,400 seconds (one day). The default value is 86,400 seconds (one day).</p>
-     * </li>
-     * <li><p>The effective expiration time of the access token is the minimum value of accessTokenExpirationTime and expirationTime.</p>
-     * </li>
-     * <li><p>If you call the operation using a Security Token Service (STS) token, the effective expiration time of the access token is the minimum value of accessTokenExpirationTime, expirationTime, and the expiration time of the STS token.</p>
-     * </li>
+     * <li>Access token expiration time (in seconds), which is the expiration time for the user to access the page interface. The default value is 86400 seconds (one day), and the range of values is from 0 to 86400 seconds (one day).</li>
+     * <li>The access token expiration time is the minimum value between <code>accessTokenExpirationTime</code> and <code>expirationTime</code>.</li>
+     * <li>If called through STS, the access token expiration time (i.e., the time during which the user can access the page interface) is the minimum value among <code>accessTokenExpirationTime</code>, <code>expirationTime</code>, and the STS expiration time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,7 +19,7 @@ public class CreateTicketRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li>The expiration time of the URL for the embedded page, in seconds. The value can range from 0 to 2,592,000 seconds (30 days). The default value is 86,400 seconds (one day).</li>
+     * <li>Expiration time (in seconds), which is the expiration time for the embedded page URL. The default value is 86400 seconds (one day), and the range of values is from 0 to 2592000 seconds (30 days).</li>
      * </ul>
      * 
      * <strong>example:</strong>

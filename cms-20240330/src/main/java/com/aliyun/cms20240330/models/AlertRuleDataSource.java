@@ -4,27 +4,70 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class AlertRuleDataSource extends TeaModel {
+    /**
+     * <p>Applicable data source type: APM_DS.
+     * Application type: </p>
+     * <ul>
+     * <li>apm.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>apm</p>
+     */
     @NameInMap("appType")
     public String appType;
 
+    /**
+     * <p>Applicable data source type: SLS_MULTI_DS.
+     * List of sub-data sources.</p>
+     */
     @NameInMap("dsList")
     public java.util.List<AlertRuleDataSourceDsList> dsList;
 
     /**
-     * <p>实例id，当type=PROMETHEUS_DS/ENTERPRISE_DS时必填，为prometheus实例的clusterId或指标仓库名称</p>
+     * <p>Applicable data source type: PROMETHEUS_DS.
+     * Prometheus instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rw-bbe8961b4a59be0</p>
      */
     @NameInMap("instanceId")
     public String instanceId;
 
+    /**
+     * <p>Applicable data source type: ENTERPRISE_DS.
+     * Name of the enterprise cloud monitoring metric repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyun-default</p>
+     */
     @NameInMap("namespace")
     public String namespace;
 
+    /**
+     * <p>Applicable data source types: APM_DS, PROMETHEUS_DS.
+     * The regionId to which the data source belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regionId")
     public String regionId;
 
     /**
-     * <p>数据源类型</p>
+     * <p>Data source type.
+     * Valid values:</p>
+     * <ul>
+     * <li>PROMETHEUS_DS: Prometheus data source.</li>
+     * <li>SLS_MULTI_DS: SLS data source.</li>
+     * <li>APM_DS: Application monitoring data source.</li>
+     * <li>CMS_BASIC_DS: Basic cloud monitoring data source.</li>
+     * <li>ENTERPRISE_DS: Enterprise cloud monitoring data source.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PROMETHEUS_DS</p>
      */
     @NameInMap("type")
     public String type;
@@ -83,15 +126,43 @@ public class AlertRuleDataSource extends TeaModel {
     }
 
     public static class AlertRuleDataSourceDsList extends TeaModel {
+        /**
+         * <p>SLS project</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mySlsProject</p>
+         */
         @NameInMap("project")
         public String project;
 
+        /**
+         * <p>The region where the SLS project is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("regionId")
         public String regionId;
 
+        /**
+         * <p>LogStore/MetricStore name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mySlsLogStore</p>
+         */
         @NameInMap("store")
         public String store;
 
+        /**
+         * <p>Type of SLS data sub-source:</p>
+         * <ul>
+         * <li>SLS_LOG_DS: LogStore data source.</li>
+         * <li>SLS_METRIC_DS: MetricStore data source.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SLS_LOG_DS</p>
+         */
         @NameInMap("type")
         public String type;
 

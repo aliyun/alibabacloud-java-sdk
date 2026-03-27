@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class ListIntegrationPolicyCollectorsRequest extends TeaModel {
     /**
-     * <p>The name of the add-on release.</p>
-     * 
      * <strong>example:</strong>
      * <p>release-1234567</p>
      */
@@ -14,7 +12,6 @@ public class ListIntegrationPolicyCollectorsRequest extends TeaModel {
     public String addonReleaseName;
 
     /**
-     * <p>The collector type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,8 +21,6 @@ public class ListIntegrationPolicyCollectorsRequest extends TeaModel {
     public String collectorType;
 
     /**
-     * <p>The language.</p>
-     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */

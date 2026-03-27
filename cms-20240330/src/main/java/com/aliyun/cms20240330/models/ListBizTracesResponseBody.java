@@ -4,15 +4,10 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class ListBizTracesResponseBody extends TeaModel {
-    /**
-     * <p>The list of business traces.</p>
-     */
     @NameInMap("items")
     public java.util.List<BizTraceConfig> items;
 
     /**
-     * <p>The maximum number of results returned. The maximum value is 100.</p>
-     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -20,8 +15,6 @@ public class ListBizTracesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to use to retrieve the next page of results.</p>
-     * 
      * <strong>example:</strong>
      * <p>aa9d0e569b88098a0e3155c29b473201a</p>
      */
@@ -29,8 +22,6 @@ public class ListBizTracesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>0CEC5375-C554-562B-A65F-*****</p>
      */
@@ -38,8 +29,6 @@ public class ListBizTracesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
-     * 
      * <strong>example:</strong>
      * <p>66</p>
      */

@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class ListAlertWebhooksResponseBody extends TeaModel {
     /**
-     * <p>The page number. The default value is 1.</p>
-     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -14,8 +12,6 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The page size.</p>
-     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -23,8 +19,6 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>8A33DBEA-<em><strong><strong>-</strong></strong></em>-<em><strong><strong>-</strong></strong></em></p>
      */
@@ -32,8 +26,6 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
-     * 
      * <strong>example:</strong>
      * <p>8</p>
      */
@@ -41,7 +33,7 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
     public Long total;
 
     /**
-     * <p>The webhooks.</p>
+     * <p>webhooks</p>
      */
     @NameInMap("webhooks")
     public java.util.List<ListAlertWebhooksResponseBodyWebhooks> webhooks;
@@ -93,14 +85,6 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
 
     public static class ListAlertWebhooksResponseBodyWebhooks extends TeaModel {
         /**
-         * <p>The content type of the data. Valid values:</p>
-         * <ul>
-         * <li><p>JSON</p>
-         * </li>
-         * <li><p>FORM</p>
-         * </li>
-         * </ul>
-         * 
          * <strong>example:</strong>
          * <p>JSON</p>
          */
@@ -108,7 +92,7 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
         public String contentType;
 
         /**
-         * <p>The headers.</p>
+         * <p>headers</p>
          * 
          * <strong>example:</strong>
          * <p>key</p>
@@ -117,14 +101,6 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
         public java.util.Map<String, ?> headers;
 
         /**
-         * <p>The language. Valid values:</p>
-         * <ul>
-         * <li><p>zh_CN</p>
-         * </li>
-         * <li><p>en_US</p>
-         * </li>
-         * </ul>
-         * 
          * <strong>example:</strong>
          * <p>zh_CN</p>
          */
@@ -132,14 +108,6 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
         public String lang;
 
         /**
-         * <p>The request method. Valid values:</p>
-         * <ul>
-         * <li><p>GET</p>
-         * </li>
-         * <li><p>POST</p>
-         * </li>
-         * </ul>
-         * 
          * <strong>example:</strong>
          * <p>GET</p>
          */
@@ -147,8 +115,6 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
         public String method;
 
         /**
-         * <p>The name of the webhook.</p>
-         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -156,8 +122,6 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The URL of the alert callback.</p>
-         * 
          * <strong>example:</strong>
          * <p><a href="http://aliyun.com/test">http://aliyun.com/test</a></p>
          */
@@ -165,8 +129,6 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
         public String url;
 
         /**
-         * <p>The unique ID of the webhook.</p>
-         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

@@ -8,17 +8,12 @@ public class CreateThreadRequest extends TeaModel {
     public java.util.Map<String, String> attributes;
 
     /**
-     * <p>The title of the session.</p>
-     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
     @NameInMap("title")
     public String title;
 
-    /**
-     * <p>The properties of the session.</p>
-     */
     @NameInMap("variables")
     public CreateThreadRequestVariables variables;
 
@@ -53,19 +48,15 @@ public class CreateThreadRequest extends TeaModel {
 
     public static class CreateThreadRequestVariables extends TeaModel {
         /**
-         * <p>The name of the Simple Log Service project.</p>
-         * 
          * <strong>example:</strong>
-         * <p>project</p>
+         * <p>az_alipay</p>
          */
         @NameInMap("project")
         public String project;
 
         /**
-         * <p>The name of the workspace.</p>
-         * 
          * <strong>example:</strong>
-         * <p>workspace</p>
+         * <p>rum-monitor-test-aysls-pub-cn-heyuan-monitor</p>
          */
         @NameInMap("workspace")
         public String workspace;

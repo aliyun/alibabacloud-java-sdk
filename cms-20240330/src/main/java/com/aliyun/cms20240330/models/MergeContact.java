@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class MergeContact extends TeaModel {
     /**
-     * <p>邮箱地址。</p>
-     * 
      * <strong>example:</strong>
      * <p><a href="mailto:zhangsan@company.com">zhangsan@company.com</a></p>
      */
@@ -14,26 +12,16 @@ public class MergeContact extends TeaModel {
     public String email;
 
     /**
-     * <p>邮箱是否已验证。</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("emailVerify")
     public Boolean emailVerify;
 
-    /**
-     * <p>扩展字段，用于存储额外信息。</p>
-     * 
-     * <strong>example:</strong>
-     * <p>{ &quot;department&quot;: &quot;运维部&quot;, &quot;role&quot;: &quot;工程师&quot; }</p>
-     */
     @NameInMap("extend")
     public java.util.Map<String, ?> extend;
 
     /**
-     * <p>创建时间。</p>
-     * 
      * <strong>example:</strong>
      * <p>2025-03-11T08:21:58.789Z</p>
      */
@@ -41,8 +29,6 @@ public class MergeContact extends TeaModel {
     public String gmtCreate;
 
     /**
-     * <p>最后修改时间。</p>
-     * 
      * <strong>example:</strong>
      * <p>2025-03-11T08:21:58.789Z</p>
      */
@@ -50,8 +36,6 @@ public class MergeContact extends TeaModel {
     public String gmtModified;
 
     /**
-     * <p>联系人唯一标识符。</p>
-     * 
      * <strong>example:</strong>
      * <p>user-12345</p>
      */
@@ -59,26 +43,16 @@ public class MergeContact extends TeaModel {
     public String identifier;
 
     /**
-     * <p>语言偏好。</p>
-     * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
      */
     @NameInMap("lang")
     public String lang;
 
-    /**
-     * <p>联系人姓名。</p>
-     * 
-     * <strong>example:</strong>
-     * <p>张三</p>
-     */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>手机号码。</p>
-     * 
      * <strong>example:</strong>
      * <p>13800138000</p>
      */
@@ -86,8 +60,6 @@ public class MergeContact extends TeaModel {
     public String phone;
 
     /**
-     * <p>手机号码国家区号。</p>
-     * 
      * <strong>example:</strong>
      * <p>86</p>
      */
@@ -95,8 +67,6 @@ public class MergeContact extends TeaModel {
     public String phoneCode;
 
     /**
-     * <p>手机号码是否已验证。</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -104,8 +74,6 @@ public class MergeContact extends TeaModel {
     public Boolean phoneVerify;
 
     /**
-     * <p>联系人来源系统。</p>
-     * 
      * <strong>example:</strong>
      * <p>dingtalk</p>
      */

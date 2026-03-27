@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetEntityStoreDataRequest extends TeaModel {
     /**
-     * <p>The start point in time for the query.</p>
-     * <p>This is a UNIX timestamp. It represents the number of seconds that have elapsed since 00:00:00 UTC on January 1, 1970.</p>
+     * <p>Start time of the query.</p>
+     * <p>Unix timestamp format, representing the number of seconds since 1970-1-1 00:00:00 UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class GetEntityStoreDataRequest extends TeaModel {
     public Integer from;
 
     /**
-     * <p>The search statement.</p>
+     * <p>Query statement</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,8 +26,8 @@ public class GetEntityStoreDataRequest extends TeaModel {
     public String query;
 
     /**
-     * <p>The end point in time for the query.</p>
-     * <p>This is a UNIX timestamp. It represents the number of seconds that have elapsed since 00:00:00 UTC on January 1, 1970.</p>
+     * <p>End time of the query.</p>
+     * <p>Unix timestamp format, representing the number of seconds since 1970-1-1 00:00:00 UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -4,14 +4,11 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
-    /**
-     * <p>The list of regions.</p>
-     */
     @NameInMap("regions")
     public java.util.List<DescribeRegionsResponseBodyRegions> regions;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A*****</p>
@@ -42,8 +39,6 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     public static class DescribeRegionsResponseBodyRegions extends TeaModel {
         /**
-         * <p>The name of the region.</p>
-         * 
          * <strong>example:</strong>
          * <p>China (Beijing)</p>
          */
@@ -51,8 +46,6 @@ public class DescribeRegionsResponseBody extends TeaModel {
         public String localName;
 
         /**
-         * <p>The region ID.</p>
-         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */

@@ -4,29 +4,20 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class CreateMemoryStoreRequest extends TeaModel {
-    /**
-     * <p>A list of custom extraction strategies.</p>
-     */
     @NameInMap("customExtractionStrategies")
     public java.util.List<CustomExtractionStrategy> customExtractionStrategies;
 
     /**
-     * <p>The description of the Memory Store.</p>
-     * 
      * <strong>example:</strong>
      * <p>Test memory store for demonstration.</p>
      */
     @NameInMap("description")
     public String description;
 
-    /**
-     * <p>The extraction strategies to use. Valid values: <code>Episodic</code>, <code>Summary</code>, and <code>Fact</code>.</p>
-     */
     @NameInMap("extractionStrategies")
     public java.util.List<String> extractionStrategies;
 
     /**
-     * <p>The name of the Memory Store.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,7 +27,6 @@ public class CreateMemoryStoreRequest extends TeaModel {
     public String memoryStoreName;
 
     /**
-     * <p>The time-to-live (TTL) for short-term memory.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +34,16 @@ public class CreateMemoryStoreRequest extends TeaModel {
      */
     @NameInMap("shortTermTtl")
     public Integer shortTermTtl;
+
+    /**
+     * <strong>example:</strong>
+     * <p>None/Trace</p>
+     */
+    @NameInMap("sourceType")
+    public String sourceType;
+
+    @NameInMap("traceSourceConfig")
+    public CreateMemoryStoreRequestTraceSourceConfig traceSourceConfig;
 
     public static CreateMemoryStoreRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMemoryStoreRequest self = new CreateMemoryStoreRequest();
@@ -88,6 +88,71 @@ public class CreateMemoryStoreRequest extends TeaModel {
     }
     public Integer getShortTermTtl() {
         return this.shortTermTtl;
+    }
+
+    public CreateMemoryStoreRequest setSourceType(String sourceType) {
+        this.sourceType = sourceType;
+        return this;
+    }
+    public String getSourceType() {
+        return this.sourceType;
+    }
+
+    public CreateMemoryStoreRequest setTraceSourceConfig(CreateMemoryStoreRequestTraceSourceConfig traceSourceConfig) {
+        this.traceSourceConfig = traceSourceConfig;
+        return this;
+    }
+    public CreateMemoryStoreRequestTraceSourceConfig getTraceSourceConfig() {
+        return this.traceSourceConfig;
+    }
+
+    public static class CreateMemoryStoreRequestTraceSourceConfig extends TeaModel {
+        @NameInMap("includeOutput")
+        public Boolean includeOutput;
+
+        /**
+         * <strong>example:</strong>
+         * <p>(serviceName : &quot;langchain-rag&quot; or serviceName : &quot;agentscope-code-correction&quot;) and hostname = frontend-proxy-999c48c8d-hvk6c</p>
+         */
+        @NameInMap("query")
+        public String query;
+
+        /**
+         * <strong>example:</strong>
+         * <p>test-workspace</p>
+         */
+        @NameInMap("workspace")
+        public String workspace;
+
+        public static CreateMemoryStoreRequestTraceSourceConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateMemoryStoreRequestTraceSourceConfig self = new CreateMemoryStoreRequestTraceSourceConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateMemoryStoreRequestTraceSourceConfig setIncludeOutput(Boolean includeOutput) {
+            this.includeOutput = includeOutput;
+            return this;
+        }
+        public Boolean getIncludeOutput() {
+            return this.includeOutput;
+        }
+
+        public CreateMemoryStoreRequestTraceSourceConfig setQuery(String query) {
+            this.query = query;
+            return this;
+        }
+        public String getQuery() {
+            return this.query;
+        }
+
+        public CreateMemoryStoreRequestTraceSourceConfig setWorkspace(String workspace) {
+            this.workspace = workspace;
+            return this;
+        }
+        public String getWorkspace() {
+            return this.workspace;
+        }
+
     }
 
 }

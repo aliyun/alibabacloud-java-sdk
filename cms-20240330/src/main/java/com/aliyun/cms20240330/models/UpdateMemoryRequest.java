@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class UpdateMemoryRequest extends TeaModel {
     /**
-     * <p>The metadata of the Memory.</p>
-     * 
      * <strong>example:</strong>
      * <p>{&quot;sessionId&quot;:&quot;test_session_001&quot;}</p>
      */
@@ -14,8 +12,6 @@ public class UpdateMemoryRequest extends TeaModel {
     public java.util.Map<String, ?> metadata;
 
     /**
-     * <p>The new text for the Memory.</p>
-     * 
      * <strong>example:</strong>
      * <p>Likes to play tennis on weekends</p>
      */

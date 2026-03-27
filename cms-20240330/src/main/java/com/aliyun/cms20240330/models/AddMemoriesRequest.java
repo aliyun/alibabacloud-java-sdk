@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class AddMemoriesRequest extends TeaModel {
     /**
-     * <p>Application agent ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>952730733889060865</p>
      */
@@ -14,8 +12,6 @@ public class AddMemoriesRequest extends TeaModel {
     public String agentId;
 
     /**
-     * <p>Application ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>mm_480d961a1b5e4efe84603f4cbc0f</p>
      */
@@ -23,8 +19,6 @@ public class AddMemoriesRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>Asynchronous mode.</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -32,8 +26,6 @@ public class AddMemoriesRequest extends TeaModel {
     public Boolean asyncMode;
 
     /**
-     * <p>Custom instructions.</p>
-     * 
      * <strong>example:</strong>
      * <p>Your custom instructions here</p>
      */
@@ -41,23 +33,16 @@ public class AddMemoriesRequest extends TeaModel {
     public String customInstructions;
 
     /**
-     * <p>Infer.</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("infer")
     public Boolean infer;
 
-    /**
-     * <p>Messages.</p>
-     */
     @NameInMap("messages")
     public java.util.List<AddMemoriesRequestMessages> messages;
 
     /**
-     * <p>Metadata.</p>
-     * 
      * <strong>example:</strong>
      * <p>{&quot;sessionId&quot;:&quot;test_session_001&quot;}</p>
      */
@@ -65,8 +50,6 @@ public class AddMemoriesRequest extends TeaModel {
     public java.util.Map<String, ?> metadata;
 
     /**
-     * <p>Run ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>jr-80ded1d6953c64ea</p>
      */
@@ -81,8 +64,6 @@ public class AddMemoriesRequest extends TeaModel {
     public Long timestamp;
 
     /**
-     * <p>User ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>test_user_001</p>
      */
@@ -176,8 +157,6 @@ public class AddMemoriesRequest extends TeaModel {
 
     public static class AddMemoriesRequestMessages extends TeaModel {
         /**
-         * <p>Content.</p>
-         * 
          * <strong>example:</strong>
          * <p>My name is Zhang San and I live in Hangzhou.</p>
          */
@@ -185,8 +164,6 @@ public class AddMemoriesRequest extends TeaModel {
         public String content;
 
         /**
-         * <p>Role.</p>
-         * 
          * <strong>example:</strong>
          * <p>user</p>
          */

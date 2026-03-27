@@ -5,14 +5,6 @@ import com.aliyun.tea.*;
 
 public class UpdateAlertWebhookRequest extends TeaModel {
     /**
-     * <p>The content type of the data. Supported values:</p>
-     * <ul>
-     * <li><p>JSON</p>
-     * </li>
-     * <li><p>FORM</p>
-     * </li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>JSON</p>
      */
@@ -20,20 +12,12 @@ public class UpdateAlertWebhookRequest extends TeaModel {
     public String contentType;
 
     /**
-     * <p>The headers.</p>
+     * <p>headers</p>
      */
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
     /**
-     * <p>The language. Supported values:</p>
-     * <ul>
-     * <li><p>zh_CN</p>
-     * </li>
-     * <li><p>en_US</p>
-     * </li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>zh_CN</p>
      */
@@ -41,14 +25,6 @@ public class UpdateAlertWebhookRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The request method. Supported values:</p>
-     * <ul>
-     * <li><p>GET</p>
-     * </li>
-     * <li><p>POST</p>
-     * </li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>GET</p>
      */
@@ -56,8 +32,6 @@ public class UpdateAlertWebhookRequest extends TeaModel {
     public String method;
 
     /**
-     * <p>The name of the webhook.</p>
-     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -65,8 +39,6 @@ public class UpdateAlertWebhookRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The URL of the alert callback.</p>
-     * 
      * <strong>example:</strong>
      * <p><a href="http://aliyun.com/test">http://aliyun.com/test</a></p>
      */

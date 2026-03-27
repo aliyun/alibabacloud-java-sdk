@@ -4,9 +4,6 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class GetUmodelCommonSchemaRefResponseBody extends TeaModel {
-    /**
-     * <p>The referenced common Umodel Schema.</p>
-     */
     @NameInMap("commonSchemaRef")
     public java.util.List<GetUmodelCommonSchemaRefResponseBodyCommonSchemaRef> commonSchemaRef;
 
@@ -25,8 +22,6 @@ public class GetUmodelCommonSchemaRefResponseBody extends TeaModel {
 
     public static class GetUmodelCommonSchemaRefResponseBodyCommonSchemaRef extends TeaModel {
         /**
-         * <p>The common Umodel Schema group.</p>
-         * 
          * <strong>example:</strong>
          * <p>apm-common</p>
          */
@@ -34,8 +29,6 @@ public class GetUmodelCommonSchemaRefResponseBody extends TeaModel {
         public String group;
 
         /**
-         * <p>The version.</p>
-         * 
          * <strong>example:</strong>
          * <p>0.1.0</p>
          */

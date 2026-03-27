@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListServicesResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of results returned. The maximum value is 200.</p>
+     * <p>Maximum number of results to return, with a maximum value of 200</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,7 +14,7 @@ public class ListServicesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The paging token.</p>
+     * <p>Pagination token</p>
      * 
      * <strong>example:</strong>
      * <p>2-ba4d-4b9f-aa24-dcb067a30f1c</p>
@@ -23,7 +23,7 @@ public class ListServicesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>0CEC5375-C554-562B-A65F-9A629907C1F0</p>
@@ -32,13 +32,13 @@ public class ListServicesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of service information.</p>
+     * <p>List of service information.</p>
      */
     @NameInMap("services")
     public java.util.List<ListServicesResponseBodyServices> services;
 
     /**
-     * <p>The total number of records.</p>
+     * <p>Total count</p>
      * 
      * <strong>example:</strong>
      * <p>66</p>
@@ -93,7 +93,7 @@ public class ListServicesResponseBody extends TeaModel {
 
     public static class ListServicesResponseBodyServices extends TeaModel {
         /**
-         * <p>Additional information.</p>
+         * <p>Extended information.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;language&quot;:&quot;java&quot;}</p>
@@ -102,7 +102,7 @@ public class ListServicesResponseBody extends TeaModel {
         public String attributes;
 
         /**
-         * <p>The creation time.</p>
+         * <p>Creation time</p>
          * 
          * <strong>example:</strong>
          * <p>2025-07-01T02:23:59Z</p>
@@ -111,7 +111,7 @@ public class ListServicesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The service description. This parameter is valid only when serviceType is RUM.</p>
+         * <p>Service description, valid only when serviceType=RUM.</p>
          * 
          * <strong>example:</strong>
          * <p>workspace api monitor test</p>
@@ -120,7 +120,7 @@ public class ListServicesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The display name. This parameter is valid only when serviceType is RUM.</p>
+         * <p>Display name, valid only when serviceType=RUM.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -129,7 +129,7 @@ public class ListServicesResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The ID of the ARMS application for backward compatibility.</p>
+         * <p>Historical compatible ARMS application ID</p>
          * 
          * <strong>example:</strong>
          * <p>kgcsf@192197e828d51aa</p>
@@ -138,8 +138,6 @@ public class ListServicesResponseBody extends TeaModel {
         public String pid;
 
         /**
-         * <p>The resource group ID.</p>
-         * 
          * <strong>example:</strong>
          * <p>rg-aekxxzuad5zzzz</p>
          */
@@ -147,7 +145,7 @@ public class ListServicesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The service ID.</p>
+         * <p>Service ID</p>
          * 
          * <strong>example:</strong>
          * <p>jm2pl0yoqf@d4905cb11a4f218dfb0a8</p>
@@ -156,7 +154,7 @@ public class ListServicesResponseBody extends TeaModel {
         public String serviceId;
 
         /**
-         * <p>The service name.</p>
+         * <p>Service name</p>
          * 
          * <strong>example:</strong>
          * <p>demo-app</p>
@@ -165,7 +163,7 @@ public class ListServicesResponseBody extends TeaModel {
         public String serviceName;
 
         /**
-         * <p>The service status. This parameter is valid only when serviceType is RUM.</p>
+         * <p>Service status, valid only when serviceType=RUM.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -174,7 +172,7 @@ public class ListServicesResponseBody extends TeaModel {
         public String serviceStatus;
 
         /**
-         * <p>The service type.</p>
+         * <p>Service type</p>
          * 
          * <strong>example:</strong>
          * <p>TRACE</p>
@@ -183,7 +181,7 @@ public class ListServicesResponseBody extends TeaModel {
         public String serviceType;
 
         /**
-         * <p>The workspace.</p>
+         * <p>Workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>default-cms-1192928460540589-cn-hangzhou</p>
