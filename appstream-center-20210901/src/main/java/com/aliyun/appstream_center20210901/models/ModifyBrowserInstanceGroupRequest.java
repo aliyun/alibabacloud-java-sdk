@@ -431,6 +431,12 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         @NameInMap("RichTextClipboard")
         public String richTextClipboard;
 
+        @NameInMap("RichTextClipboardLimit")
+        public Integer richTextClipboardLimit;
+
+        @NameInMap("RichTextClipboardSizeUnit")
+        public String richTextClipboardSizeUnit;
+
         /**
          * <p>The text clipboard policy.</p>
          * <p>Valid values:</p>
@@ -506,6 +512,22 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         }
         public String getRichTextClipboard() {
             return this.richTextClipboard;
+        }
+
+        public ModifyBrowserInstanceGroupRequestPolicyClipboardPolicy setRichTextClipboardLimit(Integer richTextClipboardLimit) {
+            this.richTextClipboardLimit = richTextClipboardLimit;
+            return this;
+        }
+        public Integer getRichTextClipboardLimit() {
+            return this.richTextClipboardLimit;
+        }
+
+        public ModifyBrowserInstanceGroupRequestPolicyClipboardPolicy setRichTextClipboardSizeUnit(String richTextClipboardSizeUnit) {
+            this.richTextClipboardSizeUnit = richTextClipboardSizeUnit;
+            return this;
+        }
+        public String getRichTextClipboardSizeUnit() {
+            return this.richTextClipboardSizeUnit;
         }
 
         public ModifyBrowserInstanceGroupRequestPolicyClipboardPolicy setTextClipboard(String textClipboard) {
