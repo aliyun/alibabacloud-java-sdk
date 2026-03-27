@@ -285,6 +285,9 @@ public class SubmitHtmlTranslateTaskRequest extends TeaModel {
         @NameInMap("textTransform")
         public SubmitHtmlTranslateTaskRequestExtTextTransform textTransform;
 
+        @NameInMap("trackingData")
+        public String trackingData;
+
         public static SubmitHtmlTranslateTaskRequestExt build(java.util.Map<String, ?> map) throws Exception {
             SubmitHtmlTranslateTaskRequestExt self = new SubmitHtmlTranslateTaskRequestExt();
             return TeaModel.build(map, self);
@@ -344,6 +347,14 @@ public class SubmitHtmlTranslateTaskRequest extends TeaModel {
         }
         public SubmitHtmlTranslateTaskRequestExtTextTransform getTextTransform() {
             return this.textTransform;
+        }
+
+        public SubmitHtmlTranslateTaskRequestExt setTrackingData(String trackingData) {
+            this.trackingData = trackingData;
+            return this;
+        }
+        public String getTrackingData() {
+            return this.trackingData;
         }
 
     }

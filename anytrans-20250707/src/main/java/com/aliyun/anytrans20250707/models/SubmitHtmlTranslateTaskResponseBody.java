@@ -110,6 +110,9 @@ public class SubmitHtmlTranslateTaskResponseBody extends TeaModel {
         @NameInMap("taskId")
         public String taskId;
 
+        @NameInMap("trackingData")
+        public String trackingData;
+
         public static SubmitHtmlTranslateTaskResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             SubmitHtmlTranslateTaskResponseBodyData self = new SubmitHtmlTranslateTaskResponseBodyData();
             return TeaModel.build(map, self);
@@ -129,6 +132,14 @@ public class SubmitHtmlTranslateTaskResponseBody extends TeaModel {
         }
         public String getTaskId() {
             return this.taskId;
+        }
+
+        public SubmitHtmlTranslateTaskResponseBodyData setTrackingData(String trackingData) {
+            this.trackingData = trackingData;
+            return this;
+        }
+        public String getTrackingData() {
+            return this.trackingData;
         }
 
     }

@@ -156,6 +156,9 @@ public class BatchTranslateResponseBody extends TeaModel {
         @NameInMap("code")
         public Long code;
 
+        @NameInMap("detectedLang")
+        public String detectedLang;
+
         /**
          * <strong>example:</strong>
          * <p>0</p>
@@ -191,6 +194,14 @@ public class BatchTranslateResponseBody extends TeaModel {
         }
         public Long getCode() {
             return this.code;
+        }
+
+        public BatchTranslateResponseBodyDataTranslationList setDetectedLang(String detectedLang) {
+            this.detectedLang = detectedLang;
+            return this;
+        }
+        public String getDetectedLang() {
+            return this.detectedLang;
         }
 
         public BatchTranslateResponseBodyDataTranslationList setIndex(String index) {

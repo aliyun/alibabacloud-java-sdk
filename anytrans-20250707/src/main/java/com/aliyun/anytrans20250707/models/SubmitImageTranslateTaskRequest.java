@@ -258,6 +258,9 @@ public class SubmitImageTranslateTaskRequest extends TeaModel {
         @NameInMap("textTransform")
         public SubmitImageTranslateTaskRequestExtTextTransform textTransform;
 
+        @NameInMap("trackingData")
+        public String trackingData;
+
         public static SubmitImageTranslateTaskRequestExt build(java.util.Map<String, ?> map) throws Exception {
             SubmitImageTranslateTaskRequestExt self = new SubmitImageTranslateTaskRequestExt();
             return TeaModel.build(map, self);
@@ -309,6 +312,14 @@ public class SubmitImageTranslateTaskRequest extends TeaModel {
         }
         public SubmitImageTranslateTaskRequestExtTextTransform getTextTransform() {
             return this.textTransform;
+        }
+
+        public SubmitImageTranslateTaskRequestExt setTrackingData(String trackingData) {
+            this.trackingData = trackingData;
+            return this;
+        }
+        public String getTrackingData() {
+            return this.trackingData;
         }
 
     }

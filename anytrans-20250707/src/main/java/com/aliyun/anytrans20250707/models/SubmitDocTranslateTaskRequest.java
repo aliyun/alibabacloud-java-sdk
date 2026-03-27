@@ -188,6 +188,9 @@ public class SubmitDocTranslateTaskRequest extends TeaModel {
         @NameInMap("terminologies")
         public java.util.List<SubmitDocTranslateTaskRequestExtTerminologies> terminologies;
 
+        @NameInMap("trackingData")
+        public String trackingData;
+
         public static SubmitDocTranslateTaskRequestExt build(java.util.Map<String, ?> map) throws Exception {
             SubmitDocTranslateTaskRequestExt self = new SubmitDocTranslateTaskRequestExt();
             return TeaModel.build(map, self);
@@ -223,6 +226,14 @@ public class SubmitDocTranslateTaskRequest extends TeaModel {
         }
         public java.util.List<SubmitDocTranslateTaskRequestExtTerminologies> getTerminologies() {
             return this.terminologies;
+        }
+
+        public SubmitDocTranslateTaskRequestExt setTrackingData(String trackingData) {
+            this.trackingData = trackingData;
+            return this;
+        }
+        public String getTrackingData() {
+            return this.trackingData;
         }
 
     }

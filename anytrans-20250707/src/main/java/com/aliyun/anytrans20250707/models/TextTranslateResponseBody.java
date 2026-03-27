@@ -151,6 +151,9 @@ public class TextTranslateResponseBody extends TeaModel {
     }
 
     public static class TextTranslateResponseBodyData extends TeaModel {
+        @NameInMap("detectedLang")
+        public String detectedLang;
+
         /**
          * <strong>example:</strong>
          * <p>How does Mogujie solve the data annotation challenge by building a platform?</p>
@@ -164,6 +167,14 @@ public class TextTranslateResponseBody extends TeaModel {
         public static TextTranslateResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             TextTranslateResponseBodyData self = new TextTranslateResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public TextTranslateResponseBodyData setDetectedLang(String detectedLang) {
+            this.detectedLang = detectedLang;
+            return this;
+        }
+        public String getDetectedLang() {
+            return this.detectedLang;
         }
 
         public TextTranslateResponseBodyData setTranslation(String translation) {

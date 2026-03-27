@@ -112,6 +112,9 @@ public class SubmitLongTextTranslateTaskResponseBody extends TeaModel {
         @NameInMap("taskId")
         public String taskId;
 
+        @NameInMap("trackingData")
+        public String trackingData;
+
         public static SubmitLongTextTranslateTaskResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             SubmitLongTextTranslateTaskResponseBodyData self = new SubmitLongTextTranslateTaskResponseBodyData();
             return TeaModel.build(map, self);
@@ -131,6 +134,14 @@ public class SubmitLongTextTranslateTaskResponseBody extends TeaModel {
         }
         public String getTaskId() {
             return this.taskId;
+        }
+
+        public SubmitLongTextTranslateTaskResponseBodyData setTrackingData(String trackingData) {
+            this.trackingData = trackingData;
+            return this;
+        }
+        public String getTrackingData() {
+            return this.trackingData;
         }
 
     }
