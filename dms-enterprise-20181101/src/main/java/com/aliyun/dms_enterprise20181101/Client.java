@@ -17112,6 +17112,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>根据用户提供的问题，智能搜索获取表知识</p>
+     * 
+     * <b>summary</b> : 
+     * <p>根据用户提供的问题，智能搜索获取表知识</p>
+     * 
+     * @param request SearchTableKnowledgeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SearchTableKnowledgeResponse
+     */
+    public SearchTableKnowledgeResponse searchTableKnowledgeWithOptions(SearchTableKnowledgeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbId)) {
+            query.put("DbId", request.dbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.model)) {
+            query.put("Model", request.model);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            query.put("Query", request.query);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SearchTableKnowledge"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchTableKnowledgeResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>根据用户提供的问题，智能搜索获取表知识</p>
+     * 
+     * <b>summary</b> : 
+     * <p>根据用户提供的问题，智能搜索获取表知识</p>
+     * 
+     * @param request SearchTableKnowledgeRequest
+     * @return SearchTableKnowledgeResponse
+     */
+    public SearchTableKnowledgeResponse searchTableKnowledge(SearchTableKnowledgeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.searchTableKnowledgeWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Configures the owner of an instance, a database, or a table.</p>
      * 
