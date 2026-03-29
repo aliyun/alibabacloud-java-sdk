@@ -4,9 +4,6 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class UploadRecommendationDataRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("Content")
     public java.util.List<UploadRecommendationDataRequestContent> content;
 
@@ -16,14 +13,6 @@ public class UploadRecommendationDataRequest extends TeaModel {
     public static UploadRecommendationDataRequest build(java.util.Map<String, ?> map) throws Exception {
         UploadRecommendationDataRequest self = new UploadRecommendationDataRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UploadRecommendationDataRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public UploadRecommendationDataRequest setContent(java.util.List<UploadRecommendationDataRequestContent> content) {

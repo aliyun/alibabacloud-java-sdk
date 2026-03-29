@@ -11,8 +11,12 @@ public class TrafficControlTaskTrafficInfoTargetTrafficsDataValue extends TeaMod
     @NameInMap("Traffic")
     public Double traffic;
 
-    @NameInMap("RecorfTime")
-    public Long recorfTime;
+    /**
+     * <strong>example:</strong>
+     * <p>1760319273</p>
+     */
+    @NameInMap("RecordTime")
+    public Long recordTime;
 
     public static TrafficControlTaskTrafficInfoTargetTrafficsDataValue build(java.util.Map<String, ?> map) throws Exception {
         TrafficControlTaskTrafficInfoTargetTrafficsDataValue self = new TrafficControlTaskTrafficInfoTargetTrafficsDataValue();
@@ -27,12 +31,12 @@ public class TrafficControlTaskTrafficInfoTargetTrafficsDataValue extends TeaMod
         return this.traffic;
     }
 
-    public TrafficControlTaskTrafficInfoTargetTrafficsDataValue setRecorfTime(Long recorfTime) {
-        this.recorfTime = recorfTime;
+    public TrafficControlTaskTrafficInfoTargetTrafficsDataValue setRecordTime(Long recordTime) {
+        this.recordTime = recordTime;
         return this;
     }
-    public Long getRecorfTime() {
-        return this.recorfTime;
+    public Long getRecordTime() {
+        return this.recordTime;
     }
 
 }

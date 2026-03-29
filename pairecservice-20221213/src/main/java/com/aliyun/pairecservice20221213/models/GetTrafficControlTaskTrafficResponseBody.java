@@ -39,8 +39,12 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
         @NameInMap("Data")
         public java.util.Map<String, TrafficControlTaskTrafficInfoTargetTrafficsDataValue> data;
 
-        @NameInMap("TrafficControlTargetId")
-        public String trafficControlTargetId;
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("TrafficContorlTargetId")
+        public String trafficContorlTargetId;
 
         public static GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfoTargetTraffics build(java.util.Map<String, ?> map) throws Exception {
             GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfoTargetTraffics self = new GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfoTargetTraffics();
@@ -55,12 +59,12 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
             return this.data;
         }
 
-        public GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfoTargetTraffics setTrafficControlTargetId(String trafficControlTargetId) {
-            this.trafficControlTargetId = trafficControlTargetId;
+        public GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfoTargetTraffics setTrafficContorlTargetId(String trafficContorlTargetId) {
+            this.trafficContorlTargetId = trafficContorlTargetId;
             return this;
         }
-        public String getTrafficControlTargetId() {
-            return this.trafficControlTargetId;
+        public String getTrafficContorlTargetId() {
+            return this.trafficContorlTargetId;
         }
 
     }
