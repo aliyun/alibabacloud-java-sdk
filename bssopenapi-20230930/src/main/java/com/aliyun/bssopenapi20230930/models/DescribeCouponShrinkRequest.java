@@ -18,6 +18,9 @@ public class DescribeCouponShrinkRequest extends TeaModel {
     @NameInMap("CouponNo")
     public String couponNo;
 
+    @NameInMap("CouponTemplateIdList")
+    public String couponTemplateIdListShrink;
+
     /**
      * <strong>example:</strong>
      * <p>CERTAIN</p>
@@ -113,6 +116,14 @@ public class DescribeCouponShrinkRequest extends TeaModel {
     }
     public String getCouponNo() {
         return this.couponNo;
+    }
+
+    public DescribeCouponShrinkRequest setCouponTemplateIdListShrink(String couponTemplateIdListShrink) {
+        this.couponTemplateIdListShrink = couponTemplateIdListShrink;
+        return this;
+    }
+    public String getCouponTemplateIdListShrink() {
+        return this.couponTemplateIdListShrink;
     }
 
     public DescribeCouponShrinkRequest setCouponType(String couponType) {

@@ -986,6 +986,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         DescribeCouponShrinkRequest request = new DescribeCouponShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.couponTemplateIdList)) {
+            request.couponTemplateIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.couponTemplateIdList, "CouponTemplateIdList", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.ecIdAccountIds)) {
             request.ecIdAccountIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ecIdAccountIds, "EcIdAccountIds", "json");
         }
@@ -997,6 +1001,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.couponNo)) {
             query.put("CouponNo", request.couponNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.couponTemplateIdListShrink)) {
+            query.put("CouponTemplateIdList", request.couponTemplateIdListShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.couponType)) {

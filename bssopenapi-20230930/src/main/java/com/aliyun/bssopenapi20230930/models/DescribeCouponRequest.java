@@ -18,6 +18,9 @@ public class DescribeCouponRequest extends TeaModel {
     @NameInMap("CouponNo")
     public String couponNo;
 
+    @NameInMap("CouponTemplateIdList")
+    public java.util.List<Long> couponTemplateIdList;
+
     /**
      * <strong>example:</strong>
      * <p>CERTAIN</p>
@@ -113,6 +116,14 @@ public class DescribeCouponRequest extends TeaModel {
     }
     public String getCouponNo() {
         return this.couponNo;
+    }
+
+    public DescribeCouponRequest setCouponTemplateIdList(java.util.List<Long> couponTemplateIdList) {
+        this.couponTemplateIdList = couponTemplateIdList;
+        return this;
+    }
+    public java.util.List<Long> getCouponTemplateIdList() {
+        return this.couponTemplateIdList;
     }
 
     public DescribeCouponRequest setCouponType(String couponType) {
