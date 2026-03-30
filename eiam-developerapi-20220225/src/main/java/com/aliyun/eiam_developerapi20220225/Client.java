@@ -1981,6 +1981,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("cloudAccountRoleExternalId", request.cloudAccountRoleExternalId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.durationSeconds)) {
+            query.put("durationSeconds", request.durationSeconds);
+        }
+
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -2075,6 +2079,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         ObtainCredentialHeaders headers = new ObtainCredentialHeaders();
         return this.obtainCredentialWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取JWT认证令牌明文。</p>
+     * 
+     * @param request ObtainJwtAuthenticationTokenRequest
+     * @param headers ObtainJwtAuthenticationTokenHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ObtainJwtAuthenticationTokenResponse
+     */
+    public ObtainJwtAuthenticationTokenResponse obtainJwtAuthenticationTokenWithOptions(String instanceId, ObtainJwtAuthenticationTokenRequest request, ObtainJwtAuthenticationTokenHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authenticationTokenId)) {
+            body.put("authenticationTokenId", request.authenticationTokenId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.consumerId)) {
+            body.put("consumerId", request.consumerId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ObtainJwtAuthenticationToken"),
+            new TeaPair("version", "2022-02-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/authenticationTokens/_/actions/obtainJwt"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "Anonymous"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.doROARequest(params.action, params.version, params.protocol, params.method, params.authType, params.pathname, params.bodyType, req, runtime), new ObtainJwtAuthenticationTokenResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取JWT认证令牌明文。</p>
+     * 
+     * @param request ObtainJwtAuthenticationTokenRequest
+     * @return ObtainJwtAuthenticationTokenResponse
+     */
+    public ObtainJwtAuthenticationTokenResponse obtainJwtAuthenticationToken(String instanceId, ObtainJwtAuthenticationTokenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ObtainJwtAuthenticationTokenHeaders headers = new ObtainJwtAuthenticationTokenHeaders();
+        return this.obtainJwtAuthenticationTokenWithOptions(instanceId, request, headers, runtime);
     }
 
     /**

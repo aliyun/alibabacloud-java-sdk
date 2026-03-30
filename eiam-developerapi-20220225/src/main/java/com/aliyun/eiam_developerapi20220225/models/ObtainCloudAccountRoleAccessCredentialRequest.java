@@ -13,6 +13,9 @@ public class ObtainCloudAccountRoleAccessCredentialRequest extends TeaModel {
     @NameInMap("cloudAccountRoleExternalId")
     public String cloudAccountRoleExternalId;
 
+    @NameInMap("durationSeconds")
+    public Integer durationSeconds;
+
     public static ObtainCloudAccountRoleAccessCredentialRequest build(java.util.Map<String, ?> map) throws Exception {
         ObtainCloudAccountRoleAccessCredentialRequest self = new ObtainCloudAccountRoleAccessCredentialRequest();
         return TeaModel.build(map, self);
@@ -24,6 +27,14 @@ public class ObtainCloudAccountRoleAccessCredentialRequest extends TeaModel {
     }
     public String getCloudAccountRoleExternalId() {
         return this.cloudAccountRoleExternalId;
+    }
+
+    public ObtainCloudAccountRoleAccessCredentialRequest setDurationSeconds(Integer durationSeconds) {
+        this.durationSeconds = durationSeconds;
+        return this;
+    }
+    public Integer getDurationSeconds() {
+        return this.durationSeconds;
     }
 
 }

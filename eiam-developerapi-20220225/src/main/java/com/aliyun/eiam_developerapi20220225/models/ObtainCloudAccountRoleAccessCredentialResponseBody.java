@@ -163,6 +163,58 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
 
     }
 
+    public static class ObtainCloudAccountRoleAccessCredentialResponseBodyCloudAccountRoleAccessCredentialAwsStsToken extends TeaModel {
+        @NameInMap("accessKeyId")
+        public String accessKeyId;
+
+        @NameInMap("expiration")
+        public String expiration;
+
+        @NameInMap("secretAccessKey")
+        public String secretAccessKey;
+
+        @NameInMap("sessionToken")
+        public String sessionToken;
+
+        public static ObtainCloudAccountRoleAccessCredentialResponseBodyCloudAccountRoleAccessCredentialAwsStsToken build(java.util.Map<String, ?> map) throws Exception {
+            ObtainCloudAccountRoleAccessCredentialResponseBodyCloudAccountRoleAccessCredentialAwsStsToken self = new ObtainCloudAccountRoleAccessCredentialResponseBodyCloudAccountRoleAccessCredentialAwsStsToken();
+            return TeaModel.build(map, self);
+        }
+
+        public ObtainCloudAccountRoleAccessCredentialResponseBodyCloudAccountRoleAccessCredentialAwsStsToken setAccessKeyId(String accessKeyId) {
+            this.accessKeyId = accessKeyId;
+            return this;
+        }
+        public String getAccessKeyId() {
+            return this.accessKeyId;
+        }
+
+        public ObtainCloudAccountRoleAccessCredentialResponseBodyCloudAccountRoleAccessCredentialAwsStsToken setExpiration(String expiration) {
+            this.expiration = expiration;
+            return this;
+        }
+        public String getExpiration() {
+            return this.expiration;
+        }
+
+        public ObtainCloudAccountRoleAccessCredentialResponseBodyCloudAccountRoleAccessCredentialAwsStsToken setSecretAccessKey(String secretAccessKey) {
+            this.secretAccessKey = secretAccessKey;
+            return this;
+        }
+        public String getSecretAccessKey() {
+            return this.secretAccessKey;
+        }
+
+        public ObtainCloudAccountRoleAccessCredentialResponseBodyCloudAccountRoleAccessCredentialAwsStsToken setSessionToken(String sessionToken) {
+            this.sessionToken = sessionToken;
+            return this;
+        }
+        public String getSessionToken() {
+            return this.sessionToken;
+        }
+
+    }
+
     public static class ObtainCloudAccountRoleAccessCredentialResponseBodyCloudAccountRoleAccessCredential extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -173,6 +225,9 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
 
         @NameInMap("alibabaCloudStsToken")
         public ObtainCloudAccountRoleAccessCredentialResponseBodyCloudAccountRoleAccessCredentialAlibabaCloudStsToken alibabaCloudStsToken;
+
+        @NameInMap("awsStsToken")
+        public ObtainCloudAccountRoleAccessCredentialResponseBodyCloudAccountRoleAccessCredentialAwsStsToken awsStsToken;
 
         public static ObtainCloudAccountRoleAccessCredentialResponseBodyCloudAccountRoleAccessCredential build(java.util.Map<String, ?> map) throws Exception {
             ObtainCloudAccountRoleAccessCredentialResponseBodyCloudAccountRoleAccessCredential self = new ObtainCloudAccountRoleAccessCredentialResponseBodyCloudAccountRoleAccessCredential();
@@ -193,6 +248,14 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
         }
         public ObtainCloudAccountRoleAccessCredentialResponseBodyCloudAccountRoleAccessCredentialAlibabaCloudStsToken getAlibabaCloudStsToken() {
             return this.alibabaCloudStsToken;
+        }
+
+        public ObtainCloudAccountRoleAccessCredentialResponseBodyCloudAccountRoleAccessCredential setAwsStsToken(ObtainCloudAccountRoleAccessCredentialResponseBodyCloudAccountRoleAccessCredentialAwsStsToken awsStsToken) {
+            this.awsStsToken = awsStsToken;
+            return this;
+        }
+        public ObtainCloudAccountRoleAccessCredentialResponseBodyCloudAccountRoleAccessCredentialAwsStsToken getAwsStsToken() {
+            return this.awsStsToken;
         }
 
     }
