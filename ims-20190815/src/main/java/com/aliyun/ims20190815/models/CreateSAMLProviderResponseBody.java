@@ -8,7 +8,7 @@ public class CreateSAMLProviderResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>E5EDDFD2-3654-4F9F-9780-4AE7D81823EF</p>
+     * <p>A95A763D-F6B7-5242-83EB-AB45CE67F358</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -50,23 +50,11 @@ public class CreateSAMLProviderResponseBody extends TeaModel {
         @NameInMap("Arn")
         public String arn;
 
-        /**
-         * <p>The supported signature algorithm. Valid values:</p>
-         * <ul>
-         * <li><p>rsa-sha256</p>
-         * </li>
-         * <li><p>rsa-sha1 (default)</p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>rsa-sha1</p>
-         */
         @NameInMap("AuthnSignAlgo")
         public String authnSignAlgo;
 
         /**
-         * <p>The time when the information was created. It is displayed in UTC.</p>
+         * <p>The creation time. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-22T02:37:05Z</p>
@@ -75,7 +63,7 @@ public class CreateSAMLProviderResponseBody extends TeaModel {
         public String createDate;
 
         /**
-         * <p>The IdP description.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>This is a provider.</p>
@@ -84,7 +72,7 @@ public class CreateSAMLProviderResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The IdP name.</p>
+         * <p>The name of the IdP.</p>
          * 
          * <strong>example:</strong>
          * <p>test-provider</p>
@@ -93,7 +81,7 @@ public class CreateSAMLProviderResponseBody extends TeaModel {
         public String SAMLProviderName;
 
         /**
-         * <p>The time when the information was last updated. It is displayed in UTC.</p>
+         * <p>The update time. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-22T02:51:20Z</p>

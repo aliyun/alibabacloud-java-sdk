@@ -4,9 +4,18 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class ProvisionExternalApplicationResponseBody extends TeaModel {
+    /**
+     * <p>The information about the external application.</p>
+     */
     @NameInMap("ExternalApplication")
     public ProvisionExternalApplicationResponseBodyExternalApplication externalApplication;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>55535873-9A6B-5C87-853F-C7CD258826F2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -100,24 +109,63 @@ public class ProvisionExternalApplicationResponseBody extends TeaModel {
     }
 
     public static class ProvisionExternalApplicationResponseBodyExternalApplication extends TeaModel {
+        /**
+         * <p>The name of the application principal. The value is in the <code>&lt;app_name&gt;@app.&lt;account_id&gt;.onaliyun.com</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:GiteePrd@app.177242285274">GiteePrd@app.177242285274</a>****.onaliyun.com</p>
+         */
         @NameInMap("AppPrincipalName")
         public String appPrincipalName;
 
+        /**
+         * <p>The time when the application was installed. The value is a timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1603693518000</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The information about the scopes of permissions that are granted to the application.</p>
+         */
         @NameInMap("DelegatedScope")
         public ProvisionExternalApplicationResponseBodyExternalApplicationDelegatedScope delegatedScope;
 
+        /**
+         * <p>The display name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GiteeAliyun</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403550611646604****</p>
+         */
         @NameInMap("ForeignAppId")
         public String foreignAppId;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the external application belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>157242285274****</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
+        /**
+         * <p>The update time. The value is a timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1603693518000</p>
+         */
         @NameInMap("UpdateDate")
         public String updateDate;
 

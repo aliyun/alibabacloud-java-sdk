@@ -4,9 +4,18 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class CreateAccessKeyResponseBody extends TeaModel {
+    /**
+     * <p>The information about the AccessKey pair.</p>
+     */
     @NameInMap("AccessKey")
     public CreateAccessKeyResponseBodyAccessKey accessKey;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>19DDD9F7-AFCC-4D72-8CBA-CCE5A142E7AB</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +41,43 @@ public class CreateAccessKeyResponseBody extends TeaModel {
     }
 
     public static class CreateAccessKeyResponseBodyAccessKey extends TeaModel {
+        /**
+         * <p>The AccessKey ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourAccessKeyID</p>
+         */
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
+        /**
+         * <p>The AccessKey secret.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourAccessKeySecret</p>
+         */
         @NameInMap("AccessKeySecret")
         public String accessKeySecret;
 
+        /**
+         * <p>The time when the AccessKey pair was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-15T08:08:54Z</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The status of the AccessKey pair. Valid values:</p>
+         * <ul>
+         * <li>Active</li>
+         * <li>Inactive</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
+         */
         @NameInMap("Status")
         public String status;
 

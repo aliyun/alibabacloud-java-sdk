@@ -11,8 +11,6 @@ public class GetGovernanceItemReportResponseBody extends TeaModel {
     public GetGovernanceItemReportResponseBodyColumnsValue columnsValue;
 
     /**
-     * <p>The time when the report for the check item was generated.</p>
-     * 
      * <strong>example:</strong>
      * <p>2020-10-19T15:06:52Z</p>
      */
@@ -20,14 +18,6 @@ public class GetGovernanceItemReportResponseBody extends TeaModel {
     public String generateTime;
 
     /**
-     * <p>Indicates whether the response is truncated. Valid values:</p>
-     * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -35,8 +25,6 @@ public class GetGovernanceItemReportResponseBody extends TeaModel {
     public Boolean isTruncated;
 
     /**
-     * <p>This parameter is returned only when <code>IsTruncated</code> is set to true. Use this parameter to retrieve the truncated content.</p>
-     * 
      * <strong>example:</strong>
      * <p>EXAMPLE</p>
      */
@@ -44,16 +32,6 @@ public class GetGovernanceItemReportResponseBody extends TeaModel {
     public String marker;
 
     /**
-     * <p>The data type of the metric value. Valid values:</p>
-     * <ul>
-     * <li><p>Number: the numeric type.</p>
-     * </li>
-     * <li><p>String: the string type.</p>
-     * </li>
-     * <li><p>Boolean: the Boolean type.</p>
-     * </li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>Number</p>
      */
@@ -61,8 +39,6 @@ public class GetGovernanceItemReportResponseBody extends TeaModel {
     public String metricType;
 
     /**
-     * <p>The metric value.</p>
-     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -70,8 +46,6 @@ public class GetGovernanceItemReportResponseBody extends TeaModel {
     public Object metricValue;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>F2CE9688-AA85-5F23-8C22-0EC23473405F</p>
      */

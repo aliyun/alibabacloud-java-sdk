@@ -5,17 +5,36 @@ import com.aliyun.tea.*;
 
 public class UpdateAccessKeyRequest extends TeaModel {
     /**
+     * <p>The status of the AccessKey pair. Valid values:</p>
+     * <ul>
+     * <li>Active</li>
+     * <li>Inactive</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Active</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
+     * <p>The AccessKey ID of the AccessKey pair for which you want to modify the status.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LTAI*******************</p>
      */
     @NameInMap("UserAccessKeyId")
     public String userAccessKeyId;
 
+    /**
+     * <p>The logon name of the RAM user.</p>
+     * <p>If this parameter is empty, the status of the AccessKey pair for the current user is modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
+     */
     @NameInMap("UserPrincipalName")
     public String userPrincipalName;
 

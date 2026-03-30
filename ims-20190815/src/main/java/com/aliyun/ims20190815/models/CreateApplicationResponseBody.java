@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationResponseBody extends TeaModel {
     /**
-     * <p>The application information.</p>
+     * <p>The information about the application.</p>
      */
     @NameInMap("Application")
     public CreateApplicationResponseBodyApplication application;
@@ -158,7 +158,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The application ID.</p>
+         * <p>The ID of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>472457090344041****</p>
@@ -185,7 +185,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         public String appType;
 
         /**
-         * <p>The time when the application was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-23T08:06:57Z</p>
@@ -194,7 +194,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         public String createDate;
 
         /**
-         * <p>The information about the application scopes.</p>
+         * <p>The information about the permissions that are granted on the application.</p>
          */
         @NameInMap("DelegatedScope")
         public CreateApplicationResponseBodyApplicationDelegatedScope delegatedScope;
@@ -209,7 +209,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>Indicates whether the application can be installed by other Alibaba Cloud accounts.</p>
+         * <p>Indicates whether the application can be installed by using other Alibaba Cloud accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -217,18 +217,6 @@ public class CreateApplicationResponseBody extends TeaModel {
         @NameInMap("IsMultiTenant")
         public Boolean isMultiTenant;
 
-        /**
-         * <p>The OAuth protocol version of the application. Valid values:</p>
-         * <ul>
-         * <li><p><code>2.0</code>: OAuth 2.0.</p>
-         * </li>
-         * <li><p><code>2.1</code>: OAuth 2.1.</p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>2.0</p>
-         */
         @NameInMap("ProtocolVersion")
         public String protocolVersion;
 
@@ -245,7 +233,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         public Integer refreshTokenValidity;
 
         /**
-         * <p>Indicates whether an application key is required.</p>
+         * <p>Indicates whether a secret is required.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -254,7 +242,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         public Boolean secretRequired;
 
         /**
-         * <p>The time when the application was last updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-23T08:06:57Z</p>

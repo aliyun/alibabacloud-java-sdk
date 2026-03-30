@@ -7,12 +7,9 @@ public class ListPredefinedScopesRequest extends TeaModel {
     /**
      * <p>The type of the application. Valid values:</p>
      * <ul>
-     * <li><p>WebApp</p>
-     * </li>
-     * <li><p>NativeApp</p>
-     * </li>
-     * <li><p>ServerApp</p>
-     * </li>
+     * <li>WebApp</li>
+     * <li>NativeApp</li>
+     * <li>ServerApp</li>
      * </ul>
      * <p>If this parameter is empty, the permissions on all types of applications are queried.</p>
      * 

@@ -4,9 +4,18 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class CreateGroupResponseBody extends TeaModel {
+    /**
+     * <p>The information about the RAM user group.</p>
+     */
     @NameInMap("Group")
     public CreateGroupResponseBodyGroup group;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3C38192B-7BF8-45DA-8F0A-E670EA51426C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +41,57 @@ public class CreateGroupResponseBody extends TeaModel {
     }
 
     public static class CreateGroupResponseBodyGroup extends TeaModel {
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dev-Team</p>
+         */
         @NameInMap("Comments")
         public String comments;
 
+        /**
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-19T16:15:17Z</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The display name of the RAM user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dev-Team</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The ID of the RAM user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>740317625433843****</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the RAM user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dev-Team</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-19T16:15:17Z</p>
+         */
         @NameInMap("UpdateDate")
         public String updateDate;
 

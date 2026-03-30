@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetApplicationRequest extends TeaModel {
     /**
-     * <p>The application ID.</p>
+     * <p>The ID of the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

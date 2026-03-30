@@ -4,9 +4,18 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class ProvisionApplicationResponseBody extends TeaModel {
+    /**
+     * <p>The installation information of the application.</p>
+     */
     @NameInMap("ApplicationProvisionInfo")
     public ProvisionApplicationResponseBodyApplicationProvisionInfo applicationProvisionInfo;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C8AE06ED-9593-5BF9-8D4A-68D5DDCC90AB</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -100,30 +109,81 @@ public class ProvisionApplicationResponseBody extends TeaModel {
     }
 
     public static class ProvisionApplicationResponseBodyApplicationProvisionInfo extends TeaModel {
+        /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>177242285274****</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>452392483381546****</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GiteePrd</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The name of the application principal. The value is in the <code>&lt;app_name&gt;@app.&lt;account_id&gt;.onaliyun.com</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:GiteePrd@app.177242285274">GiteePrd@app.177242285274</a>****.onaliyun.com</p>
+         */
         @NameInMap("AppPrincipalName")
         public String appPrincipalName;
 
+        /**
+         * <p>The time when the application was installed. The value is a timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1603693518000</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The information about the permissions that are granted to the application.</p>
+         */
         @NameInMap("DelegatedScope")
         public ProvisionApplicationResponseBodyApplicationProvisionInfoDelegatedScope delegatedScope;
 
+        /**
+         * <p>The display name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GiteeAliyun</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account for which the application was installed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>177242285274****</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
+        /**
+         * <p>The update time. The value is a timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1603693518000</p>
+         */
         @NameInMap("UpdateDate")
         public String updateDate;
 

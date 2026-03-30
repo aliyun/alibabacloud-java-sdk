@@ -4,9 +4,21 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class SetDefaultDomainResponseBody extends TeaModel {
+    /**
+     * <p>The default domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>examplecompany.onaliyun.com</p>
+     */
     @NameInMap("DefaultDomainName")
     public String defaultDomainName;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>66815255-7CCE-4759-AC37-9755794C3626</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

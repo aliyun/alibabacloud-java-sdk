@@ -4,12 +4,37 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class ListUsersForGroupResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the response is truncated. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <blockquote>
+     * <p> This parameter is returned only when <code>IsTruncated</code> is <code>true</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>EXAMPLE</p>
+     */
     @NameInMap("Marker")
     public String marker;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>789FF581-B3C8-43A8-9115-54304B46D05C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

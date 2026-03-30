@@ -11,7 +11,7 @@ public class GetApplicationResponseBody extends TeaModel {
     public GetApplicationResponseBodyApplication application;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6616F09B-2768-4C11-8866-A8EE4C4A583E</p>
@@ -158,7 +158,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The application ID.</p>
+         * <p>The ID of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>472457090344041****</p>
@@ -167,7 +167,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The application name.</p>
+         * <p>The name of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>myapp</p>
@@ -176,14 +176,11 @@ public class GetApplicationResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The application type. Valid values:</p>
+         * <p>The type of the application. Valid values:</p>
          * <ul>
-         * <li><p>WebApp: a web application that is based on browser interaction.</p>
-         * </li>
-         * <li><p>NativeApp: a native application that runs on an operating system, such as a desktop or mobile operating system.</p>
-         * </li>
-         * <li><p>ServerApp: an application that can directly access Alibaba Cloud services without user logon. Currently, only applications that use the System for Cross-domain Identity Management (SCIM) for user synchronization are supported.</p>
-         * </li>
+         * <li>WebApp: a web application.</li>
+         * <li>NativeApp: a native application that runs on an operating system, such as a desktop or mobile operating system.</li>
+         * <li>ServerApp: an application that can access Alibaba Cloud services without the need for user logon. Only applications that synchronize user information based on the System for Cross-domain Identity Management (SCIM) protocol are supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -193,7 +190,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String appType;
 
         /**
-         * <p>The time when the application was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-23T08:06:57Z</p>
@@ -202,7 +199,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String createDate;
 
         /**
-         * <p>The permission scopes of the application.</p>
+         * <p>The information about the permissions that are granted on the application.</p>
          */
         @NameInMap("DelegatedScope")
         public GetApplicationResponseBodyApplicationDelegatedScope delegatedScope;
@@ -217,7 +214,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>Indicates whether the application can be installed by other Alibaba Cloud accounts.</p>
+         * <p>Indicates whether the application can be installed by using other Alibaba Cloud accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -225,18 +222,6 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("IsMultiTenant")
         public Boolean isMultiTenant;
 
-        /**
-         * <p>The OAuth protocol version of the application. Valid values:</p>
-         * <ul>
-         * <li><p><code>2.0</code>: OAuth 2.0.</p>
-         * </li>
-         * <li><p><code>2.1</code>: OAuth 2.1.</p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>2.0</p>
-         */
         @NameInMap("ProtocolVersion")
         public String protocolVersion;
 
@@ -253,7 +238,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public Integer refreshTokenValidity;
 
         /**
-         * <p>Indicates whether an application key is required.</p>
+         * <p>Indicates whether a secret is required.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -262,7 +247,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public Boolean secretRequired;
 
         /**
-         * <p>The time when the application was last updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-23T08:06:57Z</p>

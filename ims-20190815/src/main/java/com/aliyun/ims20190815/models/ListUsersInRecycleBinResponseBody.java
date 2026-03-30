@@ -4,12 +4,34 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class ListUsersInRecycleBinResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the response is truncated. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
+    /**
+     * <p>The parameter that is used to obtain the truncated part. It takes effect only when <code>IsTruncated</code> is set to <code>true</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EXAMPLE</p>
+     */
     @NameInMap("Marker")
     public String marker;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3687BD52-49FD-585B-AB14-CD05B7C76963</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

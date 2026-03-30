@@ -5,8 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetSAMLProviderRequest extends TeaModel {
     /**
-     * <p>The name of the SAML provider.</p>
+     * <p>The name of the IdP.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-provider</p>
      */
     @NameInMap("SAMLProviderName")
     public String SAMLProviderName;

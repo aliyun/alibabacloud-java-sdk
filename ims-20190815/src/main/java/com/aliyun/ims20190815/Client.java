@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为OIDC身份提供商添加指定客户端ID</p>
+     * <p>Adds a client ID to an OpenID Connect (OIDC) identity provider (IdP).</p>
      * 
      * @param request AddClientIdToOIDCProviderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -64,7 +64,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为OIDC身份提供商添加指定客户端ID</p>
+     * <p>Adds a client ID to an OpenID Connect (OIDC) identity provider (IdP).</p>
      * 
      * @param request AddClientIdToOIDCProviderRequest
      * @return AddClientIdToOIDCProviderResponse
@@ -75,8 +75,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3></h3>
+     * <p>This topic provides an example on how to add the fingerprint <code>902ef2deeb3c5b13ea4c3d5193629309e231****</code> to the OIDC IdP named <code>TestOIDCProvider</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>为OIDC身份提供商添加验证指纹</p>
+     * <p>Adds a fingerprint to an OpenID Connect (OIDC) identity provider (IdP).</p>
      * 
      * @param request AddFingerprintToOIDCProviderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -111,8 +115,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3></h3>
+     * <p>This topic provides an example on how to add the fingerprint <code>902ef2deeb3c5b13ea4c3d5193629309e231****</code> to the OIDC IdP named <code>TestOIDCProvider</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>为OIDC身份提供商添加验证指纹</p>
+     * <p>Adds a fingerprint to an OpenID Connect (OIDC) identity provider (IdP).</p>
      * 
      * @param request AddFingerprintToOIDCProviderRequest
      * @return AddFingerprintToOIDCProviderResponse
@@ -124,7 +132,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将RAM用户添加到指定的用户组</p>
+     * <p>Adds a Resource Access Management (RAM) user to a RAM user group.</p>
      * 
      * @param request AddUserToGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -160,7 +168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将RAM用户添加到指定的用户组</p>
+     * <p>Adds a Resource Access Management (RAM) user to a RAM user group.</p>
      * 
      * @param request AddUserToGroupRequest
      * @return AddUserToGroupResponse
@@ -172,7 +180,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为RAM用户绑定多因素认证设备</p>
+     * <p>Binds a multi-factor authentication (MFA) device to a Resource Access Management (RAM) user.</p>
      * 
      * @param request BindMFADeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -216,7 +224,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为RAM用户绑定多因素认证设备</p>
+     * <p>Binds a multi-factor authentication (MFA) device to a Resource Access Management (RAM) user.</p>
      * 
      * @param request BindMFADeviceRequest
      * @return BindMFADeviceResponse
@@ -227,8 +235,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation is available only for RAM users. Before you call this operation, make sure that <code>AllowUserToChangePassword</code> in <a href="https://help.aliyun.com/document_detail/43765.html">SetSecurityPreference</a> is set to <code>True</code>. The value True indicates that RAM users can manage their passwords.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>修改RAM用户的登录密码</p>
+     * <p>Changes the password that is used to log on to the console for a Resource Access Management (RAM) user.</p>
      * 
      * @param request ChangePasswordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -263,8 +276,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation is available only for RAM users. Before you call this operation, make sure that <code>AllowUserToChangePassword</code> in <a href="https://help.aliyun.com/document_detail/43765.html">SetSecurityPreference</a> is set to <code>True</code>. The value True indicates that RAM users can manage their passwords.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>修改RAM用户的登录密码</p>
+     * <p>Changes the password that is used to log on to the console for a Resource Access Management (RAM) user.</p>
      * 
      * @param request ChangePasswordRequest
      * @return ChangePasswordResponse
@@ -276,7 +294,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建主账号或RAM用户访问密钥</p>
+     * <p>Creates an AccessKey pair for an Alibaba Cloud account or a Resource Access Management (RAM) user.</p>
      * 
      * @param request CreateAccessKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -308,7 +326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建主账号或RAM用户访问密钥</p>
+     * <p>Creates an AccessKey pair for an Alibaba Cloud account or a Resource Access Management (RAM) user.</p>
      * 
      * @param request CreateAccessKeyRequest
      * @return CreateAccessKeyResponse
@@ -320,7 +338,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为指定的应用创建应用密钥</p>
+     * <p>Creates an application secret for an application.</p>
      * 
      * @param request CreateAppSecretRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -352,7 +370,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为指定的应用创建应用密钥</p>
+     * <p>Creates an application secret for an application.</p>
      * 
      * @param request CreateAppSecretRequest
      * @return CreateAppSecretResponse
@@ -448,7 +466,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建用户组</p>
+     * <p>Creates a Resource Access Management (RAM) user group.</p>
      * 
      * @param request CreateGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -488,7 +506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建用户组</p>
+     * <p>Creates a Resource Access Management (RAM) user group.</p>
      * 
      * @param request CreateGroupRequest
      * @return CreateGroupResponse
@@ -500,7 +518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a logon configuration for a Resource Access Management (RAM) user.</p>
+     * <p>Enables logon to the console for a Resource Access Management (RAM) user.</p>
      * 
      * @param request CreateLoginProfileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -548,7 +566,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a logon configuration for a Resource Access Management (RAM) user.</p>
+     * <p>Enables logon to the console for a Resource Access Management (RAM) user.</p>
      * 
      * @param request CreateLoginProfileRequest
      * @return CreateLoginProfileResponse
@@ -559,8 +577,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Before you call this operation, make sure that the information such as the URL of the issuer, the fingerprints of HTTPS certificate authority (CA) certificates, and the client IDs are obtained from an external IdP, such as Google Workspace or Okta.</p>
+     * <h3><a href="#"></a>Limits</h3>
+     * <ul>
+     * <li>You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.</li>
+     * <li>You can add a maximum of 50 client IDs to an OIDC IdP.</li>
+     * <li>You can add a maximum of five fingerprints to an OIDC IdP.</li>
+     * </ul>
+     * <h3><a href="#"></a>Operation description</h3>
+     * <p>This topic provides an example on how to create an IdP named <code>TestOIDCProvider</code> to configure a trust relationship between the external IdP and Alibaba Cloud.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建OIDC身份供应商</p>
+     * <p>Creates an OpenID Connect (OIDC) identity provider (IdP) to configure a trust relationship between Alibaba Cloud and an external IdP. This topic provides an example on how to create an IdP named TestOIDCProvider to configure a trust relationship between the external IdP Okta and Alibaba Cloud.</p>
      * 
      * @param request CreateOIDCProviderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -611,8 +641,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Before you call this operation, make sure that the information such as the URL of the issuer, the fingerprints of HTTPS certificate authority (CA) certificates, and the client IDs are obtained from an external IdP, such as Google Workspace or Okta.</p>
+     * <h3><a href="#"></a>Limits</h3>
+     * <ul>
+     * <li>You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.</li>
+     * <li>You can add a maximum of 50 client IDs to an OIDC IdP.</li>
+     * <li>You can add a maximum of five fingerprints to an OIDC IdP.</li>
+     * </ul>
+     * <h3><a href="#"></a>Operation description</h3>
+     * <p>This topic provides an example on how to create an IdP named <code>TestOIDCProvider</code> to configure a trust relationship between the external IdP and Alibaba Cloud.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建OIDC身份供应商</p>
+     * <p>Creates an OpenID Connect (OIDC) identity provider (IdP) to configure a trust relationship between Alibaba Cloud and an external IdP. This topic provides an example on how to create an IdP named TestOIDCProvider to configure a trust relationship between the external IdP Okta and Alibaba Cloud.</p>
      * 
      * @param request CreateOIDCProviderRequest
      * @return CreateOIDCProviderResponse
@@ -679,8 +721,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This topic provides an example on how to create a RAM user named <code>test</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建RAM用户</p>
+     * <p>Creates a RAM user.</p>
      * 
      * @param request CreateUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -731,8 +776,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This topic provides an example on how to create a RAM user named <code>test</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建RAM用户</p>
+     * <p>Creates a RAM user.</p>
      * 
      * @param request CreateUserRequest
      * @return CreateUserResponse
@@ -744,7 +792,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建多因素认证设备</p>
+     * <p>Creates a virtual multi-factor authentication (MFA) device.</p>
      * 
      * @param request CreateVirtualMFADeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -776,7 +824,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建多因素认证设备</p>
+     * <p>Creates a virtual multi-factor authentication (MFA) device.</p>
      * 
      * @param request CreateVirtualMFADeviceRequest
      * @return CreateVirtualMFADeviceResponse
@@ -788,7 +836,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除用户的访问密钥</p>
+     * <p>Deletes an AccessKey pair for an Alibaba Cloud account or a Resource Access Management (RAM) user.</p>
      * 
      * @param request DeleteAccessKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -824,7 +872,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除用户的访问密钥</p>
+     * <p>Deletes an AccessKey pair for an Alibaba Cloud account or a Resource Access Management (RAM) user.</p>
      * 
      * @param request DeleteAccessKeyRequest
      * @return DeleteAccessKeyResponse
@@ -836,7 +884,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除回收站中的访问密钥</p>
+     * <p>Deletes a specific AccessKey pair that belongs to a Resource Access Management (RAM) user from the recycle bin.</p>
      * 
      * @param request DeleteAccessKeyInRecycleBinRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -872,7 +920,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除回收站中的访问密钥</p>
+     * <p>Deletes a specific AccessKey pair that belongs to a Resource Access Management (RAM) user from the recycle bin.</p>
      * 
      * @param request DeleteAccessKeyInRecycleBinRequest
      * @return DeleteAccessKeyInRecycleBinResponse
@@ -884,7 +932,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定应用的应用密钥</p>
+     * <p>Deletes the application secret of an application.</p>
      * 
      * @param request DeleteAppSecretRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -920,7 +968,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定应用的应用密钥</p>
+     * <p>Deletes the application secret of an application.</p>
      * 
      * @param request DeleteAppSecretRequest
      * @return DeleteAppSecretResponse
@@ -932,7 +980,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定的应用</p>
+     * <p>Deletes an application.</p>
      * 
      * @param request DeleteApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -964,7 +1012,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定的应用</p>
+     * <p>Deletes an application.</p>
      * 
      * @param request DeleteApplicationRequest
      * @return DeleteApplicationResponse
@@ -975,8 +1023,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you delete a RAM user group, make sure that no policies are attached to the group and no RAM users are included in the group.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除指定的用户组</p>
+     * <p>Deletes a Resource Access Management (RAM) user group.</p>
      * 
      * @param request DeleteGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1007,8 +1058,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you delete a RAM user group, make sure that no policies are attached to the group and no RAM users are included in the group.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除指定的用户组</p>
+     * <p>Deletes a Resource Access Management (RAM) user group.</p>
      * 
      * @param request DeleteGroupRequest
      * @return DeleteGroupResponse
@@ -1020,7 +1074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关闭指定RAM用户的控制台登录</p>
+     * <p>Disables logon to the console for a Resource Access Management (RAM) user.</p>
      * 
      * @param request DeleteLoginProfileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1052,7 +1106,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关闭指定RAM用户的控制台登录</p>
+     * <p>Disables logon to the console for a Resource Access Management (RAM) user.</p>
      * 
      * @param request DeleteLoginProfileRequest
      * @return DeleteLoginProfileResponse
@@ -1063,8 +1117,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3></h3>
+     * <p>This topic provides an example on how to remove the OIDC IdP named <code>TestOIDCProvider</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除指定的角色SSO身份提供商</p>
+     * <p>Deletes an OpenID Connect (OIDC) identity provider (IdP).</p>
      * 
      * @param request DeleteOIDCProviderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1095,8 +1153,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3></h3>
+     * <p>This topic provides an example on how to remove the OIDC IdP named <code>TestOIDCProvider</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除指定的角色SSO身份提供商</p>
+     * <p>Deletes an OpenID Connect (OIDC) identity provider (IdP).</p>
      * 
      * @param request DeleteOIDCProviderRequest
      * @return DeleteOIDCProviderResponse
@@ -1108,7 +1170,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除Passkey</p>
+     * <p>Deletes a passkey for a Resource Access Management (RAM) user.</p>
      * 
      * @param request DeletePasskeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1144,7 +1206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除Passkey</p>
+     * <p>Deletes a passkey for a Resource Access Management (RAM) user.</p>
      * 
      * @param request DeletePasskeyRequest
      * @return DeletePasskeyResponse
@@ -1156,7 +1218,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定的角色SSO身份提供商</p>
+     * <p>Deletes an identity provider (IdP) for role-based single sign-on (SSO).</p>
      * 
      * @param request DeleteSAMLProviderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1188,7 +1250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定的角色SSO身份提供商</p>
+     * <p>Deletes an identity provider (IdP) for role-based single sign-on (SSO).</p>
      * 
      * @param request DeleteSAMLProviderRequest
      * @return DeleteSAMLProviderResponse
@@ -1200,7 +1262,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除RAM用户</p>
+     * <p>Deletes a Resource Access Management (RAM) user.</p>
      * 
      * @param request DeleteUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1236,7 +1298,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除RAM用户</p>
+     * <p>Deletes a Resource Access Management (RAM) user.</p>
      * 
      * @param request DeleteUserRequest
      * @return DeleteUserResponse
@@ -1248,7 +1310,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除回收站中的用户</p>
+     * <p>Deletes a specific Resource Access Management (RAM) user from the recycle bin.</p>
      * 
      * @param request DeleteUserInRecycleBinRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1280,7 +1342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除回收站中的用户</p>
+     * <p>Deletes a specific Resource Access Management (RAM) user from the recycle bin.</p>
      * 
      * @param request DeleteUserInRecycleBinRequest
      * @return DeleteUserInRecycleBinResponse
@@ -1292,7 +1354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除多因素认证设备</p>
+     * <p>Deletes a multi-factor authentication (MFA) device.</p>
      * 
      * @param request DeleteVirtualMFADeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1324,7 +1386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除多因素认证设备</p>
+     * <p>Deletes a multi-factor authentication (MFA) device.</p>
      * 
      * @param request DeleteVirtualMFADeviceRequest
      * @return DeleteVirtualMFADeviceResponse
@@ -1335,8 +1397,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If you want to call this operation to uninstall an internal application, the type of the internal application must be <strong>ServerApp</strong>. Otherwise, an error occurs when you call this operation.</p>
+     * <blockquote>
+     * <p> For <strong>internal applications</strong>, only internal applications of the ServerApp type need to be <strong>installed or provisioned</strong>. Therefore, only internal applications of the ServerApp type <strong>can be uninstalled</strong>. Internal applications of the WebApp and NativeApp types <strong>do not need to and cannot be uninstalled</strong>.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>解除安装应用</p>
+     * <p>Uninstalls an external application or an internal application of the ServerApp type.</p>
      * 
      * @param request DeprovisionApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1367,8 +1435,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If you want to call this operation to uninstall an internal application, the type of the internal application must be <strong>ServerApp</strong>. Otherwise, an error occurs when you call this operation.</p>
+     * <blockquote>
+     * <p> For <strong>internal applications</strong>, only internal applications of the ServerApp type need to be <strong>installed or provisioned</strong>. Therefore, only internal applications of the ServerApp type <strong>can be uninstalled</strong>. Internal applications of the WebApp and NativeApp types <strong>do not need to and cannot be uninstalled</strong>.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>解除安装应用</p>
+     * <p>Uninstalls an external application or an internal application of the ServerApp type.</p>
      * 
      * @param request DeprovisionApplicationRequest
      * @return DeprovisionApplicationResponse
@@ -1380,7 +1454,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解除安装外部应用</p>
+     * <p>Deletes an installed external application.</p>
      * 
      * @param request DeprovisionExternalApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1412,7 +1486,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解除安装外部应用</p>
+     * <p>Deletes an installed external application.</p>
      * 
      * @param request DeprovisionExternalApplicationRequest
      * @return DeprovisionExternalApplicationResponse
@@ -1424,7 +1498,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解绑并删除多因素认证设备</p>
+     * <p>Unbinds and deletes a multi-factor authentication (MFA) device from a Resource Access Management (RAM) user.</p>
      * 
      * @param request DisableVirtualMFARequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1456,7 +1530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解绑并删除多因素认证设备</p>
+     * <p>Unbinds and deletes a multi-factor authentication (MFA) device from a Resource Access Management (RAM) user.</p>
      * 
      * @param request DisableVirtualMFARequest
      * @return DisableVirtualMFAResponse
@@ -1468,7 +1542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>生成用户凭证报告</p>
+     * <p>Generates the user credential report of an Alibaba Cloud account.</p>
      * 
      * @param request GenerateCredentialReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1492,7 +1566,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>生成用户凭证报告</p>
+     * <p>Generates the user credential report of an Alibaba Cloud account.</p>
      * @return GenerateCredentialReportResponse
      */
     public GenerateCredentialReportResponse generateCredentialReport() throws Exception {
@@ -1502,7 +1576,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>生成身份权限治理报告</p>
+     * <p>Generates a check report for Cloud Governance.</p>
      * 
      * @param request GenerateGovernanceReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1526,7 +1600,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>生成身份权限治理报告</p>
+     * <p>Generates a check report for Cloud Governance.</p>
      * @return GenerateGovernanceReportResponse
      */
     public GenerateGovernanceReportResponse generateGovernanceReport() throws Exception {
@@ -1536,7 +1610,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询回收站中的访问密钥信息</p>
+     * <p>Queries information about a specific AccessKey pair of a Resource Access Management (RAM) user in the recycle bin.</p>
      * 
      * @param request GetAccessKeyInfoInRecycleBinRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1568,7 +1642,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询回收站中的访问密钥信息</p>
+     * <p>Queries information about a specific AccessKey pair of a Resource Access Management (RAM) user in the recycle bin.</p>
      * 
      * @param request GetAccessKeyInfoInRecycleBinRequest
      * @return GetAccessKeyInfoInRecycleBinResponse
@@ -1580,7 +1654,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定访问密钥的最后使用时间</p>
+     * <p>Queries the time when an AccessKey pair was used for the last time.</p>
      * 
      * @param request GetAccessKeyLastUsedRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1616,7 +1690,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定访问密钥的最后使用时间</p>
+     * <p>Queries the time when an AccessKey pair was used for the last time.</p>
      * 
      * @param request GetAccessKeyLastUsedRequest
      * @return GetAccessKeyLastUsedResponse
@@ -1628,7 +1702,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询主账号多因素认证设备信息</p>
+     * <p>Queries information about the multi-factor authentication (MFA) devices of an Alibaba Cloud account.</p>
      * 
      * @param request GetAccountMFAInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1652,7 +1726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询主账号多因素认证设备信息</p>
+     * <p>Queries information about the multi-factor authentication (MFA) devices of an Alibaba Cloud account.</p>
      * @return GetAccountMFAInfoResponse
      */
     public GetAccountMFAInfoResponse getAccountMFAInfo() throws Exception {
@@ -1662,7 +1736,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询阿里云账号的安全报告</p>
+     * <p>Queries the security report of an Alibaba Cloud account.</p>
      * 
      * @param request GetAccountSecurityPracticeReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1686,7 +1760,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询阿里云账号的安全报告</p>
+     * <p>Queries the security report of an Alibaba Cloud account.</p>
      * @return GetAccountSecurityPracticeReportResponse
      */
     public GetAccountSecurityPracticeReportResponse getAccountSecurityPracticeReport() throws Exception {
@@ -1696,7 +1770,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a summary of an Alibaba Cloud account.</p>
+     * <p>Queries the overview information about an Alibaba Cloud account.</p>
      * 
      * @param request GetAccountSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1720,7 +1794,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a summary of an Alibaba Cloud account.</p>
+     * <p>Queries the overview information about an Alibaba Cloud account.</p>
      * @return GetAccountSummaryResponse
      */
     public GetAccountSummaryResponse getAccountSummary() throws Exception {
@@ -1730,7 +1804,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定应用密钥信息</p>
+     * <p>Queries the details of an application secret.</p>
      * 
      * @param request GetAppSecretRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1766,7 +1840,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定应用密钥信息</p>
+     * <p>Queries the details of an application secret.</p>
      * 
      * @param request GetAppSecretRequest
      * @return GetAppSecretResponse
@@ -1778,10 +1852,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to query the configuration information of the application <code>472457090344041****</code>.</p>
+     * <p>This topic provides an example on how to query the configurations of an application named <code>472457090344041****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the configuration information of a specified application.</p>
+     * <p>Queries the configuration information about an application.</p>
      * 
      * @param request GetApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1813,10 +1887,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to query the configuration information of the application <code>472457090344041****</code>.</p>
+     * <p>This topic provides an example on how to query the configurations of an application named <code>472457090344041****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the configuration information of a specified application.</p>
+     * <p>Queries the configuration information about an application.</p>
      * 
      * @param request GetApplicationRequest
      * @return GetApplicationResponse
@@ -1828,7 +1902,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询应用安装信息</p>
+     * <p>Queries installation information about a specified installed application.</p>
      * 
      * @param request GetApplicationProvisionInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1860,7 +1934,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询应用安装信息</p>
+     * <p>Queries installation information about a specified installed application.</p>
      * 
      * @param request GetApplicationProvisionInfoRequest
      * @return GetApplicationProvisionInfoResponse
@@ -1872,7 +1946,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户凭证报告内容</p>
+     * <p>Queries the user credential reports of an Alibaba Cloud account.</p>
      * 
      * @param request GetCredentialReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1908,7 +1982,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户凭证报告内容</p>
+     * <p>Queries the user credential reports of an Alibaba Cloud account.</p>
      * 
      * @param request GetCredentialReportRequest
      * @return GetCredentialReportResponse
@@ -1920,7 +1994,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询默认域名</p>
+     * <p>Queries the default domain name of an Alibaba Cloud account.</p>
      * 
      * @param request GetDefaultDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1944,7 +2018,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询默认域名</p>
+     * <p>Queries the default domain name of an Alibaba Cloud account.</p>
      * @return GetDefaultDomainResponse
      */
     public GetDefaultDomainResponse getDefaultDomain() throws Exception {
@@ -1954,7 +2028,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询外部应用</p>
+     * <p>Queries information about an installed external application.</p>
      * 
      * @param request GetExternalApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1986,7 +2060,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询外部应用</p>
+     * <p>Queries information about an installed external application.</p>
      * 
      * @param request GetExternalApplicationRequest
      * @return GetExternalApplicationResponse
@@ -1998,7 +2072,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a specific check item in an identity and access governance report.</p>
+     * <p>查询用户的单项ram治理报告</p>
      * 
      * @param request GetGovernanceItemReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2038,7 +2112,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a specific check item in an identity and access governance report.</p>
+     * <p>查询用户的单项ram治理报告</p>
      * 
      * @param request GetGovernanceItemReportRequest
      * @return GetGovernanceItemReportResponse
@@ -2050,7 +2124,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of an identity and access governance report.</p>
+     * <p>查询成熟度报告状态</p>
      * 
      * @param request GetGovernanceReportStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2074,7 +2148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of an identity and access governance report.</p>
+     * <p>查询成熟度报告状态</p>
      * @return GetGovernanceReportStatusResponse
      */
     public GetGovernanceReportStatusResponse getGovernanceReportStatus() throws Exception {
@@ -2084,7 +2158,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定用户组信息</p>
+     * <p>Queries the information about a Resource Access Management (RAM) user group.</p>
      * 
      * @param request GetGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2116,7 +2190,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定用户组信息</p>
+     * <p>Queries the information about a Resource Access Management (RAM) user group.</p>
      * 
      * @param request GetGroupRequest
      * @return GetGroupResponse
@@ -2128,7 +2202,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the logon information for a specified Resource Access Management (RAM) user.</p>
+     * <p>Queries the logon configurations of a Resource Access Management (RAM) user.</p>
      * 
      * @param request GetLoginProfileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2160,7 +2234,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the logon information for a specified Resource Access Management (RAM) user.</p>
+     * <p>Queries the logon configurations of a Resource Access Management (RAM) user.</p>
      * 
      * @param request GetLoginProfileRequest
      * @return GetLoginProfileResponse
@@ -2171,8 +2245,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3></h3>
+     * <p>This topic provides an example on how to query the information about an OpenID Connect (OIDC) identity provider (IdP) named <code>TestOIDCProvider</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询OIDC身份提供商信息</p>
+     * <p>Queries the information about an OIDC IdP.</p>
      * 
      * @param request GetOIDCProviderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2203,8 +2281,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3></h3>
+     * <p>This topic provides an example on how to query the information about an OpenID Connect (OIDC) identity provider (IdP) named <code>TestOIDCProvider</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询OIDC身份提供商信息</p>
+     * <p>Queries the information about an OIDC IdP.</p>
      * 
      * @param request GetOIDCProviderRequest
      * @return GetOIDCProviderResponse
@@ -2216,7 +2298,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the password strength policy for Resource Access Management (RAM) users.</p>
+     * <p>Queries the details of the password policy for RAM users.</p>
      * 
      * @param request GetPasswordPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2240,7 +2322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the password strength policy for Resource Access Management (RAM) users.</p>
+     * <p>Queries the details of the password policy for RAM users.</p>
      * @return GetPasswordPolicyResponse
      */
     public GetPasswordPolicyResponse getPasswordPolicy() throws Exception {
@@ -2250,7 +2332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about a specified SAML provider for role-based SSO.</p>
+     * <p>Queries the information about an identity provider (IdP) for role-based single sign-on (SSO).</p>
      * 
      * @param request GetSAMLProviderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2282,7 +2364,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about a specified SAML provider for role-based SSO.</p>
+     * <p>Queries the information about an identity provider (IdP) for role-based single sign-on (SSO).</p>
      * 
      * @param request GetSAMLProviderRequest
      * @return GetSAMLProviderResponse
@@ -2294,7 +2376,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the global security preferences for Resource Access Management (RAM) users.</p>
+     * <p>Queries the security preferences for RAM users.</p>
      * 
      * @param request GetSecurityPreferenceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2318,7 +2400,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the global security preferences for Resource Access Management (RAM) users.</p>
+     * <p>Queries the security preferences for RAM users.</p>
      * @return GetSecurityPreferenceResponse
      */
     public GetSecurityPreferenceResponse getSecurityPreference() throws Exception {
@@ -2328,7 +2410,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询RAM用户的详细信息</p>
+     * <p>Queries the information about a RAM user.</p>
      * 
      * @param request GetUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2368,7 +2450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询RAM用户的详细信息</p>
+     * <p>Queries the information about a RAM user.</p>
      * 
      * @param request GetUserRequest
      * @return GetUserResponse
@@ -2380,7 +2462,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取回收站中的用户</p>
+     * <p>Queries information about a specific Resource Access Management (RAM) user in the recycle bin.</p>
      * 
      * @param request GetUserInRecycleBinRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2416,7 +2498,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取回收站中的用户</p>
+     * <p>Queries information about a specific Resource Access Management (RAM) user in the recycle bin.</p>
      * 
      * @param request GetUserInRecycleBinRequest
      * @return GetUserInRecycleBinResponse
@@ -2428,7 +2510,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询RAM用户多因素认证设备信息</p>
+     * <p>Queries information about the multi-factor authentication (MFA) device that is bound to a Resource Access Management (RAM) user.</p>
      * 
      * @param request GetUserMFAInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2460,7 +2542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询RAM用户多因素认证设备信息</p>
+     * <p>Queries information about the multi-factor authentication (MFA) device that is bound to a Resource Access Management (RAM) user.</p>
      * 
      * @param request GetUserMFAInfoRequest
      * @return GetUserMFAInfoResponse
@@ -2472,7 +2554,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the identity provider settings for user-based SSO.</p>
+     * <p>Queries the configurations of user-based single sign-on (SSO).</p>
      * 
      * @param request GetUserSsoSettingsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2496,7 +2578,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the identity provider settings for user-based SSO.</p>
+     * <p>Queries the configurations of user-based single sign-on (SSO).</p>
      * @return GetUserSsoSettingsResponse
      */
     public GetUserSsoSettingsResponse getUserSsoSettings() throws Exception {
@@ -2506,7 +2588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取用户安全认证的信息</p>
+     * <p>Queries the status of the mobile phone or email that is bound to a Resource Access Management (RAM) user.</p>
      * 
      * @param request GetVerificationInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2538,7 +2620,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取用户安全认证的信息</p>
+     * <p>Queries the status of the mobile phone or email that is bound to a Resource Access Management (RAM) user.</p>
      * 
      * @param request GetVerificationInfoRequest
      * @return GetVerificationInfoResponse
@@ -2550,7 +2632,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询主账号或RAM用户访问密钥列表</p>
+     * <p>Queries the AccessKey pairs of an Alibaba Cloud account or a Resource Access Management (RAM) user.</p>
      * 
      * @param request ListAccessKeysRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2582,7 +2664,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询主账号或RAM用户访问密钥列表</p>
+     * <p>Queries the AccessKey pairs of an Alibaba Cloud account or a Resource Access Management (RAM) user.</p>
      * 
      * @param request ListAccessKeysRequest
      * @return ListAccessKeysResponse
@@ -2594,7 +2676,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出回收站中访问密钥列表</p>
+     * <p>Queries the AccessKey pairs of a specific Resource Access Management (RAM) user in the recycle bin.</p>
      * 
      * @param request ListAccessKeysInRecycleBinRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2626,7 +2708,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出回收站中访问密钥列表</p>
+     * <p>Queries the AccessKey pairs of a specific Resource Access Management (RAM) user in the recycle bin.</p>
      * 
      * @param request ListAccessKeysInRecycleBinRequest
      * @return ListAccessKeysInRecycleBinResponse
@@ -2638,7 +2720,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定应用的应用密钥ID列表</p>
+     * <p>Queries the secret IDs of an application.</p>
      * 
      * @param request ListAppSecretIdsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2670,7 +2752,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定应用的应用密钥ID列表</p>
+     * <p>Queries the secret IDs of an application.</p>
      * 
      * @param request ListAppSecretIdsRequest
      * @return ListAppSecretIdsResponse
@@ -2726,10 +2808,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to query the applications in your Alibaba Cloud account. The response shows that only one application, named <code>myapp</code>, exists in the account.</p>
+     * <p>This topic provides an example on how to query the applications within the current account. The returned result shows that only one application named <code>myapp</code> belongs to the current account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists the applications that you have created.</p>
+     * <p>Lists the created applications.</p>
      * 
      * @param request ListApplicationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2753,10 +2835,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to query the applications in your Alibaba Cloud account. The response shows that only one application, named <code>myapp</code>, exists in the account.</p>
+     * <p>This topic provides an example on how to query the applications within the current account. The returned result shows that only one application named <code>myapp</code> belongs to the current account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists the applications that you have created.</p>
+     * <p>Lists the created applications.</p>
      * @return ListApplicationsResponse
      */
     public ListApplicationsResponse listApplications() throws Exception {
@@ -2848,7 +2930,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询RAM用户加入的用户组列表</p>
+     * <p>Queries the Resource Access Management (RAM) user groups to which a RAM user belongs.</p>
      * 
      * @param request ListGroupsForUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2880,7 +2962,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询RAM用户加入的用户组列表</p>
+     * <p>Queries the Resource Access Management (RAM) user groups to which a RAM user belongs.</p>
      * 
      * @param request ListGroupsForUserRequest
      * @return ListGroupsForUserResponse
@@ -2891,8 +2973,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3></h3>
+     * <p>This topic provides an example on how to query all OpenID Connect (OIDC) identity providers (IdPs) within your Alibaba Cloud account. The response shows that your Alibaba Cloud account has only one OIDC IdP named <code>TestOIDCProvider</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询OIDC身份提供商列表</p>
+     * <p>Queries OIDC IdPs.</p>
      * 
      * @param request ListOIDCProvidersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2927,8 +3013,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3></h3>
+     * <p>This topic provides an example on how to query all OpenID Connect (OIDC) identity providers (IdPs) within your Alibaba Cloud account. The response shows that your Alibaba Cloud account has only one OIDC IdP named <code>TestOIDCProvider</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询OIDC身份提供商列表</p>
+     * <p>Queries OIDC IdPs.</p>
      * 
      * @param request ListOIDCProvidersRequest
      * @return ListOIDCProvidersResponse
@@ -2940,7 +3030,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询Passkey</p>
+     * <p>Queries the information about the passkeys that are bound to a Resource Access Management (RAM) user.</p>
      * 
      * @param request ListPasskeysRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2972,7 +3062,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询Passkey</p>
+     * <p>Queries the information about the passkeys that are bound to a Resource Access Management (RAM) user.</p>
      * 
      * @param request ListPasskeysRequest
      * @return ListPasskeysResponse
@@ -3062,7 +3152,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询角色SSO身份提供商列表</p>
+     * <p>Queries information about identity providers (IdPs) for role-based single sign-on (SSO).</p>
      * 
      * @param request ListSAMLProvidersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3098,7 +3188,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询角色SSO身份提供商列表</p>
+     * <p>Queries information about identity providers (IdPs) for role-based single sign-on (SSO).</p>
      * 
      * @param request ListSAMLProvidersRequest
      * @return ListSAMLProvidersResponse
@@ -3109,8 +3199,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3></h3>
+     * <p>You must specify at least one of the following parameters or parameter pairs in a request to determine a query object:</p>
+     * <ul>
+     * <li><code>ResourceId.N</code></li>
+     * <li><code>Tag.N.Key</code></li>
+     * <li><code>Tag.N.Key</code> and <code>Tag.N.Value</code></li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询资源与标签的关系</p>
+     * <p>Queries the tags that are added resources.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3161,8 +3260,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3></h3>
+     * <p>You must specify at least one of the following parameters or parameter pairs in a request to determine a query object:</p>
+     * <ul>
+     * <li><code>ResourceId.N</code></li>
+     * <li><code>Tag.N.Key</code></li>
+     * <li><code>Tag.N.Key</code> and <code>Tag.N.Value</code></li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询资源与标签的关系</p>
+     * <p>Queries the tags that are added resources.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -3316,7 +3424,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户组中用户列表</p>
+     * <p>Queries Resource Access Management (RAM) users in a RAM user group.</p>
      * 
      * @param request ListUsersForGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3356,7 +3464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户组中用户列表</p>
+     * <p>Queries Resource Access Management (RAM) users in a RAM user group.</p>
      * 
      * @param request ListUsersForGroupRequest
      * @return ListUsersForGroupResponse
@@ -3368,7 +3476,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询回收站中用户列表</p>
+     * <p>Queries the basic information about all Resource Access Management (RAM) users in the recycle bin.</p>
      * 
      * @param request ListUsersInRecycleBinRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3408,7 +3516,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询回收站中用户列表</p>
+     * <p>Queries the basic information about all Resource Access Management (RAM) users in the recycle bin.</p>
      * 
      * @param request ListUsersInRecycleBinRequest
      * @return ListUsersInRecycleBinResponse
@@ -3468,7 +3576,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>安装应用</p>
+     * <p>Installs an application.</p>
      * 
      * @param request ProvisionApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3504,7 +3612,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>安装应用</p>
+     * <p>Installs an application.</p>
      * 
      * @param request ProvisionApplicationRequest
      * @return ProvisionApplicationResponse
@@ -3516,7 +3624,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>安装外部应用</p>
+     * <p>Installs an external application.</p>
      * 
      * @param request ProvisionExternalApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3552,7 +3660,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>安装外部应用</p>
+     * <p>Installs an external application.</p>
      * 
      * @param request ProvisionExternalApplicationRequest
      * @return ProvisionExternalApplicationResponse
@@ -3563,8 +3671,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3></h3>
+     * <p>This topic provides an example on how to remove the client ID <code>498469743454717****</code> from the OIDC IdP named <code>TestOIDCProvider</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>移除OIDC身份提供商中的指定客户端ID</p>
+     * <p>Removes a client ID from an OpenID Connect (OIDC) identity provider (IdP).</p>
      * 
      * @param request RemoveClientIdFromOIDCProviderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3599,8 +3711,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3></h3>
+     * <p>This topic provides an example on how to remove the client ID <code>498469743454717****</code> from the OIDC IdP named <code>TestOIDCProvider</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>移除OIDC身份提供商中的指定客户端ID</p>
+     * <p>Removes a client ID from an OpenID Connect (OIDC) identity provider (IdP).</p>
      * 
      * @param request RemoveClientIdFromOIDCProviderRequest
      * @return RemoveClientIdFromOIDCProviderResponse
@@ -3611,8 +3727,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3></h3>
+     * <p>This topic provides an example on how to remove the fingerprint <code>6938fd4d98bab03faadb97b34396831e3780****</code> from the OIDC IdP named <code>TestOIDCProvider</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>移除OIDC身份提供商中指定的验证指纹</p>
+     * <p>Removes a fingerprint from an OpenID Connect (OIDC) identity provider (IdP).</p>
      * 
      * @param request RemoveFingerprintFromOIDCProviderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3647,8 +3767,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3></h3>
+     * <p>This topic provides an example on how to remove the fingerprint <code>6938fd4d98bab03faadb97b34396831e3780****</code> from the OIDC IdP named <code>TestOIDCProvider</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>移除OIDC身份提供商中指定的验证指纹</p>
+     * <p>Removes a fingerprint from an OpenID Connect (OIDC) identity provider (IdP).</p>
      * 
      * @param request RemoveFingerprintFromOIDCProviderRequest
      * @return RemoveFingerprintFromOIDCProviderResponse
@@ -3660,7 +3784,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将RAM用户从用户组中移除</p>
+     * <p>Removes a Resource Access Management (RAM) user from a RAM user group.</p>
      * 
      * @param request RemoveUserFromGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3696,7 +3820,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将RAM用户从用户组中移除</p>
+     * <p>Removes a Resource Access Management (RAM) user from a RAM user group.</p>
      * 
      * @param request RemoveUserFromGroupRequest
      * @return RemoveUserFromGroupResponse
@@ -3708,7 +3832,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>清空回收站中的访问密钥</p>
+     * <p>Restores a specific AccessKey pair that belongs to a Resource Access Management (RAM) user from the recycle bin.</p>
      * 
      * @param request RestoreAccessKeyFromRecycleBinRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3744,7 +3868,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>清空回收站中的访问密钥</p>
+     * <p>Restores a specific AccessKey pair that belongs to a Resource Access Management (RAM) user from the recycle bin.</p>
      * 
      * @param request RestoreAccessKeyFromRecycleBinRequest
      * @return RestoreAccessKeyFromRecycleBinResponse
@@ -3756,7 +3880,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>清空回收站中的用户</p>
+     * <p>Restores a specific Resource Access Management (RAM) user from the recycle bin.</p>
      * 
      * @param request RestoreUserFromRecycleBinRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3788,7 +3912,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>清空回收站中的用户</p>
+     * <p>Restores a specific Resource Access Management (RAM) user from the recycle bin.</p>
      * 
      * @param request RestoreUserFromRecycleBinRequest
      * @return RestoreUserFromRecycleBinResponse
@@ -3800,7 +3924,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置默认域名</p>
+     * <p>Configures the default domain name for an Alibaba Cloud account.</p>
      * 
      * @param request SetDefaultDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3832,7 +3956,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置默认域名</p>
+     * <p>Configures the default domain name for an Alibaba Cloud account.</p>
      * 
      * @param request SetDefaultDomainRequest
      * @return SetDefaultDomainResponse
@@ -3844,7 +3968,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the password strength policy for RAM users.</p>
+     * <p>Configures the password policy for Resource Access Management (RAM) users.</p>
      * 
      * @param request SetPasswordPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3924,7 +4048,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the password strength policy for RAM users.</p>
+     * <p>Configures the password policy for Resource Access Management (RAM) users.</p>
      * 
      * @param request SetPasswordPolicyRequest
      * @return SetPasswordPolicyResponse
@@ -3935,8 +4059,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3></h3>
+     * <p>This topic provides an example on how to enable multi-factor authentication (MFA) only for RAM users who initiated unusual logons.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Configures the global security preferences for a Resource Access Management (RAM) user.</p>
+     * <p>Configures security preferences for a RAM user.</p>
      * 
      * @param tmpReq SetSecurityPreferenceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4021,8 +4149,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3></h3>
+     * <p>This topic provides an example on how to enable multi-factor authentication (MFA) only for RAM users who initiated unusual logons.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Configures the global security preferences for a Resource Access Management (RAM) user.</p>
+     * <p>Configures security preferences for a RAM user.</p>
      * 
      * @param request SetSecurityPreferenceRequest
      * @return SetSecurityPreferenceResponse
@@ -4034,7 +4166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the identity provider (IdP) settings for user-based single sign-on (SSO).</p>
+     * <p>Configures information about user-based single sign-on (SSO).</p>
      * 
      * @param request SetUserSsoSettingsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4082,7 +4214,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the identity provider (IdP) settings for user-based single sign-on (SSO).</p>
+     * <p>Configures information about user-based single sign-on (SSO).</p>
      * 
      * @param request SetUserSsoSettingsRequest
      * @return SetUserSsoSettingsResponse
@@ -4094,7 +4226,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增录入/修改安全手机号码、安全邮箱的API</p>
+     * <p>Binds a mobile phone or email to a Resource Access Management (RAM) user.</p>
      * 
      * @param request SetVerificationInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4138,7 +4270,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增录入/修改安全手机号码、安全邮箱的API</p>
+     * <p>Binds a mobile phone or email to a Resource Access Management (RAM) user.</p>
      * 
      * @param request SetVerificationInfoRequest
      * @return SetVerificationInfoResponse
@@ -4150,7 +4282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>资源打上标签</p>
+     * <p>Adds tags to resources.</p>
      * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4194,7 +4326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>资源打上标签</p>
+     * <p>Adds tags to resources.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -4206,7 +4338,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为RAM用户解绑多因素认证设备</p>
+     * <p>Unbinds a multi-factor authentication (MFA) device from a Resource Access Management (RAM) user.</p>
      * 
      * @param request UnbindMFADeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4238,7 +4370,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为RAM用户解绑多因素认证设备</p>
+     * <p>Unbinds a multi-factor authentication (MFA) device from a Resource Access Management (RAM) user.</p>
      * 
      * @param request UnbindMFADeviceRequest
      * @return UnbindMFADeviceResponse
@@ -4250,7 +4382,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除用户的安全认证</p>
+     * <p>Unbinds a mobile phone or email from a Resource Access Management (RAM) user.</p>
      * 
      * @param request UnbindVerificationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4294,7 +4426,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除用户的安全认证</p>
+     * <p>Unbinds a mobile phone or email from a Resource Access Management (RAM) user.</p>
      * 
      * @param request UnbindVerificationRequest
      * @return UnbindVerificationResponse
@@ -4306,7 +4438,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解绑资源的标签</p>
+     * <p>Removes tags from a resource.</p>
      * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4354,7 +4486,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解绑资源的标签</p>
+     * <p>Removes tags from a resource.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -4366,7 +4498,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改访问密钥状态</p>
+     * <p>Modifies the status of an AccessKey pair for an Alibaba Cloud account or a Resource Access Management (RAM) user.</p>
      * 
      * @param request UpdateAccessKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4406,7 +4538,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改访问密钥状态</p>
+     * <p>Modifies the status of an AccessKey pair for an Alibaba Cloud account or a Resource Access Management (RAM) user.</p>
      * 
      * @param request UpdateAccessKeyRequest
      * @return UpdateAccessKeyResponse
@@ -4418,7 +4550,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the configuration of a specified application.</p>
+     * <p>Modifies the information about a specified application.</p>
      * 
      * @param request UpdateApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4482,7 +4614,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the configuration of a specified application.</p>
+     * <p>Modifies the information about a specified application.</p>
      * 
      * @param request UpdateApplicationRequest
      * @return UpdateApplicationResponse
@@ -4494,7 +4626,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改指定用户组的信息</p>
+     * <p>Modifies information about a Resource Access Management (RAM) user group.</p>
      * 
      * @param request UpdateGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4538,7 +4670,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改指定用户组的信息</p>
+     * <p>Modifies information about a Resource Access Management (RAM) user group.</p>
      * 
      * @param request UpdateGroupRequest
      * @return UpdateGroupResponse
@@ -4550,7 +4682,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the console logon information for a specified Resource Access Management (RAM) user.</p>
+     * <p>Modifies the console logon configurations of a Resource Access Management (RAM) user.</p>
      * 
      * @param request UpdateLoginProfileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4598,7 +4730,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the console logon information for a specified Resource Access Management (RAM) user.</p>
+     * <p>Modifies the console logon configurations of a Resource Access Management (RAM) user.</p>
      * 
      * @param request UpdateLoginProfileRequest
      * @return UpdateLoginProfileResponse
@@ -4609,8 +4741,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3></h3>
+     * <p>This topic provides an example on how to change the description of the OIDC IdP named <code>TestOIDCProvider</code> to <code>This is a new OIDC Provider.</code></p>
+     * 
      * <b>summary</b> : 
-     * <p>修改OIDC身份提供商的描述和客户端ID</p>
+     * <p>Modifies the description and client IDs of an OpenID Connect (OIDC) identity provider (IdP).</p>
      * 
      * @param request UpdateOIDCProviderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4653,8 +4789,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3></h3>
+     * <p>This topic provides an example on how to change the description of the OIDC IdP named <code>TestOIDCProvider</code> to <code>This is a new OIDC Provider.</code></p>
+     * 
      * <b>summary</b> : 
-     * <p>修改OIDC身份提供商的描述和客户端ID</p>
+     * <p>Modifies the description and client IDs of an OpenID Connect (OIDC) identity provider (IdP).</p>
      * 
      * @param request UpdateOIDCProviderRequest
      * @return UpdateOIDCProviderResponse
@@ -4666,7 +4806,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新Passkey</p>
+     * <p>Updates the name of a passkey.</p>
      * 
      * @param request UpdatePasskeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4706,7 +4846,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新Passkey</p>
+     * <p>Updates the name of a passkey.</p>
      * 
      * @param request UpdatePasskeyRequest
      * @return UpdatePasskeyResponse
@@ -4718,10 +4858,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This example shows how to change the description of the identity provider <code>test-provider</code> to <code>This is a new provider.</code>.</p>
+     * <p>This topic provides an example on how to change the description of an IdP named <code>test-provider</code> to <code>This is a new provider.</code></p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the information about a specified identity provider for role-based single sign-on (SSO).</p>
+     * <p>Modifies information about an identity provider (IdP) for role-based single sign-on (SSO).</p>
      * 
      * @param request UpdateSAMLProviderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4765,10 +4905,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This example shows how to change the description of the identity provider <code>test-provider</code> to <code>This is a new provider.</code>.</p>
+     * <p>This topic provides an example on how to change the description of an IdP named <code>test-provider</code> to <code>This is a new provider.</code></p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the information about a specified identity provider for role-based single sign-on (SSO).</p>
+     * <p>Modifies information about an identity provider (IdP) for role-based single sign-on (SSO).</p>
      * 
      * @param request UpdateSAMLProviderRequest
      * @return UpdateSAMLProviderResponse
@@ -4779,8 +4919,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This topic provides an example to show how to modify the name of a RAM user from <code>test@example.onaliyun.com</code> to <code>new@example.onaliyun.com</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改RAM用户信息</p>
+     * <p>Modifies the information about a RAM user.</p>
      * 
      * @param request UpdateUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4835,8 +4978,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This topic provides an example to show how to modify the name of a RAM user from <code>test@example.onaliyun.com</code> to <code>new@example.onaliyun.com</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改RAM用户信息</p>
+     * <p>Modifies the information about a RAM user.</p>
      * 
      * @param request UpdateUserRequest
      * @return UpdateUserResponse

@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class SetPasswordPolicyRequest extends TeaModel {
     /**
-     * <p>Specifies whether to prevent a RAM user from logging on after the password expires. Valid values:</p>
+     * <p>Specifies whether to disable logon after the password expires. Valid values:</p>
      * <ul>
-     * <li><p>true: After the password expires, the RAM user cannot log on to the console. The password must be reset by the Alibaba Cloud account or a RAM user with administrative permissions before the RAM user can log on.</p>
-     * </li>
-     * <li><p>false (default): After the password expires, the RAM user can change the password and then log on.</p>
-     * </li>
+     * <li>true: After the password expires, you cannot use the password to log on to the console. You can log on to the console only after you reset the password by using your Alibaba Cloud account or as a RAM user that has administrative rights.</li>
+     * <li>false: After the password expires, you can change the password to log on to the console. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,15 +17,6 @@ public class SetPasswordPolicyRequest extends TeaModel {
     @NameInMap("HardExpire")
     public Boolean hardExpire;
 
-    /**
-     * <p>The validity period of an initial password. An initial password is the password that is set when you create a RAM user or re-enable console logon.</p>
-     * <p>Valid values: 0 to 90. Unit: days.</p>
-     * <p>Default value: 14.</p>
-     * <p>A value of 0 disables this feature.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>14</p>
-     */
     @NameInMap("InitialPasswordAge")
     public Integer initialPasswordAge;
 
@@ -35,9 +24,9 @@ public class SetPasswordPolicyRequest extends TeaModel {
     public Boolean interceptRiskPasswordOnApi;
 
     /**
-     * <p>The maximum number of consecutive logon failures that are allowed. If the number of failures is reached, the account is locked for one hour.</p>
+     * <p>The maximum number of password retries. If you enter the wrong passwords for the specified consecutive times, the account is locked for one hour.</p>
      * <p>Valid values: 0 to 32.</p>
-     * <p>Default value: 0. A value of 0 disables this feature.</p>
+     * <p>The default value is 0, which indicates that the password retries are not limited.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -46,9 +35,9 @@ public class SetPasswordPolicyRequest extends TeaModel {
     public Integer maxLoginAttemps;
 
     /**
-     * <p>The validity period of a password.</p>
+     * <p>The validity period of the password.</p>
      * <p>Valid values: 0 to 1095. Unit: days.</p>
-     * <p>Default value: 0. A value of 0 indicates that the password never expires.</p>
+     * <p>The default value is 0, which indicates that the password never expires.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -57,9 +46,9 @@ public class SetPasswordPolicyRequest extends TeaModel {
     public Integer maxPasswordAge;
 
     /**
-     * <p>The minimum number of unique characters in a password.</p>
+     * <p>The minimum number of unique characters in the password.</p>
      * <p>Valid values: 0 to 8.</p>
-     * <p>Default value: 0. A value of 0 indicates that no limit is imposed on the number of unique characters.</p>
+     * <p>The default value is 0, which indicates that no limits are imposed on the number of unique characters in a password.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -68,7 +57,7 @@ public class SetPasswordPolicyRequest extends TeaModel {
     public Integer minimumPasswordDifferentCharacter;
 
     /**
-     * <p>The minimum length of the password.</p>
+     * <p>The minimum number of characters in the password.</p>
      * <p>Valid values: 8 to 32. Default value: 8.</p>
      * 
      * <strong>example:</strong>
@@ -78,12 +67,10 @@ public class SetPasswordPolicyRequest extends TeaModel {
     public Integer minimumPasswordLength;
 
     /**
-     * <p>Specifies whether the password can contain the username. Valid values:</p>
+     * <p>Specifies whether to exclude the username from the password. Valid values:</p>
      * <ul>
-     * <li><p>true: The password cannot contain the username.</p>
-     * </li>
-     * <li><p>false (default): The password can contain the username.</p>
-     * </li>
+     * <li>true: A password cannot contain the username.</li>
+     * <li>false: A password can contain the username. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -93,9 +80,9 @@ public class SetPasswordPolicyRequest extends TeaModel {
     public Boolean passwordNotContainUserName;
 
     /**
-     * <p>The number of previous passwords that cannot be reused.</p>
-     * <p>Valid values: 0 to 24.</p>
-     * <p>Default value: 0. A value of 0 disables this feature.</p>
+     * <p>The policy for password history check.</p>
+     * <p>The previous N passwords cannot be reused. Valid values of N: 0 to 24.</p>
+     * <p>The default value is 0, which indicates that RAM users can reuse previous passwords.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -106,10 +93,8 @@ public class SetPasswordPolicyRequest extends TeaModel {
     /**
      * <p>Specifies whether the password must contain lowercase letters. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false (default)</p>
-     * </li>
+     * <li>true</li>
+     * <li>false (default)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -121,10 +106,8 @@ public class SetPasswordPolicyRequest extends TeaModel {
     /**
      * <p>Specifies whether the password must contain digits. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false (default)</p>
-     * </li>
+     * <li>true</li>
+     * <li>false (default)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -134,12 +117,10 @@ public class SetPasswordPolicyRequest extends TeaModel {
     public Boolean requireNumbers;
 
     /**
-     * <p>Specifies whether the password must contain symbols. Valid values:</p>
+     * <p>Specifies whether the password must contain special characters. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false (default)</p>
-     * </li>
+     * <li>true</li>
+     * <li>false (default)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -151,10 +132,8 @@ public class SetPasswordPolicyRequest extends TeaModel {
     /**
      * <p>Specifies whether the password must contain uppercase letters. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false (default)</p>
-     * </li>
+     * <li>true</li>
+     * <li>false (default)</li>
      * </ul>
      * 
      * <strong>example:</strong>

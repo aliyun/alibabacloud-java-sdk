@@ -4,9 +4,21 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class RestoreAccessKeyFromRecycleBinRequest extends TeaModel {
+    /**
+     * <p>The AccessKey ID of the RAM user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LTAI*******************</p>
+     */
     @NameInMap("UserAccessKeyId")
     public String userAccessKeyId;
 
+    /**
+     * <p>The ID of the Resource Access Management (RAM) user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20732900249392****</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

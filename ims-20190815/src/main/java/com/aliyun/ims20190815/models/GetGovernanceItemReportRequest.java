@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetGovernanceItemReportRequest extends TeaModel {
     /**
-     * <p>The check item. For more information, see <a href="https://help.aliyun.com/zh/ram/user-guide/overview-of-cloud-governance-for-ram?spm=a2c4g.11174283.0.0.88b3de53tfL5XG#section-q06-p9p-8vl">Identity and access governance check items</a>.</p>
-     * 
      * <strong>example:</strong>
      * <p>SSOLoginEnabled</p>
      */
@@ -14,8 +12,6 @@ public class GetGovernanceItemReportRequest extends TeaModel {
     public String governanceItemType;
 
     /**
-     * <p>If the response is truncated, use the <code>Marker</code> to retrieve the subsequent content.</p>
-     * 
      * <strong>example:</strong>
      * <p>EXAMPLE</p>
      */
@@ -23,9 +19,6 @@ public class GetGovernanceItemReportRequest extends TeaModel {
     public String marker;
 
     /**
-     * <p>The number of entries to return. If the response is truncated because the number of entries exceeds the value of <code>MaxItems</code>, the value of the <code>IsTruncated</code> parameter is true.</p>
-     * <p>Valid values: 1 to 1000. Default value: 1000.</p>
-     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */

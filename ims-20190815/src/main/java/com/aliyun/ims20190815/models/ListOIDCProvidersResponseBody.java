@@ -4,15 +4,37 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class ListOIDCProvidersResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the response is truncated. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
+    /**
+     * <p>The <code>marker</code>. This parameter is returned only if the value of <code>IsTruncated</code> is <code>true</code>. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.``</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EXAMPLE</p>
+     */
     @NameInMap("Marker")
     public String marker;
 
     @NameInMap("OIDCProviders")
     public ListOIDCProvidersResponseBodyOIDCProviders OIDCProviders;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D2148337-B86A-57F0-8B31-EB7BE0125226</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

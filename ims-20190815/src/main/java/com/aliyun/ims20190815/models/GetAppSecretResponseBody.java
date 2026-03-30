@@ -4,9 +4,18 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class GetAppSecretResponseBody extends TeaModel {
+    /**
+     * <p>The details of the application secret.</p>
+     */
     @NameInMap("AppSecret")
     public GetAppSecretResponseBodyAppSecret appSecret;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE46FC3C-3BDE-4771-B531-27B7B6EB533D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +41,39 @@ public class GetAppSecretResponseBody extends TeaModel {
     }
 
     public static class GetAppSecretResponseBodyAppSecret extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>472457090344041****</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The ID of the application secret.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2efd5004-005c-4f05-83c6-5b1dd176****</p>
+         */
         @NameInMap("AppSecretId")
         public String appSecretId;
 
+        /**
+         * <p>The content of the application secret.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ai78ZmmxnlUG1jXlBZRDFKos9DIjY4m17Q7dCpMwn1rqXsTGb1X1XmrmveMp****</p>
+         */
         @NameInMap("AppSecretValue")
         public String appSecretValue;
 
+        /**
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-26T02:52:31Z</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 

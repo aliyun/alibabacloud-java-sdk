@@ -4,6 +4,12 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class GetGroupRequest extends TeaModel {
+    /**
+     * <p>The name of the RAM user group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Dev-Team</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 

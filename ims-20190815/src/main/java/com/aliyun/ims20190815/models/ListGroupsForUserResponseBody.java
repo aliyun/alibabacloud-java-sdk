@@ -7,6 +7,12 @@ public class ListGroupsForUserResponseBody extends TeaModel {
     @NameInMap("Groups")
     public ListGroupsForUserResponseBodyGroups groups;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7158A935-FB5E-49A7-8E52-FDA5B2B67247</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

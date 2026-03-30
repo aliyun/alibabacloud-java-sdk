@@ -7,6 +7,12 @@ public class ListAccessKeysResponseBody extends TeaModel {
     @NameInMap("AccessKeys")
     public ListAccessKeysResponseBodyAccessKeys accessKeys;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4B450CA1-36E8-4AA2-8461-86B42BF4CC4E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

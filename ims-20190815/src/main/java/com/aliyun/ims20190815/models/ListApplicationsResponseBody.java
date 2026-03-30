@@ -8,7 +8,7 @@ public class ListApplicationsResponseBody extends TeaModel {
     public ListApplicationsResponseBodyApplications applications;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>CE458B58-8C40-46F7-A9D4-CB85136B0C06</p>

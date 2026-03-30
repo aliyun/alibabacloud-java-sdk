@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetAccessKeyInfoInRecycleBinRequest extends TeaModel {
     /**
+     * <p>The AccessKey ID of the Resource Access Management (RAM) user.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LTAI*******************</p>
      */
     @NameInMap("UserAccessKeyId")
     public String userAccessKeyId;

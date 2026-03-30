@@ -4,21 +4,60 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
+    /**
+     * <p>The token that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The number of entries per page. If a response is truncated because it reaches the value of PageSize, the value of IsTruncated will be true. Valid values: 1 to 100. Default value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of resource N.</p>
+     * <p>Valid values of N: 1 to 50. If ResourceType is set to user, the resource ID is the ID of the RAM user.</p>
+     * <blockquote>
+     * <p>You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.</p>
+     * </blockquote>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    /**
+     * <p>The name of resource N.</p>
+     * <p>Valid values of N: 1 to 50. If ResourceType is set to user, the resource name is the name of the RAM user.</p>
+     * <blockquote>
+     * <p>You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.</p>
+     * </blockquote>
+     */
     @NameInMap("ResourcePrincipalName")
     public java.util.List<String> resourcePrincipalName;
 
+    /**
+     * <p>The type of the resource. Valid value:</p>
+     * <ul>
+     * <li>user: a RAM user</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>user</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tag value.</p>
+     * <p>Valid values of N: 1 to 20. N must be consecutive.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
@@ -76,9 +115,23 @@ public class ListTagResourcesRequest extends TeaModel {
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N.</p>
+         * <p>Valid values of N: 1 to 20. N must be consecutive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operator</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N.</p>
+         * <p>Valid values of N: 1 to 20. N must be consecutive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
         @NameInMap("Value")
         public String value;
 

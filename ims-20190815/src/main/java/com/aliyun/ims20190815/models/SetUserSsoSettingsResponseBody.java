@@ -6,12 +6,15 @@ import com.aliyun.tea.*;
 public class SetUserSsoSettingsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>87F2E3F6-28A0-43F3-A77F-F7760E62F61E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The user-based SSO settings.</p>
+     * <p>The configurations of user-based SSO.</p>
      */
     @NameInMap("UserSsoSettings")
     public SetUserSsoSettingsResponseBodyUserSsoSettings userSsoSettings;
@@ -38,45 +41,46 @@ public class SetUserSsoSettingsResponseBody extends TeaModel {
     }
 
     public static class SetUserSsoSettingsResponseBodyUserSsoSettings extends TeaModel {
-        /**
-         * <p>The signature algorithm that is supported by the Alibaba Cloud SP. Valid values:</p>
-         * <ul>
-         * <li><p>rsa-sha256</p>
-         * </li>
-         * <li><p>rsa-sha1 (default)</p>
-         * </li>
-         * </ul>
-         */
         @NameInMap("AuthnSignAlgo")
         public String authnSignAlgo;
 
         /**
          * <p>The auxiliary domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("AuxiliaryDomain")
         public String auxiliaryDomain;
 
         /**
-         * <p>The metadata file. The file is Base64-encoded.</p>
+         * <p>The metadata file, which is Base64-encoded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PD94bWwgdmVy****</p>
          */
         @NameInMap("MetadataDocument")
         public String metadataDocument;
 
         /**
          * <p>Indicates whether user-based SSO is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("SsoEnabled")
         public Boolean ssoEnabled;
 
         /**
-         * <p>Indicates whether the <code>&lt;saml:NameID&gt;</code> element in a SAML response must contain a domain name when a user logs on using SAML-based SSO. This applies if the username that is specified on the IdP for logon matching contains a domain name suffix.</p>
+         * <p>Indicates whether the SAML SSO requires a domain name in the <code>&lt;saml:NameID&gt;</code> element of the SAML response. If yes, the username specified by the IdP for SSO must have a domain name as the suffix.</p>
          * <ul>
-         * <li><p>If this parameter is set to <code>true</code>, the value of the <code>&lt;saml:NameID&gt;</code> element <strong>must</strong> be in the <code>username@domain</code> format, which includes a domain name suffix. The <code>domain</code> can be the default domain name or a domain alias if one is configured.</p>
-         * </li>
-         * <li><p>If this parameter is set to <code>false</code>, the value of the <code>&lt;saml:NameID&gt;</code> element <strong>must</strong> be the <code>username</code> only. The value <strong>must not</strong> contain the <code>domain</code> part.</p>
-         * </li>
+         * <li>If the value of the parameter is <code>true</code>, the <code>&lt;saml:NameID&gt;</code> element <strong>must</strong> be in the <code>username@domain</code> format. You can set <code>domain</code> to the default domain name or the configured domain alias.</li>
+         * <li>If the value of the parameter is <code>false</code>, the <code>&lt;saml:NameID&gt;</code> element <strong>must</strong> be in the <code>username</code> format and <strong>cannot</strong> contain the <code>domain</code> suffix.</li>
          * </ul>
          * <p>The default value is <code>true</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("SsoLoginWithDomain")
         public Boolean ssoLoginWithDomain;

@@ -17,7 +17,7 @@ public class CreateApplicationRequest extends TeaModel {
 
     /**
      * <p>The application name.</p>
-     * <p>The name can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+     * <p>The name can be up to 64 characters in length. The name can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>myapp</p>
@@ -28,12 +28,9 @@ public class CreateApplicationRequest extends TeaModel {
     /**
      * <p>The type of the application. Valid values:</p>
      * <ul>
-     * <li><p>WebApp: a web application that is based on browser interaction.</p>
-     * </li>
-     * <li><p>NativeApp: a native application that runs on an operating system, such as a desktop or mobile operating system.</p>
-     * </li>
-     * <li><p>ServerApp: an application that directly accesses Alibaba Cloud services without user logon. Currently, only applications that use the System for Cross-domain Identity Management (SCIM) protocol for user synchronization are supported.</p>
-     * </li>
+     * <li>WebApp: a web application that interacts with a browser.</li>
+     * <li>NativeApp: a native application that runs on an operating system, such as a desktop operating system or a mobile operating system.</li>
+     * <li>ServerApp: an application that accesses Alibaba Cloud services without the need of manual user logon. User provisioning is automated based on the System for Cross-Domain Identity Management (SCIM) protocol.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -55,12 +52,10 @@ public class CreateApplicationRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>Specifies whether the application can be installed by other Alibaba Cloud accounts. Valid values:</p>
+     * <p>Indicates whether the application can be installed by using other Alibaba Cloud accounts. Valid values:</p>
      * <ul>
-     * <li><p>true: For NativeApp and ServerApp applications, the default value is \<code>true\\</code> if you leave this parameter empty.</p>
-     * </li>
-     * <li><p>false: For WebApp applications, the default value is \<code>false\\</code> if you leave this parameter empty.</p>
-     * </li>
+     * <li>true: If you do not set this parameter for applications of the NativeApp and ServerApp types, true is used.</li>
+     * <li>false: If you do not set this parameter for applications of the WebApp type, false is used.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,35 +65,22 @@ public class CreateApplicationRequest extends TeaModel {
     public Boolean isMultiTenant;
 
     /**
-     * <p>The scopes of the application.</p>
-     * <p>For information about the valid values and descriptions of scopes, see <a href="https://help.aliyun.com/document_detail/93693.html">OAuth scopes</a>. You can also call the <a href="https://help.aliyun.com/document_detail/187206.html">ListPredefinedScopes</a> operation to obtain the scopes that are supported by different application types.</p>
-     * <p>To enter multiple scopes, separate them with semicolons (;).</p>
+     * <p>The scope of application permissions.</p>
+     * <p>For more information about the application permission scope, see <a href="https://help.aliyun.com/document_detail/93693.html">Open authorization scope</a>. You can also call the <a href="https://help.aliyun.com/document_detail/187206.html">ListPredefinedScopes</a> operation to query the permissions that are supported by different types of applications.</p>
+     * <p>If you enter multiple permission scopes, separate them with semicolons (;).</p>
      * 
      * <strong>example:</strong>
-     * <p>aliuid;profile</p>
+     * <p>aliuid</p>
      */
     @NameInMap("PredefinedScopes")
     public String predefinedScopes;
 
-    /**
-     * <p>The OAuth protocol version of the application. Valid values:</p>
-     * <ul>
-     * <li><p><code>2.0</code>: OAuth 2.0.</p>
-     * </li>
-     * <li><p><code>2.1</code>: OAuth 2.1.</p>
-     * </li>
-     * </ul>
-     * <p>Default value: <code>2.0</code>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2.0</p>
-     */
     @NameInMap("ProtocolVersion")
     public String protocolVersion;
 
     /**
-     * <p>The webhook address.</p>
-     * <p>To enter multiple webhook addresses, separate them with semicolons (;).</p>
+     * <p>The callback URL.</p>
+     * <p>If you enter multiple callback URLs, separate them with semicolons (;).</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://www.example.com">https://www.example.com</a></p>
@@ -107,14 +89,12 @@ public class CreateApplicationRequest extends TeaModel {
     public String redirectUris;
 
     /**
-     * <p>The validity period of the refresh token.</p>
+     * <p>The validity period of the refreshed token.</p>
      * <p>Valid values: 7200 to 31536000. Unit: seconds.</p>
      * <p>Default value:</p>
      * <ul>
-     * <li><p>For NativeApp and ServerApp applications, the default value is 2,592,000 seconds (30 days) if you leave this parameter empty.</p>
-     * </li>
-     * <li><p>For WebApp applications, the default value is 7,776,000 seconds (90 days) if you leave this parameter empty.</p>
-     * </li>
+     * <li>For applications of the WebApp and ServerApp types, if this parameter is left empty, the value 2592000 is used. The value 2592000 indicates that the validity period of the refreshed token is 30 days.</li>
+     * <li>For applications of the NativeApp type, if this parameter is left empty, the value 7776000 is used. The value 7776000 indicates that the validity period of the refreshed token is 90 days.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -124,35 +104,31 @@ public class CreateApplicationRequest extends TeaModel {
     public Integer refreshTokenValidity;
 
     /**
-     * <p>The required scopes.</p>
-     * <p>You can specify one or more scopes in <code>RequiredScopes</code> as required. When a user grants permissions to the application, the required scopes are selected by default and cannot be deselected.</p>
-     * <p>To enter multiple scopes, separate them with semicolons (;).</p>
+     * <p>The required permission.</p>
+     * <p>You can specify one or more permissions for the <code>RequiredScopes</code> parameter. After you specify this parameter, the required permissions are automatically selected and cannot be revoked when a user grants permissions on the application.</p>
+     * <p>If you enter multiple permission scopes, separate them with semicolons (;).</p>
      * <blockquote>
-     * <p>If a scope that you specify in <code>RequiredScopes</code> is not within the range of <code>PredefinedScopes</code>, the required setting for that scope does not take effect.</p>
+     * <p> If the permission that you specify for the <code>RequiredScopes</code> parameter is not included in the value of the <code>PredefinedScopes</code> parameter, the permission does not take effect.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>aliuid</p>
+     * <p>aliuid;profile</p>
      */
     @NameInMap("RequiredScopes")
     public String requiredScopes;
 
     /**
-     * <p>Specifies whether an application key is required. Valid values:</p>
+     * <p>Indicates whether a secret is required. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>For WebApp and ServerApp applications, this parameter is forcibly set to \<code>true\\</code> and cannot be changed.</li>
+     * <li>For applications of the WebApp and ServerApp types, this parameter is automatically set to true and cannot be changed.</li>
+     * <li>For applications of the NativeApp type, this parameter can be set to true or false. If you do not set this parameter, false is used. Applications of the NativeApp type run in untrusted environments and the secrets of these applications are not protected. Therefore, we recommend that you do not set this parameter to true unless otherwise specified. For more information, see <a href="https://help.aliyun.com/document_detail/93697.html">Use an application of the NativeApp type to log on to Alibaba Cloud</a>.</li>
      * </ul>
      * </blockquote>
-     * <ul>
-     * <li>For NativeApp applications, you can set this parameter to \<code>true\\</code> or \<code>false\\</code>. If you do not set this parameter, the default value is \<code>false\\</code>. Because these applications often run in untrusted environments where application keys cannot be effectively protected, do not set this parameter to \<code>true\\</code> unless necessary. For more information, see <a href="https://help.aliyun.com/document_detail/93697.html">Log on to Alibaba Cloud from a native application</a>.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

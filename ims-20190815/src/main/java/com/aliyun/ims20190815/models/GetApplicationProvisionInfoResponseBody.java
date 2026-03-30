@@ -4,9 +4,18 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class GetApplicationProvisionInfoResponseBody extends TeaModel {
+    /**
+     * <p>The installation information about the application.</p>
+     */
     @NameInMap("ApplicationProvisionInfo")
     public GetApplicationProvisionInfoResponseBodyApplicationProvisionInfo applicationProvisionInfo;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>936E1D9C-157D-45BD-8A3B-81C0716EB078</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -100,24 +109,63 @@ public class GetApplicationProvisionInfoResponseBody extends TeaModel {
     }
 
     public static class GetApplicationProvisionInfoResponseBodyApplicationProvisionInfo extends TeaModel {
+        /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>177242285274****</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>452392483381546****</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GiteePrd</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The time when the application was installed. The value is a timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1603693518000</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The information about the scopes of permissions that are granted to the application.</p>
+         */
         @NameInMap("DelegatedScope")
         public GetApplicationProvisionInfoResponseBodyApplicationProvisionInfoDelegatedScope delegatedScope;
 
+        /**
+         * <p>The display name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GiteeAliyun</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The update time. The value is a timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1603693518000</p>
+         */
         @NameInMap("UpdateDate")
         public String updateDate;
 
