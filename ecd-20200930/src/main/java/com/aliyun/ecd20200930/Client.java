@@ -4133,6 +4133,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateEcdReportTaskResponse createEcdReportTaskWithOptions(CreateEcdReportTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.filterList)) {
             query.put("FilterList", request.filterList);
         }
@@ -8414,6 +8418,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDesktopInfoResponse describeDesktopInfoWithOptions(DescribeDesktopInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.desktopId)) {
             query.put("DesktopId", request.desktopId);
         }
@@ -8851,6 +8859,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AppliedScope", request.appliedScope);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.cpuCount)) {
             query.put("CpuCount", request.cpuCount);
         }
@@ -8970,6 +8982,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDesktopsResponse describeDesktopsWithOptions(DescribeDesktopsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
             query.put("ChargeType", request.chargeType);
         }
@@ -9438,6 +9454,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeEcdReportTasksResponse describeEcdReportTasksWithOptions(DescribeEcdReportTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
             query.put("PageNum", request.pageNum);
         }
@@ -17419,7 +17439,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改全球加速配置</p>
+     * <p>Modifies Global Accelerator (GA) configuration.</p>
      * 
      * @param request ModifyOfficeSiteAcceleratorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17459,7 +17479,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改全球加速配置</p>
+     * <p>Modifies Global Accelerator (GA) configuration.</p>
      * 
      * @param request ModifyOfficeSiteAcceleratorRequest
      * @return ModifyOfficeSiteAcceleratorResponse
@@ -19613,7 +19633,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can use the RunCommand operation to run scripts only on Windows cloud desktops.</p>
      * 
      * <b>summary</b> : 
-     * <p>Runs a PowerShell or batch (.bat) command on one or more Windows cloud computers.</p>
+     * <p>Runs a PowerShell or batch (.bat) script on Windows cloud desktops.</p>
      * 
      * @param request RunCommandRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19676,7 +19696,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can use the RunCommand operation to run scripts only on Windows cloud desktops.</p>
      * 
      * <b>summary</b> : 
-     * <p>Runs a PowerShell or batch (.bat) command on one or more Windows cloud computers.</p>
+     * <p>Runs a PowerShell or batch (.bat) script on Windows cloud desktops.</p>
      * 
      * @param request RunCommandRequest
      * @return RunCommandResponse

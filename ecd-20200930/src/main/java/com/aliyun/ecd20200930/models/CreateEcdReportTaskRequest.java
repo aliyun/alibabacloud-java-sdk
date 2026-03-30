@@ -4,6 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateEcdReportTaskRequest extends TeaModel {
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
     /**
      * <p>The filter conditions for filtering query results. The logical relationship between each filter condition is &quot;and&quot; (&amp;). Each filter condition contains FilterKey and FilterValues, which indicate the key and value for the filter condition.</p>
      */
@@ -61,6 +64,14 @@ public class CreateEcdReportTaskRequest extends TeaModel {
     public static CreateEcdReportTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateEcdReportTaskRequest self = new CreateEcdReportTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateEcdReportTaskRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public CreateEcdReportTaskRequest setFilterList(java.util.List<CreateEcdReportTaskRequestFilterList> filterList) {

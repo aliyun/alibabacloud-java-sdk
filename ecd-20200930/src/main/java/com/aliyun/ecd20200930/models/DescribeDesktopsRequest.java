@@ -4,6 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDesktopsRequest extends TeaModel {
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
     /**
      * <p>The billing method of the cloud computer.</p>
      * <p>Valid values:</p>
@@ -373,6 +376,14 @@ public class DescribeDesktopsRequest extends TeaModel {
     public static DescribeDesktopsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDesktopsRequest self = new DescribeDesktopsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDesktopsRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public DescribeDesktopsRequest setChargeType(String chargeType) {

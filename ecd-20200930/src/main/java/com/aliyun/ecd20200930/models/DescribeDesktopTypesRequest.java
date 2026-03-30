@@ -13,6 +13,9 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     @NameInMap("AppliedScope")
     public String appliedScope;
 
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
     /**
      * <p>The number of vCPUs.</p>
      * 
@@ -248,6 +251,14 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     }
     public String getAppliedScope() {
         return this.appliedScope;
+    }
+
+    public DescribeDesktopTypesRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public DescribeDesktopTypesRequest setCpuCount(Integer cpuCount) {

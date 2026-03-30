@@ -4,6 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeEcdReportTasksRequest extends TeaModel {
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
     /**
      * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
      * 
@@ -74,6 +77,14 @@ public class DescribeEcdReportTasksRequest extends TeaModel {
     public static DescribeEcdReportTasksRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEcdReportTasksRequest self = new DescribeEcdReportTasksRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeEcdReportTasksRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public DescribeEcdReportTasksRequest setPageNum(Integer pageNum) {
