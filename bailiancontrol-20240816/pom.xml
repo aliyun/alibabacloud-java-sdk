@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>bailiancontrol20240816</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
   <name>bailiancontrol20240816</name>
   <description>Alibaba Cloud BailianControl (20240816) SDK for Java

@@ -114,12 +114,34 @@ public class ListApiKeysResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListApiKeysResponseBodyApiKeysAuthSetModel extends TeaModel {
+        @NameInMap("authSetMode")
+        public String authSetMode;
+
+        public static ListApiKeysResponseBodyApiKeysAuthSetModel build(java.util.Map<String, ?> map) throws Exception {
+            ListApiKeysResponseBodyApiKeysAuthSetModel self = new ListApiKeysResponseBodyApiKeysAuthSetModel();
+            return TeaModel.build(map, self);
+        }
+
+        public ListApiKeysResponseBodyApiKeysAuthSetModel setAuthSetMode(String authSetMode) {
+            this.authSetMode = authSetMode;
+            return this;
+        }
+        public String getAuthSetMode() {
+            return this.authSetMode;
+        }
+
+    }
+
     public static class ListApiKeysResponseBodyApiKeys extends TeaModel {
         @NameInMap("apiKeyValue")
         public String apiKeyValue;
 
         @NameInMap("apikeyId")
         public String apikeyId;
+
+        @NameInMap("authSetModel")
+        public ListApiKeysResponseBodyApiKeysAuthSetModel authSetModel;
 
         @NameInMap("blocked")
         public Integer blocked;
@@ -170,6 +192,14 @@ public class ListApiKeysResponseBody extends TeaModel {
         }
         public String getApikeyId() {
             return this.apikeyId;
+        }
+
+        public ListApiKeysResponseBodyApiKeys setAuthSetModel(ListApiKeysResponseBodyApiKeysAuthSetModel authSetModel) {
+            this.authSetModel = authSetModel;
+            return this;
+        }
+        public ListApiKeysResponseBodyApiKeysAuthSetModel getAuthSetModel() {
+            return this.authSetModel;
         }
 
         public ListApiKeysResponseBodyApiKeys setBlocked(Integer blocked) {
