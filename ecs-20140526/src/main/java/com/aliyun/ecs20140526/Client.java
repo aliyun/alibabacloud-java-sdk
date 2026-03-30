@@ -2643,6 +2643,118 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>使用一块已有的磁盘克隆出新磁盘</p>
+     * 
+     * @param request CloneDisksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CloneDisksResponse
+     */
+    public CloneDisksResponse cloneDisksWithOptions(CloneDisksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.arn)) {
+            query.put("Arn", request.arn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.burstingEnabled)) {
+            query.put("BurstingEnabled", request.burstingEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.diskCategory)) {
+            query.put("DiskCategory", request.diskCategory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.diskName)) {
+            query.put("DiskName", request.diskName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.encrypted)) {
+            query.put("Encrypted", request.encrypted);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kmsKeyId)) {
+            query.put("KmsKeyId", request.kmsKeyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.multiAttach)) {
+            query.put("MultiAttach", request.multiAttach);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.performanceLevel)) {
+            query.put("PerformanceLevel", request.performanceLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.provisionedIops)) {
+            query.put("ProvisionedIops", request.provisionedIops);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("Size", request.size);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceDiskId)) {
+            query.put("SourceDiskId", request.sourceDiskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CloneDisks"),
+            new TeaPair("version", "2014-05-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CloneDisksResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>使用一块已有的磁盘克隆出新磁盘</p>
+     * 
+     * @param request CloneDisksRequest
+     * @return CloneDisksResponse
+     */
+    public CloneDisksResponse cloneDisks(CloneDisksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.cloneDisksWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>ConnectRouterInterface</p>
      * 
      * @deprecated OpenAPI ConnectRouterInterface is deprecated, please use Vpc::2016-04-28::ConnectRouterInterface instead.
@@ -18483,7 +18595,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询运维窗口</p>
+     * <p>Query O\\\&amp;M window</p>
      * 
      * @param tmpReq DescribePlanMaintenanceWindowsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18549,7 +18661,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询运维窗口</p>
+     * <p>Query O\\\&amp;M window</p>
      * 
      * @param request DescribePlanMaintenanceWindowsRequest
      * @return DescribePlanMaintenanceWindowsResponse

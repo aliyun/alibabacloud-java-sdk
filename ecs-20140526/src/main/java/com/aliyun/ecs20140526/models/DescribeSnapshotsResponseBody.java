@@ -177,6 +177,13 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         @NameInMap("Encrypted")
         public Boolean encrypted;
 
+        /**
+         * <strong>example:</strong>
+         * <p>65535</p>
+         */
+        @NameInMap("FullSnapshotSizeInBytes")
+        public Long fullSnapshotSizeInBytes;
+
         @NameInMap("InstantAccess")
         public Boolean instantAccess;
 
@@ -300,6 +307,14 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
         public Boolean getEncrypted() {
             return this.encrypted;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setFullSnapshotSizeInBytes(Long fullSnapshotSizeInBytes) {
+            this.fullSnapshotSizeInBytes = fullSnapshotSizeInBytes;
+            return this;
+        }
+        public Long getFullSnapshotSizeInBytes() {
+            return this.fullSnapshotSizeInBytes;
         }
 
         public DescribeSnapshotsResponseBodySnapshotsSnapshot setInstantAccess(Boolean instantAccess) {
