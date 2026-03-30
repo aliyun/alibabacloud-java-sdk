@@ -32,6 +32,9 @@ public class ListYikeProductionsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
+
     public static ListYikeProductionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListYikeProductionsRequest self = new ListYikeProductionsRequest();
         return TeaModel.build(map, self);
@@ -67,6 +70,14 @@ public class ListYikeProductionsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListYikeProductionsRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }
