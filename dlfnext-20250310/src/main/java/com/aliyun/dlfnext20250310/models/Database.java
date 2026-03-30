@@ -49,6 +49,9 @@ public class Database extends TeaModel {
     @NameInMap("owner")
     public String owner;
 
+    @NameInMap("tableCount")
+    public Long tableCount;
+
     /**
      * <strong>example:</strong>
      * <p>1744970111419</p>
@@ -122,6 +125,14 @@ public class Database extends TeaModel {
     }
     public String getOwner() {
         return this.owner;
+    }
+
+    public Database setTableCount(Long tableCount) {
+        this.tableCount = tableCount;
+        return this;
+    }
+    public Long getTableCount() {
+        return this.tableCount;
     }
 
     public Database setUpdatedAt(Long updatedAt) {

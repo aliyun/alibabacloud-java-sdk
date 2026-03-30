@@ -13,6 +13,9 @@ public class TableSnapshot extends TeaModel {
     @NameInMap("lastFileCreationTime")
     public Long lastFileCreationTime;
 
+    @NameInMap("partitionCount")
+    public Long partitionCount;
+
     @NameInMap("recordCount")
     public Long recordCount;
 
@@ -49,6 +52,14 @@ public class TableSnapshot extends TeaModel {
     }
     public Long getLastFileCreationTime() {
         return this.lastFileCreationTime;
+    }
+
+    public TableSnapshot setPartitionCount(Long partitionCount) {
+        this.partitionCount = partitionCount;
+        return this;
+    }
+    public Long getPartitionCount() {
+        return this.partitionCount;
     }
 
     public TableSnapshot setRecordCount(Long recordCount) {
