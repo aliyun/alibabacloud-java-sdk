@@ -106,6 +106,9 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     @NameInMap("PayType")
     public String payType;
 
+    @NameInMap("PolarClawSaaSApplicationAttribute")
+    public DescribeApplicationAttributeResponseBodyPolarClawSaaSApplicationAttribute polarClawSaaSApplicationAttribute;
+
     /**
      * <strong>example:</strong>
      * <p>pfs-**************</p>
@@ -332,6 +335,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     }
     public String getPayType() {
         return this.payType;
+    }
+
+    public DescribeApplicationAttributeResponseBody setPolarClawSaaSApplicationAttribute(DescribeApplicationAttributeResponseBodyPolarClawSaaSApplicationAttribute polarClawSaaSApplicationAttribute) {
+        this.polarClawSaaSApplicationAttribute = polarClawSaaSApplicationAttribute;
+        return this;
+    }
+    public DescribeApplicationAttributeResponseBodyPolarClawSaaSApplicationAttribute getPolarClawSaaSApplicationAttribute() {
+        return this.polarClawSaaSApplicationAttribute;
     }
 
     public DescribeApplicationAttributeResponseBody setPolarFSInstanceId(String polarFSInstanceId) {
@@ -959,6 +970,25 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
         public String getUserName() {
             return this.userName;
+        }
+
+    }
+
+    public static class DescribeApplicationAttributeResponseBodyPolarClawSaaSApplicationAttribute extends TeaModel {
+        @NameInMap("AuthCallbackURL")
+        public String authCallbackURL;
+
+        public static DescribeApplicationAttributeResponseBodyPolarClawSaaSApplicationAttribute build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApplicationAttributeResponseBodyPolarClawSaaSApplicationAttribute self = new DescribeApplicationAttributeResponseBodyPolarClawSaaSApplicationAttribute();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationAttributeResponseBodyPolarClawSaaSApplicationAttribute setAuthCallbackURL(String authCallbackURL) {
+            this.authCallbackURL = authCallbackURL;
+            return this;
+        }
+        public String getAuthCallbackURL() {
+            return this.authCallbackURL;
         }
 
     }

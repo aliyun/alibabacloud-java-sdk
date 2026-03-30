@@ -29,6 +29,20 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("Architecture")
     public String architecture;
 
+    /**
+     * <strong>example:</strong>
+     * <p>feishu</p>
+     */
+    @NameInMap("AuthProvider")
+    public String authProvider;
+
+    /**
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
+    @NameInMap("AuthProviderConfig")
+    public String authProviderConfig;
+
     @NameInMap("AutoAllocatePublicEip")
     public Boolean autoAllocatePublicEip;
 
@@ -225,6 +239,22 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getArchitecture() {
         return this.architecture;
+    }
+
+    public CreateApplicationRequest setAuthProvider(String authProvider) {
+        this.authProvider = authProvider;
+        return this;
+    }
+    public String getAuthProvider() {
+        return this.authProvider;
+    }
+
+    public CreateApplicationRequest setAuthProviderConfig(String authProviderConfig) {
+        this.authProviderConfig = authProviderConfig;
+        return this;
+    }
+    public String getAuthProviderConfig() {
+        return this.authProviderConfig;
     }
 
     public CreateApplicationRequest setAutoAllocatePublicEip(Boolean autoAllocatePublicEip) {

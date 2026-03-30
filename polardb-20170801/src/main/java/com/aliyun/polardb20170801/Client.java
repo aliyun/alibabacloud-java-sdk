@@ -1832,6 +1832,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Architecture", request.architecture);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.authProvider)) {
+            query.put("AuthProvider", request.authProvider);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authProviderConfig)) {
+            query.put("AuthProviderConfig", request.authProviderConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.autoAllocatePublicEip)) {
             query.put("AutoAllocatePublicEip", request.autoAllocatePublicEip);
         }
