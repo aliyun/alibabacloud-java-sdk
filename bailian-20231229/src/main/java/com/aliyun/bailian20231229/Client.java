@@ -637,8 +637,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OverlapSize", request.overlapSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.rerankInstruct)) {
+            query.put("RerankInstruct", request.rerankInstruct);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.rerankMinScore)) {
             query.put("RerankMinScore", request.rerankMinScore);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rerankMode)) {
+            query.put("RerankMode", request.rerankMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.rerankModelName)) {

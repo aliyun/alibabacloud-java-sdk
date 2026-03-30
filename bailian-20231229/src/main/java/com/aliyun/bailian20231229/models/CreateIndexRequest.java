@@ -98,6 +98,9 @@ public class CreateIndexRequest extends TeaModel {
     @NameInMap("OverlapSize")
     public Integer overlapSize;
 
+    @NameInMap("RerankInstruct")
+    public String rerankInstruct;
+
     /**
      * <p>The similarity threshold. Only chunks with a similarity score higher than this value can be recalled. This parameter is used to filter chunks returned by the re-rank model. Valid values: 0.01 to 1.00.</p>
      * <p>Default value: 0.01.</p>
@@ -107,6 +110,9 @@ public class CreateIndexRequest extends TeaModel {
      */
     @NameInMap("RerankMinScore")
     public Double rerankMinScore;
+
+    @NameInMap("RerankMode")
+    public String rerankMode;
 
     /**
      * <p>The re-ranking model used in the knowledge base. The re-rank model is a scoring system outside the knowledge base. It calculates the similarity score of the query and text chunks in the knowledge base and ranks them in descending order. Then, the model returns the top K chunks with the highest scores. Valid values:</p>
@@ -390,12 +396,28 @@ public class CreateIndexRequest extends TeaModel {
         return this.overlapSize;
     }
 
+    public CreateIndexRequest setRerankInstruct(String rerankInstruct) {
+        this.rerankInstruct = rerankInstruct;
+        return this;
+    }
+    public String getRerankInstruct() {
+        return this.rerankInstruct;
+    }
+
     public CreateIndexRequest setRerankMinScore(Double rerankMinScore) {
         this.rerankMinScore = rerankMinScore;
         return this;
     }
     public Double getRerankMinScore() {
         return this.rerankMinScore;
+    }
+
+    public CreateIndexRequest setRerankMode(String rerankMode) {
+        this.rerankMode = rerankMode;
+        return this;
+    }
+    public String getRerankMode() {
+        return this.rerankMode;
     }
 
     public CreateIndexRequest setRerankModelName(String rerankModelName) {

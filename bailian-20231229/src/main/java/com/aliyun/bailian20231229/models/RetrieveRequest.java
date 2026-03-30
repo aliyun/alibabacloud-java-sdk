@@ -286,6 +286,12 @@ public class RetrieveRequest extends TeaModel {
         @NameInMap("ModelName")
         public String modelName;
 
+        @NameInMap("RerankInstruct")
+        public String rerankInstruct;
+
+        @NameInMap("RerankMode")
+        public String rerankMode;
+
         public static RetrieveRequestRerank build(java.util.Map<String, ?> map) throws Exception {
             RetrieveRequestRerank self = new RetrieveRequestRerank();
             return TeaModel.build(map, self);
@@ -297,6 +303,22 @@ public class RetrieveRequest extends TeaModel {
         }
         public String getModelName() {
             return this.modelName;
+        }
+
+        public RetrieveRequestRerank setRerankInstruct(String rerankInstruct) {
+            this.rerankInstruct = rerankInstruct;
+            return this;
+        }
+        public String getRerankInstruct() {
+            return this.rerankInstruct;
+        }
+
+        public RetrieveRequestRerank setRerankMode(String rerankMode) {
+            this.rerankMode = rerankMode;
+            return this;
+        }
+        public String getRerankMode() {
+            return this.rerankMode;
         }
 
     }
