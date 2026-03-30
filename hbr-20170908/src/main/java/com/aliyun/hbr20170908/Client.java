@@ -176,6 +176,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param request AddDataSourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddDataSourceResponse
+     */
+    public AddDataSourceResponse addDataSourceWithOptions(AddDataSourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connectionInfo)) {
+            query.put("ConnectionInfo", request.connectionInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credential)) {
+            query.put("Credential", request.credential);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceName)) {
+            query.put("DataSourceName", request.dataSourceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceType)) {
+            query.put("DataSourceType", request.dataSourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.exclude)) {
+            query.put("Exclude", request.exclude);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.include)) {
+            query.put("Include", request.include);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.indexLevel)) {
+            query.put("IndexLevel", request.indexLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.options)) {
+            query.put("Options", request.options);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.path)) {
+            query.put("Path", request.path);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schedule)) {
+            query.put("Schedule", request.schedule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.speedLimit)) {
+            query.put("SpeedLimit", request.speedLimit);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddDataSource"),
+            new TeaPair("version", "2017-09-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddDataSourceResponse());
+    }
+
+    /**
+     * @param request AddDataSourceRequest
+     * @return AddDataSourceResponse
+     */
+    public AddDataSourceResponse addDataSource(AddDataSourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addDataSourceWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>浏览备份文件</p>
      * 
