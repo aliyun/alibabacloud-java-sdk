@@ -1681,6 +1681,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CloudAccountProviderName", request.cloudAccountProviderName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudAccountSite)) {
+            query.put("CloudAccountSite", request.cloudAccountSite);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.cloudAccountVendorType)) {
             query.put("CloudAccountVendorType", request.cloudAccountVendorType);
         }

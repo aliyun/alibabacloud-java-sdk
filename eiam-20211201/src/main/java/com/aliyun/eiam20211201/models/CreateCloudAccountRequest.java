@@ -41,6 +41,9 @@ public class CreateCloudAccountRequest extends TeaModel {
     @NameInMap("CloudAccountProviderName")
     public String cloudAccountProviderName;
 
+    @NameInMap("CloudAccountSite")
+    public String cloudAccountSite;
+
     /**
      * <p>云账号类型</p>
      * <p>This parameter is required.</p>
@@ -102,6 +105,14 @@ public class CreateCloudAccountRequest extends TeaModel {
     }
     public String getCloudAccountProviderName() {
         return this.cloudAccountProviderName;
+    }
+
+    public CreateCloudAccountRequest setCloudAccountSite(String cloudAccountSite) {
+        this.cloudAccountSite = cloudAccountSite;
+        return this;
+    }
+    public String getCloudAccountSite() {
+        return this.cloudAccountSite;
     }
 
     public CreateCloudAccountRequest setCloudAccountVendorType(String cloudAccountVendorType) {
