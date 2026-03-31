@@ -127,7 +127,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Integrates the dashboard of Prometheus Service.</p>
+     * <p>Integrates the dashboard of Managed Service for Prometheus.</p>
      * 
      * @deprecated OpenAPI AddGrafana is deprecated
      * 
@@ -171,7 +171,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Integrates the dashboard of Prometheus Service.</p>
+     * <p>Integrates the dashboard of Managed Service for Prometheus.</p>
      * 
      * @deprecated OpenAPI AddGrafana is deprecated
      * 
@@ -503,7 +503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates or updates a recording rule of Managed Service for Prometheus.</p>
+     * <p>Creates or updates a recording rule.</p>
      * 
      * @deprecated OpenAPI AddRecordingRule is deprecated
      * 
@@ -547,7 +547,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates or updates a recording rule of Managed Service for Prometheus.</p>
+     * <p>Creates or updates a recording rule.</p>
      * 
      * @deprecated OpenAPI AddRecordingRule is deprecated
      * 
@@ -847,7 +847,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Blocks alert notifications in a time period.</p>
+     * <p>Blocks alert notifications. After an alert is blocked, no more notifications are sent within the specified time range.</p>
      * 
      * @param request BlockAlarmNotificationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -891,7 +891,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Blocks alert notifications in a time period.</p>
+     * <p>Blocks alert notifications. After an alert is blocked, no more notifications are sent within the specified time range.</p>
      * 
      * @param request BlockAlarmNotificationRequest
      * @return BlockAlarmNotificationResponse
@@ -2219,7 +2219,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates or modifies an EventBridge integration.</p>
+     * <p>Creates or modifies an EventBridge integration that is used to push notifications.</p>
      * 
      * @param request CreateOrUpdateEventBridgeIntegrationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2283,7 +2283,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates or modifies an EventBridge integration.</p>
+     * <p>Creates or modifies an EventBridge integration that is used to push notifications.</p>
      * 
      * @param request CreateOrUpdateEventBridgeIntegrationRequest
      * @return CreateOrUpdateEventBridgeIntegrationResponse
@@ -3787,7 +3787,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases a Prometheus instance for Alibaba Cloud services.</p>
+     * <p>Uninstalls a Prometheus instance.</p>
      * 
      * @deprecated OpenAPI DeleteCmsExporter is deprecated, please use ARMS::2019-08-08::DeleteAddonRelease instead.
      * 
@@ -3827,7 +3827,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases a Prometheus instance for Alibaba Cloud services.</p>
+     * <p>Uninstalls a Prometheus instance.</p>
      * 
      * @deprecated OpenAPI DeleteCmsExporter is deprecated, please use ARMS::2019-08-08::DeleteAddonRelease instead.
      * 
@@ -4247,7 +4247,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an EventBridge integration.</p>
+     * <p>Deletes an EventBridge integration that is used to push notifications.</p>
      * 
      * @param request DeleteEventBridgeIntegrationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4279,7 +4279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an EventBridge integration.</p>
+     * <p>Deletes an EventBridge integration that is used to push notifications.</p>
      * 
      * @param request DeleteEventBridgeIntegrationRequest
      * @return DeleteEventBridgeIntegrationResponse
@@ -4457,7 +4457,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes collection rules from an integration.</p>
+     * <p>Deletes the collection rules for a Container Service for Kubernetes (ACK) cluster.</p>
      * 
      * @deprecated OpenAPI DeleteIntegration is deprecated, please use ARMS::2019-08-08::DeleteAddonRelease instead.
      * 
@@ -4501,7 +4501,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes collection rules from an integration.</p>
+     * <p>Deletes the collection rules for a Container Service for Kubernetes (ACK) cluster.</p>
      * 
      * @deprecated OpenAPI DeleteIntegration is deprecated, please use ARMS::2019-08-08::DeleteAddonRelease instead.
      * 
@@ -5065,7 +5065,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The ID of the silence policy.</p>
+     * <p>Deletes a silence policy based on its ID.</p>
      * 
      * @param request DeleteSilencePolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5097,7 +5097,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The ID of the silence policy.</p>
+     * <p>Deletes a silence policy based on its ID.</p>
      * 
      * @param request DeleteSilencePolicyRequest
      * @return DeleteSilencePolicyResponse
@@ -5993,7 +5993,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries instant messaging (IM) chatbots.</p>
+     * <p>Queries a list of IM chatbots.</p>
      * 
      * @param request DescribeIMRobotsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6037,7 +6037,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries instant messaging (IM) chatbots.</p>
+     * <p>Queries a list of IM chatbots.</p>
      * 
      * @param request DescribeIMRobotsRequest
      * @return DescribeIMRobotsResponse
@@ -9911,7 +9911,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>环境addon列表</p>
+     * <p>Queries the information about the add-ons that are installed in an environment.</p>
      * 
      * @param request ListEnvironmentAddonsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9947,7 +9947,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>环境addon列表</p>
+     * <p>Queries the information about the add-ons that are installed in an environment.</p>
      * 
      * @param request ListEnvironmentAddonsRequest
      * @return ListEnvironmentAddonsResponse
@@ -10359,7 +10359,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries an EventBridge integration.</p>
+     * <p>Queries EventBridge integrations that are used to push notifications.</p>
      * 
      * @param request ListEventBridgeIntegrationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10387,7 +10387,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries an EventBridge integration.</p>
+     * <p>Queries EventBridge integrations that are used to push notifications.</p>
      * 
      * @param request ListEventBridgeIntegrationsRequest
      * @return ListEventBridgeIntegrationsResponse
@@ -12785,7 +12785,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries application monitoring tasks by page.</p>
+     * <p>Queries Application Monitoring tasks by page.</p>
      * 
      * @param request SearchTraceAppByPageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12837,7 +12837,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries application monitoring tasks by page.</p>
+     * <p>Queries Application Monitoring tasks by page.</p>
      * 
      * @param request SearchTraceAppByPageRequest
      * @return SearchTraceAppByPageResponse

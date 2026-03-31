@@ -328,9 +328,17 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     }
 
     public static class CreatePrometheusInstanceRequestTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("Value")
         public String value;
 

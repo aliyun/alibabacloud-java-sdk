@@ -113,21 +113,9 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
     }
 
     public static class CreateRetcodeAppResponseBodyRetcodeAppDataBeanTagsTags extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestKey</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestValue</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -201,9 +189,6 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        /**
-         * <p>The tags of the task.</p>
-         */
         @NameInMap("Tags")
         public CreateRetcodeAppResponseBodyRetcodeAppDataBeanTags tags;
 

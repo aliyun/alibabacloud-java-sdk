@@ -564,6 +564,9 @@ public class ListAddonReleasesResponseBody extends TeaModel {
     }
 
     public static class ListAddonReleasesResponseBodyData extends TeaModel {
+        @NameInMap("ContainsV2Addon")
+        public Boolean containsV2Addon;
+
         /**
          * <p>The queried add-ons.</p>
          */
@@ -582,6 +585,14 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public static ListAddonReleasesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListAddonReleasesResponseBodyData self = new ListAddonReleasesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListAddonReleasesResponseBodyData setContainsV2Addon(Boolean containsV2Addon) {
+            this.containsV2Addon = containsV2Addon;
+            return this;
+        }
+        public Boolean getContainsV2Addon() {
+            return this.containsV2Addon;
         }
 
         public ListAddonReleasesResponseBodyData setReleases(java.util.List<ListAddonReleasesResponseBodyDataReleases> releases) {
