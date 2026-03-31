@@ -436,6 +436,12 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         @NameInMap("DirectoryType")
         public String directoryType;
 
+        @NameInMap("EnvId")
+        public String envId;
+
+        @NameInMap("EnvType")
+        public String envType;
+
         /**
          * <p>The expiration date of the subscription cloud computer share.</p>
          * 
@@ -915,6 +921,22 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         }
         public String getDirectoryType() {
             return this.directoryType;
+        }
+
+        public GetDesktopGroupDetailResponseBodyDesktops setEnvId(String envId) {
+            this.envId = envId;
+            return this;
+        }
+        public String getEnvId() {
+            return this.envId;
+        }
+
+        public GetDesktopGroupDetailResponseBodyDesktops setEnvType(String envType) {
+            this.envType = envType;
+            return this;
+        }
+        public String getEnvType() {
+            return this.envType;
         }
 
         public GetDesktopGroupDetailResponseBodyDesktops setExpiredTime(String expiredTime) {

@@ -344,6 +344,12 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @NameInMap("EntraDomainName")
         public String entraDomainName;
 
+        @NameInMap("EnvId")
+        public String envId;
+
+        @NameInMap("EnvType")
+        public String envType;
+
         /**
          * <p>The expiration date of the subscription cloud computer share.</p>
          * 
@@ -886,6 +892,22 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
         public String getEntraDomainName() {
             return this.entraDomainName;
+        }
+
+        public DescribeDesktopGroupsResponseBodyDesktopGroups setEnvId(String envId) {
+            this.envId = envId;
+            return this;
+        }
+        public String getEnvId() {
+            return this.envId;
+        }
+
+        public DescribeDesktopGroupsResponseBodyDesktopGroups setEnvType(String envType) {
+            this.envType = envType;
+            return this;
+        }
+        public String getEnvType() {
+            return this.envType;
         }
 
         public DescribeDesktopGroupsResponseBodyDesktopGroups setExpiredTime(String expiredTime) {
