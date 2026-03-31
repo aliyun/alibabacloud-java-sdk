@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDefenseTemplateRequest extends TeaModel {
     /**
-     * <p>The description of the protection template.</p>
+     * <p>The description of the protection rule template whose configurations you want to modify.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -16,7 +16,7 @@ public class ModifyDefenseTemplateRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,12 +27,10 @@ public class ModifyDefenseTemplateRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region of the WAF instance. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-     * </li>
+     * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
+     * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,7 +40,7 @@ public class ModifyDefenseTemplateRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -51,7 +49,7 @@ public class ModifyDefenseTemplateRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The ID of the protection template to modify.</p>
+     * <p>The ID of the protection rule template whose configurations you want to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,10 +59,7 @@ public class ModifyDefenseTemplateRequest extends TeaModel {
     public Long templateId;
 
     /**
-     * <p>The name of the protection template. The name must be 1 to 255 characters long and can contain Chinese characters, letters, digits, underscores (_), periods (.), and hyphens (-).</p>
-     * <blockquote>
-     * <p>Template names must be unique for the same protection scenario (<strong>DefenseScene</strong>).</p>
-     * </blockquote>
+     * <p>The name of the protection rule template whose configurations you want to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

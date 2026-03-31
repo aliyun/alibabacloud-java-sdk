@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDefenseResourceGroupsRequest extends TeaModel {
     /**
-     * <p>The name of the protected object group that you want to query. Fuzzy query is supported.</p>
+     * <p>The name of the protected object group that you want to query. Fuzzy queries are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>demoGroupName</p>
@@ -25,7 +25,7 @@ public class DescribeDefenseResourceGroupsRequest extends TeaModel {
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to view the current WAF instance ID.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -36,7 +36,7 @@ public class DescribeDefenseResourceGroupsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>, which indicates the first page.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -45,7 +45,7 @@ public class DescribeDefenseResourceGroupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>20</strong>, which indicates 20 entries per page.</p>
+     * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -56,10 +56,8 @@ public class DescribeDefenseResourceGroupsRequest extends TeaModel {
     /**
      * <p>The region in which the WAF instance is deployed. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-     * </li>
+     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>

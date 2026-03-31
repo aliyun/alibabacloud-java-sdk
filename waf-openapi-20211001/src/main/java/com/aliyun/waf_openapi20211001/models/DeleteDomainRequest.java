@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteDomainRequest extends TeaModel {
     /**
-     * <p>The access type of the WAF instance. Valid values:</p>
+     * <p>The mode in which the domain name is added to WAF. Valid values:</p>
      * <ul>
-     * <li><p><strong>share</strong> (default): CNAME access.</p>
-     * </li>
-     * <li><p><strong>hybrid_cloud_cname</strong>: Hybrid cloud reverse proxy access.</p>
-     * </li>
+     * <li><strong>share:</strong> CNAME record mode. This is the default value.</li>
+     * <li><strong>hybrid_cloud_cname:</strong> hybrid cloud reverse proxy mode.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class DeleteDomainRequest extends TeaModel {
     public String accessType;
 
     /**
-     * <p>The domain name that is added to WAF.</p>
+     * <p>The domain name that you want to delete.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
@@ -29,7 +27,7 @@ public class DeleteDomainRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>The domain ID.</p>
+     * <p>The ID of the domain name.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyundoc.com-waf">www.aliyundoc.com-waf</a></p>
@@ -40,7 +38,7 @@ public class DeleteDomainRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to view the ID of the current WAF instance.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -51,12 +49,10 @@ public class DeleteDomainRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region of the WAF instance. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: The Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</p>
-     * </li>
+     * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
+     * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

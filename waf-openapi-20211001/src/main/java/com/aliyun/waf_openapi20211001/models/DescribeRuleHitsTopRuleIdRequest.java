@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRuleHitsTopRuleIdRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. This value is a UNIX timestamp. Unit: seconds. If you do not specify this parameter, the current time is used.</p>
+     * <p>The end of the time range to query. Unit: seconds. If you do not specify this parameter, the current time is used.</p>
      * 
      * <strong>example:</strong>
      * <p>1665386280</p>
@@ -16,7 +16,7 @@ public class DescribeRuleHitsTopRuleIdRequest extends TeaModel {
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the WAF instance ID.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,12 +27,10 @@ public class DescribeRuleHitsTopRuleIdRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Specifies whether to aggregate the number of rule hits by protected object.</p>
+     * <p>Specifies whether protected objects that trigger protection rules are returned in the response. Valid values</p>
      * <ul>
-     * <li><p>true (default): The number of rule hits is aggregated for each protection rule. In this case, the <strong>Resource</strong> parameter in the response is empty.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The number of rule hits is not aggregated. Statistics are collected for each protected object and protection rule.</p>
-     * </li>
+     * <li><strong>true</strong>: returns only the number of times each protection rule is triggered. If you set IsGroupResource to true, Resource is left empty.</li>
+     * <li><strong>false</strong>: returns the number of times each protection rule is triggered by each protected object.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,10 +42,8 @@ public class DescribeRuleHitsTopRuleIdRequest extends TeaModel {
     /**
      * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: Outside Chinese mainland.</p>
-     * </li>
+     * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
+     * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,7 +62,7 @@ public class DescribeRuleHitsTopRuleIdRequest extends TeaModel {
     public String resource;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -75,18 +71,13 @@ public class DescribeRuleHitsTopRuleIdRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The type of rule that was hit. If you do not specify this parameter, statistics for all rule types are returned.</p>
+     * <p>The type of rules that are triggered by the protected object. By default, this parameter is not specified and all types of rules are queried.</p>
      * <ul>
-     * <li><p><strong>blacklist</strong>: The request hit a rule in the IP address blacklist.</p>
-     * </li>
-     * <li><p><strong>custom</strong>: The request hit a custom rule.</p>
-     * </li>
-     * <li><p><strong>antiscan</strong>: The request hit a scan protection rule.</p>
-     * </li>
-     * <li><p><strong>cc_system</strong>: The request hit an HTTP flood protection rule.</p>
-     * </li>
-     * <li><p><strong>region_block</strong>: The request hit a rule in the Location Blacklist.</p>
-     * </li>
+     * <li><strong>blacklist:</strong> IP address blacklist rules.</li>
+     * <li><strong>custom:</strong> custom rules.</li>
+     * <li><strong>antiscan:</strong> scan protection rules.</li>
+     * <li><strong>cc_system:</strong> HTTP flood protection rules.</li>
+     * <li><strong>region_block:</strong> region blacklist rules.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -96,7 +87,7 @@ public class DescribeRuleHitsTopRuleIdRequest extends TeaModel {
     public String ruleType;
 
     /**
-     * <p>The start of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The beginning of the time range to query. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

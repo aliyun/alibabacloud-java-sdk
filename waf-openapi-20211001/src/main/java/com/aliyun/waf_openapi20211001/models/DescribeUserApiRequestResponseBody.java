@@ -14,7 +14,7 @@ public class DescribeUserApiRequestResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of statistics.</p>
+     * <p>The statistics.</p>
      */
     @NameInMap("Requests")
     public java.util.List<DescribeUserApiRequestResponseBodyRequests> requests;
@@ -42,7 +42,7 @@ public class DescribeUserApiRequestResponseBody extends TeaModel {
 
     public static class DescribeUserApiRequestResponseBodyRequests extends TeaModel {
         /**
-         * <p>The number of statistics.</p>
+         * <p>The number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>76</p>
@@ -51,16 +51,12 @@ public class DescribeUserApiRequestResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The statistics information. This includes:</p>
+         * <p>The type of the statistics. Valid values:</p>
          * <ul>
-         * <li><p><strong>client_list</strong>: the client tool.</p>
-         * </li>
-         * <li><p><strong>ip</strong>: the IP address information.</p>
-         * </li>
-         * <li><p><strong>region_id</strong>: the region.</p>
-         * </li>
-         * <li><p><strong>country_id</strong>: the country.</p>
-         * </li>
+         * <li><strong>client_list</strong>: client</li>
+         * <li><strong>ip</strong>: IP address</li>
+         * <li><strong>region_id</strong> region</li>
+         * <li><strong>country_id</strong>: country</li>
          * </ul>
          * 
          * <strong>example:</strong>

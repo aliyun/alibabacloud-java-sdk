@@ -4,15 +4,10 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeDefenseResourceOwnerUidResponseBody extends TeaModel {
-    /**
-     * <p>The owner account information of the protected objects.</p>
-     */
     @NameInMap("OwnerInfos")
     public java.util.List<DescribeDefenseResourceOwnerUidResponseBodyOwnerInfos> ownerInfos;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>7326952B-B83B-5B7C-84FA-77F3E17310A2</p>
      */
@@ -42,8 +37,6 @@ public class DescribeDefenseResourceOwnerUidResponseBody extends TeaModel {
 
     public static class DescribeDefenseResourceOwnerUidResponseBodyOwnerInfos extends TeaModel {
         /**
-         * <p>The owner account ID of the protected object.</p>
-         * 
          * <strong>example:</strong>
          * <p>125************21</p>
          */
@@ -51,8 +44,6 @@ public class DescribeDefenseResourceOwnerUidResponseBody extends TeaModel {
         public String ownerUserId;
 
         /**
-         * <p>The name of the protected object.</p>
-         * 
          * <strong>example:</strong>
          * <p>a.com-waf</p>
          */

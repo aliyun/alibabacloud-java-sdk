@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyHybridCloudGroupExpansionServerResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7BD7F9A1-0E72-5BC1-8248-C629B4***B6</p>

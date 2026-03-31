@@ -7,10 +7,8 @@ public class ModifyDefenseResourceXffRequest extends TeaModel {
     /**
      * <p>The status of the tracking cookie.</p>
      * <ul>
-     * <li><p><strong>0</strong>: Disabled.</p>
-     * </li>
-     * <li><p><strong>1 (default)</strong>: Enabled.</p>
-     * </li>
+     * <li><strong>0</strong>: disabled</li>
+     * <li><strong>1</strong>: enabled. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,10 +20,8 @@ public class ModifyDefenseResourceXffRequest extends TeaModel {
     /**
      * <p>The status of the secure attribute of the tracking cookie.</p>
      * <ul>
-     * <li><p><strong>0 (default)</strong>: Disabled.</p>
-     * </li>
-     * <li><p><strong>1</strong>: Enabled.</p>
-     * </li>
+     * <li><strong>0</strong>: disabled. This is the default value.</li>
+     * <li><strong>1</strong>: enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,10 +33,8 @@ public class ModifyDefenseResourceXffRequest extends TeaModel {
     /**
      * <p>The status of the secure attribute of the slider CAPTCHA cookie.</p>
      * <ul>
-     * <li><p><strong>0 (default)</strong>: Disabled.</p>
-     * </li>
-     * <li><p><strong>1</strong>: Enabled.</p>
-     * </li>
+     * <li><strong>0</strong>: disabled. This is the default value.</li>
+     * <li><strong>1</strong>: enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,32 +46,30 @@ public class ModifyDefenseResourceXffRequest extends TeaModel {
     /**
      * <p>The custom header fields.</p>
      * <blockquote>
-     * <p>The first IP address in the specified header field is used as the client source IP address to prevent X-Forwarded-For (XFF) spoofing. If multiple headers are specified, they are tried in sequence to obtain the source IP address. If the first header does not contain an IP address, the system tries the second header, and so on. If no IP address is found in any of the specified headers, the system uses the first IP address in the X-Forwarded-For header.</p>
+     * <p> The first IP address in the specified custom header field is used as the originating IP address of the client to prevent X-Forwarded-For forgery. If you specify multiple header fields, WAF reads the values of the header fields in sequence until the originating IP address is obtained. If the originating IP address cannot be obtained, the first IP address in the X-Forwarded-For header is used as the originating IP address of the client.</p>
      * </blockquote>
      */
     @NameInMap("CustomHeaders")
     public java.util.List<String> customHeaders;
 
     /**
-     * <p>The ID of the WAF instance.</p>
+     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>waf_v2_public_cn-wwo****ek07</p>
+     * <p>waf_v2_public_cn-wwo3c****07</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The region of the WAF instance. Valid values:</p>
+     * <p>The region in which the WAF instance is deployed. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: The Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</p>
-     * </li>
+     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -91,7 +83,7 @@ public class ModifyDefenseResourceXffRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>alb-4pxu81fgagx3h6y****-alb</p>
+     * <p>alb-4pxu81fgagx3****mz-alb</p>
      */
     @NameInMap("Resource")
     public String resource;
@@ -100,13 +92,13 @@ public class ModifyDefenseResourceXffRequest extends TeaModel {
      * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-acfm2ki****miwq</p>
+     * <p>rg-acfm2kie2****wq</p>
      */
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The response header parameters.</p>
+     * <p>The response header.</p>
      */
     @NameInMap("ResponseHeaders")
     public java.util.List<ModifyDefenseResourceXffRequestResponseHeaders> responseHeaders;
@@ -114,10 +106,8 @@ public class ModifyDefenseResourceXffRequest extends TeaModel {
     /**
      * <p>Specifies whether a Layer 7 proxy is deployed in front of WAF. Layer 7 proxies include Anti-DDoS Proxy and Alibaba Cloud CDN. Valid values:</p>
      * <ul>
-     * <li><p><strong>0 (default)</strong>: No.</p>
-     * </li>
-     * <li><p><strong>1</strong>: Yes.</p>
-     * </li>
+     * <li><strong>0</strong>: No Layer 7 proxies are deployed. This is the default value.</li>
+     * <li><strong>1</strong>: A Layer 7 proxy is deployed.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

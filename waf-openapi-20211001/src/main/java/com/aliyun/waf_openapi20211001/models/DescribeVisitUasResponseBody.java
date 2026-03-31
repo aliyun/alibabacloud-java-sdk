@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVisitUasResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>2847CE98-AFAE-5A64-B80E-60461717F9DE</p>
@@ -14,7 +14,7 @@ public class DescribeVisitUasResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The top 10 User-Agents.</p>
+     * <p>The array of the top 10 user agents that are used to initiate requests.</p>
      */
     @NameInMap("Uas")
     public java.util.List<DescribeVisitUasResponseBodyUas> uas;
@@ -42,7 +42,7 @@ public class DescribeVisitUasResponseBody extends TeaModel {
 
     public static class DescribeVisitUasResponseBodyUas extends TeaModel {
         /**
-         * <p>The total number of requests from the User-Agent.</p>
+         * <p>The number of requests that use the user agent.</p>
          * 
          * <strong>example:</strong>
          * <p>698455</p>
@@ -51,7 +51,7 @@ public class DescribeVisitUasResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The User-Agent.</p>
+         * <p>The user agent.</p>
          * 
          * <strong>example:</strong>
          * <p>chrome</p>

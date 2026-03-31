@@ -14,7 +14,7 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details of the protection template.</p>
+     * <p>The information about the template.</p>
      */
     @NameInMap("Template")
     public DescribeDefenseTemplateResponseBodyTemplate template;
@@ -42,7 +42,7 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
 
     public static class DescribeDefenseTemplateResponseBodyTemplate extends TeaModel {
         /**
-         * <p>The scenario in which the protection template is used. For more information, see the description of the <strong>DefenseScene</strong> parameter in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> operation.</p>
+         * <p>The scenario in which the template is used. For more information, see the description of the <strong>DefenseScene</strong> parameter in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> topic.</p>
          * 
          * <strong>example:</strong>
          * <p>waf_group</p>
@@ -51,16 +51,11 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
         public String defenseScene;
 
         /**
-         * <p>The sub-scenario of the protection template. Valid values:</p>
+         * <p>The sub-scenario in which the template is used. Valid values:</p>
          * <ul>
-         * <li><p><strong>web</strong>: the bot management template for website protection.</p>
-         * </li>
-         * <li><p><strong>app</strong>: the bot management template for app protection.</p>
-         * </li>
-         * <li><p><strong>basic</strong>: the basic bot management template.</p>
-         * </li>
-         * <li><p><strong>bot_custom_acl</strong>: the bot management template for custom protection rules.</p>
-         * </li>
+         * <li><strong>web</strong>: The template is a bot management template that is used for website protection.</li>
+         * <li><strong>app</strong>: The template is a bot management template that is used for app protection.</li>
+         * <li><strong>basic</strong>: The template is a bot management template that is used for basic protection.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -70,7 +65,7 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
         public String defenseSubScene;
 
         /**
-         * <p>The description of the protection template.</p>
+         * <p>The description of the protection rule template.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -79,7 +74,7 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The most recent time the protection template was modified. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The most recent time when the protection rule template was modified.</p>
          * 
          * <strong>example:</strong>
          * <p>1665283642000</p>
@@ -88,7 +83,7 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>The ID of the protection template.</p>
+         * <p>The ID of the protection rule template.</p>
          * 
          * <strong>example:</strong>
          * <p>10097</p>
@@ -97,7 +92,7 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
         public Long templateId;
 
         /**
-         * <p>The name of the protection template.</p>
+         * <p>The name of the protection rule template.</p>
          * 
          * <strong>example:</strong>
          * <p>test0621</p>
@@ -106,7 +101,7 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
         public String templateName;
 
         /**
-         * <p>The origin of the protection template. A value of <strong>custom</strong> indicates that the template is user-defined.</p>
+         * <p>The origin of the protection rule template. If the value of this parameter is custom, the protection rule template is created by the user.</p>
          * 
          * <strong>example:</strong>
          * <p>custom</p>
@@ -115,12 +110,10 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
         public String templateOrigin;
 
         /**
-         * <p>The status of the protection template. Valid values:</p>
+         * <p>The status of the protection rule template. Valid values:</p>
          * <ul>
-         * <li><p><strong>0</strong>: disabled.</p>
-         * </li>
-         * <li><p><strong>1</strong>: enabled.</p>
-         * </li>
+         * <li><strong>0:</strong> disabled.</li>
+         * <li><strong>1:</strong> enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -130,12 +123,10 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
         public Integer templateStatus;
 
         /**
-         * <p>The type of the protection template. Valid values:</p>
+         * <p>The type of the protection rule template. Valid values:</p>
          * <ul>
-         * <li><p><strong>user_default</strong>: the default template.</p>
-         * </li>
-         * <li><p><strong>user_custom</strong>: a custom template.</p>
-         * </li>
+         * <li><strong>user_default:</strong> default template.</li>
+         * <li><strong>user_custom:</strong> custom template.</li>
          * </ul>
          * 
          * <strong>example:</strong>

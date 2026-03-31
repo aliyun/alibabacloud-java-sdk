@@ -7,7 +7,7 @@ public class DescribeApisecMatchedHostsRequest extends TeaModel {
     /**
      * <p>The ID of the hybrid cloud cluster.</p>
      * <blockquote>
-     * <p>This parameter is used only in hybrid cloud scenarios. Call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to obtain information about hybrid cloud clusters.</p>
+     * <p>For hybrid cloud scenarios only, you can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the hybrid cloud clusters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class DescribeApisecMatchedHostsRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The ID of the WAF instance.</p>
+     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to view the ID of the current WAF instance.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -39,7 +39,7 @@ public class DescribeApisecMatchedHostsRequest extends TeaModel {
     public String matchedHost;
 
     /**
-     * <p>The number of the page to return for a paged query. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -48,7 +48,7 @@ public class DescribeApisecMatchedHostsRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries to return on each page for a paged query. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -57,12 +57,10 @@ public class DescribeApisecMatchedHostsRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The region of the WAF instance. Valid values:</p>
+     * <p>The region in which the WAF instance is deployed. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-     * </li>
+     * <li><strong>cn-hangzhou</strong>: Chinese mainland</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,12 +81,9 @@ public class DescribeApisecMatchedHostsRequest extends TeaModel {
     /**
      * <p>The detection type. Valid values:</p>
      * <ul>
-     * <li><p><strong>api</strong>: the list of domain names for API assets.</p>
-     * </li>
-     * <li><p><strong>abnormal</strong>: the list of domain names that have threats.</p>
-     * </li>
-     * <li><p><strong>event</strong>: the list of domain names that have management events.</p>
-     * </li>
+     * <li><strong>api</strong>: API-related domain names</li>
+     * <li><strong>abnormal</strong>: risk-related domain names</li>
+     * <li><strong>event</strong>: security event-related domain names</li>
      * </ul>
      * 
      * <strong>example:</strong>

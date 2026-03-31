@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeApisecAbnormalDomainStatisticResponseBody extends TeaModel {
     /**
-     * <p>The statistics of domain names with API security risks.</p>
+     * <p>The response parameters.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeApisecAbnormalDomainStatisticResponseBodyData> data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>66A98669-CC6E-4F3E-80A6-3014***B11AE</p>
@@ -20,7 +20,7 @@ public class DescribeApisecAbnormalDomainStatisticResponseBody extends TeaModel 
     public String requestId;
 
     /**
-     * <p>The total number of domain names that have API security risks.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +59,7 @@ public class DescribeApisecAbnormalDomainStatisticResponseBody extends TeaModel 
 
     public static class DescribeApisecAbnormalDomainStatisticResponseBodyData extends TeaModel {
         /**
-         * <p>The total number of APIs that are associated with the domain name.</p>
+         * <p>The number of APIs.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -68,7 +68,7 @@ public class DescribeApisecAbnormalDomainStatisticResponseBody extends TeaModel 
         public Long apiCount;
 
         /**
-         * <p>The domain name that is protected by WAF.</p>
+         * <p>The domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>ba.aliyun.com</p>
@@ -77,7 +77,7 @@ public class DescribeApisecAbnormalDomainStatisticResponseBody extends TeaModel 
         public String domain;
 
         /**
-         * <p>The number of high-severity threats.</p>
+         * <p>The number of high-level risks.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -86,7 +86,7 @@ public class DescribeApisecAbnormalDomainStatisticResponseBody extends TeaModel 
         public Long high;
 
         /**
-         * <p>The number of low-severity threats.</p>
+         * <p>The number of low-level risks.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -95,7 +95,7 @@ public class DescribeApisecAbnormalDomainStatisticResponseBody extends TeaModel 
         public Long low;
 
         /**
-         * <p>The number of medium-severity threats.</p>
+         * <p>The number of medium-level risks.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>

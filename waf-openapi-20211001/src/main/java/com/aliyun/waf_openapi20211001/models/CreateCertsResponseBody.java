@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCertsResponseBody extends TeaModel {
     /**
-     * <p>The certificate ID.</p>
+     * <p>The ID of the certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>123456-cn-hangzhou</p>
@@ -14,7 +14,7 @@ public class CreateCertsResponseBody extends TeaModel {
     public String certIdentifier;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>5BBA38B1-07AE-559F-8766-AB50****C300</p>

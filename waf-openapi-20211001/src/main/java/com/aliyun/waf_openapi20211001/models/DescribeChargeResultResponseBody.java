@@ -4,15 +4,10 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeChargeResultResponseBody extends TeaModel {
-    /**
-     * <p>The billing calculation results for each module.</p>
-     */
     @NameInMap("ModuleDetails")
     public java.util.List<DescribeChargeResultResponseBodyModuleDetails> moduleDetails;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>D7861F61-5B61-46CE-A47C-6B19160D5EB0</p>
      */
@@ -20,8 +15,6 @@ public class DescribeChargeResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of calculated Security Capacity Units (SeCUs).</p>
-     * 
      * <strong>example:</strong>
      * <p>1080</p>
      */
@@ -59,8 +52,6 @@ public class DescribeChargeResultResponseBody extends TeaModel {
 
     public static class DescribeChargeResultResponseBodyModuleDetails extends TeaModel {
         /**
-         * <p>The ID of the billing module.</p>
-         * 
          * <strong>example:</strong>
          * <p>domainCount</p>
          */
@@ -68,8 +59,6 @@ public class DescribeChargeResultResponseBody extends TeaModel {
         public String moduleCode;
 
         /**
-         * <p>The number of SeCUs for the billing module.</p>
-         * 
          * <strong>example:</strong>
          * <p>1080</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDefenseResourceGroupRequest extends TeaModel {
     /**
-     * <p>The protected objects to add to the protected object group. Separate multiple protected objects with commas (,). If this parameter is empty, no protected objects are added to the protected object group.</p>
+     * <p>The protected objects that you want to add to the protected object group. Separate the protected objects with commas (,). If you leave this parameter empty, no protected objects are added to the protected object group.</p>
      * 
      * <strong>example:</strong>
      * <p>test1.aliyundoc.com,test2.aliyundoc.com</p>
@@ -14,7 +14,7 @@ public class ModifyDefenseResourceGroupRequest extends TeaModel {
     public String addList;
 
     /**
-     * <p>The protected objects to remove from the protected object group. Separate multiple protected objects with commas (,). If this parameter is empty, no protected objects are removed from the protected object group.</p>
+     * <p>The protected objects that you want to remove from the protected object group. Separate the protected objects with commas (,). If you leave this parameter empty, no protected objects are removed from the protected object group.</p>
      * 
      * <strong>example:</strong>
      * <p>test14.waf.com,test24.waf.com</p>
@@ -23,7 +23,7 @@ public class ModifyDefenseResourceGroupRequest extends TeaModel {
     public String deleteList;
 
     /**
-     * <p>The description of the protected object group. The description can be up to 512 characters long.</p>
+     * <p>The description of the protected object group.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -32,7 +32,7 @@ public class ModifyDefenseResourceGroupRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the protected object group to modify.</p>
+     * <p>The name of the protected object group whose configurations you want to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class ModifyDefenseResourceGroupRequest extends TeaModel {
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the current WAF instance.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -55,12 +55,10 @@ public class ModifyDefenseResourceGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region where the WAF instance is located. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-     * </li>
+     * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
+     * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,7 +68,7 @@ public class ModifyDefenseResourceGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>

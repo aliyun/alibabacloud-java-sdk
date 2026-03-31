@@ -14,7 +14,7 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The log status information of protected objects.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Result")
     public java.util.List<DescribeResourceLogStatusResponseBodyResult> result;
@@ -42,7 +42,7 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
 
     public static class DescribeResourceLogStatusResponseBodyResult extends TeaModel {
         /**
-         * <p>The name of the protected object.</p>
+         * <p>The protected object.</p>
          * 
          * <strong>example:</strong>
          * <p>alb-wewbb23dfsetetcic****</p>
@@ -51,12 +51,10 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
         public String resource;
 
         /**
-         * <p>Indicates whether log collection is enabled for the protected object. Valid values:</p>
+         * <p>Indicates whether the log collection feature is enabled for the protected object. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: Log collection is enabled.</p>
-         * </li>
-         * <li><p><strong>false</strong>: Log collection is disabled.</p>
-         * </li>
+         * <li><strong>true:</strong> The log collection feature is enabled.</li>
+         * <li><strong>false:</strong> The log collection feature is disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

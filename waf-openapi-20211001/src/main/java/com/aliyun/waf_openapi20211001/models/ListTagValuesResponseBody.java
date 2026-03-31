@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagValuesResponseBody extends TeaModel {
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If this parameter is empty, no next page exists.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0*****</p>
@@ -23,7 +23,7 @@ public class ListTagValuesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The tag values that are associated with the specified tag key.</p>
+     * <p>The tag values.</p>
      */
     @NameInMap("Values")
     public java.util.List<String> values;

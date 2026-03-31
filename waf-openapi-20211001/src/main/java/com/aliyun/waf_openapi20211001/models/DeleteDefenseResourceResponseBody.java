@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteDefenseResourceResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>745F051D-95FD-57EC-9DC1-79BB4883C6A4</p>
      */

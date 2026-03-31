@@ -16,7 +16,7 @@ public class ModifyMajorProtectionBlackIpRequest extends TeaModel {
     /**
      * <p>The time after which the IP address blacklist becomes invalid. Unit: seconds.</p>
      * <blockquote>
-     * <p>If the value is <strong>0</strong>, the IP address blacklist is permanently valid.</p>
+     * <p> If you set this parameter to <strong>0</strong>, the blacklist is permanently valid.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -29,7 +29,7 @@ public class ModifyMajorProtectionBlackIpRequest extends TeaModel {
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -40,8 +40,7 @@ public class ModifyMajorProtectionBlackIpRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The IP address blacklist to add. You can specify custom IP addresses or CIDR blocks. Both IPv4 and IPv6 addresses are supported. Separate multiple IP addresses with commas (,).
-     * For more information, see <a href="https://help.aliyun.com/document_detail/425591.html">Critical event protection</a>.</p>
+     * <p>The IP addresses that you want to add to the IP address blacklist. You can specify multiple CIDR blocks or IP addresses. IPv4 and IPv6 addresses are supported. Separate the CIDR blocks or IP addresses with commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/425591.html">Protection for major events</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,12 +50,10 @@ public class ModifyMajorProtectionBlackIpRequest extends TeaModel {
     public String ipList;
 
     /**
-     * <p>The region of the WAF instance. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: The Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</p>
-     * </li>
+     * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
+     * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,7 +63,7 @@ public class ModifyMajorProtectionBlackIpRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -75,7 +72,7 @@ public class ModifyMajorProtectionBlackIpRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The ID of the IP address blacklist rule for critical event protection.</p>
+     * <p>The ID of the IP address blacklist rule for major event protection.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -85,7 +82,7 @@ public class ModifyMajorProtectionBlackIpRequest extends TeaModel {
     public Long ruleId;
 
     /**
-     * <p>The ID of the critical event protection template.</p>
+     * <p>The ID of the IP address blacklist rule template for major event protection.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

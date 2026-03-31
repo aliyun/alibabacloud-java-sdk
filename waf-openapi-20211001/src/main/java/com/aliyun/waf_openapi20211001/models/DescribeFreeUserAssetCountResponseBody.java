@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFreeUserAssetCountResponseBody extends TeaModel {
     /**
-     * <p>The statistics information about assets detected by the basic API security feature.</p>
+     * <p>The asset statistics provided by basic detection.</p>
      */
     @NameInMap("Asset")
     public DescribeFreeUserAssetCountResponseBodyAsset asset;
@@ -51,7 +51,7 @@ public class DescribeFreeUserAssetCountResponseBody extends TeaModel {
         public Long assetActive;
 
         /**
-         * <p>The total number of API assets.</p>
+         * <p>The total number of APIs.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -60,7 +60,7 @@ public class DescribeFreeUserAssetCountResponseBody extends TeaModel {
         public Long assetCount;
 
         /**
-         * <p>The number of inactive APIs.</p>
+         * <p>The number of deactivated APIs.</p>
          * 
          * <strong>example:</strong>
          * <p>13</p>

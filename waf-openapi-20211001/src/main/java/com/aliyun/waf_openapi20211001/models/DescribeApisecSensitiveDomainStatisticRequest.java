@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class DescribeApisecSensitiveDomainStatisticRequest extends TeaModel {
     /**
      * <p>The ID of the hybrid cloud cluster.</p>
-     * <blockquote>
-     * <p>This parameter is applicable only to hybrid cloud scenarios. Call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to obtain information about hybrid cloud clusters.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>428</p>
@@ -17,7 +14,7 @@ public class DescribeApisecSensitiveDomainStatisticRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The end of the time range to query. Specify a Unix timestamp in UTC. Unit: milliseconds.</p>
+     * <p>The end of the time range to query. Specify a UNIX timestamp in UTC. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1686895256</p>
@@ -28,7 +25,7 @@ public class DescribeApisecSensitiveDomainStatisticRequest extends TeaModel {
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -39,12 +36,10 @@ public class DescribeApisecSensitiveDomainStatisticRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The sorting method of the list. Valid values:</p>
+     * <p>The sorting order. Valid values:</p>
      * <ul>
-     * <li><p>asc: Ascending order.</p>
-     * </li>
-     * <li><p>desc: Descending order.</p>
-     * </li>
+     * <li><strong>asc</strong>: ascending order.</li>
+     * <li><strong>desc</strong>: descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +49,7 @@ public class DescribeApisecSensitiveDomainStatisticRequest extends TeaModel {
     public String orderWay;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>, which indicates the first page.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -63,21 +58,19 @@ public class DescribeApisecSensitiveDomainStatisticRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>5</strong>, which indicates 5 entries per page.</p>
+     * <p>The number of entries per page. Default value: <strong>5</strong>.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>5</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The region of the WAF instance. Valid values:</p>
+     * <p>The region in which the WAF instance is deployed. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: The Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</p>
-     * </li>
+     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -96,7 +89,7 @@ public class DescribeApisecSensitiveDomainStatisticRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The beginning of the time range to query. Specify a Unix timestamp in UTC. Unit: milliseconds.</p>
+     * <p>The beginning of the time range to query. Specify a UNIX timestamp in UTC. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1668496310</p>
@@ -105,12 +98,10 @@ public class DescribeApisecSensitiveDomainStatisticRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The type of sensitive data. Valid values:</p>
+     * <p>The sensitive data type. Valid values:</p>
      * <ul>
-     * <li><p>request: Sensitive data in requests.</p>
-     * </li>
-     * <li><p>response: Sensitive data in responses.</p>
-     * </li>
+     * <li><strong>request</strong>: sensitive data in requests.</li>
+     * <li><strong>response</strong>: sensitive data in responses.</li>
      * </ul>
      * 
      * <strong>example:</strong>

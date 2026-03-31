@@ -502,6 +502,8 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
 
     public static class DescribeHybridCloudResourceDetailResponseBodyDomain extends TeaModel {
         /**
+         * <p>CNAME</p>
+         * 
          * <strong>example:</strong>
          * <p>kdmqyi3ck7xogegxpiyfpb0fj21mgkxn.****.com</p>
          */
@@ -516,6 +518,8 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
         public String domain;
 
         /**
+         * <p>id</p>
+         * 
          * <strong>example:</strong>
          * <p>31323</p>
          */

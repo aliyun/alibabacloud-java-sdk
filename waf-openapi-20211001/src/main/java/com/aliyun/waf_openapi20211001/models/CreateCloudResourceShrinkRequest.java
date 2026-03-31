@@ -7,7 +7,7 @@ public class CreateCloudResourceShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,14 +18,14 @@ public class CreateCloudResourceShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The listener configuration.</p>
+     * <p>The listener configurations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Listen")
     public String listenShrink;
 
     /**
-     * <p>The Alibaba Cloud account ID of the resource owner.</p>
+     * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -34,18 +34,16 @@ public class CreateCloudResourceShrinkRequest extends TeaModel {
     public String ownerUserId;
 
     /**
-     * <p>The forwarding configuration.</p>
+     * <p>The forwarding configurations.</p>
      */
     @NameInMap("Redirect")
     public String redirectShrink;
 
     /**
-     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <p>The region in which the WAF instance is deployed. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-     * </li>
+     * <li><strong>cn-hangzhou</strong>: the Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -65,7 +63,7 @@ public class CreateCloudResourceShrinkRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The list of tags. You can add up to 20 tags.</p>
+     * <p>The tags. You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateCloudResourceShrinkRequestTag> tag;
@@ -133,7 +131,7 @@ public class CreateCloudResourceShrinkRequest extends TeaModel {
 
     public static class CreateCloudResourceShrinkRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>TagKey1</p>
@@ -142,7 +140,7 @@ public class CreateCloudResourceShrinkRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>TagValue1</p>

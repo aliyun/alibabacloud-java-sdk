@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSensitiveOutboundTrendResponseBody extends TeaModel {
     /**
-     * <p>The trend data of sensitive outbound data.</p>
+     * <p>The information records involved in cross-border data transfer.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeSensitiveOutboundTrendResponseBodyData> data;
@@ -59,7 +59,7 @@ public class DescribeSensitiveOutboundTrendResponseBody extends TeaModel {
 
     public static class DescribeSensitiveOutboundTrendResponseBodyData extends TeaModel {
         /**
-         * <p>The total number of personal information entries detected during the time period.</p>
+         * <p>The total number of personal information records.</p>
          * 
          * <strong>example:</strong>
          * <p>672</p>
@@ -68,7 +68,7 @@ public class DescribeSensitiveOutboundTrendResponseBody extends TeaModel {
         public Long infoCount;
 
         /**
-         * <p>The total number of outbound personal information entries detected during the time period.</p>
+         * <p>The total number of personal information records involved in cross-border data transfer.</p>
          * 
          * <strong>example:</strong>
          * <p>541</p>
@@ -77,7 +77,7 @@ public class DescribeSensitiveOutboundTrendResponseBody extends TeaModel {
         public Long infoOutboundCount;
 
         /**
-         * <p>The total number of sensitive outbound data entries detected during the time period.</p>
+         * <p>The total number of sensitive information records involved in cross-border data transfer.</p>
          * 
          * <strong>example:</strong>
          * <p>378</p>
@@ -86,7 +86,7 @@ public class DescribeSensitiveOutboundTrendResponseBody extends TeaModel {
         public Long sensitiveOutboundCount;
 
         /**
-         * <p>The timestamp that indicates when the data was recorded. This value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time of cross-border data transfer. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1672502400</p>

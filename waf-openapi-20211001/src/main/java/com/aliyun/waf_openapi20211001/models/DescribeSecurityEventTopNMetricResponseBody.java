@@ -14,13 +14,13 @@ public class DescribeSecurityEventTopNMetricResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array of the top N statistics.</p>
+     * <p>The top N data entries returned.</p>
      */
     @NameInMap("SecurityEventTopNValues")
     public java.util.List<DescribeSecurityEventTopNMetricResponseBodySecurityEventTopNValues> securityEventTopNValues;
 
     /**
-     * <p>The metadata of the returned data.</p>
+     * <p>The metadata of the data entries returned.</p>
      */
     @NameInMap("TopNMetaData")
     public DescribeSecurityEventTopNMetricResponseBodyTopNMetaData topNMetaData;
@@ -56,7 +56,7 @@ public class DescribeSecurityEventTopNMetricResponseBody extends TeaModel {
 
     public static class DescribeSecurityEventTopNMetricResponseBodySecurityEventTopNValues extends TeaModel {
         /**
-         * <p>Additional information, such as the protection module to which a rule ID belongs.</p>
+         * <p>The additional information, such as the protection module for a protection rule whose ID is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>waf_base</p>
@@ -65,7 +65,7 @@ public class DescribeSecurityEventTopNMetricResponseBody extends TeaModel {
         public String attribute;
 
         /**
-         * <p>The value of a field. The meaning of this parameter varies based on the specified \<code>Metric\\</code>.</p>
+         * <p>The field value, which varies based on the metric.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -74,7 +74,7 @@ public class DescribeSecurityEventTopNMetricResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The statistical count used for top N sorting.</p>
+         * <p>The count for the data entry.</p>
          * 
          * <strong>example:</strong>
          * <p>1111</p>
@@ -115,7 +115,7 @@ public class DescribeSecurityEventTopNMetricResponseBody extends TeaModel {
 
     public static class DescribeSecurityEventTopNMetricResponseBodyTopNMetaDataDateRange extends TeaModel {
         /**
-         * <p>The end of the time range that was queried. The value is a UNIX timestamp. Unit: seconds. This value is the same as the \<code>EndDate\\</code> request parameter.</p>
+         * <p>The end of the time range to query. The value is a Unix timestamp. Unit: seconds. This value is the same as the value of EndDate in the request parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>1713888600</p>
@@ -124,7 +124,7 @@ public class DescribeSecurityEventTopNMetricResponseBody extends TeaModel {
         public Long endDate;
 
         /**
-         * <p>The start of the time range that was queried. The value is a UNIX timestamp. Unit: seconds. This value is the same as the \<code>StartDate\\</code> request parameter.</p>
+         * <p>The beginning of the time range to query. The value is a Unix timestamp. Unit: seconds. This value is the same as the value of StartDate in the request parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>1713888000</p>
@@ -157,13 +157,13 @@ public class DescribeSecurityEventTopNMetricResponseBody extends TeaModel {
 
     public static class DescribeSecurityEventTopNMetricResponseBodyTopNMetaData extends TeaModel {
         /**
-         * <p>The time range used for the query.</p>
+         * <p>The time range that is used for the query.</p>
          */
         @NameInMap("DateRange")
         public DescribeSecurityEventTopNMetricResponseBodyTopNMetaDataDateRange dateRange;
 
         /**
-         * <p>The unit of the returned statistics.</p>
+         * <p>The unit of the statistics returned. It is fixed as requests.</p>
          * 
          * <strong>example:</strong>
          * <p>requests</p>

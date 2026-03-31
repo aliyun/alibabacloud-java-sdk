@@ -5,12 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyDomainShrinkRequest extends TeaModel {
     /**
-     * <p>The access mode of the WAF instance. Valid values:</p>
+     * <p>The mode in which you want to add the domain name to WAF. Set the value to share.</p>
      * <ul>
-     * <li><p><strong>share</strong> (default): onboarding by using a CNAME record.</p>
-     * </li>
-     * <li><p><strong>hybrid_cloud_cname</strong>: onboarding by using a hybrid cloud CNAME record.</p>
-     * </li>
+     * <li><strong>share:</strong> adds the domain name to WAF in CNAME record mode. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +17,7 @@ public class ModifyDomainShrinkRequest extends TeaModel {
     public String accessType;
 
     /**
-     * <p>The domain name whose configurations you want to modify.</p>
+     * <p>The domain name whose access configurations you want to modify.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
@@ -28,19 +25,13 @@ public class ModifyDomainShrinkRequest extends TeaModel {
     @NameInMap("Domain")
     public String domain;
 
-    /**
-     * <p>The ID of the domain name.</p>
-     * 
-     * <strong>example:</strong>
-     * <p><a href="http://www.aliyundoc.com-waf">www.aliyundoc.com-waf</a></p>
-     */
     @NameInMap("DomainId")
     public String domainId;
 
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -51,14 +42,14 @@ public class ModifyDomainShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The listening settings.</p>
+     * <p>The listener configurations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Listen")
     public String listenShrink;
 
     /**
-     * <p>The forwarding settings.</p>
+     * <p>The forwarding configurations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Redirect")
@@ -67,10 +58,8 @@ public class ModifyDomainShrinkRequest extends TeaModel {
     /**
      * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-     * </li>
+     * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
+     * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

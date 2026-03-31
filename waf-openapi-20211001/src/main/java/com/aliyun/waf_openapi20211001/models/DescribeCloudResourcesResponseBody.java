@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudResourcesResponseBody extends TeaModel {
     /**
-     * <p>A list of cloud services.</p>
+     * <p>The cloud service resources that are added to WAF.</p>
      */
     @NameInMap("CloudResources")
     public java.util.List<DescribeCloudResourcesResponseBodyCloudResources> cloudResources;
@@ -20,7 +20,7 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of cloud services found.</p>
+     * <p>The total number of cloud service resources returned.</p>
      * 
      * <strong>example:</strong>
      * <p>121</p>
@@ -59,9 +59,9 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
 
     public static class DescribeCloudResourcesResponseBodyCloudResources extends TeaModel {
         /**
-         * <p>The number of HTTP ports that are added to WAF.</p>
+         * <p>The number of the HTTP ports that are added to WAF.</p>
          * <blockquote>
-         * <p>This parameter is returned only for ECS and CLB instances.</p>
+         * <p> This parameter is returned only if the cloud service is ECS or CLB.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -71,9 +71,9 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
         public Integer httpPortCount;
 
         /**
-         * <p>The number of HTTPS ports that are added to WAF.</p>
+         * <p>The number of the HTTPS ports that are added to WAF.</p>
          * <blockquote>
-         * <p>This parameter is returned only for ECS and CLB instances.</p>
+         * <p> This parameter is returned only if the cloud service is ECS or CLB.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -83,7 +83,7 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
         public Integer httpsPortCount;
 
         /**
-         * <p>The UID of the account to which the resource belongs.</p>
+         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>11769793******</p>
@@ -92,7 +92,7 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
         public String ownerUserId;
 
         /**
-         * <p>The domain name of the resource. This parameter is returned for FC or SAE instances.</p>
+         * <p>The domain name. This parameter has a value only if the value of ResourceProduct is fc or sae.</p>
          * 
          * <strong>example:</strong>
          * <p>test-resource-domain</p>
@@ -101,7 +101,7 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
         public String resourceDomain;
 
         /**
-         * <p>The name of the function. This parameter is returned for FC instances.</p>
+         * <p>The function name. This parameter has a value only if the value of ResourceProduct is fc.</p>
          * 
          * <strong>example:</strong>
          * <p>test-resource-function</p>
@@ -110,7 +110,7 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
         public String resourceFunction;
 
         /**
-         * <p>The ID of the resource instance.</p>
+         * <p>The ID of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>alb-ffff****</p>
@@ -147,7 +147,7 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
         public String resourceInstanceName;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The name of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>test-resource-name</p>
@@ -159,22 +159,13 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
         /**
          * <p>The cloud service to which the resource belongs. Valid values:</p>
          * <ul>
-         * <li><p><strong>alb</strong>: ALB</p>
-         * </li>
-         * <li><p><strong>mse</strong>: MSE</p>
-         * </li>
-         * <li><p><strong>fc</strong>: FC</p>
-         * </li>
-         * <li><p><strong>sae</strong>: SAE</p>
-         * </li>
-         * <li><p><strong>ecs</strong>: ECS</p>
-         * </li>
-         * <li><p><strong>clb4</strong>: CLB that uses TCP</p>
-         * </li>
-         * <li><p><strong>clb7</strong>: CLB that uses HTTP or HTTPS</p>
-         * </li>
-         * <li><p><strong>nlb</strong>: NLB</p>
-         * </li>
+         * <li><strong>alb</strong>: ALB.</li>
+         * <li><strong>mse</strong>: MSE.</li>
+         * <li><strong>fc</strong>: Function Compute.</li>
+         * <li><strong>sae</strong>: SAE.</li>
+         * <li><strong>ecs</strong>: ECS.</li>
+         * <li><strong>clb4</strong>: Layer 4 CLB.</li>
+         * <li><strong>clb7</strong>: Layer 7 CLB.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -184,7 +175,7 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
         public String resourceProduct;
 
         /**
-         * <p>The region where the resource resides.</p>
+         * <p>The region ID of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -193,7 +184,7 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
         public String resourceRegionId;
 
         /**
-         * <p>The name of the route. This parameter is returned for MSE instances.</p>
+         * <p>The route name. This parameter has a value only if the value of ResourceProduct is mse.</p>
          * 
          * <strong>example:</strong>
          * <p>test-route-name</p>
@@ -202,7 +193,7 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
         public String resourceRouteName;
 
         /**
-         * <p>The name of the service. This parameter is returned for FC instances.</p>
+         * <p>The service name. This parameter has a value only if the value of ResourceProduct is fc.</p>
          * 
          * <strong>example:</strong>
          * <p>test-resource-service</p>

@@ -5,55 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateDefenseRuleRequest extends TeaModel {
     /**
-     * <p>The protection scenario for the rule.</p>
-     * <p>When <strong>DefenseType</strong> is <strong>template</strong>, valid values are:</p>
+     * <p>The module to which the protection rule that you want to create belongs.</p>
      * <ul>
-     * <li><p><strong>waf_group</strong>: basic protection.</p>
-     * </li>
-     * <li><p><strong>waf_base</strong>: new version of Web core protection.</p>
-     * </li>
-     * <li><p><strong>antiscan</strong>: scan protection.</p>
-     * </li>
-     * <li><p><strong>ip_blacklist</strong>: IP blacklist.</p>
-     * </li>
-     * <li><p><strong>custom_acl</strong>: custom rules.</p>
-     * </li>
-     * <li><p><strong>whitelist</strong>: whitelist.</p>
-     * </li>
-     * <li><p><strong>region_block</strong>: location blacklist.</p>
-     * </li>
-     * <li><p><strong>custom_response</strong>: legacy custom response.</p>
-     * </li>
-     * <li><p><strong>cc</strong>: HTTP flood protection.</p>
-     * </li>
-     * <li><p><strong>tamperproof</strong>: webpage tamper protection.</p>
-     * </li>
-     * <li><p><strong>dlp</strong>: data leak prevention.</p>
-     * </li>
-     * <li><p><strong>spike_throttle</strong>: peak traffic throttling.</p>
-     * </li>
+     * <li><strong>waf_group:</strong> the basic protection rule module.</li>
+     * <li><strong>antiscan:</strong> the scan protection module.</li>
+     * <li><strong>ip_blacklist:</strong> the IP address blacklist module.</li>
+     * <li><strong>custom_acl:</strong> the custom rule module.</li>
+     * <li><strong>whitelist:</strong> the whitelist module.</li>
+     * <li><strong>region_block:</strong> the region blacklist module.</li>
+     * <li><strong>custom_response:</strong> the custom response module.</li>
+     * <li><strong>cc:</strong> the HTTP flood protection module.</li>
+     * <li><strong>tamperproof:</strong> the website tamper-proofing module.</li>
+     * <li><strong>dlp:</strong> the data leakage prevention module.</li>
      * </ul>
-     * <p>When <strong>DefenseType</strong> is <strong>resource</strong>, valid values are:</p>
-     * <ul>
-     * <li><p><strong>account_identifier</strong>: account extraction.</p>
-     * </li>
-     * <li><p><strong>custom_response</strong>: new version of custom response.</p>
-     * </li>
-     * <li><p><strong>waf_codec</strong>: decoding.</p>
-     * </li>
-     * </ul>
-     * <p>When <strong>DefenseType</strong> is <strong>global</strong>, valid values are:</p>
-     * <ul>
-     * <li><p><strong>regular_custom</strong>: custom regex.</p>
-     * </li>
-     * <li><p><strong>address_book</strong>: address book.</p>
-     * </li>
-     * <li><p><strong>custom_response</strong>: new version of custom response.</p>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p>For globally configured custom responses, users can reference them under protected objects or rules. When referenced at different levels, the effective logic follows this order: rule level &gt; protected object level &gt; default page.</p>
-     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,27 +26,13 @@ public class CreateDefenseRuleRequest extends TeaModel {
     @NameInMap("DefenseScene")
     public String defenseScene;
 
-    /**
-     * <p>The type of the protection rule. Valid values:</p>
-     * <ul>
-     * <li><p><strong>template</strong> (default): template-based protection rules.</p>
-     * </li>
-     * <li><p><strong>resource</strong>: rules applied at the protected object level.</p>
-     * </li>
-     * <li><p><strong>global</strong>: global-level rules.</p>
-     * </li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>template</p>
-     */
     @NameInMap("DefenseType")
     public String defenseType;
 
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -95,10 +45,8 @@ public class CreateDefenseRuleRequest extends TeaModel {
     /**
      * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-     * </li>
+     * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
+     * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -107,20 +55,11 @@ public class CreateDefenseRuleRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The protected object associated with the rule.</p>
-     * <blockquote>
-     * <p>Provide this parameter only when <strong>DefenseType</strong> is <strong>resource</strong>.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>sec****-waf</p>
-     */
     @NameInMap("Resource")
     public String resource;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -129,23 +68,20 @@ public class CreateDefenseRuleRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The rule configuration content, specified as a JSON string.</p>
+     * <p>The configurations of the protection rule. The value is a JSON string that contains multiple parameters.</p>
      * <blockquote>
-     * <p>The specific parameters vary based on the specified <strong>DefenseType</strong> (<strong>DefenseScene</strong>). For details, see <strong>Protection Rule Parameter Descriptions</strong>.</p>
+     * <p> The parameters vary based on the <strong>protection module</strong>, which is specified by <strong>DefenseScene</strong>. For more information, see the &quot;<strong>Parameters of protection rules</strong>&quot; section in this topic.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>waf_group</p>
+     * <p>For more information, see the following section</p>
      */
     @NameInMap("Rules")
     public String rules;
 
     /**
-     * <p>The ID of the protection template to which the rule belongs.</p>
-     * <blockquote>
-     * <p>Provide this parameter only when <strong>DefenseType</strong> is <strong>template</strong>.</p>
-     * </blockquote>
+     * <p>The ID of the rule template for which you want to create a protection rule.</p>
      * 
      * <strong>example:</strong>
      * <p>1122</p>

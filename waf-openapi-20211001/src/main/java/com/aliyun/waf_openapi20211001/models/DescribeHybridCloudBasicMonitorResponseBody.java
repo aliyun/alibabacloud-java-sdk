@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeHybridCloudBasicMonitorResponseBody extends TeaModel {
     /**
-     * <p>The list of basic monitoring metrics.</p>
+     * <p>The basic metrics.</p>
      */
     @NameInMap("BasicMonitors")
     public java.util.List<DescribeHybridCloudBasicMonitorResponseBodyBasicMonitors> basicMonitors;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0B8AF42B-16A9-5762-AEF3-D148****FE5D</p>
@@ -19,14 +19,6 @@ public class DescribeHybridCloudBasicMonitorResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <blockquote>
-     * <p>This parameter is deprecated. No meaningful data is returned.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>3</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -60,30 +52,15 @@ public class DescribeHybridCloudBasicMonitorResponseBody extends TeaModel {
     }
 
     public static class DescribeHybridCloudBasicMonitorResponseBodyBasicMonitors extends TeaModel {
-        /**
-         * <p>The status. Valid values:</p>
-         * <ul>
-         * <li><p><strong>normal</strong>: Normal.</p>
-         * </li>
-         * <li><p>\<em>\</em>\<em>\</em>: Abnormal.</p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>normal</p>
-         */
         @NameInMap("Levle")
         public String levle;
 
         /**
          * <p>The metric. Valid values:</p>
          * <ul>
-         * <li><p><strong>basic_monitor_cpu_usage</strong>: CPU.</p>
-         * </li>
-         * <li><p><strong>basic_monitor_memory_usage</strong>: memory.</p>
-         * </li>
-         * <li><p><strong>basic_monitor_disk_usage</strong>: disk.</p>
-         * </li>
+         * <li><strong>basic_monitor_cpu_usage</strong>: the CPU.</li>
+         * <li><strong>basic_monitor_memory_usage</strong>: the memory.</li>
+         * <li><strong>basic_monitor_disk_usage</strong>: the disk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -93,7 +70,7 @@ public class DescribeHybridCloudBasicMonitorResponseBody extends TeaModel {
         public String monitorName;
 
         /**
-         * <p>The usage percentage.</p>
+         * <p>The resource usage.</p>
          * 
          * <strong>example:</strong>
          * <p>5.905694</p>

@@ -5,7 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeDefenseTemplatesRequest extends TeaModel {
     /**
-     * <p>The protection scenario. For more information, see the description of the <strong>DefenseScene</strong> parameter in the <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a> topic.</p>
+     * <p>The scenario in which the protection template is used.</p>
+     * <ul>
+     * <li><strong>waf_group</strong>: basic protection.</li>
+     * <li><strong>antiscan</strong>: scan protection.</li>
+     * <li><strong>ip_blacklist</strong>: IP address blacklist.</li>
+     * <li><strong>custom_acl</strong>: custom rule.</li>
+     * <li><strong>whitelist</strong>: whitelist.</li>
+     * <li><strong>region_block</strong>: region blacklist.</li>
+     * <li><strong>custom_response</strong>: custom response.</li>
+     * <li><strong>cc</strong>: HTTP flood protection.</li>
+     * <li><strong>tamperproof</strong>: website tamper-proofing.</li>
+     * <li><strong>dlp</strong>: data leakage prevention.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>region_block</p>
@@ -14,16 +26,11 @@ public class DescribeDefenseTemplatesRequest extends TeaModel {
     public String defenseScene;
 
     /**
-     * <p>The sub-scenario of the protection template. Valid values:</p>
+     * <p>The sub-scenario in which the protection template is used. Valid values:</p>
      * <ul>
-     * <li><p><strong>web</strong>: the web protection template for bot management.</p>
-     * </li>
-     * <li><p><strong>app</strong>: the app protection template for bot management.</p>
-     * </li>
-     * <li><p><strong>basic</strong>: the basic protection template for bot management.</p>
-     * </li>
-     * <li><p><strong>bot_custom_acl</strong>: the advanced custom protection rule template for bot management.</p>
-     * </li>
+     * <li><strong>web</strong>: bot management for website protection.</li>
+     * <li><strong>app</strong>: bot management for app protection.</li>
+     * <li><strong>basic</strong>: bot management for basic protection.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +40,7 @@ public class DescribeDefenseTemplatesRequest extends TeaModel {
     public String defenseSubScene;
 
     /**
-     * <p>The ID of the WAF instance.</p>
+     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <blockquote>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
@@ -46,7 +53,7 @@ public class DescribeDefenseTemplatesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -55,7 +62,7 @@ public class DescribeDefenseTemplatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -64,12 +71,10 @@ public class DescribeDefenseTemplatesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <p>The region in which the WAF instance is deployed. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-     * </li>
+     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,19 +84,19 @@ public class DescribeDefenseTemplatesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the protected object or protected object group, or the ID of the protected asset.</p>
+     * <p>The name of the protected object or protected object group.</p>
      * <blockquote>
-     * <p>You must specify the Resource and ResourceType parameters to filter query results.</p>
+     * <p> If you specify ResourceType, you must specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>ruiqiu.cc-ecs</p>
+     * <p>xxxqiu.cc-ecs</p>
      */
     @NameInMap("Resource")
     public String resource;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmvyknl****fa</p>
@@ -102,15 +107,11 @@ public class DescribeDefenseTemplatesRequest extends TeaModel {
     /**
      * <p>The type of the protected resource. Valid values:</p>
      * <ul>
-     * <li><p><strong>single</strong> (default): a protected object.</p>
-     * </li>
-     * <li><p><strong>group</strong>: a protected object group.</p>
-     * </li>
-     * <li><p><strong>asset</strong>: a protected asset.</p>
-     * </li>
+     * <li><strong>single</strong>: protected object. This is the default value.</li>
+     * <li><strong>group</strong>: protected object group.</li>
      * </ul>
      * <blockquote>
-     * <p>You must specify the Resource and ResourceType parameters to filter query results.</p>
+     * <p> If you specify Resource, you must specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -123,13 +124,13 @@ public class DescribeDefenseTemplatesRequest extends TeaModel {
      * <p>The ID of the protection template.</p>
      * 
      * <strong>example:</strong>
-     * <p>39395</p>
+     * <p>12345</p>
      */
     @NameInMap("TemplateId")
     public Long templateId;
 
     /**
-     * <p>The IDs of the protection templates that you want to query. You can specify this parameter to query the protected objects for which multiple protection templates take effect. Separate multiple template IDs with commas (,).</p>
+     * <p>The IDs of the protection templates that you want to query. Separate multiple template IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>189731,189539,189538,189531,189540,189542,189541</p>
@@ -138,21 +139,19 @@ public class DescribeDefenseTemplatesRequest extends TeaModel {
     public String templateIds;
 
     /**
-     * <p>The name of the protection template to query.</p>
+     * <p>The name of the protection template.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>testTemplateName</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
 
     /**
-     * <p>The type of the protection template that you want to create. Valid values:</p>
+     * <p>The type of the protection template. Valid values:</p>
      * <ul>
-     * <li><p><strong>user_default</strong>: default protection template.</p>
-     * </li>
-     * <li><p><strong>user_custom</strong>: custom protection template.</p>
-     * </li>
+     * <li><strong>user_default</strong>: default template.</li>
+     * <li><strong>user_custom</strong>: custom template.</li>
      * </ul>
      * 
      * <strong>example:</strong>

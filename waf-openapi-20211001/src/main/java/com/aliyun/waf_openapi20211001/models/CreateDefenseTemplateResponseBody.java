@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDefenseTemplateResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>F48ABDF7-D777-5F26-892A-57349765D7A9</p>
@@ -14,7 +14,7 @@ public class CreateDefenseTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the protection template.</p>
+     * <p>The ID of the protection rule template.</p>
      * 
      * <strong>example:</strong>
      * <p>2212</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeApisecMatchedHostsResponseBody extends TeaModel {
     /**
-     * <p>The list of domain names.</p>
+     * <p>The domain names.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeApisecMatchedHostsResponseBodyData> data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8D4CA088-F72B-5658-BD5B-ECE8B8F0C7BB</p>
@@ -59,7 +59,7 @@ public class DescribeApisecMatchedHostsResponseBody extends TeaModel {
 
     public static class DescribeApisecMatchedHostsResponseBodyData extends TeaModel {
         /**
-         * <p>The number of queries.</p>
+         * <p>The number of APIs related to the domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>31</p>

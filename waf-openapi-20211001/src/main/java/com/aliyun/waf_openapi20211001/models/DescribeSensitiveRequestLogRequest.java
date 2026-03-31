@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeSensitiveRequestLogRequest extends TeaModel {
     /**
-     * <p>The account that initiated the request.</p>
-     * 
      * <strong>example:</strong>
      * <p>admin</p>
      */
@@ -14,7 +12,7 @@ public class DescribeSensitiveRequestLogRequest extends TeaModel {
     public String account;
 
     /**
-     * <p>The API path.</p>
+     * <p>The API.</p>
      * 
      * <strong>example:</strong>
      * <p>/api/users/login</p>
@@ -23,7 +21,7 @@ public class DescribeSensitiveRequestLogRequest extends TeaModel {
     public String apiFormat;
 
     /**
-     * <p>The client IP address.</p>
+     * <p>The IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>103.118.55.**</p>
@@ -34,7 +32,7 @@ public class DescribeSensitiveRequestLogRequest extends TeaModel {
     /**
      * <p>The ID of the hybrid cloud cluster.</p>
      * <blockquote>
-     * <p>This parameter is available only for hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query information about hybrid cloud clusters.</p>
+     * <p>For hybrid cloud scenarios only, you can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the hybrid cloud clusters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,7 +42,7 @@ public class DescribeSensitiveRequestLogRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The end of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The end of the time range to query. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1726057800</p>
@@ -55,7 +53,7 @@ public class DescribeSensitiveRequestLogRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -93,12 +91,10 @@ public class DescribeSensitiveRequestLogRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <p>The region ID of the WAF instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-     * </li>
+     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -108,7 +104,7 @@ public class DescribeSensitiveRequestLogRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -117,9 +113,9 @@ public class DescribeSensitiveRequestLogRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The type of sensitive data.</p>
+     * <p>The type of the sensitive data.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported sensitive data types.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported types of sensitive data.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -129,7 +125,7 @@ public class DescribeSensitiveRequestLogRequest extends TeaModel {
     public String sensitiveCode;
 
     /**
-     * <p>The sensitive data in the response.</p>
+     * <p>The response sensitive data.</p>
      * 
      * <strong>example:</strong>
      * <p>user</p>
@@ -138,7 +134,7 @@ public class DescribeSensitiveRequestLogRequest extends TeaModel {
     public String sensitiveData;
 
     /**
-     * <p>The beginning of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The beginning of the time range to query. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1723392000</p>

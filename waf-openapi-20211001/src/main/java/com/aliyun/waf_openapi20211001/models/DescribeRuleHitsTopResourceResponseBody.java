@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRuleHitsTopResourceResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>ADA11BC7-AA95-5C31-9095-5802C02ED1DC</p>
@@ -14,7 +14,7 @@ public class DescribeRuleHitsTopResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The top 10 protected objects that triggered protection rules.</p>
+     * <p>The array of the top 10 protected objects that trigger protection rules.</p>
      */
     @NameInMap("RuleHitsTopResource")
     public java.util.List<DescribeRuleHitsTopResourceResponseBodyRuleHitsTopResource> ruleHitsTopResource;
@@ -42,7 +42,7 @@ public class DescribeRuleHitsTopResourceResponseBody extends TeaModel {
 
     public static class DescribeRuleHitsTopResourceResponseBodyRuleHitsTopResource extends TeaModel {
         /**
-         * <p>The number of requests that triggered the rule.</p>
+         * <p>The number of requests that match protection rules.</p>
          * 
          * <strong>example:</strong>
          * <p>14219</p>

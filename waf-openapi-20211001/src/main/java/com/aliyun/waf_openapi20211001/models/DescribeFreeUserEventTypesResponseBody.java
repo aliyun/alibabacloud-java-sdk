@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFreeUserEventTypesResponseBody extends TeaModel {
     /**
-     * <p>The list of security event types detected by the basic detection feature.</p>
+     * <p>The types of security events on which basic detection is performed.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeFreeUserEventTypesResponseBodyData> data;
@@ -51,7 +51,7 @@ public class DescribeFreeUserEventTypesResponseBody extends TeaModel {
         public String eventNum;
 
         /**
-         * <p>The security event type.</p>
+         * <p>The type of the security event.</p>
          * 
          * <strong>example:</strong>
          * <p>SMSInterfaceAbuse</p>

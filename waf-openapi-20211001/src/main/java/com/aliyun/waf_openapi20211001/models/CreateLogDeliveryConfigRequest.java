@@ -5,23 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateLogDeliveryConfigRequest extends TeaModel {
     /**
-     * <p>The details of the log delivery configuration. The value is a JSON string that is generated from a series of parameters.</p>
+     * <p>The content of the log delivery configuration. Set the value to a JSON string that contains multiple parameters.</p>
      * <blockquote>
-     * <p>The parameters vary based on the value of <strong>DeliveryType</strong>. For more information, see <strong>Parameters for log delivery configuration details</strong>.</p>
+     * <p> The parameters vary based on the type of the <strong>log delivery configuration</strong> specified by <strong>DeliveryType</strong>. For more information, see <strong>Parameter description for log delivery configuration</strong>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>{
-     *   &quot;rfcVersion&quot;: &quot;rfc3164&quot;,
-     *   &quot;protocol&quot;: &quot;tcp&quot;,
-     *   &quot;servers&quot;: [
-     *     {
-     *       &quot;address&quot;: &quot;1.1.1.1&quot;,
-     *       &quot;port&quot;: 20
-     *     }
-     *   ]
-     * }</p>
      */
     @NameInMap("DeliveryDetail")
     public String deliveryDetail;
@@ -39,23 +27,21 @@ public class CreateLogDeliveryConfigRequest extends TeaModel {
     /**
      * <p>The type of the log delivery configuration. Valid values:</p>
      * <ul>
-     * <li><p><strong>syslog</strong>: Delivers logs to a syslog service.</p>
-     * </li>
-     * <li><p><strong>kafka</strong>: Delivers logs to a Kafka service.</p>
-     * </li>
+     * <li><strong>syslog</strong>: Logs are delivered to a syslog service.</li>
+     * <li><strong>kafka</strong>: Logs are delivered to a Kafka service.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>syslog</p>
+     * <p>kafka</p>
      */
     @NameInMap("DeliveryType")
     public String deliveryType;
 
     /**
-     * <p>The ID of the WAF instance.</p>
+     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -66,12 +52,10 @@ public class CreateLogDeliveryConfigRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <p>The region ID of the WAF instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-     * </li>
+     * <li><strong>cn-hangzhou</strong>: the Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>

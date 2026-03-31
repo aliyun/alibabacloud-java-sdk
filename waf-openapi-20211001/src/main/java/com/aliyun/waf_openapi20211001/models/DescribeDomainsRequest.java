@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainsRequest extends TeaModel {
     /**
-     * <p>The IP address of the origin server or the back-to-origin domain name. You can specify only one of these options.</p>
+     * <p>An array of HTTPS listener ports.</p>
      * 
      * <strong>example:</strong>
      * <p>1.1.XX.XX</p>
@@ -14,7 +14,7 @@ public class DescribeDomainsRequest extends TeaModel {
     public String backend;
 
     /**
-     * <p>The domain name added to WAF.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
@@ -22,20 +22,11 @@ public class DescribeDomainsRequest extends TeaModel {
     @NameInMap("Domain")
     public String domain;
 
-    /**
-     * <p>The ID of the domain name.</p>
-     * 
-     * <strong>example:</strong>
-     * <p><a href="http://www.aliyundoc.com-waf">www.aliyundoc.com-waf</a></p>
-     */
     @NameInMap("DomainId")
     public String domainId;
 
     /**
-     * <p>The ID of the WAF instance.</p>
-     * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to view the ID of the current WAF instance.</p>
-     * </blockquote>
+     * <p>The page number of the page to return. Default value: 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +36,7 @@ public class DescribeDomainsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -54,7 +45,7 @@ public class DescribeDomainsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10.</p>
+     * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -65,10 +56,8 @@ public class DescribeDomainsRequest extends TeaModel {
     /**
      * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-     * </li>
+     * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
+     * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -78,7 +67,7 @@ public class DescribeDomainsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -87,7 +76,7 @@ public class DescribeDomainsRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The tags of the resource. A maximum of 20 tags are supported.</p>
+     * <p>The tag of the resource. You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeDomainsRequestTag> tag;

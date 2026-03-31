@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateHybridCloudGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the created node group.</p>
+     * <p>The ID of the node group.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class CreateHybridCloudGroupResponseBody extends TeaModel {
     public Long data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>48F7C7BA-0932-50EA-89AD-5B0E1***274</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeSensitiveDetectionResultResponseBody extends TeaModel {
     /**
-     * <p>The data returned for the compliance detection results.</p>
+     * <p>The compliance check results.</p>
      */
     @NameInMap("Data")
     public DescribeSensitiveDetectionResultResponseBodyData data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D7861F61-5B61-46CE-A47C-6B19160D5EB0</p>
@@ -42,7 +42,7 @@ public class DescribeSensitiveDetectionResultResponseBody extends TeaModel {
 
     public static class DescribeSensitiveDetectionResultResponseBodyDataResultList extends TeaModel {
         /**
-         * <p>The number of personal information items.</p>
+         * <p>The number of personal information records.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>
@@ -51,7 +51,7 @@ public class DescribeSensitiveDetectionResultResponseBody extends TeaModel {
         public Long infoCount;
 
         /**
-         * <p>The number of outbound transfers of personal information.</p>
+         * <p>The number of sensitive personal information records that are involved in cross-border data transfer.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -60,7 +60,7 @@ public class DescribeSensitiveDetectionResultResponseBody extends TeaModel {
         public Long outboundCount;
 
         /**
-         * <p>The code of the sensitive data type.</p>
+         * <p>The sensitive data type.</p>
          * 
          * <strong>example:</strong>
          * <p>1002</p>
@@ -101,7 +101,7 @@ public class DescribeSensitiveDetectionResultResponseBody extends TeaModel {
 
     public static class DescribeSensitiveDetectionResultResponseBodyDataResultMax extends TeaModel {
         /**
-         * <p>The number of personal information items for the most frequently detected sensitive data type.</p>
+         * <p>The number of sensitive personal information records that are of the most frequent sensitive data type.</p>
          * 
          * <strong>example:</strong>
          * <p>187</p>
@@ -110,7 +110,7 @@ public class DescribeSensitiveDetectionResultResponseBody extends TeaModel {
         public Long infoCount;
 
         /**
-         * <p>The number of outbound transfers of personal information for the most frequently detected sensitive data type.</p>
+         * <p>The number of sensitive personal information records that are of the most frequent sensitive data type and are involved in cross-border data transfer.</p>
          * 
          * <strong>example:</strong>
          * <p>54</p>
@@ -119,7 +119,7 @@ public class DescribeSensitiveDetectionResultResponseBody extends TeaModel {
         public Long outboundCount;
 
         /**
-         * <p>The code of the sensitive data type that is most frequently detected.</p>
+         * <p>The most frequent sensitive data type.</p>
          * 
          * <strong>example:</strong>
          * <p>1003</p>
@@ -160,12 +160,10 @@ public class DescribeSensitiveDetectionResultResponseBody extends TeaModel {
 
     public static class DescribeSensitiveDetectionResultResponseBodyDataResult extends TeaModel {
         /**
-         * <p>The result of the compliance detection. Valid values:</p>
+         * <p>The compliance check results. Valid values:</p>
          * <ul>
-         * <li><p><strong>report</strong>: A risk of outbound data transfer is detected.</p>
-         * </li>
-         * <li><p><strong>none</strong>: No risk of outbound data transfer is detected.</p>
-         * </li>
+         * <li><strong>report</strong>: Risks exist in cross-border data transfer.</li>
+         * <li><strong>none</strong>: No risks exist in cross-border data transfer.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -175,13 +173,13 @@ public class DescribeSensitiveDetectionResultResponseBody extends TeaModel {
         public String detectionResult;
 
         /**
-         * <p>The detection results for each sensitive data type.</p>
+         * <p>The sensitive information check results by sensitive data type.</p>
          */
         @NameInMap("List")
         public java.util.List<DescribeSensitiveDetectionResultResponseBodyDataResultList> list;
 
         /**
-         * <p>The statistics for the most frequently detected sensitive data type.</p>
+         * <p>The maximum values in the statistics of sensitive data types.</p>
          */
         @NameInMap("Max")
         public DescribeSensitiveDetectionResultResponseBodyDataResultMax max;
@@ -219,7 +217,7 @@ public class DescribeSensitiveDetectionResultResponseBody extends TeaModel {
 
     public static class DescribeSensitiveDetectionResultResponseBodyData extends TeaModel {
         /**
-         * <p>The compliance detection results for sensitive data.</p>
+         * <p>The compliance checks.</p>
          */
         @NameInMap("Result")
         public java.util.List<DescribeSensitiveDetectionResultResponseBodyDataResult> result;

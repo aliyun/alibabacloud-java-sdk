@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyLogDeliveryConfigResponseBody extends TeaModel {
     /**
-     * <p>The name of the log delivery configuration that was modified.</p>
+     * <p>The name of the log delivery configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>test1</p>

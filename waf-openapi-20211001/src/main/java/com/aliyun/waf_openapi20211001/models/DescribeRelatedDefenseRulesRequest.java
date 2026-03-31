@@ -5,10 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeRelatedDefenseRulesRequest extends TeaModel {
     /**
-     * <p>The WAF protection scenario. Only the following value is supported:</p>
-     * <ul>
-     * <li><strong>address_book</strong>: address book.</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,10 +14,6 @@ public class DescribeRelatedDefenseRulesRequest extends TeaModel {
     public String defenseScene;
 
     /**
-     * <p>The type of the protection rule. Only the following value is supported:</p>
-     * <ul>
-     * <li><strong>global</strong>: a global rule.</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,10 +23,6 @@ public class DescribeRelatedDefenseRulesRequest extends TeaModel {
     public String defenseType;
 
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
-     * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of your WAF instance.</p>
-     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,8 +32,6 @@ public class DescribeRelatedDefenseRulesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 100. Default value: 20.</p>
-     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -53,11 +39,6 @@ public class DescribeRelatedDefenseRulesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to query the next page of results. If more results are available, this parameter is returned.</p>
-     * <blockquote>
-     * <p>If this parameter is returned, more results are available. Use the returned NextToken value as a request parameter to retrieve the next page of data. Repeat this process until the <strong>NextToken</strong> parameter is not returned. This indicates that all data has been retrieved.</p>
-     * </blockquote>
-     * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0*****</p>
      */
@@ -65,14 +46,6 @@ public class DescribeRelatedDefenseRulesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region where the WAF instance resides. Valid values:</p>
-     * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-     * </li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -80,8 +53,6 @@ public class DescribeRelatedDefenseRulesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
-     * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
      */
@@ -89,7 +60,6 @@ public class DescribeRelatedDefenseRulesRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The ID of the protection rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

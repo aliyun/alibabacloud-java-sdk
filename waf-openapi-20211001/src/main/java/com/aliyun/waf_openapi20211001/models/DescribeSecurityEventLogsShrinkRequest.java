@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityEventLogsShrinkRequest extends TeaModel {
     /**
-     * <p>The filter conditions. A logical AND relationship exists between multiple filter conditions.</p>
+     * <p>The filter conditions for the query. Multiple conditions are evaluated by using a logical AND.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Filter")
@@ -14,7 +14,7 @@ public class DescribeSecurityEventLogsShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -25,7 +25,7 @@ public class DescribeSecurityEventLogsShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The page number to return for a paged query. The default value is <strong>1</strong>, which indicates the first page.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class DescribeSecurityEventLogsShrinkRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page for a paged query. The maximum value is <strong>100</strong>.</p>
+     * <p>The number of entries per page. Maximum value: <strong>100</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,16 +45,14 @@ public class DescribeSecurityEventLogsShrinkRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region of the WAF instance. Valid values:</p>
+     * <p>The region ID of the WAF instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-     * </li>
+     * <li><strong>cn-hangzhou</strong>: The Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
+     * <p>ap-southeast-1</p>
      */
     @NameInMap("RegionId")
     public String regionId;

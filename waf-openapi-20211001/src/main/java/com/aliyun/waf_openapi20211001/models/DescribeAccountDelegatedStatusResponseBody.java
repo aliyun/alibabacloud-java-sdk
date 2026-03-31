@@ -14,7 +14,7 @@ public class DescribeAccountDelegatedStatusResponseBody extends TeaModel {
     public String accountId;
 
     /**
-     * <p>The name of the Alibaba Cloud account. This parameter is returned only if the account is a delegated administrator.</p>
+     * <p>The name of the Alibaba Cloud account. This parameter is returned only if the account is the delegated administrator account.</p>
      * 
      * <strong>example:</strong>
      * <p>account_test</p>
@@ -23,12 +23,10 @@ public class DescribeAccountDelegatedStatusResponseBody extends TeaModel {
     public String accountName;
 
     /**
-     * <p>Indicates whether the account is a delegated administrator for WAF.</p>
+     * <p>Indicates whether the Alibaba Cloud account is the delegated administrator account of the WAF instance.</p>
      * <ul>
-     * <li><p><strong>true</strong>: The account is a delegated administrator.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The account is not a delegated administrator.</p>
-     * </li>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,10 +36,10 @@ public class DescribeAccountDelegatedStatusResponseBody extends TeaModel {
     public Boolean delegatedStatus;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>8161375D-5958-5627-BFDE-DF1458A73E87</p>
+     * <p>8161375D-5958-5627-BFDE-DF14****3E87</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -7,7 +7,7 @@ public class DescribeMajorProtectionBlackIpsRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to obtain the ID of the current WAF instance.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class DescribeMajorProtectionBlackIpsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The IP address to query. You can set this parameter to perform a fuzzy query on the added IP address blacklist.</p>
+     * <p>The IP address that you want to query. You can specify this parameter to query an IP address in the IP address blacklist for major event protection by using fuzzy matching.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX</p>
@@ -27,16 +27,12 @@ public class DescribeMajorProtectionBlackIpsRequest extends TeaModel {
     public String ipLike;
 
     /**
-     * <p>The property by which to sort the results in <strong>descending order</strong>. Valid values:</p>
+     * <p>The method that you want to use to sort the IP addresses <strong>in descending order</strong>. Valid values:</p>
      * <ul>
-     * <li><p><strong>gmtModified</strong>: sorts by modification time.</p>
-     * </li>
-     * <li><p><strong>ip</strong>: sorts by IP address.</p>
-     * </li>
-     * <li><p><strong>templateId</strong>: sorts by template ID.</p>
-     * </li>
-     * <li><p><strong>id</strong>: sorts by primary key.</p>
-     * </li>
+     * <li><strong>gmtModified:</strong> sorts the IP addresses by most recent modification time.</li>
+     * <li><strong>ip:</strong> sorts the IP addresses by IP address.</li>
+     * <li><strong>templateId:</strong> sorts the IP addresses by template ID.</li>
+     * <li><strong>id:</strong> sorts the IP addresses by primary key.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,7 +42,7 @@ public class DescribeMajorProtectionBlackIpsRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>, which indicates the first page.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -55,7 +51,7 @@ public class DescribeMajorProtectionBlackIpsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>10</strong>, which indicates 10 entries per page.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -64,12 +60,10 @@ public class DescribeMajorProtectionBlackIpsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region in which the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: regions outside the Chinese mainland.</p>
-     * </li>
+     * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
+     * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,7 +73,7 @@ public class DescribeMajorProtectionBlackIpsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -88,7 +82,7 @@ public class DescribeMajorProtectionBlackIpsRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The ID of the IP address blacklist rule for critical event protection.</p>
+     * <p>The ID of the IP address blacklist rule for major event protection.</p>
      * 
      * <strong>example:</strong>
      * <p>20013199</p>
@@ -97,7 +91,7 @@ public class DescribeMajorProtectionBlackIpsRequest extends TeaModel {
     public Long ruleId;
 
     /**
-     * <p>The ID of the critical event protection template.</p>
+     * <p>The ID of the rule template for major event protection.</p>
      * 
      * <strong>example:</strong>
      * <p>5673</p>

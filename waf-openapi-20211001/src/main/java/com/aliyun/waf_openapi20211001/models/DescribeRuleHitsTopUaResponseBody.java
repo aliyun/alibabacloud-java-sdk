@@ -14,7 +14,7 @@ public class DescribeRuleHitsTopUaResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The top 10 User-Agents that initiated attacks.</p>
+     * <p>The array of the top 10 user agents that are used to initiate attacks.</p>
      */
     @NameInMap("RuleHitsTopUa")
     public java.util.List<DescribeRuleHitsTopUaResponseBodyRuleHitsTopUa> ruleHitsTopUa;
@@ -42,7 +42,7 @@ public class DescribeRuleHitsTopUaResponseBody extends TeaModel {
 
     public static class DescribeRuleHitsTopUaResponseBodyRuleHitsTopUa extends TeaModel {
         /**
-         * <p>The number of attack requests.</p>
+         * <p>The number of attacks that are initiated from the IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>531</p>
@@ -51,7 +51,7 @@ public class DescribeRuleHitsTopUaResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The User-Agent string.</p>
+         * <p>The user agent.</p>
          * 
          * <strong>example:</strong>
          * <p>android</p>

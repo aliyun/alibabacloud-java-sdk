@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateDefenseResourceResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>1738C613-D054-5191-888B-DC0CF4C3A4A0</p>
      */
@@ -14,8 +12,6 @@ public class CreateDefenseResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The name of the protected object that is created.</p>
-     * 
      * <strong>example:</strong>
      * <p>cdX.XXX-call.cn-alb</p>
      */

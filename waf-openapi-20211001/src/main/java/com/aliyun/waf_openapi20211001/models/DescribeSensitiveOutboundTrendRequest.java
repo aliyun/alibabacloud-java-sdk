@@ -7,7 +7,7 @@ public class DescribeSensitiveOutboundTrendRequest extends TeaModel {
     /**
      * <p>The ID of the hybrid cloud cluster.</p>
      * <blockquote>
-     * <p>This parameter is required only for hybrid cloud scenarios. Call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query information about hybrid cloud clusters.</p>
+     * <p>For hybrid cloud scenarios only, you can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the hybrid cloud clusters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class DescribeSensitiveOutboundTrendRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The end of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The end of the time range to query. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
      * <blockquote>
-     * <p>Compliance audit supports queries for the last 1, 3, 6, or 12 months, or from January 1 of the previous year to the present. Make sure that the time range is valid.</p>
+     * <p> You can query only data of the previous month, previous 3 months, previous 6 months, previous 12 months, and data generated since January 1 of last year for compliance check. You must specify a valid time range.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class DescribeSensitiveOutboundTrendRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -42,12 +42,10 @@ public class DescribeSensitiveOutboundTrendRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region in which the WAF instance resides. Valid values:</p>
+     * <p>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-     * </li>
+     * <li><strong>cn-hangzhou</strong>: Chinese mainland</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,9 +64,9 @@ public class DescribeSensitiveOutboundTrendRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The beginning of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The beginning of the time range to query. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
      * <blockquote>
-     * <p>Compliance audit supports queries for the last 1, 3, 6, or 12 months, or from January 1 of the previous year to the present. Make sure that the time range is valid.</p>
+     * <p> You can query only data of the previous month, previous 3 months, previous 6 months, previous 12 months, and data generated since January 1 of last year for compliance check. You must specify a valid time range.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

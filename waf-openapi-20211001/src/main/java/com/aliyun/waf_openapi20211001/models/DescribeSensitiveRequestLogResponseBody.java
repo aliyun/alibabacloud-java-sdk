@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSensitiveRequestLogResponseBody extends TeaModel {
     /**
-     * <p>The list of access logs.</p>
+     * <p>The access logs.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeSensitiveRequestLogResponseBodyData> data;
@@ -59,8 +59,6 @@ public class DescribeSensitiveRequestLogResponseBody extends TeaModel {
 
     public static class DescribeSensitiveRequestLogResponseBodyData extends TeaModel {
         /**
-         * <p>The account that initiated the request.</p>
-         * 
          * <strong>example:</strong>
          * <p>admin</p>
          */
@@ -68,7 +66,7 @@ public class DescribeSensitiveRequestLogResponseBody extends TeaModel {
         public String account;
 
         /**
-         * <p>The API path.</p>
+         * <p>The API.</p>
          * 
          * <strong>example:</strong>
          * <p>/api/users/login</p>
@@ -86,7 +84,7 @@ public class DescribeSensitiveRequestLogResponseBody extends TeaModel {
         public String apiId;
 
         /**
-         * <p>The client IP address.</p>
+         * <p>The IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>103.118.55.**</p>
@@ -95,7 +93,7 @@ public class DescribeSensitiveRequestLogResponseBody extends TeaModel {
         public String clientIP;
 
         /**
-         * <p>The number of outbound sensitive data entries.</p>
+         * <p>The number of sensitive data records involved in cross-border data transfer.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -113,7 +111,7 @@ public class DescribeSensitiveRequestLogResponseBody extends TeaModel {
         public String matchedHost;
 
         /**
-         * <p>The code of the region to which the client IP address belongs.</p>
+         * <p>IP region, formatted as a region code.</p>
          * 
          * <strong>example:</strong>
          * <p>CN</p>
@@ -122,7 +120,7 @@ public class DescribeSensitiveRequestLogResponseBody extends TeaModel {
         public String remoteCountryId;
 
         /**
-         * <p>The time of the request. This value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time when the request was initiated. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1723392000</p>
@@ -131,9 +129,9 @@ public class DescribeSensitiveRequestLogResponseBody extends TeaModel {
         public Long requestTime;
 
         /**
-         * <p>The sensitive data. The key indicates the sensitive data type identifier, which can be a built-in or custom type, and the value indicates the list of sensitive data.</p>
+         * <p>The details of sensitive data. The value is a string that consists of a JSON struct. The JSON struct contains key-value pairs. In a key-value pair, a key indicates the identifier of a sensitive data type, including built-in and custom types, and a value indicates specific sensitive data.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported sensitive data types.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported sensitive data types.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -151,7 +149,7 @@ public class DescribeSensitiveRequestLogResponseBody extends TeaModel {
         public String sensitiveList;
 
         /**
-         * <p>The ID of the access log.</p>
+         * <p>The trace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0a3d455b17027784870843933dce3d</p>

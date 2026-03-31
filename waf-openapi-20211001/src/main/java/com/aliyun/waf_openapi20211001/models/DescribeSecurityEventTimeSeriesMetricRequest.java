@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityEventTimeSeriesMetricRequest extends TeaModel {
     /**
-     * <p>The filter conditions for the query. Multiple filter conditions have a logical AND relationship.</p>
+     * <p>The filter conditions for the query. Multiple conditions are evaluated by using a logical AND.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Filter")
@@ -14,7 +14,7 @@ public class DescribeSecurityEventTimeSeriesMetricRequest extends TeaModel {
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -25,16 +25,12 @@ public class DescribeSecurityEventTimeSeriesMetricRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Specifies the content of the returned data. Different metrics correspond to different data content. This operation supports the following metrics:</p>
+     * <p>The metric whose time series data you want to return. The following metrics are supported:</p>
      * <ul>
-     * <li><p>mitigated_requests: Returns the time series statistics of blocked requests.</p>
-     * </li>
-     * <li><p>monitored_requests: Returns the time series statistics of requests that hit only observation-type rules.</p>
-     * </li>
-     * <li><p>mitigated_requests_group_by_defense_scene: Returns data grouped by module. It records a time series graph of the hit count for each module. A single request may hit multiple modules. Therefore, the hit count returned by this metric may not be consistent with the number of requests.</p>
-     * </li>
-     * <li><p>mitigated_requests_group_by_block_defense_scene: Returns data grouped by module. It records a time series graph of the number of blocked requests for each module. A single request is blocked by only one module. Therefore, the count returned by this metric is consistent with the number of requests.</p>
-     * </li>
+     * <li>mitigated_requests: The system returns the time series data of requests that are blocked.</li>
+     * <li>monitored_requests: The system returns the time series data of requests that match Monitor protection rules.</li>
+     * <li>mitigated_requests_group_by_defense_scene: The system returns the number of requests that match each protection module. The returned results are grouped by protection module and can be used to generate time series charts. A request can match multiple protection modules. Therefore, the total number of matched requests is inconsistent with the total number of requests.</li>
+     * <li>mitigated_requests_group_by_block_defense_scene: The system returns the number of requests that are blocked by each protection module. The returned results are grouped by protection module and can be used to generate time series charts. A request can be blocked by only one protection module. Therefore, the total number of blocked requests is consistent with the total number of requests.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -45,16 +41,14 @@ public class DescribeSecurityEventTimeSeriesMetricRequest extends TeaModel {
     public String metric;
 
     /**
-     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <p>The region ID of the WAF instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-     * </li>
+     * <li><strong>cn-hangzhou</strong>: The Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
+     * <p>ap-southeast-1</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -115,7 +109,7 @@ public class DescribeSecurityEventTimeSeriesMetricRequest extends TeaModel {
 
     public static class DescribeSecurityEventTimeSeriesMetricRequestFilterConditions extends TeaModel {
         /**
-         * <p>The name of the field to filter. This operation supports all fields.</p>
+         * <p>The field name. This operation supports all fields. For details, see the <strong>Supported field names</strong> section below.</p>
          * 
          * <strong>example:</strong>
          * <p>matched_host</p>
@@ -124,7 +118,7 @@ public class DescribeSecurityEventTimeSeriesMetricRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The operator.</p>
+         * <p>The operator. For details, see the <strong>Supported operators</strong> section below.</p>
          * 
          * <strong>example:</strong>
          * <p>eq</p>
@@ -133,7 +127,7 @@ public class DescribeSecurityEventTimeSeriesMetricRequest extends TeaModel {
         public String opValue;
 
         /**
-         * <p>The filter value.</p>
+         * <p>The field content.</p>
          * 
          * <strong>example:</strong>
          * <p>test.waf-top</p>
@@ -174,7 +168,7 @@ public class DescribeSecurityEventTimeSeriesMetricRequest extends TeaModel {
 
     public static class DescribeSecurityEventTimeSeriesMetricRequestFilterDateRange extends TeaModel {
         /**
-         * <p>The end time of the query. This is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The end of the time range to query. The value is a Unix timestamp. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,10 +178,7 @@ public class DescribeSecurityEventTimeSeriesMetricRequest extends TeaModel {
         public Long endDate;
 
         /**
-         * <p>You can query data from the last 30 days. The start time of the query. This is a UNIX timestamp. Unit: seconds.</p>
-         * <blockquote>
-         * <h2>The start time must be within the last 30 days.</h2>
-         * </blockquote>
+         * <p>The beginning of the time range to query. The value is a Unix timestamp. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,13 +212,13 @@ public class DescribeSecurityEventTimeSeriesMetricRequest extends TeaModel {
 
     public static class DescribeSecurityEventTimeSeriesMetricRequestFilter extends TeaModel {
         /**
-         * <p>A list of filter conditions. Each node describes one filter condition.</p>
+         * <p>The filter conditions. Each object describes a filter condition.</p>
          */
         @NameInMap("Conditions")
         public java.util.List<DescribeSecurityEventTimeSeriesMetricRequestFilterConditions> conditions;
 
         /**
-         * <p>The time range to query.</p>
+         * <p>The time range for the query.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("DateRange")

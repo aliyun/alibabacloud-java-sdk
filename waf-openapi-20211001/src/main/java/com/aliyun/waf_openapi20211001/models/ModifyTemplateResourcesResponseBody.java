@@ -8,7 +8,7 @@ public class ModifyTemplateResourcesResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>CF708F2F-FFB0-54D4-B1E0-B84A7CEB****</p>
+     * <p>CF708F2F-FFB0-54D4-B1E0-B84A7CEBFB60</p>
      */
     @NameInMap("RequestId")
     public String requestId;

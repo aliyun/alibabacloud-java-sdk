@@ -4,25 +4,13 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class ModifyDefenseRuleStatusRequest extends TeaModel {
-    /**
-     * <p>The type of the protection rule. Valid values:</p>
-     * <ul>
-     * <li><p><strong>template</strong> (default): a template protection rule.</p>
-     * </li>
-     * <li><p><strong>resource</strong>: a rule that is configured for a protected object.</p>
-     * </li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>template</p>
-     */
     @NameInMap("DefenseType")
     public String defenseType;
 
     /**
-     * <p>The ID of the WAF instance.</p>
+     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -33,12 +21,10 @@ public class ModifyDefenseRuleStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region of the WAF instance. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-     * </li>
+     * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
+     * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,7 +43,7 @@ public class ModifyDefenseRuleStatusRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The ID of the protection rule to modify.</p>
+     * <p>The ID of the protection rule whose status you want to change.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,10 +55,8 @@ public class ModifyDefenseRuleStatusRequest extends TeaModel {
     /**
      * <p>The new status of the protection rule. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: disabled</p>
-     * </li>
-     * <li><p><strong>1</strong>: enabled</p>
-     * </li>
+     * <li><strong>0:</strong> disabled.</li>
+     * <li><strong>1:</strong> enabled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -83,7 +67,7 @@ public class ModifyDefenseRuleStatusRequest extends TeaModel {
     public Integer ruleStatus;
 
     /**
-     * <p>The ID of the protection template.</p>
+     * <p>The ID of the protection rule template to which the protection rule whose status you want to change belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>7239</p>

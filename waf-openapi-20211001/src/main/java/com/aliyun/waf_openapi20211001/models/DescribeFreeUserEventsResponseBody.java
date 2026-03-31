@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFreeUserEventsResponseBody extends TeaModel {
     /**
-     * <p>The list of security events detected by the basic scan.</p>
+     * <p>The security events on which basic detection is performed.</p>
      */
     @NameInMap("Event")
     public java.util.List<DescribeFreeUserEventsResponseBodyEvent> event;
@@ -42,7 +42,7 @@ public class DescribeFreeUserEventsResponseBody extends TeaModel {
 
     public static class DescribeFreeUserEventsResponseBodyEvent extends TeaModel {
         /**
-         * <p>The API path.</p>
+         * <p>The API.</p>
          * 
          * <strong>example:</strong>
          * <p>/api/login</p>
@@ -51,7 +51,7 @@ public class DescribeFreeUserEventsResponseBody extends TeaModel {
         public String apiFormat;
 
         /**
-         * <p>The attack IP address.</p>
+         * <p>The attacker IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>104.234.140.**</p>
@@ -60,7 +60,7 @@ public class DescribeFreeUserEventsResponseBody extends TeaModel {
         public String attackIP;
 
         /**
-         * <p>The time of the attack. This value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time at which the attack was launched. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1683703260</p>
@@ -69,7 +69,7 @@ public class DescribeFreeUserEventsResponseBody extends TeaModel {
         public Long attackTime;
 
         /**
-         * <p>The domain name to which the API belongs.</p>
+         * <p>The domain name of the API.</p>
          * 
          * <strong>example:</strong>
          * <p>www.***.cn</p>
@@ -78,14 +78,11 @@ public class DescribeFreeUserEventsResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>The event level. Valid values:</p>
+         * <p>The severity level of the security event. Valid values:</p>
          * <ul>
-         * <li><p><strong>high</strong>: high risk.</p>
-         * </li>
-         * <li><p><strong>medium</strong>: medium risk.</p>
-         * </li>
-         * <li><p><strong>low</strong>: low risk.</p>
-         * </li>
+         * <li><strong>high</strong></li>
+         * <li><strong>medium</strong></li>
+         * <li><strong>low</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -95,9 +92,9 @@ public class DescribeFreeUserEventsResponseBody extends TeaModel {
         public String eventLevel;
 
         /**
-         * <p>The event type.</p>
+         * <p>The type of the security event.</p>
          * <blockquote>
-         * <p>Call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to obtain the supported event types.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported types of security events.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

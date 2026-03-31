@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUserSlsLogRegionsResponseBody extends TeaModel {
     /**
-     * <p>The list of log storage region IDs.</p>
+     * <p>The region IDs.</p>
      */
     @NameInMap("LogRegions")
     public java.util.List<String> logRegions;
@@ -14,7 +14,7 @@ public class DescribeUserSlsLogRegionsResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>9D11AC3A-A10C-56E7-A342-E87EC892BAE2</p>
+     * <p>9D11AC3A-A10C-56E7-A342-E87EC892****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

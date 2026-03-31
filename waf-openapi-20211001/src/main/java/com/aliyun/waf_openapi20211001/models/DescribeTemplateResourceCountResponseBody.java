@@ -14,7 +14,7 @@ public class DescribeTemplateResourceCountResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array of resource count objects. Each object contains the number of protected objects, protected object groups, and protected assets that are associated with a protection template.</p>
+     * <p>The number of protected objects or protected object groups for which the protection template takes effect.</p>
      */
     @NameInMap("ResourceCount")
     public java.util.List<DescribeTemplateResourceCountResponseBodyResourceCount> resourceCount;
@@ -42,8 +42,6 @@ public class DescribeTemplateResourceCountResponseBody extends TeaModel {
 
     public static class DescribeTemplateResourceCountResponseBodyResourceCount extends TeaModel {
         /**
-         * <p>The number of protected assets that are associated with the protection template.</p>
-         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -51,7 +49,7 @@ public class DescribeTemplateResourceCountResponseBody extends TeaModel {
         public Integer assetCount;
 
         /**
-         * <p>The number of protected object groups that are associated with the protection template.</p>
+         * <p>The number of protected object groups.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -60,7 +58,7 @@ public class DescribeTemplateResourceCountResponseBody extends TeaModel {
         public Integer groupCount;
 
         /**
-         * <p>The number of protected objects that are associated with the protection template.</p>
+         * <p>The number of protected objects.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

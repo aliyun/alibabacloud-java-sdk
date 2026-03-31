@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
     /**
-     * <p>The list of IP addresses in the blacklist.</p>
+     * <p>An array of IP addresses in the IP address blacklist.</p>
      */
     @NameInMap("IpList")
     public java.util.List<DescribeMajorProtectionBlackIpsResponseBodyIpList> ipList;
@@ -59,7 +59,7 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
 
     public static class DescribeMajorProtectionBlackIpsResponseBodyIpList extends TeaModel {
         /**
-         * <p>The description of the template.</p>
+         * <p>The description of the IP address in the blacklist.</p>
          * 
          * <strong>example:</strong>
          * <p>test0003asdffas</p>
@@ -68,9 +68,9 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The timestamp after which the IP address blacklist becomes invalid. Unit: seconds.</p>
+         * <p>The time after which the IP address blacklist becomes invalid. Unit: seconds.</p>
          * <blockquote>
-         * <p>If the value is <strong>0</strong>, the IP address blacklist is permanently valid.</p>
+         * <p> If the value of this parameter is <strong>0</strong>, the blacklist is permanently valid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -80,7 +80,7 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
         public Long expiredTime;
 
         /**
-         * <p>The time when the IP address in the blacklist was modified.</p>
+         * <p>The most recent time when the IP address blacklist was modified.</p>
          * 
          * <strong>example:</strong>
          * <p>1665456202000</p>
@@ -89,7 +89,7 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>The IP address.</p>
+         * <p>The IP address in the IP address blacklist.</p>
          * 
          * <strong>example:</strong>
          * <p>192.0.XX.XX</p>
@@ -98,7 +98,7 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
         public String ip;
 
         /**
-         * <p>The ID of the IP address blacklist rule for critical event protection.</p>
+         * <p>The ID of the IP address blacklist rule for major event protection.</p>
          * 
          * <strong>example:</strong>
          * <p>8508970</p>
@@ -107,7 +107,7 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
         public Long ruleId;
 
         /**
-         * <p>The ID of the critical event protection template.</p>
+         * <p>The ID of the rule template for major event protection.</p>
          * 
          * <strong>example:</strong>
          * <p>9684</p>

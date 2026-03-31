@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDefaultHttpsRequest extends TeaModel {
     /**
-     * <p>The certificate ID.</p>
+     * <p>The ID of the certificate.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,14 +15,11 @@ public class ModifyDefaultHttpsRequest extends TeaModel {
     public String certId;
 
     /**
-     * <p>The type of the cipher suite. Valid values:</p>
+     * <p>The type of the cipher suites. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: adds all cipher suites.</p>
-     * </li>
-     * <li><p><strong>2</strong>: adds strong cipher suites.</p>
-     * </li>
-     * <li><p><strong>99</strong>: adds custom cipher suites.</p>
-     * </li>
+     * <li><strong>1</strong>: all cipher suites.</li>
+     * <li><strong>2</strong>: strong cipher suites.</li>
+     * <li><strong>99</strong>: custom cipher suites.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,7 +29,7 @@ public class ModifyDefaultHttpsRequest extends TeaModel {
     public Integer cipherSuite;
 
     /**
-     * <p>The custom cipher suites that you want to add. This parameter is used only when <strong>CipherSuite</strong> is set to <strong>99</strong>.</p>
+     * <p>The custom cipher suites that you want to add. This parameter is available only if you set <strong>CipherSuite</strong> to <strong>99</strong>.</p>
      */
     @NameInMap("CustomCiphers")
     public java.util.List<String> customCiphers;
@@ -40,10 +37,8 @@ public class ModifyDefaultHttpsRequest extends TeaModel {
     /**
      * <p>Specifies whether to support TLS 1.3. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: supports TLS 1.3.</p>
-     * </li>
-     * <li><p><strong>false</strong>: does not support TLS 1.3.</p>
-     * </li>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,9 +48,9 @@ public class ModifyDefaultHttpsRequest extends TeaModel {
     public Boolean enableTLSv3;
 
     /**
-     * <p>The ID of the WAF instance.</p>
+     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <blockquote>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to view the ID of the current WAF instance.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -68,10 +63,8 @@ public class ModifyDefaultHttpsRequest extends TeaModel {
     /**
      * <p>The region in which the WAF instance is deployed. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: regions outside the Chinese mainland.</p>
-     * </li>
+     * <li><strong>cn-hangzhou</strong>: the Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,7 +74,7 @@ public class ModifyDefaultHttpsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * <p>阿里云资源组ID。</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -92,12 +85,9 @@ public class ModifyDefaultHttpsRequest extends TeaModel {
     /**
      * <p>The version of the TLS protocol. Valid values:</p>
      * <ul>
-     * <li><p><strong>tlsv1</strong></p>
-     * </li>
-     * <li><p><strong>tlsv1.1</strong></p>
-     * </li>
-     * <li><p><strong>tlsv1.2</strong></p>
-     * </li>
+     * <li><strong>tlsv1</strong></li>
+     * <li><strong>tlsv1.1</strong></li>
+     * <li><strong>tlsv1.2</strong></li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

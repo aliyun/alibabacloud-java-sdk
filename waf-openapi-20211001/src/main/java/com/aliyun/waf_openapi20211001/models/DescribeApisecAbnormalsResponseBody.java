@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApisecAbnormalsResponseBody extends TeaModel {
     /**
-     * <p>The list of security risks.</p>
+     * <p>The risks.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeApisecAbnormalsResponseBodyData> data;
@@ -20,10 +20,10 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of security risks returned.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>5</p>
+     * <p>35</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -59,7 +59,7 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
 
     public static class DescribeApisecAbnormalsResponseBodyData extends TeaModel {
         /**
-         * <p>The number of risk events that are associated with the security risk.</p>
+         * <p>The number of risk-related security events.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -68,7 +68,7 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
         public Long abnormalEventNumber;
 
         /**
-         * <p>The ID of the security risk.</p>
+         * <p>The ID of the risk.</p>
          * 
          * <strong>example:</strong>
          * <p>7c1431f27ae7e9c8cc64095***68e</p>
@@ -77,42 +77,26 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
         public String abnormalId;
 
         /**
-         * <p>The details of the security risk in JSON format. The JSON object contains the following fields:</p>
+         * <p>The details of the risk. The value is a string that consists of multiple parameters in the JSON format. Valid values:</p>
          * <ul>
-         * <li><p><strong>rule</strong>: The detection rule that triggered the security risk.</p>
-         * </li>
-         * <li><p><strong>data_type</strong>: The type of sensitive data.</p>
-         * </li>
-         * <li><p><strong>custom_rule_name</strong>: The name of the custom rule.</p>
-         * </li>
-         * <li><p><strong>rule_name</strong>: The name of the built-in rule.</p>
-         * </li>
+         * <li><strong>rule</strong>: risk-related rule</li>
+         * <li><strong>data_type</strong>: sensitive data type</li>
+         * <li><strong>custom_rule_name</strong>: custom rule name</li>
+         * <li><strong>rule_name</strong>: built-in rule name</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{
-         *     &quot;data_type&quot;: [&quot;1005&quot;,&quot;1004&quot;],
-         *     &quot;rule&quot;: {
-         *         &quot;parent&quot;: &quot;RiskType_Permission&quot;,
-         *         &quot;code&quot;: &quot;Risk_UnauthSensitive&quot;,
-         *         &quot;level&quot;: &quot;high&quot;,
-         *         &quot;origin&quot;: &quot;default&quot;,
-         *         &quot;name&quot;: &quot;Risk_UnauthSensitive&quot;
-         *     }
-         * }</p>
+         * <p>{ &quot;data_type&quot;: [&quot;1005&quot;,&quot;1004&quot;], &quot;rule&quot;: { &quot;parent&quot;: &quot;RiskType_Permission&quot;, &quot;code&quot;: &quot;Risk_UnauthSensitive&quot;, &quot;level&quot;: &quot;high&quot;, &quot;origin&quot;: &quot;default&quot;, &quot;name&quot;: &quot;Risk_UnauthSensitive&quot; } }</p>
          */
         @NameInMap("AbnormalInfo")
         public String abnormalInfo;
 
         /**
-         * <p>The severity level of the security risk. Valid values:</p>
+         * <p>The level of the risk. Valid values:</p>
          * <ul>
-         * <li><p><strong>high</strong>: High.</p>
-         * </li>
-         * <li><p><strong>medium</strong>: Medium.</p>
-         * </li>
-         * <li><p><strong>low</strong>: Low.</p>
-         * </li>
+         * <li><strong>high</strong></li>
+         * <li><strong>medium</strong></li>
+         * <li><strong>low</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -122,9 +106,9 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
         public String abnormalLevel;
 
         /**
-         * <p>The type of the security risk.</p>
+         * <p>The type of the risk.</p>
          * <blockquote>
-         * <p>Call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to query the supported risk types.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported types of risks.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -134,7 +118,7 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
         public String abnormalTag;
 
         /**
-         * <p>The processing status of the security risk.</p>
+         * <p>The status of the risk.</p>
          * 
          * <strong>example:</strong>
          * <p>unresolved</p>
@@ -143,7 +127,7 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
         public String abnromalStatus;
 
         /**
-         * <p>The path of the API that is associated with the security risk.</p>
+         * <p>The risk-related API.</p>
          * 
          * <strong>example:</strong>
          * <p>/api/login</p>
@@ -152,7 +136,7 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
         public String apiFormat;
 
         /**
-         * <p>The ID of the API that is associated with the security risk.</p>
+         * <p>The ID of the risk-related API.</p>
          * 
          * <strong>example:</strong>
          * <p>09559c0d71ca2ffc996b81***836d8</p>
@@ -163,7 +147,7 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
         /**
          * <p>The business purpose of the API.</p>
          * <blockquote>
-         * <p>Call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to query the supported business purposes.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the business purposes of APIs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -173,7 +157,7 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
         public String apiTag;
 
         /**
-         * <p>The time when the security risk was first detected. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time at which the risk was first detected. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1684252800</p>
@@ -182,14 +166,14 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
         public Long discoverTime;
 
         /**
-         * <p>The list of security risk samples.</p>
+         * <p>The risk-related samples.</p>
          */
         @NameInMap("Examples")
         @Deprecated
         public java.util.List<String> examples;
 
         /**
-         * <p>The time when the API was first discovered. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time at which the API was first detected. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1701138088</p>
@@ -198,12 +182,10 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
         public Long firstTime;
 
         /**
-         * <p>Indicates whether the security risk is being followed. Valid values:</p>
+         * <p>Indicates whether the API is followed. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: The security risk is being followed.</p>
-         * </li>
-         * <li><p><strong>0</strong> (default): The security risk is not being followed.</p>
-         * </li>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>(default): no</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -213,7 +195,7 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
         public Long follow;
 
         /**
-         * <p>The time when the security risk was marked as ignored. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time at which the risk was marked as ignored. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1684252800</p>
@@ -222,7 +204,7 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
         public Long ignoreTime;
 
         /**
-         * <p>The most recent time when the API was accessed. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time at which the API was last accessed. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1684252800</p>
@@ -231,7 +213,7 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
         public Long lastestTime;
 
         /**
-         * <p>The most recent time when the security risk was detected. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time at which the risk was last detected. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1684252800</p>
@@ -240,7 +222,7 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
         public Long latestDiscoverTime;
 
         /**
-         * <p>The domain name or IP address that the API resides on.</p>
+         * <p>The domain name or IP address of the API.</p>
          * 
          * <strong>example:</strong>
          * <p>a.aliyun.com</p>
@@ -249,21 +231,19 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
         public String matchedHost;
 
         /**
-         * <p>The remarks for the security risk.</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
-         * <p>Strict</p>
+         * <p>Business side notified</p>
          */
         @NameInMap("Note")
         public String note;
 
         /**
-         * <p>The source of the risk detection rule. Valid values:</p>
+         * <p>The source of the risk type. Valid values:</p>
          * <ul>
-         * <li><p><strong>custom</strong>: Custom rule.</p>
-         * </li>
-         * <li><p><strong>default</strong>: Built-in rule.</p>
-         * </li>
+         * <li><strong>custom</strong></li>
+         * <li><strong>default</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -273,24 +253,13 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
         public String origin;
 
         /**
-         * <p>The handling status of the security risk. Valid values:</p>
+         * <p>The status of the risk. Valid values:</p>
          * <ul>
-         * <li><p><strong>toBeConfirmed</strong>: To be confirmed.</p>
-         * </li>
-         * <li><p><strong>confirmed</strong>: Confirmed.</p>
-         * </li>
-         * <li><p><strong>toBeFixed</strong>: To be fixed.</p>
-         * </li>
-         * <li><p><strong>fixed</strong>: Fixed (manually verified).</p>
-         * </li>
-         * <li><p><strong>ignored</strong>: Ignored.</p>
-         * </li>
-         * <li><p><strong>toBeVerified</strong>: To be verified by the system.</p>
-         * </li>
-         * <li><p><strong>notFixed</strong>: Verification failed.</p>
-         * </li>
-         * <li><p><strong>systemFixed</strong>: Fixed (verified by the system).</p>
-         * </li>
+         * <li><strong>toBeConfirmed</strong></li>
+         * <li><strong>confirmed</strong></li>
+         * <li><strong>toBeFixed</strong></li>
+         * <li><strong>fixed</strong></li>
+         * <li><strong>ignored</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>

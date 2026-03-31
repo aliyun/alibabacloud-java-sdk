@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribePeakTrendResponseBody extends TeaModel {
     /**
-     * <p>The QPS statistics of WAF.</p>
+     * <p>An array of the QPS statistics of the WAF instance.</p>
      */
     @NameInMap("FlowChart")
     public java.util.List<DescribePeakTrendResponseBodyFlowChart> flowChart;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>9D11AC3A-A10C-56E7-A342-E87EC892BAE2</p>
@@ -42,7 +42,7 @@ public class DescribePeakTrendResponseBody extends TeaModel {
 
     public static class DescribePeakTrendResponseBodyFlowChart extends TeaModel {
         /**
-         * <p>The number of requests protected by the ACL module. This includes requests that are monitored and blocked.</p>
+         * <p>The number of requests that are monitored or blocked by the custom rule (access control) module.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -51,7 +51,7 @@ public class DescribePeakTrendResponseBody extends TeaModel {
         public Long aclSum;
 
         /**
-         * <p>The number of requests protected by the scan protection module. This includes requests that are monitored and blocked.</p>
+         * <p>The number of requests that are monitored or blocked by the scan protection module.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -60,7 +60,7 @@ public class DescribePeakTrendResponseBody extends TeaModel {
         public Long antiScanSum;
 
         /**
-         * <p>The number of requests protected by the CC protection module. This includes requests that are monitored and blocked.</p>
+         * <p>The number of requests that are monitored or blocked by the HTTP flood protection module.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -78,7 +78,7 @@ public class DescribePeakTrendResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The ordinal number for the time point, sorted in chronological order.</p>
+         * <p>The serial number of the time interval. The serial numbers are arranged in chronological order.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -87,7 +87,7 @@ public class DescribePeakTrendResponseBody extends TeaModel {
         public Long index;
 
         /**
-         * <p>The number of requests protected by the web attack protection module. This includes requests that are monitored and blocked.</p>
+         * <p>The number of requests that are monitored or blocked by the regular expression protection engine.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

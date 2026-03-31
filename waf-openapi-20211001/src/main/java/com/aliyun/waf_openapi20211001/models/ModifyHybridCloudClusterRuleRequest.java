@@ -5,27 +5,21 @@ import com.aliyun.tea.*;
 
 public class ModifyHybridCloudClusterRuleRequest extends TeaModel {
     /**
-     * <p>[Deprecated] The hybrid cloud cluster ID.</p>
+     * <p>The ID of the hybrid cloud cluster.</p>
      * 
      * <strong>example:</strong>
-     * <p>10*</p>
+     * <p>1018</p>
      */
     @NameInMap("ClusterId")
     public Long clusterId;
 
-    /**
-     * <p>The cluster rule resource ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>hdbc-clusterrule-*******ym0w</p>
-     */
     @NameInMap("ClusterRuleResourceId")
     public String clusterRuleResourceId;
 
     /**
-     * <p>The Web Application Firewall (WAF) instance ID.</p>
+     * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> to query the current WAF instance ID.</p>
+     * <p> You can call the DescribeInstanceInfo operation to query the ID of the WAF instance.<a href="~~140857~~"></a></p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -36,12 +30,10 @@ public class ModifyHybridCloudClusterRuleRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region of the WAF instance. Valid values:</p>
+     * <p>The region of the WAF instance. Valid value:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: The Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</p>
-     * </li>
+     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,34 +52,10 @@ public class ModifyHybridCloudClusterRuleRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The traffic routing rule configuration:</p>
-     * <blockquote>
-     * <p>Notice: </p>
-     * </blockquote>
-     * <p>The mode cannot be changed after it is selected.</p>
-     * <ul>
-     * <li><p><strong>check_mode</strong> Defines the traffic scope for the routing rule. Valid values:</p>
-     * <ul>
-     * <li><p><strong>all</strong>: Routes all traffic.</p>
-     * </li>
-     * <li><p><strong>part</strong>: Routes a specified portion of traffic.</p>
-     * </li>
-     * </ul>
-     * </li>
-     * <li><p><strong>type</strong>: The rule\&quot;s match type. Valid values:</p>
-     * <ul>
-     * <li><p><strong>exact</strong>: Exact match</p>
-     * </li>
-     * <li><p><strong>regex</strong>: Regular expression match.</p>
-     * </li>
-     * </ul>
-     * </li>
-     * <li><p><strong>substance</strong>: The value of the rule.</p>
-     * </li>
-     * </ul>
+     * <p>The configuration of the rule.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;check_mode\&quot;: \&quot;all\&quot;, \&quot;type\&quot;: \&quot;exact\&quot;, \&quot;substance\&quot;: \&quot;122\&quot;}</p>
+     * <p>{\&quot;check_mode\&quot;:\&quot;part\&quot;,\&quot;include\&quot;:{\&quot;exact\&quot;:[],\&quot;regex\&quot;:[]}}</p>
      */
     @NameInMap("RuleConfig")
     public String ruleConfig;
@@ -95,10 +63,8 @@ public class ModifyHybridCloudClusterRuleRequest extends TeaModel {
     /**
      * <p>The status of the rule. Valid values:</p>
      * <ul>
-     * <li><p><strong>on</strong>: Enabled</p>
-     * </li>
-     * <li><p><strong>off</strong>: Disabled.</p>
-     * </li>
+     * <li><strong>on</strong>: enables the rule.</li>
+     * <li><strong>off</strong>: disables the rule.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -108,9 +74,9 @@ public class ModifyHybridCloudClusterRuleRequest extends TeaModel {
     public String ruleStatus;
 
     /**
-     * <p>[Deprecated] The rule type. Valid values:</p>
+     * <p>The type of the rule. Valid values:</p>
      * <ul>
-     * <li><strong>pullin</strong>: Traffic routing configuration.</li>
+     * <li><strong>pullin</strong>: The traffic redirection rule.</li>
      * </ul>
      * 
      * <strong>example:</strong>

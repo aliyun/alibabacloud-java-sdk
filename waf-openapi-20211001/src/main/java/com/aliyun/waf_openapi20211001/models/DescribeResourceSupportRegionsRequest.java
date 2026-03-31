@@ -7,7 +7,7 @@ public class DescribeResourceSupportRegionsRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to view the ID of the current WAF instance.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,12 +18,10 @@ public class DescribeResourceSupportRegionsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region to which the WAF instance belongs. Valid values:</p>
+     * <p>The region in which the WAF instance is deployed. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: indicates the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: indicates regions outside the Chinese mainland.</p>
-     * </li>
+     * <li><strong>cn-hangzhou</strong>: the Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +31,7 @@ public class DescribeResourceSupportRegionsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekzpks****kdjq</p>
@@ -42,30 +40,12 @@ public class DescribeResourceSupportRegionsRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The cloud product to which the resource belongs. By default, instances of ALB, MSE, FC, and SAE products are returned. Valid values:</p>
+     * <p>The cloud service. Valid values:</p>
      * <ul>
-     * <li><p><strong>alb</strong>: indicates the ALB product.</p>
-     * </li>
-     * <li><p><strong>mse</strong>: indicates the MSE product.</p>
-     * </li>
-     * <li><p><strong>fc</strong>: indicates the FC product.</p>
-     * </li>
-     * <li><p><strong>sae</strong>: indicates the SAE product.</p>
-     * </li>
-     * <li><p><strong>ecs</strong>: indicates the ECS product.</p>
-     * </li>
-     * <li><p><strong>clb4</strong>: indicates the CLB(TCP) product.</p>
-     * </li>
-     * <li><p><strong>clb7</strong>: indicates the CLB(HTTP/HTTPS) product.</p>
-     * </li>
-     * <li><p><strong>apig</strong>: indicates the APIG product.</p>
-     * </li>
-     * <li><p><strong>nlb</strong>: indicates the NLB product.</p>
-     * </li>
+     * <li><strong>clb4</strong>: Layer 4 CLB.</li>
+     * <li><strong>clb7</strong>: Layer 7 CLB.</li>
+     * <li><strong>ecs</strong>: ECS.</li>
      * </ul>
-     * <blockquote>
-     * <p>Each product supports different regions. When the product filter field has a value, you need to refer to the regions supported by the product. Otherwise, the filtering may fail.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>clb7</p>

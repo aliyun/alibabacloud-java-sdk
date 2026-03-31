@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyHybridCloudServerRequest extends TeaModel {
     /**
-     * <p>The continent where the hybrid cloud node resides.</p>
+     * <p>The continent.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,11 +15,11 @@ public class ModifyHybridCloudServerRequest extends TeaModel {
     public String continents;
 
     /**
-     * <p>The custom name of the hybrid cloud node.</p>
+     * <p>The name of the node.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>节点名称</p>
+     * <p>demo</p>
      */
     @NameInMap("CustomName")
     public String customName;
@@ -27,7 +27,7 @@ public class ModifyHybridCloudServerRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the WAF instance.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -38,7 +38,7 @@ public class ModifyHybridCloudServerRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the hybrid cloud node.</p>
+     * <p>The ID of the node.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class ModifyHybridCloudServerRequest extends TeaModel {
     public String mid;
 
     /**
-     * <p>The cloud service provider of the hybrid cloud node. Example: aliyun.</p>
+     * <p>The cloud service provider.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,7 +58,7 @@ public class ModifyHybridCloudServerRequest extends TeaModel {
     public String operator;
 
     /**
-     * <p>The region code of the city where the hybrid cloud node resides.</p>
+     * <p>The city.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,12 +68,10 @@ public class ModifyHybridCloudServerRequest extends TeaModel {
     public String regionCode;
 
     /**
-     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <p>The region of the WAF instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-     * </li>
+     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>

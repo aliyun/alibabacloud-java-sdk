@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApisecStatisticsResponseBody extends TeaModel {
     /**
-     * <p>The statistical results of API security risks or events.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("Data")
     public DescribeApisecStatisticsResponseBodyData data;
@@ -42,8 +42,6 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
 
     public static class DescribeApisecStatisticsResponseBodyData extends TeaModel {
         /**
-         * <p>The number of accounts associated with the monitored APIs.</p>
-         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -51,7 +49,7 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
         public Long account;
 
         /**
-         * <p>The number of handled items.</p>
+         * <p>The number of handled events.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -60,80 +58,78 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
         public Long actioned;
 
         /**
-         * <p>The number of APIs that are monitored by the API security module.</p>
+         * <p>The number of APIs.</p>
          * 
          * <strong>example:</strong>
-         * <p>202</p>
+         * <p>/api/v1/login</p>
          */
         @NameInMap("Api")
         public Long api;
 
         /**
-         * <p>The number of confirmed items.</p>
+         * <p>The number of confirmed events.</p>
          * 
          * <strong>example:</strong>
-         * <p>11</p>
+         * <p>10</p>
          */
         @NameInMap("Confirmed")
         public Long confirmed;
 
         /**
-         * <p>The number of domain names that are monitored by the API security module.</p>
+         * <p>The number of domain names.</p>
          * 
          * <strong>example:</strong>
-         * <p>22</p>
+         * <p>a.aliyun.com</p>
          */
         @NameInMap("Domain")
         public Long domain;
 
         /**
-         * <p>The number of items that are manually verified as fixed.</p>
+         * <p>The number of fixed risks.</p>
          * 
          * <strong>example:</strong>
-         * <p>13</p>
+         * <p>0</p>
          */
         @NameInMap("Fixed")
         public Long fixed;
 
         /**
-         * <p>The number of high-risk items.</p>
+         * <p>The number of high-risk events.</p>
          * 
          * <strong>example:</strong>
-         * <p>135</p>
+         * <p>10</p>
          */
         @NameInMap("High")
         public Long high;
 
         /**
-         * <p>The number of ignored items.</p>
+         * <p>The number of ignored risks.</p>
          * 
          * <strong>example:</strong>
-         * <p>3</p>
+         * <p>0</p>
          */
         @NameInMap("Ignore")
         public Long ignore;
 
         /**
-         * <p>The number of low-risk items.</p>
+         * <p>The number of low-risk events.</p>
          * 
          * <strong>example:</strong>
-         * <p>160</p>
+         * <p>10</p>
          */
         @NameInMap("Low")
         public Long low;
 
         /**
-         * <p>The number of medium-risk items.</p>
+         * <p>The number of moderate-risk events.</p>
          * 
          * <strong>example:</strong>
-         * <p>27</p>
+         * <p>10</p>
          */
         @NameInMap("Medium")
         public Long medium;
 
         /**
-         * <p>The number of items that are verified as not fixed.</p>
-         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -141,8 +137,6 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
         public Long notFixed;
 
         /**
-         * <p>The number of items that are verified as fixed by the system.</p>
-         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -150,26 +144,24 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
         public Long systemFixed;
 
         /**
-         * <p>The number of items to be confirmed.</p>
+         * <p>The number of events to be confirmed.</p>
          * 
          * <strong>example:</strong>
-         * <p>295</p>
+         * <p>10</p>
          */
         @NameInMap("ToBeConfirmed")
         public Long toBeConfirmed;
 
         /**
-         * <p>The number of items to be fixed.</p>
+         * <p>The number of risks to be fixed.</p>
          * 
          * <strong>example:</strong>
-         * <p>3</p>
+         * <p>10</p>
          */
         @NameInMap("ToBeFixed")
         public Long toBeFixed;
 
         /**
-         * <p>The number of items to be verified by the system.</p>
-         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -177,49 +169,46 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
         public Long toBeVerified;
 
         /**
-         * <p>The number of new high-risk items detected today.</p>
+         * <p>The number of new high-risk events today.</p>
          * 
          * <strong>example:</strong>
-         * <p>3</p>
+         * <p>10</p>
          */
         @NameInMap("TodayHigh")
         public String todayHigh;
 
         /**
-         * <p>The number of new low-risk items detected today.</p>
+         * <p>The number of new low-risk events today.</p>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>10</p>
          */
         @NameInMap("TodayLow")
         public Long todayLow;
 
         /**
-         * <p>The number of new medium-risk items detected today.</p>
+         * <p>The number of new moderate-risk events today.</p>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>10</p>
          */
         @NameInMap("TodayMedium")
         public String todayMedium;
 
         /**
-         * <p>The total number of new items detected today.</p>
+         * <p>The total number of new events today.</p>
          * 
          * <strong>example:</strong>
-         * <p>3</p>
+         * <p>30</p>
          */
         @NameInMap("TodayTotal")
         public String todayTotal;
 
         /**
-         * <p>The total number of items.</p>
-         * <blockquote>
-         * <p>This is the sum of the values of the <strong>High</strong>, <strong>Medium</strong>, and <strong>Low</strong> response parameters.</p>
-         * </blockquote>
+         * <p>The total number of events.</p>
          * 
          * <strong>example:</strong>
-         * <p>322</p>
+         * <p>30</p>
          */
         @NameInMap("Total")
         public Long total;

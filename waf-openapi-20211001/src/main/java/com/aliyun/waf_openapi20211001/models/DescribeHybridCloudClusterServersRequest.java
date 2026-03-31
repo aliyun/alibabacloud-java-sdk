@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeHybridCloudClusterServersRequest extends TeaModel {
     /**
-     * <p>The ID of the hybrid cloud cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +14,6 @@ public class DescribeHybridCloudClusterServersRequest extends TeaModel {
     public Long clusterId;
 
     /**
-     * <p>The name of the node group.</p>
-     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -24,18 +21,6 @@ public class DescribeHybridCloudClusterServersRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The type of the hybrid cloud node group. Valid values:</p>
-     * <ul>
-     * <li><p><strong>protect</strong>: protection.</p>
-     * </li>
-     * <li><p><strong>control</strong>: control.</p>
-     * </li>
-     * <li><p><strong>storage</strong>: storage.</p>
-     * </li>
-     * <li><p><strong>controlStorage</strong>: control and storage.</p>
-     * </li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>protect</p>
      */
@@ -43,8 +28,6 @@ public class DescribeHybridCloudClusterServersRequest extends TeaModel {
     public String groupType;
 
     /**
-     * <p>The hostname of the server that you want to query.</p>
-     * 
      * <strong>example:</strong>
      * <p>online-***wwq</p>
      */
@@ -52,10 +35,6 @@ public class DescribeHybridCloudClusterServersRequest extends TeaModel {
     public String hostName;
 
     /**
-     * <p>The ID of the WAF instance.</p>
-     * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
-     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,8 +44,6 @@ public class DescribeHybridCloudClusterServersRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The IP address of the server that you want to query.</p>
-     * 
      * <strong>example:</strong>
      * <p>1.X.X.1</p>
      */
@@ -74,8 +51,6 @@ public class DescribeHybridCloudClusterServersRequest extends TeaModel {
     public String ip;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
-     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -83,8 +58,6 @@ public class DescribeHybridCloudClusterServersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
-     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -92,14 +65,6 @@ public class DescribeHybridCloudClusterServersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region where the WAF instance resides. Valid values:</p>
-     * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-     * </li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -107,8 +72,6 @@ public class DescribeHybridCloudClusterServersRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
-     * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
      */

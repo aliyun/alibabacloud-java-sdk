@@ -5,23 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeBaseRuleChangeLogResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>6FBF08CB-8691-5B65-BBF8-***</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>List of ruleset changes.</p>
-     */
     @NameInMap("Rules")
     public java.util.List<DescribeBaseRuleChangeLogResponseBodyRules> rules;
 
     /**
-     * <p>The total number of rule change entries in the list.</p>
-     * 
      * <strong>example:</strong>
      * <p>63</p>
      */
@@ -59,8 +52,6 @@ public class DescribeBaseRuleChangeLogResponseBody extends TeaModel {
 
     public static class DescribeBaseRuleChangeLogResponseBodyRules extends TeaModel {
         /**
-         * <p>The CVE ID of the vulnerability associated with the system rule.</p>
-         * 
          * <strong>example:</strong>
          * <p>CVE-2021-34538</p>
          */
@@ -68,14 +59,6 @@ public class DescribeBaseRuleChangeLogResponseBody extends TeaModel {
         public String cveId;
 
         /**
-         * <p>The operation type. Valid values:</p>
-         * <ul>
-         * <li><p>add: Add.</p>
-         * </li>
-         * <li><p>modify: Modify.</p>
-         * </li>
-         * </ul>
-         * 
          * <strong>example:</strong>
          * <p>add</p>
          */
@@ -83,8 +66,6 @@ public class DescribeBaseRuleChangeLogResponseBody extends TeaModel {
         public String operation;
 
         /**
-         * <p>The rule ID.</p>
-         * 
          * <strong>example:</strong>
          * <p>42755</p>
          */
@@ -92,8 +73,6 @@ public class DescribeBaseRuleChangeLogResponseBody extends TeaModel {
         public Long ruleId;
 
         /**
-         * <p>The rule name.</p>
-         * 
          * <strong>example:</strong>
          * <p>Header XSS Scanner Behavior</p>
          */
@@ -101,8 +80,6 @@ public class DescribeBaseRuleChangeLogResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The update time of the rule.</p>
-         * 
          * <strong>example:</strong>
          * <p>1665460629000</p>
          */

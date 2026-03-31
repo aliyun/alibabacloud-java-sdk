@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateHybridCloudClusterRuleResponseBody extends TeaModel {
     /**
-     * <p>The ID of the cluster rule resource.</p>
-     * 
      * <strong>example:</strong>
      * <p>hdbc-clusterrule-*******m0w</p>
      */
@@ -14,8 +12,6 @@ public class CreateHybridCloudClusterRuleResponseBody extends TeaModel {
     public String clusterRuleResourceId;
 
     /**
-     * <p>The ID of the request.</p>
-     * 
      * <strong>example:</strong>
      * <p>66A98669-CC6E-4F3E-*****-3014697B11AE</p>
      */

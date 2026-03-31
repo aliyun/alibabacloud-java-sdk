@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateHybridCloudClusterResponseBody extends TeaModel {
     /**
-     * <p>The ID of the hybrid cloud cluster.</p>
+     * <p>The ID of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

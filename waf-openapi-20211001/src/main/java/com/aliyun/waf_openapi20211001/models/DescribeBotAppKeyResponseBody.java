@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBotAppKeyResponseBody extends TeaModel {
     /**
-     * <p>The AppKey for bot management.</p>
+     * <p>AppKey。</p>
      * 
      * <strong>example:</strong>
      * <p>N1Kiv3AGZm******</p>
@@ -14,8 +14,6 @@ public class DescribeBotAppKeyResponseBody extends TeaModel {
     public String appKey;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>0C4ADFD4-5B7D-591D-A607-A45C*****</p>
      */

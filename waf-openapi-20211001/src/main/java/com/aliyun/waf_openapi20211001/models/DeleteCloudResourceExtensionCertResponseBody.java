@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCloudResourceExtensionCertResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>56B40D30-4960-4F19-B7D5-***</p>

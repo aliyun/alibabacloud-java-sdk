@@ -7,7 +7,7 @@ public class DescribeDefenseResourceTemplatesRequest extends TeaModel {
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to obtain the instance ID.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,12 +18,10 @@ public class DescribeDefenseResourceTemplatesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region of the WAF instance. Valid values:</p>
+     * <p>The region in which the WAF instance is deployed. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland</p>
-     * </li>
+     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,11 +31,11 @@ public class DescribeDefenseResourceTemplatesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the protected object or protected object group, or the ID of the protected asset to query.</p>
+     * <p>The name of the protected object or protected object group that you want to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>mitsuichemicals.cn-waf</p>
+     * <p>xxxxxhemicals.cn-waf</p>
      */
     @NameInMap("Resource")
     public String resource;
@@ -52,14 +50,10 @@ public class DescribeDefenseResourceTemplatesRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The type of protected resource. Valid values:</p>
+     * <p>The type of the protected resource. Valid values:</p>
      * <ul>
-     * <li><p><strong>single</strong> (default): A protected object.</p>
-     * </li>
-     * <li><p><strong>group</strong>: A protected object group.</p>
-     * </li>
-     * <li><p><strong>asset</strong>: A protected asset.</p>
-     * </li>
+     * <li><strong>single</strong>: protected object. This is the default value.</li>
+     * <li><strong>group</strong>: protected object group.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -78,7 +72,7 @@ public class DescribeDefenseResourceTemplatesRequest extends TeaModel {
     public Long ruleId;
 
     /**
-     * <p>The name of the protection rule.</p>
+     * <p>The name of the rule.</p>
      * 
      * <strong>example:</strong>
      * <p>demoRuleName</p>
@@ -87,12 +81,10 @@ public class DescribeDefenseResourceTemplatesRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The type of protection rule. Valid values:</p>
+     * <p>The type of the protection rule. Valid values:</p>
      * <ul>
-     * <li><p><strong>defense</strong> (default): A protection rule.</p>
-     * </li>
-     * <li><p><strong>whitelist</strong>: A whitelist rule.</p>
-     * </li>
+     * <li><strong>defense</strong>: defense rule. This is the default value.</li>
+     * <li><strong>whitelist</strong>: whitelist rule.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,7 +94,7 @@ public class DescribeDefenseResourceTemplatesRequest extends TeaModel {
     public String ruleType;
 
     /**
-     * <p>The name of the protection template to query.</p>
+     * <p>The name of the protection rule template.</p>
      * 
      * <strong>example:</strong>
      * <p>test221</p>

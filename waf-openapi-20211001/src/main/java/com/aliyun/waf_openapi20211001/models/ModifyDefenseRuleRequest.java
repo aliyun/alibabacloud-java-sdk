@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDefenseRuleRequest extends TeaModel {
     /**
-     * <p>The protection scenario to modify. For more information, see the <strong>DefenseScene</strong> parameter in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</p>
+     * <p>The scenario in which you want to use the protection rule. For more information, see the description of the <strong>DefenseScene</strong> parameter in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> topic.</p>
      * 
      * <strong>example:</strong>
      * <p>waf_group</p>
@@ -13,27 +13,13 @@ public class ModifyDefenseRuleRequest extends TeaModel {
     @NameInMap("DefenseScene")
     public String defenseScene;
 
-    /**
-     * <p>The type of the protection rule. Valid values:</p>
-     * <ul>
-     * <li><p><strong>template</strong> (default): a template protection rule.</p>
-     * </li>
-     * <li><p><strong>resource</strong>: a rule for a specific protected object.</p>
-     * </li>
-     * <li><p><strong>global</strong>: a global rule.</p>
-     * </li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>template</p>
-     */
     @NameInMap("DefenseType")
     public String defenseType;
 
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of your WAF instance.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -44,12 +30,10 @@ public class ModifyDefenseRuleRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region of the WAF instance. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-     * </li>
+     * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
+     * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,20 +42,11 @@ public class ModifyDefenseRuleRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The protected object for which you want to modify the rule.</p>
-     * <blockquote>
-     * <p>This parameter is required only when <strong>DefenseType</strong> is set to <strong>resource</strong>.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>rencs***-waf</p>
-     */
     @NameInMap("Resource")
     public String resource;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -80,32 +55,21 @@ public class ModifyDefenseRuleRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The details of the protection rule, in a JSON string format. Specify the rule ID and the configuration of the protection rule to modify. The details include the following:</p>
+     * <p>The details of the protection rule. Specify a string that contains multiple parameters in the JSON format. You must specify the ID and the new configurations of the protection rule.</p>
      * <ul>
-     * <li><p><strong>id</strong>: The ID of the rule. This parameter is required. Data type: Long.</p>
-     * </li>
-     * <li><p>Configuration of the protection rule: The parameters are the same as the <strong>Rules</strong> parameter of the <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a> operation. For more information, see the description of the protection rule parameters in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</p>
-     * </li>
+     * <li><strong>id:</strong> The ID of the protection rule. Data type: long. You must specify this parameter.</li>
+     * <li>The protection rule configurations: The role of this parameter is the same as that of the <strong>Rules</strong> parameter in the <strong>CreateDefenseRule</strong> topic. For more information, see the &quot;<strong>Protection rule parameters</strong>&quot; section in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> topic.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>[
-     *       {
-     *             &quot;id&quot;: 2344,
-     *             &quot;policyId&quot;: 1012,
-     *             &quot;action&quot;: &quot;block&quot;
-     *       }
-     * ]</p>
+     * <p>[{&quot;id&quot;:2344,&quot;policyId&quot;:1012,&quot;action&quot;:&quot;block&quot;}]</p>
      */
     @NameInMap("Rules")
     public String rules;
 
     /**
-     * <p>The ID of the protection template.</p>
-     * <blockquote>
-     * <p>This parameter is required only when <strong>DefenseType</strong> is set to <strong>template</strong>.</p>
-     * </blockquote>
+     * <p>The ID of the protection rule template to which the protection rule whose configurations you want to modify belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>5325</p>

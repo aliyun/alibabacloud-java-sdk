@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeUserEventTypeResponseBody extends TeaModel {
     /**
-     * <p>A list of security event types and their statistics.</p>
+     * <p>The types and statistics of security events.</p>
      */
     @NameInMap("Event")
     public java.util.List<DescribeUserEventTypeResponseBodyEvent> event;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>177BA739-6512-5470-98C6-E***0BAA3D</p>
@@ -42,7 +42,7 @@ public class DescribeUserEventTypeResponseBody extends TeaModel {
 
     public static class DescribeUserEventTypeResponseBodyEvent extends TeaModel {
         /**
-         * <p>The event code.</p>
+         * <p>The code of the security event.</p>
          * 
          * <strong>example:</strong>
          * <p>Event_LoginCollision</p>
@@ -60,7 +60,7 @@ public class DescribeUserEventTypeResponseBody extends TeaModel {
         public Long eventCount;
 
         /**
-         * <p>The parent type of the event.</p>
+         * <p>The parent type of the security event.</p>
          * 
          * <strong>example:</strong>
          * <p>EventType_Account</p>
@@ -69,13 +69,13 @@ public class DescribeUserEventTypeResponseBody extends TeaModel {
         public String eventParentType;
 
         /**
-         * <p>The type of the event.</p>
+         * <p>The type of the security event.</p>
          * <blockquote>
-         * <p>Call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to obtain the supported event types.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported types of security events.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>Event_LoginCollision</p>
+         * <p>Event_AbnormalFrequency</p>
          */
         @NameInMap("EventType")
         public String eventType;

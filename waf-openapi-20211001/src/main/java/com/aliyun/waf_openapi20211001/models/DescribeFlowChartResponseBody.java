@@ -11,7 +11,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
     public java.util.List<DescribeFlowChartResponseBodyFlowChart> flowChart;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>BFA71416-670E-585D-AAE6-E7BBEE248FAB</p>
@@ -132,7 +132,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public Long ccCustomReportsSum;
 
         /**
-         * <p>The number of requests that are blocked by system HTTP flood protection rules.</p>
+         * <p>The number of requests that are blocked by HTTP flood protection rules created by the system.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -141,7 +141,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public Long ccSystemBlocksSum;
 
         /**
-         * <p>The number of requests that are monitored by system HTTP flood protection rules.</p>
+         * <p>The number of requests that are monitored by HTTP flood protection rules created by the system.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -159,7 +159,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The total volume of inbound traffic. Unit: bytes.</p>
+         * <p>The total number of requests that are redirected to the WAF instance.</p>
          * 
          * <strong>example:</strong>
          * <p>121645464</p>
@@ -168,7 +168,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public Long inBytes;
 
         /**
-         * <p>The time sequence number, sorted in chronological order.</p>
+         * <p>The serial number of the time interval. The serial numbers are arranged in chronological order.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -177,7 +177,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public Long index;
 
         /**
-         * <p>The peak number of requests.</p>
+         * <p>The peak traffic.</p>
          * 
          * <strong>example:</strong>
          * <p>2932</p>
@@ -186,7 +186,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public Long maxPv;
 
         /**
-         * <p>The total volume of outbound traffic. Unit: bytes.</p>
+         * <p>The total number of requests that are forwarded by the WAF instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1200540464</p>
@@ -195,7 +195,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public Long outBytes;
 
         /**
-         * <p>The number of requests that are blocked by peak traffic throttling rules.</p>
+         * <p>The number of requests that are blocked by rate limiting rules.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -204,7 +204,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public Long ratelimitBlockSum;
 
         /**
-         * <p>The number of requests that are monitored by peak traffic throttling rules.</p>
+         * <p>The number of requests that are monitored by rate limiting rules.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -213,7 +213,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public Long ratelimitReportSum;
 
         /**
-         * <p>The number of requests that are blocked by Location Blacklist rules.</p>
+         * <p>The number of requests that are blocked by region blacklist rules.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -222,7 +222,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public Long regionBlockBlocksSum;
 
         /**
-         * <p>The number of requests that are monitored by Location Blacklist rules.</p>
+         * <p>The number of requests that are monitored by region blacklist rules.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -231,7 +231,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public Long regionBlockReportsSum;
 
         /**
-         * <p>The total number of requests from bots.</p>
+         * <p>The total number of bot requests.</p>
          * 
          * <strong>example:</strong>
          * <p>1110</p>

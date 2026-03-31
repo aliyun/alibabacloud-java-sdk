@@ -14,7 +14,7 @@ public class DescribeFlowTopResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The top 10 protected objects that received the most requests.</p>
+     * <p>The array of the top 10 protected objects that receive requests.</p>
      */
     @NameInMap("RuleHitsTopResource")
     public java.util.List<DescribeFlowTopResourceResponseBodyRuleHitsTopResource> ruleHitsTopResource;
@@ -42,7 +42,7 @@ public class DescribeFlowTopResourceResponseBody extends TeaModel {
 
     public static class DescribeFlowTopResourceResponseBodyRuleHitsTopResource extends TeaModel {
         /**
-         * <p>The total number of requests for the protected object during the specified time period.</p>
+         * <p>The total number of requests received by the protected object in a specified time range.</p>
          * 
          * <strong>example:</strong>
          * <p>181174784</p>

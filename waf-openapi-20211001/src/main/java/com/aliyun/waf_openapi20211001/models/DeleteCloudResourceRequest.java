@@ -4,22 +4,13 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DeleteCloudResourceRequest extends TeaModel {
-    /**
-     * <p>The ID of the protected resource. WAF automatically generates this ID when you add the cloud service to WAF.</p>
-     * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/2839876.html">CreateCloudResource</a> to add a resource and then view the resource ID in the response.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>lb-****py9kcm2n6nuesiu2a-80-clb4</p>
-     */
     @NameInMap("CloudResourceId")
     public String cloudResourceId;
 
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to view the ID of your WAF instance.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -30,7 +21,7 @@ public class DeleteCloudResourceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The port of the cloud service that is added to WAF.</p>
+     * <p>The port of the resource that is added to WAF.</p>
      * 
      * <strong>example:</strong>
      * <p>443</p>
@@ -40,12 +31,10 @@ public class DeleteCloudResourceRequest extends TeaModel {
     public Integer port;
 
     /**
-     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <p>The region in which the WAF instance is deployed. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-     * </li>
+     * <li><strong>cn-hangzhou</strong>: the Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -56,7 +45,7 @@ public class DeleteCloudResourceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the cloud service instance.</p>
+     * <p>The ID of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>lb-bp1*****jqnnqk5uj2p</p>
@@ -75,16 +64,11 @@ public class DeleteCloudResourceRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The type of the cloud service. Valid values:</p>
+     * <p>The cloud service. Valid values:</p>
      * <ul>
-     * <li><p><strong>clb4</strong>: Layer 4 CLB.</p>
-     * </li>
-     * <li><p><strong>clb7</strong>: Layer 7 CLB.</p>
-     * </li>
-     * <li><p><strong>ecs</strong>: ECS.</p>
-     * </li>
-     * <li><p><strong>nlb</strong>: Network Load Balancer (NLB).</p>
-     * </li>
+     * <li><strong>clb4</strong>: Layer 4 CLB.</li>
+     * <li><strong>clb7</strong>: Layer 7 CLB.</li>
+     * <li><strong>ecs</strong>: ECS.</li>
      * </ul>
      * 
      * <strong>example:</strong>

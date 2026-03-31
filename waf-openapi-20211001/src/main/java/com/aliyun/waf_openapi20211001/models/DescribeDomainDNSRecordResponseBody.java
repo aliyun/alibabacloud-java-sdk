@@ -5,20 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainDNSRecordResponseBody extends TeaModel {
     /**
-     * <p>The DNS status. Valid values:</p>
+     * <p>The status of the DNS settings. Valid values:</p>
      * <ul>
-     * <li><p><strong>cnameMatched</strong>: The DNS record is normal.</p>
-     * </li>
-     * <li><p><strong>vipMatched</strong>: The domain name is mapped to an A record.</p>
-     * </li>
-     * <li><p><strong>wafVip</strong>: The domain name is mapped to the virtual IP address (VIP) of another WAF instance.</p>
-     * </li>
-     * <li><p><strong>unRecord</strong>: No DNS record is configured.</p>
-     * </li>
-     * <li><p><strong>unUsed</strong>: Traffic is not forwarded to WAF.</p>
-     * </li>
-     * <li><p><strong>checkTimeout</strong>: The check timed out.</p>
-     * </li>
+     * <li><strong>cnameMatched</strong>: The DNS settings are properly configured.</li>
+     * <li><strong>vipMatched</strong>: An A record maps the domain name to the WAF virtual IP address (VIP).</li>
+     * <li><strong>wafVip</strong>: An A record maps the domain name to another WAF VIP.</li>
+     * <li><strong>unRecord</strong>: The domain name does not have a DNS record.</li>
+     * <li><strong>unUsed</strong>: The domain name is not pointed to WAF.</li>
+     * <li><strong>checkTimeout</strong>: The check times out.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +22,7 @@ public class DescribeDomainDNSRecordResponseBody extends TeaModel {
     public String DNSStatus;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D827FCFE-90A7-4330-9326-D33C8B4C****</p>

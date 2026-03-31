@@ -5,17 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeThreatEventTopMetricResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
-     * 
      * <strong>example:</strong>
      * <p>12EF3845-CCEB-4B84-AE60-2B49B*****EE5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The list of statistics.</p>
-     */
     @NameInMap("TopMetrics")
     public java.util.List<DescribeThreatEventTopMetricResponseBodyTopMetrics> topMetrics;
 
@@ -42,8 +37,6 @@ public class DescribeThreatEventTopMetricResponseBody extends TeaModel {
 
     public static class DescribeThreatEventTopMetricResponseBodyTopMetrics extends TeaModel {
         /**
-         * <p>The number of attacks.</p>
-         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -51,11 +44,6 @@ public class DescribeThreatEventTopMetricResponseBody extends TeaModel {
         public Long cnt;
 
         /**
-         * <p>The country where the source IP address of the attack is located.</p>
-         * <blockquote>
-         * <p>This parameter is returned only when <strong>Metric</strong> is set to <strong>src</strong>.</p>
-         * </blockquote>
-         * 
          * <strong>example:</strong>
          * <p>CN</p>
          */
@@ -63,11 +51,6 @@ public class DescribeThreatEventTopMetricResponseBody extends TeaModel {
         public String country;
 
         /**
-         * <p>The region where the source IP address of the attack is located.</p>
-         * <blockquote>
-         * <p>This parameter is returned only when <strong>Metric</strong> is set to <strong>src</strong>.</p>
-         * </blockquote>
-         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -75,20 +58,6 @@ public class DescribeThreatEventTopMetricResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The attack value. The meaning of this parameter varies based on the value of <strong>Metric</strong>.</p>
-         * <ul>
-         * <li><p>If <strong>Metric</strong> is set to <strong>time</strong>, this parameter indicates the attack time.</p>
-         * </li>
-         * <li><p>If <strong>Metric</strong> is set to <strong>src</strong>, this parameter indicates the source IP address of the attack.</p>
-         * </li>
-         * <li><p>If <strong>Metric</strong> is set to <strong>target</strong>, this parameter indicates the URL of the attack request.</p>
-         * </li>
-         * <li><p>If <strong>Metric</strong> is set to <strong>type</strong>, this parameter indicates the attack type. For example, <strong>dirscan</strong> indicates directory scan and <strong>webscan</strong> indicates web scan. For more information about other attack types, see the description of the <strong>detectType</strong> parameter for custom regular expression rules (<strong>regular_custom</strong>) in the <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a> operation.</p>
-         * </li>
-         * <li><p>If <strong>Metric</strong> is set to <strong>tools</strong>, this parameter indicates the attack tool.</p>
-         * </li>
-         * </ul>
-         * 
          * <strong>example:</strong>
          * <p>115.28.209.212</p>
          */

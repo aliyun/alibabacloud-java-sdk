@@ -5,11 +5,6 @@ import com.aliyun.tea.*;
 
 public class ModifyUserLogFieldConfigRequest extends TeaModel {
     /**
-     * <p>The delivery type. Valid value:</p>
-     * <ul>
-     * <li><strong>sls</strong>: Simple Log Service.</li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>sls</p>
      */
@@ -17,11 +12,6 @@ public class ModifyUserLogFieldConfigRequest extends TeaModel {
     public String deliveryType;
 
     /**
-     * <p>The extended configuration for log delivery, in JSON format.</p>
-     * <blockquote>
-     * <p>For more information, see the description of the <strong>ExtendConfig</strong> parameter.</p>
-     * </blockquote>
-     * 
      * <strong>example:</strong>
      * <p>{\&quot;request_header\&quot;:\&quot;App-Id,channelCode\&quot;}</p>
      */
@@ -29,15 +19,6 @@ public class ModifyUserLogFieldConfigRequest extends TeaModel {
     public String extendConfig;
 
     /**
-     * <p>The list of log fields to deliver. Use the \<code>a,b,c,...\\</code> format.</p>
-     * <blockquote>
-     * <ul>
-     * <li><p>You must include all required log fields. Call the <a href="~~DescribeCommonLogFields~~">DescribeCommonLogFields</a> operation to view the log fields that WAF supports.</p>
-     * </li>
-     * <li><p>If the log fields include <strong>request_header</strong>, use the <strong>ExtendConfig</strong> parameter to specify the request headers to deliver.</p>
-     * </li>
-     * </ul>
-     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,10 +28,6 @@ public class ModifyUserLogFieldConfigRequest extends TeaModel {
     public String fieldList;
 
     /**
-     * <p>The ID of the WAF instance.</p>
-     * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to view the ID of your WAF instance.</p>
-     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,11 +37,6 @@ public class ModifyUserLogFieldConfigRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The log delivery strategy, in JSON array format. You can specify multiple strategies.</p>
-     * <blockquote>
-     * <p>For more information, see the description of the <strong>LogDeliveryStrategy</strong> parameter.</p>
-     * </blockquote>
-     * 
      * <strong>example:</strong>
      * <p>[{\&quot;logType\&quot;:\&quot;blockLog\&quot;,\&quot;rate\&quot;:100},{\&quot;logType\&quot;:\&quot;normalRequestLog\&quot;,\&quot;rate\&quot;:100},{\&quot;logType\&quot;:\&quot;checkLog\&quot;,\&quot;rate\&quot;:100}]</p>
      */
@@ -72,14 +44,6 @@ public class ModifyUserLogFieldConfigRequest extends TeaModel {
     public String logDeliveryStrategy;
 
     /**
-     * <p>The region in which the WAF instance resides. Valid values:</p>
-     * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-     * </li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -87,8 +51,6 @@ public class ModifyUserLogFieldConfigRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
-     * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
      */

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeRuleGroupsRequest extends TeaModel {
     /**
-     * <p>The ID of the WAF instance.</p>
+     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class DescribeRuleGroupsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The page number of the results to return. The default value is <strong>1</strong>, which returns the first page of results.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,7 +27,7 @@ public class DescribeRuleGroupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. The default value is <strong>10</strong>.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -36,12 +36,10 @@ public class DescribeRuleGroupsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-     * </li>
+     * <li><strong>cn-hangzhou:</strong> the Chinese mainland</li>
+     * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +49,7 @@ public class DescribeRuleGroupsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -60,12 +58,10 @@ public class DescribeRuleGroupsRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The query type. Valid values:</p>
+     * <p>The type of the query condition. Valid values:</p>
      * <ul>
-     * <li><p><strong>id</strong>: Queries by rule group ID.</p>
-     * </li>
-     * <li><p><strong>name</strong>: Queries by rule group name. Both Chinese and English names are supported.</p>
-     * </li>
+     * <li><strong>id:</strong> queries regular expression rule groups by ID.</li>
+     * <li><strong>name:</strong> queries regular expression rule groups by name.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,7 +71,7 @@ public class DescribeRuleGroupsRequest extends TeaModel {
     public String searchType;
 
     /**
-     * <p>The content to query.</p>
+     * <p>The query condition.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

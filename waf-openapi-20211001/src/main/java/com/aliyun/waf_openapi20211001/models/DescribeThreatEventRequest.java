@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeThreatEventRequest extends TeaModel {
     /**
-     * <p>The domain name that is protected by WAF. If you do not specify this parameter, security events for all domain names are queried.</p>
-     * 
      * <strong>example:</strong>
      * <p><a href="http://www.abc.com">www.abc.com</a></p>
      */
@@ -14,7 +12,6 @@ public class DescribeThreatEventRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. This value is a UNIX timestamp in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,10 +21,6 @@ public class DescribeThreatEventRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
-     * <blockquote>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</p>
-     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,8 +30,6 @@ public class DescribeThreatEventRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The page number of the page to return. Default value: 1.</p>
-     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -46,8 +37,6 @@ public class DescribeThreatEventRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>5</strong>. Valid values: 1 to 200.</p>
-     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -55,14 +44,6 @@ public class DescribeThreatEventRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region where the WAF instance resides. Valid values:</p>
-     * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: a region outside the Chinese mainland.</p>
-     * </li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -70,8 +51,6 @@ public class DescribeThreatEventRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
-     * 
      * <strong>example:</strong>
      * <p>rg-aeky65ka*****</p>
      */
@@ -79,7 +58,6 @@ public class DescribeThreatEventRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The beginning of the time range to query. This value is a UNIX timestamp in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,10 +5,6 @@ import com.aliyun.tea.*;
 
 public class ModifyUserWafLogStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the WAF instance.</p>
-     * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</p>
-     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,17 +14,6 @@ public class ModifyUserWafLogStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the log storage region. If this parameter is not specified, Simple Log Service is enabled in the region where the WAF instance resides.</p>
-     * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the default region where Simple Log Service is enabled for a WAF instance in the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: the default region where Simple Log Service is enabled for a WAF instance outside the Chinese mainland.</p>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/2712598.html">DescribeUserSlsLogRegions</a> to query the available log storage regions.</p>
-     * </blockquote>
-     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -36,13 +21,6 @@ public class ModifyUserWafLogStatusRequest extends TeaModel {
     public String logRegionId;
 
     /**
-     * <p>Indicates whether Simple Log Service is enabled. Valid values:</p>
-     * <ul>
-     * <li><p><strong>0</strong>: Simple Log Service is disabled.</p>
-     * </li>
-     * <li><p><strong>1</strong>: Simple Log Service is enabled.</p>
-     * </li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,14 +30,6 @@ public class ModifyUserWafLogStatusRequest extends TeaModel {
     public Integer logStatus;
 
     /**
-     * <p>The region where the WAF instance resides. Valid values:</p>
-     * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-     * </li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -67,8 +37,6 @@ public class ModifyUserWafLogStatusRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
-     * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
      */

@@ -8,18 +8,16 @@ public class DescribeSlsAuthStatusResponseBody extends TeaModel {
      * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>3589D3A3-4A04-51CB-AA89-353ED20ACB10</p>
+     * <p>3589D3A3-4A04-51CB-AA89-353ED20A****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The authorization status. Valid values:</p>
+     * <p>Indicates whether WAF is authorized to access Logstores. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: indicates that authorization is granted.</p>
-     * </li>
-     * <li><p><strong>false</strong>: indicates that authorization is not granted.</p>
-     * </li>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,17 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeDefenseRuleStatisticsResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>D7861F61-5B61-46CE-A47C-6B19160D5EB0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The rule statistics that are grouped by the specified conditions.</p>
-     */
     @NameInMap("StatisticsInfos")
     public java.util.List<DescribeDefenseRuleStatisticsResponseBodyStatisticsInfos> statisticsInfos;
 
@@ -42,8 +37,6 @@ public class DescribeDefenseRuleStatisticsResponseBody extends TeaModel {
 
     public static class DescribeDefenseRuleStatisticsResponseBodyStatisticsInfos extends TeaModel {
         /**
-         * <p>The number of rules that match the specified grouping conditions.</p>
-         * 
          * <strong>example:</strong>
          * <p>27</p>
          */
@@ -51,8 +44,6 @@ public class DescribeDefenseRuleStatisticsResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The value of the quaternary grouping condition.</p>
-         * 
          * <strong>example:</strong>
          * <p>action</p>
          */
@@ -60,8 +51,6 @@ public class DescribeDefenseRuleStatisticsResponseBody extends TeaModel {
         public String fourthValue;
 
         /**
-         * <p>The value of the primary grouping condition.</p>
-         * 
          * <strong>example:</strong>
          * <p>sytem</p>
          */
@@ -69,8 +58,6 @@ public class DescribeDefenseRuleStatisticsResponseBody extends TeaModel {
         public String primaryValue;
 
         /**
-         * <p>The value of the secondary grouping condition.</p>
-         * 
          * <strong>example:</strong>
          * <p>block</p>
          */
@@ -78,8 +65,6 @@ public class DescribeDefenseRuleStatisticsResponseBody extends TeaModel {
         public String secondaryValue;
 
         /**
-         * <p>The value of the tertiary grouping condition.</p>
-         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

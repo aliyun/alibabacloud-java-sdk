@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyPauseProtectionStatusResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>D7861F61-<em><strong><strong>-</strong></strong></em>*-D5EB0</p>

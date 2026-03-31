@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSensitiveApiStatisticResponseBody extends TeaModel {
     /**
-     * <p>The list of statistics.</p>
+     * <p>The statistics.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeSensitiveApiStatisticResponseBodyData> data;
@@ -20,7 +20,7 @@ public class DescribeSensitiveApiStatisticResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -77,7 +77,7 @@ public class DescribeSensitiveApiStatisticResponseBody extends TeaModel {
         public String apiId;
 
         /**
-         * <p>The number of outbound personal information entries by API.</p>
+         * <p>The number of personal information records involved in cross-border data transfer by API.</p>
          * 
          * <strong>example:</strong>
          * <p>78</p>
@@ -86,13 +86,13 @@ public class DescribeSensitiveApiStatisticResponseBody extends TeaModel {
         public Long infoCount;
 
         /**
-         * <p>The list of sensitive data types.</p>
+         * <p>The types of sensitive data.</p>
          */
         @NameInMap("SensitiveCode")
         public java.util.List<String> sensitiveCode;
 
         /**
-         * <p>The number of outbound personal sensitive data entries by API.</p>
+         * <p>The number of sensitive personal information records involved in cross-border data transfer by API.</p>
          * 
          * <strong>example:</strong>
          * <p>55</p>
@@ -149,7 +149,7 @@ public class DescribeSensitiveApiStatisticResponseBody extends TeaModel {
 
     public static class DescribeSensitiveApiStatisticResponseBodyData extends TeaModel {
         /**
-         * <p>The number of outbound personal information entries by domain name.</p>
+         * <p>The number of personal information records involved in cross-border data transfer by domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>213</p>
@@ -158,10 +158,7 @@ public class DescribeSensitiveApiStatisticResponseBody extends TeaModel {
         public Long infoOutboundCount;
 
         /**
-         * <p>The list of statistics about APIs for the domain name.</p>
-         * <blockquote>
-         * <p>The statistics by API are returned only when you set the <strong>Type</strong> parameter to <strong>apiFormat</strong>.</p>
-         * </blockquote>
+         * <p>The domain name-related APIs.</p>
          */
         @NameInMap("List")
         public java.util.List<DescribeSensitiveApiStatisticResponseBodyDataList> list;
@@ -176,7 +173,7 @@ public class DescribeSensitiveApiStatisticResponseBody extends TeaModel {
         public String matchedHost;
 
         /**
-         * <p>The number of outbound personal sensitive data entries by domain name.</p>
+         * <p>The number of sensitive personal information records involved in cross-border data transfer by domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>127</p>

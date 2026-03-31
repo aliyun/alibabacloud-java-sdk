@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class AddAddressResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>2EFCFE18-78F8-5079-B312-07***48B</p>
      */

@@ -5,23 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeDefenseGroupValidResourcesResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>A57BA089-3B28-5C82-8331-7B94****4978</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The names of the protected objects.</p>
-     */
     @NameInMap("Resources")
     public java.util.List<String> resources;
 
     /**
-     * <p>The total number of entries returned.</p>
-     * 
      * <strong>example:</strong>
      * <p>12</p>
      */

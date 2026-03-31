@@ -5,17 +5,12 @@ import com.aliyun.tea.*;
 
 public class AddAddressRequest extends TeaModel {
     /**
-     * <p>The addresses to add to the address book.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AddressList")
     public java.util.List<String> addressList;
 
     /**
-     * <p>The ID of the WAF instance.</p>
-     * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to obtain the WAF instance ID.</p>
-     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,8 +20,6 @@ public class AddAddressRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
-     * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
      */
@@ -34,7 +27,6 @@ public class AddAddressRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The ID of the address book.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

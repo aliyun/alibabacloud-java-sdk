@@ -5,17 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainUsedPortsResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>D7861F61-5B61-<em>-A47C-</em></p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The used ports.</p>
-     */
     @NameInMap("UsedPorts")
     public java.util.List<Integer> usedPorts;
 

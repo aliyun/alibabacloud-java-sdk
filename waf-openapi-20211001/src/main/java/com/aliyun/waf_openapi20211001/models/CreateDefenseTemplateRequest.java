@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDefenseTemplateRequest extends TeaModel {
     /**
-     * <p>The protection scenario. For more information, see the <strong>DefenseScene</strong> parameter of the <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a> operation.</p>
+     * <p>The scenario in which you want to use the protection rule template. For more information, see the description of the <strong>DefenseScene</strong> parameter in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> topic.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,29 +14,22 @@ public class CreateDefenseTemplateRequest extends TeaModel {
     @NameInMap("DefenseScene")
     public String defenseScene;
 
-    /**
-     * <strong>example:</strong>
-     * <p>bot_custom_acl</p>
-     */
     @NameInMap("DefenseSubScene")
     public String defenseSubScene;
 
     /**
-     * <p>The description of the protection template.</p>
-     * <ul>
-     * <li><strong>bot_custom_acl</strong>: Represents the protection template for advanced custom rules in bot management.</li>
-     * </ul>
+     * <p>The description of the protection rule template.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>Test</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The ID of the WAF instance.</p>
+     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to get the ID of the WAF instance.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -47,7 +40,11 @@ public class CreateDefenseTemplateRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <ul>
+     * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
+     * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -56,13 +53,7 @@ public class CreateDefenseTemplateRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
-     * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: Represents the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: Represents regions outside the Chinese mainland.</p>
-     * </li>
-     * </ul>
+     * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -71,10 +62,7 @@ public class CreateDefenseTemplateRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The name of the protection template. The name must be 1 to 255 characters long and can contain letters, digits, Chinese characters, underscores (_), periods (.), and hyphens (-).</p>
-     * <blockquote>
-     * <p>The names of templates for the same protection scenario (<strong>DefenseScene</strong>) must be unique.</p>
-     * </blockquote>
+     * <p>The name of the protection rule template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -84,7 +72,7 @@ public class CreateDefenseTemplateRequest extends TeaModel {
     public String templateName;
 
     /**
-     * <p>The origin of the protection template. The value must be <strong>custom</strong>.</p>
+     * <p>The origin of the protection rule template that you want to create. Set the value to <strong>custom</strong>. The value specifies that the protection rule template is a custom template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -94,12 +82,10 @@ public class CreateDefenseTemplateRequest extends TeaModel {
     public String templateOrigin;
 
     /**
-     * <p>Indicates whether the protection template is enabled. Valid values:</p>
+     * <p>The status of the protection rule template. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: Disabled.</p>
-     * </li>
-     * <li><p><strong>1</strong>: Enabled.</p>
-     * </li>
+     * <li><strong>0:</strong> disabled.</li>
+     * <li><strong>1:</strong> enabled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -110,12 +96,10 @@ public class CreateDefenseTemplateRequest extends TeaModel {
     public Integer templateStatus;
 
     /**
-     * <p>The type of the protection template. Valid values:</p>
+     * <p>The type of the protection rule template. Valid values:</p>
      * <ul>
-     * <li><p><strong>user_default</strong>: The user\&quot;s default template.</p>
-     * </li>
-     * <li><p><strong>user_custom</strong>: A user-defined template.</p>
-     * </li>
+     * <li><strong>user_default:</strong> default template.</li>
+     * <li><strong>user_custom:</strong> custom template.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -125,18 +109,9 @@ public class CreateDefenseTemplateRequest extends TeaModel {
     @NameInMap("TemplateType")
     public String templateType;
 
-    /**
-     * <p>The protected objects to unbind when you create a default template. Use the [<strong>&quot;XX1&quot;,&quot;XX2&quot;,...</strong>] format.</p>
-     * <blockquote>
-     * <p>This parameter takes effect only when you create a <strong>default template</strong> (<strong>TemplateType</strong> is set to <strong>user_default</strong>).</p>
-     * </blockquote>
-     */
     @NameInMap("UnbindResourceGroups")
     public java.util.List<String> unbindResourceGroups;
 
-    /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
-     */
     @NameInMap("UnbindResources")
     public java.util.List<String> unbindResources;
 

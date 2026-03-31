@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeAddressesRequest extends TeaModel {
     /**
-     * <p>The address to use for a fuzzy match. If you specify this parameter, only addresses that contain the specified string are returned.</p>
-     * 
      * <strong>example:</strong>
      * <p>1.2.3.3</p>
      */
@@ -14,10 +12,6 @@ public class DescribeAddressesRequest extends TeaModel {
     public String addressLike;
 
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
-     * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
-     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,8 +21,6 @@ public class DescribeAddressesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 500. Default value: 20.</p>
-     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -36,8 +28,6 @@ public class DescribeAddressesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to start the next page of results. Set this parameter to the value of <strong>NextToken</strong> that is returned from the previous call. Do not specify this parameter for the first call.</p>
-     * 
      * <strong>example:</strong>
      * <p>AAAAAGBgV9tolsLfijC4wam2htS*****D/46H3X2wIS</p>
      */
@@ -45,14 +35,6 @@ public class DescribeAddressesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region where the WAF instance resides. Valid values:</p>
-     * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-     * </li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -60,8 +42,6 @@ public class DescribeAddressesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
-     * 
      * <strong>example:</strong>
      * <p>rg-acfm4gh****wela</p>
      */
@@ -69,8 +49,6 @@ public class DescribeAddressesRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The ID of the address book to query.</p>
-     * 
      * <strong>example:</strong>
      * <p>12345678</p>
      */
