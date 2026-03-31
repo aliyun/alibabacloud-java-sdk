@@ -4,15 +4,10 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class GetMmsTableResponseBody extends TeaModel {
-    /**
-     * <p>The returned data.</p>
-     */
     @NameInMap("data")
     public GetMmsTableResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>E7FB14F1-4ACD-5C73-A755-B302D70AB9AD</p>
      */
@@ -42,8 +37,6 @@ public class GetMmsTableResponseBody extends TeaModel {
 
     public static class GetMmsTableResponseBodyDataSchemaColumns extends TeaModel {
         /**
-         * <p>The comment of the column.</p>
-         * 
          * <strong>example:</strong>
          * <p>user id</p>
          */
@@ -51,8 +44,6 @@ public class GetMmsTableResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The default value of the column.</p>
-         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -60,8 +51,6 @@ public class GetMmsTableResponseBody extends TeaModel {
         public String defaultValue;
 
         /**
-         * <p>The column name.</p>
-         * 
          * <strong>example:</strong>
          * <p>user_id</p>
          */
@@ -69,8 +58,6 @@ public class GetMmsTableResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Indicates whether the column can be null.</p>
-         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -78,8 +65,6 @@ public class GetMmsTableResponseBody extends TeaModel {
         public Boolean nullable;
 
         /**
-         * <p>The data type of the column.</p>
-         * 
          * <strong>example:</strong>
          * <p>bigint</p>
          */
@@ -135,8 +120,6 @@ public class GetMmsTableResponseBody extends TeaModel {
 
     public static class GetMmsTableResponseBodyDataSchemaPartitions extends TeaModel {
         /**
-         * <p>The comment of the column.</p>
-         * 
          * <strong>example:</strong>
          * <p>first partition level</p>
          */
@@ -144,8 +127,6 @@ public class GetMmsTableResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The default value of the column.</p>
-         * 
          * <strong>example:</strong>
          * <p>abc</p>
          */
@@ -153,8 +134,6 @@ public class GetMmsTableResponseBody extends TeaModel {
         public String defaultValue;
 
         /**
-         * <p>The column name.</p>
-         * 
          * <strong>example:</strong>
          * <p>p1</p>
          */
@@ -162,8 +141,6 @@ public class GetMmsTableResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Indicates whether the column can be null.</p>
-         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -171,8 +148,6 @@ public class GetMmsTableResponseBody extends TeaModel {
         public Boolean nullable;
 
         /**
-         * <p>The data type of the column.</p>
-         * 
          * <strong>example:</strong>
          * <p>string</p>
          */
@@ -227,15 +202,10 @@ public class GetMmsTableResponseBody extends TeaModel {
     }
 
     public static class GetMmsTableResponseBodyDataSchema extends TeaModel {
-        /**
-         * <p>All common columns.</p>
-         */
         @NameInMap("columns")
         public java.util.List<GetMmsTableResponseBodyDataSchemaColumns> columns;
 
         /**
-         * <p>The comment of the table.</p>
-         * 
          * <strong>example:</strong>
          * <p>for mms test</p>
          */
@@ -243,17 +213,12 @@ public class GetMmsTableResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The table name.</p>
-         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("name")
         public String name;
 
-        /**
-         * <p>All partition key columns.</p>
-         */
         @NameInMap("partitions")
         public java.util.List<GetMmsTableResponseBodyDataSchemaPartitions> partitions;
 
@@ -298,8 +263,6 @@ public class GetMmsTableResponseBody extends TeaModel {
 
     public static class GetMmsTableResponseBodyData extends TeaModel {
         /**
-         * <p>The database ID.</p>
-         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -307,8 +270,6 @@ public class GetMmsTableResponseBody extends TeaModel {
         public Long dbId;
 
         /**
-         * <p>The database name.</p>
-         * 
          * <strong>example:</strong>
          * <p>mms_test</p>
          */
@@ -316,8 +277,6 @@ public class GetMmsTableResponseBody extends TeaModel {
         public String dbName;
 
         /**
-         * <p>The destination MaxCompute table name. By default, this name matches the original table name.</p>
-         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -325,8 +284,6 @@ public class GetMmsTableResponseBody extends TeaModel {
         public String dstName;
 
         /**
-         * <p>The destination MaxCompute project name.</p>
-         * 
          * <strong>example:</strong>
          * <p>mms_test</p>
          */
@@ -334,8 +291,6 @@ public class GetMmsTableResponseBody extends TeaModel {
         public String dstProjectName;
 
         /**
-         * <p>The destination MaxCompute schema name. This value is null if the destination MaxCompute project does not enable the schema layer.</p>
-         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -343,8 +298,6 @@ public class GetMmsTableResponseBody extends TeaModel {
         public String dstSchemaName;
 
         /**
-         * <p>Other information stored in JSON format.</p>
-         * 
          * <strong>example:</strong>
          * <p>{&quot;mapkey.delim&quot;:&quot;:&quot;,&quot;collection.delim&quot;:&quot;,&quot;,&quot;serialization.format&quot;:&quot;|&quot;,&quot;field.delim&quot;:&quot;|&quot;}</p>
          */
@@ -352,8 +305,6 @@ public class GetMmsTableResponseBody extends TeaModel {
         public String extra;
 
         /**
-         * <p>Indicates whether the table is a partitioned table.</p>
-         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -361,7 +312,7 @@ public class GetMmsTableResponseBody extends TeaModel {
         public Boolean hasPartitions;
 
         /**
-         * <p>The table ID.</p>
+         * <p>table ID</p>
          * 
          * <strong>example:</strong>
          * <p>22</p>
@@ -370,7 +321,7 @@ public class GetMmsTableResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The input format.</p>
+         * <p>inputFormat</p>
          * 
          * <strong>example:</strong>
          * <p>org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat</p>
@@ -379,7 +330,7 @@ public class GetMmsTableResponseBody extends TeaModel {
         public String inputFormat;
 
         /**
-         * <p>The last DDL time.</p>
+         * <p>lastDdlTime</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-17 15:44:42</p>
@@ -388,8 +339,6 @@ public class GetMmsTableResponseBody extends TeaModel {
         public String lastDdlTime;
 
         /**
-         * <p>The storage location of the table.</p>
-         * 
          * <strong>example:</strong>
          * <p>| hdfs://master-1-1.c-c127cd184bb029ea.cn-zhangjiakou.emr.aliyuncs.com:9000/user/hive/warehouse/demo</p>
          */
@@ -397,8 +346,6 @@ public class GetMmsTableResponseBody extends TeaModel {
         public String location;
 
         /**
-         * <p>The table name.</p>
-         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -406,8 +353,6 @@ public class GetMmsTableResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The number of rows.</p>
-         * 
          * <strong>example:</strong>
          * <p>233232</p>
          */
@@ -415,7 +360,7 @@ public class GetMmsTableResponseBody extends TeaModel {
         public Long numRows;
 
         /**
-         * <p>The output format.</p>
+         * <p>outputFormat</p>
          * 
          * <strong>example:</strong>
          * <p>org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat</p>
@@ -424,8 +369,6 @@ public class GetMmsTableResponseBody extends TeaModel {
         public String outputFormat;
 
         /**
-         * <p>The owner of the table.</p>
-         * 
          * <strong>example:</strong>
          * <p>Hive</p>
          */
@@ -433,8 +376,6 @@ public class GetMmsTableResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The number of partitions.</p>
-         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -442,8 +383,6 @@ public class GetMmsTableResponseBody extends TeaModel {
         public Integer partitions;
 
         /**
-         * <p>The number of partitions that are being migrated.</p>
-         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -451,8 +390,6 @@ public class GetMmsTableResponseBody extends TeaModel {
         public Integer partitionsDoing;
 
         /**
-         * <p>The number of partitions that are migrated.</p>
-         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -460,22 +397,17 @@ public class GetMmsTableResponseBody extends TeaModel {
         public Integer partitionsDone;
 
         /**
-         * <p>The number of partitions that failed to be migrated.</p>
-         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("partitionsFailed")
         public Integer partitionsFailed;
 
-        /**
-         * <p>The table schema.</p>
-         */
         @NameInMap("schema")
         public GetMmsTableResponseBodyDataSchema schema;
 
         /**
-         * <p>The serializer/deserializer (SerDe).</p>
+         * <p>serde</p>
          * 
          * <strong>example:</strong>
          * <p>org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe</p>
@@ -484,8 +416,6 @@ public class GetMmsTableResponseBody extends TeaModel {
         public String serde;
 
         /**
-         * <p>The data size in bytes.</p>
-         * 
          * <strong>example:</strong>
          * <p>23232</p>
          */
@@ -493,8 +423,6 @@ public class GetMmsTableResponseBody extends TeaModel {
         public Long size;
 
         /**
-         * <p>The data source ID.</p>
-         * 
          * <strong>example:</strong>
          * <p>2000028</p>
          */
@@ -502,8 +430,6 @@ public class GetMmsTableResponseBody extends TeaModel {
         public Long sourceId;
 
         /**
-         * <p>The data source name.</p>
-         * 
          * <strong>example:</strong>
          * <p>demo</p>
          */
@@ -511,8 +437,6 @@ public class GetMmsTableResponseBody extends TeaModel {
         public String sourceName;
 
         /**
-         * <p>The migration status.</p>
-         * 
          * <strong>example:</strong>
          * <p>DONE</p>
          */
@@ -520,8 +444,6 @@ public class GetMmsTableResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The table type.</p>
-         * 
          * <strong>example:</strong>
          * <p>MANAGED_TABLED</p>
          */
@@ -529,8 +451,6 @@ public class GetMmsTableResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Indicates whether the metadata is updated.</p>
-         * 
          * <strong>example:</strong>
          * <p>false</p>
          */

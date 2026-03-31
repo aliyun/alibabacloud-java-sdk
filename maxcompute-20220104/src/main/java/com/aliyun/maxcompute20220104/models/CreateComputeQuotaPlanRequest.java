@@ -5,11 +5,18 @@ import com.aliyun.tea.*;
 
 public class CreateComputeQuotaPlanRequest extends TeaModel {
     /**
+     * <p>The name of quota plan.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>planA</p>
      */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The parameters of quota plan.</p>
+     */
     @NameInMap("quota")
     public CreateComputeQuotaPlanRequestQuota quota;
 
@@ -36,7 +43,14 @@ public class CreateComputeQuotaPlanRequest extends TeaModel {
 
     public static class CreateComputeQuotaPlanRequestQuotaParameter extends TeaModel {
         /**
+         * <p>The value of elastic Reserved CUs in the level-1 quota.</p>
+         * <blockquote>
+         * <p>The default value is 0. The maximum value of this parameter must be equal to the number of subscription-based reserved CUs and cannot exceed 10,000 CUs.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("elasticReservedCU")
         public Long elasticReservedCU;
@@ -58,19 +72,43 @@ public class CreateComputeQuotaPlanRequest extends TeaModel {
 
     public static class CreateComputeQuotaPlanRequestQuotaSubQuotaInfoListParameter extends TeaModel {
         /**
+         * <p>The value of elastic Reserved CUs.</p>
+         * <blockquote>
+         * <p>The total number of elastically reserved CUs in all the level-2 quotas is equal to the number of elastically reserved CUs in the level-1 quota.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("elasticReservedCU")
         public Long elasticReservedCU;
 
         /**
+         * <p>The value of maxCU in Reserved CUs.</p>
+         * <blockquote>
+         * <p>The value of maxCU must be less than or equal to the value of maxCU in the level-1 quota that you purchased.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("maxCU")
         public Long maxCU;
 
         /**
+         * <p>The value of minCU in Reserved CUs.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The total value of minCU in all the level-2 quotas is equal to the value of minCU in the level-1 quota.</li>
+         * <li>The value of minCU must be less than or equal to the value of maxCU in the level-2 quota and less than or equal to the value of minCU in the level-1 quota that you purchased.</li>
+         * </ul>
+         * </blockquote>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("minCU")
         public Long minCU;
@@ -108,11 +146,18 @@ public class CreateComputeQuotaPlanRequest extends TeaModel {
 
     public static class CreateComputeQuotaPlanRequestQuotaSubQuotaInfoList extends TeaModel {
         /**
+         * <p>The nickname of the level-2 quota.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>os_ComputeQuota</p>
          */
         @NameInMap("nickName")
         public String nickName;
 
+        /**
+         * <p>The parameters of the level-2 quota.</p>
+         */
         @NameInMap("parameter")
         public CreateComputeQuotaPlanRequestQuotaSubQuotaInfoListParameter parameter;
 
@@ -140,9 +185,15 @@ public class CreateComputeQuotaPlanRequest extends TeaModel {
     }
 
     public static class CreateComputeQuotaPlanRequestQuota extends TeaModel {
+        /**
+         * <p>The parameters of level-1 quota.</p>
+         */
         @NameInMap("parameter")
         public CreateComputeQuotaPlanRequestQuotaParameter parameter;
 
+        /**
+         * <p>The list of level-2 quotas.</p>
+         */
         @NameInMap("subQuotaInfoList")
         public java.util.List<CreateComputeQuotaPlanRequestQuotaSubQuotaInfoList> subQuotaInfoList;
 

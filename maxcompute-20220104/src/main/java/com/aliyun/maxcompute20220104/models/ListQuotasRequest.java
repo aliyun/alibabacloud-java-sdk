@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListQuotasRequest extends TeaModel {
     /**
-     * <p>The billing method.</p>
+     * <p>The billing method of the quota.</p>
      * 
      * <strong>example:</strong>
      * <p>subscription</p>
@@ -14,7 +14,7 @@ public class ListQuotasRequest extends TeaModel {
     public String billingType;
 
     /**
-     * <p>The token that specifies the position from which to start returning results. The results are sorted in alphabetical order.</p>
+     * <p>Specifies the marker after which the returned list begins.</p>
      * 
      * <strong>example:</strong>
      * <p>cHlvZHBzX3VkZl8xMDExNV8xNDU3NDI4NDkzKg==</p>
@@ -31,16 +31,28 @@ public class ListQuotasRequest extends TeaModel {
     @NameInMap("maxItem")
     public Long maxItem;
 
+    /**
+     * <p>The service ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ODPS</p>
+     */
     @NameInMap("productId")
     @Deprecated
     public String productId;
 
+    /**
+     * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("region")
     @Deprecated
     public String region;
 
     /**
-     * <p>The cost allocation tags that are used to filter quotas. You can create cost allocation tags in the Tag service.</p>
+     * <p>The cost tag. You can filter out quota objects based on the cost tag. The cost tag is created when you tag a service.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;tag&quot;:&quot;this_is_tag_demo&quot;}</p>
@@ -48,6 +60,12 @@ public class ListQuotasRequest extends TeaModel {
     @NameInMap("saleTags")
     public String saleTags;
 
+    /**
+     * <p>The ID of the tenant.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>280747109771520</p>
+     */
     @NameInMap("tenantId")
     @Deprecated
     public String tenantId;

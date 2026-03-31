@@ -4,15 +4,10 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class GetMmsFetchMetadataJobResponseBody extends TeaModel {
-    /**
-     * <p>The returned data.</p>
-     */
     @NameInMap("data")
     public GetMmsFetchMetadataJobResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>5CA6292A-E301-5CD8-B4E2-AF060F99147B</p>
      */
@@ -42,8 +37,6 @@ public class GetMmsFetchMetadataJobResponseBody extends TeaModel {
 
     public static class GetMmsFetchMetadataJobResponseBodyData extends TeaModel {
         /**
-         * <p>The time when metadata synchronization ended.</p>
-         * 
          * <strong>example:</strong>
          * <p>2024-12-16 19:10:07</p>
          */
@@ -51,8 +44,6 @@ public class GetMmsFetchMetadataJobResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The error message.</p>
-         * 
          * <strong>example:</strong>
          * <p>unexpected exception</p>
          */
@@ -60,8 +51,6 @@ public class GetMmsFetchMetadataJobResponseBody extends TeaModel {
         public String errorMsg;
 
         /**
-         * <p>The ID of the asynchronous task.</p>
-         * 
          * <strong>example:</strong>
          * <p>1000002</p>
          */
@@ -69,8 +58,6 @@ public class GetMmsFetchMetadataJobResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The progress of metadata synchronization. Valid values: 1 to 10000.</p>
-         * 
          * <strong>example:</strong>
          * <p>5000</p>
          */
@@ -78,8 +65,6 @@ public class GetMmsFetchMetadataJobResponseBody extends TeaModel {
         public Float progress;
 
         /**
-         * <p>The result of metadata synchronization.</p>
-         * 
          * <strong>example:</strong>
          * <p>{&quot;databases&quot;:5,&quot;tables&quot;:75,&quot;partitions&quot;:215}</p>
          */
@@ -87,8 +72,6 @@ public class GetMmsFetchMetadataJobResponseBody extends TeaModel {
         public String result;
 
         /**
-         * <p>The data source ID.</p>
-         * 
          * <strong>example:</strong>
          * <p>2000015</p>
          */
@@ -96,8 +79,6 @@ public class GetMmsFetchMetadataJobResponseBody extends TeaModel {
         public Long sourceId;
 
         /**
-         * <p>The time when metadata synchronization started.</p>
-         * 
          * <strong>example:</strong>
          * <p>2024-12-16 19:09:37</p>
          */
@@ -105,8 +86,6 @@ public class GetMmsFetchMetadataJobResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The status of the asynchronous task for metadata synchronization.</p>
-         * 
          * <strong>example:</strong>
          * <p>SCAN_DOING</p>
          */

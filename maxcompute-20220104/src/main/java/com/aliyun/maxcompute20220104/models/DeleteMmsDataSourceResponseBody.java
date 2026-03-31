@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteMmsDataSourceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the deleted data source.</p>
-     * 
      * <strong>example:</strong>
      * <p>2000015</p>
      */
@@ -14,8 +12,6 @@ public class DeleteMmsDataSourceResponseBody extends TeaModel {
     public Long data;
 
     /**
-     * <p>The ID of the request.</p>
-     * 
      * <strong>example:</strong>
      * <p>EA1320AB-7766-5EC7-B0F6-8B20E2298567</p>
      */

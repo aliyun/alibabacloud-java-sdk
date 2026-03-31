@@ -5,17 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateMmsFetchMetadataJobRequest extends TeaModel {
     /**
-     * <p>Updates metadata for the specified source database, schema, or dataset.</p>
-     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
     @NameInMap("dbName")
     public String dbName;
 
-    /**
-     * <p>Updates metadata for the specified source tables.</p>
-     */
     @NameInMap("tableNames")
     public java.util.List<String> tableNames;
 

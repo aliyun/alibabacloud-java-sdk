@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetProjectRequest extends TeaModel {
     /**
-     * <p>Specifies whether to include additional information, such as securityProperties and superAdmins.</p>
+     * <p>Specifies whether to use additional information.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,8 +14,6 @@ public class GetProjectRequest extends TeaModel {
     public Boolean verbose;
 
     /**
-     * <p>Specifies whether to include additional information, such as productType.</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -23,8 +21,6 @@ public class GetProjectRequest extends TeaModel {
     public Boolean withQuotaProductType;
 
     /**
-     * <p>Specifies whether to include additional information, such as properties.storageTierInfo.</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

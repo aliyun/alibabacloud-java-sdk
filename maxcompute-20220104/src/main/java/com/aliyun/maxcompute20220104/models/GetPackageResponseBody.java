@@ -4,18 +4,45 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class GetPackageResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public GetPackageResponseBodyData data;
 
+    /**
+     * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>040002</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>error message.</p>
+     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
+    /**
+     * <p>Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("httpCode")
     public Integer httpCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0b57ff8316614119858417939e3e54</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -65,9 +92,21 @@ public class GetPackageResponseBody extends TeaModel {
     }
 
     public static class GetPackageResponseBodyDataAllowedProjectList extends TeaModel {
+        /**
+         * <p>The security level for sensitive data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("label")
         public String label;
 
+        /**
+         * <p>The name of the MaxCompute project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>proejctB</p>
+         */
         @NameInMap("project")
         public String project;
 
@@ -95,12 +134,27 @@ public class GetPackageResponseBody extends TeaModel {
     }
 
     public static class GetPackageResponseBodyDataResourceListFunction extends TeaModel {
+        /**
+         * <p>The operations that were performed on the function.</p>
+         */
         @NameInMap("actions")
         public java.util.List<String> actions;
 
+        /**
+         * <p>The name of the function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>function_1</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The name of schema.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("schemaName")
         public String schemaName;
 
@@ -136,12 +190,27 @@ public class GetPackageResponseBody extends TeaModel {
     }
 
     public static class GetPackageResponseBodyDataResourceListResource extends TeaModel {
+        /**
+         * <p>The operations that were performed on the resource.</p>
+         */
         @NameInMap("actions")
         public java.util.List<String> actions;
 
+        /**
+         * <p>The name of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>res_1</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The name of schema.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("schemaName")
         public String schemaName;
 
@@ -177,12 +246,27 @@ public class GetPackageResponseBody extends TeaModel {
     }
 
     public static class GetPackageResponseBodyDataResourceListTable extends TeaModel {
+        /**
+         * <p>The operations that were performed on the table.</p>
+         */
         @NameInMap("actions")
         public java.util.List<String> actions;
 
+        /**
+         * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dim_odps</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The name of schema.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("schemaName")
         public String schemaName;
 
@@ -218,12 +302,21 @@ public class GetPackageResponseBody extends TeaModel {
     }
 
     public static class GetPackageResponseBodyDataResourceList extends TeaModel {
+        /**
+         * <p>The functions.</p>
+         */
         @NameInMap("function")
         public java.util.List<GetPackageResponseBodyDataResourceListFunction> function;
 
+        /**
+         * <p>The resources.</p>
+         */
         @NameInMap("resource")
         public java.util.List<GetPackageResponseBodyDataResourceListResource> resource;
 
+        /**
+         * <p>The tables.</p>
+         */
         @NameInMap("table")
         public java.util.List<GetPackageResponseBodyDataResourceListTable> table;
 
@@ -259,9 +352,15 @@ public class GetPackageResponseBody extends TeaModel {
     }
 
     public static class GetPackageResponseBodyData extends TeaModel {
+        /**
+         * <p>The projects in which the package is installed.</p>
+         */
         @NameInMap("allowedProjectList")
         public java.util.List<GetPackageResponseBodyDataAllowedProjectList> allowedProjectList;
 
+        /**
+         * <p>The details of the resources that are included in the package.</p>
+         */
         @NameInMap("resourceList")
         public GetPackageResponseBodyDataResourceList resourceList;
 

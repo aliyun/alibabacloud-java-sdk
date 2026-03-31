@@ -8,8 +8,6 @@ public class ListMmsTablesRequest extends TeaModel {
     public ListMmsTablesRequestSorter sorter;
 
     /**
-     * <p>The ID of the database.</p>
-     * 
      * <strong>example:</strong>
      * <p>197</p>
      */
@@ -17,8 +15,6 @@ public class ListMmsTablesRequest extends TeaModel {
     public Long dbId;
 
     /**
-     * <p>The name of the database.</p>
-     * 
      * <strong>example:</strong>
      * <p>mms_test</p>
      */
@@ -26,8 +22,6 @@ public class ListMmsTablesRequest extends TeaModel {
     public String dbName;
 
     /**
-     * <p>The name of the destination MaxCompute table.</p>
-     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -35,8 +29,6 @@ public class ListMmsTablesRequest extends TeaModel {
     public String dstName;
 
     /**
-     * <p>The name of the destination MaxCompute project.</p>
-     * 
      * <strong>example:</strong>
      * <p>mms_test</p>
      */
@@ -44,8 +36,6 @@ public class ListMmsTablesRequest extends TeaModel {
     public String dstProjectName;
 
     /**
-     * <p>The name of the destination MaxCompute schema. This parameter is null if the destination MaxCompute project does not have a schema layer.</p>
-     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -53,8 +43,6 @@ public class ListMmsTablesRequest extends TeaModel {
     public String dstSchemaName;
 
     /**
-     * <p>The partitioned table.</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -62,8 +50,6 @@ public class ListMmsTablesRequest extends TeaModel {
     public Boolean hasPartitions;
 
     /**
-     * <p>The end of the time range for lastDdlTime.</p>
-     * 
      * <strong>example:</strong>
      * <p>2024-12-19 15:44:42</p>
      */
@@ -71,8 +57,6 @@ public class ListMmsTablesRequest extends TeaModel {
     public String lastDdlTimeEnd;
 
     /**
-     * <p>The start of the time range for lastDdlTime.</p>
-     * 
      * <strong>example:</strong>
      * <p>2024-12-17 15:44:42</p>
      */
@@ -80,8 +64,6 @@ public class ListMmsTablesRequest extends TeaModel {
     public String lastDdlTimeStart;
 
     /**
-     * <p>The name of the table.</p>
-     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -89,8 +71,6 @@ public class ListMmsTablesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Specifies whether to return only the names of the tables.</p>
-     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -98,8 +78,6 @@ public class ListMmsTablesRequest extends TeaModel {
     public Boolean onlyName;
 
     /**
-     * <p>The page number.</p>
-     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -107,26 +85,16 @@ public class ListMmsTablesRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("pageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The migration status.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>test</p>
-     */
     @NameInMap("status")
     public java.util.List<String> status;
 
     /**
-     * <p>The table type.</p>
-     * 
      * <strong>example:</strong>
      * <p>MANAGED_TABLE</p>
      */
@@ -260,8 +228,6 @@ public class ListMmsTablesRequest extends TeaModel {
 
     public static class ListMmsTablesRequestSorter extends TeaModel {
         /**
-         * <p>The sort order for lastDdlTime.</p>
-         * 
          * <strong>example:</strong>
          * <p>desc</p>
          */
@@ -269,8 +235,6 @@ public class ListMmsTablesRequest extends TeaModel {
         public String lastDdlTime;
 
         /**
-         * <p>The sort order for the number of rows.</p>
-         * 
          * <strong>example:</strong>
          * <p>desc</p>
          */
@@ -278,8 +242,6 @@ public class ListMmsTablesRequest extends TeaModel {
         public String numRows;
 
         /**
-         * <p>The sort order for the data size.</p>
-         * 
          * <strong>example:</strong>
          * <p>asc</p>
          */

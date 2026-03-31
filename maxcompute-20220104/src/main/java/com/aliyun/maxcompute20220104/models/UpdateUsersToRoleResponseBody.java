@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateUsersToRoleResponseBody extends TeaModel {
     /**
-     * <p>The returned result.</p>
+     * <p>The data returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

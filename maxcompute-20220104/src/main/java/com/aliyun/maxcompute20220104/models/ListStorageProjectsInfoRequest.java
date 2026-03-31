@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class ListStorageProjectsInfoRequest extends TeaModel {
     /**
-     * <p>Specifies whether to sort the results in ascending order.</p>
-     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -14,7 +12,6 @@ public class ListStorageProjectsInfoRequest extends TeaModel {
     public Boolean ascOrder;
 
     /**
-     * <p>The statistics collection date. The date is accurate to the day. The date must be in the <code>YYYYMMdd</code> format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,20 +21,6 @@ public class ListStorageProjectsInfoRequest extends TeaModel {
     public String date;
 
     /**
-     * <p>The column to sort by. Valid values:</p>
-     * <ul>
-     * <li><p>totalStorage</p>
-     * </li>
-     * <li><p>longTermStorage</p>
-     * </li>
-     * <li><p>lowFreqStorage</p>
-     * </li>
-     * <li><p>standardStorage</p>
-     * </li>
-     * <li><p>recycleBinStorage</p>
-     * </li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>totalStorage</p>
      */
@@ -45,8 +28,6 @@ public class ListStorageProjectsInfoRequest extends TeaModel {
     public String orderColumn;
 
     /**
-     * <p>The page number.</p>
-     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -54,8 +35,6 @@ public class ListStorageProjectsInfoRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -63,8 +42,6 @@ public class ListStorageProjectsInfoRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The prefix of the MaxCompute project name.</p>
-     * 
      * <strong>example:</strong>
      * <p>odps_project</p>
      */
@@ -72,8 +49,6 @@ public class ListStorageProjectsInfoRequest extends TeaModel {
     public String projectPrefix;
 
     /**
-     * <p>The number of days for year-over-year comparison.</p>
-     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -81,8 +56,6 @@ public class ListStorageProjectsInfoRequest extends TeaModel {
     public Integer recentDays;
 
     /**
-     * <p>The region ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>cn-chengdu</p>
      */
@@ -90,8 +63,6 @@ public class ListStorageProjectsInfoRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The tenant ID. You can log on to the MaxCompute console and choose <strong>Tenant Property</strong> in the navigation pane on the left to view the tenant ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>28074710977****</p>
      */

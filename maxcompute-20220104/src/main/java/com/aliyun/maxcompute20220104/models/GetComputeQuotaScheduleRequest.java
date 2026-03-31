@@ -4,6 +4,12 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class GetComputeQuotaScheduleRequest extends TeaModel {
+    /**
+     * <p>Display time zone.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UTC+8</p>
+     */
     @NameInMap("displayTimezone")
     public String displayTimezone;
 

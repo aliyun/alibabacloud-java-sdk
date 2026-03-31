@@ -4,15 +4,10 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class CreateMmsFetchMetadataJobResponseBody extends TeaModel {
-    /**
-     * <p>The returned result.</p>
-     */
     @NameInMap("data")
     public CreateMmsFetchMetadataJobResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>CC4D05E8-0613-5A8E-9339-A0EBD097A69E</p>
      */
@@ -42,8 +37,6 @@ public class CreateMmsFetchMetadataJobResponseBody extends TeaModel {
 
     public static class CreateMmsFetchMetadataJobResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the asynchronous task that syncs metadata.</p>
-         * 
          * <strong>example:</strong>
          * <p>1000002</p>
          */

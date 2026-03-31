@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateQuotaRequest extends TeaModel {
     /**
-     * <p>Billing type. Use payasyougo for pay-as-you-go or subscription for subscription.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +14,6 @@ public class CreateQuotaRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>Product code. For example:
-     * Alibaba Cloud China Website (www\.aliyun.com): use odps for pay-as-you-go and odpsplus for subscription.
-     * Alibaba Cloud International Website (www\.alibabacloud.com): use odps_intl for pay-as-you-go and odpsplus_intl for subscription.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,13 +23,6 @@ public class CreateQuotaRequest extends TeaModel {
     public String commodityCode;
 
     /**
-     * <p>Quota specification.</p>
-     * <blockquote>
-     * <p>Notice: Required only for subscription quotas.
-     * The minimum CU value is 50.
-     * ord_time supports month and year.</p>
-     * </blockquote>
-     * 
      * <strong>example:</strong>
      * <p>{&quot;CU&quot;:50,&quot;ord_time&quot;:&quot;1:Month&quot;,&quot;autoRenew&quot;:false}</p>
      */
@@ -41,11 +30,6 @@ public class CreateQuotaRequest extends TeaModel {
     public String commodityData;
 
     /**
-     * <blockquote>
-     * <p>Notice: </p>
-     * </blockquote>
-     * <p>Required only for subscription quotas.</p>
-     * 
      * <strong>example:</strong>
      * <p>MyQuota</p>
      */

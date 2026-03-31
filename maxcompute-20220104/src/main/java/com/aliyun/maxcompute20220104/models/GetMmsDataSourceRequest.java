@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetMmsDataSourceRequest extends TeaModel {
     /**
-     * <p>The language of the description for the configuration items.</p>
-     * 
      * <strong>example:</strong>
      * <p>en_US</p>
      */
@@ -14,8 +12,6 @@ public class GetMmsDataSourceRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Specifies whether to obtain the specific configuration items of the data source.</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -4,15 +4,10 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class ListMmsTaskLogsResponseBody extends TeaModel {
-    /**
-     * <p>A list of logs.</p>
-     */
     @NameInMap("data")
     public java.util.List<ListMmsTaskLogsResponseBodyData> data;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>A3AE5649-EF90-54BD-86D0-C632FA950988</p>
      */
@@ -42,8 +37,6 @@ public class ListMmsTaskLogsResponseBody extends TeaModel {
 
     public static class ListMmsTaskLogsResponseBodyData extends TeaModel {
         /**
-         * <p>The operation performed by the migration task.</p>
-         * 
          * <strong>example:</strong>
          * <p>create schema if not exists mms_test.default;</p>
          */
@@ -51,8 +44,6 @@ public class ListMmsTaskLogsResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>The time when the log was created.</p>
-         * 
          * <strong>example:</strong>
          * <p>2024-12-17 15:44:00</p>
          */
@@ -60,8 +51,6 @@ public class ListMmsTaskLogsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The log ID.</p>
-         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
@@ -69,8 +58,6 @@ public class ListMmsTaskLogsResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The result of the migration task operation.</p>
-         * 
          * <strong>example:</strong>
          * <p>ok</p>
          */
@@ -78,8 +65,6 @@ public class ListMmsTaskLogsResponseBody extends TeaModel {
         public String msg;
 
         /**
-         * <p>The data source ID.</p>
-         * 
          * <strong>example:</strong>
          * <p>2000015</p>
          */
@@ -87,8 +72,6 @@ public class ListMmsTaskLogsResponseBody extends TeaModel {
         public Long sourceId;
 
         /**
-         * <p>The migration task status.</p>
-         * 
          * <strong>example:</strong>
          * <p>DATA_DOING</p>
          */
@@ -96,8 +79,6 @@ public class ListMmsTaskLogsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The migration task ID.</p>
-         * 
          * <strong>example:</strong>
          * <p>4023</p>
          */

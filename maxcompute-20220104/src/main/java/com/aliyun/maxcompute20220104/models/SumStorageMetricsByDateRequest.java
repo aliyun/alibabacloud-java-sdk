@@ -5,23 +5,16 @@ import com.aliyun.tea.*;
 
 public class SumStorageMetricsByDateRequest extends TeaModel {
     /**
-     * <p>The end date. The value is a millisecond-level timestamp. This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>1718590596556</p>
      */
     @NameInMap("endDate")
     public Long endDate;
 
-    /**
-     * <p>The project names.</p>
-     */
     @NameInMap("projectNames")
     public java.util.List<String> projectNames;
 
     /**
-     * <p>The region ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -29,8 +22,6 @@ public class SumStorageMetricsByDateRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The start date. The value is a millisecond-level timestamp. This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>1715393576201</p>
      */
@@ -38,12 +29,6 @@ public class SumStorageMetricsByDateRequest extends TeaModel {
     public Long startDate;
 
     /**
-     * <p>The type of storage usage statistics. This parameter is required. Valid values:</p>
-     * <ul>
-     * <li>PROJECT</li>
-     * <li>STORAGE_TYPE</li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>PROJECT</p>
      */
@@ -51,8 +36,6 @@ public class SumStorageMetricsByDateRequest extends TeaModel {
     public String statsType;
 
     /**
-     * <p>The user UID.</p>
-     * 
      * <strong>example:</strong>
      * <p>12345</p>
      */

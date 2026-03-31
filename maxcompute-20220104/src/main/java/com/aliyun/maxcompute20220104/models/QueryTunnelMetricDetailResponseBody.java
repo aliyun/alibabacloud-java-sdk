@@ -4,15 +4,10 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class QueryTunnelMetricDetailResponseBody extends TeaModel {
-    /**
-     * <p>The returned data.</p>
-     */
     @NameInMap("data")
     public QueryTunnelMetricDetailResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
-     * 
      * <strong>example:</strong>
      * <p>OBJECT_NOT_EXIST</p>
      */
@@ -20,8 +15,6 @@ public class QueryTunnelMetricDetailResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message.</p>
-     * 
      * <strong>example:</strong>
      * <p>plan \&quot;***\&quot; does not exist</p>
      */
@@ -29,8 +22,6 @@ public class QueryTunnelMetricDetailResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
-     * <p>The HTTP status code returned.</p>
-     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -38,8 +29,6 @@ public class QueryTunnelMetricDetailResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>0a06dd4516687375802853481ec9fd</p>
      */
@@ -92,15 +81,10 @@ public class QueryTunnelMetricDetailResponseBody extends TeaModel {
     }
 
     public static class QueryTunnelMetricDetailResponseBodyDataMetrics extends TeaModel {
-        /**
-         * <p>The metadata of the metric.</p>
-         */
         @NameInMap("metric")
         public java.util.Map<String, String> metric;
 
         /**
-         * <p>The numeric information of the metric.</p>
-         * 
          * <strong>example:</strong>
          * <p>&quot;avgValue&quot;:&quot;11.5&quot;</p>
          */
@@ -131,15 +115,10 @@ public class QueryTunnelMetricDetailResponseBody extends TeaModel {
     }
 
     public static class QueryTunnelMetricDetailResponseBodyData extends TeaModel {
-        /**
-         * <p>The metric values.</p>
-         */
         @NameInMap("metrics")
         public java.util.List<QueryTunnelMetricDetailResponseBodyDataMetrics> metrics;
 
         /**
-         * <p>The name of the metric.</p>
-         * 
          * <strong>example:</strong>
          * <p>tableA</p>
          */

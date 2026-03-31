@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class StartMmsJobResponseBody extends TeaModel {
     /**
-     * <p>The ID of the migration job.</p>
-     * 
      * <strong>example:</strong>
      * <p>88</p>
      */
@@ -14,8 +12,6 @@ public class StartMmsJobResponseBody extends TeaModel {
     public Long data;
 
     /**
-     * <p>The ID of the request.</p>
-     * 
      * <strong>example:</strong>
      * <p>5CA6292A-E301-5CD8-B4E2-AF060F99147B</p>
      */

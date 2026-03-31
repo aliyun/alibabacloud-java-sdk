@@ -23,7 +23,7 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>异常信息</p>
+     * <p>this quota is not exist.</p>
      */
     @NameInMap("errorMsg")
     public String errorMsg;
@@ -31,16 +31,11 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
      * <ul>
-     * <li><p>1xx: Informational - The request has been received and the process is continuing.</p>
-     * </li>
-     * <li><p>2xx: Success - The request was successfully received, understood, and accepted.</p>
-     * </li>
-     * <li><p>3xx: Redirection - Further action must be taken to complete the request.</p>
-     * </li>
-     * <li><p>4xx: Client Error - The request contains bad syntax or cannot be fulfilled.</p>
-     * </li>
-     * <li><p>5xx: Server Error - The server failed to fulfill an apparently valid request.</p>
-     * </li>
+     * <li>1xx: informational response. The request is received and is being processed.</li>
+     * <li>2xx: success. The request is successfully received, understood, and accepted by the server.</li>
+     * <li>3xx: redirection. The request is redirected, and further actions are required to complete the request.</li>
+     * <li>4xx: client error. The request contains invalid request parameters or syntaxes, or specific request conditions cannot be met.</li>
+     * <li>5xx: server error. The server cannot meet requirements due to other reasons.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -105,7 +100,7 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
 
     public static class ListJobSnapshotInfosResponseBodyDataJobInfoList extends TeaModel {
         /**
-         * <p>The amount of CPU cores requested by the job at the snapshot time.</p>
+         * <p>The CPU request amount of the job at the snapshot time point. Unit: Core.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -114,7 +109,7 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         public Long cpuRequest;
 
         /**
-         * <p>The CPU usage of the job at the snapshot time. Unit: cores.</p>
+         * <p>CPU usage of the job at the snapshot time. Unit: Core.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -123,7 +118,7 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         public Long cpuUsage;
 
         /**
-         * <p>The CPU fulfillment ratio of the job at the snapshot time. This is calculated by dividing the CPU usage by the CPU request.</p>
+         * <p>The CPU satisfaction ratio of the job at the snapshot time point (cpuUsage/cpuRequest).</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -132,7 +127,7 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         public Double cpuUsageToRequestRatio;
 
         /**
-         * <p>The upstream node ID.</p>
+         * <p>The ID of the upstream node.</p>
          * 
          * <strong>example:</strong>
          * <p>76358164</p>
@@ -162,7 +157,7 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         public String extPlatformId;
 
         /**
-         * <p>The job ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>20241028****jkl</p>
@@ -171,7 +166,7 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The job owner.</p>
+         * <p>The account that commits the job.</p>
          * 
          * <strong>example:</strong>
          * <p>ALIYUN$7632***@aliyun.com</p>
@@ -180,7 +175,7 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         public String jobOwner;
 
         /**
-         * <p>The job type.</p>
+         * <p>The type of the job.</p>
          * 
          * <strong>example:</strong>
          * <p>SQL</p>
@@ -189,7 +184,7 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         public String jobType;
 
         /**
-         * <p>This parameter is not used.</p>
+         * <p>Not applicable.</p>
          * 
          * <strong>example:</strong>
          * <p>-1</p>
@@ -198,7 +193,7 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         public Double maxCpuPct;
 
         /**
-         * <p>This parameter is not used.</p>
+         * <p>Not applicable.</p>
          * 
          * <strong>example:</strong>
          * <p>-1</p>
@@ -207,7 +202,7 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         public Double maxMemoryPct;
 
         /**
-         * <p>The amount of memory requested by the job at the snapshot time, in MB.</p>
+         * <p>The Memory request amount of the job at the snapshot time point. Unit: MB.</p>
          * 
          * <strong>example:</strong>
          * <p>409600</p>
@@ -216,7 +211,7 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         public Long memoryRequest;
 
         /**
-         * <p>The memory usage of the job at the snapshot time. Unit: MB.</p>
+         * <p>Memory usage of the job at the snapshot time. Unit: MB.</p>
          * 
          * <strong>example:</strong>
          * <p>409600</p>
@@ -225,7 +220,7 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         public Long memoryUsage;
 
         /**
-         * <p>The memory fulfillment ratio of the job at the snapshot time. This is calculated by dividing the memory usage by the memory request.</p>
+         * <p>The Memory satisfaction ratio of the job at the snapshot time point (memoryUsage/memoryRequest).</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -234,7 +229,7 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         public Double memoryUsageToRequestRatio;
 
         /**
-         * <p>The CPU usage percentage of a subscription job at the snapshot time. This value is calculated by dividing the CPU usage by the sum of the reserved CPU guarantee and the elastic reserved CPU. This parameter is not available for pay-as-you-go jobs.</p>
+         * <p>The CPU usage ratio of the annual or monthly subscription job at the snapshot time (CPU usage / (reserved CPU guarantee + elastic reserved CPU)). This parameter is not available for pay-as-you-go jobs.</p>
          * 
          * <strong>example:</strong>
          * <p>0.6</p>
@@ -243,7 +238,7 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         public Double minCpuPct;
 
         /**
-         * <p>The memory usage percentage of a subscription job at the observation time. This value is calculated by dividing the memory usage by the sum of the reserved memory guarantee and the elastic reserved memory. This parameter is not available for pay-as-you-go jobs.</p>
+         * <p>The memory usage ratio of the annual or monthly subscription job at the observation time (memory usage / (reserved memory guarantee + elastic reserved memory)). This parameter is not available for pay-as-you-go jobs.</p>
          * 
          * <strong>example:</strong>
          * <p>0.6</p>
@@ -252,7 +247,7 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         public Double minMemoryPct;
 
         /**
-         * <p>The job priority.</p>
+         * <p>The priority of the job.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>
@@ -261,7 +256,7 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         public Long priority;
 
         /**
-         * <p>The project name.</p>
+         * <p>The name of the MaxCompute project.</p>
          * 
          * <strong>example:</strong>
          * <p>projectA</p>
@@ -270,7 +265,7 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         public String project;
 
         /**
-         * <p>The nickname of the computing quota that the job uses.</p>
+         * <p>The nickname of the computing Quota used by the job.</p>
          * 
          * <strong>example:</strong>
          * <p>quota_A</p>
@@ -279,7 +274,7 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         public String quotaNickname;
 
         /**
-         * <p>The quota type.</p>
+         * <p>The type of the quota.</p>
          * 
          * <strong>example:</strong>
          * <p>subscription</p>
@@ -297,9 +292,9 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The time when the job started running.</p>
+         * <p>The start time of the job.</p>
          * <blockquote>
-         * <p>The time when the job acquired its first computing resource.</p>
+         * <p>The time when the job received the first batch of computing resources.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -309,7 +304,7 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         public Long runningAtTime;
 
         /**
-         * <p>The runtime duration, in seconds. This is the duration from when the job started running to the snapshot time. If the job has not started, this parameter is empty.</p>
+         * <p>The running duration, which is the duration from the runningAtTime to the snapshotTime of the job.  Unit: seconds (s).</p>
          * 
          * <strong>example:</strong>
          * <p>43</p>
@@ -336,9 +331,9 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         public Long snapshotTime;
 
         /**
-         * <p>The job status.</p>
+         * <p>The snapshot status of the job.</p>
          * <blockquote>
-         * <p>The status of a snapshot job can only be \<code>running\\</code>.</p>
+         * <p>The snapshot status is only running.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -348,7 +343,7 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the job was submitted.</p>
+         * <p>The time when the job was committed.</p>
          * 
          * <strong>example:</strong>
          * <p>1736821785</p>
@@ -366,7 +361,7 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         public String tenantId;
 
         /**
-         * <p>The total duration, in seconds. This is the duration from when the job was submitted to the snapshot time.</p>
+         * <p>The interval from the time when the job was submitted to the snapshotTime .Unit: seconds (s).</p>
          * 
          * <strong>example:</strong>
          * <p>63</p>
@@ -375,7 +370,7 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         public Long totalTime;
 
         /**
-         * <p>The waiting duration, in seconds. This is the duration from when the job was submitted to when it started running. If the job has not started, this is the duration from the submission time to the snapshot time.</p>
+         * <p>The duration from the time the job is submitted to the time the job starts to run. Unit: seconds (s).</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -640,7 +635,7 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
 
     public static class ListJobSnapshotInfosResponseBodyData extends TeaModel {
         /**
-         * <p>The list of job snapshots.</p>
+         * <p>The job snapshots.</p>
          */
         @NameInMap("jobInfoList")
         public java.util.List<ListJobSnapshotInfosResponseBodyDataJobInfoList> jobInfoList;
@@ -664,7 +659,7 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of returned results.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>

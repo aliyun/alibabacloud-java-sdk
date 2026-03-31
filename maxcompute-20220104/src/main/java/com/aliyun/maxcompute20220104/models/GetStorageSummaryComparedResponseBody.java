@@ -4,15 +4,10 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class GetStorageSummaryComparedResponseBody extends TeaModel {
-    /**
-     * <p>The data returned.</p>
-     */
     @NameInMap("data")
     public GetStorageSummaryComparedResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
-     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -20,8 +15,6 @@ public class GetStorageSummaryComparedResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message.</p>
-     * 
      * <strong>example:</strong>
      * <p>plan \&quot;***\&quot; does not exist</p>
      */
@@ -29,20 +22,6 @@ public class GetStorageSummaryComparedResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
-     * <p>The HTTP status code.</p>
-     * <ul>
-     * <li><p>1xx: informational response. The request is received and is being processed.</p>
-     * </li>
-     * <li><p>2xx: success. The request is successfully received, understood, and accepted by the server.</p>
-     * </li>
-     * <li><p>3xx: redirection. The request is redirected. You must take further action to complete the request.</p>
-     * </li>
-     * <li><p>4xx: client error. The request contains invalid parameters or syntax, or fails to meet specific conditions.</p>
-     * </li>
-     * <li><p>5xx: server error. The server cannot fulfill the request for other reasons.</p>
-     * </li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -50,8 +29,6 @@ public class GetStorageSummaryComparedResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>0bc3b4b016674434996033675e71ee</p>
      */
@@ -105,8 +82,6 @@ public class GetStorageSummaryComparedResponseBody extends TeaModel {
 
     public static class GetStorageSummaryComparedResponseBodyData extends TeaModel {
         /**
-         * <p>The start date.</p>
-         * 
          * <strong>example:</strong>
          * <p>20250601</p>
          */
@@ -114,59 +89,18 @@ public class GetStorageSummaryComparedResponseBody extends TeaModel {
         public String beginDate;
 
         /**
-         * <p>The end date.</p>
-         * 
          * <strong>example:</strong>
          * <p>20250604</p>
          */
         @NameInMap("endDate")
         public String endDate;
 
-        /**
-         * <p>The year-on-year (YoY) change rate of the storage usage from the start date to the end date. Valid values:</p>
-         * <ul>
-         * <li><p>lowFreqStorageRate</p>
-         * </li>
-         * <li><p>totalStorageRate</p>
-         * </li>
-         * <li><p>standardStorageRate</p>
-         * </li>
-         * <li><p>longTermStorageRate</p>
-         * </li>
-         * </ul>
-         */
         @NameInMap("rate")
         public java.util.Map<String, Double> rate;
 
-        /**
-         * <p>The unit of the change in the storage usage from the start date to the end date. Valid values:</p>
-         * <ul>
-         * <li><p>lowFreqStorageUnit</p>
-         * </li>
-         * <li><p>totalStorageUnit</p>
-         * </li>
-         * <li><p>standardStorageUnit</p>
-         * </li>
-         * <li><p>longTermStorageUnit</p>
-         * </li>
-         * </ul>
-         */
         @NameInMap("unit")
         public java.util.Map<String, String> unit;
 
-        /**
-         * <p>The change in the storage usage from the start date to the end date. Valid values:</p>
-         * <ul>
-         * <li><p>lowFreqStorage</p>
-         * </li>
-         * <li><p>totalStorage</p>
-         * </li>
-         * <li><p>standardStorage</p>
-         * </li>
-         * <li><p>longTermStorage</p>
-         * </li>
-         * </ul>
-         */
         @NameInMap("value")
         public java.util.Map<String, Double> value;
 

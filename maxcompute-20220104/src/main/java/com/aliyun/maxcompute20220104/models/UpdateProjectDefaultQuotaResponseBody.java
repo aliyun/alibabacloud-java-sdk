@@ -4,9 +4,21 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class UpdateProjectDefaultQuotaResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("data")
     public String data;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0a06dfe716674588654372173ec0da</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

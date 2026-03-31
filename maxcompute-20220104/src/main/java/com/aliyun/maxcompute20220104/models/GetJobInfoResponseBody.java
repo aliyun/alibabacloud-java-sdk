@@ -4,18 +4,52 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class GetJobInfoResponseBody extends TeaModel {
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("data")
     public GetJobInfoResponseBodyData data;
 
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OBJECT_NOT_EXIST</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This object does not exist.</p>
+     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * <ul>
+     * <li>1xx: informational response. The request is received and is being processed.</li>
+     * <li>2xx: success. The request is successfully received, understood, and accepted by the server.</li>
+     * <li>3xx: redirection. The request is redirected, and further actions are required to complete the request.</li>
+     * <li>4xx: client error. The request contains invalid request parameters and syntaxes, or specific request conditions cannot be met.</li>
+     * <li>5xx: server error. The server cannot meet requirements due to other reasons.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("httpCode")
     public Integer httpCode;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0be3e0bb16654558425251398e27a9</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -65,12 +99,30 @@ public class GetJobInfoResponseBody extends TeaModel {
     }
 
     public static class GetJobInfoResponseBodyDataJobSubStatusList extends TeaModel {
+        /**
+         * <p>The encoding of the substatus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1010</p>
+         */
         @NameInMap("code")
         public Integer code;
 
+        /**
+         * <p>The description of the substatus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Waiting for scheduling</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The start time of the substatus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-05 00:04:15.717364 +0800</p>
+         */
         @NameInMap("startTime")
         public String startTime;
 
@@ -106,21 +158,54 @@ public class GetJobInfoResponseBody extends TeaModel {
     }
 
     public static class GetJobInfoResponseBodyDataSceneResults extends TeaModel {
+        /**
+         * <p>The intelligent diagnostics result description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This job uses annual and monthly computing resources. It may be that the job is waiting for resources due to the large amount of overall job running data, many resources requested, and low job priority. Please go to Resource Consumption to view the specific situation. You can also go to Cost Optimization to see if you need to adjust resource configuration.</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Information about the nodes where data skew or data expansion is detected. This parameter is returned only when the diagnostics scenario is data skew or data expansion.</p>
+         */
         @NameInMap("params")
         public java.util.Map<String, String> params;
 
+        /**
+         * <p>The intelligent diagnostics result scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LackResource</p>
+         */
         @NameInMap("scene")
         public String scene;
 
+        /**
+         * <p>The intelligent diagnostics result tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SubscriptionLackResource</p>
+         */
         @NameInMap("sceneTag")
         public String sceneTag;
 
+        /**
+         * <p>The intelligent diagnostics result summary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Insufficient computing resources available for the job. Click to view details.</p>
+         */
         @NameInMap("summary")
         public String summary;
 
+        /**
+         * <p>The intelligent diagnostics result type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>warning</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -180,78 +265,222 @@ public class GetJobInfoResponseBody extends TeaModel {
     }
 
     public static class GetJobInfoResponseBodyData extends TeaModel {
+        /**
+         * <p>The amount of resources consumed by the job. This parameter is returned only for jobs that are complete.Unit: 100\*Core\*s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("cuUsage")
         public Long cuUsage;
 
+        /**
+         * <p>The end time of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1672112913</p>
+         */
         @NameInMap("endAtTime")
         public Long endAtTime;
 
+        /**
+         * <p>The ID of the ancestor node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>node_4</p>
+         */
         @NameInMap("extNodeId")
         public String extNodeId;
 
+        /**
+         * <p>The Alibaba Cloud account ID of the task owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>duty_2</p>
+         */
         @NameInMap("extNodeOnDuty")
         public String extNodeOnDuty;
 
+        /**
+         * <p>The upstream platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>platform_3</p>
+         */
         @NameInMap("extPlantFrom")
         public String extPlantFrom;
 
+        /**
+         * <p>The amount of data scanned by the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("inputBytes")
         public Double inputBytes;
 
+        /**
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20230410****60gg</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <p>The owner of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN$7632***@aliyun.com</p>
+         */
         @NameInMap("jobOwner")
         public String jobOwner;
 
+        /**
+         * <p>The substatuses of the job lifecycle.</p>
+         */
         @NameInMap("jobSubStatusList")
         public java.util.List<GetJobInfoResponseBodyDataJobSubStatusList> jobSubStatusList;
 
+        /**
+         * <p>The type of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL</p>
+         */
         @NameInMap("jobType")
         public String jobType;
 
+        /**
+         * <p>The number of memory consumed by the job. This parameter is returned only for jobs that are complete.Unit: MB\*s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("memoryUsage")
         public Long memoryUsage;
 
+        /**
+         * <p>The priority of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("priority")
         public Long priority;
 
+        /**
+         * <p>The project name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dp_cdm_prod</p>
+         */
         @NameInMap("project")
         public String project;
 
+        /**
+         * <p>The nickname of the computing quota that is used by the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>os_bigdata</p>
+         */
         @NameInMap("quotaNickname")
         public String quotaNickname;
 
+        /**
+         * <p>The quota type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>subscription</p>
+         */
         @NameInMap("quotaType")
         public String quotaType;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("region")
         public String region;
 
+        /**
+         * <p>The start time, which is the time when the job received the first batch of computing resources. For jobs that run for a short period of time or do not consume computing resources, such as the jobs that involve DDL statements, the job submission time is used instead.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1672112113</p>
+         */
         @NameInMap("runningAtTime")
         public Long runningAtTime;
 
+        /**
+         * <p>The execution duration, which is the duration from the start time to the end time of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>800</p>
+         */
         @NameInMap("runningTime")
         public Long runningTime;
 
+        /**
+         * <p>The intelligent diagnostics result.</p>
+         */
         @NameInMap("sceneResults")
         public java.util.List<GetJobInfoResponseBodyDataSceneResults> sceneResults;
 
+        /**
+         * <p>The signature of the SQL job. You can use the signature to find the instances on which each time an SQL statement is executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20c1efb4a7caca1865f4aa784bb500efae74af04</p>
+         */
         @NameInMap("signature")
         public String signature;
 
+        /**
+         * <p>The job status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The time when the job was submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1672112013</p>
+         */
         @NameInMap("submittedAtTime")
         public Long submittedAtTime;
 
+        /**
+         * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4784****5249</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 
+        /**
+         * <p>The total duration from the time a job is submitted to the time the job is terminated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>900</p>
+         */
         @NameInMap("totalTime")
         public Long totalTime;
 
+        /**
+         * <p>The wait time, which is the duration from the time the job is submitted to the time the job starts to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("waitingTime")
         public Long waitingTime;
 

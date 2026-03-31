@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTunnelQuotaTimerResponseBody extends TeaModel {
     /**
-     * <p>The returned result.</p>
+     * <p>The data returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -34,16 +34,11 @@ public class UpdateTunnelQuotaTimerResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
      * <ul>
-     * <li><p>1xx: informational response. The request was received and is being processed.</p>
-     * </li>
-     * <li><p>2xx: success. The request was successfully received, understood, and accepted by the server.</p>
-     * </li>
-     * <li><p>3xx: redirection. The request is redirected. You must take further action to complete the request.</p>
-     * </li>
-     * <li><p>4xx: client error. The request contains invalid request parameters or syntax, or cannot be fulfilled.</p>
-     * </li>
-     * <li><p>5xx: server error. The server cannot fulfill the request for other reasons.</p>
-     * </li>
+     * <li>1xx: informational response. The request is received and is being processed.</li>
+     * <li>2xx: success. The request is successfully received, understood, and accepted by the server.</li>
+     * <li>3xx: redirection. The request is redirected, and further actions are required to complete the request.</li>
+     * <li>4xx: client error. The request contains invalid request parameters or syntaxes, or specific request conditions cannot be met.</li>
+     * <li>5xx: server error. The server cannot meet requirements due to other reasons.</li>
      * </ul>
      * 
      * <strong>example:</strong>

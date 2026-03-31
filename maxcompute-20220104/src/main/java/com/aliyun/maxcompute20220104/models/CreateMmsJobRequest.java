@@ -4,176 +4,71 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class CreateMmsJobRequest extends TeaModel {
-    /**
-     * <p>{Source column name: Destination column name}</p>
-     */
     @NameInMap("columnMapping")
     public java.util.Map<String, String> columnMapping;
 
-    /**
-     * <p>The destination MaxCompute project.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>mms_test</p>
-     */
     @NameInMap("dstDbName")
     public String dstDbName;
 
-    /**
-     * <p>The destination MaxCompute schema.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>default</p>
-     */
     @NameInMap("dstSchemaName")
     public String dstSchemaName;
 
-    /**
-     * <p>Specifies whether to migrate table data.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("enableDataMigration")
     public Boolean enableDataMigration;
 
-    /**
-     * <p>Specifies whether to migrate table schemas.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("enableSchemaMigration")
     public Boolean enableSchemaMigration;
 
-    /**
-     * <p>Specifies whether to enable data verification. The current verification method is to execute SELECT COUNT(\*) on the source and destination to compare the number of rows.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("enableVerification")
     public Boolean enableVerification;
 
-    /**
-     * <p>The expected completion time of the migration. Note: A smaller eta value gives the migration task higher priority.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2025-02-04</p>
-     */
     @NameInMap("eta")
     public String eta;
 
-    /**
-     * <p>Specifies whether to perform an incremental migration. In an incremental migration, only new or changed partitions are migrated. Note that changed partitions are re-migrated.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("increment")
     public Boolean increment;
 
-    /**
-     * <p>The name of the migration job.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>migrate_db_1</p>
-     */
     @NameInMap("name")
     public String name;
 
-    /**
-     * <p>Other configuration information.</p>
-     */
     @NameInMap("others")
     public java.util.Map<String, ?> others;
 
-    /**
-     * <p>{Table name: Partition filter expression}</p>
-     */
     @NameInMap("partitionFilters")
     public java.util.Map<String, String> partitionFilters;
 
-    /**
-     * <p>The list of partition IDs.</p>
-     */
     @NameInMap("partitions")
     public java.util.List<Long> partitions;
 
-    /**
-     * <p>Specifies whether to migrate only metadata.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("schemaOnly")
     public Boolean schemaOnly;
 
-    /**
-     * <p>The ID of the data source.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2000014</p>
-     */
     @NameInMap("sourceId")
     public Long sourceId;
 
-    /**
-     * <p>The name of the data source.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>demo</p>
-     */
     @NameInMap("sourceName")
     public String sourceName;
 
-    /**
-     * <p>The name of the source database.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>src_db</p>
-     */
     @NameInMap("srcDbName")
     public String srcDbName;
 
-    /**
-     * <p>The name of the source schema. This is the schema in a Layer 3 namespace.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>default</p>
-     */
     @NameInMap("srcSchemaName")
     public String srcSchemaName;
 
-    /**
-     * <p>The blacklist of tables.</p>
-     */
     @NameInMap("tableBlackList")
     public java.util.List<String> tableBlackList;
 
-    /**
-     * <p>{Source table: Destination table}</p>
-     */
     @NameInMap("tableMapping")
     public java.util.Map<String, String> tableMapping;
 
-    /**
-     * <p>The whitelist of tables. Note: If you configure both a whitelist and a blacklist, only the blacklist takes effect.</p>
-     */
     @NameInMap("tableWhiteList")
     public java.util.List<String> tableWhiteList;
 
-    /**
-     * <p>The list of table names.</p>
-     */
     @NameInMap("tables")
     public java.util.List<String> tables;
 
     /**
-     * <p>The type of the migration task.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>BIGQUERY</p>
+     * <p>MOCK, HIVE: hive udtf task, HIVE_DATAX: hive datax task, COPY_TASK: odps Copy Task, ODPS_INSERT_OVERWRITE: odps simple insert overwrite task, MC2MC_VERIFY, OSS, HIVE_OSS</p>
      */
     @NameInMap("taskType")
     public String taskType;

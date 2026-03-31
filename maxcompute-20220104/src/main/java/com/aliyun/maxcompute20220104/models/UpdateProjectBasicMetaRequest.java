@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateProjectBasicMetaRequest extends TeaModel {
     /**
-     * <p>The description of the project.</p>
+     * <p>The project description.</p>
      * 
      * <strong>example:</strong>
      * <p>BI_Analysis</p>
@@ -42,7 +42,7 @@ public class UpdateProjectBasicMetaRequest extends TeaModel {
 
     public static class UpdateProjectBasicMetaRequestPropertiesEncryption extends TeaModel {
         /**
-         * <p>The encryption algorithm. The key supports algorithms such as AES256, AESCTR, and RC4.</p>
+         * <p>The data encryption algorithm that is supported by the key. Valid values: AES256, AESCTR, and RC4.</p>
          * 
          * <strong>example:</strong>
          * <p>AES256</p>
@@ -51,8 +51,9 @@ public class UpdateProjectBasicMetaRequest extends TeaModel {
         public String algorithm;
 
         /**
-         * <p>Specifies whether to enable data encryption for the project. For more information about data encryption, see
-         * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/security-and-compliance/storage-encryption">Storage encryption</a>.</p>
+         * <p>Indicates whether the data encryption feature needs to be enabled for the project. For more information about data encryption, see
+         * &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/security-and-compliance/storage-encryption">Storage Encryption</a>
+         * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/security-and-compliance/storage-encryption">Storage Encryption</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -61,7 +62,7 @@ public class UpdateProjectBasicMetaRequest extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The type of key used for data encryption. This can be the default MaxCompute key or a Bring-Your-Own-Key (BYOK). The default MaxCompute key is created within MaxCompute.</p>
+         * <p>The type of key that is used for data encryption. You can select MaxCompute Default Key or Bring Your Own Key (BYOK) as the key type. If you select MaxCompute Default Key, the default key that is created by MaxCompute is used.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -104,12 +105,9 @@ public class UpdateProjectBasicMetaRequest extends TeaModel {
         /**
          * <p>The lifecycle type. Valid values:</p>
          * <ul>
-         * <li><p><strong>mandatory</strong>: The Lifecycle clause is required. You must set a lifecycle for the table.</p>
-         * </li>
-         * <li><p><strong>optional</strong>: The Lifecycle clause is optional when you create a table. If you do not set a lifecycle for the table, the table never expires.</p>
-         * </li>
-         * <li><p><strong>inherit</strong>: If you do not set a lifecycle for the table when you create it, the lifecycle of the table is the value of odps.table.lifecycle.value.</p>
-         * </li>
+         * <li><em>mandatory</em>: The lifecycle clause is required in a table creation statement.</li>
+         * <li><em>optional</em>: The lifecycle clause is optional in a table creation statement. If you do not configure a lifecycle for a table, the table does not expire.</li>
+         * <li><em>inherit</em>: If you do not configure a lifecycle for a table when you create the table, the value of the odps.table.lifecycle.value parameter is used as the table lifecycle by default.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -119,7 +117,7 @@ public class UpdateProjectBasicMetaRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The lifecycle of the table in days. The value must be an integer from 1 to 37231. The default value is 37231.</p>
+         * <p>The table lifecycle. Unit: days. Valid values: 1 to 37231. Default value: 37231.</p>
          * 
          * <strong>example:</strong>
          * <p>37231</p>
@@ -152,7 +150,7 @@ public class UpdateProjectBasicMetaRequest extends TeaModel {
 
     public static class UpdateProjectBasicMetaRequestProperties extends TeaModel {
         /**
-         * <p>Specifies whether to allow full table scans in the project. A full table scan consumes a large amount of resources. To improve processing efficiency, this feature is disabled by default.</p>
+         * <p>Indicates whether a full table scan is allowed in the project. A full table scan occupies a large number of resources, which reduces data processing efficiency. By default, the full table scan feature is disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -161,7 +159,7 @@ public class UpdateProjectBasicMetaRequest extends TeaModel {
         public Boolean allowFullScan;
 
         /**
-         * <p>Specifies whether to enable the Decimal data type of MaxCompute V2.0 for the project.</p>
+         * <p>Indicates whether the DECIMAL type of the MaxCompute V2.0 data type edition is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -173,12 +171,10 @@ public class UpdateProjectBasicMetaRequest extends TeaModel {
         public Boolean enableDr;
 
         /**
-         * <p>Specifies whether to enable resource group-based routing for Data Transmission Service.</p>
+         * <p>Indicates whether the routing of the Tunnel resource group is enabled.</p>
          * <ul>
-         * <li><p>true: Data transmission tasks submitted in the project use the attached Data Transmission Service resource group by default.</p>
-         * </li>
-         * <li><p>false: Data transmission tasks submitted in the project use the shared Data Transmission Service resource group by default.</p>
-         * </li>
+         * <li>true: The data transfer tasks that are submitted by the project by default use the Tunnel resource group that is bound to the project.</li>
+         * <li>false: The data transfer tasks that are submitted by the project by default use the Tunnel shared resource group.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -194,8 +190,7 @@ public class UpdateProjectBasicMetaRequest extends TeaModel {
         public UpdateProjectBasicMetaRequestPropertiesEncryption encryption;
 
         /**
-         * <p>The number of days to retain backup data. During this period, you can restore the current version to any backup version.
-         * The value must be an integer from 0 to 30. The default value is 1. A value of 0 disables the backup feature.</p>
+         * <p>The retention period for backup data. Unit: days. During the retention period, you can restore data of the version in use to the backup data of any version. Valid values: [0,30]. Default value: 1. The value 0 indicates that the backup feature is disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -204,8 +199,7 @@ public class UpdateProjectBasicMetaRequest extends TeaModel {
         public Long retentionDays;
 
         /**
-         * <p>The maximum consumption threshold for a single SQL job.
-         * Unit: Scanned data (GB) × Complexity.</p>
+         * <p>The maximum consumption threshold of a single SQL statement. Formula: Amount of scanned data (GB) × Complexity.</p>
          * 
          * <strong>example:</strong>
          * <p>1500</p>
@@ -214,13 +208,13 @@ public class UpdateProjectBasicMetaRequest extends TeaModel {
         public String sqlMeteringMax;
 
         /**
-         * <p>The lifecycle properties of the table.</p>
+         * <p>The table lifecycle properties.</p>
          */
         @NameInMap("tableLifecycle")
         public UpdateProjectBasicMetaRequestPropertiesTableLifecycle tableLifecycle;
 
         /**
-         * <p>The time zone of the project. This is the <code>odps.sql.timezone</code> property.</p>
+         * <p>The time zone that is used by your project. The time zone is the same as the time zone specified by <code>odps.sql.timezone</code> .</p>
          * 
          * <strong>example:</strong>
          * <p>Asia/Shanghai</p>
@@ -229,12 +223,11 @@ public class UpdateProjectBasicMetaRequest extends TeaModel {
         public String timezone;
 
         /**
-         * <p>The &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/overview-of-dts">Data Transmission Service</a> resource group attached to the project.</p>
+         * <p>The &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/user-guide/overview-of-dts">Data Transmission Service</a>
+         * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/overview-of-dts">Data Transmission Service</a> resource group that is bound to the project.</p>
          * <ul>
-         * <li><p>Default (shared Data Transmission Service resource group): The project is not allowed to use a subscription Data Transmission Service resource group. Regardless of the value of the default Data Transmission Service resource group, data transmission tasks submitted in the project automatically use the Default resource group.</p>
-         * </li>
-         * <li><p>Subscription Data Transmission Service resource group: The project is allowed to use a subscription Data Transmission Service resource group.</p>
-         * </li>
+         * <li>Default resource group: The Tunnel shared resource group is used. You cannot use the subscription-based Tunnel resource group for the project. The default resource group is automatically used by the Tunnel service of your project, regardless of the parameter setting.</li>
+         * <li>Subscription-based Tunnel resource group: You can use the subscription-based Tunnel resource group for the project.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -246,14 +239,12 @@ public class UpdateProjectBasicMetaRequest extends TeaModel {
         /**
          * <p>The data type edition. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: Edition 1.0</p>
-         * </li>
-         * <li><p><strong>2</strong>: Edition 2.0</p>
-         * </li>
-         * <li><p><strong>hive</strong>: Hive-compatible edition</p>
-         * </li>
+         * <li><em>1</em>: MaxCompute V1.0 data type edition</li>
+         * <li><em>2</em>: MaxCompute V2.0 data type edition</li>
+         * <li><em>hive</em>: Hive-compatible data type edition
+         * For more information about the differences among the three data type editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/user-guide/data-type-editions">Data Type Versions</a>
+         * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/data-type-editions">Data Type Versions</a>.</li>
          * </ul>
-         * <p>For more information about the differences between the data type editions, see &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/data-type-editions">Data type editions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0</p>

@@ -4,32 +4,13 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class QueryStorageMetricRequest extends TeaModel {
-    /**
-     * <p>The names of the projects.</p>
-     */
     @NameInMap("projectList")
     public java.util.List<String> projectList;
 
-    /**
-     * <p>The storage class. Valid values include the following:</p>
-     * <ul>
-     * <li><p>totalStorage</p>
-     * </li>
-     * <li><p>longTermStorage</p>
-     * </li>
-     * <li><p>lowFreqStorage</p>
-     * </li>
-     * <li><p>standardStorage</p>
-     * </li>
-     * <li><p>recycleBinStorage</p>
-     * </li>
-     * </ul>
-     */
     @NameInMap("typeList")
     public java.util.List<String> typeList;
 
     /**
-     * <p>The end of the time range to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +20,6 @@ public class QueryStorageMetricRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The start of the time range to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

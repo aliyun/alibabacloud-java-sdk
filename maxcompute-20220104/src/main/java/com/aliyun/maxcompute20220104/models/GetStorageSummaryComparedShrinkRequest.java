@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetStorageSummaryComparedShrinkRequest extends TeaModel {
     /**
-     * <p>The start date.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +14,6 @@ public class GetStorageSummaryComparedShrinkRequest extends TeaModel {
     public String beginDate;
 
     /**
-     * <p>The end date.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,15 +22,10 @@ public class GetStorageSummaryComparedShrinkRequest extends TeaModel {
     @NameInMap("endDate")
     public String endDate;
 
-    /**
-     * <p>The list of projects.</p>
-     */
     @NameInMap("projects")
     public String projectsShrink;
 
     /**
-     * <p>The region ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -40,8 +33,6 @@ public class GetStorageSummaryComparedShrinkRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The tenant ID. You can log on to the MaxCompute console and choose <strong>Tenant Property</strong> in the navigation pane on the left to view the tenant ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>483212237127906</p>
      */

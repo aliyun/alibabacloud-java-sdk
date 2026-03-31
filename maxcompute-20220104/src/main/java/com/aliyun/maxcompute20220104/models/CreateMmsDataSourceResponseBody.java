@@ -4,15 +4,10 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class CreateMmsDataSourceResponseBody extends TeaModel {
-    /**
-     * <p>The returned results.</p>
-     */
     @NameInMap("data")
     public CreateMmsDataSourceResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>B42CA730-8187-50F1-9FE0-6733297036DB</p>
      */
@@ -42,8 +37,6 @@ public class CreateMmsDataSourceResponseBody extends TeaModel {
 
     public static class CreateMmsDataSourceResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the data source.</p>
-         * 
          * <strong>example:</strong>
          * <p>18</p>
          */

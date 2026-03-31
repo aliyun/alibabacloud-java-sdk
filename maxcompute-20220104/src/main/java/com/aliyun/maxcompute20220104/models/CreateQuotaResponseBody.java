@@ -4,15 +4,10 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class CreateQuotaResponseBody extends TeaModel {
-    /**
-     * <p>Response parameters.</p>
-     */
     @NameInMap("data")
     public CreateQuotaResponseBodyData data;
 
     /**
-     * <p>Request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>0bc520ad17171208978521777d742c</p>
      */
@@ -42,8 +37,6 @@ public class CreateQuotaResponseBody extends TeaModel {
 
     public static class CreateQuotaResponseBodyData extends TeaModel {
         /**
-         * <p>Quota alias.</p>
-         * 
          * <strong>example:</strong>
          * <p>os_PayAsYouGoQuota_p</p>
          */

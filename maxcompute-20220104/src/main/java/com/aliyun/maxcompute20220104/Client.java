@@ -83,6 +83,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Please ensure that before using this interface, you have fully understood the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/computing-pricing-1">Pricing and Charges</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/computing-pricing-1">Pricing and Charges</a> of MaxCompute Elastic Reserved CU.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Activate a Quota Plan Immediately.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ApplyComputeQuotaPlanResponse
@@ -106,6 +113,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Please ensure that before using this interface, you have fully understood the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/computing-pricing-1">Pricing and Charges</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/computing-pricing-1">Pricing and Charges</a> of MaxCompute Elastic Reserved CU.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Activate a Quota Plan Immediately.</p>
      * @return ApplyComputeQuotaPlanResponse
      */
     public ApplyComputeQuotaPlanResponse applyComputeQuotaPlan(String nickname, String planName) throws Exception {
@@ -115,6 +128,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Please ensure that before using this interface, you have fully understood the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/computing-pricing-1">Pricing and Charges</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/computing-pricing-1">Pricing and Charges</a> of MaxCompute Elastic Reserved CU.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a quota plan.</p>
+     * 
      * @param request CreateComputeQuotaPlanRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -150,6 +170,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Please ensure that before using this interface, you have fully understood the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/computing-pricing-1">Pricing and Charges</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/computing-pricing-1">Pricing and Charges</a> of MaxCompute Elastic Reserved CU.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a quota plan.</p>
+     * 
      * @param request CreateComputeQuotaPlanRequest
      * @return CreateComputeQuotaPlanResponse
      */
@@ -161,7 +188,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a data source to migrate data to MaxCompute using MaxCompute Migration Assist (MMA).</p>
+     * <p>Creates a data source and uses MaxCompute Migration Assist (MMA) to migrate data from the data source to MaxCompute.</p>
      * 
      * @param request CreateMmsDataSourceRequest
      * @param headers map
@@ -207,7 +234,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a data source to migrate data to MaxCompute using MaxCompute Migration Assist (MMA).</p>
+     * <p>Creates a data source and uses MaxCompute Migration Assist (MMA) to migrate data from the data source to MaxCompute.</p>
      * 
      * @param request CreateMmsDataSourceRequest
      * @return CreateMmsDataSourceResponse
@@ -220,7 +247,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a job to pull metadata from a data source.</p>
+     * <p>Creates a MaxCompute Migration Assist (MMA) job to pull the metadata from a data source.</p>
      * 
      * @param request CreateMmsFetchMetadataJobRequest
      * @param headers map
@@ -258,7 +285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a job to pull metadata from a data source.</p>
+     * <p>Creates a MaxCompute Migration Assist (MMA) job to pull the metadata from a data source.</p>
      * 
      * @param request CreateMmsFetchMetadataJobRequest
      * @return CreateMmsFetchMetadataJobResponse
@@ -401,6 +428,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a package.</p>
+     * 
      * @param request CreatePackageRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -433,6 +463,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a package.</p>
+     * 
      * @param request CreatePackageRequest
      * @return CreatePackageResponse
      */
@@ -444,7 +477,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建项目</p>
+     * <p>Creates a MaxCompute project.</p>
      * 
      * @param request CreateProjectRequest
      * @param headers map
@@ -473,7 +506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建项目</p>
+     * <p>Creates a MaxCompute project.</p>
      * 
      * @param request CreateProjectRequest
      * @return CreateProjectResponse
@@ -485,11 +518,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p><em>Before using this operation, review the MaxCompute billing model and <a href="https://www.aliyun.com/product/maxcompute/pricing?spm=5176.30275541.J_ZGek9Blx07Hclc3Ddt9dg.2.19502f3dPPfezu%5C&scm=20140722.S_card@@%E4%BA%A7%E5%93%81@@143540.S_new~UND~card.ID_card@@%E4%BA%A7%E5%93%81@@143540-RL_MaxCompute-LOC_2024SPSearchCard-OR_ser-PAR1_213c994b17738148516424527d0d07-V_4-RE_new9-P0_0-P1_0">pricing</a>.</em>*</p>
-     * 
      * <b>summary</b> : 
-     * <p>Creates a quota. When you enable MaxCompute for the first time, a pay-as-you-go quota must be created. If you create a subscription quota, your Alibaba Cloud account is automatically charged.</p>
+     * <p>CreateQuota</p>
      * 
      * @param request CreateQuotaRequest
      * @param headers map
@@ -534,11 +564,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p><em>Before using this operation, review the MaxCompute billing model and <a href="https://www.aliyun.com/product/maxcompute/pricing?spm=5176.30275541.J_ZGek9Blx07Hclc3Ddt9dg.2.19502f3dPPfezu%5C&scm=20140722.S_card@@%E4%BA%A7%E5%93%81@@143540.S_new~UND~card.ID_card@@%E4%BA%A7%E5%93%81@@143540-RL_MaxCompute-LOC_2024SPSearchCard-OR_ser-PAR1_213c994b17738148516424527d0d07-V_4-RE_new9-P0_0-P1_0">pricing</a>.</em>*</p>
-     * 
      * <b>summary</b> : 
-     * <p>Creates a quota. When you enable MaxCompute for the first time, a pay-as-you-go quota must be created. If you create a subscription quota, your Alibaba Cloud account is automatically charged.</p>
+     * <p>CreateQuota</p>
      * 
      * @param request CreateQuotaRequest
      * @return CreateQuotaResponse
@@ -550,6 +577,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a quota plan.</p>
+     * 
      * @param request CreateQuotaPlanRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -586,6 +616,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a quota plan.</p>
+     * 
      * @param request CreateQuotaPlanRequest
      * @return CreateQuotaPlanResponse
      */
@@ -596,6 +629,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a role at the MaxCompute project level.</p>
+     * 
      * @param request CreateRoleRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -622,6 +658,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a role at the MaxCompute project level.</p>
+     * 
      * @param request CreateRoleRequest
      * @return CreateRoleResponse
      */
@@ -632,6 +671,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a MaxCompute quota plan.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteComputeQuotaPlanResponse
@@ -655,6 +697,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a MaxCompute quota plan.</p>
      * @return DeleteComputeQuotaPlanResponse
      */
     public DeleteComputeQuotaPlanResponse deleteComputeQuotaPlan(String nickname, String planName) throws Exception {
@@ -665,7 +709,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a MaxCompute Migration Assist (MMA) data source and its associated migration plans and metadata.</p>
+     * <p>Deletes a MaxCompute Migration Assist (MMA) data source. For example, you can call this operation to delete the migration plan or metadata of a data source.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -691,7 +735,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a MaxCompute Migration Assist (MMA) data source and its associated migration plans and metadata.</p>
+     * <p>Deletes a MaxCompute Migration Assist (MMA) data source. For example, you can call this operation to delete the migration plan or metadata of a data source.</p>
      * @return DeleteMmsDataSourceResponse
      */
     public DeleteMmsDataSourceResponse deleteMmsDataSource(String sourceId) throws Exception {
@@ -702,7 +746,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a MaxCompute Migration Assist (MMA) data migration plan.</p>
+     * <p>Deletes a MaxCompute Migration Assist (MMA) migration job.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -728,7 +772,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a MaxCompute Migration Assist (MMA) data migration plan.</p>
+     * <p>Deletes a MaxCompute Migration Assist (MMA) migration job.</p>
      * @return DeleteMmsJobResponse
      */
     public DeleteMmsJobResponse deleteMmsJob(String sourceId, String jobId) throws Exception {
@@ -739,7 +783,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a MaxCompute project. This operation is irreversible. Use this API with caution.</p>
+     * <p>Deletes a MaxCompute project.</p>
      * 
      * @param request DeleteProjectRequest
      * @param headers map
@@ -773,7 +817,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a MaxCompute project. This operation is irreversible. Use this API with caution.</p>
+     * <p>Deletes a MaxCompute project.</p>
      * 
      * @param request DeleteProjectRequest
      * @return DeleteProjectResponse
@@ -785,6 +829,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a quota plan.</p>
+     * 
      * @param request DeleteQuotaPlanRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -820,6 +867,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a quota plan.</p>
+     * 
      * @param request DeleteQuotaPlanRequest
      * @return DeleteQuotaPlanResponse
      */
@@ -830,6 +880,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetComputeEffectivePlan.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetComputeEffectivePlanResponse
@@ -853,6 +906,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetComputeEffectivePlan.</p>
      * @return GetComputeEffectivePlanResponse
      */
     public GetComputeEffectivePlanResponse getComputeEffectivePlan(String nickname) throws Exception {
@@ -862,6 +917,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Get detailed information of a single compute quota plan.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetComputeQuotaPlanResponse
@@ -885,6 +943,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Get detailed information of a single compute quota plan.</p>
      * @return GetComputeQuotaPlanResponse
      */
     public GetComputeQuotaPlanResponse getComputeQuotaPlan(String nickname, String planName) throws Exception {
@@ -894,6 +954,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Displays the time-specific configuration of compute quota.</p>
+     * 
      * @param request GetComputeQuotaScheduleRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -925,6 +988,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Displays the time-specific configuration of compute quota.</p>
+     * 
      * @param request GetComputeQuotaScheduleRequest
      * @return GetComputeQuotaScheduleResponse
      */
@@ -935,6 +1001,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the basic information about a job.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetJobInfoResponse
@@ -958,6 +1027,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the basic information about a job.</p>
      * @return GetJobInfoResponse
      */
     public GetJobInfoResponse getJobInfo(String instanceId) throws Exception {
@@ -967,6 +1038,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Performs statistics on all jobs that are complete on a specified day and obtains the total resource usage of each job executor on a daily basis.</p>
+     * 
      * @param tmpReq GetJobResourceUsageRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1024,6 +1098,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Performs statistics on all jobs that are complete on a specified day and obtains the total resource usage of each job executor on a daily basis.</p>
+     * 
      * @param request GetJobResourceUsageRequest
      * @return GetJobResourceUsageResponse
      */
@@ -1035,7 +1112,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a single asynchronous task from MaxCompute Migration Assist (MMA).</p>
+     * <p>Queries a MaxCompute Migration Assist (MMA) asynchronous task.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1061,7 +1138,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a single asynchronous task from MaxCompute Migration Assist (MMA).</p>
+     * <p>Queries a MaxCompute Migration Assist (MMA) asynchronous task.</p>
      * @return GetMmsAsyncTaskResponse
      */
     public GetMmsAsyncTaskResponse getMmsAsyncTask(String sourceId, String asyncTaskId) throws Exception {
@@ -1072,7 +1149,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a single MaxCompute Migration Assist (MMA) data source.</p>
+     * <p>Queries the information about a MaxCompute Migration Assist (MMA) data source.</p>
      * 
      * @param request GetMmsDataSourceRequest
      * @param headers map
@@ -1110,7 +1187,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a single MaxCompute Migration Assist (MMA) data source.</p>
+     * <p>Queries the information about a MaxCompute Migration Assist (MMA) data source.</p>
      * 
      * @param request GetMmsDataSourceRequest
      * @return GetMmsDataSourceResponse
@@ -1123,7 +1200,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a database from a MaxCompute Migration Assist (MMA) data source.</p>
+     * <p>Queries a database in a MaxCompute Migration Assist (MMA) data source.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1149,7 +1226,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a database from a MaxCompute Migration Assist (MMA) data source.</p>
+     * <p>Queries a database in a MaxCompute Migration Assist (MMA) data source.</p>
      * @return GetMmsDbResponse
      */
     public GetMmsDbResponse getMmsDb(String sourceId, String dbId) throws Exception {
@@ -1160,7 +1237,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a MaxCompute Migration Assist (MMA) job that fetches metadata.</p>
+     * <p>Queries the details of a MaxCompute Migration Assist (MMA) job that is used to query the metadata of a data source.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1186,7 +1263,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a MaxCompute Migration Assist (MMA) job that fetches metadata.</p>
+     * <p>Queries the details of a MaxCompute Migration Assist (MMA) job that is used to query the metadata of a data source.</p>
      * @return GetMmsFetchMetadataJobResponse
      */
     public GetMmsFetchMetadataJobResponse getMmsFetchMetadataJob(String sourceId, String scanId) throws Exception {
@@ -1197,7 +1274,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a single MaxCompute Migration Assist (MMA) migration plan.</p>
+     * <p>Queries the details of a MaxCompute Migration Assist (MMA) migration job.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1223,7 +1300,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a single MaxCompute Migration Assist (MMA) migration plan.</p>
+     * <p>Queries the details of a MaxCompute Migration Assist (MMA) migration job.</p>
      * @return GetMmsJobResponse
      */
     public GetMmsJobResponse getMmsJob(String sourceId, String jobId) throws Exception {
@@ -1234,7 +1311,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a partition from a MaxCompute Migration Assist (MMA) data source.</p>
+     * <p>Queries a partition from a MaxCompute Migration Assist (MMA) data source.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1260,7 +1337,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a partition from a MaxCompute Migration Assist (MMA) data source.</p>
+     * <p>Queries a partition from a MaxCompute Migration Assist (MMA) data source.</p>
      * @return GetMmsPartitionResponse
      */
     public GetMmsPartitionResponse getMmsPartition(String sourceId, String partitionId) throws Exception {
@@ -1271,7 +1348,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a table from a MaxCompute Migration Assist (MMA) data source.</p>
+     * <p>Queries a table in a MaxCompute Migration Assist (MMA) data source.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1297,7 +1374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a table from a MaxCompute Migration Assist (MMA) data source.</p>
+     * <p>Queries a table in a MaxCompute Migration Assist (MMA) data source.</p>
      * @return GetMmsTableResponse
      */
     public GetMmsTableResponse getMmsTable(String sourceId, String tableId) throws Exception {
@@ -1308,7 +1385,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specific migration task.</p>
+     * <p>Queries the details of a migration task.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1334,7 +1411,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specific migration task.</p>
+     * <p>Queries the details of a migration task.</p>
      * @return GetMmsTaskResponse
      */
     public GetMmsTaskResponse getMmsTask(String sourceId, String taskId) throws Exception {
@@ -1344,6 +1421,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains the information about a package.</p>
+     * 
      * @param request GetPackageRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1375,6 +1455,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains the information about a package.</p>
+     * 
      * @param request GetPackageRequest
      * @return GetPackageResponse
      */
@@ -1386,7 +1469,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the basic information about a MaxCompute project.</p>
+     * <p>Queries the information about a MaxCompute project.</p>
      * 
      * @param request GetProjectRequest
      * @param headers map
@@ -1428,7 +1511,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the basic information about a MaxCompute project.</p>
+     * <p>Queries the information about a MaxCompute project.</p>
      * 
      * @param request GetProjectRequest
      * @return GetProjectResponse
@@ -1441,7 +1524,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve information for the specified level-1 quota group. Warning: This operation will be decommissioned on July 31, 2024. It will be replaced by the <code>QueryQuota</code> operation. The request parameters, response parameters, and features of the two operations are the same.</p>
+     * <p>Obtains the information about a specified level-1 quota.</p>
      * 
      * @param request GetQuotaRequest
      * @param headers map
@@ -1487,7 +1570,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve information for the specified level-1 quota group. Warning: This operation will be decommissioned on July 31, 2024. It will be replaced by the <code>QueryQuota</code> operation. The request parameters, response parameters, and features of the two operations are the same.</p>
+     * <p>Obtains the information about a specified level-1 quota.</p>
      * 
      * @param request GetQuotaRequest
      * @return GetQuotaResponse
@@ -1499,6 +1582,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains the information of a quota plan.</p>
+     * 
      * @param request GetQuotaPlanRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1534,6 +1620,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains the information of a quota plan.</p>
+     * 
      * @param request GetQuotaPlanRequest
      * @return GetQuotaPlanResponse
      */
@@ -1544,6 +1633,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains the scheduling plan for a quota plan.</p>
+     * 
      * @param request GetQuotaScheduleRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1583,6 +1675,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains the scheduling plan for a quota plan.</p>
+     * 
      * @param request GetQuotaScheduleRequest
      * @return GetQuotaScheduleResponse
      */
@@ -1593,6 +1688,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries quota resource consumption information.</p>
+     * 
      * @param tmpReq GetQuotaUsageRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1666,6 +1764,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries quota resource consumption information.</p>
+     * 
      * @param request GetQuotaUsageRequest
      * @return GetQuotaUsageResponse
      */
@@ -1676,6 +1777,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains the ACL-based permissions that is granted to a project-level role.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetRoleAclResponse
@@ -1699,6 +1803,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains the ACL-based permissions that is granted to a project-level role.</p>
      * @return GetRoleAclResponse
      */
     public GetRoleAclResponse getRoleAcl(String projectName, String roleName) throws Exception {
@@ -1708,6 +1814,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains ACL-based permissions on an object that are granted to a project-level role.</p>
+     * 
      * @param request GetRoleAclOnObjectRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1743,6 +1852,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains ACL-based permissions on an object that are granted to a project-level role.</p>
+     * 
      * @param request GetRoleAclOnObjectRequest
      * @return GetRoleAclOnObjectResponse
      */
@@ -1753,6 +1865,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains the policy that is attached to a project-level role.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetRolePolicyResponse
@@ -1776,6 +1891,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains the policy that is attached to a project-level role.</p>
      * @return GetRolePolicyResponse
      */
     public GetRolePolicyResponse getRolePolicy(String projectName, String roleName) throws Exception {
@@ -1785,6 +1902,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains the running state data of jobs that are in the running state in a specified period of time.</p>
+     * 
      * @param tmpReq GetRunningJobsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1846,6 +1966,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains the running state data of jobs that are in the running state in a specified period of time.</p>
+     * 
      * @param request GetRunningJobsRequest
      * @return GetRunningJobsResponse
      */
@@ -1856,9 +1979,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Retrieves a summary of the total storage amount.</p>
-     * 
      * @param request GetStorageAmountSummaryRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1898,9 +2018,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Retrieves a summary of the total storage amount.</p>
-     * 
      * @param request GetStorageAmountSummaryRequest
      * @return GetStorageAmountSummaryResponse
      */
@@ -1911,9 +2028,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Retrieves a summary of storage usage.</p>
-     * 
      * @param request GetStorageSizeSummaryRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1953,9 +2067,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Retrieves a summary of storage usage.</p>
-     * 
      * @param request GetStorageSizeSummaryRequest
      * @return GetStorageSizeSummaryResponse
      */
@@ -1966,9 +2077,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Retrieves the year-on-year (YoY) change in storage usage.</p>
-     * 
      * @param tmpReq GetStorageSummaryComparedRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2022,9 +2130,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Retrieves the year-on-year (YoY) change in storage usage.</p>
-     * 
      * @param request GetStorageSummaryComparedRequest
      * @return GetStorageSummaryComparedResponse
      */
@@ -2035,6 +2140,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Views the information about MaxCompute internal tables, views, external tables, clustered tables, or transactional tables.</p>
+     * 
      * @param request GetTableInfoRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2070,6 +2178,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Views the information about MaxCompute internal tables, views, external tables, clustered tables, or transactional tables.</p>
+     * 
      * @param request GetTableInfoRequest
      * @return GetTableInfoResponse
      */
@@ -2080,6 +2191,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains the trusted projects of the current project.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTrustedProjectsResponse
@@ -2103,6 +2217,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains the trusted projects of the current project.</p>
      * @return GetTrustedProjectsResponse
      */
     public GetTrustedProjectsResponse getTrustedProjects(String projectName) throws Exception {
@@ -2112,6 +2228,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Terminates a running job.</p>
+     * 
      * @param request KillJobsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2148,6 +2267,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Terminates a running job.</p>
+     * 
      * @param request KillJobsRequest
      * @return KillJobsResponse
      */
@@ -2158,6 +2280,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of computing resources used by a pay-as-you-go job.</p>
+     * 
      * @param request ListComputeMetricsByInstanceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2229,6 +2354,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of computing resources used by a pay-as-you-go job.</p>
+     * 
      * @param request ListComputeMetricsByInstanceRequest
      * @return ListComputeMetricsByInstanceResponse
      */
@@ -2240,7 +2368,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists compute quota plans.</p>
+     * <p>Get computeQuotaPlan list.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2266,7 +2394,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists compute quota plans.</p>
+     * <p>Get computeQuotaPlan list.</p>
      * @return ListComputeQuotaPlanResponse
      */
     public ListComputeQuotaPlanResponse listComputeQuotaPlan(String nickname) throws Exception {
@@ -2276,6 +2404,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains functions in a MaxCompute project.</p>
+     * 
      * @param request ListFunctionsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2319,6 +2450,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains functions in a MaxCompute project.</p>
+     * 
      * @param request ListFunctionsRequest
      * @return ListFunctionsResponse
      */
@@ -2330,7 +2464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of jobs.</p>
+     * <p>Views a list of jobs.</p>
      * 
      * @param request ListJobInfosRequest
      * @param headers map
@@ -2450,7 +2584,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of jobs.</p>
+     * <p>Views a list of jobs.</p>
      * 
      * @param request ListJobInfosRequest
      * @return ListJobInfosResponse
@@ -2462,6 +2596,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a performance metric of the job that is complete.</p>
+     * 
      * @param request ListJobMetricRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2523,6 +2660,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a performance metric of the job that is complete.</p>
+     * 
      * @param request ListJobMetricRequest
      * @return ListJobMetricResponse
      */
@@ -2534,7 +2674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves job snapshot data at a specific point in time.</p>
+     * <p>Views a list of job snapshot data at a specific point in time.</p>
      * 
      * @param request ListJobSnapshotInfosRequest
      * @param headers map
@@ -2642,7 +2782,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves job snapshot data at a specific point in time.</p>
+     * <p>Views a list of job snapshot data at a specific point in time.</p>
      * 
      * @param request ListJobSnapshotInfosRequest
      * @return ListJobSnapshotInfosResponse
@@ -2655,7 +2795,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the MaxCompute Migration Assist (MMA) data sources.</p>
+     * <p>Queries a list of MaxCompute Migration Assist (MMA) data sources.</p>
      * 
      * @param request ListMmsDataSourcesRequest
      * @param headers map
@@ -2705,7 +2845,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the MaxCompute Migration Assist (MMA) data sources.</p>
+     * <p>Queries a list of MaxCompute Migration Assist (MMA) data sources.</p>
      * 
      * @param request ListMmsDataSourcesRequest
      * @return ListMmsDataSourcesResponse
@@ -2718,7 +2858,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List databases in the MMA data source.</p>
+     * <p>Queries a list of databases in a MaxCompute Migration Assist (MMA) data source.</p>
      * 
      * @param tmpReq ListMmsDbsRequest
      * @param headers map
@@ -2774,7 +2914,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List databases in the MMA data source.</p>
+     * <p>Queries a list of databases in a MaxCompute Migration Assist (MMA) data source.</p>
      * 
      * @param request ListMmsDbsRequest
      * @return ListMmsDbsResponse
@@ -2787,7 +2927,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists migration jobs.</p>
+     * <p>Queries a list of migration jobs.</p>
      * 
      * @param request ListMmsJobsRequest
      * @param headers map
@@ -2861,7 +3001,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists migration jobs.</p>
+     * <p>Queries a list of migration jobs.</p>
      * 
      * @param request ListMmsJobsRequest
      * @return ListMmsJobsResponse
@@ -2874,7 +3014,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the partitions in a MaxCompute Migration Assist (MMA) data source.</p>
+     * <p>Queries a list of partitions in a MaxCompute Migration Assist (MMA) data source.</p>
      * 
      * @param tmpReq ListMmsPartitionsRequest
      * @param headers map
@@ -2958,7 +3098,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the partitions in a MaxCompute Migration Assist (MMA) data source.</p>
+     * <p>Queries a list of partitions in a MaxCompute Migration Assist (MMA) data source.</p>
      * 
      * @param request ListMmsPartitionsRequest
      * @return ListMmsPartitionsResponse
@@ -2971,7 +3111,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the tables in a MaxCompute Migration Assist (MMA) data source.</p>
+     * <p>Queries a list of tables in a MaxCompute Migration Assist (MMA) data source.</p>
      * 
      * @param tmpReq ListMmsTablesRequest
      * @param headers map
@@ -3067,7 +3207,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the tables in a MaxCompute Migration Assist (MMA) data source.</p>
+     * <p>Queries a list of tables in a MaxCompute Migration Assist (MMA) data source.</p>
      * 
      * @param request ListMmsTablesRequest
      * @return ListMmsTablesResponse
@@ -3080,7 +3220,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the execution logs for a specific migration task.</p>
+     * <p>Queries a list of the execution logs of a single migration task.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3106,7 +3246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the execution logs for a specific migration task.</p>
+     * <p>Queries a list of the execution logs of a single migration task.</p>
      * @return ListMmsTaskLogsResponse
      */
     public ListMmsTaskLogsResponse listMmsTaskLogs(String sourceId, String taskId) throws Exception {
@@ -3117,7 +3257,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of migration tasks.</p>
+     * <p>Queries a list of migration tasks.</p>
      * 
      * @param request ListMmsTasksRequest
      * @param headers map
@@ -3191,7 +3331,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of migration tasks.</p>
+     * <p>Queries a list of migration tasks.</p>
      * 
      * @param request ListMmsTasksRequest
      * @return ListMmsTasksResponse
@@ -3203,6 +3343,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the packages in a MaxCompute project.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListPackagesResponse
@@ -3226,6 +3369,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the packages in a MaxCompute project.</p>
      * @return ListPackagesResponse
      */
     public ListPackagesResponse listPackages(String projectName) throws Exception {
@@ -3236,7 +3381,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListProjectUsers</p>
+     * <p>Queries a list of users in a project.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3262,7 +3407,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListProjectUsers</p>
+     * <p>Queries a list of users in a project.</p>
      * @return ListProjectUsersResponse
      */
     public ListProjectUsersResponse listProjectUsers(String projectName) throws Exception {
@@ -3272,6 +3417,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of MaxCompute projects.</p>
+     * 
      * @param request ListProjectsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3339,6 +3487,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of MaxCompute projects.</p>
+     * 
      * @param request ListProjectsRequest
      * @return ListProjectsResponse
      */
@@ -3350,7 +3501,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of quotas.</p>
+     * <p>Queries quotas.</p>
      * 
      * @param request ListQuotasRequest
      * @param headers map
@@ -3408,7 +3559,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of quotas.</p>
+     * <p>Queries quotas.</p>
      * 
      * @param request ListQuotasRequest
      * @return ListQuotasResponse
@@ -3420,6 +3571,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains quota plans.</p>
+     * 
      * @param request ListQuotasPlansRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3455,6 +3609,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains quota plans.</p>
+     * 
      * @param request ListQuotasPlansRequest
      * @return ListQuotasPlansResponse
      */
@@ -3465,6 +3622,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains resources in a MaxCompute project.</p>
+     * 
      * @param request ListResourcesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3508,6 +3668,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains resources in a MaxCompute project.</p>
+     * 
      * @param request ListResourcesRequest
      * @return ListResourcesResponse
      */
@@ -3518,6 +3681,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains MaxCompute project-level roles.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListRolesResponse
@@ -3541,6 +3707,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains MaxCompute project-level roles.</p>
      * @return ListRolesResponse
      */
     public ListRolesResponse listRoles(String projectName) throws Exception {
@@ -3550,6 +3718,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the storage details of a specific partition in a partitioned table in a MaxCompute project.</p>
+     * 
      * @param tmpReq ListStoragePartitionsInfoRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3623,6 +3794,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the storage details of a specific partition in a partitioned table in a MaxCompute project.</p>
+     * 
      * @param request ListStoragePartitionsInfoRequest
      * @return ListStoragePartitionsInfoResponse
      */
@@ -3633,9 +3807,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Retrieves the storage details of projects.</p>
-     * 
      * @param request ListStorageProjectsInfoRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3699,9 +3870,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Retrieves the storage details of projects.</p>
-     * 
      * @param request ListStorageProjectsInfoRequest
      * @return ListStorageProjectsInfoResponse
      */
@@ -3712,6 +3880,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the table storage details of a MaxCompute project.</p>
+     * 
      * @param tmpReq ListStorageTablesInfoRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3789,6 +3960,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the table storage details of a MaxCompute project.</p>
+     * 
      * @param request ListStorageTablesInfoRequest
      * @return ListStorageTablesInfoResponse
      */
@@ -3799,6 +3973,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains tables in a MaxCompute project.</p>
+     * 
      * @param request ListTablesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3846,6 +4023,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains tables in a MaxCompute project.</p>
+     * 
      * @param request ListTablesRequest
      * @return ListTablesResponse
      */
@@ -3856,6 +4036,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Displays the time-specific configuration of an exclusive resource group for Tunnel (referred to as Tunnel quota).</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTunnelQuotaTimerResponse
@@ -3879,6 +4062,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Displays the time-specific configuration of an exclusive resource group for Tunnel (referred to as Tunnel quota).</p>
      * @return ListTunnelQuotaTimerResponse
      */
     public ListTunnelQuotaTimerResponse listTunnelQuotaTimer(String nickname) throws Exception {
@@ -3888,6 +4073,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains users in a MaxCompute project.</p>
+     * 
      * @param request ListUsersRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3923,6 +4111,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains users in a MaxCompute project.</p>
+     * 
      * @param request ListUsersRequest
      * @return ListUsersResponse
      */
@@ -3933,6 +4124,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains information about the users who are assigned a project-level role.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListUsersByRoleResponse
@@ -3956,6 +4150,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains information about the users who are assigned a project-level role.</p>
      * @return ListUsersByRoleResponse
      */
     public ListUsersByRoleResponse listUsersByRole(String projectName, String roleName) throws Exception {
@@ -3965,6 +4161,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a specified level-1 quota group.</p>
+     * 
      * @param request QueryQuotaRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4008,6 +4207,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a specified level-1 quota group.</p>
+     * 
      * @param request QueryQuotaRequest
      * @return QueryQuotaResponse
      */
@@ -4019,7 +4221,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the time series data of resource consumption for a quota.</p>
+     * <p>查询quota的资源使用信息</p>
      * 
      * @param request QueryQuotaMetricRequest
      * @param headers map
@@ -4079,7 +4281,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the time series data of resource consumption for a quota.</p>
+     * <p>查询quota的资源使用信息</p>
      * 
      * @param request QueryQuotaMetricRequest
      * @return QueryQuotaMetricResponse
@@ -4092,7 +4294,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries time-series metrics of data storage.</p>
+     * <p>Queries time series metrics of stored data.</p>
      * 
      * @param request QueryStorageMetricRequest
      * @param headers map
@@ -4140,7 +4342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries time-series metrics of data storage.</p>
+     * <p>Queries time series metrics of stored data.</p>
      * 
      * @param request QueryStorageMetricRequest
      * @return QueryStorageMetricResponse
@@ -4152,19 +4354,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <ul>
-     * <li>You can use this API to query various Tunnel metrics, such as slot usage (<code>slot_usage</code>), slot usage limit (<code>slot_max</code>), throughput (<code>throughput</code>), throughput rate (<code>throughput_speed</code>), and number of requests (<code>request</code>).</li>
-     * <li>The <code>startTime</code> and <code>endTime</code> parameters are required. They specify the start and end of the time range for the query. The values are UNIX timestamps in seconds.</li>
-     * <li>The <code>metric</code> parameter is also required. It specifies the type of metric to query.</li>
-     * <li>Depending on the value of <code>metric</code>, you may need to specify additional parameters for filtering to refine your query. These parameters include <code>quotaNickname</code>, <code>project</code>, <code>tableList</code>, <code>operationList</code>, <code>codeList</code>, <code>groupList</code>, and <code>topN</code>.</li>
-     * <li>For some <code>metric</code> values, you must specify other parameters. For example, if <code>groupList</code> contains <code>table</code> or <code>ip</code>, you must specify the <code>project</code> parameter and other required parameters. In this case, the system returns only the top N results.</li>
-     * <li>The <code>strategy</code> parameter defines the data aggregation logic. This logic is used when the automatic step size exceeds 60 seconds over a long time range. The default value is <code>max</code>.</li>
-     * <li>Ensure all parameters meet the requirements in this document to prevent request failures.</li>
-     * </ul>
-     * 
      * <b>summary</b> : 
-     * <p>Queries metric data for the Tunnel Data Transmission Service within a specified time range.</p>
+     * <p>Queries the metrics of the Tunnel service within a specified time range.</p>
      * 
      * @param request QueryTunnelMetricRequest
      * @param headers map
@@ -4235,19 +4426,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <ul>
-     * <li>You can use this API to query various Tunnel metrics, such as slot usage (<code>slot_usage</code>), slot usage limit (<code>slot_max</code>), throughput (<code>throughput</code>), throughput rate (<code>throughput_speed</code>), and number of requests (<code>request</code>).</li>
-     * <li>The <code>startTime</code> and <code>endTime</code> parameters are required. They specify the start and end of the time range for the query. The values are UNIX timestamps in seconds.</li>
-     * <li>The <code>metric</code> parameter is also required. It specifies the type of metric to query.</li>
-     * <li>Depending on the value of <code>metric</code>, you may need to specify additional parameters for filtering to refine your query. These parameters include <code>quotaNickname</code>, <code>project</code>, <code>tableList</code>, <code>operationList</code>, <code>codeList</code>, <code>groupList</code>, and <code>topN</code>.</li>
-     * <li>For some <code>metric</code> values, you must specify other parameters. For example, if <code>groupList</code> contains <code>table</code> or <code>ip</code>, you must specify the <code>project</code> parameter and other required parameters. In this case, the system returns only the top N results.</li>
-     * <li>The <code>strategy</code> parameter defines the data aggregation logic. This logic is used when the automatic step size exceeds 60 seconds over a long time range. The default value is <code>max</code>.</li>
-     * <li>Ensure all parameters meet the requirements in this document to prevent request failures.</li>
-     * </ul>
-     * 
      * <b>summary</b> : 
-     * <p>Queries metric data for the Tunnel Data Transmission Service within a specified time range.</p>
+     * <p>Queries the metrics of the Tunnel service within a specified time range.</p>
      * 
      * @param request QueryTunnelMetricRequest
      * @return QueryTunnelMetricResponse
@@ -4259,18 +4439,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <ul>
-     * <li>This operation queries various Tunnel metrics, such as slot usage details (<code>slot_usage_detail</code>), throughput details (<code>throughput_detail</code>), and a throughput summary (<code>throughput_summary</code>).</li>
-     * <li>The <code>quotaNickname</code> and <code>project</code> parameters cannot both be empty.</li>
-     * <li>If the groupList parameter contains <code>table</code> or <code>ip</code>, you must specify the <code>project</code> parameter. If the <code>groupList</code> parameter contains <code>ip</code>, you must also specify the <code>tableList</code> parameter.</li>
-     * <li>The orderColumn parameter can be set to <code>maxValue</code>, <code>minValue</code>, <code>avgValue</code>, or <code>sumValue</code>. The <code>sumValue</code> option is valid only for <code>throughput_summary</code>. By default, this parameter is empty, which means that no sorting is performed.</li>
-     * <li>The default value of the <code>ascOrder</code> parameter is <code>false</code>, which indicates that the results are sorted in descending order.</li>
-     * <li>The <code>limit</code> parameter specifies the maximum number of entries to return. The default value is 10, and the maximum value is 100.</li>
-     * </ul>
-     * 
      * <b>summary</b> : 
-     * <p>Queries detailed data for the Tunnel Data Transmission Service within a specified time range.</p>
+     * <p>Queries the metrics of the Tunnel service within a specified time range.</p>
      * 
      * @param request QueryTunnelMetricDetailRequest
      * @param headers map
@@ -4341,18 +4511,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <ul>
-     * <li>This operation queries various Tunnel metrics, such as slot usage details (<code>slot_usage_detail</code>), throughput details (<code>throughput_detail</code>), and a throughput summary (<code>throughput_summary</code>).</li>
-     * <li>The <code>quotaNickname</code> and <code>project</code> parameters cannot both be empty.</li>
-     * <li>If the groupList parameter contains <code>table</code> or <code>ip</code>, you must specify the <code>project</code> parameter. If the <code>groupList</code> parameter contains <code>ip</code>, you must also specify the <code>tableList</code> parameter.</li>
-     * <li>The orderColumn parameter can be set to <code>maxValue</code>, <code>minValue</code>, <code>avgValue</code>, or <code>sumValue</code>. The <code>sumValue</code> option is valid only for <code>throughput_summary</code>. By default, this parameter is empty, which means that no sorting is performed.</li>
-     * <li>The default value of the <code>ascOrder</code> parameter is <code>false</code>, which indicates that the results are sorted in descending order.</li>
-     * <li>The <code>limit</code> parameter specifies the maximum number of entries to return. The default value is 10, and the maximum value is 100.</li>
-     * </ul>
-     * 
      * <b>summary</b> : 
-     * <p>Queries detailed data for the Tunnel Data Transmission Service within a specified time range.</p>
+     * <p>Queries the metrics of the Tunnel service within a specified time range.</p>
      * 
      * @param request QueryTunnelMetricDetailRequest
      * @return QueryTunnelMetricDetailResponse
@@ -4365,7 +4525,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retries a data migration job.</p>
+     * <p>Retries a migration job.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4391,7 +4551,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retries a data migration job.</p>
+     * <p>Retries a migration job.</p>
      * @return RetryMmsJobResponse
      */
     public RetryMmsJobResponse retryMmsJob(String sourceId, String jobId) throws Exception {
@@ -4402,7 +4562,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts a data migration job.</p>
+     * <p>Starts a migration job.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4428,7 +4588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts a data migration job.</p>
+     * <p>Starts a migration job.</p>
      * @return StartMmsJobResponse
      */
     public StartMmsJobResponse startMmsJob(String sourceId, String jobId) throws Exception {
@@ -4439,7 +4599,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops a data migration job.</p>
+     * <p>Stops a migration job.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4465,7 +4625,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops a data migration job.</p>
+     * <p>Stops a migration job.</p>
      * @return StopMmsJobResponse
      */
     public StopMmsJobResponse stopMmsJob(String sourceId, String jobId) throws Exception {
@@ -4475,9 +4635,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Retrieves the storage information for each category or project on a specified date.</p>
-     * 
      * @param request SumStorageMetricsByDateRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4529,9 +4686,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Retrieves the storage information for each category or project on a specified date.</p>
-     * 
      * @param request SumStorageMetricsByDateRequest
      * @return SumStorageMetricsByDateResponse
      */
@@ -4542,6 +4696,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Please ensure that before using this interface, you have fully understood the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/computing-pricing-1">Pricing and Charges</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/computing-pricing-1">Pricing and Charges</a> of MaxCompute Elastic Reserved CU.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Update the ComputeQuotaPlan.</p>
+     * 
      * @param request UpdateComputeQuotaPlanRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4577,6 +4738,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Please ensure that before using this interface, you have fully understood the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/computing-pricing-1">Pricing and Charges</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/computing-pricing-1">Pricing and Charges</a> of MaxCompute Elastic Reserved CU.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Update the ComputeQuotaPlan.</p>
+     * 
      * @param request UpdateComputeQuotaPlanRequest
      * @return UpdateComputeQuotaPlanResponse
      */
@@ -4588,10 +4756,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, ensure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/computing-pricing-1">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/computing-pricing-1">billing methods and pricing</a> of reserved compute units (CUs) in MaxCompute.</p>
+     * <p>Please ensure that before using this interface, you have fully understood the&lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/computing-pricing-1">Pricing and Billing</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/computing-pricing-1">Pricing and Billing</a> of MaxCompute Elastic Reserved CU.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the time-based schedule for a computing quota.</p>
+     * <p>Update the time-based plan for computing quota.</p>
      * 
      * @param request UpdateComputeQuotaScheduleRequest
      * @param headers map
@@ -4626,10 +4795,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, ensure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/computing-pricing-1">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/computing-pricing-1">billing methods and pricing</a> of reserved compute units (CUs) in MaxCompute.</p>
+     * <p>Please ensure that before using this interface, you have fully understood the&lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/computing-pricing-1">Pricing and Billing</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/computing-pricing-1">Pricing and Billing</a> of MaxCompute Elastic Reserved CU.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the time-based schedule for a computing quota.</p>
+     * <p>Update the time-based plan for computing quota.</p>
      * 
      * @param request UpdateComputeQuotaScheduleRequest
      * @return UpdateComputeQuotaScheduleResponse
@@ -4641,6 +4811,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Updates the basic configuration of a MaxCompute quota. For example, you can call this operation to add or delete a level-2 quota, define the basic attributes of a level-2 quota, and define the configuration of compute units (CUs) for a quota plan that is in effect.</p>
+     * 
      * @param request UpdateComputeSubQuotaRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4672,6 +4845,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Updates the basic configuration of a MaxCompute quota. For example, you can call this operation to add or delete a level-2 quota, define the basic attributes of a level-2 quota, and define the configuration of compute units (CUs) for a quota plan that is in effect.</p>
+     * 
      * @param request UpdateComputeSubQuotaRequest
      * @return UpdateComputeSubQuotaResponse
      */
@@ -4683,7 +4859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Refreshes the metadata of a MaxCompute Migration Assist (MMA) data source.</p>
+     * <p>Updates the metadata of a MaxCompute Migration Assist (MMA) data source.</p>
      * 
      * @param request UpdateMmsDataSourceRequest
      * @param headers map
@@ -4729,7 +4905,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Refreshes the metadata of a MaxCompute Migration Assist (MMA) data source.</p>
+     * <p>Updates the metadata of a MaxCompute Migration Assist (MMA) data source.</p>
      * 
      * @param request UpdateMmsDataSourceRequest
      * @return UpdateMmsDataSourceResponse
@@ -4741,6 +4917,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Updates the objects in a package and projects in which the package can be installed.</p>
+     * 
      * @param request UpdatePackageRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4767,6 +4946,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Updates the objects in a package and projects in which the package can be installed.</p>
+     * 
      * @param request UpdatePackageRequest
      * @return UpdatePackageResponse
      */
@@ -4778,7 +4960,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the basic information of a project.</p>
+     * <p>Update Project Basic Information</p>
      * 
      * @param request UpdateProjectBasicMetaRequest
      * @param headers map
@@ -4816,7 +4998,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the basic information of a project.</p>
+     * <p>Update Project Basic Information</p>
      * 
      * @param request UpdateProjectBasicMetaRequest
      * @return UpdateProjectBasicMetaResponse
@@ -4828,6 +5010,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Updates the default computing quota of a project.</p>
+     * 
      * @param request UpdateProjectDefaultQuotaRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4859,6 +5044,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Updates the default computing quota of a project.</p>
+     * 
      * @param request UpdateProjectDefaultQuotaRequest
      * @return UpdateProjectDefaultQuotaResponse
      */
@@ -4869,6 +5057,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the IP address whitelist of a MaxCompute project.</p>
+     * 
      * @param request UpdateProjectIpWhiteListRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4895,6 +5086,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the IP address whitelist of a MaxCompute project.</p>
+     * 
      * @param request UpdateProjectIpWhiteListRequest
      * @return UpdateProjectIpWhiteListResponse
      */
@@ -4906,7 +5100,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upgrades a project\&quot;s Layer 2 model to a Layer 3 model.</p>
+     * <p>将project的二层模型升级为三层模型</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4932,7 +5126,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upgrades a project\&quot;s Layer 2 model to a Layer 3 model.</p>
+     * <p>将project的二层模型升级为三层模型</p>
      * @return UpdateProjectModelTierResponse
      */
     public UpdateProjectModelTierResponse updateProjectModelTier(String projectName) throws Exception {
@@ -4942,6 +5136,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Updates a quota plan.</p>
+     * 
      * @param request UpdateQuotaPlanRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4978,6 +5175,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Updates a quota plan.</p>
+     * 
      * @param request UpdateQuotaPlanRequest
      * @return UpdateQuotaPlanResponse
      */
@@ -4988,6 +5188,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Updates the scheduling plan for a quota plan.</p>
+     * 
      * @param request UpdateQuotaScheduleRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5024,6 +5227,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Updates the scheduling plan for a quota plan.</p>
+     * 
      * @param request UpdateQuotaScheduleRequest
      * @return UpdateQuotaScheduleResponse
      */
@@ -5035,10 +5241,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, ensure that you fully understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for exclusive Data Transmission Service resource groups and elastic reserved computing resources.</p>
+     * <p>Before you call this operation, make sure that you are familiar with the <a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing and prices</a> of Tunnel quotas and elastically reserved computing resources.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the time-based auto-scaling configuration for an exclusive resource group for Data Transmission Service (Tunnel Quota).</p>
+     * <p>Updates the time-specific configuration of an exclusive resource group for Tunnel (referred to as Tunnel quota).</p>
      * 
      * @param request UpdateTunnelQuotaTimerRequest
      * @param headers map
@@ -5073,10 +5279,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, ensure that you fully understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for exclusive Data Transmission Service resource groups and elastic reserved computing resources.</p>
+     * <p>Before you call this operation, make sure that you are familiar with the <a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing and prices</a> of Tunnel quotas and elastically reserved computing resources.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the time-based auto-scaling configuration for an exclusive resource group for Data Transmission Service (Tunnel Quota).</p>
+     * <p>Updates the time-specific configuration of an exclusive resource group for Tunnel (referred to as Tunnel quota).</p>
      * 
      * @param request UpdateTunnelQuotaTimerRequest
      * @return UpdateTunnelQuotaTimerResponse
@@ -5089,7 +5295,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds or removes users from a project role.</p>
+     * <p>Add or remove users from a project role.</p>
      * 
      * @param request UpdateUsersToRoleRequest
      * @param headers map
@@ -5127,7 +5333,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds or removes users from a project role.</p>
+     * <p>Add or remove users from a project role.</p>
      * 
      * @param request UpdateUsersToRoleRequest
      * @return UpdateUsersToRoleResponse

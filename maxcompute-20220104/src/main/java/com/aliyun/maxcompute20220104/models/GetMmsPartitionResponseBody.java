@@ -4,15 +4,10 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class GetMmsPartitionResponseBody extends TeaModel {
-    /**
-     * <p>The partition object.</p>
-     */
     @NameInMap("data")
     public GetMmsPartitionResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>D9F872FD-5DDE-30A6-8C8A-1B8C6A81059F</p>
      */
@@ -41,18 +36,10 @@ public class GetMmsPartitionResponseBody extends TeaModel {
     }
 
     public static class GetMmsPartitionResponseBodyData extends TeaModel {
-        /**
-         * <p>The ID of the database that contains the partition. The name for this metadata layer depends on the data source. For example, it is a Dataset in BigQuery, a Database in Hive, or a Schema in Databricks and MaxCompute.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>12</p>
-         */
         @NameInMap("dbId")
         public Long dbId;
 
         /**
-         * <p>The name of the database. The name for this metadata layer depends on the data source. For example, it is a Dataset in BigQuery, a Database in Hive, or a Schema in Databricks and MaxCompute.</p>
-         * 
          * <strong>example:</strong>
          * <p>d1</p>
          */
@@ -60,8 +47,6 @@ public class GetMmsPartitionResponseBody extends TeaModel {
         public String dbName;
 
         /**
-         * <p>The name of the destination MaxCompute project.</p>
-         * 
          * <strong>example:</strong>
          * <p>mms_test</p>
          */
@@ -69,8 +54,6 @@ public class GetMmsPartitionResponseBody extends TeaModel {
         public String dstProjectName;
 
         /**
-         * <p>The name of the destination MaxCompute schema. This parameter is null if the destination MaxCompute project does not use a schema layer.</p>
-         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -78,8 +61,6 @@ public class GetMmsPartitionResponseBody extends TeaModel {
         public String dstSchemaName;
 
         /**
-         * <p>The name of the destination MaxCompute table.</p>
-         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -87,8 +68,6 @@ public class GetMmsPartitionResponseBody extends TeaModel {
         public String dstTableName;
 
         /**
-         * <p>The value of the destination MaxCompute partition. By default, this value is the same as the source partition value.</p>
-         * 
          * <strong>example:</strong>
          * <p>p1=1/p2=abc</p>
          */
@@ -96,8 +75,6 @@ public class GetMmsPartitionResponseBody extends TeaModel {
         public String dstValue;
 
         /**
-         * <p>The partition ID.</p>
-         * 
          * <strong>example:</strong>
          * <p>2323</p>
          */
@@ -105,7 +82,7 @@ public class GetMmsPartitionResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The time of the last DDL operation.</p>
+         * <p>lastDdlTime</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-17 15:44:42</p>
@@ -114,8 +91,6 @@ public class GetMmsPartitionResponseBody extends TeaModel {
         public String lastDdlTime;
 
         /**
-         * <p>The number of rows.</p>
-         * 
          * <strong>example:</strong>
          * <p>2323</p>
          */
@@ -123,8 +98,6 @@ public class GetMmsPartitionResponseBody extends TeaModel {
         public Long numRows;
 
         /**
-         * <p>The data size in bytes.</p>
-         * 
          * <strong>example:</strong>
          * <p>12323</p>
          */
@@ -132,8 +105,6 @@ public class GetMmsPartitionResponseBody extends TeaModel {
         public Long size;
 
         /**
-         * <p>The data source ID.</p>
-         * 
          * <strong>example:</strong>
          * <p>200018</p>
          */
@@ -141,8 +112,6 @@ public class GetMmsPartitionResponseBody extends TeaModel {
         public Long sourceId;
 
         /**
-         * <p>The data source name.</p>
-         * 
          * <strong>example:</strong>
          * <p>demo</p>
          */
@@ -150,8 +119,6 @@ public class GetMmsPartitionResponseBody extends TeaModel {
         public String sourceName;
 
         /**
-         * <p>The migration status.</p>
-         * 
          * <strong>example:</strong>
          * <p>DONE</p>
          */
@@ -159,8 +126,6 @@ public class GetMmsPartitionResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The table ID.</p>
-         * 
          * <strong>example:</strong>
          * <p>23</p>
          */
@@ -168,8 +133,6 @@ public class GetMmsPartitionResponseBody extends TeaModel {
         public Long tableId;
 
         /**
-         * <p>The table name.</p>
-         * 
          * <strong>example:</strong>
          * <p>t1</p>
          */
@@ -177,8 +140,6 @@ public class GetMmsPartitionResponseBody extends TeaModel {
         public String tableName;
 
         /**
-         * <p>Indicates whether the metadata is updated.</p>
-         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -186,8 +147,6 @@ public class GetMmsPartitionResponseBody extends TeaModel {
         public Boolean updated;
 
         /**
-         * <p>The partition value.</p>
-         * 
          * <strong>example:</strong>
          * <p>p1=1/p2=abc</p>
          */

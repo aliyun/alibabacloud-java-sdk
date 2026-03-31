@@ -4,15 +4,10 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class ListMmsDataSourcesResponseBody extends TeaModel {
-    /**
-     * <p>The returned data.</p>
-     */
     @NameInMap("data")
     public ListMmsDataSourcesResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>C1F7715F-D316-5AB6-BD02-5241083F4003</p>
      */
@@ -41,24 +36,13 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
     }
 
     public static class ListMmsDataSourcesResponseBodyDataObjectListConfig extends TeaModel {
-        /**
-         * <p>The description of the configuration.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>范围分区表迁移方式</p>
-         */
         @NameInMap("desc")
         public String desc;
 
-        /**
-         * <p>The enumerated values for the configuration.</p>
-         */
         @NameInMap("enums")
         public java.util.List<String> enums;
 
         /**
-         * <p>The configuration group.</p>
-         * 
          * <strong>example:</strong>
          * <p>basic_group</p>
          */
@@ -66,26 +50,16 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
         public String group;
 
         /**
-         * <p>The English identifier for the configuration.</p>
-         * 
          * <strong>example:</strong>
          * <p>bigquery.range.partition.migrate.type</p>
          */
         @NameInMap("key")
         public String key;
 
-        /**
-         * <p>The name of the configuration.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>范围分区表迁移方式</p>
-         */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>An example value for the configuration.</p>
-         * 
          * <strong>example:</strong>
          * <p>Cluster or Partition</p>
          */
@@ -93,8 +67,6 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
         public String placeHolder;
 
         /**
-         * <p>Indicates whether the configuration is required.</p>
-         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -102,8 +74,6 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
         public Boolean required;
 
         /**
-         * <p>If \<code>type\\</code> is set to \<code>file\\</code>, \<code>subType\\</code> specifies the file type, such as \<code>.keytab\\</code>.</p>
-         * 
          * <strong>example:</strong>
          * <p>.keytab</p>
          */
@@ -111,8 +81,6 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
         public String subType;
 
         /**
-         * <p>The type of the configuration. Valid values: \<code>boolean\\</code>, \<code>int\\</code>, \<code>map\\</code>, \<code>string\\</code>, \<code>password\\</code>, and \<code>file\\</code>.</p>
-         * 
          * <strong>example:</strong>
          * <p>string</p>
          */
@@ -120,8 +88,6 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The value of the configuration.</p>
-         * 
          * <strong>example:</strong>
          * <p>Partition</p>
          */
@@ -217,23 +183,16 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
 
     public static class ListMmsDataSourcesResponseBodyDataObjectList extends TeaModel {
         /**
-         * <p>Indicates whether the data source instance or its associated agent is started.</p>
-         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("agentIsOnline")
         public Boolean agentIsOnline;
 
-        /**
-         * <p>The configurations of the data source.</p>
-         */
         @NameInMap("config")
         public java.util.List<ListMmsDataSourcesResponseBodyDataObjectListConfig> config;
 
         /**
-         * <p>The time when the data source was created.</p>
-         * 
          * <strong>example:</strong>
          * <p>2024-12-17 09:29:58</p>
          */
@@ -241,8 +200,6 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The number of databases in the data source.</p>
-         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -250,23 +207,16 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
         public Integer dbNum;
 
         /**
-         * <p>The default destination MaxCompute project.</p>
-         * 
          * <strong>example:</strong>
          * <p>mms_test</p>
          */
         @NameInMap("dstProject")
         public String dstProject;
 
-        /**
-         * <p>The list of destination MaxCompute projects.</p>
-         */
         @NameInMap("dstProjects")
         public java.util.List<String> dstProjects;
 
         /**
-         * <p>The reason why the data source instance failed to start or shut down. This parameter is returned only when the value of \<code>status\\</code> is \<code>START_FAILED\\</code> or \<code>STOP_FAILED\\</code>.</p>
-         * 
          * <strong>example:</strong>
          * <p>unexpected exception</p>
          */
@@ -274,8 +224,6 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
         public String errMsg;
 
         /**
-         * <p>The data source ID.</p>
-         * 
          * <strong>example:</strong>
          * <p>2000015</p>
          */
@@ -283,8 +231,6 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The last time when the metadata was synchronized.</p>
-         * 
          * <strong>example:</strong>
          * <p>2024-12-17 15:44:17</p>
          */
@@ -292,8 +238,6 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
         public String lastUpdateTime;
 
         /**
-         * <p>The name of the data source.</p>
-         * 
          * <strong>example:</strong>
          * <p>demo</p>
          */
@@ -301,8 +245,6 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The MaxCompute network connectivity ID is the region ID.</p>
-         * 
          * <strong>example:</strong>
          * <p>vpc-2zebqp6uojhdla46677tl:cn-beijing</p>
          */
@@ -310,8 +252,6 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
         public String networklink;
 
         /**
-         * <p>The number of partitions in the data source.</p>
-         * 
          * <strong>example:</strong>
          * <p>10000000</p>
          */
@@ -319,8 +259,6 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
         public Integer partitionNum;
 
         /**
-         * <p>The number of partitions that are being migrated.</p>
-         * 
          * <strong>example:</strong>
          * <p>2332</p>
          */
@@ -328,8 +266,6 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
         public Integer partitionsDoingNum;
 
         /**
-         * <p>The number of partitions that have been migrated.</p>
-         * 
          * <strong>example:</strong>
          * <p>23</p>
          */
@@ -337,8 +273,6 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
         public Integer partitionsDoneNum;
 
         /**
-         * <p>The number of partitions that failed to be migrated.</p>
-         * 
          * <strong>example:</strong>
          * <p>2323</p>
          */
@@ -346,26 +280,26 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
         public Integer partitionsFailedNum;
 
         /**
-         * <p>The region ID.</p>
-         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
         @NameInMap("region")
         public String region;
 
+        @NameInMap("scanErrMsg")
+        public String scanErrMsg;
+
         /**
-         * <p>The ID of the metadata synchronization task.</p>
-         * 
          * <strong>example:</strong>
          * <p>1000253</p>
          */
         @NameInMap("scanId")
         public Long scanId;
 
+        @NameInMap("scanStatus")
+        public String scanStatus;
+
         /**
-         * <p>The status of the data source.</p>
-         * 
          * <strong>example:</strong>
          * <p>STARTED</p>
          */
@@ -373,8 +307,6 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The number of tables in the data source.</p>
-         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -382,8 +314,6 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
         public Integer tableNum;
 
         /**
-         * <p>The number of tables that are being migrated.</p>
-         * 
          * <strong>example:</strong>
          * <p>18</p>
          */
@@ -391,8 +321,6 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
         public Integer tablesDoingNum;
 
         /**
-         * <p>The number of tables that have been migrated.</p>
-         * 
          * <strong>example:</strong>
          * <p>2323</p>
          */
@@ -400,8 +328,6 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
         public Integer tablesDoneNum;
 
         /**
-         * <p>The number of tables that failed to be migrated.</p>
-         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -409,8 +335,6 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
         public Integer tablesFailedNum;
 
         /**
-         * <p>The number of tables that are partially migrated.</p>
-         * 
          * <strong>example:</strong>
          * <p>22</p>
          */
@@ -418,8 +342,6 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
         public Integer tablesPartDoneNum;
 
         /**
-         * <p>The type of the data source.</p>
-         * 
          * <strong>example:</strong>
          * <p>BIGQUERY</p>
          */
@@ -559,12 +481,28 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             return this.region;
         }
 
+        public ListMmsDataSourcesResponseBodyDataObjectList setScanErrMsg(String scanErrMsg) {
+            this.scanErrMsg = scanErrMsg;
+            return this;
+        }
+        public String getScanErrMsg() {
+            return this.scanErrMsg;
+        }
+
         public ListMmsDataSourcesResponseBodyDataObjectList setScanId(Long scanId) {
             this.scanId = scanId;
             return this;
         }
         public Long getScanId() {
             return this.scanId;
+        }
+
+        public ListMmsDataSourcesResponseBodyDataObjectList setScanStatus(String scanStatus) {
+            this.scanStatus = scanStatus;
+            return this;
+        }
+        public String getScanStatus() {
+            return this.scanStatus;
         }
 
         public ListMmsDataSourcesResponseBodyDataObjectList setStatus(String status) {
@@ -626,15 +564,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
     }
 
     public static class ListMmsDataSourcesResponseBodyData extends TeaModel {
-        /**
-         * <p>The list of data sources.</p>
-         */
         @NameInMap("objectList")
         public java.util.List<ListMmsDataSourcesResponseBodyDataObjectList> objectList;
 
         /**
-         * <p>The page number.</p>
-         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -642,8 +575,6 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
-         * <p>The number of entries per page.</p>
-         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -651,8 +582,6 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of records.</p>
-         * 
          * <strong>example:</strong>
          * <p>9</p>
          */

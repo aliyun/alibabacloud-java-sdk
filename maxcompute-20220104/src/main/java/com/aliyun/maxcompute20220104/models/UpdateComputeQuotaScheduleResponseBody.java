@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateComputeQuotaScheduleResponseBody extends TeaModel {
     /**
-     * <p>The returned result.</p>
+     * <p>The data returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,18 +32,13 @@ public class UpdateComputeQuotaScheduleResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>HTTP status code.</p>
      * <ul>
-     * <li><p>1xx: an informational response. The request was received and is being processed.</p>
-     * </li>
-     * <li><p>2xx: a success response. The request was successfully received, understood, and accepted by the server.</p>
-     * </li>
-     * <li><p>3xx: a redirection response. The request was redirected. You must take further action to complete the request.</p>
-     * </li>
-     * <li><p>4xx: a client error. The request contains invalid request parameters or syntax, or cannot be fulfilled for a specific reason.</p>
-     * </li>
-     * <li><p>5xx: a server error. The server cannot fulfill the request for other reasons.</p>
-     * </li>
+     * <li>1xx: Informational - The request has been received and is being processed.</li>
+     * <li>2xx: Success - The request action was successfully received, understood, and accepted by the server.</li>
+     * <li>3xx: Redirection - Further action must be taken to complete the request.</li>
+     * <li>4xx: Client Error - The request contains an error in the request parameters, syntax, or specific request conditions cannot be met.</li>
+     * <li>5xx: Server Error - The server could not fulfill the request due to other reasons.</li>
      * </ul>
      * 
      * <strong>example:</strong>
