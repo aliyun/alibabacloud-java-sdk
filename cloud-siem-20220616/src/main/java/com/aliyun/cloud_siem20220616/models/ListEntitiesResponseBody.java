@@ -137,6 +137,36 @@ public class ListEntitiesResponseBody extends TeaModel {
 
     }
 
+    public static class ListEntitiesResponseBodyDataResponseDataAgentDisposes extends TeaModel {
+        @NameInMap("AgentDisposalMethod")
+        public String agentDisposalMethod;
+
+        @NameInMap("AgentDisposalPlaybookUuid")
+        public String agentDisposalPlaybookUuid;
+
+        public static ListEntitiesResponseBodyDataResponseDataAgentDisposes build(java.util.Map<String, ?> map) throws Exception {
+            ListEntitiesResponseBodyDataResponseDataAgentDisposes self = new ListEntitiesResponseBodyDataResponseDataAgentDisposes();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEntitiesResponseBodyDataResponseDataAgentDisposes setAgentDisposalMethod(String agentDisposalMethod) {
+            this.agentDisposalMethod = agentDisposalMethod;
+            return this;
+        }
+        public String getAgentDisposalMethod() {
+            return this.agentDisposalMethod;
+        }
+
+        public ListEntitiesResponseBodyDataResponseDataAgentDisposes setAgentDisposalPlaybookUuid(String agentDisposalPlaybookUuid) {
+            this.agentDisposalPlaybookUuid = agentDisposalPlaybookUuid;
+            return this;
+        }
+        public String getAgentDisposalPlaybookUuid() {
+            return this.agentDisposalPlaybookUuid;
+        }
+
+    }
+
     public static class ListEntitiesResponseBodyDataResponseData extends TeaModel {
         @NameInMap("AgentConfidence")
         public String agentConfidence;
@@ -149,6 +179,9 @@ public class ListEntitiesResponseBody extends TeaModel {
 
         @NameInMap("AgentDisposalSuggestion")
         public String agentDisposalSuggestion;
+
+        @NameInMap("AgentDisposes")
+        public java.util.List<ListEntitiesResponseBodyDataResponseDataAgentDisposes> agentDisposes;
 
         /**
          * <strong>example:</strong>
@@ -306,6 +339,14 @@ public class ListEntitiesResponseBody extends TeaModel {
         }
         public String getAgentDisposalSuggestion() {
             return this.agentDisposalSuggestion;
+        }
+
+        public ListEntitiesResponseBodyDataResponseData setAgentDisposes(java.util.List<ListEntitiesResponseBodyDataResponseDataAgentDisposes> agentDisposes) {
+            this.agentDisposes = agentDisposes;
+            return this;
+        }
+        public java.util.List<ListEntitiesResponseBodyDataResponseDataAgentDisposes> getAgentDisposes() {
+            return this.agentDisposes;
         }
 
         public ListEntitiesResponseBodyDataResponseData setAlertNum(Integer alertNum) {

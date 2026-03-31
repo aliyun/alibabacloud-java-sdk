@@ -479,6 +479,9 @@ public class DescribeAlertsResponseBody extends TeaModel {
         @NameInMap("IncidentUuid")
         public String incidentUuid;
 
+        @NameInMap("InvestigationReport")
+        public String investigationReport;
+
         /**
          * <p>Indicates whether an attack is defended. Valid values:</p>
          * <ul>
@@ -798,6 +801,14 @@ public class DescribeAlertsResponseBody extends TeaModel {
         }
         public String getIncidentUuid() {
             return this.incidentUuid;
+        }
+
+        public DescribeAlertsResponseBodyDataResponseData setInvestigationReport(String investigationReport) {
+            this.investigationReport = investigationReport;
+            return this;
+        }
+        public String getInvestigationReport() {
+            return this.investigationReport;
         }
 
         public DescribeAlertsResponseBodyDataResponseData setIsDefend(String isDefend) {

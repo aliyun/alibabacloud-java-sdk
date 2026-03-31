@@ -225,6 +225,9 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         @NameInMap("TaskConfig")
         public String taskConfig;
 
+        @NameInMap("UnAvailableCode")
+        public String unAvailableCode;
+
         /**
          * <strong>example:</strong>
          * <p>kill_process_isolate_file</p>
@@ -312,6 +315,14 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         }
         public String getTaskConfig() {
             return this.taskConfig;
+        }
+
+        public DescribeDisposeAndPlaybookResponseBodyDataResponseDataPlaybookList setUnAvailableCode(String unAvailableCode) {
+            this.unAvailableCode = unAvailableCode;
+            return this;
+        }
+        public String getUnAvailableCode() {
+            return this.unAvailableCode;
         }
 
         public DescribeDisposeAndPlaybookResponseBodyDataResponseDataPlaybookList setUuid(String uuid) {
