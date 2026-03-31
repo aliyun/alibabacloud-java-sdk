@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class StartAggregateRemediationRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
-     * <p>To get the account group ID, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+     * <p>For information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,8 +16,8 @@ public class StartAggregateRemediationRequest extends TeaModel {
     public String aggregatorId;
 
     /**
-     * <p>The ID of the rule.</p>
-     * <p>To get the rule ID, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</p>
+     * <p>The rule ID.</p>
+     * <p>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -4,17 +4,14 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListRecommendManagedRulesResponseBody extends TeaModel {
-    /**
-     * <p>The list of rules.</p>
-     */
     @NameInMap("RecommendedManagedRules")
     public ListRecommendManagedRulesResponseBodyRecommendedManagedRules recommendedManagedRules;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
-     * <p>DC300244-FCE3-5061-8214-C27ECB66****</p>
+     * <p>DC300244-FCE3-5061-8214-C27ECB668487</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -41,38 +38,22 @@ public class ListRecommendManagedRulesResponseBody extends TeaModel {
     }
 
     public static class ListRecommendManagedRulesResponseBodyRecommendedManagedRulesRecommendedManagedRuleList extends TeaModel {
-        /**
-         * <p>The rule name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>oss-bucket-referer-limit</p>
-         */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
 
-        /**
-         * <p>The description of the managed rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>If the hotlink protection feature is enabled for the OSS bucket and the Referer is added to a specified whitelist, the configuration is considered compliant.</p>
-         */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The rule identifier.</p>
-         * 
          * <strong>example:</strong>
-         * <p>oss-bucket-referer-limit</p>
+         * <p>rds-instance-expired-check</p>
          */
         @NameInMap("Identifier")
         public String identifier;
 
         /**
-         * <p>The resource type.</p>
-         * 
          * <strong>example:</strong>
-         * <p>ACS::OSS::Bucket</p>
+         * <p>ACS::RDS::Instance</p>
          */
         @NameInMap("ResourceTypeScope")
         public String resourceTypeScope;
@@ -118,35 +99,23 @@ public class ListRecommendManagedRulesResponseBody extends TeaModel {
 
     public static class ListRecommendManagedRulesResponseBodyRecommendedManagedRules extends TeaModel {
         /**
-         * <p>The maximum number of entries returned for the request.</p>
-         * 
          * <strong>example:</strong>
-         * <p>200</p>
+         * <p>10</p>
          */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
         /**
-         * <p>The token that is used to initiate the next query.</p>
-         * <blockquote>
-         * <p>If this parameter is left empty, no more results are returned.</p>
-         * </blockquote>
-         * 
          * <strong>example:</strong>
-         * <p>zXZXbg4Mra0kOrhpwl21****</p>
+         * <p>zXZXbg4Mra0kOrhpwl21Lw==</p>
          */
         @NameInMap("NextToken")
         public String nextToken;
 
-        /**
-         * <p>The list of managed rules.</p>
-         */
         @NameInMap("RecommendedManagedRuleList")
         public java.util.List<ListRecommendManagedRulesResponseBodyRecommendedManagedRulesRecommendedManagedRuleList> recommendedManagedRuleList;
 
         /**
-         * <p>The total number of rules.</p>
-         * 
          * <strong>example:</strong>
          * <p>39</p>
          */

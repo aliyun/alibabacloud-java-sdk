@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAggregateRemediationsResponseBody extends TeaModel {
     /**
-     * <p>The result of the operation to delete the remediation settings.</p>
+     * <p>The results of the delete operation.</p>
      */
     @NameInMap("RemediationDeleteResults")
     public java.util.List<DeleteAggregateRemediationsResponseBodyRemediationDeleteResults> remediationDeleteResults;
@@ -42,12 +42,10 @@ public class DeleteAggregateRemediationsResponseBody extends TeaModel {
 
     public static class DeleteAggregateRemediationsResponseBodyRemediationDeleteResults extends TeaModel {
         /**
-         * <p>The error code.</p>
+         * <p>The error code returned.</p>
          * <ul>
-         * <li><p>This parameter is empty if the remediation setting is successfully deleted.</p>
-         * </li>
-         * <li><p>If the remediation setting fails to be deleted, this parameter indicates the error code. For more information about error codes, see &lt;props=&quot;intl&quot;&gt;<a href="https://error-center.alibabacloud.com/status/product/Config">Error Center</a>.</p>
-         * </li>
+         * <li>If the remediation template is deleted, no error code is returned.</li>
+         * <li>If the remediation template fails to be deleted, an error code is returned. For more information about error codes, see <a href="https://error-center.alibabacloud.com/status/product/Config">Error codes</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -57,7 +55,7 @@ public class DeleteAggregateRemediationsResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The ID of the remediation setting.</p>
+         * <p>The ID of the remediation template.</p>
          * 
          * <strong>example:</strong>
          * <p>crr-909ba2d4716700eb****</p>
@@ -66,12 +64,10 @@ public class DeleteAggregateRemediationsResponseBody extends TeaModel {
         public String remediationId;
 
         /**
-         * <p>Indicates whether the operation was successful. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><p>true: The operation was successful.</p>
-         * </li>
-         * <li><p>false: The operation failed.</p>
-         * </li>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

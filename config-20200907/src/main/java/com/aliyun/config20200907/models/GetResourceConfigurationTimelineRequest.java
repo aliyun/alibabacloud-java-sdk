@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetResourceConfigurationTimelineRequest extends TeaModel {
     /**
-     * <p>The end timestamp of the time range to query. The value is a UNIX timestamp in milliseconds. If you do not specify this parameter, the current time is used.</p>
+     * <p>The end of the time range to query. The default value indicates the time when the GetResourceConfigurationTimeline operation is called. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1625821156000</p>
@@ -23,7 +23,7 @@ public class GetResourceConfigurationTimelineRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If the response of the current request is truncated, you can use this token to retrieve the next page of results.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>IWBjqMYSy0is7zSMGu16****</p>
@@ -42,8 +42,8 @@ public class GetResourceConfigurationTimelineRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The ID of the resource.</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
+     * <p>The resource IDs.</p>
+     * <p>For more information about how to query the ID of a resource, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class GetResourceConfigurationTimelineRequest extends TeaModel {
 
     /**
      * <p>The resource type.</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
+     * <p>For more information about how to obtain the type of a resource, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,7 +64,7 @@ public class GetResourceConfigurationTimelineRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The start timestamp of the time range to query. The value is a UNIX timestamp in milliseconds. If you do not specify this parameter, the query starts from 30 days before the current time.</p>
+     * <p>The beginning of the time range to query. By default, Cloud Config retrieves the configuration changes in the last 30 days for the specified resource. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1623211156000</p>

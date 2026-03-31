@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class ListRecommendManagedRulesRequest extends TeaModel {
     /**
-     * <p>The rule does not take effect on resources in the specified regions. The resources in the specified regions are not evaluated. Separate multiple region IDs with commas (,).</p>
-     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -14,8 +12,6 @@ public class ListRecommendManagedRulesRequest extends TeaModel {
     public String excludeRegionIdsScope;
 
     /**
-     * <p>The rule does not take effect on resources in the specified resource groups. The resources in the specified resource groups are not evaluated. Separate multiple resource group IDs with commas (,).</p>
-     * 
      * <strong>example:</strong>
      * <p>rg-bnczc6r7rml****</p>
      */
@@ -23,8 +19,6 @@ public class ListRecommendManagedRulesRequest extends TeaModel {
     public String excludeResourceGroupIdsScope;
 
     /**
-     * <p>The rule does not take effect on the specified resources. The specified resources are not evaluated. Separate multiple resource IDs with commas (,).</p>
-     * 
      * <strong>example:</strong>
      * <p>23642660635687****</p>
      */
@@ -32,17 +26,13 @@ public class ListRecommendManagedRulesRequest extends TeaModel {
     public String excludeResourceIdsScope;
 
     /**
-     * <p>The maximum number of entries to return on each page. Default value: 200.</p>
-     * 
      * <strong>example:</strong>
-     * <p>200</p>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that specifies the position from which to start the query. If this parameter is left empty, the query starts from the beginning.</p>
-     * 
      * <strong>example:</strong>
      * <p>IWBjqMYSy0is7zSMGu16****</p>
      */
@@ -50,8 +40,6 @@ public class ListRecommendManagedRulesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The scope of region IDs. Separate multiple region IDs with commas (,).</p>
-     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -59,8 +47,6 @@ public class ListRecommendManagedRulesRequest extends TeaModel {
     public String regionIdsScope;
 
     /**
-     * <p>The rule takes effect only on resources in the specified resource groups. Separate multiple resource group IDs with commas (,).</p>
-     * 
      * <strong>example:</strong>
      * <p>rg-aekzc7r7rhx****</p>
      */
@@ -68,8 +54,6 @@ public class ListRecommendManagedRulesRequest extends TeaModel {
     public String resourceGroupIdsScope;
 
     /**
-     * <p>The rule takes effect on the specified resources. Separate multiple resource IDs with commas (,).</p>
-     * 
      * <strong>example:</strong>
      * <p>lb-5cmbowstbkss9ta03****</p>
      */
@@ -77,9 +61,6 @@ public class ListRecommendManagedRulesRequest extends TeaModel {
     public String resourceIdsScope;
 
     /**
-     * <p>The managed rules that have been selected. Separate multiple rule identifiers with commas (,).
-     * The system does not recommend managed rules that are of the same resource type as the selected managed rules.</p>
-     * 
      * <strong>example:</strong>
      * <p>ram-user-last-login-expired-check</p>
      */

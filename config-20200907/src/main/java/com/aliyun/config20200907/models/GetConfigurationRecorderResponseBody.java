@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetConfigurationRecorderResponseBody extends TeaModel {
     /**
-     * <p>The resource monitoring information.</p>
+     * <p>The details of the configuration recorder that monitors resources.</p>
      */
     @NameInMap("ConfigurationRecorder")
     public GetConfigurationRecorderResponseBodyConfigurationRecorder configurationRecorder;
@@ -42,16 +42,12 @@ public class GetConfigurationRecorderResponseBody extends TeaModel {
 
     public static class GetConfigurationRecorderResponseBodyConfigurationRecorder extends TeaModel {
         /**
-         * <p>The status of resource monitoring. Valid values:</p>
+         * <p>The status of the configuration recorder. Valid values:</p>
          * <ul>
-         * <li><p>REGISTRABLE: Not registered.</p>
-         * </li>
-         * <li><p>BUILDING: Building.</p>
-         * </li>
-         * <li><p>REGISTERED: Registered.</p>
-         * </li>
-         * <li><p>REBUILDING: Rebuilding.</p>
-         * </li>
+         * <li>REGISTRABLE: The configuration recorder has not been registered.</li>
+         * <li>BUILDING: The configuration recorder is being deployed.</li>
+         * <li>REGISTERED: The configuration recorder has been registered.</li>
+         * <li>REBUILDING: The configuration recorder is being redeployed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -61,7 +57,7 @@ public class GetConfigurationRecorderResponseBody extends TeaModel {
         public String configurationRecorderStatus;
 
         /**
-         * <p>A list of monitored resource types.</p>
+         * <p>The types of resources that are monitored.</p>
          */
         @NameInMap("ResourceTypes")
         public java.util.List<String> resourceTypes;

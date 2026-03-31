@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListResourcesByAdvancedSearchRequest extends TeaModel {
     /**
+     * <p>The SQL query statement.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SELECT ResourceId, ResourceName WHERE Tags.Kvpair=\&quot;business:online\&quot;</p>
      */
     @NameInMap("Sql")
     public String sql;

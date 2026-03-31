@@ -14,7 +14,7 @@ public class EvaluatePreConfigRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The array that contains the compliance evaluation results.</p>
+     * <p>The details of the compliance evaluation result.</p>
      */
     @NameInMap("ResourceEvaluations")
     public java.util.List<EvaluatePreConfigRulesResponseBodyResourceEvaluations> resourceEvaluations;
@@ -53,12 +53,9 @@ public class EvaluatePreConfigRulesResponseBody extends TeaModel {
         /**
          * <p>The compliance type of the resource that was evaluated by using the evaluation rule. Valid values:</p>
          * <ul>
-         * <li><p>COMPLIANT: The resource is evaluated as compliant.</p>
-         * </li>
-         * <li><p>NON_COMPLIANT: The resource is evaluated as non-compliant.</p>
-         * </li>
-         * <li><p>NOT_APPLICABLE: The rule does not apply to the resource.</p>
-         * </li>
+         * <li>COMPLIANT: The resource was evaluated as compliant.</li>
+         * <li>NON_COMPLIANT: The resource was evaluated as incompliant.</li>
+         * <li>NOT_APPLICABLE: The evaluation rule does not apply to the resource.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -68,7 +65,7 @@ public class EvaluatePreConfigRulesResponseBody extends TeaModel {
         public String complianceType;
 
         /**
-         * <p>The URL of the topic that describes how the managed rule remediates the non-compliant configurations.</p>
+         * <p>The URL of the topic that describes how the managed rule remediates the incompliant configurations.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.aliyundoc.com">https://example.aliyundoc.com</a></p>
@@ -77,7 +74,7 @@ public class EvaluatePreConfigRulesResponseBody extends TeaModel {
         public String helpUrl;
 
         /**
-         * <p>The identifier of the rule.</p>
+         * <p>The identifier of the evaluation rule.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs-instance-deletion-protection-enabled</p>
@@ -128,7 +125,7 @@ public class EvaluatePreConfigRulesResponseBody extends TeaModel {
         /**
          * <p>The logical ID of the resource.</p>
          * <blockquote>
-         * <p>If the request parameter is empty, it is automatically generated based on the Base64 value of <code>ResourceProperties</code>.</p>
+         * <p> If the ResourceLogicalId request parameter is left empty, the value of the ResourceLogicalId response parameter is generated based on the value of the <code>ResourceProperties</code> parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

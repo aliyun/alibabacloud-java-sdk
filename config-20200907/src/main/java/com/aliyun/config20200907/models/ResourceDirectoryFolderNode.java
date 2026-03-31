@@ -4,21 +4,41 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ResourceDirectoryFolderNode extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>171322098523****</p>
+     */
     @NameInMap("AccountId")
     public String accountId;
 
     @NameInMap("Children")
     public java.util.List<ResourceDirectoryFolderNode> children;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Alice</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>fd-JeZYYJ****</p>
+     */
     @NameInMap("FolderId")
     public String folderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ECS</p>
+     */
     @NameInMap("FolderName")
     public String folderName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>fd-JeZYYJ****</p>
+     */
     @NameInMap("ParentFolderId")
     public String parentFolderId;
 

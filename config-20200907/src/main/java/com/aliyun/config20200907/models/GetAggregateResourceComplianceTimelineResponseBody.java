@@ -14,7 +14,7 @@ public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel
     public String requestId;
 
     /**
-     * <p>The compliance timeline of the resource.</p>
+     * <p>The information about the compliance timeline.</p>
      */
     @NameInMap("ResourceComplianceTimeline")
     public GetAggregateResourceComplianceTimelineResponseBodyResourceComplianceTimeline resourceComplianceTimeline;
@@ -51,7 +51,7 @@ public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel
         public String accountId;
 
         /**
-         * <p>The zone where the resource resides.</p>
+         * <p>The ID of the zone in which the resource resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-f</p>
@@ -69,25 +69,54 @@ public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel
         public Long captureTime;
 
         /**
-         * <p>A list of rules associated with the resource and their compliance details.</p>
+         * <p>The information about the rules that evaluated the resource and the compliance evaluation result.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;Compliance\&quot;:{\&quot;complianceType\&quot;:\&quot;COMPLIANT\&quot;,\&quot;count\&quot;:1},\&quot;ConfigRuleList\&quot;:[{\&quot;accountId\&quot;:100931896542****,\&quot;configRuleId\&quot;:\&quot;cr-9524626622af003d****\&quot;,\&quot;configRuleArn\&quot;:\&quot;acs:config::100931896542****:rule/cr-9524626622af003d****\&quot;,\&quot;configRuleName\&quot;:\&quot;OSS存储空间ACL禁止公共读写\&quot;,\&quot;complianceType\&quot;:\&quot;COMPLIANT\&quot;,\&quot;riskLevel\&quot;:1,\&quot;annotation\&quot;:\&quot;\&quot;,\&quot;invokingEventMessageType\&quot;:\&quot;ScheduledNotification\&quot;}]}</p>
+         * <p>{
+         *     &quot;AccessControlList&quot;: {
+         *         &quot;Grant&quot;: &quot;private&quot;
+         *     },
+         *     &quot;ServerSideEncryptionRule&quot;: {
+         *         &quot;SSEAlgorithm&quot;: &quot;None&quot;
+         *     },
+         *     &quot;Comment&quot;: &quot;&quot;,
+         *     &quot;Owner&quot;: {
+         *         &quot;DisplayName&quot;: &quot;126672004088****&quot;,
+         *         &quot;ID&quot;: &quot;126672004088****&quot;
+         *     },
+         *     &quot;ResourceGroupId&quot;: &quot;rg-acfmy4dfoau****&quot;,
+         *     &quot;StorageClass&quot;: &quot;Standard&quot;,
+         *     &quot;DataRedundancyType&quot;: &quot;LRS&quot;,
+         *     &quot;AllowEmptyReferer&quot;: &quot;true&quot;,
+         *     &quot;Name&quot;: &quot;test-private-oss****&quot;,
+         *     &quot;BucketPolicy&quot;: {
+         *         &quot;LogPrefix&quot;: &quot;&quot;,
+         *         &quot;LogBucket&quot;: &quot;&quot;
+         *     },
+         *     &quot;ExtranetEndpoint&quot;: &quot;oss-cn-hangzhou.aliyuncs.com&quot;,
+         *     &quot;IntranetEndpoint&quot;: &quot;oss-cn-hangzhou-internal.aliyuncs.com&quot;,
+         *     &quot;Location&quot;: &quot;oss-cn-hangzhou&quot;
+         * }</p>
          */
         @NameInMap("Configuration")
         public String configuration;
 
         /**
-         * <p>The details of the resource change that triggered this evaluation.</p>
+         * <p>The details of the resource change that triggered the compliance evaluation.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;OSS存储空间ACL禁止公共读写\&quot;:[{\&quot;accountId\&quot;:100931896542****,\&quot;configRuleId\&quot;:\&quot;cr-965f626622af003d****\&quot;,\&quot;configRuleArn\&quot;:\&quot;acs:config::100931896542****:rule/cr-965f626622af003d****\&quot;,\&quot;configRuleName\&quot;:\&quot;OSS存储空间ACL禁止公共读写\&quot;,\&quot;complianceType\&quot;:\&quot;COMPLIANT\&quot;,\&quot;riskLevel\&quot;:1,\&quot;annotation\&quot;:\&quot;\&quot;,\&quot;invokingEventMessageType\&quot;:\&quot;ScheduledNotification\&quot;},{}]}</p>
+         * <p>{
+         *     &quot;ResourceGroupId&quot;: [
+         *         &quot;rg-acfmy4dfoau****&quot;,
+         *         &quot;rg-a3dmy4lksta****&quot;
+         *     ]
+         * }</p>
          */
         @NameInMap("ConfigurationDiff")
         public String configurationDiff;
 
         /**
-         * <p>The ID of the region where the resource resides.</p>
+         * <p>The ID of the region in which the resource resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -105,40 +134,38 @@ public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel
         public Long resourceCreateTime;
 
         /**
-         * <p>The resource ID.</p>
+         * <p>The ID of the resource.</p>
          * 
          * <strong>example:</strong>
-         * <p>new-bucket</p>
+         * <p>test-private-oss****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The resource name.</p>
+         * <p>The name of the resource.</p>
          * 
          * <strong>example:</strong>
-         * <p>new-bucket</p>
+         * <p>test-private-oss****</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;
 
         /**
-         * <p>The status of the resource. The status of a resource is defined by the corresponding Alibaba Cloud service. This parameter can be empty. For example:</p>
+         * <p>The status of the resource. The parameter value varies based on the resource type and may be left empty. Examples:</p>
          * <ul>
-         * <li><p>If the resource type is ACS::ECS::Instance, this parameter can be Running or Stopped because an ECS instance is stateful.</p>
-         * </li>
-         * <li><p>If the resource type is ACS::OSS::Bucket, this parameter is empty because an OSS bucket is stateless.</p>
-         * </li>
+         * <li>If the ResourceType parameter is set to ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.</li>
+         * <li>If the ResourceType parameter is set to ACS::OSS::Bucket, the resource is an OSS bucket that does not have a specific state. In this case, this parameter is left empty.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>null</p>
+         * <p>Running</p>
          */
         @NameInMap("ResourceStatus")
         public String resourceStatus;
 
         /**
-         * <p>The resource type.</p>
+         * <p>The type of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>ACS::OSS::Bucket</p>
@@ -260,13 +287,17 @@ public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel
 
     public static class GetAggregateResourceComplianceTimelineResponseBodyResourceComplianceTimeline extends TeaModel {
         /**
-         * <p>A list of compliance timeline entries.</p>
+         * <p>The status of the resource. The parameter value varies based on the resource type and may be left empty. Examples:</p>
+         * <ul>
+         * <li>If the value of the ResourceType parameter is ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.</li>
+         * <li>If the value of the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is empty.</li>
+         * </ul>
          */
         @NameInMap("ComplianceList")
         public java.util.List<GetAggregateResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList> complianceList;
 
         /**
-         * <p>The maximum number of entries returned per page.</p>
+         * <p>The maximum number of entries returned for a single request.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -275,7 +306,7 @@ public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel
         public Integer maxResults;
 
         /**
-         * <p>The token used to query the next page.</p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>5OVS5J4I1/UKTkHV5oNs****</p>

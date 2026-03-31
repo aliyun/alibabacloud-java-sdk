@@ -4,9 +4,18 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetAggregateResourceComplianceGroupByRegionResponseBody extends TeaModel {
+    /**
+     * <p>The queried evaluation results.</p>
+     */
     @NameInMap("ComplianceResult")
     public GetAggregateResourceComplianceGroupByRegionResponseBodyComplianceResult complianceResult;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5E3A847A-5D40-54A1-A2CE-77A87823ED07</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +41,27 @@ public class GetAggregateResourceComplianceGroupByRegionResponseBody extends Tea
     }
 
     public static class GetAggregateResourceComplianceGroupByRegionResponseBodyComplianceResultComplianceResultListCompliances extends TeaModel {
+        /**
+         * <p>The evaluation result. Valid values:</p>
+         * <ul>
+         * <li>COMPLIANT: The resource is evaluated as compliant.</li>
+         * <li>NON_COMPLIANT: The resource is evaluated as non-compliant.</li>
+         * <li>NOT_APPLICABLE: The rule does not apply to the resource.</li>
+         * <li>INSUFFICIENT_DATA: No data is available.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLIANT</p>
+         */
         @NameInMap("ComplianceType")
         public String complianceType;
 
+        /**
+         * <p>The total number of evaluation results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Count")
         public Long count;
 
@@ -62,9 +89,18 @@ public class GetAggregateResourceComplianceGroupByRegionResponseBody extends Tea
     }
 
     public static class GetAggregateResourceComplianceGroupByRegionResponseBodyComplianceResultComplianceResultList extends TeaModel {
+        /**
+         * <p>The queried evaluation results.</p>
+         */
         @NameInMap("Compliances")
         public java.util.List<GetAggregateResourceComplianceGroupByRegionResponseBodyComplianceResultComplianceResultListCompliances> compliances;
 
+        /**
+         * <p>The region ID of the evaluated resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
@@ -92,6 +128,9 @@ public class GetAggregateResourceComplianceGroupByRegionResponseBody extends Tea
     }
 
     public static class GetAggregateResourceComplianceGroupByRegionResponseBodyComplianceResult extends TeaModel {
+        /**
+         * <p>The evaluation results grouped by region.</p>
+         */
         @NameInMap("ComplianceResultList")
         public java.util.List<GetAggregateResourceComplianceGroupByRegionResponseBodyComplianceResultComplianceResultList> complianceResultList;
 

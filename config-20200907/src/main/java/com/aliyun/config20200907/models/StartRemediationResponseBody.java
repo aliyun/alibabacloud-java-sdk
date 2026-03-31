@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class StartRemediationResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The operation was successful.</p>
-     * </li>
-     * <li><p>false: The operation failed.</p>
-     * </li>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

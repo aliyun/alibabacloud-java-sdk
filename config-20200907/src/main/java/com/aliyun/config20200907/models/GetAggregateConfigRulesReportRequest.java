@@ -5,11 +5,22 @@ import com.aliyun.tea.*;
 
 public class GetAggregateConfigRulesReportRequest extends TeaModel {
     /**
+     * <p>The ID of the account group.</p>
+     * <p>For more information about how to obtain the ID of the account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ca-f632626622af0079****</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
+    /**
+     * <p>The ID of the compliance evaluation report.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crp-88176457e0d900c9****</p>
+     */
     @NameInMap("ReportId")
     public String reportId;
 

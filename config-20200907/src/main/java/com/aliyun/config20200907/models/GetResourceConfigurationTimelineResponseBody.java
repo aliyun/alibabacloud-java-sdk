@@ -14,7 +14,7 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The configuration history of the resource.</p>
+     * <p>The configuration timeline of the resource.</p>
      */
     @NameInMap("ResourceConfigurationTimeline")
     public GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimeline resourceConfigurationTimeline;
@@ -51,7 +51,7 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
         public Long accountId;
 
         /**
-         * <p>The zone.</p>
+         * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
@@ -60,7 +60,7 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
         public String availabilityZone;
 
         /**
-         * <p>The timestamp when the resource change snapshot was recorded. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The time when the resource change snapshot was recorded. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1624961156000</p>
@@ -69,7 +69,7 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
         public String captureTime;
 
         /**
-         * <p>The details of the resource configuration change.</p>
+         * <p>The details of the resource changes that trigger the compliance evaluation.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;AccessControlList\&quot;:[null,{\&quot;Grant\&quot;:\&quot;private\&quot;}],\&quot;ServerSideEncryptionRule\&quot;:[null,{\&quot;SSEAlgorithm\&quot;:\&quot;None\&quot;}],\&quot;CreationDate\&quot;:[null,\&quot;2021-06-29T10:05:12.000Z\&quot;],\&quot;Owner\&quot;:[null,{\&quot;DisplayName\&quot;:\&quot;100931896542****\&quot;,\&quot;ID\&quot;:\&quot;100931896542****\&quot;}],\&quot;BucketPolicy\&quot;:[null,{\&quot;LogPrefix\&quot;:\&quot;\&quot;,\&quot;LogBucket\&quot;:\&quot;\&quot;}],\&quot;StorageClass\&quot;:[null,\&quot;Standard\&quot;],\&quot;ExtranetEndpoint\&quot;:[null,\&quot;oss-cn-hangzhou.aliyuncs.com\&quot;],\&quot;DataRedundancyType\&quot;:[null,\&quot;LRS\&quot;],\&quot;AllowEmptyReferer\&quot;:[null,\&quot;true\&quot;],\&quot;IntranetEndpoint\&quot;:[null,\&quot;oss-cn-hangzhou-internal.aliyuncs.com\&quot;],\&quot;Name\&quot;:[null,\&quot;new-bucket\&quot;],\&quot;Location\&quot;:[null,\&quot;oss-cn-hangzhou\&quot;]}</p>
@@ -87,7 +87,7 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>Details of related resources, including their region ID, relationship, resource ID, and resource type.</p>
+         * <p>The details of each resource that is associated with the current resource, including the region ID, resource relationship, resource ID, and resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -96,7 +96,7 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
         public String relationship;
 
         /**
-         * <p>The changes to the related resources.</p>
+         * <p>The change records of the resource relationship.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -105,7 +105,7 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
         public String relationshipDiff;
 
         /**
-         * <p>The timestamp when the resource was created. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The time when the resource was created. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1624961112000</p>
@@ -116,25 +116,20 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
         /**
          * <p>The type of the resource change event. Valid values:</p>
          * <ul>
-         * <li><p>DISCOVERED: A resource is discovered by Cloud Config.</p>
-         * </li>
-         * <li><p>DISCOVERED_REVISED: A resource is discovered by Cloud Config through a periodic reconciliation task.</p>
-         * </li>
-         * <li><p>MODIFY: A resource is modified.</p>
-         * </li>
-         * <li><p>MODIFY_REVISED: A resource modification is recorded through a periodic reconciliation task.</p>
-         * </li>
-         * <li><p>REMOVE: A resource is deleted.</p>
-         * </li>
+         * <li>DISCOVERED: A resource is created.</li>
+         * <li>DISCOVERED_REVISED: A resource is created by periodic remediation tasks.</li>
+         * <li>MODIFY: A resource is modified.</li>
+         * <li>MODIFY_REVISED: A resource is modified by periodic remediation tasks.</li>
+         * <li>REMOVE: A resource is deleted.</li>
          * </ul>
          * <blockquote>
+         * </blockquote>
          * <ul>
-         * <li><p>To ensure data integrity, Cloud Config periodically reconciles resource data. This process can generate resource discovery events, which occur infrequently.</p>
+         * <li><p>To ensure the integrity of resources, periodic remediation tasks are run to check data and generate events that indicate the creation of new resources. Such events are infrequent.</p>
          * </li>
-         * <li><p>The time of an event generated by a reconciliation task is the time when the task discovers the change. This is later than the actual time of the change.</p>
+         * <li><p>The time when a resource change event is generated by a periodic remediation task is considered as the detection time of Cloud Config. The detection time is later than the time when the resource is modified.</p>
          * </li>
          * </ul>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>DISCOVERED</p>
@@ -291,7 +286,7 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
 
     public static class GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimeline extends TeaModel {
         /**
-         * <p>A list of configuration history records for the resource.</p>
+         * <p>The configuration changes on the configuration timeline.</p>
          */
         @NameInMap("ConfigurationList")
         public java.util.List<GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList> configurationList;
@@ -306,7 +301,7 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The token that is used to retrieve the next page of results.</p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>IWBjqMYSy0is7zSMGu16****</p>

@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeDiscoveredResourceBatchRequest extends TeaModel {
     /**
-     * <p>The regions where the resources reside. Separate multiple regions with commas (<code>,</code>).</p>
-     * 
      * <strong>example:</strong>
      * <p>cn-shanghai,cn-hongkong,cn-zhangjiakou,cn-hangzhou</p>
      */
@@ -14,19 +12,15 @@ public class DescribeDiscoveredResourceBatchRequest extends TeaModel {
     public String regions;
 
     /**
-     * <p>The resource IDs. Separate multiple resource IDs with commas (<code>,</code>).</p>
-     * 
      * <strong>example:</strong>
-     * <p>r-wz998f311e21****,r-wz97f4a73478****</p>
+     * <p>r-wz998f311e21exxx,r-wz97f4a734789xxx</p>
      */
     @NameInMap("ResourceIds")
     public String resourceIds;
 
     /**
-     * <p>The resource types. Separate multiple resource types with commas (<code>,</code>).</p>
-     * 
      * <strong>example:</strong>
-     * <p>ACS::ECS::Disk,ACS::ECS::Instance</p>
+     * <p>ACS::ECS::Disk</p>
      */
     @NameInMap("ResourceTypes")
     public String resourceTypes;

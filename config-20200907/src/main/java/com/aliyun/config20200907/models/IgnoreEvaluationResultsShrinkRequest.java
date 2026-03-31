@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class IgnoreEvaluationResultsShrinkRequest extends TeaModel {
     /**
-     * <p>The rule ID.</p>
-     * <p>For more information about how to obtain the rule ID, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</p>
+     * <p>The ID of the rule.</p>
+     * <p>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,9 +16,9 @@ public class IgnoreEvaluationResultsShrinkRequest extends TeaModel {
     public String configRuleId;
 
     /**
-     * <p>The date on which the ignored evaluation results are automatically restored.</p>
+     * <p>The date from which the system automatically re-evaluates the ignored incompliant resources.</p>
      * <blockquote>
-     * <p>If this parameter is left empty, the ignored evaluation results are not automatically restored. You must manually restore them.</p>
+     * <p> If you leave this parameter empty, the system does not automatically re-evaluate the ignored incompliant resources. You must manually re-evaluate the ignored incompliant resources.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,16 +28,16 @@ public class IgnoreEvaluationResultsShrinkRequest extends TeaModel {
     public String ignoreDate;
 
     /**
-     * <p>The reason for ignoring the resources.</p>
+     * <p>The reason why you want to ignore the resource.</p>
      * 
      * <strong>example:</strong>
-     * <p>无需检测。</p>
+     * <p>Test ignore.</p>
      */
     @NameInMap("Reason")
     public String reason;
 
     /**
-     * <p>The list of resources to be ignored.</p>
+     * <p>The resources to be ignored.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Resources")

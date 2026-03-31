@@ -4,9 +4,21 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ActiveConfigRulesRequest extends TeaModel {
+    /**
+     * <p>The ID of the compliance package.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cp-fe416457e0d90022****</p>
+     */
     @NameInMap("CompliancePackId")
     public String compliancePackId;
 
+    /**
+     * <p>The rule ID. Separate multiple rule IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cr-2da35180a8d1008e****,cr-2da35180a8d1008e****</p>
+     */
     @NameInMap("ConfigRuleIds")
     public String configRuleIds;
 

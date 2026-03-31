@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListCompliancePacksResponseBody extends TeaModel {
     /**
-     * <p>The query results for the compliance packs.</p>
+     * <p>The compliance packages returned.</p>
      */
     @NameInMap("CompliancePacksResult")
     public ListCompliancePacksResponseBodyCompliancePacksResult compliancePacksResult;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6EC7AED1-172F-42AE-9C12-295BC2ADB751</p>
@@ -42,7 +42,7 @@ public class ListCompliancePacksResponseBody extends TeaModel {
 
     public static class ListCompliancePacksResponseBodyCompliancePacksResultCompliancePacksTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>tag key</p>
          * 
          * <strong>example:</strong>
          * <p>key-1</p>
@@ -51,7 +51,7 @@ public class ListCompliancePacksResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value.</p>
+         * <p>tag value</p>
          * 
          * <strong>example:</strong>
          * <p>value-1</p>
@@ -84,7 +84,7 @@ public class ListCompliancePacksResponseBody extends TeaModel {
 
     public static class ListCompliancePacksResponseBodyCompliancePacksResultCompliancePacks extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account to which the compliance pack belongs.</p>
+         * <p>The ID of the Alibaba Cloud account to which the compliance package belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>120886317861****</p>
@@ -93,7 +93,7 @@ public class ListCompliancePacksResponseBody extends TeaModel {
         public Long accountId;
 
         /**
-         * <p>The ID of the compliance pack.</p>
+         * <p>The compliance package ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cp-fdc8626622af00f9****</p>
@@ -102,25 +102,25 @@ public class ListCompliancePacksResponseBody extends TeaModel {
         public String compliancePackId;
 
         /**
-         * <p>The name of the compliance pack.</p>
+         * <p>The name of the compliance package.</p>
          * 
          * <strong>example:</strong>
-         * <p>BestPracticesForResourceStability</p>
+         * <p>ClassifiedProtectionPreCheck</p>
          */
         @NameInMap("CompliancePackName")
         public String compliancePackName;
 
         /**
-         * <p>The ID of the compliance pack template.</p>
+         * <p>The ID of the compliance package template.</p>
          * 
          * <strong>example:</strong>
-         * <p>ct-484cff4e06a30062****</p>
+         * <p>ct-5f26ff4e06a300c4****</p>
          */
         @NameInMap("CompliancePackTemplateId")
         public String compliancePackTemplateId;
 
         /**
-         * <p>The timestamp when the compliance pack was created. Unit: milliseconds.</p>
+         * <p>The timestamp when the compliance package was created. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1621325046000</p>
@@ -129,23 +129,20 @@ public class ListCompliancePacksResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>The description of the compliance pack.</p>
+         * <p>The description of the compliance package.</p>
          * 
          * <strong>example:</strong>
-         * <p>Check the stability of Alibaba Cloud resources based on the high-availability infrastructure, capacity protection, change management, monitoring management, backup management, and fault isolation. This helps you identify issues at the earliest opportunity and improve stability and the efficiency of O&amp;M.</p>
+         * <p>Based on the Level 3 standards Equal Protection 2.0, this template provides continuous compliance monitoring recommendations to help you perform self-inspections and fix issues in advance, ensuring a quick pass during the official inspection.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The risk level of the compliance pack. Valid values:</p>
+         * <p>The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:</p>
          * <ul>
-         * <li><p>1: high risk.</p>
-         * </li>
-         * <li><p>2: medium risk.</p>
-         * </li>
-         * <li><p>3: low risk.</p>
-         * </li>
+         * <li>1: high</li>
+         * <li>2: medium</li>
+         * <li>3: low</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -155,12 +152,10 @@ public class ListCompliancePacksResponseBody extends TeaModel {
         public Integer riskLevel;
 
         /**
-         * <p>The status of the compliance pack. Valid values:</p>
+         * <p>The status of the compliance package. Valid values:</p>
          * <ul>
-         * <li><p>ACTIVE: The compliance pack is active.</p>
-         * </li>
-         * <li><p>CREATING: The compliance pack is being created.</p>
-         * </li>
+         * <li>ACTIVE: The compliance package is normal.</li>
+         * <li>CREATING: The compliance package is being created.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -170,7 +165,7 @@ public class ListCompliancePacksResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tags of the resource.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListCompliancePacksResponseBodyCompliancePacksResultCompliancePacksTags> tags;
@@ -256,13 +251,13 @@ public class ListCompliancePacksResponseBody extends TeaModel {
 
     public static class ListCompliancePacksResponseBodyCompliancePacksResult extends TeaModel {
         /**
-         * <p>A list of compliance packs.</p>
+         * <p>The compliance packages.</p>
          */
         @NameInMap("CompliancePacks")
         public java.util.List<ListCompliancePacksResponseBodyCompliancePacksResultCompliancePacks> compliancePacks;
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the returned page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -271,7 +266,7 @@ public class ListCompliancePacksResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -280,7 +275,7 @@ public class ListCompliancePacksResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of compliance packs.</p>
+         * <p>The total number of compliance packages returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

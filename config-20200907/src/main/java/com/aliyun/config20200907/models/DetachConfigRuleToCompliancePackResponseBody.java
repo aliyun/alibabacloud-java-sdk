@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DetachConfigRuleToCompliancePackResponseBody extends TeaModel {
     /**
-     * <p>The results of the operation to detach rules.</p>
+     * <p>The results of the operations to remove one or more rules.</p>
      */
     @NameInMap("OperateRuleResult")
     public DetachConfigRuleToCompliancePackResponseBodyOperateRuleResult operateRuleResult;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1AC7AED1-172F-42AE-9C12-295BC2ADB12A</p>
@@ -51,17 +51,10 @@ public class DetachConfigRuleToCompliancePackResponseBody extends TeaModel {
         public String configRuleId;
 
         /**
-         * <p>The error code.</p>
+         * <p>The error code returned.</p>
          * <ul>
-         * <li>This parameter is empty if the operation is successful.</li>
-         * </ul>
-         * <p>&lt;props=&quot;china&quot;&gt;</p>
-         * <ul>
-         * <li>An error code is returned if the operation fails. For more information about error codes, see the <a href="https://error-center.aliyun.com/status/product/Config">Error Center</a>.</li>
-         * </ul>
-         * <p>&lt;props=&quot;intl&quot;&gt;</p>
-         * <ul>
-         * <li>An error code is returned if the operation fails. For more information about error codes, see the <a href="https://error-center.alibabacloud.com/status/product/Config">Error Center</a>.</li>
+         * <li>This parameter is empty if the rule is removed from the compliance package.</li>
+         * <li>An error code is returned if the rule fails to be removed from the compliance package. For more information about error codes, see <a href="https://error-center.alibabacloud.com/status/product/Config">Error codes</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -71,12 +64,10 @@ public class DetachConfigRuleToCompliancePackResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>Indicates whether the operation was successful. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><p>true: The operation was successful.</p>
-         * </li>
-         * <li><p>false: The operation failed.</p>
-         * </li>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -118,7 +109,7 @@ public class DetachConfigRuleToCompliancePackResponseBody extends TeaModel {
 
     public static class DetachConfigRuleToCompliancePackResponseBodyOperateRuleResult extends TeaModel {
         /**
-         * <p>A list of the results of the operation to detach rules.</p>
+         * <p>The result of the operation to remove the rule.</p>
          */
         @NameInMap("OperateRuleItemList")
         public java.util.List<DetachConfigRuleToCompliancePackResponseBodyOperateRuleResultOperateRuleItemList> operateRuleItemList;

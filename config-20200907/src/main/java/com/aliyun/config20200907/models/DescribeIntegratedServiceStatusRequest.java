@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeIntegratedServiceStatusRequest extends TeaModel {
     /**
-     * <p>The code of the cloud service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -15,8 +15,8 @@ public class GetAggregatorShrinkRequest extends TeaModel {
     public String aggregatorId;
 
     /**
-     * <p>The tags of the resource. This parameter is deprecated and is not in use.</p>
-     * <p>A maximum of 20 tags can be attached.</p>
+     * <p>The tags of the resource.</p>
+     * <p>You can add up to 20 tags to a resource.</p>
      */
     @NameInMap("Tag")
     @Deprecated

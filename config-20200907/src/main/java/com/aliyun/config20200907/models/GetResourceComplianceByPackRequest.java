@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class GetResourceComplianceByPackRequest extends TeaModel {
     /**
      * <p>The ID of the compliance package.</p>
-     * <p>For more information about how to get the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/263332.html">ListCompliancePacks</a>.</p>
+     * <p>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/263332.html">ListCompliancePacks</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

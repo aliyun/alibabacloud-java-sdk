@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAggregateResourcesByAdvancedSearchResponseBody extends TeaModel {
     /**
-     * <p>The query results.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("QueryResults")
     public ListAggregateResourcesByAdvancedSearchResponseBodyQueryResults queryResults;
@@ -42,13 +42,13 @@ public class ListAggregateResourcesByAdvancedSearchResponseBody extends TeaModel
 
     public static class ListAggregateResourcesByAdvancedSearchResponseBodyQueryResultsQueryResultList extends TeaModel {
         /**
-         * <p>The list of field names returned by the search.</p>
+         * <p>The field names.</p>
          */
         @NameInMap("Columns")
         public java.util.List<String> columns;
 
         /**
-         * <p>The list of resource data returned by the search.</p>
+         * <p>The resource data.</p>
          */
         @NameInMap("Values")
         public java.util.List<?> values;
@@ -78,7 +78,7 @@ public class ListAggregateResourcesByAdvancedSearchResponseBody extends TeaModel
 
     public static class ListAggregateResourcesByAdvancedSearchResponseBodyQueryResults extends TeaModel {
         /**
-         * <p>The list of resources returned by the query. A maximum of 1,000 entries are returned. To view more data, download the search file.</p>
+         * <p>The queried resources. A maximum of 1,000 data records can be returned. To view more data, use the download URL of the resource file.</p>
          */
         @NameInMap("QueryResultList")
         public ListAggregateResourcesByAdvancedSearchResponseBodyQueryResultsQueryResultList queryResultList;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDiscoveredResourcesResponseBody extends TeaModel {
     /**
-     * <p>The list of resources.</p>
+     * <p>The information about the resources.</p>
      */
     @NameInMap("DiscoveredResourceProfiles")
     public ListDiscoveredResourcesResponseBodyDiscoveredResourceProfiles discoveredResourceProfiles;
@@ -51,7 +51,7 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         public Long accountId;
 
         /**
-         * <p>The availability zone of the resource.</p>
+         * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
@@ -69,7 +69,7 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The time when the resource was created. This is a UNIX timestamp in milliseconds.</p>
+         * <p>The timestamp when the resource was created. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1618675206000</p>
@@ -80,10 +80,8 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         /**
          * <p>The status of the resource. Valid values:</p>
          * <ul>
-         * <li><p>0: Deleted.</p>
-         * </li>
-         * <li><p>1: Active.</p>
-         * </li>
+         * <li>0: The resource is deleted.</li>
+         * <li>1: The resource is retained.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -93,7 +91,6 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         public Integer resourceDeleted;
 
         /**
-         * <p>The ID of the resource group to which the resource belongs. Example: rg-acfmvoh45rhxxxx</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,12 +121,10 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         public String resourceName;
 
         /**
-         * <p>The status of the resource. The status is defined by the corresponding Alibaba Cloud service. This parameter can be empty. For example:</p>
+         * <p>The status of the resource. The value of this parameter varies based on the resource type and may be empty. Examples:</p>
          * <ul>
-         * <li><p>If the resource type is ACS::ECS::Instance, the resource is stateful. The value can be Running or Stopped.</p>
-         * </li>
-         * <li><p>If the resource type is ACS::OSS::Bucket, the resource is stateless. The value is empty.</p>
-         * </li>
+         * <li>If the ResourceType parameter is set to ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.</li>
+         * <li>If the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is left empty.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -139,7 +134,7 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         public String resourceStatus;
 
         /**
-         * <p>The resource type.</p>
+         * <p>The type of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>ACS::ECS::NetworkInterface</p>
@@ -157,7 +152,7 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         public String tags;
 
         /**
-         * <p>The time when the resource was last updated. This is a UNIX timestamp in milliseconds.</p>
+         * <p>The time when the resource was last updated. The value must be a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1722441600000</p>
@@ -166,7 +161,6 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         public Long updateTime;
 
         /**
-         * <p>The ID of the vSwitch to which the resource belongs. Multiple vSwitch IDs are separated by commas (,). An empty string (&quot;&quot;) is returned if the resource does not belong to a vSwitch.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,7 +182,6 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         public Long version;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC) to which the resource belongs. An empty string (&quot;&quot;) is returned if the resource does not belong to a VPC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -344,10 +337,10 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
          * 
          * <strong>example:</strong>
-         * <p>IWBjqMYSy0is7zSMGu16****</p>
+         * <p>161259599160****</p>
          */
         @NameInMap("NextToken")
         public String nextToken;

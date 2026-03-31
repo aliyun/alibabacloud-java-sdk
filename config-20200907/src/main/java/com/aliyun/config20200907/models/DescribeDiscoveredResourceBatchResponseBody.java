@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeDiscoveredResourceBatchResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
-     * <p>6CE4ABA1-9A57-41A9-8EA9-E8B17D46****</p>
+     * <p>6CE4ABA1-9A57-41A9-8EA9-E8B17D4671CD</p>
      */
     @NameInMap("RequestId")
     public String requestId;

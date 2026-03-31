@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
     /**
-     * <p>The rule evaluation results.</p>
+     * <p>The compliance evaluation results returned.</p>
      */
     @NameInMap("EvaluationResults")
     public ListConfigRuleEvaluationResultsResponseBodyEvaluationResults evaluationResults;
@@ -51,7 +51,7 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
         public String compliancePackId;
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the rule.</p>
+         * <p>The ARN of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:config::120886317861****:rule/cr-cac56457e0d900d3****</p>
@@ -72,15 +72,15 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
          * <p>The rule name.</p>
          * 
          * <strong>example:</strong>
-         * <p>ECS实例CPU核数满足最低要求</p>
+         * <p>test-rule-name</p>
          */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
 
         /**
-         * <p>The date when the ignored evaluation result is automatically resumed.</p>
+         * <p>The date on which the system automatically re-evaluates the ignored incompliant resources.</p>
          * <blockquote>
-         * <p>If this parameter is empty, the result is not automatically resumed. You must manually resume it.</p>
+         * <p> If the value of this parameter is left empty, the system does not automatically re-evaluate the ignored incompliant resources. You must manually re-evaluate the ignored incompliant resources.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -90,7 +90,7 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
         public String ignoreDate;
 
         /**
-         * <p>The ID of the region to which the resource belongs.</p>
+         * <p>The ID of the region in which your resources reside.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -99,11 +99,7 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the resource group to which the resource belongs.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-aek3tprgnnc****</p>
          * 
          * <strong>if can be null:</strong>
          * <p>true</p>
@@ -139,7 +135,7 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
         public Long resourceOwnerId;
 
         /**
-         * <p>The resource type.</p>
+         * <p>The type of the resource that is monitored by Cloud Config.</p>
          * 
          * <strong>example:</strong>
          * <p>ACS::ECS::Instance</p>
@@ -244,13 +240,13 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
 
     public static class ListConfigRuleEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifier extends TeaModel {
         /**
-         * <p>The resource information in the rule evaluation result.</p>
+         * <p>The information about the evaluated resource in the compliance evaluation result.</p>
          */
         @NameInMap("EvaluationResultQualifier")
         public ListConfigRuleEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier evaluationResultQualifier;
 
         /**
-         * <p>The UNIX timestamp displayed on the timeline. Unit: milliseconds.</p>
+         * <p>The timestamp when the compliance evaluation was performed. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1622802307081</p>
@@ -283,18 +279,13 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
 
     public static class ListConfigRuleEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList extends TeaModel {
         /**
-         * <p>The supplementary information about the non-compliant resource. This may include the following information:</p>
+         * <p>The annotation to the resource that is evaluated as non-compliant. The following section describe the parameters that can be returned:</p>
          * <ul>
-         * <li><p><code>configuration</code>: The current configuration of the resource, which is the non-compliant configuration.</p>
-         * </li>
-         * <li><p><code>desiredValue</code>: The expected configuration of the resource, which is the compliant configuration.</p>
-         * </li>
-         * <li><p><code>operator</code>: The comparison operator used to compare the current configuration with the expected configuration.</p>
-         * </li>
-         * <li><p><code>property</code>: The JSON path of the current configuration in the resource property struct.</p>
-         * </li>
-         * <li><p><code>reason</code>: The reason why the resource is non-compliant.</p>
-         * </li>
+         * <li><code>configuration</code>: the current resource configuration that is evaluated as non-compliant.</li>
+         * <li><code>desiredValue</code>: the expected resource configuration that is evaluated as compliant.</li>
+         * <li><code>operator</code>: the operator that compares the current configuration with the expected configuration of the resource.</li>
+         * <li><code>property</code>: the JSON path of the current configuration in the resource property struct.</li>
+         * <li><code>reason</code>: the reason why the resource is evaluated as non-compliant.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -304,18 +295,13 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
         public String annotation;
 
         /**
-         * <p>The compliance evaluation result. Valid values:</p>
+         * <p>The compliance evaluation result of the resource. Valid values:</p>
          * <ul>
-         * <li><p>COMPLIANT: The resource is compliant.</p>
-         * </li>
-         * <li><p>NON_COMPLIANT: The resource is non-compliant.</p>
-         * </li>
-         * <li><p>NOT_APPLICABLE: The rule does not apply to the resource.</p>
-         * </li>
-         * <li><p>INSUFFICIENT_DATA: No data is available.</p>
-         * </li>
-         * <li><p>IGNORED: The evaluation result is ignored.</p>
-         * </li>
+         * <li>COMPLIANT: The resources are evaluated as compliant.</li>
+         * <li>NON_COMPLIANT: The resources are evaluated as non-compliant.</li>
+         * <li>NOT_APPLICABLE: The rule does not apply to the resources.</li>
+         * <li>INSUFFICIENT_DATA: No data is available.</li>
+         * <li>IGNORED: The resource is ignored during compliance evaluation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -325,7 +311,7 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
         public String complianceType;
 
         /**
-         * <p>The UNIX timestamp when the rule was triggered for evaluation. Unit: milliseconds.</p>
+         * <p>The timestamp when the rule was triggered for the compliance evaluation. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1622802307081</p>
@@ -334,8 +320,6 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
         public Long configRuleInvokedTimestamp;
 
         /**
-         * <p>The unique ID of the evaluation result.</p>
-         * 
          * <strong>example:</strong>
          * <p>00000089-4e0d-58b5-a96a-8e54112110f3</p>
          */
@@ -343,7 +327,7 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
         public String evaluationId;
 
         /**
-         * <p>The identifier of the rule evaluation result.</p>
+         * <p>The identifying information about the compliance evaluation result.</p>
          */
         @NameInMap("EvaluationResultIdentifier")
         public ListConfigRuleEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifier evaluationResultIdentifier;
@@ -351,12 +335,9 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
         /**
          * <p>The trigger type of the rule. Valid values:</p>
          * <ul>
-         * <li><p>ConfigurationItemChangeNotification: The rule is triggered by a configuration change.</p>
-         * </li>
-         * <li><p>ScheduledNotification: The rule is triggered periodically.</p>
-         * </li>
-         * <li><p>Manual: The rule is triggered manually.</p>
-         * </li>
+         * <li>ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</li>
+         * <li>ScheduledNotification: The rule is periodically triggered.</li>
+         * <li>Manual: The rule is manually triggered.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -366,17 +347,13 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
         public String invokingEventMessageType;
 
         /**
-         * <p>The time when the resource was last remediated to a compliant state. This value is not recorded when a new resource or rule is evaluated as compliant for the first time.</p>
-         * 
          * <strong>example:</strong>
-         * <p>1768788515723</p>
+         * <p>1768788515725</p>
          */
         @NameInMap("LastCompliantFixedTimestamp")
         public Long lastCompliantFixedTimestamp;
 
         /**
-         * <p>The start time of the last non-compliance.</p>
-         * 
          * <strong>example:</strong>
          * <p>1744696665000</p>
          */
@@ -384,12 +361,10 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
         public Long lastNonCompliantRecordTimestamp;
 
         /**
-         * <p>Indicates whether the remediation setting is enabled. Valid values:</p>
+         * <p>Indicates whether the remediation template is enabled. Valid values:</p>
          * <ul>
-         * <li><p>true: The remediation setting is enabled.</p>
-         * </li>
-         * <li><p>false: The remediation setting is disabled.</p>
-         * </li>
+         * <li>true: The remediation template is enabled.</li>
+         * <li>false: The remediation template is disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -399,7 +374,7 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
         public Boolean remediationEnabled;
 
         /**
-         * <p>The UNIX timestamp when the resource evaluation result was generated. Unit: milliseconds.</p>
+         * <p>The timestamp when the compliance evaluation result was recorded. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1622802307150</p>
@@ -408,14 +383,11 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
         public Long resultRecordedTimestamp;
 
         /**
-         * <p>The risk level of the rule. Valid values:</p>
+         * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
          * <ul>
-         * <li><p>1: high</p>
-         * </li>
-         * <li><p>2: medium</p>
-         * </li>
-         * <li><p>3: low</p>
-         * </li>
+         * <li>1: high</li>
+         * <li>2: medium</li>
+         * <li>3: low</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -521,7 +493,7 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
 
     public static class ListConfigRuleEvaluationResultsResponseBodyEvaluationResults extends TeaModel {
         /**
-         * <p>The list of rule evaluation results.</p>
+         * <p>The details of the compliance evaluation result.</p>
          */
         @NameInMap("EvaluationResultList")
         public java.util.List<ListConfigRuleEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList> evaluationResultList;
@@ -536,7 +508,7 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The token used to retrieve the next page of results.</p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>IWBjqMYSy0is7zSMGu16****</p>

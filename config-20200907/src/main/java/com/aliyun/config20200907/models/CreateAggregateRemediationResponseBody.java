@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAggregateRemediationResponseBody extends TeaModel {
     /**
-     * <p>The remediation ID.</p>
+     * <p>The ID of the remediation template.</p>
      * 
      * <strong>example:</strong>
      * <p>crr-909ba2d4716700eb****</p>

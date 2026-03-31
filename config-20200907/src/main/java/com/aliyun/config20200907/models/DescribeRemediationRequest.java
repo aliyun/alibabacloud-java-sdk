@@ -5,12 +5,20 @@ import com.aliyun.tea.*;
 
 public class DescribeRemediationRequest extends TeaModel {
     /**
+     * <p>The rule ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>cr-3184626622af0038418c</p>
+     * <p>cr-3184626622af003****</p>
      */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
+    /**
+     * <p>The ID of the remediation configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crr-f381cf0c1c2f004e****</p>
+     */
     @NameInMap("RemediationId")
     public String remediationId;
 

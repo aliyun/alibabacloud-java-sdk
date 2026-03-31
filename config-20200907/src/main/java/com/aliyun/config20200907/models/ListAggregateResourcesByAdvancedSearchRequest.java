@@ -15,7 +15,7 @@ public class ListAggregateResourcesByAdvancedSearchRequest extends TeaModel {
     public String aggregatorId;
 
     /**
-     * <p>The SQL search statement.</p>
+     * <p>The SQL query statement.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAggregateRemediationsResponseBody extends TeaModel {
     /**
-     * <p>The remediation settings.</p>
+     * <p>An array that contains remediation templates.</p>
      */
     @NameInMap("Remediations")
     public java.util.List<ListAggregateRemediationsResponseBodyRemediations> remediations;
@@ -42,7 +42,7 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
 
     public static class ListAggregateRemediationsResponseBodyRemediations extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>100931896542****</p>
@@ -69,16 +69,12 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
         public String configRuleId;
 
         /**
-         * <p>The execution mode of the remediation. Valid values:</p>
+         * <p>The execution mode of the remediation template. Valid values:</p>
          * <ul>
-         * <li><p>NON_EXECUTION: The remediation is not executed.</p>
-         * </li>
-         * <li><p>AUTO_EXECUTION: The remediation is automatically executed.</p>
-         * </li>
-         * <li><p>MANUAL_EXECUTION: The remediation is manually executed.</p>
-         * </li>
-         * <li><p>NOT_CONFIG: The remediation is not configured.</p>
-         * </li>
+         * <li>NON_EXECUTION: The remediation template is not executed.</li>
+         * <li>AUTO_EXECUTION: The remediation template is automatically executed.</li>
+         * <li>MANUAL_EXECUTION: The remediation template is manually executed.</li>
+         * <li>NOT_CONFIG: The execution mode is not specified.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -88,7 +84,7 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
         public String invokeType;
 
         /**
-         * <p>The ID of the last successful remediation.</p>
+         * <p>The ID of the last successful execution of the remediation template.</p>
          * 
          * <strong>example:</strong>
          * <p>bd7629fb-cac8-42fe-bcb1-e362c5a6****</p>
@@ -97,7 +93,7 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
         public String lastSuccessfulInvocationId;
 
         /**
-         * <p>The timestamp of the last successful remediation. Unit: milliseconds.</p>
+         * <p>The timestamp of the last successful execution of the remediation template. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1625451393589</p>
@@ -106,16 +102,12 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
         public Long lastSuccessfulInvocationTime;
 
         /**
-         * <p>The mode of the last successful remediation. Valid values:</p>
+         * <p>The mode of the last successful execution of the remediation template. Valid values:</p>
          * <ul>
-         * <li><p>NON_EXECUTION: The remediation was not executed.</p>
-         * </li>
-         * <li><p>AUTO_EXECUTION: The remediation was automatically executed.</p>
-         * </li>
-         * <li><p>MANUAL_EXECUTION: The remediation was manually executed.</p>
-         * </li>
-         * <li><p>NOT_CONFIG: The remediation was not configured.</p>
-         * </li>
+         * <li>NON_EXECUTION: The remediation template is not executed.</li>
+         * <li>AUTO_EXECUTION: The remediation template is automatically executed.</li>
+         * <li>MANUAL_EXECUTION: The remediation template is manually executed.</li>
+         * <li>NOT_CONFIG: The execution mode is not specified.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -125,7 +117,7 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
         public String lastSuccessfulInvocationType;
 
         /**
-         * <p>The converted format of the remediation setting parameters. This parameter is used only to convert the parameters of an OOS template.</p>
+         * <p>The converted configuration of the remediation template. This parameter is returned only for an OOS remediation template.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;bucketName&quot;: &quot;{resourceId}&quot;, &quot;regionId&quot;: &quot;{regionId}&quot;, &quot;permissionName&quot;: &quot;private&quot;}</p>
@@ -134,7 +126,7 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
         public String remediaitonOriginParams;
 
         /**
-         * <p>The ID of the remediation setting.</p>
+         * <p>The ID of the remediation template.</p>
          * 
          * <strong>example:</strong>
          * <p>crr-6b7c626622af0026****</p>
@@ -143,14 +135,11 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
         public String remediationId;
 
         /**
-         * <p>The source of the remediation template. Valid values:</p>
+         * <p>The source of remediation template. Valid values:</p>
          * <ul>
-         * <li><p>ALIYUN: official template.</p>
-         * </li>
-         * <li><p>CUSTOM: custom template.</p>
-         * </li>
-         * <li><p>NONE: none.</p>
-         * </li>
+         * <li>ALIYUN: official template.</li>
+         * <li>CUSTOM: custom template.</li>
+         * <li>NONE: none.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -169,12 +158,10 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
         public String remediationTemplateId;
 
         /**
-         * <p>The type of the remediation. Valid values:</p>
+         * <p>The type of the remediation template. Valid values:</p>
          * <ul>
-         * <li><p>OOS: Operation Orchestration Service (official remediation).</p>
-         * </li>
-         * <li><p>FC: Function Compute (custom remediation).</p>
-         * </li>
+         * <li>OOS: Operation Orchestration Service (official remediation).</li>
+         * <li>FC: Function Compute (custom remediation).</li>
          * </ul>
          * 
          * <strong>example:</strong>

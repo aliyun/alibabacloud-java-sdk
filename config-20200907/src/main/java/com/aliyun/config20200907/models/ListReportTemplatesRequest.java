@@ -5,9 +5,6 @@ import com.aliyun.tea.*;
 
 public class ListReportTemplatesRequest extends TeaModel {
     /**
-     * <p>The keyword for your search.</p>
-     * <p>You can perform a fuzzy query on template ID, template name, or template description.</p>
-     * 
      * <strong>example:</strong>
      * <p>test-description</p>
      */
@@ -15,8 +12,6 @@ public class ListReportTemplatesRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The number of entries to return per page. Default value: 20.</p>
-     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -24,8 +19,6 @@ public class ListReportTemplatesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>If the response is truncated, use NextToken to send another request and get results after the truncation point.</p>
-     * 
      * <strong>example:</strong>
      * <p>IWBjqMYSy0is7zSMGu16****</p>
      */

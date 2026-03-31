@@ -9,7 +9,7 @@ public class ListSupportedProductsRequest extends TeaModel {
      * <p>Valid values: 1 to 500. Default value: 200.</p>
      * 
      * <strong>example:</strong>
-     * <p>200</p>
+     * <p>100</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;

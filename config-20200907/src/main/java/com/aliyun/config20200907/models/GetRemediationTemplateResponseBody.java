@@ -14,7 +14,7 @@ public class GetRemediationTemplateResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>E232FC35-BD40-51E3-B2EB-09416A23****</p>
+     * <p>E232FC35-BD40-51E3-B2EB-09416A234939</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -42,7 +42,7 @@ public class GetRemediationTemplateResponseBody extends TeaModel {
 
     public static class GetRemediationTemplateResponseBodyRemediationTemplates extends TeaModel {
         /**
-         * <p>The identifier of the supported rule template.</p>
+         * <p>The ID of the supported rule template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class GetRemediationTemplateResponseBody extends TeaModel {
         public String managedRuleIdentifier;
 
         /**
-         * <p>The type of the automatic remediation template. Valid value: OOS (Operation Orchestration).</p>
+         * <p>The type of the automatic remediation template. The value is set to OOS.</p>
          * 
          * <strong>example:</strong>
          * <p>OOS</p>
@@ -61,10 +61,10 @@ public class GetRemediationTemplateResponseBody extends TeaModel {
         public String remediationType;
 
         /**
-         * <p>The definition of the template parameters.</p>
+         * <p>The parameters of the automatic remediation template.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;Parameters\&quot;:{\&quot;regionId\&quot;:{\&quot;AllowValues\&quot;:\&quot;\&quot;,\&quot;AssociationProperty\&quot;:\&quot;RegionId\&quot;,\&quot;CreateDated\&quot;:\&quot;2025-08-04T09:54:57\&quot;,\&quot;Default\&quot;:\&quot;{regionId}\&quot;,\&quot;Description\&quot;:{\&quot;en\&quot;:\&quot;regionId\&quot;,\&quot;zh-cn\&quot;:\&quot;regionId\&quot;},\&quot;Id\&quot;:688,\&quot;MaxKeyLength\&quot;:\&quot;125\&quot;,\&quot;MaxValueLength\&quot;:\&quot;255\&quot;,\&quot;ModifiedDate\&quot;:\&quot;2025-08-04T09:54:57\&quot;,\&quot;Name\&quot;:\&quot;regionId\&quot;,\&quot;Optional\&quot;:1,\&quot;TemplateIdentifier\&quot;:\&quot;ACS-ALB-BulkyEnableDeletionProtection\&quot;,\&quot;Type\&quot;:\&quot;String\&quot;,\&quot;Version\&quot;:\&quot;LASTEST\&quot;},\&quot;loadBalancerIds\&quot;:{\&quot;AllowValues\&quot;:\&quot;\&quot;,\&quot;AssociationProperty\&quot;:\&quot;\&quot;,\&quot;CreateDated\&quot;:\&quot;2025-08-04T09:54:57\&quot;,\&quot;Default\&quot;:\&quot;[\\\&quot;{resourceId}\\\&quot;]\&quot;,\&quot;Description\&quot;:{\&quot;en\&quot;:\&quot;loadBalancerIds\&quot;,\&quot;zh-cn\&quot;:\&quot;loadBalancerIds\&quot;},\&quot;Id\&quot;:689,\&quot;MaxKeyLength\&quot;:\&quot;125\&quot;,\&quot;MaxValueLength\&quot;:\&quot;255\&quot;,\&quot;ModifiedDate\&quot;:\&quot;2025-08-04T09:54:57\&quot;,\&quot;Name\&quot;:\&quot;loadBalancerIds\&quot;,\&quot;Optional\&quot;:1,\&quot;TemplateIdentifier\&quot;:\&quot;ACS-ALB-BulkyEnableDeletionProtection\&quot;,\&quot;Type\&quot;:\&quot;ARRAY\&quot;,\&quot;Version\&quot;:\&quot;LASTEST\&quot;}}}</p>
+         * <p>{\&quot;Parameters\&quot;:{\&quot;regionId\&quot;:{\&quot;AssociationProperty\&quot;:\&quot;RegionId\&quot;,\&quot;CreateDated\&quot;:\&quot;2023-09-08T16:36:15\&quot;,\&quot;Default\&quot;:\&quot;{regionId}\&quot;,\&quot;Description\&quot;:{\&quot;en\&quot;:\&quot;regionId\&quot;,\&quot;zh-cn\&quot;:\&quot;regionId\&quot;},\&quot;Id\&quot;:538,\&quot;MaxKeyLength\&quot;:\&quot;125\&quot;,\&quot;MaxValueLength\&quot;:\&quot;255\&quot;,\&quot;ModifiedDate\&quot;:\&quot;2023-09-08T16:36:15\&quot;,\&quot;Name\&quot;:\&quot;regionId\&quot;,\&quot;Optional\&quot;:1,\&quot;TemplateIdentifier\&quot;:\&quot;ACS-ALB-BulkyEnableDeletionProtection\&quot;,\&quot;Type\&quot;:\&quot;String\&quot;,\&quot;Version\&quot;:\&quot;LASTEST\&quot;},\&quot;loadBalancerIds\&quot;:{\&quot;CreateDated\&quot;:\&quot;2023-09-08T16:36:16\&quot;,\&quot;Default\&quot;:\&quot;[\\\&quot;{resourceId}\\\&quot;]\&quot;,\&quot;Description\&quot;:{\&quot;en\&quot;:\&quot;loadBalancerIds\&quot;,\&quot;zh-cn\&quot;:\&quot;loadBalancerIds\&quot;},\&quot;Id\&quot;:539,\&quot;MaxKeyLength\&quot;:\&quot;125\&quot;,\&quot;MaxValueLength\&quot;:\&quot;255\&quot;,\&quot;ModifiedDate\&quot;:\&quot;2023-09-08T16:36:16\&quot;,\&quot;Name\&quot;:\&quot;loadBalancerIds\&quot;,\&quot;Optional\&quot;:1,\&quot;TemplateIdentifier\&quot;:\&quot;ACS-ALB-BulkyEnableDeletionProtection\&quot;,\&quot;Type\&quot;:\&quot;ARRAY\&quot;,\&quot;Version\&quot;:\&quot;LASTEST\&quot;}}}</p>
          */
         @NameInMap("TemplateDefinition")
         public String templateDefinition;
@@ -74,13 +74,13 @@ public class GetRemediationTemplateResponseBody extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Call the EnableDeletionProtection interface to enable ALB instance deletion protection. Be aware of the risks and exercise caution.</p>
+         * <p>调用接口EnableDeletionProtection，开启ALB实例删除保护，请您知晓风险谨慎操作。</p>
          */
         @NameInMap("TemplateDescription")
         public String templateDescription;
 
         /**
-         * <p>The identifier of the automatic remediation template.</p>
+         * <p>The ID of the automatic remediation template.</p>
          * 
          * <strong>example:</strong>
          * <p>ACS-ALB-BulkyEnableDeletionProtection</p>
@@ -92,7 +92,7 @@ public class GetRemediationTemplateResponseBody extends TeaModel {
          * <p>The name of the automatic remediation template.</p>
          * 
          * <strong>example:</strong>
-         * <p>Enable ALB instance deletion protection</p>
+         * <p>开启ALB实例删除保护</p>
          */
         @NameInMap("TemplateName")
         public String templateName;

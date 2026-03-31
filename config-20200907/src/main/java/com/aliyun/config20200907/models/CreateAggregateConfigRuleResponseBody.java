@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAggregateConfigRuleResponseBody extends TeaModel {
     /**
-     * <p>The ID of the rule.</p>
+     * <p>The rule ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cr-4e3d626622af0080****</p>
@@ -14,7 +14,7 @@ public class CreateAggregateConfigRuleResponseBody extends TeaModel {
     public String configRuleId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5895065A-196C-4254-8AD8-14EFC31EEF50</p>

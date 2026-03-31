@@ -4,15 +4,10 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetReportTemplateResponseBody extends TeaModel {
-    /**
-     * <p>Report template.</p>
-     */
     @NameInMap("ReportTemplate")
     public GetReportTemplateResponseBodyReportTemplate reportTemplate;
 
     /**
-     * <p>Request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>A7A0FFF8-0B44-40C6-8BBF-3A185EFDF3F7</p>
      */
@@ -42,16 +37,6 @@ public class GetReportTemplateResponseBody extends TeaModel {
 
     public static class GetReportTemplateResponseBodyReportTemplateReportScope extends TeaModel {
         /**
-         * <p>Key for the report scope. Supported keys:</p>
-         * <ul>
-         * <li><p>AggregatorId</p>
-         * </li>
-         * <li><p>CompliancePackId</p>
-         * </li>
-         * <li><p>RuleId</p>
-         * </li>
-         * </ul>
-         * 
          * <strong>example:</strong>
          * <p>RuleId</p>
          */
@@ -59,8 +44,6 @@ public class GetReportTemplateResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>Matching logic. Only In is supported.</p>
-         * 
          * <strong>example:</strong>
          * <p>In</p>
          */
@@ -68,8 +51,6 @@ public class GetReportTemplateResponseBody extends TeaModel {
         public String matchType;
 
         /**
-         * <p>Value for the report scope. For multiple values of the same type, such as multiple rule IDs, separate them with commas.</p>
-         * 
          * <strong>example:</strong>
          * <p>cr-1,cr-2</p>
          */
@@ -109,8 +90,6 @@ public class GetReportTemplateResponseBody extends TeaModel {
 
     public static class GetReportTemplateResponseBodyReportTemplate extends TeaModel {
         /**
-         * <p>Report file format.</p>
-         * 
          * <strong>example:</strong>
          * <p>excel</p>
          */
@@ -118,35 +97,19 @@ public class GetReportTemplateResponseBody extends TeaModel {
         public String reportFileFormats;
 
         /**
-         * <p>Aggregation granularity of the report.</p>
-         * 
          * <strong>example:</strong>
          * <p>AllInOne</p>
          */
         @NameInMap("ReportGranularity")
         public String reportGranularity;
 
-        /**
-         * <p>Report language. Valid values: zh-CN and en-US. Default is en-US if empty.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>en-US</p>
-         */
         @NameInMap("ReportLanguage")
         public String reportLanguage;
 
-        /**
-         * <p>Array of report scopes. Each scope defines a set of rules included in the audit report. Scopes use OR logic. That is, rules from all scopes are combined.</p>
-         * <blockquote>
-         * <p>If the array has two items, and the first specifies RuleId cr-1 while the second specifies RuleId cr-2, then the report covers both cr-1 and cr-2.</p>
-         * </blockquote>
-         */
         @NameInMap("ReportScope")
         public java.util.List<GetReportTemplateResponseBodyReportTemplateReportScope> reportScope;
 
         /**
-         * <p>Description of the report template.</p>
-         * 
          * <strong>example:</strong>
          * <p>test-description</p>
          */
@@ -154,8 +117,6 @@ public class GetReportTemplateResponseBody extends TeaModel {
         public String reportTemplateDescription;
 
         /**
-         * <p>ID of the report template.</p>
-         * 
          * <strong>example:</strong>
          * <p>crt-xxx</p>
          */
@@ -163,8 +124,6 @@ public class GetReportTemplateResponseBody extends TeaModel {
         public String reportTemplateId;
 
         /**
-         * <p>Name of the report template.</p>
-         * 
          * <strong>example:</strong>
          * <p>test-name</p>
          */
@@ -172,35 +131,6 @@ public class GetReportTemplateResponseBody extends TeaModel {
         public String reportTemplateName;
 
         /**
-         * <p>Subscription frequency for the report. If this field is not empty, it contains a Quartz-formatted cron expression that triggers notifications.</p>
-         * <p>The format is: seconds minutes hours day-of-month month day-of-week. Common examples include the following:</p>
-         * <ul>
-         * <li><p>Run daily at 00:00: 0 0 0 \* \* ?</p>
-         * </li>
-         * <li><p>Run every Monday at 15:30: 0 30 15 ? \* MON</p>
-         * </li>
-         * <li><p>Run on the first day of each month at 02:00: 0 0 2 1 \* ?</p>
-         * </li>
-         * </ul>
-         * <p>Where:</p>
-         * <ul>
-         * <li><p>&quot;\*&quot; means any value.</p>
-         * </li>
-         * <li><p>&quot;?&quot; means no specific value for the day-of-month or day-of-week field.</p>
-         * </li>
-         * <li><p>MON means Monday.</p>
-         * </li>
-         * </ul>
-         * <blockquote>
-         * <p>Trigger times are in UTC+8. Adjust your cron expression based on your time zone.</p>
-         * </blockquote>
-         * <blockquote>
-         * <p>The system tries to trigger notifications as close as possible to the scheduled time. Delays may occur due to report generation status. A single template can trigger at most one notification per day.</p>
-         * </blockquote>
-         * <blockquote>
-         * <p>In Quartz, days of the week are numbered: 1 = Sunday, 2 = Monday, 3 = Tuesday, 4 = Wednesday, 5 = Thursday, 6 = Friday, 7 = Saturday.</p>
-         * </blockquote>
-         * 
          * <strong>example:</strong>
          * <p>0 0 0 * * ?</p>
          */

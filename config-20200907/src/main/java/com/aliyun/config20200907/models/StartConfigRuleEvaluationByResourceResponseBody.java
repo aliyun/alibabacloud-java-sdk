@@ -5,9 +5,6 @@ import com.aliyun.tea.*;
 
 public class StartConfigRuleEvaluationByResourceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the rule.</p>
-     * <p>For more information about how to obtain the rule ID, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</p>
-     * 
      * <strong>example:</strong>
      * <p>cr-2da35180a8d1008e****</p>
      */
@@ -15,8 +12,6 @@ public class StartConfigRuleEvaluationByResourceResponseBody extends TeaModel {
     public String configRuleId;
 
     /**
-     * <p>The ID of the request.</p>
-     * 
      * <strong>example:</strong>
      * <p>A7A0FFF8-0B44-40C6-8BBF-3A185EFDF3F7</p>
      */

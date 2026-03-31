@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ListCompliancePacksRequest extends TeaModel {
     /**
      * <p>The page number.</p>
-     * <p>Minimum value: 1. Default value: 1.</p>
+     * <p>Pages start from page 1. Default value: 1</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -16,7 +16,7 @@ public class ListCompliancePacksRequest extends TeaModel {
 
     /**
      * <p>The number of entries per page.</p>
-     * <p>Valid values: 1 to 100. Default value: 10.</p>
+     * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -24,30 +24,14 @@ public class ListCompliancePacksRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The risk level of the compliance pack. Valid values:</p>
-     * <ul>
-     * <li><p>1: high risk.</p>
-     * </li>
-     * <li><p>2: medium risk.</p>
-     * </li>
-     * <li><p>3: low risk.</p>
-     * </li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("RiskLevel")
     public Integer riskLevel;
 
     /**
-     * <p>The status of the compliance pack. Valid values:</p>
+     * <p>The status of the compliance package to be queried. Valid values:</p>
      * <ul>
-     * <li><p>ACTIVE: The compliance pack is active.</p>
-     * </li>
-     * <li><p>CREATING: The compliance pack is being created.</p>
-     * </li>
+     * <li>ACTIVE: The compliance package is active.</li>
+     * <li>CREATING: The compliance package is being created.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,7 +42,7 @@ public class ListCompliancePacksRequest extends TeaModel {
 
     /**
      * <p>The tags of the resource.</p>
-     * <p>You can attach up to 20 tags to a resource.</p>
+     * <p>You can add up to 20 tags to a resource.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListCompliancePacksRequestTag> tag;
@@ -110,8 +94,8 @@ public class ListCompliancePacksRequest extends TeaModel {
 
     public static class ListCompliancePacksRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the resource.</p>
-         * <p>You can attach up to 20 tag keys to a resource.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys.</p>
+         * <p>The tag key cannot be an empty string. The tag key must be 1 to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs</code>:. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>key-1</p>
@@ -120,8 +104,9 @@ public class ListCompliancePacksRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource.</p>
-         * <p>You can attach up to 20 tag values to a resource.</p>
+         * <p>The tag values.</p>
+         * <p>The tag values can be an empty string or up to 128 characters in length. The tag values cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>Each key-value must be unique. You can specify at most 20 tag values in each call.</p>
          * 
          * <strong>example:</strong>
          * <p>value-1</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAggregateCompliancePackResponseBody extends TeaModel {
     /**
-     * <p>The ID of the compliance pack.</p>
+     * <p>The compliance package ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cp-fc56626622af00f9****</p>

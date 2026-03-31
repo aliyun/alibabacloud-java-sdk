@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateReportTemplateResponseBody extends TeaModel {
     /**
-     * <p>Report template ID</p>
-     * 
      * <strong>example:</strong>
      * <p>crt-xxx</p>
      */
@@ -14,8 +12,6 @@ public class CreateReportTemplateResponseBody extends TeaModel {
     public String reportTemplateId;
 
     /**
-     * <p>Request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>A7A0FFF8-0B44-40C6-8BBF-3A185EFDFXXX</p>
      */

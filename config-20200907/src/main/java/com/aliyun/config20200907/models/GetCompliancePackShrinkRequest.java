@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetCompliancePackShrinkRequest extends TeaModel {
     /**
-     * <p>The compliance package ID.</p>
-     * <p>For more information about how to obtain the compliance package ID, see <a href="https://help.aliyun.com/document_detail/263332.html">ListCompliancePacks</a>.</p>
+     * <p>The ID of the compliance package.</p>
+     * <p>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/263332.html">ListCompliancePacks</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,8 +16,8 @@ public class GetCompliancePackShrinkRequest extends TeaModel {
     public String compliancePackId;
 
     /**
-     * <p>The tags of the resource. This parameter is deprecated and takes no effect if it is specified.</p>
-     * <p>You can add up to 20 tags.</p>
+     * <p>The tags of the resource.</p>
+     * <p>You can add up to 20 tags to a resource.</p>
      */
     @NameInMap("Tag")
     @Deprecated

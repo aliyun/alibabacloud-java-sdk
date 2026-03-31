@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class StartAggregateRemediationResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the operation succeeded. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The operation succeeded.</p>
-     * </li>
-     * <li><p>false: The operation failed.</p>
-     * </li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class StartAggregateRemediationResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C7817373-78CB-4F9A-8AFA-E7A88E9D64A2</p>

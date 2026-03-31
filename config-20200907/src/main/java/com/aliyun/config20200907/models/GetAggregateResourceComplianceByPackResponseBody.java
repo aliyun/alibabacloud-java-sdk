@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAggregateResourceComplianceByPackResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6EC7AED1-172F-42AE-9C12-295BC2ADB751</p>
@@ -14,7 +14,7 @@ public class GetAggregateResourceComplianceByPackResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The compliance results of the resources in the compliance package.</p>
+     * <p>The compliance evaluation results returned.</p>
      */
     @NameInMap("ResourceComplianceResult")
     public GetAggregateResourceComplianceByPackResponseBodyResourceComplianceResult resourceComplianceResult;
@@ -50,30 +50,12 @@ public class GetAggregateResourceComplianceByPackResponseBody extends TeaModel {
         @NameInMap("CompliancePackId")
         public String compliancePackId;
 
-        /**
-         * <p>The total number of compliant resources.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("CompliantCount")
         public Integer compliantCount;
 
-        /**
-         * <p>The total number of ignored resources.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("IgnoredCount")
         public Integer ignoredCount;
 
-        /**
-         * <p>The total number of resources for which the evaluation data is insufficient.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("InsufficientDataCount")
         public Integer insufficientDataCount;
 
@@ -86,17 +68,11 @@ public class GetAggregateResourceComplianceByPackResponseBody extends TeaModel {
         @NameInMap("NonCompliantCount")
         public Integer nonCompliantCount;
 
-        /**
-         * <p>The total number of resources that are not applicable.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("NotApplicableCount")
         public Integer notApplicableCount;
 
         /**
-         * <p>The total number of resources evaluated by the compliance package.</p>
+         * <p>The total number of resources.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

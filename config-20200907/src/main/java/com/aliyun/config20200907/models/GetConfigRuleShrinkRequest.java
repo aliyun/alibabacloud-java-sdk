@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class GetConfigRuleShrinkRequest extends TeaModel {
     /**
      * <p>The rule ID.</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</p>
+     * <p>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,8 +16,8 @@ public class GetConfigRuleShrinkRequest extends TeaModel {
     public String configRuleId;
 
     /**
-     * <p>The tags of the resource. This parameter is deprecated and has no effect.</p>
-     * <p>You can add a maximum of 20 tags to a resource.</p>
+     * <p>The tags of the resource.</p>
+     * <p>You can add up to 20 tags to a resource.</p>
      */
     @NameInMap("Tag")
     @Deprecated

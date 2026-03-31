@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesShrinkRequest extends TeaModel {
     /**
-     * <p>The token to retrieve the next page of results.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJ****</p>
@@ -14,7 +14,7 @@ public class ListTagResourcesShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the region to which the tags belong.</p>
+     * <p>The region ID of the tag.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,36 +25,31 @@ public class ListTagResourcesShrinkRequest extends TeaModel {
 
     /**
      * <p>The resource ID.</p>
-     * <p>You can query tags for a maximum of 50 resources.</p>
+     * <p>You can add tags to up to 50 resources.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type in CloudConfig. Valid values:</p>
+     * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li><p><code>ACS::Config::Rule</code>: a rule for a single account.</p>
-     * </li>
-     * <li><p><code>ACS::Config::AggregateConfigRule</code>: a rule for multiple accounts.</p>
-     * </li>
-     * <li><p><code>ACS::Config::Aggregator</code>: an account group.</p>
-     * </li>
-     * <li><p><code>ACS::Config::CompliancePack</code>: a compliance package for a single account.</p>
-     * </li>
-     * <li><p><code>ACS::Config::AggregateCompliancePack</code>: a compliance package for multiple accounts.</p>
-     * </li>
+     * <li><code>ACS::Config::Rule</code></li>
+     * <li><code>ACS::Config::AggregateConfigRule</code></li>
+     * <li><code>ACS::Config::Aggregator</code></li>
+     * <li><code>ACS::Config::CompliancePack</code></li>
+     * <li><code>ACS::Config::AggregateCompliancePack</code></li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ACS::Config::Rule</p>
+     * <p>ACS::Config:rule</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The tags of the resource.</p>
-     * <p>You can filter resources by a maximum of 20 tags.</p>
+     * <p>You can add up to 20 tags to a resource.</p>
      */
     @NameInMap("Tag")
     public String tagShrink;

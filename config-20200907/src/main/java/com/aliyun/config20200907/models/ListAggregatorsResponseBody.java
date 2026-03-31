@@ -4,9 +4,18 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListAggregatorsResponseBody extends TeaModel {
+    /**
+     * <p>The account groups.</p>
+     */
     @NameInMap("AggregatorsResult")
     public ListAggregatorsResponseBodyAggregatorsResult aggregatorsResult;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20C8526D-12C5-4336-BC72-EBD5D1BA732F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +41,21 @@ public class ListAggregatorsResponseBody extends TeaModel {
     }
 
     public static class ListAggregatorsResponseBodyAggregatorsResultAggregatorsTags extends TeaModel {
+        /**
+         * <p>The tag keys of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-1</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag values of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-1</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -62,33 +83,99 @@ public class ListAggregatorsResponseBody extends TeaModel {
     }
 
     public static class ListAggregatorsResponseBodyAggregatorsResultAggregators extends TeaModel {
+        /**
+         * <p>The ID of the management account that is used to create the account group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100931896542****</p>
+         */
         @NameInMap("AccountId")
         public Long accountId;
 
+        /**
+         * <p>The number of member accounts in the account group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("AggregatorAccountCount")
         public Long aggregatorAccountCount;
 
+        /**
+         * <p>The timestamp generated when the account group was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1623036305000</p>
+         */
         @NameInMap("AggregatorCreateTimestamp")
         public Long aggregatorCreateTimestamp;
 
+        /**
+         * <p>The ID of the account group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca-88ea626622af0055****</p>
+         */
         @NameInMap("AggregatorId")
         public String aggregatorId;
 
+        /**
+         * <p>The name of the account group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test_Group</p>
+         */
         @NameInMap("AggregatorName")
         public String aggregatorName;
 
+        /**
+         * <p>The status of the account group. Valid values:</p>
+         * <ul>
+         * <li>0: The account group is being created.</li>
+         * <li>1: The account group was created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AggregatorStatus")
         public Integer aggregatorStatus;
 
+        /**
+         * <p>The type of the account group. Valid values:</p>
+         * <ul>
+         * <li>RD: global account group.</li>
+         * <li>FOLDER: account group of the folder.</li>
+         * <li>CUSTOM: custom account group.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CUSTOM</p>
+         */
         @NameInMap("AggregatorType")
         public String aggregatorType;
 
+        /**
+         * <p>The description of the account group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Example-description</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-BU****</p>
+         */
         @NameInMap("FolderId")
         public String folderId;
 
+        /**
+         * <p>tags</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListAggregatorsResponseBodyAggregatorsResultAggregatorsTags> tags;
 
@@ -180,9 +267,18 @@ public class ListAggregatorsResponseBody extends TeaModel {
     }
 
     public static class ListAggregatorsResponseBodyAggregatorsResult extends TeaModel {
+        /**
+         * <p>The list of the account groups.</p>
+         */
         @NameInMap("Aggregators")
         public java.util.List<ListAggregatorsResponseBodyAggregatorsResultAggregators> aggregators;
 
+        /**
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TGlzdFJlc291cmNlU2hhcmVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 

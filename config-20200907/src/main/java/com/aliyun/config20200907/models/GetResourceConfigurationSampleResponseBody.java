@@ -5,17 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetResourceConfigurationSampleResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
-     * <p>DC300244-FCE3-5061-8214-C27ECB66****</p>
+     * <p>DC300244-FCE3-5061-8214-C27ECB668487</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The sample.</p>
-     */
     @NameInMap("Sample")
     public GetResourceConfigurationSampleResponseBodySample sample;
 
@@ -42,44 +39,30 @@ public class GetResourceConfigurationSampleResponseBody extends TeaModel {
 
     public static class GetResourceConfigurationSampleResponseBodySample extends TeaModel {
         /**
-         * <p>The user ID.</p>
-         * 
          * <strong>example:</strong>
-         * <p>101339776561****</p>
+         * <p>10093xxxx</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
-         * <p>The zone.</p>
-         * 
          * <strong>example:</strong>
-         * <p>cn-shanghai-g</p>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("AvailabilityZone")
         public String availabilityZone;
 
-        /**
-         * <p>The complete configuration information of the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{\&quot;Status\&quot;:\&quot;Running\&quot;,\&quot;HibernationOptions\&quot;:{\&quot;Configured\&quot;:\&quot;false\&quot;},\&quot;ResourceGroupId\&quot;:\&quot;rg-bp67acfmxazb4p****\&quot;,\&quot;MetadataOptions\&quot;:{\&quot;HttpPutResponseHopLimit\&quot;:\&quot;0\&quot;,\&quot;HttpTokens\&quot;:\&quot;optional\&quot;,\&quot;HttpEndpoint\&quot;:\&quot;enabled\&quot;},\&quot;InstanceId\&quot;:\&quot;i-bp67acfmxazb4p****\&quot;,\&quot;InstanceChargeType\&quot;:\&quot;PostPaid\&quot;,\&quot;Memory\&quot;:\&quot;16384\&quot;,\&quot;StoppedMode\&quot;:\&quot;KeepCharging\&quot;,\&quot;CpuOptions\&quot;:{\&quot;ThreadsPerCore\&quot;:\&quot;4\&quot;,\&quot;Numa\&quot;:\&quot;2\&quot;,\&quot;CoreCount\&quot;:\&quot;2\&quot;},\&quot;StartTime\&quot;:\&quot;2017-12-10T04:04Z\&quot;,\&quot;Cpu\&quot;:\&quot;8\&quot;,\&quot;OSName\&quot;:\&quot;CentOS 7.4 64 bit\&quot;,\&quot;DeletionProtection\&quot;:\&quot;false\&quot;,\&quot;SecurityGroupIds\&quot;:{\&quot;SecurityGroupId\&quot;:[null]},\&quot;InstanceNetworkType\&quot;:\&quot;vpc\&quot;,\&quot;InnerIpAddress\&quot;:{\&quot;IpAddress\&quot;:[\&quot;<code>42.112.**.**</code>\&quot;]},\&quot;ExpiredTime\&quot;:\&quot;2017-12-10T04:04Z\&quot;,\&quot;EipAddress\&quot;:{\&quot;AllocationId\&quot;:\&quot;eip-2ze88m67qx5z****\&quot;,\&quot;Bandwidth\&quot;:\&quot;5\&quot;,\&quot;IpAddress\&quot;:\&quot;<code>42.112.**.**</code>\&quot;,\&quot;IsSupportUnassociate\&quot;:\&quot;true\&quot;,\&quot;InternetChargeType\&quot;:\&quot;PayByTraffic\&quot;},\&quot;ImageId\&quot;:\&quot;m-bp67acfmxazb4p****\&quot;,\&quot;ImageOptions\&quot;:{\&quot;LoginAsNonRoot\&quot;:\&quot;false\&quot;},\&quot;HostName\&quot;:\&quot;testHostName\&quot;,\&quot;Tags\&quot;:{\&quot;Tag\&quot;:[null]},\&quot;VlanId\&quot;:\&quot;10\&quot;}</p>
-         */
         @NameInMap("Configuration")
         public String configuration;
 
         /**
-         * <p>The region ID.</p>
-         * 
          * <strong>example:</strong>
-         * <p>cn-shanghai</p>
+         * <p>cn-shenzhen</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
-         * <p>The time when the resource was created.</p>
-         * 
          * <strong>example:</strong>
          * <p>1646362560000</p>
          */
@@ -87,14 +70,6 @@ public class GetResourceConfigurationSampleResponseBody extends TeaModel {
         public String resourceCreationTime;
 
         /**
-         * <p>The deletion status of the resource. Valid values:</p>
-         * <ul>
-         * <li><p>1: The resource is retained.</p>
-         * </li>
-         * <li><p>0: The resource is deleted.</p>
-         * </li>
-         * </ul>
-         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -102,17 +77,13 @@ public class GetResourceConfigurationSampleResponseBody extends TeaModel {
         public String resourceDeleted;
 
         /**
-         * <p>The resource ID.</p>
-         * 
          * <strong>example:</strong>
-         * <p>i-bp1aaegapahkh880****</p>
+         * <p>i-bp1aaegapahkh880x4wq</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The resource name.</p>
-         * 
          * <strong>example:</strong>
          * <p>my-ecs</p>
          */
@@ -120,8 +91,6 @@ public class GetResourceConfigurationSampleResponseBody extends TeaModel {
         public String resourceName;
 
         /**
-         * <p>The resource status.</p>
-         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -129,8 +98,6 @@ public class GetResourceConfigurationSampleResponseBody extends TeaModel {
         public String resourceStatus;
 
         /**
-         * <p>The resource type.</p>
-         * 
          * <strong>example:</strong>
          * <p>ACS::ECS::Instance</p>
          */
@@ -138,8 +105,6 @@ public class GetResourceConfigurationSampleResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The tag.</p>
-         * 
          * <strong>example:</strong>
          * <p>{\&quot;key\&quot;:\&quot;value\&quot;}</p>
          */
@@ -147,8 +112,6 @@ public class GetResourceConfigurationSampleResponseBody extends TeaModel {
         public String tags;
 
         /**
-         * <p>The version information.</p>
-         * 
          * <strong>example:</strong>
          * <p>5</p>
          */

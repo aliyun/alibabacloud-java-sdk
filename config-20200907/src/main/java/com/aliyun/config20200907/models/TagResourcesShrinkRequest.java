@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TagResourcesShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID of the tags.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,25 +15,20 @@ public class TagResourcesShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource ID.</p>
+     * <p>The resource IDs. You can add tags to up to 50 resources.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource in CloudConfig. Valid values:</p>
+     * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li><p><code>ACS::Config::Rule</code>: a rule for a single account.</p>
-     * </li>
-     * <li><p><code>ACS::Config::AggregateConfigRule</code>: a rule for multiple accounts.</p>
-     * </li>
-     * <li><p><code>ACS::Config::Aggregator</code>: an account group.</p>
-     * </li>
-     * <li><p><code>ACS::Config::CompliancePack</code>: a compliance package for a single account.</p>
-     * </li>
-     * <li><p><code>ACS::Config::AggregateCompliancePack</code>: a compliance package for multiple accounts.</p>
-     * </li>
+     * <li><code>ACS::Config::Rule</code></li>
+     * <li><code>ACS::Config::AggregateConfigRule</code></li>
+     * <li><code>ACS::Config::Aggregator</code></li>
+     * <li><code>ACS::Config::CompliancePack</code></li>
+     * <li><code>ACS::Config::AggregateCompliancePack</code></li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -44,8 +39,8 @@ public class TagResourcesShrinkRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags of the resource.</p>
-     * <p>You can attach a maximum of 20 tags.</p>
+     * <p>The tag value of the resource.</p>
+     * <p>You can specify up to 20 tag values.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")

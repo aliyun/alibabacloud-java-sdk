@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class GetAggregateResourceConfigurationTimelineRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+     * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class GetAggregateResourceConfigurationTimelineRequest extends TeaModel {
     public String aggregatorId;
 
     /**
-     * <p>The end time of the query. This is a UNIX timestamp in milliseconds. By default, data up to the current time is queried.</p>
+     * <p>The end of the time range to query. The default value indicates the time when the GetAggregateResourceConfigurationTimeline operation is called. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1625821156000</p>
@@ -25,7 +25,7 @@ public class GetAggregateResourceConfigurationTimelineRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The maximum number of entries to return on each page. Valid values: 1 to 100.</p>
+     * <p>The maximum number of entries to return for a single request. Valid values: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -34,7 +34,7 @@ public class GetAggregateResourceConfigurationTimelineRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>If the output is truncated, you can use the <code>NextToken</code> to start the next query from the truncation point.</p>
+     * <p>The <code>token</code> that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.</p>
      * 
      * <strong>example:</strong>
      * <p>IWBjqMYSy0is7zSMGu16****</p>
@@ -43,8 +43,8 @@ public class GetAggregateResourceConfigurationTimelineRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the region where the resource resides.</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/265983.html">ListAggregateDiscoveredResources</a>.</p>
+     * <p>The ID of the region in which the resource resides.</p>
+     * <p>For more information about how to obtain the ID of a region, see <a href="https://help.aliyun.com/document_detail/265983.html">ListAggregateDiscoveredResources</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class GetAggregateResourceConfigurationTimelineRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The ID of the Alibaba Cloud account that owns the resource in the account group.</p>
+     * <p>Required. The ID of the Alibaba Cloud account to which the specified resource belongs in the account group.</p>
      * 
      * <strong>example:</strong>
      * <p>100931896542****</p>
@@ -63,8 +63,8 @@ public class GetAggregateResourceConfigurationTimelineRequest extends TeaModel {
     public Long resourceAccountId;
 
     /**
-     * <p>The ID of the resource.</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/265983.html">ListAggregateDiscoveredResources</a>.</p>
+     * <p>The resource ID.</p>
+     * <p>For more information about how to query the ID of a resource, see <a href="https://help.aliyun.com/document_detail/265983.html">ListAggregateDiscoveredResources</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class GetAggregateResourceConfigurationTimelineRequest extends TeaModel {
 
     /**
      * <p>The type of the resource.</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/265983.html">ListAggregateDiscoveredResources</a>.</p>
+     * <p>For more information about how to obtain the type of a resource, see <a href="https://help.aliyun.com/document_detail/265983.html">ListAggregateDiscoveredResources</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -89,7 +89,7 @@ public class GetAggregateResourceConfigurationTimelineRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The start time of the query. This is a UNIX timestamp in milliseconds. By default, data from the last 30 days is queried.</p>
+     * <p>The beginning of the time range to query. By default, Cloud Config retrieves the configuration changes in the last 30 days for the specified resource. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1623211156000</p>

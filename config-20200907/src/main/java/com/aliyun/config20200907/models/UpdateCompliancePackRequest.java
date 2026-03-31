@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCompliancePackRequest extends TeaModel {
     /**
-     * <p>A client token to ensure the idempotence of the request. Generate a unique token for each request. The <code>ClientToken</code> value can contain only ASCII characters and must be no more than 64 characters long.</p>
+     * <p>The client token that you want to use to ensure the idempotency of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.``</p>
      * 
      * <strong>example:</strong>
      * <p>1594295238-f9361358-5843-4294-8d30-b5183fac****</p>
@@ -14,8 +14,8 @@ public class UpdateCompliancePackRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the compliance pack.</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/263332.html">ListCompliancePacks</a>.</p>
+     * <p>The ID of the compliance package.</p>
+     * <p>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/263332.html">ListCompliancePacks</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,33 +25,33 @@ public class UpdateCompliancePackRequest extends TeaModel {
     public String compliancePackId;
 
     /**
-     * <p>The name of the compliance pack.</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/263332.html">ListCompliancePacks</a>.</p>
+     * <p>The name of the compliance package.</p>
+     * <p>For more information about how to obtain the name of a compliance package, see <a href="https://help.aliyun.com/document_detail/263332.html">ListCompliancePacks</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>等保三级预检合规包</p>
+     * <p>The name of the compliance package.</p>
      */
     @NameInMap("CompliancePackName")
     public String compliancePackName;
 
     /**
-     * <p>The rules in the compliance pack.</p>
-     * <p>If you leave this parameter empty when you modify the compliance pack, the original rules are retained. If you specify new rules, they replace the original rules.</p>
+     * <p>The rules in the compliance package.</p>
+     * <p>If you leave this parameter empty, the rules in the compliance package remain unchanged. If you configure this parameter, Cloud Config replaces the existing rules in the compliance package with the specified rules.</p>
      */
     @NameInMap("ConfigRules")
     public java.util.List<UpdateCompliancePackRequestConfigRules> configRules;
 
     /**
-     * <p>The description of the compliance pack.</p>
+     * <p>The description of the compliance package.</p>
      * 
      * <strong>example:</strong>
-     * <p>基于等保2.0三级标准，提供持续检测合规性的建议模板，帮助您提前自检并修复问题，以便快速通过正式检测。</p>
+     * <p>The description of the compliance package.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The compliance pack does not evaluate resources in the specified regions. Separate multiple region IDs with commas (,).</p>
+     * <p>The IDs of the regions to which the rule not applies. Separate multiple region IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -60,7 +60,7 @@ public class UpdateCompliancePackRequest extends TeaModel {
     public String excludeRegionIdsScope;
 
     /**
-     * <p>The compliance pack does not evaluate resources in the specified resource groups. Separate multiple resource group IDs with commas (,).</p>
+     * <p>ExcludeResourceGroupIdsScope. Separate multiple resource group IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bnczc6r7rml****</p>
@@ -69,7 +69,7 @@ public class UpdateCompliancePackRequest extends TeaModel {
     public String excludeResourceGroupIdsScope;
 
     /**
-     * <p>The compliance pack does not evaluate the specified resources. Separate multiple resource IDs with commas (,).</p>
+     * <p>The ID of the resource that you do not want to evaluate by using the compliance package. Separate multiple resource IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>23642660635687****</p>
@@ -78,13 +78,13 @@ public class UpdateCompliancePackRequest extends TeaModel {
     public String excludeResourceIdsScope;
 
     /**
-     * <p>The excluded tag scope.</p>
+     * <p>ExcludeTagsScope</p>
      */
     @NameInMap("ExcludeTagsScope")
     public java.util.List<UpdateCompliancePackRequestExcludeTagsScope> excludeTagsScope;
 
     /**
-     * <p>The compliance pack evaluates only resources in the specified regions. Separate multiple region IDs with commas (,).</p>
+     * <p>The ID of the region whose resources you want to evaluate by using the compliance package. Separate multiple region IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -93,7 +93,7 @@ public class UpdateCompliancePackRequest extends TeaModel {
     public String regionIdsScope;
 
     /**
-     * <p>The compliance pack evaluates only resources in the specified resource groups. Separate multiple resource group IDs with commas (,).</p>
+     * <p>The ID of the resource group whose resources you want to evaluate by using the compliance package. Separate multiple resource group IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekzdibsjjc****</p>
@@ -102,7 +102,7 @@ public class UpdateCompliancePackRequest extends TeaModel {
     public String resourceGroupIdsScope;
 
     /**
-     * <p>The compliance pack evaluates only the specified resources. Separate multiple resource IDs with commas (,).</p>
+     * <p>The IDs of the resources included from the compliance evaluations performed by the rule. Separate multiple resource IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>lb-5cmbowstbkss9ta03****</p>
@@ -111,14 +111,11 @@ public class UpdateCompliancePackRequest extends TeaModel {
     public String resourceIdsScope;
 
     /**
-     * <p>The risk level of the compliance pack. Valid values:</p>
+     * <p>The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:</p>
      * <ul>
-     * <li><p>1: High risk.</p>
-     * </li>
-     * <li><p>2: Medium risk.</p>
-     * </li>
-     * <li><p>3: Low risk.</p>
-     * </li>
+     * <li>1: high risk level</li>
+     * <li>2: medium risk level</li>
+     * <li>3: low risk level</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -128,15 +125,15 @@ public class UpdateCompliancePackRequest extends TeaModel {
     public Integer riskLevel;
 
     /**
-     * <p>The tags of the resource. This parameter is deprecated. Ignore this parameter because it is no longer valid.</p>
-     * <p>You can add up to 20 tags.</p>
+     * <p>The tags of the resource.</p>
+     * <p>You can add up to 20 tags to a resource.</p>
      */
     @NameInMap("Tag")
     @Deprecated
     public java.util.List<UpdateCompliancePackRequestTag> tag;
 
     /**
-     * <p>The compliance pack evaluates only resources that have the specified tag key.</p>
+     * <p>The tag key of the resource that you want to evaluate by using the compliance package.</p>
      * 
      * <strong>example:</strong>
      * <p>ECS</p>
@@ -145,9 +142,9 @@ public class UpdateCompliancePackRequest extends TeaModel {
     public String tagKeyScope;
 
     /**
-     * <p>The compliance pack evaluates only resources that have the specified tag key and value.</p>
+     * <p>The tag value of the resource that you want to evaluate by using the compliance package.</p>
      * <blockquote>
-     * <p>You must use TagValueScope with TagKeyScope.</p>
+     * <p> You must configure the TagValueScope parameter together with the TagValueScope parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -157,7 +154,7 @@ public class UpdateCompliancePackRequest extends TeaModel {
     public String tagValueScope;
 
     /**
-     * <p>The tag scope.</p>
+     * <p>TagsScope</p>
      */
     @NameInMap("TagsScope")
     public java.util.List<UpdateCompliancePackRequestTagsScope> tagsScope;
@@ -306,8 +303,8 @@ public class UpdateCompliancePackRequest extends TeaModel {
 
     public static class UpdateCompliancePackRequestConfigRulesConfigRuleParameters extends TeaModel {
         /**
-         * <p>The name of the rule parameter.</p>
-         * <p>You must specify <code>ParameterName</code> and <code>ParameterValue</code> together, or leave them both empty. If a rule template has a parameter without a default value, you must specify this parameter. For more information, see <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a>.</p>
+         * <p>The name of the managed rule parameter.</p>
+         * <p>You must specify both <code>ParameterName</code> and <code>ParameterValue</code> or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the name of an input parameter for a managed rule, see <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>bandwidth</p>
@@ -316,8 +313,8 @@ public class UpdateCompliancePackRequest extends TeaModel {
         public String parameterName;
 
         /**
-         * <p>The value of the rule parameter.</p>
-         * <p>You must specify <code>ParameterName</code> and <code>ParameterValue</code> together, or leave them both empty. If a rule template has a parameter without a default value, you must specify this parameter. For more information, see <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a>.</p>
+         * <p>The value of the managed rule parameter.</p>
+         * <p>You must configure the <code>ParameterName</code> and <code>ParameterValue</code> parameters or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the value of an input parameter for a managed rule, see <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -350,8 +347,8 @@ public class UpdateCompliancePackRequest extends TeaModel {
 
     public static class UpdateCompliancePackRequestConfigRules extends TeaModel {
         /**
-         * <p>The rule ID. CloudConfig adds an existing rule to the compliance pack.</p>
-         * <p>You must specify either <code>ManagedRuleIdentifier</code> or <code>ConfigRuleId</code>. If you specify both parameters, <code>ConfigRuleId</code> takes precedence. For more information, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</p>
+         * <p>The rule ID. If you configure this parameter, Cloud Config adds the rule that has the specified ID to the compliance package.</p>
+         * <p>You need to only specify one of the <code>ManagedRuleIdentifier</code> and <code>ConfigRuleId</code> properties. If you specify both the properties, the value of the <code>ConfigRuleId</code> property takes precedence. You can call the <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a> operation to obtain the rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cr-e918626622af000f****</p>
@@ -360,32 +357,32 @@ public class UpdateCompliancePackRequest extends TeaModel {
         public String configRuleId;
 
         /**
-         * <p>The name of the rule.</p>
+         * <p>The rule name.</p>
          * 
          * <strong>example:</strong>
-         * <p>检测闲置弹性公网IP</p>
+         * <p>The rule name.</p>
          */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
 
         /**
-         * <p>The parameters of the rule.</p>
+         * <p>The details of the input parameter of the rule.</p>
          */
         @NameInMap("ConfigRuleParameters")
         public java.util.List<UpdateCompliancePackRequestConfigRulesConfigRuleParameters> configRuleParameters;
 
         /**
-         * <p>The description of the rule.</p>
+         * <p>The rule description.</p>
          * 
          * <strong>example:</strong>
-         * <p>弹性公网已绑定到ECS或者NAT实例，非闲置状态，视为“合规”。</p>
+         * <p>The rule description.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The identifier of the rule template. CloudConfig automatically creates a rule based on this identifier and adds the rule to the compliance pack.</p>
-         * <p>You must specify either <code>ManagedRuleIdentifier</code> or <code>ConfigRuleId</code>. If you specify both parameters, <code>ConfigRuleId</code> takes precedence. For more information, see <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a>.</p>
+         * <p>The identifier of the managed rule. Cloud Config automatically creates a rule based on the identifier of the managed rule and adds the rule to the current compliance package.</p>
+         * <p>You need to only configure the <code>ManagedRuleIdentifier</code> or <code>ConfigRuleId</code> parameter. If you configure both parameters, the value of the <code>ConfigRuleId</code> parameter takes precedence. For more information about how to obtain the identifier of a managed rule, see <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>eip-bandwidth-limit</p>
@@ -394,14 +391,11 @@ public class UpdateCompliancePackRequest extends TeaModel {
         public String managedRuleIdentifier;
 
         /**
-         * <p>The risk level of the rule. Valid values:</p>
+         * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
          * <ul>
-         * <li><p>1: High risk.</p>
-         * </li>
-         * <li><p>2: Medium risk.</p>
-         * </li>
-         * <li><p>3: Low risk.</p>
-         * </li>
+         * <li>1: high risk level</li>
+         * <li>2: medium risk level</li>
+         * <li>3: low risk level</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -509,9 +503,9 @@ public class UpdateCompliancePackRequest extends TeaModel {
 
     public static class UpdateCompliancePackRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the resource.</p>
-         * <p>If you specify this parameter, it cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https:// </code>.</p>
-         * <p>You can specify the tag keys of up to 20 tags at a time.</p>
+         * <p>The tag keys.</p>
+         * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length. The tag keys cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>You can specify at most 20 tag keys in each call.</p>
          * 
          * <strong>example:</strong>
          * <p>key-1</p>
@@ -520,8 +514,9 @@ public class UpdateCompliancePackRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, it can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag values.</p>
+         * <p>The tag values can be an empty string or up to 128 characters in length. The tag values cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>Each key-value must be unique. You can specify at most 20 tag values in each call.</p>
          * 
          * <strong>example:</strong>
          * <p>value-1</p>

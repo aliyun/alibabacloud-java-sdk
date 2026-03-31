@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The token to retrieve the next page of results.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
      * <blockquote>
-     * <p>This parameter is empty when there are no more results to return.</p>
+     * <p>If NextToken is empty, no next page exists.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

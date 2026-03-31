@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class GetAggregateConfigRuleComplianceByPackRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
-     * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+     * <p>For information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,8 +16,8 @@ public class GetAggregateConfigRuleComplianceByPackRequest extends TeaModel {
     public String aggregatorId;
 
     /**
-     * <p>The ID of the compliance pack.</p>
-     * <p>For more information about how to obtain the ID of a compliance pack, see <a href="https://help.aliyun.com/document_detail/262059.html">ListAggregateCompliancePacks</a>.</p>
+     * <p>The ID of the compliance package.</p>
+     * <p>For information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/262059.html">ListAggregateCompliancePacks</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

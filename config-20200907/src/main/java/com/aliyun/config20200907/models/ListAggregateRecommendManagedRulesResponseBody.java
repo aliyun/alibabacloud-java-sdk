@@ -4,17 +4,14 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListAggregateRecommendManagedRulesResponseBody extends TeaModel {
-    /**
-     * <p>The list of rules.</p>
-     */
     @NameInMap("RecommendedManagedRules")
     public ListAggregateRecommendManagedRulesResponseBodyRecommendedManagedRules recommendedManagedRules;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
-     * <p>6CE4ABA1-9A57-41A9-8EA9-E8B17D46****</p>
+     * <p>6CE4ABA1-9A57-41A9-8EA9-E8B17D4671CD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -42,37 +39,25 @@ public class ListAggregateRecommendManagedRulesResponseBody extends TeaModel {
 
     public static class ListAggregateRecommendManagedRulesResponseBodyRecommendedManagedRulesRecommendedManagedRuleList extends TeaModel {
         /**
-         * <p>The name of the rule.</p>
-         * 
          * <strong>example:</strong>
-         * <p>ram-policy-in-use-check</p>
+         * <p>TagPolicy-1759141226889097</p>
          */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
 
-        /**
-         * <p>The description of the rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>If the permission policy is bound to one or more RAM user groups, RAM roles, or RAM users, the configuration is considered compliant.</p>
-         */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The identifier of the rule.</p>
-         * 
          * <strong>example:</strong>
-         * <p>ram-policy-in-use-check</p>
+         * <p>ram-user-last-login-expired-check</p>
          */
         @NameInMap("Identifier")
         public String identifier;
 
         /**
-         * <p>The resource type.</p>
-         * 
          * <strong>example:</strong>
-         * <p>ACS::RAM::Policy</p>
+         * <p>ACS::RAM::User</p>
          */
         @NameInMap("ResourceTypeScope")
         public String resourceTypeScope;
@@ -118,34 +103,25 @@ public class ListAggregateRecommendManagedRulesResponseBody extends TeaModel {
 
     public static class ListAggregateRecommendManagedRulesResponseBodyRecommendedManagedRules extends TeaModel {
         /**
-         * <p>The maximum number of entries returned per page.</p>
-         * 
          * <strong>example:</strong>
-         * <p>200</p>
+         * <p>10</p>
          */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
         /**
-         * <p>If the return results are truncated, you can use NextToken to initiate another request to retrieve the remaining results.</p>
-         * 
          * <strong>example:</strong>
-         * <p>zXZXbg4Mra0kOrhpwl21****</p>
+         * <p>zXZXbg4Mra0kOrhpwl21Lw==</p>
          */
         @NameInMap("NextToken")
         public String nextToken;
 
-        /**
-         * <p>The list of managed rules.</p>
-         */
         @NameInMap("RecommendedManagedRuleList")
         public java.util.List<ListAggregateRecommendManagedRulesResponseBodyRecommendedManagedRulesRecommendedManagedRuleList> recommendedManagedRuleList;
 
         /**
-         * <p>The total number of rule templates.</p>
-         * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>0</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

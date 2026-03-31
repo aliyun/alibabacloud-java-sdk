@@ -5,17 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListCompliancePackTemplatesRequest extends TeaModel {
     /**
-     * <p>The ID of the compliance pack template.</p>
+     * <p>The ID of the compliance package template.</p>
      * 
      * <strong>example:</strong>
-     * <p>ct-5f26ff4e06a300c4****</p>
+     * <p>ct-d254ff4e06a300cf****</p>
      */
     @NameInMap("CompliancePackTemplateId")
     public String compliancePackTemplateId;
 
     /**
-     * <p>The field used to filter the query results.</p>
-     * 
      * <strong>example:</strong>
      * <p>LAW</p>
      */
@@ -24,7 +22,7 @@ public class ListCompliancePackTemplatesRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
-     * <p>Minimum value: 1. Default value: 1.</p>
+     * <p>Pages start from page 1. Default value: 1</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,8 +31,8 @@ public class ListCompliancePackTemplatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <p>Valid values: 1 to 100. Default value: 10.</p>
+     * <p>The number of entries per page.</p>
+     * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -43,7 +41,7 @@ public class ListCompliancePackTemplatesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The resource type that is evaluated by the rules. If you specify this parameter, only the compliance pack templates that contain rules for the specified resource type are returned.</p>
+     * <p>The types of the resources evaluated based on the rule. If you configure this parameter, only the rules that include the resource types in the compliance package template are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>ACS::ECS::Instance</p>
@@ -51,17 +49,6 @@ public class ListCompliancePackTemplatesRequest extends TeaModel {
     @NameInMap("ResourceTypes")
     public String resourceTypes;
 
-    /**
-     * <p>The risk level of the rules in the compliance pack. Valid values:</p>
-     * <ul>
-     * <li>1: high</li>
-     * <li>2: medium</li>
-     * <li>3: low</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>2</p>
-     */
     @NameInMap("RuleRiskLevel")
     public Integer ruleRiskLevel;
 

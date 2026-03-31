@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetComplianceSummaryResponseBody extends TeaModel {
     /**
-     * <p>The compliance summary.</p>
+     * <p>The summary of compliance statistics.</p>
      */
     @NameInMap("ComplianceSummary")
     public GetComplianceSummaryResponseBodyComplianceSummary complianceSummary;
@@ -42,7 +42,7 @@ public class GetComplianceSummaryResponseBody extends TeaModel {
 
     public static class GetComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule extends TeaModel {
         /**
-         * <p>The timestamp when the compliance summary was generated. Unit: milliseconds.</p>
+         * <p>The time when the compliance summary was generated. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1589853712165</p>
@@ -51,7 +51,7 @@ public class GetComplianceSummaryResponseBody extends TeaModel {
         public Long complianceSummaryTimestamp;
 
         /**
-         * <p>The number of compliant rules.</p>
+         * <p>The number of rules evaluated as compliant.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -60,7 +60,7 @@ public class GetComplianceSummaryResponseBody extends TeaModel {
         public Integer compliantCount;
 
         /**
-         * <p>The number of non-compliant rules.</p>
+         * <p>The number of rules evaluated as non-compliant.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>
@@ -118,7 +118,7 @@ public class GetComplianceSummaryResponseBody extends TeaModel {
 
     public static class GetComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByResource extends TeaModel {
         /**
-         * <p>The timestamp when the compliance summary was generated. Unit: milliseconds.</p>
+         * <p>The time when the compliance summary was generated. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1589853712165</p>
@@ -127,7 +127,7 @@ public class GetComplianceSummaryResponseBody extends TeaModel {
         public Long complianceSummaryTimestamp;
 
         /**
-         * <p>The number of compliant resources.</p>
+         * <p>The number of resources evaluated as compliant.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -135,44 +135,17 @@ public class GetComplianceSummaryResponseBody extends TeaModel {
         @NameInMap("CompliantCount")
         public Integer compliantCount;
 
-        /**
-         * <p>The number of non-compliant resources detected by high-risk rules.</p>
-         * <blockquote>
-         * <p>Note: This value can be greater than the total number of resources in your account. Resources are counted based on each rule. For example, if a resource is evaluated as non-compliant by two rules, the value of this parameter increases by 2.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("HighRiskRuleNonCompliantResourceCount")
         public Integer highRiskRuleNonCompliantResourceCount;
 
-        /**
-         * <p>The number of non-compliant resources detected by low-risk rules.</p>
-         * <blockquote>
-         * <p>Note: This value can be greater than the total number of resources in your account. Resources are counted based on each rule. For example, if a resource is evaluated as non-compliant by two low-risk rules, the value of this parameter increases by 2.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("LowRiskRuleNonCompliantResourceCount")
         public Integer lowRiskRuleNonCompliantResourceCount;
 
-        /**
-         * <p>The number of non-compliant resources detected by medium-risk rules.</p>
-         * <blockquote>
-         * <p>Note: This value can be greater than the total number of resources in your account. Resources are counted based on each rule. For example, if a resource is evaluated as non-compliant by two rules, the value of this parameter increases by 2.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>6</p>
-         */
         @NameInMap("MediumRiskRuleNonCompliantResourceCount")
         public Integer mediumRiskRuleNonCompliantResourceCount;
 
         /**
-         * <p>The number of non-compliant resources.</p>
+         * <p>The number of resources evaluated as non-compliant.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -254,13 +227,13 @@ public class GetComplianceSummaryResponseBody extends TeaModel {
 
     public static class GetComplianceSummaryResponseBodyComplianceSummary extends TeaModel {
         /**
-         * <p>The compliance summary by rule.</p>
+         * <p>The summary of compliance statistics from the rule dimension.</p>
          */
         @NameInMap("ComplianceSummaryByConfigRule")
         public GetComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule complianceSummaryByConfigRule;
 
         /**
-         * <p>The compliance summary by resource.</p>
+         * <p>The summary of compliance statistics from the resource dimension.</p>
          */
         @NameInMap("ComplianceSummaryByResource")
         public GetComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByResource complianceSummaryByResource;

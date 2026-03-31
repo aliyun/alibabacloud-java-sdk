@@ -5,18 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListResourceEvaluationResultsRequest extends TeaModel {
     /**
-     * <p>The compliance evaluation result. Valid values:</p>
+     * <p>The compliance evaluation result of the resource. Valid values:</p>
      * <ul>
-     * <li><p>COMPLIANT: The resource is compliant.</p>
-     * </li>
-     * <li><p>NON_COMPLIANT: The resource is non-compliant.</p>
-     * </li>
-     * <li><p>NOT_APPLICABLE: The rule does not apply to the resource.</p>
-     * </li>
-     * <li><p>INSUFFICIENT_DATA: No data is available for the resource.</p>
-     * </li>
-     * <li><p>IGNORED: The evaluation result is ignored.</p>
-     * </li>
+     * <li>COMPLIANT: The resource is evaluated as compliant.</li>
+     * <li>NON_COMPLIANT: The resource is evaluated as non-compliant.</li>
+     * <li>NOT_APPLICABLE: The rule does not apply to the resources.</li>
+     * <li>INSUFFICIENT_DATA: No data is available.</li>
+     * <li>IGNORED: The resource is ignored during compliance evaluation.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,7 +21,7 @@ public class ListResourceEvaluationResultsRequest extends TeaModel {
     public String complianceType;
 
     /**
-     * <p>The maximum number of entries to return for a single request. Valid values: 1 to 100.</p>
+     * <p>The maximum number of entries to return in a request. Valid values: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -35,7 +30,7 @@ public class ListResourceEvaluationResultsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>If the response is truncated, pass the <code>NextToken</code> value in a subsequent request to retrieve the remaining results.</p>
+     * <p>The token that you want to use to initiate the current request. If the response of the previous request is truncated, you can use this token to initiate another request and obtain the remaining entries.``</p>
      * 
      * <strong>example:</strong>
      * <p>IWBjqMYSy0is7zSMGu16****</p>
@@ -44,8 +39,8 @@ public class ListResourceEvaluationResultsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the region where the resource resides. For example, <code>global</code> indicates Global, and <code>cn-hangzhou</code> indicates China (Hangzhou).</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
+     * <p>The ID of the region where one or more resources you want to query reside. For example, the value <code>global</code> indicates global regions and the value <code>cn-hangzhou</code> indicates the China (Hangzhou) region.</p>
+     * <p>For more information about how to obtain the ID of the region where a resource resides, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>global</p>
@@ -54,8 +49,8 @@ public class ListResourceEvaluationResultsRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The resource ID.</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
+     * <p>The ID of the resource.</p>
+     * <p>For more information about how to obtain the ID of a resource, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>23642660635396****</p>
@@ -64,8 +59,8 @@ public class ListResourceEvaluationResultsRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The resource type.</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
+     * <p>The type of the resource.</p>
+     * <p>For more information about how to query the type of a resource, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>ACS::RAM::User</p>
@@ -73,29 +68,9 @@ public class ListResourceEvaluationResultsRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
-    /**
-     * <p>The risk level of the rule. Valid values:</p>
-     * <ul>
-     * <li><p>1: High risk.</p>
-     * </li>
-     * <li><p>2: Medium risk.</p>
-     * </li>
-     * <li><p>3: Low risk.</p>
-     * </li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("RiskLevel")
     public Integer riskLevel;
 
-    /**
-     * <p>This parameter is optional. The only supported value is <code>LastNonCompliantRecordTimestamp-Asc</code>. This value sorts resources based on when they first became non-compliant, with the earliest appearing first. Use this parameter only when you set the <code>ComplianceType</code> parameter to <code>NON_COMPLIANT</code>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>LastNonCompliantRecordTimestamp-Asc</p>
-     */
     @NameInMap("SortBy")
     public String sortBy;
 

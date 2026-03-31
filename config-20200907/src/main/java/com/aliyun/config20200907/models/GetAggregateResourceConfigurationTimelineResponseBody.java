@@ -14,7 +14,7 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
     public String requestId;
 
     /**
-     * <p>The configuration history of the resource.</p>
+     * <p>The configuration timeline of the resource.</p>
      */
     @NameInMap("ResourceConfigurationTimeline")
     public GetAggregateResourceConfigurationTimelineResponseBodyResourceConfigurationTimeline resourceConfigurationTimeline;
@@ -42,7 +42,7 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
 
     public static class GetAggregateResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account that owns the resource.</p>
+         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>100931896542****</p>
@@ -51,7 +51,7 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
         public Long accountId;
 
         /**
-         * <p>The zone.</p>
+         * <p>The ID of the zone in which the resource resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
@@ -60,7 +60,7 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
         public String availabilityZone;
 
         /**
-         * <p>The time when the resource change snapshot was recorded. This is a UNIX timestamp in milliseconds.</p>
+         * <p>The timestamp when the resource change snapshot was recorded. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1624961156000</p>
@@ -69,7 +69,7 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
         public String captureTime;
 
         /**
-         * <p>The details of the resource changes that triggered the evaluation.</p>
+         * <p>The details of the resource change that triggered the compliance evaluation.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;AccessControlList\&quot;:[null,{\&quot;Grant\&quot;:\&quot;private\&quot;}],\&quot;ServerSideEncryptionRule\&quot;:[null,{\&quot;SSEAlgorithm\&quot;:\&quot;None\&quot;}],\&quot;CreationDate\&quot;:[null,\&quot;2021-06-29T10:05:12.000Z\&quot;],\&quot;Owner\&quot;:[null,{\&quot;DisplayName\&quot;:\&quot;100931896542****\&quot;,\&quot;ID\&quot;:\&quot;100931896542****\&quot;}],\&quot;BucketPolicy\&quot;:[null,{\&quot;LogPrefix\&quot;:\&quot;\&quot;,\&quot;LogBucket\&quot;:\&quot;\&quot;}],\&quot;StorageClass\&quot;:[null,\&quot;Standard\&quot;],\&quot;ExtranetEndpoint\&quot;:[null,\&quot;oss-cn-hangzhou.aliyuncs.com\&quot;],\&quot;DataRedundancyType\&quot;:[null,\&quot;LRS\&quot;],\&quot;AllowEmptyReferer\&quot;:[null,\&quot;true\&quot;],\&quot;IntranetEndpoint\&quot;:[null,\&quot;oss-cn-hangzhou-internal.aliyuncs.com\&quot;],\&quot;Name\&quot;:[null,\&quot;new-bucket\&quot;],\&quot;Location\&quot;:[null,\&quot;oss-cn-hangzhou\&quot;]}</p>
@@ -78,7 +78,7 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
         public String configurationDiff;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The ID of the region in which the resource resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -87,7 +87,7 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
         public String region;
 
         /**
-         * <p>The time when the resource was created. This is a UNIX timestamp in milliseconds.</p>
+         * <p>The timestamp when the resource was created. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1624961112000</p>
@@ -96,27 +96,20 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
         public String resourceCreateTime;
 
         /**
-         * <p>The type of the resource change event. Valid values:</p>
+         * <p>The type of the resource change event involved. Valid values:</p>
          * <ul>
-         * <li><p>DISCOVERED: The resource is discovered by Cloud Config.</p>
-         * </li>
-         * <li><p>DISCOVERED_REVISED: The resource is discovered by Cloud Config through a periodic remediation task.</p>
-         * </li>
-         * <li><p>MODIFY: The resource is modified.</p>
-         * </li>
-         * <li><p>MODIFY_REVISED: The resource is modified, as detected by a periodic remediation task.</p>
-         * </li>
-         * <li><p>REMOVE: The resource is deleted.</p>
-         * </li>
+         * <li>DISCOVERED: A resource is created.</li>
+         * <li>DISCOVERED_REVISED: A resource is created by periodic remediation tasks.</li>
+         * <li>MODIFY: A resource is modified.</li>
+         * <li>MODIFY_REVISED: A resource is modified by periodic remediation tasks.</li>
+         * <li>REMOVE: A resource is deleted.</li>
          * </ul>
          * <blockquote>
-         * <ul>
-         * <li><p>To ensure data integrity, Cloud Config periodically runs remediation tasks to align data. This process may generate resource discovery events. These events occur infrequently.</p>
-         * </li>
-         * <li><p>The time when a resource event is generated by a periodic remediation task is the discovery time of the task. This time is later than the actual time of the resource change.</p>
-         * </li>
-         * </ul>
          * </blockquote>
+         * <ul>
+         * <li>To ensure the integrity of resources, periodic remediation tasks are run to check data and generate events that indicate the creation of new resources. Such events are infrequent.</li>
+         * <li>The time when a resource change event is generated by a periodic remediation task is considered as the detection time of Cloud Config. The detection time is later than the time when the resource is modified.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>DISCOVERED</p>
@@ -134,7 +127,7 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
         public String resourceId;
 
         /**
-         * <p>The resource name.</p>
+         * <p>The name of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>new-bucket</p>
@@ -143,7 +136,7 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
         public String resourceName;
 
         /**
-         * <p>The resource type.</p>
+         * <p>The type of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>ACS::OSS::Bucket</p>
@@ -257,13 +250,13 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
 
     public static class GetAggregateResourceConfigurationTimelineResponseBodyResourceConfigurationTimeline extends TeaModel {
         /**
-         * <p>A list of configuration changes.</p>
+         * <p>The resource name.</p>
          */
         @NameInMap("ConfigurationList")
         public java.util.List<GetAggregateResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList> configurationList;
 
         /**
-         * <p>The maximum number of entries returned on each page.</p>
+         * <p>The maximum number of entries returned for a single request.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -272,7 +265,7 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
         public Integer maxResults;
 
         /**
-         * <p>The token used to start the next query.</p>
+         * <p>The token that is used to initiate the next request.</p>
          * 
          * <strong>example:</strong>
          * <p>IWBjqMYSy0is7zSMGu16****</p>

@@ -4,6 +4,12 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetResourceComplianceGroupByRegionRequest extends TeaModel {
+    /**
+     * <p>The rule IDs. Separate multiple rule IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cr-2541626622af0000****</p>
+     */
     @NameInMap("ConfigRuleIds")
     public String configRuleIds;
 

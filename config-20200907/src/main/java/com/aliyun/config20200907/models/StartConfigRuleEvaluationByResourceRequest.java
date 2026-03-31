@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class StartConfigRuleEvaluationByResourceRequest extends TeaModel {
     /**
-     * <p>The ID of the resource.</p>
-     * <p>For more information about how to obtain the resource ID, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -4,9 +4,18 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ActiveAggregateConfigRulesResponseBody extends TeaModel {
+    /**
+     * <p>The results of the operations.</p>
+     */
     @NameInMap("OperateRuleResult")
     public ActiveAggregateConfigRulesResponseBodyOperateRuleResult operateRuleResult;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6EC7AED1-172F-42AE-9C12-295BC2ADB751</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +41,34 @@ public class ActiveAggregateConfigRulesResponseBody extends TeaModel {
     }
 
     public static class ActiveAggregateConfigRulesResponseBodyOperateRuleResultOperateRuleItemList extends TeaModel {
+        /**
+         * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cr-5772ba41209e007b****</p>
+         */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
 
+        /**
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ConfigRuleNotExists</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 
@@ -73,6 +104,9 @@ public class ActiveAggregateConfigRulesResponseBody extends TeaModel {
     }
 
     public static class ActiveAggregateConfigRulesResponseBodyOperateRuleResult extends TeaModel {
+        /**
+         * <p>The result information about the operation.</p>
+         */
         @NameInMap("OperateRuleItemList")
         public java.util.List<ActiveAggregateConfigRulesResponseBodyOperateRuleResultOperateRuleItemList> operateRuleItemList;
 

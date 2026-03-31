@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class GenerateReportFromTemplateRequest extends TeaModel {
     /**
-     * <p>Report template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

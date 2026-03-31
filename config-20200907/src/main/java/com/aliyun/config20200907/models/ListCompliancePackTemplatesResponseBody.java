@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListCompliancePackTemplatesResponseBody extends TeaModel {
     /**
-     * <p>The details of the compliance pack templates.</p>
+     * <p>The information about the compliance package templates returned.</p>
      */
     @NameInMap("CompliancePackTemplatesResult")
     public ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResult compliancePackTemplatesResult;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D67FC82F-25AE-4268-A94C-3348340748F9</p>
@@ -42,28 +42,28 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
 
     public static class ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplatesConfigRulesConfigRuleParameters extends TeaModel {
         /**
-         * <p>The name of the parameter for the managed rule.</p>
+         * <p>The name of the input parameter of the managed rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>necessity</p>
+         * <p>days</p>
          */
         @NameInMap("ParameterName")
         public String parameterName;
 
         /**
-         * <p>The value of the parameter for the managed rule.</p>
+         * <p>The value of the input parameter of the managed rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>asap</p>
+         * <p>90</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
 
         /**
-         * <p>Indicates whether the parameter is required for the managed rule. Valid values:</p>
+         * <p>Indicates whether the parameter is required in the managed rule. Valid values:</p>
          * <ul>
-         * <li>true: The parameter is required.</li>
-         * <li>false: The parameter is not required.</li>
+         * <li>true: required</li>
+         * <li>false: optional</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -105,37 +105,37 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
 
     public static class ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplatesConfigRules extends TeaModel {
         /**
-         * <p>The parameters of the managed rule.</p>
+         * <p>The input parameter of the managed rule.</p>
          */
         @NameInMap("ConfigRuleParameters")
         public java.util.List<ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplatesConfigRulesConfigRuleParameters> configRuleParameters;
 
         /**
-         * <p>The description of the control. This parameter is returned only for compliance packs that are created based on a regulation.</p>
+         * <p>The description of the regulation. This parameter is available only for regulation compliance packages.</p>
          * 
          * <strong>example:</strong>
-         * <p>e) Possible known vulnerabilities should be found and remedied in a timely manner after adequate testing and evaluation.\nf) It shall be able to detect intrusion into important nodes and provide an alarm in case of serious intrusion events.</p>
+         * <p>No classic networks exist.</p>
          */
         @NameInMap("ControlDescription")
         public String controlDescription;
 
         /**
-         * <p>The ID of the control.</p>
+         * <p>The regulation ID.</p>
          * <blockquote>
-         * <p>This parameter appears only for regulatory compliance packages.</p>
+         * <p> This parameter is available only for regulation compliance packages.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>8.1.4.4</p>
+         * <p>3.1</p>
          */
         @NameInMap("ControlId")
         public String controlId;
 
         /**
-         * <p>Indicates whether the rule can be quickly enabled. Valid values:</p>
+         * <p>Indicates whether the rules are enabled together with the compliance package. Valid values:</p>
          * <ul>
-         * <li>true: The rule can be quickly enabled.</li>
-         * <li>false: The rule cannot be quickly enabled.</li>
+         * <li>true</li>
+         * <li>false</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -148,7 +148,7 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
          * <p>The description of the rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>If no vulnerabilities that are of the specified type and severity level and to be fixed exist on the running ECS instances that are protected by Security Center, the configuration is considered compliant. This rule does not apply to ECS instances that are not in the running state.</p>
+         * <p>If the expiration time of the SLB certificate is later than the specified number of days after the check time, the configuration is considered compliant. Default value: 90 days.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -157,7 +157,7 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
          * <p>The identifier of the managed rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>ecs-instance-updated-security-vul</p>
+         * <p>slb-servercertificate-expired-check</p>
          */
         @NameInMap("ManagedRuleIdentifier")
         public String managedRuleIdentifier;
@@ -166,16 +166,16 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
          * <p>The name of the managed rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>ecs-instance-updated-security-vul</p>
+         * <p>slb-servercertificate-expired-check</p>
          */
         @NameInMap("ManagedRuleName")
         public String managedRuleName;
 
         /**
-         * <p>The resource types that are evaluated by the rule.</p>
+         * <p>The types of the resources evaluated based on the rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>ACS::ECS::Instance</p>
+         * <p>ACS::SLB::ServerCertificate</p>
          */
         @NameInMap("ResourceTypesScope")
         public String resourceTypesScope;
@@ -189,7 +189,7 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>2</p>
+         * <p>1</p>
          */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
@@ -275,58 +275,58 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
 
     public static class ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplates extends TeaModel {
         /**
-         * <p>The ID of the compliance pack template.</p>
+         * <p>The ID of the compliance package template.</p>
          * 
          * <strong>example:</strong>
-         * <p>ct-5f26ff4e06a300c4****</p>
+         * <p>ct-d254ff4e06a300cf****</p>
          */
         @NameInMap("CompliancePackTemplateId")
         public String compliancePackTemplateId;
 
         /**
-         * <p>The name of the compliance pack template.</p>
+         * <p>The name of the compliance package template.</p>
          * 
          * <strong>example:</strong>
-         * <p>ClassifiedProtectionPreCheck</p>
+         * <p>BestPracticesForResourceStability</p>
          */
         @NameInMap("CompliancePackTemplateName")
         public String compliancePackTemplateName;
 
         /**
-         * <p>A list of default rules in the compliance pack.</p>
+         * <p>The default rules in the compliance package.</p>
          */
         @NameInMap("ConfigRules")
         public java.util.List<ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplatesConfigRules> configRules;
 
         /**
-         * <p>The description of the compliance pack.</p>
+         * <p>The description of the compliance package.</p>
          * 
          * <strong>example:</strong>
-         * <p>Checks the compliance of Alibaba Cloud resources based on the specific requirements of MLPS 2.0 Level 3.</p>
+         * <p>example-description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The classification labels of the compliance pack.</p>
+         * <p>The tag of the compliance package.</p>
          * 
          * <strong>example:</strong>
-         * <p>Regulation</p>
+         * <p>tagKey-1</p>
          */
         @NameInMap("Labels")
         public String labels;
 
         /**
-         * <p>The UNIX timestamp when the compliance pack was last updated.</p>
+         * <p>The time when the compliance package was last updated.</p>
          * 
          * <strong>example:</strong>
-         * <p>1747983081</p>
+         * <p>1663408308</p>
          */
         @NameInMap("LastUpdate")
         public Integer lastUpdate;
 
         /**
-         * <p>The risk level of the rules in the compliance pack. Valid values:</p>
+         * <p>The risk level of the managed rule in the compliance package. Valid values:</p>
          * <ul>
          * <li>1: high</li>
          * <li>2: medium</li>
@@ -404,7 +404,7 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
 
     public static class ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResult extends TeaModel {
         /**
-         * <p>A list of compliance pack templates.</p>
+         * <p>The compliance package templates.</p>
          */
         @NameInMap("CompliancePackTemplates")
         public java.util.List<ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplates> compliancePackTemplates;
@@ -419,7 +419,7 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -428,7 +428,7 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of compliance pack templates.</p>
+         * <p>The total number of the compliance package templates returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

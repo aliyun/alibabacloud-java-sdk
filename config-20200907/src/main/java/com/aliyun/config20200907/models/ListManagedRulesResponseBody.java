@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListManagedRulesResponseBody extends TeaModel {
     /**
-     * <p>The rule templates.</p>
+     * <p>The managed rules.</p>
      */
     @NameInMap("ManagedRules")
     public ListManagedRulesResponseBodyManagedRules managedRules;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>B3E605AB-63D5-1EE0-BFA6-0BAC247B0461</p>
@@ -42,7 +42,7 @@ public class ListManagedRulesResponseBody extends TeaModel {
 
     public static class ListManagedRulesResponseBodyManagedRulesManagedRuleListScope extends TeaModel {
         /**
-         * <p>The types of resources that are evaluated based on the rule template.</p>
+         * <p>The types of resources to which the managed rule applies.</p>
          */
         @NameInMap("ComplianceResourceTypes")
         public java.util.List<String> complianceResourceTypes;
@@ -64,25 +64,25 @@ public class ListManagedRulesResponseBody extends TeaModel {
 
     public static class ListManagedRulesResponseBodyManagedRulesManagedRuleList extends TeaModel {
         /**
-         * <p>The name of the rule template.</p>
+         * <p>The name of the managed rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>CDN域名开启HTTPS加密</p>
+         * <p>test-rule-name</p>
          */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
 
         /**
-         * <p>The description of the rule template.</p>
+         * <p>The description of the managed rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>CDN域名开启HTTPS协议加密，视为“合规”。</p>
+         * <p>The description of the test rule.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The URL of the document that provides remediation guidance.</p>
+         * <p>The URL of the topic that describes how the managed rule remediates the incompliant configurations.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.aliyundoc.com">https://example.aliyundoc.com</a></p>
@@ -91,7 +91,7 @@ public class ListManagedRulesResponseBody extends TeaModel {
         public String helpUrls;
 
         /**
-         * <p>The unique identifier of the rule template.</p>
+         * <p>The unique identifier of the managed rule.</p>
          * 
          * <strong>example:</strong>
          * <p>cdn-domain-https-enabled</p>
@@ -100,13 +100,13 @@ public class ListManagedRulesResponseBody extends TeaModel {
         public String identifier;
 
         /**
-         * <p>The list of labels of the rule template.</p>
+         * <p>The classification description of the managed rule.</p>
          */
         @NameInMap("Labels")
         public java.util.List<String> labels;
 
         /**
-         * <p>The identifier of the supported remediation template.</p>
+         * <p>The ID of the remediation template.</p>
          * 
          * <strong>example:</strong>
          * <p>ACS-CDN-SetDomainServerCertificate</p>
@@ -115,23 +115,20 @@ public class ListManagedRulesResponseBody extends TeaModel {
         public String remediationTemplateIdentifier;
 
         /**
-         * <p>The name of the supported remediation template.</p>
+         * <p>The name of the remediation template.</p>
          * 
          * <strong>example:</strong>
-         * <p>开启CDN域名HTTPS监听</p>
+         * <p>Configure encryption rules for OSS buckets</p>
          */
         @NameInMap("RemediationTemplateName")
         public String remediationTemplateName;
 
         /**
-         * <p>The risk level of the rule. Valid values:</p>
+         * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
          * <ul>
-         * <li><p>1: high</p>
-         * </li>
-         * <li><p>2: medium</p>
-         * </li>
-         * <li><p>3: low</p>
-         * </li>
+         * <li>1: high</li>
+         * <li>2: medium</li>
+         * <li>3: low</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -141,18 +138,16 @@ public class ListManagedRulesResponseBody extends TeaModel {
         public Integer riskLevel;
 
         /**
-         * <p>The effective scope of the rule template.</p>
+         * <p>The effective scope of the managed rule.</p>
          */
         @NameInMap("Scope")
         public ListManagedRulesResponseBodyManagedRulesManagedRuleListScope scope;
 
         /**
-         * <p>Indicates whether the rule supports dry runs. Valid values:</p>
+         * <p>Indicates whether precheck is supported. Valid values:</p>
          * <ul>
-         * <li><p>true: The rule supports dry runs.</p>
-         * </li>
-         * <li><p>false: The rule does not support dry runs.</p>
-         * </li>
+         * <li>true</li>
+         * <li>false</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -250,14 +245,14 @@ public class ListManagedRulesResponseBody extends TeaModel {
 
     public static class ListManagedRulesResponseBodyManagedRules extends TeaModel {
         /**
-         * <p>The details of the rule templates.</p>
+         * <p>The details of the managed rule.</p>
          */
         @NameInMap("ManagedRuleList")
         public java.util.List<ListManagedRulesResponseBodyManagedRulesManagedRuleList> managedRuleList;
 
         /**
-         * <p>The page number of the returned page.</p>
-         * <p>The value must be greater than or equal to 1.</p>
+         * <p>The page number.</p>
+         * <p>Page start from page 1.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -275,10 +270,10 @@ public class ListManagedRulesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of rule templates.</p>
+         * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>21</p>
+         * <p>1</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetCompliancePackRequest extends TeaModel {
     /**
-     * <p>The compliance package ID.</p>
-     * <p>For more information about how to obtain the compliance package ID, see <a href="https://help.aliyun.com/document_detail/263332.html">ListCompliancePacks</a>.</p>
+     * <p>The ID of the compliance package.</p>
+     * <p>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/263332.html">ListCompliancePacks</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,8 +16,8 @@ public class GetCompliancePackRequest extends TeaModel {
     public String compliancePackId;
 
     /**
-     * <p>The tags of the resource. This parameter is deprecated and takes no effect if it is specified.</p>
-     * <p>You can add up to 20 tags.</p>
+     * <p>The tags of the resource.</p>
+     * <p>You can add up to 20 tags to a resource.</p>
      */
     @NameInMap("Tag")
     @Deprecated
@@ -47,9 +47,9 @@ public class GetCompliancePackRequest extends TeaModel {
 
     public static class GetCompliancePackRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the resource.</p>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>You can specify up to 20 tag keys at a time.</p>
+         * <p>The tag key.</p>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>You can specify at most 20 tag keys.</p>
          * 
          * <strong>example:</strong>
          * <p>key-1</p>
@@ -58,9 +58,7 @@ public class GetCompliancePackRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource.</p>
-         * <p>The tag value can be an empty string or a string of up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>Each tag key must have a corresponding tag value. You can specify up to 20 tag values at a time.</p>
+         * <p>The tag value. The tag value can be up to 256 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>value-1</p>

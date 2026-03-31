@@ -5,9 +5,6 @@ import com.aliyun.tea.*;
 
 public class ListAggregateRecommendManagedRulesRequest extends TeaModel {
     /**
-     * <p>The ID of the account group.</p>
-     * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
-     * 
      * <strong>example:</strong>
      * <p>ca-f632626622af0079****</p>
      */
@@ -15,8 +12,6 @@ public class ListAggregateRecommendManagedRulesRequest extends TeaModel {
     public String aggregatorId;
 
     /**
-     * <p>The compliance package is invalid for resources in the specified region. The resources in the specified region are not evaluated. Separate multiple region IDs with commas (,).</p>
-     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -24,8 +19,6 @@ public class ListAggregateRecommendManagedRulesRequest extends TeaModel {
     public String excludeRegionIdsScope;
 
     /**
-     * <p>The rule is invalid for resources in the specified resource group. The resources in the specified resource group are not evaluated. Separate multiple resource group IDs with commas (,).</p>
-     * 
      * <strong>example:</strong>
      * <p>rg-bnczc6r7rml****</p>
      */
@@ -33,11 +26,6 @@ public class ListAggregateRecommendManagedRulesRequest extends TeaModel {
     public String excludeResourceGroupIdsScope;
 
     /**
-     * <p>The rule is invalid for the specified resource. The specified resource is not evaluated. Separate multiple resource IDs with commas (,).</p>
-     * <blockquote>
-     * <p>This parameter applies only to rule templates.</p>
-     * </blockquote>
-     * 
      * <strong>example:</strong>
      * <p>lb-t4nbowvtbkss7t326****</p>
      */
@@ -45,17 +33,13 @@ public class ListAggregateRecommendManagedRulesRequest extends TeaModel {
     public String excludeResourceIdsScope;
 
     /**
-     * <p>The maximum number of entries to return for a single request. Default value: 200.</p>
-     * 
      * <strong>example:</strong>
-     * <p>200</p>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. It indicates the position where the current query begins. If you leave this parameter empty, the query starts from the beginning.</p>
-     * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
@@ -63,11 +47,6 @@ public class ListAggregateRecommendManagedRulesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The rule is effective only for resources in the specified region. Separate multiple region IDs with commas (,).</p>
-     * <blockquote>
-     * <p>This parameter applies only to rule templates.</p>
-     * </blockquote>
-     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -75,8 +54,6 @@ public class ListAggregateRecommendManagedRulesRequest extends TeaModel {
     public String regionIdsScope;
 
     /**
-     * <p>The rule is effective only for resources in the specified resource group. Separate multiple resource group IDs with commas (,).</p>
-     * 
      * <strong>example:</strong>
      * <p>rg-aekzc7r7rhx****</p>
      */
@@ -84,8 +61,6 @@ public class ListAggregateRecommendManagedRulesRequest extends TeaModel {
     public String resourceGroupIdsScope;
 
     /**
-     * <p>The rule is effective for the specified resource. Separate multiple resource IDs with commas (,).</p>
-     * 
      * <strong>example:</strong>
      * <p>lb-5cmbowstbkss9ta03****</p>
      */
@@ -93,8 +68,6 @@ public class ListAggregateRecommendManagedRulesRequest extends TeaModel {
     public String resourceIdsScope;
 
     /**
-     * <p>The selected managed rules.</p>
-     * 
      * <strong>example:</strong>
      * <p>ram-user-mfa-check-v2,ram-user-last-login-expired-check</p>
      */

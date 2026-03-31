@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteReportTemplateResponseBody extends TeaModel {
     /**
-     * <p>The ID of the report template.</p>
-     * 
      * <strong>example:</strong>
      * <p>crt-xxx</p>
      */
@@ -14,8 +12,6 @@ public class DeleteReportTemplateResponseBody extends TeaModel {
     public String reportTemplateId;
 
     /**
-     * <p>The ID of the request.</p>
-     * 
      * <strong>example:</strong>
      * <p>DE9FFFE5-FCAD-4B24-9546-BF49273C562B</p>
      */

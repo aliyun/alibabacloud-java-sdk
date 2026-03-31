@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class CreateAggregateRemediationRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
-     * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+     * <p>For more information about how to obtain the ID of the account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class CreateAggregateRemediationRequest extends TeaModel {
     public String aggregatorId;
 
     /**
-     * <p>A client token. It is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The <code>ClientToken</code> parameter can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <code>token</code> can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
@@ -26,7 +26,7 @@ public class CreateAggregateRemediationRequest extends TeaModel {
 
     /**
      * <p>The rule ID.</p>
-     * <p>For more information about how to obtain the rule ID, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</p>
+     * <p>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,16 +36,12 @@ public class CreateAggregateRemediationRequest extends TeaModel {
     public String configRuleId;
 
     /**
-     * <p>The execution mode of the remediation. Valid values:</p>
+     * <p>The execution mode of the remediation template. Valid values:</p>
      * <ul>
-     * <li><p>NON_EXECUTION: The remediation is not executed.</p>
-     * </li>
-     * <li><p>AUTO_EXECUTION: The remediation is automatically executed.</p>
-     * </li>
-     * <li><p>MANUAL_EXECUTION: The remediation is manually executed.</p>
-     * </li>
-     * <li><p>NOT_CONFIG: The execution mode is not set.</p>
-     * </li>
+     * <li>NON_EXECUTION: The remediation template is not executed.</li>
+     * <li>AUTO_EXECUTION: The remediation template is automatically executed.</li>
+     * <li>MANUAL_EXECUTION: The remediation template is manually executed.</li>
+     * <li>NOT_CONFIG: The execution mode is not specified.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -56,8 +52,8 @@ public class CreateAggregateRemediationRequest extends TeaModel {
     public String invokeType;
 
     /**
-     * <p>The parameters of the remediation.</p>
-     * <p>For more information about how to obtain the parameters of the remediation, see the <code>TemplateDefinition</code> parameter in <a href="https://help.aliyun.com/document_detail/416781.html">ListRemediationTemplates</a>.</p>
+     * <p>The configuration of the remediation template.</p>
+     * <p>For more information about how to obtain the configuration of the remediation template, see <a href="https://help.aliyun.com/document_detail/416781.html">ListRemediationTemplates</a>. You can view the <code>TemplateDefinition</code> response parameter to obtain the configuration of the remediation template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,12 +63,10 @@ public class CreateAggregateRemediationRequest extends TeaModel {
     public String params;
 
     /**
-     * <p>The remediation template ID.</p>
+     * <p>The ID of the remediation template.</p>
      * <ul>
-     * <li><p>If you set <code>RemediationType</code> to <code>OOS</code>, set this parameter to <code>ACS-OSS-PutBucketAcl</code>. For more information about how to obtain the remediation template ID, see <a href="https://help.aliyun.com/document_detail/416781.html">ListRemediationTemplates</a>.</p>
-     * </li>
-     * <li><p>If you set <code>RemediationType</code> to <code>FC</code>, set this parameter to the Alibaba Cloud Resource Name (ARN) of the function in Function Compute. Example: <code>acs:fc:cn-hangzhou:100931896542****:services/ConfigService.LATEST/functions/test-php</code>.</p>
-     * </li>
+     * <li>If you set the <code>RemediationType</code> parameter to <code>OOS</code>, set this parameter to the identifier of the relevant official remediation template, such as <code>ACS-OSS-PutBucketAcl</code>. For more information about how to obtain the remediation template identifier, see <a href="https://help.aliyun.com/document_detail/416781.html">ListRemediationTemplates</a>.</li>
+     * <li>If you set the <code>RemediationType</code> parameter to <code>FC</code>, set this parameter to the Alibaba Cloud Resource Name (ARN) of the relevant Function Compute resource, such as <code>acs:fc:cn-hangzhou:100931896542****:services/ConfigService.LATEST/functions/test-php</code>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -83,12 +77,10 @@ public class CreateAggregateRemediationRequest extends TeaModel {
     public String remediationTemplateId;
 
     /**
-     * <p>The remediation type. Valid values:</p>
+     * <p>The type of the remediation template. Valid values:</p>
      * <ul>
-     * <li><p>OOS: OOS (template-based remediation).</p>
-     * </li>
-     * <li><p>FC: FC (custom remediation).</p>
-     * </li>
+     * <li>OOS: stands for Operation Orchestration Service and indicates official remediation.</li>
+     * <li>FC: stands for Function Compute and indicates custom remediation.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -99,14 +91,11 @@ public class CreateAggregateRemediationRequest extends TeaModel {
     public String remediationType;
 
     /**
-     * <p>The source of the remediation template. Valid values:</p>
+     * <p>The source of remediation template. Valid values:</p>
      * <ul>
-     * <li><p>ALIYUN (default): official template.</p>
-     * </li>
-     * <li><p>CUSTOM: custom template. This value must be specified for custom FC remediations.</p>
-     * </li>
-     * <li><p>NONE: none.</p>
-     * </li>
+     * <li>ALIYUN (default): official template.</li>
+     * <li>CUSTOM: custom template.</li>
+     * <li>NONE: none.</li>
      * </ul>
      * 
      * <strong>example:</strong>

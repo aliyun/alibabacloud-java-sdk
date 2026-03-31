@@ -5,14 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateAggregatorShrinkRequest extends TeaModel {
     /**
-     * <p>The member accounts of the account group.</p>
+     * <p>The information about the member accounts in the account group. Example:</p>
+     * <pre><code>[{
+     *     &quot;accountId&quot;: 171322098523****,
+     *     &quot;accountType&quot;:&quot;ResourceDirectory&quot;,
+     *                 &quot;accountName&quot;:&quot;Alice&quot;
+     * }, {
+     *     &quot;accountId&quot;: 100532098349****,
+     *     &quot;accountType&quot;:&quot;ResourceDirectory&quot;,
+     *                 &quot;accountName&quot;:&quot;Tom&quot;
+     * }]
+     * </code></pre>
      * <blockquote>
-     * <ul>
-     * <li><p>If you set <code>AggregatorType</code> to \`RD, you can leave this parameter empty. This indicates that all members in the resource directory are added to the global account group.</p>
-     * </li>
-     * <li><p>If you set <code>AggregatorType</code> to <code>FOLDER</code>, you can leave this parameter empty. This indicates that all members in a specific folder in the resource directory are added to the folder account group.</p>
-     * </li>
-     * </ul>
+     * <p> If <code>AggregatorType</code> is set to <code>RD</code> or <code>FOLDER</code>, this parameter can be left empty, which indicates that all accounts in the resource directory are added to the global account group.</p>
      * </blockquote>
      * 
      * <strong>if can be null:</strong>
@@ -26,7 +31,7 @@ public class CreateAggregatorShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Example_Aggregator</p>
+     * <p>Test_Group</p>
      */
     @NameInMap("AggregatorName")
     public String aggregatorName;
@@ -34,12 +39,9 @@ public class CreateAggregatorShrinkRequest extends TeaModel {
     /**
      * <p>The type of the account group. Valid values:</p>
      * <ul>
-     * <li><p>RD: global account group.</p>
-     * </li>
-     * <li><p>FOLDER: folder account group. You must also set the <code>FolderId</code> parameter. For more information about how to obtain a folder ID, see <a href="https://help.aliyun.com/document_detail/160016.html">ListAccounts</a>.</p>
-     * </li>
-     * <li><p>CUSTOM (default): custom account group. You must also set the <code>AccountId</code> and <code>AccountType</code> parameters for <code>AggregatorAccounts</code>.</p>
-     * </li>
+     * <li>RD: global account group.</li>
+     * <li>FOLDER: account group of the folder.</li>
+     * <li>CUSTOM (default): custom account group.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +51,7 @@ public class CreateAggregatorShrinkRequest extends TeaModel {
     public String aggregatorType;
 
     /**
-     * <p>A client token that is used to ensure the idempotence of the request. You must make sure that the token is unique for different requests. The <code>ClientToken</code> parameter can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <code>token</code> can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>1594295238-f9361358-5843-4294-8d30-b5183fac****</p>
@@ -61,14 +63,13 @@ public class CreateAggregatorShrinkRequest extends TeaModel {
      * <p>The description of the account group.</p>
      * 
      * <strong>example:</strong>
-     * <p>Example aggregator used to demonstrate how to create an aggregator.</p>
+     * <p>Aggregator description.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The ID of the attached folder. You can specify multiple folder IDs. Separate the IDs with commas (,).</p>
-     * <p>This parameter is required if you set <code>AggregatorType</code> to <code>FOLDER</code>.</p>
+     * <p>The ID of the folder to which the account group is attached. You must specify this parameter if <code>AggregatorType</code> is set to <code>FOLDER</code>. Multiple resource folder IDs should be separated by commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>fd-brHdgv****,fd-brHdgk****</p>
@@ -78,7 +79,7 @@ public class CreateAggregatorShrinkRequest extends TeaModel {
 
     /**
      * <p>The tags of the resource.</p>
-     * <p>You can attach a maximum of 20 tags.</p>
+     * <p>You can add up to 20 tags to a resource.</p>
      */
     @NameInMap("Tag")
     public String tagShrink;

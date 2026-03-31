@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartConfigRuleEvaluationResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D31EEAD7-BF1E-5927-977A-AFF9342A7273</p>
@@ -14,12 +14,10 @@ public class StartConfigRuleEvaluationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result of the request. Valid values:</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The request is successful.</p>
-     * </li>
-     * <li><p>false: The request failed.</p>
-     * </li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * 
      * <strong>example:</strong>

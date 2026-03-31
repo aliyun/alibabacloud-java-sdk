@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class StartRemediationRequest extends TeaModel {
     /**
      * <p>The rule ID.</p>
-     * <p>For information about how to obtain the rule ID, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</p>
+     * <p>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
