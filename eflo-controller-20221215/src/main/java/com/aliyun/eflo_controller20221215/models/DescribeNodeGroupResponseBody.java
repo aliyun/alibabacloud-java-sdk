@@ -46,6 +46,9 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
     @NameInMap("NodeGroupName")
     public String nodeGroupName;
 
+    @NameInMap("RamRoleName")
+    public String ramRoleName;
+
     /**
      * <p>Id of the request</p>
      */
@@ -179,6 +182,14 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
     }
     public String getNodeGroupName() {
         return this.nodeGroupName;
+    }
+
+    public DescribeNodeGroupResponseBody setRamRoleName(String ramRoleName) {
+        this.ramRoleName = ramRoleName;
+        return this;
+    }
+    public String getRamRoleName() {
+        return this.ramRoleName;
     }
 
     public DescribeNodeGroupResponseBody setRequestId(String requestId) {

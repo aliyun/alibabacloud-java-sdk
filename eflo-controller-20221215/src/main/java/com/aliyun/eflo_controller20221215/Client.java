@@ -3343,6 +3343,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("NodeGroupId", request.nodeGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ramRoleName)) {
+            body.put("RamRoleName", request.ramRoleName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
             body.put("UserData", request.userData);
         }

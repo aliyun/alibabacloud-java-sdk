@@ -202,6 +202,9 @@ public class CreateNodeGroupRequest extends TeaModel {
         @NameInMap("NodeGroupName")
         public String nodeGroupName;
 
+        @NameInMap("RamRoleName")
+        public String ramRoleName;
+
         /**
          * <p>Details of the node system disk configuration.</p>
          */
@@ -295,6 +298,14 @@ public class CreateNodeGroupRequest extends TeaModel {
         }
         public String getNodeGroupName() {
             return this.nodeGroupName;
+        }
+
+        public CreateNodeGroupRequestNodeGroup setRamRoleName(String ramRoleName) {
+            this.ramRoleName = ramRoleName;
+            return this;
+        }
+        public String getRamRoleName() {
+            return this.ramRoleName;
         }
 
         public CreateNodeGroupRequestNodeGroup setSystemDisk(CreateNodeGroupRequestNodeGroupSystemDisk systemDisk) {

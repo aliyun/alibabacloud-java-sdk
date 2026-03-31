@@ -58,6 +58,9 @@ public class UpdateNodeGroupRequest extends TeaModel {
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
+    @NameInMap("RamRoleName")
+    public String ramRoleName;
+
     /**
      * <p>User-defined script</p>
      * 
@@ -120,6 +123,14 @@ public class UpdateNodeGroupRequest extends TeaModel {
     }
     public String getNodeGroupId() {
         return this.nodeGroupId;
+    }
+
+    public UpdateNodeGroupRequest setRamRoleName(String ramRoleName) {
+        this.ramRoleName = ramRoleName;
+        return this;
+    }
+    public String getRamRoleName() {
+        return this.ramRoleName;
     }
 
     public UpdateNodeGroupRequest setUserData(String userData) {

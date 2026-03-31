@@ -1446,6 +1446,9 @@ public class CreateClusterRequest extends TeaModel {
         @NameInMap("Nodes")
         public java.util.List<CreateClusterRequestNodeGroupsNodes> nodes;
 
+        @NameInMap("RamRoleName")
+        public String ramRoleName;
+
         /**
          * <p>System disk information</p>
          */
@@ -1554,6 +1557,14 @@ public class CreateClusterRequest extends TeaModel {
         }
         public java.util.List<CreateClusterRequestNodeGroupsNodes> getNodes() {
             return this.nodes;
+        }
+
+        public CreateClusterRequestNodeGroups setRamRoleName(String ramRoleName) {
+            this.ramRoleName = ramRoleName;
+            return this;
+        }
+        public String getRamRoleName() {
+            return this.ramRoleName;
         }
 
         public CreateClusterRequestNodeGroups setSystemDisk(CreateClusterRequestNodeGroupsSystemDisk systemDisk) {
