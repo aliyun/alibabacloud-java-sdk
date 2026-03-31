@@ -802,6 +802,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>增加用户积分</p>
+     * 
+     * @param request AddYikeUserCreditRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddYikeUserCreditResponse
+     */
+    public AddYikeUserCreditResponse addYikeUserCreditWithOptions(AddYikeUserCreditRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.credit)) {
+            query.put("Credit", request.credit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.yikeUserId)) {
+            query.put("YikeUserId", request.yikeUserId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddYikeUserCredit"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddYikeUserCreditResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>增加用户积分</p>
+     * 
+     * @param request AddYikeUserCreditRequest
+     * @return AddYikeUserCreditResponse
+     */
+    public AddYikeUserCreditResponse addYikeUserCredit(AddYikeUserCreditRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addYikeUserCreditWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Modifies search index information including index status and configurations.</p>
      * 
      * @param request AlterSearchIndexRequest
@@ -3748,6 +3796,162 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateYikeAssetUploadResponse createYikeAssetUpload(CreateYikeAssetUploadRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createYikeAssetUploadWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建一刻项目</p>
+     * 
+     * @param request CreateYikeProductionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateYikeProductionResponse
+     */
+    public CreateYikeProductionResponse createYikeProductionWithOptions(CreateYikeProductionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.title)) {
+            query.put("Title", request.title);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateYikeProduction"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateYikeProductionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建一刻项目</p>
+     * 
+     * @param request CreateYikeProductionRequest
+     * @return CreateYikeProductionResponse
+     */
+    public CreateYikeProductionResponse createYikeProduction(CreateYikeProductionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createYikeProductionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建一刻子用户</p>
+     * 
+     * @param request CreateYikeUserRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateYikeUserResponse
+     */
+    public CreateYikeUserResponse createYikeUserWithOptions(CreateYikeUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nickname)) {
+            query.put("Nickname", request.nickname);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.password)) {
+            query.put("Password", request.password);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productionIds)) {
+            query.put("ProductionIds", request.productionIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userNamePrefix)) {
+            query.put("UserNamePrefix", request.userNamePrefix);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateYikeUser"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateYikeUserResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建一刻子用户</p>
+     * 
+     * @param request CreateYikeUserRequest
+     * @return CreateYikeUserResponse
+     */
+    public CreateYikeUserResponse createYikeUser(CreateYikeUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createYikeUserWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建工作室</p>
+     * 
+     * @param request CreateYikeWorkspaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateYikeWorkspaceResponse
+     */
+    public CreateYikeWorkspaceResponse createYikeWorkspaceWithOptions(CreateYikeWorkspaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.title)) {
+            query.put("Title", request.title);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userCountLimit)) {
+            query.put("UserCountLimit", request.userCountLimit);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateYikeWorkspace"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateYikeWorkspaceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建工作室</p>
+     * 
+     * @param request CreateYikeWorkspaceRequest
+     * @return CreateYikeWorkspaceResponse
+     */
+    public CreateYikeWorkspaceResponse createYikeWorkspace(CreateYikeWorkspaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createYikeWorkspaceWithOptions(request, runtime);
     }
 
     /**
@@ -10642,6 +10846,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询一刻用户积分</p>
+     * 
+     * @param request GetYikeUserCreditRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetYikeUserCreditResponse
+     */
+    public GetYikeUserCreditResponse getYikeUserCreditWithOptions(GetYikeUserCreditRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.yikeUserId)) {
+            query.put("YikeUserId", request.yikeUserId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetYikeUserCredit"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetYikeUserCreditResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询一刻用户积分</p>
+     * 
+     * @param request GetYikeUserCreditRequest
+     * @return GetYikeUserCreditResponse
+     */
+    public GetYikeUserCreditResponse getYikeUserCredit(GetYikeUserCreditRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getYikeUserCreditWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Adds a media asset in a search library. Before you call this operation, you must create a search library.</p>
      * 
      * @param request InsertMediaToSearchLibRequest
@@ -17464,6 +17712,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SetNotifyConfigResponse setNotifyConfig(SetNotifyConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setNotifyConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>设置用户角色</p>
+     * 
+     * @param request SetYikeUserRoleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetYikeUserRoleResponse
+     */
+    public SetYikeUserRoleResponse setYikeUserRoleWithOptions(SetYikeUserRoleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.roleName)) {
+            query.put("RoleName", request.roleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.yikeUserId)) {
+            query.put("YikeUserId", request.yikeUserId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetYikeUserRole"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetYikeUserRoleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>设置用户角色</p>
+     * 
+     * @param request SetYikeUserRoleRequest
+     * @return SetYikeUserRoleResponse
+     */
+    public SetYikeUserRoleResponse setYikeUserRole(SetYikeUserRoleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setYikeUserRoleWithOptions(request, runtime);
     }
 
     /**
