@@ -1,3 +1,9 @@
+2026-03-31 Version: 2.8.0
+- Support API DescribeDataSources.
+- Support API RemoveDataSource.
+- Support API UpdateDataSource.
+
+
 2026-03-30 Version: 2.7.0
 - Support API AddDataSource.
 

@@ -3254,6 +3254,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param request DescribeDataSourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDataSourcesResponse
+     */
+    public DescribeDataSourcesResponse describeDataSourcesWithOptions(DescribeDataSourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceId)) {
+            query.put("DataSourceId", request.dataSourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceName)) {
+            query.put("DataSourceName", request.dataSourceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceType)) {
+            query.put("DataSourceType", request.dataSourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDataSources"),
+            new TeaPair("version", "2017-09-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDataSourcesResponse());
+    }
+
+    /**
+     * @param request DescribeDataSourcesRequest
+     * @return DescribeDataSourcesResponse
+     */
+    public DescribeDataSourcesResponse describeDataSources(DescribeDataSourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDataSourcesWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Queries one or more SAP HANA backup plans that meet the specified conditions.</p>
      * 
@@ -5137,6 +5195,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param request RemoveDataSourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveDataSourceResponse
+     */
+    public RemoveDataSourceResponse removeDataSourceWithOptions(RemoveDataSourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceId)) {
+            query.put("DataSourceId", request.dataSourceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RemoveDataSource"),
+            new TeaPair("version", "2017-09-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveDataSourceResponse());
+    }
+
+    /**
+     * @param request RemoveDataSourceRequest
+     * @return RemoveDataSourceResponse
+     */
+    public RemoveDataSourceResponse removeDataSource(RemoveDataSourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.removeDataSourceWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Queries the information about one or more backup snapshots that meet the specified conditions.</p>
      * 
@@ -5756,6 +5852,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateContainerClusterResponse updateContainerCluster(UpdateContainerClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateContainerClusterWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request UpdateDataSourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateDataSourceResponse
+     */
+    public UpdateDataSourceResponse updateDataSourceWithOptions(UpdateDataSourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connectionInfo)) {
+            query.put("ConnectionInfo", request.connectionInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credential)) {
+            query.put("Credential", request.credential);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceId)) {
+            query.put("DataSourceId", request.dataSourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceName)) {
+            query.put("DataSourceName", request.dataSourceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.exclude)) {
+            query.put("Exclude", request.exclude);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.include)) {
+            query.put("Include", request.include);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.indexLevel)) {
+            query.put("IndexLevel", request.indexLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.options)) {
+            query.put("Options", request.options);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.path)) {
+            query.put("Path", request.path);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schedule)) {
+            query.put("Schedule", request.schedule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.speedLimit)) {
+            query.put("SpeedLimit", request.speedLimit);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateDataSource"),
+            new TeaPair("version", "2017-09-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDataSourceResponse());
+    }
+
+    /**
+     * @param request UpdateDataSourceRequest
+     * @return UpdateDataSourceResponse
+     */
+    public UpdateDataSourceResponse updateDataSource(UpdateDataSourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateDataSourceWithOptions(request, runtime);
     }
 
     /**
