@@ -21,6 +21,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("ApplicationName")
     public String applicationName;
 
+    @NameInMap("ApplicationOwner")
+    public CreateApplicationRequestApplicationOwner applicationOwner;
+
     /**
      * <p>The type of the application source. Valid values:</p>
      * <ul>
@@ -43,6 +46,9 @@ public class CreateApplicationRequest extends TeaModel {
      */
     @NameInMap("ApplicationTemplateId")
     public String applicationTemplateId;
+
+    @NameInMap("CustomFields")
+    public java.util.List<CreateApplicationRequestCustomFields> customFields;
 
     /**
      * <p>The description of the application.</p>
@@ -107,6 +113,14 @@ public class CreateApplicationRequest extends TeaModel {
         return this.applicationName;
     }
 
+    public CreateApplicationRequest setApplicationOwner(CreateApplicationRequestApplicationOwner applicationOwner) {
+        this.applicationOwner = applicationOwner;
+        return this;
+    }
+    public CreateApplicationRequestApplicationOwner getApplicationOwner() {
+        return this.applicationOwner;
+    }
+
     public CreateApplicationRequest setApplicationSourceType(String applicationSourceType) {
         this.applicationSourceType = applicationSourceType;
         return this;
@@ -121,6 +135,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getApplicationTemplateId() {
         return this.applicationTemplateId;
+    }
+
+    public CreateApplicationRequest setCustomFields(java.util.List<CreateApplicationRequestCustomFields> customFields) {
+        this.customFields = customFields;
+        return this;
+    }
+    public java.util.List<CreateApplicationRequestCustomFields> getCustomFields() {
+        return this.customFields;
     }
 
     public CreateApplicationRequest setDescription(String description) {
@@ -153,6 +175,66 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getSsoType() {
         return this.ssoType;
+    }
+
+    public static class CreateApplicationRequestApplicationOwner extends TeaModel {
+        @NameInMap("GroupIds")
+        public java.util.List<String> groupIds;
+
+        @NameInMap("UserIds")
+        public java.util.List<String> userIds;
+
+        public static CreateApplicationRequestApplicationOwner build(java.util.Map<String, ?> map) throws Exception {
+            CreateApplicationRequestApplicationOwner self = new CreateApplicationRequestApplicationOwner();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateApplicationRequestApplicationOwner setGroupIds(java.util.List<String> groupIds) {
+            this.groupIds = groupIds;
+            return this;
+        }
+        public java.util.List<String> getGroupIds() {
+            return this.groupIds;
+        }
+
+        public CreateApplicationRequestApplicationOwner setUserIds(java.util.List<String> userIds) {
+            this.userIds = userIds;
+            return this;
+        }
+        public java.util.List<String> getUserIds() {
+            return this.userIds;
+        }
+
+    }
+
+    public static class CreateApplicationRequestCustomFields extends TeaModel {
+        @NameInMap("FieldName")
+        public String fieldName;
+
+        @NameInMap("FieldValue")
+        public String fieldValue;
+
+        public static CreateApplicationRequestCustomFields build(java.util.Map<String, ?> map) throws Exception {
+            CreateApplicationRequestCustomFields self = new CreateApplicationRequestCustomFields();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateApplicationRequestCustomFields setFieldName(String fieldName) {
+            this.fieldName = fieldName;
+            return this;
+        }
+        public String getFieldName() {
+            return this.fieldName;
+        }
+
+        public CreateApplicationRequestCustomFields setFieldValue(String fieldValue) {
+            this.fieldValue = fieldValue;
+            return this;
+        }
+        public String getFieldValue() {
+            return this.fieldValue;
+        }
+
     }
 
 }

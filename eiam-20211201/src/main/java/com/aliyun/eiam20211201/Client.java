@@ -1122,12 +1122,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ApplicationName", request.applicationName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationOwner)) {
+            query.put("ApplicationOwner", request.applicationOwner);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.applicationSourceType)) {
             query.put("ApplicationSourceType", request.applicationSourceType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.applicationTemplateId)) {
             query.put("ApplicationTemplateId", request.applicationTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customFields)) {
+            query.put("CustomFields", request.customFields);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
@@ -10475,6 +10483,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AuthorizationType", request.authorizationType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.customFields)) {
+            query.put("CustomFields", request.customFields);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -16605,12 +16617,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ApplicationName", request.applicationName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationOwner)) {
+            query.put("ApplicationOwner", request.applicationOwner);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.applicationVisibility)) {
             query.put("ApplicationVisibility", request.applicationVisibility);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customFields)) {
+            query.put("CustomFields", request.customFields);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {

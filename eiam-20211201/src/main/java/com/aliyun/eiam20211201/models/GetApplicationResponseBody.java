@@ -40,6 +40,66 @@ public class GetApplicationResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class GetApplicationResponseBodyApplicationApplicationOwner extends TeaModel {
+        @NameInMap("GroupIds")
+        public java.util.List<String> groupIds;
+
+        @NameInMap("UserIds")
+        public java.util.List<String> userIds;
+
+        public static GetApplicationResponseBodyApplicationApplicationOwner build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationResponseBodyApplicationApplicationOwner self = new GetApplicationResponseBodyApplicationApplicationOwner();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyApplicationApplicationOwner setGroupIds(java.util.List<String> groupIds) {
+            this.groupIds = groupIds;
+            return this;
+        }
+        public java.util.List<String> getGroupIds() {
+            return this.groupIds;
+        }
+
+        public GetApplicationResponseBodyApplicationApplicationOwner setUserIds(java.util.List<String> userIds) {
+            this.userIds = userIds;
+            return this;
+        }
+        public java.util.List<String> getUserIds() {
+            return this.userIds;
+        }
+
+    }
+
+    public static class GetApplicationResponseBodyApplicationCustomFields extends TeaModel {
+        @NameInMap("FieldName")
+        public String fieldName;
+
+        @NameInMap("FieldValue")
+        public String fieldValue;
+
+        public static GetApplicationResponseBodyApplicationCustomFields build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationResponseBodyApplicationCustomFields self = new GetApplicationResponseBodyApplicationCustomFields();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyApplicationCustomFields setFieldName(String fieldName) {
+            this.fieldName = fieldName;
+            return this;
+        }
+        public String getFieldName() {
+            return this.fieldName;
+        }
+
+        public GetApplicationResponseBodyApplicationCustomFields setFieldValue(String fieldValue) {
+            this.fieldValue = fieldValue;
+            return this;
+        }
+        public String getFieldValue() {
+            return this.fieldValue;
+        }
+
+    }
+
     public static class GetApplicationResponseBodyApplication extends TeaModel {
         /**
          * <p>The status of the Developer API feature. Valid values:</p>
@@ -81,6 +141,9 @@ public class GetApplicationResponseBody extends TeaModel {
          */
         @NameInMap("ApplicationName")
         public String applicationName;
+
+        @NameInMap("ApplicationOwner")
+        public GetApplicationResponseBodyApplicationApplicationOwner applicationOwner;
 
         /**
          * <p>The origin of the application. Valid values:</p>
@@ -140,6 +203,9 @@ public class GetApplicationResponseBody extends TeaModel {
          */
         @NameInMap("CreateTime")
         public Long createTime;
+
+        @NameInMap("CustomFields")
+        public java.util.List<GetApplicationResponseBodyApplicationCustomFields> customFields;
 
         @NameInMap("CustomSubjectStatus")
         public String customSubjectStatus;
@@ -317,6 +383,14 @@ public class GetApplicationResponseBody extends TeaModel {
             return this.applicationName;
         }
 
+        public GetApplicationResponseBodyApplication setApplicationOwner(GetApplicationResponseBodyApplicationApplicationOwner applicationOwner) {
+            this.applicationOwner = applicationOwner;
+            return this;
+        }
+        public GetApplicationResponseBodyApplicationApplicationOwner getApplicationOwner() {
+            return this.applicationOwner;
+        }
+
         public GetApplicationResponseBodyApplication setApplicationSourceType(String applicationSourceType) {
             this.applicationSourceType = applicationSourceType;
             return this;
@@ -363,6 +437,14 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public GetApplicationResponseBodyApplication setCustomFields(java.util.List<GetApplicationResponseBodyApplicationCustomFields> customFields) {
+            this.customFields = customFields;
+            return this;
+        }
+        public java.util.List<GetApplicationResponseBodyApplicationCustomFields> getCustomFields() {
+            return this.customFields;
         }
 
         public GetApplicationResponseBodyApplication setCustomSubjectStatus(String customSubjectStatus) {

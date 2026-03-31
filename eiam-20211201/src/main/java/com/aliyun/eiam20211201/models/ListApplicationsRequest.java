@@ -49,6 +49,9 @@ public class ListApplicationsRequest extends TeaModel {
     @NameInMap("AuthorizationType")
     public String authorizationType;
 
+    @NameInMap("CustomFields")
+    public java.util.List<ListApplicationsRequestCustomFields> customFields;
+
     /**
      * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
@@ -175,6 +178,14 @@ public class ListApplicationsRequest extends TeaModel {
         return this.authorizationType;
     }
 
+    public ListApplicationsRequest setCustomFields(java.util.List<ListApplicationsRequestCustomFields> customFields) {
+        this.customFields = customFields;
+        return this;
+    }
+    public java.util.List<ListApplicationsRequestCustomFields> getCustomFields() {
+        return this.customFields;
+    }
+
     public ListApplicationsRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -229,6 +240,36 @@ public class ListApplicationsRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public static class ListApplicationsRequestCustomFields extends TeaModel {
+        @NameInMap("FieldName")
+        public String fieldName;
+
+        @NameInMap("FieldValue")
+        public String fieldValue;
+
+        public static ListApplicationsRequestCustomFields build(java.util.Map<String, ?> map) throws Exception {
+            ListApplicationsRequestCustomFields self = new ListApplicationsRequestCustomFields();
+            return TeaModel.build(map, self);
+        }
+
+        public ListApplicationsRequestCustomFields setFieldName(String fieldName) {
+            this.fieldName = fieldName;
+            return this;
+        }
+        public String getFieldName() {
+            return this.fieldName;
+        }
+
+        public ListApplicationsRequestCustomFields setFieldValue(String fieldValue) {
+            this.fieldValue = fieldValue;
+            return this;
+        }
+        public String getFieldValue() {
+            return this.fieldValue;
+        }
+
     }
 
 }
