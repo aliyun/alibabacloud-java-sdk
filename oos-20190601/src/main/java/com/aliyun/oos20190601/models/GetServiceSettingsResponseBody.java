@@ -87,6 +87,13 @@ public class GetServiceSettingsResponseBody extends TeaModel {
         public String deliverySlsProjectName;
 
         /**
+         * <strong>example:</strong>
+         * <p>rd-123</p>
+         */
+        @NameInMap("RdFolders")
+        public String rdFolders;
+
+        /**
          * <p>The id of RDC Enterprise.</p>
          * 
          * <strong>example:</strong>
@@ -94,6 +101,9 @@ public class GetServiceSettingsResponseBody extends TeaModel {
          */
         @NameInMap("RdcEnterpriseId")
         public String rdcEnterpriseId;
+
+        @NameInMap("ServiceAccessRdEnabled")
+        public Boolean serviceAccessRdEnabled;
 
         public static GetServiceSettingsResponseBodyServiceSettings build(java.util.Map<String, ?> map) throws Exception {
             GetServiceSettingsResponseBodyServiceSettings self = new GetServiceSettingsResponseBodyServiceSettings();
@@ -140,12 +150,28 @@ public class GetServiceSettingsResponseBody extends TeaModel {
             return this.deliverySlsProjectName;
         }
 
+        public GetServiceSettingsResponseBodyServiceSettings setRdFolders(String rdFolders) {
+            this.rdFolders = rdFolders;
+            return this;
+        }
+        public String getRdFolders() {
+            return this.rdFolders;
+        }
+
         public GetServiceSettingsResponseBodyServiceSettings setRdcEnterpriseId(String rdcEnterpriseId) {
             this.rdcEnterpriseId = rdcEnterpriseId;
             return this;
         }
         public String getRdcEnterpriseId() {
             return this.rdcEnterpriseId;
+        }
+
+        public GetServiceSettingsResponseBodyServiceSettings setServiceAccessRdEnabled(Boolean serviceAccessRdEnabled) {
+            this.serviceAccessRdEnabled = serviceAccessRdEnabled;
+            return this;
+        }
+        public Boolean getServiceAccessRdEnabled() {
+            return this.serviceAccessRdEnabled;
         }
 
     }

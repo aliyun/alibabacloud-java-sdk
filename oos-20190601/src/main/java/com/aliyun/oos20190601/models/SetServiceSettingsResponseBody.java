@@ -95,6 +95,9 @@ public class SetServiceSettingsResponseBody extends TeaModel {
         @NameInMap("RdcEnterpriseId")
         public String rdcEnterpriseId;
 
+        @NameInMap("ServiceAccessRdEnabled")
+        public Boolean serviceAccessRdEnabled;
+
         public static SetServiceSettingsResponseBodyServiceSettings build(java.util.Map<String, ?> map) throws Exception {
             SetServiceSettingsResponseBodyServiceSettings self = new SetServiceSettingsResponseBodyServiceSettings();
             return TeaModel.build(map, self);
@@ -146,6 +149,14 @@ public class SetServiceSettingsResponseBody extends TeaModel {
         }
         public String getRdcEnterpriseId() {
             return this.rdcEnterpriseId;
+        }
+
+        public SetServiceSettingsResponseBodyServiceSettings setServiceAccessRdEnabled(Boolean serviceAccessRdEnabled) {
+            this.serviceAccessRdEnabled = serviceAccessRdEnabled;
+            return this;
+        }
+        public Boolean getServiceAccessRdEnabled() {
+            return this.serviceAccessRdEnabled;
         }
 
     }

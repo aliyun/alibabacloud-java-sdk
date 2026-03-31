@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListExecutionsShrinkRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>123456789</p>
+     */
+    @NameInMap("AccountId")
+    public String accountId;
+
+    /**
      * <p>The types of the execution template. Valid values: Other, TimerTrigger, EventTrigger, and AlarmTrigger. You can specify only one of the Categories and Category parameters. We recommend that you specify Categories.</p>
      * 
      * <strong>example:</strong>
@@ -134,6 +141,9 @@ public class ListExecutionsShrinkRequest extends TeaModel {
     @NameInMap("RamRole")
     public String ramRole;
 
+    @NameInMap("RdFolderIds")
+    public String rdFolderIdsShrink;
+
     /**
      * <p>The ID of the region.</p>
      * 
@@ -247,6 +257,14 @@ public class ListExecutionsShrinkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListExecutionsShrinkRequest setAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    public String getAccountId() {
+        return this.accountId;
+    }
+
     public ListExecutionsShrinkRequest setCategories(String categories) {
         this.categories = categories;
         return this;
@@ -357,6 +375,14 @@ public class ListExecutionsShrinkRequest extends TeaModel {
     }
     public String getRamRole() {
         return this.ramRole;
+    }
+
+    public ListExecutionsShrinkRequest setRdFolderIdsShrink(String rdFolderIdsShrink) {
+        this.rdFolderIdsShrink = rdFolderIdsShrink;
+        return this;
+    }
+    public String getRdFolderIdsShrink() {
+        return this.rdFolderIdsShrink;
     }
 
     public ListExecutionsShrinkRequest setRegionId(String regionId) {

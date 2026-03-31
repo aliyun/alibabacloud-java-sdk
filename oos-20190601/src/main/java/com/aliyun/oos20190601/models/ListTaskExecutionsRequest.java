@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListTaskExecutionsRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>123456789</p>
+     */
+    @NameInMap("AccountId")
+    public String accountId;
+
+    /**
      * <p>The execution ID of the task.</p>
      * 
      * <strong>example:</strong>
@@ -160,6 +167,14 @@ public class ListTaskExecutionsRequest extends TeaModel {
     public static ListTaskExecutionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTaskExecutionsRequest self = new ListTaskExecutionsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListTaskExecutionsRequest setAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    public String getAccountId() {
+        return this.accountId;
     }
 
     public ListTaskExecutionsRequest setEndDateAfter(String endDateAfter) {

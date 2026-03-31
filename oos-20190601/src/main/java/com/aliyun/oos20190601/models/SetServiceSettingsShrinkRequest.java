@@ -3,7 +3,7 @@ package com.aliyun.oos20190601.models;
 
 import com.aliyun.tea.*;
 
-public class SetServiceSettingsRequest extends TeaModel {
+public class SetServiceSettingsShrinkRequest extends TeaModel {
     /**
      * <p>The name of OSS bucket to deliver.</p>
      * 
@@ -50,7 +50,7 @@ public class SetServiceSettingsRequest extends TeaModel {
     public String deliverySlsProjectName;
 
     @NameInMap("RdFolderIds")
-    public java.util.List<String> rdFolderIds;
+    public String rdFolderIdsShrink;
 
     /**
      * <p>The id of RDC Enterprise.</p>
@@ -77,12 +77,12 @@ public class SetServiceSettingsRequest extends TeaModel {
     @NameInMap("ServiceAccessRdEnabled")
     public Boolean serviceAccessRdEnabled;
 
-    public static SetServiceSettingsRequest build(java.util.Map<String, ?> map) throws Exception {
-        SetServiceSettingsRequest self = new SetServiceSettingsRequest();
+    public static SetServiceSettingsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        SetServiceSettingsShrinkRequest self = new SetServiceSettingsShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public SetServiceSettingsRequest setDeliveryOssBucketName(String deliveryOssBucketName) {
+    public SetServiceSettingsShrinkRequest setDeliveryOssBucketName(String deliveryOssBucketName) {
         this.deliveryOssBucketName = deliveryOssBucketName;
         return this;
     }
@@ -90,7 +90,7 @@ public class SetServiceSettingsRequest extends TeaModel {
         return this.deliveryOssBucketName;
     }
 
-    public SetServiceSettingsRequest setDeliveryOssEnabled(Boolean deliveryOssEnabled) {
+    public SetServiceSettingsShrinkRequest setDeliveryOssEnabled(Boolean deliveryOssEnabled) {
         this.deliveryOssEnabled = deliveryOssEnabled;
         return this;
     }
@@ -98,7 +98,7 @@ public class SetServiceSettingsRequest extends TeaModel {
         return this.deliveryOssEnabled;
     }
 
-    public SetServiceSettingsRequest setDeliveryOssKeyPrefix(String deliveryOssKeyPrefix) {
+    public SetServiceSettingsShrinkRequest setDeliveryOssKeyPrefix(String deliveryOssKeyPrefix) {
         this.deliveryOssKeyPrefix = deliveryOssKeyPrefix;
         return this;
     }
@@ -106,7 +106,7 @@ public class SetServiceSettingsRequest extends TeaModel {
         return this.deliveryOssKeyPrefix;
     }
 
-    public SetServiceSettingsRequest setDeliverySlsEnabled(Boolean deliverySlsEnabled) {
+    public SetServiceSettingsShrinkRequest setDeliverySlsEnabled(Boolean deliverySlsEnabled) {
         this.deliverySlsEnabled = deliverySlsEnabled;
         return this;
     }
@@ -114,7 +114,7 @@ public class SetServiceSettingsRequest extends TeaModel {
         return this.deliverySlsEnabled;
     }
 
-    public SetServiceSettingsRequest setDeliverySlsProjectName(String deliverySlsProjectName) {
+    public SetServiceSettingsShrinkRequest setDeliverySlsProjectName(String deliverySlsProjectName) {
         this.deliverySlsProjectName = deliverySlsProjectName;
         return this;
     }
@@ -122,15 +122,15 @@ public class SetServiceSettingsRequest extends TeaModel {
         return this.deliverySlsProjectName;
     }
 
-    public SetServiceSettingsRequest setRdFolderIds(java.util.List<String> rdFolderIds) {
-        this.rdFolderIds = rdFolderIds;
+    public SetServiceSettingsShrinkRequest setRdFolderIdsShrink(String rdFolderIdsShrink) {
+        this.rdFolderIdsShrink = rdFolderIdsShrink;
         return this;
     }
-    public java.util.List<String> getRdFolderIds() {
-        return this.rdFolderIds;
+    public String getRdFolderIdsShrink() {
+        return this.rdFolderIdsShrink;
     }
 
-    public SetServiceSettingsRequest setRdcEnterpriseId(String rdcEnterpriseId) {
+    public SetServiceSettingsShrinkRequest setRdcEnterpriseId(String rdcEnterpriseId) {
         this.rdcEnterpriseId = rdcEnterpriseId;
         return this;
     }
@@ -138,7 +138,7 @@ public class SetServiceSettingsRequest extends TeaModel {
         return this.rdcEnterpriseId;
     }
 
-    public SetServiceSettingsRequest setRegionId(String regionId) {
+    public SetServiceSettingsShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -146,7 +146,7 @@ public class SetServiceSettingsRequest extends TeaModel {
         return this.regionId;
     }
 
-    public SetServiceSettingsRequest setServiceAccessRdEnabled(Boolean serviceAccessRdEnabled) {
+    public SetServiceSettingsShrinkRequest setServiceAccessRdEnabled(Boolean serviceAccessRdEnabled) {
         this.serviceAccessRdEnabled = serviceAccessRdEnabled;
         return this;
     }

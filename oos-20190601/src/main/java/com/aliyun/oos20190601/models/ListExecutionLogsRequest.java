@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListExecutionLogsRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>123456789</p>
+     */
+    @NameInMap("AccountId")
+    public String accountId;
+
+    /**
      * <p>The ID of the execution.</p>
      * <p>This parameter is required.</p>
      * 
@@ -62,6 +69,14 @@ public class ListExecutionLogsRequest extends TeaModel {
     public static ListExecutionLogsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListExecutionLogsRequest self = new ListExecutionLogsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListExecutionLogsRequest setAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    public String getAccountId() {
+        return this.accountId;
     }
 
     public ListExecutionLogsRequest setExecutionId(String executionId) {

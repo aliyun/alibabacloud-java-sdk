@@ -22,9 +22,6 @@ public class ListTagResourcesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The set of resources and the tags that are added to the resources.</p>
-     */
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
 
@@ -58,39 +55,15 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
-        /**
-         * <p>The ID of the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TagTest2</p>
-         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <p>The type of the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>template</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>k1</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>v1</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 

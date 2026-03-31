@@ -152,6 +152,13 @@ public class ListExecutionsResponseBody extends TeaModel {
 
     public static class ListExecutionsResponseBodyExecutions extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>123456789</p>
+         */
+        @NameInMap("AccountId")
+        public String accountId;
+
+        /**
          * <p>The type of the execution template. Valid values: Other, TimerTrigger, EventTrigger, and AlarmTrigger.</p>
          * 
          * <strong>example:</strong>
@@ -459,6 +466,14 @@ public class ListExecutionsResponseBody extends TeaModel {
         public static ListExecutionsResponseBodyExecutions build(java.util.Map<String, ?> map) throws Exception {
             ListExecutionsResponseBodyExecutions self = new ListExecutionsResponseBodyExecutions();
             return TeaModel.build(map, self);
+        }
+
+        public ListExecutionsResponseBodyExecutions setAccountId(String accountId) {
+            this.accountId = accountId;
+            return this;
+        }
+        public String getAccountId() {
+            return this.accountId;
         }
 
         public ListExecutionsResponseBodyExecutions setCategory(String category) {

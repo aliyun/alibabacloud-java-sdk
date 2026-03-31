@@ -17,6 +17,9 @@ public class UpdateApplicationGroupShrinkRequest extends TeaModel {
     @NameInMap("DeployedRevisionId")
     public String deployedRevisionId;
 
+    @NameInMap("MonitorMetadata")
+    public String monitorMetadata;
+
     /**
      * <p>The name of the application group.</p>
      * <p>This parameter is required.</p>
@@ -82,6 +85,14 @@ public class UpdateApplicationGroupShrinkRequest extends TeaModel {
     }
     public String getDeployedRevisionId() {
         return this.deployedRevisionId;
+    }
+
+    public UpdateApplicationGroupShrinkRequest setMonitorMetadata(String monitorMetadata) {
+        this.monitorMetadata = monitorMetadata;
+        return this;
+    }
+    public String getMonitorMetadata() {
+        return this.monitorMetadata;
     }
 
     public UpdateApplicationGroupShrinkRequest setName(String name) {

@@ -565,6 +565,144 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+     * 特别注意的是，在调用此API时，需确保提供的<code>RegionId</code>、<code>ConversationId</code>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<code>ClientId</code>、<code>ClientSecret</code>等字段时更应谨慎处理，避免泄露给非授权方。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>用于创建、更新、查询和删除聊天配置，支持钉钉等平台。</p>
+     * 
+     * @param request CreateChatConfigurationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateChatConfigurationResponse
+     */
+    public CreateChatConfigurationResponse createChatConfigurationWithOptions(CreateChatConfigurationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configuration)) {
+            query.put("Configuration", request.configuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ramRole)) {
+            query.put("RamRole", request.ramRole);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateChatConfiguration"),
+            new TeaPair("version", "2019-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateChatConfigurationResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+     * 特别注意的是，在调用此API时，需确保提供的<code>RegionId</code>、<code>ConversationId</code>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<code>ClientId</code>、<code>ClientSecret</code>等字段时更应谨慎处理，避免泄露给非授权方。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>用于创建、更新、查询和删除聊天配置，支持钉钉等平台。</p>
+     * 
+     * @param request CreateChatConfigurationRequest
+     * @return CreateChatConfigurationResponse
+     */
+    public CreateChatConfigurationResponse createChatConfiguration(CreateChatConfigurationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createChatConfigurationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建部署制品</p>
+     * 
+     * @param request CreateDeployRevisionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDeployRevisionResponse
+     */
+    public CreateDeployRevisionResponse createDeployRevisionWithOptions(CreateDeployRevisionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationName)) {
+            query.put("ApplicationName", request.applicationName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deployResourceType)) {
+            query.put("DeployResourceType", request.deployResourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hooks)) {
+            query.put("Hooks", request.hooks);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.location)) {
+            query.put("Location", request.location);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.revisionType)) {
+            query.put("RevisionType", request.revisionType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDeployRevision"),
+            new TeaPair("version", "2019-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDeployRevisionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建部署制品</p>
+     * 
+     * @param request CreateDeployRevisionRequest
+     * @return CreateDeployRevisionResponse
+     */
+    public CreateDeployRevisionResponse createDeployRevision(CreateDeployRevisionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDeployRevisionWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>创建仓库</p>
      * 
@@ -650,7 +788,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an O\\\\\\&amp;M Item.</p>
+     * <p>Creates an O\\\\\\\\\\&amp;M Item.</p>
      * 
      * @param tmpReq CreateOpsItemRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -736,7 +874,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an O\\\\\\&amp;M Item.</p>
+     * <p>Creates an O\\\\\\\\\\&amp;M Item.</p>
      * 
      * @param request CreateOpsItemRequest
      * @return CreateOpsItemResponse
@@ -940,7 +1078,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an encryption parameter. Make sure that you have the permissions to call this operation.</p>
+     * <p>Creates an encryption parameter. Make sure that you have the permissions to call the CreateSecret operation of Key Management Service (KMS) before you call this operation.</p>
      * 
      * @param tmpReq CreateSecretParameterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1018,7 +1156,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an encryption parameter. Make sure that you have the permissions to call this operation.</p>
+     * <p>Creates an encryption parameter. Make sure that you have the permissions to call the CreateSecret operation of Key Management Service (KMS) before you call this operation.</p>
      * 
      * @param request CreateSecretParameterRequest
      * @return CreateSecretParameterResponse
@@ -1305,8 +1443,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+     * 特别注意的是，在调用此API时，需确保提供的<code>RegionId</code>、<code>ConversationId</code>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<code>ClientId</code>、<code>ClientSecret</code>等字段时更应谨慎处理，避免泄露给非授权方。</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes multiple executions.</p>
+     * <p>用于创建、更新、查询和删除聊天配置，支持钉钉等平台。</p>
+     * 
+     * @param request DeleteChatConfigurationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteChatConfigurationResponse
+     */
+    public DeleteChatConfigurationResponse deleteChatConfigurationWithOptions(DeleteChatConfigurationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteChatConfiguration"),
+            new TeaPair("version", "2019-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteChatConfigurationResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+     * 特别注意的是，在调用此API时，需确保提供的<code>RegionId</code>、<code>ConversationId</code>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<code>ClientId</code>、<code>ClientSecret</code>等字段时更应谨慎处理，避免泄露给非授权方。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>用于创建、更新、查询和删除聊天配置，支持钉钉等平台。</p>
+     * 
+     * @param request DeleteChatConfigurationRequest
+     * @return DeleteChatConfigurationResponse
+     */
+    public DeleteChatConfigurationResponse deleteChatConfiguration(DeleteChatConfigurationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteChatConfigurationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes executions.</p>
      * 
      * @param request DeleteExecutionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1346,7 +1542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes multiple executions.</p>
+     * <p>Deletes executions.</p>
      * 
      * @param request DeleteExecutionsRequest
      * @return DeleteExecutionsResponse
@@ -1502,7 +1698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an encryption parameter. Make sure that you have the permissions to call the DeleteSecret operation before you call this operation.</p>
+     * <p>Deletes an encryption parameter. Make sure that you have the permissions to call the DeleteSecret operation of Key Management Service (KMS) before you call this operation.</p>
      * 
      * @param request DeleteSecretParameterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1538,7 +1734,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an encryption parameter. Make sure that you have the permissions to call the DeleteSecret operation before you call this operation.</p>
+     * <p>Deletes an encryption parameter. Make sure that you have the permissions to call the DeleteSecret operation of Key Management Service (KMS) before you call this operation.</p>
      * 
      * @param request DeleteSecretParameterRequest
      * @return DeleteSecretParameterResponse
@@ -1766,7 +1962,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询应用分组资源成本</p>
+     * <p>Queries the resource costs of an application group.</p>
      * 
      * @param request DescribeApplicationGroupBillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1822,7 +2018,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询应用分组资源成本</p>
+     * <p>Queries the resource costs of an application group.</p>
      * 
      * @param request DescribeApplicationGroupBillRequest
      * @return DescribeApplicationGroupBillResponse
@@ -2101,6 +2297,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+     * 特别注意的是，在调用此API时，需确保提供的<code>RegionId</code>、<code>ConversationId</code>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<code>ClientId</code>、<code>ClientSecret</code>等字段时更应谨慎处理，避免泄露给非授权方。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>用于创建、更新、查询和删除聊天配置，支持钉钉等平台。</p>
+     * 
+     * @param request GetChatConfigurationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetChatConfigurationResponse
+     */
+    public GetChatConfigurationResponse getChatConfigurationWithOptions(GetChatConfigurationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetChatConfiguration"),
+            new TeaPair("version", "2019-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetChatConfigurationResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+     * 特别注意的是，在调用此API时，需确保提供的<code>RegionId</code>、<code>ConversationId</code>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<code>ClientId</code>、<code>ClientSecret</code>等字段时更应谨慎处理，避免泄露给非授权方。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>用于创建、更新、查询和删除聊天配置，支持钉钉等平台。</p>
+     * 
+     * @param request GetChatConfigurationRequest
+     * @return GetChatConfigurationResponse
+     */
+    public GetChatConfigurationResponse getChatConfiguration(GetChatConfigurationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getChatConfigurationWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Queries the information about the template of an execution, including the content of the template.</p>
      * 
@@ -2342,7 +2596,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an O\\\\\\&amp;M item.</p>
+     * <p>Queries the details of an O\\\\\\\\\\&amp;M item.</p>
      * 
      * @param request GetOpsItemRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2378,7 +2632,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an O\\\\\\&amp;M item.</p>
+     * <p>Queries the details of an O\\\\\\\\\\&amp;M item.</p>
      * 
      * @param request GetOpsItemRequest
      * @return GetOpsItemResponse
@@ -2602,7 +2856,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an encryption parameter, including the parameter value. Make sure that you have the permissions to call the GetSecretValue operation before you call this operation.</p>
+     * <p>Queries the information about an encryption parameter, including the parameter value. Make sure that you have the permissions to call the GetSecretValue operation of Key Management Service (KMS) before you call this operation.</p>
      * 
      * @param request GetSecretParameterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2646,7 +2900,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an encryption parameter, including the parameter value. Make sure that you have the permissions to call the GetSecretValue operation before you call this operation.</p>
+     * <p>Queries the information about an encryption parameter, including the parameter value. Make sure that you have the permissions to call the GetSecretValue operation of Key Management Service (KMS) before you call this operation.</p>
      * 
      * @param request GetSecretParameterRequest
      * @return GetSecretParameterResponse
@@ -2658,7 +2912,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about one or more encryption parameters. Make sure that you have the permissions to call the GetSecretValue operation before you call this operation.</p>
+     * <p>Queries the information about one or more encryption parameters. Make sure that you have the permissions to call the GetSecretValue operation of Key Management Service (KMS) before you call this operation.</p>
      * 
      * @param request GetSecretParametersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2698,7 +2952,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about one or more encryption parameters. Make sure that you have the permissions to call the GetSecretValue operation before you call this operation.</p>
+     * <p>Queries the information about one or more encryption parameters. Make sure that you have the permissions to call the GetSecretValue operation of Key Management Service (KMS) before you call this operation.</p>
      * 
      * @param request GetSecretParametersRequest
      * @return GetSecretParametersResponse
@@ -2710,7 +2964,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries encryption parameters by path. Make sure that you have the permissions to call the GetSecretValue operation before you call this operation.</p>
+     * <p>Queries encryption parameters by path. Make sure that you have the permissions to call the GetSecretValue operation of Key Management Service (KMS) before you call this operation.</p>
      * 
      * @param request GetSecretParametersByPathRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2762,7 +3016,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries encryption parameters by path. Make sure that you have the permissions to call the GetSecretValue operation before you call this operation.</p>
+     * <p>Queries encryption parameters by path. Make sure that you have the permissions to call the GetSecretValue operation of Key Management Service (KMS) before you call this operation.</p>
      * 
      * @param request GetSecretParametersByPathRequest
      * @return GetSecretParametersByPathResponse
@@ -2774,7 +3028,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the settings of the delivery feature.</p>
+     * <p>Queries the service settings, including the configuration of delivering template execution records and the associated organization ID.</p>
      * 
      * @param request GetServiceSettingsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2802,7 +3056,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the settings of the delivery feature.</p>
+     * <p>Queries the service settings, including the configuration of delivering template execution records and the associated organization ID.</p>
      * 
      * @param request GetServiceSettingsRequest
      * @return GetServiceSettingsResponse
@@ -2866,7 +3120,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取参数可用值</p>
+     * <p>Obtains available values of parameters.</p>
      * 
      * @param request GetTemplateParameterConstraintsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2918,7 +3172,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取参数可用值</p>
+     * <p>Obtains available values of parameters.</p>
      * 
      * @param request GetTemplateParameterConstraintsRequest
      * @return GetTemplateParameterConstraintsResponse
@@ -3132,6 +3386,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+     * 特别注意的是，在调用此API时，需确保提供的<code>RegionId</code>、<code>ConversationId</code>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<code>ClientId</code>、<code>ClientSecret</code>等字段时更应谨慎处理，避免泄露给非授权方。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>用于创建、更新、查询和删除聊天配置，支持钉钉等平台。</p>
+     * 
+     * @param request ListChatConfigurationsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListChatConfigurationsResponse
+     */
+    public ListChatConfigurationsResponse listChatConfigurationsWithOptions(ListChatConfigurationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filters)) {
+            query.put("Filters", request.filters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListChatConfigurations"),
+            new TeaPair("version", "2019-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListChatConfigurationsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+     * 特别注意的是，在调用此API时，需确保提供的<code>RegionId</code>、<code>ConversationId</code>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<code>ClientId</code>、<code>ClientSecret</code>等字段时更应谨慎处理，避免泄露给非授权方。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>用于创建、更新、查询和删除聊天配置，支持钉钉等平台。</p>
+     * 
+     * @param request ListChatConfigurationsRequest
+     * @return ListChatConfigurationsResponse
+     */
+    public ListChatConfigurationsResponse listChatConfigurations(ListChatConfigurationsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listChatConfigurationsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <hr>
      * 
      * <b>summary</b> : 
@@ -3144,6 +3464,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListExecutionLogsResponse listExecutionLogsWithOptions(ListExecutionLogsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
+            query.put("AccountId", request.accountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.executionId)) {
             query.put("ExecutionId", request.executionId);
         }
@@ -3260,11 +3584,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ListExecutionsShrinkRequest request = new ListExecutionsShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.rdFolderIds)) {
+            request.rdFolderIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.rdFolderIds, "RdFolderIds", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
             request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
+            query.put("AccountId", request.accountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.categories)) {
             query.put("Categories", request.categories);
         }
@@ -3319,6 +3651,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ramRole)) {
             query.put("RamRole", request.ramRole);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rdFolderIdsShrink)) {
+            query.put("RdFolderIds", request.rdFolderIdsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -3852,7 +4188,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the patches of an instance.</p>
+     * <p>Queries the patches of an instance.</p>
      * 
      * @param request ListInstancePatchesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3900,7 +4236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the patches of an instance.</p>
+     * <p>Queries the patches of an instance.</p>
      * 
      * @param request ListInstancePatchesRequest
      * @return ListInstancePatchesResponse
@@ -3976,7 +4312,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries O\&amp;M items.</p>
+     * <p>Queries O\\\&amp;M items.</p>
      * 
      * @param tmpReq ListOpsItemsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4038,7 +4374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries O\&amp;M items.</p>
+     * <p>Queries O\\\&amp;M items.</p>
      * 
      * @param request ListOpsItemsRequest
      * @return ListOpsItemsResponse
@@ -4302,7 +4638,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a scheduled execution that involves O&amp;M operations on Elastic Compute Service (ECS) instances.</p>
+     * <p>Queries the information about a scheduled execution that involves O\&amp;M operations on Elastic Compute Service (ECS) instances.</p>
      * 
      * @param request ListResourceExecutionStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4346,7 +4682,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a scheduled execution that involves O&amp;M operations on Elastic Compute Service (ECS) instances.</p>
+     * <p>Queries the information about a scheduled execution that involves O\&amp;M operations on Elastic Compute Service (ECS) instances.</p>
      * 
      * @param request ListResourceExecutionStatusRequest
      * @return ListResourceExecutionStatusResponse
@@ -4778,6 +5114,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>用于获取任务执行内部的云助手脚本执行ID</p>
+     * 
+     * @param request ListTaskExecutionInvocationsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTaskExecutionInvocationsResponse
+     */
+    public ListTaskExecutionInvocationsResponse listTaskExecutionInvocationsWithOptions(ListTaskExecutionInvocationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskExecutionId)) {
+            query.put("TaskExecutionId", request.taskExecutionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTaskExecutionInvocations"),
+            new TeaPair("version", "2019-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTaskExecutionInvocationsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>用于获取任务执行内部的云助手脚本执行ID</p>
+     * 
+     * @param request ListTaskExecutionInvocationsRequest
+     * @return ListTaskExecutionInvocationsResponse
+     */
+    public ListTaskExecutionInvocationsResponse listTaskExecutionInvocations(ListTaskExecutionInvocationsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listTaskExecutionInvocationsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries task executions. Multiple methods are supported to filter task executions.</p>
      * 
      * @param request ListTaskExecutionsRequest
@@ -4787,6 +5175,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListTaskExecutionsResponse listTaskExecutionsWithOptions(ListTaskExecutionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
+            query.put("AccountId", request.accountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endDateAfter)) {
             query.put("EndDateAfter", request.endDateAfter);
         }
@@ -4882,7 +5274,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of versions of a template.</p>
+     * <p>Queries the versions of a template.</p>
      * 
      * @param request ListTemplateVersionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4930,7 +5322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of versions of a template.</p>
+     * <p>Queries the versions of a template.</p>
      * 
      * @param request ListTemplateVersionsRequest
      * @return ListTemplateVersionsResponse
@@ -5264,14 +5656,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables the feature of delivering template execution records and sets the storage location.</p>
+     * <p>Enables or disables the feature of delivering template execution records and sets the storage location and organization ID.</p>
      * 
-     * @param request SetServiceSettingsRequest
+     * @param tmpReq SetServiceSettingsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetServiceSettingsResponse
      */
-    public SetServiceSettingsResponse setServiceSettingsWithOptions(SetServiceSettingsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public SetServiceSettingsResponse setServiceSettingsWithOptions(SetServiceSettingsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SetServiceSettingsShrinkRequest request = new SetServiceSettingsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.rdFolderIds)) {
+            request.rdFolderIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.rdFolderIds, "RdFolderIds", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.deliveryOssBucketName)) {
             query.put("DeliveryOssBucketName", request.deliveryOssBucketName);
@@ -5293,12 +5691,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DeliverySlsProjectName", request.deliverySlsProjectName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.rdFolderIdsShrink)) {
+            query.put("RdFolderIds", request.rdFolderIdsShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.rdcEnterpriseId)) {
             query.put("RdcEnterpriseId", request.rdcEnterpriseId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceAccessRdEnabled)) {
+            query.put("ServiceAccessRdEnabled", request.serviceAccessRdEnabled);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -5320,7 +5726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables the feature of delivering template execution records and sets the storage location.</p>
+     * <p>Enables or disables the feature of delivering template execution records and sets the storage location and organization ID.</p>
      * 
      * @param request SetServiceSettingsRequest
      * @return SetServiceSettingsResponse
@@ -5783,6 +6189,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DeployedRevisionId", request.deployedRevisionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.monitorMetadata)) {
+            query.put("MonitorMetadata", request.monitorMetadata);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
         }
@@ -5833,8 +6243,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+     * 特别注意的是，在调用此API时，需确保提供的<code>RegionId</code>、<code>ConversationId</code>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<code>ClientId</code>、<code>ClientSecret</code>等字段时更应谨慎处理，避免泄露给非授权方。</p>
+     * 
      * <b>summary</b> : 
-     * <p>Update executions that are in Running or Waiting status.</p>
+     * <p>用于创建、更新、查询和删除聊天配置，支持钉钉等平台。</p>
+     * 
+     * @param request UpdateChatConfigurationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateChatConfigurationResponse
+     */
+    public UpdateChatConfigurationResponse updateChatConfigurationWithOptions(UpdateChatConfigurationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configuration)) {
+            query.put("Configuration", request.configuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ramRole)) {
+            query.put("RamRole", request.ramRole);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateChatConfiguration"),
+            new TeaPair("version", "2019-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateChatConfigurationResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+     * 特别注意的是，在调用此API时，需确保提供的<code>RegionId</code>、<code>ConversationId</code>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<code>ClientId</code>、<code>ClientSecret</code>等字段时更应谨慎处理，避免泄露给非授权方。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>用于创建、更新、查询和删除聊天配置，支持钉钉等平台。</p>
+     * 
+     * @param request UpdateChatConfigurationRequest
+     * @return UpdateChatConfigurationResponse
+     */
+    public UpdateChatConfigurationResponse updateChatConfiguration(UpdateChatConfigurationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateChatConfigurationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates an execution in the Running or Waiting state.</p>
      * 
      * @param request UpdateExecutionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5890,7 +6374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update executions that are in Running or Waiting status.</p>
+     * <p>Updates an execution in the Running or Waiting state.</p>
      * 
      * @param request UpdateExecutionRequest
      * @return UpdateExecutionResponse
@@ -5976,7 +6460,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies an O\\\\\\&amp;M item.</p>
+     * <p>Modifies an O\\\\\\\\\\&amp;M item.</p>
      * 
      * @param tmpReq UpdateOpsItemRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6070,7 +6554,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies an O\\\\\\&amp;M item.</p>
+     * <p>Modifies an O\\\\\\\\\\&amp;M item.</p>
      * 
      * @param request UpdateOpsItemRequest
      * @return UpdateOpsItemResponse
@@ -6252,7 +6736,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates an encryption parameter.</p>
+     * <p>Updates an encryption parameter. Make sure that you have the permissions to call the UpdateSecretValue operation of Key Management Service (KMS) before you call this operation.</p>
      * 
      * @param tmpReq UpdateSecretParameterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6310,7 +6794,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates an encryption parameter.</p>
+     * <p>Updates an encryption parameter. Make sure that you have the permissions to call the UpdateSecretValue operation of Key Management Service (KMS) before you call this operation.</p>
      * 
      * @param request UpdateSecretParameterRequest
      * @return UpdateSecretParameterResponse
@@ -6482,6 +6966,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateTemplateResponse updateTemplate(UpdateTemplateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新模板属性</p>
+     * 
+     * @param request UpdateTemplateAttributesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateTemplateAttributesResponse
+     */
+    public UpdateTemplateAttributesResponse updateTemplateAttributesWithOptions(UpdateTemplateAttributesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountIds)) {
+            query.put("AccountIds", request.accountIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isFavorite)) {
+            query.put("IsFavorite", request.isFavorite);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sharePermissionAction)) {
+            query.put("SharePermissionAction", request.sharePermissionAction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shareTemplateVersion)) {
+            query.put("ShareTemplateVersion", request.shareTemplateVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
+            query.put("TemplateName", request.templateName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateTemplateAttributes"),
+            new TeaPair("version", "2019-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTemplateAttributesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新模板属性</p>
+     * 
+     * @param request UpdateTemplateAttributesRequest
+     * @return UpdateTemplateAttributesResponse
+     */
+    public UpdateTemplateAttributesResponse updateTemplateAttributes(UpdateTemplateAttributesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateTemplateAttributesWithOptions(request, runtime);
     }
 
     /**

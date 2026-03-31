@@ -143,6 +143,9 @@ public class GetApplicationGroupResponseBody extends TeaModel {
         @NameInMap("ImportTagValue")
         public String importTagValue;
 
+        @NameInMap("MonitorMetadata")
+        public String monitorMetadata;
+
         /**
          * <p>The name of the application group.</p>
          * 
@@ -312,6 +315,14 @@ public class GetApplicationGroupResponseBody extends TeaModel {
         }
         public String getImportTagValue() {
             return this.importTagValue;
+        }
+
+        public GetApplicationGroupResponseBodyApplicationGroup setMonitorMetadata(String monitorMetadata) {
+            this.monitorMetadata = monitorMetadata;
+            return this;
+        }
+        public String getMonitorMetadata() {
+            return this.monitorMetadata;
         }
 
         public GetApplicationGroupResponseBodyApplicationGroup setName(String name) {
