@@ -22,6 +22,9 @@ public class DetachPolicyFromRoleRequest extends TeaModel {
     @NameInMap("PolicyType")
     public String policyType;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The name of the RAM role.</p>
      * 
@@ -50,6 +53,14 @@ public class DetachPolicyFromRoleRequest extends TeaModel {
     }
     public String getPolicyType() {
         return this.policyType;
+    }
+
+    public DetachPolicyFromRoleRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DetachPolicyFromRoleRequest setRoleName(String roleName) {

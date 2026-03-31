@@ -22,9 +22,6 @@ public class ListPoliciesResponseBody extends TeaModel {
     @NameInMap("Marker")
     public String marker;
 
-    /**
-     * <p>The information about the policies.</p>
-     */
     @NameInMap("Policies")
     public ListPoliciesResponseBodyPolicies policies;
 
@@ -75,21 +72,9 @@ public class ListPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListPoliciesResponseBodyPoliciesPolicyTagsTag extends TeaModel {
-        /**
-         * <p>The key of the tag.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>owner</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The value of the tag.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>alice</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -136,72 +121,27 @@ public class ListPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListPoliciesResponseBodyPoliciesPolicy extends TeaModel {
-        /**
-         * <p>The number of references to the policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("AttachmentCount")
         public Integer attachmentCount;
 
-        /**
-         * <p>The time when the policy was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-01-23T12:33:18Z</p>
-         */
         @NameInMap("CreateDate")
         public String createDate;
 
-        /**
-         * <p>The default version of the policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>v1</p>
-         */
         @NameInMap("DefaultVersion")
         public String defaultVersion;
 
-        /**
-         * <p>The description of the policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>OSS administrator</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The name of the policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>OSS-Administrator</p>
-         */
         @NameInMap("PolicyName")
         public String policyName;
 
-        /**
-         * <p>The type of the policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>System</p>
-         */
         @NameInMap("PolicyType")
         public String policyType;
 
-        /**
-         * <p>The tags.</p>
-         */
         @NameInMap("Tags")
         public ListPoliciesResponseBodyPoliciesPolicyTags tags;
 
-        /**
-         * <p>The time when the policy was modified.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-01-23T12:33:18Z</p>
-         */
         @NameInMap("UpdateDate")
         public String updateDate;
 

@@ -4,9 +4,6 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class ListAccessKeysResponseBody extends TeaModel {
-    /**
-     * <p>The AccessKey pairs that belong to the RAM user.</p>
-     */
     @NameInMap("AccessKeys")
     public ListAccessKeysResponseBodyAccessKeys accessKeys;
 
@@ -41,30 +38,12 @@ public class ListAccessKeysResponseBody extends TeaModel {
     }
 
     public static class ListAccessKeysResponseBodyAccessKeysAccessKey extends TeaModel {
-        /**
-         * <p>The AccessKey ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0wNEpMMlzy7s****</p>
-         */
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
-        /**
-         * <p>The time when the AccessKey pair was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-01-23T12:33:18Z</p>
-         */
         @NameInMap("CreateDate")
         public String createDate;
 
-        /**
-         * <p>The status of the AccessKey pair. Valid values: Active and Inactive.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Active</p>
-         */
         @NameInMap("Status")
         public String status;
 

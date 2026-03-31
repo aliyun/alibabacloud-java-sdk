@@ -31,9 +31,6 @@ public class ListUsersForGroupResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information about the RAM users.</p>
-     */
     @NameInMap("Users")
     public ListUsersForGroupResponseBodyUsers users;
 
@@ -75,30 +72,12 @@ public class ListUsersForGroupResponseBody extends TeaModel {
     }
 
     public static class ListUsersForGroupResponseBodyUsersUser extends TeaModel {
-        /**
-         * <p>The display name of the RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Alice</p>
-         */
         @NameInMap("DisplayName")
         public String displayName;
 
-        /**
-         * <p>The time when the RAM user joined the RAM user group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-01-23T12:33:18Z</p>
-         */
         @NameInMap("JoinDate")
         public String joinDate;
 
-        /**
-         * <p>The name of the RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>zhangqiang</p>
-         */
         @NameInMap("UserName")
         public String userName;
 

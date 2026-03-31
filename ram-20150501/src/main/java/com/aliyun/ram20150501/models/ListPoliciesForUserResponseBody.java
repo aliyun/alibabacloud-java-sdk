@@ -4,9 +4,6 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class ListPoliciesForUserResponseBody extends TeaModel {
-    /**
-     * <p>The information about the policy.</p>
-     */
     @NameInMap("Policies")
     public ListPoliciesForUserResponseBodyPolicies policies;
 
@@ -41,52 +38,18 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
     }
 
     public static class ListPoliciesForUserResponseBodyPoliciesPolicy extends TeaModel {
-        /**
-         * <p>The time at which the policy is attached to the RAM user. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-01-23T12:33:18Z</p>
-         */
         @NameInMap("AttachDate")
         public String attachDate;
 
-        /**
-         * <p>The current version.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>v1</p>
-         */
         @NameInMap("DefaultVersion")
         public String defaultVersion;
 
-        /**
-         * <p>The description of the policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>OSS administrator</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The name of the policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>OSS-Administrator</p>
-         */
         @NameInMap("PolicyName")
         public String policyName;
 
-        /**
-         * <p>The type of the policy. Valid values:</p>
-         * <ul>
-         * <li>System: system policy</li>
-         * <li>Custom: custom policy</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Custom</p>
-         */
         @NameInMap("PolicyType")
         public String policyType;
 

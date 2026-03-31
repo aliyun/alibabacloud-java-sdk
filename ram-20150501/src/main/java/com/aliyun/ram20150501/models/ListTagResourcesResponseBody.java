@@ -23,7 +23,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The tags that are added to the resources.</p>
+     * <p>The tags that are added to the cloud resources.</p>
      */
     @NameInMap("TagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
@@ -69,6 +69,11 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
         /**
          * <p>The resource type.</p>
+         * <p>Enumerated values:</p>
+         * <ul>
+         * <li>role: RAM roles.</li>
+         * <li>policy: policies.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>role</p>

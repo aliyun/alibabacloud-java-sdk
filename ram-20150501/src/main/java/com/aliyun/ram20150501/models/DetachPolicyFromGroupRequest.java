@@ -31,6 +31,9 @@ public class DetachPolicyFromGroupRequest extends TeaModel {
     @NameInMap("PolicyType")
     public String policyType;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static DetachPolicyFromGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         DetachPolicyFromGroupRequest self = new DetachPolicyFromGroupRequest();
         return TeaModel.build(map, self);
@@ -58,6 +61,14 @@ public class DetachPolicyFromGroupRequest extends TeaModel {
     }
     public String getPolicyType() {
         return this.policyType;
+    }
+
+    public DetachPolicyFromGroupRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

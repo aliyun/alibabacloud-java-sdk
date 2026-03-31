@@ -22,6 +22,9 @@ public class DetachPolicyFromUserRequest extends TeaModel {
     @NameInMap("PolicyType")
     public String policyType;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The name of the RAM user.</p>
      * 
@@ -50,6 +53,14 @@ public class DetachPolicyFromUserRequest extends TeaModel {
     }
     public String getPolicyType() {
         return this.policyType;
+    }
+
+    public DetachPolicyFromUserRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DetachPolicyFromUserRequest setUserName(String userName) {

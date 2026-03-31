@@ -4,9 +4,6 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class ListPolicyVersionsResponseBody extends TeaModel {
-    /**
-     * <p>The information about the policy versions.</p>
-     */
     @NameInMap("PolicyVersions")
     public ListPolicyVersionsResponseBodyPolicyVersions policyVersions;
 
@@ -41,39 +38,15 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
     }
 
     public static class ListPolicyVersionsResponseBodyPolicyVersionsPolicyVersion extends TeaModel {
-        /**
-         * <p>The time when the version was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-02-26T01:25:52Z</p>
-         */
         @NameInMap("CreateDate")
         public String createDate;
 
-        /**
-         * <p>Indicates whether the policy version is the default version.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("IsDefaultVersion")
         public Boolean isDefaultVersion;
 
-        /**
-         * <p>The document of the policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{ &quot;Statement&quot;: [{ &quot;Action&quot;: [&quot;oss:<em>&quot;], &quot;Effect&quot;: &quot;Allow&quot;, &quot;Resource&quot;: [&quot;acs:oss:</em>:<em>:</em>&quot;]}], &quot;Version&quot;: &quot;1&quot;}</p>
-         */
         @NameInMap("PolicyDocument")
         public String policyDocument;
 
-        /**
-         * <p>The ID of the policy version.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>v3</p>
-         */
         @NameInMap("VersionId")
         public String versionId;
 

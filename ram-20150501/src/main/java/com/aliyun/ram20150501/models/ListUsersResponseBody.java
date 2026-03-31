@@ -31,9 +31,6 @@ public class ListUsersResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The RAM users.</p>
-     */
     @NameInMap("Users")
     public ListUsersResponseBodyUsers users;
 
@@ -75,81 +72,27 @@ public class ListUsersResponseBody extends TeaModel {
     }
 
     public static class ListUsersResponseBodyUsersUser extends TeaModel {
-        /**
-         * <p>The description.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Cloud computing engineer</p>
-         */
         @NameInMap("Comments")
         public String comments;
 
-        /**
-         * <p>The time when the RAM user was created. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-01-23T12:33:18Z</p>
-         */
         @NameInMap("CreateDate")
         public String createDate;
 
-        /**
-         * <p>The display name of the RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Zhangq****</p>
-         */
         @NameInMap("DisplayName")
         public String displayName;
 
-        /**
-         * <p>The email address of the RAM user.</p>
-         * <blockquote>
-         * <p>This parameter is unavailable.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>zhangq****@example.com</p>
-         */
         @NameInMap("Email")
         public String email;
 
-        /**
-         * <p>The mobile phone number of the RAM user.</p>
-         * <blockquote>
-         * <p>This parameter is unavailable.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>86-1860000****</p>
-         */
         @NameInMap("MobilePhone")
         public String mobilePhone;
 
-        /**
-         * <p>The point in time when the information about the RAM user was last modified. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-01-23T12:33:18Z</p>
-         */
         @NameInMap("UpdateDate")
         public String updateDate;
 
-        /**
-         * <p>The ID of the RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>122748924538****</p>
-         */
         @NameInMap("UserId")
         public String userId;
 
-        /**
-         * <p>The logon name of the RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>zhangq****</p>
-         */
         @NameInMap("UserName")
         public String userName;
 

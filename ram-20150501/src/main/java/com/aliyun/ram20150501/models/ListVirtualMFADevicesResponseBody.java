@@ -13,9 +13,6 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information about the MFA devices.</p>
-     */
     @NameInMap("VirtualMFADevices")
     public ListVirtualMFADevicesResponseBodyVirtualMFADevices virtualMFADevices;
 
@@ -41,30 +38,12 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
     }
 
     public static class ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADeviceUser extends TeaModel {
-        /**
-         * <p>The display name of the RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>zhangq****</p>
-         */
         @NameInMap("DisplayName")
         public String displayName;
 
-        /**
-         * <p>The unique ID of the RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>122748924538****</p>
-         */
         @NameInMap("UserId")
         public String userId;
 
-        /**
-         * <p>The name of the RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>zhangq****</p>
-         */
         @NameInMap("UserName")
         public String userName;
 
@@ -100,27 +79,12 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
     }
 
     public static class ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADevice extends TeaModel {
-        /**
-         * <p>The time when the MFA device was enabled.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-02-18T17:22:08Z</p>
-         */
         @NameInMap("ActivateDate")
         public String activateDate;
 
-        /**
-         * <p>The serial number of the MFA device.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>acs:ram::123456789012****:mfa/device002</p>
-         */
         @NameInMap("SerialNumber")
         public String serialNumber;
 
-        /**
-         * <p>The basic information about the Resource Access Management (RAM) user to which the MFA device is bound.</p>
-         */
         @NameInMap("User")
         public ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADeviceUser user;
 

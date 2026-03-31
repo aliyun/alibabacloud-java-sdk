@@ -97,6 +97,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PolicyType", request.policyType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -143,6 +147,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.policyType)) {
             query.put("PolicyType", request.policyType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.roleName)) {
@@ -195,6 +203,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.policyType)) {
             query.put("PolicyType", request.policyType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
@@ -1119,8 +1131,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you delete a regular RAM role, call the <a href="https://help.aliyun.com/document_detail/2337680.html">DetachPolicyFromRole</a> operation to remove all policies from the RAM role.
+     * The DeleteRole operation cannot be used to delete service-linked roles and reserved roles for cloud services.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes a Resource Access Management (RAM) role.</p>
+     * <p>Deletes a regular Resource Access Management (RAM) role.</p>
      * 
      * @param request DeleteRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1151,8 +1167,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you delete a regular RAM role, call the <a href="https://help.aliyun.com/document_detail/2337680.html">DetachPolicyFromRole</a> operation to remove all policies from the RAM role.
+     * The DeleteRole operation cannot be used to delete service-linked roles and reserved roles for cloud services.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes a Resource Access Management (RAM) role.</p>
+     * <p>Deletes a regular Resource Access Management (RAM) role.</p>
      * 
      * @param request DeleteRoleRequest
      * @return DeleteRoleResponse
@@ -1279,6 +1299,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PolicyType", request.policyType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1325,6 +1349,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.policyType)) {
             query.put("PolicyType", request.policyType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.roleName)) {
@@ -1377,6 +1405,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.policyType)) {
             query.put("PolicyType", request.policyType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
@@ -2386,7 +2418,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tags that are added to resources.</p>
+     * <p>Queries the tags that are added to cloud resources which are Resource Access Management (RAM) roles and policies.</p>
      * 
      * @param tmpReq ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2444,7 +2476,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tags that are added to resources.</p>
+     * <p>Queries the tags that are added to cloud resources which are Resource Access Management (RAM) roles and policies.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -2874,7 +2906,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds tags to resources.</p>
+     * <p>Adds tags to cloud resources which are Resource Access Management (RAM) roles and policies.</p>
      * 
      * @param tmpReq TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2924,7 +2956,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds tags to resources.</p>
+     * <p>Adds tags to cloud resources which are Resource Access Management (RAM) roles and policies.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -2980,7 +3012,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes tags from resources.</p>
+     * <p>Removes tags from cloud resources that are Resource Access Management (RAM) roles and policies.</p>
      * 
      * @param tmpReq UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3034,7 +3066,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes tags from resources.</p>
+     * <p>Removes tags from cloud resources that are Resource Access Management (RAM) roles and policies.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse

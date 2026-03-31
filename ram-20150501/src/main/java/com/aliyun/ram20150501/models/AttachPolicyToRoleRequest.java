@@ -22,6 +22,9 @@ public class AttachPolicyToRoleRequest extends TeaModel {
     @NameInMap("PolicyType")
     public String policyType;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The name of the RAM role.</p>
      * 
@@ -50,6 +53,14 @@ public class AttachPolicyToRoleRequest extends TeaModel {
     }
     public String getPolicyType() {
         return this.policyType;
+    }
+
+    public AttachPolicyToRoleRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public AttachPolicyToRoleRequest setRoleName(String roleName) {

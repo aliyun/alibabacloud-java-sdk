@@ -4,9 +4,6 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class ListPoliciesForGroupResponseBody extends TeaModel {
-    /**
-     * <p>The information about the policies.</p>
-     */
     @NameInMap("Policies")
     public ListPoliciesForGroupResponseBodyPolicies policies;
 
@@ -41,48 +38,18 @@ public class ListPoliciesForGroupResponseBody extends TeaModel {
     }
 
     public static class ListPoliciesForGroupResponseBodyPoliciesPolicy extends TeaModel {
-        /**
-         * <p>The time when the policy was attached to the RAM user group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-01-23T12:33:18Z</p>
-         */
         @NameInMap("AttachDate")
         public String attachDate;
 
-        /**
-         * <p>The default version of the policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>v1</p>
-         */
         @NameInMap("DefaultVersion")
         public String defaultVersion;
 
-        /**
-         * <p>The description of the policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>OSS administrator</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The name of the policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>OSS-Administrator</p>
-         */
         @NameInMap("PolicyName")
         public String policyName;
 
-        /**
-         * <p>The type of the policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Custom</p>
-         */
         @NameInMap("PolicyType")
         public String policyType;
 

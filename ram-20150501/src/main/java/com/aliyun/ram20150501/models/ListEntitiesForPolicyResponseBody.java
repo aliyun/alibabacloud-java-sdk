@@ -4,9 +4,6 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class ListEntitiesForPolicyResponseBody extends TeaModel {
-    /**
-     * <p>The information about the Resource Access Management (RAM) user groups.</p>
-     */
     @NameInMap("Groups")
     public ListEntitiesForPolicyResponseBodyGroups groups;
 
@@ -19,15 +16,9 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information about the RAM roles.</p>
-     */
     @NameInMap("Roles")
     public ListEntitiesForPolicyResponseBodyRoles roles;
 
-    /**
-     * <p>The information about the RAM users.</p>
-     */
     @NameInMap("Users")
     public ListEntitiesForPolicyResponseBodyUsers users;
 
@@ -69,30 +60,12 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
     }
 
     public static class ListEntitiesForPolicyResponseBodyGroupsGroup extends TeaModel {
-        /**
-         * <p>The time when the policy was attached to the RAM user group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-02-18T17:22:08Z</p>
-         */
         @NameInMap("AttachDate")
         public String attachDate;
 
-        /**
-         * <p>The description of the RAM user group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Test team</p>
-         */
         @NameInMap("Comments")
         public String comments;
 
-        /**
-         * <p>The name of the RAM user group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>QA-Team</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 
@@ -147,48 +120,18 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
     }
 
     public static class ListEntitiesForPolicyResponseBodyRolesRole extends TeaModel {
-        /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>acs:ram::123456789012****:role/ECSAdmin</p>
-         */
         @NameInMap("Arn")
         public String arn;
 
-        /**
-         * <p>The time when the policy was attached to the RAM role.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-01-23T12:33:18Z</p>
-         */
         @NameInMap("AttachDate")
         public String attachDate;
 
-        /**
-         * <p>The description of the RAM role.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ECS administrator</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the RAM role.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>122748924538****</p>
-         */
         @NameInMap("RoleId")
         public String roleId;
 
-        /**
-         * <p>The name of the RAM role.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ECSAdmin</p>
-         */
         @NameInMap("RoleName")
         public String roleName;
 
@@ -259,39 +202,15 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
     }
 
     public static class ListEntitiesForPolicyResponseBodyUsersUser extends TeaModel {
-        /**
-         * <p>The time when the policy was attached to the RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-01-23T12:33:18Z</p>
-         */
         @NameInMap("AttachDate")
         public String attachDate;
 
-        /**
-         * <p>The display name of the RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Zhang*</p>
-         */
         @NameInMap("DisplayName")
         public String displayName;
 
-        /**
-         * <p>The unique ID of the RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>122748924538****</p>
-         */
         @NameInMap("UserId")
         public String userId;
 
-        /**
-         * <p>The name of the RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>zhangq****</p>
-         */
         @NameInMap("UserName")
         public String userName;
 
