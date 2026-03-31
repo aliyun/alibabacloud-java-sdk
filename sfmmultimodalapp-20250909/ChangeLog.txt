@@ -1,3 +1,6 @@
+2026-03-31 Version: 1.1.2
+- Generated java 2025-09-09 for SfmMultiModalApp.
+
 2026-03-26 Version: 1.1.1
 - Update API CreateMemory: add request parameters AutoUpdate.
 - Update API CreateMemory: add request parameters ExpirationTime.

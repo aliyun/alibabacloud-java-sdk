@@ -32,8 +32,6 @@ public class CreateProfileRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>6e18191727f747ec9de06a2</p>
      */

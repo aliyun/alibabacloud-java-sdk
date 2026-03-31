@@ -14,8 +14,6 @@ public class QueryProfileRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>6d4359977d1</p>
      */

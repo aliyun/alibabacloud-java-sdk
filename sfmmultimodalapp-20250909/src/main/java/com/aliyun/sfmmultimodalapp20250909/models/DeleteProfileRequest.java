@@ -14,8 +14,6 @@ public class DeleteProfileRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>5A7C969B-5101-112B-8202-DFAEEA4BFBED</p>
      */

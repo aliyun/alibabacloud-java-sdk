@@ -45,8 +45,6 @@ public class PatchMemoryConfigRequest extends TeaModel {
     public Integer topK;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>110b6d4359977d1</p>
      */

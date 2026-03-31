@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>sfmmultimodalapp20250909</artifactId>
-  <version>1.1.1</version>
+  <version>1.1.2</version>
   <packaging>jar</packaging>
   <name>sfmmultimodalapp20250909</name>
   <description>Alibaba Cloud SfmMultiModalApp (20250909) SDK for Java

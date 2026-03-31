@@ -27,8 +27,6 @@ public class UpdateProfileShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>10b6d435</p>
      */
