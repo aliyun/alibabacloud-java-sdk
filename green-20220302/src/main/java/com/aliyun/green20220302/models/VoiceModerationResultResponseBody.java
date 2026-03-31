@@ -74,6 +74,162 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class VoiceModerationResultResponseBodyDataSliceDetailsResultCustomizedHit extends TeaModel {
+        @NameInMap("KeyWords")
+        public String keyWords;
+
+        @NameInMap("LibName")
+        public String libName;
+
+        public static VoiceModerationResultResponseBodyDataSliceDetailsResultCustomizedHit build(java.util.Map<String, ?> map) throws Exception {
+            VoiceModerationResultResponseBodyDataSliceDetailsResultCustomizedHit self = new VoiceModerationResultResponseBodyDataSliceDetailsResultCustomizedHit();
+            return TeaModel.build(map, self);
+        }
+
+        public VoiceModerationResultResponseBodyDataSliceDetailsResultCustomizedHit setKeyWords(String keyWords) {
+            this.keyWords = keyWords;
+            return this;
+        }
+        public String getKeyWords() {
+            return this.keyWords;
+        }
+
+        public VoiceModerationResultResponseBodyDataSliceDetailsResultCustomizedHit setLibName(String libName) {
+            this.libName = libName;
+            return this;
+        }
+        public String getLibName() {
+            return this.libName;
+        }
+
+    }
+
+    public static class VoiceModerationResultResponseBodyDataSliceDetailsResultRiskPositions extends TeaModel {
+        @NameInMap("EndPos")
+        public Integer endPos;
+
+        @NameInMap("RiskWord")
+        public String riskWord;
+
+        @NameInMap("StartPos")
+        public Integer startPos;
+
+        public static VoiceModerationResultResponseBodyDataSliceDetailsResultRiskPositions build(java.util.Map<String, ?> map) throws Exception {
+            VoiceModerationResultResponseBodyDataSliceDetailsResultRiskPositions self = new VoiceModerationResultResponseBodyDataSliceDetailsResultRiskPositions();
+            return TeaModel.build(map, self);
+        }
+
+        public VoiceModerationResultResponseBodyDataSliceDetailsResultRiskPositions setEndPos(Integer endPos) {
+            this.endPos = endPos;
+            return this;
+        }
+        public Integer getEndPos() {
+            return this.endPos;
+        }
+
+        public VoiceModerationResultResponseBodyDataSliceDetailsResultRiskPositions setRiskWord(String riskWord) {
+            this.riskWord = riskWord;
+            return this;
+        }
+        public String getRiskWord() {
+            return this.riskWord;
+        }
+
+        public VoiceModerationResultResponseBodyDataSliceDetailsResultRiskPositions setStartPos(Integer startPos) {
+            this.startPos = startPos;
+            return this;
+        }
+        public Integer getStartPos() {
+            return this.startPos;
+        }
+
+    }
+
+    public static class VoiceModerationResultResponseBodyDataSliceDetailsResult extends TeaModel {
+        @NameInMap("Confidence")
+        public Float confidence;
+
+        @NameInMap("CustomizedHit")
+        public java.util.List<VoiceModerationResultResponseBodyDataSliceDetailsResultCustomizedHit> customizedHit;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("RiskLevel")
+        public String riskLevel;
+
+        @NameInMap("RiskPositions")
+        public java.util.List<VoiceModerationResultResponseBodyDataSliceDetailsResultRiskPositions> riskPositions;
+
+        @NameInMap("RiskWords")
+        public String riskWords;
+
+        public static VoiceModerationResultResponseBodyDataSliceDetailsResult build(java.util.Map<String, ?> map) throws Exception {
+            VoiceModerationResultResponseBodyDataSliceDetailsResult self = new VoiceModerationResultResponseBodyDataSliceDetailsResult();
+            return TeaModel.build(map, self);
+        }
+
+        public VoiceModerationResultResponseBodyDataSliceDetailsResult setConfidence(Float confidence) {
+            this.confidence = confidence;
+            return this;
+        }
+        public Float getConfidence() {
+            return this.confidence;
+        }
+
+        public VoiceModerationResultResponseBodyDataSliceDetailsResult setCustomizedHit(java.util.List<VoiceModerationResultResponseBodyDataSliceDetailsResultCustomizedHit> customizedHit) {
+            this.customizedHit = customizedHit;
+            return this;
+        }
+        public java.util.List<VoiceModerationResultResponseBodyDataSliceDetailsResultCustomizedHit> getCustomizedHit() {
+            return this.customizedHit;
+        }
+
+        public VoiceModerationResultResponseBodyDataSliceDetailsResult setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public VoiceModerationResultResponseBodyDataSliceDetailsResult setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public VoiceModerationResultResponseBodyDataSliceDetailsResult setRiskLevel(String riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public String getRiskLevel() {
+            return this.riskLevel;
+        }
+
+        public VoiceModerationResultResponseBodyDataSliceDetailsResult setRiskPositions(java.util.List<VoiceModerationResultResponseBodyDataSliceDetailsResultRiskPositions> riskPositions) {
+            this.riskPositions = riskPositions;
+            return this;
+        }
+        public java.util.List<VoiceModerationResultResponseBodyDataSliceDetailsResultRiskPositions> getRiskPositions() {
+            return this.riskPositions;
+        }
+
+        public VoiceModerationResultResponseBodyDataSliceDetailsResult setRiskWords(String riskWords) {
+            this.riskWords = riskWords;
+            return this;
+        }
+        public String getRiskWords() {
+            return this.riskWords;
+        }
+
+    }
+
     public static class VoiceModerationResultResponseBodyDataSliceDetails extends TeaModel {
         /**
          * <p>The description of the labels.</p>
@@ -128,6 +284,9 @@ public class VoiceModerationResultResponseBody extends TeaModel {
          */
         @NameInMap("OriginAlgoResult")
         public java.util.Map<String, ?> originAlgoResult;
+
+        @NameInMap("Result")
+        public java.util.List<VoiceModerationResultResponseBodyDataSliceDetailsResult> result;
 
         /**
          * <p>Risk Level.</p>
@@ -252,6 +411,14 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         }
         public java.util.Map<String, ?> getOriginAlgoResult() {
             return this.originAlgoResult;
+        }
+
+        public VoiceModerationResultResponseBodyDataSliceDetails setResult(java.util.List<VoiceModerationResultResponseBodyDataSliceDetailsResult> result) {
+            this.result = result;
+            return this;
+        }
+        public java.util.List<VoiceModerationResultResponseBodyDataSliceDetailsResult> getResult() {
+            return this.result;
         }
 
         public VoiceModerationResultResponseBodyDataSliceDetails setRiskLevel(String riskLevel) {
