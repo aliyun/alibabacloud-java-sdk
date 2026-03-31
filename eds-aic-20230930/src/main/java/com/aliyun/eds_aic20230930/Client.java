@@ -684,6 +684,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PromotionId", request.promotionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.saleMode)) {
+            query.put("SaleMode", request.saleMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.streamMode)) {
             query.put("StreamMode", request.streamMode);
         }

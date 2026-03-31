@@ -246,6 +246,9 @@ public class CreateAndroidInstanceGroupShrinkRequest extends TeaModel {
     @NameInMap("PromotionId")
     public String promotionId;
 
+    @NameInMap("SaleMode")
+    public String saleMode;
+
     @NameInMap("StreamMode")
     public Integer streamMode;
 
@@ -463,6 +466,14 @@ public class CreateAndroidInstanceGroupShrinkRequest extends TeaModel {
     }
     public String getPromotionId() {
         return this.promotionId;
+    }
+
+    public CreateAndroidInstanceGroupShrinkRequest setSaleMode(String saleMode) {
+        this.saleMode = saleMode;
+        return this;
+    }
+    public String getSaleMode() {
+        return this.saleMode;
     }
 
     public CreateAndroidInstanceGroupShrinkRequest setStreamMode(Integer streamMode) {

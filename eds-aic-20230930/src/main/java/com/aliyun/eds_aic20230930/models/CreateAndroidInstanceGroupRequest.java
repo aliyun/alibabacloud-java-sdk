@@ -246,6 +246,9 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
     @NameInMap("PromotionId")
     public String promotionId;
 
+    @NameInMap("SaleMode")
+    public String saleMode;
+
     @NameInMap("StreamMode")
     public Integer streamMode;
 
@@ -463,6 +466,14 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
     }
     public String getPromotionId() {
         return this.promotionId;
+    }
+
+    public CreateAndroidInstanceGroupRequest setSaleMode(String saleMode) {
+        this.saleMode = saleMode;
+        return this;
+    }
+    public String getSaleMode() {
+        return this.saleMode;
     }
 
     public CreateAndroidInstanceGroupRequest setStreamMode(Integer streamMode) {
