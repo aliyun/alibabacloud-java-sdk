@@ -5372,6 +5372,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Releases the VPC peering connection.</p>
+     * 
+     * @param request DeleteNetworkPeerConnectionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteNetworkPeerConnectionResponse
+     */
+    public DeleteNetworkPeerConnectionResponse deleteNetworkPeerConnectionWithOptions(DeleteNetworkPeerConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteNetworkPeerConnection"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteNetworkPeerConnectionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Releases the VPC peering connection.</p>
+     * 
+     * @param request DeleteNetworkPeerConnectionRequest
+     * @return DeleteNetworkPeerConnectionResponse
+     */
+    public DeleteNetworkPeerConnectionResponse deleteNetworkPeerConnection(DeleteNetworkPeerConnectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteNetworkPeerConnectionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes an object.</p>
      * 
      * @param request DeleteObjectRequest
@@ -10514,6 +10558,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeNetworkInterfacesResponse describeNetworkInterfaces(DescribeNetworkInterfacesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeNetworkInterfacesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries VPC peering connections.</p>
+     * 
+     * @param request DescribeNetworkPeerConnectionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeNetworkPeerConnectionsResponse
+     */
+    public DescribeNetworkPeerConnectionsResponse describeNetworkPeerConnectionsWithOptions(DescribeNetworkPeerConnectionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ensRegionId)) {
+            query.put("EnsRegionId", request.ensRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkIds)) {
+            query.put("NetworkIds", request.networkIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeNetworkPeerConnections"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeNetworkPeerConnectionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries VPC peering connections.</p>
+     * 
+     * @param request DescribeNetworkPeerConnectionsRequest
+     * @return DescribeNetworkPeerConnectionsResponse
+     */
+    public DescribeNetworkPeerConnectionsResponse describeNetworkPeerConnections(DescribeNetworkPeerConnectionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeNetworkPeerConnectionsWithOptions(request, runtime);
     }
 
     /**
@@ -19400,6 +19508,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UntagResourcesResponse untagResources(UntagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.untagResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新集群证书</p>
+     * 
+     * @param request UpdateClusterCertificateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateClusterCertificateResponse
+     */
+    public UpdateClusterCertificateResponse updateClusterCertificateWithOptions(UpdateClusterCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateClusterCertificate"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateClusterCertificateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新集群证书</p>
+     * 
+     * @param request UpdateClusterCertificateRequest
+     * @return UpdateClusterCertificateResponse
+     */
+    public UpdateClusterCertificateResponse updateClusterCertificate(UpdateClusterCertificateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateClusterCertificateWithOptions(request, runtime);
     }
 
     /**
