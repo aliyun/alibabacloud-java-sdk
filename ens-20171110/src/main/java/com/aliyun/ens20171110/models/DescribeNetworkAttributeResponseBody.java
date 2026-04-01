@@ -13,9 +13,6 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
     @NameInMap("CidrBlock")
     public String cidrBlock;
 
-    /**
-     * <p>The list of resources in the network.</p>
-     */
     @NameInMap("CloudResources")
     public DescribeNetworkAttributeResponseBodyCloudResources cloudResources;
 
@@ -55,27 +52,15 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
     @NameInMap("GatewayRouteTableId")
     public String gatewayRouteTableId;
 
-    /**
-     * <p>List of HaVipIds.</p>
-     */
     @NameInMap("HaVipIds")
     public DescribeNetworkAttributeResponseBodyHaVipIds haVipIds;
 
-    /**
-     * <p>The instance IDs.</p>
-     */
     @NameInMap("InstanceIds")
     public DescribeNetworkAttributeResponseBodyInstanceIds instanceIds;
 
-    /**
-     * <p>List of ELB instances.</p>
-     */
     @NameInMap("LoadBalancerIds")
     public DescribeNetworkAttributeResponseBodyLoadBalancerIds loadBalancerIds;
 
-    /**
-     * <p>List of NAT Gateways.</p>
-     */
     @NameInMap("NatGatewayIds")
     public DescribeNetworkAttributeResponseBodyNatGatewayIds natGatewayIds;
 
@@ -97,9 +82,6 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
     @NameInMap("NetworkId")
     public String networkId;
 
-    /**
-     * <p>A list of multicast source IDs.</p>
-     */
     @NameInMap("NetworkInterfaceIds")
     public DescribeNetworkAttributeResponseBodyNetworkInterfaceIds networkInterfaceIds;
 
@@ -130,9 +112,6 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
     @NameInMap("RouteTableId")
     public String routeTableId;
 
-    /**
-     * <p>List of routing table IDs.</p>
-     */
     @NameInMap("RouteTableIds")
     public DescribeNetworkAttributeResponseBodyRouteTableIds routeTableIds;
 
@@ -161,9 +140,6 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
-    /**
-     * <p>The list of vSwitches in the network.</p>
-     */
     @NameInMap("VSwitchIds")
     public DescribeNetworkAttributeResponseBodyVSwitchIds vSwitchIds;
 
@@ -341,21 +317,9 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkAttributeResponseBodyCloudResourcesCloudResourceSetType extends TeaModel {
-        /**
-         * <p>The number of resources in the network.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("ResourceCount")
         public Integer resourceCount;
 
-        /**
-         * <p>The resource type. VSwitch.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>VSwitch</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 

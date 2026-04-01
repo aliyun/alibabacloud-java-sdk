@@ -13,9 +13,6 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <p>The information about the regions.</p>
-     */
     @NameInMap("EnsRegions")
     public DescribeEnsRegionsResponseBodyEnsRegions ensRegions;
 
@@ -58,48 +55,18 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeEnsRegionsResponseBodyEnsRegionsEnsRegions extends TeaModel {
-        /**
-         * <p>The code of the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>NorthEastChina</p>
-         */
         @NameInMap("Area")
         public String area;
 
-        /**
-         * <p>The name of the node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>NorthChina</p>
-         */
         @NameInMap("EnName")
         public String enName;
 
-        /**
-         * <p>The ID of the node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-dalian-unicom</p>
-         */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
-        /**
-         * <p>The name of the node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Dalian Unicom</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The province where the node is deployed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Liaoning Province</p>
-         */
         @NameInMap("Province")
         public String province;
 

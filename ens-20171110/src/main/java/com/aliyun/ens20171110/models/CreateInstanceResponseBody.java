@@ -16,9 +16,6 @@ public class CreateInstanceResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <p>The IDs of instances.</p>
-     */
     @NameInMap("InstanceIds")
     public CreateInstanceResponseBodyInstanceIds instanceIds;
 

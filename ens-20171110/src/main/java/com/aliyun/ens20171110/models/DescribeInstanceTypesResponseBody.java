@@ -13,9 +13,6 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <p>Details about the instance types.</p>
-     */
     @NameInMap("InstanceTypes")
     public DescribeInstanceTypesResponseBodyInstanceTypes instanceTypes;
 
@@ -58,39 +55,15 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceType extends TeaModel {
-        /**
-         * <p>The number of vCPUs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("CpuCoreCount")
         public Integer cpuCoreCount;
 
-        /**
-         * <p>This parameter is unavailable.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>This parameter is not needed temporarily.</p>
-         */
         @NameInMap("InstanceTypeId")
         public String instanceTypeId;
 
-        /**
-         * <p>The name of the instance type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ens.xxx.small</p>
-         */
         @NameInMap("InstanceTypeName")
         public String instanceTypeName;
 
-        /**
-         * <p>The memory size. Unit: MB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>8192</p>
-         */
         @NameInMap("MemorySize")
         public Integer memorySize;
 

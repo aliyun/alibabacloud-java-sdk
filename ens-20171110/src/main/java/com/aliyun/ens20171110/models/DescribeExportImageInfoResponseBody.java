@@ -4,9 +4,6 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeExportImageInfoResponseBody extends TeaModel {
-    /**
-     * <p>The returned result. For more information, see the Images parameter described in the JSON-formatted sample success response.</p>
-     */
     @NameInMap("Images")
     public DescribeExportImageInfoResponseBodyImages images;
 
@@ -92,85 +89,27 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeExportImageInfoResponseBodyImagesImage extends TeaModel {
-        /**
-         * <p>The architecture of the image. Example: <strong>x86_64</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>x86_64</p>
-         */
         @NameInMap("Architecture")
         public String architecture;
 
-        /**
-         * <p>The time when the image was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2017-12-08T12:10:03Z</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>The URL of the exported image.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="https://user_defined_bucket.oss-cn-beijing.aliyuncs.com/m-xxxxxxxxx1.qcow2">https://user_defined_bucket.oss-cn-beijing.aliyuncs.com/m-xxxxxxxxx1.qcow2</a></p>
-         */
         @NameInMap("ExportedImageURL")
         public String exportedImageURL;
 
-        /**
-         * <p>The export status of the image. Valid values:</p>
-         * <ul>
-         * <li>Exporting</li>
-         * <li>Exported</li>
-         * <li>ExportError</li>
-         * <li>Unexported</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Exported</p>
-         */
         @NameInMap("ImageExportStatus")
         public String imageExportStatus;
 
-        /**
-         * <p>The ID of the image.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>m-xxxxxxxxx1</p>
-         */
         @NameInMap("ImageId")
         public String imageId;
 
-        /**
-         * <p>The name of the image.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>m-xxxxxxxxx1</p>
-         */
         @NameInMap("ImageName")
         public String imageName;
 
-        /**
-         * <p>The source of the image. Valid values:</p>
-         * <ul>
-         * <li>system: public image</li>
-         * <li>self: custom image</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>system</p>
-         */
         @NameInMap("ImageOwnerAlias")
         public String imageOwnerAlias;
 
-        /**
-         * <p>The OS.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>centos</p>
-         */
         @NameInMap("Platform")
         public String platform;
 

@@ -307,6 +307,13 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>0</p>
          */
+        @NameInMap("FailedNodes")
+        public Integer failedNodes;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("InitialNodes")
         public Integer initialNodes;
 
@@ -349,6 +356,14 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
         }
         public Integer getDesiredNodes() {
             return this.desiredNodes;
+        }
+
+        public CreateClusterNodePoolResponseBodyNodepoolStatus setFailedNodes(Integer failedNodes) {
+            this.failedNodes = failedNodes;
+            return this;
+        }
+        public Integer getFailedNodes() {
+            return this.failedNodes;
         }
 
         public CreateClusterNodePoolResponseBodyNodepoolStatus setInitialNodes(Integer initialNodes) {

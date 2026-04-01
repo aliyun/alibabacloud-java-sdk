@@ -82,6 +82,9 @@ public class BatchEventMigrateInstanceRequest extends TeaModel {
         @NameInMap("PlanTime")
         public Long planTime;
 
+        @NameInMap("PlanUtcTime")
+        public String planUtcTime;
+
         /**
          * <p>Resource ID i-\*.</p>
          * <p>This parameter is required.</p>
@@ -135,6 +138,14 @@ public class BatchEventMigrateInstanceRequest extends TeaModel {
         }
         public Long getPlanTime() {
             return this.planTime;
+        }
+
+        public BatchEventMigrateInstanceRequestEventInfos setPlanUtcTime(String planUtcTime) {
+            this.planUtcTime = planUtcTime;
+            return this;
+        }
+        public String getPlanUtcTime() {
+            return this.planUtcTime;
         }
 
         public BatchEventMigrateInstanceRequestEventInfos setResourceId(String resourceId) {

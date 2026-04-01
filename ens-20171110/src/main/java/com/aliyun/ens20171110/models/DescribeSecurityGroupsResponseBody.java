@@ -31,9 +31,6 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Details about security groups.</p>
-     */
     @NameInMap("SecurityGroups")
     public DescribeSecurityGroupsResponseBodySecurityGroups securityGroups;
 
@@ -130,60 +127,24 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup extends TeaModel {
-        /**
-         * <p>The creation time. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-11-01T06:08:46Z</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>The description of the security group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestDescription</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The number of associated instances.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5</p>
-         */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
-        /**
-         * <p>The IDs of the instances that are associated with the security group.</p>
-         */
         @NameInMap("InstanceIds")
         public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupInstanceIds instanceIds;
 
-        /**
-         * <p>The IDs of the ENIs that are associated with the security group.</p>
-         */
         @NameInMap("NetworkInterfaceIds")
         public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupNetworkInterfaceIds networkInterfaceIds;
 
-        /**
-         * <p>The ID of the security group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sg-bp67acfmxazb4ph***</p>
-         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
-        /**
-         * <p>The name of the security group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DocTest</p>
-         */
         @NameInMap("SecurityGroupName")
         public String securityGroupName;
 

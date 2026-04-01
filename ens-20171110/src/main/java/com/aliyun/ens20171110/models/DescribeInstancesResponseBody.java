@@ -13,9 +13,6 @@ public class DescribeInstancesResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <p>The information about the instance is returned in an array of InstanceAttributesType.</p>
-     */
     @NameInMap("Instances")
     public DescribeInstancesResponseBodyInstances instances;
 
@@ -109,122 +106,39 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceDataDiskDataDisk extends TeaModel {
-        /**
-         * <p>The category of the cloud disk or local disk. Valid values:</p>
-         * <ul>
-         * <li><strong>file</strong>: local disk.</li>
-         * <li><strong>pangu</strong>: ultra disk.</li>
-         * <li><strong>local_hdd</strong>: local HDD.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>file</p>
-         */
         @NameInMap("Category")
         public String category;
 
-        /**
-         * <p>The ID of the disk.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>d-5ip4c2dhmas0vjd5u1r****</p>
-         */
         @NameInMap("DiskId")
         public String diskId;
 
-        /**
-         * <p>The name of the disk.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DiskName</p>
-         */
         @NameInMap("DiskName")
         public String diskName;
 
-        /**
-         * <p>The size of the disk. Unit: GiB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("DiskSize")
         public Integer diskSize;
 
-        /**
-         * <p>The KMS key ID used by the cloud drive.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0e478b7a-4262-4802-b8cb-00d3fxxxxx</p>
-         */
         @NameInMap("EncryptKeyId")
         public String encryptKeyId;
 
-        /**
-         * <p>Specifies whether to encrypt the disk.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Encrypted")
         public Boolean encrypted;
 
-        /**
-         * <p>The size of the disk. Unit: MiB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>51200</p>
-         */
         @NameInMap("Size")
         public Integer size;
 
-        /**
-         * <p>The extended field of the disk category. Valid values:</p>
-         * <ul>
-         * <li><strong>file</strong>: local disk.</li>
-         * <li><strong>pangu</strong>: ultra disk.</li>
-         * <li><strong>local_hdd</strong>: local HDD.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>pangu</p>
-         */
         @NameInMap("device_type")
         public String deviceType;
 
-        /**
-         * <p>The type of the cloud disk or local disk. Valid values:</p>
-         * <p><strong>system</strong>: system disk. <strong>data</strong>: data disk.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>system</p>
-         */
         @NameInMap("disk_type")
         public String diskType;
 
-        /**
-         * <p>The name of the disk.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>name</p>
-         */
         @NameInMap("name")
         public String name;
 
-        /**
-         * <p>The size of the disk. Unit: MiB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20480</p>
-         */
         @NameInMap("storage")
         public Integer storage;
 
-        /**
-         * <p>The UUID of the disk.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>d-5itef1wtxj961mbff8xe9****</p>
-         */
         @NameInMap("uuid")
         public String uuid;
 
@@ -389,27 +303,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceNetworkAttributes extends TeaModel {
-        /**
-         * <p>The ID of the network.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>n-2zeuphj08tt7q3brd****</p>
-         */
         @NameInMap("NetworkId")
         public String networkId;
 
-        /**
-         * <p>Details of the private IP addresses.</p>
-         */
         @NameInMap("PrivateIpAddress")
         public DescribeInstancesResponseBodyInstancesInstanceNetworkAttributesPrivateIpAddress privateIpAddress;
 
-        /**
-         * <p>The vSwitch ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vsw-2zeh0r1pabwtg6wcs****</p>
-         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
@@ -445,12 +344,6 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesIpv6SetsIpv6Set extends TeaModel {
-        /**
-         * <p>IPv6 addresses N of the ENI. You can specify multiple IPv6 addresses. Valid values of N: 1 to 100.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2408:4005:396:3200:****:6609:821e:df7a</p>
-         */
         @NameInMap("Ipv6Address")
         public String ipv6Address;
 
@@ -489,28 +382,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesPrivateIpSetsPrivateIpSet extends TeaModel {
-        /**
-         * <p>Indicates whether the IP address is the primary private IP address. Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Primary")
         public Boolean primary;
 
-        /**
-         * <p>The private IP address.</p>
-         * <blockquote>
-         * <p> This parameter is available only if ScheduleAreaLevel is set to Region and cannot be configured if ScheduleAreaLevel is set to other values. Otherwise, an error occurs. If you specify a private IP address, the number of instances must be 1. The private IP address takes effect only when the private IP address and the vSwitch ID are not empty.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>10.75.66.***</p>
-         */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
 
@@ -557,55 +431,21 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaces extends TeaModel {
-        /**
-         * <p>The IPv6 addresses of the ENI. This parameter has a value only when <code>AdditionalAttributes.N</code> is set to <code>NETWORK_PRIMARY_ENI_IP</code>.</p>
-         */
         @NameInMap("Ipv6Sets")
         public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesIpv6Sets ipv6Sets;
 
-        /**
-         * <p>The MAC address of the ENI.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>00:16:3e:4f:5f:ca</p>
-         */
         @NameInMap("MacAddress")
         public String macAddress;
 
-        /**
-         * <p>The ID of the ENI.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>eni-0wlonoy6jo8532gfzuama****</p>
-         */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
-        /**
-         * <p>The primary IP address of the ENI.</p>
-         * 
-         * <strong>example:</strong>
-         * <hr>
-         */
         @NameInMap("PrimaryIpAddress")
         public String primaryIpAddress;
 
-        /**
-         * <p>The private IP addresses of the ENI.</p>
-         */
         @NameInMap("PrivateIpSets")
         public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesPrivateIpSets privateIpSets;
 
-        /**
-         * <p>The type of the disk. Valid values:</p>
-         * <ul>
-         * <li>system: system disk.</li>
-         * <li>data: data disk.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Secondary</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -684,30 +524,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstancePrivateIpAddressesPrivateIpAddress extends TeaModel {
-        /**
-         * <p>The gateway.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>119.147.xx.xx</p>
-         */
         @NameInMap("GateWay")
         public String gateWay;
 
-        /**
-         * <p>The IP address.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>119.147.xx.xx</p>
-         */
         @NameInMap("Ip")
         public String ip;
 
-        /**
-         * <p>The ISP.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cmcc</p>
-         */
         @NameInMap("Isp")
         public String isp;
 
@@ -781,30 +603,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstancePublicIpAddressesPublicIpAddress extends TeaModel {
-        /**
-         * <p>The gateway.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>119.147.xx.xx</p>
-         */
         @NameInMap("GateWay")
         public String gateWay;
 
-        /**
-         * <p>The IP address.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>119.147.xx.xx</p>
-         */
         @NameInMap("Ip")
         public String ip;
 
-        /**
-         * <p>The Internet service provider (ISP).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>unicom</p>
-         */
         @NameInMap("Isp")
         public String isp;
 
@@ -878,98 +682,30 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceSystemDisk extends TeaModel {
-        /**
-         * <p>The category of the cloud disk or local disk. Valid values:</p>
-         * <ul>
-         * <li><strong>file</strong>: local disk.</li>
-         * <li><strong>pangu</strong>: ultra disk.</li>
-         * <li><strong>local_hdd</strong>: local HDD.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>file</p>
-         */
         @NameInMap("Category")
         public String category;
 
-        /**
-         * <p>The ID of the disk.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>d-5ip4c2dhmas0rn7rt0p9****</p>
-         */
         @NameInMap("DiskId")
         public String diskId;
 
-        /**
-         * <p>The name of the disk.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DiskName</p>
-         */
         @NameInMap("DiskName")
         public String diskName;
 
-        /**
-         * <p>The size of the disk. Unit: MiB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>51200</p>
-         */
         @NameInMap("Size")
         public Integer size;
 
-        /**
-         * <p>The extended field of the disk category. Valid values:</p>
-         * <ul>
-         * <li><strong>file</strong>: local disk.</li>
-         * <li><strong>pangu</strong>: ultra disk.</li>
-         * <li><strong>local_hdd</strong>: local HDD.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>pangu</p>
-         */
         @NameInMap("device_type")
         public String deviceType;
 
-        /**
-         * <p>The type of the cloud disk or local disk. Valid values:</p>
-         * <ul>
-         * <li><strong>system</strong>: system disk.</li>
-         * <li><strong>data</strong>: data disk.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>system</p>
-         */
         @NameInMap("disk_type")
         public String diskType;
 
-        /**
-         * <p>The name of the disk.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DiskName</p>
-         */
         @NameInMap("name")
         public String name;
 
-        /**
-         * <p>The size of the disk. Unit: MiB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20480</p>
-         */
         @NameInMap("storage")
         public Integer storage;
 
-        /**
-         * <p>The UUID of the disk.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>d-5ip4c2dhmas0rn7rt0p96****</p>
-         */
         @NameInMap("uuid")
         public String uuid;
 
@@ -1053,21 +789,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceTagsTags extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>key1</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>value1</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -1114,283 +838,99 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstance extends TeaModel {
-        /**
-         * <p>The automatic release time of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2023-06-28T14:38:52Z</p>
-         */
         @NameInMap("AutoReleaseTime")
         public String autoReleaseTime;
 
-        /**
-         * <p>The number of vCPUs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("Cpu")
         public String cpu;
 
-        /**
-         * <p>The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-07-26T06:40:43Z</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>Details of the data disk.</p>
-         */
         @NameInMap("DataDisk")
         public DescribeInstancesResponseBodyInstancesInstanceDataDisk dataDisk;
 
         @NameInMap("DeletionProtection")
         public Boolean deletionProtection;
 
-        /**
-         * <p>The total size of the disk. Unit: MiB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>71680</p>
-         */
         @NameInMap("Disk")
         public Integer disk;
 
-        /**
-         * <p>The region ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-telecom</p>
-         */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
-        /**
-         * <p>The expiration time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2119-07-13T02:38:57Z</p>
-         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
-        /**
-         * <p>The hostname of the instance.</p>
-         * <ul>
-         * <li>The hostname cannot start or end with a period (.) or hyphen (-). It cannot contain consecutive periods (.) or hyphens (-).</li>
-         * <li>For a Windows instance, the hostname must be 2 to 15 characters in length and can contain letters, digits, and hyphens (-). The hostname cannot contain periods (.) or contain only digits.</li>
-         * <li>For an instance that runs another operating system such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate the hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>testHostName</p>
-         */
         @NameInMap("HostName")
         public String hostName;
 
-        /**
-         * <p>The ID of the image.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>m-****</p>
-         */
         @NameInMap("ImageId")
         public String imageId;
 
-        /**
-         * <p>The private IP addresses of the instances.</p>
-         */
         @NameInMap("InnerIpAddress")
         public DescribeInstancesResponseBodyInstancesInstanceInnerIpAddress innerIpAddress;
 
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-instanc****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The name of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-5itef0f28t17bcdw9deu6meub</p>
-         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        /**
-         * <p>The category of the instance. Valid values:</p>
-         * <ul>
-         * <li>EnsInstance: ENS instances that you purchase.</li>
-         * <li>EnsService: ENS instances that belong to edge services.</li>
-         * <li>BuildMachine: ENS instances that are configured with image builders.</li>
-         * <li>EnsPostPaidInstance: pay-as-you-go ENS instances that you purchase.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>EnsService</p>
-         */
         @NameInMap("InstanceResourceType")
         public String instanceResourceType;
 
-        /**
-         * <p>The instance family. Valid values:</p>
-         * <ul>
-         * <li>x86_vm: x86-based computing instance.</li>
-         * <li>x86_pm: x86-based physical machine.</li>
-         * <li>x86_bmi: x86-based bare metal instance.</li>
-         * <li>x86_bm: bare metal instance with the SmartNIC.</li>
-         * <li>pc_bmi: heterogeneous bare metal instance.</li>
-         * <li>pc_vm: heterogeneous virtual machine.</li>
-         * <li>arm_bmi: Arm-based computing instance.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>x86_vm</p>
-         */
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
 
-        /**
-         * <p>The maximum outbound bandwidth. Unit: Mbit/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>40</p>
-         */
         @NameInMap("InternetMaxBandwidthIn")
         public Integer internetMaxBandwidthIn;
 
-        /**
-         * <p>The minimum inbound bandwidth. Unit: Mbit/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("InternetMaxBandwidthOut")
         public Integer internetMaxBandwidthOut;
 
-        /**
-         * <p>The name of the SSH key pair.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>terraform-example</p>
-         */
         @NameInMap("KeyPairName")
         public String keyPairName;
 
-        /**
-         * <p>The memory size. Unit: MB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2048</p>
-         */
         @NameInMap("Memory")
         public Integer memory;
 
-        /**
-         * <p>Details of the network.</p>
-         */
         @NameInMap("NetworkAttributes")
         public DescribeInstancesResponseBodyInstancesInstanceNetworkAttributes networkAttributes;
 
-        /**
-         * <p>The ENI attached to the instance.</p>
-         */
         @NameInMap("NetworkInterfaces")
         public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfaces networkInterfaces;
 
-        /**
-         * <p>The name of the image.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>centos 6.8 x86_64</p>
-         */
         @NameInMap("OSName")
         public String OSName;
 
-        /**
-         * <p>Details of the private IP addresses.</p>
-         */
         @NameInMap("PrivateIpAddresses")
         public DescribeInstancesResponseBodyInstancesInstancePrivateIpAddresses privateIpAddresses;
 
-        /**
-         * <p>The public IP addresses of the instances.</p>
-         */
         @NameInMap("PublicIpAddress")
         public DescribeInstancesResponseBodyInstancesInstancePublicIpAddress publicIpAddress;
 
-        /**
-         * <p>Details of the public IP addresses.</p>
-         */
         @NameInMap("PublicIpAddresses")
         public DescribeInstancesResponseBodyInstancesInstancePublicIpAddresses publicIpAddresses;
 
-        /**
-         * <p>The IDs of the security groups.</p>
-         */
         @NameInMap("SecurityGroupIds")
         public DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds securityGroupIds;
 
-        /**
-         * <p>The ID of your Alibaba Cloud account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Deleting</p>
-         */
         @NameInMap("ServiceStatus")
         public String serviceStatus;
 
-        /**
-         * <p>The instance type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ens.sn1.stiny</p>
-         */
         @NameInMap("SpecName")
         public String specName;
 
-        /**
-         * <p>The bidding policy of the preemptible instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>NoSpot</p>
-         */
         @NameInMap("SpotStrategy")
         public String spotStrategy;
 
-        /**
-         * <p>The status of the instance. Valid values:</p>
-         * <ul>
-         * <li>Running</li>
-         * <li>Expired</li>
-         * <li>Stopped</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Running</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>Details of the system disk.</p>
-         */
         @NameInMap("SystemDisk")
         public DescribeInstancesResponseBodyInstancesInstanceSystemDisk systemDisk;
 
-        /**
-         * <p>The tags of the instance.</p>
-         * <blockquote>
-         * <p> This operation does not return tag information. You can call this operation in combination with the tag-related operations.</p>
-         * </blockquote>
-         */
         @NameInMap("Tags")
         public DescribeInstancesResponseBodyInstancesInstanceTags tags;
 

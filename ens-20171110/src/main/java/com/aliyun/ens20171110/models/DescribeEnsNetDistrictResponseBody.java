@@ -13,9 +13,6 @@ public class DescribeEnsNetDistrictResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <p>The information about the regions.</p>
-     */
     @NameInMap("EnsNetDistricts")
     public DescribeEnsNetDistrictResponseBodyEnsNetDistricts ensNetDistricts;
 
@@ -58,62 +55,21 @@ public class DescribeEnsNetDistrictResponseBody extends TeaModel {
     }
 
     public static class DescribeEnsNetDistrictResponseBodyEnsNetDistrictsEnsNetDistrict extends TeaModel {
-        /**
-         * <p>The number of nodes in the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("EnsRegionIdCount")
         public String ensRegionIdCount;
 
-        /**
-         * <p>The code of the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100106</p>
-         */
         @NameInMap("NetDistrictCode")
         public String netDistrictCode;
 
-        /**
-         * <p>The name of the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>southWest</p>
-         */
         @NameInMap("NetDistrictEnName")
         public String netDistrictEnName;
 
-        /**
-         * <p>The parent code of the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100000</p>
-         */
         @NameInMap("NetDistrictFatherCode")
         public String netDistrictFatherCode;
 
-        /**
-         * <p>The level of the region.</p>
-         * <ul>
-         * <li><strong>Big</strong>: area</li>
-         * <li><strong>Middle</strong>: province</li>
-         * <li><strong>Small</strong>: city</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Big</p>
-         */
         @NameInMap("NetDistrictLevel")
         public String netDistrictLevel;
 
-        /**
-         * <p>The name of the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>southwest China</p>
-         */
         @NameInMap("NetDistrictName")
         public String netDistrictName;
 

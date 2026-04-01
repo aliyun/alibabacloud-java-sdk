@@ -40,9 +40,6 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    /**
-     * <p>The information about the vSwitches. For more information, see the array of vSwitches in the response examples in the JSON format.</p>
-     */
     @NameInMap("VSwitches")
     public DescribeVSwitchesResponseBodyVSwitches vSwitches;
 
@@ -92,37 +89,17 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     }
 
     public static class DescribeVSwitchesResponseBodyVSwitchesVSwitchTagsTag extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestKey</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <strong>example:</strong>
-         * <p>TestKey</p>
-         */
         @NameInMap("TagKey")
         @Deprecated
         public String tagKey;
 
-        /**
-         * <strong>example:</strong>
-         * <p>TestValue</p>
-         */
         @NameInMap("TagValue")
         @Deprecated
         public String tagValue;
 
-        /**
-         * <p>The request error rate.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestValue</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -187,91 +164,33 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     }
 
     public static class DescribeVSwitchesResponseBodyVSwitchesVSwitch extends TeaModel {
-        /**
-         * <p>The IPv4 CIDR block of the vSwitch.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10.21.224.0/22</p>
-         */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
-        /**
-         * <p>The time when the VPC was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-06-16T06:33:15Z</p>
-         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
-        /**
-         * <p>The description of the vSwitch.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>VSwitchDescription</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the ENS node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-xian-unicom</p>
-         */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
-        /**
-         * <p>The number of available IP addresses.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1024</p>
-         */
         @NameInMap("FreeIpCount")
         public Long freeIpCount;
 
-        /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-25cdvfeq58pl****</p>
-         */
         @NameInMap("NetworkId")
         public String networkId;
 
-        /**
-         * <p>The status of the vSwitch. Valid values:</p>
-         * <ul>
-         * <li>Pending</li>
-         * <li>Available</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Pending</p>
-         */
         @NameInMap("Status")
         public String status;
 
         @NameInMap("Tags")
         public DescribeVSwitchesResponseBodyVSwitchesVSwitchTags tags;
 
-        /**
-         * <p>The ID of the vSwitch.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vsw-5m9xhlq8oh***</p>
-         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        /**
-         * <p>The name of the vSwitch.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testVSwitchName</p>
-         */
         @NameInMap("VSwitchName")
         public String vSwitchName;
 

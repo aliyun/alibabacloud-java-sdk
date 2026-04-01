@@ -4,9 +4,6 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeKeyPairsResponseBody extends TeaModel {
-    /**
-     * <p>Details about the key pairs.</p>
-     */
     @NameInMap("KeyPairs")
     public DescribeKeyPairsResponseBodyKeyPairs keyPairs;
 
@@ -92,39 +89,15 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
     }
 
     public static class DescribeKeyPairsResponseBodyKeyPairsKeyPair extends TeaModel {
-        /**
-         * <p>The time when the key pair was created. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-04-26T15:38:27Z</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>The fingerprint of the key pair.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>fdaf8ff7a756ef843814fc****</p>
-         */
         @NameInMap("KeyPairFingerPrint")
         public String keyPairFingerPrint;
 
-        /**
-         * <p>The ID of the key pair.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ssh-50cynkq42sgj4ej1tn78t4***</p>
-         */
         @NameInMap("KeyPairId")
         public String keyPairId;
 
-        /**
-         * <p>The name of the SSH key pair.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestKeyPairName</p>
-         */
         @NameInMap("KeyPairName")
         public String keyPairName;
 

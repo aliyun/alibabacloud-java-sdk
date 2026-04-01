@@ -22,9 +22,6 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The push results of data files.</p>
-     */
     @NameInMap("PushResults")
     public DescribeDataPushResultResponseBodyPushResults pushResults;
 
@@ -92,39 +89,15 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
     }
 
     public static class DescribeDataPushResultResponseBodyPushResultsPushResultStatusStatSStatusStatRegionIdsRegionId extends TeaModel {
-        /**
-         * <p>The ID of the ENS node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-wuxi-5</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The start time of the push operation. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-12-28T16:00:00Z</p>
-         */
         @NameInMap("StartTime")
         public String startTime;
 
-        /**
-         * <p>The description of the status.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Success</p>
-         */
         @NameInMap("StatusDescrip")
         public String statusDescrip;
 
-        /**
-         * <p>The time when the status was last updated. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-12-07T02:37:10Z</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
@@ -187,27 +160,12 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
     }
 
     public static class DescribeDataPushResultResponseBodyPushResultsPushResultStatusStatSStatusStat extends TeaModel {
-        /**
-         * <p>The total number of ENS nodes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("RegionIdCount")
         public Integer regionIdCount;
 
-        /**
-         * <p>The push status of data files on the ENS node.</p>
-         */
         @NameInMap("RegionIds")
         public DescribeDataPushResultResponseBodyPushResultsPushResultStatusStatSStatusStatRegionIds regionIds;
 
-        /**
-         * <p>The push status. The value is of the enumeration type. Valid values: SUCCESS FAILED PUSHING</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FAILED</p>
-         */
         @NameInMap("Status")
         public String status;
 
@@ -262,27 +220,12 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
     }
 
     public static class DescribeDataPushResultResponseBodyPushResultsPushResult extends TeaModel {
-        /**
-         * <p>The name of the data file.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>gcs-pre-websocket-eip-telecom</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The push status of data files.</p>
-         */
         @NameInMap("StatusStatS")
         public DescribeDataPushResultResponseBodyPushResultsPushResultStatusStatS statusStatS;
 
-        /**
-         * <p>The version number of the data file.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>standard</p>
-         */
         @NameInMap("Version")
         public String version;
 

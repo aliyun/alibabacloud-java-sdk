@@ -4,9 +4,6 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworksResponseBody extends TeaModel {
-    /**
-     * <p>The VPCs.</p>
-     */
     @NameInMap("Networks")
     public DescribeNetworksResponseBodyNetworks networks;
 
@@ -130,37 +127,17 @@ public class DescribeNetworksResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworksResponseBodyNetworksNetworkTagsTag extends TeaModel {
-        /**
-         * <p>The key of the tag.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestKey</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <strong>example:</strong>
-         * <p>TestKey</p>
-         */
         @NameInMap("TagKey")
         @Deprecated
         public String tagKey;
 
-        /**
-         * <strong>example:</strong>
-         * <p>TestValue</p>
-         */
         @NameInMap("TagValue")
         @Deprecated
         public String tagValue;
 
-        /**
-         * <p>The bandwidth.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestValue</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -244,124 +221,48 @@ public class DescribeNetworksResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworksResponseBodyNetworksNetwork extends TeaModel {
-        /**
-         * <p>The IPv4 CIDR block of the network.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10.0.xx.xx/24</p>
-         */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
-        /**
-         * <p>The timestamp when the instance was created. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-06-16T06:33:15Z</p>
-         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
-        /**
-         * <p>The description of the network.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>exampleDescription</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the edge node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-beijing</p>
-         */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
-        /**
-         * <p>The ID of the gateway route table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rt-5*****tbs</p>
-         */
         @NameInMap("GatewayRouteTableId")
         public String gatewayRouteTableId;
 
-        /**
-         * <p>The ID of the network access control list (ACL).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>nacl-a2do9e413e0spxscd****</p>
-         */
         @NameInMap("NetworkAclId")
         public String networkAclId;
 
-        /**
-         * <p>The ID of the network.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>n-5***</p>
-         */
         @NameInMap("NetworkId")
         public String networkId;
 
-        /**
-         * <p>The name of the network.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example</p>
-         */
         @NameInMap("NetworkName")
         public String networkName;
 
-        /**
-         * <p>The ID of the route table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rt-5*****pks</p>
-         */
         @NameInMap("RouteTableId")
         public String routeTableId;
 
-        /**
-         * <p>The IDs of the route tables.</p>
-         */
         @NameInMap("RouteTableIds")
         public DescribeNetworksResponseBodyNetworksNetworkRouteTableIds routeTableIds;
 
-        /**
-         * <p>The route table ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rtb-5**</p>
-         */
         @NameInMap("RouterTableId")
         public String routerTableId;
 
         @NameInMap("SecondaryCidrBlocks")
         public DescribeNetworksResponseBodyNetworksNetworkSecondaryCidrBlocks secondaryCidrBlocks;
 
-        /**
-         * <p>The status of the network. Valid values:</p>
-         * <ul>
-         * <li>Pending</li>
-         * <li>Available</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Available</p>
-         */
         @NameInMap("Status")
         public String status;
 
         @NameInMap("Tags")
         public DescribeNetworksResponseBodyNetworksNetworkTags tags;
 
-        /**
-         * <p>The list of vSwitches in the network.</p>
-         */
         @NameInMap("VSwitchIds")
         public DescribeNetworksResponseBodyNetworksNetworkVSwitchIds vSwitchIds;
 

@@ -15,7 +15,7 @@ public class PutBucketLifecycleRequest extends TeaModel {
      * <p>false</p>
      */
     @NameInMap("AllowSameActionOverlap")
-    public String allowSameActionOverlap;
+    public Boolean allowSameActionOverlap;
 
     /**
      * <p>The name of the bucket.</p>
@@ -97,11 +97,11 @@ public class PutBucketLifecycleRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public PutBucketLifecycleRequest setAllowSameActionOverlap(String allowSameActionOverlap) {
+    public PutBucketLifecycleRequest setAllowSameActionOverlap(Boolean allowSameActionOverlap) {
         this.allowSameActionOverlap = allowSameActionOverlap;
         return this;
     }
-    public String getAllowSameActionOverlap() {
+    public Boolean getAllowSameActionOverlap() {
         return this.allowSameActionOverlap;
     }
 

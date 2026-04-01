@@ -13,9 +13,6 @@ public class DescribeEnsNetLevelResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <p>The network levels.</p>
-     */
     @NameInMap("EnsNetLevels")
     public DescribeEnsNetLevelResponseBodyEnsNetLevels ensNetLevels;
 
@@ -58,17 +55,6 @@ public class DescribeEnsNetLevelResponseBody extends TeaModel {
     }
 
     public static class DescribeEnsNetLevelResponseBodyEnsNetLevelsEnsNetLevel extends TeaModel {
-        /**
-         * <p>The network level. Valid values:</p>
-         * <ul>
-         * <li>Big: greater area.</li>
-         * <li>Middle: province.</li>
-         * <li>Small: city.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Big</p>
-         */
         @NameInMap("EnsNetLevelCode")
         public String ensNetLevelCode;
 

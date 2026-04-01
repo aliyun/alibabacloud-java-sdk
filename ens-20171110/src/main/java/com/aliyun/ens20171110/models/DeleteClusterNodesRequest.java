@@ -19,6 +19,9 @@ public class DeleteClusterNodesRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    @NameInMap("ReleaseNode")
+    public Boolean releaseNode;
+
     public static DeleteClusterNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteClusterNodesRequest self = new DeleteClusterNodesRequest();
         return TeaModel.build(map, self);
@@ -38,6 +41,14 @@ public class DeleteClusterNodesRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public DeleteClusterNodesRequest setReleaseNode(Boolean releaseNode) {
+        this.releaseNode = releaseNode;
+        return this;
+    }
+    public Boolean getReleaseNode() {
+        return this.releaseNode;
     }
 
     public static class DeleteClusterNodesRequestBody extends TeaModel {

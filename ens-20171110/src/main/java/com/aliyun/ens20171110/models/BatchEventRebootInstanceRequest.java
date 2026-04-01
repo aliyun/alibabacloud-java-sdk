@@ -55,6 +55,9 @@ public class BatchEventRebootInstanceRequest extends TeaModel {
         @NameInMap("PlanTime")
         public Long planTime;
 
+        @NameInMap("PlanUtcTime")
+        public String planUtcTime;
+
         /**
          * <p>A client ID.</p>
          * 
@@ -91,6 +94,14 @@ public class BatchEventRebootInstanceRequest extends TeaModel {
         }
         public Long getPlanTime() {
             return this.planTime;
+        }
+
+        public BatchEventRebootInstanceRequestEventInfos setPlanUtcTime(String planUtcTime) {
+            this.planUtcTime = planUtcTime;
+            return this;
+        }
+        public String getPlanUtcTime() {
+            return this.planUtcTime;
         }
 
         public BatchEventRebootInstanceRequestEventInfos setResourceId(String resourceId) {

@@ -4,9 +4,6 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class RunServiceScheduleResponseBody extends TeaModel {
-    /**
-     * <p>The execution results of the commands.</p>
-     */
     @NameInMap("CommandResults")
     public RunServiceScheduleResponseBodyCommandResults commandResults;
 
@@ -143,30 +140,12 @@ public class RunServiceScheduleResponseBody extends TeaModel {
     }
 
     public static class RunServiceScheduleResponseBodyCommandResultsCommandResult extends TeaModel {
-        /**
-         * <p>The command.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ls -l /data</p>
-         */
         @NameInMap("Command")
         public String command;
 
-        /**
-         * <p>The name of the container.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>android</p>
-         */
         @NameInMap("ContainerName")
         public String containerName;
 
-        /**
-         * <p>The execution result of the command.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>success</p>
-         */
         @NameInMap("ResultMsg")
         public String resultMsg;
 

@@ -40,9 +40,6 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
     @NameInMap("DataDiskMinSize")
     public Integer dataDiskMinSize;
 
-    /**
-     * <p>The information about instance specifications.</p>
-     */
     @NameInMap("InstanceSpecs")
     public DescribeInstanceSpecResponseBodyInstanceSpecs instanceSpecs;
 
@@ -126,39 +123,15 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceSpecResponseBodyInstanceSpecsInstanceSpec extends TeaModel {
-        /**
-         * <p>The number of CPU cores.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Core")
         public String core;
 
-        /**
-         * <p>The display name of the instance type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Computational 1C2G</p>
-         */
         @NameInMap("DisplayName")
         public String displayName;
 
-        /**
-         * <p>The type of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ens.sn1.stiny</p>
-         */
         @NameInMap("InstanceType")
         public String instanceType;
 
-        /**
-         * <p>The memory size. Unit: MB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2048</p>
-         */
         @NameInMap("Memory")
         public String memory;
 

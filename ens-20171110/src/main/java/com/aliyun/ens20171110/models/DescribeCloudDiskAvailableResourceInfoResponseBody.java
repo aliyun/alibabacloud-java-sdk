@@ -13,9 +13,6 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The specifications of resources that you can purchase.</p>
-     */
     @NameInMap("SupportResources")
     public DescribeCloudDiskAvailableResourceInfoResponseBodySupportResources supportResources;
 
@@ -60,78 +57,27 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
     }
 
     public static class DescribeCloudDiskAvailableResourceInfoResponseBodySupportResourcesSupportResource extends TeaModel {
-        /**
-         * <p>Node product capability.</p>
-         */
         @NameInMap("Ability")
         public DescribeCloudDiskAvailableResourceInfoResponseBodySupportResourcesSupportResourceAbility ability;
 
-        /**
-         * <p>The number of disks that you can purchase.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("CanBuyCount")
         public Long canBuyCount;
 
-        /**
-         * <p>The type of the disk.</p>
-         * <ul>
-         * <li>cloud_efficiency:ultra disk.</li>
-         * <li>cloud_ssd:all-flash disk.</li>
-         * <li>local_hdd:local HDD.</li>
-         * <li>local_ssd:local SSD.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>cloud_ssd</p>
-         */
         @NameInMap("Category")
         public String category;
 
-        /**
-         * <p>The default size of the disk. Unit: GiB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("DefaultDiskSize")
         public Long defaultDiskSize;
 
-        /**
-         * <p>The maximum size of the disk. Unit: GiB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>80</p>
-         */
         @NameInMap("DiskMaxSize")
         public Long diskMaxSize;
 
-        /**
-         * <p>The minimum size of the disk size. Unit: GiB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("DiskMinSize")
         public Long diskMinSize;
 
-        /**
-         * <p>The ID of the edge node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-beijing-cmcc</p>
-         */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
-        /**
-         * <p>The name of the task node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Beijing Mobile</p>
-         */
         @NameInMap("EnsRegionName")
         public String ensRegionName;
 

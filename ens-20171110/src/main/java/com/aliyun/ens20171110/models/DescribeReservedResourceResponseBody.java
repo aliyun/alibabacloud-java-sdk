@@ -13,9 +13,6 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <p>The information about the image.</p>
-     */
     @NameInMap("Images")
     public DescribeReservedResourceResponseBodyImages images;
 
@@ -28,9 +25,6 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The resources.</p>
-     */
     @NameInMap("SupportResources")
     public DescribeReservedResourceResponseBodySupportResources supportResources;
 
@@ -72,21 +66,9 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeReservedResourceResponseBodyImagesImage extends TeaModel {
-        /**
-         * <p>The ID of the image.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>centos_6_08_64_20G_alibase_****</p>
-         */
         @NameInMap("ImageId")
         public String imageId;
 
-        /**
-         * <p>The name of the image.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>centos_6_08_64_20G_alibase_****</p>
-         */
         @NameInMap("ImageName")
         public String imageName;
 
@@ -171,42 +153,18 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeReservedResourceResponseBodySupportResourcesSupportResource extends TeaModel {
-        /**
-         * <p>The sizes of data disks.</p>
-         */
         @NameInMap("DataDiskSizes")
         public DescribeReservedResourceResponseBodySupportResourcesSupportResourceDataDiskSizes dataDiskSizes;
 
-        /**
-         * <p>The ID of the node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-beijing-cmcc</p>
-         */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
-        /**
-         * <p>The specifications of instances.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ens.sn1.stiny</p>
-         */
         @NameInMap("InstanceSpec")
         public String instanceSpec;
 
-        /**
-         * <p>The number of resources that you can purchase.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>9</p>
-         */
         @NameInMap("SupportResourcesCount")
         public String supportResourcesCount;
 
-        /**
-         * <p>The sizes of system disks.</p>
-         */
         @NameInMap("SystemDiskSizes")
         public DescribeReservedResourceResponseBodySupportResourcesSupportResourceSystemDiskSizes systemDiskSizes;
 

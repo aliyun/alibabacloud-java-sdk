@@ -49,27 +49,15 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
-    /**
-     * <p>A list of high-availability VIP instance IDs.</p>
-     */
     @NameInMap("HaVipIds")
     public DescribeVSwitchAttributesResponseBodyHaVipIds haVipIds;
 
-    /**
-     * <p>A list of instance IDs.</p>
-     */
     @NameInMap("InstanceIds")
     public DescribeVSwitchAttributesResponseBodyInstanceIds instanceIds;
 
-    /**
-     * <p>A list of load balancer instance IDs.</p>
-     */
     @NameInMap("LoadBalancerIds")
     public DescribeVSwitchAttributesResponseBodyLoadBalancerIds loadBalancerIds;
 
-    /**
-     * <p>A list of NAT gateway IDs.</p>
-     */
     @NameInMap("NatGatewayIds")
     public DescribeVSwitchAttributesResponseBodyNatGatewayIds natGatewayIds;
 
@@ -82,9 +70,6 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     @NameInMap("NetworkId")
     public String networkId;
 
-    /**
-     * <p>A list of elastic network interface IDs.</p>
-     */
     @NameInMap("NetworkInterfaceIds")
     public DescribeVSwitchAttributesResponseBodyNetworkInterfaceIds networkInterfaceIds;
 

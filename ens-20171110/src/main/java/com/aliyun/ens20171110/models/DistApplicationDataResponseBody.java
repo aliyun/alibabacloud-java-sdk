@@ -4,9 +4,6 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DistApplicationDataResponseBody extends TeaModel {
-    /**
-     * <p>The list of ENS instance IDs.</p>
-     */
     @NameInMap("DistInstanceIds")
     public DistApplicationDataResponseBodyDistInstanceIds distInstanceIds;
 
@@ -19,9 +16,6 @@ public class DistApplicationDataResponseBody extends TeaModel {
     @NameInMap("DistInstanceTotalCount")
     public Integer distInstanceTotalCount;
 
-    /**
-     * <p>The distribution result of the data file.</p>
-     */
     @NameInMap("DistResults")
     public DistApplicationDataResponseBodyDistResults distResults;
 
@@ -91,39 +85,15 @@ public class DistApplicationDataResponseBody extends TeaModel {
     }
 
     public static class DistApplicationDataResponseBodyDistResultsDistResult extends TeaModel {
-        /**
-         * <p>The name of the data file.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>gcs-prod-websocket-eip-unicom</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The error code. The value is of the enumerated data type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>400</p>
-         */
         @NameInMap("ResultCode")
         public Integer resultCode;
 
-        /**
-         * <p>The description of the distribution result.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Success</p>
-         */
         @NameInMap("ResultDescrip")
         public String resultDescrip;
 
-        /**
-         * <p>The version number of the data file.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>standard</p>
-         */
         @NameInMap("Version")
         public String version;
 

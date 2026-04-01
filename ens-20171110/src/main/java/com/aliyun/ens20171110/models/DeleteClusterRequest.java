@@ -13,6 +13,9 @@ public class DeleteClusterRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    @NameInMap("RetainResources")
+    public Boolean retainResources;
+
     public static DeleteClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteClusterRequest self = new DeleteClusterRequest();
         return TeaModel.build(map, self);
@@ -24,6 +27,14 @@ public class DeleteClusterRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public DeleteClusterRequest setRetainResources(Boolean retainResources) {
+        this.retainResources = retainResources;
+        return this;
+    }
+    public Boolean getRetainResources() {
+        return this.retainResources;
     }
 
 }

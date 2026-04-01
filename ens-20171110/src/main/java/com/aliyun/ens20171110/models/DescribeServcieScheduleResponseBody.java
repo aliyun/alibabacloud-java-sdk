@@ -143,21 +143,9 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
     }
 
     public static class DescribeServcieScheduleResponseBodyPodAbstractInfoContainerStatusesContainerStatus extends TeaModel {
-        /**
-         * <p>The ID of the container.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>container_e79_1638372147094_158091_02_000001</p>
-         */
         @NameInMap("ContainerId")
         public String containerId;
 
-        /**
-         * <p>The name of the container.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>nginx</p>
-         */
         @NameInMap("Name")
         public String name;
 
@@ -213,9 +201,6 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
         @NameInMap("ContainerService")
         public Boolean containerService;
 
-        /**
-         * <p>The information about the container.</p>
-         */
         @NameInMap("ContainerStatuses")
         public DescribeServcieScheduleResponseBodyPodAbstractInfoContainerStatuses containerStatuses;
 

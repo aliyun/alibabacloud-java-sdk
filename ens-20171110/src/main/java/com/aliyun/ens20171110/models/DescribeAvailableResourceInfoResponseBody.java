@@ -4,9 +4,6 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
-    /**
-     * <p>The information about the image.</p>
-     */
     @NameInMap("Images")
     public DescribeAvailableResourceInfoResponseBodyImages images;
 
@@ -19,9 +16,6 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The specifications of resources that you can purchase.</p>
-     */
     @NameInMap("SupportResources")
     public DescribeAvailableResourceInfoResponseBodySupportResources supportResources;
 
@@ -55,30 +49,12 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceInfoResponseBodyImagesImage extends TeaModel {
-        /**
-         * <p>The ID of the image.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>centos_6_08_64_20G_a****</p>
-         */
         @NameInMap("ImageId")
         public String imageId;
 
-        /**
-         * <p>The name of the image.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>centos_6_08_64_20G_a****</p>
-         */
         @NameInMap("ImageName")
         public String imageName;
 
-        /**
-         * <p>The size of the image. Unit: GB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("ImageSize")
         public Integer imageSize;
 
@@ -171,57 +147,21 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceEnsRegionIdsExtendsEnsRegionId extends TeaModel {
-        /**
-         * <p>The region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>EastChina</p>
-         */
         @NameInMap("Area")
         public String area;
 
-        /**
-         * <p>The name. This parameter is empty by default.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>EnName</p>
-         */
         @NameInMap("EnName")
         public String enName;
 
-        /**
-         * <p>The ID of the edge node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-chengdu-telecom-4</p>
-         */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
-        /**
-         * <p>The information about the Internet service provider (ISP).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>unicom</p>
-         */
         @NameInMap("Isp")
         public String isp;
 
-        /**
-         * <p>The name of the edge node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Taizhou Telecom, China Unicom, and China Mobile</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The province.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Zhejiang Province</p>
-         */
         @NameInMap("Province")
         public String province;
 
@@ -338,66 +278,30 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResource extends TeaModel {
-        /**
-         * <p>Bandwidth billing method.</p>
-         */
         @NameInMap("BandwidthTypes")
         public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceBandwidthTypes bandwidthTypes;
 
-        /**
-         * <p>The maximum capacity of a data disk. Unit: GB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
-         */
         @NameInMap("DataDiskMaxSize")
         public Integer dataDiskMaxSize;
 
-        /**
-         * <p>The minimum data disk size. Unit: GiB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("DataDiskMinSize")
         public Integer dataDiskMinSize;
 
-        /**
-         * <p>node ID</p>
-         */
         @NameInMap("EnsRegionIds")
         public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceEnsRegionIds ensRegionIds;
 
-        /**
-         * <p>The supplementary information about the edge nodes.</p>
-         */
         @NameInMap("EnsRegionIdsExtends")
         public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceEnsRegionIdsExtends ensRegionIdsExtends;
 
         @NameInMap("InstanceSpeces")
         public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceInstanceSpeces instanceSpeces;
 
-        /**
-         * <p>Operator</p>
-         */
         @NameInMap("Isp")
         public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceIsp isp;
 
-        /**
-         * <p>The maximum size of the system disk. Unit: GiB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("SystemDiskMaxSize")
         public Integer systemDiskMaxSize;
 
-        /**
-         * <p>The minimum capacity of a system disk. Unit: GB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("SystemDiskMinSize")
         public Integer systemDiskMinSize;
 

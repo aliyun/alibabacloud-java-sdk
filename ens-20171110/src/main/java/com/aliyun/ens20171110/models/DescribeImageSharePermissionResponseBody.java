@@ -4,9 +4,6 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageSharePermissionResponseBody extends TeaModel {
-    /**
-     * <p>The account information.</p>
-     */
     @NameInMap("Accounts")
     public DescribeImageSharePermissionResponseBodyAccounts accounts;
 
@@ -109,12 +106,6 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
     }
 
     public static class DescribeImageSharePermissionResponseBodyAccountsAccount extends TeaModel {
-        /**
-         * <p>The Alibaba Cloud account with which you share the image.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1515285523xxxx</p>
-         */
         @NameInMap("AliyunUid")
         public String aliyunUid;
 

@@ -13,9 +13,6 @@ public class DescribeImageInfosResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <p>The information about images.</p>
-     */
     @NameInMap("Images")
     public DescribeImageInfosResponseBodyImages images;
 
@@ -58,41 +55,15 @@ public class DescribeImageInfosResponseBody extends TeaModel {
     }
 
     public static class DescribeImageInfosResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping extends TeaModel {
-        /**
-         * <p>The format of the image.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>The format of the image.
-         * raw
-         * qcow2</p>
-         */
         @NameInMap("Format")
         public String format;
 
-        /**
-         * <p>The size of the image. Unit: GB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("Size")
         public String size;
 
-        /**
-         * <p>The type of the disk. Valid values: System and Data.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Data</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>The ID of the image.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-test</p>
-         */
         @NameInMap("imageId")
         public String imageId;
 
@@ -155,87 +126,30 @@ public class DescribeImageInfosResponseBody extends TeaModel {
     }
 
     public static class DescribeImageInfosResponseBodyImagesImage extends TeaModel {
-        /**
-         * <p>The computing type of the image. Valid values:</p>
-         * <ul>
-         * <li>ens_vm: x86 computing.</li>
-         * <li>arm_vm: ARM computing.</li>
-         * <li>bare_metal: x86 bare machine.</li>
-         * <li>pcfarm: heterogeneous computing.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ens_vm</p>
-         */
         @NameInMap("ComputeType")
         public String computeType;
 
-        /**
-         * <p>The description of the image.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>centos_6_08_64_20G_alibase_2017****</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The mappings between disks and snapshots in the image.</p>
-         */
         @NameInMap("DiskDeviceMappings")
         public DescribeImageInfosResponseBodyImagesImageDiskDeviceMappings diskDeviceMappings;
 
-        /**
-         * <p>The ID of the image.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>centos_6_08_64_20G_alibase_2017****</p>
-         */
         @NameInMap("ImageId")
         public String imageId;
 
-        /**
-         * <p>The size of the image. Unit: GiB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("ImageSize")
         public String imageSize;
 
-        /**
-         * <p>The version of the image.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6.8</p>
-         */
         @NameInMap("ImageVersion")
         public String imageVersion;
 
-        /**
-         * <p>The type of the image. Valid values: <strong>centos</strong>, <strong>debian</strong>, <strong>ubuntu</strong>, and <strong>windows</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>centos</p>
-         */
         @NameInMap("OSName")
         public String OSName;
 
-        /**
-         * <p>The type of the operating system.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>linux</p>
-         */
         @NameInMap("OSType")
         public String OSType;
 
-        /**
-         * <p>The ID of the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shenzhen</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 

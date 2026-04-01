@@ -171,6 +171,9 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
         @NameInMap("NotBefore")
         public Long notBefore;
 
+        @NameInMap("NotBeforeUtcTime")
+        public String notBeforeUtcTime;
+
         /**
          * <p>The release time in milliseconds.</p>
          * 
@@ -179,6 +182,9 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
          */
         @NameInMap("PublishTime")
         public Long publishTime;
+
+        @NameInMap("PublishUtcTime")
+        public String publishUtcTime;
 
         /**
          * <p>The event cause.</p>
@@ -248,12 +254,28 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             return this.notBefore;
         }
 
+        public DescribeHistoryEventsResponseBodyEvents setNotBeforeUtcTime(String notBeforeUtcTime) {
+            this.notBeforeUtcTime = notBeforeUtcTime;
+            return this;
+        }
+        public String getNotBeforeUtcTime() {
+            return this.notBeforeUtcTime;
+        }
+
         public DescribeHistoryEventsResponseBodyEvents setPublishTime(Long publishTime) {
             this.publishTime = publishTime;
             return this;
         }
         public Long getPublishTime() {
             return this.publishTime;
+        }
+
+        public DescribeHistoryEventsResponseBodyEvents setPublishUtcTime(String publishUtcTime) {
+            this.publishUtcTime = publishUtcTime;
+            return this;
+        }
+        public String getPublishUtcTime() {
+            return this.publishUtcTime;
         }
 
         public DescribeHistoryEventsResponseBodyEvents setReason(String reason) {

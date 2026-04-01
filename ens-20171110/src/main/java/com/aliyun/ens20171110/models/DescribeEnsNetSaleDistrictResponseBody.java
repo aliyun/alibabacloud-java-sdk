@@ -13,9 +13,6 @@ public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <p>The information about the ISPs in the area.</p>
-     */
     @NameInMap("EnsNetDistricts")
     public DescribeEnsNetSaleDistrictResponseBodyEnsNetDistricts ensNetDistricts;
 
@@ -58,71 +55,24 @@ public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
     }
 
     public static class DescribeEnsNetSaleDistrictResponseBodyEnsNetDistrictsEnsNetDistrict extends TeaModel {
-        /**
-         * <p>The information about the ISP.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{                         &quot;count&quot;:2,                         &quot;name&quot;:&quot;telecommunication&quot;,                         &quot;code&quot;:&quot;telecom&quot;,                         &quot;country&quot;:&quot;cn&quot;                     }</p>
-         */
         @NameInMap("EnsRegionIdCount")
         public String ensRegionIdCount;
 
-        /**
-         * <p>The information about the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{                         &quot;count&quot;:2,                         &quot;code&quot;:&quot;multiCarrier&quot;                     }</p>
-         */
         @NameInMap("InstanceCount")
         public String instanceCount;
 
-        /**
-         * <p>The region code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100101</p>
-         */
         @NameInMap("NetDistrictCode")
         public String netDistrictCode;
 
-        /**
-         * <p>The name of the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>northEast</p>
-         */
         @NameInMap("NetDistrictEnName")
         public String netDistrictEnName;
 
-        /**
-         * <p>The parent code of the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100000</p>
-         */
         @NameInMap("NetDistrictFatherCode")
         public String netDistrictFatherCode;
 
-        /**
-         * <p>The region level. Valid values:</p>
-         * <ul>
-         * <li><strong>Big</strong>: area</li>
-         * <li><strong>Middle</strong>: province</li>
-         * <li><strong>Small</strong>: city</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Big</p>
-         */
         @NameInMap("NetDistrictLevel")
         public String netDistrictLevel;
 
-        /**
-         * <p>The Chinese name of the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Northeast China</p>
-         */
         @NameInMap("NetDistrictName")
         public String netDistrictName;
 

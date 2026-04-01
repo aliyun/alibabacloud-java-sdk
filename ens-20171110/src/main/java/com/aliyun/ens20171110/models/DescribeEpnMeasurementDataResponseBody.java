@@ -4,9 +4,6 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
-    /**
-     * <p>The metering data returned.</p>
-     */
     @NameInMap("MeasurementDatas")
     public DescribeEpnMeasurementDataResponseBodyMeasurementDatas measurementDatas;
 
@@ -41,52 +38,18 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
     }
 
     public static class DescribeEpnMeasurementDataResponseBodyMeasurementDatasMeasurementDataBandWidthFeeDatasBandWidthFeeData extends TeaModel {
-        /**
-         * <p>The code of the billable item.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-cmcc-1</p>
-         */
         @NameInMap("CostCode")
         public String costCode;
 
-        /**
-         * <p>The name of the billable item.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Beijing, Shanghai, and Guangzhou Mobile</p>
-         */
         @NameInMap("CostName")
         public String costName;
 
-        /**
-         * <p>Metering method</p>
-         * <ul>
-         * <li>SpeedUp: bandwidth of intelligent acceleration</li>
-         * <li>IntranetConnection: internal bandwidth</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>SpeedUp</p>
-         */
         @NameInMap("CostType")
         public String costType;
 
-        /**
-         * <p>The value of the billable item.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>16486</p>
-         */
         @NameInMap("CostVal")
         public Integer costVal;
 
-        /**
-         * <p>This parameter is unavailable.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>This parameter is not currently in use.</p>
-         */
         @NameInMap("IspLine")
         public String ispLine;
 
@@ -157,49 +120,18 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
     }
 
     public static class DescribeEpnMeasurementDataResponseBodyMeasurementDatasMeasurementData extends TeaModel {
-        /**
-         * <p>The bandwidth data returned.</p>
-         */
         @NameInMap("BandWidthFeeDatas")
         public DescribeEpnMeasurementDataResponseBodyMeasurementDatasMeasurementDataBandWidthFeeDatas bandWidthFeeDatas;
 
-        /**
-         * <p>The metering method. Valid values:</p>
-         * <ul>
-         * <li>ChargeByUnified: unified metering.</li>
-         * <li>ChargeByGrade: differential metering.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ChargeByGrade</p>
-         */
         @NameInMap("ChargeModel")
         public String chargeModel;
 
-        /**
-         * <p>The metering cycle.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-07-30</p>
-         */
         @NameInMap("CostCycle")
         public String costCycle;
 
-        /**
-         * <p>The end time of the metering cycle.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-07-30T16:00:00Z</p>
-         */
         @NameInMap("CostEndTime")
         public String costEndTime;
 
-        /**
-         * <p>The start time of the metering cycle.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-07-29T16:00:00Z</p>
-         */
         @NameInMap("CostStartTime")
         public String costStartTime;
 

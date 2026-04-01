@@ -4,9 +4,6 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEpnInstancesResponseBody extends TeaModel {
-    /**
-     * <p>Details of EPN instances.</p>
-     */
     @NameInMap("EPNInstances")
     public DescribeEpnInstancesResponseBodyEPNInstances EPNInstances;
 
@@ -92,103 +89,33 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeEpnInstancesResponseBodyEPNInstancesEPNInstance extends TeaModel {
-        /**
-         * <p>The time when the instance was created. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-11-01T06:08:46Z</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>The ID of the EPN instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>epn****</p>
-         */
         @NameInMap("EPNInstanceId")
         public String EPNInstanceId;
 
-        /**
-         * <p>The name of the EPN instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ens_test_epn</p>
-         */
         @NameInMap("EPNInstanceName")
         public String EPNInstanceName;
 
-        /**
-         * <p>Set the value to EdgeToEdge.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>EdgeToEdge</p>
-         */
         @NameInMap("EPNInstanceType")
         public String EPNInstanceType;
 
-        /**
-         * <p>The end of the time range during which the data was queried. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-11-01T06:08:46Z</p>
-         */
         @NameInMap("EndTime")
         public String endTime;
 
-        /**
-         * <p>The inbound bandwidth. Unit: Mbit/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>40</p>
-         */
         @NameInMap("InternetMaxBandwidthOut")
         public Integer internetMaxBandwidthOut;
 
-        /**
-         * <p>The time when the instance was last modified. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-11-01T06:08:46Z</p>
-         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
-        /**
-         * <p>The networking mode. Valid values:</p>
-         * <ul>
-         * <li>SpeedUp: intelligent acceleration network (Internet)</li>
-         * <li>Connection: internal network</li>
-         * <li>SpeedUpAndConnection: intelligent acceleration network and internal network</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>SpeedUp</p>
-         */
         @NameInMap("NetworkingModel")
         public String networkingModel;
 
-        /**
-         * <p>The beginning of the time range during which the data was queried. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-11-01T06:08:46Z</p>
-         */
         @NameInMap("StartTime")
         public String startTime;
 
-        /**
-         * <p>The status of the instance. Valid values:</p>
-         * <ul>
-         * <li>Running</li>
-         * <li>Excuting</li>
-         * <li>Stopped</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Running</p>
-         */
         @NameInMap("Status")
         public String status;
 

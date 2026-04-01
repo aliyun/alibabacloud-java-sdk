@@ -55,6 +55,9 @@ public class BatchEventRedeployInstanceRequest extends TeaModel {
         @NameInMap("PlanTime")
         public Long planTime;
 
+        @NameInMap("PlanUtcTime")
+        public String planUtcTime;
+
         /**
          * <p>Resource ID.</p>
          * 
@@ -91,6 +94,14 @@ public class BatchEventRedeployInstanceRequest extends TeaModel {
         }
         public Long getPlanTime() {
             return this.planTime;
+        }
+
+        public BatchEventRedeployInstanceRequestEventInfos setPlanUtcTime(String planUtcTime) {
+            this.planUtcTime = planUtcTime;
+            return this;
+        }
+        public String getPlanUtcTime() {
+            return this.planUtcTime;
         }
 
         public BatchEventRedeployInstanceRequestEventInfos setResourceId(String resourceId) {

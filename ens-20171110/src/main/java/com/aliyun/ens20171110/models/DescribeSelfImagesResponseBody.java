@@ -13,9 +13,6 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <p>The image information.</p>
-     */
     @NameInMap("Images")
     public DescribeSelfImagesResponseBodyImages images;
 
@@ -109,45 +106,15 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
     }
 
     public static class DescribeSelfImagesResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping extends TeaModel {
-        /**
-         * <p>The format of the image.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>The format of the image.
-         * raw
-         * qcow2</p>
-         */
         @NameInMap("Format")
         public String format;
 
-        /**
-         * <p>The size of the disk. Unit: GiB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("Size")
         public String size;
 
-        /**
-         * <p>The type of the disk. Valid values:</p>
-         * <ul>
-         * <li>system: system disk.</li>
-         * <li>data: data disk.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Data</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>The ID of image.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-test</p>
-         */
         @NameInMap("imageId")
         public String imageId;
 
@@ -210,161 +177,48 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
     }
 
     public static class DescribeSelfImagesResponseBodyImagesImage extends TeaModel {
-        /**
-         * <p>The image architecture. Valid values:</p>
-         * <ul>
-         * <li>i386</li>
-         * <li>x86_64</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>x86_64</p>
-         */
         @NameInMap("Architecture")
         public String architecture;
 
-        /**
-         * <p>Computing type. ens_vm/ens: x86 computing. bare_metal: x86 bare machine or x86 bare metal. arm_vm: ARM computing. arm_bare_metal: ARM bare machine or ARM bare metal. pcfarm: heterogeneous computing.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ens_vm</p>
-         */
         @NameInMap("ComputeType")
         public String computeType;
 
-        /**
-         * <p>The image creation time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2017-12-08T12:10:03Z</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>The mappings between the disk and the snapshot in the image.</p>
-         */
         @NameInMap("DiskDeviceMappings")
         public DescribeSelfImagesResponseBodyImagesImageDiskDeviceMappings diskDeviceMappings;
 
-        /**
-         * <p>The ID of the image.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>centos_6_08_64_20G_a****</p>
-         */
         @NameInMap("ImageId")
         public String imageId;
 
-        /**
-         * <p>The name of the image.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>centos_6_08_64_20G_a****</p>
-         */
         @NameInMap("ImageName")
         public String imageName;
 
-        /**
-         * <p>The source of the image. Valid values:</p>
-         * <ul>
-         * <li><strong>others</strong>: a custom image that is shared by other Alibaba Cloud accounts.</li>
-         * <li><strong>self</strong>: your own custom image.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>system</p>
-         */
         @NameInMap("ImageOwnerAlias")
         public String imageOwnerAlias;
 
-        /**
-         * <p>The size of the image. Unit: GiB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("ImageSize")
         public String imageSize;
 
-        /**
-         * <p>The size of the image storage.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>400</p>
-         */
         @NameInMap("ImageStorageSize")
         public String imageStorageSize;
 
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-5iqczfxps7csjrxeca****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The operating system version.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>7.2</p>
-         */
         @NameInMap("OsVersion")
         public String osVersion;
 
-        /**
-         * <p>The platform.</p>
-         * <ul>
-         * <li>centos</li>
-         * <li>ubuntu</li>
-         * <li>alios</li>
-         * <li>debian</li>
-         * <li>rhel</li>
-         * <li>windows</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>centos</p>
-         */
         @NameInMap("Platform")
         public String platform;
 
-        /**
-         * <p>The ID of the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shenzhen</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The snapshot ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sp-5yt3bdedxzdz6t6uuw****</p>
-         */
         @NameInMap("SnapshotId")
         public String snapshotId;
 
-        /**
-         * <p>The state of the image.</p>
-         * <ul>
-         * <li>Creating.</li>
-         * <li>Packing.</li>
-         * <li>Uploading.</li>
-         * <li>Pack_failed.</li>
-         * <li>Upload_failed.</li>
-         * <li>Available: Only images in the Available state can be used and operated.</li>
-         * <li>Unavailable.</li>
-         * <li>Copying.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Creating</p>
-         */
         @NameInMap("Status")
         public String status;
 

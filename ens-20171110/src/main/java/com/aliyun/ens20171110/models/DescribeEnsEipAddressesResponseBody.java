@@ -95,17 +95,41 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
     }
 
     public static class DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressTagsTag extends TeaModel {
+        /**
+         * <p>标签键</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>标签键。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("TagKey")
         @Deprecated
         public String tagKey;
 
+        /**
+         * <p>标签值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("TagValue")
         @Deprecated
         public String tagValue;
 
+        /**
+         * <p>标签值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -170,54 +194,186 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
     }
 
     public static class DescribeEnsEipAddressesResponseBodyEipAddressesEipAddress extends TeaModel {
+        /**
+         * <p>EIP的实例ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-5sainglpw7qfem3icir4s****</p>
+         */
         @NameInMap("AllocationId")
         public String allocationId;
 
+        /**
+         * <p>EIP的创建时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1624885274000</p>
+         */
         @NameInMap("AllocationTime")
         public String allocationTime;
 
+        /**
+         * <p>EIP的带宽峰值，默认值为5。取值范围：<strong>5</strong>~<strong>10000</strong>，单位：Mbps。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
+        /**
+         * <p>EIP的计费模式。</p>
+         * <ul>
+         * <li><p><strong>PrePaid</strong>：包年包月。</p>
+         * </li>
+         * <li><p><strong>PostPaid</strong>：按量计费。</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <p>EIP的描述信息。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>ENS节点ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-xian-telecom</p>
+         */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
         @NameInMap("IcmpReplyEnabled")
         public Boolean icmpReplyEnabled;
 
+        /**
+         * <p>当前绑定的实例的ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-5sc3kum2e0sz34wbqrws9****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>要绑定的云产品实例的类型，取值： </p>
+         * <ul>
+         * <li><p><strong>EnsInstance</strong>：VPC类型的ENS实例。</p>
+         * </li>
+         * <li><p><strong>SlbInstance</strong>：负载均衡实例。</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SlbInstance</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>EIP的计费方式。</p>
+         * <ul>
+         * <li><p><strong>95BandwidthByMonth</strong>：月95峰值带宽。</p>
+         * </li>
+         * <li><p><strong>PayByBandwidth</strong>：固定带宽计费。</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>95BandwidthByMonth</p>
+         */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
+        /**
+         * <p>EIP的IP地址。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120.XXX.XXX.4</p>
+         */
         @NameInMap("IpAddress")
         public String ipAddress;
 
+        /**
+         * <p>如果该弹性IP是备用EIP时，表示当前EIP的运行状态。</p>
+         * <ul>
+         * <li><strong>Stopped</strong>：已停止。</li>
+         * <li><strong>Running</strong>：运行中。</li>
+         * <li><strong>Starting</strong>：启动中。</li>
+         * <li><strong>Stopping</strong>：停止中。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Stopped</p>
+         */
         @NameInMap("IpStatus")
         public String ipStatus;
 
+        /**
+         * <p>运营商，取值：</p>
+         * <ul>
+         * <li><strong>cmcc</strong>：中国移动。</li>
+         * <li><strong>unicom</strong>：中国联通。</li>
+         * <li><strong>telecom</strong>：中国电信。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cmcc</p>
+         */
         @NameInMap("Isp")
         public String isp;
 
+        /**
+         * <p>EIP实例名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>该EIP是否是备用。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Standby")
         public Boolean standby;
 
+        /**
+         * <p>EIP的状态。</p>
+         * <ul>
+         * <li><p><strong>Associating</strong>：绑定中。</p>
+         * </li>
+         * <li><p><strong>Unassociating</strong>：解绑中。   </p>
+         * </li>
+         * <li><p><strong>InUse</strong>：已分配。   </p>
+         * </li>
+         * <li><p><strong>Available</strong>：可用。</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>标签集合。</p>
+         */
         @NameInMap("Tags")
         public DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressTags tags;
 

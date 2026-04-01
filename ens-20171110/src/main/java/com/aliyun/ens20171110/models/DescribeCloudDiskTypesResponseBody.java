@@ -13,9 +13,6 @@ public class DescribeCloudDiskTypesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The specifications of resources that you can purchase.</p>
-     */
     @NameInMap("SupportResources")
     public DescribeCloudDiskTypesResponseBodySupportResources supportResources;
 
@@ -41,27 +38,9 @@ public class DescribeCloudDiskTypesResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudDiskTypesResponseBodySupportResourcesSupportResource extends TeaModel {
-        /**
-         * <p>The category of the disk.</p>
-         * <ul>
-         * <li>cloud_efficiency: ultra disk.</li>
-         * <li>cloud_ssd: all-flash disk.</li>
-         * <li>local_hdd: local HDD.</li>
-         * <li>local_ssd: local SSD.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>cloud_efficiency</p>
-         */
         @NameInMap("Category")
         public String category;
 
-        /**
-         * <p>The ID of the edge node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-guangzhou-10</p>
-         */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 

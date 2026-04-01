@@ -625,6 +625,140 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>添加已有节点到集群节点池</p>
+     * 
+     * @param tmpReq AttachInstancesToNodePoolRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AttachInstancesToNodePoolResponse
+     */
+    public AttachInstancesToNodePoolResponse attachInstancesToNodePoolWithOptions(AttachInstancesToNodePoolRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AttachInstancesToNodePoolShrinkRequest request = new AttachInstancesToNodePoolShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.instances)) {
+            request.instancesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.instances, "Instances", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instancesShrink)) {
+            query.put("Instances", request.instancesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodepoolId)) {
+            query.put("NodepoolId", request.nodepoolId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AttachInstancesToNodePool"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AttachInstancesToNodePoolResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>添加已有节点到集群节点池</p>
+     * 
+     * @param request AttachInstancesToNodePoolRequest
+     * @return AttachInstancesToNodePoolResponse
+     */
+    public AttachInstancesToNodePoolResponse attachInstancesToNodePool(AttachInstancesToNodePoolRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.attachInstancesToNodePoolWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <p>This operation is used to bind a key pair to instances. Only disabled instances are supported.</p>
+     * <ul>
+     * <li>You can bind a maximum of 30 instances at a time.</li>
+     * <li>At least one of the key_pair_name and key_pair_id parameters is not empty.</li>
+     * <li>Specify the key_pair_id parameter when you call this parameter. The key_pair_name parameter will be discarded.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Binds a Secure Shell (SSH) key pair to specific instances. You can bind a maximum of 30 instances at a time.</p>
+     * 
+     * @param tmpReq AttachKeyPairRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AttachKeyPairResponse
+     */
+    public AttachKeyPairResponse attachKeyPairWithOptions(AttachKeyPairRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AttachKeyPairShrinkRequest request = new AttachKeyPairShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.instanceIds)) {
+            request.instanceIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.instanceIds, "InstanceIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIdsShrink)) {
+            query.put("InstanceIds", request.instanceIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyPairId)) {
+            query.put("KeyPairId", request.keyPairId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyPairName)) {
+            query.put("KeyPairName", request.keyPairName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AttachKeyPair"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AttachKeyPairResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <p>This operation is used to bind a key pair to instances. Only disabled instances are supported.</p>
+     * <ul>
+     * <li>You can bind a maximum of 30 instances at a time.</li>
+     * <li>At least one of the key_pair_name and key_pair_id parameters is not empty.</li>
+     * <li>Specify the key_pair_id parameter when you call this parameter. The key_pair_name parameter will be discarded.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Binds a Secure Shell (SSH) key pair to specific instances. You can bind a maximum of 30 instances at a time.</p>
+     * 
+     * @param request AttachKeyPairRequest
+     * @return AttachKeyPairResponse
+     */
+    public AttachKeyPairResponse attachKeyPair(AttachKeyPairRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.attachKeyPairWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>When you call this operation, take note of the following limits:</p>
      * <ul>
@@ -4195,6 +4329,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClusterId", request.clusterId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.retainResources)) {
+            query.put("RetainResources", request.retainResources);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -4295,6 +4433,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
             query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.releaseNode)) {
+            query.put("ReleaseNode", request.releaseNode);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -6362,6 +6504,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询添加已有节点到集群节点池的脚本</p>
+     * 
+     * @param request DescribeClusterAttachScriptsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeClusterAttachScriptsResponse
+     */
+    public DescribeClusterAttachScriptsResponse describeClusterAttachScriptsWithOptions(DescribeClusterAttachScriptsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodepoolId)) {
+            query.put("NodepoolId", request.nodepoolId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.options)) {
+            query.put("Options", request.options);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeClusterAttachScripts"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClusterAttachScriptsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询添加已有节点到集群节点池的脚本</p>
+     * 
+     * @param request DescribeClusterAttachScriptsRequest
+     * @return DescribeClusterAttachScriptsResponse
+     */
+    public DescribeClusterAttachScriptsResponse describeClusterAttachScripts(DescribeClusterAttachScriptsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeClusterAttachScriptsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询集群详细信息</p>
      * 
      * @param request DescribeClusterDetailRequest
@@ -8348,7 +8542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about file systems.</p>
+     * <p>Queries the information about Apsara File Storage NAS (NAS) file systems.</p>
      * 
      * @param request DescribeFileSystemsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8376,7 +8570,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about file systems.</p>
+     * <p>Queries the information about Apsara File Storage NAS (NAS) file systems.</p>
      * 
      * @param request DescribeFileSystemsRequest
      * @return DescribeFileSystemsResponse
@@ -11912,6 +12106,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <p>This operation is used to unbind a key pair from instances. Only disabled instances are supported.</p>
+     * <ul>
+     * <li>You can unbind a maximum of 30 instances at a time.</li>
+     * <li>If the name of the SSH key pair that is bound to an instance is not same as the value of the keyPairName parameter, an exception is thrown.</li>
+     * <li>At least one of key_pair_name and key_pair_id is not empty.</li>
+     * <li>Specify the key_pair_id parameter when you call this parameter. The key_pair_name parameter will be discarded.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Unbinds a Secure Shell (SSH) key pair from specific instances by specifying the name or ID of the SSH key pair.</p>
+     * 
+     * @param tmpReq DetachKeyPairRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DetachKeyPairResponse
+     */
+    public DetachKeyPairResponse detachKeyPairWithOptions(DetachKeyPairRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DetachKeyPairShrinkRequest request = new DetachKeyPairShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.instanceIds)) {
+            request.instanceIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.instanceIds, "InstanceIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIdsShrink)) {
+            query.put("InstanceIds", request.instanceIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyPairId)) {
+            query.put("KeyPairId", request.keyPairId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyPairName)) {
+            query.put("KeyPairName", request.keyPairName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DetachKeyPair"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DetachKeyPairResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <p>This operation is used to unbind a key pair from instances. Only disabled instances are supported.</p>
+     * <ul>
+     * <li>You can unbind a maximum of 30 instances at a time.</li>
+     * <li>If the name of the SSH key pair that is bound to an instance is not same as the value of the keyPairName parameter, an exception is thrown.</li>
+     * <li>At least one of key_pair_name and key_pair_id is not empty.</li>
+     * <li>Specify the key_pair_id parameter when you call this parameter. The key_pair_name parameter will be discarded.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Unbinds a Secure Shell (SSH) key pair from specific instances by specifying the name or ID of the SSH key pair.</p>
+     * 
+     * @param request DetachKeyPairRequest
+     * @return DetachKeyPairResponse
+     */
+    public DetachKeyPairResponse detachKeyPair(DetachKeyPairRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.detachKeyPairWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Before you call this operation, take note of the following items:</p>
      * <ul>
      * <li>You cannot detach a primary ENI from an instance.</li>
@@ -12058,6 +12330,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PlanTime", request.planTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.planUtcTime)) {
+            query.put("PlanUtcTime", request.planUtcTime);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
             query.put("ResourceId", request.resourceId);
         }
@@ -12120,6 +12396,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PlanTime", request.planTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.planUtcTime)) {
+            query.put("PlanUtcTime", request.planUtcTime);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
             query.put("ResourceId", request.resourceId);
         }
@@ -12180,6 +12460,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.planTime)) {
             query.put("PlanTime", request.planTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.planUtcTime)) {
+            query.put("PlanUtcTime", request.planUtcTime);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
@@ -12804,7 +13088,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为当前用户创建ENS的服务关联角色（SLR），管控资源。</p>
+     * <p>Create a service-linked role (SLR) for ENS for the current user to manage resources.</p>
      * 
      * @param request InitializeENSECKServiceRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12828,7 +13112,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为当前用户创建ENS的服务关联角色（SLR），管控资源。</p>
+     * <p>Create a service-linked role (SLR) for ENS for the current user to manage resources.</p>
      * @return InitializeENSECKServiceRoleResponse
      */
     public InitializeENSECKServiceRoleResponse initializeENSECKServiceRole() throws Exception {
@@ -13504,7 +13788,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取所有产品能力</p>
+     * <p>Lists all service capabilities.</p>
      * 
      * @param request ListProductAbilitiesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13528,7 +13812,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取所有产品能力</p>
+     * <p>Lists all service capabilities.</p>
      * @return ListProductAbilitiesResponse
      */
     public ListProductAbilitiesResponse listProductAbilities() throws Exception {
@@ -14982,7 +15266,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改snat规则</p>
+     * <p>Modifies a specified SNAT entry.</p>
      * 
      * @param request ModifySnatEntryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15030,7 +15314,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改snat规则</p>
+     * <p>Modifies a specified SNAT entry.</p>
      * 
      * @param request ModifySnatEntryRequest
      * @return ModifySnatEntryResponse

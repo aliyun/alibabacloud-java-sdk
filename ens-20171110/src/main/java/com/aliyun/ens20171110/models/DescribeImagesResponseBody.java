@@ -13,9 +13,6 @@ public class DescribeImagesResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <p>The information about the images.</p>
-     */
     @NameInMap("Images")
     public DescribeImagesResponseBodyImages images;
 
@@ -109,45 +106,15 @@ public class DescribeImagesResponseBody extends TeaModel {
     }
 
     public static class DescribeImagesResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping extends TeaModel {
-        /**
-         * <p>The format of the image.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>The format of the image.
-         * raw
-         * qcow2</p>
-         */
         @NameInMap("Format")
         public String format;
 
-        /**
-         * <p>The size of the disk. Unit: GiB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("Size")
         public String size;
 
-        /**
-         * <p>The type of the disk. Valid values:</p>
-         * <ul>
-         * <li>system: system disk.</li>
-         * <li>data: data disk.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Data</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>The ID of image.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-test</p>
-         */
         @NameInMap("imageId")
         public String imageId;
 
@@ -210,99 +177,33 @@ public class DescribeImagesResponseBody extends TeaModel {
     }
 
     public static class DescribeImagesResponseBodyImagesImage extends TeaModel {
-        /**
-         * <p>The architecture of the image. Example: <strong>x86_64</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>x86_64</p>
-         */
         @NameInMap("Architecture")
         public String architecture;
 
-        /**
-         * <p>The time when the image was created. The time follows the ISO 8601 standard.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2017-12-08T12:10:03Z</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>The mappings between the disk and the snapshot in the image.</p>
-         */
         @NameInMap("DiskDeviceMappings")
         public DescribeImagesResponseBodyImagesImageDiskDeviceMappings diskDeviceMappings;
 
-        /**
-         * <p>The ID of the image.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>centos_6_08_64_20G_alibase_2017****</p>
-         */
         @NameInMap("ImageId")
         public String imageId;
 
-        /**
-         * <p>The name of the image.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Ubuntu_16.04</p>
-         */
         @NameInMap("ImageName")
         public String imageName;
 
-        /**
-         * <p>The source of the image. Valid values:</p>
-         * <ul>
-         * <li>system: Alibaba Cloud public images</li>
-         * <li>self: your custom images</li>
-         * <li>others: shared images from other Alibaba Cloud accounts, or community images published by other Alibaba Cloud accounts</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>system</p>
-         */
         @NameInMap("ImageOwnerAlias")
         public String imageOwnerAlias;
 
-        /**
-         * <p>The size of the image. Unit: GiB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>40</p>
-         */
         @NameInMap("ImageSize")
         public String imageSize;
 
-        /**
-         * <p>The operating system type of the image. Valid values:</p>
-         * <ul>
-         * <li>Linux</li>
-         * <li>Windows</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>centos</p>
-         */
         @NameInMap("Platform")
         public String platform;
 
-        /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-qingdao</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The ID of the snapshot.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>mock-clone_snapshot_id</p>
-         */
         @NameInMap("SnapshotId")
         public String snapshotId;
 

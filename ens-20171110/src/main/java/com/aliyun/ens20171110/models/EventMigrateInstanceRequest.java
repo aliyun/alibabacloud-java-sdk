@@ -62,6 +62,9 @@ public class EventMigrateInstanceRequest extends TeaModel {
     @NameInMap("PlanTime")
     public Long planTime;
 
+    @NameInMap("PlanUtcTime")
+    public String planUtcTime;
+
     /**
      * <p>The ID of the resource.</p>
      * <p>This parameter is required.</p>
@@ -115,6 +118,14 @@ public class EventMigrateInstanceRequest extends TeaModel {
     }
     public Long getPlanTime() {
         return this.planTime;
+    }
+
+    public EventMigrateInstanceRequest setPlanUtcTime(String planUtcTime) {
+        this.planUtcTime = planUtcTime;
+        return this;
+    }
+    public String getPlanUtcTime() {
+        return this.planUtcTime;
     }
 
     public EventMigrateInstanceRequest setResourceId(String resourceId) {
