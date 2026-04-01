@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add Disaster Recovery Plan Entry</p>
+     * <p>Adds a topic mapping to a Global Replicator task.</p>
      * 
      * @param request AddDisasterRecoveryItemRequest
      * @param headers map
@@ -62,7 +62,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add Disaster Recovery Plan Entry</p>
+     * <p>Adds a topic mapping to a Global Replicator task.</p>
      * 
      * @param request AddDisasterRecoveryItemRequest
      * @return AddDisasterRecoveryItemResponse
@@ -733,7 +733,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除容灾计划条目</p>
+     * <p>Deletes a topic mapping of a Global Replicator task.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -759,7 +759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除容灾计划条目</p>
+     * <p>Deletes a topic mapping of a Global Replicator task.</p>
      * @return DeleteDisasterRecoveryItemResponse
      */
     public DeleteDisasterRecoveryItemResponse deleteDisasterRecoveryItem(String planId, String itemId) throws Exception {
@@ -816,7 +816,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a ApsaraMQ for RocketMQ instance.</p>
+     * <p>Releases an instance.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -851,7 +851,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a ApsaraMQ for RocketMQ instance.</p>
+     * <p>Releases an instance.</p>
      * @return DeleteInstanceResponse
      */
     public DeleteInstanceResponse deleteInstance(String instanceId) throws Exception {
@@ -1050,7 +1050,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>执行迁移操作</p>
+     * <p>Executes a specific operation on a specific migration task.</p>
      * 
      * @param request ExecuteMigrationOperationRequest
      * @param headers map
@@ -1090,7 +1090,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>执行迁移操作</p>
+     * <p>Executes a specific operation on a specific migration task.</p>
      * 
      * @param request ExecuteMigrationOperationRequest
      * @return ExecuteMigrationOperationResponse
@@ -1150,7 +1150,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询topic可重置时间范围</p>
+     * <p>Queries the time range within which the consumer offset in a topic can be reset.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1176,7 +1176,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询topic可重置时间范围</p>
+     * <p>Queries the time range within which the consumer offset in a topic can be reset.</p>
      * @return GetConsumeTimespanResponse
      */
     public GetConsumeTimespanResponse getConsumeTimespan(String instanceId, String consumerGroupId, String topicName) throws Exception {
@@ -1369,7 +1369,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询容灾计划条目详情</p>
+     * <p>Queries the details of a topic mapping in a Global Replicator task.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1395,7 +1395,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询容灾计划条目详情</p>
+     * <p>Queries the details of a topic mapping in a Global Replicator task.</p>
      * @return GetDisasterRecoveryItemResponse
      */
     public GetDisasterRecoveryItemResponse getDisasterRecoveryItem(String planId, String itemId) throws Exception {
@@ -1766,7 +1766,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询支持的可用区</p>
+     * <p>Queries the supported zones.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1792,7 +1792,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询支持的可用区</p>
+     * <p>Queries the supported zones.</p>
      * @return ListAvailableZonesResponse
      */
     public ListAvailableZonesResponse listAvailableZones() throws Exception {
@@ -1803,7 +1803,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询消费者客户端连接信息</p>
+     * <p>Queries the connections of a specific consumer client.</p>
      * 
      * @param request ListConsumerConnectionsRequest
      * @param headers map
@@ -1841,7 +1841,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询消费者客户端连接信息</p>
+     * <p>Queries the connections of a specific consumer client.</p>
      * 
      * @param request ListConsumerConnectionsRequest
      * @return ListConsumerConnectionsResponse
@@ -1966,7 +1966,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query disaster recovery plan consumption progress information</p>
+     * <p>Queries consumer progress synchronization tasks.</p>
      * 
      * @param request ListDisasterRecoveryCheckpointsRequest
      * @param headers map
@@ -2012,7 +2012,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query disaster recovery plan consumption progress information</p>
+     * <p>Queries consumer progress synchronization tasks.</p>
      * 
      * @param request ListDisasterRecoveryCheckpointsRequest
      * @return ListDisasterRecoveryCheckpointsResponse
@@ -2403,7 +2403,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of messages.</p>
+     * <p>Queries messages.</p>
      * 
      * @param request ListMessagesRequest
      * @param headers map
@@ -2465,7 +2465,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of messages.</p>
+     * <p>Queries messages.</p>
      * 
      * @param request ListMessagesRequest
      * @return ListMessagesResponse
@@ -2529,7 +2529,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询迁移操作列表</p>
+     * <p>Queries a list of migration operations.</p>
      * 
      * @param request ListMigrationOperationsRequest
      * @param headers map
@@ -2579,7 +2579,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询迁移操作列表</p>
+     * <p>Queries a list of migration operations.</p>
      * 
      * @param request ListMigrationOperationsRequest
      * @return ListMigrationOperationsResponse
@@ -2592,7 +2592,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询迁移列表</p>
+     * <p>Queries migration tasks.</p>
      * 
      * @param request ListMigrationsRequest
      * @param headers map
@@ -2642,7 +2642,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询迁移列表</p>
+     * <p>Queries migration tasks.</p>
      * 
      * @param request ListMigrationsRequest
      * @return ListMigrationsResponse
@@ -2692,7 +2692,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query visible resource tag relationships</p>
+     * <p>Queries the tags that are added to resources.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param headers map
@@ -2746,7 +2746,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query visible resource tag relationships</p>
+     * <p>Queries the tags that are added to resources.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -2936,7 +2936,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resets the consumer offset of a consumer group.</p>
+     * <p>Resets the consumer offset of a consumer group. If you reset a consumer offset, the offset from which a consumer starts to consume messages is changed. If faults occur or wrong messages are consumed during message consumption, you can reset the consumer offset to roll back the consumption to a specific offset for reconsumption. You can also reset the consumer offset to the latest offset and temporarily leave the accumulated messages unhandled.</p>
      * 
      * @param request ResetConsumeOffsetRequest
      * @param headers map
@@ -2974,7 +2974,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resets the consumer offset of a consumer group.</p>
+     * <p>Resets the consumer offset of a consumer group. If you reset a consumer offset, the offset from which a consumer starts to consume messages is changed. If faults occur or wrong messages are consumed during message consumption, you can reset the consumer offset to roll back the consumption to a specific offset for reconsumption. You can also reset the consumer offset to the latest offset and temporarily leave the accumulated messages unhandled.</p>
      * 
      * @param request ResetConsumeOffsetRequest
      * @return ResetConsumeOffsetResponse
@@ -2987,7 +2987,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enable Disaster Recovery Plan Entry</p>
+     * <p>Starts a topic mapping of a Global Replicator task.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3013,7 +3013,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enable Disaster Recovery Plan Entry</p>
+     * <p>Starts a topic mapping of a Global Replicator task.</p>
      * @return StartDisasterRecoveryItemResponse
      */
     public StartDisasterRecoveryItemResponse startDisasterRecoveryItem(String planId, String itemId) throws Exception {
@@ -3024,7 +3024,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deactivate Disaster Recovery Plan Entry</p>
+     * <p>Stops a topic mapping of a Global Replicator task.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3050,7 +3050,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deactivate Disaster Recovery Plan Entry</p>
+     * <p>Stops a topic mapping of a Global Replicator task.</p>
      * @return StopDisasterRecoveryItemResponse
      */
     public StopDisasterRecoveryItemResponse stopDisasterRecoveryItem(String planId, String itemId) throws Exception {
@@ -3706,6 +3706,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public VerifySendMessageResponse verifySendMessageWithOptions(String instanceId, String topicName, VerifySendMessageRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deliveryTimeStamp)) {
+            body.put("deliveryTimeStamp", request.deliveryTimeStamp);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.liteTopicName)) {
             body.put("liteTopicName", request.liteTopicName);
         }
@@ -3714,12 +3718,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("message", request.message);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.messageGroup)) {
+            body.put("messageGroup", request.messageGroup);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.messageKey)) {
             body.put("messageKey", request.messageKey);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.messageTag)) {
             body.put("messageTag", request.messageTag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userProperties)) {
+            body.put("userProperties", request.userProperties);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

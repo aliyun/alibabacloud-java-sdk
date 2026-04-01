@@ -881,6 +881,13 @@ public class GetInstanceResponseBody extends TeaModel {
         public String capacityType;
 
         /**
+         * <strong>example:</strong>
+         * <p>async_cross_az</p>
+         */
+        @NameInMap("drReplicationMode")
+        public String drReplicationMode;
+
+        /**
          * <p>The retention period of messages. Unit: hours.</p>
          * <p>For information about the valid values of this parameter, see the &quot;Limits on resource quotas&quot; section in <a href="https://help.aliyun.com/document_detail/440347.html">Usage limits</a>.</p>
          * <p>The storage of messages in ApsaraMQ for RocketMQ is serverless and scalable. You are charged for message storage based on your actual usage. You can change the retention period of messages to adjust storage capacity. For more information, see <a href="https://help.aliyun.com/document_detail/427238.html">Storage fee</a>.</p>
@@ -981,6 +988,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getCapacityType() {
             return this.capacityType;
+        }
+
+        public GetInstanceResponseBodyDataProductInfo setDrReplicationMode(String drReplicationMode) {
+            this.drReplicationMode = drReplicationMode;
+            return this;
+        }
+        public String getDrReplicationMode() {
+            return this.drReplicationMode;
         }
 
         public GetInstanceResponseBodyDataProductInfo setMessageRetentionTime(Integer messageRetentionTime) {

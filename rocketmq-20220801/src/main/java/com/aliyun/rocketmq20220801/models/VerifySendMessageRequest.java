@@ -6,6 +6,13 @@ import com.aliyun.tea.*;
 public class VerifySendMessageRequest extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>1773718320000</p>
+     */
+    @NameInMap("deliveryTimeStamp")
+    public Long deliveryTimeStamp;
+
+    /**
+     * <strong>example:</strong>
      * <p>abc</p>
      */
     @NameInMap("liteTopicName")
@@ -19,6 +26,13 @@ public class VerifySendMessageRequest extends TeaModel {
      */
     @NameInMap("message")
     public String message;
+
+    /**
+     * <strong>example:</strong>
+     * <p>testMessageGroup</p>
+     */
+    @NameInMap("messageGroup")
+    public String messageGroup;
 
     /**
      * <p>The message key.</p>
@@ -38,9 +52,20 @@ public class VerifySendMessageRequest extends TeaModel {
     @NameInMap("messageTag")
     public String messageTag;
 
+    @NameInMap("userProperties")
+    public java.util.Map<String, ?> userProperties;
+
     public static VerifySendMessageRequest build(java.util.Map<String, ?> map) throws Exception {
         VerifySendMessageRequest self = new VerifySendMessageRequest();
         return TeaModel.build(map, self);
+    }
+
+    public VerifySendMessageRequest setDeliveryTimeStamp(Long deliveryTimeStamp) {
+        this.deliveryTimeStamp = deliveryTimeStamp;
+        return this;
+    }
+    public Long getDeliveryTimeStamp() {
+        return this.deliveryTimeStamp;
     }
 
     public VerifySendMessageRequest setLiteTopicName(String liteTopicName) {
@@ -59,6 +84,14 @@ public class VerifySendMessageRequest extends TeaModel {
         return this.message;
     }
 
+    public VerifySendMessageRequest setMessageGroup(String messageGroup) {
+        this.messageGroup = messageGroup;
+        return this;
+    }
+    public String getMessageGroup() {
+        return this.messageGroup;
+    }
+
     public VerifySendMessageRequest setMessageKey(String messageKey) {
         this.messageKey = messageKey;
         return this;
@@ -73,6 +106,14 @@ public class VerifySendMessageRequest extends TeaModel {
     }
     public String getMessageTag() {
         return this.messageTag;
+    }
+
+    public VerifySendMessageRequest setUserProperties(java.util.Map<String, ?> userProperties) {
+        this.userProperties = userProperties;
+        return this;
+    }
+    public java.util.Map<String, ?> getUserProperties() {
+        return this.userProperties;
     }
 
 }
