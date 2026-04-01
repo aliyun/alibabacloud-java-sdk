@@ -31,6 +31,9 @@ public class PartitionSummary extends TeaModel {
     @NameInMap("lastAccessTime")
     public Long lastAccessTime;
 
+    @NameInMap("lastRequester")
+    public String lastRequester;
+
     /**
      * <p>Partition identifier</p>
      * 
@@ -57,6 +60,18 @@ public class PartitionSummary extends TeaModel {
      */
     @NameInMap("tableName")
     public String tableName;
+
+    @NameInMap("topRequester")
+    public String topRequester;
+
+    @NameInMap("totalFileAccessNum")
+    public Long totalFileAccessNum;
+
+    @NameInMap("totalFileAccessNum30d")
+    public Long totalFileAccessNum30d;
+
+    @NameInMap("totalFileAccessNum7d")
+    public Long totalFileAccessNum7d;
 
     /**
      * <p>24h access count</p>
@@ -112,6 +127,14 @@ public class PartitionSummary extends TeaModel {
         return this.lastAccessTime;
     }
 
+    public PartitionSummary setLastRequester(String lastRequester) {
+        this.lastRequester = lastRequester;
+        return this;
+    }
+    public String getLastRequester() {
+        return this.lastRequester;
+    }
+
     public PartitionSummary setPartitionName(String partitionName) {
         this.partitionName = partitionName;
         return this;
@@ -150,6 +173,38 @@ public class PartitionSummary extends TeaModel {
     }
     public String getTableName() {
         return this.tableName;
+    }
+
+    public PartitionSummary setTopRequester(String topRequester) {
+        this.topRequester = topRequester;
+        return this;
+    }
+    public String getTopRequester() {
+        return this.topRequester;
+    }
+
+    public PartitionSummary setTotalFileAccessNum(Long totalFileAccessNum) {
+        this.totalFileAccessNum = totalFileAccessNum;
+        return this;
+    }
+    public Long getTotalFileAccessNum() {
+        return this.totalFileAccessNum;
+    }
+
+    public PartitionSummary setTotalFileAccessNum30d(Long totalFileAccessNum30d) {
+        this.totalFileAccessNum30d = totalFileAccessNum30d;
+        return this;
+    }
+    public Long getTotalFileAccessNum30d() {
+        return this.totalFileAccessNum30d;
+    }
+
+    public PartitionSummary setTotalFileAccessNum7d(Long totalFileAccessNum7d) {
+        this.totalFileAccessNum7d = totalFileAccessNum7d;
+        return this;
+    }
+    public Long getTotalFileAccessNum7d() {
+        return this.totalFileAccessNum7d;
     }
 
     public PartitionSummary setTotalFileCount(Long totalFileCount) {

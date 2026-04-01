@@ -36,6 +36,9 @@ public class TableSummary extends TeaModel {
     @NameInMap("lastAccessTime")
     public Long lastAccessTime;
 
+    @NameInMap("lastRequester")
+    public String lastRequester;
+
     @NameInMap("objTypeArchiveSize")
     public Long objTypeArchiveSize;
 
@@ -81,6 +84,18 @@ public class TableSummary extends TeaModel {
      */
     @NameInMap("tableName")
     public String tableName;
+
+    @NameInMap("topRequester")
+    public String topRequester;
+
+    @NameInMap("totalFileAccessNum")
+    public Long totalFileAccessNum;
+
+    @NameInMap("totalFileAccessNum30d")
+    public Long totalFileAccessNum30d;
+
+    @NameInMap("totalFileAccessNum7d")
+    public Long totalFileAccessNum7d;
 
     /**
      * <p>30-day access count</p>
@@ -154,6 +169,14 @@ public class TableSummary extends TeaModel {
     }
     public Long getLastAccessTime() {
         return this.lastAccessTime;
+    }
+
+    public TableSummary setLastRequester(String lastRequester) {
+        this.lastRequester = lastRequester;
+        return this;
+    }
+    public String getLastRequester() {
+        return this.lastRequester;
     }
 
     public TableSummary setObjTypeArchiveSize(Long objTypeArchiveSize) {
@@ -234,6 +257,38 @@ public class TableSummary extends TeaModel {
     }
     public String getTableName() {
         return this.tableName;
+    }
+
+    public TableSummary setTopRequester(String topRequester) {
+        this.topRequester = topRequester;
+        return this;
+    }
+    public String getTopRequester() {
+        return this.topRequester;
+    }
+
+    public TableSummary setTotalFileAccessNum(Long totalFileAccessNum) {
+        this.totalFileAccessNum = totalFileAccessNum;
+        return this;
+    }
+    public Long getTotalFileAccessNum() {
+        return this.totalFileAccessNum;
+    }
+
+    public TableSummary setTotalFileAccessNum30d(Long totalFileAccessNum30d) {
+        this.totalFileAccessNum30d = totalFileAccessNum30d;
+        return this;
+    }
+    public Long getTotalFileAccessNum30d() {
+        return this.totalFileAccessNum30d;
+    }
+
+    public TableSummary setTotalFileAccessNum7d(Long totalFileAccessNum7d) {
+        this.totalFileAccessNum7d = totalFileAccessNum7d;
+        return this;
+    }
+    public Long getTotalFileAccessNum7d() {
+        return this.totalFileAccessNum7d;
     }
 
     public TableSummary setTotalFileCount(Long totalFileCount) {
