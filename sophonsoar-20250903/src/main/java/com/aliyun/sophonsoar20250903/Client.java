@@ -27,6 +27,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>停止剧本</p>
+     * 
+     * @param request AbortPlaybookExecutionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AbortPlaybookExecutionResponse
+     */
+    public AbortPlaybookExecutionResponse abortPlaybookExecutionWithOptions(AbortPlaybookExecutionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            body.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.playbookExecutionUuid)) {
+            body.put("PlaybookExecutionUuid", request.playbookExecutionUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.playbookUuid)) {
+            body.put("PlaybookUuid", request.playbookUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleFor)) {
+            body.put("RoleFor", request.roleFor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleType)) {
+            body.put("RoleType", request.roleType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AbortPlaybookExecution"),
+            new TeaPair("version", "2025-09-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AbortPlaybookExecutionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停止剧本</p>
+     * 
+     * @param request AbortPlaybookExecutionRequest
+     * @return AbortPlaybookExecutionResponse
+     */
+    public AbortPlaybookExecutionResponse abortPlaybookExecution(AbortPlaybookExecutionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.abortPlaybookExecutionWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Please ensure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration product (i.e., Threat Analysis and Response Log Ingress Traffic) before using this interface.</p>
      * 
@@ -289,8 +349,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before using this interface, please make sure you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the Response Orchestration product (i.e., Threat Analysis and Response Log Ingress Traffic).</p>
+     * 
      * <b>summary</b> : 
-     * <p>执行组件动作</p>
+     * <p>Execute component action.</p>
      * 
      * @param request ExecuteComponentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -345,8 +408,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before using this interface, please make sure you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the Response Orchestration product (i.e., Threat Analysis and Response Log Ingress Traffic).</p>
+     * 
      * <b>summary</b> : 
-     * <p>执行组件动作</p>
+     * <p>Execute component action.</p>
      * 
      * @param request ExecuteComponentRequest
      * @return ExecuteComponentResponse

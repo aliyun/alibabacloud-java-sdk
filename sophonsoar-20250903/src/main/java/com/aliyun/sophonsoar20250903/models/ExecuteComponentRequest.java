@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExecuteComponentRequest extends TeaModel {
     /**
+     * <p>The name of the component action.</p>
+     * 
      * <strong>example:</strong>
      * <p>doRequest</p>
      */
@@ -12,6 +14,8 @@ public class ExecuteComponentRequest extends TeaModel {
     public String componentActionName;
 
     /**
+     * <p>Asset UUID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1C5F11E9-<strong><strong>-51F0-</strong></strong>-43BB312A0557</p>
      */
@@ -19,6 +23,8 @@ public class ExecuteComponentRequest extends TeaModel {
     public String componentAssetUuid;
 
     /**
+     * <p>Component input parameters.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -26,6 +32,8 @@ public class ExecuteComponentRequest extends TeaModel {
     public String componentInput;
 
     /**
+     * <p>The name of the component.</p>
+     * 
      * <strong>example:</strong>
      * <p>SLS</p>
      */
@@ -33,6 +41,14 @@ public class ExecuteComponentRequest extends TeaModel {
     public String componentName;
 
     /**
+     * <p>The language type for requests and responses. Values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -40,6 +56,8 @@ public class ExecuteComponentRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The name of the node corresponding to the current component in the playbook.</p>
+     * 
      * <strong>example:</strong>
      * <p>node1</p>
      */
@@ -47,6 +65,11 @@ public class ExecuteComponentRequest extends TeaModel {
     public String playBookNodeName;
 
     /**
+     * <p>The UUID of the playbook.</p>
+     * <blockquote>
+     * <p>You can obtain this parameter by calling the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> interface.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>ac343acc-1a61-4084-9a1cxxxxx</p>
      */

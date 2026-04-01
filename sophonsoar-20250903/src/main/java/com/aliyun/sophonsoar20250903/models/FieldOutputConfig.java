@@ -4,18 +4,55 @@ package com.aliyun.sophonsoar20250903.models;
 import com.aliyun.tea.*;
 
 public class FieldOutputConfig extends TeaModel {
+    /**
+     * <p>Field default value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11.**.*.11</p>
+     */
     @NameInMap("DefaultValue")
     public String defaultValue;
 
+    /**
+     * <p>Field description information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Single IP to be blocked</p>
+     */
     @NameInMap("FieldDescription")
     public String fieldDescription;
 
+    /**
+     * <p>Field example.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2.<em>.</em>.2</p>
+     */
     @NameInMap("FieldExample")
     public String fieldExample;
 
+    /**
+     * <p>Field name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ip</p>
+     */
     @NameInMap("FieldName")
     public String fieldName;
 
+    /**
+     * <p>Field type, with the following values:</p>
+     * <ul>
+     * <li><strong>String</strong>: String.</li>
+     * <li><strong>Long</strong>: Long integer.</li>
+     * <li><strong>Integer</strong>: Integer.</li>
+     * <li><strong>Double</strong>: Double.</li>
+     * <li><strong>Boolean</strong>: Boolean.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>String</p>
+     */
     @NameInMap("FieldType")
     public String fieldType;
 
