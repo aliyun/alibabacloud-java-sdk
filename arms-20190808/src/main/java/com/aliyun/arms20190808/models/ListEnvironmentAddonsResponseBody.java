@@ -746,6 +746,9 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
         @NameInMap("Addons")
         public java.util.List<ListEnvironmentAddonsResponseBodyDataAddons> addons;
 
+        @NameInMap("ContainsV2Addon")
+        public Boolean containsV2Addon;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -764,6 +767,14 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
         }
         public java.util.List<ListEnvironmentAddonsResponseBodyDataAddons> getAddons() {
             return this.addons;
+        }
+
+        public ListEnvironmentAddonsResponseBodyData setContainsV2Addon(Boolean containsV2Addon) {
+            this.containsV2Addon = containsV2Addon;
+            return this;
+        }
+        public Boolean getContainsV2Addon() {
+            return this.containsV2Addon;
         }
 
         public ListEnvironmentAddonsResponseBodyData setTotal(Long total) {
