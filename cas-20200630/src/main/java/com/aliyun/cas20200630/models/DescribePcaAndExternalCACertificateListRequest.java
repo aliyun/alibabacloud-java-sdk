@@ -11,6 +11,12 @@ public class DescribePcaAndExternalCACertificateListRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    @NameInMap("Identifiers")
+    public String identifiers;
+
+    @NameInMap("KeyWord")
+    public String keyWord;
+
     /**
      * <strong>example:</strong>
      * <p>50</p>
@@ -29,6 +35,22 @@ public class DescribePcaAndExternalCACertificateListRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public DescribePcaAndExternalCACertificateListRequest setIdentifiers(String identifiers) {
+        this.identifiers = identifiers;
+        return this;
+    }
+    public String getIdentifiers() {
+        return this.identifiers;
+    }
+
+    public DescribePcaAndExternalCACertificateListRequest setKeyWord(String keyWord) {
+        this.keyWord = keyWord;
+        return this;
+    }
+    public String getKeyWord() {
+        return this.keyWord;
     }
 
     public DescribePcaAndExternalCACertificateListRequest setShowSize(Integer showSize) {

@@ -1171,7 +1171,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details about a root certificate authority (CA) certificate or an intermediate CA certificate.</p>
+     * <p>Queries the details about a certificate authority (CA) certificate.</p>
      * 
      * @param request DescribeCACertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1209,7 +1209,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details about a root certificate authority (CA) certificate or an intermediate CA certificate.</p>
+     * <p>Queries the details about a certificate authority (CA) certificate.</p>
      * 
      * @param request DescribeCACertificateRequest
      * @return DescribeCACertificateResponse
@@ -1505,7 +1505,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取客户端证书</p>
+     * <p>Queries the details about multiple client certificates or server certificates at a time by using the serial numbers of the certificates.</p>
      * 
      * @deprecated OpenAPI DescribeClientCertificateForSerialNumber is deprecated, please use cas::2020-06-30::DescribeClientCertificate instead.
      * 
@@ -1541,7 +1541,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取客户端证书</p>
+     * <p>Queries the details about multiple client certificates or server certificates at a time by using the serial numbers of the certificates.</p>
      * 
      * @deprecated OpenAPI DescribeClientCertificateForSerialNumber is deprecated, please use cas::2020-06-30::DescribeClientCertificate instead.
      * 
@@ -1611,7 +1611,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取客户端证书状态</p>
+     * <p>Queries the status information about client certificates or server certificates by using the serial numbers of the certificates.</p>
      * 
      * @param request DescribeClientCertificateStatusForSerialNumberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1643,7 +1643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取客户端证书状态</p>
+     * <p>Queries the status information about client certificates or server certificates by using the serial numbers of the certificates.</p>
      * 
      * @param request DescribeClientCertificateStatusForSerialNumberRequest
      * @return DescribeClientCertificateStatusForSerialNumberResponse
@@ -1657,19 +1657,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>返回用户所有CaCertificate，包括PCA内部产生的与导入的外部证书</p>
      * 
-     * @deprecated OpenAPI DescribePcaAndExternalCACertificateList is deprecated, please use cas::2020-06-30::ListAllEndEntityInstance instead.
-     * 
      * @param request DescribePcaAndExternalCACertificateListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePcaAndExternalCACertificateListResponse
      */
-    @Deprecated
-    // Deprecated
     public DescribePcaAndExternalCACertificateListResponse describePcaAndExternalCACertificateListWithOptions(DescribePcaAndExternalCACertificateListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
             query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.identifiers)) {
+            query.put("Identifiers", request.identifiers);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyWord)) {
+            query.put("KeyWord", request.keyWord);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.showSize)) {
@@ -1697,13 +1701,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>返回用户所有CaCertificate，包括PCA内部产生的与导入的外部证书</p>
      * 
-     * @deprecated OpenAPI DescribePcaAndExternalCACertificateList is deprecated, please use cas::2020-06-30::ListAllEndEntityInstance instead.
-     * 
      * @param request DescribePcaAndExternalCACertificateListRequest
      * @return DescribePcaAndExternalCACertificateListResponse
      */
-    @Deprecated
-    // Deprecated
     public DescribePcaAndExternalCACertificateListResponse describePcaAndExternalCACertificateList(DescribePcaAndExternalCACertificateListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describePcaAndExternalCACertificateListWithOptions(request, runtime);
@@ -1833,7 +1833,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取证书日志</p>
+     * <p>Queries the operation logs of a certificate authority (CA) certificate.</p>
      * 
      * @param request ListCACertificateLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1865,7 +1865,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取证书日志</p>
+     * <p>Queries the operation logs of a certificate authority (CA) certificate.</p>
      * 
      * @param request ListCACertificateLogRequest
      * @return ListCACertificateLogResponse
@@ -1877,7 +1877,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取证书列表</p>
+     * <p>Queries a list of certificates.</p>
      * 
      * @param request ListCertRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1945,7 +1945,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取证书列表</p>
+     * <p>Queries a list of certificates.</p>
      * 
      * @param request ListCertRequest
      * @return ListCertResponse
@@ -2023,7 +2023,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询私有CA机构证书</p>
+     * <p>Queries private certificate authority (CA) certificates.</p>
      * 
      * @param request ListPcaCaCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2059,7 +2059,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询私有CA机构证书</p>
+     * <p>Queries private certificate authority (CA) certificates.</p>
      * 
      * @param request ListPcaCaCertificateRequest
      * @return ListPcaCaCertificateResponse
@@ -2491,7 +2491,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上传pca证书到SSL上传证书</p>
+     * <p>Synchronizes private certificate authority (CA) certificates to the list of SSL certificates.</p>
      * 
      * @param request UploadPcaCertToCasRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2523,7 +2523,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上传pca证书到SSL上传证书</p>
+     * <p>Synchronizes private certificate authority (CA) certificates to the list of SSL certificates.</p>
      * 
      * @param request UploadPcaCertToCasRequest
      * @return UploadPcaCertToCasResponse

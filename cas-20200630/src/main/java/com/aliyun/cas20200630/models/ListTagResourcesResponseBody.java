@@ -36,27 +36,15 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyDataTagResourcesTagResources extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>cas-upload-xgjcng</p>
-         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ALIYUN::CAS::PCACERTIFICATE</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <strong>example:</strong>
-         * <p>PVDCDC</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 
