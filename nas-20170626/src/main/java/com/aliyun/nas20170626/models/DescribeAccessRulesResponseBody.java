@@ -4,9 +4,6 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessRulesResponseBody extends TeaModel {
-    /**
-     * <p>The rules in the permission group.</p>
-     */
     @NameInMap("AccessRules")
     public DescribeAccessRulesResponseBodyAccessRules accessRules;
 
@@ -92,100 +89,30 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessRulesResponseBodyAccessRulesAccessRule extends TeaModel {
-        /**
-         * <p>The name of the permission group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("AccessGroupName")
         public String accessGroupName;
 
-        /**
-         * <p>The ID of the rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("AccessRuleId")
         public String accessRuleId;
 
-        /**
-         * <p>The type of the file system.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>standard: General-purpose File Storage NAS (NAS) file system</li>
-         * <li>extreme: Extreme NAS file system</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>standard</p>
-         */
         @NameInMap("FileSystemType")
         public String fileSystemType;
 
-        /**
-         * <p>The IPv6 address or CIDR block of the authorized object.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2001:250:6000::***</p>
-         */
         @NameInMap("Ipv6SourceCidrIp")
         public String ipv6SourceCidrIp;
 
-        /**
-         * <p>The priority of the rule.</p>
-         * <p>If multiple rules are attached to the authorized object, the rule with the highest priority takes effect.</p>
-         * <p>Valid values: 1 to 100. The value 1 indicates the highest priority.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Priority")
         public Integer priority;
 
-        /**
-         * <p>The access permissions of the authorized object on the file system.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>RDWR (default): the read and write permissions</li>
-         * <li>RDONLY: the read-only permissions</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>RDWR</p>
-         */
         @NameInMap("RWAccess")
         public String RWAccess;
 
-        /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The IP address or CIDR block of the authorized object.</p>
-         */
         @NameInMap("SourceCidrIp")
         public String sourceCidrIp;
 
-        /**
-         * <p>The access permissions for different types of users in the authorized object.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>no_squash: allows access from root users to the file system.</li>
-         * <li>root_squash: grants root users the least permissions as the nobody user.</li>
-         * <li>all_squash: grants all users the least permissions as the nobody user.</li>
-         * </ul>
-         * <p>The nobody user has the least permissions in Linux and can access only the public content of the file system. This ensures the security of the file system.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>no_squash</p>
-         */
         @NameInMap("UserAccess")
         public String userAccess;
 

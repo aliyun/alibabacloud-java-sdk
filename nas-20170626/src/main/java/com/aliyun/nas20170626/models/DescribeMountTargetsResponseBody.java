@@ -4,9 +4,6 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeMountTargetsResponseBody extends TeaModel {
-    /**
-     * <p>The queried mount targets.</p>
-     */
     @NameInMap("MountTargets")
     public DescribeMountTargetsResponseBodyMountTargets mountTargets;
 
@@ -92,30 +89,12 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
     }
 
     public static class DescribeMountTargetsResponseBodyMountTargetsMountTargetClientMasterNodesClientMasterNode extends TeaModel {
-        /**
-         * <p>The default logon password of the ECS instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>12****</p>
-         */
         @NameInMap("DefaultPasswd")
         public String defaultPasswd;
 
-        /**
-         * <p>The ID of the ECS instance on the client management node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-hp3i3odi5ory1buo****</p>
-         */
         @NameInMap("EcsId")
         public String ecsId;
 
-        /**
-         * <p>The IP address of the ECS instance on the client management node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>192.168.1.0</p>
-         */
         @NameInMap("EcsIp")
         public String ecsIp;
 
@@ -170,32 +149,9 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
     }
 
     public static class DescribeMountTargetsResponseBodyMountTargetsMountTargetTagsTag extends TeaModel {
-        /**
-         * <p>The tag key. Limits:</p>
-         * <ul>
-         * <li>The tag key cannot be null or an empty string.</li>
-         * <li>The tag key can be up to 128 characters in length.</li>
-         * <li>The key value cannot start with aliyun or acs:.</li>
-         * <li>The key value cannot contain http:// or https://.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>nastest</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value.</p>
-         * <p>Limits:</p>
-         * <ul>
-         * <li>The tag value can be up to 128 characters in length.</li>
-         * <li>The tag value cannot contain http:// or https://.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>mounttargettest</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -242,103 +198,33 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
     }
 
     public static class DescribeMountTargetsResponseBodyMountTargetsMountTarget extends TeaModel {
-        /**
-         * <p>The name of the permission group that is attached to the mount target.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DEFAULT_VPC_GROUP_NAME</p>
-         */
         @NameInMap("AccessGroup")
         public String accessGroup;
 
-        /**
-         * <p>The information about client management nodes.</p>
-         */
         @NameInMap("ClientMasterNodes")
         public DescribeMountTargetsResponseBodyMountTargetsMountTargetClientMasterNodes clientMasterNodes;
 
-        /**
-         * <p>The dual-stack (IPv4 and IPv6) domain name of the mount target.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1ca404****-x****.dualstack.cn-hangzhou.nas.aliyuncs.com</p>
-         */
         @NameInMap("DualStackMountTargetDomain")
         public String dualStackMountTargetDomain;
 
-        /**
-         * <p>The type of the mount target.</p>
-         * <ul>
-         * <li>IPv4: an IPv4 mount target</li>
-         * <li>DualStack: a dual-stack mount target</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>IPv4</p>
-         */
         @NameInMap("IPVersion")
         public String IPVersion;
 
-        /**
-         * <p>The IPv4 domain name of the mount target.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1ca404****-w****.cn-hangzhou.nas.aliyuncs.com</p>
-         */
         @NameInMap("MountTargetDomain")
         public String mountTargetDomain;
 
-        /**
-         * <p>The network type. Valid value: <strong>Vpc</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Vpc</p>
-         */
         @NameInMap("NetworkType")
         public String networkType;
 
-        /**
-         * <p>The status of the mount target.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Active: The mount target is available.</li>
-         * <li>Inactive: The mount target is unavailable.</li>
-         * <li>Pending: The mount target is being created or modified.</li>
-         * <li>Deleting: The mount target is being deleted.</li>
-         * <li>Hibernating: The mount target is being hibernated.</li>
-         * <li>Hibernated: The mount target is hibernated.</li>
-         * </ul>
-         * <blockquote>
-         * <p>You can mount a file system only when the mount target of the file system is in the Active state.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>Active</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>An array of tags. The array may contain up to 20 tags. If the array contains multiple tags, each tag key is unique.</p>
-         */
         @NameInMap("Tags")
         public DescribeMountTargetsResponseBodyMountTargetsMountTargetTags tags;
 
-        /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-2zesj9afh3y518k9o****</p>
-         */
         @NameInMap("VpcId")
         public String vpcId;
 
-        /**
-         * <p>The ID of the vSwitch.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vsw-2zevmwkwyztjuoffg****</p>
-         */
         @NameInMap("VswId")
         public String vswId;
 

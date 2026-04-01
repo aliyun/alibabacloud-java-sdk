@@ -13,9 +13,6 @@ public class DescribeZonesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The queried zones.</p>
-     */
     @NameInMap("Zones")
     public DescribeZonesResponseBodyZones zones;
 
@@ -60,31 +57,9 @@ public class DescribeZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeZonesResponseBodyZonesZoneInstanceTypesInstanceType extends TeaModel {
-        /**
-         * <p>The protocol type.</p>
-         * <ul>
-         * <li>If the FileSystemType parameter is set to standard, the protocol type is nfs or smb.</li>
-         * <li>If the FileSystemType parameter is set to extreme, the protocol type is nfs.</li>
-         * <li>If the FileSystemType parameter is set to cpfs, the protocol type is cpfs.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>nfs</p>
-         */
         @NameInMap("ProtocolType")
         public String protocolType;
 
-        /**
-         * <p>The storage type.</p>
-         * <ul>
-         * <li>If the FileSystemType parameter is set to standard, the storage type is Performance or Capacity.</li>
-         * <li>If the FileSystemType parameter is set to extreme, the storage type is standard or advance.</li>
-         * <li>If the FileSystemType parameter is set to cpfs, the storage type is advance_100 (100 MB/s/TiB baseline) or advance_200 (200 MB/s/TiB baseline).</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Capacity</p>
-         */
         @NameInMap("StorageType")
         public String storageType;
 
@@ -150,30 +125,15 @@ public class DescribeZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeZonesResponseBodyZonesZone extends TeaModel {
-        /**
-         * <p>This parameter is reserved. You can ignore this parameter.</p>
-         */
         @NameInMap("Capacity")
         public DescribeZonesResponseBodyZonesZoneCapacity capacity;
 
-        /**
-         * <p>The details about file system types.</p>
-         */
         @NameInMap("InstanceTypes")
         public DescribeZonesResponseBodyZonesZoneInstanceTypes instanceTypes;
 
-        /**
-         * <p>This parameter is reserved. You can ignore this parameter.</p>
-         */
         @NameInMap("Performance")
         public DescribeZonesResponseBodyZonesZonePerformance performance;
 
-        /**
-         * <p>The zone ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-b</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 

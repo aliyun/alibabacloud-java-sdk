@@ -22,9 +22,6 @@ public class DescribeRegionsResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The queried regions.</p>
-     */
     @NameInMap("Regions")
     public DescribeRegionsResponseBodyRegions regions;
 
@@ -92,30 +89,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionsRegion extends TeaModel {
-        /**
-         * <p>The region name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>East China 1</p>
-         */
         @NameInMap("LocalName")
         public String localName;
 
-        /**
-         * <p>The endpoint for the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>nas.cn-hangzhou.aliyuncs.com</p>
-         */
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 
-        /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 

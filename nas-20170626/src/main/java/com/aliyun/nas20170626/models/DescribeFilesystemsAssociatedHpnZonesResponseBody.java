@@ -4,10 +4,15 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeFilesystemsAssociatedHpnZonesResponseBody extends TeaModel {
+    /**
+     * <p>The list of HpnZones associated with the file system.</p>
+     */
     @NameInMap("Filesystems")
     public java.util.List<DescribeFilesystemsAssociatedHpnZonesResponseBodyFilesystems> filesystems;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>98696EF0-1607-4E9D-B01D-F20930B6****</p>
      */
@@ -36,10 +41,15 @@ public class DescribeFilesystemsAssociatedHpnZonesResponseBody extends TeaModel 
     }
 
     public static class DescribeFilesystemsAssociatedHpnZonesResponseBodyFilesystems extends TeaModel {
+        /**
+         * <p>The list of HpnZones supported by the file system.</p>
+         */
         @NameInMap("AssociatedHpnZones")
         public java.util.List<String> associatedHpnZones;
 
         /**
+         * <p>The ID of the CPFS for Lingjun file system.</p>
+         * 
          * <strong>example:</strong>
          * <p>bmcpfs-290t15yn4uo8lid****</p>
          */
@@ -47,6 +57,8 @@ public class DescribeFilesystemsAssociatedHpnZonesResponseBody extends TeaModel 
         public String fileSystemId;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-k</p>
          */

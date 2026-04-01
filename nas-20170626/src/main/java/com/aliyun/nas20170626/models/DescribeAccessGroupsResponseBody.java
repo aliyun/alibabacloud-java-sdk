@@ -4,9 +4,6 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessGroupsResponseBody extends TeaModel {
-    /**
-     * <p>The queried permission groups.</p>
-     */
     @NameInMap("AccessGroups")
     public DescribeAccessGroupsResponseBodyAccessGroups accessGroups;
 
@@ -92,81 +89,27 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessGroupsResponseBodyAccessGroupsAccessGroup extends TeaModel {
-        /**
-         * <p>The name of the permission group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DEFAULT_VPC_GROUP_NAME</p>
-         */
         @NameInMap("AccessGroupName")
         public String accessGroupName;
 
-        /**
-         * <p>The network type of the permission group. Valid value: <strong>Vpc</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Vpc</p>
-         */
         @NameInMap("AccessGroupType")
         public String accessGroupType;
 
-        /**
-         * <p>The time when the permission group was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-01-05T16:00:00Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The description of the permission group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>This is a test access group.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The type of the file system.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>standard: General-purpose NAS</li>
-         * <li>extreme: Extreme NAS</li>
-         * <li>cpfs: CPFS</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>standard</p>
-         */
         @NameInMap("FileSystemType")
         public String fileSystemType;
 
-        /**
-         * <p>The number of mount targets to which the permission group is attached.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("MountTargetCount")
         public Integer mountTargetCount;
 
-        /**
-         * <p>Region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The total number of rules in the permission group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("RuleCount")
         public Integer ruleCount;
 

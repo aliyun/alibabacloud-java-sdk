@@ -4639,8 +4639,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Only CPFS for Lingjun supports this operation.</p>
+     * <ul>
+     * <li>You can call this operation to query up to 20 file systems at a time.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询文件系统关联的 HpnZone 列表</p>
+     * <p>Retrieves the list of HpnZones for a file system. Access performance is optimal when compute nodes are located in one of the associated HpnZones.</p>
      * 
      * @param tmpReq DescribeFilesystemsAssociatedHpnZonesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4681,8 +4687,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Only CPFS for Lingjun supports this operation.</p>
+     * <ul>
+     * <li>You can call this operation to query up to 20 file systems at a time.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询文件系统关联的 HpnZone 列表</p>
+     * <p>Retrieves the list of HpnZones for a file system. Access performance is optimal when compute nodes are located in one of the associated HpnZones.</p>
      * 
      * @param request DescribeFilesystemsAssociatedHpnZonesRequest
      * @return DescribeFilesystemsAssociatedHpnZonesResponse
@@ -4800,6 +4812,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeLifecyclePoliciesResponse describeLifecyclePolicies(DescribeLifecyclePoliciesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeLifecyclePoliciesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询生命周期策略日志</p>
+     * 
+     * @param request DescribeLifecyclePolicyLogsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeLifecyclePolicyLogsResponse
+     */
+    public DescribeLifecyclePolicyLogsResponse describeLifecyclePolicyLogsWithOptions(DescribeLifecyclePolicyLogsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSystemId)) {
+            query.put("FileSystemId", request.fileSystemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lifecyclePolicyId)) {
+            query.put("LifecyclePolicyId", request.lifecyclePolicyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeLifecyclePolicyLogs"),
+            new TeaPair("version", "2017-06-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeLifecyclePolicyLogsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询生命周期策略日志</p>
+     * 
+     * @param request DescribeLifecyclePolicyLogsRequest
+     * @return DescribeLifecyclePolicyLogsResponse
+     */
+    public DescribeLifecyclePolicyLogsResponse describeLifecyclePolicyLogs(DescribeLifecyclePolicyLogsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeLifecyclePolicyLogsWithOptions(request, runtime);
     }
 
     /**
@@ -5928,7 +5996,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询协议机挂载点</p>
+     * <p>Query the export directory information of the protocol service</p>
      * 
      * @param request GetProtocolMountTargetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5980,7 +6048,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询协议机挂载点</p>
+     * <p>Query the export directory information of the protocol service</p>
      * 
      * @param request GetProtocolMountTargetRequest
      * @return GetProtocolMountTargetResponse
@@ -7805,6 +7873,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>启动生命周期策略运行</p>
+     * 
+     * @param request StartLifecyclePolicyExecutionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartLifecyclePolicyExecutionResponse
+     */
+    public StartLifecyclePolicyExecutionResponse startLifecyclePolicyExecutionWithOptions(StartLifecyclePolicyExecutionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSystemId)) {
+            query.put("FileSystemId", request.fileSystemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lifecyclePolicyId)) {
+            query.put("LifecyclePolicyId", request.lifecyclePolicyId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartLifecyclePolicyExecution"),
+            new TeaPair("version", "2017-06-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartLifecyclePolicyExecutionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启动生命周期策略运行</p>
+     * 
+     * @param request StartLifecyclePolicyExecutionRequest
+     * @return StartLifecyclePolicyExecutionResponse
+     */
+    public StartLifecyclePolicyExecutionResponse startLifecyclePolicyExecution(StartLifecyclePolicyExecutionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.startLifecyclePolicyExecutionWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>  This operation is available only to CPFS file systems.</p>
      * <ul>
@@ -7882,7 +7998,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates tags and binds the tags to file systems.</p>
+     * <p>停止生命周期策略运行</p>
+     * 
+     * @param request StopLifecyclePolicyExecutionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopLifecyclePolicyExecutionResponse
+     */
+    public StopLifecyclePolicyExecutionResponse stopLifecyclePolicyExecutionWithOptions(StopLifecyclePolicyExecutionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSystemId)) {
+            query.put("FileSystemId", request.fileSystemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lifecyclePolicyId)) {
+            query.put("LifecyclePolicyId", request.lifecyclePolicyId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopLifecyclePolicyExecution"),
+            new TeaPair("version", "2017-06-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopLifecyclePolicyExecutionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停止生命周期策略运行</p>
+     * 
+     * @param request StopLifecyclePolicyExecutionRequest
+     * @return StopLifecyclePolicyExecutionResponse
+     */
+    public StopLifecyclePolicyExecutionResponse stopLifecyclePolicyExecution(StopLifecyclePolicyExecutionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.stopLifecyclePolicyExecutionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates and adds tags to specified resources. File systems and access points are supported.</p>
      * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7922,7 +8086,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates tags and binds the tags to file systems.</p>
+     * <p>Creates and adds tags to specified resources. File systems and access points are supported.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -7934,7 +8098,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes tags from a file system.</p>
+     * <p>Deletes a tag from a specified resource.</p>
      * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7978,7 +8142,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes tags from a file system.</p>
+     * <p>Deletes a tag from a specified resource.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -7986,6 +8150,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UntagResourcesResponse untagResources(UntagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.untagResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新生命周期策略</p>
+     * 
+     * @param request UpdateLifecyclePolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateLifecyclePolicyResponse
+     */
+    public UpdateLifecyclePolicyResponse updateLifecyclePolicyWithOptions(UpdateLifecyclePolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSystemId)) {
+            query.put("FileSystemId", request.fileSystemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lifecyclePolicyId)) {
+            query.put("LifecyclePolicyId", request.lifecyclePolicyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paths)) {
+            query.put("Paths", request.paths);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.retrieveRules)) {
+            query.put("RetrieveRules", request.retrieveRules);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageType)) {
+            query.put("StorageType", request.storageType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transitRules)) {
+            query.put("TransitRules", request.transitRules);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateLifecyclePolicy"),
+            new TeaPair("version", "2017-06-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateLifecyclePolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新生命周期策略</p>
+     * 
+     * @param request UpdateLifecyclePolicyRequest
+     * @return UpdateLifecyclePolicyResponse
+     */
+    public UpdateLifecyclePolicyResponse updateLifecyclePolicy(UpdateLifecyclePolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateLifecyclePolicyWithOptions(request, runtime);
     }
 
     /**

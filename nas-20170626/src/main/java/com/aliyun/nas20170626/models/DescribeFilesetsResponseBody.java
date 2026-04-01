@@ -4,9 +4,6 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeFilesetsResponseBody extends TeaModel {
-    /**
-     * <p>The fileset information.</p>
-     */
     @NameInMap("Entries")
     public DescribeFilesetsResponseBodyEntries entries;
 
@@ -81,29 +78,9 @@ public class DescribeFilesetsResponseBody extends TeaModel {
     }
 
     public static class DescribeFilesetsResponseBodyEntriesEntrieQuota extends TeaModel {
-        /**
-         * <p>The file quantity quota. Valid values:</p>
-         * <ul>
-         * <li>Minimum value: 10000.</li>
-         * <li>Maximum value: 10000000000.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>10000</p>
-         */
         @NameInMap("FileCountLimit")
         public Long fileCountLimit;
 
-        /**
-         * <p>The capacity quota. Unit: bytes.</p>
-         * <ul>
-         * <li>Minimum value: 10737418240 (10 GiB).</li>
-         * <li>Step size: 1073741824 (1 GiB).</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>10737418240</p>
-         */
         @NameInMap("SizeLimit")
         public Long sizeLimit;
 
@@ -131,127 +108,36 @@ public class DescribeFilesetsResponseBody extends TeaModel {
     }
 
     public static class DescribeFilesetsResponseBodyEntriesEntrie extends TeaModel {
-        /**
-         * <p>The time when the fileset was created.</p>
-         * <p>The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-09-30T10:08:08Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>Specifies whether to enable deletion protection to allow you to release the fileset by using the console or by calling the <a href="https://help.aliyun.com/document_detail/2402263.html">DeleteFileset</a> operation. Valid values:</p>
-         * <ul>
-         * <li>true: enables release protection.</li>
-         * <li>false: disables release protection.</li>
-         * </ul>
-         * <blockquote>
-         * <p>This parameter can protect filesets only against manual releases, but not against automatic releases.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("DeletionProtection")
         public Boolean deletionProtection;
 
-        /**
-         * <p>The fileset description.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The usage of the file quantity.</p>
-         * <blockquote>
-         * <p> Only CPFS for LINGJUN V2.7.0 and later support this parameter.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>1024</p>
-         */
         @NameInMap("FileCountUsage")
         public Long fileCountUsage;
 
-        /**
-         * <p>The ID of the file system.</p>
-         * <ul>
-         * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-099394bd928c\<em>\</em>\<em>\</em>.</li>
-         * <li>The IDs of CPFS for LINGJUN file systems must start with <code>bmcpfs-</code>. Example: bmcpfs-290w65p03ok64ya\<em>\</em>\<em>\</em>.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>bmcpfs-290w65p03ok64ya****</p>
-         */
         @NameInMap("FileSystemId")
         public String fileSystemId;
 
-        /**
-         * <p>The fileset path.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>pathtoroot/fset</p>
-         */
         @NameInMap("FileSystemPath")
         public String fileSystemPath;
 
-        /**
-         * <p>The fileset ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>fset-1902718ea0ae****</p>
-         */
         @NameInMap("FsetId")
         public String fsetId;
 
-        /**
-         * <p>The quota information.</p>
-         * <blockquote>
-         * <p> Only CPFS for Lingjun V2.7.0 and later support this parameter.</p>
-         * </blockquote>
-         */
         @NameInMap("Quota")
         public DescribeFilesetsResponseBodyEntriesEntrieQuota quota;
 
-        /**
-         * <p>The capacity usage. Unit: bytes.</p>
-         * <blockquote>
-         * <p> Only CPFS for LINGJUN V2.7.0 and later support this parameter.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>1024</p>
-         */
         @NameInMap("SpaceUsage")
         public Long spaceUsage;
 
-        /**
-         * <p>The fileset status. Valid values:</p>
-         * <ul>
-         * <li>CREATING: The fileset is being created.</li>
-         * <li>CREATED: The fileset has been created and is running properly.</li>
-         * <li>RELEASING: The fileset is being released.</li>
-         * <li>RELEASED: The fileset has been deleted.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>CREATED</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The time when the fileset was last updated.</p>
-         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-09-30T10:08:08Z</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

@@ -42,9 +42,6 @@ public class DescribeFilesystemsVscAttachInfoResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    /**
-     * <p>A collection of file system and virtual channel association data.</p>
-     */
     @NameInMap("VscAttachInfo")
     public DescribeFilesystemsVscAttachInfoResponseBodyVscAttachInfo vscAttachInfo;
 
@@ -94,37 +91,12 @@ public class DescribeFilesystemsVscAttachInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeFilesystemsVscAttachInfoResponseBodyVscAttachInfoVscAttachInfo extends TeaModel {
-        /**
-         * <p>The ID of the file system.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>bmcpfs-290t15yn4uo8lid****</p>
-         */
         @NameInMap("FileSystemId")
         public String fileSystemId;
 
-        /**
-         * <p>The association status of the file system and virtual channel. Valid values:</p>
-         * <ul>
-         * <li>Attaching: The association is being made.</li>
-         * <li>Attached: The association is complete.</li>
-         * <li>Detaching: The association is being canceled.</li>
-         * <li>Detached: The association is canceled.</li>
-         * <li>Failed: The association failed.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Attached</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The ID of the virtual storage channel.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vsc-8vb864o3ppwfvh****</p>
-         */
         @NameInMap("VscId")
         public String vscId;
 

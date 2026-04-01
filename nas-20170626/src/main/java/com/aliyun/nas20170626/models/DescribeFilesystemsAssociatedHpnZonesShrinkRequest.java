@@ -4,10 +4,17 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeFilesystemsAssociatedHpnZonesShrinkRequest extends TeaModel {
+    /**
+     * <p>The collection of file system IDs.</p>
+     * <blockquote>
+     * <p> The maximum number of elements in the set must be less than or equal to 20.</p>
+     * </blockquote>
+     */
     @NameInMap("Filesystems")
     public String filesystemsShrink;
 
     /**
+     * <p>The ID of the region where the file system resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

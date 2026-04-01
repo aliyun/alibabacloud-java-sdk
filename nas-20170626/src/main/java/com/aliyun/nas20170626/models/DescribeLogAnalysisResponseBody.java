@@ -4,9 +4,6 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogAnalysisResponseBody extends TeaModel {
-    /**
-     * <p>The collection of log dump information.</p>
-     */
     @NameInMap("Analyses")
     public DescribeLogAnalysisResponseBodyAnalyses analyses;
 
@@ -109,39 +106,15 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
     }
 
     public static class DescribeLogAnalysisResponseBodyAnalysesAnalysisMetaValue extends TeaModel {
-        /**
-         * <p>The name of the dedicated Logstore that is used to store NAS operation logs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>nas-nfs</p>
-         */
         @NameInMap("Logstore")
         public String logstore;
 
-        /**
-         * <p>The name of the project where the dedicated Logstore resides.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>nas-1746495857602745-cn-hangzhou</p>
-         */
         @NameInMap("Project")
         public String project;
 
-        /**
-         * <p>The region where the dedicated Logstore resides.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("Region")
         public String region;
 
-        /**
-         * <p>The role that is used by NAS to access Simple Log Service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>acs:ram::162165525211xxxx:role/aliyunnaslogarchiverole</p>
-         */
         @NameInMap("RoleArn")
         public String roleArn;
 
@@ -185,18 +158,9 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
     }
 
     public static class DescribeLogAnalysisResponseBodyAnalysesAnalysis extends TeaModel {
-        /**
-         * <p>The ID of the file system.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0c7154xxxx</p>
-         */
         @NameInMap("MetaKey")
         public String metaKey;
 
-        /**
-         * <p>The log dump information of the file system.</p>
-         */
         @NameInMap("MetaValue")
         public DescribeLogAnalysisResponseBodyAnalysesAnalysisMetaValue metaValue;
 

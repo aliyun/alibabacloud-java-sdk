@@ -4,9 +4,6 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
-    /**
-     * <p>The queried automatic snapshot tasks.</p>
-     */
     @NameInMap("AutoSnapshotTasks")
     public DescribeAutoSnapshotTasksResponseBodyAutoSnapshotTasks autoSnapshotTasks;
 
@@ -92,21 +89,9 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeAutoSnapshotTasksResponseBodyAutoSnapshotTasksAutoSnapshotTask extends TeaModel {
-        /**
-         * <p>The ID of the automatic snapshot policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sp-extreme-233e6****</p>
-         */
         @NameInMap("AutoSnapshotPolicyId")
         public String autoSnapshotPolicyId;
 
-        /**
-         * <p>The ID of the file system.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>extreme-233e6****</p>
-         */
         @NameInMap("SourceFileSystemId")
         public String sourceFileSystemId;
 

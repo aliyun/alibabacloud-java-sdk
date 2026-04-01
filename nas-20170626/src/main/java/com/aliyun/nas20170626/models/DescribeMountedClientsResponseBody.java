@@ -4,9 +4,6 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeMountedClientsResponseBody extends TeaModel {
-    /**
-     * <p>The queried clients.</p>
-     */
     @NameInMap("Clients")
     public DescribeMountedClientsResponseBodyClients clients;
 
@@ -92,12 +89,6 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
     }
 
     public static class DescribeMountedClientsResponseBodyClientsClient extends TeaModel {
-        /**
-         * <p>The IP address of the client.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10.10.10.1</p>
-         */
         @NameInMap("ClientIP")
         public String clientIP;
 
