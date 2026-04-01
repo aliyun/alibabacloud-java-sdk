@@ -95,31 +95,9 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>Specifies whether to retain the virtual IP address (VIP) when swapping connection addresses.  </p>
-     * <ul>
-     * <li><strong>true</strong>: Retains the VIP.  </li>
-     * <li><strong>false</strong> (default): Does not retain the VIP.</li>
-     * </ul>
-     * <blockquote>
-     * <p>This parameter is supported only for RDS PostgreSQL instances.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("RetainVip")
     public Boolean retainVip;
 
-    /**
-     * <p>The ID of the target RDS PostgreSQL instance whose connection address you want to swap with the current instance.  </p>
-     * <blockquote>
-     * <p>This parameter is supported only for RDS PostgreSQL instances.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>pgm-bp1206s14p3o****</p>
-     */
     @NameInMap("TargetDBInstanceId")
     public String targetDBInstanceId;
 

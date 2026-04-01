@@ -7,15 +7,39 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
     @NameInMap("Items")
     public DescribeDetachedBackupsResponseBodyItems items;
 
+    /**
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageRecordCount")
     public String pageRecordCount;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1A6D328C-84B8-40DC-BF49-6C73984D7494</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalRecordCount")
     public String totalRecordCount;
 

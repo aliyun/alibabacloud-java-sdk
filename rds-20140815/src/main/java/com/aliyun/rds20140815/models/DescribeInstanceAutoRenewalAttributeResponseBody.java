@@ -7,15 +7,39 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
     @NameInMap("Items")
     public DescribeInstanceAutoRenewalAttributeResponseBodyItems items;
 
+    /**
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4182309D-CD29-49B1-B4A5-D7CB4D56C31F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 

@@ -7,15 +7,40 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
     @NameInMap("Items")
     public DescribeDBInstancesByExpireTimeResponseBodyItems items;
 
+    /**
+     * <p>The page number of the returned page. Valid values: any <strong>non-zero</strong> positive integer.</p>
+     * <p>Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of instances returned on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 

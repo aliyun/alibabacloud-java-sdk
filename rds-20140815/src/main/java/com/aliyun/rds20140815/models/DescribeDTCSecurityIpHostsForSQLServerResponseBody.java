@@ -4,15 +4,33 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxx</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The number of distributed transaction whitelists.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("IpHostPairNum")
     public String ipHostPairNum;
 
     @NameInMap("Items")
     public DescribeDTCSecurityIpHostsForSQLServerResponseBodyItems items;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2CA62A70-2203-45C6-8E90-8971D5ACC0C2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

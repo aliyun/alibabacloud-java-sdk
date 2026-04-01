@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteRCVClusterRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cd21387ea640145bab79a78276c1a****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

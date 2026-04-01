@@ -4,33 +4,68 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeRCAvailableResourceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("Cores")
     public Integer cores;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cloud_ssd</p>
+     */
     @NameInMap("DataDiskCategory")
     public String dataDiskCategory;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dh-bp165p6xk2tlw61e****</p>
+     */
     @NameInMap("DedicatedHostId")
     public String dedicatedHostId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InstanceType</p>
      */
     @NameInMap("DestinationResource")
     public String destinationResource;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PrePaid</p>
+     */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>mysql.x4.4xlarge.7cm</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>optimized</p>
+     */
     @NameInMap("IoOptimized")
     public String ioOptimized;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8.0</p>
+     */
     @NameInMap("Memory")
     public Float memory;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vpc</p>
+     */
     @NameInMap("NetworkCategory")
     public String networkCategory;
 
@@ -40,21 +75,45 @@ public class DescribeRCAvailableResourceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>instance</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Region</p>
+     */
     @NameInMap("Scope")
     public String scope;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SpotDuration")
     public Integer spotDuration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NoSpot</p>
+     */
     @NameInMap("SpotStrategy")
     public String spotStrategy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cloud_ssd</p>
+     */
     @NameInMap("SystemDiskCategory")
     public String systemDiskCategory;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-e</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDBInstanceReplicationRequest extends TeaModel {
     /**
-     * <p>The name of the replication channel, used to identify the replication link.</p>
+     * <p>复制通道名称，用于标识复制链路</p>
      * 
      * <strong>example:</strong>
      * <p>replication-channel-001</p>
@@ -14,7 +14,7 @@ public class CreateDBInstanceReplicationRequest extends TeaModel {
     public String channelName;
 
     /**
-     * <p>The instance ID. You can obtain it by invoking DescribeDBInstances.</p>
+     * <p>目标RDS实例ID，复制链路将在此实例上创建</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CreateDBInstanceReplicationRequest extends TeaModel {
     public String dbInstanceId;
 
     /**
-     * <p>The host address of the master database, which can be an IP address or a domain name.</p>
+     * <p>主数据库主机地址，支持IP或域名</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class CreateDBInstanceReplicationRequest extends TeaModel {
     public String masterHost;
 
     /**
-     * <p>The password of the master database, used to authenticate the replication user. It must be Base64-encoded in advance.</p>
+     * <p>主数据库密码，用于验证复制用户，需要提前经过Base64编码</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class CreateDBInstanceReplicationRequest extends TeaModel {
     public String masterPassword;
 
     /**
-     * <p>The port number of the master database, typically 3306 for MySQL.</p>
+     * <p>主数据库端口号，通常为3306（MySQL）或5432（PostgreSQL）</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class CreateDBInstanceReplicationRequest extends TeaModel {
     public Integer masterPort;
 
     /**
-     * <p>The username of the master database, used to establish the replication connection.</p>
+     * <p>主数据库用户名，用于建立复制连接</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,7 +73,7 @@ public class CreateDBInstanceReplicationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the Region where the instance is located.</p>
+     * <p>地域ID，表示RDS实例所在的地域</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

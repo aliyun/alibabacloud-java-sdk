@@ -5,7 +5,15 @@ import com.aliyun.tea.*;
 
 public class ModifyActionEventPolicyRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable the event history feature. Valid values:</p>
+     * <ul>
+     * <li><strong>True</strong></li>
+     * <li><strong>False</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("EnableEventLog")
     public String enableEventLog;
@@ -14,7 +22,11 @@ public class ModifyActionEventPolicyRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

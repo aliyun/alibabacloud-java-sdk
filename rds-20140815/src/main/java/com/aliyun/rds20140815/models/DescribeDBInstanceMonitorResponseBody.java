@@ -4,9 +4,21 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceMonitorResponseBody extends TeaModel {
+    /**
+     * <p>The monitoring frequency. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("Period")
     public String period;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30829FD4-1A84-4C2A-A625-2EADECB95CA3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

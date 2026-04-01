@@ -36,23 +36,6 @@ public class StopRCInstanceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The stop mode to use when stopping the instance. Valid values:</p>
-     * <ul>
-     * <li><p>StopCharging: economical mode. When economical mode is enabled:</p>
-     * <ul>
-     * <li>Computing resources are no longer billed.</li>
-     * <li>System disk and data disk continue to be billed.</li>
-     * <li>Because computing resources are revoked, the instance might fail to start due to insufficient inventory. In this case, try again later or change the instance type.</li>
-     * </ul>
-     * </li>
-     * <li><p>KeepCharging: normal stop mode. The instance continues to incur charges after it is stopped.</p>
-     * </li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>KeepCharging</p>
-     */
     @NameInMap("StoppedMode")
     public String stoppedMode;
 

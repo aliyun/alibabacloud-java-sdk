@@ -4,18 +4,42 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeParameterTemplatesResponseBody extends TeaModel {
+    /**
+     * <p>The database engine of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <p>The version of the database engine.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8.0</p>
+     */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    /**
+     * <p>The number of parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("ParameterCount")
     public String parameterCount;
 
     @NameInMap("Parameters")
     public DescribeParameterTemplatesResponseBodyParameters parameters;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0F9B7410-EC73-510C-B385-8339455C12C6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

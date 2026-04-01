@@ -4,21 +4,56 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribePGHbaConfigResponseBody extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-bp1*****</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     @NameInMap("DefaultHbaItems")
     public DescribePGHbaConfigResponseBodyDefaultHbaItems defaultHbaItems;
 
+    /**
+     * <p>The time when the previous modification was made to the pg_hba.conf file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-11-25T06:00:40Z</p>
+     */
     @NameInMap("HbaModifyTime")
     public String hbaModifyTime;
 
+    /**
+     * <p>The status of the previous modification to the pg_hba.conf file. Valid values:</p>
+     * <ul>
+     * <li><strong>success</strong></li>
+     * <li><strong>setting</strong></li>
+     * <li><strong>failed</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("LastModifyStatus")
     public String lastModifyStatus;
 
+    /**
+     * <p>The reason why the previous modification was made to the pg_hba.conf file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified users (testuser) is not exist.</p>
+     */
     @NameInMap("ModifyStatusReason")
     public String modifyStatusReason;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A147A124-A147-5CCF-9609-B73C028848DF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

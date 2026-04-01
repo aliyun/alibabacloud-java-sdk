@@ -5,41 +5,105 @@ import com.aliyun.tea.*;
 
 public class ModifyDBProxyInstanceShrinkRequest extends TeaModel {
     /**
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-t4n3a****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>A deprecated parameter. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
+     */
     @NameInMap("DBProxyEngineType")
     public String DBProxyEngineType;
 
     /**
+     * <p>The number of database proxies. If you set this parameter to 0, the database proxy feature is disabled for the instance. Valid values: <strong>1</strong> to <strong>16</strong>.</p>
+     * <blockquote>
+     * <p> The capability of the database proxy feature to process requests increases with the number of database proxies that are enabled. You can monitor the load on the instance and specify an appropriate number of database proxies based on the load monitoring data.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("DBProxyInstanceNum")
     public String DBProxyInstanceNum;
 
     /**
+     * <p>The database proxy type. Valid values:</p>
+     * <ul>
+     * <li><strong>common</strong>: general-purpose database proxy</li>
+     * <li><strong>exclusive</strong> (default): dedicated database proxy</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DedicatedProxy</p>
      */
     @NameInMap("DBProxyInstanceType")
     public String DBProxyInstanceType;
 
+    /**
+     * <p>List of proxy nodes.</p>
+     * <blockquote>
+     * <p>This parameter must be passed when the current proxy instance is deployed in multiple availability zones.</p>
+     * </blockquote>
+     */
     @NameInMap("DBProxyNodes")
     public String DBProxyNodesShrink;
 
+    /**
+     * <p>The point in time that you want to specify. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <blockquote>
+     * <p> If the <strong>EffectiveTime</strong> parameter is set to <strong>SpecificTime</strong>, you must specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-07-10T13:15:12Z</p>
+     */
     @NameInMap("EffectiveSpecificTime")
     public String effectiveSpecificTime;
 
+    /**
+     * <p>The effective time. Valid values:</p>
+     * <ul>
+     * <li><strong>Immediate</strong>: The effective time is immediate.</li>
+     * <li><strong>MaintainTime</strong>: The effective time is within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</li>
+     * <li><strong>SpecificTime</strong>: The effective time is a specified point in time.</li>
+     * </ul>
+     * <p>Default value: <strong>MaintainTime</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MaintainTime</p>
+     */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
+    /**
+     * <p>The list of available zones for migration agents.</p>
+     * <blockquote>
+     * <p>Currently, only RDS MySQL cloud disk version agent instance migration is supported.</p>
+     * </blockquote>
+     */
     @NameInMap("MigrateAZ")
     public String migrateAZShrink;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -49,6 +113,15 @@ public class ModifyDBProxyInstanceShrinkRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the vSwitch in the destination zone. You can call the <a href="https://help.aliyun.com/document_detail/610431.html">DescribeVSwitches</a> operation to query existing vSwitches.</p>
+     * <blockquote>
+     * <p> Only database proxies for ApsaraDB RDS for MySQL instances that use cloud disks can be migrated to different zones.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-uf6adz52c2p****</p>
+     */
     @NameInMap("VSwitchIds")
     public String vSwitchIds;
 

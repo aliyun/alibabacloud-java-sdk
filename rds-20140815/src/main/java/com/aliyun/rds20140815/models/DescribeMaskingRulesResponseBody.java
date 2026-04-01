@@ -4,15 +4,10 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeMaskingRulesResponseBody extends TeaModel {
-    /**
-     * <p>Returned data</p>
-     */
     @NameInMap("Data")
     public DescribeMaskingRulesResponseBodyData data;
 
     /**
-     * <p>Request ID</p>
-     * 
      * <strong>example:</strong>
      * <p>69779000-57A4-38F6-BF85-**********A2</p>
      */
@@ -41,21 +36,12 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeMaskingRulesResponseBodyDataRulesRuleConfig extends TeaModel {
-        /**
-         * <p>List of columns</p>
-         */
         @NameInMap("Columns")
         public java.util.List<String> columns;
 
-        /**
-         * <p>List of databases</p>
-         */
         @NameInMap("Databases")
         public java.util.List<String> databases;
 
-        /**
-         * <p>Table List</p>
-         */
         @NameInMap("Tables")
         public java.util.List<String> tables;
 
@@ -92,8 +78,6 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
 
     public static class DescribeMaskingRulesResponseBodyDataRules extends TeaModel {
         /**
-         * <p>Default encryption or masking algorithm</p>
-         * 
          * <strong>example:</strong>
          * <p>aes-128-gcm</p>
          */
@@ -101,8 +85,6 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
         public String defaultAlgo;
 
         /**
-         * <p>Whether the rule is enabled</p>
-         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -110,8 +92,6 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
         public String enabled;
 
         /**
-         * <p>Rule algorithm. Multiple algorithms can be selected. Masking algorithms can include additional parameters. Format: {name: algorithm1}, {name: algorithm2, params: {encryption position, number of encrypted digits}}</p>
-         * 
          * <strong>example:</strong>
          * <p>[{&quot;name&quot;: &quot;aes-128-gcm&quot;},
          *         {&quot;name&quot;:&quot;sm4-128-gcm&quot;}]</p>
@@ -119,15 +99,10 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
         @NameInMap("MaskingAlgo")
         public String maskingAlgo;
 
-        /**
-         * <p>Rule configuration</p>
-         */
         @NameInMap("RuleConfig")
         public DescribeMaskingRulesResponseBodyDataRulesRuleConfig ruleConfig;
 
         /**
-         * <p>Rule Name</p>
-         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -182,9 +157,6 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeMaskingRulesResponseBodyData extends TeaModel {
-        /**
-         * <p>List of encryption or desensitization rules</p>
-         */
         @NameInMap("Rules")
         public java.util.List<DescribeMaskingRulesResponseBodyDataRules> rules;
 

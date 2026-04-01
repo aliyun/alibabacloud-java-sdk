@@ -7,15 +7,39 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
     @NameInMap("Items")
     public DescribeDBInstancesByPerformanceResponseBodyItems items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>28</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23907437-79B9-411A-9EE6-75A8F0F1C619</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>28</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 

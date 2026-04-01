@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeRCSecurityGroupPermissionRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-2ze27hs990o2hn94****</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;

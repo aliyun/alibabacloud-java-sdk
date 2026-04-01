@@ -9,7 +9,7 @@ public class DescribeAnalyticdbByPrimaryDBInstanceRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5****</p>
+     * <p>rm-uf6wjk5*******</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

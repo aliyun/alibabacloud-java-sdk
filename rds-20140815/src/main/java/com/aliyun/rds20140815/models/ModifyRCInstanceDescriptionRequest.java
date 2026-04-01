@@ -4,12 +4,33 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyRCInstanceDescriptionRequest extends TeaModel {
+    /**
+     * <p>The instance name.</p>
+     * <blockquote>
+     * <p> The name must be 2 to 255 characters in length and can contain letters, digits, <code>underscores (_)</code>, and <code>hyphens (-)</code>. It must start with a letter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>testInstance</p>
+     */
     @NameInMap("InstanceDescription")
     public String instanceDescription;
 
+    /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rc-m5ei7b1w38w2l91x****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

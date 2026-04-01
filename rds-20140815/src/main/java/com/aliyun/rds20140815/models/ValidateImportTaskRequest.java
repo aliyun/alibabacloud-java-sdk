@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class ValidateImportTaskRequest extends TeaModel {
     /**
-     * <p>Instance ID. You can obtain the value of this parameter by invoking the DescribeDBInstances API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +14,6 @@ public class ValidateImportTaskRequest extends TeaModel {
     public String dbInstanceId;
 
     /**
-     * <p>Estimated instance size (GB)</p>
-     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -24,7 +21,6 @@ public class ValidateImportTaskRequest extends TeaModel {
     public Integer estimatedSize;
 
     /**
-     * <p>Source MySQL host address</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +33,6 @@ public class ValidateImportTaskRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Password for the source MySQL user (Base64 encrypted)</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +42,6 @@ public class ValidateImportTaskRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>Source MySQL port number</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,7 +51,6 @@ public class ValidateImportTaskRequest extends TeaModel {
     public Integer port;
 
     /**
-     * <p>Region ID. You can obtain this by invoking the DescribeRegions API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,8 +60,6 @@ public class ValidateImportTaskRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Source cloud instance ID</p>
-     * 
      * <strong>example:</strong>
      * <p>i-wz9ff3acy500io5wdf5s</p>
      */
@@ -76,11 +67,6 @@ public class ValidateImportTaskRequest extends TeaModel {
     public String sourceInstanceId;
 
     /**
-     * <p>Source platform type  </p>
-     * <ul>
-     * <li>ECS</li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>ECS</p>
      */
@@ -88,7 +74,6 @@ public class ValidateImportTaskRequest extends TeaModel {
     public String sourcePlatform;
 
     /**
-     * <p>Backup transfer port number</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -98,7 +83,6 @@ public class ValidateImportTaskRequest extends TeaModel {
     public Integer streamPort;
 
     /**
-     * <p>Source MySQL user</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -108,8 +92,6 @@ public class ValidateImportTaskRequest extends TeaModel {
     public String user;
 
     /**
-     * <p>Path to the Xtrabackup tool on the source</p>
-     * 
      * <strong>example:</strong>
      * <p>/usr/local/bin/xtrabackup</p>
      */

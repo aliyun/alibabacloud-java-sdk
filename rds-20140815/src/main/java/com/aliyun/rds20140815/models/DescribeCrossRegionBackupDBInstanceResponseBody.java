@@ -7,21 +7,58 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
     @NameInMap("Items")
     public DescribeCrossRegionBackupDBInstanceResponseBodyItems items;
 
+    /**
+     * <p>The total number of items returned for cross-region backup settings.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ItemsNumbers")
     public Integer itemsNumbers;
 
+    /**
+     * <p>The page number. Pages start from page 1.</p>
+     * <p>Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Default value: 30.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>33517002-182D-40BE-93EC-610BD3381045</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalRecords")
     public Integer totalRecords;
 

@@ -20,19 +20,6 @@ public class ModifyRCInstanceRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
-    /**
-     * <p>Specifies whether to automatically use a coupon. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong> (default): Yes.</li>
-     * <li><strong>false</strong>: No.</li>
-     * </ul>
-     * <blockquote>
-     * <p>If you use a coupon and later decrease the quota, the amount offset by the coupon will not be refunded.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("AutoUseCoupon")
     public Boolean autoUseCoupon;
 
@@ -83,41 +70,12 @@ public class ModifyRCInstanceRequest extends TeaModel {
     @NameInMap("InstanceType")
     public String instanceType;
 
-    /**
-     * <p>The coupon code.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>72329885****</p>
-     */
     @NameInMap("PromotionCode")
     public String promotionCode;
 
-    /**
-     * <p>The restart time of the instance.</p>
-     * <ul>
-     * <li>If <strong>RebootWhenFinished</strong> is set to <strong>false</strong>, you <strong>must</strong> specify a restart time within 48 hours.</li>
-     * <li>The time must follow the ISO 8601 standard in UTC+0. Format: <code>yyyy-MM-ddTHH:mmZ</code>.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>2025-04-03T12:05Z</p>
-     */
     @NameInMap("RebootTime")
     public String rebootTime;
 
-    /**
-     * <p>Whether to restart the instance immediately after the upgrade/downgrade operation ends. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong> (default): Yes.</li>
-     * <li><strong>false</strong>: No.<blockquote>
-     * <p>If the instance is in the <strong>paused</strong> status, it remains in that status even if you set <code>RebootWhenFinished=true</code>, and the restart operation will not be executed.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("RebootWhenFinished")
     public Boolean rebootWhenFinished;
 

@@ -90,7 +90,7 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-wz9s06u4drm******</p>
+         * <p>rm-wz92gn1ll9fe5d3a4</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
@@ -198,7 +198,7 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
          * <p>The memory increase percentage.</p>
          * 
          * <strong>example:</strong>
-         * <p>20</p>
+         * <p>2023-10-25</p>
          */
         @NameInMap("MemoryIncreaseRatio")
         public String memoryIncreaseRatio;

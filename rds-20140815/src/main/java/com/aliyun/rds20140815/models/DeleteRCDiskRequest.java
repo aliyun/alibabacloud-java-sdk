@@ -5,11 +5,21 @@ import com.aliyun.tea.*;
 
 public class DeleteRCDiskRequest extends TeaModel {
     /**
+     * <p>The ID of the cloud disk that you want to release.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rcd-wz9c8isqly8637zw****</p>
      */
     @NameInMap("DiskId")
     public String diskId;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

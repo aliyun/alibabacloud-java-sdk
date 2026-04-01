@@ -53,9 +53,6 @@ public class DescribeRCSnapshotsRequest extends TeaModel {
     @NameInMap("SnapshotIds")
     public String snapshotIds;
 
-    /**
-     * <p>Tag Details.</p>
-     */
     @NameInMap("Tag")
     public java.util.List<DescribeRCSnapshotsRequestTag> tag;
 
@@ -121,21 +118,9 @@ public class DescribeRCSnapshotsRequest extends TeaModel {
     }
 
     public static class DescribeRCSnapshotsRequestTag extends TeaModel {
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testRC</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test01</p>
-         */
         @NameInMap("Value")
         public String value;
 

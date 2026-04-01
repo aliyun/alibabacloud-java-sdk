@@ -4,15 +4,36 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DeleteRCClusterNodesRequest extends TeaModel {
+    /**
+     * <p>The instance IDs.</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <p>The node information.</p>
+     */
     @NameInMap("Nodes")
     public java.util.List<String> nodes;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The virtual private cloud (VPC) ID.</p>
+     * <blockquote>
+     * <p> This is a reserved parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class DeleteRCDeploymentSetRequest extends TeaModel {
     /**
+     * <p>The deployment set ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ds-uf6c8qerk019bj1l****</p>
      */
     @NameInMap("DeploymentSetId")
     public String deploymentSetId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

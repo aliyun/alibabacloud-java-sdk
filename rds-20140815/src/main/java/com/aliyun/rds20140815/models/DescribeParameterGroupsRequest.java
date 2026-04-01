@@ -4,6 +4,16 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeParameterGroupsRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to return the parameter overview.</p>
+     * <ul>
+     * <li><strong>false</strong> (default): The parameter overview is returned.</li>
+     * <li><strong>true</strong>: The parameter overview is not returned.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnableDetail")
     public Boolean enableDetail;
 
@@ -11,11 +21,21 @@ public class DescribeParameterGroupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

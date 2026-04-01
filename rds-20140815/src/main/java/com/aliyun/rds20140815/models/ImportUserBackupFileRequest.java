@@ -28,19 +28,6 @@ public class ImportUserBackupFileRequest extends TeaModel {
     @NameInMap("BucketRegion")
     public String bucketRegion;
 
-    /**
-     * <p>Specifies whether to automatically set up replication. Valid values:</p>
-     * <ul>
-     * <li>true: Yes. The <code>MasterInfo</code> parameter is required.</li>
-     * <li>false: No.</li>
-     * </ul>
-     * <blockquote>
-     * <p>This applies only to native replication instances and requires the <code>DBInstanceId</code> parameter to be passed when invoking the API.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("BuildReplication")
     public Boolean buildReplication;
 
@@ -71,34 +58,10 @@ public class ImportUserBackupFileRequest extends TeaModel {
     @NameInMap("EngineVersion")
     public String engineVersion;
 
-    /**
-     * <p>A case-sensitive JSON array containing the Master information for setting up MySQL replication. Example:</p>
-     * <pre><code>{&quot;masterIp&quot;:&quot;172.20.xx.xx&quot;,&quot;masterPort&quot;:&quot;3306&quot;,&quot;masterUser&quot;:&quot;replica&quot;,&quot;masterPassword&quot;:&quot;W33uopkehBQ=&quot;}
-     * </code></pre>
-     * <p>The parameters in the array are described as follows:</p>
-     * <ul>
-     * <li><code>masterIp</code>: Primary database IP address.</li>
-     * <li><code>masterPort</code>: Primary database port.</li>
-     * <li><code>masterUser</code>: Replication account for the primary database.</li>
-     * <li><code>masterPassword</code>: Password for the replication account of the primary database, which must be Base64-encoded.</li>
-     * </ul>
-     * <blockquote>
-     * <p>This applies only to native replication instances and requires the <code>DBInstanceId</code> parameter to be passed when invoking the API.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>{&quot;masterIp&quot;:&quot;172.20.xx.xx&quot;,&quot;masterPort&quot;:&quot;3306&quot;,&quot;masterUser&quot;:&quot;replica&quot;,&quot;masterPassword&quot;:&quot;W33uopkehBQ=&quot;}</p>
-     */
     @NameInMap("MasterInfo")
     public String masterInfo;
 
     /**
-     * <p>Import mode. Valid values:</p>
-     * <ul>
-     * <li>oss: Download the backup from OSS and import it.</li>
-     * <li>stream: Import the backup over the network.</li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>oss</p>
      */
@@ -163,24 +126,6 @@ public class ImportUserBackupFileRequest extends TeaModel {
     @NameInMap("Retention")
     public Integer retention;
 
-    /**
-     * <p>A case-sensitive JSON array that provides the source information for a full backup. Example:</p>
-     * <pre><code>{&quot;sourceIp&quot;:&quot;172.20.xx.xx&quot;,&quot;sourcePort&quot;:&quot;9999&quot;}
-     * </code></pre>
-     * <p>The parameters in the array are described as follows:</p>
-     * <ul>
-     * <li><p><code>sourceIp</code>: Source IP address.</p>
-     * </li>
-     * <li><p><code>sourcePort</code>: Port on which Netcat listens at the source.</p>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p>This applies only to native replication instances and requires the <code>DBInstanceId</code> parameter to be passed when invoking the API.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>{&quot;sourceIp&quot;:&quot;172.20.xx.xx&quot;,&quot;sourcePort&quot;:&quot;9999&quot;}</p>
-     */
     @NameInMap("SourceInfo")
     public String sourceInfo;
 

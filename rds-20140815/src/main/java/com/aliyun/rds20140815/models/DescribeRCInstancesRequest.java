@@ -7,12 +7,6 @@ public class DescribeRCInstancesRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <p>Query by instance host IP address.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>172.16.XX.XX</p>
-     */
     @NameInMap("HostIp")
     public String hostIp;
 
@@ -23,27 +17,15 @@ public class DescribeRCInstancesRequest extends TeaModel {
      * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rc-i2p26bde8bckf141****</p>
+     * <p>rm-2ze704f*****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <p>Instance ID.</p>
-     * <p>This parameter is used to query multiple instances simultaneously. Separate instance IDs with English commas (,), and up to 100 IDs are supported. The input format is: <code>[&quot;instance ID 1&quot;,&quot;instance ID 2&quot;]</code>.</p>
-     * <blockquote>
-     * <p>When both <strong>InstanceIds</strong> and <strong>instanceId</strong> are provided, the value of <strong>InstanceIds</strong> takes precedence.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>[&quot;rc-i2p26bde8bckf141****&quot;,&quot;rc-l1753m982otq2s2m****&quot;]</p>
-     */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
     /**
-     * <p>Instance Name</p>
-     * 
      * <strong>example:</strong>
      * <p>k8s-node</p>
      */
@@ -72,12 +54,6 @@ public class DescribeRCInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>Query by instance public IP address.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>121.89.XX.XX</p>
-     */
     @NameInMap("PublicIp")
     public String publicIp;
 
@@ -90,28 +66,9 @@ public class DescribeRCInstancesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>Instance status. Valid values:  </p>
-     * <ul>
-     * <li><strong>Pending</strong>: Creation in progress.  </li>
-     * <li><strong>Running</strong>: Running.  </li>
-     * <li><strong>Starting</strong>: Starting.  </li>
-     * <li><strong>Stopping</strong>: Pausing.  </li>
-     * <li><strong>Stopped</strong>: Paused.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>Running</p>
-     */
     @NameInMap("Status")
     public String status;
 
-    /**
-     * <p>Query by specified tag. The input format is: <code>{&quot;TagKey&quot;:&quot;TagValue&quot;}</code>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>{&quot;testRC&quot;:&quot;test01&quot;}</p>
-     */
     @NameInMap("Tag")
     public String tag;
 

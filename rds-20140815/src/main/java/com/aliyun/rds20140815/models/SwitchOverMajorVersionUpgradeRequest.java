@@ -4,12 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class SwitchOverMajorVersionUpgradeRequest extends TeaModel {
-    /**
-     * <p>Used to ensure the idempotence of the request and prevent duplicate submissions. The client generates this parameter value, which must be unique across different requests. It can contain a maximum of 64 ASCII characters and must not include non-ASCII characters.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
-     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -37,12 +31,6 @@ public class SwitchOverMajorVersionUpgradeRequest extends TeaModel {
     @NameInMap("RegionId")
     public byte[] regionId;
 
-    /**
-     * <p>Resource group ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rg-acfmy****</p>
-     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

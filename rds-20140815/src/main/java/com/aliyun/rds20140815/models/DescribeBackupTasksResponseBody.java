@@ -7,6 +7,12 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
     @NameInMap("Items")
     public DescribeBackupTasksResponseBodyItems items;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90496720-2319-42A8-87CD-FCE4DF95EBED</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

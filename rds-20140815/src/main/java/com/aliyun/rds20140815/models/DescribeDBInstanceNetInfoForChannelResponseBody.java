@@ -7,9 +7,25 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
     @NameInMap("DBInstanceNetInfos")
     public DescribeDBInstanceNetInfoForChannelResponseBodyDBInstanceNetInfos DBInstanceNetInfos;
 
+    /**
+     * <p>The network type of the instance. Valid values:</p>
+     * <ul>
+     * <li><strong>VPC</strong>: a virtual private cloud (VPC)</li>
+     * <li><strong>Classic</strong>: classic network</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
+     */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>61DF1F28-F409-50C0-B90A-CCE82D44****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

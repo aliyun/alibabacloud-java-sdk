@@ -9,7 +9,7 @@ public class EvaluateLocalExtendDiskRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-wz9s06u4drm******</p>
+     * <p>rm-m5e999iqm65******</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;

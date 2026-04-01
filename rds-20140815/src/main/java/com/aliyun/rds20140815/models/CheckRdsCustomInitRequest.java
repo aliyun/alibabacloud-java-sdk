@@ -15,7 +15,7 @@ public class CheckRdsCustomInitRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>rg-bp67acfmxazb4p****</p>
+     * <p>None</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

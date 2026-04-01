@@ -4,9 +4,18 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableZonesResponseBody extends TeaModel {
+    /**
+     * <p>The available zones in the region.</p>
+     */
     @NameInMap("AvailableZones")
     public java.util.List<DescribeAvailableZonesResponseBodyAvailableZones> availableZones;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4256E149-C3C4-4FA7-BDEA-13CA415E8763</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +41,12 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorysSupportedStorageTypes extends TeaModel {
+        /**
+         * <p>The storage type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>local_ssd</p>
+         */
         @NameInMap("StorageType")
         public String storageType;
 
@@ -51,9 +66,18 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorys extends TeaModel {
+        /**
+         * <p>The RDS edition of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HighAvailability</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The storage types that are available for purchase.</p>
+         */
         @NameInMap("SupportedStorageTypes")
         public java.util.List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorysSupportedStorageTypes> supportedStorageTypes;
 
@@ -81,9 +105,18 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersions extends TeaModel {
+        /**
+         * <p>The RDS editions that are available that are available for purchase.</p>
+         */
         @NameInMap("SupportedCategorys")
         public java.util.List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorys> supportedCategorys;
 
+        /**
+         * <p>The database engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.0</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -111,9 +144,18 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableZonesResponseBodyAvailableZonesSupportedEngines extends TeaModel {
+        /**
+         * <p>The database engine of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <p>The database engine versions that are available for purchase.</p>
+         */
         @NameInMap("SupportedEngineVersions")
         public java.util.List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersions> supportedEngineVersions;
 
@@ -141,12 +183,27 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableZonesResponseBodyAvailableZones extends TeaModel {
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The database engines that are available for purchase.</p>
+         */
         @NameInMap("SupportedEngines")
         public java.util.List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEngines> supportedEngines;
 
+        /**
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-e</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

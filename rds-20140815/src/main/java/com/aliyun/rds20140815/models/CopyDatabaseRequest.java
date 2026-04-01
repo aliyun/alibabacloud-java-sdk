@@ -4,18 +4,42 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CopyDatabaseRequest extends TeaModel {
+    /**
+     * <p>The instance name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5******</p>
+     */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <p>The destination database name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>db2***</p>
+     */
     @NameInMap("DstDBName")
     public String dstDBName;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The reserved account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ReserveAccount")
     public Integer reserveAccount;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy*****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -25,6 +49,12 @@ public class CopyDatabaseRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The source database name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>db1***</p>
+     */
     @NameInMap("SrcDBName")
     public String srcDBName;
 

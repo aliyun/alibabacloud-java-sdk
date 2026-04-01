@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class CancelActiveOperationTasksRequest extends TeaModel {
     /**
+     * <p>The IDs of tasks that you want to cancel at a time. Separate multiple IDs with commas (,). We recommend that you configure up to 25 IDs at a time.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>188****,188****,188****</p>
      */
     @NameInMap("Ids")
     public String ids;

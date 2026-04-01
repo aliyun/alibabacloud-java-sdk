@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeMaskingRulesRequest extends TeaModel {
     /**
-     * <p>Instance Name</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +14,6 @@ public class DescribeMaskingRulesRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>Database Name</p>
-     * 
      * <strong>example:</strong>
      * <p>myDB</p>
      */
@@ -27,8 +24,6 @@ public class DescribeMaskingRulesRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>Region ID</p>
-     * 
      * <strong>example:</strong>
      * <p>ap-southeast-1</p>
      */
@@ -42,8 +37,6 @@ public class DescribeMaskingRulesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Rule Name (comma-separated)</p>
-     * 
      * <strong>example:</strong>
      * <p>test1,test2</p>
      */

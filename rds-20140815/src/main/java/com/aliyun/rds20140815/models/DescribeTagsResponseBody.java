@@ -7,6 +7,12 @@ public class DescribeTagsResponseBody extends TeaModel {
     @NameInMap("Items")
     public DescribeTagsResponseBodyItems items;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

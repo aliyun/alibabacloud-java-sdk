@@ -4,26 +4,51 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeKmsAssociateResourcesRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
+     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCz****</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
+     * <p>The ID of the KMS resource. Only key IDs are supported.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>494c98ce-f2b5-48ab-96ab-36c986b6****</p>
      */
     @NameInMap("KmsResourceId")
     public String kmsResourceId;
 
+    /**
+     * <p>The ID of the region to which the KMS resource belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("KmsResourceRegionId")
     public String kmsResourceRegionId;
 
     /**
+     * <p>The type of the KMS resource. Only key is supported.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>key</p>
      */
     @NameInMap("KmsResourceType")
     public String kmsResourceType;
 
     /**
+     * <p>The ID of the Alibaba Cloud account to which the KMS resource belongs.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>164882191396****</p>
      */
     @NameInMap("KmsResourceUser")
     public String kmsResourceUser;
@@ -34,9 +59,21 @@ public class DescribeKmsAssociateResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4p****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

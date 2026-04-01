@@ -9,7 +9,7 @@ public class CreateYouhuiForOrderRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>171151088708****</p>
+     * <p>1711510887******</p>
      */
     @NameInMap("ActivityId")
     public Long activityId;
@@ -22,7 +22,7 @@ public class CreateYouhuiForOrderRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>200000199****</p>
+     * <p>2000001******</p>
      */
     @NameInMap("PromotionId")
     public Long promotionId;

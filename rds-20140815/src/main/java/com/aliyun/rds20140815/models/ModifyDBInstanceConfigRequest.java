@@ -4,10 +4,21 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceConfigRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6000170000591aed949d0f****</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
+     * <p>The name of the configuration item that you want to modify. Valid values:</p>
+     * <ul>
+     * <li><strong>pgbouncer</strong>. This configuration item is supported for ApsaraDB RDS for PostgreSQL instances.</li>
+     * <li><strong>clear_errorlog</strong>. This configuration item is supported for ApsaraDB RDS for SQL Server instances.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +28,11 @@ public class ModifyDBInstanceConfigRequest extends TeaModel {
     public String configName;
 
     /**
+     * <p>The value of the configuration item that you want to modify. Valid values:</p>
+     * <ul>
+     * <li>If you set ConfigName to pgbouncer, the valid values are <strong>true</strong> and <strong>false</strong>.</li>
+     * <li>If you set ConfigName to clear_errorlog, set the value to <strong>1</strong>. The value 1 indicates that error logs are cleaned up.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,7 +42,11 @@ public class ModifyDBInstanceConfigRequest extends TeaModel {
     public String configValue;
 
     /**
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -37,6 +57,12 @@ public class ModifyDBInstanceConfigRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The resource group ID. You can call the DescribeDBInstanceAttribute to obtain the resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4p****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -46,9 +72,26 @@ public class ModifyDBInstanceConfigRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The update time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-05-06T09:24:00Z</p>
+     */
     @NameInMap("SwitchTime")
     public String switchTime;
 
+    /**
+     * <p>The time at which the modification takes effect. Valid values:</p>
+     * <ul>
+     * <li><strong>Immediate</strong>: immediately modifies the parameter. This is the default value.</li>
+     * <li><strong>MaintainTime</strong>: modifies the parameter during the maintenance window of the instance. You can call the ModifyDBInstanceMaintainTime operation to change the maintenance window.</li>
+     * <li><strong>ScheduleTime</strong>: modifies the parameter at the point in time that you specify. If you specify this value, you must also specify <strong>SwitchTime</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Immediate</p>
+     */
     @NameInMap("SwitchTimeMode")
     public String switchTimeMode;
 

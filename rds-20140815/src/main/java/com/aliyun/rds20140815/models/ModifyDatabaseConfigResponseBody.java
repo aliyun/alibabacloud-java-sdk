@@ -4,12 +4,30 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDatabaseConfigResponseBody extends TeaModel {
+    /**
+     * <p>The code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8B993DA9-5272-5414-94E3-4CA8BA0146C2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

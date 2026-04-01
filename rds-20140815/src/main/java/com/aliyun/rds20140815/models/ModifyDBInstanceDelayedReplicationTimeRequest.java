@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceDelayedReplicationTimeRequest extends TeaModel {
     /**
+     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5*****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -14,7 +18,11 @@ public class ModifyDBInstanceDelayedReplicationTimeRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The replication latency of the read-only instance. Unit: seconds.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("ReadSQLReplicationTime")
     public String readSQLReplicationTime;

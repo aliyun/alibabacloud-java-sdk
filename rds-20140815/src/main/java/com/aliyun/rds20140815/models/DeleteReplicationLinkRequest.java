@@ -5,13 +5,25 @@ import com.aliyun.tea.*;
 
 public class DeleteReplicationLinkRequest extends TeaModel {
     /**
+     * <p>The ID of the DR instance.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pgm-bp1trqb4p1xd****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
+     * <p>Specifies whether to delete the data synchronization link between the DR instance and the primary instance and promote the DR instance to the primary instance. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("PromoteToMaster")
     public Boolean promoteToMaster;

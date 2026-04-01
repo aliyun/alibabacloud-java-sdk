@@ -4,6 +4,10 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ListRCVClustersResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>07F6177E-6DE4-408A-BB4F-0723301340F3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,34 @@ public class ListRCVClustersResponseBody extends TeaModel {
     }
 
     public static class ListRCVClustersResponseBodyVClusters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cd21387ea640145bab79a78276c1a****</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("InstanceCount")
         public Long instanceCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
         @NameInMap("SupportDiskPerformanceLevel")
         public java.util.List<String> supportDiskPerformanceLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-2zeqj40j2ce0s5yhg****</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

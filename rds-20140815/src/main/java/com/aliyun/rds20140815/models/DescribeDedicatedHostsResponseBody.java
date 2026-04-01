@@ -4,12 +4,24 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostsResponseBody extends TeaModel {
+    /**
+     * <p>The host group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dhg-7a9xxxxxxxx</p>
+     */
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
 
     @NameInMap("DedicatedHosts")
     public DescribeDedicatedHostsResponseBodyDedicatedHosts dedicatedHosts;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C860658E-68A6-46C1-AF6E-3AE7C4D3CACF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

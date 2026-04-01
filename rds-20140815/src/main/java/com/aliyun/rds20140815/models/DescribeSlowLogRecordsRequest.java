@@ -9,7 +9,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5****</p>
+     * <p>rm-uf6wjk5******</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -18,7 +18,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
      * <p>The name of the database.</p>
      * 
      * <strong>example:</strong>
-     * <p>testdb</p>
+     * <p>RDS_MySQL</p>
      */
     @NameInMap("DBName")
     public String DBName;

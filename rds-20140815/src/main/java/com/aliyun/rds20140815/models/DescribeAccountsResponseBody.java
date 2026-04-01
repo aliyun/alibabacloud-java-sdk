@@ -7,21 +7,67 @@ public class DescribeAccountsResponseBody extends TeaModel {
     @NameInMap("Accounts")
     public DescribeAccountsResponseBodyAccounts accounts;
 
+    /**
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A2E94301-D07F-4457-9B49-6AA2BB388C85</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The first time when the system admin account was enabled. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * <blockquote>
+     * <p> This parameter is returned only for instances that run SQL Server.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-02-06T11:00:00Z</p>
+     */
     @NameInMap("SystemAdminAccountFirstActivationTime")
     public String systemAdminAccountFirstActivationTime;
 
+    /**
+     * <p>Indicates whether the system admin account was enabled. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The system admin account was enabled.</li>
+     * <li><strong>false</strong>: The system admin account was disabled.</li>
+     * </ul>
+     * <blockquote>
+     * <p> The <a href="https://help.aliyun.com/document_detail/170736.html">system admin account</a> is supported only for the instances that run SQL Server. If the instance runs SQL Server, a value is returned for this parameter. If the instance runs a different database engine, no value is returned for this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("SystemAdminAccountStatus")
     public String systemAdminAccountStatus;
 
+    /**
+     * <p>The total number of entries that are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 

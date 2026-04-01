@@ -11,6 +11,10 @@ public class CheckRdsCustomInitResponseBody extends TeaModel {
     @NameInMap("HasServiceLinkedRole")
     public String hasServiceLinkedRole;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("RegisterUidSuccess")
     public Boolean registerUidSuccess;
 

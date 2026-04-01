@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class MigrateConnectionToOtherZoneRequest extends TeaModel {
     /**
+     * <p>The endpoint of the instance. The endpoint is specified when you create the instance.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-bp1oypo6ky19y****</p>
      */
     @NameInMap("ConnectionString")
     public String connectionString;
 
     /**
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-bp1oypo6ky19y****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -23,7 +31,11 @@ public class MigrateConnectionToOtherZoneRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The ID of the zone.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-i</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

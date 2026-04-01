@@ -4,6 +4,12 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstancePayTypeResponseBody extends TeaModel {
+    /**
+     * <p>The order ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100789370230206</p>
+     */
     @NameInMap("OrderId")
     public Long orderId;
 

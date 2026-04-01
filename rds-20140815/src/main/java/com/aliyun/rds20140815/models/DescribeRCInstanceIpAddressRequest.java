@@ -4,33 +4,97 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeRCInstanceIpAddressRequest extends TeaModel {
+    /**
+     * <p>The page number. Default value: 1. Pages start from page 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The region ID of the asset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("DdosRegionId")
     public String ddosRegionId;
 
+    /**
+     * <p>The DDoS mitigation status of the asset. Valid values:</p>
+     * <ul>
+     * <li><strong>defense</strong>: queries assets for which traffic scrubbing is performed.</li>
+     * <li><strong>blackhole</strong>: queries assets for which blackhole filtering is triggered.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>defense</p>
+     */
     @NameInMap("DdosStatus")
     public String ddosStatus;
 
+    /**
+     * <p>The ID of the RDS Custom instance to which the asset to query is added.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rc-y6dn4pyuub1r89******</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The IP address of the asset to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>39.105.XXX.XXX</p>
+     */
     @NameInMap("InstanceIp")
     public String instanceIp;
 
+    /**
+     * <p>The name of the RDS Custom instance to which the asset to query is added.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rc-y6dn4pyuub1r89******</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>The type of the asset that is assigned a public IP address. Set the value to <strong>ecs</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <p>The number of instances on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region in which the RDS Custom instance resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The type of the resource. Set the value to <strong>ecs</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

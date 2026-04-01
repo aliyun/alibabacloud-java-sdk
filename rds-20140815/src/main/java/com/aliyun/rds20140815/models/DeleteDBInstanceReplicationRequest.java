@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDBInstanceReplicationRequest extends TeaModel {
     /**
-     * <p>The name of the replication channel, used to identify the replication link.</p>
+     * <p>复制通道名称，用于标识需要删除的复制链路</p>
      * 
      * <strong>example:</strong>
      * <p>replication-channel-001</p>
@@ -14,7 +14,7 @@ public class DeleteDBInstanceReplicationRequest extends TeaModel {
     public String channelName;
 
     /**
-     * <p>Instance ID. You can invoke DescribeDBInstances to obtain it.</p>
+     * <p>目标RDS实例ID，复制链路将从此实例上删除</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class DeleteDBInstanceReplicationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Region ID. You can invoke DescribeRegions to obtain it.</p>
+     * <p>地域ID，表示RDS实例所在的地域</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -109,34 +109,12 @@ public class DescribeRCImageListResponseBody extends TeaModel {
     }
 
     public static class DescribeRCImageListResponseBodyImagesDiskDeviceMappings extends TeaModel {
-        /**
-         * <p>The device information of the disk, such as <code>/dev/xvdb</code>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>/dev/xvdb</p>
-         */
         @NameInMap("Device")
         public String device;
 
-        /**
-         * <p>The size of the disk. Unit: GiB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>40</p>
-         */
         @NameInMap("Size")
         public String size;
 
-        /**
-         * <p>The property of the disk.</p>
-         * <ul>
-         * <li><strong>system</strong>: system disk.</li>
-         * <li><strong>data</strong>: data disk.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>system</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -203,9 +181,6 @@ public class DescribeRCImageListResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The mapping between disks and snapshots in the image.</p>
-         */
         @NameInMap("DiskDeviceMappings")
         public java.util.List<DescribeRCImageListResponseBodyImagesDiskDeviceMappings> diskDeviceMappings;
 
@@ -249,24 +224,11 @@ public class DescribeRCImageListResponseBody extends TeaModel {
         @NameInMap("IsPublic")
         public Boolean isPublic;
 
-        /**
-         * <p>Indicates whether RDS Custom instances are supported. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: Yes.</li>
-         * <li><strong>false</strong>: No.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("IsSupportRdsCustom")
         public Boolean isSupportRdsCustom;
 
         /**
          * <p>The display name of the operating system in Chinese.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Alibaba Cloud Linux  2.1903 LTS 64位 快速启动版</p>
          */
         @NameInMap("OSName")
         public String OSName;
@@ -293,12 +255,6 @@ public class DescribeRCImageListResponseBody extends TeaModel {
         @NameInMap("OSType")
         public String OSType;
 
-        /**
-         * <p>Operating system platform.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Aliyun</p>
-         */
         @NameInMap("Platform")
         public String platform;
 

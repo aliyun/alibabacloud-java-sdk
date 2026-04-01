@@ -4,21 +4,41 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeRCSecurityGroupPermissionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Accept</p>
+     */
     @NameInMap("InnerAccessPolicy")
     public String innerAccessPolicy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>847BA085-B377-4BFA-8267-F82345ECE1D2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sg-2ze27hs990o2hn94****</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     @NameInMap("SecurityGroupPermissions")
     public java.util.List<DescribeRCSecurityGroupPermissionResponseBodySecurityGroupPermissions> securityGroupPermissions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vpc-bp1opxu1zkhn****</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -76,33 +96,73 @@ public class DescribeRCSecurityGroupPermissionResponseBody extends TeaModel {
     }
 
     public static class DescribeRCSecurityGroupPermissionResponseBodySecurityGroupPermissions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2025-05-31T03:12:29Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>192.168.0.0/0</p>
+         */
         @NameInMap("DestCidrIp")
         public String destCidrIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ingress</p>
+         */
         @NameInMap("Direction")
         public String direction;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TCP</p>
+         */
         @NameInMap("IpProtocol")
         public String ipProtocol;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Accept</p>
+         */
         @NameInMap("Policy")
         public String policy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>80/80</p>
+         */
         @NameInMap("PortRange")
         public String portRange;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Priority")
         public String priority;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sgr-uf6ffg4du0e9jis2****</p>
+         */
         @NameInMap("SecurityGroupRuleId")
         public String securityGroupRuleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>192.168.0.0/0</p>
+         */
         @NameInMap("SourceCidrIp")
         public String sourceCidrIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>80/80</p>
+         */
         @NameInMap("SourcePortRange")
         public String sourcePortRange;
 

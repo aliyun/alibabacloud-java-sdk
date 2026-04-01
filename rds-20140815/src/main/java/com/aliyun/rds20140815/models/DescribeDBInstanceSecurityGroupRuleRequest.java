@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceSecurityGroupRuleRequest extends TeaModel {
     /**
+     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/2628785.html">DescribeDBInstances</a> operation to query the IDs of instances.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-2ze202******</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

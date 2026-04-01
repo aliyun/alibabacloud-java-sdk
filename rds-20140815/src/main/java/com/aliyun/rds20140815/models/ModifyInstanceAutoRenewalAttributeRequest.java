@@ -4,18 +4,47 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceAutoRenewalAttributeRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+     * <ul>
+     * <li><strong>True</strong></li>
+     * <li><strong>False</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("AutoRenew")
     public String autoRenew;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCzxxxxxx</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-bpxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The number of months for auto-renewal. Valid values: <strong>1 to 12</strong>.</p>
+     * <blockquote>
+     * <p> This parameter must be specified when <strong>AutoRenew</strong> is set to <strong>True</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("Duration")
     public String duration;
 
@@ -26,7 +55,11 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

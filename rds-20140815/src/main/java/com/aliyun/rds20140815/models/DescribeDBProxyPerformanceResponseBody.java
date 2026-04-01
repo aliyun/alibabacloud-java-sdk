@@ -8,7 +8,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
      * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>lsme****</p>
+     * <p>lsmexxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

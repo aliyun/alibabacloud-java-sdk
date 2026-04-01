@@ -4,11 +4,21 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribePGHbaConfigRequest extends TeaModel {
+    /**
+     * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pgm-bp1lymyn1v3i****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -19,6 +29,12 @@ public class DescribePGHbaConfigRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy*****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

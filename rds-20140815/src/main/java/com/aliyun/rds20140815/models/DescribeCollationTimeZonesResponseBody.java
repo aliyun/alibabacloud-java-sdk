@@ -7,6 +7,12 @@ public class DescribeCollationTimeZonesResponseBody extends TeaModel {
     @NameInMap("CollationTimeZones")
     public DescribeCollationTimeZonesResponseBodyCollationTimeZones collationTimeZones;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4EAED246-DB18-4C8D-9EB5-C319626F2A77</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

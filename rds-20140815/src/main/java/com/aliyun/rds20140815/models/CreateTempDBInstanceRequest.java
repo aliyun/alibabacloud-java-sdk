@@ -4,11 +4,24 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateTempDBInstanceRequest extends TeaModel {
+    /**
+     * <p>The backup set ID. You can call the DescribeBackups operation to query the backup set ID.</p>
+     * <blockquote>
+     * <p> You must specify at least one of <strong>BackupId</strong> and <strong>RestoreTime</strong> parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>603******</p>
+     */
     @NameInMap("BackupId")
     public Long backupId;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5******</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -19,6 +32,12 @@ public class CreateTempDBInstanceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy*****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -28,6 +47,18 @@ public class CreateTempDBInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The specified point in time within the backup retention period. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <blockquote>
+     * <ul>
+     * <li>The time can be set to a point in time within the last seven days and must be more than 30 minutes earlier than the current time. The default time zone is UTC.</li>
+     * <li>You must specify at least one of the <strong>BackupId</strong> and <strong>RestoreTime</strong> parameters.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2011-06-11T16:00:00Z</p>
+     */
     @NameInMap("RestoreTime")
     public String restoreTime;
 

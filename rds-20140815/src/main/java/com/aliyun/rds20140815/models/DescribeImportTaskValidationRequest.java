@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeImportTaskValidationRequest extends TeaModel {
     /**
-     * <p>Instance ID. You can obtain it by calling DescribeDBInstances.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +17,6 @@ public class DescribeImportTaskValidationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Job ID. This is the job ID returned when you invoke the <strong>ValidateImportTask</strong> API to create a precheck for an import job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

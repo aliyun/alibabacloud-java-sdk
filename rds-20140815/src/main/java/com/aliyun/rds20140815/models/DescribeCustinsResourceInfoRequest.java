@@ -9,7 +9,7 @@ public class DescribeCustinsResourceInfoRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-wz9s06u4drm******</p>
+     * <p>rm-wz9s06u4drmqj4aqv</p>
      */
     @NameInMap("DBInstanceIds")
     public String DBInstanceIds;

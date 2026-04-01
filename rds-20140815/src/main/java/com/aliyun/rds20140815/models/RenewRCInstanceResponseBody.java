@@ -13,12 +13,6 @@ public class RenewRCInstanceResponseBody extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    /**
-     * <p>The order ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>23202700556****</p>
-     */
     @NameInMap("OrderId")
     public String orderId;
 

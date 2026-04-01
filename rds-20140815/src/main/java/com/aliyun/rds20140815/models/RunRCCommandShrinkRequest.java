@@ -4,18 +4,33 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class RunRCCommandShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCziJZNwH****</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ZWNobyAxMjM=</p>
      */
     @NameInMap("CommandContent")
     public String commandContent;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ab141ddfbacfe02d9dbc25966ed971536124527097398d419a6746873fea****</p>
+     */
     @NameInMap("ContainerId")
     public String containerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test-container</p>
+     */
     @NameInMap("ContainerName")
     public String containerName;
 
@@ -26,9 +41,17 @@ public class RunRCCommandShrinkRequest extends TeaModel {
     @NameInMap("ContentEncoding")
     public String contentEncoding;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testDescription</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnableParameter")
     public Boolean enableParameter;
 
@@ -38,20 +61,39 @@ public class RunRCCommandShrinkRequest extends TeaModel {
     @NameInMap("InstanceIds")
     public String instanceIdsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("KeepCommand")
     public Boolean keepCommand;
 
+    /**
+     * <strong>example:</strong>
+     * <p>python3 -u {{ACS::ScriptFileName|Ext(&quot;.py&quot;)}}</p>
+     */
     @NameInMap("Launcher")
     public String launcher;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testName</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;name&quot;:&quot;Jack&quot;, &quot;accessKey&quot;:&quot;LTAI*************&quot;}</p>
+     */
     @NameInMap("Parameters")
     public String parametersShrink;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -63,6 +105,10 @@ public class RunRCCommandShrinkRequest extends TeaModel {
     @NameInMap("RepeatMode")
     public String repeatMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-acfmy*****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -79,6 +125,10 @@ public class RunRCCommandShrinkRequest extends TeaModel {
     @NameInMap("TerminationMode")
     public String terminationMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("Timeout")
     public Long timeout;
 
@@ -91,12 +141,24 @@ public class RunRCCommandShrinkRequest extends TeaModel {
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Username")
     public String username;
 
+    /**
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("WindowsPasswordName")
     public String windowsPasswordName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/home/user</p>
+     */
     @NameInMap("WorkingDir")
     public String workingDir;
 

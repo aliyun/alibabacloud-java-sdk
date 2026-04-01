@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteMaskingRulesRequest extends TeaModel {
     /**
-     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +14,6 @@ public class DeleteMaskingRulesRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>Database name</p>
-     * 
      * <strong>example:</strong>
      * <p>myDB</p>
      */
@@ -27,8 +24,6 @@ public class DeleteMaskingRulesRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>Region ID</p>
-     * 
      * <strong>example:</strong>
      * <p>ap-southeast-1</p>
      */
@@ -42,7 +37,6 @@ public class DeleteMaskingRulesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Name of the rule to delete</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

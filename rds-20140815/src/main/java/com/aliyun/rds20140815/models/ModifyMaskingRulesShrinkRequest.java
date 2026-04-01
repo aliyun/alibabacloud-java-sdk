@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class ModifyMaskingRulesShrinkRequest extends TeaModel {
     /**
-     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +14,6 @@ public class ModifyMaskingRulesShrinkRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>Database name</p>
-     * 
      * <strong>example:</strong>
      * <p>myDB</p>
      */
@@ -24,8 +21,6 @@ public class ModifyMaskingRulesShrinkRequest extends TeaModel {
     public String DBName;
 
     /**
-     * <p>Name of the default encryption or masking algorithm</p>
-     * 
      * <strong>example:</strong>
      * <p>sm4-128-gcm</p>
      */
@@ -33,8 +28,6 @@ public class ModifyMaskingRulesShrinkRequest extends TeaModel {
     public String defaultAlgo;
 
     /**
-     * <p>Indicates whether the rule is enabled. Valid values: true, false</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -42,8 +35,6 @@ public class ModifyMaskingRulesShrinkRequest extends TeaModel {
     public String enabled;
 
     /**
-     * <p>Rule algorithm. Multiple algorithms can be specified. Masking Algorithm can include additional parameters. Format: {name: algorithm1}, {name: algorithm2, params: {encryption position, number of encrypted digits}}</p>
-     * 
      * <strong>example:</strong>
      * <p>[{&quot;name&quot;: &quot;sha256&quot;},
      *         {&quot;name&quot;:&quot;sm4-128-gcm&quot;}]</p>
@@ -55,8 +46,6 @@ public class ModifyMaskingRulesShrinkRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>Region ID</p>
-     * 
      * <strong>example:</strong>
      * <p>ap-southeast-1</p>
      */
@@ -69,14 +58,10 @@ public class ModifyMaskingRulesShrinkRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>Rule configuration, in JSON string format</p>
-     */
     @NameInMap("RuleConfig")
     public String ruleConfigShrink;
 
     /**
-     * <p>Name of the rule to modify</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

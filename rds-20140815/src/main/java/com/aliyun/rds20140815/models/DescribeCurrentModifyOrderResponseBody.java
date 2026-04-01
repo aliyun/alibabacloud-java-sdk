@@ -85,7 +85,7 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
          * <p>The description of the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>eyJ2IjoibWV0YS5rOHMuaW8vdjEiLCJydiI6MTg2MjEwOTkwLCJzdGFydCI6InNob3BpZnktdXNlci1jb3JlXHUwMDAwIn0</p>
          */
         @NameInMap("Mark")
         public String mark;

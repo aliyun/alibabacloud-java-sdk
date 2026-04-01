@@ -4,15 +4,36 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceMetricsResponseBody extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-bp1*****</p>
+     */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <p>An array consisting of the Enhanced Monitoring metrics that are enabled for the instance.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeDBInstanceMetricsResponseBodyItems> items;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>318C3754-F6D0-54BB-A55C-23EAA04708B7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of enhanced monitoring metrics that are enabled for the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -54,30 +75,93 @@ public class DescribeDBInstanceMetricsResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceMetricsResponseBodyItems extends TeaModel {
+        /**
+         * <p>The description of the enhanced monitoring metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OS CPU utilization, equal to the number of OS-consumed CPUs divided by the total number of CPUs</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The category of the enhanced monitoring metric. Valid values:</p>
+         * <ul>
+         * <li><strong>os</strong>: OS metric</li>
+         * <li><strong>db</strong>: database metric</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>os</p>
+         */
         @NameInMap("Dimension")
         public String dimension;
 
+        /**
+         * <p>The key of the group to which the enhanced monitoring metric belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>os.cpu_usage</p>
+         */
         @NameInMap("GroupKey")
         public String groupKey;
 
+        /**
+         * <p>The name of the group to which the enhanced monitoring metric belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CPU Utilization Rate</p>
+         */
         @NameInMap("GroupKeyType")
         public String groupKeyType;
 
+        /**
+         * <p>The method that is used to aggregate the monitoring data of the enhanced monitoring metric. Valid values:</p>
+         * <ul>
+         * <li><strong>avg</strong>: The system calculates the average value of the enhanced monitoring metric.</li>
+         * <li><strong>min</strong>: The system calculates the minimum value of the enhanced monitoring metric.</li>
+         * <li><strong>max</strong>: The system calculates the maximum value of the enhanced monitoring metric.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>avg</p>
+         */
         @NameInMap("Method")
         public String method;
 
+        /**
+         * <p>The key of the enhanced monitoring metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>os.cpu_usage.sys.avg</p>
+         */
         @NameInMap("MetricsKey")
         public String metricsKey;
 
+        /**
+         * <p>The alias of the enhanced monitoring metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>os.cpu_usage.sys</p>
+         */
         @NameInMap("MetricsKeyAlias")
         public String metricsKeyAlias;
 
+        /**
+         * <p>The serial number of the enhanced monitoring metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SortRule")
         public Integer sortRule;
 
+        /**
+         * <p>The unit of the enhanced monitoring metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>%</p>
+         */
         @NameInMap("Unit")
         public String unit;
 

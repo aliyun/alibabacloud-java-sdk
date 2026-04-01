@@ -4,15 +4,31 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeHistoryTasksStatRequest extends TeaModel {
+    /**
+     * <p>The minimum execution duration of a task. This parameter is used to filter tasks whose execution duration is longer than the minimum execution duration. Unit: seconds. The default value is 0, which indicates that no limit is imposed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("FromExecTime")
     public Integer fromExecTime;
 
     /**
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-05-08T07:04:17Z</p>
      */
     @NameInMap("FromStartTime")
     public String fromStartTime;
 
+    /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-2ze704f*****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -20,6 +36,7 @@ public class DescribeHistoryTasksStatRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +45,12 @@ public class DescribeHistoryTasksStatRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy*****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -40,20 +63,58 @@ public class DescribeHistoryTasksStatRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The status of the task. Valid values:</p>
+     * <ul>
+     * <li><strong>Scheduled</strong></li>
+     * <li><strong>Running</strong></li>
+     * <li><strong>Succeed</strong></li>
+     * <li><strong>Failed</strong></li>
+     * <li><strong>Cancelling</strong></li>
+     * <li><strong>Canceled</strong></li>
+     * <li><strong>Waiting</strong></li>
+     * </ul>
+     * <p>Separate multiple statuses with commas (,). By default, this parameter is left empty. This indicates that tasks in all statuses are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Scheduled</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12221</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <p>The task type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>all</p>
+     */
     @NameInMap("TaskType")
     public String taskType;
 
+    /**
+     * <p>The maximum execution duration of a task. This parameter is used to filter tasks whose execution duration is shorter than or equal to the maximum execution duration. Unit: seconds. The default value is 0, which indicates that no limit is imposed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("ToExecTime")
     public Integer toExecTime;
 
     /**
+     * <p>The end of the time range to query. Only tasks that have a start time earlier than or equal to the time specified by this parameter are queried. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-02-24T10:01:37Z</p>
      */
     @NameInMap("ToStartTime")
     public String toStartTime;

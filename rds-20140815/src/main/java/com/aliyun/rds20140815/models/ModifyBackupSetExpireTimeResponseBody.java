@@ -17,7 +17,11 @@ public class ModifyBackupSetExpireTimeResponseBody extends TeaModel {
      * <p>The details of the returned parameters.</p>
      * 
      * <strong>example:</strong>
-     * <p>{expectExpireTime=1752581423000, dbClusterId=rm-7xv8f2zcia0e4****, backupId=262186****}</p>
+     * <p>{
+     *       &quot;SupportOnlineResizeDisk&quot;: true,
+     *       &quot;DBInstanceName&quot;: &quot;rm-bp****&quot;,
+     *       &quot;maxSupportDiskSizeGB&quot;: 6144
+     * }</p>
      */
     @NameInMap("Data")
     public String data;

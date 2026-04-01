@@ -27,12 +27,6 @@ public class CreateBackupRequest extends TeaModel {
     @NameInMap("BackupMethod")
     public String backupMethod;
 
-    /**
-     * <p>When the <strong>BackupStrategy</strong> of an SQL Server instance is set to <strong>db</strong>, the <strong>BackupMethod</strong> is <strong>Physical</strong>, and the <strong>BackupType</strong> is <strong>FullBackup</strong>, you can specify the retention period for the backup set. Valid values are 7 to 730 days or -1 (permanent retention).</p>
-     * 
-     * <strong>example:</strong>
-     * <p>7</p>
-     */
     @NameInMap("BackupRetentionPeriod")
     public Long backupRetentionPeriod;
 

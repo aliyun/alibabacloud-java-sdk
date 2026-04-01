@@ -4,33 +4,119 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class MigrateToOtherZoneRequest extends TeaModel {
+    /**
+     * <p>The RDS edition of the instance. Valid values:</p>
+     * <ul>
+     * <li><strong>Basic</strong>: RDS Basic Edition</li>
+     * <li><strong>HighAvailability</strong>: RDS High-availability Edition</li>
+     * <li><strong>AlwaysOn</strong>: SQL Server on RDS Cluster Edition</li>
+     * <li><strong>cluster</strong>: MySQL on RDS Cluster Edition</li>
+     * <li><strong>Finance</strong>: RDS Enterprise Edition</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>HighAvailability</p>
+     */
     @NameInMap("Category")
     public String category;
 
     @NameInMap("CustomExtraInfo")
     public String customExtraInfo;
 
+    /**
+     * <p>The new instance type of the instance. You can change the instance type of the instance. You cannot change the storage type of the instance. If you set <strong>IsModifySpec</strong> to <strong>true</strong>, you must specify at least one of DBInstanceClass and <strong>DBInstanceStorage</strong>.</p>
+     * <p>For more information about instance types, see <a href="https://help.aliyun.com/document_detail/276975.html">Primary ApsaraDB RDS for MySQL instance types</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql.x4.xlarge.2</p>
+     */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
     /**
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The new storage capacity of the instance. If you set <strong>IsModifySpec</strong> to <strong>true</strong>, you must specify at least one of DBInstanceStorage and <strong>DBInstanceClass</strong>.</p>
+     * <p>Unit: GB. The available storage capacity range varies based on the instance type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/276975.html">Primary ApsaraDB RDS for MySQL instance types</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>500</p>
+     */
     @NameInMap("DBInstanceStorage")
     public Long DBInstanceStorage;
 
+    /**
+     * <p>The storage type of the instance. Valid values:</p>
+     * <ul>
+     * <li><strong>local_ssd</strong>: local SSD. This is the recommended storage type.</li>
+     * <li><strong>general_essd</strong>: general Enterprise SSD (ESSD). This is the recommended storage type.</li>
+     * <li><strong>cloud_essd</strong>: PL1 ESSD</li>
+     * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
+     * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
+     * <li><strong>cloud_ssd</strong>: standard SSD. This storage type is not recommended. Standard SSDs are no longer available for purchase in some Alibaba Cloud regions.</li>
+     * </ul>
+     * <p>The default value of this parameter is determined by the instance type specified by the <strong>DBInstanceClass</strong> parameter.</p>
+     * <ul>
+     * <li>If the instance type specifies the local SSD storage type, the default value of this parameter is <strong>local_ssd</strong>.</li>
+     * <li>If the instance type specifies the standard SSD or ESSD storage type, the default value of this parameter is <strong>cloud_essd</strong>.</li>
+     * </ul>
+     * <blockquote>
+     * <p> Serverless instances support only PL1 ESSDs and general ESSDs.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>local_ssd</p>
+     */
     @NameInMap("DBInstanceStorageType")
     public String DBInstanceStorageType;
 
+    /**
+     * <p>The time when you want the change to take effect. Valid values:</p>
+     * <ul>
+     * <li><strong>Immediately</strong> (default): The change immediately takes effect.</li>
+     * <li><strong>MaintainTime</strong>: The change takes effect during the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</li>
+     * <li><strong>ScheduleTime</strong>: The change takes effect at the point in time that you specify.</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you set this parameter to <strong>ScheduleTime</strong>, you must specify the <strong>SwitchTime</strong> parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Immediate</p>
+     */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
+    /**
+     * <p>A reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("IoAccelerationEnabled")
     public String ioAccelerationEnabled;
 
+    /**
+     * <p>Specifies whether to change the specifications of the instance during the cross-zone migration. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: You want to change the specifications of the instance during the cross-zone migration. If you set this parameter to <strong>true</strong>, you must specify at least one of <strong>DBInstanceClass</strong> and <strong>DBInstanceStorage</strong>.</li>
+     * <li><strong>false</strong> (default): You do not want to change the specifications of the instance during the cross-zone migration.</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter applies only to instances that run MySQL.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsModifySpec")
     public String isModifySpec;
 
@@ -46,24 +132,75 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The migration time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <blockquote>
+     * <p>This parameter is used with <strong>EffectiveTime</strong>. You must specify this parameter only when <strong>EffectiveTime</strong> is set to <strong>ScheduleTime</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-12-14T15:15:15Z</p>
+     */
     @NameInMap("SwitchTime")
     public String switchTime;
 
+    /**
+     * <p>The ID of the virtual private cloud (VPC). Do not change the VPC of the instance when you migrate the instance across zones.</p>
+     * <ul>
+     * <li>This parameter must be specified when the instance resides in a VPC.</li>
+     * <li>If the instance runs SQL Server, you can change the VPC of the instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-xxxxxxx</p>
+     */
     @NameInMap("VPCId")
     public String VPCId;
 
+    /**
+     * <p>The vSwitch ID.</p>
+     * <ul>
+     * <li>This parameter must be specified when the instance resides in a VPC. You can call the DescribeVSwitches operation to query existing vSwitches.</li>
+     * <li>If the instance runs PostgreSQL or SQL Server and a secondary zone is specified for the instance, you can specify multiple vSwitch IDs, each of which corresponds to a zone. Separate the vSwitch IDs with commas (,).</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-uf6adz52c2pxxxxxxx</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
+     * <p>The ID of the destination zone. You can call the DescribeRegions operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-b</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
 
+    /**
+     * <p>The secondary zone 1 of the instance.</p>
+     * <blockquote>
+     * <p> This parameter must be configured if the instance runs RDS editions other than RDS Basic Edition.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-c</p>
+     */
     @NameInMap("ZoneIdSlave1")
     public String zoneIdSlave1;
 
+    /**
+     * <p>The secondary zone 2 of the instance.</p>
+     * <blockquote>
+     * <p> You can specify this parameter only for instances that run RDS Enterprise Edition.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-d</p>
+     */
     @NameInMap("ZoneIdSlave2")
     public String zoneIdSlave2;
 

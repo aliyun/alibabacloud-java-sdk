@@ -4,15 +4,10 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccountMaskingPrivilegeResponseBody extends TeaModel {
-    /**
-     * <p>Returned data</p>
-     */
     @NameInMap("Data")
     public DescribeAccountMaskingPrivilegeResponseBodyData data;
 
     /**
-     * <p>Request ID</p>
-     * 
      * <strong>example:</strong>
      * <p>D0073A98-52F1-3075-8256-394**********</p>
      */
@@ -42,8 +37,6 @@ public class DescribeAccountMaskingPrivilegeResponseBody extends TeaModel {
 
     public static class DescribeAccountMaskingPrivilegeResponseBodyDataUserPrivilege extends TeaModel {
         /**
-         * <p>Permission expiration time in UTC format</p>
-         * 
          * <strong>example:</strong>
          * <p>2026-01-22T02:01:20Z</p>
          */
@@ -51,8 +44,6 @@ public class DescribeAccountMaskingPrivilegeResponseBody extends TeaModel {
         public String expireTime;
 
         /**
-         * <p>Permission type. restrictedAccess indicates restricted access (data masking required)</p>
-         * 
          * <strong>example:</strong>
          * <p>restrictedAccess</p>
          */
@@ -60,8 +51,6 @@ public class DescribeAccountMaskingPrivilegeResponseBody extends TeaModel {
         public String privilege;
 
         /**
-         * <p>Account name</p>
-         * 
          * <strong>example:</strong>
          * <p>rds</p>
          */
@@ -100,9 +89,6 @@ public class DescribeAccountMaskingPrivilegeResponseBody extends TeaModel {
     }
 
     public static class DescribeAccountMaskingPrivilegeResponseBodyData extends TeaModel {
-        /**
-         * <p>List of user encryption or data masking permissions</p>
-         */
         @NameInMap("UserPrivilege")
         public java.util.List<DescribeAccountMaskingPrivilegeResponseBodyDataUserPrivilege> userPrivilege;
 

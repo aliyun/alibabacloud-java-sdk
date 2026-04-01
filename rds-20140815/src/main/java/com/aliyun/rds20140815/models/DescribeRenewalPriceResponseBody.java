@@ -4,9 +4,18 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeRenewalPriceResponseBody extends TeaModel {
+    /**
+     * <p>Details of price information.</p>
+     */
     @NameInMap("PriceInfo")
     public DescribeRenewalPriceResponseBodyPriceInfo priceInfo;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DC9F4EF6-D038-4405-B497-1F48E722C9F2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,12 +52,30 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenewalPriceResponseBodyPriceInfoActivityInfo extends TeaModel {
+        /**
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Error description</p>
+         */
         @NameInMap("CheckErrMsg")
         public String checkErrMsg;
 
+        /**
+         * <p>The error code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("Success")
         public String success;
 
@@ -174,24 +201,51 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenewalPriceResponseBodyPriceInfo extends TeaModel {
+        /**
+         * <p>The information about the promotion.</p>
+         */
         @NameInMap("ActivityInfo")
         public DescribeRenewalPriceResponseBodyPriceInfoActivityInfo activityInfo;
 
         @NameInMap("Coupons")
         public DescribeRenewalPriceResponseBodyPriceInfoCoupons coupons;
 
+        /**
+         * <p>The currency unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CNY</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <p>The discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27</p>
+         */
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
+        /**
+         * <p>The original price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>138</p>
+         */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
         @NameInMap("RuleIds")
         public DescribeRenewalPriceResponseBodyPriceInfoRuleIds ruleIds;
 
+        /**
+         * <p>The transaction price, which is equal to the original price minus the discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
         @NameInMap("TradePrice")
         public Float tradePrice;
 

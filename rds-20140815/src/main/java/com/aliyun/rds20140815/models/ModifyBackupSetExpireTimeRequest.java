@@ -16,7 +16,7 @@ public class ModifyBackupSetExpireTimeRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>262186****</p>
+     * <p>b-n8tpg24c6i0v****</p>
      */
     @NameInMap("BackupId")
     public Long backupId;
@@ -26,7 +26,7 @@ public class ModifyBackupSetExpireTimeRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-7xv8f2zcia0e4****</p>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -37,7 +37,7 @@ public class ModifyBackupSetExpireTimeRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2025-07-15T12:10:23Z</p>
+     * <p>2025-06-17T12:10:23Z</p>
      */
     @NameInMap("ExpectExpireTime")
     public String expectExpireTime;

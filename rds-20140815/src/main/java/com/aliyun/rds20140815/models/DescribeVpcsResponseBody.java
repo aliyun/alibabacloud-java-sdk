@@ -4,15 +4,31 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8F4596F7-FA71-590E-9E1C-********</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>14</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,27 +81,59 @@ public class DescribeVpcsResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcsResponseBodyVpcsVSwitchs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>172.16.0.0/24</p>
+         */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-01-01T12:00:00Z</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-01-01T12:00:00Z</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-a</p>
+         */
         @NameInMap("IzNo")
         public String izNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-xxxxxx</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>default-vswitch</p>
+         */
         @NameInMap("VSwitchName")
         public String vSwitchName;
 
@@ -161,36 +209,76 @@ public class DescribeVpcsResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcsResponseBodyVpcs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>18757856124****</p>
+         */
         @NameInMap("AliUid")
         public String aliUid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>26888</p>
+         */
         @NameInMap("Bid")
         public String bid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>172.16.0.0/12</p>
+         */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-01-01T12:00:00Z</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-01-01T12:00:00Z</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionNo")
         public String regionNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("Status")
         public String status;
 
         @NameInMap("VSwitchs")
         public java.util.List<DescribeVpcsResponseBodyVpcsVSwitchs> vSwitchs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-xxxxxx</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>my-vpc</p>
+         */
         @NameInMap("VpcName")
         public String vpcName;
 

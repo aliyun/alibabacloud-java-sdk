@@ -4,9 +4,17 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class EnableBackupEncryptionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>rm-wz951f7f******</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FCA65FA6-658A-5C43-96F4-D************</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

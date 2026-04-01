@@ -17,30 +17,12 @@ public class DescribeRCImageListRequest extends TeaModel {
     @NameInMap("Architecture")
     public String architecture;
 
-    /**
-     * <p>Image ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>m-2oqiu973jwcxe****</p>
-     */
     @NameInMap("ImageId")
     public String imageId;
 
-    /**
-     * <p>Image Name.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>test_image_name</p>
-     */
     @NameInMap("ImageName")
     public String imageName;
 
-    /**
-     * <p>Query images that can be used for the specified instance type.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>mysql.x2.xlarge.6cm</p>
-     */
     @NameInMap("InstanceType")
     public String instanceType;
 

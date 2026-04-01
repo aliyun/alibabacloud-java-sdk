@@ -7,6 +7,12 @@ public class DescribeRegionInfosResponseBody extends TeaModel {
     @NameInMap("Regions")
     public DescribeRegionInfosResponseBodyRegions regions;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5414A4E5-4C36-4461-95FC-************</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,12 +4,30 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceSecurityGroupRuleResponseBody extends TeaModel {
+    /**
+     * <p>The status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The information about the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>07F6177E-6DE4-408A-BB4F-0723301340F7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

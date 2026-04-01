@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeReadDBInstanceDelayRequest extends TeaModel {
     /**
+     * <p>The primary instance ID. You can call the DescribeDBInstances operation to query the primary instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-bp*****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -17,11 +21,21 @@ public class DescribeReadDBInstanceDelayRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The read-only instance ID. You can call the DescribeDBInstances operation to query the read-only instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rr-bp*****</p>
      */
     @NameInMap("ReadInstanceId")
     public String readInstanceId;
 
+    /**
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

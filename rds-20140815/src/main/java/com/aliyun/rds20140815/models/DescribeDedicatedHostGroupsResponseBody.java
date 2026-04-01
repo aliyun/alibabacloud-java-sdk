@@ -7,6 +7,12 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
     @NameInMap("DedicatedHostGroups")
     public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroups dedicatedHostGroups;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AB44DC0A-7E77-442A-97A9-C6418694CB22</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -7,6 +7,12 @@ public class DescribeRCClustersRequest extends TeaModel {
     @NameInMap("Profile")
     public String profile;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

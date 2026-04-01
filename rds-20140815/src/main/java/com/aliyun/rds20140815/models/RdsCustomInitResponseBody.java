@@ -4,6 +4,10 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class RdsCustomInitResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("RegisterUidSuccess")
     public Boolean registerUidSuccess;
 

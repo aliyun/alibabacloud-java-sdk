@@ -4,15 +4,31 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeModifyPGHbaConfigLogRequest extends TeaModel {
+    /**
+     * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pgm-bp1lymyn1v3i****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-11-25T06:00:40Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
@@ -22,6 +38,12 @@ public class DescribeModifyPGHbaConfigLogRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy*****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -31,6 +53,12 @@ public class DescribeModifyPGHbaConfigLogRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in Coordinated Universal Time (UTC).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-11-25T05:00:40Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

@@ -7,6 +7,12 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
     @NameInMap("DbProxyCertListItems")
     public GetDbProxyInstanceSslResponseBodyDbProxyCertListItems dbProxyCertListItems;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D330E60C-8AAA-4D63-8F64-5B78F4692F98</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

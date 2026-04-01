@@ -26,7 +26,7 @@ public class CreateYouhuiForOrderResponseBody extends TeaModel {
      * <p>The coupon ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>22120151****</p>
+     * <p>221201******</p>
      */
     @NameInMap("YouhuiId")
     public String youhuiId;

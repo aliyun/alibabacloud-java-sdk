@@ -5,17 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeParameterTimedScheduleTaskResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>A807C95D-410C-5BB5-96C0-C6E09F2C3D36</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>List of scan jobs.</p>
-     */
     @NameInMap("TaskList")
     public java.util.List<DescribeParameterTimedScheduleTaskResponseBodyTaskList> taskList;
 
@@ -42,8 +37,6 @@ public class DescribeParameterTimedScheduleTaskResponseBody extends TeaModel {
 
     public static class DescribeParameterTimedScheduleTaskResponseBodyTaskList extends TeaModel {
         /**
-         * <p>Instance name.</p>
-         * 
          * <strong>example:</strong>
          * <p>rm-2ze2za3is7baay****</p>
          */
@@ -51,8 +44,6 @@ public class DescribeParameterTimedScheduleTaskResponseBody extends TeaModel {
         public String DBInstanceName;
 
         /**
-         * <p>Modified parameter settings.</p>
-         * 
          * <strong>example:</strong>
          * <p>{&quot;auto_increment_increment&quot;:&quot;1000&quot;,&quot;back_log&quot;:&quot;99&quot;}</p>
          */
@@ -60,14 +51,6 @@ public class DescribeParameterTimedScheduleTaskResponseBody extends TeaModel {
         public String parameters;
 
         /**
-         * <p>Status. Valid values:</p>
-         * <ul>
-         * <li><strong>PENDING</strong>: Pending execution.</li>
-         * <li><strong>EXECUTING</strong>: Executing.</li>
-         * <li><strong>COMPLETED</strong>: Completed.</li>
-         * <li><strong>EXECUTING</strong>: Failed.</li>
-         * </ul>
-         * 
          * <strong>example:</strong>
          * <p>PENDING</p>
          */
@@ -75,8 +58,6 @@ public class DescribeParameterTimedScheduleTaskResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Effective period for the parameter modification.</p>
-         * 
          * <strong>example:</strong>
          * <p>2022-05-06T09:24:00Z</p>
          */
@@ -84,8 +65,6 @@ public class DescribeParameterTimedScheduleTaskResponseBody extends TeaModel {
         public String switchTime;
 
         /**
-         * <p>Scheduled task ID for parameter modification.</p>
-         * 
          * <strong>example:</strong>
          * <p>27056921</p>
          */

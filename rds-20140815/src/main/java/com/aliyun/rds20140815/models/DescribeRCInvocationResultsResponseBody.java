@@ -9,19 +9,38 @@ public class DescribeRCInvocationResultsResponseBody extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>49BC2500-8078-5AC4-A545-20AA5945B0E6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -79,9 +98,17 @@ public class DescribeRCInvocationResultsResponseBody extends TeaModel {
     }
 
     public static class DescribeRCInvocationResultsResponseBodyInvocationResultsTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>testKey</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testValue</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -109,57 +136,125 @@ public class DescribeRCInvocationResultsResponseBody extends TeaModel {
     }
 
     public static class DescribeRCInvocationResultsResponseBodyInvocationResults extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>c-7d2a745b412b4601b2d47f6a768d****</p>
+         */
         @NameInMap("CommandId")
         public String commandId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ab141ddfbacfe02d9dbc25966ed971536124527097398d419a6746873fea****</p>
+         */
         @NameInMap("ContainerId")
         public String containerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-container</p>
+         */
         @NameInMap("ContainerName")
         public String containerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Dropped")
         public Integer dropped;
 
+        /**
+         * <strong>example:</strong>
+         * <p>InstanceNotExists</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>the specified instance does not exists</p>
+         */
         @NameInMap("ErrorInfo")
         public String errorInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ExitCode")
         public Integer exitCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-12-20T06:15:56Z</p>
+         */
         @NameInMap("FinishedTime")
         public String finishedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rc-i322y2t562oh7o******</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("InvocationStatus")
         public String invocationStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>t-7d2a745b412b4601b2d47f6a768d****</p>
+         */
         @NameInMap("InvokeId")
         public String invokeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("InvokeRecordStatus")
         public String invokeRecordStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MTU6MzA6MDEK</p>
+         */
         @NameInMap("Output")
         public String output;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Repeats")
         public String repeats;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-12-20T06:15:55Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2025-01-19T09:15:47Z</p>
+         */
         @NameInMap("StopTime")
         public String stopTime;
 
         @NameInMap("Tags")
         public java.util.List<DescribeRCInvocationResultsResponseBodyInvocationResultsTags> tags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testuser</p>
+         */
         @NameInMap("Username")
         public String username;
 

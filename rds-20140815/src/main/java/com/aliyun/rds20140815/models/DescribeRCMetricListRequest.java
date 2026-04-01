@@ -4,12 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeRCMetricListRequest extends TeaModel {
-    /**
-     * <p>Custom for SQL Server to batch query monitoring data for specified resources.<br>Format: a collection of key:value pairs.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>[{&quot;instanceId&quot;:&quot;rc-l9hv3rv74ql7oa******&quot;},{&quot;instanceId&quot;:&quot;rc-b532l1uj8n6sex******&quot;}]</p>
-     */
     @NameInMap("Dimensions")
     public String dimensions;
 
@@ -67,7 +61,7 @@ public class DescribeRCMetricListRequest extends TeaModel {
      * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
-     * <p>6178f1825f9fb76ce0b5e8707e******</p>
+     * <p>6178f1825f9fb76ce0b5e8707e68181f</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class RunRCInstancesShrinkRequest extends TeaModel {
     /**
-     * <p>ACU type</p>
-     * 
      * <strong>example:</strong>
      * <p>gn8is</p>
      */
@@ -34,7 +32,7 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>false</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
@@ -47,24 +45,11 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>false</p>
      */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
-    /**
-     * <p>Specifies whether to automatically use a coupon. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong> (default): Yes.</li>
-     * <li><strong>false</strong>: No.</li>
-     * </ul>
-     * <blockquote>
-     * <p>If you use a coupon and later decrease the quota, the amount offset by the coupon will not be refunded.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("AutoUseCoupon")
     public Boolean autoUseCoupon;
 
@@ -77,31 +62,12 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    /**
-     * <p>Information about the ACK Edge cluster.</p>
-     */
     @NameInMap("CreateAckEdgeParam")
     public String createAckEdgeParamShrink;
 
-    /**
-     * <p>Reserved parameter. Not supported currently.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>None</p>
-     */
     @NameInMap("CreateExtraParam")
     public String createExtraParam;
 
-    /**
-     * <p>Specifies whether the instance can be added to an ACK cluster. When this parameter is set to <strong>1</strong>, the created instance can be added to an ACK cluster by invoking the <strong>AttachRCInstances</strong> API operation, enabling efficient management of container applications.</p>
-     * <ul>
-     * <li><strong>1</strong>: Yes.</li>
-     * <li><strong>0</strong> (default): No.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("CreateMode")
     public String createMode;
 
@@ -111,16 +77,6 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
     @NameInMap("DataDisk")
     public String dataDiskShrink;
 
-    /**
-     * <p>Specifies whether to enable release protection. Valid values:  </p>
-     * <ul>
-     * <li><strong>true</strong>: Enabled  </li>
-     * <li><strong>false</strong> (default): Disabled</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("DeletionProtection")
     public Boolean deletionProtection;
 
@@ -128,7 +84,7 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
      * <p>The deployment set ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>ds-uf6670sipmph********</p>
+     * <p>ds-uf6670sipmph5j5b6ke4</p>
      */
     @NameInMap("DeploymentSetId")
     public String deploymentSetId;
@@ -155,16 +111,6 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    /**
-     * <p>Hostname of the instance (2–64 characters).  </p>
-     * <ul>
-     * <li>Multiple segments separated by periods (.) are supported. Each segment can contain uppercase and lowercase English letters, digits, and hyphens (-).  </li>
-     * <li>A period (.) or hyphen (-) cannot appear at the beginning or end of a segment, nor can two periods or hyphens appear consecutively.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>testHost1</p>
-     */
     @NameInMap("HostName")
     public String hostName;
 
@@ -172,7 +118,7 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
      * <p>The ID of the image used by the instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>image-dsvjzw2ii8n4******</p>
+     * <p>image-dsvjzw2ii8n4fvr6de</p>
      */
     @NameInMap("ImageId")
     public String imageId;
@@ -190,7 +136,7 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
      * <p>The instance name.</p>
      * 
      * <strong>example:</strong>
-     * <p>rc-node-[99,1]-rchost</p>
+     * <p>ceshi</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
@@ -218,7 +164,7 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
      * <p>The reserved parameter. This parameter is not supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>0</p>
+     * <p>null</p>
      */
     @NameInMap("InternetMaxBandwidthOut")
     public Integer internetMaxBandwidthOut;
@@ -248,14 +194,11 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
      * <p>The password of the account that is used to log on to the instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>TestRDS123!</p>
+     * <p>2F9e9@a69c!e18b569c8</p>
      */
     @NameInMap("Password")
     public String password;
 
-    /**
-     * <p>Specifies whether to use the password preset in the image. When this parameter is used, the Password parameter must be empty, and you must ensure that the selected image has a password already configured. Default value: false.</p>
-     */
     @NameInMap("PasswordInherit")
     public Boolean passwordInherit;
 
@@ -276,7 +219,7 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Month</p>
+     * <p>Year</p>
      */
     @NameInMap("PeriodUnit")
     public String periodUnit;
@@ -288,12 +231,6 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
-    /**
-     * <p>The coupon code.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>72329885****</p>
-     */
     @NameInMap("PromotionCode")
     public String promotionCode;
 
@@ -307,18 +244,10 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The resource group ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rg-acfmy****</p>
-     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>Scheduled elasticity rule</p>
-     * 
      * <strong>example:</strong>
      * <p>{&quot;rule&quot;:[{&quot;beginTime&quot;:&quot;09:00&quot;,&quot;endTime&quot;:&quot;17:00&quot;,&quot;acu&quot;:4}]}</p>
      */
@@ -341,7 +270,7 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>sg-uf6av412xaxixu******</p>
+     * <p>sg-uf6av412xaxixuezol6w</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
@@ -349,31 +278,9 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
     @NameInMap("SecurityGroupIds")
     public String securityGroupIdsShrink;
 
-    /**
-     * <p>The spot strategy for pay-as-you-go instances. This parameter takes effect only when the <strong>InstanceChargeType</strong> parameter is set to <strong>PostPaid</strong>. Valid values:  </p>
-     * <ul>
-     * <li><strong>NoSpot</strong>: Normal pay-as-you-go instance.  </li>
-     * <li><strong>SpotAsPriceGo</strong>: The system automatically bids based on the current market price.</li>
-     * </ul>
-     * <p>Default value: <strong>NoSpot</strong>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>NoSpot</p>
-     */
     @NameInMap("SpotStrategy")
     public String spotStrategy;
 
-    /**
-     * <p>The deployment type of RDS Custom. Valid values:</p>
-     * <ul>
-     * <li><strong>eni</strong>: Dual network interface cards.</li>
-     * <li><strong>edge</strong>: Point of presence (POP) node pool.</li>
-     * <li><strong>share</strong>: VPC.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>share</p>
-     */
     @NameInMap("SupportCase")
     public String supportCase;
 
@@ -383,35 +290,12 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
     @NameInMap("SystemDisk")
     public String systemDiskShrink;
 
-    /**
-     * <p>The list of tags.</p>
-     */
     @NameInMap("Tag")
     public java.util.List<RunRCInstancesShrinkRequestTag> tag;
 
-    /**
-     * <p>The instance user data. The raw data can be up to 32 KB in size.  </p>
-     * <p>Do not pass sensitive information, such as passwords and private keys, in plaintext. If you must pass such information, encrypt it first, encode it in Base64, and then transmit it. Decrypt and use it inside the instance. The following is an example of converting a script into a Base64-encoded string:  </p>
-     * <pre><code>echo -n \\&quot;#!/bin/sh
-     * echo &quot;Hello World&quot;\\&quot; | base64 -w 0
-     * </code></pre>
-     * 
-     * <strong>example:</strong>
-     * <p>IyEvYmluL3NoCmVjaG8gIkhlbGxvIFdvcmxkLiBUaGUgdGltZSBpcyBub3cgJChkYXRlIC1SKSIhIHwgdGVlIC9yb290L3VzZXJkYXRhX3Rlc3QudHh0</p>
-     */
     @NameInMap("UserData")
     public String userData;
 
-    /**
-     * <p>Specifies whether custom data is Base64-encoded.  </p>
-     * <ul>
-     * <li><strong>true</strong>: Yes.  </li>
-     * <li><strong>false</strong> (default): No.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("UserDataInBase64")
     public Boolean userDataInBase64;
 
@@ -798,21 +682,9 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
     }
 
     public static class RunRCInstancesShrinkRequestTag extends TeaModel {
-        /**
-         * <p>The tag key. You can create up to N tag keys at the same time, where N ranges from <strong>1 to 20</strong>. Empty strings are not allowed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Testkey1</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value corresponding to the tag key. You can create up to N tag values at the same time, where N ranges from <strong>1 to 20</strong>. Empty strings are allowed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Testvalue1</p>
-         */
         @NameInMap("Value")
         public String value;
 

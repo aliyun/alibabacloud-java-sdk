@@ -7,15 +7,48 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
     @NameInMap("Databases")
     public DescribeDBInstanceTDEResponseBodyDatabases databases;
 
+    /**
+     * <p>The ID of the custom key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>749c1df7-<strong><strong>-</strong></strong>-<strong><strong>-</strong></strong></p>
+     */
     @NameInMap("EncryptionKey")
     public String encryptionKey;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C816A4BF-A6EC-4722-95F9-2055859CCFD2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The method that is used to generate the key for TDE at the instance level. Valid values:</p>
+     * <ul>
+     * <li><strong>Aliyun_Generate_Key</strong></li>
+     * <li><strong>Customer_Provided_Key</strong></li>
+     * <li><strong>Unknown</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Aliyun_Generate_Key</p>
+     */
     @NameInMap("TDEMode")
     public String TDEMode;
 
+    /**
+     * <p>The TDE status of the instance. Valid values:</p>
+     * <ul>
+     * <li><strong>Enabled</strong></li>
+     * <li><strong>Disabled</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Enabled</p>
+     */
     @NameInMap("TDEStatus")
     public String TDEStatus;
 

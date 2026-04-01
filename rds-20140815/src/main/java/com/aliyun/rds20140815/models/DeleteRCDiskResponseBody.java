@@ -4,6 +4,12 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DeleteRCDiskResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8BE834C8-3C25-5AF8-BE3E-C8A690602A7F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

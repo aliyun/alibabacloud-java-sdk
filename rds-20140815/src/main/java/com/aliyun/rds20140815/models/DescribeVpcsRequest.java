@@ -10,18 +10,38 @@ public class DescribeVpcsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rds</p>
+     */
     @NameInMap("Product")
     public String product;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-acfmxxtz*****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -34,9 +54,17 @@ public class DescribeVpcsRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vpc-bp1bva4qkmvqt******</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing-g</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

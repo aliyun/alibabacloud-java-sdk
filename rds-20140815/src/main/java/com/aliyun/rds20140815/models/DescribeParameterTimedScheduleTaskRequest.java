@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeParameterTimedScheduleTaskRequest extends TeaModel {
     /**
-     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

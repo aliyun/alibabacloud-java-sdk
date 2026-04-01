@@ -7,6 +7,12 @@ public class DescribeDatabasesResponseBody extends TeaModel {
     @NameInMap("Databases")
     public DescribeDatabasesResponseBodyDatabases databases;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2603CA96-B17D-4903-BC04-61A2C829CD94</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

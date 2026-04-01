@@ -8,7 +8,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
      * <p>The internal endpoint of the instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5****.mysql.rds.aliyuncs.com</p>
+     * <p>rm-uf6wjk5*****.mysql.rds.aliyuncs.com</p>
      */
     @NameInMap("ConnectionString")
     public String connectionString;
@@ -18,7 +18,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
      * <p>For example, if the value of the <strong>Amount</strong> parameter is <strong>3</strong>, three instance IDs are returned. Examples: <code>rm-uf6wjk5*****1,rm-uf6wjk5*****2,rm-uf6wjk5*****3</code></p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5****</p>
+     * <p>rm-uf6wjk5*****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -71,7 +71,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
      * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>1007893702****</p>
+     * <p>1007893702*****</p>
      */
     @NameInMap("OrderId")
     public String orderId;
@@ -118,7 +118,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>s2365879-a9d0-55af-fgae-f2****</p>
+     * <p>s2365879-a9d0-55af-fgae-f2*****</p>
      */
     @NameInMap("TaskId")
     public String taskId;

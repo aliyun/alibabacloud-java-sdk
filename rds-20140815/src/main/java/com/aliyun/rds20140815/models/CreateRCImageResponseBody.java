@@ -4,6 +4,12 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateRCImageResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F8D78AED-5050-113C-A46E-7B346*******</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

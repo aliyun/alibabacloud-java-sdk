@@ -135,8 +135,6 @@ public class DescribeRCDisksResponseBody extends TeaModel {
 
     public static class DescribeRCDisksResponseBodyDisks extends TeaModel {
         /**
-         * <p>The mount time.</p>
-         * 
          * <strong>example:</strong>
          * <p>2017-12-05T2340:00Z</p>
          */
@@ -156,7 +154,7 @@ public class DescribeRCDisksResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>cloud_auto</p>
+         * <p>cloud_ssd</p>
          */
         @NameInMap("Category")
         public String category;

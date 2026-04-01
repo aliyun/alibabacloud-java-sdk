@@ -50,7 +50,7 @@ public class CloneDBInstanceRequest extends TeaModel {
      * <p>A reserved parameter. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>0</p>
+     * <p>false</p>
      */
     @NameInMap("BpeEnabled")
     public String bpeEnabled;
@@ -130,7 +130,7 @@ public class CloneDBInstanceRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf6wjk5****</p>
+     * <p>rm-uf6wjk5xxxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -162,7 +162,7 @@ public class CloneDBInstanceRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>general_essd</p>
+     * <p>cloud_essd</p>
      */
     @NameInMap("DBInstanceStorageType")
     public String DBInstanceStorageType;
@@ -180,7 +180,7 @@ public class CloneDBInstanceRequest extends TeaModel {
      * <p>The ID of the dedicated cluster.</p>
      * 
      * <strong>example:</strong>
-     * <p>dhg-7a9****</p>
+     * <p>dhg-7a9xxxxxxxx</p>
      */
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
@@ -218,7 +218,7 @@ public class CloneDBInstanceRequest extends TeaModel {
      * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>0</p>
+     * <p>None</p>
      */
     @NameInMap("IoAccelerationEnabled")
     public String ioAccelerationEnabled;
@@ -258,7 +258,7 @@ public class CloneDBInstanceRequest extends TeaModel {
      * <p>The internal IP address of the new instance, which must be within the CIDR block supported by the specified vSwitch. The system automatically assigns an internal IP address based on the values of the <strong>VPCId</strong> and <strong>VSwitchId</strong> parameters.</p>
      * 
      * <strong>example:</strong>
-     * <p>172.XX.XX.69</p>
+     * <p>172.XX.XXX.69</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
@@ -337,7 +337,7 @@ public class CloneDBInstanceRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>vpc-uf6f7l4fg90****</p>
+     * <p>vpc-uf6f7l4fg90xxxxxxxxxx</p>
      */
     @NameInMap("VPCId")
     public String VPCId;
@@ -350,7 +350,7 @@ public class CloneDBInstanceRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>vsw-uf6adz52c2p****</p>
+     * <p>vsw-uf6adz52c2pxxxxxxxxxx</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;

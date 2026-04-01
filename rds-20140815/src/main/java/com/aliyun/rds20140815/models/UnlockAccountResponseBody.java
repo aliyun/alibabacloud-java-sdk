@@ -4,6 +4,12 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class UnlockAccountResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AA65190D-852A-4C9B-88DA-E92698CAA350</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

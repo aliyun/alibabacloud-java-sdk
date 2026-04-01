@@ -4,9 +4,18 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateDBInstanceEndpointAddressResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public CreateDBInstanceEndpointAddressResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>08A3B71B-FE08-4B03-974F-CC7EA6DB1828</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +41,30 @@ public class CreateDBInstanceEndpointAddressResponseBody extends TeaModel {
     }
 
     public static class CreateDBInstanceEndpointAddressResponseBodyData extends TeaModel {
+        /**
+         * <p>The public endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-******.mysql.rds.aliyuncs.com</p>
+         */
         @NameInMap("ConnectionString")
         public String connectionString;
 
+        /**
+         * <p>The endpoint ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-****</p>
+         */
         @NameInMap("DBInstanceEndpointId")
         public String DBInstanceEndpointId;
 
+        /**
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-****</p>
+         */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 

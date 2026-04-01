@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeImportTaskRequest extends TeaModel {
     /**
-     * <p>Instance ID. You can obtain it by calling DescribeDBInstances.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +17,6 @@ public class DescribeImportTaskRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Region ID. You can obtain it by calling DescribeRegions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +26,6 @@ public class DescribeImportTaskRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Job ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
