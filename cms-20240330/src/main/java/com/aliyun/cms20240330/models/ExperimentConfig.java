@@ -4,6 +4,9 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class ExperimentConfig extends TeaModel {
+    @NameInMap("endpointConnectorId")
+    public String endpointConnectorId;
+
     @NameInMap("label")
     public String label;
 
@@ -25,6 +28,14 @@ public class ExperimentConfig extends TeaModel {
     public static ExperimentConfig build(java.util.Map<String, ?> map) throws Exception {
         ExperimentConfig self = new ExperimentConfig();
         return TeaModel.build(map, self);
+    }
+
+    public ExperimentConfig setEndpointConnectorId(String endpointConnectorId) {
+        this.endpointConnectorId = endpointConnectorId;
+        return this;
+    }
+    public String getEndpointConnectorId() {
+        return this.endpointConnectorId;
     }
 
     public ExperimentConfig setLabel(String label) {

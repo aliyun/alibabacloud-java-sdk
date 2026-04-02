@@ -1,3 +1,8 @@
+2026-04-02 Version: 6.5.0
+- Support API ManageAlertRules.
+- Support API QueryAlertRules.
+
+
 2026-04-02 Version: 6.4.0
 - Support API CreateDataset.
 - Support API DeleteDataset.
