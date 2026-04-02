@@ -1048,6 +1048,12 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("PostStart")
+        public String postStart;
+
+        @NameInMap("PreStop")
+        public String preStop;
+
         @NameInMap("Readiness")
         public String readiness;
 
@@ -1145,6 +1151,22 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataSidecarContainersConfig setPostStart(String postStart) {
+            this.postStart = postStart;
+            return this;
+        }
+        public String getPostStart() {
+            return this.postStart;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataSidecarContainersConfig setPreStop(String preStop) {
+            this.preStop = preStop;
+            return this;
+        }
+        public String getPreStop() {
+            return this.preStop;
         }
 
         public DescribeApplicationConfigResponseBodyDataSidecarContainersConfig setReadiness(String readiness) {

@@ -1,3 +1,8 @@
+2026-04-02 Version: 2.13.2
+- Update API DescribeApplicationConfig: add response parameters Body.Data.SidecarContainersConfig.$.PostStart.
+- Update API DescribeApplicationConfig: add response parameters Body.Data.SidecarContainersConfig.$.PreStop.
+
+
 2026-03-27 Version: 2.13.1
 - Generated java 2019-05-06 for sae.
 

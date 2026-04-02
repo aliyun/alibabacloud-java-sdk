@@ -97,6 +97,12 @@ public class SidecarContainerConfig extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("PostStart")
+    public String postStart;
+
+    @NameInMap("PreStop")
+    public String preStop;
+
     @NameInMap("Readiness")
     public String readiness;
 
@@ -194,6 +200,22 @@ public class SidecarContainerConfig extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public SidecarContainerConfig setPostStart(String postStart) {
+        this.postStart = postStart;
+        return this;
+    }
+    public String getPostStart() {
+        return this.postStart;
+    }
+
+    public SidecarContainerConfig setPreStop(String preStop) {
+        this.preStop = preStop;
+        return this;
+    }
+    public String getPreStop() {
+        return this.preStop;
     }
 
     public SidecarContainerConfig setReadiness(String readiness) {
