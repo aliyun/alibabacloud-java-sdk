@@ -89,6 +89,7 @@ public class SearchCloudGtmAddressPoolsRequest extends TeaModel {
 
     /**
      * <p>Current page number, starting from 1, default is 1.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -98,6 +99,7 @@ public class SearchCloudGtmAddressPoolsRequest extends TeaModel {
 
     /**
      * <p>The number of rows per page when paginating queries, with a maximum value of 100 and a default of 20.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

@@ -77,6 +77,7 @@ public class SearchCloudGtmInstanceConfigsRequest extends TeaModel {
 
     /**
      * <p>Current page number, starting from 1, default is 1.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -86,6 +87,7 @@ public class SearchCloudGtmInstanceConfigsRequest extends TeaModel {
 
     /**
      * <p>The number of rows per page when paginating queries, with a maximum value of <strong>100</strong>, and a default of <strong>20</strong>.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
