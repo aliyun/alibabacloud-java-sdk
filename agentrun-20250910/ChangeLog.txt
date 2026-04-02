@@ -1,3 +1,8 @@
+2026-04-02 Version: 5.7.0
+- Support API PauseSandbox.
+- Support API ResumeSandbox.
+
+
 2026-03-26 Version: 5.6.0
 - Support API CreateTool.
 - Support API DeleteTool.

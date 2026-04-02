@@ -3023,6 +3023,49 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>停止指定的沙箱实例。停止后，沙箱将进入TERMINATED状态。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>暂停沙箱</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PauseSandboxResponse
+     */
+    public PauseSandboxResponse pauseSandboxWithOptions(String sandboxId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PauseSandbox"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/sandboxes/" + com.aliyun.openapiutil.Client.getEncodeParam(sandboxId) + "/pause"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PauseSandboxResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>停止指定的沙箱实例。停止后，沙箱将进入TERMINATED状态。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>暂停沙箱</p>
+     * @return PauseSandboxResponse
+     */
+    public PauseSandboxResponse pauseSandbox(String sandboxId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.pauseSandboxWithOptions(sandboxId, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>为指定的智能体运行时发布新版本，用于版本管理和部署。新版本可以包含代码更新、配置变更等内容。</p>
      * 
      * <b>summary</b> : 
@@ -3070,11 +3113,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>恢复沙箱</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ResumeSandboxResponse
+     */
+    public ResumeSandboxResponse resumeSandboxWithOptions(String sandboxId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ResumeSandbox"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/sandboxes/" + com.aliyun.openapiutil.Client.getEncodeParam(sandboxId) + "/resume"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ResumeSandboxResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>恢复沙箱</p>
+     * @return ResumeSandboxResponse
+     */
+    public ResumeSandboxResponse resumeSandbox(String sandboxId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.resumeSandboxWithOptions(sandboxId, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>停止指定的沙箱实例。停止后，沙箱将进入TERMINATED状态。</p>
      * 
      * <b>summary</b> : 
-     * <p>删除沙箱</p>
+     * <p>停止沙箱</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3103,7 +3183,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>停止指定的沙箱实例。停止后，沙箱将进入TERMINATED状态。</p>
      * 
      * <b>summary</b> : 
-     * <p>删除沙箱</p>
+     * <p>停止沙箱</p>
      * @return StopSandboxResponse
      */
     public StopSandboxResponse stopSandbox(String sandboxId) throws Exception {
