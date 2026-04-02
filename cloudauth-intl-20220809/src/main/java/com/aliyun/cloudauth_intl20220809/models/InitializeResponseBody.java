@@ -23,7 +23,7 @@ public class InitializeResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>4EB35****87EBA1</p>
@@ -87,7 +87,7 @@ public class InitializeResponseBody extends TeaModel {
         /**
          * <p>Standard encryption protocol for authentication.</p>
          * <blockquote>
-         * <p>This field is required when integrating with H5 web pages using iframe embedding.</p>
+         * <p>Required when integrating with H5 web pages using iframe embedding.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

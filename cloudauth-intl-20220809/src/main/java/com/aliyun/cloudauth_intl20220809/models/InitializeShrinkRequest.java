@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class InitializeShrinkRequest extends TeaModel {
     /**
-     * <p><warning>This feature is currently not supported by <strong>Web SDK</strong>. Please refer to the App SDK integration if needed.</warning></p>
-     * <p>Whether to enable strict face quality detection:</p>
+     * <p><warning>This feature is not supported by <strong>Web SDK</strong>. Please refer to the App SDK integration if needed.</warning></p>
+     * <p>Whether to enable strict face quality check:</p>
      * <ul>
-     * <li>Y: Enable (default)</li>
-     * <li>N: Disable</li>
+     * <li>Y: Enabled (default)</li>
+     * <li>N: Disabled</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class InitializeShrinkRequest extends TeaModel {
     public String autoRegistration;
 
     /**
-     * <p>Security Token, used for preventing duplication and tampering. If this parameter is passed, the CallbackToken field will be displayed in the callback address.</p>
+     * <p>Security token used for preventing duplication and tampering. If this parameter is passed, the CallbackToken field will be displayed in the callback URL.</p>
      * 
      * <strong>example:</strong>
      * <p>7ca5c68d869344ea8eeb30cdfd544544-6358700</p>
@@ -46,7 +46,7 @@ public class InitializeShrinkRequest extends TeaModel {
     public String callbackToken;
 
     /**
-     * <p>Callback notification address for authentication results. The default callback request method is GET, and the callback address must start with https. After completing the authentication, the platform will call back this address and automatically add the transactionId, passed, and subcode fields.</p>
+     * <p>Callback notification URL for authentication results. The default callback request method is GET, and the callback URL must start with https. After completing the authentication, the platform will call back this URL and automatically add the transactionId, passed, and subcode fields.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://www.aliyun.com?callbackToken=1000004826&transactionId=shaxxxx&passed=Y&subCode=200">https://www.aliyun.com?callbackToken=1000004826&amp;transactionId=shaxxxx&amp;passed=Y&amp;subCode=200</a></p>
@@ -57,8 +57,8 @@ public class InitializeShrinkRequest extends TeaModel {
     /**
      * <p>Whether to enable adaptive color-changing window border</p>
      * <ul>
-     * <li><strong>Y</strong>: Enable</li>
-     * <li><strong>N</strong>: Disable</li>
+     * <li><strong>Y</strong>: Enabled</li>
+     * <li><strong>N</strong>: Disabled</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class InitializeShrinkRequest extends TeaModel {
     public String dateOfExpiry;
 
     /**
-     * <p>User\&quot;s real name.</p>
+     * <p>The real name of the user.</p>
      * 
      * <strong>example:</strong>
      * <p>张三</p>
@@ -119,7 +119,7 @@ public class InitializeShrinkRequest extends TeaModel {
     public String docNo;
 
     /**
-     * <p>Customer-defined input to specify whether to collect more pages</p>
+     * <p>Customer-defined input for whether to capture additional pages</p>
      */
     @NameInMap("DocPageConfig")
     public String docPageConfigShrink;
@@ -138,25 +138,30 @@ public class InitializeShrinkRequest extends TeaModel {
     public String docScanMode;
 
     /**
-     * <p>Document type, uniquely identified by an 8-digit combination.
-     * Note: This parameter is required only when ProductCode is KYC_GLOBAL, OCR_GLOBAL, or IDR_GLOBAL.</p>
+     * <p>Document type</p>
+     * <blockquote>
+     * <p>For eKYC_PRO and ID_OCR_MAX solutions, see the official documentation: <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/certificate-code-table?spm=a2c63.p38356.help-menu-445633.d_2_8_2_0.279147abwKAWbr">https://www.alibabacloud.com/help/zh/ekyc/latest/certificate-code-table?spm=a2c63.p38356.help-menu-445633.d_2_8_2_0.279147abwKAWbr</a></p>
+     * </blockquote>
+     * <blockquote>
+     * <p>For ID_OCR, eKYC, and eYKC_MIN solutions, see the official documentation: Document Type List <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/gnhekqy05ni51m4c?spm=a2c63.p38356.help-menu-445633.d_2_3_1_0_0_0.6243244777KoZ7">https://www.alibabacloud.com/help/zh/ekyc/latest/gnhekqy05ni51m4c?spm=a2c63.p38356.help-menu-445633.d_2_3_1_0_0_0.6243244777KoZ7</a></p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>​01560000</p>
+     * <p>00000001</p>
      */
     @NameInMap("DocType")
     public String docType;
 
     /**
-     * <p>Whether to require a video for evidence.</p>
+     * <p>Whether to require evidence video.</p>
      * <ul>
      * <li><p>N: Not required (default).</p>
      * </li>
-     * <li><p>Y: During the authentication process, a 1~2 second video of the user\&quot;s face will be captured and returned via the query interface.</p>
+     * <li><p>Y: During the authentication process, a 1-2 second video of the user\&quot;s face will be captured and returned via the query interface.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>Due to the large size of the video file, the system may discard it when the network is unstable, prioritizing the transmission of necessary images for authentication.</p>
+     * <p>Due to the large size of video files, the system may discard them in case of network instability, prioritizing the transmission of necessary images for authentication.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -178,7 +183,7 @@ public class InitializeShrinkRequest extends TeaModel {
     public String documentNumber;
 
     /**
-     * <p>In the document OCR recognition step, whether the recognition result page is editable:</p>
+     * <p>Whether the OCR result page is editable in the document OCR recognition process:</p>
      * <ul>
      * <li><p><strong>0</strong>: Not editable</p>
      * </li>
@@ -192,6 +197,17 @@ public class InitializeShrinkRequest extends TeaModel {
     @NameInMap("EditOcrResult")
     public String editOcrResult;
 
+    /**
+     * <p>Enter an Indonesian email address. This field is only effective when Authorize=T.</p>
+     * <blockquote>
+     * <ul>
+     * <li>This field is required only when the Indonesian data source is enabled.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:evxxx@imigxxxxx.go.id">evxxx@imigxxxxx.go.id</a></p>
+     */
     @NameInMap("Email")
     public String email;
 
@@ -205,7 +221,7 @@ public class InitializeShrinkRequest extends TeaModel {
     public String experienceCode;
 
     /**
-     * <p>Face library to be compared</p>
+     * <p>The face library to be compared</p>
      * 
      * <strong>example:</strong>
      * <p>0e0c34a77f</p>
@@ -214,8 +230,7 @@ public class InitializeShrinkRequest extends TeaModel {
     public String faceGroupCodes;
 
     /**
-     * <p>Base64 encoded face image. If you choose to pass the face image via FacePictureBase64, please check the image size and do not upload images larger than 1 MB.
-     * When productCode is FV_GLOBAL, choose one of the parameters between FacePictureBase64 and FacePictureUrl to pass in.</p>
+     * <p>Base64 encoded photo. If you choose to pass the face photo via FacePictureBase64, please check the photo size and avoid uploading overly large photos.</p>
      * 
      * <strong>example:</strong>
      * <p>Base64</p>
@@ -224,7 +239,7 @@ public class InitializeShrinkRequest extends TeaModel {
     public String facePictureBase64;
 
     /**
-     * <p>Face image URL. A publicly accessible HTTP or HTTPS link. When productCode is FV_GLOBAL, choose one of the parameters between FacePictureUrl and FacePictureBase to pass in.</p>
+     * <p>URL of the face photo. A publicly accessible HTTP or HTTPS link.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -269,12 +284,12 @@ public class InitializeShrinkRequest extends TeaModel {
     public String idSpoof;
 
     /**
-     * <p>Custom OCR quality detection threshold mode:</p>
+     * <p>Custom OCR quality check threshold mode:</p>
      * <ul>
      * <li><strong>0</strong>: Standard mode</li>
      * <li><strong>1</strong>: Strict mode</li>
      * <li><strong>2</strong>: Lenient mode</li>
-     * <li><strong>3</strong> (default): Disable quality detection</li>
+     * <li><strong>3</strong> (default): Quality check disabled</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -293,13 +308,13 @@ public class InitializeShrinkRequest extends TeaModel {
     public String languageConfig;
 
     /**
-     * <p>Source of MRTD verification parameters. This parameter is required to decrypt information when reading the document chip via NFC.</p>
+     * <p>Source of MRTD verification parameters. This parameter is required for decrypting information when reading the document chip via NFC.</p>
      * <ul>
      * <li><p><strong>0</strong>: User input</p>
      * </li>
      * <li><p><strong>1</strong>: OCR read</p>
      * </li>
-     * <li><p><strong>2</strong>: Passed through the API</p>
+     * <li><p><strong>2</strong>: Passed through the interface</p>
      * </li>
      * </ul>
      * 
@@ -310,7 +325,7 @@ public class InitializeShrinkRequest extends TeaModel {
     public String MRTDInput;
 
     /**
-     * <p>A unique business identifier defined by the merchant, used for subsequent troubleshooting. It supports a combination of letters and numbers, with a maximum length of 32 characters. Please ensure its uniqueness.</p>
+     * <p>A unique business identifier defined by the merchant, used for subsequent troubleshooting. It supports a combination of letters and numbers, with a maximum length of 32 characters. Ensure its uniqueness.</p>
      * 
      * <strong>example:</strong>
      * <p>e0c34a***353888</p>
@@ -319,7 +334,7 @@ public class InitializeShrinkRequest extends TeaModel {
     public String merchantBizId;
 
     /**
-     * <p>Your custom user ID or other identifiers that can recognize specific users, such as phone numbers or email addresses. It is strongly recommended to pre-desensitize the value of this field, for example, by hashing it.</p>
+     * <p>Your custom user ID or other identifiers that can uniquely identify a specific user, such as a phone number or email address. It is strongly recommended to pre-desensitize the value of this field, for example, by hashing it.</p>
      * 
      * <strong>example:</strong>
      * <p>1221****6543</p>
@@ -336,21 +351,32 @@ public class InitializeShrinkRequest extends TeaModel {
     @NameInMap("MetaInfo")
     public String metaInfo;
 
+    /**
+     * <p>Enter an Indonesian phone number, which must be in the format (starting with +62, followed by 9-11 digits). This field is only effective when Authorize=T.</p>
+     * <blockquote>
+     * <ul>
+     * <li>This field is required only when the Indonesian data source is enabled.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>+6281293671234</p>
+     */
     @NameInMap("Mobile")
     public String mobile;
 
     /**
-     * <p>The type of liveness detection to be performed:</p>
+     * <p>Type of liveness detection to be performed:</p>
      * <ul>
      * <li><p><strong>LIVENESS</strong> (default): Blinking action liveness detection.</p>
      * </li>
-     * <li><p><strong>PHOTINUS_LIVENESS</strong>: Blinking action liveness + photinus liveness dual detection.</p>
+     * <li><p><strong>PHOTINUS_LIVENESS</strong>: Dual liveness detection with blinking action and photinus liveness.</p>
      * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>For supported SDK versions, see <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/sdk-publishing-record?spm=a2c63.p38356.0.i99">SDK Publishing Record</a>.</li>
-     * <li>PC does not support photinus liveness dual detection.</li>
+     * <li>For supported SDK versions, see <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/sdk-publishing-record?spm=a2c63.p38356.0.i99">SDK Release Records</a>.</li>
+     * <li>PC does not support dual liveness detection with photinus.</li>
      * </ul>
      * </blockquote>
      * 
@@ -370,7 +396,7 @@ public class InitializeShrinkRequest extends TeaModel {
     public String ocr;
 
     /**
-     * <p>Page configuration for collection, multiple pages are connected using commas. The value range is as follows:</p>
+     * <p>Page configuration for collection, multiple pages are connected using commas. Value range:</p>
      * <ul>
      * <li><p><strong>01</strong>: Front side of the document</p>
      * </li>
@@ -378,7 +404,7 @@ public class InitializeShrinkRequest extends TeaModel {
      * </li>
      * </ul>
      * <blockquote>
-     * <p>When this value is 01,02, currently only Chinese and Vietnamese IDs are supported.</p>
+     * <p>When this value is set to 01,02, it currently only supports Chinese and Vietnamese IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -390,15 +416,15 @@ public class InitializeShrinkRequest extends TeaModel {
     /**
      * <p>When compatibility issues occur with H5-based mobile authentication, whether to allow a fallback handling method.</p>
      * <ul>
-     * <li><p><strong>url</strong> (default): Support fallback. The page displays the authentication URL, which users can copy and open in another browser to continue the authentication process.</p>
+     * <li><p><strong>url</strong> (default): Fallback supported. The page displays the authentication URL, which users can copy and open or switch browsers to continue the authentication process.</p>
      * </li>
-     * <li><p><strong>keep</strong>: Do not support fallback. Directly return the error reason and end the authentication process.</p>
+     * <li><p><strong>keep</strong>: Fallback not supported. The error reason is returned directly, and the authentication process ends.</p>
      * </li>
      * </ul>
      * <blockquote>
      * <ul>
      * <li>This switch is not supported on PC.</li>
-     * <li>If the business scenario involves completing authentication through an embedded web page in an app, it is recommended to set this parameter to <code>keep</code> to disallow URL fallback.</li>
+     * <li>If the business scenario involves completing authentication within an embedded web page in an app, it is recommended to set this parameter to keep, disallowing URL fallback.</li>
      * </ul>
      * </blockquote>
      * 
@@ -409,23 +435,19 @@ public class InitializeShrinkRequest extends TeaModel {
     public String procedurePriority;
 
     /**
-     * <p>The product solution to be integrated. The values are as follows:</p>
-     * <ul>
-     * <li>KYC_GLOBAL (eKYC product solution)</li>
-     * <li>FV_GLOBAL (Live Face Verification)</li>
-     * <li>FL_GLOBAL (Liveness Detection)</li>
-     * <li>IDR_GLOBAL (Single Document Verification)</li>
-     * <li>OCR_GLOBAL (Single Document OCR)</li>
-     * </ul>
+     * <p>The product solution to be integrated</p>
+     * <blockquote>
+     * <p>For more details, see the official documentation: <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/product-introduction?spm=a2c63.p38356.0.i1">https://www.alibabacloud.com/help/zh/ekyc/latest/product-introduction?spm=a2c63.p38356.0.i1</a></p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>KYC_GLOBAL</p>
+     * <p>eKYC</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
-     * <p>Supports card and face sequential arrangement:</p>
+     * <p>Supports card and face sequence arrangement:</p>
      * <ul>
      * <li>DOC_FACE (default)</li>
      * <li>FACE_DOC</li>
@@ -448,7 +470,7 @@ public class InitializeShrinkRequest extends TeaModel {
     public String returnFaces;
 
     /**
-     * <p>Client-side callback address.</p>
+     * <p>Callback URL on the client side.</p>
      * 
      * <strong>example:</strong>
      * <p>http*****</p>
@@ -475,9 +497,9 @@ public class InitializeShrinkRequest extends TeaModel {
     public String sceneCode;
 
     /**
-     * <p>Represents different security levels in the authentication process. The available values are as follows:</p>
+     * <p>Represents different security levels in the authentication process. Available values:</p>
      * <p>01: Normal mode (default).
-     * 02: Secure mode, a relatively strict mode, suitable for high-risk scenarios. (IDV product input parameter)</p>
+     * 02: Secure mode, a relatively strict mode suitable for high-risk scenarios. (IDV product input parameter)</p>
      * 
      * <strong>example:</strong>
      * <p>01</p>
@@ -486,7 +508,7 @@ public class InitializeShrinkRequest extends TeaModel {
     public String securityLevel;
 
     /**
-     * <p>In the document OCR recognition step, whether to display the album upload entry:</p>
+     * <p>Whether to display the album upload entry during the document OCR recognition phase:</p>
      * <ul>
      * <li><p><strong>1</strong>: Display (default)</p>
      * </li>
@@ -501,7 +523,7 @@ public class InitializeShrinkRequest extends TeaModel {
     public String showAlbumIcon;
 
     /**
-     * <p>Switch to control whether to display the guide page:</p>
+     * <p>Switch for displaying the guide page:</p>
      * <ul>
      * <li><p><strong>1</strong>: Display (default)</p>
      * </li>
@@ -516,7 +538,7 @@ public class InitializeShrinkRequest extends TeaModel {
     public String showGuidePage;
 
     /**
-     * <p>In the document OCR recognition step, whether to display the recognition result page:</p>
+     * <p>Whether to display the recognition result page during the document OCR recognition phase:</p>
      * <ul>
      * <li><p><strong>1</strong>: Display (default)</p>
      * </li>
@@ -531,7 +553,7 @@ public class InitializeShrinkRequest extends TeaModel {
     public String showOcrResult;
 
     /**
-     * <p>Custom UI configuration. Based on the configuration template, convert your custom UI configuration into a JSON string and pass it through this interface. For more information, see <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/idv-kyc-custom-skin?spm=a2c63.p38356.0.i60">IDV UI Customization</a>.</p>
+     * <p>Custom UI configuration. Based on the configuration template, convert your custom UI settings into a JSON string and pass it through this interface. For more information, see <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/idv-kyc-custom-skin?spm=a2c63.p38356.0.i60">IDV UI Customization</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -554,7 +576,7 @@ public class InitializeShrinkRequest extends TeaModel {
     public String targetFacePicture;
 
     /**
-     * <p>Portrait image URL, accessible via public HTTP or HTTPS link.</p>
+     * <p>Portrait image URL, accessible via HTTP or HTTPS on the public network.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://www.xxxxx.com/1.jpg">https://www.xxxxx.com/1.jpg</a></p>
@@ -563,10 +585,10 @@ public class InitializeShrinkRequest extends TeaModel {
     public String targetFacePictureUrl;
 
     /**
-     * <p>When <strong>DocType</strong>=01000000 (global passport), you can choose whether to enable NFC verification.</p>
+     * <p>Optional to enable NFC verification when <strong>DocType</strong>=01000000 (global passport).</p>
      * <ul>
-     * <li><strong>Y</strong> (enable)</li>
-     * <li><strong>N</strong> (disable)</li>
+     * <li><strong>Y</strong> (Enabled)</li>
+     * <li><strong>N</strong> (Disabled)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -576,7 +598,7 @@ public class InitializeShrinkRequest extends TeaModel {
     public String useNFC;
 
     /**
-     * <p>Type of verification</p>
+     * <p>The type of verification</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
