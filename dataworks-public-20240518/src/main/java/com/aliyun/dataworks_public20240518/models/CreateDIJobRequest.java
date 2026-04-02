@@ -278,6 +278,29 @@ public class CreateDIJobRequest extends TeaModel {
         return this.transformationRules;
     }
 
+    public static class CreateDIJobRequestDestinationDataSourceSettingsDataSourceProperties extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{     &quot;instanceType&quot;: &quot;serverless&quot;,     &quot;username&quot;: &quot;zmtest&quot;,     &quot;password&quot;: &quot;xxxxxxx&quot;,     &quot;regionId&quot;: &quot;cn-beijing&quot;,     &quot;appName&quot;: &quot;es-servexxxx&quot; }</p>
+         */
+        @NameInMap("ConnectionProperties")
+        public String connectionProperties;
+
+        public static CreateDIJobRequestDestinationDataSourceSettingsDataSourceProperties build(java.util.Map<String, ?> map) throws Exception {
+            CreateDIJobRequestDestinationDataSourceSettingsDataSourceProperties self = new CreateDIJobRequestDestinationDataSourceSettingsDataSourceProperties();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDIJobRequestDestinationDataSourceSettingsDataSourceProperties setConnectionProperties(String connectionProperties) {
+            this.connectionProperties = connectionProperties;
+            return this;
+        }
+        public String getConnectionProperties() {
+            return this.connectionProperties;
+        }
+
+    }
+
     public static class CreateDIJobRequestDestinationDataSourceSettings extends TeaModel {
         /**
          * <p>The data source name.</p>
@@ -287,6 +310,9 @@ public class CreateDIJobRequest extends TeaModel {
          */
         @NameInMap("DataSourceName")
         public String dataSourceName;
+
+        @NameInMap("DataSourceProperties")
+        public CreateDIJobRequestDestinationDataSourceSettingsDataSourceProperties dataSourceProperties;
 
         public static CreateDIJobRequestDestinationDataSourceSettings build(java.util.Map<String, ?> map) throws Exception {
             CreateDIJobRequestDestinationDataSourceSettings self = new CreateDIJobRequestDestinationDataSourceSettings();
@@ -299,6 +325,14 @@ public class CreateDIJobRequest extends TeaModel {
         }
         public String getDataSourceName() {
             return this.dataSourceName;
+        }
+
+        public CreateDIJobRequestDestinationDataSourceSettings setDataSourceProperties(CreateDIJobRequestDestinationDataSourceSettingsDataSourceProperties dataSourceProperties) {
+            this.dataSourceProperties = dataSourceProperties;
+            return this;
+        }
+        public CreateDIJobRequestDestinationDataSourceSettingsDataSourceProperties getDataSourceProperties() {
+            return this.dataSourceProperties;
         }
 
     }
@@ -781,6 +815,13 @@ public class CreateDIJobRequest extends TeaModel {
 
     public static class CreateDIJobRequestSourceDataSourceSettingsDataSourceProperties extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>{     &quot;instanceId&quot;: &quot;rm-2ze09gn3x6xxx&quot;,     &quot;password&quot;: &quot;xxxx&quot;,     &quot;database&quot;: &quot;agent&quot;,     &quot;username&quot;: &quot;zmtest&quot;     &quot;regionId&quot;: &quot;cn-beijing&quot; }</p>
+         */
+        @NameInMap("ConnectionProperties")
+        public String connectionProperties;
+
+        /**
          * <p>The database encoding.</p>
          * 
          * <strong>example:</strong>
@@ -801,6 +842,14 @@ public class CreateDIJobRequest extends TeaModel {
         public static CreateDIJobRequestSourceDataSourceSettingsDataSourceProperties build(java.util.Map<String, ?> map) throws Exception {
             CreateDIJobRequestSourceDataSourceSettingsDataSourceProperties self = new CreateDIJobRequestSourceDataSourceSettingsDataSourceProperties();
             return TeaModel.build(map, self);
+        }
+
+        public CreateDIJobRequestSourceDataSourceSettingsDataSourceProperties setConnectionProperties(String connectionProperties) {
+            this.connectionProperties = connectionProperties;
+            return this;
+        }
+        public String getConnectionProperties() {
+            return this.connectionProperties;
         }
 
         public CreateDIJobRequestSourceDataSourceSettingsDataSourceProperties setEncoding(String encoding) {
