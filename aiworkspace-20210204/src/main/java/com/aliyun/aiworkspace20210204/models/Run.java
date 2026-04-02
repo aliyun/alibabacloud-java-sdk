@@ -4,48 +4,93 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class Run extends TeaModel {
+    /**
+     * <p>The visibility.</p>
+     */
     @NameInMap("Accessibility")
     public String accessibility;
 
+    /**
+     * <p>The ID of the experiment that corresponds to the run.</p>
+     */
     @NameInMap("ExperimentId")
     public String experimentId;
 
+    /**
+     * <p>The creation time.</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <p>The last modified time.</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <p>The labels added to the run.</p>
+     */
     @NameInMap("Labels")
     public java.util.List<RunLabel> labels;
 
+    /**
+     * <p>The metrics of the run.</p>
+     */
     @NameInMap("Metrics")
     public java.util.List<RunMetric> metrics;
 
+    /**
+     * <p>Parameter</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the owner account.</p>
+     */
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>The hyperparameters of the run.</p>
+     */
     @NameInMap("Params")
     public java.util.List<RunParam> params;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The run ID.</p>
+     */
     @NameInMap("RunId")
     public String runId;
 
+    /**
+     * <p>The ID of the source PAI workload.</p>
+     */
     @NameInMap("SourceId")
     public String sourceId;
 
+    /**
+     * <p>The type of the source PAI workload.</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 
+    /**
+     * <p>The owner ID.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <p>The ID of the workspace to which the run belongs.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

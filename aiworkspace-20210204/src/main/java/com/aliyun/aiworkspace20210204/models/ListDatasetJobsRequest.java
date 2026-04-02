@@ -49,6 +49,9 @@ public class ListDatasetJobsRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("WithLogs")
+    public Boolean withLogs;
+
     /**
      * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
      * 
@@ -117,6 +120,14 @@ public class ListDatasetJobsRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public ListDatasetJobsRequest setWithLogs(Boolean withLogs) {
+        this.withLogs = withLogs;
+        return this;
+    }
+    public Boolean getWithLogs() {
+        return this.withLogs;
     }
 
     public ListDatasetJobsRequest setWorkspaceId(String workspaceId) {

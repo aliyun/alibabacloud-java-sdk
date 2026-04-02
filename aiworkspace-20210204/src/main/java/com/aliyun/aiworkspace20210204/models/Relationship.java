@@ -4,15 +4,27 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class Relationship extends TeaModel {
+    /**
+     * <p>Attributes</p>
+     */
     @NameInMap("Attributes")
     public java.util.Map<String, ?> attributes;
 
+    /**
+     * <p>DataChannel</p>
+     */
     @NameInMap("DataChannel")
     public String dataChannel;
 
+    /**
+     * <p>RelationshipGuid</p>
+     */
     @NameInMap("RelationshipGuid")
     public String relationshipGuid;
 
+    /**
+     * <p>RelationshipType</p>
+     */
     @NameInMap("RelationshipType")
     public String relationshipType;
 

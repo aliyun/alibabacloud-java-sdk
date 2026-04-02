@@ -363,6 +363,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Accessibility", request.accessibility);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.cloneType)) {
+            body.put("CloneType", request.cloneType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.codeBranch)) {
             body.put("CodeBranch", request.codeBranch);
         }
@@ -523,6 +527,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.accessibility)) {
             body.put("Accessibility", request.accessibility);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accessibleRoleIdList)) {
+            body.put("AccessibleRoleIdList", request.accessibleRoleIdList);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.dataCount)) {
@@ -4090,6 +4098,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Status", request.status);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.withLogs)) {
+            query.put("WithLogs", request.withLogs);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
             query.put("WorkspaceId", request.workspaceId);
         }
@@ -4226,6 +4238,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dataTypes)) {
             query.put("DataTypes", request.dataTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetIds)) {
+            query.put("DatasetIds", request.datasetIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.edition)) {
@@ -4414,7 +4430,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举特性</p>
+     * <p>Queries a list of features.</p>
      * 
      * @param request ListFeaturesRequest
      * @param headers map
@@ -4448,7 +4464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举特性</p>
+     * <p>Queries a list of features.</p>
      * 
      * @param request ListFeaturesRequest
      * @return ListFeaturesResponse
@@ -5889,6 +5905,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateCodeSourceResponse updateCodeSourceWithOptions(String CodeSourceId, UpdateCodeSourceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cloneType)) {
+            body.put("CloneType", request.cloneType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.codeBranch)) {
             body.put("CodeBranch", request.codeBranch);
         }
@@ -6129,6 +6149,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateDatasetResponse updateDatasetWithOptions(String DatasetId, UpdateDatasetRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessibility)) {
+            body.put("Accessibility", request.accessibility);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accessibleRoleIdList)) {
+            body.put("AccessibleRoleIdList", request.accessibleRoleIdList);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("Description", request.description);
         }

@@ -5,36 +5,62 @@ import com.aliyun.tea.*;
 
 public class Dataset extends TeaModel {
     /**
+     * <p>The workspace accessibility. Valid values:</p>
+     * <ul>
+     * <li>PRIVATE (default): The dataset is accessible only to you and the administrator of the workspace.</li>
+     * <li>PUBLIC: The dataset is accessible to all members in the workspace.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>PRIVATE PUBLIC</p>
+     * <p>PRIVATE</p>
      */
     @NameInMap("Accessibility")
     public String accessibility;
 
+    @NameInMap("AccessibleRoleIdList")
+    public java.util.List<String> accessibleRoleIdList;
+
     /**
+     * <p>The data source type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>NAS</li>
+     * <li>OSS</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>OSS URL</p>
+     * <p>NAS</p>
      */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
     /**
+     * <p>The data type. Valid values:</p>
+     * <ul>
+     * <li>COMMON (default)</li>
+     * <li>PIC</li>
+     * <li>TEXT</li>
+     * <li>Video</li>
+     * <li>AUDIO</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>COMMON PIC TEXT VIDEO AUDIO</p>
+     * <p>COMMON</p>
      */
     @NameInMap("DataType")
     public String dataType;
 
     /**
+     * <p>The dataset ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>d-c0h44g3wlwkj8o4348</p>
+     * <p>d-c0h44g3****j8o4348</p>
      */
     @NameInMap("DatasetId")
     public String datasetId;
 
     /**
-     * <strong>example:</strong>
-     * <p>Animal images.</p>
+     * <p>The dataset description.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -47,70 +73,122 @@ public class Dataset extends TeaModel {
     public String edition;
 
     /**
+     * <p>The time when the dataset was created.</p>
+     * 
      * <strong>example:</strong>
-     * <p>2021-01-30T12:51:33.028Z</p>
+     * <p>2021-01-21T17:12:35.232Z</p>
      */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
     /**
+     * <p>The time when the dataset was modified.</p>
+     * 
      * <strong>example:</strong>
-     * <p>2021-01-30T12:51:33.028Z</p>
+     * <p>2021-01-21T17:12:35.232Z</p>
      */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <p>The dataset import information, such as OSS, NAS, and CPFS.</p>
+     * <p><strong>OSS</strong></p>
+     * <p>{ &quot;region&quot;: &quot;${region}&quot;,//The region ID. &quot;bucket&quot;: &quot;${bucket}&quot;,//The bucket name. &quot;path&quot;: &quot;${path}&quot; //The file path. }</p>
+     * <p><strong>NAS</strong></p>
+     * <p><strong>CPFS</strong></p>
+     * <p><strong>CPFS for Lingjun</strong></p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;region&quot;: &quot;cn-wulanchabu&quot;,
+     *     &quot;fileSystemId&quot;: &quot;bmcpfs-xxxxxxxxxxx&quot;,
+     *     &quot;path&quot;: &quot;/mnt&quot;,
+     *     &quot;mountTarget&quot;: &quot;cpfs-xxxxxxxxxxxx-vpc-gacs9f.cn-wulanchabu.cpfs.aliyuncs.com&quot;,
+     *     &quot;isVpcMount&quot;: true
+     * }</p>
+     */
     @NameInMap("ImportInfo")
     public String importInfo;
 
     @NameInMap("IsShared")
     public Boolean isShared;
 
+    /**
+     * <p>The labels.</p>
+     */
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
+    /**
+     * <p>The latest dataset version.</p>
+     */
     @NameInMap("LatestVersion")
     public DatasetVersion latestVersion;
 
     /**
+     * <p>MountAccess</p>
+     * 
      * <strong>example:</strong>
      * <p>RO RW</p>
      */
     @NameInMap("MountAccess")
     public String mountAccess;
 
+    /**
+     * <p>The IDs of the roles that have read and write permissions on the dataset in the workspace. The IDs starting with PAI is the IDs of the basic roles, and the IDs starting with role- is the IDs of the custom roles. If the list contains &quot;\*&quot;, all roles have read and write permissions.</p>
+     */
     @NameInMap("MountAccessReadWriteRoleIdList")
     public java.util.List<String> mountAccessReadWriteRoleIdList;
 
     /**
+     * <p>The dataset name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>AnimalDataset</p>
+     * <p>myName</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The extended field that can be used as an option. The value is a JSON string. When you use the dataset in Deep Learning Containers (DLC), you can use the mountPath field to specify the default mount path of the dataset.</p>
+     * 
      * <strong>example:</strong>
-     * <p>jsonstring</p>
+     * <p>{
+     *   &quot;mountPath&quot;: &quot;/mnt/data/&quot;
+     * }</p>
      */
     @NameInMap("Options")
     public String options;
 
     /**
+     * <p>The ID of the Alibaba Cloud account.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1004110000006048</p>
+     * <p>1631044****3440</p>
      */
     @NameInMap("OwnerId")
     public String ownerId;
 
     /**
+     * <p>The dataset property. Valid values:</p>
+     * <ul>
+     * <li>FILE</li>
+     * <li>DIRECTORY</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>FILE DIRECTORY TABULAR</p>
+     * <p>DIRECTORY</p>
      */
     @NameInMap("Property")
     public String property;
 
     /**
+     * <p>The provider type of the dataset. Valid values:</p>
+     * <ul>
+     * <li>Ecs (default)</li>
+     * <li>Lingjun</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Ecs</p>
      */
@@ -124,13 +202,17 @@ public class Dataset extends TeaModel {
     public DatasetSharingConfig sharingConfig;
 
     /**
+     * <p>The ID of the source dataset for the labeled dataset.</p>
+     * 
      * <strong>example:</strong>
-     * <p>d-bvfasdf4wxxj8o411</p>
+     * <p>d-bvfasdfxxxxj8o411</p>
      */
     @NameInMap("SourceDatasetId")
     public String sourceDatasetId;
 
     /**
+     * <p>The version of the source dataset for the labeled dataset.</p>
+     * 
      * <strong>example:</strong>
      * <p>v2</p>
      */
@@ -138,20 +220,32 @@ public class Dataset extends TeaModel {
     public String sourceDatasetVersion;
 
     /**
+     * <p>The source ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>Source Id</p>
+     * <p>jdnhf***fnrimv</p>
      */
     @NameInMap("SourceId")
     public String sourceId;
 
     /**
+     * <p>The source type.
+     * Valid values:</p>
+     * <ul>
+     * <li>PAI_PUBLIC_DATASET</li>
+     * <li>ITAG</li>
+     * <li>USER</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>USER ITAG  PAI_PUBLIC_DATASET</p>
+     * <p>USER</p>
      */
     @NameInMap("SourceType")
     public String sourceType;
 
     /**
+     * <p>The labeling template of the iTAG labeled dataset.</p>
+     * 
      * <strong>example:</strong>
      * <p>text-classification</p>
      */
@@ -159,22 +253,37 @@ public class Dataset extends TeaModel {
     public String tagTemplateType;
 
     /**
+     * <p>URI examples:</p>
+     * <ul>
+     * <li>Object Storage Service (OSS) data source: <code>oss://bucket.endpoint/object</code></li>
+     * <li>File Storage NAS (NAS) data source: <code>nas://&lt;nasfisid&gt;.region/subpath/to/dir/</code></li>
+     * <li>Cloud Parallel File Storage (CPFS) 1.0 data source: <code>nas://&lt;cpfs-fsid&gt;.region/subpath/to/dir/</code></li>
+     * <li>CPFS 2.0 data source: <code>nas://&lt;cpfs-fsid&gt;.region/&lt;protocolserviceid&gt;/</code></li>
+     * </ul>
+     * <blockquote>
+     * <p> You can distinguish CPFS 1.0 and CPFS 2.0 file systems based on the format of the file system ID: The ID of the CPFS 1.0 file system is in the cpfs-&lt;8-bit ASCII characters&gt; format. The ID of the CPFS 2.0 file system is in the cpfs-&lt;16-bit ASCII characters&gt; format.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
-     * <p>oss://xxx</p>
+     * <p>nas://09f****f2.cn-hangzhou/</p>
      */
     @NameInMap("Uri")
     public String uri;
 
     /**
+     * <p>The user ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>2004110000006048</p>
+     * <p>2485765****023475</p>
      */
     @NameInMap("UserId")
     public String userId;
 
     /**
+     * <p>The ID of the workspace to which the dataset belongs.</p>
+     * 
      * <strong>example:</strong>
-     * <p>Workspace Id</p>
+     * <p>478**</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;
@@ -190,6 +299,14 @@ public class Dataset extends TeaModel {
     }
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    public Dataset setAccessibleRoleIdList(java.util.List<String> accessibleRoleIdList) {
+        this.accessibleRoleIdList = accessibleRoleIdList;
+        return this;
+    }
+    public java.util.List<String> getAccessibleRoleIdList() {
+        return this.accessibleRoleIdList;
     }
 
     public Dataset setDataSourceType(String dataSourceType) {

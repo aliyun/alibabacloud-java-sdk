@@ -7,30 +7,62 @@ public class DatasetShareRelationship extends TeaModel {
     @NameInMap("AllowedMountAccessLevels")
     public java.util.List<String> allowedMountAccessLevels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2026-08-27T12:23:58Z</p>
+     */
     @NameInMap("ExpiresAt")
     public String expiresAt;
 
     @NameInMap("Extra")
     public String extra;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsSecureMode")
     public Boolean isSecureMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2025-08-26T12:23:58Z</p>
+     */
     @NameInMap("SharedAt")
     public String sharedAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>148***************115</p>
+     */
     @NameInMap("SourceTenantId")
     public String sourceTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>33**19</p>
+     */
     @NameInMap("SourceWorkspaceId")
     public String sourceWorkspaceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ACTIVE</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>153***************249</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>42**2</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

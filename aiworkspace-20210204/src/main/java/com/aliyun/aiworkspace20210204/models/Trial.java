@@ -4,39 +4,75 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class Trial extends TeaModel {
+    /**
+     * <p>Accessibility</p>
+     */
     @NameInMap("Accessibility")
     public String accessibility;
 
+    /**
+     * <p>ExperimentId</p>
+     */
     @NameInMap("ExperimentId")
     public String experimentId;
 
+    /**
+     * <p>GmtCreateTime</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <p>GmtModifiedTime</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <p>Labels</p>
+     */
     @NameInMap("Labels")
     public java.util.List<java.util.Map<String, ?>> labels;
 
+    /**
+     * <p>Name</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>OwnerId</p>
+     */
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>SourceId</p>
+     */
     @NameInMap("SourceId")
     public String sourceId;
 
+    /**
+     * <p>SourceType</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 
+    /**
+     * <p>TrialId</p>
+     */
     @NameInMap("TrialId")
     public String trialId;
 
+    /**
+     * <p>UserId</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <p>WorkspaceId</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

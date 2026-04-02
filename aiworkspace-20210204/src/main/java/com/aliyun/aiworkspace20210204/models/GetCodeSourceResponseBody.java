@@ -17,6 +17,9 @@ public class GetCodeSourceResponseBody extends TeaModel {
     @NameInMap("Accessibility")
     public String accessibility;
 
+    @NameInMap("CloneType")
+    public Integer cloneType;
+
     /**
      * <p>The code repository branch.</p>
      * 
@@ -154,6 +157,14 @@ public class GetCodeSourceResponseBody extends TeaModel {
     }
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    public GetCodeSourceResponseBody setCloneType(Integer cloneType) {
+        this.cloneType = cloneType;
+        return this;
+    }
+    public Integer getCloneType() {
+        return this.cloneType;
     }
 
     public GetCodeSourceResponseBody setCodeBranch(String codeBranch) {

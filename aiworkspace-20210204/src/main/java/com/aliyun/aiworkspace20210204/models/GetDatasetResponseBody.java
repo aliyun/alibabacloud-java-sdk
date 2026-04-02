@@ -17,6 +17,9 @@ public class GetDatasetResponseBody extends TeaModel {
     @NameInMap("Accessibility")
     public String accessibility;
 
+    @NameInMap("AccessibleRoleIdList")
+    public java.util.List<String> accessibleRoleIdList;
+
     /**
      * <p>The type of the data source. Valid values:</p>
      * <ul>
@@ -336,6 +339,14 @@ public class GetDatasetResponseBody extends TeaModel {
     }
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    public GetDatasetResponseBody setAccessibleRoleIdList(java.util.List<String> accessibleRoleIdList) {
+        this.accessibleRoleIdList = accessibleRoleIdList;
+        return this;
+    }
+    public java.util.List<String> getAccessibleRoleIdList() {
+        return this.accessibleRoleIdList;
     }
 
     public GetDatasetResponseBody setDataSourceType(String dataSourceType) {

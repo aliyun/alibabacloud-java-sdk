@@ -4,45 +4,127 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class DatasetJob extends TeaModel {
+    /**
+     * <p>The number of completed files.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>990</p>
+     */
     @NameInMap("CompletedFileCount")
     public Long completedFileCount;
 
+    /**
+     * <p>The job creation time (UTC).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-06-20T04:05:59Z</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The job ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dsjob-9jx1*****uj9e</p>
+     */
     @NameInMap("DatasetJobId")
     public String datasetJobId;
 
+    /**
+     * <p>The dataset version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1</p>
+     */
     @NameInMap("DatasetVersion")
     public String datasetVersion;
 
+    /**
+     * <p>The job description.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The number of failed files.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("FailedFileCount")
     public Long failedFileCount;
 
+    /**
+     * <p>The job finish time (UTC).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-06-20T06:03:48Z</p>
+     */
     @NameInMap("FinishTime")
     public String finishTime;
 
+    /**
+     * <p>The job action.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SemanticIndex</p>
+     */
     @NameInMap("JobAction")
     public String jobAction;
 
+    /**
+     * <p>The job mode.</p>
+     * <p>Valid value:</p>
+     * <ul>
+     * <li>Full</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Full</p>
+     */
     @NameInMap("JobMode")
     public String jobMode;
 
+    /**
+     * <p>The job details.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;modelId\&quot;:\&quot;xxx\&quot;}</p>
+     */
     @NameInMap("JobSpec")
     public String jobSpec;
 
+    /**
+     * <p>The job logs.</p>
+     */
     @NameInMap("Logs")
     public java.util.List<String> logs;
 
+    /**
+     * <p>The job status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The number of job files.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("TotalFileCount")
     public Long totalFileCount;
 
+    /**
+     * <p>The workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>145883</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

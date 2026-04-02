@@ -5,18 +5,26 @@ import com.aliyun.tea.*;
 
 public class RunMetric extends TeaModel {
     /**
+     * <p>The metric name.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <p>The step number that generated the metric.</p>
+     */
     @NameInMap("Step")
     public Long step;
 
+    /**
+     * <p>The timestamp when the metric was generated.</p>
+     */
     @NameInMap("Timestamp")
     public Long timestamp;
 
     /**
+     * <p>The metric value.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Value")

@@ -4,12 +4,21 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class Relation extends TeaModel {
+    /**
+     * <p>ErrMsg</p>
+     */
     @NameInMap("ErrMsg")
     public String errMsg;
 
+    /**
+     * <p>LineageRelation</p>
+     */
     @NameInMap("LineageRelation")
     public LineageRelation lineageRelation;
 
+    /**
+     * <p>Result</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 

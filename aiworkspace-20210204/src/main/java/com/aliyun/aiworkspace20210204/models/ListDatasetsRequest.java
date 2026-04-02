@@ -36,6 +36,9 @@ public class ListDatasetsRequest extends TeaModel {
     @NameInMap("DataTypes")
     public String dataTypes;
 
+    @NameInMap("DatasetIds")
+    public String datasetIds;
+
     @NameInMap("Edition")
     public String edition;
 
@@ -195,6 +198,14 @@ public class ListDatasetsRequest extends TeaModel {
     }
     public String getDataTypes() {
         return this.dataTypes;
+    }
+
+    public ListDatasetsRequest setDatasetIds(String datasetIds) {
+        this.datasetIds = datasetIds;
+        return this;
+    }
+    public String getDatasetIds() {
+        return this.datasetIds;
     }
 
     public ListDatasetsRequest setEdition(String edition) {

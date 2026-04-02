@@ -4,12 +4,21 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class LineageRelation extends TeaModel {
+    /**
+     * <p>DestEntityQualifiedName</p>
+     */
     @NameInMap("DestEntityQualifiedName")
     public String destEntityQualifiedName;
 
+    /**
+     * <p>RelationshipGuid</p>
+     */
     @NameInMap("RelationshipGuid")
     public String relationshipGuid;
 
+    /**
+     * <p>SrcEntityQualifiedName</p>
+     */
     @NameInMap("SrcEntityQualifiedName")
     public String srcEntityQualifiedName;
 

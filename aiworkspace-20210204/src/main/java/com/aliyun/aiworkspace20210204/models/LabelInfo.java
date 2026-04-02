@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class LabelInfo extends TeaModel {
     /**
+     * <p>Key of Label</p>
+     * 
      * <strong>example:</strong>
      * <p>key</p>
      */
@@ -12,6 +14,8 @@ public class LabelInfo extends TeaModel {
     public String key;
 
     /**
+     * <p>Value of Label</p>
+     * 
      * <strong>example:</strong>
      * <p>value</p>
      */

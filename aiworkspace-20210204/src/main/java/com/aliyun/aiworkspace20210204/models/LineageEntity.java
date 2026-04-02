@@ -4,15 +4,27 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class LineageEntity extends TeaModel {
+    /**
+     * <p>Attributes</p>
+     */
     @NameInMap("Attributes")
     public java.util.Map<String, ?> attributes;
 
+    /**
+     * <p>EntityType</p>
+     */
     @NameInMap("EntityType")
     public String entityType;
 
+    /**
+     * <p>Name</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>QualifiedName</p>
+     */
     @NameInMap("QualifiedName")
     public String qualifiedName;
 

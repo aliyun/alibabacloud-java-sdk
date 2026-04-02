@@ -4,42 +4,81 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class Experiment extends TeaModel {
+    /**
+     * <p>Accessibility</p>
+     */
     @NameInMap("Accessibility")
     public String accessibility;
 
+    /**
+     * <p>ArtifactUri</p>
+     */
     @NameInMap("ArtifactUri")
     public String artifactUri;
 
+    /**
+     * <p>ExperimentId</p>
+     */
     @NameInMap("ExperimentId")
     public String experimentId;
 
+    /**
+     * <p>GmtCreatedTime</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <p>GmtModifiedTime</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <p>Labels</p>
+     */
     @NameInMap("Labels")
     public java.util.List<ExperimentLabel> labels;
 
+    /**
+     * <p>LatestRun</p>
+     */
     @NameInMap("LatestRun")
     public Run latestRun;
 
+    /**
+     * <p>Name</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>OwnerId</p>
+     */
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>RequestId</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>TensorboardLogUri</p>
+     */
     @NameInMap("TensorboardLogUri")
     public String tensorboardLogUri;
 
+    /**
+     * <p>UserId</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <p>WorkspaceId</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

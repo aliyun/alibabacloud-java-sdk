@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class RunParam extends TeaModel {
     /**
+     * <p>The name of the parameter.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Key")
     public String key;
 
     /**
+     * <p>The value of the parameter.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Value")

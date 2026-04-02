@@ -5,13 +5,24 @@ import com.aliyun.tea.*;
 
 public class CodeSourceItem extends TeaModel {
     /**
+     * <p>The visibility of the code source. Valid values:</p>
+     * <ul>
+     * <li>PRIVATE: Visible only to you and the administrator in the workspace.</li>
+     * <li>PUBLIC: Visible to all users in the workspace.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PUBLIC</p>
      */
     @NameInMap("Accessibility")
     public String accessibility;
 
+    @NameInMap("CloneType")
+    public Integer cloneType;
+
     /**
+     * <p>The code branch.</p>
+     * 
      * <strong>example:</strong>
      * <p>master</p>
      */
@@ -19,23 +30,32 @@ public class CodeSourceItem extends TeaModel {
     public String codeBranch;
 
     /**
+     * <p>The code commit ID</p>
+     * 
      * <strong>example:</strong>
-     * <p>44da109b59f8596152987eaa8f3b2487bb72ea63</p>
+     * <p>44da10**********</p>
      */
     @NameInMap("CodeCommit")
     public String codeCommit;
 
     /**
+     * <p>The address of the code repository.</p>
+     * 
      * <strong>example:</strong>
-     * <p><a href="https://code.aliyun.com/pai-dlc/examples.git">https://code.aliyun.com/pai-dlc/examples.git</a></p>
+     * <p><a href="https://code.aliyun.com/">https://code.aliyun.com/</a>****</p>
      */
     @NameInMap("CodeRepo")
     public String codeRepo;
 
+    /**
+     * <p>The token used to access the code repository.</p>
+     */
     @NameInMap("CodeRepoAccessToken")
     public String codeRepoAccessToken;
 
     /**
+     * <p>The username of the code repository.</p>
+     * 
      * <strong>example:</strong>
      * <p>user</p>
      */
@@ -43,13 +63,17 @@ public class CodeSourceItem extends TeaModel {
     public String codeRepoUserName;
 
     /**
+     * <p>The code source ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>code-20210111103721-85qz78ia96lu</p>
+     * <p>code-202**********</p>
      */
     @NameInMap("CodeSourceId")
     public String codeSourceId;
 
     /**
+     * <p>The code source description.</p>
+     * 
      * <strong>example:</strong>
      * <p>code source of dlc examples</p>
      */
@@ -57,6 +81,8 @@ public class CodeSourceItem extends TeaModel {
     public String description;
 
     /**
+     * <p>The code source name.</p>
+     * 
      * <strong>example:</strong>
      * <p>MyCodeSourceName1</p>
      */
@@ -64,6 +90,8 @@ public class CodeSourceItem extends TeaModel {
     public String displayName;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-18T12:52:15Z</p>
      */
@@ -71,6 +99,8 @@ public class CodeSourceItem extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The last modified time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-18T12:52:15Z</p>
      */
@@ -78,6 +108,8 @@ public class CodeSourceItem extends TeaModel {
     public String gmtModifyTime;
 
     /**
+     * <p>The local mount path of the code.</p>
+     * 
      * <strong>example:</strong>
      * <p>/root/code/</p>
      */
@@ -85,6 +117,8 @@ public class CodeSourceItem extends TeaModel {
     public String mountPath;
 
     /**
+     * <p>The ID of the creator.</p>
+     * 
      * <strong>example:</strong>
      * <p>1157290171663117</p>
      */
@@ -92,6 +126,8 @@ public class CodeSourceItem extends TeaModel {
     public String userId;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234</p>
      */
@@ -109,6 +145,14 @@ public class CodeSourceItem extends TeaModel {
     }
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    public CodeSourceItem setCloneType(Integer cloneType) {
+        this.cloneType = cloneType;
+        return this;
+    }
+    public Integer getCloneType() {
+        return this.cloneType;
     }
 
     public CodeSourceItem setCodeBranch(String codeBranch) {

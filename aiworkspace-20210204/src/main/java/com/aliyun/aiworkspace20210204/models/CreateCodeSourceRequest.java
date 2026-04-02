@@ -17,6 +17,9 @@ public class CreateCodeSourceRequest extends TeaModel {
     @NameInMap("Accessibility")
     public String accessibility;
 
+    @NameInMap("CloneType")
+    public Integer cloneType;
+
     /**
      * <p>The code branch.</p>
      * 
@@ -105,6 +108,14 @@ public class CreateCodeSourceRequest extends TeaModel {
     }
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    public CreateCodeSourceRequest setCloneType(Integer cloneType) {
+        this.cloneType = cloneType;
+        return this;
+    }
+    public Integer getCloneType() {
+        return this.cloneType;
     }
 
     public CreateCodeSourceRequest setCodeBranch(String codeBranch) {

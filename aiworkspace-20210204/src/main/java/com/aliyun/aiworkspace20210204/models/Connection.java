@@ -4,42 +4,117 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class Connection extends TeaModel {
+    /**
+     * <p>The workspace accessibility. Valid values:</p>
+     * <ul>
+     * <li>PRIVATE (default): accessible only to you and the administrator of the workspace.</li>
+     * <li>PUBLIC: accessible to all members in the workspace.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PRIVATE</p>
+     */
     @NameInMap("Accessibility")
     public String accessibility;
 
+    /**
+     * <p>The connection configuration.</p>
+     */
     @NameInMap("Configs")
     public java.util.Map<String, String> configs;
 
+    /**
+     * <p>The connection ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>conn-pai9m***mi47</p>
+     */
     @NameInMap("ConnectionId")
     public String connectionId;
 
+    /**
+     * <p>The connection name.</p>
+     */
     @NameInMap("ConnectionName")
     public String connectionName;
 
+    /**
+     * <p>The connection type. Valid values:</p>
+     * <ul>
+     * <li>DashScopeConnection</li>
+     * <li>OpenLLMConnection</li>
+     * <li>MilvusConnection</li>
+     * <li>OpenSearchConnection</li>
+     * <li>LindormConnection</li>
+     * <li>ElasticsearchConnection</li>
+     * <li>HologresConnection</li>
+     * <li>RDSConnection</li>
+     * <li>CustomConnection</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ElasticsearchConnection</p>
+     */
     @NameInMap("ConnectionType")
     public String connectionType;
 
+    /**
+     * <p>The connection creator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20925961****557803</p>
+     */
     @NameInMap("Creator")
     public String creator;
 
+    /**
+     * <p>The connection description.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The time when the connection was modified, in UTC. The time follows the ISO 8601 standard.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-03-07T07:54:56Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <p>The time when the connection was modified, in UTC. The time follows the ISO 8601 standard.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-03-07T07:54:56Z</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <p>The models.</p>
+     */
     @NameInMap("Models")
     public java.util.List<ConnectionModels> models;
 
+    /**
+     * <p>The connection resource. This parameter is used for the connection configuration of the database type.</p>
+     */
     @NameInMap("ResourceMeta")
     public ConnectionResourceMeta resourceMeta;
 
+    /**
+     * <p>The key-value configuration to be encrypted, such as the database logon password and the key for model connection.</p>
+     */
     @NameInMap("Secrets")
     public java.util.Map<String, String> secrets;
 
+    /**
+     * <p>The workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>228**</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -153,15 +228,45 @@ public class Connection extends TeaModel {
     }
 
     public static class ConnectionModels extends TeaModel {
+        /**
+         * <p>The display name of the model.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The model identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>model_001</p>
+         */
         @NameInMap("Model")
         public String model;
 
+        /**
+         * <p>The model type. Valid values:</p>
+         * <ul>
+         * <li>LLM</li>
+         * <li>Embedding</li>
+         * <li>ReRank</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LLM</p>
+         */
         @NameInMap("ModelType")
         public String modelType;
 
+        /**
+         * <p>Indicates whether tool calling was supported. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ToolCall")
         public Boolean toolCall;
 
@@ -208,9 +313,18 @@ public class Connection extends TeaModel {
         @NameInMap("Extra")
         public String extra;
 
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ld-2vc1***v1zaqgzol</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The instance name.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 

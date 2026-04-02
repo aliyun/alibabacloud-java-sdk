@@ -17,6 +17,9 @@ public class CreateDatasetRequest extends TeaModel {
     @NameInMap("Accessibility")
     public String accessibility;
 
+    @NameInMap("AccessibleRoleIdList")
+    public java.util.List<String> accessibleRoleIdList;
+
     /**
      * <p>The number of dataset files.</p>
      * 
@@ -302,6 +305,14 @@ public class CreateDatasetRequest extends TeaModel {
     }
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    public CreateDatasetRequest setAccessibleRoleIdList(java.util.List<String> accessibleRoleIdList) {
+        this.accessibleRoleIdList = accessibleRoleIdList;
+        return this;
+    }
+    public java.util.List<String> getAccessibleRoleIdList() {
+        return this.accessibleRoleIdList;
     }
 
     public CreateDatasetRequest setDataCount(Long dataCount) {

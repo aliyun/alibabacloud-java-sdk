@@ -4,22 +4,33 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class RunLabel extends TeaModel {
+    /**
+     * <p>The creation time.</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <p>The last modified time.</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
     /**
+     * <p>The label key.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <p>The ID of the run.</p>
+     */
     @NameInMap("RunId")
     public String runId;
 
     /**
+     * <p>The label value.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Value")

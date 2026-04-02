@@ -4,6 +4,9 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class UpdateCodeSourceRequest extends TeaModel {
+    @NameInMap("CloneType")
+    public Integer cloneType;
+
     /**
      * <p>The name of the code branch.</p>
      * 
@@ -76,6 +79,14 @@ public class UpdateCodeSourceRequest extends TeaModel {
     public static UpdateCodeSourceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateCodeSourceRequest self = new UpdateCodeSourceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateCodeSourceRequest setCloneType(Integer cloneType) {
+        this.cloneType = cloneType;
+        return this;
+    }
+    public Integer getCloneType() {
+        return this.cloneType;
     }
 
     public UpdateCodeSourceRequest setCodeBranch(String codeBranch) {

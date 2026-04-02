@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Collection extends TeaModel {
     /**
+     * <p>The name of the collection. The name must be globally unique.</p>
+     * 
      * <strong>example:</strong>
      * <p>AI4D</p>
      */
@@ -12,6 +14,8 @@ public class Collection extends TeaModel {
     public String collectionName;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-21T17:12:35Z</p>
      */
@@ -19,6 +23,8 @@ public class Collection extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The last update time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-21T17:12:35Z</p>
      */
@@ -26,6 +32,8 @@ public class Collection extends TeaModel {
     public String gmtModifiedTime;
 
     /**
+     * <p>The ID of the Alibaba Cloud account.</p>
+     * 
      * <strong>example:</strong>
      * <p>155770209******</p>
      */
@@ -33,6 +41,8 @@ public class Collection extends TeaModel {
     public String ownerId;
 
     /**
+     * <p>The ID of the user that created the collection.</p>
+     * 
      * <strong>example:</strong>
      * <p>155770209******</p>
      */

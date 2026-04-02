@@ -4,9 +4,15 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class DatasetLabel extends TeaModel {
+    /**
+     * <p>Key</p>
+     */
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <p>Value</p>
+     */
     @NameInMap("Value")
     public String value;
 

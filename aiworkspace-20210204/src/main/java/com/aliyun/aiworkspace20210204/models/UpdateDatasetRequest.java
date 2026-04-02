@@ -4,6 +4,12 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class UpdateDatasetRequest extends TeaModel {
+    @NameInMap("Accessibility")
+    public String accessibility;
+
+    @NameInMap("AccessibleRoleIdList")
+    public java.util.List<String> accessibleRoleIdList;
+
     /**
      * <p>The description of the dataset.</p>
      */
@@ -54,6 +60,22 @@ public class UpdateDatasetRequest extends TeaModel {
     public static UpdateDatasetRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDatasetRequest self = new UpdateDatasetRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateDatasetRequest setAccessibility(String accessibility) {
+        this.accessibility = accessibility;
+        return this;
+    }
+    public String getAccessibility() {
+        return this.accessibility;
+    }
+
+    public UpdateDatasetRequest setAccessibleRoleIdList(java.util.List<String> accessibleRoleIdList) {
+        this.accessibleRoleIdList = accessibleRoleIdList;
+        return this;
+    }
+    public java.util.List<String> getAccessibleRoleIdList() {
+        return this.accessibleRoleIdList;
     }
 
     public UpdateDatasetRequest setDescription(String description) {

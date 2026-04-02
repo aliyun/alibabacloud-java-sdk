@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExperimentLabel extends TeaModel {
     /**
+     * <p>ExperimentId</p>
+     * 
      * <strong>example:</strong>
      * <p>exp-890waerw09a0f</p>
      */
@@ -12,6 +14,8 @@ public class ExperimentLabel extends TeaModel {
     public String experimentId;
 
     /**
+     * <p>Create time</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-12-27T03:30:04Z</p>
      */
@@ -19,6 +23,8 @@ public class ExperimentLabel extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>Modified time</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-12-27T03:30:04Z</p>
      */
@@ -26,6 +32,8 @@ public class ExperimentLabel extends TeaModel {
     public String gmtModifiedTime;
 
     /**
+     * <p>Key of Experiment Label</p>
+     * 
      * <strong>example:</strong>
      * <p>key</p>
      */
@@ -33,6 +41,8 @@ public class ExperimentLabel extends TeaModel {
     public String key;
 
     /**
+     * <p>Value of Experiment Label</p>
+     * 
      * <strong>example:</strong>
      * <p>value</p>
      */
