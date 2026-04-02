@@ -202,6 +202,44 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
 
     }
 
+    public static class ChatWithKnowledgeBaseRequestKnowledgeParamsRerankModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Given a web search query, retrieve relevant passages that answer the query</p>
+         */
+        @NameInMap("Instruct")
+        public String instruct;
+
+        /**
+         * <strong>example:</strong>
+         * <p>qwen3-rerank</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        public static ChatWithKnowledgeBaseRequestKnowledgeParamsRerankModel build(java.util.Map<String, ?> map) throws Exception {
+            ChatWithKnowledgeBaseRequestKnowledgeParamsRerankModel self = new ChatWithKnowledgeBaseRequestKnowledgeParamsRerankModel();
+            return TeaModel.build(map, self);
+        }
+
+        public ChatWithKnowledgeBaseRequestKnowledgeParamsRerankModel setInstruct(String instruct) {
+            this.instruct = instruct;
+            return this;
+        }
+        public String getInstruct() {
+            return this.instruct;
+        }
+
+        public ChatWithKnowledgeBaseRequestKnowledgeParamsRerankModel setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class ChatWithKnowledgeBaseRequestKnowledgeParamsSourceCollectionQueryParamsGraphSearchArgs extends TeaModel {
         /**
          * <p>Returns the top number of entities and relationship edges. Default value: 60.</p>
@@ -223,6 +261,44 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
         }
         public Long getGraphTopK() {
             return this.graphTopK;
+        }
+
+    }
+
+    public static class ChatWithKnowledgeBaseRequestKnowledgeParamsSourceCollectionQueryParamsRerankModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Given a web search query, retrieve relevant passages that answer the query</p>
+         */
+        @NameInMap("Instruct")
+        public String instruct;
+
+        /**
+         * <strong>example:</strong>
+         * <p>qwen3-rerank</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        public static ChatWithKnowledgeBaseRequestKnowledgeParamsSourceCollectionQueryParamsRerankModel build(java.util.Map<String, ?> map) throws Exception {
+            ChatWithKnowledgeBaseRequestKnowledgeParamsSourceCollectionQueryParamsRerankModel self = new ChatWithKnowledgeBaseRequestKnowledgeParamsSourceCollectionQueryParamsRerankModel();
+            return TeaModel.build(map, self);
+        }
+
+        public ChatWithKnowledgeBaseRequestKnowledgeParamsSourceCollectionQueryParamsRerankModel setInstruct(String instruct) {
+            this.instruct = instruct;
+            return this;
+        }
+        public String getInstruct() {
+            return this.instruct;
+        }
+
+        public ChatWithKnowledgeBaseRequestKnowledgeParamsSourceCollectionQueryParamsRerankModel setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }
@@ -340,6 +416,9 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
         @NameInMap("RerankFactor")
         public Double rerankFactor;
 
+        @NameInMap("RerankModel")
+        public ChatWithKnowledgeBaseRequestKnowledgeParamsSourceCollectionQueryParamsRerankModel rerankModel;
+
         /**
          * <p>The number of top results.</p>
          * 
@@ -425,6 +504,14 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
         }
         public Double getRerankFactor() {
             return this.rerankFactor;
+        }
+
+        public ChatWithKnowledgeBaseRequestKnowledgeParamsSourceCollectionQueryParams setRerankModel(ChatWithKnowledgeBaseRequestKnowledgeParamsSourceCollectionQueryParamsRerankModel rerankModel) {
+            this.rerankModel = rerankModel;
+            return this;
+        }
+        public ChatWithKnowledgeBaseRequestKnowledgeParamsSourceCollectionQueryParamsRerankModel getRerankModel() {
+            return this.rerankModel;
         }
 
         public ChatWithKnowledgeBaseRequestKnowledgeParamsSourceCollectionQueryParams setTopK(Long topK) {
@@ -563,6 +650,9 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
         @NameInMap("RerankFactor")
         public Double rerankFactor;
 
+        @NameInMap("RerankModel")
+        public ChatWithKnowledgeBaseRequestKnowledgeParamsRerankModel rerankModel;
+
         /**
          * <p>Knowledge base.</p>
          * <p>This parameter is required.</p>
@@ -606,6 +696,14 @@ public class ChatWithKnowledgeBaseRequest extends TeaModel {
         }
         public Double getRerankFactor() {
             return this.rerankFactor;
+        }
+
+        public ChatWithKnowledgeBaseRequestKnowledgeParams setRerankModel(ChatWithKnowledgeBaseRequestKnowledgeParamsRerankModel rerankModel) {
+            this.rerankModel = rerankModel;
+            return this;
+        }
+        public ChatWithKnowledgeBaseRequestKnowledgeParamsRerankModel getRerankModel() {
+            return this.rerankModel;
         }
 
         public ChatWithKnowledgeBaseRequestKnowledgeParams setSourceCollection(java.util.List<ChatWithKnowledgeBaseRequestKnowledgeParamsSourceCollection> sourceCollection) {

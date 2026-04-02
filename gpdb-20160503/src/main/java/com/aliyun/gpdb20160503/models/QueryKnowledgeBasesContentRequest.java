@@ -73,6 +73,9 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
     @NameInMap("RerankFactor")
     public Double rerankFactor;
 
+    @NameInMap("RerankModel")
+    public QueryKnowledgeBasesContentRequestRerankModel rerankModel;
+
     /**
      * <p>The information about collections to retrieve from.</p>
      * <p>This parameter is required.</p>
@@ -148,6 +151,14 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
     }
     public Double getRerankFactor() {
         return this.rerankFactor;
+    }
+
+    public QueryKnowledgeBasesContentRequest setRerankModel(QueryKnowledgeBasesContentRequestRerankModel rerankModel) {
+        this.rerankModel = rerankModel;
+        return this;
+    }
+    public QueryKnowledgeBasesContentRequestRerankModel getRerankModel() {
+        return this.rerankModel;
     }
 
     public QueryKnowledgeBasesContentRequest setSourceCollection(java.util.List<QueryKnowledgeBasesContentRequestSourceCollection> sourceCollection) {
@@ -249,6 +260,36 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
 
     }
 
+    public static class QueryKnowledgeBasesContentRequestRerankModel extends TeaModel {
+        @NameInMap("Instruct")
+        public String instruct;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static QueryKnowledgeBasesContentRequestRerankModel build(java.util.Map<String, ?> map) throws Exception {
+            QueryKnowledgeBasesContentRequestRerankModel self = new QueryKnowledgeBasesContentRequestRerankModel();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryKnowledgeBasesContentRequestRerankModel setInstruct(String instruct) {
+            this.instruct = instruct;
+            return this;
+        }
+        public String getInstruct() {
+            return this.instruct;
+        }
+
+        public QueryKnowledgeBasesContentRequestRerankModel setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class QueryKnowledgeBasesContentRequestSourceCollectionQueryParamsGraphSearchArgs extends TeaModel {
         /**
          * <p>Returns the top number of entities and relationship edges. Default value: 60.</p>
@@ -270,6 +311,36 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
         }
         public Long getGraphTopK() {
             return this.graphTopK;
+        }
+
+    }
+
+    public static class QueryKnowledgeBasesContentRequestSourceCollectionQueryParamsRerankModel extends TeaModel {
+        @NameInMap("Instruct")
+        public String instruct;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static QueryKnowledgeBasesContentRequestSourceCollectionQueryParamsRerankModel build(java.util.Map<String, ?> map) throws Exception {
+            QueryKnowledgeBasesContentRequestSourceCollectionQueryParamsRerankModel self = new QueryKnowledgeBasesContentRequestSourceCollectionQueryParamsRerankModel();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryKnowledgeBasesContentRequestSourceCollectionQueryParamsRerankModel setInstruct(String instruct) {
+            this.instruct = instruct;
+            return this;
+        }
+        public String getInstruct() {
+            return this.instruct;
+        }
+
+        public QueryKnowledgeBasesContentRequestSourceCollectionQueryParamsRerankModel setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }
@@ -412,6 +483,9 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
         @NameInMap("RerankFactor")
         public Double rerankFactor;
 
+        @NameInMap("RerankModel")
+        public QueryKnowledgeBasesContentRequestSourceCollectionQueryParamsRerankModel rerankModel;
+
         /**
          * <p>The number of top results.</p>
          * 
@@ -513,6 +587,14 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
         }
         public Double getRerankFactor() {
             return this.rerankFactor;
+        }
+
+        public QueryKnowledgeBasesContentRequestSourceCollectionQueryParams setRerankModel(QueryKnowledgeBasesContentRequestSourceCollectionQueryParamsRerankModel rerankModel) {
+            this.rerankModel = rerankModel;
+            return this;
+        }
+        public QueryKnowledgeBasesContentRequestSourceCollectionQueryParamsRerankModel getRerankModel() {
+            return this.rerankModel;
         }
 
         public QueryKnowledgeBasesContentRequestSourceCollectionQueryParams setTopK(Long topK) {

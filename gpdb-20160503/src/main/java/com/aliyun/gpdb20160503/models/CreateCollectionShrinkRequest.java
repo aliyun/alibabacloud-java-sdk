@@ -4,6 +4,9 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class CreateCollectionShrinkRequest extends TeaModel {
+    @NameInMap("Algorithm")
+    public String algorithm;
+
     /**
      * <p>The name of the collection that you want to create.</p>
      * <blockquote>
@@ -206,6 +209,9 @@ public class CreateCollectionShrinkRequest extends TeaModel {
     @NameInMap("SupportSparse")
     public Boolean supportSparse;
 
+    @NameInMap("VectorIndexConfig")
+    public String vectorIndexConfigShrink;
+
     /**
      * <p>The ID of the workspace that consists of multiple AnalyticDB for PostgreSQL instances. You must specify one of the WorkspaceId and DBInstanceId parameters. If you specify both parameters, the WorkspaceId parameter takes effect.</p>
      * 
@@ -218,6 +224,14 @@ public class CreateCollectionShrinkRequest extends TeaModel {
     public static CreateCollectionShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCollectionShrinkRequest self = new CreateCollectionShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateCollectionShrinkRequest setAlgorithm(String algorithm) {
+        this.algorithm = algorithm;
+        return this;
+    }
+    public String getAlgorithm() {
+        return this.algorithm;
     }
 
     public CreateCollectionShrinkRequest setCollection(String collection) {
@@ -370,6 +384,14 @@ public class CreateCollectionShrinkRequest extends TeaModel {
     }
     public Boolean getSupportSparse() {
         return this.supportSparse;
+    }
+
+    public CreateCollectionShrinkRequest setVectorIndexConfigShrink(String vectorIndexConfigShrink) {
+        this.vectorIndexConfigShrink = vectorIndexConfigShrink;
+        return this;
+    }
+    public String getVectorIndexConfigShrink() {
+        return this.vectorIndexConfigShrink;
     }
 
     public CreateCollectionShrinkRequest setWorkspaceId(String workspaceId) {

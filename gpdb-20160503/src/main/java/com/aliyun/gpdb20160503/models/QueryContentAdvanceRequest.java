@@ -270,6 +270,9 @@ public class QueryContentAdvanceRequest extends TeaModel {
     @NameInMap("RerankFactor")
     public Double rerankFactor;
 
+    @NameInMap("RerankModel")
+    public QueryContentAdvanceRequestRerankModel rerankModel;
+
     /**
      * <p>The number of the returned top results.</p>
      * 
@@ -489,6 +492,14 @@ public class QueryContentAdvanceRequest extends TeaModel {
         return this.rerankFactor;
     }
 
+    public QueryContentAdvanceRequest setRerankModel(QueryContentAdvanceRequestRerankModel rerankModel) {
+        this.rerankModel = rerankModel;
+        return this;
+    }
+    public QueryContentAdvanceRequestRerankModel getRerankModel() {
+        return this.rerankModel;
+    }
+
     public QueryContentAdvanceRequest setTopK(Integer topK) {
         this.topK = topK;
         return this;
@@ -534,6 +545,44 @@ public class QueryContentAdvanceRequest extends TeaModel {
         }
         public Integer getGraphTopK() {
             return this.graphTopK;
+        }
+
+    }
+
+    public static class QueryContentAdvanceRequestRerankModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Given a web search query, retrieve relevant passages that answer the query</p>
+         */
+        @NameInMap("Instruct")
+        public String instruct;
+
+        /**
+         * <strong>example:</strong>
+         * <p>qwen3-rerank</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        public static QueryContentAdvanceRequestRerankModel build(java.util.Map<String, ?> map) throws Exception {
+            QueryContentAdvanceRequestRerankModel self = new QueryContentAdvanceRequestRerankModel();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryContentAdvanceRequestRerankModel setInstruct(String instruct) {
+            this.instruct = instruct;
+            return this;
+        }
+        public String getInstruct() {
+            return this.instruct;
+        }
+
+        public QueryContentAdvanceRequestRerankModel setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }

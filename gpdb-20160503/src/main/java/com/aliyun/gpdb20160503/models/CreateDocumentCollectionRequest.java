@@ -4,6 +4,9 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class CreateDocumentCollectionRequest extends TeaModel {
+    @NameInMap("Algorithm")
+    public String algorithm;
+
     /**
      * <p>The name of the document collection that you want to create.</p>
      * <blockquote>
@@ -261,9 +264,20 @@ public class CreateDocumentCollectionRequest extends TeaModel {
     @NameInMap("SupportSparse")
     public Boolean supportSparse;
 
+    @NameInMap("VectorIndexConfig")
+    public CreateDocumentCollectionRequestVectorIndexConfig vectorIndexConfig;
+
     public static CreateDocumentCollectionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDocumentCollectionRequest self = new CreateDocumentCollectionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDocumentCollectionRequest setAlgorithm(String algorithm) {
+        this.algorithm = algorithm;
+        return this;
+    }
+    public String getAlgorithm() {
+        return this.algorithm;
     }
 
     public CreateDocumentCollectionRequest setCollection(String collection) {
@@ -474,7 +488,18 @@ public class CreateDocumentCollectionRequest extends TeaModel {
         return this.supportSparse;
     }
 
+    public CreateDocumentCollectionRequest setVectorIndexConfig(CreateDocumentCollectionRequestVectorIndexConfig vectorIndexConfig) {
+        this.vectorIndexConfig = vectorIndexConfig;
+        return this;
+    }
+    public CreateDocumentCollectionRequestVectorIndexConfig getVectorIndexConfig() {
+        return this.vectorIndexConfig;
+    }
+
     public static class CreateDocumentCollectionRequestSparseVectorIndexConfig extends TeaModel {
+        @NameInMap("Algorithm")
+        public String algorithm;
+
         @NameInMap("HnswEfConstruction")
         public Integer hnswEfConstruction;
 
@@ -484,6 +509,14 @@ public class CreateDocumentCollectionRequest extends TeaModel {
         public static CreateDocumentCollectionRequestSparseVectorIndexConfig build(java.util.Map<String, ?> map) throws Exception {
             CreateDocumentCollectionRequestSparseVectorIndexConfig self = new CreateDocumentCollectionRequestSparseVectorIndexConfig();
             return TeaModel.build(map, self);
+        }
+
+        public CreateDocumentCollectionRequestSparseVectorIndexConfig setAlgorithm(String algorithm) {
+            this.algorithm = algorithm;
+            return this;
+        }
+        public String getAlgorithm() {
+            return this.algorithm;
         }
 
         public CreateDocumentCollectionRequestSparseVectorIndexConfig setHnswEfConstruction(Integer hnswEfConstruction) {
@@ -500,6 +533,36 @@ public class CreateDocumentCollectionRequest extends TeaModel {
         }
         public Integer getHnswM() {
             return this.hnswM;
+        }
+
+    }
+
+    public static class CreateDocumentCollectionRequestVectorIndexConfig extends TeaModel {
+        @NameInMap("Nlist")
+        public Integer nlist;
+
+        @NameInMap("RabitqBits")
+        public Integer rabitqBits;
+
+        public static CreateDocumentCollectionRequestVectorIndexConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateDocumentCollectionRequestVectorIndexConfig self = new CreateDocumentCollectionRequestVectorIndexConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDocumentCollectionRequestVectorIndexConfig setNlist(Integer nlist) {
+            this.nlist = nlist;
+            return this;
+        }
+        public Integer getNlist() {
+            return this.nlist;
+        }
+
+        public CreateDocumentCollectionRequestVectorIndexConfig setRabitqBits(Integer rabitqBits) {
+            this.rabitqBits = rabitqBits;
+            return this;
+        }
+        public Integer getRabitqBits() {
+            return this.rabitqBits;
         }
 
     }

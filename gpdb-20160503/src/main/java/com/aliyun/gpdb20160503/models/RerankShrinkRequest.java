@@ -24,6 +24,13 @@ public class RerankShrinkRequest extends TeaModel {
     public String documentsShrink;
 
     /**
+     * <strong>example:</strong>
+     * <p>Given a web search query, retrieve relevant passages that answer the query</p>
+     */
+    @NameInMap("Instruct")
+    public String instruct;
+
+    /**
      * <p>Maximum number of chunks allowed when the text exceeds the model window:</p>
      * <ul>
      * <li>bge-reranker-v2-m3: default value is 10.</li>
@@ -114,6 +121,14 @@ public class RerankShrinkRequest extends TeaModel {
     }
     public String getDocumentsShrink() {
         return this.documentsShrink;
+    }
+
+    public RerankShrinkRequest setInstruct(String instruct) {
+        this.instruct = instruct;
+        return this;
+    }
+    public String getInstruct() {
+        return this.instruct;
     }
 
     public RerankShrinkRequest setMaxChunksPerDoc(Integer maxChunksPerDoc) {

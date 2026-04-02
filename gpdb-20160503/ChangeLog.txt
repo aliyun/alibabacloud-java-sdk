@@ -1,3 +1,25 @@
+2026-04-02 Version: 4.3.0
+- Support API DeleteChunks.
+- Support API ListChunks.
+- Update API ChatWithKnowledgeBase: add request parameters KnowledgeParams.RerankModel.
+- Update API ChatWithKnowledgeBase: add request parameters KnowledgeParams.SourceCollection.$.QueryParams.RerankModel.
+- Update API ChatWithKnowledgeBaseStream: add request parameters KnowledgeParams.RerankModel.
+- Update API ChatWithKnowledgeBaseStream: add request parameters KnowledgeParams.SourceCollection.$.QueryParams.RerankModel.
+- Update API CreateCollection: add request parameters Algorithm.
+- Update API CreateCollection: add request parameters VectorIndexConfig.
+- Update API CreateCollection: add request parameters SparseVectorIndexConfig.Algorithm.
+- Update API CreateDocumentCollection: add request parameters Algorithm.
+- Update API CreateDocumentCollection: add request parameters VectorIndexConfig.
+- Update API CreateDocumentCollection: add request parameters SparseVectorIndexConfig.Algorithm.
+- Update API CreateVectorIndex: add request parameters Algorithm.
+- Update API CreateVectorIndex: add request parameters Nlist.
+- Update API CreateVectorIndex: add request parameters RabitqBits.
+- Update API QueryContent: add request parameters RerankModel.
+- Update API QueryKnowledgeBasesContent: add request parameters RerankModel.
+- Update API QueryKnowledgeBasesContent: add request parameters SourceCollection.$.QueryParams.RerankModel.
+- Update API Rerank: add request parameters Instruct.
+
+
 2026-03-19 Version: 4.2.0
 - Support API CreateAIService.
 - Support API DeleteAIService.

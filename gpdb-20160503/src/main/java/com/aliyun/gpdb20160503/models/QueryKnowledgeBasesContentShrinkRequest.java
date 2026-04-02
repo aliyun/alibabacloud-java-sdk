@@ -73,6 +73,9 @@ public class QueryKnowledgeBasesContentShrinkRequest extends TeaModel {
     @NameInMap("RerankFactor")
     public Double rerankFactor;
 
+    @NameInMap("RerankModel")
+    public String rerankModelShrink;
+
     /**
      * <p>The information about collections to retrieve from.</p>
      * <p>This parameter is required.</p>
@@ -148,6 +151,14 @@ public class QueryKnowledgeBasesContentShrinkRequest extends TeaModel {
     }
     public Double getRerankFactor() {
         return this.rerankFactor;
+    }
+
+    public QueryKnowledgeBasesContentShrinkRequest setRerankModelShrink(String rerankModelShrink) {
+        this.rerankModelShrink = rerankModelShrink;
+        return this;
+    }
+    public String getRerankModelShrink() {
+        return this.rerankModelShrink;
     }
 
     public QueryKnowledgeBasesContentShrinkRequest setSourceCollectionShrink(String sourceCollectionShrink) {

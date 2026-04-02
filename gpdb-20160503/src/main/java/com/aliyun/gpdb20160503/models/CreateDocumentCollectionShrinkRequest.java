@@ -4,6 +4,9 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class CreateDocumentCollectionShrinkRequest extends TeaModel {
+    @NameInMap("Algorithm")
+    public String algorithm;
+
     /**
      * <p>The name of the document collection that you want to create.</p>
      * <blockquote>
@@ -261,9 +264,20 @@ public class CreateDocumentCollectionShrinkRequest extends TeaModel {
     @NameInMap("SupportSparse")
     public Boolean supportSparse;
 
+    @NameInMap("VectorIndexConfig")
+    public String vectorIndexConfigShrink;
+
     public static CreateDocumentCollectionShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDocumentCollectionShrinkRequest self = new CreateDocumentCollectionShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDocumentCollectionShrinkRequest setAlgorithm(String algorithm) {
+        this.algorithm = algorithm;
+        return this;
+    }
+    public String getAlgorithm() {
+        return this.algorithm;
     }
 
     public CreateDocumentCollectionShrinkRequest setCollection(String collection) {
@@ -472,6 +486,14 @@ public class CreateDocumentCollectionShrinkRequest extends TeaModel {
     }
     public Boolean getSupportSparse() {
         return this.supportSparse;
+    }
+
+    public CreateDocumentCollectionShrinkRequest setVectorIndexConfigShrink(String vectorIndexConfigShrink) {
+        this.vectorIndexConfigShrink = vectorIndexConfigShrink;
+        return this;
+    }
+    public String getVectorIndexConfigShrink() {
+        return this.vectorIndexConfigShrink;
     }
 
 }

@@ -4,6 +4,9 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class CreateCollectionRequest extends TeaModel {
+    @NameInMap("Algorithm")
+    public String algorithm;
+
     /**
      * <p>The name of the collection that you want to create.</p>
      * <blockquote>
@@ -206,6 +209,9 @@ public class CreateCollectionRequest extends TeaModel {
     @NameInMap("SupportSparse")
     public Boolean supportSparse;
 
+    @NameInMap("VectorIndexConfig")
+    public CreateCollectionRequestVectorIndexConfig vectorIndexConfig;
+
     /**
      * <p>The ID of the workspace that consists of multiple AnalyticDB for PostgreSQL instances. You must specify one of the WorkspaceId and DBInstanceId parameters. If you specify both parameters, the WorkspaceId parameter takes effect.</p>
      * 
@@ -218,6 +224,14 @@ public class CreateCollectionRequest extends TeaModel {
     public static CreateCollectionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCollectionRequest self = new CreateCollectionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateCollectionRequest setAlgorithm(String algorithm) {
+        this.algorithm = algorithm;
+        return this;
+    }
+    public String getAlgorithm() {
+        return this.algorithm;
     }
 
     public CreateCollectionRequest setCollection(String collection) {
@@ -372,6 +386,14 @@ public class CreateCollectionRequest extends TeaModel {
         return this.supportSparse;
     }
 
+    public CreateCollectionRequest setVectorIndexConfig(CreateCollectionRequestVectorIndexConfig vectorIndexConfig) {
+        this.vectorIndexConfig = vectorIndexConfig;
+        return this;
+    }
+    public CreateCollectionRequestVectorIndexConfig getVectorIndexConfig() {
+        return this.vectorIndexConfig;
+    }
+
     public CreateCollectionRequest setWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
@@ -381,6 +403,9 @@ public class CreateCollectionRequest extends TeaModel {
     }
 
     public static class CreateCollectionRequestSparseVectorIndexConfig extends TeaModel {
+        @NameInMap("Algorithm")
+        public String algorithm;
+
         @NameInMap("HnswEfConstruction")
         public Integer hnswEfConstruction;
 
@@ -390,6 +415,14 @@ public class CreateCollectionRequest extends TeaModel {
         public static CreateCollectionRequestSparseVectorIndexConfig build(java.util.Map<String, ?> map) throws Exception {
             CreateCollectionRequestSparseVectorIndexConfig self = new CreateCollectionRequestSparseVectorIndexConfig();
             return TeaModel.build(map, self);
+        }
+
+        public CreateCollectionRequestSparseVectorIndexConfig setAlgorithm(String algorithm) {
+            this.algorithm = algorithm;
+            return this;
+        }
+        public String getAlgorithm() {
+            return this.algorithm;
         }
 
         public CreateCollectionRequestSparseVectorIndexConfig setHnswEfConstruction(Integer hnswEfConstruction) {
@@ -406,6 +439,36 @@ public class CreateCollectionRequest extends TeaModel {
         }
         public Integer getHnswM() {
             return this.hnswM;
+        }
+
+    }
+
+    public static class CreateCollectionRequestVectorIndexConfig extends TeaModel {
+        @NameInMap("Nlist")
+        public Integer nlist;
+
+        @NameInMap("RabitqBits")
+        public Integer rabitqBits;
+
+        public static CreateCollectionRequestVectorIndexConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateCollectionRequestVectorIndexConfig self = new CreateCollectionRequestVectorIndexConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateCollectionRequestVectorIndexConfig setNlist(Integer nlist) {
+            this.nlist = nlist;
+            return this;
+        }
+        public Integer getNlist() {
+            return this.nlist;
+        }
+
+        public CreateCollectionRequestVectorIndexConfig setRabitqBits(Integer rabitqBits) {
+            this.rabitqBits = rabitqBits;
+            return this;
+        }
+        public Integer getRabitqBits() {
+            return this.rabitqBits;
         }
 
     }

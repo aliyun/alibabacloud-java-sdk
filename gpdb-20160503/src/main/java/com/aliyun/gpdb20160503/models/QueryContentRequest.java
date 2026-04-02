@@ -270,6 +270,9 @@ public class QueryContentRequest extends TeaModel {
     @NameInMap("RerankFactor")
     public Double rerankFactor;
 
+    @NameInMap("RerankModel")
+    public QueryContentRequestRerankModel rerankModel;
+
     /**
      * <p>The number of the returned top results.</p>
      * 
@@ -489,6 +492,14 @@ public class QueryContentRequest extends TeaModel {
         return this.rerankFactor;
     }
 
+    public QueryContentRequest setRerankModel(QueryContentRequestRerankModel rerankModel) {
+        this.rerankModel = rerankModel;
+        return this;
+    }
+    public QueryContentRequestRerankModel getRerankModel() {
+        return this.rerankModel;
+    }
+
     public QueryContentRequest setTopK(Integer topK) {
         this.topK = topK;
         return this;
@@ -534,6 +545,44 @@ public class QueryContentRequest extends TeaModel {
         }
         public Integer getGraphTopK() {
             return this.graphTopK;
+        }
+
+    }
+
+    public static class QueryContentRequestRerankModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Given a web search query, retrieve relevant passages that answer the query</p>
+         */
+        @NameInMap("Instruct")
+        public String instruct;
+
+        /**
+         * <strong>example:</strong>
+         * <p>qwen3-rerank</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        public static QueryContentRequestRerankModel build(java.util.Map<String, ?> map) throws Exception {
+            QueryContentRequestRerankModel self = new QueryContentRequestRerankModel();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryContentRequestRerankModel setInstruct(String instruct) {
+            this.instruct = instruct;
+            return this;
+        }
+        public String getInstruct() {
+            return this.instruct;
+        }
+
+        public QueryContentRequestRerankModel setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }

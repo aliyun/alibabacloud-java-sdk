@@ -270,6 +270,9 @@ public class QueryContentShrinkRequest extends TeaModel {
     @NameInMap("RerankFactor")
     public Double rerankFactor;
 
+    @NameInMap("RerankModel")
+    public String rerankModelShrink;
+
     /**
      * <p>The number of the returned top results.</p>
      * 
@@ -487,6 +490,14 @@ public class QueryContentShrinkRequest extends TeaModel {
     }
     public Double getRerankFactor() {
         return this.rerankFactor;
+    }
+
+    public QueryContentShrinkRequest setRerankModelShrink(String rerankModelShrink) {
+        this.rerankModelShrink = rerankModelShrink;
+        return this;
+    }
+    public String getRerankModelShrink() {
+        return this.rerankModelShrink;
     }
 
     public QueryContentShrinkRequest setTopK(Integer topK) {

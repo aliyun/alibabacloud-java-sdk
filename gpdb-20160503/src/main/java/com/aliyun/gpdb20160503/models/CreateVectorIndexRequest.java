@@ -4,6 +4,9 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class CreateVectorIndexRequest extends TeaModel {
+    @NameInMap("Algorithm")
+    public String algorithm;
+
     /**
      * <p>Collection name.</p>
      * <blockquote>
@@ -127,6 +130,9 @@ public class CreateVectorIndexRequest extends TeaModel {
     @NameInMap("Namespace")
     public String namespace;
 
+    @NameInMap("Nlist")
+    public Integer nlist;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -142,6 +148,9 @@ public class CreateVectorIndexRequest extends TeaModel {
      */
     @NameInMap("PqEnable")
     public Integer pqEnable;
+
+    @NameInMap("RabitqBits")
+    public Integer rabitqBits;
 
     /**
      * <p>Region ID where the instance is located.</p>
@@ -159,6 +168,14 @@ public class CreateVectorIndexRequest extends TeaModel {
     public static CreateVectorIndexRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateVectorIndexRequest self = new CreateVectorIndexRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateVectorIndexRequest setAlgorithm(String algorithm) {
+        this.algorithm = algorithm;
+        return this;
+    }
+    public String getAlgorithm() {
+        return this.algorithm;
     }
 
     public CreateVectorIndexRequest setCollection(String collection) {
@@ -241,6 +258,14 @@ public class CreateVectorIndexRequest extends TeaModel {
         return this.namespace;
     }
 
+    public CreateVectorIndexRequest setNlist(Integer nlist) {
+        this.nlist = nlist;
+        return this;
+    }
+    public Integer getNlist() {
+        return this.nlist;
+    }
+
     public CreateVectorIndexRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -255,6 +280,14 @@ public class CreateVectorIndexRequest extends TeaModel {
     }
     public Integer getPqEnable() {
         return this.pqEnable;
+    }
+
+    public CreateVectorIndexRequest setRabitqBits(Integer rabitqBits) {
+        this.rabitqBits = rabitqBits;
+        return this;
+    }
+    public Integer getRabitqBits() {
+        return this.rabitqBits;
     }
 
     public CreateVectorIndexRequest setRegionId(String regionId) {
