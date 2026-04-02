@@ -253,6 +253,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.vswitchIds)) {
+            request.vswitchIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.vswitchIds, "VswitchIds", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
             query.put("AutoRenew", request.autoRenew);
@@ -284,6 +288,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.kmsKeyId)) {
             query.put("KmsKeyId", request.kmsKeyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.listenerMode)) {
+            query.put("ListenerMode", request.listenerMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxConnections)) {
@@ -330,6 +338,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceGroupId", request.resourceGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.securityGroupId)) {
+            query.put("SecurityGroupId", request.securityGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.serverlessChargeType)) {
             query.put("ServerlessChargeType", request.serverlessChargeType);
         }
@@ -352,6 +364,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.tracingStorageTime)) {
             query.put("TracingStorageTime", request.tracingStorageTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vswitchIdsShrink)) {
+            query.put("VswitchIds", request.vswitchIdsShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

@@ -1,3 +1,18 @@
+2026-04-02 Version: 1.4.7
+- Update API CreateInstance: add request parameters ListenerMode.
+- Update API CreateInstance: add request parameters SecurityGroupId.
+- Update API CreateInstance: add request parameters VpcId.
+- Update API CreateInstance: add request parameters VswitchIds.
+- Update API GetInstance: add response parameters Body.Data.ListenerMode.
+- Update API GetInstance: add response parameters Body.Data.SecurityGroupId.
+- Update API GetInstance: add response parameters Body.Data.VpcId.
+- Update API GetInstance: add response parameters Body.Data.VswitchIds.
+- Update API ListInstances: add response parameters Body.Data.Instances.$.ListenerMode.
+- Update API ListInstances: add response parameters Body.Data.Instances.$.SecurityGroupId.
+- Update API ListInstances: add response parameters Body.Data.Instances.$.VpcId.
+- Update API ListInstances: add response parameters Body.Data.Instances.$.VswitchIds.
+
+
 2025-12-25 Version: 1.4.6
 - Update API ListExchanges: add response parameters Body.Data.Exchanges.$.Internal.
 

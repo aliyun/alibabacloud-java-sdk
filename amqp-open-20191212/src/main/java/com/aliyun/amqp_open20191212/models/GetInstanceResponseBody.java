@@ -119,6 +119,13 @@ public class GetInstanceResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>tcp_and_ssl</p>
+         */
+        @NameInMap("ListenerMode")
+        public String listenerMode;
+
+        /**
+         * <strong>example:</strong>
          * <p>1500</p>
          */
         @NameInMap("MaxConnections")
@@ -188,6 +195,13 @@ public class GetInstanceResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>sg-xxx</p>
+         */
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
+        /**
+         * <strong>example:</strong>
          * <p>SERVING</p>
          */
         @NameInMap("Status")
@@ -223,6 +237,16 @@ public class GetInstanceResponseBody extends TeaModel {
          */
         @NameInMap("TracingStorageTime")
         public Integer tracingStorageTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-xxx</p>
+         */
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        @NameInMap("VswitchIds")
+        public java.util.List<String> vswitchIds;
 
         public static GetInstanceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceResponseBodyData self = new GetInstanceResponseBodyData();
@@ -299,6 +323,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getKmsKeyId() {
             return this.kmsKeyId;
+        }
+
+        public GetInstanceResponseBodyData setListenerMode(String listenerMode) {
+            this.listenerMode = listenerMode;
+            return this;
+        }
+        public String getListenerMode() {
+            return this.listenerMode;
         }
 
         public GetInstanceResponseBodyData setMaxConnections(Integer maxConnections) {
@@ -389,6 +421,14 @@ public class GetInstanceResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
+        public GetInstanceResponseBodyData setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
         public GetInstanceResponseBodyData setStatus(String status) {
             this.status = status;
             return this;
@@ -435,6 +475,22 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public Integer getTracingStorageTime() {
             return this.tracingStorageTime;
+        }
+
+        public GetInstanceResponseBodyData setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public GetInstanceResponseBodyData setVswitchIds(java.util.List<String> vswitchIds) {
+            this.vswitchIds = vswitchIds;
+            return this;
+        }
+        public java.util.List<String> getVswitchIds() {
+            return this.vswitchIds;
         }
 
     }

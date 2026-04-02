@@ -91,6 +91,13 @@ public class CreateInstanceShrinkRequest extends TeaModel {
     public String kmsKeyId;
 
     /**
+     * <strong>example:</strong>
+     * <p>tcp_and_ssl</p>
+     */
+    @NameInMap("ListenerMode")
+    public String listenerMode;
+
+    /**
      * <p>The maximum number of connections that can be established to the instance.</p>
      * <p>Configure this parameter based on the values provided on the <a href="https://common-buy.aliyun.com/?commodityCode=ons_onsproxy_pre">ApsaraMQ for RocketMQ buy page</a>.</p>
      * 
@@ -211,6 +218,15 @@ public class CreateInstanceShrinkRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-xxx</p>
+     */
+    @NameInMap("SecurityGroupId")
+    public String securityGroupId;
+
+    /**
      * <p>The billing method of the serverless instance. Valid value:</p>
      * <ul>
      * <li>onDemand: You are charged based on your actual usage.</li>
@@ -292,6 +308,21 @@ public class CreateInstanceShrinkRequest extends TeaModel {
     @NameInMap("TracingStorageTime")
     public Integer tracingStorageTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-xxx</p>
+     */
+    @NameInMap("VpcId")
+    public String vpcId;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("VswitchIds")
+    public String vswitchIdsShrink;
+
     public static CreateInstanceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceShrinkRequest self = new CreateInstanceShrinkRequest();
         return TeaModel.build(map, self);
@@ -359,6 +390,14 @@ public class CreateInstanceShrinkRequest extends TeaModel {
     }
     public String getKmsKeyId() {
         return this.kmsKeyId;
+    }
+
+    public CreateInstanceShrinkRequest setListenerMode(String listenerMode) {
+        this.listenerMode = listenerMode;
+        return this;
+    }
+    public String getListenerMode() {
+        return this.listenerMode;
     }
 
     public CreateInstanceShrinkRequest setMaxConnections(Integer maxConnections) {
@@ -449,6 +488,14 @@ public class CreateInstanceShrinkRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
+    public CreateInstanceShrinkRequest setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
+        return this;
+    }
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
     public CreateInstanceShrinkRequest setServerlessChargeType(String serverlessChargeType) {
         this.serverlessChargeType = serverlessChargeType;
         return this;
@@ -495,6 +542,22 @@ public class CreateInstanceShrinkRequest extends TeaModel {
     }
     public Integer getTracingStorageTime() {
         return this.tracingStorageTime;
+    }
+
+    public CreateInstanceShrinkRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    public CreateInstanceShrinkRequest setVswitchIdsShrink(String vswitchIdsShrink) {
+        this.vswitchIdsShrink = vswitchIdsShrink;
+        return this;
+    }
+    public String getVswitchIdsShrink() {
+        return this.vswitchIdsShrink;
     }
 
 }

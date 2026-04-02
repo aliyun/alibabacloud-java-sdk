@@ -164,6 +164,13 @@ public class ListInstancesResponseBody extends TeaModel {
         public String kmsKeyId;
 
         /**
+         * <strong>example:</strong>
+         * <p>tcp_and_ssl</p>
+         */
+        @NameInMap("ListenerMode")
+        public String listenerMode;
+
+        /**
          * <p>The maximum number of Internet-based transactions per second (TPS) for the instance.</p>
          * 
          * <strong>example:</strong>
@@ -252,6 +259,13 @@ public class ListInstancesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <strong>example:</strong>
+         * <p>sg-xxx</p>
+         */
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
+        /**
          * <p>The instance status. Valid values:</p>
          * <ul>
          * <li>DEPLOYING: The instance is being deployed.</li>
@@ -292,6 +306,16 @@ public class ListInstancesResponseBody extends TeaModel {
          */
         @NameInMap("Tags")
         public java.util.List<ListInstancesResponseBodyDataInstancesTags> tags;
+
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-xxx</p>
+         */
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        @NameInMap("VswitchIds")
+        public java.util.List<String> vswitchIds;
 
         public static ListInstancesResponseBodyDataInstances build(java.util.Map<String, ?> map) throws Exception {
             ListInstancesResponseBodyDataInstances self = new ListInstancesResponseBodyDataInstances();
@@ -368,6 +392,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getKmsKeyId() {
             return this.kmsKeyId;
+        }
+
+        public ListInstancesResponseBodyDataInstances setListenerMode(String listenerMode) {
+            this.listenerMode = listenerMode;
+            return this;
+        }
+        public String getListenerMode() {
+            return this.listenerMode;
         }
 
         public ListInstancesResponseBodyDataInstances setMaxEipTps(Integer maxEipTps) {
@@ -450,6 +482,14 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
+        public ListInstancesResponseBodyDataInstances setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
         public ListInstancesResponseBodyDataInstances setStatus(String status) {
             this.status = status;
             return this;
@@ -480,6 +520,22 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public java.util.List<ListInstancesResponseBodyDataInstancesTags> getTags() {
             return this.tags;
+        }
+
+        public ListInstancesResponseBodyDataInstances setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public ListInstancesResponseBodyDataInstances setVswitchIds(java.util.List<String> vswitchIds) {
+            this.vswitchIds = vswitchIds;
+            return this;
+        }
+        public java.util.List<String> getVswitchIds() {
+            return this.vswitchIds;
         }
 
     }
