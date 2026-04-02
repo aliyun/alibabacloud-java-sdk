@@ -6,6 +6,13 @@ import com.aliyun.tea.*;
 public class ModelRouterQueryNacosTagsRequest extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>providers</p>
+     */
+    @NameInMap("configType")
+    public String configType;
+
+    /**
+     * <strong>example:</strong>
      * <p>resourceId</p>
      */
     @NameInMap("groupBy")
@@ -63,6 +70,14 @@ public class ModelRouterQueryNacosTagsRequest extends TeaModel {
     public static ModelRouterQueryNacosTagsRequest build(java.util.Map<String, ?> map) throws Exception {
         ModelRouterQueryNacosTagsRequest self = new ModelRouterQueryNacosTagsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModelRouterQueryNacosTagsRequest setConfigType(String configType) {
+        this.configType = configType;
+        return this;
+    }
+    public String getConfigType() {
+        return this.configType;
     }
 
     public ModelRouterQueryNacosTagsRequest setGroupBy(String groupBy) {

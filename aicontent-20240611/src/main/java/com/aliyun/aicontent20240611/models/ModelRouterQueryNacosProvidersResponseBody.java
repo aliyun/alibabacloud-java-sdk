@@ -99,9 +99,38 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class ModelRouterQueryNacosProvidersResponseBodyDataModelsExtensions extends TeaModel {
+        @NameInMap("async")
+        public Boolean async;
+
+        public static ModelRouterQueryNacosProvidersResponseBodyDataModelsExtensions build(java.util.Map<String, ?> map) throws Exception {
+            ModelRouterQueryNacosProvidersResponseBodyDataModelsExtensions self = new ModelRouterQueryNacosProvidersResponseBodyDataModelsExtensions();
+            return TeaModel.build(map, self);
+        }
+
+        public ModelRouterQueryNacosProvidersResponseBodyDataModelsExtensions setAsync(Boolean async) {
+            this.async = async;
+            return this;
+        }
+        public Boolean getAsync() {
+            return this.async;
+        }
+
+    }
+
     public static class ModelRouterQueryNacosProvidersResponseBodyDataModels extends TeaModel {
+        @NameInMap("extensions")
+        public ModelRouterQueryNacosProvidersResponseBodyDataModelsExtensions extensions;
+
         @NameInMap("identifier")
         public String identifier;
+
+        /**
+         * <strong>example:</strong>
+         * <p>text</p>
+         */
+        @NameInMap("inOut")
+        public String inOut;
 
         @NameInMap("inputToken")
         public String inputToken;
@@ -109,9 +138,24 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
         @NameInMap("outputToken")
         public String outputToken;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Chat</p>
+         */
+        @NameInMap("type")
+        public String type;
+
         public static ModelRouterQueryNacosProvidersResponseBodyDataModels build(java.util.Map<String, ?> map) throws Exception {
             ModelRouterQueryNacosProvidersResponseBodyDataModels self = new ModelRouterQueryNacosProvidersResponseBodyDataModels();
             return TeaModel.build(map, self);
+        }
+
+        public ModelRouterQueryNacosProvidersResponseBodyDataModels setExtensions(ModelRouterQueryNacosProvidersResponseBodyDataModelsExtensions extensions) {
+            this.extensions = extensions;
+            return this;
+        }
+        public ModelRouterQueryNacosProvidersResponseBodyDataModelsExtensions getExtensions() {
+            return this.extensions;
         }
 
         public ModelRouterQueryNacosProvidersResponseBodyDataModels setIdentifier(String identifier) {
@@ -120,6 +164,14 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
         }
         public String getIdentifier() {
             return this.identifier;
+        }
+
+        public ModelRouterQueryNacosProvidersResponseBodyDataModels setInOut(String inOut) {
+            this.inOut = inOut;
+            return this;
+        }
+        public String getInOut() {
+            return this.inOut;
         }
 
         public ModelRouterQueryNacosProvidersResponseBodyDataModels setInputToken(String inputToken) {
@@ -136,6 +188,14 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
         }
         public String getOutputToken() {
             return this.outputToken;
+        }
+
+        public ModelRouterQueryNacosProvidersResponseBodyDataModels setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

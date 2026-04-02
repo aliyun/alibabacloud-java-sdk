@@ -100,15 +100,37 @@ public class ModelRouterQueryNacosTagsResponseBody extends TeaModel {
     }
 
     public static class ModelRouterQueryNacosTagsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>文本生成</p>
+         */
+        @NameInMap("label")
+        public String label;
+
         @NameInMap("tag")
         public String tag;
 
         @NameInMap("tagName")
         public String tagName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NLP</p>
+         */
+        @NameInMap("value")
+        public String value;
+
         public static ModelRouterQueryNacosTagsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ModelRouterQueryNacosTagsResponseBodyData self = new ModelRouterQueryNacosTagsResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ModelRouterQueryNacosTagsResponseBodyData setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
         }
 
         public ModelRouterQueryNacosTagsResponseBodyData setTag(String tag) {
@@ -125,6 +147,14 @@ public class ModelRouterQueryNacosTagsResponseBody extends TeaModel {
         }
         public String getTagName() {
             return this.tagName;
+        }
+
+        public ModelRouterQueryNacosTagsResponseBodyData setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

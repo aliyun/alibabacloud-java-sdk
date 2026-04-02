@@ -34,6 +34,13 @@ public class ModelRouterCreateClientRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("parentId")
+    public Long parentId;
+
+    /**
+     * <strong>example:</strong>
      * <p>备注</p>
      */
     @NameInMap("remark")
@@ -74,6 +81,14 @@ public class ModelRouterCreateClientRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public ModelRouterCreateClientRequest setParentId(Long parentId) {
+        this.parentId = parentId;
+        return this;
+    }
+    public Long getParentId() {
+        return this.parentId;
     }
 
     public ModelRouterCreateClientRequest setRemark(String remark) {

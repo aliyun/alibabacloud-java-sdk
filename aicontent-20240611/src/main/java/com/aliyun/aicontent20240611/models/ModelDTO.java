@@ -30,6 +30,9 @@ public class ModelDTO extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    @NameInMap("extensions")
+    public String extensions;
+
     /**
      * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>
@@ -52,6 +55,9 @@ public class ModelDTO extends TeaModel {
      */
     @NameInMap("id")
     public Long id;
+
+    @NameInMap("inOut")
+    public String inOut;
 
     /**
      * <strong>example:</strong>
@@ -152,6 +158,14 @@ public class ModelDTO extends TeaModel {
         return this.description;
     }
 
+    public ModelDTO setExtensions(String extensions) {
+        this.extensions = extensions;
+        return this;
+    }
+    public String getExtensions() {
+        return this.extensions;
+    }
+
     public ModelDTO setGmtCreate(String gmtCreate) {
         this.gmtCreate = gmtCreate;
         return this;
@@ -174,6 +188,14 @@ public class ModelDTO extends TeaModel {
     }
     public Long getId() {
         return this.id;
+    }
+
+    public ModelDTO setInOut(String inOut) {
+        this.inOut = inOut;
+        return this;
+    }
+    public String getInOut() {
+        return this.inOut;
     }
 
     public ModelDTO setIsCustom(Boolean isCustom) {

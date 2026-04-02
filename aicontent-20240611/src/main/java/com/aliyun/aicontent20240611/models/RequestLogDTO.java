@@ -83,6 +83,13 @@ public class RequestLogDTO extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>Chat</p>
+     */
+    @NameInMap("modelType")
+    public String modelType;
+
+    /**
+     * <strong>example:</strong>
      * <p>100</p>
      */
     @NameInMap("promptTokens")
@@ -150,6 +157,13 @@ public class RequestLogDTO extends TeaModel {
      */
     @NameInMap("totalTokens")
     public Integer totalTokens;
+
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;prompt_tokens&quot;:100,&quot;completion_tokens&quot;:50,&quot;total_tokens&quot;:150}</p>
+     */
+    @NameInMap("usage")
+    public UsageInfoDTO usage;
 
     public static RequestLogDTO build(java.util.Map<String, ?> map) throws Exception {
         RequestLogDTO self = new RequestLogDTO();
@@ -244,6 +258,14 @@ public class RequestLogDTO extends TeaModel {
         return this.modelName;
     }
 
+    public RequestLogDTO setModelType(String modelType) {
+        this.modelType = modelType;
+        return this;
+    }
+    public String getModelType() {
+        return this.modelType;
+    }
+
     public RequestLogDTO setPromptTokens(Integer promptTokens) {
         this.promptTokens = promptTokens;
         return this;
@@ -322,6 +344,14 @@ public class RequestLogDTO extends TeaModel {
     }
     public Integer getTotalTokens() {
         return this.totalTokens;
+    }
+
+    public RequestLogDTO setUsage(UsageInfoDTO usage) {
+        this.usage = usage;
+        return this;
+    }
+    public UsageInfoDTO getUsage() {
+        return this.usage;
     }
 
 }

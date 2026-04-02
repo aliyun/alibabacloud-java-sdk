@@ -27,6 +27,13 @@ public class ModelRouterQueryModelListRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>Chat</p>
+     */
+    @NameInMap("modelType")
+    public String modelType;
+
+    /**
+     * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("needTotalCount")
@@ -101,6 +108,14 @@ public class ModelRouterQueryModelListRequest extends TeaModel {
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public ModelRouterQueryModelListRequest setModelType(String modelType) {
+        this.modelType = modelType;
+        return this;
+    }
+    public String getModelType() {
+        return this.modelType;
     }
 
     public ModelRouterQueryModelListRequest setNeedTotalCount(Boolean needTotalCount) {

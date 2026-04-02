@@ -1,3 +1,16 @@
+2026-04-02 Version: 7.0.1
+- Update API ModelRouterCreateClient: add request parameters body.parentId.
+- Update API ModelRouterCreateModel: add request parameters body.extensions.
+- Update API ModelRouterCreateModel: add request parameters body.inOut.
+- Update API ModelRouterQueryModelList: add request parameters modelType.
+- Update API ModelRouterQueryNacosProviders: add response parameters Body.data.$.models.$.extensions.
+- Update API ModelRouterQueryNacosProviders: add response parameters Body.data.$.models.$.inOut.
+- Update API ModelRouterQueryNacosProviders: add response parameters Body.data.$.models.$.type.
+- Update API ModelRouterQueryNacosTags: add request parameters configType.
+- Update API ModelRouterQueryNacosTags: add response parameters Body.data.$.label.
+- Update API ModelRouterQueryNacosTags: add response parameters Body.data.$.value.
+
+
 2026-03-23 Version: 7.0.0
 - Update API ModelRouterQueryApiKeyList: update response parameters Body.data' type has changed.
 - Update API ModelRouterQueryApiKeyList: delete response parameters Body.data.$.

@@ -2384,6 +2384,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("name", request.name);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.parentId)) {
+            body.put("parentId", request.parentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
             body.put("remark", request.remark);
         }
@@ -2496,6 +2500,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extensions)) {
+            body.put("extensions", request.extensions);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inOut)) {
+            body.put("inOut", request.inOut);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxInputLength)) {
@@ -3093,6 +3105,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("maxResults", request.maxResults);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.modelType)) {
+            query.put("modelType", request.modelType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.needTotalCount)) {
             query.put("needTotalCount", request.needTotalCount);
         }
@@ -3239,6 +3255,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModelRouterQueryNacosTagsResponse modelRouterQueryNacosTagsWithOptions(ModelRouterQueryNacosTagsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configType)) {
+            query.put("configType", request.configType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.groupBy)) {
             query.put("groupBy", request.groupBy);
         }
