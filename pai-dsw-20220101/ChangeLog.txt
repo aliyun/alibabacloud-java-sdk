@@ -1,3 +1,16 @@
+2026-04-02 Version: 2.4.0
+- Support API CreateTempFile.
+- Support API CreateTempFileTask.
+- Support API DeleteTempFile.
+- Support API DeleteTempFileTask.
+- Support API DeleteTempFileTasks.
+- Support API GetTempFile.
+- Support API GetTempFileTask.
+- Support API ListTempFiles.
+- Support API UpdateTempFile.
+- Support API UpdateTempFileTask.
+
+
 2026-03-02 Version: 2.3.7
 - Generated java 2022-01-01 for pai-dsw.
 
