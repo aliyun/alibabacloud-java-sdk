@@ -1,3 +1,20 @@
+2026-04-02 Version: 2.0.1
+- Update API CreateEndpointGroup: add request parameters EndpointConfigurations.$.ApiKeys.
+- Update API CreateEndpointGroup: add request parameters EndpointConfigurations.$.Provider.
+- Update API CreateEndpointGroups: add request parameters EndpointGroupConfigurations.$.EndpointConfigurations.$.ApiKeys.
+- Update API CreateEndpointGroups: add request parameters EndpointGroupConfigurations.$.EndpointConfigurations.$.Provider.
+- Update API CreateListener: add request parameters EndpointGroupConfigurations.$.EndpointConfigurations.$.ApiKeys.
+- Update API CreateListener: add request parameters EndpointGroupConfigurations.$.EndpointConfigurations.$.Provider.
+- Update API DescribeEndpointGroup: add response parameters Body.EndpointConfigurations.$.ApiKeys.
+- Update API DescribeEndpointGroup: add response parameters Body.EndpointConfigurations.$.Provider.
+- Update API ListEndpointGroups: add response parameters Body.EndpointGroups.$.EndpointConfigurations.$.ApiKeys.
+- Update API ListEndpointGroups: add response parameters Body.EndpointGroups.$.EndpointConfigurations.$.Provider.
+- Update API UpdateEndpointGroup: add request parameters EndpointConfigurations.$.ApiKeys.
+- Update API UpdateEndpointGroup: add request parameters EndpointConfigurations.$.Provider.
+- Update API UpdateEndpointGroups: add request parameters EndpointGroupConfigurations.$.EndpointConfigurations.$.ApiKeys.
+- Update API UpdateEndpointGroups: add request parameters EndpointGroupConfigurations.$.EndpointConfigurations.$.Provider.
+
+
 2026-01-14 Version: 2.0.0
 - Support API AssociateResources.
 - Support API DisassociateResources.

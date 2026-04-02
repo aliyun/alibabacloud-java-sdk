@@ -26,9 +26,6 @@ public class ListTagResourcesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information about the resources to which tags are added.</p>
-     */
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
 
@@ -79,46 +76,15 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
-        /**
-         * <p>The ID of the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ga-bp149u6o36qt1as9b****</p>
-         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <p>The type of the resource.</p>
-         * <ul>
-         * <li><strong>accelerator</strong>: a standard GA instance</li>
-         * <li><strong>basicaccelerator</strong>: a basic GA instance</li>
-         * <li><strong>bandwidthpackage</strong>: a bandwidth plan</li>
-         * <li><strong>acl</strong>: an ACL</li>
-         * <li><strong>endpointgroup</strong>: an endpoint group</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>accelerator</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>valueTest</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>KeyTest</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 

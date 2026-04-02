@@ -92,6 +92,9 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
     }
 
     public static class ListEndpointGroupsResponseBodyEndpointGroupsEndpointConfigurations extends TeaModel {
+        @NameInMap("ApiKeys")
+        public java.util.List<String> apiKeys;
+
         /**
          * <p>Indicates whether the client IP address preservation feature is enabled. Valid values:</p>
          * <ul>
@@ -156,6 +159,13 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public String probeProtocol;
 
         /**
+         * <strong>example:</strong>
+         * <p>BAILIAN</p>
+         */
+        @NameInMap("Provider")
+        public String provider;
+
+        /**
          * <p>The private IP address of the ENI.</p>
          * 
          * <strong>example:</strong>
@@ -214,6 +224,14 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListEndpointGroupsResponseBodyEndpointGroupsEndpointConfigurations setApiKeys(java.util.List<String> apiKeys) {
+            this.apiKeys = apiKeys;
+            return this;
+        }
+        public java.util.List<String> getApiKeys() {
+            return this.apiKeys;
+        }
+
         public ListEndpointGroupsResponseBodyEndpointGroupsEndpointConfigurations setEnableClientIPPreservation(Boolean enableClientIPPreservation) {
             this.enableClientIPPreservation = enableClientIPPreservation;
             return this;
@@ -260,6 +278,14 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         }
         public String getProbeProtocol() {
             return this.probeProtocol;
+        }
+
+        public ListEndpointGroupsResponseBodyEndpointGroupsEndpointConfigurations setProvider(String provider) {
+            this.provider = provider;
+            return this;
+        }
+        public String getProvider() {
+            return this.provider;
         }
 
         public ListEndpointGroupsResponseBodyEndpointGroupsEndpointConfigurations setSubAddress(String subAddress) {

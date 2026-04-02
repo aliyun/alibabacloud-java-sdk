@@ -635,6 +635,9 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeEndpointGroupResponseBodyEndpointConfigurations extends TeaModel {
+        @NameInMap("ApiKeys")
+        public java.util.List<String> apiKeys;
+
         /**
          * <p>Indicates whether the client IP address preservation feature is enabled. Valid values:</p>
          * <ul>
@@ -687,6 +690,13 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
          */
         @NameInMap("ProbeProtocol")
         public String probeProtocol;
+
+        /**
+         * <strong>example:</strong>
+         * <p>BAILIAN</p>
+         */
+        @NameInMap("Provider")
+        public String provider;
 
         /**
          * <p>The private IP address of the ENI.</p>
@@ -747,6 +757,14 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeEndpointGroupResponseBodyEndpointConfigurations setApiKeys(java.util.List<String> apiKeys) {
+            this.apiKeys = apiKeys;
+            return this;
+        }
+        public java.util.List<String> getApiKeys() {
+            return this.apiKeys;
+        }
+
         public DescribeEndpointGroupResponseBodyEndpointConfigurations setEnableClientIPPreservation(Boolean enableClientIPPreservation) {
             this.enableClientIPPreservation = enableClientIPPreservation;
             return this;
@@ -785,6 +803,14 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
         }
         public String getProbeProtocol() {
             return this.probeProtocol;
+        }
+
+        public DescribeEndpointGroupResponseBodyEndpointConfigurations setProvider(String provider) {
+            this.provider = provider;
+            return this;
+        }
+        public String getProvider() {
+            return this.provider;
         }
 
         public DescribeEndpointGroupResponseBodyEndpointConfigurations setSubAddress(String subAddress) {

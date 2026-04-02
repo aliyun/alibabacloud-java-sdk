@@ -775,6 +775,9 @@ public class CreateListenerRequest extends TeaModel {
     }
 
     public static class CreateListenerRequestEndpointGroupConfigurationsEndpointConfigurations extends TeaModel {
+        @NameInMap("ApiKeys")
+        public java.util.List<String> apiKeys;
+
         /**
          * <p>Specifies whether to automatically preserve client IP addresses. Valid values:</p>
          * <ul>
@@ -826,6 +829,13 @@ public class CreateListenerRequest extends TeaModel {
          */
         @NameInMap("Endpoint")
         public String endpoint;
+
+        /**
+         * <strong>example:</strong>
+         * <p>BAILIAN</p>
+         */
+        @NameInMap("Provider")
+        public String provider;
 
         /**
          * <p>The private IP address of the ENI.</p>
@@ -914,6 +924,14 @@ public class CreateListenerRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public CreateListenerRequestEndpointGroupConfigurationsEndpointConfigurations setApiKeys(java.util.List<String> apiKeys) {
+            this.apiKeys = apiKeys;
+            return this;
+        }
+        public java.util.List<String> getApiKeys() {
+            return this.apiKeys;
+        }
+
         public CreateListenerRequestEndpointGroupConfigurationsEndpointConfigurations setEnableClientIPPreservation(Boolean enableClientIPPreservation) {
             this.enableClientIPPreservation = enableClientIPPreservation;
             return this;
@@ -936,6 +954,14 @@ public class CreateListenerRequest extends TeaModel {
         }
         public String getEndpoint() {
             return this.endpoint;
+        }
+
+        public CreateListenerRequestEndpointGroupConfigurationsEndpointConfigurations setProvider(String provider) {
+            this.provider = provider;
+            return this;
+        }
+        public String getProvider() {
+            return this.provider;
         }
 
         public CreateListenerRequestEndpointGroupConfigurationsEndpointConfigurations setSubAddress(String subAddress) {

@@ -429,6 +429,9 @@ public class CreateEndpointGroupRequest extends TeaModel {
     }
 
     public static class CreateEndpointGroupRequestEndpointConfigurations extends TeaModel {
+        @NameInMap("ApiKeys")
+        public java.util.List<String> apiKeys;
+
         /**
          * <p>Specifies whether to automatically preserve client IP addresses. Valid values:</p>
          * <ul>
@@ -483,6 +486,13 @@ public class CreateEndpointGroupRequest extends TeaModel {
          */
         @NameInMap("Endpoint")
         public String endpoint;
+
+        /**
+         * <strong>example:</strong>
+         * <p>BAILIAN</p>
+         */
+        @NameInMap("Provider")
+        public String provider;
 
         /**
          * <p>The private IP address of the ENI.</p>
@@ -567,6 +577,14 @@ public class CreateEndpointGroupRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public CreateEndpointGroupRequestEndpointConfigurations setApiKeys(java.util.List<String> apiKeys) {
+            this.apiKeys = apiKeys;
+            return this;
+        }
+        public java.util.List<String> getApiKeys() {
+            return this.apiKeys;
+        }
+
         public CreateEndpointGroupRequestEndpointConfigurations setEnableClientIPPreservation(Boolean enableClientIPPreservation) {
             this.enableClientIPPreservation = enableClientIPPreservation;
             return this;
@@ -589,6 +607,14 @@ public class CreateEndpointGroupRequest extends TeaModel {
         }
         public String getEndpoint() {
             return this.endpoint;
+        }
+
+        public CreateEndpointGroupRequestEndpointConfigurations setProvider(String provider) {
+            this.provider = provider;
+            return this;
+        }
+        public String getProvider() {
+            return this.provider;
         }
 
         public CreateEndpointGroupRequestEndpointConfigurations setSubAddress(String subAddress) {
