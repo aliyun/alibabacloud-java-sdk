@@ -709,6 +709,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @NameInMap("AccountType")
         public String accountType;
 
+        @NameInMap("AgentProviderList")
+        public java.util.List<String> agentProviderList;
+
         /**
          * <p>The number of concurrent sessions of each cloud computer in a multi-session cloud computer pool.</p>
          * 
@@ -1355,6 +1358,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
         public String getAccountType() {
             return this.accountType;
+        }
+
+        public DescribeDesktopsResponseBodyDesktops setAgentProviderList(java.util.List<String> agentProviderList) {
+            this.agentProviderList = agentProviderList;
+            return this;
+        }
+        public java.util.List<String> getAgentProviderList() {
+            return this.agentProviderList;
         }
 
         public DescribeDesktopsResponseBodyDesktops setBindAmount(Integer bindAmount) {

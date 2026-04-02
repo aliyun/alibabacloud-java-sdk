@@ -51,6 +51,9 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
     }
 
     public static class DescribeDesktopMetadataResponseBodyDesktops extends TeaModel {
+        @NameInMap("AgentProviderList")
+        public java.util.List<String> agentProviderList;
+
         /**
          * <strong>example:</strong>
          * <p>PostPaid</p>
@@ -160,6 +163,14 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         public static DescribeDesktopMetadataResponseBodyDesktops build(java.util.Map<String, ?> map) throws Exception {
             DescribeDesktopMetadataResponseBodyDesktops self = new DescribeDesktopMetadataResponseBodyDesktops();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDesktopMetadataResponseBodyDesktops setAgentProviderList(java.util.List<String> agentProviderList) {
+            this.agentProviderList = agentProviderList;
+            return this;
+        }
+        public java.util.List<String> getAgentProviderList() {
+            return this.agentProviderList;
         }
 
         public DescribeDesktopMetadataResponseBodyDesktops setChargeType(String chargeType) {
