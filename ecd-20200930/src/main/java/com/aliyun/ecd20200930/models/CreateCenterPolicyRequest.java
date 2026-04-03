@@ -25,6 +25,12 @@ public class CreateCenterPolicyRequest extends TeaModel {
     @NameInMap("AdminAccess")
     public String adminAccess;
 
+    @NameInMap("AdminKeyboardOnFullScreen")
+    public String adminKeyboardOnFullScreen;
+
+    @NameInMap("AdminKeyboardOnWindows")
+    public String adminKeyboardOnWindows;
+
     /**
      * <p>The anti-screenshot policy.</p>
      * <p>Valid values:</p>
@@ -203,6 +209,9 @@ public class CreateCenterPolicyRequest extends TeaModel {
      */
     @NameInMap("CpuSingleRateLimit")
     public Integer cpuSingleRateLimit;
+
+    @NameInMap("Description")
+    public String description;
 
     /**
      * <p>Specifies whether to display the peripheral connection prompt.</p>
@@ -407,6 +416,9 @@ public class CreateCenterPolicyRequest extends TeaModel {
 
     @NameInMap("InternetPrinter")
     public String internetPrinter;
+
+    @NameInMap("KeyboardControl")
+    public String keyboardControl;
 
     /**
      * <p>The read/write permissions on the on-premises drive.</p>
@@ -1274,6 +1286,22 @@ public class CreateCenterPolicyRequest extends TeaModel {
         return this.adminAccess;
     }
 
+    public CreateCenterPolicyRequest setAdminKeyboardOnFullScreen(String adminKeyboardOnFullScreen) {
+        this.adminKeyboardOnFullScreen = adminKeyboardOnFullScreen;
+        return this;
+    }
+    public String getAdminKeyboardOnFullScreen() {
+        return this.adminKeyboardOnFullScreen;
+    }
+
+    public CreateCenterPolicyRequest setAdminKeyboardOnWindows(String adminKeyboardOnWindows) {
+        this.adminKeyboardOnWindows = adminKeyboardOnWindows;
+        return this;
+    }
+    public String getAdminKeyboardOnWindows() {
+        return this.adminKeyboardOnWindows;
+    }
+
     public CreateCenterPolicyRequest setAppContentProtection(String appContentProtection) {
         this.appContentProtection = appContentProtection;
         return this;
@@ -1450,6 +1478,14 @@ public class CreateCenterPolicyRequest extends TeaModel {
         return this.cpuSingleRateLimit;
     }
 
+    public CreateCenterPolicyRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
     public CreateCenterPolicyRequest setDeviceConnectHint(String deviceConnectHint) {
         this.deviceConnectHint = deviceConnectHint;
         return this;
@@ -1624,6 +1660,14 @@ public class CreateCenterPolicyRequest extends TeaModel {
     }
     public String getInternetPrinter() {
         return this.internetPrinter;
+    }
+
+    public CreateCenterPolicyRequest setKeyboardControl(String keyboardControl) {
+        this.keyboardControl = keyboardControl;
+        return this;
+    }
+    public String getKeyboardControl() {
+        return this.keyboardControl;
     }
 
     public CreateCenterPolicyRequest setLocalDrive(String localDrive) {

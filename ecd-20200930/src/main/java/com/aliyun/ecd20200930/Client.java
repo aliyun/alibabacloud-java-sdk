@@ -2529,6 +2529,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AdminAccess", request.adminAccess);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.adminKeyboardOnFullScreen)) {
+            query.put("AdminKeyboardOnFullScreen", request.adminKeyboardOnFullScreen);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.adminKeyboardOnWindows)) {
+            query.put("AdminKeyboardOnWindows", request.adminKeyboardOnWindows);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.appContentProtection)) {
             query.put("AppContentProtection", request.appContentProtection);
         }
@@ -2617,6 +2625,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CpuSingleRateLimit", request.cpuSingleRateLimit);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.deviceConnectHint)) {
             query.put("DeviceConnectHint", request.deviceConnectHint);
         }
@@ -2703,6 +2715,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.internetPrinter)) {
             query.put("InternetPrinter", request.internetPrinter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyboardControl)) {
+            query.put("KeyboardControl", request.keyboardControl);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.localDrive)) {
@@ -15330,6 +15346,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AdminAccess", request.adminAccess);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.adminKeyboardOnFullScreen)) {
+            query.put("AdminKeyboardOnFullScreen", request.adminKeyboardOnFullScreen);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.adminKeyboardOnWindows)) {
+            query.put("AdminKeyboardOnWindows", request.adminKeyboardOnWindows);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.appContentProtection)) {
             query.put("AppContentProtection", request.appContentProtection);
         }
@@ -15416,6 +15440,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.cpuSingleRateLimit)) {
             query.put("CpuSingleRateLimit", request.cpuSingleRateLimit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.deviceConnectHint)) {

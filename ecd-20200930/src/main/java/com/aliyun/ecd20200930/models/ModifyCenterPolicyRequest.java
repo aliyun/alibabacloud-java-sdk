@@ -25,6 +25,12 @@ public class ModifyCenterPolicyRequest extends TeaModel {
     @NameInMap("AdminAccess")
     public String adminAccess;
 
+    @NameInMap("AdminKeyboardOnFullScreen")
+    public String adminKeyboardOnFullScreen;
+
+    @NameInMap("AdminKeyboardOnWindows")
+    public String adminKeyboardOnWindows;
+
     /**
      * <p>The anti-screenshot policy.</p>
      * <p>Valid values:</p>
@@ -199,6 +205,9 @@ public class ModifyCenterPolicyRequest extends TeaModel {
      */
     @NameInMap("CpuSingleRateLimit")
     public Integer cpuSingleRateLimit;
+
+    @NameInMap("Description")
+    public String description;
 
     /**
      * <p>Specifies whether to display the peripheral connection prompt.</p>
@@ -1311,6 +1320,22 @@ public class ModifyCenterPolicyRequest extends TeaModel {
         return this.adminAccess;
     }
 
+    public ModifyCenterPolicyRequest setAdminKeyboardOnFullScreen(String adminKeyboardOnFullScreen) {
+        this.adminKeyboardOnFullScreen = adminKeyboardOnFullScreen;
+        return this;
+    }
+    public String getAdminKeyboardOnFullScreen() {
+        return this.adminKeyboardOnFullScreen;
+    }
+
+    public ModifyCenterPolicyRequest setAdminKeyboardOnWindows(String adminKeyboardOnWindows) {
+        this.adminKeyboardOnWindows = adminKeyboardOnWindows;
+        return this;
+    }
+    public String getAdminKeyboardOnWindows() {
+        return this.adminKeyboardOnWindows;
+    }
+
     public ModifyCenterPolicyRequest setAppContentProtection(String appContentProtection) {
         this.appContentProtection = appContentProtection;
         return this;
@@ -1485,6 +1510,14 @@ public class ModifyCenterPolicyRequest extends TeaModel {
     }
     public Integer getCpuSingleRateLimit() {
         return this.cpuSingleRateLimit;
+    }
+
+    public ModifyCenterPolicyRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public ModifyCenterPolicyRequest setDeviceConnectHint(String deviceConnectHint) {

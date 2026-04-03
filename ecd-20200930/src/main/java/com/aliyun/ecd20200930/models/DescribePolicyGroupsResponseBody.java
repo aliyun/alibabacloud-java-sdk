@@ -848,6 +848,12 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("AdminAccess")
         public String adminAccess;
 
+        @NameInMap("AdminKeyboardOnFullScreen")
+        public String adminKeyboardOnFullScreen;
+
+        @NameInMap("AdminKeyboardOnWindows")
+        public String adminKeyboardOnWindows;
+
         /**
          * <p>Indicates whether the anti-screenshot feature is enabled.</p>
          * <p>Valid values:</p>
@@ -1009,6 +1015,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         @NameInMap("CpuSingleRateLimit")
         public Integer cpuSingleRateLimit;
+
+        @NameInMap("Description")
+        public String description;
 
         /**
          * <p>The number of cloud computers bound with this policy.</p>
@@ -1229,6 +1238,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
         @NameInMap("InternetPrinter")
         public String internetPrinter;
+
+        @NameInMap("KeyboardControl")
+        public String keyboardControl;
 
         /**
          * <p>The permissions on local disk mapping.</p>
@@ -2117,6 +2129,22 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             return this.adminAccess;
         }
 
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setAdminKeyboardOnFullScreen(String adminKeyboardOnFullScreen) {
+            this.adminKeyboardOnFullScreen = adminKeyboardOnFullScreen;
+            return this;
+        }
+        public String getAdminKeyboardOnFullScreen() {
+            return this.adminKeyboardOnFullScreen;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setAdminKeyboardOnWindows(String adminKeyboardOnWindows) {
+            this.adminKeyboardOnWindows = adminKeyboardOnWindows;
+            return this;
+        }
+        public String getAdminKeyboardOnWindows() {
+            return this.adminKeyboardOnWindows;
+        }
+
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setAppContentProtection(String appContentProtection) {
             this.appContentProtection = appContentProtection;
             return this;
@@ -2283,6 +2311,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public Integer getCpuSingleRateLimit() {
             return this.cpuSingleRateLimit;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setDesktopCount(Integer desktopCount) {
@@ -2507,6 +2543,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public String getInternetPrinter() {
             return this.internetPrinter;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setKeyboardControl(String keyboardControl) {
+            this.keyboardControl = keyboardControl;
+            return this;
+        }
+        public String getKeyboardControl() {
+            return this.keyboardControl;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setLocalDrive(String localDrive) {
