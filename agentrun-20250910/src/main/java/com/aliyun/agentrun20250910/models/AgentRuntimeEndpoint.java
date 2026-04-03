@@ -61,6 +61,12 @@ public class AgentRuntimeEndpoint extends TeaModel {
     public RoutingConfiguration routingConfiguration;
 
     /**
+     * <p>端点的弹性伸缩状态，包括最小/目标/当前实例数及定时策略（复用 ScalingStatus）</p>
+     */
+    @NameInMap("scalingStatus")
+    public ScalingStatus scalingStatus;
+
+    /**
      * <strong>example:</strong>
      * <p>ACTIVE</p>
      */
@@ -148,6 +154,14 @@ public class AgentRuntimeEndpoint extends TeaModel {
     }
     public RoutingConfiguration getRoutingConfiguration() {
         return this.routingConfiguration;
+    }
+
+    public AgentRuntimeEndpoint setScalingStatus(ScalingStatus scalingStatus) {
+        this.scalingStatus = scalingStatus;
+        return this;
+    }
+    public ScalingStatus getScalingStatus() {
+        return this.scalingStatus;
     }
 
     public AgentRuntimeEndpoint setStatus(String status) {

@@ -41,6 +41,12 @@ public class CreateFunagentInput extends TeaModel {
 
     /**
      * <p><code>string</code>，必填</p>
+     */
+    @NameInMap("dbInstanceId")
+    public String dbInstanceId;
+
+    /**
+     * <p><code>string</code>，必填</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("dbName")
@@ -172,6 +178,14 @@ public class CreateFunagentInput extends TeaModel {
     }
     public String getDbHost() {
         return this.dbHost;
+    }
+
+    public CreateFunagentInput setDbInstanceId(String dbInstanceId) {
+        this.dbInstanceId = dbInstanceId;
+        return this;
+    }
+    public String getDbInstanceId() {
+        return this.dbInstanceId;
     }
 
     public CreateFunagentInput setDbName(String dbName) {

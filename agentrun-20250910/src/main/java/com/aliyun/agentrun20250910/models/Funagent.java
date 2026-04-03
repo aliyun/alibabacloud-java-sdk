@@ -28,6 +28,9 @@ public class Funagent extends TeaModel {
     @NameInMap("dbHost")
     public String dbHost;
 
+    @NameInMap("dbInstanceId")
+    public String dbInstanceId;
+
     @NameInMap("dbName")
     public String dbName;
 
@@ -151,6 +154,14 @@ public class Funagent extends TeaModel {
     }
     public String getDbHost() {
         return this.dbHost;
+    }
+
+    public Funagent setDbInstanceId(String dbInstanceId) {
+        this.dbInstanceId = dbInstanceId;
+        return this;
+    }
+    public String getDbInstanceId() {
+        return this.dbInstanceId;
     }
 
     public Funagent setDbName(String dbName) {

@@ -34,6 +34,12 @@ public class CreateAgentRuntimeEndpointInput extends TeaModel {
     public RoutingConfiguration routingConfiguration;
 
     /**
+     * <p>端点的弹性伸缩配置，包括最小实例数和定时扩容策略（复用 ScalingConfig）</p>
+     */
+    @NameInMap("scalingConfig")
+    public ScalingConfig scalingConfig;
+
+    /**
      * <p>智能体运行时的目标版本</p>
      * 
      * <strong>example:</strong>
@@ -77,6 +83,14 @@ public class CreateAgentRuntimeEndpointInput extends TeaModel {
     }
     public RoutingConfiguration getRoutingConfiguration() {
         return this.routingConfiguration;
+    }
+
+    public CreateAgentRuntimeEndpointInput setScalingConfig(ScalingConfig scalingConfig) {
+        this.scalingConfig = scalingConfig;
+        return this;
+    }
+    public ScalingConfig getScalingConfig() {
+        return this.scalingConfig;
     }
 
     public CreateAgentRuntimeEndpointInput setTargetVersion(String targetVersion) {
