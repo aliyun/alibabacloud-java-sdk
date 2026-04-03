@@ -44,6 +44,9 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
         @NameInMap("AgentConfig")
         public AIAgentConfig agentConfig;
 
+        @NameInMap("CallInfo")
+        public AIAgentCallInfo callInfo;
+
         /**
          * <p>The URL of the call log file.</p>
          * 
@@ -110,6 +113,14 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
         }
         public AIAgentConfig getAgentConfig() {
             return this.agentConfig;
+        }
+
+        public DescribeAIAgentInstanceResponseBodyInstance setCallInfo(AIAgentCallInfo callInfo) {
+            this.callInfo = callInfo;
+            return this;
+        }
+        public AIAgentCallInfo getCallInfo() {
+            return this.callInfo;
         }
 
         public DescribeAIAgentInstanceResponseBodyInstance setCallLogUrl(String callLogUrl) {

@@ -13,6 +13,9 @@ public class GenerateAIAgentCallResponseBody extends TeaModel {
     @NameInMap("AIAgentUserId")
     public String AIAgentUserId;
 
+    @NameInMap("AvatarUserId")
+    public String avatarUserId;
+
     /**
      * <p>The ARTC channel ID.</p>
      * 
@@ -69,6 +72,14 @@ public class GenerateAIAgentCallResponseBody extends TeaModel {
     }
     public String getAIAgentUserId() {
         return this.AIAgentUserId;
+    }
+
+    public GenerateAIAgentCallResponseBody setAvatarUserId(String avatarUserId) {
+        this.avatarUserId = avatarUserId;
+        return this;
+    }
+    public String getAvatarUserId() {
+        return this.avatarUserId;
     }
 
     public GenerateAIAgentCallResponseBody setChannelId(String channelId) {

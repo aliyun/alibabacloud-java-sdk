@@ -585,6 +585,9 @@ public class AIAgentConfig extends TeaModel {
         @NameInMap("Messages")
         public java.util.List<AIAgentConfigAutoSpeechConfigLlmPendingMessages> messages;
 
+        @NameInMap("Mode")
+        public String mode;
+
         @NameInMap("WaitTime")
         public Integer waitTime;
 
@@ -599,6 +602,14 @@ public class AIAgentConfig extends TeaModel {
         }
         public java.util.List<AIAgentConfigAutoSpeechConfigLlmPendingMessages> getMessages() {
             return this.messages;
+        }
+
+        public AIAgentConfigAutoSpeechConfigLlmPending setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
         }
 
         public AIAgentConfigAutoSpeechConfigLlmPending setWaitTime(Integer waitTime) {
@@ -642,6 +653,9 @@ public class AIAgentConfig extends TeaModel {
     }
 
     public static class AIAgentConfigAutoSpeechConfigUserIdle extends TeaModel {
+        @NameInMap("HangupEndWord")
+        public String hangupEndWord;
+
         @NameInMap("MaxRepeats")
         public Integer maxRepeats;
 
@@ -654,6 +668,14 @@ public class AIAgentConfig extends TeaModel {
         public static AIAgentConfigAutoSpeechConfigUserIdle build(java.util.Map<String, ?> map) throws Exception {
             AIAgentConfigAutoSpeechConfigUserIdle self = new AIAgentConfigAutoSpeechConfigUserIdle();
             return TeaModel.build(map, self);
+        }
+
+        public AIAgentConfigAutoSpeechConfigUserIdle setHangupEndWord(String hangupEndWord) {
+            this.hangupEndWord = hangupEndWord;
+            return this;
+        }
+        public String getHangupEndWord() {
+            return this.hangupEndWord;
         }
 
         public AIAgentConfigAutoSpeechConfigUserIdle setMaxRepeats(Integer maxRepeats) {
