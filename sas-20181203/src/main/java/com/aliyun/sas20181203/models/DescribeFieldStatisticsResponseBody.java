@@ -69,6 +69,13 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         public Integer azureInstanceCount;
 
         /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
+        @NameInMap("BaiduInstanceCount")
+        public Integer baiduInstanceCount;
+
+        /**
          * <p>The number of cores of exposed assets.</p>
          * 
          * <strong>example:</strong>
@@ -166,6 +173,13 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
          */
         @NameInMap("InstanceSyncTaskCount")
         public Integer instanceSyncTaskCount;
+
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
+        @NameInMap("KingsoftInstanceCount")
+        public Integer kingsoftInstanceCount;
 
         /**
          * <p>The number of cores of new servers.</p>
@@ -276,6 +290,13 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         public Integer riskInstanceCount;
 
         /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
+        @NameInMap("StateCloudInstanceCount")
+        public Integer stateCloudInstanceCount;
+
+        /**
          * <p>The total number of cloud services that are protected by Security Center.</p>
          * 
          * <strong>example:</strong>
@@ -301,6 +322,13 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
          */
         @NameInMap("TripartiteInstanceCount")
         public Integer tripartiteInstanceCount;
+
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
+        @NameInMap("UcloudInstanceCount")
+        public Integer ucloudInstanceCount;
 
         /**
          * <p>The number of servers that are in the Unknown state.</p>
@@ -374,6 +402,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         }
         public Integer getAzureInstanceCount() {
             return this.azureInstanceCount;
+        }
+
+        public DescribeFieldStatisticsResponseBodyGroupedFields setBaiduInstanceCount(Integer baiduInstanceCount) {
+            this.baiduInstanceCount = baiduInstanceCount;
+            return this;
+        }
+        public Integer getBaiduInstanceCount() {
+            return this.baiduInstanceCount;
         }
 
         public DescribeFieldStatisticsResponseBodyGroupedFields setExposedInstanceCoreCount(Long exposedInstanceCoreCount) {
@@ -462,6 +498,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         }
         public Integer getInstanceSyncTaskCount() {
             return this.instanceSyncTaskCount;
+        }
+
+        public DescribeFieldStatisticsResponseBodyGroupedFields setKingsoftInstanceCount(Integer kingsoftInstanceCount) {
+            this.kingsoftInstanceCount = kingsoftInstanceCount;
+            return this;
+        }
+        public Integer getKingsoftInstanceCount() {
+            return this.kingsoftInstanceCount;
         }
 
         public DescribeFieldStatisticsResponseBodyGroupedFields setNewInstanceCoreCount(Long newInstanceCoreCount) {
@@ -560,6 +604,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             return this.riskInstanceCount;
         }
 
+        public DescribeFieldStatisticsResponseBodyGroupedFields setStateCloudInstanceCount(Integer stateCloudInstanceCount) {
+            this.stateCloudInstanceCount = stateCloudInstanceCount;
+            return this;
+        }
+        public Integer getStateCloudInstanceCount() {
+            return this.stateCloudInstanceCount;
+        }
+
         public DescribeFieldStatisticsResponseBodyGroupedFields setTencentInstanceCount(Integer tencentInstanceCount) {
             this.tencentInstanceCount = tencentInstanceCount;
             return this;
@@ -582,6 +634,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         }
         public Integer getTripartiteInstanceCount() {
             return this.tripartiteInstanceCount;
+        }
+
+        public DescribeFieldStatisticsResponseBodyGroupedFields setUcloudInstanceCount(Integer ucloudInstanceCount) {
+            this.ucloudInstanceCount = ucloudInstanceCount;
+            return this;
+        }
+        public Integer getUcloudInstanceCount() {
+            return this.ucloudInstanceCount;
         }
 
         public DescribeFieldStatisticsResponseBodyGroupedFields setUnKnowStatusInstanceCount(Integer unKnowStatusInstanceCount) {

@@ -1,3 +1,10 @@
+2026-04-03 Version: 9.1.2
+- Update API DescribeFieldStatistics: add response parameters Body.GroupedFields.BaiduInstanceCount.
+- Update API DescribeFieldStatistics: add response parameters Body.GroupedFields.KingsoftInstanceCount.
+- Update API DescribeFieldStatistics: add response parameters Body.GroupedFields.StateCloudInstanceCount.
+- Update API DescribeFieldStatistics: add response parameters Body.GroupedFields.UcloudInstanceCount.
+
+
 2026-03-26 Version: 9.1.1
 - Update API DescribeImageListBySensitiveFile: add response parameters Body.ImageInfos.$.InstanceName.
 - Update API ModifyNoticeConfig: add request parameters FocusLevel.
