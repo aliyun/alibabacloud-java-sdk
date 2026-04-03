@@ -78,6 +78,13 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         @NameInMap("Revisable")
         public Integer revisable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("UserChangable")
+        public Integer userChangable;
+
         public static DescribeParameterTemplatesResponseBodyDataParameters build(java.util.Map<String, ?> map) throws Exception {
             DescribeParameterTemplatesResponseBodyDataParameters self = new DescribeParameterTemplatesResponseBodyDataParameters();
             return TeaModel.build(map, self);
@@ -129,6 +136,14 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
         public Integer getRevisable() {
             return this.revisable;
+        }
+
+        public DescribeParameterTemplatesResponseBodyDataParameters setUserChangable(Integer userChangable) {
+            this.userChangable = userChangable;
+            return this;
+        }
+        public Integer getUserChangable() {
+            return this.userChangable;
         }
 
     }

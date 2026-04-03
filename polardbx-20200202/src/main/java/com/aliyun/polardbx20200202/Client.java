@@ -3816,6 +3816,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查看参数模版</p>
+     * 
      * @param request DescribeParameterTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeParameterTemplatesResponse
@@ -3857,6 +3860,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查看参数模版</p>
+     * 
      * @param request DescribeParameterTemplatesRequest
      * @return DescribeParameterTemplatesResponse
      */
