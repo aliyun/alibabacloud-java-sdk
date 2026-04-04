@@ -280,6 +280,178 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>校验用户资源计量</p>
+     * 
+     * @param request CheckUserResourceMeasureRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckUserResourceMeasureResponse
+     */
+    public CheckUserResourceMeasureResponse checkUserResourceMeasureWithOptions(CheckUserResourceMeasureRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.belongId)) {
+            query.put("BelongId", request.belongId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.belongIdType)) {
+            query.put("BelongIdType", request.belongIdType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            query.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.espBizId)) {
+            query.put("EspBizId", request.espBizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderComponentParams)) {
+            query.put("OrderComponentParams", request.orderComponentParams);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceCode)) {
+            query.put("ResourceCode", request.resourceCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceValue)) {
+            query.put("ResourceValue", request.resourceValue);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckUserResourceMeasure"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckUserResourceMeasureResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>校验用户资源计量</p>
+     * 
+     * @param request CheckUserResourceMeasureRequest
+     * @return CheckUserResourceMeasureResponse
+     */
+    public CheckUserResourceMeasureResponse checkUserResourceMeasure(CheckUserResourceMeasureRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.checkUserResourceMeasureWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建应用助手智能体</p>
+     * 
+     * @param request CreateAppAssistantAgentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAppAssistantAgentResponse
+     */
+    public CreateAppAssistantAgentResponse createAppAssistantAgentWithOptions(CreateAppAssistantAgentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentName)) {
+            query.put("AgentName", request.agentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.platformType)) {
+            query.put("PlatformType", request.platformType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAppAssistantAgent"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAppAssistantAgentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建应用助手智能体</p>
+     * 
+     * @param request CreateAppAssistantAgentRequest
+     * @return CreateAppAssistantAgentResponse
+     */
+    public CreateAppAssistantAgentResponse createAppAssistantAgent(CreateAppAssistantAgentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAppAssistantAgentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>生成应用助手SSO免登</p>
+     * 
+     * @param request CreateAppAssistantAgentSsoLoginRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAppAssistantAgentSsoLoginResponse
+     */
+    public CreateAppAssistantAgentSsoLoginResponse createAppAssistantAgentSsoLoginWithOptions(CreateAppAssistantAgentSsoLoginRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.platformType)) {
+            query.put("PlatformType", request.platformType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetUrl)) {
+            query.put("TargetUrl", request.targetUrl);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAppAssistantAgentSsoLogin"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAppAssistantAgentSsoLoginResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>生成应用助手SSO免登</p>
+     * 
+     * @param request CreateAppAssistantAgentSsoLoginRequest
+     * @return CreateAppAssistantAgentSsoLoginResponse
+     */
+    public CreateAppAssistantAgentSsoLoginResponse createAppAssistantAgentSsoLogin(CreateAppAssistantAgentSsoLoginRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAppAssistantAgentSsoLoginWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Create a website instance</p>
      * 
      * @param tmpReq CreateAppInstanceRequest
@@ -1566,6 +1738,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public IntrospectAppInstanceTicketForPreviewResponse introspectAppInstanceTicketForPreview(IntrospectAppInstanceTicketForPreviewRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.introspectAppInstanceTicketForPreviewWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询应用助手智能体列表</p>
+     * 
+     * @param request ListAppAssistantAgentsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAppAssistantAgentsResponse
+     */
+    public ListAppAssistantAgentsResponse listAppAssistantAgentsWithOptions(ListAppAssistantAgentsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.platformType)) {
+            query.put("PlatformType", request.platformType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAppAssistantAgents"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAppAssistantAgentsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询应用助手智能体列表</p>
+     * 
+     * @param request ListAppAssistantAgentsRequest
+     * @return ListAppAssistantAgentsResponse
+     */
+    public ListAppAssistantAgentsResponse listAppAssistantAgents(ListAppAssistantAgentsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAppAssistantAgentsWithOptions(request, runtime);
     }
 
     /**
