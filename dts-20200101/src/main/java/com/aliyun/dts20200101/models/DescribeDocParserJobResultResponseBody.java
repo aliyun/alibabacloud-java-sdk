@@ -49,6 +49,9 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    @NameInMap("OuterFileUrl")
+    public String outerFileUrl;
+
     /**
      * <strong>example:</strong>
      * <p>C166D79D-436B-45F0-B5A5-25E1959F****</p>
@@ -122,6 +125,14 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
     }
     public Integer getHttpStatusCode() {
         return this.httpStatusCode;
+    }
+
+    public DescribeDocParserJobResultResponseBody setOuterFileUrl(String outerFileUrl) {
+        this.outerFileUrl = outerFileUrl;
+        return this;
+    }
+    public String getOuterFileUrl() {
+        return this.outerFileUrl;
     }
 
     public DescribeDocParserJobResultResponseBody setRequestId(String requestId) {
