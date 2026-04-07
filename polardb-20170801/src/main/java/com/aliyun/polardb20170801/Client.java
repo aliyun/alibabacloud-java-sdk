@@ -1940,6 +1940,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SecurityIPType", request.securityIPType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.skillTemplateId)) {
+            query.put("SkillTemplateId", request.skillTemplateId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
             query.put("Tag", request.tag);
         }

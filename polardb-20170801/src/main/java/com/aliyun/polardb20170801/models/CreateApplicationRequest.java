@@ -178,6 +178,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("SecurityIPType")
     public String securityIPType;
 
+    @NameInMap("SkillTemplateId")
+    public String skillTemplateId;
+
     @NameInMap("Tag")
     public java.util.List<CreateApplicationRequestTag> tag;
 
@@ -455,6 +458,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getSecurityIPType() {
         return this.securityIPType;
+    }
+
+    public CreateApplicationRequest setSkillTemplateId(String skillTemplateId) {
+        this.skillTemplateId = skillTemplateId;
+        return this;
+    }
+    public String getSkillTemplateId() {
+        return this.skillTemplateId;
     }
 
     public CreateApplicationRequest setTag(java.util.List<CreateApplicationRequestTag> tag) {

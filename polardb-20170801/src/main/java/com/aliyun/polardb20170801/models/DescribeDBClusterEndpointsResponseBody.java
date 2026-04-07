@@ -232,6 +232,9 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         @NameInMap("AutoAddNewNodes")
         public String autoAddNewNodes;
 
+        @NameInMap("ConnectionString")
+        public String connectionString;
+
         /**
          * <p>The ID of the cluster.</p>
          * 
@@ -305,6 +308,9 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         @NameInMap("EndpointType")
         public String endpointType;
 
+        @NameInMap("NetType")
+        public String netType;
+
         /**
          * <p>The role name of each node in the endpoint. The role name of the primary node is <strong>Writer</strong>. Multiple read-only nodes can be associated with an endpoint. Therefore, the role name of each read-only node is suffixed with a number. For example, you can use <strong>Reader1</strong> and <strong>Reader2</strong> as the role names.</p>
          * <blockquote>
@@ -348,6 +354,12 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         @NameInMap("PolarSccWaitTimeout")
         public String polarSccWaitTimeout;
 
+        @NameInMap("Port")
+        public String port;
+
+        @NameInMap("Protocol")
+        public String protocol;
+
         /**
          * <p>The read/write mode. Valid values:</p>
          * <ul>
@@ -377,6 +389,9 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         @NameInMap("ServiceName")
         public String serviceName;
 
+        @NameInMap("VPCId")
+        public String VPCId;
+
         public static DescribeDBClusterEndpointsResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBClusterEndpointsResponseBodyItems self = new DescribeDBClusterEndpointsResponseBodyItems();
             return TeaModel.build(map, self);
@@ -396,6 +411,14 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         }
         public String getAutoAddNewNodes() {
             return this.autoAddNewNodes;
+        }
+
+        public DescribeDBClusterEndpointsResponseBodyItems setConnectionString(String connectionString) {
+            this.connectionString = connectionString;
+            return this;
+        }
+        public String getConnectionString() {
+            return this.connectionString;
         }
 
         public DescribeDBClusterEndpointsResponseBodyItems setDBClusterId(String DBClusterId) {
@@ -438,6 +461,14 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             return this.endpointType;
         }
 
+        public DescribeDBClusterEndpointsResponseBodyItems setNetType(String netType) {
+            this.netType = netType;
+            return this;
+        }
+        public String getNetType() {
+            return this.netType;
+        }
+
         public DescribeDBClusterEndpointsResponseBodyItems setNodeWithRoles(String nodeWithRoles) {
             this.nodeWithRoles = nodeWithRoles;
             return this;
@@ -470,6 +501,22 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             return this.polarSccWaitTimeout;
         }
 
+        public DescribeDBClusterEndpointsResponseBodyItems setPort(String port) {
+            this.port = port;
+            return this;
+        }
+        public String getPort() {
+            return this.port;
+        }
+
+        public DescribeDBClusterEndpointsResponseBodyItems setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
+        }
+
         public DescribeDBClusterEndpointsResponseBodyItems setReadWriteMode(String readWriteMode) {
             this.readWriteMode = readWriteMode;
             return this;
@@ -492,6 +539,14 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         }
         public String getServiceName() {
             return this.serviceName;
+        }
+
+        public DescribeDBClusterEndpointsResponseBodyItems setVPCId(String VPCId) {
+            this.VPCId = VPCId;
+            return this;
+        }
+        public String getVPCId() {
+            return this.VPCId;
         }
 
     }

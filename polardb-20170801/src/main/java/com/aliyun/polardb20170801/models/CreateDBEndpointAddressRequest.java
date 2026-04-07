@@ -33,7 +33,6 @@ public class CreateDBEndpointAddressRequest extends TeaModel {
      * <blockquote>
      * <p> You can call the <a href="https://help.aliyun.com/document_detail/98205.html">DescribeDBClusterEndpoints</a> operation to query endpoint details.</p>
      * </blockquote>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>pe-**************</p>
