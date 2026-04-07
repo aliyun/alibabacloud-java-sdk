@@ -41,6 +41,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ApplicationId", request.applicationId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.audioCodec)) {
+            query.put("AudioCodec", request.audioCodec);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.businessUnitId)) {
             query.put("BusinessUnitId", request.businessUnitId);
         }
@@ -246,6 +250,114 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建克隆音</p>
+     * 
+     * @param request CreateCloneVoiceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCloneVoiceResponse
+     */
+    public CreateCloneVoiceResponse createCloneVoiceWithOptions(CreateCloneVoiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessUnitId)) {
+            body.put("BusinessUnitId", request.businessUnitId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileKey)) {
+            body.put("FileKey", request.fileKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.model)) {
+            body.put("Model", request.model);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCloneVoice"),
+            new TeaPair("version", "2025-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCloneVoiceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建克隆音</p>
+     * 
+     * @param request CreateCloneVoiceRequest
+     * @return CreateCloneVoiceResponse
+     */
+    public CreateCloneVoiceResponse createCloneVoice(CreateCloneVoiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createCloneVoiceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建变量</p>
+     * 
+     * @param request CreateVariableRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateVariableResponse
+     */
+    public CreateVariableResponse createVariableWithOptions(CreateVariableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessUnitId)) {
+            body.put("BusinessUnitId", request.businessUnitId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("DisplayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateVariable"),
+            new TeaPair("version", "2025-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVariableResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建变量</p>
+     * 
+     * @param request CreateVariableRequest
+     * @return CreateVariableResponse
+     */
+    public CreateVariableResponse createVariable(CreateVariableRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createVariableWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>删除应用</p>
      * 
      * @param request DeleteApplicationRequest
@@ -290,6 +402,102 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteApplicationResponse deleteApplication(DeleteApplicationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteApplicationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除场景</p>
+     * 
+     * @param request DeleteCloneVoiceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCloneVoiceResponse
+     */
+    public DeleteCloneVoiceResponse deleteCloneVoiceWithOptions(DeleteCloneVoiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessUnitId)) {
+            body.put("BusinessUnitId", request.businessUnitId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloneVoiceId)) {
+            body.put("CloneVoiceId", request.cloneVoiceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCloneVoice"),
+            new TeaPair("version", "2025-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCloneVoiceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除场景</p>
+     * 
+     * @param request DeleteCloneVoiceRequest
+     * @return DeleteCloneVoiceResponse
+     */
+    public DeleteCloneVoiceResponse deleteCloneVoice(DeleteCloneVoiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteCloneVoiceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除变量</p>
+     * 
+     * @param request DeleteVariableRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteVariableResponse
+     */
+    public DeleteVariableResponse deleteVariableWithOptions(DeleteVariableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessUnitId)) {
+            body.put("BusinessUnitId", request.businessUnitId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.variableId)) {
+            body.put("VariableId", request.variableId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteVariable"),
+            new TeaPair("version", "2025-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteVariableResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除变量</p>
+     * 
+     * @param request DeleteVariableRequest
+     * @return DeleteVariableResponse
+     */
+    public DeleteVariableResponse deleteVariable(DeleteVariableRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteVariableWithOptions(request, runtime);
     }
 
     /**
@@ -442,6 +650,118 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListApplicationsResponse listApplications(ListApplicationsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listApplicationsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取实例详情</p>
+     * 
+     * @param request ListCloneVoiceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCloneVoiceResponse
+     */
+    public ListCloneVoiceResponse listCloneVoiceWithOptions(ListCloneVoiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessUnitId)) {
+            body.put("BusinessUnitId", request.businessUnitId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCloneVoice"),
+            new TeaPair("version", "2025-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCloneVoiceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取实例详情</p>
+     * 
+     * @param request ListCloneVoiceRequest
+     * @return ListCloneVoiceResponse
+     */
+    public ListCloneVoiceResponse listCloneVoice(ListCloneVoiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCloneVoiceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取变量列表</p>
+     * 
+     * @param request ListVariableRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListVariableResponse
+     */
+    public ListVariableResponse listVariableWithOptions(ListVariableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessUnitId)) {
+            body.put("BusinessUnitId", request.businessUnitId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchPattern)) {
+            body.put("SearchPattern", request.searchPattern);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListVariable"),
+            new TeaPair("version", "2025-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListVariableResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取变量列表</p>
+     * 
+     * @param request ListVariableRequest
+     * @return ListVariableResponse
+     */
+    public ListVariableResponse listVariable(ListVariableRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listVariableWithOptions(request, runtime);
     }
 
     /**
@@ -640,5 +960,113 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateApplicationVersionResponse updateApplicationVersion(UpdateApplicationVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateApplicationVersionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新实例</p>
+     * 
+     * @param request UpdateCloneVoiceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCloneVoiceResponse
+     */
+    public UpdateCloneVoiceResponse updateCloneVoiceWithOptions(UpdateCloneVoiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessUnitId)) {
+            body.put("BusinessUnitId", request.businessUnitId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloneVoiceId)) {
+            body.put("CloneVoiceId", request.cloneVoiceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCloneVoice"),
+            new TeaPair("version", "2025-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCloneVoiceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新实例</p>
+     * 
+     * @param request UpdateCloneVoiceRequest
+     * @return UpdateCloneVoiceResponse
+     */
+    public UpdateCloneVoiceResponse updateCloneVoice(UpdateCloneVoiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCloneVoiceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新变量</p>
+     * 
+     * @param request UpdateVariableRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateVariableResponse
+     */
+    public UpdateVariableResponse updateVariableWithOptions(UpdateVariableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessUnitId)) {
+            body.put("BusinessUnitId", request.businessUnitId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("DisplayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.variableId)) {
+            body.put("VariableId", request.variableId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateVariable"),
+            new TeaPair("version", "2025-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateVariableResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新变量</p>
+     * 
+     * @param request UpdateVariableRequest
+     * @return UpdateVariableResponse
+     */
+    public UpdateVariableResponse updateVariable(UpdateVariableRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateVariableWithOptions(request, runtime);
     }
 }

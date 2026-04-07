@@ -1,3 +1,15 @@
+2026-04-07 Version: 1.2.0
+- Support API CreateCloneVoice.
+- Support API CreateVariable.
+- Support API DeleteCloneVoice.
+- Support API DeleteVariable.
+- Support API ListCloneVoice.
+- Support API ListVariable.
+- Support API UpdateCloneVoice.
+- Support API UpdateVariable.
+- Update API BridgeWebCall: add request parameters AudioCodec.
+
+
 2026-02-02 Version: 1.1.0
 - Support API GetDataChannelCredential.
 

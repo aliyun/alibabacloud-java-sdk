@@ -13,6 +13,9 @@ public class BridgeWebCallRequest extends TeaModel {
     @NameInMap("ApplicationId")
     public String applicationId;
 
+    @NameInMap("AudioCodec")
+    public String audioCodec;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -77,6 +80,14 @@ public class BridgeWebCallRequest extends TeaModel {
     }
     public String getApplicationId() {
         return this.applicationId;
+    }
+
+    public BridgeWebCallRequest setAudioCodec(String audioCodec) {
+        this.audioCodec = audioCodec;
+        return this;
+    }
+    public String getAudioCodec() {
+        return this.audioCodec;
     }
 
     public BridgeWebCallRequest setBusinessUnitId(String businessUnitId) {
