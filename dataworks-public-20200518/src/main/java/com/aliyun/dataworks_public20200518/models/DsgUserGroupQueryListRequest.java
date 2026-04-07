@@ -51,6 +51,9 @@ public class DsgUserGroupQueryListRequest extends TeaModel {
     @NameInMap("ProjectName")
     public String projectName;
 
+    @NameInMap("userGroupType")
+    public Integer userGroupType;
+
     public static DsgUserGroupQueryListRequest build(java.util.Map<String, ?> map) throws Exception {
         DsgUserGroupQueryListRequest self = new DsgUserGroupQueryListRequest();
         return TeaModel.build(map, self);
@@ -94,6 +97,14 @@ public class DsgUserGroupQueryListRequest extends TeaModel {
     }
     public String getProjectName() {
         return this.projectName;
+    }
+
+    public DsgUserGroupQueryListRequest setUserGroupType(Integer userGroupType) {
+        this.userGroupType = userGroupType;
+        return this;
+    }
+    public Integer getUserGroupType() {
+        return this.userGroupType;
     }
 
 }

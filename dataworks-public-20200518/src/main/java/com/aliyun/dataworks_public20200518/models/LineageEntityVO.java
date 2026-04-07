@@ -12,6 +12,8 @@ public class LineageEntityVO extends TeaModel {
     public java.util.Map<String, String> attributes;
 
     /**
+     * <p>Detail url of entity</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://domain.test.url/entity">http://domain.test.url/entity</a></p>
      */
@@ -26,6 +28,8 @@ public class LineageEntityVO extends TeaModel {
     public String entityType;
 
     /**
+     * <p>Name of entity</p>
+     * 
      * <strong>example:</strong>
      * <p>tableName</p>
      */
@@ -40,6 +44,8 @@ public class LineageEntityVO extends TeaModel {
     public String owner;
 
     /**
+     * <p>Parent name of entity</p>
+     * 
      * <strong>example:</strong>
      * <p>dbName</p>
      */
@@ -47,6 +53,8 @@ public class LineageEntityVO extends TeaModel {
     public String parentName;
 
     /**
+     * <p>Unique identifier of entity</p>
+     * 
      * <strong>example:</strong>
      * <p>maxcompute-table.projectName.tablename</p>
      */

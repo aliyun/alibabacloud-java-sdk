@@ -1576,6 +1576,8 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
         public ListDataServicePublishedApisResponseBodyDataApisScriptDetails scriptDetails;
 
         /**
+         * <p>SQL mode. 0: Basic SQL; 1: Advanced SQL.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1809,7 +1811,7 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
 
     public static class ListDataServicePublishedApisResponseBodyData extends TeaModel {
         /**
-         * <p>The information about the APIs in the published state.</p>
+         * <p>Information about published APIs.</p>
          */
         @NameInMap("Apis")
         public java.util.List<ListDataServicePublishedApisResponseBodyDataApis> apis;

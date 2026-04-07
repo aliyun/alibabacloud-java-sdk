@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetQualityRuleResponseBody extends TeaModel {
     /**
-     * <p>The information about the monitoring rule.</p>
+     * <p>Information about the retrieved rule.</p>
      */
     @NameInMap("Data")
     public GetQualityRuleResponseBodyData data;
@@ -282,7 +282,12 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The type of the monitoring rule.</p>
+         * <p>Rule type:</p>
+         * <ul>
+         * <li>0: System template rule</li>
+         * <li>1: Custom SQL rule</li>
+         * <li>4: Custom template rule</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>

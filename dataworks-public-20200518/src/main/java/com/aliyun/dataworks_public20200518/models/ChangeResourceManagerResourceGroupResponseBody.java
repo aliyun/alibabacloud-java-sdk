@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class ChangeResourceManagerResourceGroupResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the resource group is changed.</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -14,8 +12,6 @@ public class ChangeResourceManagerResourceGroupResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The HTTP status code.</p>
-     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -23,8 +19,6 @@ public class ChangeResourceManagerResourceGroupResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>1AFAE64E-D1BE-432B-A9****</p>
      */
@@ -32,8 +26,6 @@ public class ChangeResourceManagerResourceGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -144,7 +144,12 @@ public class CreateQualityRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The type of the monitoring rule. Valid values: 0, 1, and 2. The value 0 indicates that the monitoring rule is created by the system. The value 1 indicates that the monitoring rule is created by a user. The value 2 indicates that the monitoring rule is a workspace-level rule.</p>
+     * <p>Rule type:</p>
+     * <ul>
+     * <li>0: System template rule</li>
+     * <li>1: Custom SQL rule</li>
+     * <li>4: Custom template rule</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

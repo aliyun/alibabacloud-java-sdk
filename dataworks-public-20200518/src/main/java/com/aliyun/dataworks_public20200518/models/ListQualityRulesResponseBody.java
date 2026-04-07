@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListQualityRulesResponseBody extends TeaModel {
     /**
-     * <p>The list of monitoring rules.</p>
+     * <p>The list of retrieved rules.</p>
      */
     @NameInMap("Data")
     public ListQualityRulesResponseBodyData data;
@@ -298,11 +298,11 @@ public class ListQualityRulesResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The type of the monitoring rule. Valid values:</p>
+         * <p>Rule type:</p>
          * <ul>
-         * <li>0: The monitoring rule is created by the system.</li>
-         * <li>1: The monitoring rule is created by a user.</li>
-         * <li>2: The monitoring rule is a workspace-level rule.</li>
+         * <li>0: System template rule</li>
+         * <li>1: Custom SQL rule</li>
+         * <li>1: Custom template rule</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -591,7 +591,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The details of the monitoring rules.</p>
+         * <p>The details of the validation rule.</p>
          */
         @NameInMap("Rules")
         public java.util.List<ListQualityRulesResponseBodyDataRules> rules;

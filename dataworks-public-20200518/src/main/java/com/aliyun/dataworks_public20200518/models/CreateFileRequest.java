@@ -213,7 +213,7 @@ public class CreateFileRequest extends TeaModel {
     public Boolean ignoreParentSkipRunningProperty;
 
     /**
-     * <p>Custom image ID</p>
+     * <p>The ID of the custom image.</p>
      * 
      * <strong>example:</strong>
      * <p>m-bp1h4b5a8ogkbll2f3tr</p>

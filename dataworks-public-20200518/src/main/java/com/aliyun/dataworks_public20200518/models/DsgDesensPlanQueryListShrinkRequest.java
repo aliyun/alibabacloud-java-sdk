@@ -3,7 +3,7 @@ package com.aliyun.dataworks_public20200518.models;
 
 import com.aliyun.tea.*;
 
-public class DsgDesensPlanQueryListRequest extends TeaModel {
+public class DsgDesensPlanQueryListShrinkRequest extends TeaModel {
     /**
      * <p>The owner of the data masking rule.</p>
      * 
@@ -66,7 +66,7 @@ public class DsgDesensPlanQueryListRequest extends TeaModel {
     public Integer status;
 
     @NameInMap("columns")
-    public java.util.List<DsgDesensPlanQueryListRequestColumns> columns;
+    public String columnsShrink;
 
     @NameInMap("dataType")
     public String dataType;
@@ -74,12 +74,12 @@ public class DsgDesensPlanQueryListRequest extends TeaModel {
     @NameInMap("emptyNotDesesn")
     public String emptyNotDesesn;
 
-    public static DsgDesensPlanQueryListRequest build(java.util.Map<String, ?> map) throws Exception {
-        DsgDesensPlanQueryListRequest self = new DsgDesensPlanQueryListRequest();
+    public static DsgDesensPlanQueryListShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        DsgDesensPlanQueryListShrinkRequest self = new DsgDesensPlanQueryListShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public DsgDesensPlanQueryListRequest setOwner(String owner) {
+    public DsgDesensPlanQueryListShrinkRequest setOwner(String owner) {
         this.owner = owner;
         return this;
     }
@@ -87,7 +87,7 @@ public class DsgDesensPlanQueryListRequest extends TeaModel {
         return this.owner;
     }
 
-    public DsgDesensPlanQueryListRequest setPageNumber(Integer pageNumber) {
+    public DsgDesensPlanQueryListShrinkRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -95,7 +95,7 @@ public class DsgDesensPlanQueryListRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public DsgDesensPlanQueryListRequest setPageSize(Integer pageSize) {
+    public DsgDesensPlanQueryListShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -103,7 +103,7 @@ public class DsgDesensPlanQueryListRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DsgDesensPlanQueryListRequest setRuleName(String ruleName) {
+    public DsgDesensPlanQueryListShrinkRequest setRuleName(String ruleName) {
         this.ruleName = ruleName;
         return this;
     }
@@ -111,7 +111,7 @@ public class DsgDesensPlanQueryListRequest extends TeaModel {
         return this.ruleName;
     }
 
-    public DsgDesensPlanQueryListRequest setSceneId(Long sceneId) {
+    public DsgDesensPlanQueryListShrinkRequest setSceneId(Long sceneId) {
         this.sceneId = sceneId;
         return this;
     }
@@ -119,7 +119,7 @@ public class DsgDesensPlanQueryListRequest extends TeaModel {
         return this.sceneId;
     }
 
-    public DsgDesensPlanQueryListRequest setStatus(Integer status) {
+    public DsgDesensPlanQueryListShrinkRequest setStatus(Integer status) {
         this.status = status;
         return this;
     }
@@ -127,15 +127,15 @@ public class DsgDesensPlanQueryListRequest extends TeaModel {
         return this.status;
     }
 
-    public DsgDesensPlanQueryListRequest setColumns(java.util.List<DsgDesensPlanQueryListRequestColumns> columns) {
-        this.columns = columns;
+    public DsgDesensPlanQueryListShrinkRequest setColumnsShrink(String columnsShrink) {
+        this.columnsShrink = columnsShrink;
         return this;
     }
-    public java.util.List<DsgDesensPlanQueryListRequestColumns> getColumns() {
-        return this.columns;
+    public String getColumnsShrink() {
+        return this.columnsShrink;
     }
 
-    public DsgDesensPlanQueryListRequest setDataType(String dataType) {
+    public DsgDesensPlanQueryListShrinkRequest setDataType(String dataType) {
         this.dataType = dataType;
         return this;
     }
@@ -143,64 +143,12 @@ public class DsgDesensPlanQueryListRequest extends TeaModel {
         return this.dataType;
     }
 
-    public DsgDesensPlanQueryListRequest setEmptyNotDesesn(String emptyNotDesesn) {
+    public DsgDesensPlanQueryListShrinkRequest setEmptyNotDesesn(String emptyNotDesesn) {
         this.emptyNotDesesn = emptyNotDesesn;
         return this;
     }
     public String getEmptyNotDesesn() {
         return this.emptyNotDesesn;
-    }
-
-    public static class DsgDesensPlanQueryListRequestColumns extends TeaModel {
-        @NameInMap("column")
-        public String column;
-
-        @NameInMap("dbType")
-        public String dbType;
-
-        @NameInMap("project")
-        public String project;
-
-        @NameInMap("table")
-        public String table;
-
-        public static DsgDesensPlanQueryListRequestColumns build(java.util.Map<String, ?> map) throws Exception {
-            DsgDesensPlanQueryListRequestColumns self = new DsgDesensPlanQueryListRequestColumns();
-            return TeaModel.build(map, self);
-        }
-
-        public DsgDesensPlanQueryListRequestColumns setColumn(String column) {
-            this.column = column;
-            return this;
-        }
-        public String getColumn() {
-            return this.column;
-        }
-
-        public DsgDesensPlanQueryListRequestColumns setDbType(String dbType) {
-            this.dbType = dbType;
-            return this;
-        }
-        public String getDbType() {
-            return this.dbType;
-        }
-
-        public DsgDesensPlanQueryListRequestColumns setProject(String project) {
-            this.project = project;
-            return this;
-        }
-        public String getProject() {
-            return this.project;
-        }
-
-        public DsgDesensPlanQueryListRequestColumns setTable(String table) {
-            this.table = table;
-            return this;
-        }
-        public String getTable() {
-            return this.table;
-        }
-
     }
 
 }

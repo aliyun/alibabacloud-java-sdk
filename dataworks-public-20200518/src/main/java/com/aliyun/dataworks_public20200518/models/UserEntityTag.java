@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UserEntityTag extends TeaModel {
     /**
+     * <p>The tag key.</p>
+     * 
      * <strong>example:</strong>
      * <p>priority</p>
      */
@@ -12,6 +14,8 @@ public class UserEntityTag extends TeaModel {
     public String tagKey;
 
     /**
+     * <p>The tag value.</p>
+     * 
      * <strong>example:</strong>
      * <p>p1</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
     /**
-     * <p>The details of the permission request order.</p>
+     * <p>Details of the permission request order.</p>
      */
     @NameInMap("ApplyOrderDetail")
     public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetail applyOrderDetail;
@@ -430,9 +430,17 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
         @NameInMap("ApproveContent")
         public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContent approveContent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1757496687000</p>
+         */
         @NameInMap("FinishAapprovalTimestamp")
         public Long finishAapprovalTimestamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>agree</p>
+         */
         @NameInMap("FinishApprovalComment")
         public String finishApprovalComment;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ClusterConfig extends TeaModel {
     /**
+     * <p>The configuration value.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;spark.driver.memory&quot;:&quot;1g&quot;}</p>
      */
@@ -12,6 +14,12 @@ public class ClusterConfig extends TeaModel {
     public String configValue;
 
     /**
+     * <p>Specifies whether to overwrite the advanced settings of nodes in DataStudio. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -19,6 +27,16 @@ public class ClusterConfig extends TeaModel {
     public Boolean enableOverwrite;
 
     /**
+     * <p>The module in which the cluster is configured. Valid values:</p>
+     * <ul>
+     * <li>ide: DataStudio.</li>
+     * <li>da: DataAnalysis.</li>
+     * <li>scheduler.auto: Operation Center - auto triggered instances.</li>
+     * <li>scheduler.backfill: Operation Center - data backfill instances.</li>
+     * <li>scheduler.test: Operation Center - test instances.</li>
+     * <li>scheduler.manual: Operation Center - manually triggered instances.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ide</p>
      */

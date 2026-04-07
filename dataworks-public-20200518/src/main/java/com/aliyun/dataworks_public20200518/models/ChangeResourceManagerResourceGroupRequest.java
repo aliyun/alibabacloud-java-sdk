@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeResourceManagerResourceGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the resource type.</p>
-     * <ul>
-     * <li>If you set ResourceType to project, set this parameter to the value of ProjectIdentifier. You can call the <a href="https://help.aliyun.com/document_detail/2780068.html">ListProjects</a> operation to obtain the value of ProjectIdentifier.</li>
-     * <li>If you set ResourceType to tenantresourcegroup, set this parameter to the value of ResourceGroupType. You can call the <a href="https://help.aliyun.com/document_detail/2780075.html">ListResourceGroups</a> operation to obtain the value of ResourceGroupType. Only the values 7, 8, and 9 are valid.</li>
-     * </ul>
+     * <p>Indicates whether the request was successful.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,7 +15,7 @@ public class ChangeResourceManagerResourceGroupRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The ID of the new resource group.</p>
+     * <p>ChangeResourceManagerResourceGroup</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,11 +25,7 @@ public class ChangeResourceManagerResourceGroupRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The resource type. Valid values:</p>
-     * <ul>
-     * <li>project: workspace. If you want to change the resource group that you specify when you activate DataWorks, set the value to project.</li>
-     * <li>tenantresourcegroup: exclusive resource group. If you want to change the resource group that you specify when you purchase a DataWorks exclusive resource group, set the value to tenantresourcegroup.</li>
-     * </ul>
+     * <p>The HTTP status code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

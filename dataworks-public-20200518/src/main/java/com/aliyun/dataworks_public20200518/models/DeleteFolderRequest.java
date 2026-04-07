@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteFolderRequest extends TeaModel {
     /**
-     * <p>The ID of the folder. You can call the <a href="https://help.aliyun.com/document_detail/173955.html">ListFolders</a> operation to query the ID.</p>
+     * <p>DeleteFolder</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteFolderRequest extends TeaModel {
     public String folderId;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the ID. You must specify either this parameter or ProjectIdentifier to determine the DataWorks workspace to which the operation is applied.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -24,7 +24,7 @@ public class DeleteFolderRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The name of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Settings panel to obtain the name. You must specify either this parameter or ProjectId to determine the DataWorks workspace to which the operation is applied.</p>
+     * <p><a href="http://100.67.165.184/business/api/folders/delete">http://100.67.165.184/business/api/folders/delete</a></p>
      * 
      * <strong>example:</strong>
      * <p>dw_project</p>

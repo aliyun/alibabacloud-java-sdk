@@ -5,18 +5,29 @@ import com.aliyun.tea.*;
 
 public class LineageRelationRegisterVO extends TeaModel {
     /**
+     * <p>The time of lineage relation generation</p>
+     * 
      * <strong>example:</strong>
      * <p>1684327487964</p>
      */
     @NameInMap("CreateTimestamp")
     public Long createTimestamp;
 
+    /**
+     * <p>The destination entity in lineage relation</p>
+     */
     @NameInMap("DestEntity")
     public LineageEntityVO destEntity;
 
+    /**
+     * <p>The relationship between entities</p>
+     */
     @NameInMap("Relationship")
     public RelationshipVO relationship;
 
+    /**
+     * <p>The source entity in lineage relation</p>
+     */
     @NameInMap("SrcEntity")
     public LineageEntityVO srcEntity;
 

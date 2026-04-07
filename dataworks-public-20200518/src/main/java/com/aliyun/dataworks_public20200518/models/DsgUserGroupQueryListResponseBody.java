@@ -144,7 +144,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
          * <p>123</p>
          */
         @NameInMap("Id")
-        public Integer id;
+        public Long id;
 
         /**
          * <p>The name of the user group.</p>
@@ -163,6 +163,9 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
          */
         @NameInMap("Owner")
         public String owner;
+
+        @NameInMap("mcAggregationInfo")
+        public String mcAggregationInfo;
 
         public static DsgUserGroupQueryListResponseBodyPageDataData build(java.util.Map<String, ?> map) throws Exception {
             DsgUserGroupQueryListResponseBodyPageDataData self = new DsgUserGroupQueryListResponseBodyPageDataData();
@@ -193,11 +196,11 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
-        public DsgUserGroupQueryListResponseBodyPageDataData setId(Integer id) {
+        public DsgUserGroupQueryListResponseBodyPageDataData setId(Long id) {
             this.id = id;
             return this;
         }
-        public Integer getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -215,6 +218,14 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
         }
         public String getOwner() {
             return this.owner;
+        }
+
+        public DsgUserGroupQueryListResponseBodyPageDataData setMcAggregationInfo(String mcAggregationInfo) {
+            this.mcAggregationInfo = mcAggregationInfo;
+            return this;
+        }
+        public String getMcAggregationInfo() {
+            return this.mcAggregationInfo;
         }
 
     }

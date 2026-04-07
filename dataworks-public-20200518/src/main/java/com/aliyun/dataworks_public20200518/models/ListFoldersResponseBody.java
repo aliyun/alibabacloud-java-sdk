@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListFoldersResponseBody extends TeaModel {
     /**
-     * <p>The information about the folders.</p>
+     * <p>The path of the folder.</p>
      */
     @NameInMap("Data")
     public ListFoldersResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>Invalid.Tenant.ConnectionNotExists</p>
@@ -20,7 +20,7 @@ public class ListFoldersResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>The connection does not exist.</p>
@@ -29,7 +29,7 @@ public class ListFoldersResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The information about the folders.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -38,16 +38,16 @@ public class ListFoldersResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID. You can troubleshoot issues based on the ID.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
-     * <p>0000-ABCD-EFG****</p>
+     * <p>0000-ABCD-****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>The list of folders.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,8 +110,6 @@ public class ListFoldersResponseBody extends TeaModel {
 
     public static class ListFoldersResponseBodyDataFolders extends TeaModel {
         /**
-         * <p>The folder ID.</p>
-         * 
          * <strong>example:</strong>
          * <p>2735c2****</p>
          */
@@ -119,8 +117,6 @@ public class ListFoldersResponseBody extends TeaModel {
         public String folderId;
 
         /**
-         * <p>The path of the folder.</p>
-         * 
          * <strong>example:</strong>
          * <p>Business_process/my_first_business_process/MaxCompute/ods_layer</p>
          */
@@ -151,14 +147,11 @@ public class ListFoldersResponseBody extends TeaModel {
     }
 
     public static class ListFoldersResponseBodyData extends TeaModel {
-        /**
-         * <p>The list of folders.</p>
-         */
         @NameInMap("Folders")
         public java.util.List<ListFoldersResponseBodyDataFolders> folders;
 
         /**
-         * <p>The page number.</p>
+         * <p>The folder ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -167,7 +160,7 @@ public class ListFoldersResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p><a href="http://100.67.165.184/business/api/folders/list">http://100.67.165.184/business/api/folders/list</a></p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -176,7 +169,7 @@ public class ListFoldersResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>ListFolders</p>
          * 
          * <strong>example:</strong>
          * <p>13</p>

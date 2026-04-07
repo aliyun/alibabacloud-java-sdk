@@ -192,6 +192,8 @@ public class ListNodesResponseBody extends TeaModel {
 
         /**
          * <p>The file ID. You can call the ListFiles operation to query the ID.</p>
+         * <p>**</p>
+         * <p><strong>Warning</strong> This field is deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

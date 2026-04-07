@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListPermissionApplyOrdersRequest extends TeaModel {
     /**
-     * <p>设置申请单类型，枚举值为：</p>
+     * <p>The type of permission request. Valid values:</p>
      * <ul>
-     * <li>[ MaxComputeTable]  MaxCompute表权限申请单</li>
-     * <li>[ MaxComputeFunction] MaxCompute函数申请单</li>
-     * <li>[ MaxComputeResource] MaxCompute资源申请单</li>
-     * <li>[ DLFSchema] DLF1.0版本Schema权限申请单</li>
-     * <li>[ DLFTable] DLF1.0版本表权限申请单</li>
-     * <li>[ DLFColumn] DLF1.0版本列权限申请单</li>
-     * <li>[ DsApiDeploy] 发布数据服务权限申请单</li>
+     * <li>MaxComputeTable: Permission request for MaxCompute tables</li>
+     * <li>MaxComputeFunction: Permission request for MaxCompute functions</li>
+     * <li>MaxComputeResource: Permission request for MaxCompute resources</li>
+     * <li>DLFSchema: Permission request for DLF 1.0 schemas</li>
+     * <li>DLFTable: Permission request for DLF 1.0 tables</li>
+     * <li>DLFColumn: Permission request for DLF 1.0 columns</li>
+     * <li>DsApiDeploy: Permission request for publishing data services</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -23,7 +23,7 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
     public String applyType;
 
     /**
-     * <p>查询的数据目录名称。</p>
+     * <p>The name of the data catalog to query.</p>
      * 
      * <strong>example:</strong>
      * <p>hive</p>
@@ -41,7 +41,11 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The type of the compute engine with which the permission request order is associated. The parameter value is odps and cannot be changed. This value indicates that you can request permissions only on fields of tables in the MaxCompute compute engine.</p>
+     * <p>This parameter is deprecated and does not take effect.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>odps</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>odps</p>
@@ -50,12 +54,22 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
     public String engineType;
 
     /**
-     * <p>The status of the permission request order. Valid values:</p>
+     * <p>The status of the permission request. Valid values:</p>
      * <ul>
-     * <li>1: to be processed</li>
-     * <li>2: approved and authorized</li>
-     * <li>3: approved but authorization failed</li>
-     * <li>4: rejected</li>
+     * <li>1: Pending approval</li>
+     * <li>2: Approved and authorization succeeded</li>
+     * <li>3: Approved but authorization failed</li>
+     * <li>4: Rejected</li>
+     * <li>5: Withdrawn</li>
+     * </ul>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>0</li>
+     * <li>1</li>
+     * <li>2</li>
+     * <li>3</li>
+     * <li>4</li>
+     * <li>5</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,7 +88,12 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
     public String maxComputeProjectName;
 
     /**
-     * <p>The type of the permission request order. The parameter value is 1 and cannot be changed. This value indicates ACL-based authorization.</p>
+     * <p>This parameter is deprecated and does not take effect.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>1</li>
+     * <li>0</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -83,7 +102,7 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
     public Integer orderType;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number for pagination. The value must be a positive integer greater than or equal to 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -101,10 +120,11 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The query type of the permission request order. Valid values:</p>
+     * <p>The query type for permission requests. Valid values:</p>
      * <ul>
-     * <li>0: The permission request orders you submitted.</li>
-     * <li>1: The permission request orders you approved.</li>
+     * <li>0: Permission requests submitted by me</li>
+     * <li>1: Permission requests pending my approval</li>
+     * <li>2: All permission requests</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -133,7 +153,7 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
     public String tableName;
 
     /**
-     * <p>The ID of the DataWorks workspace that is associated with the permission request order. If you do not specify the parameter, the permission request orders of all workspaces are returned. You can go to the Workspace page in the DataWorks console to obtain the workspace ID.</p>
+     * <p>The ID of the workspace to which the permission request belongs. If you do not specify this parameter, permission requests from all workspaces are returned. To obtain the workspace ID, log on to the DataWorks console and navigate to the workspace configuration page.</p>
      * 
      * <strong>example:</strong>
      * <p>12345</p>

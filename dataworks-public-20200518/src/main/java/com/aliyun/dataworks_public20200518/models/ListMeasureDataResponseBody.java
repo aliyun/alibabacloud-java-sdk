@@ -32,7 +32,7 @@ public class ListMeasureDataResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The measurement results.</p>
+     * <p>The metering results.</p>
      */
     @NameInMap("MeasureDatas")
     public java.util.List<ListMeasureDataResponseBodyMeasureDatas> measureDatas;
@@ -132,7 +132,7 @@ public class ListMeasureDataResponseBody extends TeaModel {
         public String domainCode;
 
         /**
-         * <p>The end timestamp of the measurement period, in milliseconds.</p>
+         * <p>The end timestamp of the metering cycle, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1717430400000</p>
@@ -141,7 +141,7 @@ public class ListMeasureDataResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The start timestamp of the measurement period, in milliseconds.</p>
+         * <p>The start timestamp of the metering cycle, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1717344000000</p>

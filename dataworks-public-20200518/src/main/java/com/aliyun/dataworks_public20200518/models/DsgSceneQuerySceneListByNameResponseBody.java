@@ -255,6 +255,9 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
         @NameInMap("UserGroups")
         public String userGroups;
 
+        @NameInMap("scenceDbType")
+        public String scenceDbType;
+
         public static DsgSceneQuerySceneListByNameResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DsgSceneQuerySceneListByNameResponseBodyData self = new DsgSceneQuerySceneListByNameResponseBodyData();
             return TeaModel.build(map, self);
@@ -322,6 +325,14 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
         }
         public String getUserGroups() {
             return this.userGroups;
+        }
+
+        public DsgSceneQuerySceneListByNameResponseBodyData setScenceDbType(String scenceDbType) {
+            this.scenceDbType = scenceDbType;
+            return this;
+        }
+        public String getScenceDbType() {
+            return this.scenceDbType;
         }
 
     }

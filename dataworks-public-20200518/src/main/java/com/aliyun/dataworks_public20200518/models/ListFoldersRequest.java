@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFoldersRequest extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The error code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListFoldersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * <p>Indicates whether the request was successful.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ListFoldersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The path of the parent folder.</p>
+     * <p>0000-ABCD-EFG****</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class ListFoldersRequest extends TeaModel {
     public String parentFolderPath;
 
     /**
-     * <p>The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to obtain the workspace ID. You must configure either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -44,7 +44,7 @@ public class ListFoldersRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The name of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace page to obtain the workspace name. You must configure either this parameter or the ProjectId parameter to determine the DataWorks workspace to which the operation is applied.</p>
+     * <p>The request ID. You can troubleshoot issues based on the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dw_project</p>

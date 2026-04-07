@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class Collection extends TeaModel {
     /**
+     * <p>The type of the collection. Valid values:</p>
+     * <ul>
+     * <li><strong>ALBUM</strong>: data album</li>
+     * <li><strong>ALBUM_CATEGORY</strong>: category in a data album</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>album</p>
      */
@@ -12,6 +18,8 @@ public class Collection extends TeaModel {
     public String collectionType;
 
     /**
+     * <p>The remarks.</p>
+     * 
      * <strong>example:</strong>
      * <p>comment</p>
      */
@@ -19,6 +27,8 @@ public class Collection extends TeaModel {
     public String comment;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1668600147617</p>
      */
@@ -26,6 +36,8 @@ public class Collection extends TeaModel {
     public Long createTime;
 
     /**
+     * <p>The level of the collection. This parameter takes effect only if the CollectionType parameter is set to ALBUM_CATEGORY. Maximum value: 4.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +45,8 @@ public class Collection extends TeaModel {
     public Integer level;
 
     /**
+     * <p>The name of the collection.</p>
+     * 
      * <strong>example:</strong>
      * <p>collectionName</p>
      */
@@ -40,6 +54,8 @@ public class Collection extends TeaModel {
     public String name;
 
     /**
+     * <p>The ID of the Alibaba Cloud account that is used by the collection owner.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234444</p>
      */
@@ -47,6 +63,8 @@ public class Collection extends TeaModel {
     public String ownerId;
 
     /**
+     * <p>The name of the collection owner.</p>
+     * 
      * <strong>example:</strong>
      * <p>owner</p>
      */
@@ -54,6 +72,8 @@ public class Collection extends TeaModel {
     public String ownerName;
 
     /**
+     * <p>The unique identifier of the collection.</p>
+     * 
      * <strong>example:</strong>
      * <p>album.12334</p>
      */
@@ -61,6 +81,8 @@ public class Collection extends TeaModel {
     public String qualifiedName;
 
     /**
+     * <p>The update time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1668600148617</p>
      */

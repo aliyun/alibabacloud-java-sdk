@@ -191,7 +191,9 @@ public class GetNodeResponseBody extends TeaModel {
         public Integer dqcType;
 
         /**
-         * <p>The ID of the file.</p>
+         * <p>The file ID.</p>
+         * <p>**</p>
+         * <p><strong>Warning</strong> The field is deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>

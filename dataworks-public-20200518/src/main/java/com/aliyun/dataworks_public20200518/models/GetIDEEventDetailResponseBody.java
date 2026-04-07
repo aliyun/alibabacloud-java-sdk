@@ -994,8 +994,8 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the column is a partition key column. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: The column is a partition key column.</li>
+         * <li>false: The column is not a partition key column.</li>
          * </ul>
          * 
          * <strong>example:</strong>

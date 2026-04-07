@@ -3,17 +3,24 @@ package com.aliyun.dataworks_public20200518.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteFolderResponseBody extends TeaModel {
+public class DsgUpdateDesensStatusListResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>Invalid.Tenant.ConnectionNotExists</p>
+     * <p>true</p>
+     */
+    @NameInMap("Data")
+    public Boolean data;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1010040007</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <strong>example:</strong>
-     * <p>The connection does not exist.</p>
+     * <p>The specified parameters are invalid.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -27,7 +34,7 @@ public class DeleteFolderResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>0000-ABCD-EFG****</p>
+     * <p>AFBB799F-8578-51C5-A766-E922EDB8XXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,12 +46,20 @@ public class DeleteFolderResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static DeleteFolderResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteFolderResponseBody self = new DeleteFolderResponseBody();
+    public static DsgUpdateDesensStatusListResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DsgUpdateDesensStatusListResponseBody self = new DsgUpdateDesensStatusListResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteFolderResponseBody setErrorCode(String errorCode) {
+    public DsgUpdateDesensStatusListResponseBody setData(Boolean data) {
+        this.data = data;
+        return this;
+    }
+    public Boolean getData() {
+        return this.data;
+    }
+
+    public DsgUpdateDesensStatusListResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -52,7 +67,7 @@ public class DeleteFolderResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public DeleteFolderResponseBody setErrorMessage(String errorMessage) {
+    public DsgUpdateDesensStatusListResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
@@ -60,7 +75,7 @@ public class DeleteFolderResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public DeleteFolderResponseBody setHttpStatusCode(Integer httpStatusCode) {
+    public DsgUpdateDesensStatusListResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
@@ -68,7 +83,7 @@ public class DeleteFolderResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public DeleteFolderResponseBody setRequestId(String requestId) {
+    public DsgUpdateDesensStatusListResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -76,7 +91,7 @@ public class DeleteFolderResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteFolderResponseBody setSuccess(Boolean success) {
+    public DsgUpdateDesensStatusListResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

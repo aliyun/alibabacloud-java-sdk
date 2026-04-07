@@ -31,7 +31,6 @@ public class DsgUserGroupAddOrUpdateRequest extends TeaModel {
          * <li>If a user group is created by using an Alibaba Cloud account and a RAM role, you can call the <a href="https://help.aliyun.com/document_detail/2786445.html">DsgUserGroupQueryUserList</a> operation to query the users in the group.</li>
          * <li>If a user group is created by using a MaxCompute role, you can call the <a href="https://help.aliyun.com/document_detail/2785695.html">DsgUserGroupQueryUserList</a> operation to query the users in the group.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          */
         @NameInMap("Accounts")
         public java.util.List<String> accounts;
@@ -93,6 +92,9 @@ public class DsgUserGroupAddOrUpdateRequest extends TeaModel {
         @NameInMap("UserGroupType")
         public Integer userGroupType;
 
+        @NameInMap("projects")
+        public String projects;
+
         public static DsgUserGroupAddOrUpdateRequestUserGroups build(java.util.Map<String, ?> map) throws Exception {
             DsgUserGroupAddOrUpdateRequestUserGroups self = new DsgUserGroupAddOrUpdateRequestUserGroups();
             return TeaModel.build(map, self);
@@ -144,6 +146,14 @@ public class DsgUserGroupAddOrUpdateRequest extends TeaModel {
         }
         public Integer getUserGroupType() {
             return this.userGroupType;
+        }
+
+        public DsgUserGroupAddOrUpdateRequestUserGroups setProjects(String projects) {
+            this.projects = projects;
+            return this;
+        }
+        public String getProjects() {
+            return this.projects;
         }
 
     }

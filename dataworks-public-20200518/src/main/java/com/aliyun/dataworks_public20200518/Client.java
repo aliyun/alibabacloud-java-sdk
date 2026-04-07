@@ -17,71 +17,152 @@ public class Client extends com.aliyun.teaopenapi.Client {
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("ap-northeast-1", "dataworks.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("ap-south-1", "dataworks.ap-south-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2-pop", "dataworks.aliyuncs.com"),
+            new TeaPair("ap-south-1", "dataworks.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "dataworks.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "dataworks.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "dataworks.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "dataworks.ap-southeast-3.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "dataworks.ap-southeast-5.aliyuncs.com"),
             new TeaPair("cn-beijing", "dataworks.cn-beijing.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "dataworks.cn-beijing-finance-1.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-pop", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-beijing-gov-1", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-beijing-nu16-b01", "dataworks.aliyuncs.com"),
             new TeaPair("cn-chengdu", "dataworks.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-edge-1", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-fujian", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-haidian-cm12-c01", "dataworks.aliyuncs.com"),
             new TeaPair("cn-hangzhou", "dataworks.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-bj-b01", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-prod-1", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-1", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-2", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-3", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-test-306", "dataworks.aliyuncs.com"),
             new TeaPair("cn-hongkong", "dataworks.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hongkong-finance-pop", "dataworks.aliyuncs.com"),
             new TeaPair("cn-huhehaote", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-huhehaote-nebula-1", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "dataworks.cn-north-2-gov-1.aliyuncs.com"),
             new TeaPair("cn-qingdao", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-qingdao-nebula", "dataworks.aliyuncs.com"),
             new TeaPair("cn-shanghai", "dataworks.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et15-b01", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et2-b01", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "dataworks.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai-inner", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-shanghai-internal-test-1", "dataworks.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "dataworks.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "dataworks.cn-shenzhen-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-inner", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-st4-d01", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-su18-b01", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-wuhan", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "dataworks.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-yushanfang", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-zhangbei", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-zhangbei-na61-b01", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "dataworks.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou-na62-a01", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-nebula-1", "dataworks.aliyuncs.com"),
             new TeaPair("eu-central-1", "dataworks.eu-central-1.aliyuncs.com"),
             new TeaPair("eu-west-1", "dataworks.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-west-1-oxs", "dataworks.aliyuncs.com"),
             new TeaPair("me-east-1", "dataworks.me-east-1.aliyuncs.com"),
+            new TeaPair("rus-west-1-pop", "dataworks.aliyuncs.com"),
             new TeaPair("us-east-1", "dataworks.us-east-1.aliyuncs.com"),
-            new TeaPair("us-west-1", "dataworks.us-west-1.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "dataworks.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "dataworks.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "dataworks.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "dataworks.aliyuncs.com")
+            new TeaPair("us-west-1", "dataworks.us-west-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("dataworks-public", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
 
-    public java.util.Map<String, ?> _postOSSObject(String bucketName, java.util.Map<String, ?> data) throws Exception {
-        TeaRequest request_ = new TeaRequest();
-        java.util.Map<String, Object> form = com.aliyun.teautil.Common.assertAsMap(data);
-        String boundary = com.aliyun.fileform.Client.getBoundary();
-        String host = com.aliyun.teautil.Common.assertAsString(form.get("host"));
-        request_.protocol = "HTTPS";
-        request_.method = "POST";
-        request_.pathname = "/";
-        request_.headers = TeaConverter.buildMap(
-            new TeaPair("host", host),
-            new TeaPair("date", com.aliyun.teautil.Common.getDateUTCString()),
-            new TeaPair("user-agent", com.aliyun.teautil.Common.getUserAgent(""))
+    public java.util.Map<String, ?> _postOSSObject(String bucketName, java.util.Map<String, ?> data, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, Object> runtime_ = TeaConverter.buildMap(
+            new TeaPair("timeouted", "retry"),
+            new TeaPair("key", com.aliyun.teautil.Common.defaultString(runtime.key, _key)),
+            new TeaPair("cert", com.aliyun.teautil.Common.defaultString(runtime.cert, _cert)),
+            new TeaPair("ca", com.aliyun.teautil.Common.defaultString(runtime.ca, _ca)),
+            new TeaPair("readTimeout", com.aliyun.teautil.Common.defaultNumber(runtime.readTimeout, _readTimeout)),
+            new TeaPair("connectTimeout", com.aliyun.teautil.Common.defaultNumber(runtime.connectTimeout, _connectTimeout)),
+            new TeaPair("httpProxy", com.aliyun.teautil.Common.defaultString(runtime.httpProxy, _httpProxy)),
+            new TeaPair("httpsProxy", com.aliyun.teautil.Common.defaultString(runtime.httpsProxy, _httpsProxy)),
+            new TeaPair("noProxy", com.aliyun.teautil.Common.defaultString(runtime.noProxy, _noProxy)),
+            new TeaPair("socks5Proxy", com.aliyun.teautil.Common.defaultString(runtime.socks5Proxy, _socks5Proxy)),
+            new TeaPair("socks5NetWork", com.aliyun.teautil.Common.defaultString(runtime.socks5NetWork, _socks5NetWork)),
+            new TeaPair("maxIdleConns", com.aliyun.teautil.Common.defaultNumber(runtime.maxIdleConns, _maxIdleConns)),
+            new TeaPair("retry", TeaConverter.buildMap(
+                new TeaPair("retryable", runtime.autoretry),
+                new TeaPair("maxAttempts", com.aliyun.teautil.Common.defaultNumber(runtime.maxAttempts, 3))
+            )),
+            new TeaPair("backoff", TeaConverter.buildMap(
+                new TeaPair("policy", com.aliyun.teautil.Common.defaultString(runtime.backoffPolicy, "no")),
+                new TeaPair("period", com.aliyun.teautil.Common.defaultNumber(runtime.backoffPeriod, 1))
+            )),
+            new TeaPair("ignoreSSL", com.aliyun.teaopenapi.Client.defaultAny(runtime.ignoreSSL, false)),
+            new TeaPair("tlsMinVersion", _tlsMinVersion)
         );
-        request_.headers.put("content-type", "multipart/form-data; boundary=" + boundary + "");
-        request_.body = com.aliyun.fileform.Client.toFileForm(form, boundary);
-        TeaResponse response_ = Tea.doAction(request_, new java.util.HashMap<String, Object>(), interceptorChain);
 
-        java.util.Map<String, Object> respMap = null;
-        String bodyStr = com.aliyun.teautil.Common.readAsString(response_.body);
-        if (com.aliyun.teautil.Common.is4xx(response_.statusCode) || com.aliyun.teautil.Common.is5xx(response_.statusCode)) {
-            respMap = com.aliyun.teaxml.Client.parseXml(bodyStr, null);
-            java.util.Map<String, Object> err = com.aliyun.teautil.Common.assertAsMap(respMap.get("Error"));
-            throw new TeaException(TeaConverter.buildMap(
-                new TeaPair("code", err.get("Code")),
-                new TeaPair("message", err.get("Message")),
-                new TeaPair("data", TeaConverter.buildMap(
-                    new TeaPair("httpCode", response_.statusCode),
-                    new TeaPair("requestId", err.get("RequestId")),
-                    new TeaPair("hostId", err.get("HostId"))
-                ))
-            ));
+        TeaRequest _lastRequest = null;
+        Exception _lastException = null;
+        long _now = System.currentTimeMillis();
+        int _retryTimes = 0;
+        while (Tea.allowRetry((java.util.Map<String, Object>) runtime_.get("retry"), _retryTimes, _now)) {
+            if (_retryTimes > 0) {
+                int backoffTime = Tea.getBackoffTime(runtime_.get("backoff"), _retryTimes);
+                if (backoffTime > 0) {
+                    Tea.sleep(backoffTime);
+                }
+            }
+            _retryTimes = _retryTimes + 1;
+            try {
+                TeaRequest request_ = new TeaRequest();
+                java.util.Map<String, Object> form = com.aliyun.teautil.Common.assertAsMap(data);
+                String boundary = com.aliyun.fileform.Client.getBoundary();
+                String host = com.aliyun.teautil.Common.assertAsString(form.get("host"));
+                request_.protocol = "HTTPS";
+                request_.method = "POST";
+                request_.pathname = "/";
+                request_.headers = TeaConverter.buildMap(
+                    new TeaPair("host", host),
+                    new TeaPair("date", com.aliyun.teautil.Common.getDateUTCString()),
+                    new TeaPair("user-agent", com.aliyun.teautil.Common.getUserAgent(""))
+                );
+                request_.headers.put("content-type", "multipart/form-data; boundary=" + boundary + "");
+                request_.body = com.aliyun.fileform.Client.toFileForm(form, boundary);
+                _lastRequest = request_;
+                TeaResponse response_ = Tea.doAction(request_, runtime_, interceptorChain);
+
+                java.util.Map<String, Object> respMap = null;
+                String bodyStr = com.aliyun.teautil.Common.readAsString(response_.body);
+                if (com.aliyun.teautil.Common.is4xx(response_.statusCode) || com.aliyun.teautil.Common.is5xx(response_.statusCode)) {
+                    respMap = com.aliyun.teaxml.Client.parseXml(bodyStr, null);
+                    java.util.Map<String, Object> err = com.aliyun.teautil.Common.assertAsMap(respMap.get("Error"));
+                    throw new TeaException(TeaConverter.buildMap(
+                        new TeaPair("code", err.get("Code")),
+                        new TeaPair("message", err.get("Message")),
+                        new TeaPair("data", TeaConverter.buildMap(
+                            new TeaPair("httpCode", response_.statusCode),
+                            new TeaPair("requestId", err.get("RequestId")),
+                            new TeaPair("hostId", err.get("HostId"))
+                        ))
+                    ));
+                }
+
+                respMap = com.aliyun.teaxml.Client.parseXml(bodyStr, null);
+                return TeaConverter.merge(Object.class,
+                    respMap
+                );
+            } catch (Exception e) {
+                if (Tea.isRetryable(e)) {
+                    _lastException = e;
+                    continue;
+                }
+                throw e;
+            }
         }
-
-        respMap = com.aliyun.teaxml.Client.parseXml(bodyStr, null);
-        return TeaConverter.merge(Object.class,
-            respMap
-        );
+        throw new TeaUnretryableException(_lastRequest, _lastException);
     }
 
     public void addRuntimeOptionsInterceptor(RuntimeOptionsInterceptor interceptor) {
@@ -2014,7 +2095,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The operation that you want to perform. Set the value to \<em>\<em>CreateFolder\</em>\</em>.</p>
+     * <p>The operation that you want to perform. Set the value to \\<em>\\<em>CreateFolder\\</em>\\</em>.</p>
      * 
      * @param request CreateFolderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2054,7 +2135,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The operation that you want to perform. Set the value to \<em>\<em>CreateFolder\</em>\</em>.</p>
+     * <p>The operation that you want to perform. Set the value to \\<em>\\<em>CreateFolder\\</em>\\</em>.</p>
      * 
      * @param request CreateFolderRequest
      * @return CreateFolderResponse
@@ -2256,7 +2337,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("file", fileObj),
                 new TeaPair("success_action_status", "201")
             );
-            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader);
+            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader, runtime);
             createImportMigrationReq.packageFile = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
         }
 
@@ -2680,10 +2761,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates a partition filter expression.</p>
      * 
+     * @deprecated OpenAPI CreateQualityEntity is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.
+     * 
      * @param request CreateQualityEntityRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateQualityEntityResponse
      */
+    @Deprecated
+    // Deprecated
     public CreateQualityEntityResponse createQualityEntityWithOptions(CreateQualityEntityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2732,9 +2817,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates a partition filter expression.</p>
      * 
+     * @deprecated OpenAPI CreateQualityEntity is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.
+     * 
      * @param request CreateQualityEntityRequest
      * @return CreateQualityEntityResponse
      */
+    @Deprecated
+    // Deprecated
     public CreateQualityEntityResponse createQualityEntity(CreateQualityEntityRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createQualityEntityWithOptions(request, runtime);
@@ -2744,10 +2833,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates a subscriber for a partition filter expression.</p>
      * 
+     * @deprecated OpenAPI CreateQualityFollower is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityAlertRule instead.
+     * 
      * @param request CreateQualityFollowerRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateQualityFollowerResponse
      */
+    @Deprecated
+    // Deprecated
     public CreateQualityFollowerResponse createQualityFollowerWithOptions(CreateQualityFollowerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2792,9 +2885,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates a subscriber for a partition filter expression.</p>
      * 
+     * @deprecated OpenAPI CreateQualityFollower is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityAlertRule instead.
+     * 
      * @param request CreateQualityFollowerRequest
      * @return CreateQualityFollowerResponse
      */
+    @Deprecated
+    // Deprecated
     public CreateQualityFollowerResponse createQualityFollower(CreateQualityFollowerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createQualityFollowerWithOptions(request, runtime);
@@ -2804,10 +2901,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Associates a node with a partition filter expression.</p>
      * 
+     * @deprecated OpenAPI CreateQualityRelativeNode is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
+     * 
      * @param request CreateQualityRelativeNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateQualityRelativeNodeResponse
      */
+    @Deprecated
+    // Deprecated
     public CreateQualityRelativeNodeResponse createQualityRelativeNodeWithOptions(CreateQualityRelativeNodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2864,9 +2965,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Associates a node with a partition filter expression.</p>
      * 
+     * @deprecated OpenAPI CreateQualityRelativeNode is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
+     * 
      * @param request CreateQualityRelativeNodeRequest
      * @return CreateQualityRelativeNodeResponse
      */
+    @Deprecated
+    // Deprecated
     public CreateQualityRelativeNodeResponse createQualityRelativeNode(CreateQualityRelativeNodeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createQualityRelativeNodeWithOptions(request, runtime);
@@ -2876,10 +2981,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates a monitoring rule.</p>
      * 
+     * @deprecated OpenAPI CreateQualityRule is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.
+     * 
      * @param request CreateQualityRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateQualityRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public CreateQualityRuleResponse createQualityRuleWithOptions(CreateQualityRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2984,9 +3093,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates a monitoring rule.</p>
      * 
+     * @deprecated OpenAPI CreateQualityRule is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.
+     * 
      * @param request CreateQualityRuleRequest
      * @return CreateQualityRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public CreateQualityRuleResponse createQualityRule(CreateQualityRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createQualityRuleWithOptions(request, runtime);
@@ -3264,7 +3377,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("file", fileObj),
                 new TeaPair("success_action_status", "201")
             );
-            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader);
+            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader, runtime);
             createResourceFileReq.resourceFile = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
         }
 
@@ -3276,10 +3389,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates a MaxCompute table or view.</p>
      * 
+     * @deprecated OpenAPI CreateTable is deprecated
+     * 
      * @param request CreateTableRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateTableResponse
      */
+    @Deprecated
+    // Deprecated
     public CreateTableResponse createTableWithOptions(CreateTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3386,9 +3503,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates a MaxCompute table or view.</p>
      * 
+     * @deprecated OpenAPI CreateTable is deprecated
+     * 
      * @param request CreateTableRequest
      * @return CreateTableResponse
      */
+    @Deprecated
+    // Deprecated
     public CreateTableResponse createTable(CreateTableRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createTableWithOptions(request, runtime);
@@ -3396,7 +3517,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a table level. This operation will be replaced soon. We recommend that you do not call this operation.</p>
+     * <p>Creates a hierarchy level. This operation will be replaced soon. We recommend that you do not call this operation.</p>
      * 
      * @param request CreateTableLevelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3440,7 +3561,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a table level. This operation will be replaced soon. We recommend that you do not call this operation.</p>
+     * <p>Creates a hierarchy level. This operation will be replaced soon. We recommend that you do not call this operation.</p>
      * 
      * @param request CreateTableLevelRequest
      * @return CreateTableLevelResponse
@@ -3647,6 +3768,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a workflow.</p>
+     * 
      * @param request DeleteBusinessRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteBusinessResponse
@@ -3684,6 +3808,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a workflow.</p>
+     * 
      * @param request DeleteBusinessRequest
      * @return DeleteBusinessResponse
      */
@@ -4101,6 +4228,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a folder from DataStudio.</p>
+     * 
      * @param request DeleteFolderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteFolderResponse
@@ -4138,6 +4268,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a folder from DataStudio.</p>
+     * 
      * @param request DeleteFolderRequest
      * @return DeleteFolderResponse
      */
@@ -4440,10 +4573,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Deletes a partition filter expression.</p>
      * 
+     * @deprecated OpenAPI DeleteQualityEntity is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityScan instead.
+     * 
      * @param request DeleteQualityEntityRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteQualityEntityResponse
      */
+    @Deprecated
+    // Deprecated
     public DeleteQualityEntityResponse deleteQualityEntityWithOptions(DeleteQualityEntityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -4484,9 +4621,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Deletes a partition filter expression.</p>
      * 
+     * @deprecated OpenAPI DeleteQualityEntity is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityScan instead.
+     * 
      * @param request DeleteQualityEntityRequest
      * @return DeleteQualityEntityResponse
      */
+    @Deprecated
+    // Deprecated
     public DeleteQualityEntityResponse deleteQualityEntity(DeleteQualityEntityRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteQualityEntityWithOptions(request, runtime);
@@ -4497,12 +4638,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>In Data Quality, you must configure monitoring rules based on a partition filter expression. Data Quality uses these rules to detect changes in source data and dirty data generated during the process of extract, transform, and load (ETL). This way, you can prevent tasks from producing unexpected dirty data that affects the smooth running of tasks and business decision-making. You can go to the Manage Subscriptions page to add subscribers for a partition filter expression. When the monitoring rule that is created based on the partition filter expression is triggered, the subscribers can receive notifications and troubleshoot errors at the earliest opportunity. For more information, see <a href="https://help.aliyun.com/document_detail/73690.html">Configure monitoring rules</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a subscriber of a partition filter expression.</p>
+     * <p>Calls DeleteQualityFollower to delete the subscribers of a partition expression.</p>
+     * 
+     * @deprecated OpenAPI DeleteQualityFollower is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityAlertRule instead.
      * 
      * @param request DeleteQualityFollowerRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteQualityFollowerResponse
      */
+    @Deprecated
+    // Deprecated
     public DeleteQualityFollowerResponse deleteQualityFollowerWithOptions(DeleteQualityFollowerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -4540,21 +4685,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>In Data Quality, you must configure monitoring rules based on a partition filter expression. Data Quality uses these rules to detect changes in source data and dirty data generated during the process of extract, transform, and load (ETL). This way, you can prevent tasks from producing unexpected dirty data that affects the smooth running of tasks and business decision-making. You can go to the Manage Subscriptions page to add subscribers for a partition filter expression. When the monitoring rule that is created based on the partition filter expression is triggered, the subscribers can receive notifications and troubleshoot errors at the earliest opportunity. For more information, see <a href="https://help.aliyun.com/document_detail/73690.html">Configure monitoring rules</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a subscriber of a partition filter expression.</p>
+     * <p>Calls DeleteQualityFollower to delete the subscribers of a partition expression.</p>
+     * 
+     * @deprecated OpenAPI DeleteQualityFollower is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityAlertRule instead.
      * 
      * @param request DeleteQualityFollowerRequest
      * @return DeleteQualityFollowerResponse
      */
+    @Deprecated
+    // Deprecated
     public DeleteQualityFollowerResponse deleteQualityFollower(DeleteQualityFollowerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteQualityFollowerWithOptions(request, runtime);
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Disassociates a node from a partition filter expression.</p>
+     * 
+     * @deprecated OpenAPI DeleteQualityRelativeNode is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
+     * 
      * @param request DeleteQualityRelativeNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteQualityRelativeNodeResponse
      */
+    @Deprecated
+    // Deprecated
     public DeleteQualityRelativeNodeResponse deleteQualityRelativeNodeWithOptions(DeleteQualityRelativeNodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -4608,9 +4764,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Disassociates a node from a partition filter expression.</p>
+     * 
+     * @deprecated OpenAPI DeleteQualityRelativeNode is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
+     * 
      * @param request DeleteQualityRelativeNodeRequest
      * @return DeleteQualityRelativeNodeResponse
      */
+    @Deprecated
+    // Deprecated
     public DeleteQualityRelativeNodeResponse deleteQualityRelativeNode(DeleteQualityRelativeNodeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteQualityRelativeNodeWithOptions(request, runtime);
@@ -4620,10 +4783,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Deletes a monitoring rule.</p>
      * 
+     * @deprecated OpenAPI DeleteQualityRule is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
+     * 
      * @param request DeleteQualityRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteQualityRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public DeleteQualityRuleResponse deleteQualityRuleWithOptions(DeleteQualityRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -4660,9 +4827,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Deletes a monitoring rule.</p>
      * 
+     * @deprecated OpenAPI DeleteQualityRule is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
+     * 
      * @param request DeleteQualityRuleRequest
      * @return DeleteQualityRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public DeleteQualityRuleResponse deleteQualityRule(DeleteQualityRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteQualityRuleWithOptions(request, runtime);
@@ -4761,10 +4932,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a MaxCompute table.</p>
+     * 
+     * @deprecated OpenAPI DeleteTable is deprecated
+     * 
      * @param request DeleteTableRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteTableResponse
      */
+    @Deprecated
+    // Deprecated
     public DeleteTableResponse deleteTableWithOptions(DeleteTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4806,9 +4984,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a MaxCompute table.</p>
+     * 
+     * @deprecated OpenAPI DeleteTable is deprecated
+     * 
      * @param request DeleteTableRequest
      * @return DeleteTableResponse
      */
+    @Deprecated
+    // Deprecated
     public DeleteTableResponse deleteTable(DeleteTableRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteTableWithOptions(request, runtime);
@@ -4816,7 +5001,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a table level. This operation will be replaced soon. We recommend that you do not call this operation.</p>
+     * <p>Deletes a hierarchy level. This operation will be replaced soon. We recommend that you do not call this operation.</p>
      * 
      * @param request DeleteTableLevelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4852,7 +5037,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a table level. This operation will be replaced soon. We recommend that you do not call this operation.</p>
+     * <p>Deletes a hierarchy level. This operation will be replaced soon. We recommend that you do not call this operation.</p>
      * 
      * @param request DeleteTableLevelRequest
      * @return DeleteTableLevelResponse
@@ -5170,12 +5355,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries a list of data masking rules.</p>
      * 
-     * @param request DsgDesensPlanQueryListRequest
+     * @param tmpReq DsgDesensPlanQueryListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DsgDesensPlanQueryListResponse
      */
-    public DsgDesensPlanQueryListResponse dsgDesensPlanQueryListWithOptions(DsgDesensPlanQueryListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public DsgDesensPlanQueryListResponse dsgDesensPlanQueryListWithOptions(DsgDesensPlanQueryListRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DsgDesensPlanQueryListShrinkRequest request = new DsgDesensPlanQueryListShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.columns)) {
+            request.columnsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.columns, "columns", "json");
+        }
+
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -5342,6 +5533,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DsgQueryDefaultTemplatesResponse dsgQueryDefaultTemplates(DsgQueryDefaultTemplatesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.dsgQueryDefaultTemplatesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query the status of the masking switch.</p>
+     * 
+     * @param request DsgQueryDesensStatusListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DsgQueryDesensStatusListResponse
+     */
+    public DsgQueryDesensStatusListResponse dsgQueryDesensStatusListWithOptions(DsgQueryDesensStatusListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DsgQueryDesensStatusList"),
+            new TeaPair("version", "2020-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DsgQueryDesensStatusListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query the status of the masking switch.</p>
+     * 
+     * @param request DsgQueryDesensStatusListRequest
+     * @return DsgQueryDesensStatusListResponse
+     */
+    public DsgQueryDesensStatusListResponse dsgQueryDesensStatusList(DsgQueryDesensStatusListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.dsgQueryDesensStatusListWithOptions(request, runtime);
     }
 
     /**
@@ -5700,6 +5931,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DsgStopSensIdentifyResponse dsgStopSensIdentify(DsgStopSensIdentifyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.dsgStopSensIdentifyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the status of the masking switch.</p>
+     * 
+     * @param tmpReq DsgUpdateDesensStatusListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DsgUpdateDesensStatusListResponse
+     */
+    public DsgUpdateDesensStatusListResponse dsgUpdateDesensStatusListWithOptions(DsgUpdateDesensStatusListRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DsgUpdateDesensStatusListShrinkRequest request = new DsgUpdateDesensStatusListShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ids)) {
+            request.idsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ids, "Ids", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.desensStatus)) {
+            query.put("DesensStatus", request.desensStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idsShrink)) {
+            query.put("Ids", request.idsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DsgUpdateDesensStatusList"),
+            new TeaPair("version", "2020-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DsgUpdateDesensStatusListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the status of the masking switch.</p>
+     * 
+     * @param request DsgUpdateDesensStatusListRequest
+     * @return DsgUpdateDesensStatusListResponse
+     */
+    public DsgUpdateDesensStatusListResponse dsgUpdateDesensStatusList(DsgUpdateDesensStatusListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.dsgUpdateDesensStatusListWithOptions(request, runtime);
     }
 
     /**
@@ -6173,6 +6458,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Imports a table to a workflow. The call to this API operation is equivalent to performing the following operations: Go to the DataStudio page, find the desired workflow, and then click the workflow name. Right-click Table under the desired folder and select Import Table.</p>
+     * 
      * @param request EstablishRelationTableToBusinessRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EstablishRelationTableToBusinessResponse
@@ -6218,6 +6506,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Imports a table to a workflow. The call to this API operation is equivalent to performing the following operations: Go to the DataStudio page, find the desired workflow, and then click the workflow name. Right-click Table under the desired folder and select Import Table.</p>
+     * 
      * @param request EstablishRelationTableToBusinessRequest
      * @return EstablishRelationTableToBusinessResponse
      */
@@ -6690,10 +6981,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the status of a table creation, update, or deletion task.</p>
      * 
+     * @deprecated OpenAPI GetDDLJobStatus is deprecated
+     * 
      * @param request GetDDLJobStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDDLJobStatusResponse
      */
+    @Deprecated
+    // Deprecated
     public GetDDLJobStatusResponse getDDLJobStatusWithOptions(GetDDLJobStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -6718,9 +7013,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the status of a table creation, update, or deletion task.</p>
      * 
+     * @deprecated OpenAPI GetDDLJobStatus is deprecated
+     * 
      * @param request GetDDLJobStatusRequest
      * @return GetDDLJobStatusResponse
      */
+    @Deprecated
+    // Deprecated
     public GetDDLJobStatusResponse getDDLJobStatus(GetDDLJobStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getDDLJobStatusWithOptions(request, runtime);
@@ -8631,10 +8930,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the complete information about a table, including information about fields in the table.</p>
      * 
+     * @deprecated OpenAPI GetMetaTableFullInfo is deprecated
+     * 
      * @param request GetMetaTableFullInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetMetaTableFullInfoResponse
      */
+    @Deprecated
+    // Deprecated
     public GetMetaTableFullInfoResponse getMetaTableFullInfoWithOptions(GetMetaTableFullInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -8662,9 +8965,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the complete information about a table, including information about fields in the table.</p>
      * 
+     * @deprecated OpenAPI GetMetaTableFullInfo is deprecated
+     * 
      * @param request GetMetaTableFullInfoRequest
      * @return GetMetaTableFullInfoResponse
      */
+    @Deprecated
+    // Deprecated
     public GetMetaTableFullInfoResponse getMetaTableFullInfo(GetMetaTableFullInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getMetaTableFullInfoWithOptions(request, runtime);
@@ -9044,7 +9351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the themes and levels of a metatable.</p>
+     * <p>Fetches topics and hierarchy metadata for tables</p>
      * 
      * @param request GetMetaTableThemeLevelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9072,7 +9379,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the themes and levels of a metatable.</p>
+     * <p>Fetches topics and hierarchy metadata for tables</p>
      * 
      * @param request GetMetaTableThemeLevelRequest
      * @return GetMetaTableThemeLevelResponse
@@ -9767,10 +10074,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a partition filter expression.</p>
+     * 
+     * @deprecated OpenAPI GetQualityEntity is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.
+     * 
      * @param request GetQualityEntityRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetQualityEntityResponse
      */
+    @Deprecated
+    // Deprecated
     public GetQualityEntityResponse getQualityEntityWithOptions(GetQualityEntityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -9812,9 +10126,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a partition filter expression.</p>
+     * 
+     * @deprecated OpenAPI GetQualityEntity is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.
+     * 
      * @param request GetQualityEntityRequest
      * @return GetQualityEntityResponse
      */
+    @Deprecated
+    // Deprecated
     public GetQualityEntityResponse getQualityEntity(GetQualityEntityRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getQualityEntityWithOptions(request, runtime);
@@ -9824,10 +10145,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the subscribers of a partition filter expression.</p>
      * 
+     * @deprecated OpenAPI GetQualityFollower is deprecated, please use dataworks-public::2024-05-18::GetDataQualityAlertRule instead.
+     * 
      * @param request GetQualityFollowerRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetQualityFollowerResponse
      */
+    @Deprecated
+    // Deprecated
     public GetQualityFollowerResponse getQualityFollowerWithOptions(GetQualityFollowerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -9864,9 +10189,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the subscribers of a partition filter expression.</p>
      * 
+     * @deprecated OpenAPI GetQualityFollower is deprecated, please use dataworks-public::2024-05-18::GetDataQualityAlertRule instead.
+     * 
      * @param request GetQualityFollowerRequest
      * @return GetQualityFollowerResponse
      */
+    @Deprecated
+    // Deprecated
     public GetQualityFollowerResponse getQualityFollower(GetQualityFollowerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getQualityFollowerWithOptions(request, runtime);
@@ -9876,10 +10205,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the information about a monitoring rule.</p>
      * 
+     * @deprecated OpenAPI GetQualityRule is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.
+     * 
      * @param request GetQualityRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetQualityRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public GetQualityRuleResponse getQualityRuleWithOptions(GetQualityRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -9916,9 +10249,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the information about a monitoring rule.</p>
      * 
+     * @deprecated OpenAPI GetQualityRule is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.
+     * 
      * @param request GetQualityRuleRequest
      * @return GetQualityRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public GetQualityRuleResponse getQualityRule(GetQualityRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getQualityRuleWithOptions(request, runtime);
@@ -13150,7 +13487,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Views permission requests.</p>
+     * <p>Queries a list of permission requests.</p>
      * 
      * @param request ListPermissionApplyOrdersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13230,7 +13567,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Views permission requests.</p>
+     * <p>Queries a list of permission requests.</p>
      * 
      * @param request ListPermissionApplyOrdersRequest
      * @return ListPermissionApplyOrdersResponse
@@ -13519,10 +13856,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries a list of historical check results based on a partition filter expression.</p>
      * 
+     * @deprecated OpenAPI ListQualityResultsByEntity is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.
+     * 
      * @param request ListQualityResultsByEntityRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListQualityResultsByEntityResponse
      */
+    @Deprecated
+    // Deprecated
     public ListQualityResultsByEntityResponse listQualityResultsByEntityWithOptions(ListQualityResultsByEntityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -13578,9 +13919,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries a list of historical check results based on a partition filter expression.</p>
      * 
+     * @deprecated OpenAPI ListQualityResultsByEntity is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.
+     * 
      * @param request ListQualityResultsByEntityRequest
      * @return ListQualityResultsByEntityResponse
      */
+    @Deprecated
+    // Deprecated
     public ListQualityResultsByEntityResponse listQualityResultsByEntity(ListQualityResultsByEntityRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listQualityResultsByEntityWithOptions(request, runtime);
@@ -13590,10 +13935,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries monitoring results after the data quality of a data source or a compute engine is monitored based on monitoring rules.</p>
      * 
+     * @deprecated OpenAPI ListQualityResultsByRule is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.
+     * 
      * @param request ListQualityResultsByRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListQualityResultsByRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public ListQualityResultsByRuleResponse listQualityResultsByRuleWithOptions(ListQualityResultsByRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -13646,9 +13995,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries monitoring results after the data quality of a data source or a compute engine is monitored based on monitoring rules.</p>
      * 
+     * @deprecated OpenAPI ListQualityResultsByRule is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.
+     * 
      * @param request ListQualityResultsByRuleRequest
      * @return ListQualityResultsByRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public ListQualityResultsByRuleResponse listQualityResultsByRule(ListQualityResultsByRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listQualityResultsByRuleWithOptions(request, runtime);
@@ -13658,10 +14011,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries monitoring rules based on a partition filter expression.</p>
      * 
+     * @deprecated OpenAPI ListQualityRules is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.
+     * 
      * @param request ListQualityRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListQualityRulesResponse
      */
+    @Deprecated
+    // Deprecated
     public ListQualityRulesResponse listQualityRulesWithOptions(ListQualityRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -13706,9 +14063,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries monitoring rules based on a partition filter expression.</p>
      * 
+     * @deprecated OpenAPI ListQualityRules is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.
+     * 
      * @param request ListQualityRulesRequest
      * @return ListQualityRulesResponse
      */
+    @Deprecated
+    // Deprecated
     public ListQualityRulesResponse listQualityRules(ListQualityRulesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listQualityRulesWithOptions(request, runtime);
@@ -14074,7 +14435,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of table levels. This operation will be replaced soon. We recommend that you do not call this operation.</p>
+     * <p>Lists hierarchy levels. This operation will be replaced soon. We recommend that you do not call this operation.</p>
      * 
      * @param request ListTableLevelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14102,7 +14463,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of table levels. This operation will be replaced soon. We recommend that you do not call this operation.</p>
+     * <p>Lists hierarchy levels. This operation will be replaced soon. We recommend that you do not call this operation.</p>
      * 
      * @param request ListTableLevelRequest
      * @return ListTableLevelResponse
@@ -14114,7 +14475,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of table themes. This operation will be replaced soon. We recommend that you do not call this operation.</p>
+     * <p>Lists table themes. This operation will be replaced soon. We recommend that you do not call this operation.</p>
      * 
      * @param request ListTableThemeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14142,7 +14503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of table themes. This operation will be replaced soon. We recommend that you do not call this operation.</p>
+     * <p>Lists table themes. This operation will be replaced soon. We recommend that you do not call this operation.</p>
      * 
      * @param request ListTableThemeRequest
      * @return ListTableThemeResponse
@@ -15052,7 +15413,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resumes a suspended instance.</p>
+     * <p>Calls the ResumeInstance operation to resume a suspended instance.</p>
      * 
      * @param request ResumeInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15088,7 +15449,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resumes a suspended instance.</p>
+     * <p>Calls the ResumeInstance operation to resume a suspended instance.</p>
      * 
      * @param request ResumeInstanceRequest
      * @return ResumeInstanceResponse
@@ -17741,8 +18102,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation supports MaxCompute tables only.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Updates the metadata information about a table. Only MaxCompute tables are supported.</p>
+     * <p>This operation updates the metadata of a table.</p>
      * 
      * @param request UpdateMetaTableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17815,8 +18179,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation supports MaxCompute tables only.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Updates the metadata information about a table. Only MaxCompute tables are supported.</p>
+     * <p>This operation updates the metadata of a table.</p>
      * 
      * @param request UpdateMetaTableRequest
      * @return UpdateMetaTableResponse
@@ -17984,10 +18351,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Updates a subscription relationship.</p>
      * 
+     * @deprecated OpenAPI UpdateQualityFollower is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityAlertRule instead.
+     * 
      * @param request UpdateQualityFollowerRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateQualityFollowerResponse
      */
+    @Deprecated
+    // Deprecated
     public UpdateQualityFollowerResponse updateQualityFollowerWithOptions(UpdateQualityFollowerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -18032,9 +18403,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Updates a subscription relationship.</p>
      * 
+     * @deprecated OpenAPI UpdateQualityFollower is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityAlertRule instead.
+     * 
      * @param request UpdateQualityFollowerRequest
      * @return UpdateQualityFollowerResponse
      */
+    @Deprecated
+    // Deprecated
     public UpdateQualityFollowerResponse updateQualityFollower(UpdateQualityFollowerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateQualityFollowerWithOptions(request, runtime);
@@ -18044,10 +18419,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Updates a monitoring rule.</p>
      * 
+     * @deprecated OpenAPI UpdateQualityRule is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
+     * 
      * @param request UpdateQualityRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateQualityRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public UpdateQualityRuleResponse updateQualityRuleWithOptions(UpdateQualityRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -18160,9 +18539,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Updates a monitoring rule.</p>
      * 
+     * @deprecated OpenAPI UpdateQualityRule is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
+     * 
      * @param request UpdateQualityRuleRequest
      * @return UpdateQualityRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public UpdateQualityRuleResponse updateQualityRule(UpdateQualityRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateQualityRuleWithOptions(request, runtime);
@@ -18284,10 +18667,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Updates a MaxCompute table.</p>
      * 
+     * @deprecated OpenAPI UpdateTable is deprecated
+     * 
      * @param request UpdateTableRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateTableResponse
      */
+    @Deprecated
+    // Deprecated
     public UpdateTableResponse updateTableWithOptions(UpdateTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -18394,9 +18781,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Updates a MaxCompute table.</p>
      * 
+     * @deprecated OpenAPI UpdateTable is deprecated
+     * 
      * @param request UpdateTableRequest
      * @return UpdateTableResponse
      */
+    @Deprecated
+    // Deprecated
     public UpdateTableResponse updateTable(UpdateTableRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateTableWithOptions(request, runtime);
@@ -18406,10 +18797,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Updates the fields in a MaxCompute table.</p>
      * 
+     * @deprecated OpenAPI UpdateTableAddColumn is deprecated
+     * 
      * @param request UpdateTableAddColumnRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateTableAddColumnResponse
      */
+    @Deprecated
+    // Deprecated
     public UpdateTableAddColumnResponse updateTableAddColumnWithOptions(UpdateTableAddColumnRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -18444,9 +18839,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Updates the fields in a MaxCompute table.</p>
      * 
+     * @deprecated OpenAPI UpdateTableAddColumn is deprecated
+     * 
      * @param request UpdateTableAddColumnRequest
      * @return UpdateTableAddColumnResponse
      */
+    @Deprecated
+    // Deprecated
     public UpdateTableAddColumnResponse updateTableAddColumn(UpdateTableAddColumnRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateTableAddColumnWithOptions(request, runtime);
@@ -18454,7 +18853,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a table level. This operation will be replaced soon. We recommend that you do not call this operation.</p>
+     * <p>Updates a hierarchy level. This operation will be replaced soon. We recommend that you do not call this operation.</p>
      * 
      * @param request UpdateTableLevelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18502,7 +18901,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a table level. This operation will be replaced soon. We recommend that you do not call this operation.</p>
+     * <p>Updates a hierarchy level. This operation will be replaced soon. We recommend that you do not call this operation.</p>
      * 
      * @param request UpdateTableLevelRequest
      * @return UpdateTableLevelResponse

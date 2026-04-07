@@ -12,18 +12,18 @@ public class DsgQueryDefaultTemplatesRequest extends TeaModel {
      * <p>123</p>
      */
     @NameInMap("SceneId")
-    public Integer sceneId;
+    public Long sceneId;
 
     public static DsgQueryDefaultTemplatesRequest build(java.util.Map<String, ?> map) throws Exception {
         DsgQueryDefaultTemplatesRequest self = new DsgQueryDefaultTemplatesRequest();
         return TeaModel.build(map, self);
     }
 
-    public DsgQueryDefaultTemplatesRequest setSceneId(Integer sceneId) {
+    public DsgQueryDefaultTemplatesRequest setSceneId(Long sceneId) {
         this.sceneId = sceneId;
         return this;
     }
-    public Integer getSceneId() {
+    public Long getSceneId() {
         return this.sceneId;
     }
 

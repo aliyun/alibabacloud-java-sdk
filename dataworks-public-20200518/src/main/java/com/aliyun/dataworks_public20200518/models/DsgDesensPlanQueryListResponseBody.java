@@ -151,6 +151,58 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
 
     }
 
+    public static class DsgDesensPlanQueryListResponseBodyPageDataDataColumns extends TeaModel {
+        @NameInMap("column")
+        public String column;
+
+        @NameInMap("dbType")
+        public String dbType;
+
+        @NameInMap("project")
+        public String project;
+
+        @NameInMap("table")
+        public String table;
+
+        public static DsgDesensPlanQueryListResponseBodyPageDataDataColumns build(java.util.Map<String, ?> map) throws Exception {
+            DsgDesensPlanQueryListResponseBodyPageDataDataColumns self = new DsgDesensPlanQueryListResponseBodyPageDataDataColumns();
+            return TeaModel.build(map, self);
+        }
+
+        public DsgDesensPlanQueryListResponseBodyPageDataDataColumns setColumn(String column) {
+            this.column = column;
+            return this;
+        }
+        public String getColumn() {
+            return this.column;
+        }
+
+        public DsgDesensPlanQueryListResponseBodyPageDataDataColumns setDbType(String dbType) {
+            this.dbType = dbType;
+            return this;
+        }
+        public String getDbType() {
+            return this.dbType;
+        }
+
+        public DsgDesensPlanQueryListResponseBodyPageDataDataColumns setProject(String project) {
+            this.project = project;
+            return this;
+        }
+        public String getProject() {
+            return this.project;
+        }
+
+        public DsgDesensPlanQueryListResponseBodyPageDataDataColumns setTable(String table) {
+            this.table = table;
+            return this;
+        }
+        public String getTable() {
+            return this.table;
+        }
+
+    }
+
     public static class DsgDesensPlanQueryListResponseBodyPageDataData extends TeaModel {
         /**
          * <p>Indicates whether a watermark is added. Valid values:</p>
@@ -291,6 +343,12 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
+        @NameInMap("columns")
+        public java.util.List<DsgDesensPlanQueryListResponseBodyPageDataDataColumns> columns;
+
+        @NameInMap("emptyNotDesesn")
+        public Boolean emptyNotDesesn;
+
         public static DsgDesensPlanQueryListResponseBodyPageDataData build(java.util.Map<String, ?> map) throws Exception {
             DsgDesensPlanQueryListResponseBodyPageDataData self = new DsgDesensPlanQueryListResponseBodyPageDataData();
             return TeaModel.build(map, self);
@@ -406,6 +464,22 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
+        }
+
+        public DsgDesensPlanQueryListResponseBodyPageDataData setColumns(java.util.List<DsgDesensPlanQueryListResponseBodyPageDataDataColumns> columns) {
+            this.columns = columns;
+            return this;
+        }
+        public java.util.List<DsgDesensPlanQueryListResponseBodyPageDataDataColumns> getColumns() {
+            return this.columns;
+        }
+
+        public DsgDesensPlanQueryListResponseBodyPageDataData setEmptyNotDesesn(Boolean emptyNotDesesn) {
+            this.emptyNotDesesn = emptyNotDesesn;
+            return this;
+        }
+        public Boolean getEmptyNotDesesn() {
+            return this.emptyNotDesesn;
         }
 
     }

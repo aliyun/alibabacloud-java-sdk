@@ -73,6 +73,70 @@ public class DsgDesensPlanAddOrUpdateRequest extends TeaModel {
 
     }
 
+    public static class DsgDesensPlanAddOrUpdateRequestDesensRulesColumns extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("column")
+        public String column;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("dbType")
+        public String dbType;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("project")
+        public String project;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("table")
+        public String table;
+
+        public static DsgDesensPlanAddOrUpdateRequestDesensRulesColumns build(java.util.Map<String, ?> map) throws Exception {
+            DsgDesensPlanAddOrUpdateRequestDesensRulesColumns self = new DsgDesensPlanAddOrUpdateRequestDesensRulesColumns();
+            return TeaModel.build(map, self);
+        }
+
+        public DsgDesensPlanAddOrUpdateRequestDesensRulesColumns setColumn(String column) {
+            this.column = column;
+            return this;
+        }
+        public String getColumn() {
+            return this.column;
+        }
+
+        public DsgDesensPlanAddOrUpdateRequestDesensRulesColumns setDbType(String dbType) {
+            this.dbType = dbType;
+            return this;
+        }
+        public String getDbType() {
+            return this.dbType;
+        }
+
+        public DsgDesensPlanAddOrUpdateRequestDesensRulesColumns setProject(String project) {
+            this.project = project;
+            return this;
+        }
+        public String getProject() {
+            return this.project;
+        }
+
+        public DsgDesensPlanAddOrUpdateRequestDesensRulesColumns setTable(String table) {
+            this.table = table;
+            return this;
+        }
+        public String getTable() {
+            return this.table;
+        }
+
+    }
+
     public static class DsgDesensPlanAddOrUpdateRequestDesensRules extends TeaModel {
         /**
          * <p>Specifies whether to add a watermark. Valid values:</p>
@@ -89,7 +153,6 @@ public class DsgDesensPlanAddOrUpdateRequest extends TeaModel {
 
         /**
          * <p>The sensitive field type.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>phone</p>
@@ -111,7 +174,7 @@ public class DsgDesensPlanAddOrUpdateRequest extends TeaModel {
          * <p>123</p>
          */
         @NameInMap("Id")
-        public Integer id;
+        public Long id;
 
         /**
          * <p>The owner of the data masking rule.</p>
@@ -138,7 +201,7 @@ public class DsgDesensPlanAddOrUpdateRequest extends TeaModel {
          * <p>This parameter is required.</p>
          */
         @NameInMap("SceneIds")
-        public java.util.List<Integer> sceneIds;
+        public java.util.List<Long> sceneIds;
 
         /**
          * <p>The status of the data masking rule. Valid values:</p>
@@ -152,6 +215,12 @@ public class DsgDesensPlanAddOrUpdateRequest extends TeaModel {
          */
         @NameInMap("Status")
         public Integer status;
+
+        @NameInMap("columns")
+        public java.util.List<DsgDesensPlanAddOrUpdateRequestDesensRulesColumns> columns;
+
+        @NameInMap("emptyNotDesesn")
+        public Boolean emptyNotDesesn;
 
         public static DsgDesensPlanAddOrUpdateRequestDesensRules build(java.util.Map<String, ?> map) throws Exception {
             DsgDesensPlanAddOrUpdateRequestDesensRules self = new DsgDesensPlanAddOrUpdateRequestDesensRules();
@@ -182,11 +251,11 @@ public class DsgDesensPlanAddOrUpdateRequest extends TeaModel {
             return this.desensPlan;
         }
 
-        public DsgDesensPlanAddOrUpdateRequestDesensRules setId(Integer id) {
+        public DsgDesensPlanAddOrUpdateRequestDesensRules setId(Long id) {
             this.id = id;
             return this;
         }
-        public Integer getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -206,11 +275,11 @@ public class DsgDesensPlanAddOrUpdateRequest extends TeaModel {
             return this.ruleName;
         }
 
-        public DsgDesensPlanAddOrUpdateRequestDesensRules setSceneIds(java.util.List<Integer> sceneIds) {
+        public DsgDesensPlanAddOrUpdateRequestDesensRules setSceneIds(java.util.List<Long> sceneIds) {
             this.sceneIds = sceneIds;
             return this;
         }
-        public java.util.List<Integer> getSceneIds() {
+        public java.util.List<Long> getSceneIds() {
             return this.sceneIds;
         }
 
@@ -220,6 +289,22 @@ public class DsgDesensPlanAddOrUpdateRequest extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
+        }
+
+        public DsgDesensPlanAddOrUpdateRequestDesensRules setColumns(java.util.List<DsgDesensPlanAddOrUpdateRequestDesensRulesColumns> columns) {
+            this.columns = columns;
+            return this;
+        }
+        public java.util.List<DsgDesensPlanAddOrUpdateRequestDesensRulesColumns> getColumns() {
+            return this.columns;
+        }
+
+        public DsgDesensPlanAddOrUpdateRequestDesensRules setEmptyNotDesesn(Boolean emptyNotDesesn) {
+            this.emptyNotDesesn = emptyNotDesesn;
+            return this;
+        }
+        public Boolean getEmptyNotDesesn() {
+            return this.emptyNotDesesn;
         }
 
     }

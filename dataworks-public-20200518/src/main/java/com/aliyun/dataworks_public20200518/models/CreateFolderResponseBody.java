@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFolderResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+     * <p>The unique identifier of the folder.</p>
      * 
      * <strong>example:</strong>
      * <p>bdfd68****</p>
@@ -14,7 +14,7 @@ public class CreateFolderResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error code returned.</p>
      * 
      * <strong>example:</strong>
      * <p>Invalid.Tenant.ConnectionNotExists</p>
@@ -23,7 +23,7 @@ public class CreateFolderResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>The error message returned.</p>
      * 
      * <strong>example:</strong>
      * <p>The connection does not exist.</p>
@@ -32,7 +32,7 @@ public class CreateFolderResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The unique identifier of the folder.</p>
+     * <p>The path of the folder.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -41,7 +41,7 @@ public class CreateFolderResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFG</p>
@@ -50,7 +50,7 @@ public class CreateFolderResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
