@@ -1157,6 +1157,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建mem0</p>
+     * 
+     * @param request CreateMem0Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateMem0Response
+     */
+    public CreateMem0Response createMem0WithOptions(CreateMem0Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMem0"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMem0Response());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建mem0</p>
+     * 
+     * @param request CreateMem0Request
+     * @return CreateMem0Response
+     */
+    public CreateMem0Response createMem0(CreateMem0Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createMem0WithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建评估预检任务</p>
      * 
      * @param request CreateRplInspectionTaskRequest
@@ -1837,6 +1885,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteGdnInstanceResponse deleteGdnInstance(DeleteGdnInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteGdnInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除mem0</p>
+     * 
+     * @param request DeleteMem0Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteMem0Response
+     */
+    public DeleteMem0Response deleteMem0WithOptions(DeleteMem0Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteMem0"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteMem0Response());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除mem0</p>
+     * 
+     * @param request DeleteMem0Request
+     * @return DeleteMem0Response
+     */
+    public DeleteMem0Response deleteMem0(DeleteMem0Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteMem0WithOptions(request, runtime);
     }
 
     /**
@@ -3721,6 +3817,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeGdnInstancesResponse describeGdnInstances(DescribeGdnInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeGdnInstancesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询mem0实例信息</p>
+     * 
+     * @param request DescribeMem0InfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeMem0InfoResponse
+     */
+    public DescribeMem0InfoResponse describeMem0InfoWithOptions(DescribeMem0InfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMem0Info"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMem0InfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询mem0实例信息</p>
+     * 
+     * @param request DescribeMem0InfoRequest
+     * @return DescribeMem0InfoResponse
+     */
+    public DescribeMem0InfoResponse describeMem0Info(DescribeMem0InfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeMem0InfoWithOptions(request, runtime);
     }
 
     /**
