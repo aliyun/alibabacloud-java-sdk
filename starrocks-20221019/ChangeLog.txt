@@ -1,3 +1,7 @@
+2026-04-07 Version: 1.5.1
+- Update API DescribeInstances: add response parameters Body.Data.$.EnableAiFunction.
+
+
 2026-03-18 Version: 1.5.0
 - Support API AddBackupPolicy.
 - Support API CheckInventory.

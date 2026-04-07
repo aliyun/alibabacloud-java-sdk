@@ -223,6 +223,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("BeginTime")
         public Long beginTime;
 
+        @NameInMap("EnableAiFunction")
+        public Boolean enableAiFunction;
+
         /**
          * <strong>example:</strong>
          * <p>true</p>
@@ -426,6 +429,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public Long getBeginTime() {
             return this.beginTime;
+        }
+
+        public DescribeInstancesResponseBodyData setEnableAiFunction(Boolean enableAiFunction) {
+            this.enableAiFunction = enableAiFunction;
+            return this;
+        }
+        public Boolean getEnableAiFunction() {
+            return this.enableAiFunction;
         }
 
         public DescribeInstancesResponseBodyData setEnableAutoMinorVersionUpgrade(Boolean enableAutoMinorVersionUpgrade) {
