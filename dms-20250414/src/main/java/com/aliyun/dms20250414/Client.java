@@ -462,6 +462,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateCustomAgentShrinkRequest request = new CreateCustomAgentShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.callbackConfig)) {
+            request.callbackConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.callbackConfig, "CallbackConfig", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.executionConfig)) {
             request.executionConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.executionConfig, "ExecutionConfig", "json");
         }
@@ -475,6 +479,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callbackConfigShrink)) {
+            query.put("CallbackConfig", request.callbackConfigShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DMSUnit)) {
             query.put("DMSUnit", request.DMSUnit);
         }
@@ -3496,6 +3504,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ModifyCustomAgentShrinkRequest request = new ModifyCustomAgentShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.callbackConfig)) {
+            request.callbackConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.callbackConfig, "CallbackConfig", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.executionConfig)) {
             request.executionConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.executionConfig, "ExecutionConfig", "json");
         }
@@ -3509,6 +3521,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callbackConfigShrink)) {
+            query.put("CallbackConfig", request.callbackConfigShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.customAgentId)) {
             query.put("CustomAgentId", request.customAgentId);
         }
@@ -3710,6 +3726,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.dataSourceShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dataSource, "DataSource", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dataSources)) {
+            request.dataSourcesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dataSources, "DataSources", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.sessionConfig)) {
             request.sessionConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sessionConfig, "SessionConfig", "json");
         }
@@ -3725,6 +3745,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dataSourceShrink)) {
             query.put("DataSource", request.dataSourceShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourcesShrink)) {
+            query.put("DataSources", request.dataSourcesShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.message)) {

@@ -4,6 +4,9 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class ModifyCustomAgentShrinkRequest extends TeaModel {
+    @NameInMap("CallbackConfig")
+    public String callbackConfigShrink;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -60,6 +63,14 @@ public class ModifyCustomAgentShrinkRequest extends TeaModel {
     public static ModifyCustomAgentShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyCustomAgentShrinkRequest self = new ModifyCustomAgentShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyCustomAgentShrinkRequest setCallbackConfigShrink(String callbackConfigShrink) {
+        this.callbackConfigShrink = callbackConfigShrink;
+        return this;
+    }
+    public String getCallbackConfigShrink() {
+        return this.callbackConfigShrink;
     }
 
     public ModifyCustomAgentShrinkRequest setCustomAgentId(String customAgentId) {

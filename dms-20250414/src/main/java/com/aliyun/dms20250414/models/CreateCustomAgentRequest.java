@@ -4,6 +4,9 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class CreateCustomAgentRequest extends TeaModel {
+    @NameInMap("CallbackConfig")
+    public CreateCustomAgentRequestCallbackConfig callbackConfig;
+
     /**
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -51,6 +54,14 @@ public class CreateCustomAgentRequest extends TeaModel {
     public static CreateCustomAgentRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCustomAgentRequest self = new CreateCustomAgentRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateCustomAgentRequest setCallbackConfig(CreateCustomAgentRequestCallbackConfig callbackConfig) {
+        this.callbackConfig = callbackConfig;
+        return this;
+    }
+    public CreateCustomAgentRequestCallbackConfig getCallbackConfig() {
+        return this.callbackConfig;
     }
 
     public CreateCustomAgentRequest setDMSUnit(String DMSUnit) {
@@ -147,6 +158,69 @@ public class CreateCustomAgentRequest extends TeaModel {
     }
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    public static class CreateCustomAgentRequestCallbackConfig extends TeaModel {
+        @NameInMap("CallbackArgs")
+        public String callbackArgs;
+
+        @NameInMap("CallbackPrompt")
+        public String callbackPrompt;
+
+        @NameInMap("CallbackTime")
+        public Integer callbackTime;
+
+        @NameInMap("ToolId")
+        public String toolId;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static CreateCustomAgentRequestCallbackConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateCustomAgentRequestCallbackConfig self = new CreateCustomAgentRequestCallbackConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateCustomAgentRequestCallbackConfig setCallbackArgs(String callbackArgs) {
+            this.callbackArgs = callbackArgs;
+            return this;
+        }
+        public String getCallbackArgs() {
+            return this.callbackArgs;
+        }
+
+        public CreateCustomAgentRequestCallbackConfig setCallbackPrompt(String callbackPrompt) {
+            this.callbackPrompt = callbackPrompt;
+            return this;
+        }
+        public String getCallbackPrompt() {
+            return this.callbackPrompt;
+        }
+
+        public CreateCustomAgentRequestCallbackConfig setCallbackTime(Integer callbackTime) {
+            this.callbackTime = callbackTime;
+            return this;
+        }
+        public Integer getCallbackTime() {
+            return this.callbackTime;
+        }
+
+        public CreateCustomAgentRequestCallbackConfig setToolId(String toolId) {
+            this.toolId = toolId;
+            return this;
+        }
+        public String getToolId() {
+            return this.toolId;
+        }
+
+        public CreateCustomAgentRequestCallbackConfig setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
     }
 
     public static class CreateCustomAgentRequestExecutionConfig extends TeaModel {

@@ -4,6 +4,9 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class CreateCustomAgentShrinkRequest extends TeaModel {
+    @NameInMap("CallbackConfig")
+    public String callbackConfigShrink;
+
     /**
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -51,6 +54,14 @@ public class CreateCustomAgentShrinkRequest extends TeaModel {
     public static CreateCustomAgentShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCustomAgentShrinkRequest self = new CreateCustomAgentShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateCustomAgentShrinkRequest setCallbackConfigShrink(String callbackConfigShrink) {
+        this.callbackConfigShrink = callbackConfigShrink;
+        return this;
+    }
+    public String getCallbackConfigShrink() {
+        return this.callbackConfigShrink;
     }
 
     public CreateCustomAgentShrinkRequest setDMSUnit(String DMSUnit) {

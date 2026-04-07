@@ -82,6 +82,69 @@ public class ListCustomAgentResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class ListCustomAgentResponseBodyDataContentCallbackConfig extends TeaModel {
+        @NameInMap("CallbackArgs")
+        public String callbackArgs;
+
+        @NameInMap("CallbackPrompt")
+        public String callbackPrompt;
+
+        @NameInMap("CallbackTime")
+        public Integer callbackTime;
+
+        @NameInMap("ToolId")
+        public String toolId;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static ListCustomAgentResponseBodyDataContentCallbackConfig build(java.util.Map<String, ?> map) throws Exception {
+            ListCustomAgentResponseBodyDataContentCallbackConfig self = new ListCustomAgentResponseBodyDataContentCallbackConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCustomAgentResponseBodyDataContentCallbackConfig setCallbackArgs(String callbackArgs) {
+            this.callbackArgs = callbackArgs;
+            return this;
+        }
+        public String getCallbackArgs() {
+            return this.callbackArgs;
+        }
+
+        public ListCustomAgentResponseBodyDataContentCallbackConfig setCallbackPrompt(String callbackPrompt) {
+            this.callbackPrompt = callbackPrompt;
+            return this;
+        }
+        public String getCallbackPrompt() {
+            return this.callbackPrompt;
+        }
+
+        public ListCustomAgentResponseBodyDataContentCallbackConfig setCallbackTime(Integer callbackTime) {
+            this.callbackTime = callbackTime;
+            return this;
+        }
+        public Integer getCallbackTime() {
+            return this.callbackTime;
+        }
+
+        public ListCustomAgentResponseBodyDataContentCallbackConfig setToolId(String toolId) {
+            this.toolId = toolId;
+            return this;
+        }
+        public String getToolId() {
+            return this.toolId;
+        }
+
+        public ListCustomAgentResponseBodyDataContentCallbackConfig setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class ListCustomAgentResponseBodyDataContentExecutionConfig extends TeaModel {
         @NameInMap("SkipAskHuman")
         public Boolean skipAskHuman;
@@ -223,6 +286,9 @@ public class ListCustomAgentResponseBody extends TeaModel {
          */
         @NameInMap("AliyunUid")
         public String aliyunUid;
+
+        @NameInMap("CallbackConfig")
+        public ListCustomAgentResponseBodyDataContentCallbackConfig callbackConfig;
 
         /**
          * <strong>example:</strong>
@@ -373,6 +439,14 @@ public class ListCustomAgentResponseBody extends TeaModel {
         }
         public String getAliyunUid() {
             return this.aliyunUid;
+        }
+
+        public ListCustomAgentResponseBodyDataContent setCallbackConfig(ListCustomAgentResponseBodyDataContentCallbackConfig callbackConfig) {
+            this.callbackConfig = callbackConfig;
+            return this;
+        }
+        public ListCustomAgentResponseBodyDataContentCallbackConfig getCallbackConfig() {
+            return this.callbackConfig;
         }
 
         public ListCustomAgentResponseBodyDataContent setCreatorUserName(String creatorUserName) {

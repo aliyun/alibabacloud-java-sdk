@@ -23,6 +23,9 @@ public class SendChatMessageRequest extends TeaModel {
     @NameInMap("DataSource")
     public SendChatMessageRequestDataSource dataSource;
 
+    @NameInMap("DataSources")
+    public java.util.List<SendChatMessageRequestDataSources> dataSources;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -102,6 +105,14 @@ public class SendChatMessageRequest extends TeaModel {
     }
     public SendChatMessageRequestDataSource getDataSource() {
         return this.dataSource;
+    }
+
+    public SendChatMessageRequest setDataSources(java.util.List<SendChatMessageRequestDataSources> dataSources) {
+        this.dataSources = dataSources;
+        return this;
+    }
+    public java.util.List<SendChatMessageRequestDataSources> getDataSources() {
+        return this.dataSources;
     }
 
     public SendChatMessageRequest setMessage(String message) {
@@ -328,6 +339,135 @@ public class SendChatMessageRequest extends TeaModel {
         }
 
         public SendChatMessageRequestDataSource setTables(java.util.List<String> tables) {
+            this.tables = tables;
+            return this;
+        }
+        public java.util.List<String> getTables() {
+            return this.tables;
+        }
+
+    }
+
+    public static class SendChatMessageRequestDataSources extends TeaModel {
+        @NameInMap("DataSourceId")
+        public String dataSourceId;
+
+        @NameInMap("DataSourceType")
+        public String dataSourceType;
+
+        @NameInMap("Database")
+        public String database;
+
+        @NameInMap("DbName")
+        public String dbName;
+
+        @NameInMap("DmsDatabaseId")
+        public String dmsDatabaseId;
+
+        @NameInMap("DmsInstanceId")
+        public String dmsInstanceId;
+
+        @NameInMap("Engine")
+        public String engine;
+
+        @NameInMap("FileId")
+        public String fileId;
+
+        @NameInMap("Location")
+        public String location;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("Tables")
+        public java.util.List<String> tables;
+
+        public static SendChatMessageRequestDataSources build(java.util.Map<String, ?> map) throws Exception {
+            SendChatMessageRequestDataSources self = new SendChatMessageRequestDataSources();
+            return TeaModel.build(map, self);
+        }
+
+        public SendChatMessageRequestDataSources setDataSourceId(String dataSourceId) {
+            this.dataSourceId = dataSourceId;
+            return this;
+        }
+        public String getDataSourceId() {
+            return this.dataSourceId;
+        }
+
+        public SendChatMessageRequestDataSources setDataSourceType(String dataSourceType) {
+            this.dataSourceType = dataSourceType;
+            return this;
+        }
+        public String getDataSourceType() {
+            return this.dataSourceType;
+        }
+
+        public SendChatMessageRequestDataSources setDatabase(String database) {
+            this.database = database;
+            return this;
+        }
+        public String getDatabase() {
+            return this.database;
+        }
+
+        public SendChatMessageRequestDataSources setDbName(String dbName) {
+            this.dbName = dbName;
+            return this;
+        }
+        public String getDbName() {
+            return this.dbName;
+        }
+
+        public SendChatMessageRequestDataSources setDmsDatabaseId(String dmsDatabaseId) {
+            this.dmsDatabaseId = dmsDatabaseId;
+            return this;
+        }
+        public String getDmsDatabaseId() {
+            return this.dmsDatabaseId;
+        }
+
+        public SendChatMessageRequestDataSources setDmsInstanceId(String dmsInstanceId) {
+            this.dmsInstanceId = dmsInstanceId;
+            return this;
+        }
+        public String getDmsInstanceId() {
+            return this.dmsInstanceId;
+        }
+
+        public SendChatMessageRequestDataSources setEngine(String engine) {
+            this.engine = engine;
+            return this;
+        }
+        public String getEngine() {
+            return this.engine;
+        }
+
+        public SendChatMessageRequestDataSources setFileId(String fileId) {
+            this.fileId = fileId;
+            return this;
+        }
+        public String getFileId() {
+            return this.fileId;
+        }
+
+        public SendChatMessageRequestDataSources setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+        public SendChatMessageRequestDataSources setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public SendChatMessageRequestDataSources setTables(java.util.List<String> tables) {
             this.tables = tables;
             return this;
         }

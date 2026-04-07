@@ -23,6 +23,9 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     @NameInMap("DataSource")
     public String dataSourceShrink;
 
+    @NameInMap("DataSources")
+    public String dataSourcesShrink;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -102,6 +105,14 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     }
     public String getDataSourceShrink() {
         return this.dataSourceShrink;
+    }
+
+    public SendChatMessageShrinkRequest setDataSourcesShrink(String dataSourcesShrink) {
+        this.dataSourcesShrink = dataSourcesShrink;
+        return this;
+    }
+    public String getDataSourcesShrink() {
+        return this.dataSourcesShrink;
     }
 
     public SendChatMessageShrinkRequest setMessage(String message) {
