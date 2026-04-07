@@ -171,6 +171,15 @@ public class GetSmsTemplateListResponseBody extends TeaModel {
         public String templateCode;
 
         /**
+         * <p>模板内容</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
+         */
+        @NameInMap("TemplateContent")
+        public String templateContent;
+
+        /**
          * <p>模板名称</p>
          * 
          * <strong>example:</strong>
@@ -244,6 +253,14 @@ public class GetSmsTemplateListResponseBody extends TeaModel {
         }
         public String getTemplateCode() {
             return this.templateCode;
+        }
+
+        public GetSmsTemplateListResponseBodyDataList setTemplateContent(String templateContent) {
+            this.templateContent = templateContent;
+            return this;
+        }
+        public String getTemplateContent() {
+            return this.templateContent;
         }
 
         public GetSmsTemplateListResponseBodyDataList setTemplateName(String templateName) {

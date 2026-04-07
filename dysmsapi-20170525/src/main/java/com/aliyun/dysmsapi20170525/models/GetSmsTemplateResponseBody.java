@@ -107,6 +107,9 @@ public class GetSmsTemplateResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("SignList")
+    public GetSmsTemplateResponseBodySignList signList;
+
     /**
      * <p>SMS template code.</p>
      * 
@@ -296,6 +299,14 @@ public class GetSmsTemplateResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetSmsTemplateResponseBody setSignList(GetSmsTemplateResponseBodySignList signList) {
+        this.signList = signList;
+        return this;
+    }
+    public GetSmsTemplateResponseBodySignList getSignList() {
+        return this.signList;
+    }
+
     public GetSmsTemplateResponseBody setTemplateCode(String templateCode) {
         this.templateCode = templateCode;
         return this;
@@ -436,6 +447,25 @@ public class GetSmsTemplateResponseBody extends TeaModel {
         }
         public java.util.List<String> getMoreDataFileUrl() {
             return this.moreDataFileUrl;
+        }
+
+    }
+
+    public static class GetSmsTemplateResponseBodySignList extends TeaModel {
+        @NameInMap("SignList")
+        public java.util.List<String> signList;
+
+        public static GetSmsTemplateResponseBodySignList build(java.util.Map<String, ?> map) throws Exception {
+            GetSmsTemplateResponseBodySignList self = new GetSmsTemplateResponseBodySignList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetSmsTemplateResponseBodySignList setSignList(java.util.List<String> signList) {
+            this.signList = signList;
+            return this;
+        }
+        public java.util.List<String> getSignList() {
+            return this.signList;
         }
 
     }

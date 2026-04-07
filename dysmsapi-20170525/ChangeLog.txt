@@ -1,3 +1,8 @@
+2026-04-07 Version: 4.5.1
+- Update API GetSmsTemplate: add response parameters Body.SignList.
+- Update API GetSmsTemplateList: add response parameters Body.Data.List.$.TemplateContent.
+
+
 2026-02-10 Version: 4.5.0
 - Support API CreateDigitalSignOrder.
 - Support API CreateDigitalSmsTemplate.
