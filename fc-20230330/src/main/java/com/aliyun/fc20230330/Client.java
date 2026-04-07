@@ -2969,6 +2969,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ResumeSessionResponse resumeSessionWithOptions(String functionName, String sessionId, ResumeSessionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSystemOnly)) {
+            query.put("fileSystemOnly", request.fileSystemOnly);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
             query.put("qualifier", request.qualifier);
         }
