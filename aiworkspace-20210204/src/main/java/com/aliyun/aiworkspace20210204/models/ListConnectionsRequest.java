@@ -4,6 +4,9 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListConnectionsRequest extends TeaModel {
+    @NameInMap("Accessibility")
+    public String accessibility;
+
     /**
      * <p>The list of connection IDs.</p>
      */
@@ -121,6 +124,14 @@ public class ListConnectionsRequest extends TeaModel {
     public static ListConnectionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListConnectionsRequest self = new ListConnectionsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListConnectionsRequest setAccessibility(String accessibility) {
+        this.accessibility = accessibility;
+        return this;
+    }
+    public String getAccessibility() {
+        return this.accessibility;
     }
 
     public ListConnectionsRequest setConnectionIds(java.util.List<String> connectionIds) {

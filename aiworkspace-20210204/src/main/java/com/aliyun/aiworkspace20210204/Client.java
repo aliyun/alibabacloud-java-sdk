@@ -3731,6 +3731,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessibility)) {
+            query.put("Accessibility", request.accessibility);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.connectionIdsShrink)) {
             query.put("ConnectionIds", request.connectionIdsShrink);
         }
