@@ -1406,6 +1406,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>增加ZooKeeper Sasl 用户</p>
+     * 
+     * @param tmpReq AddZooKeeperSaslUserRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddZooKeeperSaslUserResponse
+     */
+    public AddZooKeeperSaslUserResponse addZooKeeperSaslUserWithOptions(AddZooKeeperSaslUserRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AddZooKeeperSaslUserShrinkRequest request = new AddZooKeeperSaslUserShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.saslUser)) {
+            request.saslUserShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.saslUser, "SaslUser", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reload)) {
+            query.put("Reload", request.reload);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.saslUserShrink)) {
+            query.put("SaslUser", request.saslUserShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddZooKeeperSaslUser"),
+            new TeaPair("version", "2019-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddZooKeeperSaslUserResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>增加ZooKeeper Sasl 用户</p>
+     * 
+     * @param request AddZooKeeperSaslUserRequest
+     * @return AddZooKeeperSaslUserResponse
+     */
+    public AddZooKeeperSaslUserResponse addZooKeeperSaslUser(AddZooKeeperSaslUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addZooKeeperSaslUserWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Publishes a route for a gateway.</p>
      * 
      * @param request ApplyGatewayRouteRequest
@@ -11488,6 +11550,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>列出所有ZooKeeper sasl用户</p>
+     * 
+     * @param request ListZooKeeperSaslUserRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListZooKeeperSaslUserResponse
+     */
+    public ListZooKeeperSaslUserResponse listZooKeeperSaslUserWithOptions(ListZooKeeperSaslUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListZooKeeperSaslUser"),
+            new TeaPair("version", "2019-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListZooKeeperSaslUserResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出所有ZooKeeper sasl用户</p>
+     * 
+     * @param request ListZooKeeperSaslUserRequest
+     * @return ListZooKeeperSaslUserResponse
+     */
+    public ListZooKeeperSaslUserResponse listZooKeeperSaslUser(ListZooKeeperSaslUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listZooKeeperSaslUserWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Modifies the information about a cluster for which Microservice Governance is enabled.</p>
      * 
      * @param tmpReq ModifyGovernanceKubernetesClusterRequest
@@ -13012,6 +13122,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RemoveAuthPolicyResponse removeAuthPolicy(RemoveAuthPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.removeAuthPolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除ZooKeeper sasl用户</p>
+     * 
+     * @param tmpReq RemoveZooKeeperSaslUserRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveZooKeeperSaslUserResponse
+     */
+    public RemoveZooKeeperSaslUserResponse removeZooKeeperSaslUserWithOptions(RemoveZooKeeperSaslUserRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        RemoveZooKeeperSaslUserShrinkRequest request = new RemoveZooKeeperSaslUserShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userNames)) {
+            request.userNamesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userNames, "UserNames", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reload)) {
+            query.put("Reload", request.reload);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userNamesShrink)) {
+            query.put("UserNames", request.userNamesShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RemoveZooKeeperSaslUser"),
+            new TeaPair("version", "2019-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveZooKeeperSaslUserResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除ZooKeeper sasl用户</p>
+     * 
+     * @param request RemoveZooKeeperSaslUserRequest
+     * @return RemoveZooKeeperSaslUserResponse
+     */
+    public RemoveZooKeeperSaslUserResponse removeZooKeeperSaslUser(RemoveZooKeeperSaslUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.removeZooKeeperSaslUserWithOptions(request, runtime);
     }
 
     /**
@@ -17212,6 +17384,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateZnodeResponse updateZnode(UpdateZnodeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateZnodeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改ZooKeeper sasl 用户信息</p>
+     * 
+     * @param tmpReq UpdateZooKeeperSaslUserRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateZooKeeperSaslUserResponse
+     */
+    public UpdateZooKeeperSaslUserResponse updateZooKeeperSaslUserWithOptions(UpdateZooKeeperSaslUserRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateZooKeeperSaslUserShrinkRequest request = new UpdateZooKeeperSaslUserShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.saslUser)) {
+            request.saslUserShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.saslUser, "SaslUser", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reload)) {
+            query.put("Reload", request.reload);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.saslUserShrink)) {
+            query.put("SaslUser", request.saslUserShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateZooKeeperSaslUser"),
+            new TeaPair("version", "2019-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateZooKeeperSaslUserResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改ZooKeeper sasl 用户信息</p>
+     * 
+     * @param request UpdateZooKeeperSaslUserRequest
+     * @return UpdateZooKeeperSaslUserResponse
+     */
+    public UpdateZooKeeperSaslUserResponse updateZooKeeperSaslUser(UpdateZooKeeperSaslUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateZooKeeperSaslUserWithOptions(request, runtime);
     }
 
     /**
