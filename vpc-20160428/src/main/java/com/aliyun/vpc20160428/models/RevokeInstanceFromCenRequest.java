@@ -15,7 +15,7 @@ public class RevokeInstanceFromCenRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The user ID (UID) of the Apsara Stack tenant account to which the CEN instance belongs.</p>
+     * <p>The user ID (UID) of the Alibaba Cloud account to which the CEN instance belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

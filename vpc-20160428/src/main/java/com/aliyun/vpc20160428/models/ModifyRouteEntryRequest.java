@@ -15,7 +15,11 @@ public class ModifyRouteEntryRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The destination CIDR block of the route entry. Only IPv4 CIDR blocks, IPv6 CIDR blocks, and prefix lists are supported.</p>
+     * <p>The destination CIDR block of the route entry, which supports IPv4 CIDR blocks and IPv6 CIDR blocks.</p>
+     * <blockquote>
+     * <p>When the <strong>RouteEntryId</strong> parameter is not provided, both the <strong>DestinationCidrBlock</strong> and <strong>RouteTableId</strong> parameters are required.
+     * When modifying a route whose destination CIDR block points to a prefix list, the <strong>RouteEntryId</strong> parameter is required, and the <strong>DestinationCidrBlock</strong> parameter does not support prefix list CIDR blocks or prefix list instance IDs.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>192.168.0.0/24</p>

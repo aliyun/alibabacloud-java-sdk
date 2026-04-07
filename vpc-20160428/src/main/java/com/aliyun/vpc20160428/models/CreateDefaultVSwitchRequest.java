@@ -38,7 +38,7 @@ public class CreateDefaultVSwitchRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
+     * <p>ap-southeast-1</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -55,7 +55,7 @@ public class CreateDefaultVSwitchRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou-b</p>
+     * <p>ap-southeast-1a</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

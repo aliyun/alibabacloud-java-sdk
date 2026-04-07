@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateVpcRequest extends TeaModel {
     /**
-     * <p>The CIDR block of the VPC.</p>
+     * <p>VPC CIDR.</p>
      * <ul>
      * <li>We recommend using the private IPv4 address specified in RFC 1918 as the primary IPv4 CIDR block of the VPC with a recommended mask length of 16 to 28 bits. For example, 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.</li>
      * <li>You can also use a custom CIDR block other than 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, or their subnets as the primary IPv4 CIDR block.</li>
@@ -189,7 +189,7 @@ public class CreateVpcRequest extends TeaModel {
      * <p>For more information about user CIDR blocks, see the <code>What is a user CIDR block?</code> section in <a href="https://help.aliyun.com/document_detail/185311.html">VPC FAQ</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>192.168.0.0/12</p>
+     * <p>192.168.0.0/16</p>
      */
     @NameInMap("UserCidr")
     public String userCidr;

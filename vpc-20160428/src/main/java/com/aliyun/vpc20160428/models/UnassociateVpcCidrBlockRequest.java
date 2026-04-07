@@ -7,7 +7,9 @@ public class UnassociateVpcCidrBlockRequest extends TeaModel {
     /**
      * <p>The secondary IPv6 CIDR block to be deleted.</p>
      * <blockquote>
-     * <p> You must set one of the <strong>Ipv6CidrBlock</strong> and <strong>SecondaryCidrBlock</strong> parameters.</p>
+     * <ul>
+     * <li>You must set one of the Ipv6CidrBlock and SecondaryCidrBlock parameters.</li>
+     * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -24,11 +26,11 @@ public class UnassociateVpcCidrBlockRequest extends TeaModel {
 
     /**
      * <p>The region ID of the VPC to which the secondary CIDR block to be deleted belongs.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ch-hangzhou</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -42,7 +44,9 @@ public class UnassociateVpcCidrBlockRequest extends TeaModel {
     /**
      * <p>The secondary IPv4 CIDR block to be deleted.</p>
      * <blockquote>
-     * <p> You must set one of the <strong>SecondaryCidrBlock</strong> and <strong>Ipv6CidrBlock</strong> parameters.</p>
+     * <ul>
+     * <li>You must set one of the SecondaryCidrBlock and Ipv6CidrBlock parameters.</li>
+     * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>

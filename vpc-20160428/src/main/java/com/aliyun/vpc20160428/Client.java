@@ -297,7 +297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Associates an elastic IP address (EIP) with an Internet Shared Bandwidth instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Associates an elastic IP address (EIP) with an Internet Shared Bandwidth instance.</p>
+     * <p>AddCommonBandwidthPackageIp</p>
      * 
      * @param request AddCommonBandwidthPackageIpRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -364,7 +364,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Associates an elastic IP address (EIP) with an Internet Shared Bandwidth instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Associates an elastic IP address (EIP) with an Internet Shared Bandwidth instance.</p>
+     * <p>AddCommonBandwidthPackageIp</p>
      * 
      * @param request AddCommonBandwidthPackageIpRequest
      * @return AddCommonBandwidthPackageIpResponse
@@ -1410,7 +1410,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The following section describes how to allocate an IPv6 CIDR block to a virtual private cloud (VPC):</p>
      * <ol>
      * <li>Call the AllocateVpcIpv6Cidr operation to reserve the IPv6 CIDR block.</li>
-     * <li>To allocate an IPv6 CIDR block to an existing VPC, call the <a href="https://help.aliyun.com/document_detail/146745.html">AssociateVpcCidrBlock</a> operation. Set <strong>RegionId</strong>, <strong>VpcId</strong>, and <strong>IPv6CidrBlock</strong> to the IPv6 CIDR bock, and set <strong>IpVersion</strong> to <strong>ipv6</strong>. To allocate an IPv6 CIDR block when you create a VPC, call the <a href="https://help.aliyun.com/document_detail/35737.html">CreateVpc</a> operation. Set <strong>RegionId</strong> and <strong>Ipv6CidrBlock</strong> to the IPv6 CIDR block, and set <strong>EnableIpv6</strong> to <strong>true</strong>.</li>
+     * <li>To allocate an IPv6 CIDR block to an existing VPC, call the <a href="https://help.aliyun.com/document_detail/146745.html">AssociateVpcCidrBlock</a> operation. Set <strong>RegionId</strong>, <strong>VpcId</strong>, and <strong>IPv6CidrBlock</strong> to the IPv6 CIDR block, and set <strong>IpVersion</strong> to <strong>ipv6</strong>. To allocate an IPv6 CIDR block when you create a VPC, call the <a href="https://help.aliyun.com/document_detail/35737.html">CreateVpc</a> operation. Set <strong>RegionId</strong> and <strong>Ipv6CidrBlock</strong> to the IPv6 CIDR block, and set <strong>EnableIpv6</strong> to <strong>true</strong>.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -1486,7 +1486,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The following section describes how to allocate an IPv6 CIDR block to a virtual private cloud (VPC):</p>
      * <ol>
      * <li>Call the AllocateVpcIpv6Cidr operation to reserve the IPv6 CIDR block.</li>
-     * <li>To allocate an IPv6 CIDR block to an existing VPC, call the <a href="https://help.aliyun.com/document_detail/146745.html">AssociateVpcCidrBlock</a> operation. Set <strong>RegionId</strong>, <strong>VpcId</strong>, and <strong>IPv6CidrBlock</strong> to the IPv6 CIDR bock, and set <strong>IpVersion</strong> to <strong>ipv6</strong>. To allocate an IPv6 CIDR block when you create a VPC, call the <a href="https://help.aliyun.com/document_detail/35737.html">CreateVpc</a> operation. Set <strong>RegionId</strong> and <strong>Ipv6CidrBlock</strong> to the IPv6 CIDR block, and set <strong>EnableIpv6</strong> to <strong>true</strong>.</li>
+     * <li>To allocate an IPv6 CIDR block to an existing VPC, call the <a href="https://help.aliyun.com/document_detail/146745.html">AssociateVpcCidrBlock</a> operation. Set <strong>RegionId</strong>, <strong>VpcId</strong>, and <strong>IPv6CidrBlock</strong> to the IPv6 CIDR block, and set <strong>IpVersion</strong> to <strong>ipv6</strong>. To allocate an IPv6 CIDR block when you create a VPC, call the <a href="https://help.aliyun.com/document_detail/35737.html">CreateVpc</a> operation. Set <strong>RegionId</strong> and <strong>Ipv6CidrBlock</strong> to the IPv6 CIDR block, and set <strong>EnableIpv6</strong> to <strong>true</strong>.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -4202,6 +4202,102 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateDhcpOptionsSetResponse createDhcpOptionsSet(CreateDhcpOptionsSetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDhcpOptionsSetWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建增强型VPN网关</p>
+     * 
+     * @param request CreateEnhancedVpnGatewayRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateEnhancedVpnGatewayResponse
+     */
+    public CreateEnhancedVpnGatewayResponse createEnhancedVpnGatewayWithOptions(CreateEnhancedVpnGatewayRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.disasterRecoveryVSwitchId)) {
+            query.put("DisasterRecoveryVSwitchId", request.disasterRecoveryVSwitchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayType)) {
+            query.put("GatewayType", request.gatewayType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkType)) {
+            query.put("NetworkType", request.networkType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
+            query.put("VSwitchId", request.vSwitchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpnType)) {
+            query.put("VpnType", request.vpnType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateEnhancedVpnGateway"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateEnhancedVpnGatewayResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建增强型VPN网关</p>
+     * 
+     * @param request CreateEnhancedVpnGatewayRequest
+     * @return CreateEnhancedVpnGatewayResponse
+     */
+    public CreateEnhancedVpnGatewayResponse createEnhancedVpnGateway(CreateEnhancedVpnGatewayRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createEnhancedVpnGatewayWithOptions(request, runtime);
     }
 
     /**
@@ -9036,11 +9132,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>After you create a VPC, a vRouter and a route table are automatically created.</li>
      * <li>At most three user CIDR blocks can be added to a VPC. If a user CIDR block includes another user CIDR block, the one with the shorter subnet mask takes effect. For example, if both 10.0.0.0/8 and 10.1.0.0/16 are specified, only 10.0.0.0/8 takes effect.</li>
      * <li><strong>CreateVpc</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/94565.html">DescribeVpcAttribute</a> operation to query the status of the task:<ul>
-     * <li>If the VPC is in the <strong>Creating</strong> state, the VPC is being created.</li>
-     * <li>If the VPC is in the <strong>Created</strong> state, the VPC is created.</li>
+     * <li>If the VPC is in the <strong>Pending</strong> state, the VPC is being created.</li>
+     * <li>If the VPC is in the <strong>Available</strong> state, the VPC is created.</li>
      * </ul>
      * </li>
-     * <li>You cannot repeatedly call the <strong>DeleteRouteEntry</strong> operation to create default VPCs within a specific time period. However, you can repeatedly call this operation to create custom VPCs within a specific time period.</li>
+     * <li>You cannot repeatedly call the <strong>CreateVpc</strong> operation to create default VPCs within a specific time period. However, you can repeatedly call this operation to create custom VPCs within a specific time period.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9164,11 +9260,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>After you create a VPC, a vRouter and a route table are automatically created.</li>
      * <li>At most three user CIDR blocks can be added to a VPC. If a user CIDR block includes another user CIDR block, the one with the shorter subnet mask takes effect. For example, if both 10.0.0.0/8 and 10.1.0.0/16 are specified, only 10.0.0.0/8 takes effect.</li>
      * <li><strong>CreateVpc</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/94565.html">DescribeVpcAttribute</a> operation to query the status of the task:<ul>
-     * <li>If the VPC is in the <strong>Creating</strong> state, the VPC is being created.</li>
-     * <li>If the VPC is in the <strong>Created</strong> state, the VPC is created.</li>
+     * <li>If the VPC is in the <strong>Pending</strong> state, the VPC is being created.</li>
+     * <li>If the VPC is in the <strong>Available</strong> state, the VPC is created.</li>
      * </ul>
      * </li>
-     * <li>You cannot repeatedly call the <strong>DeleteRouteEntry</strong> operation to create default VPCs within a specific time period. However, you can repeatedly call this operation to create custom VPCs within a specific time period.</li>
+     * <li>You cannot repeatedly call the <strong>CreateVpc</strong> operation to create default VPCs within a specific time period. However, you can repeatedly call this operation to create custom VPCs within a specific time period.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -10774,6 +10870,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteDhcpOptionsSetResponse deleteDhcpOptionsSet(DeleteDhcpOptionsSetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDhcpOptionsSetWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an Enhanced VPN gateway.</p>
+     * 
+     * @param request DeleteEnhancedVpnGatewayRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteEnhancedVpnGatewayResponse
+     */
+    public DeleteEnhancedVpnGatewayResponse deleteEnhancedVpnGatewayWithOptions(DeleteEnhancedVpnGatewayRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpnGatewayId)) {
+            query.put("VpnGatewayId", request.vpnGatewayId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteEnhancedVpnGateway"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteEnhancedVpnGatewayResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an Enhanced VPN gateway.</p>
+     * 
+     * @param request DeleteEnhancedVpnGatewayRequest
+     * @return DeleteEnhancedVpnGatewayResponse
+     */
+    public DeleteEnhancedVpnGatewayResponse deleteEnhancedVpnGateway(DeleteEnhancedVpnGatewayRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteEnhancedVpnGatewayWithOptions(request, runtime);
     }
 
     /**
@@ -13900,8 +14064,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>You can delete only vSwitches that are in the <strong>Available</strong> state.</li>
      * <li>You cannot delete a vSwitch from a VPC where a vSwitch or a route is being created or deleted.</li>
      * <li><strong>DeleteVSwitch</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> operation to query the status of the task:<ul>
-     * <li>If the vSwitch is in the <strong>Pending</strong> state, the vSwitch is being deleted.</li>
-     * <li>If you cannot query the vSwitch, the vSwitch is deleted.</li>
+     * <li>If the vSwitch is in the <strong>Deleting</strong> state, the vSwitch is being deleted.</li>
+     * <li>If the DescribeVSwitchAttributes operation returns empty values for the vSwitch attributes, the vSwitch is deleted.</li>
      * </ul>
      * </li>
      * <li>You cannot repeatedly call the <strong>DeleteVSwitch</strong> operation to delete a vSwitch within the specified period of time.</li>
@@ -13970,8 +14134,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>You can delete only vSwitches that are in the <strong>Available</strong> state.</li>
      * <li>You cannot delete a vSwitch from a VPC where a vSwitch or a route is being created or deleted.</li>
      * <li><strong>DeleteVSwitch</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> operation to query the status of the task:<ul>
-     * <li>If the vSwitch is in the <strong>Pending</strong> state, the vSwitch is being deleted.</li>
-     * <li>If you cannot query the vSwitch, the vSwitch is deleted.</li>
+     * <li>If the vSwitch is in the <strong>Deleting</strong> state, the vSwitch is being deleted.</li>
+     * <li>If the DescribeVSwitchAttributes operation returns empty values for the vSwitch attributes, the vSwitch is deleted.</li>
      * </ul>
      * </li>
      * <li>You cannot repeatedly call the <strong>DeleteVSwitch</strong> operation to delete a vSwitch within the specified period of time.</li>
@@ -16017,7 +16181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>To improve user experience in querying monitoring data, we recommend that you call the DescribeMetricList API operation provided by CloudMonitor to query EIP monitoring data. For more information, see <a href="https://help.aliyun.com/document_detail/51936.html">DescribeMetricList</a> and <a href="https://help.aliyun.com/document_detail/162874.html">EIP monitoring data</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the monitoring data of an elastic IP address (EIP). You can query monitoring data within the last 30 days, and get up to 400 data points in each request.</p>
+     * <p>Queries the monitoring data of an elastic IP address (EIP). You can query monitoring data within the last 30 days, and obtain up to 400 data points in each request.</p>
      * 
      * @param request DescribeEipMonitorDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16084,7 +16248,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>To improve user experience in querying monitoring data, we recommend that you call the DescribeMetricList API operation provided by CloudMonitor to query EIP monitoring data. For more information, see <a href="https://help.aliyun.com/document_detail/51936.html">DescribeMetricList</a> and <a href="https://help.aliyun.com/document_detail/162874.html">EIP monitoring data</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the monitoring data of an elastic IP address (EIP). You can query monitoring data within the last 30 days, and get up to 400 data points in each request.</p>
+     * <p>Queries the monitoring data of an elastic IP address (EIP). You can query monitoring data within the last 30 days, and obtain up to 400 data points in each request.</p>
      * 
      * @param request DescribeEipMonitorDataRequest
      * @return DescribeEipMonitorDataResponse
@@ -20401,6 +20565,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Debugging</h2>
+     * <p><a href="https://api.aliyun.com/#product=Vpc%5C&api=DescribeVpcAttribute%5C&type=RPC%5C&version=2016-04-28">You can run this interface directly in OpenAPI Explorer, saving you the trouble of calculating signatures. After running successfully, OpenAPI Explorer can automatically generate SDK code samples.</a></p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the configuration of a virtual private cloud (VPC).</p>
      * 
@@ -20461,6 +20629,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Debugging</h2>
+     * <p><a href="https://api.aliyun.com/#product=Vpc%5C&api=DescribeVpcAttribute%5C&type=RPC%5C&version=2016-04-28">You can run this interface directly in OpenAPI Explorer, saving you the trouble of calculating signatures. After running successfully, OpenAPI Explorer can automatically generate SDK code samples.</a></p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the configuration of a virtual private cloud (VPC).</p>
      * 
@@ -24502,7 +24674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries he connection features supported by a Express Connect circuit.</p>
+     * <p>Querying the connection features supported by a Express Connect circuit.</p>
      * 
      * @param request ListPhysicalConnectionFeaturesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24558,7 +24730,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries he connection features supported by a Express Connect circuit.</p>
+     * <p>Querying the connection features supported by a Express Connect circuit.</p>
      * 
      * @param request ListPhysicalConnectionFeaturesRequest
      * @return ListPhysicalConnectionFeaturesResponse
@@ -29692,7 +29864,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the name and description of a vSwitch.</p>
+     * <p>Modifies the name, description, and IPv6 settings of a vSwitch.</p>
      * 
      * @param request ModifyVSwitchAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29772,7 +29944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the name and description of a vSwitch.</p>
+     * <p>Modifies the name, description, and IPv6 settings of a vSwitch.</p>
      * 
      * @param request ModifyVSwitchAttributeRequest
      * @return ModifyVSwitchAttributeResponse
@@ -30138,7 +30310,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You cannot repeatedly call the <strong>ModifyVpcAttribute</strong> operation to modify the name and description of a VPC within the specified period of time.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a specified VPC.</p>
+     * <p>Modifies the name and description of a virtual private cloud (VPC).</p>
      * 
      * @param request ModifyVpcAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30222,7 +30394,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You cannot repeatedly call the <strong>ModifyVpcAttribute</strong> operation to modify the name and description of a VPC within the specified period of time.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a specified VPC.</p>
+     * <p>Modifies the name and description of a virtual private cloud (VPC).</p>
      * 
      * @param request ModifyVpcAttributeRequest
      * @return ModifyVpcAttributeResponse
@@ -32216,7 +32388,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disassociates an EIP from an Internet Shared Bandwidth instance.</p>
+     * <p>The region ID of the Internet Shared Bandwidth instance.
+     * You can call the [DescribeRegions]\(<del>36063</del>) operation to query the most recent region list.</p>
      * 
      * @param request RemoveCommonBandwidthPackageIpRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32276,7 +32449,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disassociates an EIP from an Internet Shared Bandwidth instance.</p>
+     * <p>The region ID of the Internet Shared Bandwidth instance.
+     * You can call the [DescribeRegions]\(<del>36063</del>) operation to query the most recent region list.</p>
      * 
      * @param request RemoveCommonBandwidthPackageIpRequest
      * @return RemoveCommonBandwidthPackageIpResponse
@@ -34562,6 +34736,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateDhcpOptionsSetAttributeResponse updateDhcpOptionsSetAttribute(UpdateDhcpOptionsSetAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateDhcpOptionsSetAttributeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改增强型VPN实例属性</p>
+     * 
+     * @param request UpdateEnhancedVpnGatewayRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateEnhancedVpnGatewayResponse
+     */
+    public UpdateEnhancedVpnGatewayResponse updateEnhancedVpnGatewayWithOptions(UpdateEnhancedVpnGatewayRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoPropagate)) {
+            query.put("AutoPropagate", request.autoPropagate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpnGatewayId)) {
+            query.put("VpnGatewayId", request.vpnGatewayId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateEnhancedVpnGateway"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateEnhancedVpnGatewayResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改增强型VPN实例属性</p>
+     * 
+     * @param request UpdateEnhancedVpnGatewayRequest
+     * @return UpdateEnhancedVpnGatewayResponse
+     */
+    public UpdateEnhancedVpnGatewayResponse updateEnhancedVpnGateway(UpdateEnhancedVpnGatewayRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateEnhancedVpnGatewayWithOptions(request, runtime);
     }
 
     /**

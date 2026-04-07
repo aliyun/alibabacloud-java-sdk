@@ -28,7 +28,7 @@ public class ModifyVpcAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Indicates whether the DNS hostname feature is enabled. Valid values:</p>
+     * <p>Specifies whether to enable the DNS hostname feature. Valid values:</p>
      * <ul>
      * <li><strong>false</strong> (default): disabled.</li>
      * <li><strong>true</strong>: enabled.</li>

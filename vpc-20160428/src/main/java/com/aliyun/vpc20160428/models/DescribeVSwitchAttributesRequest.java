@@ -24,7 +24,7 @@ public class DescribeVSwitchAttributesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the virtual private cloud (VPC) to which the custom route table belongs.</p>
+     * <p>The region ID of the VPC to which the vSwitch belongs.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * 
      * <strong>example:</strong>

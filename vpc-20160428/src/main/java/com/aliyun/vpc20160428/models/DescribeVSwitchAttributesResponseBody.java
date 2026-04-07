@@ -17,7 +17,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
      * <p>The CIDR block of the vSwitch.</p>
      * 
      * <strong>example:</strong>
-     * <p>192.168.0.1/24</p>
+     * <p>192.168.0.0/24</p>
      */
     @NameInMap("CidrBlock")
     public String cidrBlock;
@@ -46,6 +46,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
      * <li><strong>true</strong></li>
      * <li><strong>false</strong></li>
      * </ul>
+     * <p>This field is returned only when IPv6 is enabled for the vSwitch.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -79,7 +80,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
      * <p>The network access control list (ACL) rules.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>nacl-bp1fg655nh68xyz9****</p>
      */
     @NameInMap("NetworkAclId")
     public String networkAclId;
@@ -88,7 +89,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
      * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
      * 
      * <strong>example:</strong>
-     * <p>287683832402436789</p>
+     * <p>28768383240243****</p>
      */
     @NameInMap("OwnerId")
     public Long ownerId;
