@@ -1,3 +1,8 @@
+2026-04-07 Version: 5.0.5
+- Update API ListMigrationOperations: add request parameters businessStatus.
+- Update API ListMigrationOperations: add request parameters operationStatus.
+
+
 2026-04-01 Version: 5.0.4
 - Update API CreateInstance: add request parameters body.productInfo.drReplicationMode.
 - Update API GetInstance: add response parameters Body.data.productInfo.drReplicationMode.

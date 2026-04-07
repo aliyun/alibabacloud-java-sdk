@@ -2531,20 +2531,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries a list of migration operations.</p>
      * 
-     * @param request ListMigrationOperationsRequest
+     * @param tmpReq ListMigrationOperationsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListMigrationOperationsResponse
      */
-    public ListMigrationOperationsResponse listMigrationOperationsWithOptions(String migrationId, String stageType, ListMigrationOperationsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListMigrationOperationsResponse listMigrationOperationsWithOptions(String migrationId, String stageType, ListMigrationOperationsRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListMigrationOperationsShrinkRequest request = new ListMigrationOperationsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.businessStatus)) {
+            request.businessStatusShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.businessStatus, "businessStatus", "simple");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.operationStatus)) {
+            request.operationStatusShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.operationStatus, "operationStatus", "simple");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessStatusShrink)) {
+            query.put("businessStatus", request.businessStatusShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
             query.put("filter", request.filter);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("instanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operationStatusShrink)) {
+            query.put("operationStatus", request.operationStatusShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.operationType)) {

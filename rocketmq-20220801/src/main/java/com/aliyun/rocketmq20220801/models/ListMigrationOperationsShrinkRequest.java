@@ -3,9 +3,9 @@ package com.aliyun.rocketmq20220801.models;
 
 import com.aliyun.tea.*;
 
-public class ListMigrationOperationsRequest extends TeaModel {
+public class ListMigrationOperationsShrinkRequest extends TeaModel {
     @NameInMap("businessStatus")
-    public java.util.List<String> businessStatus;
+    public String businessStatusShrink;
 
     /**
      * <strong>example:</strong>
@@ -22,7 +22,7 @@ public class ListMigrationOperationsRequest extends TeaModel {
     public String instanceId;
 
     @NameInMap("operationStatus")
-    public java.util.List<String> operationStatus;
+    public String operationStatusShrink;
 
     /**
      * <p>This parameter is required.</p>
@@ -51,20 +51,20 @@ public class ListMigrationOperationsRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
-    public static ListMigrationOperationsRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListMigrationOperationsRequest self = new ListMigrationOperationsRequest();
+    public static ListMigrationOperationsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListMigrationOperationsShrinkRequest self = new ListMigrationOperationsShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListMigrationOperationsRequest setBusinessStatus(java.util.List<String> businessStatus) {
-        this.businessStatus = businessStatus;
+    public ListMigrationOperationsShrinkRequest setBusinessStatusShrink(String businessStatusShrink) {
+        this.businessStatusShrink = businessStatusShrink;
         return this;
     }
-    public java.util.List<String> getBusinessStatus() {
-        return this.businessStatus;
+    public String getBusinessStatusShrink() {
+        return this.businessStatusShrink;
     }
 
-    public ListMigrationOperationsRequest setFilter(String filter) {
+    public ListMigrationOperationsShrinkRequest setFilter(String filter) {
         this.filter = filter;
         return this;
     }
@@ -72,7 +72,7 @@ public class ListMigrationOperationsRequest extends TeaModel {
         return this.filter;
     }
 
-    public ListMigrationOperationsRequest setInstanceId(String instanceId) {
+    public ListMigrationOperationsShrinkRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -80,15 +80,15 @@ public class ListMigrationOperationsRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ListMigrationOperationsRequest setOperationStatus(java.util.List<String> operationStatus) {
-        this.operationStatus = operationStatus;
+    public ListMigrationOperationsShrinkRequest setOperationStatusShrink(String operationStatusShrink) {
+        this.operationStatusShrink = operationStatusShrink;
         return this;
     }
-    public java.util.List<String> getOperationStatus() {
-        return this.operationStatus;
+    public String getOperationStatusShrink() {
+        return this.operationStatusShrink;
     }
 
-    public ListMigrationOperationsRequest setOperationType(String operationType) {
+    public ListMigrationOperationsShrinkRequest setOperationType(String operationType) {
         this.operationType = operationType;
         return this;
     }
@@ -96,7 +96,7 @@ public class ListMigrationOperationsRequest extends TeaModel {
         return this.operationType;
     }
 
-    public ListMigrationOperationsRequest setPageNumber(Integer pageNumber) {
+    public ListMigrationOperationsShrinkRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -104,7 +104,7 @@ public class ListMigrationOperationsRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListMigrationOperationsRequest setPageSize(Integer pageSize) {
+    public ListMigrationOperationsShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
