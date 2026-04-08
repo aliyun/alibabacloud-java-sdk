@@ -124,6 +124,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("ModelName")
     public String modelName;
 
+    @NameInMap("Parameters")
+    public java.util.List<CreateApplicationRequestParameters> parameters;
+
     /**
      * <strong>example:</strong>
      * <p>Postpaid</p>
@@ -378,6 +381,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getModelName() {
         return this.modelName;
+    }
+
+    public CreateApplicationRequest setParameters(java.util.List<CreateApplicationRequestParameters> parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    public java.util.List<CreateApplicationRequestParameters> getParameters() {
+        return this.parameters;
     }
 
     public CreateApplicationRequest setPayType(String payType) {
@@ -818,6 +829,36 @@ public class CreateApplicationRequest extends TeaModel {
         }
         public Integer getShard() {
             return this.shard;
+        }
+
+    }
+
+    public static class CreateApplicationRequestParameters extends TeaModel {
+        @NameInMap("ParameterName")
+        public String parameterName;
+
+        @NameInMap("ParameterValue")
+        public String parameterValue;
+
+        public static CreateApplicationRequestParameters build(java.util.Map<String, ?> map) throws Exception {
+            CreateApplicationRequestParameters self = new CreateApplicationRequestParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateApplicationRequestParameters setParameterName(String parameterName) {
+            this.parameterName = parameterName;
+            return this;
+        }
+        public String getParameterName() {
+            return this.parameterName;
+        }
+
+        public CreateApplicationRequestParameters setParameterValue(String parameterValue) {
+            this.parameterValue = parameterValue;
+            return this;
+        }
+        public String getParameterValue() {
+            return this.parameterValue;
         }
 
     }

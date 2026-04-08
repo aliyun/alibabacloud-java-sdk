@@ -124,6 +124,9 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     @NameInMap("ModelName")
     public String modelName;
 
+    @NameInMap("Parameters")
+    public String parametersShrink;
+
     /**
      * <strong>example:</strong>
      * <p>Postpaid</p>
@@ -378,6 +381,14 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     }
     public String getModelName() {
         return this.modelName;
+    }
+
+    public CreateApplicationShrinkRequest setParametersShrink(String parametersShrink) {
+        this.parametersShrink = parametersShrink;
+        return this;
+    }
+    public String getParametersShrink() {
+        return this.parametersShrink;
     }
 
     public CreateApplicationShrinkRequest setPayType(String payType) {
