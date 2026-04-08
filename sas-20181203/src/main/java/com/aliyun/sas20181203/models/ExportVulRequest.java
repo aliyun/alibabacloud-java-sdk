@@ -153,6 +153,13 @@ public class ExportVulRequest extends TeaModel {
     public Integer raspDefend;
 
     /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
+    /**
      * <p>The tag that is used to search for the vulnerabilities. Valid values:</p>
      * <ul>
      * <li>Restart required</li>
@@ -320,6 +327,14 @@ public class ExportVulRequest extends TeaModel {
     }
     public Integer getRaspDefend() {
         return this.raspDefend;
+    }
+
+    public ExportVulRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public ExportVulRequest setSearchTags(String searchTags) {

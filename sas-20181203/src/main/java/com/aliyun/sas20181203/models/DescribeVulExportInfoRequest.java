@@ -14,6 +14,13 @@ public class DescribeVulExportInfoRequest extends TeaModel {
     @NameInMap("ExportId")
     public Long exportId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     public static DescribeVulExportInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVulExportInfoRequest self = new DescribeVulExportInfoRequest();
         return TeaModel.build(map, self);
@@ -25,6 +32,14 @@ public class DescribeVulExportInfoRequest extends TeaModel {
     }
     public Long getExportId() {
         return this.exportId;
+    }
+
+    public DescribeVulExportInfoRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
 }

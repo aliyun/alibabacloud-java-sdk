@@ -24869,6 +24869,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ExportId", request.exportId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -27288,6 +27292,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.raspDefend)) {
             query.put("RaspDefend", request.raspDefend);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.searchTags)) {
