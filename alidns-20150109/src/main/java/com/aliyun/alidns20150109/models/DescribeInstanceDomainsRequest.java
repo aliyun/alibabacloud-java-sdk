@@ -4,6 +4,9 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceDomainsRequest extends TeaModel {
+    @NameInMap("DomainKeywords")
+    public String domainKeywords;
+
     /**
      * <p>The ID of the Alibaba Cloud Domain Name System (DNS) instance. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomaininfo?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomainInfo</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
@@ -49,6 +52,14 @@ public class DescribeInstanceDomainsRequest extends TeaModel {
     public static DescribeInstanceDomainsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceDomainsRequest self = new DescribeInstanceDomainsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeInstanceDomainsRequest setDomainKeywords(String domainKeywords) {
+        this.domainKeywords = domainKeywords;
+        return this;
+    }
+    public String getDomainKeywords() {
+        return this.domainKeywords;
     }
 
     public DescribeInstanceDomainsRequest setInstanceId(String instanceId) {
