@@ -530,6 +530,92 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建内网访问诊断任务</p>
+     * 
+     * @param tmpReq CreatePADiagnosisTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePADiagnosisTaskResponse
+     */
+    public CreatePADiagnosisTaskResponse createPADiagnosisTaskWithOptions(CreatePADiagnosisTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreatePADiagnosisTaskShrinkRequest request = new CreatePADiagnosisTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.udpExtraConfigs)) {
+            request.udpExtraConfigsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.udpExtraConfigs, "UdpExtraConfigs", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.devTag)) {
+            body.put("DevTag", request.devTag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.diagnoseType)) {
+            body.put("DiagnoseType", request.diagnoseType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.host)) {
+            body.put("Host", request.host);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.popId)) {
+            body.put("PopId", request.popId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.popMode)) {
+            body.put("PopMode", request.popMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.port)) {
+            body.put("Port", request.port);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protocol)) {
+            body.put("Protocol", request.protocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.udpExtraConfigsShrink)) {
+            body.put("UdpExtraConfigs", request.udpExtraConfigsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupId)) {
+            body.put("UserGroupId", request.userGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.username)) {
+            body.put("Username", request.username);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreatePADiagnosisTask"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePADiagnosisTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建内网访问诊断任务</p>
+     * 
+     * @param request CreatePADiagnosisTaskRequest
+     * @return CreatePADiagnosisTaskResponse
+     */
+    public CreatePADiagnosisTaskResponse createPADiagnosisTask(CreatePADiagnosisTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createPADiagnosisTaskWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>By default, you can create a maximum of 500 office applications.</p>
      * 
@@ -2544,6 +2630,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetIdpConfigResponse getIdpConfig(GetIdpConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getIdpConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询内网访问诊断任务详情</p>
+     * 
+     * @param request GetPADiagnosisTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetPADiagnosisTaskResponse
+     */
+    public GetPADiagnosisTaskResponse getPADiagnosisTaskWithOptions(GetPADiagnosisTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetPADiagnosisTask"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPADiagnosisTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询内网访问诊断任务详情</p>
+     * 
+     * @param request GetPADiagnosisTaskRequest
+     * @return GetPADiagnosisTaskResponse
+     */
+    public GetPADiagnosisTaskResponse getPADiagnosisTask(GetPADiagnosisTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getPADiagnosisTaskWithOptions(request, runtime);
     }
 
     /**
