@@ -158,6 +158,9 @@ public class Resource extends TeaModel {
     @NameInMap("UpdateTime")
     public String updateTime;
 
+    @NameInMap("UsageMode")
+    public String usageMode;
+
     /**
      * <p>The vendor of the resource group instances.</p>
      * <p>Valid values:</p>
@@ -351,6 +354,14 @@ public class Resource extends TeaModel {
     }
     public String getUpdateTime() {
         return this.updateTime;
+    }
+
+    public Resource setUsageMode(String usageMode) {
+        this.usageMode = usageMode;
+        return this;
+    }
+    public String getUsageMode() {
+        return this.usageMode;
     }
 
     public Resource setVendor(String vendor) {

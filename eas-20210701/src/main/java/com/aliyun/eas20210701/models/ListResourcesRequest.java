@@ -97,6 +97,9 @@ public class ListResourcesRequest extends TeaModel {
     @NameInMap("Sort")
     public String sort;
 
+    @NameInMap("UsageMode")
+    public String usageMode;
+
     public static ListResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListResourcesRequest self = new ListResourcesRequest();
         return TeaModel.build(map, self);
@@ -164,6 +167,14 @@ public class ListResourcesRequest extends TeaModel {
     }
     public String getSort() {
         return this.sort;
+    }
+
+    public ListResourcesRequest setUsageMode(String usageMode) {
+        this.usageMode = usageMode;
+        return this;
+    }
+    public String getUsageMode() {
+        return this.usageMode;
     }
 
 }

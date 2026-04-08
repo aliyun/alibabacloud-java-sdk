@@ -200,6 +200,9 @@ public class DescribeResourceResponseBody extends TeaModel {
     @NameInMap("UpdateTime")
     public String updateTime;
 
+    @NameInMap("UsageMode")
+    public String usageMode;
+
     public static DescribeResourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeResourceResponseBody self = new DescribeResourceResponseBody();
         return TeaModel.build(map, self);
@@ -395,6 +398,14 @@ public class DescribeResourceResponseBody extends TeaModel {
     }
     public String getUpdateTime() {
         return this.updateTime;
+    }
+
+    public DescribeResourceResponseBody setUsageMode(String usageMode) {
+        this.usageMode = usageMode;
+        return this;
+    }
+    public String getUsageMode() {
+        return this.usageMode;
     }
 
 }

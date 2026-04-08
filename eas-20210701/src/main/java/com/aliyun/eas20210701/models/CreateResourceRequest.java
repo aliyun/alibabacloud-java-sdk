@@ -101,6 +101,9 @@ public class CreateResourceRequest extends TeaModel {
     @NameInMap("SystemDiskSize")
     public Integer systemDiskSize;
 
+    @NameInMap("UsageMode")
+    public String usageMode;
+
     /**
      * <p>The ID of the zone in which the instance resides.</p>
      * 
@@ -185,6 +188,14 @@ public class CreateResourceRequest extends TeaModel {
     }
     public Integer getSystemDiskSize() {
         return this.systemDiskSize;
+    }
+
+    public CreateResourceRequest setUsageMode(String usageMode) {
+        this.usageMode = usageMode;
+        return this;
+    }
+    public String getUsageMode() {
+        return this.usageMode;
     }
 
     public CreateResourceRequest setZone(String zone) {

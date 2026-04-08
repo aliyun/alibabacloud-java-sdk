@@ -662,6 +662,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("SystemDiskSize", request.systemDiskSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.usageMode)) {
+            body.put("UsageMode", request.usageMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.zone)) {
             body.put("Zone", request.zone);
         }
@@ -3807,6 +3811,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sort)) {
             query.put("Sort", request.sort);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usageMode)) {
+            query.put("UsageMode", request.usageMode);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
