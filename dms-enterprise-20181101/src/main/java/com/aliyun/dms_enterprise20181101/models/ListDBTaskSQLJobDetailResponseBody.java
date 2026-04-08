@@ -211,6 +211,9 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
         @NameInMap("Skip")
         public Boolean skip;
 
+        @NameInMap("SqlId")
+        public Long sqlId;
+
         /**
          * <p>The type of the SQL statement, such as DELETE, UPDATE, or ALTER_TABLE.</p>
          * 
@@ -340,6 +343,14 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
         }
         public Boolean getSkip() {
             return this.skip;
+        }
+
+        public ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList setSqlId(Long sqlId) {
+            this.sqlId = sqlId;
+            return this;
+        }
+        public Long getSqlId() {
+            return this.sqlId;
         }
 
         public ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList setSqlType(String sqlType) {
