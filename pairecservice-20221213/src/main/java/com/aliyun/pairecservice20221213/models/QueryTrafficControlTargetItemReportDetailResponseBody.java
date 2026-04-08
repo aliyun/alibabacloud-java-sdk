@@ -4,6 +4,10 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,12 +39,24 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
         @NameInMap("Features")
         public java.util.Map<String, ?> features;
 
+        /**
+         * <strong>example:</strong>
+         * <p>794872809896</p>
+         */
         @NameInMap("ItemId")
         public String itemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>49%</p>
+         */
         @NameInMap("TargetProgress")
         public String targetProgress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("TargetTraffic")
         public Long targetTraffic;
 
@@ -87,12 +103,24 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
         @NameInMap("Features")
         public java.util.Map<String, ?> features;
 
+        /**
+         * <strong>example:</strong>
+         * <p>398734</p>
+         */
         @NameInMap("ItemId")
         public String itemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>49%</p>
+         */
         @NameInMap("TargetProgress")
         public String targetProgress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("TargetTraffic")
         public Long targetTraffic;
 

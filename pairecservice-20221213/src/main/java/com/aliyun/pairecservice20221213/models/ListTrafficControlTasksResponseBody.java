@@ -4,9 +4,17 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class ListTrafficControlTasksResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3AAA45F6-0798-5461-9360-81D133823CE7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -73,57 +81,125 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
     }
 
     public static class ListTrafficControlTasksResponseBodyTrafficControlTasksTrafficControlTargets extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2024-04-25</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>click</p>
+         */
         @NameInMap("Event")
         public String event;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2025-06-03T15:08:10.58+08:00</p>
+         */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2025-11-21T16:26:58.57+08:00</p>
+         */
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[{&quot;field&quot;:&quot;status&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;1&quot;}]</p>
+         */
         @NameInMap("ItemConditionArray")
         public String itemConditionArray;
 
+        /**
+         * <strong>example:</strong>
+         * <p>status=1</p>
+         */
         @NameInMap("ItemConditionExpress")
         public String itemConditionExpress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Array</p>
+         */
         @NameInMap("ItemConditionType")
         public String itemConditionType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>target-1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("NewProductRegulation")
         public Boolean newProductRegulation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>recall-1</p>
+         */
         @NameInMap("RecallName")
         public String recallName;
 
         @NameInMap("SplitParts")
         public ListTrafficControlTasksResponseBodyTrafficControlTasksTrafficControlTargetsSplitParts splitParts;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-03-25</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Daily</p>
+         */
         @NameInMap("StatisPeriod")
         public String statisPeriod;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Opened</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("ToleranceValue")
         public Long toleranceValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TrafficControlTargetId")
         public String trafficControlTargetId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TrafficControlTaskId")
         public String trafficControlTaskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -279,18 +355,38 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
     }
 
     public static class ListTrafficControlTasksResponseBodyTrafficControlTasks extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("BehaviorTableMetaId")
         public String behaviorTableMetaId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Global</p>
+         */
         @NameInMap("ControlGranularity")
         public String controlGranularity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Guaranteed</p>
+         */
         @NameInMap("ControlLogic")
         public String controlLogic;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Percent</p>
+         */
         @NameInMap("ControlType")
         public String controlType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>this is a test task</p>
+         */
         @NameInMap("Description")
         public String description;
 
@@ -303,60 +399,136 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         @NameInMap("EffectiveSceneNames")
         public java.util.List<Integer> effectiveSceneNames;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-04-25</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("EverPublished")
         public Boolean everPublished;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Permanent</p>
+         */
         @NameInMap("ExecutionTime")
         public String executionTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>resource-xxx</p>
+         */
         @NameInMap("FlinkResourceId")
         public String flinkResourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>flink_test</p>
+         */
         @NameInMap("FlinkResourceName")
         public String flinkResourceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-03-25T06:04:28.441Z</p>
+         */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-03-25T06:04:28.441Z</p>
+         */
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[{&quot;field&quot;:&quot;status&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;1&quot;}]</p>
+         */
         @NameInMap("ItemConditionArray")
         public String itemConditionArray;
 
+        /**
+         * <strong>example:</strong>
+         * <p>status=1</p>
+         */
         @NameInMap("ItemConditionExpress")
         public String itemConditionExpress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Array</p>
+         */
         @NameInMap("ItemConditionType")
         public String itemConditionType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("ItemTableMetaId")
         public String itemTableMetaId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>task_1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1,2</p>
+         */
         @NameInMap("PreExperimentIds")
         public String preExperimentIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Runnning</p>
+         */
         @NameInMap("PrepubStatus")
         public String prepubStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6,7</p>
+         */
         @NameInMap("ProdExperimentIds")
         public String prodExperimentIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Runnning</p>
+         */
         @NameInMap("ProductStatus")
         public String productStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("SceneId")
         public String sceneId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>home_feed</p>
+         */
         @NameInMap("SceneName")
         public String sceneName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ServiceId")
         public String serviceId;
 
@@ -366,36 +538,76 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         @NameInMap("ServiceIds")
         public java.util.List<String> serviceIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-03-25</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>event=click</p>
+         */
         @NameInMap("StatisBahaviorConditionExpress")
         public String statisBahaviorConditionExpress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[{&quot;field&quot;:&quot;click&quot;,&quot;option&quot;:&quot;&lt;=&quot;,&quot;value&quot;:&quot;30&quot;}]</p>
+         */
         @NameInMap("StatisBehaviorConditionArray")
         public String statisBehaviorConditionArray;
 
+        /**
+         * <strong>example:</strong>
+         * <p>event=exposure</p>
+         */
         @NameInMap("StatisBehaviorConditionExpress")
         public String statisBehaviorConditionExpress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Array</p>
+         */
         @NameInMap("StatisBehaviorConditionType")
         public String statisBehaviorConditionType;
 
         @NameInMap("TrafficControlTargets")
         public java.util.List<ListTrafficControlTasksResponseBodyTrafficControlTasksTrafficControlTargets> trafficControlTargets;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TrafficControlTaskId")
         public String trafficControlTaskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[{&quot;field&quot;:&quot;gender&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;male&quot;}]</p>
+         */
         @NameInMap("UserConditionArray")
         public String userConditionArray;
 
+        /**
+         * <strong>example:</strong>
+         * <p>age&lt;=30&amp;&amp;(3&lt;=level&lt;=6)&amp;&amp;gender=male</p>
+         */
         @NameInMap("UserConditionExpress")
         public String userConditionExpress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Array</p>
+         */
         @NameInMap("UserConditionType")
         public String userConditionType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("UserTableMetaId")
         public String userTableMetaId;
 

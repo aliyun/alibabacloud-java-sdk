@@ -4,15 +4,27 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class UpdateTrafficControlTaskTrafficRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Daily</p>
+     */
     @NameInMap("Environment")
     public String environment;
 
+    /**
+     * <strong>example:</strong>
+     * <p>learn-pairec-cn-xxx</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("Traffics")
     public java.util.List<UpdateTrafficControlTaskTrafficRequestTraffics> traffics;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("new-param-3")
     public String newParam3;
 
@@ -54,21 +66,45 @@ public class UpdateTrafficControlTaskTrafficRequest extends TeaModel {
     }
 
     public static class UpdateTrafficControlTaskTrafficRequestTraffics extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>item1</p>
+         */
         @NameInMap("ItemOrExperimentId")
         public String itemOrExperimentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-01-01T02:05:06.111Z</p>
+         */
         @NameInMap("RecordTime")
         public String recordTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10.0</p>
+         */
         @NameInMap("TrafficControlTargetAimTraffic")
         public Double trafficControlTargetAimTraffic;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TrafficControlTargetId")
         public String trafficControlTargetId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100000</p>
+         */
         @NameInMap("TrafficControlTargetTraffic")
         public Long trafficControlTargetTraffic;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000000</p>
+         */
         @NameInMap("TrafficControlTaskTraffic")
         public Long trafficControlTaskTraffic;
 

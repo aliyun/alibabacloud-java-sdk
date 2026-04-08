@@ -4,57 +4,121 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class GetTrafficControlTargetResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2024-04-25</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>click</p>
+     */
     @NameInMap("Event")
     public String event;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-01-03T02:28:00.000Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[{&quot;field&quot;:&quot;status&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;1&quot;}]</p>
+     */
     @NameInMap("ItemConditionArray")
     public String itemConditionArray;
 
+    /**
+     * <strong>example:</strong>
+     * <p>status=1</p>
+     */
     @NameInMap("ItemConditionExpress")
     public String itemConditionExpress;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Array</p>
+     */
     @NameInMap("ItemConditionType")
     public String itemConditionType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>target-1</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("NewProductRegulation")
     public Boolean newProductRegulation;
 
+    /**
+     * <strong>example:</strong>
+     * <p>recall-1</p>
+     */
     @NameInMap("RecallName")
     public String recallName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SplitParts")
     public GetTrafficControlTargetResponseBodySplitParts splitParts;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-03-25</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Daily</p>
+     */
     @NameInMap("StatisPeriod")
     public String statisPeriod;
 
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("ToleranceValue")
     public Long toleranceValue;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TrafficControlTargetId")
     public String trafficControlTargetId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TrafficControlTaskId")
     public String trafficControlTaskId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("Value")
     public Float value;
 

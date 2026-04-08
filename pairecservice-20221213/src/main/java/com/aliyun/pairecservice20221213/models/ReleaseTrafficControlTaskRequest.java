@@ -4,9 +4,17 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class ReleaseTrafficControlTaskRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Daily</p>
+     */
     @NameInMap("Environment")
     public String environment;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pairec_123****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

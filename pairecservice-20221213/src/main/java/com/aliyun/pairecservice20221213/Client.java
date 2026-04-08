@@ -4072,6 +4072,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>部署流量调控任务的flink code</p>
+     * 
+     * @param request DeployTrafficControlTaskCodeRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeployTrafficControlTaskCodeResponse
+     */
+    public DeployTrafficControlTaskCodeResponse deployTrafficControlTaskCodeWithOptions(String TrafficControlTaskId, DeployTrafficControlTaskCodeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.environment)) {
+            body.put("Environment", request.environment);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.retryDeploy)) {
+            body.put("RetryDeploy", request.retryDeploy);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeployTrafficControlTaskCode"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/trafficcontroltasks/" + com.aliyun.openapiutil.Client.getEncodeParam(TrafficControlTaskId) + "/action/deploycode"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeployTrafficControlTaskCodeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>部署流量调控任务的flink code</p>
+     * 
+     * @param request DeployTrafficControlTaskCodeRequest
+     * @return DeployTrafficControlTaskCodeResponse
+     */
+    public DeployTrafficControlTaskCodeResponse deployTrafficControlTaskCode(String TrafficControlTaskId, DeployTrafficControlTaskCodeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deployTrafficControlTaskCodeWithOptions(TrafficControlTaskId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>生成算法定制脚本</p>
      * 
      * @param request GenerateAlgorithmCustomizationScriptRequest
@@ -8454,6 +8509,116 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.queryTrafficControlTargetItemReportDetailWithOptions(TrafficControlTargetId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取流量调控任务部署的结果。</p>
+     * 
+     * @param request QueryTrafficControlTaskDeployResultRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryTrafficControlTaskDeployResultResponse
+     */
+    public QueryTrafficControlTaskDeployResultResponse queryTrafficControlTaskDeployResultWithOptions(String TrafficControlTaskId, QueryTrafficControlTaskDeployResultRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.environment)) {
+            query.put("Environment", request.environment);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryTrafficControlTaskDeployResult"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/trafficcontroltasks/" + com.aliyun.openapiutil.Client.getEncodeParam(TrafficControlTaskId) + "/action/queryresult"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryTrafficControlTaskDeployResultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取流量调控任务部署的结果。</p>
+     * 
+     * @param request QueryTrafficControlTaskDeployResultRequest
+     * @return QueryTrafficControlTaskDeployResultResponse
+     */
+    public QueryTrafficControlTaskDeployResultResponse queryTrafficControlTaskDeployResult(String TrafficControlTaskId, QueryTrafficControlTaskDeployResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.queryTrafficControlTaskDeployResultWithOptions(TrafficControlTaskId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询流量调控任务单品调控报表。</p>
+     * 
+     * @param request QueryTrafficControlTaskItemReportRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryTrafficControlTaskItemReportResponse
+     */
+    public QueryTrafficControlTaskItemReportResponse queryTrafficControlTaskItemReportWithOptions(String TrafficControlTaskId, QueryTrafficControlTaskItemReportRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.environment)) {
+            query.put("Environment", request.environment);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryTrafficControlTaskItemReport"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/trafficcontroltasks/" + com.aliyun.openapiutil.Client.getEncodeParam(TrafficControlTaskId) + "/action/queryitemreport"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryTrafficControlTaskItemReportResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询流量调控任务单品调控报表。</p>
+     * 
+     * @param request QueryTrafficControlTaskItemReportRequest
+     * @return QueryTrafficControlTaskItemReportResponse
+     */
+    public QueryTrafficControlTaskItemReportResponse queryTrafficControlTaskItemReport(String TrafficControlTaskId, QueryTrafficControlTaskItemReportRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.queryTrafficControlTaskItemReportWithOptions(TrafficControlTaskId, request, headers, runtime);
     }
 
     /**

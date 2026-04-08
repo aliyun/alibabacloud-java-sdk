@@ -3,7 +3,7 @@ package com.aliyun.pairecservice20221213.models;
 
 import com.aliyun.tea.*;
 
-public class GenerateTrafficControlTaskCodeRequest extends TeaModel {
+public class DeployTrafficControlTaskCodeRequest extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>Daily</p>
@@ -12,20 +12,21 @@ public class GenerateTrafficControlTaskCodeRequest extends TeaModel {
     public String environment;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>pairec-test1</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    public static GenerateTrafficControlTaskCodeRequest build(java.util.Map<String, ?> map) throws Exception {
-        GenerateTrafficControlTaskCodeRequest self = new GenerateTrafficControlTaskCodeRequest();
+    @NameInMap("RetryDeploy")
+    public Boolean retryDeploy;
+
+    public static DeployTrafficControlTaskCodeRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeployTrafficControlTaskCodeRequest self = new DeployTrafficControlTaskCodeRequest();
         return TeaModel.build(map, self);
     }
 
-    public GenerateTrafficControlTaskCodeRequest setEnvironment(String environment) {
+    public DeployTrafficControlTaskCodeRequest setEnvironment(String environment) {
         this.environment = environment;
         return this;
     }
@@ -33,12 +34,20 @@ public class GenerateTrafficControlTaskCodeRequest extends TeaModel {
         return this.environment;
     }
 
-    public GenerateTrafficControlTaskCodeRequest setInstanceId(String instanceId) {
+    public DeployTrafficControlTaskCodeRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DeployTrafficControlTaskCodeRequest setRetryDeploy(Boolean retryDeploy) {
+        this.retryDeploy = retryDeploy;
+        return this;
+    }
+    public Boolean getRetryDeploy() {
+        return this.retryDeploy;
     }
 
 }

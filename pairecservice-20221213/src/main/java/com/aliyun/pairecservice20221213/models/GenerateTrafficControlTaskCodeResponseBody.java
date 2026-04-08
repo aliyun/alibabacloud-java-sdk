@@ -4,12 +4,24 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class GenerateTrafficControlTaskCodeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Create Table xxx.......</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>False</p>
+     */
     @NameInMap("PreNeedConfig")
     public Boolean preNeedConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

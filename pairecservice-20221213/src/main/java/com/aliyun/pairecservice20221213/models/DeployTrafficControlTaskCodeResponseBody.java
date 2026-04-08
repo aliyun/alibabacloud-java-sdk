@@ -3,7 +3,7 @@ package com.aliyun.pairecservice20221213.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateTrafficControlTargetResponseBody extends TeaModel {
+public class DeployTrafficControlTaskCodeResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
@@ -11,12 +11,12 @@ public class UpdateTrafficControlTargetResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static UpdateTrafficControlTargetResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        UpdateTrafficControlTargetResponseBody self = new UpdateTrafficControlTargetResponseBody();
+    public static DeployTrafficControlTaskCodeResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeployTrafficControlTaskCodeResponseBody self = new DeployTrafficControlTaskCodeResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UpdateTrafficControlTargetResponseBody setRequestId(String requestId) {
+    public DeployTrafficControlTaskCodeResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

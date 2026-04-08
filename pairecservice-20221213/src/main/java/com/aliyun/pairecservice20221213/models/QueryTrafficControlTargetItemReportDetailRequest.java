@@ -4,17 +4,27 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class QueryTrafficControlTargetItemReportDetailRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2024-01-01</p>
+     */
     @NameInMap("Date")
     public String date;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Pre</p>
      */
     @NameInMap("Environment")
     public String environment;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pairec_123****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

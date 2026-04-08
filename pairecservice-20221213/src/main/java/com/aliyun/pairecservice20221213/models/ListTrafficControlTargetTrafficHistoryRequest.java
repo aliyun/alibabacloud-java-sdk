@@ -4,27 +4,59 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class ListTrafficControlTargetTrafficHistoryRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2024-01-10 13:13:20</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Pre</p>
+     */
     @NameInMap("Environment")
     public String environment;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("ExperimentGroupId")
     public String experimentGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ER_All</p>
+     */
     @NameInMap("ExperimentId")
     public String experimentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pairec-1324***</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1001</p>
+     */
     @NameInMap("ItemId")
     public String itemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-01-01 13:13:20</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("Threshold")
     public String threshold;
 

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CheckTrafficControlTaskExpressionRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>event=exposure</p>
      */
     @NameInMap("Expression")
     public String expression;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pairec_123****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TableMetaId")
     public String tableMetaId;

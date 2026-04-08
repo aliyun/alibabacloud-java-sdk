@@ -4,9 +4,17 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -43,21 +51,45 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
     }
 
     public static class ListTrafficControlTargetTrafficHistoryResponseBodyTrafficControlTaskTrafficHistories extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>E1</p>
+         */
         @NameInMap("ExperimentId")
         public String experimentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1001</p>
+         */
         @NameInMap("ItemId")
         public String itemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-10-10 10:10:58</p>
+         */
         @NameInMap("RecordTime")
         public String recordTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("TrafficControlTargetAimTraffic")
         public Double trafficControlTargetAimTraffic;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("TrafficControlTargetTraffic")
         public Double trafficControlTargetTraffic;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("TrafficControlTaskTraffic")
         public Double trafficControlTaskTraffic;
 

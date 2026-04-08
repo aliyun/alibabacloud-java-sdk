@@ -4,6 +4,10 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class StopTrafficControlTargetRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>pairec-1324***</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
