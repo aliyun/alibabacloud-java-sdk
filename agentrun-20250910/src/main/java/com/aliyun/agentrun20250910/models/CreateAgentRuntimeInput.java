@@ -14,6 +14,9 @@ public class CreateAgentRuntimeInput extends TeaModel {
     @NameInMap("agentRuntimeName")
     public String agentRuntimeName;
 
+    @NameInMap("armsConfiguration")
+    public ArmsConfiguration armsConfiguration;
+
     /**
      * <p>指定智能体运行时的部署类型，支持Code（代码模式）和Container（容器模式）</p>
      * <p>This parameter is required.</p>
@@ -227,6 +230,14 @@ public class CreateAgentRuntimeInput extends TeaModel {
     }
     public String getAgentRuntimeName() {
         return this.agentRuntimeName;
+    }
+
+    public CreateAgentRuntimeInput setArmsConfiguration(ArmsConfiguration armsConfiguration) {
+        this.armsConfiguration = armsConfiguration;
+        return this;
+    }
+    public ArmsConfiguration getArmsConfiguration() {
+        return this.armsConfiguration;
     }
 
     public CreateAgentRuntimeInput setArtifactType(String artifactType) {
