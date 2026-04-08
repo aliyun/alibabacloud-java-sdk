@@ -429,6 +429,113 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>CreateMmsTimer</p>
+     * 
+     * @param request CreateMmsTimerRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateMmsTimerResponse
+     */
+    public CreateMmsTimerResponse createMmsTimerWithOptions(String sourceId, CreateMmsTimerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.columnMapping)) {
+            body.put("columnMapping", request.columnMapping);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableDataMigration)) {
+            body.put("enableDataMigration", request.enableDataMigration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableSchemaMigration)) {
+            body.put("enableSchemaMigration", request.enableSchemaMigration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableVerification)) {
+            body.put("enableVerification", request.enableVerification);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.others)) {
+            body.put("others", request.others);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.partitionFilters)) {
+            body.put("partitionFilters", request.partitionFilters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.partitions)) {
+            body.put("partitions", request.partitions);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleType)) {
+            body.put("scheduleType", request.scheduleType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
+            body.put("sourceId", request.sourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcDbName)) {
+            body.put("srcDbName", request.srcDbName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableBlackList)) {
+            body.put("tableBlackList", request.tableBlackList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableMapping)) {
+            body.put("tableMapping", request.tableMapping);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableWhiteList)) {
+            body.put("tableWhiteList", request.tableWhiteList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tables)) {
+            body.put("tables", request.tables);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.value)) {
+            body.put("value", request.value);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMmsTimer"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + "/timers"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMmsTimerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>CreateMmsTimer</p>
+     * 
+     * @param request CreateMmsTimerRequest
+     * @return CreateMmsTimerResponse
+     */
+    public CreateMmsTimerResponse createMmsTimer(String sourceId, CreateMmsTimerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createMmsTimerWithOptions(sourceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a package.</p>
      * 
      * @param request CreatePackageRequest
@@ -779,6 +886,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteMmsJobWithOptions(sourceId, jobId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DeleteMmsTimer</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteMmsTimerResponse
+     */
+    public DeleteMmsTimerResponse deleteMmsTimerWithOptions(String sourceId, String timerId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteMmsTimer"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + "/timers/" + com.aliyun.openapiutil.Client.getEncodeParam(timerId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteMmsTimerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DeleteMmsTimer</p>
+     * @return DeleteMmsTimerResponse
+     */
+    public DeleteMmsTimerResponse deleteMmsTimer(String sourceId, String timerId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteMmsTimerWithOptions(sourceId, timerId, headers, runtime);
     }
 
     /**
@@ -1418,6 +1562,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getMmsTaskWithOptions(sourceId, taskId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>GetMmsTimer</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMmsTimerResponse
+     */
+    public GetMmsTimerResponse getMmsTimerWithOptions(String sourceId, String timerId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMmsTimer"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + "/timers/" + com.aliyun.openapiutil.Client.getEncodeParam(timerId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMmsTimerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>GetMmsTimer</p>
+     * @return GetMmsTimerResponse
+     */
+    public GetMmsTimerResponse getMmsTimer(String sourceId, String timerId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getMmsTimerWithOptions(sourceId, timerId, headers, runtime);
     }
 
     /**
@@ -2795,6 +2976,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>ListMmsDataSourceConfigItems</p>
+     * 
+     * @param request ListMmsDataSourceConfigItemsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMmsDataSourceConfigItemsResponse
+     */
+    public ListMmsDataSourceConfigItemsResponse listMmsDataSourceConfigItemsWithOptions(ListMmsDataSourceConfigItemsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
+            query.put("sourceType", request.sourceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMmsDataSourceConfigItems"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/configItems"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMmsDataSourceConfigItemsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>ListMmsDataSourceConfigItems</p>
+     * 
+     * @param request ListMmsDataSourceConfigItemsRequest
+     * @return ListMmsDataSourceConfigItemsResponse
+     */
+    public ListMmsDataSourceConfigItemsResponse listMmsDataSourceConfigItems(ListMmsDataSourceConfigItemsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMmsDataSourceConfigItemsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries a list of MaxCompute Migration Assist (MMA) data sources.</p>
      * 
      * @param request ListMmsDataSourcesRequest
@@ -3340,6 +3572,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listMmsTasksWithOptions(sourceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>ListMmsTimerLogs</p>
+     * 
+     * @param request ListMmsTimerLogsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMmsTimerLogsResponse
+     */
+    public ListMmsTimerLogsResponse listMmsTimerLogsWithOptions(String sourceId, String timerId, ListMmsTimerLogsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("pageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMmsTimerLogs"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + "/timers/" + com.aliyun.openapiutil.Client.getEncodeParam(timerId) + "/logs"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMmsTimerLogsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>ListMmsTimerLogs</p>
+     * 
+     * @param request ListMmsTimerLogsRequest
+     * @return ListMmsTimerLogsResponse
+     */
+    public ListMmsTimerLogsResponse listMmsTimerLogs(String sourceId, String timerId, ListMmsTimerLogsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMmsTimerLogsWithOptions(sourceId, timerId, request, headers, runtime);
     }
 
     /**
