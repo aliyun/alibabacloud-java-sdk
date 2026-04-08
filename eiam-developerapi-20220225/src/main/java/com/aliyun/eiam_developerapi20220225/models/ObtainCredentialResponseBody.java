@@ -65,6 +65,15 @@ public class ObtainCredentialResponseBody extends TeaModel {
     public String credentialScenarioLabel;
 
     /**
+     * <p>凭据的共享范围。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user_exclusive</p>
+     */
+    @NameInMap("credentialSharingScope")
+    public String credentialSharingScope;
+
+    /**
      * <p>凭据所属的主体ID。</p>
      * 
      * <strong>example:</strong>
@@ -99,6 +108,15 @@ public class ObtainCredentialResponseBody extends TeaModel {
      */
     @NameInMap("description")
     public String description;
+
+    /**
+     * <p>凭据的专属账户ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user_xxx</p>
+     */
+    @NameInMap("exclusiveUserId")
+    public String exclusiveUserId;
 
     /**
      * <p>EIAM实例ID。</p>
@@ -188,6 +206,14 @@ public class ObtainCredentialResponseBody extends TeaModel {
         return this.credentialScenarioLabel;
     }
 
+    public ObtainCredentialResponseBody setCredentialSharingScope(String credentialSharingScope) {
+        this.credentialSharingScope = credentialSharingScope;
+        return this;
+    }
+    public String getCredentialSharingScope() {
+        return this.credentialSharingScope;
+    }
+
     public ObtainCredentialResponseBody setCredentialSubjectId(String credentialSubjectId) {
         this.credentialSubjectId = credentialSubjectId;
         return this;
@@ -218,6 +244,14 @@ public class ObtainCredentialResponseBody extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ObtainCredentialResponseBody setExclusiveUserId(String exclusiveUserId) {
+        this.exclusiveUserId = exclusiveUserId;
+        return this;
+    }
+    public String getExclusiveUserId() {
+        return this.exclusiveUserId;
     }
 
     public ObtainCredentialResponseBody setInstanceId(String instanceId) {
