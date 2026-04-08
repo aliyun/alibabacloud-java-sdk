@@ -245,6 +245,9 @@ public class DeployHttpApiRequest extends TeaModel {
 
         /**
          * <p>The configurations of existing services. For single-service publishing, only one entry is allowed. For other scenarios, multiple entries are allowed.</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>true</p>
          */
         @NameInMap("serviceConfigs")
         @Deprecated

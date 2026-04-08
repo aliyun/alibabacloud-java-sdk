@@ -2234,13 +2234,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Exports an HTTP API.</p>
      * 
+     * @param request ExportHttpApiRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ExportHttpApiResponse
      */
-    public ExportHttpApiResponse exportHttpApiWithOptions(String httpApiId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ExportHttpApiResponse exportHttpApiWithOptions(String httpApiId, ExportHttpApiRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.extensionConfig)) {
+            body.put("extensionConfig", request.extensionConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            body.put("gatewayId", request.gatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operationIds)) {
+            body.put("operationIds", request.operationIds);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ExportHttpApi"),
@@ -2259,12 +2275,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>Exports an HTTP API.</p>
+     * 
+     * @param request ExportHttpApiRequest
      * @return ExportHttpApiResponse
      */
-    public ExportHttpApiResponse exportHttpApi(String httpApiId) throws Exception {
+    public ExportHttpApiResponse exportHttpApi(String httpApiId, ExportHttpApiRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.exportHttpApiWithOptions(httpApiId, headers, runtime);
+        return this.exportHttpApiWithOptions(httpApiId, request, headers, runtime);
     }
 
     /**
@@ -3490,6 +3508,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listEnvironmentsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取网关外的服务信息</p>
+     * 
+     * @param request ListExternalServicesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListExternalServicesResponse
+     */
+    public ListExternalServicesResponse listExternalServicesWithOptions(String gatewayId, ListExternalServicesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.importableOnly)) {
+            query.put("importableOnly", request.importableOnly);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nameLike)) {
+            query.put("nameLike", request.nameLike);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paiWorkspaceId)) {
+            query.put("paiWorkspaceId", request.paiWorkspaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
+            query.put("sourceType", request.sourceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListExternalServices"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/gateways/" + com.aliyun.openapiutil.Client.getEncodeParam(gatewayId) + "/external-services"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListExternalServicesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取网关外的服务信息</p>
+     * 
+     * @param request ListExternalServicesRequest
+     * @return ListExternalServicesResponse
+     */
+    public ListExternalServicesResponse listExternalServices(String gatewayId, ListExternalServicesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listExternalServicesWithOptions(gatewayId, request, headers, runtime);
     }
 
     /**
@@ -5614,10 +5695,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("backendConfig", request.backendConfig);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.deployConfigs)) {
-            body.put("deployConfigs", request.deployConfigs);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("description", request.description);
         }
@@ -5636,10 +5713,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.mcpRouteConfig)) {
             body.put("mcpRouteConfig", request.mcpRouteConfig);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
-            body.put("name", request.name);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.policyConfigs)) {
