@@ -144,7 +144,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>SelectDB实例创建前检查</p>
+     * <p>Performs a precheck before an ApsaraDB for SelectDB instance is created.</p>
      * 
      * @param request CheckCreateDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -240,7 +240,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>SelectDB实例创建前检查</p>
+     * <p>Performs a precheck before an ApsaraDB for SelectDB instance is created.</p>
      * 
      * @param request CheckCreateDBInstanceRequest
      * @return CheckCreateDBInstanceResponse
@@ -292,7 +292,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>检查服务关联角色</p>
+     * <p>Queries the service-linked role of ApsaraDB for SelectDB.</p>
      * 
      * @param request CheckServiceLinkedRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -328,7 +328,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>检查服务关联角色</p>
+     * <p>Queries the service-linked role of ApsaraDB for SelectDB.</p>
      * 
      * @param request CheckServiceLinkedRoleRequest
      * @return CheckServiceLinkedRoleResponse
@@ -984,7 +984,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除DB实例</p>
+     * <p>Deletes an ApsaraDB for SelectDB instance.</p>
      * 
      * @param request DeleteDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1026,7 +1026,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除DB实例</p>
+     * <p>Deletes an ApsaraDB for SelectDB instance.</p>
      * 
      * @param request DeleteDBInstanceRequest
      * @return DeleteDBInstanceResponse
@@ -2020,7 +2020,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>集群变配</p>
+     * <p>Scales a cluster in an ApsaraDB for SelectDB instance.</p>
      * 
      * @param request ModifyDBClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2092,7 +2092,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>集群变配</p>
+     * <p>Scales a cluster in an ApsaraDB for SelectDB instance.</p>
      * 
      * @param request ModifyDBClusterRequest
      * @return ModifyDBClusterResponse
@@ -2594,7 +2594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>暂停后恢复集群</p>
+     * <p>Starts a cluster in an ApsaraDB for SelectDB instance.</p>
      * 
      * @param request StartBEClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2638,7 +2638,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>暂停后恢复集群</p>
+     * <p>Starts a cluster in an ApsaraDB for SelectDB instance.</p>
      * 
      * @param request StartBEClusterRequest
      * @return StartBEClusterResponse
@@ -2650,7 +2650,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>暂停BE集群</p>
+     * <p>Stops a cluster in an ApsaraDB for SelectDB instance.</p>
      * 
      * @param request StopBEClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2694,7 +2694,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>暂停BE集群</p>
+     * <p>Stops a cluster in an ApsaraDB for SelectDB instance.</p>
      * 
      * @param request StopBEClusterRequest
      * @return StopBEClusterResponse

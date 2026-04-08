@@ -154,6 +154,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("MultiZone")
     public java.util.List<DescribeDBInstanceAttributeResponseBodyMultiZone> multiZone;
 
+    @NameInMap("OTelBearerToken")
+    public String OTelBearerToken;
+
+    @NameInMap("OTelGrafanaServiceStatus")
+    public String OTelGrafanaServiceStatus;
+
     /**
      * <p>The storage capacity of the instance.</p>
      * 
@@ -429,6 +435,22 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
     public java.util.List<DescribeDBInstanceAttributeResponseBodyMultiZone> getMultiZone() {
         return this.multiZone;
+    }
+
+    public DescribeDBInstanceAttributeResponseBody setOTelBearerToken(String OTelBearerToken) {
+        this.OTelBearerToken = OTelBearerToken;
+        return this;
+    }
+    public String getOTelBearerToken() {
+        return this.OTelBearerToken;
+    }
+
+    public DescribeDBInstanceAttributeResponseBody setOTelGrafanaServiceStatus(String OTelGrafanaServiceStatus) {
+        this.OTelGrafanaServiceStatus = OTelGrafanaServiceStatus;
+        return this;
+    }
+    public String getOTelGrafanaServiceStatus() {
+        return this.OTelGrafanaServiceStatus;
     }
 
     public DescribeDBInstanceAttributeResponseBody setObjectStoreSize(Long objectStoreSize) {
