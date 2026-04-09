@@ -81,10 +81,6 @@ public class ListDomainsResponseBody extends TeaModel {
     }
 
     public static class ListDomainsResponseBodyDomainInfosDomainInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p><a href="http://www.example.com">www.example.com</a></p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
@@ -94,34 +90,18 @@ public class ListDomainsResponseBody extends TeaModel {
         @NameInMap("ResolveHttpsAes")
         public Long resolveHttpsAes;
 
-        /**
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("Resolved")
         public Long resolved;
 
-        /**
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("Resolved6")
         public Long resolved6;
 
         @NameInMap("ResolvedDoh")
         public Long resolvedDoh;
 
-        /**
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("ResolvedHttps")
         public Long resolvedHttps;
 
-        /**
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("ResolvedHttps6")
         public Long resolvedHttps6;
 

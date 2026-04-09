@@ -81,10 +81,6 @@ public class DescribeDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainsResponseBodyDomainsDomain extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
