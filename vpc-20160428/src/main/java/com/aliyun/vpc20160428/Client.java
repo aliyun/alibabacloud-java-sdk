@@ -314,6 +314,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClientToken", request.clientToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ipInstanceId)) {
             query.put("IpInstanceId", request.ipInstanceId);
         }
@@ -6023,6 +6027,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -6125,6 +6133,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
@@ -12173,6 +12185,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ipv6EgressOnlyRuleId)) {
@@ -21586,7 +21602,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the log of an SSL server.</p>
+     * <p>Queries the log entries of an SSL server.</p>
      * 
      * @param request DescribeVpnSslServerLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21662,7 +21678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the log of an SSL server.</p>
+     * <p>Queries the log entries of an SSL server.</p>
      * 
      * @param request DescribeVpnSslServerLogsRequest
      * @return DescribeVpnSslServerLogsResponse
@@ -24206,7 +24222,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the most recent region list.</p>
      * 
-     * @param request ListGeographicSubRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListGeographicSubRegionsResponse
      */
@@ -30844,7 +30859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the name and description of a VPN Gateway or the automatic route advertisement feature.</p>
+     * <p>Modifies the name and description of a VPN gateway.</p>
      * 
      * @param request ModifyVpnGatewayAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30920,7 +30935,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the name and description of a VPN Gateway or the automatic route advertisement feature.</p>
+     * <p>Modifies the name and description of a VPN gateway.</p>
      * 
      * @param request ModifyVpnGatewayAttributeRequest
      * @return ModifyVpnGatewayAttributeResponse
@@ -32404,6 +32419,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ipInstanceId)) {

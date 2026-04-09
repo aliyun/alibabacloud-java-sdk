@@ -27,6 +27,9 @@ public class CreateIpv6GatewayRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>The name of the IPv6 gateway.</p>
      * <p>The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
@@ -103,6 +106,14 @@ public class CreateIpv6GatewayRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateIpv6GatewayRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public CreateIpv6GatewayRequest setName(String name) {

@@ -27,6 +27,9 @@ public class CreateIpv6EgressOnlyRuleRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>The ID of the IPv6 address for which you want to create an egress-only rule.</p>
      * <p>This parameter is required.</p>
@@ -109,6 +112,14 @@ public class CreateIpv6EgressOnlyRuleRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateIpv6EgressOnlyRuleRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public CreateIpv6EgressOnlyRuleRequest setInstanceId(String instanceId) {

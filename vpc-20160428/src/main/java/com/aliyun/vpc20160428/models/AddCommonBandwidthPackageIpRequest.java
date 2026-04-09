@@ -20,6 +20,9 @@ public class AddCommonBandwidthPackageIpRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -76,6 +79,14 @@ public class AddCommonBandwidthPackageIpRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public AddCommonBandwidthPackageIpRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public AddCommonBandwidthPackageIpRequest setIpInstanceId(String ipInstanceId) {

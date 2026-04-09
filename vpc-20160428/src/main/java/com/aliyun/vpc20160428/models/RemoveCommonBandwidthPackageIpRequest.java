@@ -20,6 +20,9 @@ public class RemoveCommonBandwidthPackageIpRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -69,6 +72,14 @@ public class RemoveCommonBandwidthPackageIpRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public RemoveCommonBandwidthPackageIpRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public RemoveCommonBandwidthPackageIpRequest setIpInstanceId(String ipInstanceId) {

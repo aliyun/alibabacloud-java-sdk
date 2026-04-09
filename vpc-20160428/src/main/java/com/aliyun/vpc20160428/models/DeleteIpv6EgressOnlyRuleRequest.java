@@ -17,6 +17,9 @@ public class DeleteIpv6EgressOnlyRuleRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>The ID of the egress-only rule that you want to delete.</p>
      * <p>This parameter is required.</p>
@@ -60,6 +63,14 @@ public class DeleteIpv6EgressOnlyRuleRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public DeleteIpv6EgressOnlyRuleRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public DeleteIpv6EgressOnlyRuleRequest setIpv6EgressOnlyRuleId(String ipv6EgressOnlyRuleId) {
