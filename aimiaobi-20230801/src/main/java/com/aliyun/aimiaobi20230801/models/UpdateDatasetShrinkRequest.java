@@ -4,6 +4,13 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class UpdateDatasetShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>private</p>
+     */
+    @NameInMap("AccessLevel")
+    public String accessLevel;
+
     @NameInMap("DatasetConfig")
     public String datasetConfigShrink;
 
@@ -40,6 +47,14 @@ public class UpdateDatasetShrinkRequest extends TeaModel {
     public static UpdateDatasetShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDatasetShrinkRequest self = new UpdateDatasetShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateDatasetShrinkRequest setAccessLevel(String accessLevel) {
+        this.accessLevel = accessLevel;
+        return this;
+    }
+    public String getAccessLevel() {
+        return this.accessLevel;
     }
 
     public UpdateDatasetShrinkRequest setDatasetConfigShrink(String datasetConfigShrink) {

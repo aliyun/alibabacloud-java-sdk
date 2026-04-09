@@ -958,6 +958,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>用户数据集权限-批量添加</p>
+     * 
+     * @param tmpReq CreateDataPermissionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDataPermissionsResponse
+     */
+    public CreateDataPermissionsResponse createDataPermissionsWithOptions(CreateDataPermissionsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateDataPermissionsShrinkRequest request = new CreateDataPermissionsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.permissionUserInfos)) {
+            request.permissionUserInfosShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.permissionUserInfos, "PermissionUserInfos", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataId)) {
+            body.put("DataId", request.dataId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataType)) {
+            body.put("DataType", request.dataType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.permissionUserInfosShrink)) {
+            body.put("PermissionUserInfos", request.permissionUserInfosShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDataPermissions"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDataPermissionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>用户数据集权限-批量添加</p>
+     * 
+     * @param request CreateDataPermissionsRequest
+     * @return CreateDataPermissionsResponse
+     */
+    public CreateDataPermissionsResponse createDataPermissions(CreateDataPermissionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDataPermissionsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>数据集管理-创建</p>
      * 
      * @param tmpReq CreateDatasetRequest
@@ -977,6 +1039,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessLevel)) {
+            body.put("AccessLevel", request.accessLevel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.datasetConfigShrink)) {
             body.put("DatasetConfig", request.datasetConfigShrink);
         }
@@ -1472,6 +1538,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteCustomTopicViewPointByIdResponse deleteCustomTopicViewPointById(DeleteCustomTopicViewPointByIdRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteCustomTopicViewPointByIdWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>用户数据集权限-批量删除</p>
+     * 
+     * @param tmpReq DeleteDataPermissionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDataPermissionsResponse
+     */
+    public DeleteDataPermissionsResponse deleteDataPermissionsWithOptions(DeleteDataPermissionsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DeleteDataPermissionsShrinkRequest request = new DeleteDataPermissionsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ids)) {
+            request.idsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ids, "Ids", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.idsShrink)) {
+            body.put("Ids", request.idsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDataPermissions"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDataPermissionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>用户数据集权限-批量删除</p>
+     * 
+     * @param request DeleteDataPermissionsRequest
+     * @return DeleteDataPermissionsResponse
+     */
+    public DeleteDataPermissionsResponse deleteDataPermissions(DeleteDataPermissionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDataPermissionsWithOptions(request, runtime);
     }
 
     /**
@@ -6188,6 +6308,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>用户数据集权限-列表</p>
+     * 
+     * @param request ListDataPermissionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDataPermissionsResponse
+     */
+    public ListDataPermissionsResponse listDataPermissionsWithOptions(ListDataPermissionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataId)) {
+            body.put("DataId", request.dataId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataType)) {
+            body.put("DataType", request.dataType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDataPermissions"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataPermissionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>用户数据集权限-列表</p>
+     * 
+     * @param request ListDataPermissionsRequest
+     * @return ListDataPermissionsResponse
+     */
+    public ListDataPermissionsResponse listDataPermissions(ListDataPermissionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDataPermissionsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询数据集文档列表</p>
      * 
      * @param tmpReq ListDatasetDocumentsRequest
@@ -6359,6 +6539,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListDatasetsResponse listDatasetsWithOptions(ListDatasetsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetDescription)) {
+            body.put("DatasetDescription", request.datasetDescription);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.datasetId)) {
             body.put("DatasetId", request.datasetId);
         }
@@ -12729,6 +12913,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessLevel)) {
+            body.put("AccessLevel", request.accessLevel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.datasetConfigShrink)) {
             body.put("DatasetConfig", request.datasetConfigShrink);
         }

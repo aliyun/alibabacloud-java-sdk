@@ -6,6 +6,13 @@ import com.aliyun.tea.*;
 public class ListDatasetsRequest extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>xx</p>
+     */
+    @NameInMap("DatasetDescription")
+    public String datasetDescription;
+
+    /**
+     * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("DatasetId")
@@ -75,6 +82,14 @@ public class ListDatasetsRequest extends TeaModel {
     public static ListDatasetsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDatasetsRequest self = new ListDatasetsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListDatasetsRequest setDatasetDescription(String datasetDescription) {
+        this.datasetDescription = datasetDescription;
+        return this;
+    }
+    public String getDatasetDescription() {
+        return this.datasetDescription;
     }
 
     public ListDatasetsRequest setDatasetId(Long datasetId) {

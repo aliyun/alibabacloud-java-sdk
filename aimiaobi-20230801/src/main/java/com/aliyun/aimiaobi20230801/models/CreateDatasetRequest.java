@@ -4,6 +4,13 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class CreateDatasetRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>private</p>
+     */
+    @NameInMap("AccessLevel")
+    public String accessLevel;
+
     @NameInMap("DatasetConfig")
     public CreateDatasetRequestDatasetConfig datasetConfig;
 
@@ -59,6 +66,14 @@ public class CreateDatasetRequest extends TeaModel {
     public static CreateDatasetRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDatasetRequest self = new CreateDatasetRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDatasetRequest setAccessLevel(String accessLevel) {
+        this.accessLevel = accessLevel;
+        return this;
+    }
+    public String getAccessLevel() {
+        return this.accessLevel;
     }
 
     public CreateDatasetRequest setDatasetConfig(CreateDatasetRequestDatasetConfig datasetConfig) {

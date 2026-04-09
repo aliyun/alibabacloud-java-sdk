@@ -230,7 +230,55 @@ public class ListDatasetsResponseBody extends TeaModel {
 
     }
 
+    public static class ListDatasetsResponseBodyDataAdministrators extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
+        @NameInMap("UserId")
+        public String userId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
+        @NameInMap("Username")
+        public String username;
+
+        public static ListDatasetsResponseBodyDataAdministrators build(java.util.Map<String, ?> map) throws Exception {
+            ListDatasetsResponseBodyDataAdministrators self = new ListDatasetsResponseBodyDataAdministrators();
+            return TeaModel.build(map, self);
+        }
+
+        public ListDatasetsResponseBodyDataAdministrators setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public ListDatasetsResponseBodyDataAdministrators setUsername(String username) {
+            this.username = username;
+            return this;
+        }
+        public String getUsername() {
+            return this.username;
+        }
+
+    }
+
     public static class ListDatasetsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>private</p>
+         */
+        @NameInMap("AccessLevel")
+        public String accessLevel;
+
+        @NameInMap("Administrators")
+        public java.util.List<ListDatasetsResponseBodyDataAdministrators> administrators;
+
         /**
          * <strong>example:</strong>
          * <p>2024-11-12 21:46:24</p>
@@ -290,6 +338,22 @@ public class ListDatasetsResponseBody extends TeaModel {
         public static ListDatasetsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListDatasetsResponseBodyData self = new ListDatasetsResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListDatasetsResponseBodyData setAccessLevel(String accessLevel) {
+            this.accessLevel = accessLevel;
+            return this;
+        }
+        public String getAccessLevel() {
+            return this.accessLevel;
+        }
+
+        public ListDatasetsResponseBodyData setAdministrators(java.util.List<ListDatasetsResponseBodyDataAdministrators> administrators) {
+            this.administrators = administrators;
+            return this;
+        }
+        public java.util.List<ListDatasetsResponseBodyDataAdministrators> getAdministrators() {
+            return this.administrators;
         }
 
         public ListDatasetsResponseBodyData setCreateTime(String createTime) {

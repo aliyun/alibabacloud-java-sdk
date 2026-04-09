@@ -719,6 +719,13 @@ public class GetDatasetResponseBody extends TeaModel {
     public static class GetDatasetResponseBodyData extends TeaModel {
         /**
          * <strong>example:</strong>
+         * <p>private</p>
+         */
+        @NameInMap("AccessLevel")
+        public String accessLevel;
+
+        /**
+         * <strong>example:</strong>
          * <p>2024-11-12 21:46:24</p>
          */
         @NameInMap("CreateTime")
@@ -775,6 +782,14 @@ public class GetDatasetResponseBody extends TeaModel {
         public static GetDatasetResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetDatasetResponseBodyData self = new GetDatasetResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetDatasetResponseBodyData setAccessLevel(String accessLevel) {
+            this.accessLevel = accessLevel;
+            return this;
+        }
+        public String getAccessLevel() {
+            return this.accessLevel;
         }
 
         public GetDatasetResponseBodyData setCreateTime(String createTime) {
