@@ -4,6 +4,9 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class BoundTool extends TeaModel {
+    @NameInMap("apis")
+    public java.util.List<BoundToolApi> apis;
+
     /**
      * <p>绑定的 HTTP 请求方法，支持：GET、PUT、POST、PATCH、DELETE、OPTIONS</p>
      * 
@@ -11,6 +14,7 @@ public class BoundTool extends TeaModel {
      * <p>POST</p>
      */
     @NameInMap("method")
+    @Deprecated
     public String method;
 
     /**
@@ -20,6 +24,7 @@ public class BoundTool extends TeaModel {
      * <p>/api/v1/tools</p>
      */
     @NameInMap("path")
+    @Deprecated
     public String path;
 
     /**
@@ -36,6 +41,15 @@ public class BoundTool extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public BoundTool setApis(java.util.List<BoundToolApi> apis) {
+        this.apis = apis;
+        return this;
+    }
+    public java.util.List<BoundToolApi> getApis() {
+        return this.apis;
+    }
+
+    @Deprecated
     public BoundTool setMethod(String method) {
         this.method = method;
         return this;
@@ -44,6 +58,7 @@ public class BoundTool extends TeaModel {
         return this.method;
     }
 
+    @Deprecated
     public BoundTool setPath(String path) {
         this.path = path;
         return this;

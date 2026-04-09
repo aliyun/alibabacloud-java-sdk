@@ -23,6 +23,13 @@ public class ListToolsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <strong>example:</strong>
+     * <p>tool-1</p>
+     */
+    @NameInMap("toolName")
+    public String toolName;
+
+    /**
      * <p>按工具类型过滤，可选值：MCP、FUNCTIONCALL、SKILL</p>
      * 
      * <strong>example:</strong>
@@ -66,6 +73,14 @@ public class ListToolsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListToolsRequest setToolName(String toolName) {
+        this.toolName = toolName;
+        return this;
+    }
+    public String getToolName() {
+        return this.toolName;
     }
 
     public ListToolsRequest setToolType(String toolType) {

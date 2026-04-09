@@ -12,6 +12,15 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     public String agentRuntimeName;
 
     /**
+     * <p>应用实时监控服务（ARMS）的配置信息</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
+    @NameInMap("armsConfiguration")
+    public ArmsConfiguration armsConfiguration;
+
+    /**
      * <strong>example:</strong>
      * <p>Code</p>
      */
@@ -191,6 +200,14 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     }
     public String getAgentRuntimeName() {
         return this.agentRuntimeName;
+    }
+
+    public UpdateAgentRuntimeInput setArmsConfiguration(ArmsConfiguration armsConfiguration) {
+        this.armsConfiguration = armsConfiguration;
+        return this;
+    }
+    public ArmsConfiguration getArmsConfiguration() {
+        return this.armsConfiguration;
     }
 
     public UpdateAgentRuntimeInput setArtifactType(String artifactType) {

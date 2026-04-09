@@ -1,3 +1,7 @@
+2026-04-09 Version: 5.7.3
+- Update API ListTools: add request parameters toolName.
+
+
 2026-04-08 Version: 5.7.2
 - Generated java 2025-09-10 for AgentRun.
 
