@@ -1,0 +1,12 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.aiworkspace20210204.models;
+
+import com.aliyun.tea.*;
+
+public class DeleteExperimentLabelRequest extends TeaModel {
+    public static DeleteExperimentLabelRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeleteExperimentLabelRequest self = new DeleteExperimentLabelRequest();
+        return TeaModel.build(map, self);
+    }
+
+}

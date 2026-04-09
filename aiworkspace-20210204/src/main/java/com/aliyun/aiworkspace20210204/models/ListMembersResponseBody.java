@@ -58,9 +58,17 @@ public class ListMembersResponseBody extends TeaModel {
     }
 
     public static class ListMembersResponseBodyMembers extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>testAccount</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("AccountType")
         public String accountType;
 

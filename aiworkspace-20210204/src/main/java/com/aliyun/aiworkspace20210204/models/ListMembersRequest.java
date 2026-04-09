@@ -49,6 +49,13 @@ public class ListMembersRequest extends TeaModel {
     @NameInMap("Roles")
     public String roles;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2788******129</p>
+     */
+    @NameInMap("UserId")
+    public String userId;
+
     public static ListMembersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListMembersRequest self = new ListMembersRequest();
         return TeaModel.build(map, self);
@@ -84,6 +91,14 @@ public class ListMembersRequest extends TeaModel {
     }
     public String getRoles() {
         return this.roles;
+    }
+
+    public ListMembersRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }
