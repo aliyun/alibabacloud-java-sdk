@@ -34,6 +34,9 @@ public class GetAuthCodeRequest extends TeaModel {
     @NameInMap("Policy")
     public String policy;
 
+    @NameInMap("TokenType")
+    public String tokenType;
+
     public static GetAuthCodeRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAuthCodeRequest self = new GetAuthCodeRequest();
         return TeaModel.build(map, self);
@@ -69,6 +72,14 @@ public class GetAuthCodeRequest extends TeaModel {
     }
     public String getPolicy() {
         return this.policy;
+    }
+
+    public GetAuthCodeRequest setTokenType(String tokenType) {
+        this.tokenType = tokenType;
+        return this;
+    }
+    public String getTokenType() {
+        return this.tokenType;
     }
 
 }

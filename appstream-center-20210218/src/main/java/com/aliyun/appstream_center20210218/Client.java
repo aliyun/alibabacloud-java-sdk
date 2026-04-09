@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>登录token主动失效</p>
+     * <p>Manually invalidates a logon token.</p>
      * 
      * @param request ExpireLoginTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -72,7 +72,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>登录token主动失效</p>
+     * <p>Manually invalidates a logon token.</p>
      * 
      * @param request ExpireLoginTokenRequest
      * @return ExpireLoginTokenResponse
@@ -84,7 +84,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取授权码</p>
+     * <p>Obtains an authorization code that includes the identity and permission information of a user. You can use the code to launch cloud apps in integration scenarios.</p>
      * 
      * @param request GetAuthCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -92,6 +92,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public GetAuthCodeResponse getAuthCodeWithOptions(GetAuthCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tokenType)) {
+            query.put("TokenType", request.tokenType);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.autoCreateUser)) {
             body.put("AutoCreateUser", request.autoCreateUser);
@@ -110,6 +115,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -128,7 +134,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取授权码</p>
+     * <p>Obtains an authorization code that includes the identity and permission information of a user. You can use the code to launch cloud apps in integration scenarios.</p>
      * 
      * @param request GetAuthCodeRequest
      * @return GetAuthCodeResponse
