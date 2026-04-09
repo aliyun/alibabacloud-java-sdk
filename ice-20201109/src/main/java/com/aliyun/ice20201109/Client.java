@@ -7176,7 +7176,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Generates a random Key Management Service (KMS) data key used for HTTP Live Streaming (HLS) encryption and transcoding of videos.</p>
      * 
-     * @param request GenerateKMSDataKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GenerateKMSDataKeyResponse
      */
@@ -7758,7 +7757,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>获取内容分析搜索配置</p>
      * 
-     * @param request GetContentAnalyzeConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetContentAnalyzeConfigResponse
      */
@@ -7996,7 +7994,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>获取用户默认存储地址</p>
      * 
-     * @param request GetDefaultStorageLocationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDefaultStorageLocationResponse
      */
@@ -8210,7 +8207,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries event callback configurations.</p>
      * 
-     * @param request GetEventCallbackRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetEventCallbackResponse
      */
@@ -8874,7 +8870,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Retrieves all regions where MediaConnect is available.</p>
      * 
-     * @param request GetMediaConnectAvailableRegionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetMediaConnectAvailableRegionResponse
      */
@@ -18472,6 +18467,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StopRtcRobotInstanceResponse stopRtcRobotInstance(StopRtcRobotInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopRtcRobotInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>扣减用户积分</p>
+     * 
+     * @param request SubYikeUserCreditRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubYikeUserCreditResponse
+     */
+    public SubYikeUserCreditResponse subYikeUserCreditWithOptions(SubYikeUserCreditRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.credit)) {
+            query.put("Credit", request.credit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.yikeUserId)) {
+            query.put("YikeUserId", request.yikeUserId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubYikeUserCredit"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubYikeUserCreditResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>扣减用户积分</p>
+     * 
+     * @param request SubYikeUserCreditRequest
+     * @return SubYikeUserCreditResponse
+     */
+    public SubYikeUserCreditResponse subYikeUserCredit(SubYikeUserCreditRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.subYikeUserCreditWithOptions(request, runtime);
     }
 
     /**
