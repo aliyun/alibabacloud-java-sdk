@@ -4,6 +4,9 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class CreateABMetricRequest extends TeaModel {
+    @NameInMap("AggregationByUser")
+    public Boolean aggregationByUser;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -12,6 +15,13 @@ public class CreateABMetricRequest extends TeaModel {
      */
     @NameInMap("Definition")
     public String definition;
+
+    /**
+     * <strong>example:</strong>
+     * <p>pv</p>
+     */
+    @NameInMap("Denominator")
+    public String denominator;
 
     /**
      * <p>This parameter is required.</p>
@@ -28,6 +38,9 @@ public class CreateABMetricRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("IsBinomialDistribution")
+    public Boolean isBinomialDistribution;
+
     /**
      * <strong>example:</strong>
      * <p>2</p>
@@ -43,6 +56,16 @@ public class CreateABMetricRequest extends TeaModel {
      */
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("NeedSignificance")
+    public Boolean needSignificance;
+
+    /**
+     * <strong>example:</strong>
+     * <p>click</p>
+     */
+    @NameInMap("Numerator")
+    public String numerator;
 
     /**
      * <strong>example:</strong>
@@ -113,12 +136,28 @@ public class CreateABMetricRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateABMetricRequest setAggregationByUser(Boolean aggregationByUser) {
+        this.aggregationByUser = aggregationByUser;
+        return this;
+    }
+    public Boolean getAggregationByUser() {
+        return this.aggregationByUser;
+    }
+
     public CreateABMetricRequest setDefinition(String definition) {
         this.definition = definition;
         return this;
     }
     public String getDefinition() {
         return this.definition;
+    }
+
+    public CreateABMetricRequest setDenominator(String denominator) {
+        this.denominator = denominator;
+        return this;
+    }
+    public String getDenominator() {
+        return this.denominator;
     }
 
     public CreateABMetricRequest setDescription(String description) {
@@ -137,6 +176,14 @@ public class CreateABMetricRequest extends TeaModel {
         return this.instanceId;
     }
 
+    public CreateABMetricRequest setIsBinomialDistribution(Boolean isBinomialDistribution) {
+        this.isBinomialDistribution = isBinomialDistribution;
+        return this;
+    }
+    public Boolean getIsBinomialDistribution() {
+        return this.isBinomialDistribution;
+    }
+
     public CreateABMetricRequest setLeftMetricId(String leftMetricId) {
         this.leftMetricId = leftMetricId;
         return this;
@@ -151,6 +198,22 @@ public class CreateABMetricRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateABMetricRequest setNeedSignificance(Boolean needSignificance) {
+        this.needSignificance = needSignificance;
+        return this;
+    }
+    public Boolean getNeedSignificance() {
+        return this.needSignificance;
+    }
+
+    public CreateABMetricRequest setNumerator(String numerator) {
+        this.numerator = numerator;
+        return this;
+    }
+    public String getNumerator() {
+        return this.numerator;
     }
 
     public CreateABMetricRequest setOperator(String operator) {

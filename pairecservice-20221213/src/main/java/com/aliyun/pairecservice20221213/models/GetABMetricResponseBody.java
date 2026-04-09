@@ -4,6 +4,9 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class GetABMetricResponseBody extends TeaModel {
+    @NameInMap("AggregationByUser")
+    public Boolean aggregationByUser;
+
     /**
      * <strong>example:</strong>
      * <p>sum(click_cnt)</p>
@@ -11,8 +14,18 @@ public class GetABMetricResponseBody extends TeaModel {
     @NameInMap("Definition")
     public String definition;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pv</p>
+     */
+    @NameInMap("Denominator")
+    public String denominator;
+
     @NameInMap("Description")
     public String description;
+
+    @NameInMap("IsBinomialDistribution")
+    public Boolean isBinomialDistribution;
 
     /**
      * <strong>example:</strong>
@@ -27,6 +40,16 @@ public class GetABMetricResponseBody extends TeaModel {
      */
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("NeedSignificance")
+    public Boolean needSignificance;
+
+    /**
+     * <strong>example:</strong>
+     * <p>click</p>
+     */
+    @NameInMap("Numerator")
+    public String numerator;
 
     /**
      * <strong>example:</strong>
@@ -110,6 +133,14 @@ public class GetABMetricResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetABMetricResponseBody setAggregationByUser(Boolean aggregationByUser) {
+        this.aggregationByUser = aggregationByUser;
+        return this;
+    }
+    public Boolean getAggregationByUser() {
+        return this.aggregationByUser;
+    }
+
     public GetABMetricResponseBody setDefinition(String definition) {
         this.definition = definition;
         return this;
@@ -118,12 +149,28 @@ public class GetABMetricResponseBody extends TeaModel {
         return this.definition;
     }
 
+    public GetABMetricResponseBody setDenominator(String denominator) {
+        this.denominator = denominator;
+        return this;
+    }
+    public String getDenominator() {
+        return this.denominator;
+    }
+
     public GetABMetricResponseBody setDescription(String description) {
         this.description = description;
         return this;
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public GetABMetricResponseBody setIsBinomialDistribution(Boolean isBinomialDistribution) {
+        this.isBinomialDistribution = isBinomialDistribution;
+        return this;
+    }
+    public Boolean getIsBinomialDistribution() {
+        return this.isBinomialDistribution;
     }
 
     public GetABMetricResponseBody setLeftMetricId(String leftMetricId) {
@@ -140,6 +187,22 @@ public class GetABMetricResponseBody extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public GetABMetricResponseBody setNeedSignificance(Boolean needSignificance) {
+        this.needSignificance = needSignificance;
+        return this;
+    }
+    public Boolean getNeedSignificance() {
+        return this.needSignificance;
+    }
+
+    public GetABMetricResponseBody setNumerator(String numerator) {
+        this.numerator = numerator;
+        return this;
+    }
+    public String getNumerator() {
+        return this.numerator;
     }
 
     public GetABMetricResponseBody setOperator(String operator) {

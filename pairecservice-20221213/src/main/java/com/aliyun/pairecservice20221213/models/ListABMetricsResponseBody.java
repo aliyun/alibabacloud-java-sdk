@@ -58,6 +58,9 @@ public class ListABMetricsResponseBody extends TeaModel {
         @NameInMap("ABMetricId")
         public String ABMetricId;
 
+        @NameInMap("AggregationByUser")
+        public Boolean aggregationByUser;
+
         /**
          * <strong>example:</strong>
          * <p>sum(click_cnt)</p>
@@ -65,8 +68,18 @@ public class ListABMetricsResponseBody extends TeaModel {
         @NameInMap("Definition")
         public String definition;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pv</p>
+         */
+        @NameInMap("Denominator")
+        public String denominator;
+
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("IsBinomialDistribution")
+        public Boolean isBinomialDistribution;
 
         /**
          * <strong>example:</strong>
@@ -81,6 +94,16 @@ public class ListABMetricsResponseBody extends TeaModel {
          */
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("NeedSignificance")
+        public Boolean needSignificance;
+
+        /**
+         * <strong>example:</strong>
+         * <p>click</p>
+         */
+        @NameInMap("Numerator")
+        public String numerator;
 
         /**
          * <strong>example:</strong>
@@ -165,6 +188,14 @@ public class ListABMetricsResponseBody extends TeaModel {
             return this.ABMetricId;
         }
 
+        public ListABMetricsResponseBodyABMetrics setAggregationByUser(Boolean aggregationByUser) {
+            this.aggregationByUser = aggregationByUser;
+            return this;
+        }
+        public Boolean getAggregationByUser() {
+            return this.aggregationByUser;
+        }
+
         public ListABMetricsResponseBodyABMetrics setDefinition(String definition) {
             this.definition = definition;
             return this;
@@ -173,12 +204,28 @@ public class ListABMetricsResponseBody extends TeaModel {
             return this.definition;
         }
 
+        public ListABMetricsResponseBodyABMetrics setDenominator(String denominator) {
+            this.denominator = denominator;
+            return this;
+        }
+        public String getDenominator() {
+            return this.denominator;
+        }
+
         public ListABMetricsResponseBodyABMetrics setDescription(String description) {
             this.description = description;
             return this;
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListABMetricsResponseBodyABMetrics setIsBinomialDistribution(Boolean isBinomialDistribution) {
+            this.isBinomialDistribution = isBinomialDistribution;
+            return this;
+        }
+        public Boolean getIsBinomialDistribution() {
+            return this.isBinomialDistribution;
         }
 
         public ListABMetricsResponseBodyABMetrics setLeftMetricId(String leftMetricId) {
@@ -195,6 +242,22 @@ public class ListABMetricsResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListABMetricsResponseBodyABMetrics setNeedSignificance(Boolean needSignificance) {
+            this.needSignificance = needSignificance;
+            return this;
+        }
+        public Boolean getNeedSignificance() {
+            return this.needSignificance;
+        }
+
+        public ListABMetricsResponseBodyABMetrics setNumerator(String numerator) {
+            this.numerator = numerator;
+            return this;
+        }
+        public String getNumerator() {
+            return this.numerator;
         }
 
         public ListABMetricsResponseBodyABMetrics setOperator(String operator) {
