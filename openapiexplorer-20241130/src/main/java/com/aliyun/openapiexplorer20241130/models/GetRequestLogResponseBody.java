@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetRequestLogResponseBody extends TeaModel {
     /**
-     * <p>The details of the API request log.</p>
+     * <p>The detailed information about the log of the API call.</p>
      */
     @NameInMap("logInfo")
     public GetRequestLogResponseBodyLogInfo logInfo;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9BFC4AC1-6BE4-5405-BDEC-CA288D404812</p>
@@ -42,20 +42,14 @@ public class GetRequestLogResponseBody extends TeaModel {
 
     public static class GetRequestLogResponseBodyLogInfoAuthenticationInfo extends TeaModel {
         /**
-         * <p>The authentication type.</p>
+         * <p>The authentication type. Valid values:</p>
          * <ul>
-         * <li><p>AK: An AccessKey pair, which can be a permanent AccessKey pair, a temporary AccessKey pair, or an STS token.</p>
-         * </li>
-         * <li><p>PRIVATEKEY: An AccessKey pair that uses asymmetric key encryption.</p>
-         * </li>
-         * <li><p>BEARERTOKEN: An identity verification mechanism that is widely used in the OAuth 2.0 framework and cloud services.</p>
-         * </li>
-         * <li><p>CUSTOM_SPI: An efficient and secure authentication method that is used for the delivery and management of Software as a Service (SaaS) products in Alibaba Cloud Marketplace.</p>
-         * </li>
-         * <li><p>Anonymous: Anonymous access.</p>
-         * </li>
-         * <li><p>DPS: Similar to an AccessKey pair, but uses a signature algorithm that is different from the official Alibaba Cloud algorithm. This method is specific to certain products.</p>
-         * </li>
+         * <li>AK: includes a permanent AccessKey pair, a temporary AccessKey pair, and a STS token.</li>
+         * <li>PRIVATEKEY: an AccessKey pair for an asymmetric cryptography algorithm.</li>
+         * <li>BEARETOKEN: an authentication mechanism that is widely used in the OAuth 2.0 framework and cloud services.</li>
+         * <li>CUSTOM_SPI: an efficient and secure authentication method that is suitable for the delivery and management of Software as a Service (SaaS) services in Alibaba Cloud Marketplace.</li>
+         * <li>Anonymous: anonymous access.</li>
+         * <li>DPS: an authentication method that is similar to AK. Its signature algorithm is different from that of Alibaba Cloud services and is exclusive to specific products.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -65,12 +59,10 @@ public class GetRequestLogResponseBody extends TeaModel {
         public String authenticationType;
 
         /**
-         * <p>The signature method.</p>
+         * <p>The signature algorithm. Valid values:</p>
          * <ul>
-         * <li><p>HMAC-SHA1: The request is signed using the HMAC-SHA1 algorithm.</p>
-         * </li>
-         * <li><p>HMAC-SHA256: The request is signed using the HMAC-SHA256 algorithm.</p>
-         * </li>
+         * <li>HMAC-SHA1</li>
+         * <li>HMAC-SHA256</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -121,7 +113,7 @@ public class GetRequestLogResponseBody extends TeaModel {
 
     public static class GetRequestLogResponseBodyLogInfoBasicInfoAccessDeniedDetail extends TeaModel {
         /**
-         * <p>The specific operation that is denied.</p>
+         * <p>The operation that the operator does not have permissions to perform.</p>
          * 
          * <strong>example:</strong>
          * <p>openapiexplorer:GetRequestLog</p>
@@ -139,7 +131,7 @@ public class GetRequestLogResponseBody extends TeaModel {
         public String authPrincipalDisplayName;
 
         /**
-         * <p>The UID of the Alibaba Cloud account to which the current identity belongs.</p>
+         * <p>The ID of the Alibaba Cloud account to which the current identity belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>1001234561234567</p>
@@ -157,7 +149,7 @@ public class GetRequestLogResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The encoded diagnostic message. To obtain more diagnostic information, call the DecodeDiagnosticMessage operation of RAM.</p>
+         * <p>The information after encoding, which can be used for troubleshooting. You can call the DecodeDiagnosticMessage operation of Resource Access Management (RAM) for further diagnostics.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -168,7 +160,7 @@ public class GetRequestLogResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The reason why the access is denied.</p>
+         * <p>The cause of the permission-related error.</p>
          * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
@@ -177,7 +169,7 @@ public class GetRequestLogResponseBody extends TeaModel {
         public String noPermissionType;
 
         /**
-         * <p>The type of the policy that denies the access.</p>
+         * <p>The type of the policy that causes the permission-related error.</p>
          * 
          * <strong>example:</strong>
          * <p>AccountLevelIdentityBasedPolicy</p>
@@ -250,7 +242,7 @@ public class GetRequestLogResponseBody extends TeaModel {
 
     public static class GetRequestLogResponseBodyLogInfoBasicInfoApiDoc extends TeaModel {
         /**
-         * <p>The link to the API reference on the Alibaba Cloud International Website (www\.alibabacloud.com).</p>
+         * <p>The documentation URL on the international site (alibabacloud.com).</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://api.alibabacloud.com/document/Ecs/2014-05-26/RunInstances">https://api.alibabacloud.com/document/Ecs/2014-05-26/RunInstances</a></p>
@@ -259,7 +251,7 @@ public class GetRequestLogResponseBody extends TeaModel {
         public String alibabacloudSite;
 
         /**
-         * <p>The link to the API reference on the Alibaba Cloud China Website (www\.aliyun.com).</p>
+         * <p>The documentation URL on the China site (aliyun.com).</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://api.aliyun.com/document/Ecs/2014-05-26/RunInstances">https://api.aliyun.com/document/Ecs/2014-05-26/RunInstances</a></p>
@@ -292,16 +284,13 @@ public class GetRequestLogResponseBody extends TeaModel {
 
     public static class GetRequestLogResponseBodyLogInfoBasicInfoProductName extends TeaModel {
         /**
-         * <p>The Chinese name of the product.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>云服务器 ECS</p>
+         * <p>The product name in Chinese.</p>
          */
         @NameInMap("cnName")
         public String cnName;
 
         /**
-         * <p>The English name of the product.</p>
+         * <p>The product name in English.</p>
          * 
          * <strong>example:</strong>
          * <p>Elastic Compute Service</p>
@@ -334,13 +323,13 @@ public class GetRequestLogResponseBody extends TeaModel {
 
     public static class GetRequestLogResponseBodyLogInfoBasicInfo extends TeaModel {
         /**
-         * <p>The details of the access denied error. This field is returned only if an authentication error occurs for the specified request ID.</p>
+         * <p>The error message returned if the operator does not have the required permissions. This parameter is available only if an authentication error is reported for the request ID.</p>
          */
         @NameInMap("accessDeniedDetail")
         public GetRequestLogResponseBodyLogInfoBasicInfoAccessDeniedDetail accessDeniedDetail;
 
         /**
-         * <p>The name of the API that was called.</p>
+         * <p>The name of the API.</p>
          * 
          * <strong>example:</strong>
          * <p>RunInstances</p>
@@ -349,13 +338,13 @@ public class GetRequestLogResponseBody extends TeaModel {
         public String api;
 
         /**
-         * <p>The API reference information.</p>
+         * <p>The information about the API documentation.</p>
          */
         @NameInMap("apiDoc")
         public GetRequestLogResponseBodyLogInfoBasicInfoApiDoc apiDoc;
 
         /**
-         * <p>The API style. Valid values: ROA and RPC.</p>
+         * <p>The API style. Valid values: roa and rpc.</p>
          * 
          * <strong>example:</strong>
          * <p>roa</p>
@@ -364,16 +353,16 @@ public class GetRequestLogResponseBody extends TeaModel {
         public String apiStyle;
 
         /**
-         * <p>The API version.</p>
+         * <p>The version of the API.</p>
          * 
          * <strong>example:</strong>
-         * <p>2014-05-26</p>
+         * <p>2024-11-30</p>
          */
         @NameInMap("apiVersion")
         public String apiVersion;
 
         /**
-         * <p>The endpoint of the area where the endpoint is deployed.</p>
+         * <p>The endpoint of the service region.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.cn-hangzhou.aliyuncs.com</p>
@@ -382,7 +371,7 @@ public class GetRequestLogResponseBody extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The error code in the log. This field is empty if no error is reported for the request.</p>
+         * <p>The error code in the log. This parameter is left empty if no error is reported in the API call.</p>
          * 
          * <strong>example:</strong>
          * <p>IncorrectStatus.TransitRouter</p>
@@ -391,7 +380,7 @@ public class GetRequestLogResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The error message in the log. This field is empty if no error is reported for the request.</p>
+         * <p>The error message in the log. This parameter is left empty if no error is reported in the API call.</p>
          * 
          * <strong>example:</strong>
          * <p>The resource is not in a valid state for the operation.</p>
@@ -400,7 +389,7 @@ public class GetRequestLogResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The time when the gateway received the request. The time is in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the gateway receives the request. Indicate the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-21T07:43:06Z</p>
@@ -409,7 +398,7 @@ public class GetRequestLogResponseBody extends TeaModel {
         public String gatewayProcessTime;
 
         /**
-         * <p>The HTTP request method. Examples: GET, PUT, and POST.</p>
+         * <p>The HTTP request method. Valid values: GET, PUT, and POST.</p>
          * 
          * <strong>example:</strong>
          * <p>GET</p>
@@ -427,7 +416,7 @@ public class GetRequestLogResponseBody extends TeaModel {
         public String httpStatusCode;
 
         /**
-         * <p>The request ID that you specified.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123E4567-E89B-12D3-A456-426614174000</p>
@@ -445,13 +434,13 @@ public class GetRequestLogResponseBody extends TeaModel {
         public String product;
 
         /**
-         * <p>The product name, which includes the Chinese and English names.</p>
+         * <p>The product name, which includes the Chinese name and English name.</p>
          */
         @NameInMap("productName")
         public GetRequestLogResponseBodyLogInfoBasicInfoProductName productName;
 
         /**
-         * <p>The ID of the area where the endpoint is deployed.</p>
+         * <p>The service region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -460,7 +449,7 @@ public class GetRequestLogResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The time that elapses from when the gateway receives a request to when it returns a response. Unit: milliseconds (ms).</p>
+         * <p>The duration from when the gateway receives the request to when the client receives a response. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>188</p>
@@ -469,7 +458,7 @@ public class GetRequestLogResponseBody extends TeaModel {
         public String requestDuration;
 
         /**
-         * <p>The time when the request was initiated. The time is in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the request is initiated. Indicate the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-21T07:43:06Z</p>
@@ -478,7 +467,7 @@ public class GetRequestLogResponseBody extends TeaModel {
         public String sdkRequestTime;
 
         /**
-         * <p>The result of the throttling check. FC.PASS: The request was not blocked by the throttling check and no rate limiting occurred. FC.DENY: The request was blocked by the throttling check and rate limiting occurred.</p>
+         * <p>The throttling result. Valid values: FC.PASS: The task is not blocked by throttling. FC.DENY: The task is blocked by throttling.</p>
          * 
          * <strong>example:</strong>
          * <p>FC.PASS</p>
@@ -639,7 +628,7 @@ public class GetRequestLogResponseBody extends TeaModel {
 
     public static class GetRequestLogResponseBodyLogInfoCallerInfo extends TeaModel {
         /**
-         * <p>The ID of the caller\&quot;s account.</p>
+         * <p>The account ID of the caller.</p>
          * 
          * <strong>example:</strong>
          * <p>241009849925897811</p>
@@ -657,14 +646,11 @@ public class GetRequestLogResponseBody extends TeaModel {
         public String callerIp;
 
         /**
-         * <p>The type of the caller.</p>
+         * <p>The type of the caller. Valid values:</p>
          * <ol>
-         * <li><p>customer: Alibaba Cloud account</p>
-         * </li>
-         * <li><p>sub: RAM user</p>
-         * </li>
-         * <li><p>AssumedRoleUser: A temporary identity that is created using a Security Token Service (STS) token.</p>
-         * </li>
+         * <li>customer: an Alibaba Cloud account</li>
+         * <li>sub: a RAM user</li>
+         * <li>AssumedRoleUser: a user that uses a temporary Security Token Service (STS) token</li>
          * </ol>
          * 
          * <strong>example:</strong>
@@ -683,7 +669,7 @@ public class GetRequestLogResponseBody extends TeaModel {
         public String masterAccountId;
 
         /**
-         * <p>The user agent.</p>
+         * <p>The information about the user agent.</p>
          * 
          * <strong>example:</strong>
          * <p>AlibabaCloud API Workbench</p>
@@ -816,7 +802,7 @@ public class GetRequestLogResponseBody extends TeaModel {
 
     public static class GetRequestLogResponseBodyLogInfoResponses extends TeaModel {
         /**
-         * <p>The response information.</p>
+         * <p>The response body.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -866,7 +852,7 @@ public class GetRequestLogResponseBody extends TeaModel {
         public GetRequestLogResponseBodyLogInfoAuthenticationInfo authenticationInfo;
 
         /**
-         * <p>The basic information about the API request.</p>
+         * <p>The basic information about the log of the API call.</p>
          */
         @NameInMap("basicInfo")
         public GetRequestLogResponseBodyLogInfoBasicInfo basicInfo;
@@ -878,13 +864,13 @@ public class GetRequestLogResponseBody extends TeaModel {
         public GetRequestLogResponseBodyLogInfoCallerInfo callerInfo;
 
         /**
-         * <p>The request parameter information.</p>
+         * <p>The information about the request parameters.</p>
          */
         @NameInMap("parameters")
         public java.util.List<GetRequestLogResponseBodyLogInfoParameters> parameters;
 
         /**
-         * <p>The response information that corresponds to the request.</p>
+         * <p>The information that is returned for the request.</p>
          */
         @NameInMap("responses")
         public GetRequestLogResponseBodyLogInfoResponses responses;

@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteApiMcpServerRequest extends TeaModel {
     /**
-     * <p>The client token used to ensure the idempotence of the request. Generate this value on your client and make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. Use a universally unique identifier (UUID). The token is valid for three days.</p>
-     * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
@@ -14,7 +12,6 @@ public class DeleteApiMcpServerRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the API MCP service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

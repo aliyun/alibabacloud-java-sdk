@@ -5,26 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListApiMcpServersRequest extends TeaModel {
     /**
-     * <p>The time when the API MCP server was created.</p>
-     * 
      * <strong>example:</strong>
      * <p>2024-10-30T02:10:13Z</p>
      */
     @NameInMap("createTime")
     public String createTime;
 
-    /**
-     * <p>The description of the API MCP service.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>这是一个API MCP服务器。</p>
-     */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The ID of the API MCP service.</p>
-     * 
      * <strong>example:</strong>
      * <p>v6ZZ7ftCzEILW***</p>
      */
@@ -32,8 +22,6 @@ public class ListApiMcpServersRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The search keyword. Supports fuzzy search by API name and exact search by API ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>oss</p>
      */
@@ -41,8 +29,6 @@ public class ListApiMcpServersRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The language of the API reference for the API MCP service. The language of the prompt can affect the response from the AI. Valid values: \<code>ZH_CN\\</code>, \<code>EN_US\\</code>.</p>
-     * 
      * <strong>example:</strong>
      * <p>ZH_CN</p>
      */
@@ -50,8 +36,6 @@ public class ListApiMcpServersRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The maximum number of entries to return on each page for a paged query. The maximum value is 100. The default value is 20.</p>
-     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -59,11 +43,6 @@ public class ListApiMcpServersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to start the next query. Set this parameter to the \<code>nextToken\\</code> value that was returned from the previous API call.</p>
-     * <blockquote>
-     * <p>This parameter is not required for the first query. If a query does not return all results, pass the \<code>nextToken\\</code> value from the previous query to continue.</p>
-     * </blockquote>
-     * 
      * <strong>example:</strong>
      * <p>AAAAAZjtYxxxxxxxx</p>
      */
@@ -71,8 +50,6 @@ public class ListApiMcpServersRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The number of data entries to skip.</p>
-     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -80,14 +57,6 @@ public class ListApiMcpServersRequest extends TeaModel {
     public Integer skip;
 
     /**
-     * <p>The type of the API MCP service.</p>
-     * <ul>
-     * <li><p>custom: a custom service</p>
-     * </li>
-     * <li><p>system: a system service</p>
-     * </li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>system</p>
      */
@@ -95,8 +64,6 @@ public class ListApiMcpServersRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The time when the API MCP server was last updated.</p>
-     * 
      * <strong>example:</strong>
      * <p>2024-06-05T02:27:39Z</p>
      */

@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetApiMcpServerUserConfigResponseBody extends TeaModel {
     /**
-     * <p>The ID of your Alibaba Cloud account.</p>
-     * 
      * <strong>example:</strong>
      * <p>162302724684579*</p>
      */
@@ -14,8 +12,6 @@ public class GetApiMcpServerUserConfigResponseBody extends TeaModel {
     public String accountId;
 
     /**
-     * <p>Specifies whether to enable public network access for all API MCP Servers, including system MCP Servers, under your account. By default, this feature is enabled. If you disable it, you can access the servers only through VPC domain names.</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -23,8 +19,6 @@ public class GetApiMcpServerUserConfigResponseBody extends TeaModel {
     public Boolean enablePublicAccess;
 
     /**
-     * <p>The time when the configuration was created.</p>
-     * 
      * <strong>example:</strong>
      * <p>2025-11-10T06:58:39Z</p>
      */
@@ -32,8 +26,6 @@ public class GetApiMcpServerUserConfigResponseBody extends TeaModel {
     public String gmtCreate;
 
     /**
-     * <p>The time when the configuration was last updated.</p>
-     * 
      * <strong>example:</strong>
      * <p>2025-11-10T06:58:39Z</p>
      */
@@ -41,17 +33,12 @@ public class GetApiMcpServerUserConfigResponseBody extends TeaModel {
     public String gmtModified;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>A707AFA8-1A4C-5B2A-A165-8436C1EA38DB</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <p>The whitelist of source VPCs that are allowed to send requests after public network access is disabled. If you do not set this parameter or leave it empty, requests from all sources are allowed.</p>
-     */
     @NameInMap("vpcWhitelists")
     public java.util.List<String> vpcWhitelists;
 

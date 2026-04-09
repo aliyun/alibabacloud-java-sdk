@@ -43,9 +43,6 @@ public class GetErrorCodeSolutionsResponseBody extends TeaModel {
     public static class GetErrorCodeSolutionsResponseBodySolutions extends TeaModel {
         /**
          * <p>The content of the solution, which is in the markdown format.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Unsupported transit router status\n====\n\nCause\n----\n\nThe transit router is in an unstable state.\n\n* * *\n\nSolution\n----\n\nTry again after the transit router enters a stable state. You can check whether the transit router is in a stable state based on the following information.\n\nExample\n------\n\nBefore you proceed, make sure that the transit route is in a stable state.\n\n1. Go to the console. If the status of the transit router in the Transit Router list is Available, the transit router is in a stable state.\n\n2. Call the ListTransitRouters operation. If Active is returned for Status, the transit router is in a stable state.</p>
          */
         @NameInMap("content")
         public String content;
@@ -54,7 +51,7 @@ public class GetErrorCodeSolutionsResponseBody extends TeaModel {
          * <p>The error code.</p>
          * 
          * <strong>example:</strong>
-         * <p>IncorrectStatus.TransitRouter</p>
+         * <p>0017-00000502</p>
          */
         @NameInMap("errorCode")
         public String errorCode;
@@ -79,9 +76,6 @@ public class GetErrorCodeSolutionsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the product to which the solution belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Elastic Compute Service</p>
          */
         @NameInMap("productName")
         public String productName;

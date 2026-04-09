@@ -4,27 +4,16 @@ package com.aliyun.openapiexplorer20241130.models;
 import com.aliyun.tea.*;
 
 public class GetApiMcpServerResponseBody extends TeaModel {
-    /**
-     * <p>A list of supplementary API descriptions.</p>
-     */
     @NameInMap("additionalApiDescriptions")
     public java.util.List<GetApiMcpServerResponseBodyAdditionalApiDescriptions> additionalApiDescriptions;
 
-    /**
-     * <p>A list of API information for the API MCP service.</p>
-     */
     @NameInMap("apiInfos")
     public java.util.List<GetApiMcpServerResponseBodyApiInfos> apiInfos;
 
-    /**
-     * <p>A list of API information.</p>
-     */
     @NameInMap("apis")
     public java.util.List<GetApiMcpServerResponseBodyApis> apis;
 
     /**
-     * <p>The extra policy for role assumption when multi-account access is enabled. If this policy is specified, the permissions for the role assumption are based on this policy and overwrite the permissions that are defined for the role.</p>
-     * 
      * <strong>example:</strong>
      * <p>{
      *   &quot;Version&quot;: &quot;1&quot;,
@@ -45,8 +34,6 @@ public class GetApiMcpServerResponseBody extends TeaModel {
     public String assumeRoleExtraPolicy;
 
     /**
-     * <p>The name of the RAM role of the destination account that is assumed when you perform cross-account operations with multi-account access enabled.</p>
-     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -54,44 +41,26 @@ public class GetApiMcpServerResponseBody extends TeaModel {
     public String assumeRoleName;
 
     /**
-     * <p>The time when the API MCP server was created.</p>
-     * 
      * <strong>example:</strong>
      * <p>2025-02-07T02:17:46Z</p>
      */
     @NameInMap("createTime")
     public String createTime;
 
-    /**
-     * <p>The description of the API MCP server.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>这是一个API MCP 服务器</p>
-     */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>Indicates whether to enable multi-account access.</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("enableAssumeRole")
     public Boolean enableAssumeRole;
 
-    /**
-     * <p>Indicates whether to enable a custom VPC whitelist. If this parameter is not enabled, the account-level configuration is used.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("enableCustomVpcWhitelist")
     public Boolean enableCustomVpcWhitelist;
 
     /**
-     * <p>The ID of the API MCP service.</p>
-     * 
      * <strong>example:</strong>
      * <p>v6ZZ7ftCzEILW***</p>
      */
@@ -99,8 +68,6 @@ public class GetApiMcpServerResponseBody extends TeaModel {
     public String id;
 
     /**
-     * <p>The MCP instruction. It prompts the large model on how to use the MCP. The client must support the Instructions field of the standard MCP protocol.</p>
-     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -108,8 +75,6 @@ public class GetApiMcpServerResponseBody extends TeaModel {
     public String instructions;
 
     /**
-     * <p>The language of the API documentation for the API MCP service. You can select Chinese or English API documentation. The language of the prompt may affect the AI\&quot;s response.</p>
-     * 
      * <strong>example:</strong>
      * <p>ZH_CN</p>
      */
@@ -117,8 +82,6 @@ public class GetApiMcpServerResponseBody extends TeaModel {
     public String language;
 
     /**
-     * <p>The name of the MCP server. The name must be 3 to 64 characters in length and can contain lowercase letters and digits. It must not start with a digit. The name must be unique within the same Alibaba Cloud account.</p>
-     * 
      * <strong>example:</strong>
      * <p>mcp-demo</p>
      */
@@ -126,33 +89,19 @@ public class GetApiMcpServerResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The custom OAuth client ID when you select a custom OAuth configuration.</p>
-     * <p><code>Only web and native applications are supported. The OAuth scope must include /acs/mcp-server.</code></p>
-     * 
      * <strong>example:</strong>
      * <p>403*************370</p>
      */
     @NameInMap("oauthClientId")
     public String oauthClientId;
 
-    /**
-     * <p>A list of prompt configurations.</p>
-     */
     @NameInMap("prompts")
     public java.util.List<GetApiMcpServerResponseBodyPrompts> prompts;
 
-    /**
-     * <p>Indicates whether to enable public access.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>on</p>
-     */
     @NameInMap("publicAccess")
     public String publicAccess;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>9BFC4AC1-6BE4-5405-BDEC-CA288D404812</p>
      */
@@ -160,8 +109,6 @@ public class GetApiMcpServerResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The RAM access policy that is required by the API MCP service.</p>
-     * 
      * <strong>example:</strong>
      * <p>{
      *   &quot;Version&quot;: &quot;1&quot;,
@@ -182,56 +129,31 @@ public class GetApiMcpServerResponseBody extends TeaModel {
     public String requiredRAMPolicy;
 
     /**
-     * <p>The type of the API MCP service.</p>
-     * <ul>
-     * <li><p>custom: a custom service</p>
-     * </li>
-     * <li><p>system: a system service</p>
-     * </li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>system</p>
      */
     @NameInMap("sourceType")
     public String sourceType;
 
-    /**
-     * <p>A list of system MCP services.</p>
-     */
     @NameInMap("systemMcpServerInfo")
     public GetApiMcpServerResponseBodySystemMcpServerInfo systemMcpServerInfo;
 
-    /**
-     * <p>A list of system tools.</p>
-     */
     @NameInMap("systemTools")
     public java.util.List<String> systemTools;
 
-    /**
-     * <p>A list of Terraform tools.</p>
-     */
     @NameInMap("terraformTools")
     public java.util.List<GetApiMcpServerResponseBodyTerraformTools> terraformTools;
 
     /**
-     * <p>The time when the API MCP server was last modified.</p>
-     * 
      * <strong>example:</strong>
      * <p>2025-02-05T02:26:04Z</p>
      */
     @NameInMap("updateTime")
     public String updateTime;
 
-    /**
-     * <p>The connection information for the MCP server.</p>
-     */
     @NameInMap("urls")
     public GetApiMcpServerResponseBodyUrls urls;
 
-    /**
-     * <p>The VPC whitelist that specifies the allowed source VPCs after public access is disabled. If you do not set this parameter or leave it empty, access from all sources is allowed.</p>
-     */
     @NameInMap("vpcWhitelists")
     public java.util.List<String> vpcWhitelists;
 
@@ -442,8 +364,6 @@ public class GetApiMcpServerResponseBody extends TeaModel {
 
     public static class GetApiMcpServerResponseBodyAdditionalApiDescriptionsConstParameters extends TeaModel {
         /**
-         * <p>The parameter name. Only first-level parameter names are supported. For ROA-style APIs, you can set parameters such as body.xx. You cannot set values that exceed the top-level parameters.</p>
-         * 
          * <strong>example:</strong>
          * <p>InstanceId</p>
          */
@@ -451,8 +371,6 @@ public class GetApiMcpServerResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the parameter.</p>
-         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
@@ -484,43 +402,26 @@ public class GetApiMcpServerResponseBody extends TeaModel {
 
     public static class GetApiMcpServerResponseBodyAdditionalApiDescriptions extends TeaModel {
         /**
-         * <p>The API name.</p>
-         * 
          * <strong>example:</strong>
          * <p>DescribeRegions</p>
          */
         @NameInMap("apiName")
         public String apiName;
 
-        /**
-         * <p>The API metadata in JSON format. For an example of the format, see https\://api.aliyun.com/meta/v1/products/Ecs/versions/2014-05-26/apis/DescribeInstances/api.json. You can overwrite the summary and parameters fields.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{
-         *   &quot;summary&quot;: &quot;本接口支持根据不同请求条件查询实例列表，并关联查询实例的详细信息。&quot;
-         * }</p>
-         */
         @NameInMap("apiOverrideJson")
         public String apiOverrideJson;
 
         /**
-         * <p>The POP version of the API that is exposed to the MCP server.</p>
-         * 
          * <strong>example:</strong>
          * <p>2014-05-26</p>
          */
         @NameInMap("apiVersion")
         public String apiVersion;
 
-        /**
-         * <p>A list of constant input parameters. These parameters are not included in the output during API parameter parsing.</p>
-         */
         @NameInMap("constParameters")
         public java.util.List<GetApiMcpServerResponseBodyAdditionalApiDescriptionsConstParameters> constParameters;
 
         /**
-         * <p>Indicates whether to return the schema of the response parameters. Returning the schema increases the size of the entire API MCP server. The default value is null, which means the schema is not returned.</p>
-         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -528,8 +429,6 @@ public class GetApiMcpServerResponseBody extends TeaModel {
         public Boolean enableOutputSchema;
 
         /**
-         * <p>Indicates whether to return the command-line interface (CLI) command. In this mode, the API is not called. Instead, the corresponding CLI command is returned. This is suitable for long-running tasks that need to be executed using Alibaba Cloud CLI.</p>
-         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -537,15 +436,6 @@ public class GetApiMcpServerResponseBody extends TeaModel {
         public Boolean executeCliCommand;
 
         /**
-         * <p>The product code.</p>
-         * <ul>
-         * <li>Call the GetRequestLog operation to obtain the product code from the response.</li>
-         * </ul>
-         * <p>&lt;props=&quot;intl&quot;&gt;</p>
-         * <ul>
-         * <li>Find the corresponding product code from the URL of the OpenAPI Portal. For example, the URL of the OpenAPI Portal for Short Message Service is https\://api.alibabacloud.com/product/Dysmsapi. The product code for Short Message Service is Dysmsapi.</li>
-         * </ul>
-         * 
          * <strong>example:</strong>
          * <p>Ecs</p>
          */
@@ -617,8 +507,6 @@ public class GetApiMcpServerResponseBody extends TeaModel {
 
     public static class GetApiMcpServerResponseBodyApiInfos extends TeaModel {
         /**
-         * <p>The API name.</p>
-         * 
          * <strong>example:</strong>
          * <p>DescribeRegions</p>
          */
@@ -626,8 +514,6 @@ public class GetApiMcpServerResponseBody extends TeaModel {
         public String apiName;
 
         /**
-         * <p>The POP version of the API that is exposed to the MCP server.</p>
-         * 
          * <strong>example:</strong>
          * <p>2014-05-26</p>
          */
@@ -635,15 +521,6 @@ public class GetApiMcpServerResponseBody extends TeaModel {
         public String apiVersion;
 
         /**
-         * <p>The product code.</p>
-         * <ul>
-         * <li>Call the GetRequestLog operation to obtain the product code from the response.</li>
-         * </ul>
-         * <p>&lt;props=&quot;intl&quot;&gt;</p>
-         * <ul>
-         * <li>Find the corresponding product code from the URL of the OpenAPI Portal. For example, the URL of the OpenAPI Portal for Short Message Service is https\://api.alibabacloud.com/product/Dysmsapi. The product code for Short Message Service is Dysmsapi.</li>
-         * </ul>
-         * 
          * <strong>example:</strong>
          * <p>Ecs</p>
          */
@@ -683,8 +560,6 @@ public class GetApiMcpServerResponseBody extends TeaModel {
 
     public static class GetApiMcpServerResponseBodyApis extends TeaModel {
         /**
-         * <p>The POP version of the API that is exposed to the MCP server.</p>
-         * 
          * <strong>example:</strong>
          * <p>2014-05-26</p>
          */
@@ -692,24 +567,12 @@ public class GetApiMcpServerResponseBody extends TeaModel {
         public String apiVersion;
 
         /**
-         * <p>The product code.</p>
-         * <ul>
-         * <li>Call the GetRequestLog operation to obtain the product code from the response.</li>
-         * </ul>
-         * <p>&lt;props=&quot;intl&quot;&gt;</p>
-         * <ul>
-         * <li>Find the corresponding product code from the URL of the OpenAPI Portal. For example, the URL of the OpenAPI Portal for Short Message Service is https\://api.alibabacloud.com/product/Dysmsapi. The product code for Short Message Service is Dysmsapi.</li>
-         * </ul>
-         * 
          * <strong>example:</strong>
          * <p>Ecs</p>
          */
         @NameInMap("product")
         public String product;
 
-        /**
-         * <p>A list of API name matching rules.</p>
-         */
         @NameInMap("selectors")
         public java.util.List<String> selectors;
 
@@ -746,8 +609,6 @@ public class GetApiMcpServerResponseBody extends TeaModel {
 
     public static class GetApiMcpServerResponseBodyPromptsArguments extends TeaModel {
         /**
-         * <p>The description of the parameter.</p>
-         * 
          * <strong>example:</strong>
          * <p>argument description</p>
          */
@@ -755,17 +616,12 @@ public class GetApiMcpServerResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The parameter name.</p>
-         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("name")
         public String name;
 
-        /**
-         * <p>Indicates whether this parameter is required.</p>
-         */
         @NameInMap("required")
         public Boolean required;
 
@@ -801,24 +657,13 @@ public class GetApiMcpServerResponseBody extends TeaModel {
     }
 
     public static class GetApiMcpServerResponseBodyPrompts extends TeaModel {
-        /**
-         * <p>A list of parameters that the prompt supports.</p>
-         */
         @NameInMap("arguments")
         public java.util.List<GetApiMcpServerResponseBodyPromptsArguments> arguments;
 
-        /**
-         * <p>The content of the prompt. Variables are specified in the {{xxx}} format. The xxx variable must be defined in the arguments parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>prompt正文，{{name}}</p>
-         */
         @NameInMap("content")
         public String content;
 
         /**
-         * <p>The description.</p>
-         * 
          * <strong>example:</strong>
          * <p>prompt description</p>
          */
@@ -826,8 +671,6 @@ public class GetApiMcpServerResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The prompt name.</p>
-         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -875,8 +718,6 @@ public class GetApiMcpServerResponseBody extends TeaModel {
 
     public static class GetApiMcpServerResponseBodySystemMcpServerInfo extends TeaModel {
         /**
-         * <p>The name of the system MCP service.</p>
-         * 
          * <strong>example:</strong>
          * <p>mcp-system</p>
          */
@@ -884,15 +725,6 @@ public class GetApiMcpServerResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The product code.</p>
-         * <ul>
-         * <li>Call the GetRequestLog operation to obtain the product code from the response.</li>
-         * </ul>
-         * <p>&lt;props=&quot;intl&quot;&gt;</p>
-         * <ul>
-         * <li>Find the corresponding product code from the URL of the OpenAPI Portal. For example, the URL of the OpenAPI Portal for Short Message Service is https\://api.alibabacloud.com/product/Dysmsapi. The product code for Short Message Service is Dysmsapi.</li>
-         * </ul>
-         * 
          * <strong>example:</strong>
          * <p>Ecs</p>
          */
@@ -924,8 +756,6 @@ public class GetApiMcpServerResponseBody extends TeaModel {
 
     public static class GetApiMcpServerResponseBodyTerraformTools extends TeaModel {
         /**
-         * <p>Indicates whether to execute tasks asynchronously. If set to true, the system immediately starts the next task after the current task is initiated, without waiting for each resource operation to complete.</p>
-         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -933,8 +763,6 @@ public class GetApiMcpServerResponseBody extends TeaModel {
         public Boolean async;
 
         /**
-         * <p>The code for the Terraform tool. For more information, see <a href="https://help.aliyun.com/zh/terraform/terraform-configuration-and-hcl-language-overview">HCL language overview</a>.</p>
-         * 
          * <strong>example:</strong>
          * <p>variable &quot;name&quot; {
          *   default = &quot;terraform-example&quot;
@@ -954,8 +782,6 @@ public class GetApiMcpServerResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The description of the Terraform tool.</p>
-         * 
          * <strong>example:</strong>
          * <p>Terraform Tool description</p>
          */
@@ -963,16 +789,6 @@ public class GetApiMcpServerResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The destroy policy. After a task is complete, the system applies the following cleanup policy to temporary resources based on the task execution status.</p>
-         * <ul>
-         * <li><p>NEVER: All created resources are retained, regardless of whether the task succeeds or fails.</p>
-         * </li>
-         * <li><p>ALWAYS: All related resources are immediately destroyed after the task is complete, regardless of whether the task succeeds or fails.</p>
-         * </li>
-         * <li><p>ON_FAILURE: Related resources are deleted only if the task fails. If the task succeeds, the resources are retained.</p>
-         * </li>
-         * </ul>
-         * 
          * <strong>example:</strong>
          * <p>ON_FAILURE</p>
          */
@@ -980,8 +796,6 @@ public class GetApiMcpServerResponseBody extends TeaModel {
         public String destroyPolicy;
 
         /**
-         * <p>The name of the Terraform tool.</p>
-         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -1037,38 +851,22 @@ public class GetApiMcpServerResponseBody extends TeaModel {
 
     public static class GetApiMcpServerResponseBodyUrls extends TeaModel {
         /**
-         * <p>The connection information for the streamable HTTP protocol. This protocol is recommended.</p>
-         * 
          * <strong>example:</strong>
-         * <p><a href="https://openapi-mcp.cn-hangzhou.aliyuncs.com/accounts/xxxx/custom/xxx/id/xxxx/mcp">https://openapi-mcp.cn-hangzhou.aliyuncs.com/accounts/xxxx/custom/xxx/id/xxxx/mcp</a></p>
+         * <p><a href="https://mcpserverinner-pre.cn-zhangjiakou.aliyuncs.com/accounts/xxxx/custom/xxx/id/xxxx/mcp">https://mcpserverinner-pre.cn-zhangjiakou.aliyuncs.com/accounts/xxxx/custom/xxx/id/xxxx/mcp</a></p>
          */
         @NameInMap("mcp")
         public String mcp;
 
         /**
-         * <p>The connection information for the Server-Sent Events (SSE) protocol.</p>
-         * 
          * <strong>example:</strong>
-         * <p><a href="https://openapi-mcp.cn-hangzhou.aliyuncs.com/accounts/xxxx/custom/xxx/id/xxxx/sse">https://openapi-mcp.cn-hangzhou.aliyuncs.com/accounts/xxxx/custom/xxx/id/xxxx/sse</a></p>
+         * <p><a href="https://mcpserverinner-pre.cn-zhangjiakou.aliyuncs.com/accounts/xxxx/custom/xxx/id/xxxx/sse">https://mcpserverinner-pre.cn-zhangjiakou.aliyuncs.com/accounts/xxxx/custom/xxx/id/xxxx/sse</a></p>
          */
         @NameInMap("sse")
         public String sse;
 
-        /**
-         * <p>The endpoint of the streamable HTTP protocol in a VPC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="https://openapi-mcp-cn.vpc-proxy.aliyuncs.com/accounts/xxxx/custom/xxx/id/xxxx/mcp">https://openapi-mcp-cn.vpc-proxy.aliyuncs.com/accounts/xxxx/custom/xxx/id/xxxx/mcp</a></p>
-         */
         @NameInMap("vpcMcp")
         public String vpcMcp;
 
-        /**
-         * <p>The endpoint of the SSE protocol in a VPC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="https://openapi-mcp-cn.vpc-proxy.aliyuncs.com/accounts/xxxx/custom/xxx/id/xxxx/sse">https://openapi-mcp-cn.vpc-proxy.aliyuncs.com/accounts/xxxx/custom/xxx/id/xxxx/sse</a></p>
-         */
         @NameInMap("vpcSse")
         public String vpcSse;
 

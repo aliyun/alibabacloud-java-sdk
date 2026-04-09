@@ -18,7 +18,7 @@ public class GetErrorCodeSolutionsRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>IncorrectStatus.TransitRouter</p>
+     * <p>1234-56789012</p>
      */
     @NameInMap("errorCode")
     public String errorCode;
@@ -27,7 +27,7 @@ public class GetErrorCodeSolutionsRequest extends TeaModel {
      * <p>The error message for which you want to query a solution. This parameter must be configured together with the errorCode parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>The resource is not in a valid state for the operation.</p>
+     * <p>An error occurred while processing your request.</p>
      */
     @NameInMap("errorMessage")
     public String errorMessage;
@@ -35,14 +35,12 @@ public class GetErrorCodeSolutionsRequest extends TeaModel {
     /**
      * <p>The product code. You can use one of the following methods to query a product code:</p>
      * <ul>
-     * <li><p>Call the GetRequestLog operation to query a product code from the response.</p>
-     * </li>
-     * <li><p>Query the code of a product in the OpenAPI Explorer URL of the product. For example, the OpenAPI Explorer URL of Short Message Service (SMS) is https\://api.alibabacloud.com/product/Dysmsapi. Therefore, the product code of SMS is Dysmsapi.</p>
-     * </li>
+     * <li>Call the GetRequestLog operation to query a product code from the response.</li>
+     * <li>Query the code of a product in the OpenAPI Explorer URL of the product. For example, the OpenAPI Explorer URL of Short Message Service (SMS) is <a href="https://api.alibabacloud.com/product/Dysmsapi">https://api.alibabacloud.com/product/Dysmsapi</a>. Therefore, the product code of SMS is Dysmsapi.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Ecs</p>
+     * <p>oss</p>
      */
     @NameInMap("product")
     public String product;

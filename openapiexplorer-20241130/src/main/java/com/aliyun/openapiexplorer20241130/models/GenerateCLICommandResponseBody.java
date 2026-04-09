@@ -5,20 +5,12 @@ import com.aliyun.tea.*;
 
 public class GenerateCLICommandResponseBody extends TeaModel {
     /**
-     * <p>CLI command.</p>
-     * 
      * <strong>example:</strong>
      * <p>aliyun ecs DescribeRegions --ResourceType instance</p>
      */
     @NameInMap("cli")
     public String cli;
 
-    /**
-     * <p>Request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>A707AFA8-1A4C-5B2A-A165-8436C1EA38DB</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 

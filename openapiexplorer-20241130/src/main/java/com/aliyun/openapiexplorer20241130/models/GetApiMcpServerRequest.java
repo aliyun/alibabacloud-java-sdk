@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetApiMcpServerRequest extends TeaModel {
     /**
-     * <p>The ID of the API MCP service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

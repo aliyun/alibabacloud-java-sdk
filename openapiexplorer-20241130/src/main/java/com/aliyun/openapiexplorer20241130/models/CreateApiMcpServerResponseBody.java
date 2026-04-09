@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateApiMcpServerResponseBody extends TeaModel {
     /**
-     * <p>The ID of the successfully created API MCP service.</p>
-     * 
      * <strong>example:</strong>
      * <p>v6ZZ7ftCzEILW***</p>
      */
@@ -14,17 +12,12 @@ public class CreateApiMcpServerResponseBody extends TeaModel {
     public String id;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>9BFC4AC1-6BE4-5405-BDEC-CA288D404812</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <p>The connection information for the API MCP service.</p>
-     */
     @NameInMap("urls")
     public CreateApiMcpServerResponseBodyUrls urls;
 
@@ -59,8 +52,6 @@ public class CreateApiMcpServerResponseBody extends TeaModel {
 
     public static class CreateApiMcpServerResponseBodyUrls extends TeaModel {
         /**
-         * <p>The connection information for the streamable HTTP protocol. This is the recommended protocol.</p>
-         * 
          * <strong>example:</strong>
          * <p><a href="https://mcpserverinner-pre.cn-zhangjiakou.aliyuncs.com/accounts/xxxx/custom/xxx/id/xxxx/mcp">https://mcpserverinner-pre.cn-zhangjiakou.aliyuncs.com/accounts/xxxx/custom/xxx/id/xxxx/mcp</a></p>
          */
@@ -68,29 +59,15 @@ public class CreateApiMcpServerResponseBody extends TeaModel {
         public String mcp;
 
         /**
-         * <p>The connection information for the Server-Sent Events (SSE) protocol.</p>
-         * 
          * <strong>example:</strong>
          * <p><a href="https://mcpserverinner-pre.cn-zhangjiakou.aliyuncs.com/accounts/xxxx/custom/xxx/id/xxxx/sse">https://mcpserverinner-pre.cn-zhangjiakou.aliyuncs.com/accounts/xxxx/custom/xxx/id/xxxx/sse</a></p>
          */
         @NameInMap("sse")
         public String sse;
 
-        /**
-         * <p>The endpoint of the streamable HTTP protocol in a VPC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="https://openapi-mcp-cn.vpc-proxy.aliyuncs.com/accounts/xxxx/custom/xxx/id/xxxx/mcp">https://openapi-mcp-cn.vpc-proxy.aliyuncs.com/accounts/xxxx/custom/xxx/id/xxxx/mcp</a></p>
-         */
         @NameInMap("vpcMcp")
         public String vpcMcp;
 
-        /**
-         * <p>The endpoint of the SSE protocol in a VPC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="https://openapi-mcp-cn.vpc-proxy.aliyuncs.com/accounts/xxxx/custom/xxx/id/xxxx/sse">https://openapi-mcp-cn.vpc-proxy.aliyuncs.com/accounts/xxxx/custom/xxx/id/xxxx/sse</a></p>
-         */
         @NameInMap("vpcSse")
         public String vpcSse;
 
