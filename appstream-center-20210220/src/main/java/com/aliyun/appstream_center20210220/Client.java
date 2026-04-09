@@ -88,7 +88,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>身份认证查询接口</p>
+     * <p>Queries the information about identity providers by logon identifier.</p>
      * 
      * @param tmpReq FindIdpListByLoginIdentifierRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -160,7 +160,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>身份认证查询接口</p>
+     * <p>Queries the information about identity providers by logon identifier.</p>
      * 
      * @param request FindIdpListByLoginIdentifierRequest
      * @return FindIdpListByLoginIdentifierResponse
@@ -172,7 +172,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>GetLoginToken</p>
+     * <p>Queries a logon token using an enterprise identifier.</p>
      * 
      * @param tmpReq GetLoginTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -358,7 +358,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>GetLoginToken</p>
+     * <p>Queries a logon token using an enterprise identifier.</p>
      * 
      * @param request GetLoginTokenRequest
      * @return GetLoginTokenResponse
@@ -370,7 +370,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取无影StsToken</p>
+     * <p>Obtains an STS token.</p>
      * 
      * @param request GetStsTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -422,7 +422,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取无影StsToken</p>
+     * <p>Obtains an STS token.</p>
      * 
      * @param request GetStsTokenRequest
      * @return GetStsTokenResponse
@@ -433,6 +433,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Refreshes a logon token.</p>
+     * 
      * @param request RefreshLoginTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RefreshLoginTokenResponse
@@ -494,6 +497,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Refreshes a logon token.</p>
+     * 
      * @param request RefreshLoginTokenRequest
      * @return RefreshLoginTokenResponse
      */

@@ -36,6 +36,15 @@ public class GetStsTokenResponseBody extends TeaModel {
     }
 
     public static class GetStsTokenResponseBodyStsTokenModel extends TeaModel {
+        @NameInMap("EndUserId")
+        public String endUserId;
+
+        @NameInMap("LoginToken")
+        public String loginToken;
+
+        @NameInMap("ProfileRegion")
+        public String profileRegion;
+
         /**
          * <strong>example:</strong>
          * <p>be4be09e-cd00-4b4c-add7-11b4d8****</p>
@@ -60,6 +69,30 @@ public class GetStsTokenResponseBody extends TeaModel {
         public static GetStsTokenResponseBodyStsTokenModel build(java.util.Map<String, ?> map) throws Exception {
             GetStsTokenResponseBodyStsTokenModel self = new GetStsTokenResponseBodyStsTokenModel();
             return TeaModel.build(map, self);
+        }
+
+        public GetStsTokenResponseBodyStsTokenModel setEndUserId(String endUserId) {
+            this.endUserId = endUserId;
+            return this;
+        }
+        public String getEndUserId() {
+            return this.endUserId;
+        }
+
+        public GetStsTokenResponseBodyStsTokenModel setLoginToken(String loginToken) {
+            this.loginToken = loginToken;
+            return this;
+        }
+        public String getLoginToken() {
+            return this.loginToken;
+        }
+
+        public GetStsTokenResponseBodyStsTokenModel setProfileRegion(String profileRegion) {
+            this.profileRegion = profileRegion;
+            return this;
+        }
+        public String getProfileRegion() {
+            return this.profileRegion;
         }
 
         public GetStsTokenResponseBodyStsTokenModel setSessionId(String sessionId) {
