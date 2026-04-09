@@ -50,6 +50,9 @@ public class CreateCredentialRequest extends TeaModel {
     @NameInMap("CredentialScenarioLabel")
     public String credentialScenarioLabel;
 
+    @NameInMap("CredentialSharingScope")
+    public String credentialSharingScope;
+
     /**
      * <p>凭据所属的主体ID。</p>
      * 
@@ -86,6 +89,9 @@ public class CreateCredentialRequest extends TeaModel {
      */
     @NameInMap("Description")
     public String description;
+
+    @NameInMap("ExclusiveUserId")
+    public String exclusiveUserId;
 
     /**
      * <p>IDaaS EIAM实例的ID。</p>
@@ -142,6 +148,14 @@ public class CreateCredentialRequest extends TeaModel {
         return this.credentialScenarioLabel;
     }
 
+    public CreateCredentialRequest setCredentialSharingScope(String credentialSharingScope) {
+        this.credentialSharingScope = credentialSharingScope;
+        return this;
+    }
+    public String getCredentialSharingScope() {
+        return this.credentialSharingScope;
+    }
+
     public CreateCredentialRequest setCredentialSubjectId(String credentialSubjectId) {
         this.credentialSubjectId = credentialSubjectId;
         return this;
@@ -172,6 +186,14 @@ public class CreateCredentialRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateCredentialRequest setExclusiveUserId(String exclusiveUserId) {
+        this.exclusiveUserId = exclusiveUserId;
+        return this;
+    }
+    public String getExclusiveUserId() {
+        return this.exclusiveUserId;
     }
 
     public CreateCredentialRequest setInstanceId(String instanceId) {

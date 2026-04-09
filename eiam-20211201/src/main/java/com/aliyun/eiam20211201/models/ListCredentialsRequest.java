@@ -7,6 +7,9 @@ public class ListCredentialsRequest extends TeaModel {
     @NameInMap("CredentialIds")
     public java.util.List<String> credentialIds;
 
+    @NameInMap("CredentialSharingScopes")
+    public java.util.List<String> credentialSharingScopes;
+
     @NameInMap("CredentialTypes")
     public java.util.List<String> credentialTypes;
 
@@ -55,6 +58,14 @@ public class ListCredentialsRequest extends TeaModel {
     }
     public java.util.List<String> getCredentialIds() {
         return this.credentialIds;
+    }
+
+    public ListCredentialsRequest setCredentialSharingScopes(java.util.List<String> credentialSharingScopes) {
+        this.credentialSharingScopes = credentialSharingScopes;
+        return this;
+    }
+    public java.util.List<String> getCredentialSharingScopes() {
+        return this.credentialSharingScopes;
     }
 
     public ListCredentialsRequest setCredentialTypes(java.util.List<String> credentialTypes) {

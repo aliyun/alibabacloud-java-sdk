@@ -35,6 +35,25 @@ public class GetFederatedCredentialProviderResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class GetFederatedCredentialProviderResponseBodyFederatedCredentialProviderCloudIdPProviderConfig extends TeaModel {
+        @NameInMap("IdentityProviderId")
+        public String identityProviderId;
+
+        public static GetFederatedCredentialProviderResponseBodyFederatedCredentialProviderCloudIdPProviderConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetFederatedCredentialProviderResponseBodyFederatedCredentialProviderCloudIdPProviderConfig self = new GetFederatedCredentialProviderResponseBodyFederatedCredentialProviderCloudIdPProviderConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetFederatedCredentialProviderResponseBodyFederatedCredentialProviderCloudIdPProviderConfig setIdentityProviderId(String identityProviderId) {
+            this.identityProviderId = identityProviderId;
+            return this;
+        }
+        public String getIdentityProviderId() {
+            return this.identityProviderId;
+        }
+
+    }
+
     public static class GetFederatedCredentialProviderResponseBodyFederatedCredentialProviderOidcProviderConfig extends TeaModel {
         /**
          * <p>oidc凭证的受众列表</p>
@@ -548,6 +567,9 @@ public class GetFederatedCredentialProviderResponseBody extends TeaModel {
     }
 
     public static class GetFederatedCredentialProviderResponseBodyFederatedCredentialProvider extends TeaModel {
+        @NameInMap("CloudIdPProviderConfig")
+        public GetFederatedCredentialProviderResponseBodyFederatedCredentialProviderCloudIdPProviderConfig cloudIdPProviderConfig;
+
         /**
          * <p>创建时间</p>
          * 
@@ -650,6 +672,14 @@ public class GetFederatedCredentialProviderResponseBody extends TeaModel {
         public static GetFederatedCredentialProviderResponseBodyFederatedCredentialProvider build(java.util.Map<String, ?> map) throws Exception {
             GetFederatedCredentialProviderResponseBodyFederatedCredentialProvider self = new GetFederatedCredentialProviderResponseBodyFederatedCredentialProvider();
             return TeaModel.build(map, self);
+        }
+
+        public GetFederatedCredentialProviderResponseBodyFederatedCredentialProvider setCloudIdPProviderConfig(GetFederatedCredentialProviderResponseBodyFederatedCredentialProviderCloudIdPProviderConfig cloudIdPProviderConfig) {
+            this.cloudIdPProviderConfig = cloudIdPProviderConfig;
+            return this;
+        }
+        public GetFederatedCredentialProviderResponseBodyFederatedCredentialProviderCloudIdPProviderConfig getCloudIdPProviderConfig() {
+            return this.cloudIdPProviderConfig;
         }
 
         public GetFederatedCredentialProviderResponseBodyFederatedCredentialProvider setCreateTime(Long createTime) {

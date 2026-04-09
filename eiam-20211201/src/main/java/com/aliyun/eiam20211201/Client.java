@@ -1915,6 +1915,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CredentialScenarioLabel", request.credentialScenarioLabel);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialSharingScope)) {
+            query.put("CredentialSharingScope", request.credentialSharingScope);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.credentialSubjectId)) {
             query.put("CredentialSubjectId", request.credentialSubjectId);
         }
@@ -1929,6 +1933,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.exclusiveUserId)) {
+            query.put("ExclusiveUserId", request.exclusiveUserId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
@@ -2303,6 +2311,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateFederatedCredentialProviderResponse createFederatedCredentialProviderWithOptions(CreateFederatedCredentialProviderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudIdPProviderConfig)) {
+            query.put("CloudIdPProviderConfig", request.cloudIdPProviderConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
         }
@@ -11717,6 +11729,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CredentialIds", request.credentialIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialSharingScopes)) {
+            query.put("CredentialSharingScopes", request.credentialSharingScopes);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.credentialTypes)) {
             query.put("CredentialTypes", request.credentialTypes);
         }
@@ -12038,7 +12054,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the regions in which Employee Identity and Access Management (EIAM) V1.0 instances or EIAM V2.0 instances reside.</p>
      * 
-     * @param request ListEiamRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListEiamRegionsResponse
      */
@@ -12664,7 +12679,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Get a list of regions that support network access endpoints.</p>
      * 
-     * @param request ListNetworkAccessEndpointAvailableRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListNetworkAccessEndpointAvailableRegionsResponse
      */
@@ -13162,7 +13176,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries a list of supported Alibaba Cloud regions.</p>
      * 
-     * @param request ListRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListRegionsResponse
      */

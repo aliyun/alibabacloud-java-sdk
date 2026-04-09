@@ -4,6 +4,9 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class CreateFederatedCredentialProviderRequest extends TeaModel {
+    @NameInMap("CloudIdPProviderConfig")
+    public CreateFederatedCredentialProviderRequestCloudIdPProviderConfig cloudIdPProviderConfig;
+
     /**
      * <p>联邦凭证提供方描述</p>
      * 
@@ -75,6 +78,14 @@ public class CreateFederatedCredentialProviderRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateFederatedCredentialProviderRequest setCloudIdPProviderConfig(CreateFederatedCredentialProviderRequestCloudIdPProviderConfig cloudIdPProviderConfig) {
+        this.cloudIdPProviderConfig = cloudIdPProviderConfig;
+        return this;
+    }
+    public CreateFederatedCredentialProviderRequestCloudIdPProviderConfig getCloudIdPProviderConfig() {
+        return this.cloudIdPProviderConfig;
+    }
+
     public CreateFederatedCredentialProviderRequest setDescription(String description) {
         this.description = description;
         return this;
@@ -137,6 +148,29 @@ public class CreateFederatedCredentialProviderRequest extends TeaModel {
     }
     public CreateFederatedCredentialProviderRequestPrivateCaProviderConfig getPrivateCaProviderConfig() {
         return this.privateCaProviderConfig;
+    }
+
+    public static class CreateFederatedCredentialProviderRequestCloudIdPProviderConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>idp_m7hk2hbnew5ir3ycfabug6xxxx</p>
+         */
+        @NameInMap("IdentityProviderId")
+        public String identityProviderId;
+
+        public static CreateFederatedCredentialProviderRequestCloudIdPProviderConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateFederatedCredentialProviderRequestCloudIdPProviderConfig self = new CreateFederatedCredentialProviderRequestCloudIdPProviderConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateFederatedCredentialProviderRequestCloudIdPProviderConfig setIdentityProviderId(String identityProviderId) {
+            this.identityProviderId = identityProviderId;
+            return this;
+        }
+        public String getIdentityProviderId() {
+            return this.identityProviderId;
+        }
+
     }
 
     public static class CreateFederatedCredentialProviderRequestOidcProviderConfig extends TeaModel {

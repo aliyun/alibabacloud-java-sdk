@@ -192,6 +192,9 @@ public class ObtainCredentialResponseBody extends TeaModel {
         @NameInMap("CredentialScenarioLabel")
         public String credentialScenarioLabel;
 
+        @NameInMap("CredentialSharingScope")
+        public String credentialSharingScope;
+
         /**
          * <p>凭据所属的主体ID。</p>
          * 
@@ -227,6 +230,9 @@ public class ObtainCredentialResponseBody extends TeaModel {
          */
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("ExclusiveUserId")
+        public String exclusiveUserId;
 
         /**
          * <p>EIAM实例ID。</p>
@@ -316,6 +322,14 @@ public class ObtainCredentialResponseBody extends TeaModel {
             return this.credentialScenarioLabel;
         }
 
+        public ObtainCredentialResponseBodyCredential setCredentialSharingScope(String credentialSharingScope) {
+            this.credentialSharingScope = credentialSharingScope;
+            return this;
+        }
+        public String getCredentialSharingScope() {
+            return this.credentialSharingScope;
+        }
+
         public ObtainCredentialResponseBodyCredential setCredentialSubjectId(String credentialSubjectId) {
             this.credentialSubjectId = credentialSubjectId;
             return this;
@@ -346,6 +360,14 @@ public class ObtainCredentialResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ObtainCredentialResponseBodyCredential setExclusiveUserId(String exclusiveUserId) {
+            this.exclusiveUserId = exclusiveUserId;
+            return this;
+        }
+        public String getExclusiveUserId() {
+            return this.exclusiveUserId;
         }
 
         public ObtainCredentialResponseBodyCredential setInstanceId(String instanceId) {
