@@ -47,6 +47,9 @@ public class CreateJobRequest extends TeaModel {
     @NameInMap("DebuggerConfigContent")
     public String debuggerConfigContent;
 
+    @NameInMap("Description")
+    public String description;
+
     /**
      * <p>The job name. The name must be in the following format:</p>
      * <ul>
@@ -284,6 +287,14 @@ public class CreateJobRequest extends TeaModel {
     }
     public String getDebuggerConfigContent() {
         return this.debuggerConfigContent;
+    }
+
+    public CreateJobRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public CreateJobRequest setDisplayName(String displayName) {

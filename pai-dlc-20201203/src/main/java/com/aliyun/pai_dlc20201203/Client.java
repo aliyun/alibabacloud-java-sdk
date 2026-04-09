@@ -110,6 +110,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DebuggerConfigContent", request.debuggerConfigContent);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
             body.put("DisplayName", request.displayName);
         }
@@ -343,11 +347,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Deletes a completed or stopped job.</p>
      * 
+     * @param request DeleteJobRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteJobResponse
      */
-    public DeleteJobResponse deleteJobWithOptions(String JobId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DeleteJobResponse deleteJobWithOptions(String JobId, DeleteJobRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -368,12 +374,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>Deletes a completed or stopped job.</p>
+     * 
+     * @param request DeleteJobRequest
      * @return DeleteJobResponse
      */
-    public DeleteJobResponse deleteJob(String JobId) throws Exception {
+    public DeleteJobResponse deleteJob(String JobId, DeleteJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteJobWithOptions(JobId, headers, runtime);
+        return this.deleteJobWithOptions(JobId, request, headers, runtime);
     }
 
     /**
@@ -1235,6 +1243,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Caller", request.caller);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
             query.put("DisplayName", request.displayName);
         }
@@ -1568,11 +1580,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Stops a running job.</p>
      * 
+     * @param request StopJobRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return StopJobResponse
      */
-    public StopJobResponse stopJobWithOptions(String JobId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public StopJobResponse stopJobWithOptions(String JobId, StopJobRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -1593,12 +1607,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>Stops a running job.</p>
+     * 
+     * @param request StopJobRequest
      * @return StopJobResponse
      */
-    public StopJobResponse stopJob(String JobId) throws Exception {
+    public StopJobResponse stopJob(String JobId, StopJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.stopJobWithOptions(JobId, headers, runtime);
+        return this.stopJobWithOptions(JobId, request, headers, runtime);
     }
 
     /**
@@ -1662,6 +1678,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.accessibility)) {
             body.put("Accessibility", request.accessibility);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.jobSpecs)) {

@@ -35,6 +35,9 @@ public class ListJobsShrinkRequest extends TeaModel {
     @NameInMap("Caller")
     public String caller;
 
+    @NameInMap("Description")
+    public String description;
+
     /**
      * <p>The job name. Fuzzy query is supported. The name is case-insensitive. Wildcards are not supported. For example, if you enter test, test-job1, job-test, job-test2, or job-test can be matched, and job-t1 cannot be matched. The default value null indicates any job name.</p>
      * 
@@ -325,6 +328,14 @@ public class ListJobsShrinkRequest extends TeaModel {
     }
     public String getCaller() {
         return this.caller;
+    }
+
+    public ListJobsShrinkRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public ListJobsShrinkRequest setDisplayName(String displayName) {

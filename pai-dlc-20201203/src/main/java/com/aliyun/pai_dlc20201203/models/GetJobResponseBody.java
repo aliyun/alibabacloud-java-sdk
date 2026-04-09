@@ -47,6 +47,9 @@ public class GetJobResponseBody extends TeaModel {
     @NameInMap("DataSources")
     public java.util.List<GetJobResponseBodyDataSources> dataSources;
 
+    @NameInMap("Description")
+    public String description;
+
     /**
      * <p>The job name.</p>
      * 
@@ -422,6 +425,14 @@ public class GetJobResponseBody extends TeaModel {
     }
     public java.util.List<GetJobResponseBodyDataSources> getDataSources() {
         return this.dataSources;
+    }
+
+    public GetJobResponseBody setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public GetJobResponseBody setDisplayName(String displayName) {

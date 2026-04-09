@@ -17,6 +17,9 @@ public class UpdateJobRequest extends TeaModel {
     @NameInMap("Accessibility")
     public String accessibility;
 
+    @NameInMap("Description")
+    public String description;
+
     @NameInMap("JobSpecs")
     public java.util.List<JobSpec> jobSpecs;
 
@@ -44,6 +47,14 @@ public class UpdateJobRequest extends TeaModel {
     }
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    public UpdateJobRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public UpdateJobRequest setJobSpecs(java.util.List<JobSpec> jobSpecs) {
