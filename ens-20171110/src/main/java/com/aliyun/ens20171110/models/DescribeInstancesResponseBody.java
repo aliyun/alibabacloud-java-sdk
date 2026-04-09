@@ -449,6 +449,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
+        @NameInMap("VpdId")
+        public String vpdId;
+
+        @NameInMap("VpdVSwitchId")
+        public String vpdVSwitchId;
+
         public static DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaces build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaces self = new DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaces();
             return TeaModel.build(map, self);
@@ -500,6 +506,22 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaces setVpdId(String vpdId) {
+            this.vpdId = vpdId;
+            return this;
+        }
+        public String getVpdId() {
+            return this.vpdId;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaces setVpdVSwitchId(String vpdVSwitchId) {
+            this.vpdVSwitchId = vpdVSwitchId;
+            return this;
+        }
+        public String getVpdVSwitchId() {
+            return this.vpdVSwitchId;
         }
 
     }

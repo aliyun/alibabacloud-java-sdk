@@ -195,6 +195,12 @@ public class DescribeInstancesShrinkRequest extends TeaModel {
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    @NameInMap("VpdId")
+    public String vpdId;
+
+    @NameInMap("VpdVSwitchId")
+    public String vpdVSwitchId;
+
     public static DescribeInstancesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstancesShrinkRequest self = new DescribeInstancesShrinkRequest();
         return TeaModel.build(map, self);
@@ -366,6 +372,22 @@ public class DescribeInstancesShrinkRequest extends TeaModel {
     }
     public String getVSwitchId() {
         return this.vSwitchId;
+    }
+
+    public DescribeInstancesShrinkRequest setVpdId(String vpdId) {
+        this.vpdId = vpdId;
+        return this;
+    }
+    public String getVpdId() {
+        return this.vpdId;
+    }
+
+    public DescribeInstancesShrinkRequest setVpdVSwitchId(String vpdVSwitchId) {
+        this.vpdVSwitchId = vpdVSwitchId;
+        return this;
+    }
+    public String getVpdVSwitchId() {
+        return this.vpdVSwitchId;
     }
 
 }

@@ -6262,7 +6262,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the resources that can be created.</p>
      * 
-     * @param request DescribeAvailableResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAvailableResourceResponse
      */
@@ -6296,7 +6295,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the specifications of resources that you can purchase when you create an instance.</p>
      * 
-     * @param request DescribeAvailableResourceInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAvailableResourceInfoResponse
      */
@@ -6330,7 +6328,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries available bandwidth metering methods.</p>
      * 
-     * @param request DescribeBandWithdChargeTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeBandWithdChargeTypeResponse
      */
@@ -6420,7 +6417,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the available resources in a region.</p>
      * 
-     * @param request DescribeCloudDiskAvailableResourceInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCloudDiskAvailableResourceInfoResponse
      */
@@ -7322,7 +7318,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the specifications of resources that you can purchase when you create an instance.</p>
      * 
-     * @param request DescribeElbAvailableResourceInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeElbAvailableResourceInfoResponse
      */
@@ -7584,7 +7579,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the supported network levels.</p>
      * 
-     * @param request DescribeEnsNetLevelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeEnsNetLevelResponse
      */
@@ -9306,7 +9300,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the instance specifications that you can purchase.</p>
      * 
-     * @param request DescribeInstanceSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstanceSpecResponse
      */
@@ -9340,7 +9333,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the specifications of instance types.</p>
      * 
-     * @param request DescribeInstanceTypesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstanceTypesResponse
      */
@@ -9528,6 +9520,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
             query.put("VSwitchId", request.vSwitchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpdId)) {
+            query.put("VpdId", request.vpdId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpdVSwitchId)) {
+            query.put("VpdVSwitchId", request.vpdVSwitchId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -10234,7 +10234,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the specifications of resources that you can purchase when you create a NAS.</p>
      * 
-     * @param request DescribeNASAvailableResourceInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeNASAvailableResourceInfoResponse
      */
@@ -10926,7 +10925,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the specifications of resources that you can purchase.</p>
      * 
-     * @param request DescribeReservedResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeReservedResourceResponse
      */
@@ -13198,7 +13196,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Create a service-linked role (SLR) for ENS for the current user to manage resources.</p>
      * 
-     * @param request InitializeENSECKServiceRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return InitializeENSECKServiceRoleResponse
      */
@@ -13628,7 +13625,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Querying the details of a cluster component</p>
      * 
-     * @param request ListAddonsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAddonsResponse
      */
@@ -13898,7 +13894,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Lists all service capabilities.</p>
      * 
-     * @param request ListProductAbilitiesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListProductAbilitiesResponse
      */
@@ -17490,6 +17485,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.systemDiskShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.systemDisk, "SystemDisk", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.vpdVSwitchIds)) {
+            request.vpdVSwitchIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.vpdVSwitchIds, "VpdVSwitchIds", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.amount)) {
             query.put("Amount", request.amount);
@@ -17657,6 +17656,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
             query.put("VSwitchId", request.vSwitchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpdId)) {
+            query.put("VpdId", request.vpdId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpdVSwitchIdsShrink)) {
+            query.put("VpdVSwitchIds", request.vpdVSwitchIdsShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

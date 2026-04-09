@@ -461,6 +461,12 @@ public class RunInstancesRequest extends TeaModel {
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    @NameInMap("VpdId")
+    public String vpdId;
+
+    @NameInMap("VpdVSwitchIds")
+    public java.util.List<String> vpdVSwitchIds;
+
     public static RunInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         RunInstancesRequest self = new RunInstancesRequest();
         return TeaModel.build(map, self);
@@ -800,6 +806,22 @@ public class RunInstancesRequest extends TeaModel {
     }
     public String getVSwitchId() {
         return this.vSwitchId;
+    }
+
+    public RunInstancesRequest setVpdId(String vpdId) {
+        this.vpdId = vpdId;
+        return this;
+    }
+    public String getVpdId() {
+        return this.vpdId;
+    }
+
+    public RunInstancesRequest setVpdVSwitchIds(java.util.List<String> vpdVSwitchIds) {
+        this.vpdVSwitchIds = vpdVSwitchIds;
+        return this;
+    }
+    public java.util.List<String> getVpdVSwitchIds() {
+        return this.vpdVSwitchIds;
     }
 
     public static class RunInstancesRequestDataDisk extends TeaModel {

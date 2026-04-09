@@ -195,6 +195,12 @@ public class DescribeInstancesRequest extends TeaModel {
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    @NameInMap("VpdId")
+    public String vpdId;
+
+    @NameInMap("VpdVSwitchId")
+    public String vpdVSwitchId;
+
     public static DescribeInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstancesRequest self = new DescribeInstancesRequest();
         return TeaModel.build(map, self);
@@ -366,6 +372,22 @@ public class DescribeInstancesRequest extends TeaModel {
     }
     public String getVSwitchId() {
         return this.vSwitchId;
+    }
+
+    public DescribeInstancesRequest setVpdId(String vpdId) {
+        this.vpdId = vpdId;
+        return this;
+    }
+    public String getVpdId() {
+        return this.vpdId;
+    }
+
+    public DescribeInstancesRequest setVpdVSwitchId(String vpdVSwitchId) {
+        this.vpdVSwitchId = vpdVSwitchId;
+        return this;
+    }
+    public String getVpdVSwitchId() {
+        return this.vpdVSwitchId;
     }
 
     public static class DescribeInstancesRequestTags extends TeaModel {
