@@ -372,13 +372,91 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建账户专属凭据。</p>
+     * 
+     * @param request CreateUserExclusiveCredentialRequest
+     * @param headers CreateUserExclusiveCredentialHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateUserExclusiveCredentialResponse
+     */
+    public CreateUserExclusiveCredentialResponse createUserExclusiveCredentialWithOptions(String instanceId, CreateUserExclusiveCredentialRequest request, CreateUserExclusiveCredentialHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialContent)) {
+            body.put("credentialContent", request.credentialContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialIdentifier)) {
+            body.put("credentialIdentifier", request.credentialIdentifier);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialName)) {
+            body.put("credentialName", request.credentialName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialScenarioLabel)) {
+            body.put("credentialScenarioLabel", request.credentialScenarioLabel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialType)) {
+            body.put("credentialType", request.credentialType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateUserExclusiveCredential"),
+            new TeaPair("version", "2022-02-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/credentials/_/actions/createUserExclusive"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "Anonymous"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.doROARequest(params.action, params.version, params.protocol, params.method, params.authType, params.pathname, params.bodyType, req, runtime), new CreateUserExclusiveCredentialResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建账户专属凭据。</p>
+     * 
+     * @param request CreateUserExclusiveCredentialRequest
+     * @return CreateUserExclusiveCredentialResponse
+     */
+    public CreateUserExclusiveCredentialResponse createUserExclusiveCredential(String instanceId, CreateUserExclusiveCredentialRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        CreateUserExclusiveCredentialHeaders headers = new CreateUserExclusiveCredentialHeaders();
+        return this.createUserExclusiveCredentialWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes a group.</p>
      * 
+     * @param request DeleteGroupRequest
      * @param headers DeleteGroupHeaders
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteGroupResponse
      */
-    public DeleteGroupResponse deleteGroupWithOptions(String instanceId, String applicationId, String groupId, DeleteGroupHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DeleteGroupResponse deleteGroupWithOptions(String instanceId, String applicationId, String groupId, DeleteGroupRequest request, DeleteGroupHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -408,23 +486,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>Deletes a group.</p>
+     * 
+     * @param request DeleteGroupRequest
      * @return DeleteGroupResponse
      */
-    public DeleteGroupResponse deleteGroup(String instanceId, String applicationId, String groupId) throws Exception {
+    public DeleteGroupResponse deleteGroup(String instanceId, String applicationId, String groupId, DeleteGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         DeleteGroupHeaders headers = new DeleteGroupHeaders();
-        return this.deleteGroupWithOptions(instanceId, applicationId, groupId, headers, runtime);
+        return this.deleteGroupWithOptions(instanceId, applicationId, groupId, request, headers, runtime);
     }
 
     /**
      * <b>summary</b> : 
      * <p>Deletes an organizational unit.</p>
      * 
+     * @param request DeleteOrganizationalUnitRequest
      * @param headers DeleteOrganizationalUnitHeaders
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteOrganizationalUnitResponse
      */
-    public DeleteOrganizationalUnitResponse deleteOrganizationalUnitWithOptions(String instanceId, String applicationId, String organizationalUnitId, DeleteOrganizationalUnitHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DeleteOrganizationalUnitResponse deleteOrganizationalUnitWithOptions(String instanceId, String applicationId, String organizationalUnitId, DeleteOrganizationalUnitRequest request, DeleteOrganizationalUnitHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -454,23 +536,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>Deletes an organizational unit.</p>
+     * 
+     * @param request DeleteOrganizationalUnitRequest
      * @return DeleteOrganizationalUnitResponse
      */
-    public DeleteOrganizationalUnitResponse deleteOrganizationalUnit(String instanceId, String applicationId, String organizationalUnitId) throws Exception {
+    public DeleteOrganizationalUnitResponse deleteOrganizationalUnit(String instanceId, String applicationId, String organizationalUnitId, DeleteOrganizationalUnitRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         DeleteOrganizationalUnitHeaders headers = new DeleteOrganizationalUnitHeaders();
-        return this.deleteOrganizationalUnitWithOptions(instanceId, applicationId, organizationalUnitId, headers, runtime);
+        return this.deleteOrganizationalUnitWithOptions(instanceId, applicationId, organizationalUnitId, request, headers, runtime);
     }
 
     /**
      * <b>summary</b> : 
      * <p>Deletes an Employee Identity and Access Management (EIAM) account.</p>
      * 
+     * @param request DeleteUserRequest
      * @param headers DeleteUserHeaders
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteUserResponse
      */
-    public DeleteUserResponse deleteUserWithOptions(String instanceId, String applicationId, String userId, DeleteUserHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DeleteUserResponse deleteUserWithOptions(String instanceId, String applicationId, String userId, DeleteUserRequest request, DeleteUserHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -500,23 +586,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>Deletes an Employee Identity and Access Management (EIAM) account.</p>
+     * 
+     * @param request DeleteUserRequest
      * @return DeleteUserResponse
      */
-    public DeleteUserResponse deleteUser(String instanceId, String applicationId, String userId) throws Exception {
+    public DeleteUserResponse deleteUser(String instanceId, String applicationId, String userId, DeleteUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         DeleteUserHeaders headers = new DeleteUserHeaders();
-        return this.deleteUserWithOptions(instanceId, applicationId, userId, headers, runtime);
+        return this.deleteUserWithOptions(instanceId, applicationId, userId, request, headers, runtime);
     }
 
     /**
      * <b>summary</b> : 
      * <p>Disables an Employee Identity and Access Management (EIAM) account.</p>
      * 
+     * @param request DisableUserRequest
      * @param headers DisableUserHeaders
      * @param runtime runtime options for this request RuntimeOptions
      * @return DisableUserResponse
      */
-    public DisableUserResponse disableUserWithOptions(String instanceId, String applicationId, String userId, DisableUserHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DisableUserResponse disableUserWithOptions(String instanceId, String applicationId, String userId, DisableUserRequest request, DisableUserHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -546,23 +636,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>Disables an Employee Identity and Access Management (EIAM) account.</p>
+     * 
+     * @param request DisableUserRequest
      * @return DisableUserResponse
      */
-    public DisableUserResponse disableUser(String instanceId, String applicationId, String userId) throws Exception {
+    public DisableUserResponse disableUser(String instanceId, String applicationId, String userId, DisableUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         DisableUserHeaders headers = new DisableUserHeaders();
-        return this.disableUserWithOptions(instanceId, applicationId, userId, headers, runtime);
+        return this.disableUserWithOptions(instanceId, applicationId, userId, request, headers, runtime);
     }
 
     /**
      * <b>summary</b> : 
      * <p>Enables an Employee Identity and Access Management (EIAM) account.</p>
      * 
+     * @param request EnableUserRequest
      * @param headers EnableUserHeaders
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableUserResponse
      */
-    public EnableUserResponse enableUserWithOptions(String instanceId, String applicationId, String userId, EnableUserHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public EnableUserResponse enableUserWithOptions(String instanceId, String applicationId, String userId, EnableUserRequest request, EnableUserHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -592,12 +686,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>Enables an Employee Identity and Access Management (EIAM) account.</p>
+     * 
+     * @param request EnableUserRequest
      * @return EnableUserResponse
      */
-    public EnableUserResponse enableUser(String instanceId, String applicationId, String userId) throws Exception {
+    public EnableUserResponse enableUser(String instanceId, String applicationId, String userId, EnableUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         EnableUserHeaders headers = new EnableUserHeaders();
-        return this.enableUserWithOptions(instanceId, applicationId, userId, headers, runtime);
+        return this.enableUserWithOptions(instanceId, applicationId, userId, request, headers, runtime);
     }
 
     /**
@@ -1002,11 +1098,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the synchronization scope of an application in an instance.</p>
      * 
+     * @param request GetApplicationProvisioningScopeRequest
      * @param headers GetApplicationProvisioningScopeHeaders
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetApplicationProvisioningScopeResponse
      */
-    public GetApplicationProvisioningScopeResponse getApplicationProvisioningScopeWithOptions(String instanceId, String applicationId, GetApplicationProvisioningScopeHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetApplicationProvisioningScopeResponse getApplicationProvisioningScopeWithOptions(String instanceId, String applicationId, GetApplicationProvisioningScopeRequest request, GetApplicationProvisioningScopeHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -1043,23 +1141,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * 
      * <b>summary</b> : 
      * <p>Queries the synchronization scope of an application in an instance.</p>
+     * 
+     * @param request GetApplicationProvisioningScopeRequest
      * @return GetApplicationProvisioningScopeResponse
      */
-    public GetApplicationProvisioningScopeResponse getApplicationProvisioningScope(String instanceId, String applicationId) throws Exception {
+    public GetApplicationProvisioningScopeResponse getApplicationProvisioningScope(String instanceId, String applicationId, GetApplicationProvisioningScopeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         GetApplicationProvisioningScopeHeaders headers = new GetApplicationProvisioningScopeHeaders();
-        return this.getApplicationProvisioningScopeWithOptions(instanceId, applicationId, headers, runtime);
+        return this.getApplicationProvisioningScopeWithOptions(instanceId, applicationId, request, headers, runtime);
     }
 
     /**
      * <b>summary</b> : 
      * <p>Queries the details of a group.</p>
      * 
+     * @param request GetGroupRequest
      * @param headers GetGroupHeaders
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetGroupResponse
      */
-    public GetGroupResponse getGroupWithOptions(String instanceId, String applicationId, String groupId, GetGroupHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetGroupResponse getGroupWithOptions(String instanceId, String applicationId, String groupId, GetGroupRequest request, GetGroupHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -1089,23 +1191,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>Queries the details of a group.</p>
+     * 
+     * @param request GetGroupRequest
      * @return GetGroupResponse
      */
-    public GetGroupResponse getGroup(String instanceId, String applicationId, String groupId) throws Exception {
+    public GetGroupResponse getGroup(String instanceId, String applicationId, String groupId, GetGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         GetGroupHeaders headers = new GetGroupHeaders();
-        return this.getGroupWithOptions(instanceId, applicationId, groupId, headers, runtime);
+        return this.getGroupWithOptions(instanceId, applicationId, groupId, request, headers, runtime);
     }
 
     /**
      * <b>summary</b> : 
      * <p>Queries the information of an organizational unit.</p>
      * 
+     * @param request GetOrganizationalUnitRequest
      * @param headers GetOrganizationalUnitHeaders
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetOrganizationalUnitResponse
      */
-    public GetOrganizationalUnitResponse getOrganizationalUnitWithOptions(String instanceId, String applicationId, String organizationalUnitId, GetOrganizationalUnitHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetOrganizationalUnitResponse getOrganizationalUnitWithOptions(String instanceId, String applicationId, String organizationalUnitId, GetOrganizationalUnitRequest request, GetOrganizationalUnitHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -1135,12 +1241,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>Queries the information of an organizational unit.</p>
+     * 
+     * @param request GetOrganizationalUnitRequest
      * @return GetOrganizationalUnitResponse
      */
-    public GetOrganizationalUnitResponse getOrganizationalUnit(String instanceId, String applicationId, String organizationalUnitId) throws Exception {
+    public GetOrganizationalUnitResponse getOrganizationalUnit(String instanceId, String applicationId, String organizationalUnitId, GetOrganizationalUnitRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         GetOrganizationalUnitHeaders headers = new GetOrganizationalUnitHeaders();
-        return this.getOrganizationalUnitWithOptions(instanceId, applicationId, organizationalUnitId, headers, runtime);
+        return this.getOrganizationalUnitWithOptions(instanceId, applicationId, organizationalUnitId, request, headers, runtime);
     }
 
     /**
@@ -1211,11 +1319,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the details of an Employee Identity and Access Management (EIAM) account.</p>
      * 
+     * @param request GetUserRequest
      * @param headers GetUserHeaders
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetUserResponse
      */
-    public GetUserResponse getUserWithOptions(String instanceId, String applicationId, String userId, GetUserHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetUserResponse getUserWithOptions(String instanceId, String applicationId, String userId, GetUserRequest request, GetUserHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -1245,12 +1355,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>Queries the details of an Employee Identity and Access Management (EIAM) account.</p>
+     * 
+     * @param request GetUserRequest
      * @return GetUserResponse
      */
-    public GetUserResponse getUser(String instanceId, String applicationId, String userId) throws Exception {
+    public GetUserResponse getUser(String instanceId, String applicationId, String userId, GetUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         GetUserHeaders headers = new GetUserHeaders();
-        return this.getUserWithOptions(instanceId, applicationId, userId, headers, runtime);
+        return this.getUserWithOptions(instanceId, applicationId, userId, request, headers, runtime);
     }
 
     /**
@@ -1489,11 +1601,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the information of a user by using the user token.</p>
      * 
+     * @param request GetUserInfoRequest
      * @param headers GetUserInfoHeaders
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetUserInfoResponse
      */
-    public GetUserInfoResponse getUserInfoWithOptions(String instanceId, String applicationId, GetUserInfoHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetUserInfoResponse getUserInfoWithOptions(String instanceId, String applicationId, GetUserInfoRequest request, GetUserInfoHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -1523,12 +1637,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>Queries the information of a user by using the user token.</p>
+     * 
+     * @param request GetUserInfoRequest
      * @return GetUserInfoResponse
      */
-    public GetUserInfoResponse getUserInfo(String instanceId, String applicationId) throws Exception {
+    public GetUserInfoResponse getUserInfo(String instanceId, String applicationId, GetUserInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         GetUserInfoHeaders headers = new GetUserInfoHeaders();
-        return this.getUserInfoWithOptions(instanceId, applicationId, headers, runtime);
+        return this.getUserInfoWithOptions(instanceId, applicationId, request, headers, runtime);
     }
 
     /**
@@ -1735,11 +1851,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the information of all the parent organizational units of an organizational unit.</p>
      * 
+     * @param request ListOrganizationalUnitParentIdsRequest
      * @param headers ListOrganizationalUnitParentIdsHeaders
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListOrganizationalUnitParentIdsResponse
      */
-    public ListOrganizationalUnitParentIdsResponse listOrganizationalUnitParentIdsWithOptions(String instanceId, String applicationId, String organizationalUnitId, ListOrganizationalUnitParentIdsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListOrganizationalUnitParentIdsResponse listOrganizationalUnitParentIdsWithOptions(String instanceId, String applicationId, String organizationalUnitId, ListOrganizationalUnitParentIdsRequest request, ListOrganizationalUnitParentIdsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -1769,12 +1887,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>Queries the information of all the parent organizational units of an organizational unit.</p>
+     * 
+     * @param request ListOrganizationalUnitParentIdsRequest
      * @return ListOrganizationalUnitParentIdsResponse
      */
-    public ListOrganizationalUnitParentIdsResponse listOrganizationalUnitParentIds(String instanceId, String applicationId, String organizationalUnitId) throws Exception {
+    public ListOrganizationalUnitParentIdsResponse listOrganizationalUnitParentIds(String instanceId, String applicationId, String organizationalUnitId, ListOrganizationalUnitParentIdsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         ListOrganizationalUnitParentIdsHeaders headers = new ListOrganizationalUnitParentIdsHeaders();
-        return this.listOrganizationalUnitParentIdsWithOptions(instanceId, applicationId, organizationalUnitId, headers, runtime);
+        return this.listOrganizationalUnitParentIdsWithOptions(instanceId, applicationId, organizationalUnitId, request, headers, runtime);
     }
 
     /**
