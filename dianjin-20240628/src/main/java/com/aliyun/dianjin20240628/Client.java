@@ -61,7 +61,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 TeaRequest request_ = new TeaRequest();
                 java.util.Map<String, Object> form = com.aliyun.teautil.Common.assertAsMap(data);
                 String boundary = com.aliyun.fileform.Client.getBoundary();
-                String host = com.aliyun.teautil.Common.assertAsString(form.get("host"));
+                String tmp = com.aliyun.teautil.Common.assertAsString(form.get("host"));
+                String host = "" + bucketName + "." + tmp + "";
                 request_.protocol = "HTTPS";
                 request_.method = "POST";
                 request_.pathname = "/";
@@ -1188,11 +1189,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>获取app配置</p>
      * 
+     * @param request GetAppConfigRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAppConfigResponse
      */
-    public GetAppConfigResponse getAppConfigWithOptions(String workspaceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetAppConfigResponse getAppConfigWithOptions(String workspaceId, GetAppConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -1213,12 +1216,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>获取app配置</p>
+     * 
+     * @param request GetAppConfigRequest
      * @return GetAppConfigResponse
      */
-    public GetAppConfigResponse getAppConfig(String workspaceId) throws Exception {
+    public GetAppConfigResponse getAppConfig(String workspaceId, GetAppConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getAppConfigWithOptions(workspaceId, headers, runtime);
+        return this.getAppConfigWithOptions(workspaceId, request, headers, runtime);
     }
 
     /**
@@ -3435,7 +3440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("contentType", "")
             ));
             ossHeader = TeaConverter.buildMap(
-                new TeaPair("host", "" + authResponseBody.get("Bucket") + "." + com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType) + ""),
+                new TeaPair("host", com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType)),
                 new TeaPair("OSSAccessKeyId", authResponseBody.get("AccessKeyId")),
                 new TeaPair("policy", authResponseBody.get("EncodedPolicy")),
                 new TeaPair("Signature", authResponseBody.get("Signature")),
