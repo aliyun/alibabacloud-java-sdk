@@ -233,6 +233,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("EnableAutoMinorVersionUpgrade")
         public Boolean enableAutoMinorVersionUpgrade;
 
+        @NameInMap("EnableMultiAz")
+        public Boolean enableMultiAz;
+
         /**
          * <strong>example:</strong>
          * <p>true</p>
@@ -445,6 +448,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public Boolean getEnableAutoMinorVersionUpgrade() {
             return this.enableAutoMinorVersionUpgrade;
+        }
+
+        public DescribeInstancesResponseBodyData setEnableMultiAz(Boolean enableMultiAz) {
+            this.enableMultiAz = enableMultiAz;
+            return this;
+        }
+        public Boolean getEnableMultiAz() {
+            return this.enableMultiAz;
         }
 
         public DescribeInstancesResponseBodyData setEnableSSL(Boolean enableSSL) {

@@ -57,6 +57,9 @@ public class CreateInstanceV1Request extends TeaModel {
     @NameInMap("Duration")
     public Integer duration;
 
+    @NameInMap("EnableMultiAz")
+    public Boolean enableMultiAz;
+
     /**
      * <strong>example:</strong>
      * <p>true</p>
@@ -283,6 +286,14 @@ public class CreateInstanceV1Request extends TeaModel {
     }
     public Integer getDuration() {
         return this.duration;
+    }
+
+    public CreateInstanceV1Request setEnableMultiAz(Boolean enableMultiAz) {
+        this.enableMultiAz = enableMultiAz;
+        return this;
+    }
+    public Boolean getEnableMultiAz() {
+        return this.enableMultiAz;
     }
 
     public CreateInstanceV1Request setEncrypted(Boolean encrypted) {

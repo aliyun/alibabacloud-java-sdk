@@ -1,3 +1,10 @@
+2026-04-09 Version: 1.5.2
+- Update API CreateInstanceV1: add request parameters body.EnableMultiAz.
+- Update API DescribeInstances: add response parameters Body.Data.$.EnableMultiAz.
+- Update API ListOperationActivity: add response parameters Body.Data.$.ConsoleRetryCount.
+- Update API ListOperationActivity: add response parameters Body.Data.$.ErrMessage.
+
+
 2026-04-07 Version: 1.5.1
 - Update API DescribeInstances: add response parameters Body.Data.$.EnableAiFunction.
 

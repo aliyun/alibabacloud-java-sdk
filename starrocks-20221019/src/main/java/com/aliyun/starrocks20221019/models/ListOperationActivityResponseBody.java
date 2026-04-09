@@ -140,12 +140,18 @@ public class ListOperationActivityResponseBody extends TeaModel {
         @NameInMap("ActivityStatus")
         public String activityStatus;
 
+        @NameInMap("ConsoleRetryCount")
+        public Integer consoleRetryCount;
+
         /**
          * <strong>example:</strong>
          * <p>1742178604000</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
+
+        @NameInMap("ErrMessage")
+        public String errMessage;
 
         /**
          * <strong>example:</strong>
@@ -182,12 +188,28 @@ public class ListOperationActivityResponseBody extends TeaModel {
             return this.activityStatus;
         }
 
+        public ListOperationActivityResponseBodyData setConsoleRetryCount(Integer consoleRetryCount) {
+            this.consoleRetryCount = consoleRetryCount;
+            return this;
+        }
+        public Integer getConsoleRetryCount() {
+            return this.consoleRetryCount;
+        }
+
         public ListOperationActivityResponseBodyData setEndTime(Long endTime) {
             this.endTime = endTime;
             return this;
         }
         public Long getEndTime() {
             return this.endTime;
+        }
+
+        public ListOperationActivityResponseBodyData setErrMessage(String errMessage) {
+            this.errMessage = errMessage;
+            return this;
+        }
+        public String getErrMessage() {
+            return this.errMessage;
         }
 
         public ListOperationActivityResponseBodyData setName(String name) {

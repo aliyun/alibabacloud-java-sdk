@@ -385,6 +385,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Duration", request.duration);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableMultiAz)) {
+            body.put("EnableMultiAz", request.enableMultiAz);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.encrypted)) {
             body.put("Encrypted", request.encrypted);
         }
