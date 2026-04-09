@@ -13,9 +13,6 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The zones.</p>
-     */
     @NameInMap("Zones")
     public DescribeZoneVpcTreeResponseBodyZones zones;
 
@@ -41,52 +38,18 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
     }
 
     public static class DescribeZoneVpcTreeResponseBodyZonesZoneVpcsVpc extends TeaModel {
-        /**
-         * <p>The region ID of the VPC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-heyuan</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The name of the region to which the VPC belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>China (Heyuan)</p>
-         */
         @NameInMap("RegionName")
         public String regionName;
 
-        /**
-         * <p>The VPC ID. The unique ID of the VPC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-f8zvrvr1payllgz38****</p>
-         */
         @NameInMap("VpcId")
         public String vpcId;
 
-        /**
-         * <p>The VPC name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>demo-vpc</p>
-         */
         @NameInMap("VpcName")
         public String vpcName;
 
-        /**
-         * <p>The VPC type. Valid values:</p>
-         * <ul>
-         * <li>STANDARD: standard VPC</li>
-         * <li>EDS: Elastic Desktop Service (EDS) workspace VPC</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>STANDARD</p>
-         */
         @NameInMap("VpcType")
         public String vpcType;
 
@@ -157,167 +120,51 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
     }
 
     public static class DescribeZoneVpcTreeResponseBodyZonesZone extends TeaModel {
-        /**
-         * <p>The time when the zone was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-09-18T08:20Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The time when the zone was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1568794812000</p>
-         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
-        /**
-         * <p>The creator of the zone.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>141339776561****</p>
-         */
         @NameInMap("Creator")
         public String creator;
 
-        /**
-         * <p>The operator type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>USER</p>
-         */
         @NameInMap("CreatorType")
         public String creatorType;
 
-        /**
-         * <p>The logical location of the built-in authoritative module in which the zone is added. Valid values:</p>
-         * <ul>
-         * <li>NORMAL_ZONE: regular module</li>
-         * <li>FAST_ZONE: acceleration module</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>NORMAL_ZONE</p>
-         */
         @NameInMap("DnsGroup")
         public String dnsGroup;
 
-        /**
-         * <p>Indicates whether the zone is being removed to another logical location. Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("DnsGroupChanging")
         public Boolean dnsGroupChanging;
 
-        /**
-         * <p>Indicates whether the zone is a reverse lookup zone. Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("IsPtr")
         public Boolean isPtr;
 
-        /**
-         * <p>The number of Domain Name System (DNS) records added for the zone.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("RecordCount")
         public Integer recordCount;
 
-        /**
-         * <p>The description of the zone.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>demo</p>
-         */
         @NameInMap("Remark")
         public String remark;
 
-        /**
-         * <p>The time when the zone was last modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-09-18T08:20Z</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        /**
-         * <p>The time when the zone was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1568794834000</p>
-         */
         @NameInMap("UpdateTimestamp")
         public Long updateTimestamp;
 
-        /**
-         * <p>The VPCs associated with the zone.</p>
-         */
         @NameInMap("Vpcs")
         public DescribeZoneVpcTreeResponseBodyZonesZoneVpcs vpcs;
 
-        /**
-         * <p>The zone ID. This ID uniquely identifies the zone.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6d83e3b31aa60ca4aaa7161f1b6baa95</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 
-        /**
-         * <p>The zone name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("ZoneName")
         public String zoneName;
 
-        /**
-         * <p>The type of the cloud service.</p>
-         * <p><strong>Valid values:</strong></p>
-         * <ul>
-         * <li><p>If ZoneType is set to AUTH_ZONE, no value is returned for this parameter.</p>
-         * </li>
-         * <li><p>If ZoneType is set to CLOUD_PRODUCT_ZONE, the type of the cloud service is returned.</p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>BLINK</p>
-         */
         @NameInMap("ZoneTag")
         public String zoneTag;
 
-        /**
-         * <p>The zone type. Valid values:</p>
-         * <ul>
-         * <li>AUTH_ZONE: authoritative zone</li>
-         * <li>CLOUD_PRODUCT_ZONE: authoritative zone for cloud services</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>AUTH_ZONE</p>
-         */
         @NameInMap("ZoneType")
         public String zoneType;
 

@@ -42,7 +42,6 @@ public class AddResolverRuleRequest extends TeaModel {
 
     /**
      * <p>The name of the forwarding rule. You can name the rule based on your business requirements.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

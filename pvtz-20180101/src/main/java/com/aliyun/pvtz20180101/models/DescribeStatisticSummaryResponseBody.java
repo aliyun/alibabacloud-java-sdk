@@ -22,15 +22,9 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Long totalCount;
 
-    /**
-     * <p>The top three VPCs with the largest number of DNS requests.</p>
-     */
     @NameInMap("VpcRequestTops")
     public DescribeStatisticSummaryResponseBodyVpcRequestTops vpcRequestTops;
 
-    /**
-     * <p>The top three zones with the largest number of DNS requests.</p>
-     */
     @NameInMap("ZoneRequestTops")
     public DescribeStatisticSummaryResponseBodyZoneRequestTops zoneRequestTops;
 
@@ -72,61 +66,21 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeStatisticSummaryResponseBodyVpcRequestTopsVpcRequestTop extends TeaModel {
-        /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-beijing</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The name of the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>华北 2</p>
-         */
         @NameInMap("RegionName")
         public String regionName;
 
-        /**
-         * <p>The number of DNS requests on the previous day.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2254</p>
-         */
         @NameInMap("RequestCount")
         public Long requestCount;
 
-        /**
-         * <p>The tunnel ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>tun-7h33lkqfuhgnyy****</p>
-         */
         @NameInMap("TunnelId")
         public String tunnelId;
 
-        /**
-         * <p>The VPC ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-f8zvrvr1payllgz38****</p>
-         */
         @NameInMap("VpcId")
         public String vpcId;
 
-        /**
-         * <p>The VPC type. Valid values:</p>
-         * <ul>
-         * <li>STANDARD: standard VPC</li>
-         * <li>EDS: Elastic Desktop Service (EDS) workspace VPC</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>STANDARD</p>
-         */
         @NameInMap("VpcType")
         public String vpcType;
 
@@ -205,35 +159,12 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeStatisticSummaryResponseBodyZoneRequestTopsZoneRequestTop extends TeaModel {
-        /**
-         * <p>The business type. Valid values:</p>
-         * <ul>
-         * <li>AUTH_ZONE: authoritative zone</li>
-         * <li>RESOLVER_RULE: forwarding rule</li>
-         * <li>INBOUND: inbound endpoint</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>AUTH_ZONE</p>
-         */
         @NameInMap("BizType")
         public String bizType;
 
-        /**
-         * <p>The number of DNS requests on the previous day.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2251</p>
-         */
         @NameInMap("RequestCount")
         public Long requestCount;
 
-        /**
-         * <p>The zone name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test.com</p>
-         */
         @NameInMap("ZoneName")
         public String zoneName;
 

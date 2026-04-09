@@ -4,9 +4,6 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomLinesResponseBody extends TeaModel {
-    /**
-     * <p>The custom lines.</p>
-     */
     @NameInMap("CustomLines")
     public DescribeCustomLinesResponseBodyCustomLines customLines;
 
@@ -128,100 +125,36 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
     }
 
     public static class DescribeCustomLinesResponseBodyCustomLinesCustomLine extends TeaModel {
-        /**
-         * <p>The time when the custom line was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-03-25T08:07Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The time when the custom line was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1671174074000</p>
-         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
-        /**
-         * <p>The creator of the custom line.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>21312421</p>
-         */
         @NameInMap("Creator")
         public String creator;
 
-        /**
-         * <p>The type of the creator for the custom line. Valid values:</p>
-         * <ul>
-         * <li>CUSTOM: Alibaba Cloud account</li>
-         * <li>SUB: RAM user</li>
-         * <li>STS: assumed role that obtains the Security Token Service (STS) token of a RAM role</li>
-         * <li>OTHER: other roles</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>SUB</p>
-         */
         @NameInMap("CreatorSubType")
         public String creatorSubType;
 
-        /**
-         * <p>The role of the creator for the custom line. Valid values:</p>
-         * <ul>
-         * <li>USER: user</li>
-         * <li>SYSTEM: system</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>USER</p>
-         */
         @NameInMap("CreatorType")
         public String creatorType;
 
         @NameInMap("DnsCategory")
         public String dnsCategory;
 
-        /**
-         * <p>The IPv4 CIDR blocks.</p>
-         */
         @NameInMap("Ipv4s")
         public DescribeCustomLinesResponseBodyCustomLinesCustomLineIpv4s ipv4s;
 
-        /**
-         * <p>The unique ID of the custom line.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>160002</p>
-         */
         @NameInMap("LineId")
         public String lineId;
 
-        /**
-         * <p>The name of the custom line.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The time when the custom line was updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-08-24T16:08Z</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        /**
-         * <p>The time when the custom line was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1681879029000</p>
-         */
         @NameInMap("UpdateTimestamp")
         public Long updateTimestamp;
 

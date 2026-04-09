@@ -22,9 +22,6 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The DNS records.</p>
-     */
     @NameInMap("Records")
     public DescribeZoneRecordsResponseBodyRecords records;
 
@@ -109,151 +106,48 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeZoneRecordsResponseBodyRecordsRecord extends TeaModel {
-        /**
-         * <p>The time when the DNS record was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-03-14T03:47Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The time when the DNS record was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1672740294000</p>
-         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
-        /**
-         * <p>The resolution line.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>default</p>
-         */
         @NameInMap("Line")
         public String line;
 
-        /**
-         * <p>The priority of the mail exchanger (MX) record.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("Priority")
         public Integer priority;
 
-        /**
-         * <p>The ID of the DNS record.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>246959****</p>
-         */
         @NameInMap("RecordId")
         public Long recordId;
 
-        /**
-         * <p>The description of the DNS record.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Remark")
         public String remark;
 
-        /**
-         * <p>The hostname.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>www</p>
-         */
         @NameInMap("Rr")
         public String rr;
 
-        /**
-         * <p>The state of the DNS record. Valid values:</p>
-         * <ul>
-         * <li>ENABLE: The DNS record is enabled.</li>
-         * <li>DISABLE: The DNS record is disabled.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ENABLE</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The time to live (TTL) period.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>60</p>
-         */
         @NameInMap("Ttl")
         public Integer ttl;
 
-        /**
-         * <p>The type of the DNS record. Valid values:</p>
-         * <ul>
-         * <li><strong>A</strong>: An A record points a domain name to an IPv4 address.</li>
-         * <li><strong>AAAA</strong>: An AAAA record points a domain name to an IPv6 address.</li>
-         * <li><strong>CNAME</strong>: A canonical name (CNAME) record points a domain name to another domain name.</li>
-         * <li><strong>TXT</strong>: A text (TXT) record usually serves as a Sender Policy Framework (SPF) record to prevent email spam. The record value of the TXT record can be up to 255 characters in length.</li>
-         * <li><strong>MX</strong>: A mail exchanger (MX) record points a domain name to a mail server address.</li>
-         * <li><strong>PTR</strong>: A pointer (PTR) points an IP address to a domain name.</li>
-         * <li><strong>SRV</strong>: A service (SRV) record specifies a server that hosts a specific service.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>A</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>The time when the DNS record was updated. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2023-05-08T02:31Z</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        /**
-         * <p>The time when the DNS record was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1654777678000</p>
-         */
         @NameInMap("UpdateTimestamp")
         public Long updateTimestamp;
 
-        /**
-         * <p>The record value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>127.0.XX.XX</p>
-         */
         @NameInMap("Value")
         public String value;
 
-        /**
-         * <p>The weight value of the address. You can set a different weight value for each address. This way, addresses are returned based on the weight values for DNS requests. A weight value must be an integer that ranges from 1 to 100.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Weight")
         public Integer weight;
 
-        /**
-         * <p>The zone ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>a49f55537f3b0b1e6e43add0bf5f****</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 

@@ -4,9 +4,6 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
-    /**
-     * <p>The regions.</p>
-     */
     @NameInMap("Regions")
     public DescribeRegionsResponseBodyRegions regions;
 
@@ -41,39 +38,15 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionsRegion extends TeaModel {
-        /**
-         * <p>The display name of the region, which varies based on the current language.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>China (Beijing)</p>
-         */
         @NameInMap("LocalName")
         public String localName;
 
-        /**
-         * <p>The endpoint of the service in the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>pvtz.aliyuncs.com</p>
-         */
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 
-        /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-beijing</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The region name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>China (Beijing)</p>
-         */
         @NameInMap("RegionName")
         public String regionName;
 

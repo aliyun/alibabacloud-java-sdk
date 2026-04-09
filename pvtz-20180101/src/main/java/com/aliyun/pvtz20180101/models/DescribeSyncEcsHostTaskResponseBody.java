@@ -4,15 +4,9 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
-    /**
-     * <p>The synchronized regions where the ECS instances are deployed.</p>
-     */
     @NameInMap("EcsRegions")
     public DescribeSyncEcsHostTaskResponseBodyEcsRegions ecsRegions;
 
-    /**
-     * <p>The synchronized region IDs of the ECS instances.</p>
-     */
     @NameInMap("Regions")
     public DescribeSyncEcsHostTaskResponseBodyRegions regions;
 
@@ -133,18 +127,9 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
     }
 
     public static class DescribeSyncEcsHostTaskResponseBodyEcsRegionsEcsRegion extends TeaModel {
-        /**
-         * <p>The synchronized region IDs.</p>
-         */
         @NameInMap("RegionIds")
         public DescribeSyncEcsHostTaskResponseBodyEcsRegionsEcsRegionRegionIds regionIds;
 
-        /**
-         * <p>The user ID to which the region belongs. This parameter is used in cross-account synchronization scenarios.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>141339776561****</p>
-         */
         @NameInMap("UserId")
         public Long userId;
 

@@ -4,9 +4,6 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class DescribeChangeLogsResponseBody extends TeaModel {
-    /**
-     * <p>The operation logs.</p>
-     */
     @NameInMap("ChangeLogs")
     public DescribeChangeLogsResponseBodyChangeLogs changeLogs;
 
@@ -109,135 +106,42 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
     }
 
     public static class DescribeChangeLogsResponseBodyChangeLogsChangeLog extends TeaModel {
-        /**
-         * <p>The operation content.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Add RR:test.03 Type:A Line:default TTL:300 Value:172.20.XX.XX</p>
-         */
         @NameInMap("Content")
         public String content;
 
-        /**
-         * <p>The operator ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>141339776561****</p>
-         */
         @NameInMap("CreatorId")
         public String creatorId;
 
-        /**
-         * <p>The subtype of the operator. Valid values:</p>
-         * <ul>
-         * <li>CUSTOMER: Alibaba Cloud account</li>
-         * <li>SUB: RAM user</li>
-         * <li>STS: assumed role that obtains the Security Token Service (STS) token of a RAM role</li>
-         * <li>OTHER: other types</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>SUB</p>
-         */
         @NameInMap("CreatorSubType")
         public String creatorSubType;
 
-        /**
-         * <p>The operator type. No value or <strong>USER</strong> is returned for this parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>USER</p>
-         */
         @NameInMap("CreatorType")
         public String creatorType;
 
-        /**
-         * <p>The operator ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>141339776561****</p>
-         */
         @NameInMap("CreatorUserId")
         public String creatorUserId;
 
-        /**
-         * <p>The unique ID of the zone, user-defined line, forwarding rule, outbound endpoint, or inbound endpoint.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>df2d03865266bd9842306db586d3****</p>
-         */
         @NameInMap("EntityId")
         public String entityId;
 
-        /**
-         * <p>The name of the object on which the operation was performed, such as the domain name, user-defined line, cache retention domain name, forwarding rule, outbound endpoint, or inbound endpoint.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test-api.com</p>
-         */
         @NameInMap("EntityName")
         public String entityName;
 
-        /**
-         * <p>The ID of the operation log.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>90761578646770****</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>The specific operation performed on the object, such as adding, deleting, modifying, or associating the object.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>add</p>
-         */
         @NameInMap("OperAction")
         public String operAction;
 
-        /**
-         * <p>The public IP address of the operator terminal. If the IP address of the operator terminal is a private IP address, the value of this parameter is the public IP address to which the private IP address is mapped after network address translation (NAT).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>192.0.XX.XX</p>
-         */
         @NameInMap("OperIp")
         public String operIp;
 
-        /**
-         * <p>The type of the object on which the operation was performed. Valid values:</p>
-         * <ul>
-         * <li><strong>PV_ZONE</strong>: the built-in authoritative zone</li>
-         * <li><strong>PV_RECORD</strong>: the DNS record</li>
-         * <li><strong>RESOLVER_RULE</strong>: the forwarding rule</li>
-         * <li><strong>CUSTOM_LINE</strong>: the user-defined line</li>
-         * <li><strong>RESOLVER_ENDPOINT</strong>: the outbound endpoint</li>
-         * <li><strong>INBOUND_ENDPOINT</strong>: the inbound endpoint</li>
-         * <li><strong>CACHE_RESERVE_DOMAIN</strong>: the cache retention domain name</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>PV_ZONE</p>
-         */
         @NameInMap("OperObject")
         public String operObject;
 
-        /**
-         * <p>The time when the operation is performed. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-01-24T07:35Z</p>
-         */
         @NameInMap("OperTime")
         public String operTime;
 
-        /**
-         * <p>The time when the operation was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1516779348000</p>
-         */
         @NameInMap("OperTimestamp")
         public Long operTimestamp;
 

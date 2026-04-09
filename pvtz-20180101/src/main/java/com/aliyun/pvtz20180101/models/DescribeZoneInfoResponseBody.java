@@ -7,9 +7,6 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
     @NameInMap("BindEdgeDnsClusters")
     public DescribeZoneInfoResponseBodyBindEdgeDnsClusters bindEdgeDnsClusters;
 
-    /**
-     * <p>The VPCs associated with the zone.</p>
-     */
     @NameInMap("BindVpcs")
     public DescribeZoneInfoResponseBodyBindVpcs bindVpcs;
 
@@ -442,61 +439,21 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeZoneInfoResponseBodyBindVpcsVpc extends TeaModel {
-        /**
-         * <p>The region ID of the VPC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-heyuan</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The name of the region where the VPC resides.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>China (Heyuan)</p>
-         */
         @NameInMap("RegionName")
         public String regionName;
 
-        /**
-         * <p>The VPC ID. This ID uniquely identifies the VPC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-f8zvrvr1payllgz38****</p>
-         */
         @NameInMap("VpcId")
         public String vpcId;
 
-        /**
-         * <p>The VPC name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc_test</p>
-         */
         @NameInMap("VpcName")
         public String vpcName;
 
-        /**
-         * <p>The VPC type. Valid values:</p>
-         * <ul>
-         * <li>STANDARD: standard VPC</li>
-         * <li>EDS: Elastic Desktop Service (EDS) workspace VPC</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>STANDARD</p>
-         */
         @NameInMap("VpcType")
         public String vpcType;
 
-        /**
-         * <p>The user ID to which the VPC belongs. If null is returned, the VPC belongs to the current user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>141339776561****</p>
-         */
         @NameInMap("VpcUserId")
         public Long vpcUserId;
 
