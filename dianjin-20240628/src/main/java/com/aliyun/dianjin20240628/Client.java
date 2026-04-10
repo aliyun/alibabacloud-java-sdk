@@ -1132,6 +1132,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>兑换权益</p>
+     * 
+     * @param request ExchangeEntitlementRequest
+     * @param headers ExchangeEntitlementHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExchangeEntitlementResponse
+     */
+    public ExchangeEntitlementResponse exchangeEntitlementWithOptions(String workspaceId, String tenantId, ExchangeEntitlementRequest request, ExchangeEntitlementHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.externalUserId)) {
+            body.put("externalUserId", request.externalUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyHash)) {
+            body.put("keyHash", request.keyHash);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
+            body.put("requestId", request.requestId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            body.put("templateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            body.put("userName", request.userName);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xLoadTest)) {
+            realHeaders.put("X-Load-Test", com.aliyun.teautil.Common.toJSONString(headers.xLoadTest));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExchangeEntitlement"),
+            new TeaPair("version", "2024-06-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(tenantId) + "/redeem"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExchangeEntitlementResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>兑换权益</p>
+     * 
+     * @param request ExchangeEntitlementRequest
+     * @return ExchangeEntitlementResponse
+     */
+    public ExchangeEntitlementResponse exchangeEntitlement(String workspaceId, String tenantId, ExchangeEntitlementRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ExchangeEntitlementHeaders headers = new ExchangeEntitlementHeaders();
+        return this.exchangeEntitlementWithOptions(workspaceId, tenantId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>根据文档解析问答QA</p>
      * 
      * @param request GenDocQaResultRequest
@@ -2156,6 +2228,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询用量明细</p>
+     * 
+     * @param request GetUsageRequest
+     * @param headers GetUsageHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetUsageResponse
+     */
+    public GetUsageResponse getUsageWithOptions(String workspaceId, String tenantId, GetUsageRequest request, GetUsageHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.externalUserId)) {
+            query.put("externalUserId", request.externalUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.redemptionOrderNo)) {
+            query.put("redemptionOrderNo", request.redemptionOrderNo);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xLoadTest)) {
+            realHeaders.put("X-Load-Test", com.aliyun.teautil.Common.toJSONString(headers.xLoadTest));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUsage"),
+            new TeaPair("version", "2024-06-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(tenantId) + "/usage"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUsageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询用量明细</p>
+     * 
+     * @param request GetUsageRequest
+     * @return GetUsageResponse
+     */
+    public GetUsageResponse getUsage(String workspaceId, String tenantId, GetUsageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetUsageHeaders headers = new GetUsageHeaders();
+        return this.getUsageWithOptions(workspaceId, tenantId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取视频生成任务结果</p>
      * 
      * @param request GetVideoCreationTaskResultRequest
@@ -2310,6 +2442,130 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.previewDocumentWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询兑换记录</p>
+     * 
+     * @param request QueryApiKeysRequest
+     * @param headers QueryApiKeysHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryApiKeysResponse
+     */
+    public QueryApiKeysResponse queryApiKeysWithOptions(String workspaceId, String tenantId, QueryApiKeysRequest request, QueryApiKeysHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.externalUserId)) {
+            query.put("externalUserId", request.externalUserId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xLoadTest)) {
+            realHeaders.put("X-Load-Test", com.aliyun.teautil.Common.toJSONString(headers.xLoadTest));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryApiKeys"),
+            new TeaPair("version", "2024-06-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(tenantId) + "/apikeys"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryApiKeysResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询兑换记录</p>
+     * 
+     * @param request QueryApiKeysRequest
+     * @return QueryApiKeysResponse
+     */
+    public QueryApiKeysResponse queryApiKeys(String workspaceId, String tenantId, QueryApiKeysRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        QueryApiKeysHeaders headers = new QueryApiKeysHeaders();
+        return this.queryApiKeysWithOptions(workspaceId, tenantId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询兑换记录</p>
+     * 
+     * @param request QueryRedemptionRecordsRequest
+     * @param headers QueryRedemptionRecordsHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryRedemptionRecordsResponse
+     */
+    public QueryRedemptionRecordsResponse queryRedemptionRecordsWithOptions(String workspaceId, String tenantId, QueryRedemptionRecordsRequest request, QueryRedemptionRecordsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.externalUserId)) {
+            query.put("externalUserId", request.externalUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.redemptionOrderNo)) {
+            query.put("redemptionOrderNo", request.redemptionOrderNo);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xLoadTest)) {
+            realHeaders.put("X-Load-Test", com.aliyun.teautil.Common.toJSONString(headers.xLoadTest));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryRedemptionRecords"),
+            new TeaPair("version", "2024-06-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(tenantId) + "/redemption-records"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryRedemptionRecordsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询兑换记录</p>
+     * 
+     * @param request QueryRedemptionRecordsRequest
+     * @return QueryRedemptionRecordsResponse
+     */
+    public QueryRedemptionRecordsResponse queryRedemptionRecords(String workspaceId, String tenantId, QueryRedemptionRecordsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        QueryRedemptionRecordsHeaders headers = new QueryRedemptionRecordsHeaders();
+        return this.queryRedemptionRecordsWithOptions(workspaceId, tenantId, request, headers, runtime);
     }
 
     /**
