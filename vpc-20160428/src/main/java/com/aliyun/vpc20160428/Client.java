@@ -34759,7 +34759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改增强型VPN实例属性</p>
+     * <p>Modifies the name, description, or route auto-propagation feature of an Enhanced VPN gateway.</p>
      * 
      * @param request UpdateEnhancedVpnGatewayRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -34827,7 +34827,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改增强型VPN实例属性</p>
+     * <p>Modifies the name, description, or route auto-propagation feature of an Enhanced VPN gateway.</p>
      * 
      * @param request UpdateEnhancedVpnGatewayRequest
      * @return UpdateEnhancedVpnGatewayResponse

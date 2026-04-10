@@ -88,6 +88,88 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeMacsecKeysMacsecKey extends TeaModel {
+        @NameInMap("Cak")
+        public String cak;
+
+        @NameInMap("CipherSuite")
+        public String cipherSuite;
+
+        @NameInMap("Ckn")
+        public String ckn;
+
+        @NameInMap("StartOn")
+        public String startOn;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeMacsecKeysMacsecKey build(java.util.Map<String, ?> map) throws Exception {
+            DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeMacsecKeysMacsecKey self = new DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeMacsecKeysMacsecKey();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeMacsecKeysMacsecKey setCak(String cak) {
+            this.cak = cak;
+            return this;
+        }
+        public String getCak() {
+            return this.cak;
+        }
+
+        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeMacsecKeysMacsecKey setCipherSuite(String cipherSuite) {
+            this.cipherSuite = cipherSuite;
+            return this;
+        }
+        public String getCipherSuite() {
+            return this.cipherSuite;
+        }
+
+        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeMacsecKeysMacsecKey setCkn(String ckn) {
+            this.ckn = ckn;
+            return this;
+        }
+        public String getCkn() {
+            return this.ckn;
+        }
+
+        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeMacsecKeysMacsecKey setStartOn(String startOn) {
+            this.startOn = startOn;
+            return this;
+        }
+        public String getStartOn() {
+            return this.startOn;
+        }
+
+        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeMacsecKeysMacsecKey setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
+    public static class DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeMacsecKeys extends TeaModel {
+        @NameInMap("MacsecKey")
+        public java.util.List<DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeMacsecKeysMacsecKey> macsecKey;
+
+        public static DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeMacsecKeys build(java.util.Map<String, ?> map) throws Exception {
+            DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeMacsecKeys self = new DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeMacsecKeys();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeMacsecKeys setMacsecKey(java.util.List<DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeMacsecKeysMacsecKey> macsecKey) {
+            this.macsecKey = macsecKey;
+            return this;
+        }
+        public java.util.List<DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeMacsecKeysMacsecKey> getMacsecKey() {
+            return this.macsecKey;
+        }
+
+    }
+
     public static class DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeTagsTags extends TeaModel {
         @NameInMap("Key")
         public String key;
@@ -185,6 +267,9 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
 
         @NameInMap("LoaStatus")
         public String loaStatus;
+
+        @NameInMap("MacsecKeys")
+        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeMacsecKeys macsecKeys;
 
         @NameInMap("Name")
         public String name;
@@ -386,6 +471,14 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         }
         public String getLoaStatus() {
             return this.loaStatus;
+        }
+
+        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setMacsecKeys(DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeMacsecKeys macsecKeys) {
+            this.macsecKeys = macsecKeys;
+            return this;
+        }
+        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeMacsecKeys getMacsecKeys() {
+            return this.macsecKeys;
         }
 
         public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setName(String name) {
