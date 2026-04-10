@@ -1,3 +1,7 @@
+2026-04-10 Version: 2.5.0
+- Support API DescribeSandboxTemplates.
+
+
 2026-03-26 Version: 2.4.2
 - Update API CreateAppInstance: add request parameters Components.
 - Update API CreateInspectionTask: add request parameters ReportRegionId.
