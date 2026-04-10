@@ -147,7 +147,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
          * <p>{&quot;sessionId&quot;:&quot;test_session_001&quot;}</p>
          */
         @NameInMap("metadata")
-        public String metadata;
+        public java.util.Map<String, ?> metadata;
 
         /**
          * <strong>example:</strong>
@@ -237,11 +237,11 @@ public class SearchMemoriesResponseBody extends TeaModel {
             return this.memory;
         }
 
-        public SearchMemoriesResponseBodyResults setMetadata(String metadata) {
+        public SearchMemoriesResponseBodyResults setMetadata(java.util.Map<String, ?> metadata) {
             this.metadata = metadata;
             return this;
         }
-        public String getMetadata() {
+        public java.util.Map<String, ?> getMetadata() {
             return this.metadata;
         }
 

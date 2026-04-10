@@ -18,12 +18,8 @@ public class SearchMemoriesRequest extends TeaModel {
     @NameInMap("appId")
     public String appId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>{&quot;sessionId&quot;:&quot;test_session_001&quot;}</p>
-     */
-    @NameInMap("metadata")
-    public java.util.Map<String, ?> metadata;
+    @NameInMap("filters")
+    public java.util.Map<String, ?> filters;
 
     /**
      * <strong>example:</strong>
@@ -41,10 +37,24 @@ public class SearchMemoriesRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>L1</p>
+     */
+    @NameInMap("retrieveLevel")
+    public String retrieveLevel;
+
+    /**
+     * <strong>example:</strong>
      * <p>test_session_001</p>
      */
     @NameInMap("runId")
     public String runId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>0.3</p>
+     */
+    @NameInMap("threshold")
+    public Double threshold;
 
     /**
      * <strong>example:</strong>
@@ -81,12 +91,12 @@ public class SearchMemoriesRequest extends TeaModel {
         return this.appId;
     }
 
-    public SearchMemoriesRequest setMetadata(java.util.Map<String, ?> metadata) {
-        this.metadata = metadata;
+    public SearchMemoriesRequest setFilters(java.util.Map<String, ?> filters) {
+        this.filters = filters;
         return this;
     }
-    public java.util.Map<String, ?> getMetadata() {
-        return this.metadata;
+    public java.util.Map<String, ?> getFilters() {
+        return this.filters;
     }
 
     public SearchMemoriesRequest setQuery(String query) {
@@ -105,12 +115,28 @@ public class SearchMemoriesRequest extends TeaModel {
         return this.rerank;
     }
 
+    public SearchMemoriesRequest setRetrieveLevel(String retrieveLevel) {
+        this.retrieveLevel = retrieveLevel;
+        return this;
+    }
+    public String getRetrieveLevel() {
+        return this.retrieveLevel;
+    }
+
     public SearchMemoriesRequest setRunId(String runId) {
         this.runId = runId;
         return this;
     }
     public String getRunId() {
         return this.runId;
+    }
+
+    public SearchMemoriesRequest setThreshold(Double threshold) {
+        this.threshold = threshold;
+        return this;
+    }
+    public Double getThreshold() {
+        return this.threshold;
     }
 
     public SearchMemoriesRequest setTopK(Integer topK) {

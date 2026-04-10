@@ -18,6 +18,9 @@ public class GetMemoriesRequest extends TeaModel {
     @NameInMap("appId")
     public String appId;
 
+    @NameInMap("filters")
+    public java.util.Map<String, ?> filters;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -65,6 +68,14 @@ public class GetMemoriesRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public GetMemoriesRequest setFilters(java.util.Map<String, ?> filters) {
+        this.filters = filters;
+        return this;
+    }
+    public java.util.Map<String, ?> getFilters() {
+        return this.filters;
     }
 
     public GetMemoriesRequest setPage(Integer page) {
