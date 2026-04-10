@@ -40,6 +40,9 @@ public class FaceGuardRiskRequest extends TeaModel {
     @NameInMap("ProductCode")
     public String productCode;
 
+    @NameInMap("Type")
+    public String type;
+
     public static FaceGuardRiskRequest build(java.util.Map<String, ?> map) throws Exception {
         FaceGuardRiskRequest self = new FaceGuardRiskRequest();
         return TeaModel.build(map, self);
@@ -75,6 +78,14 @@ public class FaceGuardRiskRequest extends TeaModel {
     }
     public String getProductCode() {
         return this.productCode;
+    }
+
+    public FaceGuardRiskRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }
