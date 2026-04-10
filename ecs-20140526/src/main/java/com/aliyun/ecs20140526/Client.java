@@ -6749,7 +6749,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建运维窗口</p>
+     * <p>Create an O\\\&amp;M window. If you set the TargetResource parameter in the O\\\&amp;M window to the associated ECS instance and need to schedule O\\\&amp;M to avoid potential hardware problems, the execution time is set based on the interval set by the TimePeriod parameter in the O\\\&amp;M window. When the execution time of an O\\\&amp;M event is reached, the platform automatically executes the response O\\\&amp;M operation based on the type of the O\\\&amp;M event.</p>
      * 
      * @param tmpReq CreatePlanMaintenanceWindowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6811,7 +6811,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建运维窗口</p>
+     * <p>Create an O\\\&amp;M window. If you set the TargetResource parameter in the O\\\&amp;M window to the associated ECS instance and need to schedule O\\\&amp;M to avoid potential hardware problems, the execution time is set based on the interval set by the TimePeriod parameter in the O\\\&amp;M window. When the execution time of an O\\\&amp;M event is reached, the platform automatically executes the response O\\\&amp;M operation based on the type of the O\\\&amp;M event.</p>
      * 
      * @param request CreatePlanMaintenanceWindowRequest
      * @return CreatePlanMaintenanceWindowResponse
@@ -17354,7 +17354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>DescribeInvocations</p>
      * 
      * <b>summary</b> : 
-     * <p>Invoke the DescribeInvocations API to query the execution list and status of Cloud Assistant commands.</p>
+     * <p>The command type.</p>
      * 
      * @param request DescribeInvocationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17473,7 +17473,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>DescribeInvocations</p>
      * 
      * <b>summary</b> : 
-     * <p>Invoke the DescribeInvocations API to query the execution list and status of Cloud Assistant commands.</p>
+     * <p>The command type.</p>
      * 
      * @param request DescribeInvocationsRequest
      * @return DescribeInvocationsResponse
@@ -25859,7 +25859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the information of a capacity reservation, including the name, description, release mode, and the total number of Elastic Compute Service (ECS) instances for which capacity is reserved.</p>
+     * <p>Modifies the information about a capacity reservation, including the name, description, expiration method, and the total number of ECS instances that can be reserved.</p>
      * 
      * @param request ModifyCapacityReservationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -25935,7 +25935,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the information of a capacity reservation, including the name, description, release mode, and the total number of Elastic Compute Service (ECS) instances for which capacity is reserved.</p>
+     * <p>Modifies the information about a capacity reservation, including the name, description, expiration method, and the total number of ECS instances that can be reserved.</p>
      * 
      * @param request ModifyCapacityReservationRequest
      * @return ModifyCapacityReservationResponse

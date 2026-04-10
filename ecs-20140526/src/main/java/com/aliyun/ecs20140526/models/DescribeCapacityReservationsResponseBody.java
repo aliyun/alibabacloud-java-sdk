@@ -155,8 +155,22 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         @NameInMap("CapacityReservationUsages")
         public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResourceCapacityReservationUsages capacityReservationUsages;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("FailedAmount")
+        public Integer failedAmount;
+
         @NameInMap("InstanceType")
         public String instanceType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("LockedAmount")
+        public Integer lockedAmount;
 
         @NameInMap("TotalAmount")
         public Integer totalAmount;
@@ -188,12 +202,28 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             return this.capacityReservationUsages;
         }
 
+        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResource setFailedAmount(Integer failedAmount) {
+            this.failedAmount = failedAmount;
+            return this;
+        }
+        public Integer getFailedAmount() {
+            return this.failedAmount;
+        }
+
         public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResource setInstanceType(String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
         public String getInstanceType() {
             return this.instanceType;
+        }
+
+        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResource setLockedAmount(Integer lockedAmount) {
+            this.lockedAmount = lockedAmount;
+            return this;
+        }
+        public Integer getLockedAmount() {
+            return this.lockedAmount;
         }
 
         public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResource setTotalAmount(Integer totalAmount) {

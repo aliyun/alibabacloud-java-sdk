@@ -155,8 +155,22 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         @NameInMap("ElasticityAssuranceUsages")
         public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsages elasticityAssuranceUsages;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("FailedAmount")
+        public Integer failedAmount;
+
         @NameInMap("InstanceType")
         public String instanceType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("LockedAmount")
+        public Integer lockedAmount;
 
         @NameInMap("TotalAmount")
         public Integer totalAmount;
@@ -188,12 +202,28 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             return this.elasticityAssuranceUsages;
         }
 
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource setFailedAmount(Integer failedAmount) {
+            this.failedAmount = failedAmount;
+            return this;
+        }
+        public Integer getFailedAmount() {
+            return this.failedAmount;
+        }
+
         public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource setInstanceType(String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
         public String getInstanceType() {
             return this.instanceType;
+        }
+
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource setLockedAmount(Integer lockedAmount) {
+            this.lockedAmount = lockedAmount;
+            return this;
+        }
+        public Integer getLockedAmount() {
+            return this.lockedAmount;
         }
 
         public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource setTotalAmount(Integer totalAmount) {
