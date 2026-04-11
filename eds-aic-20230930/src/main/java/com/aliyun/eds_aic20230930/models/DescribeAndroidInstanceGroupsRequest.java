@@ -42,6 +42,9 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     @NameInMap("InstanceGroupName")
     public String instanceGroupName;
 
+    @NameInMap("InstanceVersion")
+    public String instanceVersion;
+
     /**
      * <p>The ID of the key pair.</p>
      * 
@@ -150,6 +153,14 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     }
     public String getInstanceGroupName() {
         return this.instanceGroupName;
+    }
+
+    public DescribeAndroidInstanceGroupsRequest setInstanceVersion(String instanceVersion) {
+        this.instanceVersion = instanceVersion;
+        return this;
+    }
+    public String getInstanceVersion() {
+        return this.instanceVersion;
     }
 
     public DescribeAndroidInstanceGroupsRequest setKeyPairId(String keyPairId) {

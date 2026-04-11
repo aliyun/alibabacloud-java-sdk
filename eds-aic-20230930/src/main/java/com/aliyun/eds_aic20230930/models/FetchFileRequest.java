@@ -11,6 +11,9 @@ public class FetchFileRequest extends TeaModel {
     @NameInMap("AndroidInstanceIdList")
     public java.util.List<String> androidInstanceIdList;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
      * <p>The path to the file that you want to pull from the cloud phone instance.</p>
      * <p>This parameter is required.</p>
@@ -68,6 +71,14 @@ public class FetchFileRequest extends TeaModel {
     }
     public java.util.List<String> getAndroidInstanceIdList() {
         return this.androidInstanceIdList;
+    }
+
+    public FetchFileRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public FetchFileRequest setSourceFilePath(String sourceFilePath) {

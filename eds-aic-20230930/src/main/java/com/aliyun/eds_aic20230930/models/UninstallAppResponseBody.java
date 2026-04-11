@@ -4,6 +4,9 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class UninstallAppResponseBody extends TeaModel {
+    @NameInMap("ChildTaskInfo")
+    public java.util.List<UninstallAppResponseBodyChildTaskInfo> childTaskInfo;
+
     /**
      * <p>The ID of the request.</p>
      * 
@@ -27,6 +30,14 @@ public class UninstallAppResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UninstallAppResponseBody setChildTaskInfo(java.util.List<UninstallAppResponseBodyChildTaskInfo> childTaskInfo) {
+        this.childTaskInfo = childTaskInfo;
+        return this;
+    }
+    public java.util.List<UninstallAppResponseBodyChildTaskInfo> getChildTaskInfo() {
+        return this.childTaskInfo;
+    }
+
     public UninstallAppResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -41,6 +52,44 @@ public class UninstallAppResponseBody extends TeaModel {
     }
     public String getTaskId() {
         return this.taskId;
+    }
+
+    public static class UninstallAppResponseBodyChildTaskInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>t-ybde48cevxxxx</p>
+         */
+        @NameInMap("ChildTaskId")
+        public String childTaskId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>acp-ty3bnd7b9xxxx</p>
+         */
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        public static UninstallAppResponseBodyChildTaskInfo build(java.util.Map<String, ?> map) throws Exception {
+            UninstallAppResponseBodyChildTaskInfo self = new UninstallAppResponseBodyChildTaskInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public UninstallAppResponseBodyChildTaskInfo setChildTaskId(String childTaskId) {
+            this.childTaskId = childTaskId;
+            return this;
+        }
+        public String getChildTaskId() {
+            return this.childTaskId;
+        }
+
+        public UninstallAppResponseBodyChildTaskInfo setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
     }
 
 }

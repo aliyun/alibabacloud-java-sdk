@@ -640,6 +640,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceGroupSpec", request.instanceGroupSpec);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceVersion)) {
+            query.put("InstanceVersion", request.instanceVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ipv6Bandwidth)) {
             query.put("Ipv6Bandwidth", request.ipv6Bandwidth);
         }
@@ -1787,6 +1791,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceGroupName", request.instanceGroupName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceVersion)) {
+            query.put("InstanceVersion", request.instanceVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.keyPairId)) {
             query.put("KeyPairId", request.keyPairId);
         }
@@ -1891,6 +1899,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceGroupName", request.instanceGroupName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceVersion)) {
+            query.put("InstanceVersion", request.instanceVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.keyPairId)) {
             query.put("KeyPairId", request.keyPairId);
         }
@@ -1925,6 +1937,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.saleMode)) {
             query.put("SaleMode", request.saleMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortKey)) {
+            query.put("SortKey", request.sortKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortType)) {
+            query.put("SortType", request.sortType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
@@ -3418,6 +3438,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.androidInstanceIdList)) {
             query.put("AndroidInstanceIdList", request.androidInstanceIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceFilePath)) {
@@ -5254,6 +5278,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.autoInstall)) {
             query.put("AutoInstall", request.autoInstall);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceFilePath)) {

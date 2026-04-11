@@ -152,6 +152,9 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
     @NameInMap("InstanceGroupSpec")
     public String instanceGroupSpec;
 
+    @NameInMap("InstanceVersion")
+    public String instanceVersion;
+
     /**
      * <blockquote>
      * <p> This parameter is not publicly available.</p>
@@ -378,6 +381,14 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
     }
     public String getInstanceGroupSpec() {
         return this.instanceGroupSpec;
+    }
+
+    public CreateAndroidInstanceGroupRequest setInstanceVersion(String instanceVersion) {
+        this.instanceVersion = instanceVersion;
+        return this;
+    }
+    public String getInstanceVersion() {
+        return this.instanceVersion;
     }
 
     public CreateAndroidInstanceGroupRequest setIpv6Bandwidth(Integer ipv6Bandwidth) {

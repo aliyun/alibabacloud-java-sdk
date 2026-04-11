@@ -4,6 +4,9 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class InstallAppResponseBody extends TeaModel {
+    @NameInMap("ChildTaskInfo")
+    public java.util.List<InstallAppResponseBodyChildTaskInfo> childTaskInfo;
+
     /**
      * <p>The ID of the request.</p>
      * 
@@ -27,6 +30,14 @@ public class InstallAppResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public InstallAppResponseBody setChildTaskInfo(java.util.List<InstallAppResponseBodyChildTaskInfo> childTaskInfo) {
+        this.childTaskInfo = childTaskInfo;
+        return this;
+    }
+    public java.util.List<InstallAppResponseBodyChildTaskInfo> getChildTaskInfo() {
+        return this.childTaskInfo;
+    }
+
     public InstallAppResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -41,6 +52,44 @@ public class InstallAppResponseBody extends TeaModel {
     }
     public String getTaskId() {
         return this.taskId;
+    }
+
+    public static class InstallAppResponseBodyChildTaskInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>t-ybde48cevxxxx</p>
+         */
+        @NameInMap("ChildTaskId")
+        public String childTaskId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>acp-ty3bnd7b9xxxx</p>
+         */
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        public static InstallAppResponseBodyChildTaskInfo build(java.util.Map<String, ?> map) throws Exception {
+            InstallAppResponseBodyChildTaskInfo self = new InstallAppResponseBodyChildTaskInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public InstallAppResponseBodyChildTaskInfo setChildTaskId(String childTaskId) {
+            this.childTaskId = childTaskId;
+            return this;
+        }
+        public String getChildTaskId() {
+            return this.childTaskId;
+        }
+
+        public InstallAppResponseBodyChildTaskInfo setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
     }
 
 }

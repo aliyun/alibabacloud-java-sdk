@@ -72,6 +72,9 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     @NameInMap("InstanceGroupName")
     public String instanceGroupName;
 
+    @NameInMap("InstanceVersion")
+    public String instanceVersion;
+
     /**
      * <p>The ID of the bound key pair.</p>
      * 
@@ -139,6 +142,12 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
      */
     @NameInMap("SaleMode")
     public String saleMode;
+
+    @NameInMap("SortKey")
+    public String sortKey;
+
+    @NameInMap("SortType")
+    public String sortType;
 
     /**
      * <p>The state of the instance.</p>
@@ -250,6 +259,14 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
         return this.instanceGroupName;
     }
 
+    public DescribeAndroidInstancesRequest setInstanceVersion(String instanceVersion) {
+        this.instanceVersion = instanceVersion;
+        return this;
+    }
+    public String getInstanceVersion() {
+        return this.instanceVersion;
+    }
+
     public DescribeAndroidInstancesRequest setKeyPairId(String keyPairId) {
         this.keyPairId = keyPairId;
         return this;
@@ -320,6 +337,22 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     }
     public String getSaleMode() {
         return this.saleMode;
+    }
+
+    public DescribeAndroidInstancesRequest setSortKey(String sortKey) {
+        this.sortKey = sortKey;
+        return this;
+    }
+    public String getSortKey() {
+        return this.sortKey;
+    }
+
+    public DescribeAndroidInstancesRequest setSortType(String sortType) {
+        this.sortType = sortType;
+        return this;
+    }
+    public String getSortType() {
+        return this.sortType;
     }
 
     public DescribeAndroidInstancesRequest setStatus(String status) {

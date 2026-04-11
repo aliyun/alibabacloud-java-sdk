@@ -14,6 +14,9 @@ public class SendFileRequest extends TeaModel {
     @NameInMap("AutoInstall")
     public Boolean autoInstall;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
      * <p>The path to which you want to upload the pushed file in the cloud phone instance.</p>
      * <p>This parameter is required.</p>
@@ -90,6 +93,14 @@ public class SendFileRequest extends TeaModel {
     }
     public Boolean getAutoInstall() {
         return this.autoInstall;
+    }
+
+    public SendFileRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public SendFileRequest setSourceFilePath(String sourceFilePath) {
