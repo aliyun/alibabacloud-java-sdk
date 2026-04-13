@@ -1766,6 +1766,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询具体Task的相关信息</p>
+     * 
+     * @param request DescribeAgentTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAgentTaskResponse
+     */
+    public DescribeAgentTaskResponse describeAgentTaskWithOptions(DescribeAgentTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskIds)) {
+            query.put("TaskIds", request.taskIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAgentTask"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAgentTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询具体Task的相关信息</p>
+     * 
+     * @param request DescribeAgentTaskRequest
+     * @return DescribeAgentTaskResponse
+     */
+    public DescribeAgentTaskResponse describeAgentTask(DescribeAgentTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAgentTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the details of an instance group.</p>
      * 
      * @param request DescribeAndroidInstanceGroupsRequest
@@ -5140,6 +5184,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ResetAndroidInstancesInGroupResponse resetAndroidInstancesInGroup(ResetAndroidInstancesInGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.resetAndroidInstancesInGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>触发云手机内的 Agent 执行 AI 自动化任务。</p>
+     * 
+     * @param request RunAgentTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RunAgentTaskResponse
+     */
+    public RunAgentTaskResponse runAgentTaskWithOptions(RunAgentTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            query.put("BizRegionId", request.bizRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxSteps)) {
+            query.put("MaxSteps", request.maxSteps);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeoutSeconds)) {
+            query.put("TimeoutSeconds", request.timeoutSeconds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userPrompt)) {
+            query.put("UserPrompt", request.userPrompt);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RunAgentTask"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RunAgentTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>触发云手机内的 Agent 执行 AI 自动化任务。</p>
+     * 
+     * @param request RunAgentTaskRequest
+     * @return RunAgentTaskResponse
+     */
+    public RunAgentTaskResponse runAgentTask(RunAgentTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.runAgentTaskWithOptions(request, runtime);
     }
 
     /**
