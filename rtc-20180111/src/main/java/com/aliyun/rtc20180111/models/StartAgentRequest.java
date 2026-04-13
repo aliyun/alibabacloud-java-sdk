@@ -363,6 +363,9 @@ public class StartAgentRequest extends TeaModel {
         @NameInMap("UserTurnEnd")
         public Boolean userTurnEnd;
 
+        @NameInMap("Version")
+        public Integer version;
+
         public static StartAgentRequestVoiceChatConfigBackChannelConfig build(java.util.Map<String, ?> map) throws Exception {
             StartAgentRequestVoiceChatConfigBackChannelConfig self = new StartAgentRequestVoiceChatConfigBackChannelConfig();
             return TeaModel.build(map, self);
@@ -374,6 +377,14 @@ public class StartAgentRequest extends TeaModel {
         }
         public Boolean getUserTurnEnd() {
             return this.userTurnEnd;
+        }
+
+        public StartAgentRequestVoiceChatConfigBackChannelConfig setVersion(Integer version) {
+            this.version = version;
+            return this;
+        }
+        public Integer getVersion() {
+            return this.version;
         }
 
     }

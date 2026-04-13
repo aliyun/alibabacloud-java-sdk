@@ -1294,7 +1294,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>列出系统支持的事件回调</p>
      * 
-     * @param request DescribeAllCallbackRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAllCallbackResponse
      */
