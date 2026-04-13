@@ -128,6 +128,13 @@ public class ListProtectedResourcesResponseBody extends TeaModel {
     public static class ListProtectedResourcesResponseBodyProtectedResources extends TeaModel {
         /**
          * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("BackupPlanCount")
+        public Long backupPlanCount;
+
+        /**
+         * <strong>example:</strong>
          * <p>BASIC</p>
          */
         @NameInMap("CreatedByProduct")
@@ -163,6 +170,13 @@ public class ListProtectedResourcesResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
+        @NameInMap("ResourceRegionId")
+        public String resourceRegionId;
+
+        /**
+         * <strong>example:</strong>
          * <p>30</p>
          */
         @NameInMap("SnapshotCount")
@@ -178,6 +192,14 @@ public class ListProtectedResourcesResponseBody extends TeaModel {
         public static ListProtectedResourcesResponseBodyProtectedResources build(java.util.Map<String, ?> map) throws Exception {
             ListProtectedResourcesResponseBodyProtectedResources self = new ListProtectedResourcesResponseBodyProtectedResources();
             return TeaModel.build(map, self);
+        }
+
+        public ListProtectedResourcesResponseBodyProtectedResources setBackupPlanCount(Long backupPlanCount) {
+            this.backupPlanCount = backupPlanCount;
+            return this;
+        }
+        public Long getBackupPlanCount() {
+            return this.backupPlanCount;
         }
 
         public ListProtectedResourcesResponseBodyProtectedResources setCreatedByProduct(String createdByProduct) {
@@ -218,6 +240,14 @@ public class ListProtectedResourcesResponseBody extends TeaModel {
         }
         public Long getResourceOwnerId() {
             return this.resourceOwnerId;
+        }
+
+        public ListProtectedResourcesResponseBodyProtectedResources setResourceRegionId(String resourceRegionId) {
+            this.resourceRegionId = resourceRegionId;
+            return this;
+        }
+        public String getResourceRegionId() {
+            return this.resourceRegionId;
         }
 
         public ListProtectedResourcesResponseBodyProtectedResources setSnapshotCount(Long snapshotCount) {

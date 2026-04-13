@@ -11,6 +11,9 @@ public class ListProtectedResourcesRequest extends TeaModel {
     @NameInMap("CreatedByProduct")
     public String createdByProduct;
 
+    @NameInMap("HasSnapshot")
+    public Boolean hasSnapshot;
+
     /**
      * <strong>example:</strong>
      * <p>10</p>
@@ -57,6 +60,14 @@ public class ListProtectedResourcesRequest extends TeaModel {
     }
     public String getCreatedByProduct() {
         return this.createdByProduct;
+    }
+
+    public ListProtectedResourcesRequest setHasSnapshot(Boolean hasSnapshot) {
+        this.hasSnapshot = hasSnapshot;
+        return this;
+    }
+    public Boolean getHasSnapshot() {
+        return this.hasSnapshot;
     }
 
     public ListProtectedResourcesRequest setMaxResults(Integer maxResults) {

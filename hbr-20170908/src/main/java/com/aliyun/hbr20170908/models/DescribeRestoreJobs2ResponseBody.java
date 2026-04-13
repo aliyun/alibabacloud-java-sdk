@@ -327,6 +327,13 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
         @NameInMap("SourceInstanceId")
         public String sourceInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>i-123***7890</p>
+         */
+        @NameInMap("SourceResourceId")
+        public String sourceResourceId;
+
         @NameInMap("SourceType")
         public String sourceType;
 
@@ -627,6 +634,14 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
         }
         public String getSourceInstanceId() {
             return this.sourceInstanceId;
+        }
+
+        public DescribeRestoreJobs2ResponseBodyRestoreJobsRestoreJob setSourceResourceId(String sourceResourceId) {
+            this.sourceResourceId = sourceResourceId;
+            return this;
+        }
+        public String getSourceResourceId() {
+            return this.sourceResourceId;
         }
 
         public DescribeRestoreJobs2ResponseBodyRestoreJobsRestoreJob setSourceType(String sourceType) {

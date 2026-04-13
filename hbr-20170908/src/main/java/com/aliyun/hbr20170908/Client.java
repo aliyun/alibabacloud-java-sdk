@@ -4082,7 +4082,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries available regions.</p>
      * 
-     * @param request DescribeRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRegionsResponse
      */
@@ -5111,6 +5110,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CreatedByProduct", request.createdByProduct);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.hasSnapshot)) {
+            query.put("HasSnapshot", request.hasSnapshot);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("MaxResults", request.maxResults);
         }
@@ -5164,7 +5167,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Activates Cloud Backup.</p>
      * 
-     * @param request OpenHbrServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return OpenHbrServiceResponse
      */
