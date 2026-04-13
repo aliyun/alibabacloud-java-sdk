@@ -3,7 +3,7 @@ package com.aliyun.paicopilot20250731.models;
 
 import com.aliyun.tea.*;
 
-public class Chat extends TeaModel {
+public class GetChatResponseBody extends TeaModel {
     @NameInMap("Answer")
     public ChatDetail answer;
 
@@ -34,7 +34,7 @@ public class Chat extends TeaModel {
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
      * 
      * <strong>example:</strong>
-     * <p>2026-01-20T09:41:23Z</p>
+     * <p>2025-12-01T17:52:05+08:00</p>
      */
     @NameInMap("GmtModified")
     public String gmtModified;
@@ -55,6 +55,13 @@ public class Chat extends TeaModel {
 
     @NameInMap("Question")
     public ChatDetail question;
+
+    /**
+     * <strong>example:</strong>
+     * <p>44553E9A-******-37ADC33FE2</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
 
     /**
      * <strong>example:</strong>
@@ -84,12 +91,12 @@ public class Chat extends TeaModel {
     @NameInMap("UserId")
     public String userId;
 
-    public static Chat build(java.util.Map<String, ?> map) throws Exception {
-        Chat self = new Chat();
+    public static GetChatResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetChatResponseBody self = new GetChatResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public Chat setAnswer(ChatDetail answer) {
+    public GetChatResponseBody setAnswer(ChatDetail answer) {
         this.answer = answer;
         return this;
     }
@@ -97,7 +104,7 @@ public class Chat extends TeaModel {
         return this.answer;
     }
 
-    public Chat setChatId(String chatId) {
+    public GetChatResponseBody setChatId(String chatId) {
         this.chatId = chatId;
         return this;
     }
@@ -105,7 +112,7 @@ public class Chat extends TeaModel {
         return this.chatId;
     }
 
-    public Chat setExtraData(String extraData) {
+    public GetChatResponseBody setExtraData(String extraData) {
         this.extraData = extraData;
         return this;
     }
@@ -113,7 +120,7 @@ public class Chat extends TeaModel {
         return this.extraData;
     }
 
-    public Chat setGmtCreateTime(String gmtCreateTime) {
+    public GetChatResponseBody setGmtCreateTime(String gmtCreateTime) {
         this.gmtCreateTime = gmtCreateTime;
         return this;
     }
@@ -121,7 +128,7 @@ public class Chat extends TeaModel {
         return this.gmtCreateTime;
     }
 
-    public Chat setGmtModified(String gmtModified) {
+    public GetChatResponseBody setGmtModified(String gmtModified) {
         this.gmtModified = gmtModified;
         return this;
     }
@@ -129,7 +136,7 @@ public class Chat extends TeaModel {
         return this.gmtModified;
     }
 
-    public Chat setMessage(String message) {
+    public GetChatResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -137,7 +144,7 @@ public class Chat extends TeaModel {
         return this.message;
     }
 
-    public Chat setOwnerId(String ownerId) {
+    public GetChatResponseBody setOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -145,7 +152,7 @@ public class Chat extends TeaModel {
         return this.ownerId;
     }
 
-    public Chat setQuestion(ChatDetail question) {
+    public GetChatResponseBody setQuestion(ChatDetail question) {
         this.question = question;
         return this;
     }
@@ -153,7 +160,15 @@ public class Chat extends TeaModel {
         return this.question;
     }
 
-    public Chat setSessionId(String sessionId) {
+    public GetChatResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetChatResponseBody setSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
@@ -161,7 +176,7 @@ public class Chat extends TeaModel {
         return this.sessionId;
     }
 
-    public Chat setStatus(String status) {
+    public GetChatResponseBody setStatus(String status) {
         this.status = status;
         return this;
     }
@@ -169,7 +184,7 @@ public class Chat extends TeaModel {
         return this.status;
     }
 
-    public Chat setTitle(String title) {
+    public GetChatResponseBody setTitle(String title) {
         this.title = title;
         return this;
     }
@@ -177,7 +192,7 @@ public class Chat extends TeaModel {
         return this.title;
     }
 
-    public Chat setUserId(String userId) {
+    public GetChatResponseBody setUserId(String userId) {
         this.userId = userId;
         return this;
     }

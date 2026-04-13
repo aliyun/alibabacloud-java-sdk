@@ -9,6 +9,9 @@ public class ChatDetail extends TeaModel {
 
     /**
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-01-21T17:12:35Z</p>
      */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
@@ -46,9 +49,17 @@ public class ChatDetail extends TeaModel {
     }
 
     public static class ChatDetailUserInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>to******</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>assistant</p>
+         */
         @NameInMap("Role")
         public String role;
 
