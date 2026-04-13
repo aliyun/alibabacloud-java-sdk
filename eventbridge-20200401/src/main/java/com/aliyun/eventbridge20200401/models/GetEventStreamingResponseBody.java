@@ -8340,6 +8340,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("NetworkType")
+        public String networkType;
+
         /**
          * <p>The region ID of the Message Queue for MQTT instance.</p>
          * 
@@ -8349,6 +8352,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
         /**
          * <p>The name of the topic in the Message Queue for MQTT instance.</p>
          * 
@@ -8357,6 +8363,12 @@ public class GetEventStreamingResponseBody extends TeaModel {
          */
         @NameInMap("Topic")
         public String topic;
+
+        @NameInMap("VSwitchIds")
+        public String vSwitchIds;
+
+        @NameInMap("VpcId")
+        public String vpcId;
 
         public static GetEventStreamingResponseBodyDataSourceSourceMQTTParameters build(java.util.Map<String, ?> map) throws Exception {
             GetEventStreamingResponseBodyDataSourceSourceMQTTParameters self = new GetEventStreamingResponseBodyDataSourceSourceMQTTParameters();
@@ -8379,6 +8391,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
             return this.instanceId;
         }
 
+        public GetEventStreamingResponseBodyDataSourceSourceMQTTParameters setNetworkType(String networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
         public GetEventStreamingResponseBodyDataSourceSourceMQTTParameters setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
@@ -8387,12 +8407,36 @@ public class GetEventStreamingResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public GetEventStreamingResponseBodyDataSourceSourceMQTTParameters setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
         public GetEventStreamingResponseBodyDataSourceSourceMQTTParameters setTopic(String topic) {
             this.topic = topic;
             return this;
         }
         public String getTopic() {
             return this.topic;
+        }
+
+        public GetEventStreamingResponseBodyDataSourceSourceMQTTParameters setVSwitchIds(String vSwitchIds) {
+            this.vSwitchIds = vSwitchIds;
+            return this;
+        }
+        public String getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        public GetEventStreamingResponseBodyDataSourceSourceMQTTParameters setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }

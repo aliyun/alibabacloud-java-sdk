@@ -1481,7 +1481,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries all Alibaba Cloud service event sources.</p>
      * 
-     * @param request ListAliyunOfficialEventSourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAliyunOfficialEventSourcesResponse
      */

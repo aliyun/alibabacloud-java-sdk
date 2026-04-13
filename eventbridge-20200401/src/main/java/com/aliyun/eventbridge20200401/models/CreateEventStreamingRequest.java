@@ -9092,6 +9092,9 @@ public class CreateEventStreamingRequest extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("NetworkType")
+        public String networkType;
+
         /**
          * <p>The ID of the region where the ApsaraMQ for MQTT instance resides.</p>
          * 
@@ -9101,6 +9104,9 @@ public class CreateEventStreamingRequest extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
         /**
          * <p>The topic from which messages are sent.</p>
          * 
@@ -9109,6 +9115,12 @@ public class CreateEventStreamingRequest extends TeaModel {
          */
         @NameInMap("Topic")
         public String topic;
+
+        @NameInMap("VSwitchIds")
+        public String vSwitchIds;
+
+        @NameInMap("VpcId")
+        public String vpcId;
 
         public static CreateEventStreamingRequestSourceSourceMQTTParameters build(java.util.Map<String, ?> map) throws Exception {
             CreateEventStreamingRequestSourceSourceMQTTParameters self = new CreateEventStreamingRequestSourceSourceMQTTParameters();
@@ -9131,6 +9143,14 @@ public class CreateEventStreamingRequest extends TeaModel {
             return this.instanceId;
         }
 
+        public CreateEventStreamingRequestSourceSourceMQTTParameters setNetworkType(String networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
         public CreateEventStreamingRequestSourceSourceMQTTParameters setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
@@ -9139,12 +9159,36 @@ public class CreateEventStreamingRequest extends TeaModel {
             return this.regionId;
         }
 
+        public CreateEventStreamingRequestSourceSourceMQTTParameters setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
         public CreateEventStreamingRequestSourceSourceMQTTParameters setTopic(String topic) {
             this.topic = topic;
             return this;
         }
         public String getTopic() {
             return this.topic;
+        }
+
+        public CreateEventStreamingRequestSourceSourceMQTTParameters setVSwitchIds(String vSwitchIds) {
+            this.vSwitchIds = vSwitchIds;
+            return this;
+        }
+        public String getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        public CreateEventStreamingRequestSourceSourceMQTTParameters setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }
