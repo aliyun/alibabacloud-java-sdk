@@ -1929,6 +1929,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>关联MACSec配置到物理专线</p>
+     * 
+     * @param request AssociateMacSecKeyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AssociateMacSecKeyResponse
+     */
+    public AssociateMacSecKeyResponse associateMacSecKeyWithOptions(AssociateMacSecKeyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cak)) {
+            query.put("Cak", request.cak);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cipherSuite)) {
+            query.put("CipherSuite", request.cipherSuite);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ckn)) {
+            query.put("Ckn", request.ckn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.physicalConnectionId)) {
+            query.put("PhysicalConnectionId", request.physicalConnectionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AssociateMacSecKey"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AssociateMacSecKeyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>关联MACSec配置到物理专线</p>
+     * 
+     * @param request AssociateMacSecKeyRequest
+     * @return AssociateMacSecKeyResponse
+     */
+    public AssociateMacSecKeyResponse associateMacSecKey(AssociateMacSecKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.associateMacSecKeyWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h2><a href="#"></a>Description</h2>
      * <ul>
@@ -22074,6 +22134,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DisableVpcClassicLinkResponse disableVpcClassicLink(DisableVpcClassicLinkRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.disableVpcClassicLinkWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>取消关联MACSec配置到物理专线</p>
+     * 
+     * @param request DisassociateMacSecKeyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisassociateMacSecKeyResponse
+     */
+    public DisassociateMacSecKeyResponse disassociateMacSecKeyWithOptions(DisassociateMacSecKeyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ckn)) {
+            query.put("Ckn", request.ckn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.physicalConnectionId)) {
+            query.put("PhysicalConnectionId", request.physicalConnectionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisassociateMacSecKey"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisassociateMacSecKeyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>取消关联MACSec配置到物理专线</p>
+     * 
+     * @param request DisassociateMacSecKeyRequest
+     * @return DisassociateMacSecKeyResponse
+     */
+    public DisassociateMacSecKeyResponse disassociateMacSecKey(DisassociateMacSecKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.disassociateMacSecKeyWithOptions(request, runtime);
     }
 
     /**

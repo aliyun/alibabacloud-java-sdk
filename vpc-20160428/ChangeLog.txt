@@ -1,3 +1,8 @@
+2026-04-13 Version: 8.2.0
+- Support API AssociateMacSecKey.
+- Support API DisassociateMacSecKey.
+
+
 2026-04-10 Version: 8.1.2
 - Update API DescribePhysicalConnections: add response parameters Body.PhysicalConnectionSet.$.MacsecKeys.
 
