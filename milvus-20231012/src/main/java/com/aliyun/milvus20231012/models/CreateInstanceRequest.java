@@ -11,11 +11,20 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("aiFunction")
+    public Boolean aiFunction;
+
     @NameInMap("autoBackup")
     public Boolean autoBackup;
 
+    @NameInMap("autoPay")
+    public Boolean autoPay;
+
     @NameInMap("autoRenew")
     public Boolean autoRenew;
+
+    @NameInMap("backupRestoreInfo")
+    public CreateInstanceRequestBackupRestoreInfo backupRestoreInfo;
 
     @NameInMap("components")
     public java.util.List<CreateInstanceRequestComponents> components;
@@ -145,6 +154,14 @@ public class CreateInstanceRequest extends TeaModel {
         return this.regionId;
     }
 
+    public CreateInstanceRequest setAiFunction(Boolean aiFunction) {
+        this.aiFunction = aiFunction;
+        return this;
+    }
+    public Boolean getAiFunction() {
+        return this.aiFunction;
+    }
+
     public CreateInstanceRequest setAutoBackup(Boolean autoBackup) {
         this.autoBackup = autoBackup;
         return this;
@@ -153,12 +170,28 @@ public class CreateInstanceRequest extends TeaModel {
         return this.autoBackup;
     }
 
+    public CreateInstanceRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
+    }
+
     public CreateInstanceRequest setAutoRenew(Boolean autoRenew) {
         this.autoRenew = autoRenew;
         return this;
     }
     public Boolean getAutoRenew() {
         return this.autoRenew;
+    }
+
+    public CreateInstanceRequest setBackupRestoreInfo(CreateInstanceRequestBackupRestoreInfo backupRestoreInfo) {
+        this.backupRestoreInfo = backupRestoreInfo;
+        return this;
+    }
+    public CreateInstanceRequestBackupRestoreInfo getBackupRestoreInfo() {
+        return this.backupRestoreInfo;
     }
 
     public CreateInstanceRequest setComponents(java.util.List<CreateInstanceRequestComponents> components) {
@@ -327,6 +360,47 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public static class CreateInstanceRequestBackupRestoreInfo extends TeaModel {
+        @NameInMap("backupId")
+        public String backupId;
+
+        @NameInMap("backupName")
+        public String backupName;
+
+        @NameInMap("sourceClusterId")
+        public String sourceClusterId;
+
+        public static CreateInstanceRequestBackupRestoreInfo build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceRequestBackupRestoreInfo self = new CreateInstanceRequestBackupRestoreInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestBackupRestoreInfo setBackupId(String backupId) {
+            this.backupId = backupId;
+            return this;
+        }
+        public String getBackupId() {
+            return this.backupId;
+        }
+
+        public CreateInstanceRequestBackupRestoreInfo setBackupName(String backupName) {
+            this.backupName = backupName;
+            return this;
+        }
+        public String getBackupName() {
+            return this.backupName;
+        }
+
+        public CreateInstanceRequestBackupRestoreInfo setSourceClusterId(String sourceClusterId) {
+            this.sourceClusterId = sourceClusterId;
+            return this;
+        }
+        public String getSourceClusterId() {
+            return this.sourceClusterId;
+        }
+
     }
 
     public static class CreateInstanceRequestComponents extends TeaModel {

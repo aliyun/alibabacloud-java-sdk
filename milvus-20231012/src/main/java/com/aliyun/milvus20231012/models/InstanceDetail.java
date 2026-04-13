@@ -4,36 +4,68 @@ package com.aliyun.milvus20231012.models;
 import com.aliyun.tea.*;
 
 public class InstanceDetail extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("autoBackup")
     public Boolean autoBackup;
 
     @NameInMap("components")
     public java.util.List<InstanceDetailComponents> components;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rootCoord:
+     *     maxDatabaseNum: 64 # Maximum number of database
+     *     maxPartitionNum: 4096</p>
+     */
     @NameInMap("configuration")
     public String configuration;
 
     /**
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-04-27T02:04:25Z</p>
      */
     @NameInMap("createTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2.5</p>
+     */
     @NameInMap("dbVersion")
     public String dbVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("encrypted")
     public Boolean encrypted;
 
     /**
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-04-27T02:04:25Z</p>
      */
     @NameInMap("expireTime")
     public String expireTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ha")
     public Boolean ha;
 
+    /**
+     * <strong>example:</strong>
+     * <p>c-xxx</p>
+     */
     @NameInMap("instanceId")
     public String instanceId;
 
@@ -44,30 +76,64 @@ public class InstanceDetail extends TeaModel {
     @NameInMap("instanceName")
     public String instanceName;
 
+    /**
+     * <p>kms key Id。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>key-xxx</p>
+     */
     @NameInMap("kmsKeyId")
     public String kmsKeyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Single</p>
+     */
     @NameInMap("multiZoneMode")
     public String multiZoneMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4751</p>
+     */
     @NameInMap("orderId")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PayAsYouGo</p>
+     */
     @NameInMap("paymentType")
     public String paymentType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("regionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-aek3dcgyq7pnqwa</p>
+     */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("runningTime")
     public Long runningTime;
 
     @NameInMap("securityGroupIds")
     public java.util.List<String> securityGroupIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>running</p>
+     */
     @NameInMap("status")
     public String status;
 
@@ -77,9 +143,17 @@ public class InstanceDetail extends TeaModel {
     @NameInMap("vSwitchIds")
     public java.util.List<InstanceDetailVSwitchIds> vSwitchIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vpc-xxx</p>
+     */
     @NameInMap("vpcId")
     public String vpcId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-i</p>
+     */
     @NameInMap("zoneId")
     public String zoneId;
 
@@ -273,18 +347,41 @@ public class InstanceDetail extends TeaModel {
     }
 
     public static class InstanceDetailComponents extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("cuNum")
         public Integer cuNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>general</p>
+         */
         @NameInMap("cuType")
         public String cuType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("diskSizeType")
         public String diskSizeType;
 
+        @NameInMap("payType")
+        public String payType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("replica")
         public Integer replica;
 
+        /**
+         * <strong>example:</strong>
+         * <p>data</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -317,6 +414,14 @@ public class InstanceDetail extends TeaModel {
             return this.diskSizeType;
         }
 
+        public InstanceDetailComponents setPayType(String payType) {
+            this.payType = payType;
+            return this;
+        }
+        public String getPayType() {
+            return this.payType;
+        }
+
         public InstanceDetailComponents setReplica(Integer replica) {
             this.replica = replica;
             return this;
@@ -336,9 +441,17 @@ public class InstanceDetail extends TeaModel {
     }
 
     public static class InstanceDetailTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>k1</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v1</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -366,9 +479,17 @@ public class InstanceDetail extends TeaModel {
     }
 
     public static class InstanceDetailVSwitchIds extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-xxx</p>
+         */
         @NameInMap("vswId")
         public String vswId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
+         */
         @NameInMap("zoneId")
         public String zoneId;
 

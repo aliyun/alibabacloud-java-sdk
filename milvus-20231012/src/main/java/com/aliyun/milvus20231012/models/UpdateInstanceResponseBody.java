@@ -18,6 +18,9 @@ public class UpdateInstanceResponseBody extends TeaModel {
     @NameInMap("data")
     public Boolean data;
 
+    @NameInMap("orderId")
+    public String orderId;
+
     /**
      * <strong>example:</strong>
      * <p>true</p>
@@ -44,6 +47,14 @@ public class UpdateInstanceResponseBody extends TeaModel {
     }
     public Boolean getData() {
         return this.data;
+    }
+
+    public UpdateInstanceResponseBody setOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public String getOrderId() {
+        return this.orderId;
     }
 
     public UpdateInstanceResponseBody setSuccess(Boolean success) {

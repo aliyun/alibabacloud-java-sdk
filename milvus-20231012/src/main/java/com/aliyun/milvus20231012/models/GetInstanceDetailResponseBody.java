@@ -177,6 +177,9 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         @NameInMap("DiskType")
         public String diskType;
 
+        @NameInMap("PayType")
+        public String payType;
+
         /**
          * <p>The number of replicas.</p>
          * 
@@ -232,6 +235,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
         public String getDiskType() {
             return this.diskType;
+        }
+
+        public GetInstanceDetailResponseBodyDataClusterInfoMilvusResourceInfoList setPayType(String payType) {
+            this.payType = payType;
+            return this;
+        }
+        public String getPayType() {
+            return this.payType;
         }
 
         public GetInstanceDetailResponseBodyDataClusterInfoMilvusResourceInfoList setReplica(Integer replica) {
@@ -791,6 +802,9 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         @NameInMap("KmsKeyId")
         public String kmsKeyId;
 
+        @NameInMap("MaintainablePeriod")
+        public String maintainablePeriod;
+
         @NameInMap("MeasureConfig")
         public GetInstanceDetailResponseBodyDataMeasureConfig measureConfig;
 
@@ -1051,6 +1065,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
         public String getKmsKeyId() {
             return this.kmsKeyId;
+        }
+
+        public GetInstanceDetailResponseBodyData setMaintainablePeriod(String maintainablePeriod) {
+            this.maintainablePeriod = maintainablePeriod;
+            return this;
+        }
+        public String getMaintainablePeriod() {
+            return this.maintainablePeriod;
         }
 
         public GetInstanceDetailResponseBodyData setMeasureConfig(GetInstanceDetailResponseBodyDataMeasureConfig measureConfig) {

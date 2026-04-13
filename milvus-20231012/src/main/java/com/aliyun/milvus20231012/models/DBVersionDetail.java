@@ -137,6 +137,9 @@ public class DBVersionDetail extends TeaModel {
         @NameInMap("isStandalone")
         public Boolean isStandalone;
 
+        @NameInMap("isStandalonePro")
+        public Boolean isStandalonePro;
+
         @NameInMap("zoneMode")
         public String zoneMode;
 
@@ -167,6 +170,14 @@ public class DBVersionDetail extends TeaModel {
         }
         public Boolean getIsStandalone() {
             return this.isStandalone;
+        }
+
+        public DBVersionDetailSpecs setIsStandalonePro(Boolean isStandalonePro) {
+            this.isStandalonePro = isStandalonePro;
+            return this;
+        }
+        public Boolean getIsStandalonePro() {
+            return this.isStandalonePro;
         }
 
         public DBVersionDetailSpecs setZoneMode(String zoneMode) {

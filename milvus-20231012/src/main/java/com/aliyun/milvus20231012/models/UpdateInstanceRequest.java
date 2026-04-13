@@ -18,6 +18,9 @@ public class UpdateInstanceRequest extends TeaModel {
     @NameInMap("autoBackup")
     public Boolean autoBackup;
 
+    @NameInMap("autoPay")
+    public Boolean autoPay;
+
     @NameInMap("components")
     public java.util.List<UpdateInstanceRequestComponents> components;
 
@@ -79,6 +82,14 @@ public class UpdateInstanceRequest extends TeaModel {
         return this.autoBackup;
     }
 
+    public UpdateInstanceRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
+    }
+
     public UpdateInstanceRequest setComponents(java.util.List<UpdateInstanceRequestComponents> components) {
         this.components = components;
         return this;
@@ -137,6 +148,9 @@ public class UpdateInstanceRequest extends TeaModel {
         @NameInMap("cuNum")
         public Integer cuNum;
 
+        @NameInMap("payType")
+        public String payType;
+
         /**
          * <p>This parameter is required.</p>
          * 
@@ -166,6 +180,14 @@ public class UpdateInstanceRequest extends TeaModel {
         }
         public Integer getCuNum() {
             return this.cuNum;
+        }
+
+        public UpdateInstanceRequestComponents setPayType(String payType) {
+            this.payType = payType;
+            return this;
+        }
+        public String getPayType() {
+            return this.payType;
         }
 
         public UpdateInstanceRequestComponents setReplica(Integer replica) {

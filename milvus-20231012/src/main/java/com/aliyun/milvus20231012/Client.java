@@ -147,12 +147,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aiFunction)) {
+            body.put("aiFunction", request.aiFunction);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.autoBackup)) {
             body.put("autoBackup", request.autoBackup);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
+            body.put("autoPay", request.autoPay);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
             body.put("autoRenew", request.autoRenew);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.backupRestoreInfo)) {
+            body.put("backupRestoreInfo", request.backupRestoreInfo);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.components)) {
@@ -937,6 +949,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.autoBackup)) {
             body.put("autoBackup", request.autoBackup);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
+            body.put("autoPay", request.autoPay);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.components)) {

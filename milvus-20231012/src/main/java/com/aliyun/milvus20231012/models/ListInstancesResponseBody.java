@@ -562,6 +562,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("Tags")
         public java.util.List<ListInstancesResponseBodyDataTags> tags;
 
+        @NameInMap("TemplateVersion")
+        public String templateVersion;
+
         @NameInMap("Version")
         public String version;
 
@@ -731,6 +734,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public java.util.List<ListInstancesResponseBodyDataTags> getTags() {
             return this.tags;
+        }
+
+        public ListInstancesResponseBodyData setTemplateVersion(String templateVersion) {
+            this.templateVersion = templateVersion;
+            return this;
+        }
+        public String getTemplateVersion() {
+            return this.templateVersion;
         }
 
         public ListInstancesResponseBodyData setVersion(String version) {
