@@ -1,3 +1,7 @@
+2026-04-13 Version: 7.6.2
+- Update API DescribeServiceEvent: add response parameters Body.Events.$.Resource.
+
+
 2026-04-08 Version: 7.6.1
 - Update API CreateResource: add request parameters body.UsageMode.
 - Update API DescribeResource: add response parameters Body.UsageMode.

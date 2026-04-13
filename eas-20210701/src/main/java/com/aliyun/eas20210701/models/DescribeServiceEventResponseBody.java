@@ -110,6 +110,9 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         @NameInMap("Reason")
         public String reason;
 
+        @NameInMap("Resource")
+        public String resource;
+
         /**
          * <p>The time when the event occurred. The time must be in UTC.</p>
          * 
@@ -151,6 +154,14 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         }
         public String getReason() {
             return this.reason;
+        }
+
+        public DescribeServiceEventResponseBodyEvents setResource(String resource) {
+            this.resource = resource;
+            return this;
+        }
+        public String getResource() {
+            return this.resource;
         }
 
         public DescribeServiceEventResponseBodyEvents setTime(String time) {
