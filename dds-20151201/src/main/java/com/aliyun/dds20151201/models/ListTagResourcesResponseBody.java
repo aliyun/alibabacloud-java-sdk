@@ -25,9 +25,6 @@ public class ListTagResourcesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Details about the tags of the instance.</p>
-     */
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
 
@@ -61,39 +58,15 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
-        /**
-         * <p>The ID of the resource. It is the ID of the ApsaraDB for MongoDB instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dds-bp17e7a04960****</p>
-         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <p>The resource type. The return value is fixed to <strong>ALIYUN: KVSTORE: INSTANCE</strong>, indicating an ApsaraDB for MongoDB instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ALIYUN::DDS::INSTANCE</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        /**
-         * <p>The key of the tag.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Environment</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The value of the tag.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dev</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 

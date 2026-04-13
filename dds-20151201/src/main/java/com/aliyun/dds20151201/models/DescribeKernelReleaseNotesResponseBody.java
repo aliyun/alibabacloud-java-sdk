@@ -4,9 +4,6 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
-    /**
-     * <p>The list of the version release notes.</p>
-     */
     @NameInMap("ReleaseNotes")
     public DescribeKernelReleaseNotesResponseBodyReleaseNotes releaseNotes;
 
@@ -41,21 +38,9 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
     }
 
     public static class DescribeKernelReleaseNotesResponseBodyReleaseNotesReleaseNote extends TeaModel {
-        /**
-         * <p>The version number.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>mongodb_20180619_0.4.9</p>
-         */
         @NameInMap("KernelVersion")
         public String kernelVersion;
 
-        /**
-         * <p>The release notes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test release note.</p>
-         */
         @NameInMap("ReleaseNote")
         public String releaseNote;
 

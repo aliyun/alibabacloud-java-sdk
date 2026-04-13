@@ -37,6 +37,9 @@ public class ModifyAuditPolicyRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("HotStoragePeriod")
+    public Integer hotStoragePeriod;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -101,6 +104,14 @@ public class ModifyAuditPolicyRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public ModifyAuditPolicyRequest setHotStoragePeriod(Integer hotStoragePeriod) {
+        this.hotStoragePeriod = hotStoragePeriod;
+        return this;
+    }
+    public Integer getHotStoragePeriod() {
+        return this.hotStoragePeriod;
     }
 
     public ModifyAuditPolicyRequest setOwnerAccount(String ownerAccount) {

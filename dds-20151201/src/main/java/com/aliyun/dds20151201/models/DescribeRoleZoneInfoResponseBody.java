@@ -13,9 +13,6 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information of nodes in the zone.</p>
-     */
     @NameInMap("ZoneInfos")
     public DescribeRoleZoneInfoResponseBodyZoneInfos zoneInfos;
 
@@ -41,62 +38,18 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeRoleZoneInfoResponseBodyZoneInfosZoneInfo extends TeaModel {
-        /**
-         * <p>The ID of the node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dds-bpxxxxxxxx</p>
-         */
         @NameInMap("InsName")
         public String insName;
 
-        /**
-         * <p>The type of the node. Valid values:</p>
-         * <ul>
-         * <li><strong>normal</strong></li>
-         * <li><strong>configServer</strong></li>
-         * <li><strong>shard</strong></li>
-         * <li><strong>mongos</strong></li>
-         * </ul>
-         * <blockquote>
-         * <p>Valid value for replica set instances: <strong>normal</strong>. Valid values for sharded cluster instances: <strong>configServer</strong>, <strong>shard</strong>, and <strong>mongos</strong>.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>normal</p>
-         */
         @NameInMap("NodeType")
         public String nodeType;
 
-        /**
-         * <p>The role ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>83xxxxx</p>
-         */
         @NameInMap("RoleId")
         public String roleId;
 
-        /**
-         * <p>The role of the node. Valid values:</p>
-         * <ul>
-         * <li><strong>Primary</strong></li>
-         * <li><strong>Secondary</strong></li>
-         * <li><strong>Hidden</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Primary</p>
-         */
         @NameInMap("RoleType")
         public String roleType;
 
-        /**
-         * <p>The zone ID of the node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-e</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 

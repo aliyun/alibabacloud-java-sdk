@@ -4,9 +4,6 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
-    /**
-     * <p>Details about the ECS security groups.</p>
-     */
     @NameInMap("Items")
     public DescribeSecurityGroupConfigurationResponseBodyItems items;
 
@@ -41,34 +38,12 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityGroupConfigurationResponseBodyItemsRdsEcsSecurityGroupRel extends TeaModel {
-        /**
-         * <p>The network type of the ECS security group. Valid values:</p>
-         * <ul>
-         * <li><strong>vpc</strong></li>
-         * <li><strong>classic</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc</p>
-         */
         @NameInMap("NetType")
         public String netType;
 
-        /**
-         * <p>The region ID of the ECS security group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The ID of the ECS security group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sg-bpxxxxxxxx</p>
-         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 

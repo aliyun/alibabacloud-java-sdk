@@ -13,9 +13,6 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The supported database types.</p>
-     */
     @NameInMap("SupportedDBTypes")
     public DescribeAvailableResourceResponseBodySupportedDBTypes supportedDBTypes;
 
@@ -41,30 +38,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DBInstanceStorageRange extends TeaModel {
-        /**
-         * <p>The maximum storage capacity. Unit: GB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>16000</p>
-         */
         @NameInMap("Max")
         public Integer max;
 
-        /**
-         * <p>The minimum storage capacity. Unit: GB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("Min")
         public Integer min;
 
-        /**
-         * <p>The step size for adjusting the storage capacity. Unit: GB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("Step")
         public Integer step;
 
@@ -100,27 +79,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class AvailableResource extends TeaModel {
-        /**
-         * <p>The storage capacity range of the instance.</p>
-         */
         @NameInMap("DBInstanceStorageRange")
         public DBInstanceStorageRange DBInstanceStorageRange;
 
-        /**
-         * <p>The instance family.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>mdb.shard.2x.xlarge.d</p>
-         */
         @NameInMap("InstanceClass")
         public String instanceClass;
 
-        /**
-         * <p>The type of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4 cores, 8 GB (Dedicated) (Current instance type: mdb.shard.2x.xlarge.d (4 cores, 8 GB (Dedicated cloud-disk), maximum connections: 3000, maximum IOPS: min{1800 + 50 × Storage capacity, 21000}))</p>
-         */
         @NameInMap("InstanceClassRemark")
         public String instanceClassRemark;
 
@@ -175,27 +139,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersionSupportedEnginesSupportedEngineSupportedNodeTypesSupportedNodeType extends TeaModel {
-        /**
-         * <p>The details of the available resources.</p>
-         */
         @NameInMap("AvailableResources")
         public AvailableResources availableResources;
 
-        /**
-         * <p>The network type of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>VPC</p>
-         */
         @NameInMap("NetworkTypes")
         public String networkTypes;
 
-        /**
-         * <p>The number of nodes in the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("NodeType")
         public String nodeType;
 
@@ -250,18 +199,9 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersionSupportedEnginesSupportedEngine extends TeaModel {
-        /**
-         * <p>The storage engine of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>WiredTiger</p>
-         */
         @NameInMap("Engine")
         public String engine;
 
-        /**
-         * <p>The supported instance types.</p>
-         */
         @NameInMap("SupportedNodeTypes")
         public DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersionSupportedEnginesSupportedEngineSupportedNodeTypes supportedNodeTypes;
 
@@ -308,18 +248,9 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersion extends TeaModel {
-        /**
-         * <p>The supported storage engines.</p>
-         */
         @NameInMap("SupportedEngines")
         public DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersionSupportedEngines supportedEngines;
 
-        /**
-         * <p>The database engine version of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4.0</p>
-         */
         @NameInMap("Version")
         public String version;
 
@@ -366,27 +297,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZone extends TeaModel {
-        /**
-         * <p>The ID of the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The supported storage engine versions.</p>
-         */
         @NameInMap("SupportedEngineVersions")
         public DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersions supportedEngineVersions;
 
-        /**
-         * <p>The ID of the zone.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-h</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -441,22 +357,9 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBType extends TeaModel {
-        /**
-         * <p>The available zones.</p>
-         */
         @NameInMap("AvailableZones")
         public DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZones availableZones;
 
-        /**
-         * <p>The architecture of the instance. Valid values:</p>
-         * <ul>
-         * <li><strong>normal</strong>: replica set instance</li>
-         * <li><strong>sharding</strong>: sharded cluster instance</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>sharding</p>
-         */
         @NameInMap("DbType")
         public String dbType;
 

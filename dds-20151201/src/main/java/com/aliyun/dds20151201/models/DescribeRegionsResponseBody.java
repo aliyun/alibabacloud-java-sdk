@@ -4,9 +4,6 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
-    /**
-     * <p>The regions.</p>
-     */
     @NameInMap("Regions")
     public DescribeRegionsResponseBodyRegions regions;
 
@@ -41,39 +38,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionsDdsRegionZonesZone extends TeaModel {
-        /**
-         * <p>Indicates whether a virtual private cloud (VPC) is supported. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: VPC is supported.</li>
-         * <li><strong>false</strong>: VPC is not supported.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("VpcEnabled")
         public Boolean vpcEnabled;
 
-        /**
-         * <p>The zone ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-h</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 
-        /**
-         * <p>The name of the zone.</p>
-         * <p>The value of the ZoneName parameter is in the language that is specified by the <strong>AcceptLanguage</strong> parameter. For example, if the value of the ZoneId parameter in the response is <strong>cn-hangzhou-h</strong>, the following values are returned for the ZoneName parameter:</p>
-         * <ul>
-         * <li>If the value of the <strong>AcceptLanguage</strong> parameter is <strong>zh</strong>, the value <strong>H</strong> is returned for the ZoneName parameter.</li>
-         * <li>If the value of the <strong>AcceptLanguage</strong> parameter is <strong>en</strong>, the value <strong>Hangzhou Zone H</strong> is returned for the ZoneName parameter.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Hangzhou Zone H</p>
-         */
         @NameInMap("ZoneName")
         public String zoneName;
 
@@ -128,45 +98,15 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionsDdsRegion extends TeaModel {
-        /**
-         * <p>The public endpoint of the region.</p>
-         * <p>For example, if the value of the RegionId parameter in the response is cn-hangzhou, the following value is returned for the EndPoint parameter:</p>
-         * <ul>
-         * <li>mongodb.aliyuncs.com</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>mongodb.aliyuncs.com</p>
-         */
         @NameInMap("EndPoint")
         public String endPoint;
 
-        /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The name of the region.</p>
-         * <p>The value of the LocalName parameter is in the language that is specified by the <strong>AcceptLanguage</strong> parameter. For example, if the value of the RegionId parameter in the response is <strong>cn-hangzhou</strong>, the following values are returned for the LocalName parameter:</p>
-         * <ul>
-         * <li>If the value of the <strong>AcceptLanguage</strong> parameter is <strong>zh</strong>, the value <strong>华东1（杭州）</strong> is returned for the LocalName parameter.</li>
-         * <li>If the value of the <strong>AcceptLanguage</strong> parameter is <strong>en</strong>, the value <strong>China (Hangzhou)</strong> is returned for the LocalName parameter.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>China (Hangzhou)</p>
-         */
         @NameInMap("RegionName")
         public String regionName;
 
-        /**
-         * <p>The zones.</p>
-         */
         @NameInMap("Zones")
         public DescribeRegionsResponseBodyRegionsDdsRegionZones zones;
 

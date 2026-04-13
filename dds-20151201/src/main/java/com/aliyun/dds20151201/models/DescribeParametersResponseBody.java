@@ -4,9 +4,6 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeParametersResponseBody extends TeaModel {
-    /**
-     * <p>The parameter settings in the configuration template.</p>
-     */
     @NameInMap("ConfigParameters")
     public DescribeParametersResponseBodyConfigParameters configParameters;
 
@@ -37,9 +34,6 @@ public class DescribeParametersResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The settings of the parameters that have taken effect.</p>
-     */
     @NameInMap("RunningParameters")
     public DescribeParametersResponseBodyRunningParameters runningParameters;
 
@@ -89,65 +83,21 @@ public class DescribeParametersResponseBody extends TeaModel {
     }
 
     public static class DescribeParametersResponseBodyConfigParametersParameter extends TeaModel {
-        /**
-         * <p>The valid values of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[0-65536]</p>
-         */
         @NameInMap("CheckingCode")
         public String checkingCode;
 
-        /**
-         * <p>Indicates whether a restart is required for parameter modifications to take effect. Valid values:</p>
-         * <ul>
-         * <li><strong>false</strong>: A restart is not required. Modifications take effect immediately.</li>
-         * <li><strong>true</strong>: A restart is required for parameter modifications to take effect.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("ForceRestart")
         public Boolean forceRestart;
 
-        /**
-         * <p>Indicates whether the parameter value can be modified. Valid values:</p>
-         * <ul>
-         * <li><strong>false</strong>: The parameter value cannot be modified.</li>
-         * <li><strong>true</strong>: The parameter value can be modified.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("ModifiableStatus")
         public Boolean modifiableStatus;
 
-        /**
-         * <p>The description of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>The threshold in milliseconds at which the database profiler considers a query slow, default is 100.</p>
-         */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
-        /**
-         * <p>The name of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>operationProfiling.slowOpThresholdMs</p>
-         */
         @NameInMap("ParameterName")
         public String parameterName;
 
-        /**
-         * <p>The value of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
-         */
         @NameInMap("ParameterValue")
         public String parameterValue;
 
@@ -226,79 +176,24 @@ public class DescribeParametersResponseBody extends TeaModel {
     }
 
     public static class DescribeParametersResponseBodyRunningParametersParameter extends TeaModel {
-        /**
-         * <p>实例的角色类型，取值说明：</p>
-         * <ul>
-         * <li><strong>db</strong>：shard角色。</li>
-         * <li><strong>cs</strong>：config server角色。</li>
-         * <li><strong>mongos</strong>：mongos角色。</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>db</p>
-         */
         @NameInMap("CharacterType")
         public String characterType;
 
-        /**
-         * <p>The valid values of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[33554432-268435456]</p>
-         */
         @NameInMap("CheckingCode")
         public String checkingCode;
 
-        /**
-         * <p>Indicates whether a restart is required for parameter modifications to take effect. Valid values:</p>
-         * <ul>
-         * <li><strong>false</strong>: A restart is not required. Modifications take effect immediately.</li>
-         * <li><strong>true</strong>: A restart is required for parameter modifications to take effect.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("ForceRestart")
         public String forceRestart;
 
-        /**
-         * <p>Indicates whether the parameter value can be modified. Valid values:</p>
-         * <ul>
-         * <li><strong>false</strong>: The parameter value cannot be modified.</li>
-         * <li><strong>true</strong>: The parameter value can be modified.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("ModifiableStatus")
         public String modifiableStatus;
 
-        /**
-         * <p>The description of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>The maximum memory bytes that sort stage may use, default is 33554432(i.e. 32MB)</p>
-         */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
-        /**
-         * <p>The name of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>setParameter.internalQueryExecMaxBlockingSortBytes</p>
-         */
         @NameInMap("ParameterName")
         public String parameterName;
 
-        /**
-         * <p>The value of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>33554432</p>
-         */
         @NameInMap("ParameterValue")
         public String parameterValue;
 

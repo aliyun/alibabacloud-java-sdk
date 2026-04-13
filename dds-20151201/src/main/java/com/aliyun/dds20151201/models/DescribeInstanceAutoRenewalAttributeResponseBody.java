@@ -4,9 +4,6 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
-    /**
-     * <p>Details about returned entries.</p>
-     */
     @NameInMap("Items")
     public DescribeInstanceAutoRenewalAttributeResponseBodyItems items;
 
@@ -92,62 +89,18 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceAutoRenewalAttributeResponseBodyItemsItem extends TeaModel {
-        /**
-         * <p>Indicates whether auto-renewal is enabled for the instance. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: Auto-renewal is enabled for the instance.</li>
-         * <li><strong>false</strong>: Auto-renewal is disabled for the instance.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("AutoRenew")
         public String autoRenew;
 
-        /**
-         * <p>The category of the instance. Valid values:</p>
-         * <ul>
-         * <li><strong>replicate</strong>: the standalone or replica set instance</li>
-         * <li><strong>sharding</strong>: the sharded cluster instance</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>replicate</p>
-         */
         @NameInMap("DBInstanceType")
         public String DBInstanceType;
 
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dds-bp2568*****</p>
-         */
         @NameInMap("DbInstanceId")
         public String dbInstanceId;
 
-        /**
-         * <p>The auto-renewal period. Unit: months.</p>
-         * <blockquote>
-         * <ul>
-         * <li>This parameter is ruturned only when the returned value of the <strong>AutoRenew</strong> parameter is <strong>true</strong>.</li>
-         * <li>You can call the <a href="https://help.aliyun.com/document_detail/145979.html">ModifyInstanceAutoRenewalAttribute</a> operation to modify the auto-renewal period.</li>
-         * </ul>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Duration")
         public String duration;
 
-        /**
-         * <p>The region ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 

@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     /**
      * <p>The current endpoint that is to be modified.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>s-bpxxxxxxxx.mongodb.rds.aliyuncs.com</p>
@@ -27,12 +26,21 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("ForceModifySuffix")
+    public Boolean forceModifySuffix;
+
+    /**
+     * <strong>example:</strong>
+     * <p>vpc</p>
+     */
+    @NameInMap("NetworkType")
+    public String networkType;
+
     /**
      * <p>The new endpoint. It must be 8 to 64 characters in length and can contain letters and digits. It must start with a lowercase letter.</p>
      * <blockquote>
      * <p>You need only to specify the prefix of the endpoint. The content other than the prefix cannot be modified.</p>
      * </blockquote>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>aliyuntest111</p>
@@ -70,6 +78,9 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PortModifyOnly")
+    public Boolean portModifyOnly;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -95,6 +106,22 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public ModifyDBInstanceConnectionStringRequest setForceModifySuffix(Boolean forceModifySuffix) {
+        this.forceModifySuffix = forceModifySuffix;
+        return this;
+    }
+    public Boolean getForceModifySuffix() {
+        return this.forceModifySuffix;
+    }
+
+    public ModifyDBInstanceConnectionStringRequest setNetworkType(String networkType) {
+        this.networkType = networkType;
+        return this;
+    }
+    public String getNetworkType() {
+        return this.networkType;
     }
 
     public ModifyDBInstanceConnectionStringRequest setNewConnectionString(String newConnectionString) {
@@ -135,6 +162,14 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyDBInstanceConnectionStringRequest setPortModifyOnly(Boolean portModifyOnly) {
+        this.portModifyOnly = portModifyOnly;
+        return this;
+    }
+    public Boolean getPortModifyOnly() {
+        return this.portModifyOnly;
     }
 
     public ModifyDBInstanceConnectionStringRequest setResourceOwnerAccount(String resourceOwnerAccount) {

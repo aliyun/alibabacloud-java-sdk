@@ -4,6 +4,9 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeReplicaSetRoleResponseBody extends TeaModel {
+    @NameInMap("ConnectionStringSuffix")
+    public String connectionStringSuffix;
+
     /**
      * <p>The instance ID.</p>
      * 
@@ -13,9 +16,6 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    /**
-     * <p>The details of the roles of the replica set instance.</p>
-     */
     @NameInMap("ReplicaSets")
     public DescribeReplicaSetRoleResponseBodyReplicaSets replicaSets;
 
@@ -31,6 +31,14 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
     public static DescribeReplicaSetRoleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeReplicaSetRoleResponseBody self = new DescribeReplicaSetRoleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeReplicaSetRoleResponseBody setConnectionStringSuffix(String connectionStringSuffix) {
+        this.connectionStringSuffix = connectionStringSuffix;
+        return this;
+    }
+    public String getConnectionStringSuffix() {
+        return this.connectionStringSuffix;
     }
 
     public DescribeReplicaSetRoleResponseBody setDBInstanceId(String DBInstanceId) {
@@ -58,75 +66,24 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
     }
 
     public static class DescribeReplicaSetRoleResponseBodyReplicaSetsReplicaSet extends TeaModel {
-        /**
-         * <p>The endpoint of the node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dds-bpxxxxxxxx.mongodb.rds.aliyuncs.com</p>
-         */
         @NameInMap("ConnectionDomain")
         public String connectionDomain;
 
-        /**
-         * <p>The port number that is used to connect to the node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3717</p>
-         */
         @NameInMap("ConnectionPort")
         public String connectionPort;
 
-        /**
-         * <p>The connection type of the node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>SRV</p>
-         */
         @NameInMap("ConnectionType")
         public String connectionType;
 
-        /**
-         * <p>The remaining duration of the classic network endpoint. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1209582</p>
-         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
-        /**
-         * <p>The network type of the instance. Valid values:</p>
-         * <ul>
-         * <li><strong>VPC</strong>: the virtual private cloud (VPC)</li>
-         * <li><strong>Classic</strong>: the classic network</li>
-         * <li><strong>Public</strong>: the Internet</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>VPC</p>
-         */
         @NameInMap("NetworkType")
         public String networkType;
 
-        /**
-         * <p>The role of the node in the replica set instance. Valid values:</p>
-         * <ul>
-         * <li><strong>Primary</strong></li>
-         * <li><strong>Secondary</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Primary</p>
-         */
         @NameInMap("ReplicaSetRole")
         public String replicaSetRole;
 
-        /**
-         * <p>The role ID of the node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>651xxxxx</p>
-         */
         @NameInMap("RoleId")
         public String roleId;
 

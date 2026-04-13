@@ -4,9 +4,6 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccountsResponseBody extends TeaModel {
-    /**
-     * <p>The details of the account.</p>
-     */
     @NameInMap("Accounts")
     public DescribeAccountsResponseBodyAccounts accounts;
 
@@ -41,59 +38,18 @@ public class DescribeAccountsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccountsResponseBodyAccountsAccount extends TeaModel {
-        /**
-         * <p>The description of the account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Admin</p>
-         */
         @NameInMap("AccountDescription")
         public String accountDescription;
 
-        /**
-         * <p>The name of the account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>root</p>
-         */
         @NameInMap("AccountName")
         public String accountName;
 
-        /**
-         * <p>The status of the account. Valid values:</p>
-         * <ul>
-         * <li><strong>Unavailable</strong></li>
-         * <li><strong>Available</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Available</p>
-         */
         @NameInMap("AccountStatus")
         public String accountStatus;
 
-        /**
-         * <p>The role of the account. Valid values:</p>
-         * <ul>
-         * <li><strong>db</strong>: shard node</li>
-         * <li><strong>cs</strong>: Configserver node</li>
-         * <li><strong>mongos</strong>: mongos node</li>
-         * <li><strong>logic</strong>: sharded cluster instance</li>
-         * <li><strong>normal</strong>: replica set instance</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>mongos</p>
-         */
         @NameInMap("CharacterType")
         public String characterType;
 
-        /**
-         * <p>The ID of the instance to which the account belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dds-bp1fd530f271****</p>
-         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 

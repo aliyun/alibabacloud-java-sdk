@@ -19,15 +19,9 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Details about the promotion rules.</p>
-     */
     @NameInMap("Rules")
     public DescribeRenewalPriceResponseBodyRules rules;
 
-    /**
-     * <p>The rules matching the coupons.</p>
-     */
     @NameInMap("SubOrders")
     public DescribeRenewalPriceResponseBodySubOrders subOrders;
 
@@ -69,45 +63,35 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenewalPriceResponseBodyOrderCouponsCoupon extends TeaModel {
-        /**
-         * <p>The coupon number.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>youhuiquan_promotion_option_id_for_blank</p>
-         */
+        @NameInMap("ActivityExtInfo")
+        public java.util.Map<String, ?> activityExtInfo;
+
         @NameInMap("CouponNo")
         public String couponNo;
 
-        /**
-         * <p>The description of the coupon.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>coupondemo</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>Indicates whether the coupon was selected.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
+        @NameInMap("Effective")
+        public Boolean effective;
+
         @NameInMap("IsSelected")
         public String isSelected;
 
-        /**
-         * <p>The name of the coupon.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>youhuiquan111</p>
-         */
         @NameInMap("Name")
         public String name;
 
         public static DescribeRenewalPriceResponseBodyOrderCouponsCoupon build(java.util.Map<String, ?> map) throws Exception {
             DescribeRenewalPriceResponseBodyOrderCouponsCoupon self = new DescribeRenewalPriceResponseBodyOrderCouponsCoupon();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeRenewalPriceResponseBodyOrderCouponsCoupon setActivityExtInfo(java.util.Map<String, ?> activityExtInfo) {
+            this.activityExtInfo = activityExtInfo;
+            return this;
+        }
+        public java.util.Map<String, ?> getActivityExtInfo() {
+            return this.activityExtInfo;
         }
 
         public DescribeRenewalPriceResponseBodyOrderCouponsCoupon setCouponNo(String couponNo) {
@@ -124,6 +108,14 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeRenewalPriceResponseBodyOrderCouponsCoupon setEffective(Boolean effective) {
+            this.effective = effective;
+            return this;
+        }
+        public Boolean getEffective() {
+            return this.effective;
         }
 
         public DescribeRenewalPriceResponseBodyOrderCouponsCoupon setIsSelected(String isSelected) {
@@ -183,9 +175,6 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenewalPriceResponseBodyOrder extends TeaModel {
-        /**
-         * <p>Details about the coupons.</p>
-         */
         @NameInMap("Coupons")
         public DescribeRenewalPriceResponseBodyOrderCoupons coupons;
 
@@ -220,9 +209,6 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         @NameInMap("OriginalAmount")
         public Float originalAmount;
 
-        /**
-         * <p>The IDs of the matched rules.</p>
-         */
         @NameInMap("RuleIds")
         public DescribeRenewalPriceResponseBodyOrderRuleIds ruleIds;
 
@@ -291,30 +277,12 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenewalPriceResponseBodyRulesRule extends TeaModel {
-        /**
-         * <p>The name of the rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>demoname</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The ID of the rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>11111111</p>
-         */
         @NameInMap("RuleDescId")
         public Long ruleDescId;
 
-        /**
-         * <p>The title of the rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>demo</p>
-         */
         @NameInMap("Title")
         public String title;
 
@@ -388,45 +356,18 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenewalPriceResponseBodySubOrdersSubOrder extends TeaModel {
-        /**
-         * <p>The discount amount of the order.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1144.8</p>
-         */
         @NameInMap("DiscountAmount")
         public Float discountAmount;
 
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dds-bp12c5b040dc****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The original price of the order.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1144.8</p>
-         */
         @NameInMap("OriginalAmount")
         public Float originalAmount;
 
-        /**
-         * <p>The IDs of the matched rules.</p>
-         */
         @NameInMap("RuleIds")
         public DescribeRenewalPriceResponseBodySubOrdersSubOrderRuleIds ruleIds;
 
-        /**
-         * <p>The actual price of the order.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("TradeAmount")
         public Float tradeAmount;
 

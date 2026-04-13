@@ -13,9 +13,6 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
     @NameInMap("Engine")
     public String engine;
 
-    /**
-     * <p>Details about the log entries returned.</p>
-     */
     @NameInMap("Items")
     public DescribeErrorLogRecordsResponseBodyItems items;
 
@@ -109,59 +106,18 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeErrorLogRecordsResponseBodyItemsLogRecords extends TeaModel {
-        /**
-         * <p>The category of the log entry. Valid values:</p>
-         * <ul>
-         * <li>NETWORK: network connection log</li>
-         * <li>ACCESS: access control log</li>
-         * <li>\-: general log</li>
-         * <li>COMMAND: slow query log</li>
-         * <li>SHARDING: sharded cluster log</li>
-         * <li>STORAGE: storage engine log</li>
-         * <li>CONNPOOL: connection pool log</li>
-         * <li>ASIO: asynchronous I/O operation log</li>
-         * <li>WRITE: slow update log</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>NETWORK</p>
-         */
         @NameInMap("Category")
         public String category;
 
-        /**
-         * <p>The connection information of the log entry.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>conn18xxxxxx</p>
-         */
         @NameInMap("ConnInfo")
         public String connInfo;
 
-        /**
-         * <p>The content of the log entry.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xxxxxxxx</p>
-         */
         @NameInMap("Content")
         public String content;
 
-        /**
-         * <p>The time when the log entry was generated. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-02-26T12:09:34Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The ID of the log entry.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1111111111</p>
-         */
         @NameInMap("Id")
         public Integer id;
 

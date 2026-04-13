@@ -4,9 +4,6 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupsResponseBody extends TeaModel {
-    /**
-     * <p>The details of the backup set.</p>
-     */
     @NameInMap("Backups")
     public DescribeBackupsResponseBodyBackups backups;
 
@@ -97,176 +94,54 @@ public class DescribeBackupsResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupsResponseBodyBackupsBackup extends TeaModel {
-        /**
-         * <p>The name of the database that has been backed up.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>database</p>
-         */
         @NameInMap("BackupDBNames")
         public String backupDBNames;
 
-        /**
-         * <p>The URL that is used to download the backup set over the Internet. If the backup set cannot be downloaded, an empty string is returned.</p>
-         */
         @NameInMap("BackupDownloadURL")
         public String backupDownloadURL;
 
-        /**
-         * <p>The end time of the backup. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-01-14T03:57:34Z</p>
-         */
         @NameInMap("BackupEndTime")
         public String backupEndTime;
 
         @NameInMap("BackupExpireTime")
         public String backupExpireTime;
 
-        /**
-         * <p>The ID of the backup set.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>32102****</p>
-         */
         @NameInMap("BackupId")
         public String backupId;
 
-        /**
-         * <p>The internal download URL of the backup set.</p>
-         * <blockquote>
-         * <p> You can use the URL to download the specified backup set on an Elastic Compute Service (ECS) instance that is in the same virtual private cloud (VPC) as the ApsaraDB for MongoDB instance.</p>
-         * </blockquote>
-         */
         @NameInMap("BackupIntranetDownloadURL")
         public String backupIntranetDownloadURL;
 
-        /**
-         * <p>The ID of the backup task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1123xxxx</p>
-         */
         @NameInMap("BackupJobId")
         public String backupJobId;
 
-        /**
-         * <p>The method that is used to generate the backup set. Valid values:</p>
-         * <ul>
-         * <li><strong>Snapshot</strong></li>
-         * <li><strong>Physical</strong></li>
-         * <li><strong>Logical</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Physical</p>
-         */
         @NameInMap("BackupMethod")
         public String backupMethod;
 
-        /**
-         * <p>The backup mode of the backup set. Valid values:</p>
-         * <ul>
-         * <li><strong>Automated</strong></li>
-         * <li><strong>Manual</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Automated</p>
-         */
         @NameInMap("BackupMode")
         public String backupMode;
 
-        /**
-         * <p>The name of the backup set. The parameter is invalid.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>12345678.tar.gz</p>
-         */
         @NameInMap("BackupName")
         public String backupName;
 
-        /**
-         * <p>The backup granularity. The parameter is invalid.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DBInstance</p>
-         */
         @NameInMap("BackupScale")
         public String backupScale;
 
-        /**
-         * <p>The size of the backup set. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6168576</p>
-         */
         @NameInMap("BackupSize")
         public Long backupSize;
 
-        /**
-         * <p>The start time of the backup. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-01-14T03:56:17Z</p>
-         */
         @NameInMap("BackupStartTime")
         public String backupStartTime;
 
-        /**
-         * <p>The status of the backup task. Valid values:</p>
-         * <ul>
-         * <li><strong>Success</strong>: The backup task is successful.</li>
-         * <li><strong>Failed</strong>: The backup task failed.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Success</p>
-         */
         @NameInMap("BackupStatus")
         public String backupStatus;
 
-        /**
-         * <p>The backup type. Valid values:</p>
-         * <ul>
-         * <li><strong>FullBackup</strong></li>
-         * <li><strong>IncrementalBackup</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>FullBackup</p>
-         */
         @NameInMap("BackupType")
         public String backupType;
 
-        /**
-         * <p>Version of the backuped instance.</p>
-         * <ul>
-         * <li><strong>6.0</strong></li>
-         * <li><strong>5.0</strong></li>
-         * <li><strong>4.4</strong></li>
-         * <li><strong>4.2</strong></li>
-         * <li><strong>4.0</strong></li>
-         * <li><strong>3.4</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>4.2</p>
-         */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
-        /**
-         * <p>Availability of the backup set.</p>
-         * <ul>
-         * <li>0: unavailable</li>
-         * <li>1: available</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("IsAvail")
         public Boolean isAvail;
 

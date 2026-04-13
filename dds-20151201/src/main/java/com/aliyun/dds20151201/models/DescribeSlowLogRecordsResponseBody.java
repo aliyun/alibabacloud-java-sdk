@@ -13,9 +13,6 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     @NameInMap("Engine")
     public String engine;
 
-    /**
-     * <p>An array that consists of the information about each slow query.</p>
-     */
     @NameInMap("Items")
     public DescribeSlowLogRecordsResponseBodyItems items;
 
@@ -109,93 +106,33 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeSlowLogRecordsResponseBodyItemsLogRecords extends TeaModel {
-        /**
-         * <p>The username of the database account that performs the operation.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("AccountName")
         public String accountName;
 
-        /**
-         * <p>The name of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>mongodbtest</p>
-         */
         @NameInMap("DBName")
         public String DBName;
 
-        /**
-         * <p>The number of documents that are scanned during the operation.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1000000</p>
-         */
         @NameInMap("DocsExamined")
         public Long docsExamined;
 
-        /**
-         * <p>The start time of the operation. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-02-25T 01:41:28Z</p>
-         */
         @NameInMap("ExecutionStartTime")
         public String executionStartTime;
 
-        /**
-         * <p>The host IP address that is used to connect to the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>192.168.XX.XX</p>
-         */
         @NameInMap("HostAddress")
         public String hostAddress;
 
-        /**
-         * <p>The number of rows involved in index scans.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("KeysExamined")
         public Long keysExamined;
 
-        /**
-         * <p>The execution time of the statement. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>600</p>
-         */
         @NameInMap("QueryTimes")
         public String queryTimes;
 
-        /**
-         * <p>The number of rows returned by the SQL statement.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("ReturnRowCounts")
         public Long returnRowCounts;
 
-        /**
-         * <p>The SQL statement that is executed during the slow operation.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{\&quot;op\&quot;:\&quot;query\&quot;,\&quot;ns\&quot;:\&quot;mongodbtest.customer\&quot;,\&quot;query\&quot;:{\&quot;find\&quot;:\&quot;customer\&quot;,\&quot;filter\&quot;:{\&quot;name\&quot;:\&quot;jack\&quot;}}}</p>
-         */
         @NameInMap("SQLText")
         public String SQLText;
 
-        /**
-         * <p>The name of the collection.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>C1</p>
-         */
         @NameInMap("TableName")
         public String tableName;
 

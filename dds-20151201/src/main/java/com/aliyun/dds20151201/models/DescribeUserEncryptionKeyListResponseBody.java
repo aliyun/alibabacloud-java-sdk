@@ -4,9 +4,6 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
-    /**
-     * <p>The list of custom keys.</p>
-     */
     @NameInMap("KeyIds")
     public DescribeUserEncryptionKeyListResponseBodyKeyIds keyIds;
 

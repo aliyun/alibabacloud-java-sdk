@@ -4,9 +4,6 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupDBsResponseBody extends TeaModel {
-    /**
-     * <p>The details of the databases.</p>
-     */
     @NameInMap("Databases")
     public DescribeBackupDBsResponseBodyDatabases databases;
 
@@ -92,12 +89,6 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupDBsResponseBodyDatabasesDatabase extends TeaModel {
-        /**
-         * <p>The name of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>mongodbtest</p>
-         */
         @NameInMap("DBName")
         public String DBName;
 

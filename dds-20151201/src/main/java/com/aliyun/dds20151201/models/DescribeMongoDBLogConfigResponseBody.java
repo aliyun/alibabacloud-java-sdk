@@ -17,6 +17,9 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
     @NameInMap("EnableAudit")
     public Boolean enableAudit;
 
+    @NameInMap("HotTtlForV2Standard")
+    public Long hotTtlForV2Standard;
+
     /**
      * <p>Indicates whether a rule to distribute logs to Logtail is created. For more information, see <a href="https://help.aliyun.com/document_detail/28979.html">Logtail overview</a>. Valid values:</p>
      * <ul>
@@ -101,6 +104,9 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
     @NameInMap("TtlForTrail")
     public Long ttlForTrail;
 
+    @NameInMap("TtlForV2Standard")
+    public Long ttlForV2Standard;
+
     /**
      * <p>The used storage capacity for the formal edition of the audit log feature. Unit: bytes.</p>
      * 
@@ -139,6 +145,14 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
     }
     public Boolean getEnableAudit() {
         return this.enableAudit;
+    }
+
+    public DescribeMongoDBLogConfigResponseBody setHotTtlForV2Standard(Long hotTtlForV2Standard) {
+        this.hotTtlForV2Standard = hotTtlForV2Standard;
+        return this;
+    }
+    public Long getHotTtlForV2Standard() {
+        return this.hotTtlForV2Standard;
     }
 
     public DescribeMongoDBLogConfigResponseBody setIsEtlMetaExist(Integer isEtlMetaExist) {
@@ -203,6 +217,14 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
     }
     public Long getTtlForTrail() {
         return this.ttlForTrail;
+    }
+
+    public DescribeMongoDBLogConfigResponseBody setTtlForV2Standard(Long ttlForV2Standard) {
+        this.ttlForV2Standard = ttlForV2Standard;
+        return this;
+    }
+    public Long getTtlForV2Standard() {
+        return this.ttlForV2Standard;
     }
 
     public DescribeMongoDBLogConfigResponseBody setUsedStorageForStandard(Long usedStorageForStandard) {

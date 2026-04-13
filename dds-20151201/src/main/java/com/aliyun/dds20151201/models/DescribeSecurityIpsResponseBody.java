@@ -13,9 +13,6 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>An array that consists of the information of IP whitelists.</p>
-     */
     @NameInMap("SecurityIpGroups")
     public DescribeSecurityIpsResponseBodySecurityIpGroups securityIpGroups;
 
@@ -58,30 +55,12 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityIpsResponseBodySecurityIpGroupsSecurityIpGroup extends TeaModel {
-        /**
-         * <p>The attribute of the IP address whitelist.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>hidden</p>
-         */
         @NameInMap("SecurityIpGroupAttribute")
         public String securityIpGroupAttribute;
 
-        /**
-         * <p>The name of the IP whitelist.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>default</p>
-         */
         @NameInMap("SecurityIpGroupName")
         public String securityIpGroupName;
 
-        /**
-         * <p>The name of the IP whitelist.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>47.xxx.xxx.xx,100.xxx.xxx.0/24</p>
-         */
         @NameInMap("SecurityIpList")
         public String securityIpList;
 

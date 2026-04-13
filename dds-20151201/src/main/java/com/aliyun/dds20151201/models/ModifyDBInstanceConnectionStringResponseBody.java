@@ -4,6 +4,9 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
+    @NameInMap("ModifiedConnectionString")
+    public String modifiedConnectionString;
+
     /**
      * <p>The request ID.</p>
      * 
@@ -16,6 +19,14 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
     public static ModifyDBInstanceConnectionStringResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceConnectionStringResponseBody self = new ModifyDBInstanceConnectionStringResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDBInstanceConnectionStringResponseBody setModifiedConnectionString(String modifiedConnectionString) {
+        this.modifiedConnectionString = modifiedConnectionString;
+        return this;
+    }
+    public String getModifiedConnectionString() {
+        return this.modifiedConnectionString;
     }
 
     public ModifyDBInstanceConnectionStringResponseBody setRequestId(String requestId) {

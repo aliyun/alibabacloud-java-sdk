@@ -13,9 +13,6 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
     @NameInMap("Engine")
     public String engine;
 
-    /**
-     * <p>Details about the operational log entries.</p>
-     */
     @NameInMap("Items")
     public DescribeRunningLogRecordsResponseBodyItems items;
 
@@ -109,39 +106,15 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeRunningLogRecordsResponseBodyItemsLogRecords extends TeaModel {
-        /**
-         * <p>The category of the log entry.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>NETWORK</p>
-         */
         @NameInMap("Category")
         public String category;
 
-        /**
-         * <p>The connection information of the log entry.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>conn18xxxxxx</p>
-         */
         @NameInMap("ConnInfo")
         public String connInfo;
 
-        /**
-         * <p>The content of the log entry.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>end connection 11.xxx.xxx.xx:3xxxx (0 connections now open)\n</p>
-         */
         @NameInMap("Content")
         public String content;
 
-        /**
-         * <p>The time when the log entry was generated. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-02-26T12:09:34Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 

@@ -31,9 +31,6 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     @NameInMap("ParameterCount")
     public String parameterCount;
 
-    /**
-     * <p>Details about the parameter templates.</p>
-     */
     @NameInMap("Parameters")
     public DescribeParameterTemplatesResponseBodyParameters parameters;
 
@@ -92,65 +89,21 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeParameterTemplatesResponseBodyParametersTemplateRecord extends TeaModel {
-        /**
-         * <p>The value range of modifiable parameters.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[0-65536]</p>
-         */
         @NameInMap("CheckingCode")
         public String checkingCode;
 
-        /**
-         * <p>Indicates whether the parameter is modifiable.</p>
-         * <ul>
-         * <li><strong>false</strong>: The parameter cannot be modified.</li>
-         * <li><strong>true</strong>: The parameter can be modified.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("ForceModify")
         public Boolean forceModify;
 
-        /**
-         * <p>Indicates whether a restart is required for parameter modifications to take effect.</p>
-         * <ul>
-         * <li><strong>false</strong>: A restart is not required. Parameter modifications immediately take effect.</li>
-         * <li><strong>true</strong>: A restart is required for parameter modifications to take effect.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("ForceRestart")
         public Boolean forceRestart;
 
-        /**
-         * <p>The description of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>The threshold in milliseconds at which the database profiler considers a query slow, default is 100.</p>
-         */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
-        /**
-         * <p>The name of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>net.compression.compressors</p>
-         */
         @NameInMap("ParameterName")
         public String parameterName;
 
-        /**
-         * <p>The default value of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("ParameterValue")
         public String parameterValue;
 

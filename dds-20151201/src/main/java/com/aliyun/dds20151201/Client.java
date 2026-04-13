@@ -10,7 +10,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-qingdao", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "mongodb.cn-qingdao.aliyuncs.com"),
             new TeaPair("cn-beijing", "mongodb.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou", "mongodb.cn-zhangjiakou.aliyuncs.com"),
             new TeaPair("cn-huhehaote", "mongodb.cn-huhehaote.aliyuncs.com"),
@@ -38,7 +38,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-shenzhen-finance-1", "mongodb.cn-shenzhen-finance-1.aliyuncs.com"),
             new TeaPair("cn-north-2-gov-1", "mongodb.cn-north-2-gov-1.aliyuncs.com"),
             new TeaPair("ap-northeast-2-pop", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-1", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "mongodb.cn-beijing-finance-1.aliyuncs.com"),
             new TeaPair("cn-beijing-finance-pop", "mongodb.aliyuncs.com"),
             new TeaPair("cn-beijing-gov-1", "mongodb.aliyuncs.com"),
             new TeaPair("cn-beijing-nu16-b01", "mongodb.aliyuncs.com"),
@@ -88,6 +88,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Applies for an SRV endpoint for an ApsaraDB for MongoDB instance.</p>
+     * 
      * @param request AllocateDBInstanceSrvNetworkAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AllocateDBInstanceSrvNetworkAddressResponse
@@ -141,6 +144,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Applies for an SRV endpoint for an ApsaraDB for MongoDB instance.</p>
+     * 
      * @param request AllocateDBInstanceSrvNetworkAddressRequest
      * @return AllocateDBInstanceSrvNetworkAddressResponse
      */
@@ -364,7 +370,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Before you enable Transparent Data Encryption (TDE) by calling the <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a> operation, you can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>You can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.</p>
+     * <p>Checks whether Key Management Service (KMS) keys are authorized to an ApsaraDB for MongoDB instance.</p>
      * 
      * @param request CheckCloudResourceAuthorizedRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -419,7 +425,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Before you enable Transparent Data Encryption (TDE) by calling the <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a> operation, you can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>You can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.</p>
+     * <p>Checks whether Key Management Service (KMS) keys are authorized to an ApsaraDB for MongoDB instance.</p>
      * 
      * @param request CheckCloudResourceAuthorizedRequest
      * @return CheckCloudResourceAuthorizedResponse
@@ -543,7 +549,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries whether a service-linked role is created.</p>
+     * <p>Checks whether a service-linked role (SLR) is created for an instance.</p>
      * 
      * @param request CheckServiceLinkedRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -583,7 +589,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries whether a service-linked role is created.</p>
+     * <p>Checks whether a service-linked role (SLR) is created for an instance.</p>
      * 
      * @param request CheckServiceLinkedRoleRequest
      * @return CheckServiceLinkedRoleResponse
@@ -1519,7 +1525,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除MongoDB备份集</p>
+     * <p>Deletes the backup set of MongoDB.</p>
      * 
      * @param request DeleteBackupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1571,7 +1577,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除MongoDB备份集</p>
+     * <p>Deletes the backup set of MongoDB.</p>
      * 
      * @param request DeleteBackupRequest
      * @return DeleteBackupResponse
@@ -2088,6 +2094,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Query maintenance task types and task quantities.</p>
+     * 
      * @param request DescribeActiveOperationTaskRegionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeActiveOperationTaskRegionResponse
@@ -2137,6 +2146,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Query maintenance task types and task quantities.</p>
+     * 
      * @param request DescribeActiveOperationTaskRegionRequest
      * @return DescribeActiveOperationTaskRegionResponse
      */
@@ -2713,7 +2725,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to query the engine versions to which an ApsaraDB for MongoDB instance can be upgraded.</p>
+     * <p>Queries the engine versions to which an ApsaraDB for MongoDB instance can be upgraded.</p>
      * 
      * @param request DescribeAvailableEngineVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2761,7 +2773,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to query the engine versions to which an ApsaraDB for MongoDB instance can be upgraded.</p>
+     * <p>Queries the engine versions to which an ApsaraDB for MongoDB instance can be upgraded.</p>
      * 
      * @param request DescribeAvailableEngineVersionRequest
      * @return DescribeAvailableEngineVersionResponse
@@ -3043,7 +3055,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the storage used for backup in an ApsaraDB for MongoDB replica set or sharded cluster instance that uses cloud disks. Note that you are charged only for the backup-used storage of each shard in a sharded cluster instance. You can call this operation only to query the storage used by a single shard in the instance for backup.</p>
+     * <p>Queries the backup storage capacity of an ApsaraDB for MongoDB replica set or sharded cluster instance that uses cloud disks.</p>
      * 
      * @param request DescribeBackupStorageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3099,7 +3111,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the storage used for backup in an ApsaraDB for MongoDB replica set or sharded cluster instance that uses cloud disks. Note that you are charged only for the backup-used storage of each shard in a sharded cluster instance. You can call this operation only to query the storage used by a single shard in the instance for backup.</p>
+     * <p>Queries the backup storage capacity of an ApsaraDB for MongoDB replica set or sharded cluster instance that uses cloud disks.</p>
      * 
      * @param request DescribeBackupStorageRequest
      * @return DescribeBackupStorageResponse
@@ -3275,6 +3287,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeBackupsResponse describeBackups(DescribeBackupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeBackupsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries binary log files bound to an ApsaraDB for MongoDB instance.</p>
+     * 
+     * @param request DescribeBinlogFilesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeBinlogFilesResponse
+     */
+    public DescribeBinlogFilesResponse describeBinlogFilesWithOptions(DescribeBinlogFilesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.binlogId)) {
+            query.put("BinlogId", request.binlogId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destRegion)) {
+            query.put("DestRegion", request.destRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeId)) {
+            query.put("NodeId", request.nodeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcRegion)) {
+            query.put("SrcRegion", request.srcRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeBinlogFiles"),
+            new TeaPair("version", "2015-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeBinlogFilesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries binary log files bound to an ApsaraDB for MongoDB instance.</p>
+     * 
+     * @param request DescribeBinlogFilesRequest
+     * @return DescribeBinlogFilesResponse
+     */
+    public DescribeBinlogFilesResponse describeBinlogFiles(DescribeBinlogFilesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeBinlogFilesWithOptions(request, runtime);
     }
 
     /**
@@ -3845,7 +3957,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看规格信息详情</p>
+     * <p>Queries the specifications of an ApsaraDB for MongoDB instance.</p>
      * 
      * @param request DescribeDBInstanceSpecInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3897,7 +4009,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看规格信息详情</p>
+     * <p>Queries the specifications of an ApsaraDB for MongoDB instance.</p>
      * 
      * @param request DescribeDBInstanceSpecInfoRequest
      * @return DescribeDBInstanceSpecInfoResponse
@@ -5949,7 +6061,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries entries in operational logs of an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries the operational logs of an ApsaraDB for MongoDB instance.</p>
      * 
      * @param request DescribeRunningLogRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6051,7 +6163,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries entries in operational logs of an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries the operational logs of an ApsaraDB for MongoDB instance.</p>
      * 
      * @param request DescribeRunningLogRecordsRequest
      * @return DescribeRunningLogRecordsResponse
@@ -6063,7 +6175,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to query ECS security groups that are bound to an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries the Elastic Compute Service (ECS) security groups that are associated with an ApsaraDB for MongoDB instance.</p>
      * 
      * @param request DescribeSecurityGroupConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6111,7 +6223,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to query ECS security groups that are bound to an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries the Elastic Compute Service (ECS) security groups that are associated with an ApsaraDB for MongoDB instance.</p>
      * 
      * @param request DescribeSecurityGroupConfigurationRequest
      * @return DescribeSecurityGroupConfigurationResponse
@@ -7118,6 +7230,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the O\\\&amp;M task configurations for an instance.</p>
+     * 
      * @param request ModifyActiveOperationMaintenanceConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyActiveOperationMaintenanceConfigResponse
@@ -7179,6 +7294,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the O\\\&amp;M task configurations for an instance.</p>
+     * 
      * @param request ModifyActiveOperationMaintenanceConfigRequest
      * @return ModifyActiveOperationMaintenanceConfigResponse
      */
@@ -7189,7 +7307,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the switching time of scheduled O\\\&amp;M tasks for an ApsaraDB for MongoDB instance.</p>
+     * <p>Modifies the switching time of scheduled O\\\\\\&amp;M tasks for an ApsaraDB for MongoDB instance.</p>
      * 
      * @param request ModifyActiveOperationTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7249,7 +7367,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the switching time of scheduled O\\\&amp;M tasks for an ApsaraDB for MongoDB instance.</p>
+     * <p>Modifies the switching time of scheduled O\\\\\\&amp;M tasks for an ApsaraDB for MongoDB instance.</p>
      * 
      * @param request ModifyActiveOperationTasksRequest
      * @return ModifyActiveOperationTasksResponse
@@ -7370,6 +7488,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBInstanceId", request.DBInstanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.hotStoragePeriod)) {
+            query.put("HotStoragePeriod", request.hotStoragePeriod);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
@@ -7431,7 +7553,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改MongoDB备份集的过期时间</p>
+     * <p>Modifies the expiration time of MongoDB backup sets</p>
      * 
      * @param request ModifyBackupExpireTimeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7487,7 +7609,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改MongoDB备份集的过期时间</p>
+     * <p>Modifies the expiration time of MongoDB backup sets</p>
      * 
      * @param request ModifyBackupExpireTimeRequest
      * @return ModifyBackupExpireTimeResponse
@@ -7644,6 +7766,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies existing release protection configurations.</p>
+     * 
      * @param request ModifyDBInstanceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBInstanceAttributeResponse
@@ -7693,6 +7818,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies existing release protection configurations.</p>
+     * 
      * @param request ModifyDBInstanceAttributeRequest
      * @return ModifyDBInstanceAttributeResponse
      */
@@ -7703,7 +7831,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改实例配置</p>
+     * <p>Modifies the configurations of an ApsaraDB for MongoDB instance.</p>
      * 
      * @param request ModifyDBInstanceConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7759,7 +7887,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改实例配置</p>
+     * <p>Modifies the configurations of an ApsaraDB for MongoDB instance.</p>
      * 
      * @param request ModifyDBInstanceConfigRequest
      * @return ModifyDBInstanceConfigResponse
@@ -7795,6 +7923,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBInstanceId", request.DBInstanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.forceModifySuffix)) {
+            query.put("ForceModifySuffix", request.forceModifySuffix);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkType)) {
+            query.put("NetworkType", request.networkType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.newConnectionString)) {
             query.put("NewConnectionString", request.newConnectionString);
         }
@@ -7813,6 +7949,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.portModifyOnly)) {
+            query.put("PortModifyOnly", request.portModifyOnly);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
@@ -9627,7 +9767,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改MongoDB实例的SRV连接地址</p>
+     * <p>Modifies the SRV connection string that is used to connect to an ApsaraDB for MongoDB instance.</p>
      * 
      * @param request ModifySrvNetworkAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9683,7 +9823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改MongoDB实例的SRV连接地址</p>
+     * <p>Modifies the SRV connection string that is used to connect to an ApsaraDB for MongoDB instance.</p>
      * 
      * @param request ModifySrvNetworkAddressRequest
      * @return ModifySrvNetworkAddressResponse

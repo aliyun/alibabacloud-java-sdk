@@ -4,15 +4,12 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
-    /**
-     * <p>The endpoints of DynamoDB-compatible instances.</p>
-     */
     @NameInMap("CompatibleConnections")
     public DescribeShardingNetworkAddressResponseBodyCompatibleConnections compatibleConnections;
 
-    /**
-     * <p>The endpoints of the ApsaraDB for MongoDB sharded cluster instance.</p>
-     */
+    @NameInMap("ConnectionStringSuffix")
+    public String connectionStringSuffix;
+
     @NameInMap("NetworkAddresses")
     public DescribeShardingNetworkAddressResponseBodyNetworkAddresses networkAddresses;
 
@@ -38,6 +35,14 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         return this.compatibleConnections;
     }
 
+    public DescribeShardingNetworkAddressResponseBody setConnectionStringSuffix(String connectionStringSuffix) {
+        this.connectionStringSuffix = connectionStringSuffix;
+        return this;
+    }
+    public String getConnectionStringSuffix() {
+        return this.connectionStringSuffix;
+    }
+
     public DescribeShardingNetworkAddressResponseBody setNetworkAddresses(DescribeShardingNetworkAddressResponseBodyNetworkAddresses networkAddresses) {
         this.networkAddresses = networkAddresses;
         return this;
@@ -55,77 +60,24 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
     }
 
     public static class DescribeShardingNetworkAddressResponseBodyCompatibleConnectionsCompatibleConnection extends TeaModel {
-        /**
-         * <p>The remaining duration of the classic network endpoint. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2591963</p>
-         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
-        /**
-         * <p>The IP address of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10.140.xxx.xx</p>
-         */
         @NameInMap("IPAddress")
         public String IPAddress;
 
-        /**
-         * <p>The endpoint of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dds-bpxxxxxxxxxxxxxx.mongodb.rds.aliyuncs.com</p>
-         */
         @NameInMap("NetworkAddress")
         public String networkAddress;
 
-        /**
-         * <p>The network type of the instance.</p>
-         * <ul>
-         * <li><strong>VPC</strong>: virtual private cloud</li>
-         * <li><strong>Classic</strong>: classic network</li>
-         * <li><strong>Public</strong>: the Internet</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>VPC</p>
-         */
         @NameInMap("NetworkType")
         public String networkType;
 
-        /**
-         * <p>The port that is used to connect to the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3717</p>
-         */
         @NameInMap("Port")
         public String port;
 
-        /**
-         * <p>The VPC ID of the instance.</p>
-         * <blockquote>
-         * <p> This parameter is returned when the network type is <strong>VPC</strong>.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-bpxxxxxxxx</p>
-         */
         @NameInMap("VPCId")
         public String VPCId;
 
-        /**
-         * <p>The ID of the vSwitch in the Virtual Private Cloud (VPC).</p>
-         * <blockquote>
-         * <p> This parameter is returned when the network type is <strong>VPC</strong>.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>vsw-bpxxxxxxxx</p>
-         */
         @NameInMap("VswitchId")
         public String vswitchId;
 
@@ -212,135 +164,39 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
     }
 
     public static class DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress extends TeaModel {
-        /**
-         * <p>The public endpoint type. Valid values:</p>
-         * <ul>
-         * <li><strong>SRV</strong></li>
-         * <li><strong>Normal</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>SRV</p>
-         */
         @NameInMap("ConnectionType")
         public String connectionType;
 
-        /**
-         * <p>The remaining duration of the classic network endpoint. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2591963</p>
-         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
-        /**
-         * <p>The IP address of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10.140.xxx.xx</p>
-         */
         @NameInMap("IPAddress")
         public String IPAddress;
 
-        /**
-         * <p>The connection string of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>s-bpxxxxxxxx.mongodb.rds.aliyuncs.com</p>
-         */
         @NameInMap("NetworkAddress")
         public String networkAddress;
 
-        /**
-         * <p>The network type of the instance.</p>
-         * <ul>
-         * <li><strong>VPC</strong>: virtual private cloud</li>
-         * <li><strong>Classic</strong>: classic network</li>
-         * <li><strong>Public</strong>: the Internet</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>VPC</p>
-         */
         @NameInMap("NetworkType")
         public String networkType;
 
-        /**
-         * <p>The ID of the mongos node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>s-bpxxxxxxxx</p>
-         */
         @NameInMap("NodeId")
         public String nodeId;
 
-        /**
-         * <p>The type of the node. Valid values:</p>
-         * <ul>
-         * <li><strong>mongos</strong>: mongos node</li>
-         * <li><strong>shard</strong>: shard node</li>
-         * <li><strong>configserver</strong>: Configserver node</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>mongos</p>
-         */
         @NameInMap("NodeType")
         public String nodeType;
 
-        /**
-         * <p>The port that is used to connect to the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3717</p>
-         */
         @NameInMap("Port")
         public String port;
 
-        /**
-         * <p>The role of the node. Valid values:</p>
-         * <ul>
-         * <li>Primary</li>
-         * <li>Secondary</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Primary</p>
-         */
         @NameInMap("Role")
         public String role;
 
-        /**
-         * <p>Txt record which can be used to store MongoDB-related meta data, such as version, configuration parameters and etc. With the combination of txt record and other technology, for example SRV record, the MongoDB client can complete the complex service discovery and configuration passing.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>mongo.example.com. IN TXT &quot;config=replicaSet=myReplicaSet&quot;</p>
-         */
         @NameInMap("TxtRecord")
         public String txtRecord;
 
-        /**
-         * <p>The VPC ID of the instance.</p>
-         * <blockquote>
-         * <p> This parameter is returned when the network type is <strong>VPC</strong>.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-bpxxxxxxxx</p>
-         */
         @NameInMap("VPCId")
         public String VPCId;
 
-        /**
-         * <p>The ID of the vSwitch in the VPC.</p>
-         * <blockquote>
-         * <p> This parameter is returned when the network type is <strong>VPC</strong>.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>vsw-bpxxxxxxxx</p>
-         */
         @NameInMap("VswitchId")
         public String vswitchId;
 
