@@ -3600,6 +3600,110 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询备选规格</p>
+     * 
+     * @param request DescribeCandidateInstanceTypeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCandidateInstanceTypeResponse
+     */
+    public DescribeCandidateInstanceTypeResponse describeCandidateInstanceTypeWithOptions(DescribeCandidateInstanceTypeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowCrossAz)) {
+            query.put("AllowCrossAz", request.allowCrossAz);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.allowDifferentGeneration)) {
+            query.put("AllowDifferentGeneration", request.allowDifferentGeneration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataDiskCategories)) {
+            query.put("DataDiskCategories", request.dataDiskCategories);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageFamily)) {
+            query.put("ImageFamily", request.imageFamily);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            query.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageName)) {
+            query.put("ImageName", request.imageName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceTypes)) {
+            query.put("InstanceTypes", request.instanceTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv6AddressCount)) {
+            query.put("Ipv6AddressCount", request.ipv6AddressCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxPrice)) {
+            query.put("MaxPrice", request.maxPrice);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.spotStrategy)) {
+            query.put("SpotStrategy", request.spotStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.systemDiskCategories)) {
+            query.put("SystemDiskCategories", request.systemDiskCategories);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneIds)) {
+            query.put("ZoneIds", request.zoneIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCandidateInstanceType"),
+            new TeaPair("version", "2022-02-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCandidateInstanceTypeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询备选规格</p>
+     * 
+     * @param request DescribeCandidateInstanceTypeRequest
+     * @return DescribeCandidateInstanceTypeResponse
+     */
+    public DescribeCandidateInstanceTypeResponse describeCandidateInstanceType(DescribeCandidateInstanceTypeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCandidateInstanceTypeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the diagnostic reports.</p>
      * 
      * @param request DescribeDiagnoseReportsRequest

@@ -190,6 +190,9 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         @NameInMap("Code")
         public String code;
 
+        @NameInMap("ElasticStrength")
+        public String elasticStrength;
+
         /**
          * <p>The instance type of the resource pool.</p>
          * 
@@ -264,6 +267,14 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         }
         public String getCode() {
             return this.code;
+        }
+
+        public DescribeElasticStrengthResponseBodyElasticStrengthModelsResourcePools setElasticStrength(String elasticStrength) {
+            this.elasticStrength = elasticStrength;
+            return this;
+        }
+        public String getElasticStrength() {
+            return this.elasticStrength;
         }
 
         public DescribeElasticStrengthResponseBodyElasticStrengthModelsResourcePools setInstanceType(String instanceType) {
@@ -499,6 +510,9 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         @NameInMap("Code")
         public String code;
 
+        @NameInMap("ElasticStrength")
+        public String elasticStrength;
+
         /**
          * <p>The instance type of the resource pool.</p>
          * 
@@ -571,6 +585,14 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         }
         public String getCode() {
             return this.code;
+        }
+
+        public DescribeElasticStrengthResponseBodyResourcePools setElasticStrength(String elasticStrength) {
+            this.elasticStrength = elasticStrength;
+            return this;
+        }
+        public String getElasticStrength() {
+            return this.elasticStrength;
         }
 
         public DescribeElasticStrengthResponseBodyResourcePools setInstanceType(String instanceType) {
