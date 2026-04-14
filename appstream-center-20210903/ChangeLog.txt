@@ -1,3 +1,6 @@
+2026-04-14 Version: 2.0.6
+- Generated java 2021-09-03 for appstream-center.
+
 2025-10-28 Version: 2.0.5
 - Update API Unbind: add request parameters AppInstancePersistentId.
 

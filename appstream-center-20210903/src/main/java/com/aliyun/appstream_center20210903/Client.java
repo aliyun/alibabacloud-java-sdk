@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取连接信息</p>
+     * <p>Queries the credential used to connect to an app instance.</p>
      * 
      * @param request GetConnectionTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -156,7 +156,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取连接信息</p>
+     * <p>Queries the credential used to connect to an app instance.</p>
      * 
      * @param request GetConnectionTicketRequest
      * @return GetConnectionTicketResponse
@@ -168,7 +168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>已上架应用列表</p>
+     * <p>Queries information about published apps.</p>
      * 
      * @param request ListPublishedAppInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -256,7 +256,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>已上架应用列表</p>
+     * <p>Queries information about published apps.</p>
      * 
      * @param request ListPublishedAppInfoRequest
      * @return ListPublishedAppInfoResponse
@@ -268,7 +268,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>运行中应用列表</p>
+     * <p>Queries running apps.</p>
      * 
      * @param request ListRunningAppsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -344,7 +344,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>运行中应用列表</p>
+     * <p>Queries running apps.</p>
      * 
      * @param request ListRunningAppsRequest
      * @return ListRunningAppsResponse
@@ -356,7 +356,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重置应用资源</p>
+     * <p>Resets app resources.</p>
      * 
      * @param request ResetAppResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -436,7 +436,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重置应用资源</p>
+     * <p>Resets app resources.</p>
      * 
      * @param request ResetAppResourcesRequest
      * @return ResetAppResourcesResponse
@@ -448,7 +448,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重启应用资源</p>
+     * <p>Restarts app resources.</p>
      * 
      * @param request RestartAppResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -528,7 +528,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重启应用资源</p>
+     * <p>Restarts app resources.</p>
      * 
      * @param request RestartAppResourcesRequest
      * @return RestartAppResourcesResponse
@@ -540,7 +540,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动应用资源</p>
+     * <p>Starts app resources.</p>
      * 
      * @param request StartAppResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -620,7 +620,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动应用资源</p>
+     * <p>Starts app resources.</p>
      * 
      * @param request StartAppResourcesRequest
      * @return StartAppResourcesResponse
@@ -632,7 +632,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止应用</p>
+     * <p>Stops a specific app.</p>
      * 
      * @param request StopAppRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -744,7 +744,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止应用</p>
+     * <p>Stops a specific app.</p>
      * 
      * @param request StopAppRequest
      * @return StopAppResponse
@@ -756,7 +756,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关闭应用资源</p>
+     * <p>Stops app resources.</p>
      * 
      * @param request StopAppResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -836,7 +836,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关闭应用资源</p>
+     * <p>Stops app resources.</p>
      * 
      * @param request StopAppResourcesRequest
      * @return StopAppResourcesResponse
@@ -848,7 +848,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解绑实例</p>
+     * <p>Unbinds an app instance from a user.</p>
      * 
      * @param request UnbindRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -932,7 +932,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解绑实例</p>
+     * <p>Unbinds an app instance from a user.</p>
      * 
      * @param request UnbindRequest
      * @return UnbindResponse
