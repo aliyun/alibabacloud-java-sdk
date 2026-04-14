@@ -14,6 +14,9 @@ public class CreatePrometheusVirtualInstanceRequest extends TeaModel {
     @NameInMap("namespace")
     public String namespace;
 
+    @NameInMap("tenantId")
+    public String tenantId;
+
     public static CreatePrometheusVirtualInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePrometheusVirtualInstanceRequest self = new CreatePrometheusVirtualInstanceRequest();
         return TeaModel.build(map, self);
@@ -25,6 +28,14 @@ public class CreatePrometheusVirtualInstanceRequest extends TeaModel {
     }
     public String getNamespace() {
         return this.namespace;
+    }
+
+    public CreatePrometheusVirtualInstanceRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
 }

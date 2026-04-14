@@ -1264,6 +1264,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("namespace", request.namespace);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("tenantId", request.tenantId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
@@ -5727,6 +5731,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
             query.put("namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
