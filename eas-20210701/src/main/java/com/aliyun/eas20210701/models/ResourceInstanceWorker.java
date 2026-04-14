@@ -47,7 +47,7 @@ public class ResourceInstanceWorker extends TeaModel {
      * <p>400</p>
      */
     @NameInMap("MemoryLimit")
-    public Integer memoryLimit;
+    public Long memoryLimit;
 
     /**
      * <p>The memory size that you applied for.</p>
@@ -83,7 +83,7 @@ public class ResourceInstanceWorker extends TeaModel {
      * <p>3</p>
      */
     @NameInMap("RestartCount")
-    public Integer restartCount;
+    public Long restartCount;
 
     /**
      * <p>The service name.</p>
@@ -193,11 +193,11 @@ public class ResourceInstanceWorker extends TeaModel {
         return this.gpuRequest;
     }
 
-    public ResourceInstanceWorker setMemoryLimit(Integer memoryLimit) {
+    public ResourceInstanceWorker setMemoryLimit(Long memoryLimit) {
         this.memoryLimit = memoryLimit;
         return this;
     }
-    public Integer getMemoryLimit() {
+    public Long getMemoryLimit() {
         return this.memoryLimit;
     }
 
@@ -225,11 +225,11 @@ public class ResourceInstanceWorker extends TeaModel {
         return this.ready;
     }
 
-    public ResourceInstanceWorker setRestartCount(Integer restartCount) {
+    public ResourceInstanceWorker setRestartCount(Long restartCount) {
         this.restartCount = restartCount;
         return this;
     }
-    public Integer getRestartCount() {
+    public Long getRestartCount() {
         return this.restartCount;
     }
 
