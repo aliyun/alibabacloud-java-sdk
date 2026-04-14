@@ -493,6 +493,79 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建网络服务</p>
+     * 
+     * @param request CreateNetworkServiceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateNetworkServiceResponse
+     */
+    public CreateNetworkServiceResponse createNetworkServiceWithOptions(String workspaceId, CreateNetworkServiceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("clientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityGroupId)) {
+            body.put("securityGroupId", request.securityGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            body.put("vpcId", request.vpcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vswitchIds)) {
+            body.put("vswitchIds", request.vswitchIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateNetworkService"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/networkServices"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateNetworkServiceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建网络服务</p>
+     * 
+     * @param request CreateNetworkServiceRequest
+     * @return CreateNetworkServiceResponse
+     */
+    public CreateNetworkServiceResponse createNetworkService(String workspaceId, CreateNetworkServiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createNetworkServiceWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a workflow.</p>
      * 
      * @param tmpReq CreateProcessDefinitionWithScheduleRequest
@@ -2643,6 +2716,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listMembersWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看网络服务列表</p>
+     * 
+     * @param request ListNetworkServicesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListNetworkServicesResponse
+     */
+    public ListNetworkServicesResponse listNetworkServicesWithOptions(String workspaceId, ListNetworkServicesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListNetworkServices"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/networkServices"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListNetworkServicesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看网络服务列表</p>
+     * 
+     * @param request ListNetworkServicesRequest
+     * @return ListNetworkServicesResponse
+     */
+    public ListNetworkServicesResponse listNetworkServices(String workspaceId, ListNetworkServicesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listNetworkServicesWithOptions(workspaceId, request, headers, runtime);
     }
 
     /**
