@@ -4,9 +4,6 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainExtensionsResponseBody extends TeaModel {
-    /**
-     * <p>A list of additional certificates.</p>
-     */
     @NameInMap("DomainExtensions")
     public DescribeDomainExtensionsResponseBodyDomainExtensions domainExtensions;
 
@@ -41,30 +38,12 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainExtensionsResponseBodyDomainExtensionsDomainExtension extends TeaModel {
-        /**
-         * <p>The domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://www.example.com">www.example.com</a></p>
-         */
         @NameInMap("Domain")
         public String domain;
 
-        /**
-         * <p>The ID of the additional certificate.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>de-bp1rp7ta1****</p>
-         */
         @NameInMap("DomainExtensionId")
         public String domainExtensionId;
 
-        /**
-         * <p>The ID of the certificate used by the domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1231579085529123_166f8204689_1714763408_70998****</p>
-         */
         @NameInMap("ServerCertificateId")
         public String serverCertificateId;
 

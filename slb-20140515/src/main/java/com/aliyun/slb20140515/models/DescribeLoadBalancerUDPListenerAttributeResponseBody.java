@@ -13,9 +13,6 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     @NameInMap("AclId")
     public String aclId;
 
-    /**
-     * <p>The ID of the access control list (ACL).</p>
-     */
     @NameInMap("AclIds")
     public DescribeLoadBalancerUDPListenerAttributeResponseBodyAclIds aclIds;
 
@@ -224,9 +221,6 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     @NameInMap("Status")
     public String status;
 
-    /**
-     * <p>The tags.</p>
-     */
     @NameInMap("Tags")
     public DescribeLoadBalancerUDPListenerAttributeResponseBodyTags tags;
 
@@ -465,21 +459,9 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     }
 
     public static class DescribeLoadBalancerUDPListenerAttributeResponseBodyTagsTag extends TeaModel {
-        /**
-         * <p>The key of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag value cannot be an empty string. The tag key can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestKey</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The value of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag value can be an empty string. The tag value can be up to 128 characters in length, and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestValue</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 

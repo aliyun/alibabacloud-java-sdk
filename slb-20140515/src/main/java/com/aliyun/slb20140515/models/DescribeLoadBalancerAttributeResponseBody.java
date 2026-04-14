@@ -40,9 +40,6 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     @NameInMap("AutoReleaseTime")
     public Long autoReleaseTime;
 
-    /**
-     * <p>The backend servers of the CLB instance.</p>
-     */
     @NameInMap("BackendServers")
     public DescribeLoadBalancerAttributeResponseBodyBackendServers backendServers;
 
@@ -130,21 +127,12 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
-    /**
-     * <p>The frontend port used by the CLB instance.</p>
-     */
     @NameInMap("ListenerPorts")
     public DescribeLoadBalancerAttributeResponseBodyListenerPorts listenerPorts;
 
-    /**
-     * <p>The ports or protocols of the listeners.</p>
-     */
     @NameInMap("ListenerPortsAndProtocal")
     public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocal listenerPortsAndProtocal;
 
-    /**
-     * <p>The ports or protocols of the listeners.</p>
-     */
     @NameInMap("ListenerPortsAndProtocol")
     public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocol listenerPortsAndProtocol;
 
@@ -344,9 +332,6 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     @NameInMap("SlaveZoneId")
     public String slaveZoneId;
 
-    /**
-     * <p>The tags.</p>
-     */
     @NameInMap("Tags")
     public DescribeLoadBalancerAttributeResponseBodyTags tags;
 
@@ -662,51 +647,18 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer extends TeaModel {
-        /**
-         * <p>The description of the backend server.</p>
-         * <blockquote>
-         * <p>This parameter is not returned if Description is not set.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>backend server description</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The backend server ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-2zej4lxhjoq1icu*****</p>
-         */
         @NameInMap("ServerId")
         public String serverId;
 
-        /**
-         * <p>The ID of the elastic network interface (ENI) or elastic container instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>192.XX.XX.11</p>
-         */
         @NameInMap("ServerIp")
         public String serverIp;
 
-        /**
-         * <p>The type of the backend server.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ecs</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>The weight of the backend server.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>90</p>
-         */
         @NameInMap("Weight")
         public Integer weight;
 
@@ -796,21 +748,9 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocalListenerPortAndProtocal extends TeaModel {
-        /**
-         * <p>The frontend port that is used by the CLB instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>443</p>
-         */
         @NameInMap("ListenerPort")
         public Integer listenerPort;
 
-        /**
-         * <p>The frontend protocol that is used by the CLB instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>http</p>
-         */
         @NameInMap("ListenerProtocal")
         public String listenerProtocal;
 
@@ -857,48 +797,18 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocolListenerPortAndProtocol extends TeaModel {
-        /**
-         * <p>Indicates whether the listener is enabled.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Listener Description</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The destination listening port to which requests are forwarded. The port must be open and use HTTPS.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>443</p>
-         */
         @NameInMap("ForwardPort")
         public Integer forwardPort;
 
-        /**
-         * <p>Indicates whether the listener is enabled.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>on</p>
-         */
         @NameInMap("ListenerForward")
         public String listenerForward;
 
-        /**
-         * <p>The frontend port that is used by the CLB instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>80</p>
-         */
         @NameInMap("ListenerPort")
         public Integer listenerPort;
 
-        /**
-         * <p>The frontend protocol that is used by the CLB instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>https</p>
-         */
         @NameInMap("ListenerProtocol")
         public String listenerProtocol;
 
@@ -969,23 +879,9 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeLoadBalancerAttributeResponseBodyTagsTag extends TeaModel {
-        /**
-         * <p>The tag key. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be at most 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It must not start with <code>aliyun</code> or <code>acs:</code>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag value. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>value</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 

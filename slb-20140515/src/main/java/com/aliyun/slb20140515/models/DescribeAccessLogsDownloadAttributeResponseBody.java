@@ -4,9 +4,6 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessLogsDownloadAttributeResponseBody extends TeaModel {
-    /**
-     * <p>The configuration of the access log.</p>
-     */
     @NameInMap("LogsDownloadAttributes")
     public DescribeAccessLogsDownloadAttributeResponseBodyLogsDownloadAttributes logsDownloadAttributes;
 
@@ -92,48 +89,18 @@ public class DescribeAccessLogsDownloadAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessLogsDownloadAttributeResponseBodyLogsDownloadAttributesLogsDownloadAttribute extends TeaModel {
-        /**
-         * <p>The CLB instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>lb-bp1b6c719dfa08ex*****</p>
-         */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
-        /**
-         * <p>The name of the Log Service project.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test-log-project</p>
-         */
         @NameInMap("LogProject")
         public String logProject;
 
-        /**
-         * <p>The name of the Logstore.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test-log-store</p>
-         */
         @NameInMap("LogStore")
         public String logStore;
 
-        /**
-         * <p>The type of access log. Only <strong>layer7</strong> is returned, which indicates Layer 7 access logs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>layer7</p>
-         */
         @NameInMap("LogType")
         public String logType;
 
-        /**
-         * <p>The region ID of the CLB instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("Region")
         public String region;
 

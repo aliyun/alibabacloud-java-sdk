@@ -31,9 +31,6 @@ public class DescribeTagsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The tags that are queried.</p>
-     */
     @NameInMap("TagSets")
     public DescribeTagsResponseBodyTagSets tagSets;
 
@@ -92,30 +89,12 @@ public class DescribeTagsResponseBody extends TeaModel {
     }
 
     public static class DescribeTagsResponseBodyTagSetsTagSet extends TeaModel {
-        /**
-         * <p>The number of instances to which the tag is added.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>api</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 

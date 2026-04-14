@@ -72,6 +72,9 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>The port that is used for health checks.</p>
      * <p>Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
@@ -336,6 +339,14 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public SetLoadBalancerUDPListenerAttributeRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public SetLoadBalancerUDPListenerAttributeRequest setHealthCheckConnectPort(Integer healthCheckConnectPort) {

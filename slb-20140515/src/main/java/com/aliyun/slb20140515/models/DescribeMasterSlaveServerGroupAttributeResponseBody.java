@@ -22,9 +22,6 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
-    /**
-     * <p>A list of backend servers in the primary/secondary server group.</p>
-     */
     @NameInMap("MasterSlaveBackendServers")
     public DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers masterSlaveBackendServers;
 
@@ -55,9 +52,6 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The tag list.</p>
-     */
     @NameInMap("Tags")
     public DescribeMasterSlaveServerGroupAttributeResponseBodyTags tags;
 
@@ -123,62 +117,21 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
     }
 
     public static class DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer extends TeaModel {
-        /**
-         * <p>The description of the primary/secondary server group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Primary and secondary server group description</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The port that is used by the backend server.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>90</p>
-         */
         @NameInMap("Port")
         public Integer port;
 
-        /**
-         * <p>The ID of the backend server.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>eni-hhshhs****</p>
-         */
         @NameInMap("ServerId")
         public String serverId;
 
-        /**
-         * <p>The type of backend server. Valid values: <strong>Master</strong> and <strong>Slave</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Slave</p>
-         */
         @NameInMap("ServerType")
         public String serverType;
 
-        /**
-         * <p>The type of the backend server. Valid values:</p>
-         * <ul>
-         * <li><strong>ecs</strong> (default): Elastic Compute Service (ECS) instance</li>
-         * <li><strong>eni</strong>: elastic network interface (ENI)</li>
-         * <li><strong>eci</strong>: elastic container instance</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>eni</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>The weight of the backend server.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("Weight")
         public Integer weight;
 
@@ -257,23 +210,9 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
     }
 
     public static class DescribeMasterSlaveServerGroupAttributeResponseBodyTagsTag extends TeaModel {
-        /**
-         * <p>The tag key. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestKey</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag value. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestValue</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 

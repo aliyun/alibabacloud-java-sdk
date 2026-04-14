@@ -13,9 +13,6 @@ public class DescribeZonesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The zones.</p>
-     */
     @NameInMap("Zones")
     public DescribeZonesResponseBodyZones zones;
 
@@ -41,21 +38,9 @@ public class DescribeZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeZonesResponseBodyZonesZoneSlaveZonesSlaveZone extends TeaModel {
-        /**
-         * <p>The name of the secondary zone.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Queries zones in a specified region.</p>
-         */
         @NameInMap("LocalName")
         public String localName;
 
-        /**
-         * <p>The ID of the secondary zone.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-g</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -102,27 +87,12 @@ public class DescribeZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeZonesResponseBodyZonesZone extends TeaModel {
-        /**
-         * <p>The name of the zone.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>The list of secondary zones.</p>
-         */
         @NameInMap("LocalName")
         public String localName;
 
-        /**
-         * <p>The secondary zones.</p>
-         */
         @NameInMap("SlaveZones")
         public DescribeZonesResponseBodyZonesZoneSlaveZones slaveZones;
 
-        /**
-         * <p>The ID of the zone.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-b</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 

@@ -4,9 +4,6 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class RemoveBackendServersResponseBody extends TeaModel {
-    /**
-     * <p>The backend servers.</p>
-     */
     @NameInMap("BackendServers")
     public RemoveBackendServersResponseBodyBackendServers backendServers;
 
@@ -58,44 +55,15 @@ public class RemoveBackendServersResponseBody extends TeaModel {
     }
 
     public static class RemoveBackendServersResponseBodyBackendServersBackendServer extends TeaModel {
-        /**
-         * <p>The description of the server group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>BackendServer1</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the backend server.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-bp1fq61enf4loa5i****</p>
-         */
         @NameInMap("ServerId")
         public String serverId;
 
-        /**
-         * <p>The type of backend server. Valid values:</p>
-         * <ul>
-         * <li><strong>ecs</strong>: ECS instance</li>
-         * <li><strong>eni</strong>: ENI</li>
-         * <li><strong>eci</strong>: elastic container instances</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ecs</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>The weight of the backend server. Valid values: <strong>0 to 100</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("Weight")
         public Integer weight;
 

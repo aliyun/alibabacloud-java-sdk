@@ -96,6 +96,9 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>Specifies whether to enable <code>GZIP</code> compression to compress specific types of files. Valid values:</p>
      * <ul>
@@ -506,6 +509,14 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public SetLoadBalancerHTTPListenerAttributeRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public SetLoadBalancerHTTPListenerAttributeRequest setGzip(String gzip) {

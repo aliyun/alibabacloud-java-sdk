@@ -93,6 +93,9 @@ public class SetLoadBalancerTCPListenerAttributeRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>The timeout period of a connection. Unit: seconds. Valid values: <strong>10</strong> to <strong>900</strong>.</p>
      * 
@@ -426,6 +429,14 @@ public class SetLoadBalancerTCPListenerAttributeRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public SetLoadBalancerTCPListenerAttributeRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public SetLoadBalancerTCPListenerAttributeRequest setEstablishedTimeout(Integer establishedTimeout) {

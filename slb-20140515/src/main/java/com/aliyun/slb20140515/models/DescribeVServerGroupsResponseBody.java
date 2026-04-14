@@ -13,9 +13,6 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The backend servers.</p>
-     */
     @NameInMap("VServerGroups")
     public DescribeVServerGroupsResponseBodyVServerGroups VServerGroups;
 
@@ -41,21 +38,9 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsListenersListener extends TeaModel {
-        /**
-         * <p>The listener port.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>80</p>
-         */
         @NameInMap("Port")
         public Integer port;
 
-        /**
-         * <p>The listener protocol. Valid values: <strong>tcp</strong>, <strong>udp</strong>, <strong>http</strong>, and <strong>https</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>tcp</p>
-         */
         @NameInMap("Protocol")
         public String protocol;
 
@@ -102,39 +87,15 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsRulesRule extends TeaModel {
-        /**
-         * <p>The requested domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://www.example.com">www.example.com</a></p>
-         */
         @NameInMap("Domain")
         public String domain;
 
-        /**
-         * <p>The ID of the forwarding rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rule-a3x3pg1yohq3lq****</p>
-         */
         @NameInMap("RuleId")
         public String ruleId;
 
-        /**
-         * <p>The name of the forwarding rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("RuleName")
         public String ruleName;
 
-        /**
-         * <p>The request URL.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>/example</p>
-         */
         @NameInMap("Url")
         public String url;
 
@@ -197,15 +158,9 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjects extends TeaModel {
-        /**
-         * <p>The listeners.</p>
-         */
         @NameInMap("Listeners")
         public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsListeners listeners;
 
-        /**
-         * <p>The forwarding rules.</p>
-         */
         @NameInMap("Rules")
         public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsRules rules;
 
@@ -233,21 +188,9 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupTagsTag extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestKey</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestValue</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -294,52 +237,21 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroup extends TeaModel {
-        /**
-         * <p>The associated resources.</p>
-         */
         @NameInMap("AssociatedObjects")
         public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjects associatedObjects;
 
-        /**
-         * <p>The time when the CLB instance was created. The time follows the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-08-31T02:49:05Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The number of servers.</p>
-         * <p>This parameter is unavailable by default. To use this parameter, submit a ticket or contact your account manager.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("ServerCount")
         public Long serverCount;
 
-        /**
-         * <p>The tags.</p>
-         */
         @NameInMap("Tags")
         public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupTags tags;
 
-        /**
-         * <p>The server group ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rsp-0bfuc*****</p>
-         */
         @NameInMap("VServerGroupId")
         public String VServerGroupId;
 
-        /**
-         * <p>The server group name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Group3</p>
-         */
         @NameInMap("VServerGroupName")
         public String VServerGroupName;
 

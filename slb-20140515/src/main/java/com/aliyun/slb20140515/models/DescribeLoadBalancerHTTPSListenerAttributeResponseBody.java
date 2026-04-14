@@ -16,9 +16,6 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
     @NameInMap("AclId")
     public String aclId;
 
-    /**
-     * <p>The ID of the network access control list (ACL) that is associated with the listener.</p>
-     */
     @NameInMap("AclIds")
     public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyAclIds aclIds;
 
@@ -109,9 +106,6 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <p>A list of additional certificates.</p>
-     */
     @NameInMap("DomainExtensions")
     public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions domainExtensions;
 
@@ -279,9 +273,6 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
     @NameInMap("RequestTimeout")
     public Integer requestTimeout;
 
-    /**
-     * <p>The list of forwarding rules that are associated with the listener.</p>
-     */
     @NameInMap("Rules")
     public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRules rules;
 
@@ -396,9 +387,6 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
     @NameInMap("TLSCipherPolicy")
     public String TLSCipherPolicy;
 
-    /**
-     * <p>The tags.</p>
-     */
     @NameInMap("Tags")
     public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyTags tags;
 
@@ -959,30 +947,12 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
     }
 
     public static class DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension extends TeaModel {
-        /**
-         * <p>The domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://www.example.com">www.example.com</a></p>
-         */
         @NameInMap("Domain")
         public String domain;
 
-        /**
-         * <p>The ID of the additional certificate.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>12</p>
-         */
         @NameInMap("DomainExtensionId")
         public String domainExtensionId;
 
-        /**
-         * <p>The ID of the certificate used by the domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>13344444****</p>
-         */
         @NameInMap("ServerCertificateId")
         public String serverCertificateId;
 
@@ -1037,48 +1007,18 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
     }
 
     public static class DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRulesRule extends TeaModel {
-        /**
-         * <p>The domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://www.example.com">www.example.com</a></p>
-         */
         @NameInMap("Domain")
         public String domain;
 
-        /**
-         * <p>The ID of the forwarding rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>23</p>
-         */
         @NameInMap("RuleId")
         public String ruleId;
 
-        /**
-         * <p>The name of the forwarding rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example</p>
-         */
         @NameInMap("RuleName")
         public String ruleName;
 
-        /**
-         * <p>The request URL.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>/example</p>
-         */
         @NameInMap("Url")
         public String url;
 
-        /**
-         * <p>The ID of the server group specified in the forwarding rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rsp-cige6j5e********</p>
-         */
         @NameInMap("VServerGroupId")
         public String VServerGroupId;
 
@@ -1149,21 +1089,9 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
     }
 
     public static class DescribeLoadBalancerHTTPSListenerAttributeResponseBodyTagsTag extends TeaModel {
-        /**
-         * <p>The key of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag value cannot be an empty string. The tag key can be up to 64 characters in length. The key cannot start with <code>acs:</code> or <code>aliyun</code> or contain <code>http://</code> or <code>https://</code>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestKey</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The value of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag value can be an empty string. The tag value can be up to 128 characters in length, and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestValue</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 

@@ -4,9 +4,6 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceResponseBody extends TeaModel {
-    /**
-     * <p>The zones and the supported resources.</p>
-     */
     @NameInMap("AvailableResources")
     public DescribeAvailableResourceResponseBodyAvailableResources availableResources;
 
@@ -41,23 +38,9 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResourcesSupportResource extends TeaModel {
-        /**
-         * <p>The type of the IP address.</p>
-         * <p>Valid values: <strong>ipv4 and ipv6</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ipv4</p>
-         */
         @NameInMap("AddressIPVersion")
         public String addressIPVersion;
 
-        /**
-         * <p>The network type.</p>
-         * <p>Valid values: <strong>vpc, classic-internet, and classic-intranet</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>classic_internet</p>
-         */
         @NameInMap("AddressType")
         public String addressType;
 
@@ -104,27 +87,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResource extends TeaModel {
-        /**
-         * <p>The primary zone.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai-a</p>
-         */
         @NameInMap("MasterZoneId")
         public String masterZoneId;
 
-        /**
-         * <p>The secondary zone.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai-b</p>
-         */
         @NameInMap("SlaveZoneId")
         public String slaveZoneId;
 
-        /**
-         * <p>The supported resources.</p>
-         */
         @NameInMap("SupportResources")
         public DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResources supportResources;
 

@@ -4,9 +4,6 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class CreateVServerGroupResponseBody extends TeaModel {
-    /**
-     * <p>The list of backend servers.</p>
-     */
     @NameInMap("BackendServers")
     public CreateVServerGroupResponseBodyBackendServers backendServers;
 
@@ -58,53 +55,18 @@ public class CreateVServerGroupResponseBody extends TeaModel {
     }
 
     public static class CreateVServerGroupResponseBodyBackendServersBackendServer extends TeaModel {
-        /**
-         * <p>The description of the vServer group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>backend server</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The port that is used by the backend server.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>70</p>
-         */
         @NameInMap("Port")
         public Integer port;
 
-        /**
-         * <p>The ID of the ECS instance or ENI.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>eni-hhshhs****</p>
-         */
         @NameInMap("ServerId")
         public String serverId;
 
-        /**
-         * <p>The type of backend server. Valid values:</p>
-         * <ul>
-         * <li><strong>ecs</strong> (default): ECS instance</li>
-         * <li><strong>eni</strong>: elastic network interface (ENI)</li>
-         * <li><strong>eci</strong>: elastic container instance</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>eni</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>The weight of the backend server.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("Weight")
         public Integer weight;
 

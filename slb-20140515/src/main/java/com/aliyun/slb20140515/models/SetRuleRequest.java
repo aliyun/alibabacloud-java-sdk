@@ -29,6 +29,9 @@ public class SetRuleRequest extends TeaModel {
     @NameInMap("CookieTimeout")
     public Integer cookieTimeout;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>Specifies whether to enable the health check feature. Valid values:</p>
      * <ul>
@@ -284,6 +287,14 @@ public class SetRuleRequest extends TeaModel {
     }
     public Integer getCookieTimeout() {
         return this.cookieTimeout;
+    }
+
+    public SetRuleRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public SetRuleRequest setHealthCheck(String healthCheck) {

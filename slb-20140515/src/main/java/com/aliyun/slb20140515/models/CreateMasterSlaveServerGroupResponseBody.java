@@ -4,9 +4,6 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
-    /**
-     * <p>The backend servers in the primary/secondary server group.</p>
-     */
     @NameInMap("MasterSlaveBackendServers")
     public CreateMasterSlaveServerGroupResponseBodyMasterSlaveBackendServers masterSlaveBackendServers;
 
@@ -58,63 +55,21 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
     }
 
     public static class CreateMasterSlaveServerGroupResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer extends TeaModel {
-        /**
-         * <p>The description of the primary/secondary server group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test-112</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The port that is used by the backend server.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>82</p>
-         */
         @NameInMap("Port")
         public Integer port;
 
-        /**
-         * <p>The ID of the backend server that you want to add.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-bp1fq61enf4loa5i****</p>
-         */
         @NameInMap("ServerId")
         public String serverId;
 
-        /**
-         * <p>The type of backend server.</p>
-         * <p>Valid values: <strong>Master</strong> and <strong>Slave</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Master</p>
-         */
         @NameInMap("ServerType")
         public String serverType;
 
-        /**
-         * <p>The type of backend server. Valid values:</p>
-         * <ul>
-         * <li><strong>ecs</strong>: ECS instance</li>
-         * <li><strong>eni</strong>: ENI</li>
-         * <li><strong>eci</strong>: elastic container instance</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ecs</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>The weight of the backend server.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("Weight")
         public Integer weight;
 

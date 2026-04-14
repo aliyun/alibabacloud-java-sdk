@@ -109,6 +109,9 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>Specifies whether to use <code>HTTP 2.0</code>. Valid values:</p>
      * <ul>
@@ -582,6 +585,14 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public SetLoadBalancerHTTPSListenerAttributeRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public SetLoadBalancerHTTPSListenerAttributeRequest setEnableHttp2(String enableHttp2) {

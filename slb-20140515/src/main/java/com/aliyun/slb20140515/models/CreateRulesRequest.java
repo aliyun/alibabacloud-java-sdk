@@ -4,6 +4,9 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class CreateRulesRequest extends TeaModel {
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>The frontend listener port that is used by the SLB instance.</p>
      * <p>Valid values: <strong>1 to 65535</strong>.</p>
@@ -82,6 +85,14 @@ public class CreateRulesRequest extends TeaModel {
     public static CreateRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRulesRequest self = new CreateRulesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateRulesRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public CreateRulesRequest setListenerPort(Integer listenerPort) {

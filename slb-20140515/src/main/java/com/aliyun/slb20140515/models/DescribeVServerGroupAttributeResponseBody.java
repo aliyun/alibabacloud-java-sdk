@@ -4,9 +4,6 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
-    /**
-     * <p>The backend servers.</p>
-     */
     @NameInMap("BackendServers")
     public DescribeVServerGroupAttributeResponseBodyBackendServers backendServers;
 
@@ -37,9 +34,6 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The tags of the backend server.</p>
-     */
     @NameInMap("Tags")
     public DescribeVServerGroupAttributeResponseBodyTags tags;
 
@@ -123,65 +117,21 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeVServerGroupAttributeResponseBodyBackendServersBackendServer extends TeaModel {
-        /**
-         * <p>The description of the server group.</p>
-         * <blockquote>
-         * <p> This parameter is not returned if the Description parameter is not specified in the request.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>Server Group Description</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The port that is used by the backend server.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>90</p>
-         */
         @NameInMap("Port")
         public Integer port;
 
-        /**
-         * <p>The ID of the backend server.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vm-233</p>
-         */
         @NameInMap("ServerId")
         public String serverId;
 
-        /**
-         * <p>The IP address of the backend server.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>192.XX.XX.11</p>
-         */
         @NameInMap("ServerIp")
         public String serverIp;
 
-        /**
-         * <p>The type of backend server. Valid values:</p>
-         * <ul>
-         * <li><strong>ecs</strong>: ECS instance</li>
-         * <li><strong>eni</strong>: ENI</li>
-         * <li><strong>eci</strong>: elastic container instance</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ecs</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>The weight of the backend server.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("Weight")
         public Integer weight;
 
@@ -260,23 +210,9 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeVServerGroupAttributeResponseBodyTagsTag extends TeaModel {
-        /**
-         * <p>The tag key. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestKey</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag value. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestValue</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 

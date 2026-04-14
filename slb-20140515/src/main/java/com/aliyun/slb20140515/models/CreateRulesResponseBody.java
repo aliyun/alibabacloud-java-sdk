@@ -13,9 +13,6 @@ public class CreateRulesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The forwarding rules.</p>
-     */
     @NameInMap("Rules")
     public CreateRulesResponseBodyRules rules;
 
@@ -41,21 +38,9 @@ public class CreateRulesResponseBody extends TeaModel {
     }
 
     public static class CreateRulesResponseBodyRulesRule extends TeaModel {
-        /**
-         * <p>The forwarding rule ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rule-bp12jzy0*****</p>
-         */
         @NameInMap("RuleId")
         public String ruleId;
 
-        /**
-         * <p>The name of the forwarding rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Rule2</p>
-         */
         @NameInMap("RuleName")
         public String ruleName;
 

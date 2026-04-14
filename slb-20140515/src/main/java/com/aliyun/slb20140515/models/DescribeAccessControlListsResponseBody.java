@@ -4,9 +4,6 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessControlListsResponseBody extends TeaModel {
-    /**
-     * <p>A list of ACLs.</p>
-     */
     @NameInMap("Acls")
     public DescribeAccessControlListsResponseBodyAcls acls;
 
@@ -109,21 +106,9 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessControlListsResponseBodyAclsAclTagsTag extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -170,54 +155,21 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessControlListsResponseBodyAclsAcl extends TeaModel {
-        /**
-         * <p>The ACL ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>acl-bp1l0kk4gxce43k*****</p>
-         */
         @NameInMap("AclId")
         public String aclId;
 
-        /**
-         * <p>The ACL name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rule1</p>
-         */
         @NameInMap("AclName")
         public String aclName;
 
-        /**
-         * <p>The IP version that is used by the CLB instance associated with the ACL.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ipv4</p>
-         */
         @NameInMap("AddressIPVersion")
         public String addressIPVersion;
 
-        /**
-         * <p>The time when the CLB instance was created. The time follows the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-08-31T02:49:05Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The resource group ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-jfenfbp1lhl0****</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        /**
-         * <p>The list of tags added to the network ACL. The value of this parameter must be a STRING list in the JSON format.</p>
-         */
         @NameInMap("Tags")
         public DescribeAccessControlListsResponseBodyAclsAclTags tags;
 

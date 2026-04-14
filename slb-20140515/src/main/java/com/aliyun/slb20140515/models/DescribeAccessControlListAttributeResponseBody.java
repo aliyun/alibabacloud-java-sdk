@@ -4,9 +4,6 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
-    /**
-     * <p>The information about the access control policy.</p>
-     */
     @NameInMap("AclEntrys")
     public DescribeAccessControlListAttributeResponseBodyAclEntrys aclEntrys;
 
@@ -46,9 +43,6 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
-    /**
-     * <p>The listeners with which the ACL is associated.</p>
-     */
     @NameInMap("RelatedListeners")
     public DescribeAccessControlListAttributeResponseBodyRelatedListeners relatedListeners;
 
@@ -70,9 +64,6 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    /**
-     * <p>The tags added to the ACL.</p>
-     */
     @NameInMap("Tags")
     public DescribeAccessControlListAttributeResponseBodyTags tags;
 
@@ -171,21 +162,9 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessControlListAttributeResponseBodyAclEntrysAclEntry extends TeaModel {
-        /**
-         * <p>The remarks of the ACL entry.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("AclEntryComment")
         public String aclEntryComment;
 
-        /**
-         * <p>The IP entry in the ACL.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>192.168.0.1</p>
-         */
         @NameInMap("AclEntryIP")
         public String aclEntryIP;
 
@@ -232,43 +211,15 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessControlListAttributeResponseBodyRelatedListenersRelatedListener extends TeaModel {
-        /**
-         * <p>The type of ACL. Valid values:</p>
-         * <ul>
-         * <li><strong>black</strong></li>
-         * <li><strong>white</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>white</p>
-         */
         @NameInMap("AclType")
         public String aclType;
 
-        /**
-         * <p>The frontend port of the listener with which the ACL is associated.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>443</p>
-         */
         @NameInMap("ListenerPort")
         public Integer listenerPort;
 
-        /**
-         * <p>The CLB instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>lb-bp1qpzldlm38bnexl****</p>
-         */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
-        /**
-         * <p>The type of protocol that the associated listener uses.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>https</p>
-         */
         @NameInMap("Protocol")
         public String protocol;
 
@@ -331,21 +282,9 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessControlListAttributeResponseBodyTagsTag extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestKey</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestValue</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 

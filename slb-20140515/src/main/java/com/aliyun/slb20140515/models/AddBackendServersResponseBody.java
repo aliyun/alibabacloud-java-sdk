@@ -4,9 +4,6 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class AddBackendServersResponseBody extends TeaModel {
-    /**
-     * <p>The list of backend servers.</p>
-     */
     @NameInMap("BackendServers")
     public AddBackendServersResponseBodyBackendServers backendServers;
 
@@ -58,46 +55,15 @@ public class AddBackendServersResponseBody extends TeaModel {
     }
 
     public static class AddBackendServersResponseBodyBackendServersBackendServer extends TeaModel {
-        /**
-         * <p>The description of the backend server.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>backend server</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the ECS instance, ENI, or elastic container instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-2zej4lxhjoq1icu*****</p>
-         */
         @NameInMap("ServerId")
         public String serverId;
 
-        /**
-         * <p>The type of the backend server. Valid values:</p>
-         * <ul>
-         * <li><strong>ecs</strong> (default): an ECS instance</li>
-         * <li><strong>eni</strong>: an ENI</li>
-         * <li><strong>eci</strong>: an elastic container instance</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ecs</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>The weight of the backend server.</p>
-         * <p>Valid values: <strong>0 to 100</strong>. Default value: <strong>100</strong>.</p>
-         * <p>If the value is set to <strong>0</strong>, no requests are forwarded to the backend server.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("Weight")
         public String weight;
 

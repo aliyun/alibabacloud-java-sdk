@@ -1650,6 +1650,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateRulesResponse createRulesWithOptions(CreateRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.listenerPort)) {
             query.put("ListenerPort", request.listenerPort);
         }
@@ -6275,7 +6279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables the whitelist of a specified listener.</p>
+     * <p>Enables or disables the whitelist of a listener.</p>
      * 
      * @param request SetListenerAccessControlStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6339,7 +6343,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables the whitelist of a specified listener.</p>
+     * <p>Enables or disables the whitelist of a listener.</p>
      * 
      * @param request SetListenerAccessControlStatusRequest
      * @return SetListenerAccessControlStatusResponse
@@ -6461,6 +6465,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.gzip)) {
@@ -6672,6 +6680,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.enableHttp2)) {
             query.put("EnableHttp2", request.enableHttp2);
         }
@@ -6845,7 +6857,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configuration of the configuration read-only mode for a Classic Load Balancer (CLB) instance.</p>
+     * <p>Enable or disable the configuration read-only mode for a Classic Load Balancer (CLB) instance.</p>
      * 
      * @param request SetLoadBalancerModificationProtectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6905,7 +6917,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configuration of the configuration read-only mode for a Classic Load Balancer (CLB) instance.</p>
+     * <p>Enable or disable the configuration read-only mode for a Classic Load Balancer (CLB) instance.</p>
      * 
      * @param request SetLoadBalancerModificationProtectionRequest
      * @return SetLoadBalancerModificationProtectionResponse
@@ -7096,6 +7108,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.establishedTimeout)) {
             query.put("EstablishedTimeout", request.establishedTimeout);
         }
@@ -7272,6 +7288,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.healthCheckConnectPort)) {
             query.put("HealthCheckConnectPort", request.healthCheckConnectPort);
         }
@@ -7408,6 +7428,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.cookieTimeout)) {
             query.put("CookieTimeout", request.cookieTimeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.healthCheck)) {

@@ -136,10 +136,6 @@ public class UploadServerCertificateResponseBody extends TeaModel {
     @NameInMap("ServerCertificateName")
     public String serverCertificateName;
 
-    /**
-     * <p>The subject alternative names.</p>
-     * <p>A domain name list is supported. A maximum of 10 domain names are supported.</p>
-     */
     @NameInMap("SubjectAlternativeNames")
     public UploadServerCertificateResponseBodySubjectAlternativeNames subjectAlternativeNames;
 
