@@ -87,6 +87,15 @@ public class CreateAgentRuntimeInput extends TeaModel {
     public Integer diskSize;
 
     /**
+     * <p>是否启用会话隔离，启用后每个会话将在独立的环境中运行</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("enableSessionIsolation")
+    public Boolean enableSessionIsolation;
+
+    /**
      * <p>智能体运行时的环境变量配置，用于在运行时传递配置参数</p>
      * 
      * <strong>example:</strong>
@@ -303,6 +312,14 @@ public class CreateAgentRuntimeInput extends TeaModel {
     }
     public Integer getDiskSize() {
         return this.diskSize;
+    }
+
+    public CreateAgentRuntimeInput setEnableSessionIsolation(Boolean enableSessionIsolation) {
+        this.enableSessionIsolation = enableSessionIsolation;
+        return this;
+    }
+    public Boolean getEnableSessionIsolation() {
+        return this.enableSessionIsolation;
     }
 
     public CreateAgentRuntimeInput setEnvironmentVariables(java.util.Map<String, String> environmentVariables) {

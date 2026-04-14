@@ -40,6 +40,15 @@ public class ListAgentRuntimesInput extends TeaModel {
     @NameInMap("statuses")
     public java.util.List<String> statuses;
 
+    /**
+     * <p>按系统标签过滤</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ecs:tag1,acs:ecs:tag2</p>
+     */
+    @NameInMap("systemTags")
+    public java.util.List<String> systemTags;
+
     public static ListAgentRuntimesInput build(java.util.Map<String, ?> map) throws Exception {
         ListAgentRuntimesInput self = new ListAgentRuntimesInput();
         return TeaModel.build(map, self);
@@ -75,6 +84,14 @@ public class ListAgentRuntimesInput extends TeaModel {
     }
     public java.util.List<String> getStatuses() {
         return this.statuses;
+    }
+
+    public ListAgentRuntimesInput setSystemTags(java.util.List<String> systemTags) {
+        this.systemTags = systemTags;
+        return this;
+    }
+    public java.util.List<String> getSystemTags() {
+        return this.systemTags;
     }
 
 }

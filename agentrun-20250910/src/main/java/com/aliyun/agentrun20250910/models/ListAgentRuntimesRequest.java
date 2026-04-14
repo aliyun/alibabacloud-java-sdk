@@ -64,6 +64,15 @@ public class ListAgentRuntimesRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>根据系统标签进行过滤，多个标签用逗号分隔，支持精确匹配</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ecs:tag1,acs:ecs:tag2</p>
+     */
+    @NameInMap("systemTags")
+    public String systemTags;
+
+    /**
      * <p>根据工作空间ID进行过滤，用于资源隔离和权限管理</p>
      * 
      * <strong>example:</strong>
@@ -136,6 +145,14 @@ public class ListAgentRuntimesRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public ListAgentRuntimesRequest setSystemTags(String systemTags) {
+        this.systemTags = systemTags;
+        return this;
+    }
+    public String getSystemTags() {
+        return this.systemTags;
     }
 
     public ListAgentRuntimesRequest setWorkspaceId(String workspaceId) {

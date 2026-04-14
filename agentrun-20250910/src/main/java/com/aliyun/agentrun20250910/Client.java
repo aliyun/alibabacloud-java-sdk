@@ -2200,6 +2200,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("status", request.status);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.systemTags)) {
+            query.put("systemTags", request.systemTags);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
             query.put("workspaceId", request.workspaceId);
         }

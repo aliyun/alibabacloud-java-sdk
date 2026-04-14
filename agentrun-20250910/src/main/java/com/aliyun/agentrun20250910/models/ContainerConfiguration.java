@@ -41,6 +41,15 @@ public class ContainerConfiguration extends TeaModel {
     @NameInMap("port")
     public Integer port;
 
+    /**
+     * <p>自定义镜像仓库的配置信息，当imageRegistryType为CUSTOM时使用</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
+    @NameInMap("registryConfig")
+    public RegistryConfig registryConfig;
+
     public static ContainerConfiguration build(java.util.Map<String, ?> map) throws Exception {
         ContainerConfiguration self = new ContainerConfiguration();
         return TeaModel.build(map, self);
@@ -84,6 +93,14 @@ public class ContainerConfiguration extends TeaModel {
     }
     public Integer getPort() {
         return this.port;
+    }
+
+    public ContainerConfiguration setRegistryConfig(RegistryConfig registryConfig) {
+        this.registryConfig = registryConfig;
+        return this;
+    }
+    public RegistryConfig getRegistryConfig() {
+        return this.registryConfig;
     }
 
 }
