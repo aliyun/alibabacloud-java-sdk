@@ -61,7 +61,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 TeaRequest request_ = new TeaRequest();
                 java.util.Map<String, Object> form = com.aliyun.teautil.Common.assertAsMap(data);
                 String boundary = com.aliyun.fileform.Client.getBoundary();
-                String host = com.aliyun.teautil.Common.assertAsString(form.get("host"));
+                String tmp = com.aliyun.teautil.Common.assertAsString(form.get("host"));
+                String host = "" + bucketName + "." + tmp + "";
                 request_.protocol = "HTTPS";
                 request_.method = "POST";
                 request_.pathname = "/";
@@ -740,7 +741,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("contentType", "")
             ));
             ossHeader = TeaConverter.buildMap(
-                new TeaPair("host", "" + authResponseBody.get("Bucket") + "." + com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType) + ""),
+                new TeaPair("host", com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType)),
                 new TeaPair("OSSAccessKeyId", authResponseBody.get("AccessKeyId")),
                 new TeaPair("policy", authResponseBody.get("EncodedPolicy")),
                 new TeaPair("Signature", authResponseBody.get("Signature")),
@@ -1338,7 +1339,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("contentType", "")
             ));
             ossHeader = TeaConverter.buildMap(
-                new TeaPair("host", "" + authResponseBody.get("Bucket") + "." + com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType) + ""),
+                new TeaPair("host", com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType)),
                 new TeaPair("OSSAccessKeyId", authResponseBody.get("AccessKeyId")),
                 new TeaPair("policy", authResponseBody.get("EncodedPolicy")),
                 new TeaPair("Signature", authResponseBody.get("Signature")),
@@ -1644,7 +1645,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("contentType", "")
             ));
             ossHeader = TeaConverter.buildMap(
-                new TeaPair("host", "" + authResponseBody.get("Bucket") + "." + com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType) + ""),
+                new TeaPair("host", com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType)),
                 new TeaPair("OSSAccessKeyId", authResponseBody.get("AccessKeyId")),
                 new TeaPair("policy", authResponseBody.get("EncodedPolicy")),
                 new TeaPair("Signature", authResponseBody.get("Signature")),
@@ -2292,7 +2293,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Query the User Status of Ant Blockchain</p>
      * 
-     * @param request DescribeAntAndCloudAuthUserStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAntAndCloudAuthUserStatusResponse
      */
@@ -2678,7 +2678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询任务导出记录</p>
+     * <p>Query export task records</p>
      * 
      * @param request DescribeInfoCheckExportRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2726,7 +2726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询任务导出记录</p>
+     * <p>Query export task records</p>
      * 
      * @param request DescribeInfoCheckExportRecordRequest
      * @return DescribeInfoCheckExportRecordResponse
@@ -2942,7 +2942,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询页面元数据</p>
+     * <p>Query Page Metadata</p>
      * 
      * @param request DescribeMetaSearchPageListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3026,7 +3026,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询页面元数据</p>
+     * <p>Query Page Metadata</p>
      * 
      * @param request DescribeMetaSearchPageListRequest
      * @return DescribeMetaSearchPageListResponse
@@ -3038,7 +3038,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询认证统计信息</p>
+     * <p>Query Authentication Statistics</p>
      * 
      * @param request DescribeMetaStatisticsListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3078,7 +3078,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询认证统计信息</p>
+     * <p>Query Authentication Statistics</p>
      * 
      * @param request DescribeMetaStatisticsListRequest
      * @return DescribeMetaStatisticsListResponse
@@ -3090,7 +3090,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询认证统计页面</p>
+     * <p>Query Authentication Statistics Page</p>
      * 
      * @param request DescribeMetaStatisticsPageListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3138,7 +3138,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询认证统计页面</p>
+     * <p>Query Authentication Statistics Page</p>
      * 
      * @param request DescribeMetaStatisticsPageListRequest
      * @return DescribeMetaStatisticsPageListResponse
@@ -3268,7 +3268,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Call DescribeOssUploadToken to get the Token required for uploading photos to OSS.</p>
      * 
-     * @param request DescribeOssUploadTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeOssUploadTokenResponse
      */
@@ -3369,7 +3368,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Query Page Settings</p>
      * 
-     * @param request DescribePageSettingRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePageSettingResponse
      */
@@ -3409,7 +3407,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Get Product Code</p>
      * 
-     * @param request DescribeProductCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeProductCodeResponse
      */
@@ -4934,7 +4931,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("contentType", "")
             ));
             ossHeader = TeaConverter.buildMap(
-                new TeaPair("host", "" + authResponseBody.get("Bucket") + "." + com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType) + ""),
+                new TeaPair("host", com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType)),
                 new TeaPair("OSSAccessKeyId", authResponseBody.get("AccessKeyId")),
                 new TeaPair("policy", authResponseBody.get("EncodedPolicy")),
                 new TeaPair("Signature", authResponseBody.get("Signature")),
@@ -4958,7 +4955,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("contentType", "")
             ));
             ossHeader = TeaConverter.buildMap(
-                new TeaPair("host", "" + authResponseBody.get("Bucket") + "." + com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType) + ""),
+                new TeaPair("host", com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType)),
                 new TeaPair("OSSAccessKeyId", authResponseBody.get("AccessKeyId")),
                 new TeaPair("policy", authResponseBody.get("EncodedPolicy")),
                 new TeaPair("Signature", authResponseBody.get("Signature")),
@@ -5116,7 +5113,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("contentType", "")
             ));
             ossHeader = TeaConverter.buildMap(
-                new TeaPair("host", "" + authResponseBody.get("Bucket") + "." + com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType) + ""),
+                new TeaPair("host", com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType)),
                 new TeaPair("OSSAccessKeyId", authResponseBody.get("AccessKeyId")),
                 new TeaPair("policy", authResponseBody.get("EncodedPolicy")),
                 new TeaPair("Signature", authResponseBody.get("Signature")),
@@ -5266,7 +5263,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("contentType", "")
             ));
             ossHeader = TeaConverter.buildMap(
-                new TeaPair("host", "" + authResponseBody.get("Bucket") + "." + com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType) + ""),
+                new TeaPair("host", com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType)),
                 new TeaPair("OSSAccessKeyId", authResponseBody.get("AccessKeyId")),
                 new TeaPair("policy", authResponseBody.get("EncodedPolicy")),
                 new TeaPair("Signature", authResponseBody.get("Signature")),
@@ -5290,7 +5287,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("contentType", "")
             ));
             ossHeader = TeaConverter.buildMap(
-                new TeaPair("host", "" + authResponseBody.get("Bucket") + "." + com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType) + ""),
+                new TeaPair("host", com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType)),
                 new TeaPair("OSSAccessKeyId", authResponseBody.get("AccessKeyId")),
                 new TeaPair("policy", authResponseBody.get("EncodedPolicy")),
                 new TeaPair("Signature", authResponseBody.get("Signature")),
@@ -7244,11 +7241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Update the information of a financial-level authentication scenario based on the scenario ID.</p>
-     * <ul>
-     * <li>Service address: cloudauth.aliyuncs.com.</li>
-     * <li>Request method: HTTPS POST.</li>
-     * </ul>
+     * <p>Content of the uploaded verification file.</p>
      * 
      * <b>summary</b> : 
      * <p>Update Ant Blockchain Transaction Scenario</p>
@@ -7327,11 +7320,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Update the information of a financial-level authentication scenario based on the scenario ID.</p>
-     * <ul>
-     * <li>Service address: cloudauth.aliyuncs.com.</li>
-     * <li>Request method: HTTPS POST.</li>
-     * </ul>
+     * <p>Content of the uploaded verification file.</p>
      * 
      * <b>summary</b> : 
      * <p>Update Ant Blockchain Transaction Scenario</p>

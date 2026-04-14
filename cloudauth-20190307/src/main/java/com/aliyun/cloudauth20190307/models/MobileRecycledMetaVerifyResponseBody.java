@@ -77,6 +77,13 @@ public class MobileRecycledMetaVerifyResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>CMCC</p>
+         */
+        @NameInMap("IspName")
+        public String ispName;
+
+        /**
+         * <strong>example:</strong>
          * <p>101</p>
          */
         @NameInMap("SubCode")
@@ -93,6 +100,14 @@ public class MobileRecycledMetaVerifyResponseBody extends TeaModel {
         }
         public String getBizCode() {
             return this.bizCode;
+        }
+
+        public MobileRecycledMetaVerifyResponseBodyResultObject setIspName(String ispName) {
+            this.ispName = ispName;
+            return this;
+        }
+        public String getIspName() {
+            return this.ispName;
         }
 
         public MobileRecycledMetaVerifyResponseBodyResultObject setSubCode(String subCode) {

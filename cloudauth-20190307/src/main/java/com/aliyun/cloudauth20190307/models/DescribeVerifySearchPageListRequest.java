@@ -33,7 +33,7 @@ public class DescribeVerifySearchPageListRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>End date of the query. The format is a Unix timestamp, in milliseconds.</p>
+     * <p>End time of the query. Format is Unix timestamp, in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-10-16 23:59:59 +0800</p>
@@ -42,7 +42,7 @@ public class DescribeVerifySearchPageListRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>Whether there is device risk (pass true if root = 1 or simulator = 1 or virtual_video = 1).</p>
+     * <p>Whether there is a device risk (pass true if root = 1 or simulator = 1 or virtual_video = 1).</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -51,7 +51,7 @@ public class DescribeVerifySearchPageListRequest extends TeaModel {
     public Boolean hasDeviceRisk;
 
     /**
-     * <p>Liveness detection model.</p>
+     * <p>Model for liveness detection.</p>
      * 
      * <strong>example:</strong>
      * <p>LIVENESS</p>
@@ -100,18 +100,68 @@ public class DescribeVerifySearchPageListRequest extends TeaModel {
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <p>Business scenario risk</p>
+     * <ul>
+     * <li><strong>0</strong>: No risk</li>
+     * <li><strong>1</strong>: Risk present</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RiskBizScenario")
     public Integer riskBizScenario;
 
+    /**
+     * <p>Device risk:</p>
+     * <ul>
+     * <li><strong>0</strong>: No risk</li>
+     * <li><strong>1</strong>: Risk present</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RiskDevice")
     public Integer riskDevice;
 
+    /**
+     * <p>DeviceToken risk:</p>
+     * <ul>
+     * <li><strong>0</strong>: No risk</li>
+     * <li><strong>1</strong>: Risk present</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("RiskDeviceToken")
     public Integer riskDeviceToken;
 
+    /**
+     * <p>General risk</p>
+     * <ul>
+     * <li><strong>0</strong>: No risk</li>
+     * <li><strong>1</strong>: Risk present</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RiskGeneric")
     public Integer riskGeneric;
 
+    /**
+     * <p>Large model mining risk</p>
+     * <ul>
+     * <li><strong>0</strong>: No risk</li>
+     * <li><strong>1</strong>: Risk present</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RiskModelMining")
     public Integer riskModelMining;
 
@@ -143,7 +193,7 @@ public class DescribeVerifySearchPageListRequest extends TeaModel {
     public Integer simulator;
 
     /**
-     * <p>Start date of the query.</p>
+     * <p>Start time of the query.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-10-10 00:00:00 +0800</p>

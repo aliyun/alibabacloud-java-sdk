@@ -13,9 +13,6 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    /**
-     * <p>Array of device information.</p>
-     */
     @NameInMap("DeviceInfoList")
     public DescribeDeviceInfoResponseBodyDeviceInfoList deviceInfoList;
 
@@ -92,48 +89,18 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDeviceInfoResponseBodyDeviceInfoListDeviceInfo extends TeaModel {
-        /**
-         * <p>Authorization start date.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20180101</p>
-         */
         @NameInMap("BeginDay")
         public String beginDay;
 
-        /**
-         * <p>Corresponds to the BizType in the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FACE_TEST</p>
-         */
         @NameInMap("BizType")
         public String bizType;
 
-        /**
-         * <p>Corresponds to the DeviceId in the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>wd.6ziUffspAeW5FVYbaqmexR-1qwNjM</p>
-         */
         @NameInMap("DeviceId")
         public String deviceId;
 
-        /**
-         * <p>Authorization expiration date.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20180101</p>
-         */
         @NameInMap("ExpiredDay")
         public String expiredDay;
 
-        /**
-         * <p>Corresponds to the UserDeviceId in the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3iJ1AY$oHcu7mC69</p>
-         */
         @NameInMap("UserDeviceId")
         public String userDeviceId;
 

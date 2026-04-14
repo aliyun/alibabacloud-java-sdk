@@ -5,14 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAntCloudAuthSceneRequest extends TeaModel {
     /**
-     * <p>Whether to enable binding to a mini program:</p>
-     * <ul>
-     * <li><strong>Y</strong>: Enable</li>
-     * <li><strong>N (default)</strong>: Do not enable<blockquote>
-     * <p>Notice: If enabling the binding of a mini program, please ensure all parameters for the mini program are passed.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
+     * <p>Update Ant Blockchain Transaction Scenario</p>
      * 
      * <strong>example:</strong>
      * <p>Y</p>
@@ -21,7 +14,14 @@ public class UpdateAntCloudAuthSceneRequest extends TeaModel {
     public String bindMiniProgram;
 
     /**
-     * <p>Content of the uploaded verification file.</p>
+     * <p>Whether to enable binding with a mini program:</p>
+     * <ul>
+     * <li><strong>Y</strong>: Enable</li>
+     * <li><strong>N (default)</strong>: Disable<blockquote>
+     * <p>Notice: If you enable binding with a mini program, please ensure that all parameters for the mini program are passed.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>774c4aab45981ff4a86cde9255a11xxx</p>
@@ -30,33 +30,38 @@ public class UpdateAntCloudAuthSceneRequest extends TeaModel {
     public String checkFileBody;
 
     /**
-     * <p>Name of the uploaded verification file.</p>
+     * <p>Scenario name.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试.txt</p>
+     * <p>Whether to enable storing the authentication files generated during the authentication process to the user\&quot;s OSS:</p>
+     * <ul>
+     * <li><strong>Y</strong>: Enable</li>
+     * <li><strong>N (default)</strong>: Disable</li>
+     * </ul>
      */
     @NameInMap("CheckFileName")
     public String checkFileName;
 
+    /**
+     * <p>Name of the uploaded verification file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Y</p>
+     */
     @NameInMap("DeviceRiskPlus")
     public String deviceRiskPlus;
 
     /**
-     * <p>Mini program name.</p>
+     * <p>System-defined parameter. Value: <strong>UpdateAntCloudAuthScene</strong>.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试APP</p>
+     * <p>Scenario ID.</p>
      */
     @NameInMap("MiniProgramName")
     public String miniProgramName;
 
     /**
-     * <p>Binding mini program platform:</p>
-     * <ul>
-     * <li><strong>WECHAT</strong>: WeChat</li>
-     * <li><strong>ALIPAY</strong>: Alipay</li>
-     * <li><strong>TIKTOK</strong>: TikTok</li>
-     * </ul>
+     * <p>Currently meaningless, can be omitted.</p>
      * 
      * <strong>example:</strong>
      * <p>IOS</p>
@@ -64,14 +69,31 @@ public class UpdateAntCloudAuthSceneRequest extends TeaModel {
     @NameInMap("Platform")
     public String platform;
 
+    /**
+     * <p>Mini program name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ReturnPicCount")
     public Long returnPicCount;
 
+    /**
+     * <p>Platform for binding the mini program:</p>
+     * <ul>
+     * <li><strong>WECHAT</strong>: WeChat</li>
+     * <li><strong>ALIPAY</strong>: Alipay</li>
+     * <li><strong>TIKTOK</strong>: TikTok</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("ReturnVideoLength")
     public Long returnVideoLength;
 
     /**
-     * <p>Scenario ID.</p>
+     * <p>Update Financial-Level Authentication Scenario</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,7 +103,11 @@ public class UpdateAntCloudAuthSceneRequest extends TeaModel {
     public Long sceneId;
 
     /**
-     * <p>Scenario name.</p>
+     * <p>Update the information of a financial-level authentication scenario based on the scenario ID.</p>
+     * <ul>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -90,7 +116,7 @@ public class UpdateAntCloudAuthSceneRequest extends TeaModel {
     public String sceneName;
 
     /**
-     * <p>Currently meaningless, can be omitted.</p>
+     * <p>Update Ant Blockchain Transaction Scenario</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -101,10 +127,10 @@ public class UpdateAntCloudAuthSceneRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>Whether to enable delivering the authentication files generated during the authentication process to the user\&quot;s OSS:</p>
+     * <p>Update the information of a financial-level authentication scenario based on the scenario ID.</p>
      * <ul>
-     * <li><strong>Y</strong>: Enable</li>
-     * <li><strong>N (default)</strong>: Disable</li>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST.</li>
      * </ul>
      * 
      * <strong>example:</strong>
