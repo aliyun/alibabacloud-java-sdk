@@ -10,6 +10,9 @@ public class PolarFsMountConfig extends TeaModel {
     @NameInMap("mountDir")
     public String mountDir;
 
+    @NameInMap("readOnly")
+    public Boolean readOnly;
+
     @NameInMap("remoteDir")
     public String remoteDir;
 
@@ -32,6 +35,14 @@ public class PolarFsMountConfig extends TeaModel {
     }
     public String getMountDir() {
         return this.mountDir;
+    }
+
+    public PolarFsMountConfig setReadOnly(Boolean readOnly) {
+        this.readOnly = readOnly;
+        return this;
+    }
+    public Boolean getReadOnly() {
+        return this.readOnly;
     }
 
     public PolarFsMountConfig setRemoteDir(String remoteDir) {
