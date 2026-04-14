@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class GetTrackListResponseBody extends TeaModel {
     /**
-     * <p>Used for pagination. Do not set this parameter for the first request. For subsequent requests, set this parameter to the OffsetCreateTime value from the previous response. (This field is deprecated.)</p>
+     * <p>Used for pagination. Not set for the first query, but for subsequent queries, it should be set to the value of OffsetCreateTime from the previous response. (This field is deprecated)</p>
      * 
      * <strong>example:</strong>
-     * <p>（本字段已废弃）</p>
+     * <p>(This field is deprecated)</p>
      */
     @NameInMap("OffsetCreateTime")
     public String offsetCreateTime;
 
     /**
-     * <p>(This field is deprecated.)</p>
+     * <p>(This field is deprecated)</p>
      * 
      * <strong>example:</strong>
-     * <p>（本字段已废弃）</p>
+     * <p>(This field is deprecated)</p>
      */
     @NameInMap("OffsetCreateTimeDesc")
     public String offsetCreateTimeDesc;
 
     /**
-     * <p>The current page number.</p>
+     * <p>Current page number</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class GetTrackListResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>Number of items per page</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,7 +41,7 @@ public class GetTrackListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The unique identifier for the request.</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
@@ -50,7 +50,7 @@ public class GetTrackListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of matching records.</p>
+     * <p>Total number of items</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -58,12 +58,6 @@ public class GetTrackListResponseBody extends TeaModel {
     @NameInMap("Total")
     public Integer total;
 
-    /**
-     * <p>The total number of pages.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2</p>
-     */
     @NameInMap("TotalPages")
     public Integer totalPages;
 

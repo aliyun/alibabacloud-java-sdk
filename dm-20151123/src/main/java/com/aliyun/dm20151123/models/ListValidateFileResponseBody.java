@@ -4,15 +4,10 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class ListValidateFileResponseBody extends TeaModel {
-    /**
-     * <p>The list of files.</p>
-     */
     @NameInMap("Files")
     public java.util.List<ListValidateFileResponseBodyFiles> files;
 
     /**
-     * <p>Indicates whether a next page of data exists.</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -20,8 +15,6 @@ public class ListValidateFileResponseBody extends TeaModel {
     public Boolean hasNext;
 
     /**
-     * <p>The page number.</p>
-     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,8 +22,6 @@ public class ListValidateFileResponseBody extends TeaModel {
     public Integer page;
 
     /**
-     * <p>The number of entries per page.</p>
-     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -38,8 +29,6 @@ public class ListValidateFileResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -47,8 +36,6 @@ public class ListValidateFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of pages.</p>
-     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -56,8 +43,6 @@ public class ListValidateFileResponseBody extends TeaModel {
     public Integer totalPages;
 
     /**
-     * <p>The total number of entries.</p>
-     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -127,8 +112,6 @@ public class ListValidateFileResponseBody extends TeaModel {
 
     public static class ListValidateFileResponseBodyFiles extends TeaModel {
         /**
-         * <p>The number of addresses with the validation result \&quot;CatchAll\&quot;.</p>
-         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -136,8 +119,6 @@ public class ListValidateFileResponseBody extends TeaModel {
         public String catchAllNum;
 
         /**
-         * <p>The time when the task was completed.</p>
-         * 
          * <strong>example:</strong>
          * <p>2000-01-01T00:00:00Z</p>
          */
@@ -145,8 +126,6 @@ public class ListValidateFileResponseBody extends TeaModel {
         public String completeTime;
 
         /**
-         * <p>The number of addresses with the validation result \&quot;DoNotMail\&quot;.</p>
-         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -154,8 +133,6 @@ public class ListValidateFileResponseBody extends TeaModel {
         public String doNotMailNum;
 
         /**
-         * <p>The file ID.</p>
-         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -163,8 +140,6 @@ public class ListValidateFileResponseBody extends TeaModel {
         public String fileId;
 
         /**
-         * <p>The file name.</p>
-         * 
          * <strong>example:</strong>
          * <p>test.csv</p>
          */
@@ -172,8 +147,6 @@ public class ListValidateFileResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The number of addresses with the validation result \&quot;Invalid\&quot;.</p>
-         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -181,8 +154,6 @@ public class ListValidateFileResponseBody extends TeaModel {
         public String invalidNum;
 
         /**
-         * <p>Indicates whether the result can be downloaded.</p>
-         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -190,8 +161,6 @@ public class ListValidateFileResponseBody extends TeaModel {
         public Boolean isDownloadable;
 
         /**
-         * <p>The task execution progress.</p>
-         * 
          * <strong>example:</strong>
          * <p>100%</p>
          */
@@ -199,8 +168,6 @@ public class ListValidateFileResponseBody extends TeaModel {
         public String percentage;
 
         /**
-         * <p>The number of addresses that have been validated.</p>
-         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -208,8 +175,6 @@ public class ListValidateFileResponseBody extends TeaModel {
         public String processedNum;
 
         /**
-         * <p>The status of the task.</p>
-         * 
          * <strong>example:</strong>
          * <p>completed</p>
          */
@@ -217,8 +182,6 @@ public class ListValidateFileResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The number of addresses to validate in the task.</p>
-         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -226,8 +189,6 @@ public class ListValidateFileResponseBody extends TeaModel {
         public String totalNum;
 
         /**
-         * <p>The number of addresses with the validation result \&quot;Unknown\&quot;.</p>
-         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -235,8 +196,6 @@ public class ListValidateFileResponseBody extends TeaModel {
         public String unknownNum;
 
         /**
-         * <p>The time when the file was submitted.</p>
-         * 
          * <strong>example:</strong>
          * <p>2000-01-01T00:00:00Z</p>
          */
@@ -244,8 +203,6 @@ public class ListValidateFileResponseBody extends TeaModel {
         public String uploadTime;
 
         /**
-         * <p>The number of addresses with the validation result \&quot;Valid\&quot;.</p>
-         * 
          * <strong>example:</strong>
          * <p>5</p>
          */

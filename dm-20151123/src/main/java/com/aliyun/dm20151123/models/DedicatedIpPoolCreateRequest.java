@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DedicatedIpPoolCreateRequest extends TeaModel {
     /**
-     * <p>The IDs of the purchased IP instances. Separate multiple IDs with commas (,). You can obtain the instance IDs from the response of the DedicatedIpNonePoolList operation.</p>
+     * <p>Purchased IP instance IDs, separated by commas; derived from the IP purchase instance IDs returned by the DedicatedIpNonePoolList interface.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx,xxx</p>
@@ -14,7 +14,8 @@ public class DedicatedIpPoolCreateRequest extends TeaModel {
     public String buyResourceIds;
 
     /**
-     * <p>The name of the IP pool. The name must be 1 to 50 characters in length. It can contain letters, digits, underscores (_), and hyphens (-). The name cannot be changed after the IP pool is created.</p>
+     * <p>IP pool name;
+     * Length should be 1-50 characters, allowing English letters, numbers, _, and -. The name cannot be modified after the IP pool is created.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>

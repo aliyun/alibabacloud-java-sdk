@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class ListValidateFileRequest extends TeaModel {
     /**
-     * <p>The end time. The time is in UTC and follows the RFC 3339 format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +14,6 @@ public class ListValidateFileRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>A keyword in the file name.</p>
-     * 
      * <strong>example:</strong>
      * <p>keyword</p>
      */
@@ -24,8 +21,6 @@ public class ListValidateFileRequest extends TeaModel {
     public String fileKeyword;
 
     /**
-     * <p>The page number.</p>
-     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,8 +28,6 @@ public class ListValidateFileRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>The number of entries per page.</p>
-     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -42,7 +35,6 @@ public class ListValidateFileRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The start time. The time is in UTC and follows the RFC 3339 format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

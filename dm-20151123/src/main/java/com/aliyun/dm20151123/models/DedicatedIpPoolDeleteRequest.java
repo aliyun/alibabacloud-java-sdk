@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class DedicatedIpPoolDeleteRequest extends TeaModel {
     /**
-     * <p>The IP pool ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */

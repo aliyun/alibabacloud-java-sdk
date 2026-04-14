@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchSendMailResponseBody extends TeaModel {
     /**
-     * <p>The event ID.</p>
+     * <p>Event ID</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -14,7 +14,7 @@ public class BatchSendMailResponseBody extends TeaModel {
     public String envId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>12D086F6-8F31-4658-84C1-006DED011A85</p>

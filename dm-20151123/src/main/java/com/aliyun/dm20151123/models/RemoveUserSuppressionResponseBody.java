@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class RemoveUserSuppressionResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>1A846D66-5EC7-551B-9687-5BF1963DCFC1</p>
      */

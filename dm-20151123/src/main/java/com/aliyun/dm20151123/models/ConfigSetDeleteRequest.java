@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class ConfigSetDeleteRequest extends TeaModel {
     /**
-     * <p>The IDs of the configuration sets. Separate multiple IDs with commas. This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -14,8 +12,6 @@ public class ConfigSetDeleteRequest extends TeaModel {
     public String ids;
 
     /**
-     * <p>Specifies whether to force delete the associations with sender addresses.</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

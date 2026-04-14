@@ -4,12 +4,6 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class DescTemplateRequest extends TeaModel {
-    /**
-     * <p>This parameter is deprecated. It is retained for historical compatibility.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Abandoned, historical reasons for compatibility</p>
-     */
     @NameInMap("FromType")
     public Integer fromType;
 
@@ -23,7 +17,6 @@ public class DescTemplateRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

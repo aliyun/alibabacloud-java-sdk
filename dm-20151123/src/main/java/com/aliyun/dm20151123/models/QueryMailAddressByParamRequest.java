@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class QueryMailAddressByParamRequest extends TeaModel {
     /**
-     * <p>The email address. The length is 1 to 60 characters. It supports digits, letters, periods (.), hyphens (-), and at signs (@).</p>
+     * <p>Email address, length 1-60, supports numbers, letters, ., -, @.</p>
      * 
      * <strong>example:</strong>
-     * <p>账号+@+域名</p>
+     * <p><a href="mailto:sender@example.com">sender@example.com</a></p>
      */
     @NameInMap("KeyWord")
     public String keyWord;
@@ -17,7 +17,7 @@ public class QueryMailAddressByParamRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The current page number. The default value is 1.</p>
+     * <p>Current page number, default: 1</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +26,7 @@ public class QueryMailAddressByParamRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page. The default value is 10.</p>
+     * <p>Page size, default: 10</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,12 +41,10 @@ public class QueryMailAddressByParamRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the sender address. Valid values:</p>
+     * <p>Sending address type. Values:</p>
      * <ul>
-     * <li><p>batch: batch emails</p>
-     * </li>
-     * <li><p>trigger: triggered emails</p>
-     * </li>
+     * <li>batch: bulk email</li>
+     * <li>trigger: triggered email</li>
      * </ul>
      * 
      * <strong>example:</strong>

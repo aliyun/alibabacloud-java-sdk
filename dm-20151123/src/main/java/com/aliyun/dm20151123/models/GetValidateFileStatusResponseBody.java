@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetValidateFileStatusResponseBody extends TeaModel {
     /**
-     * <p>The number of email addresses with the validation result \<code>CatchAll\\</code>.</p>
-     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -14,8 +12,6 @@ public class GetValidateFileStatusResponseBody extends TeaModel {
     public String catchAllNum;
 
     /**
-     * <p>The time when the task was completed.</p>
-     * 
      * <strong>example:</strong>
      * <p>2000-01-01T00:00:00Z</p>
      */
@@ -23,8 +19,6 @@ public class GetValidateFileStatusResponseBody extends TeaModel {
     public String completeTime;
 
     /**
-     * <p>The number of email addresses with the validation result \<code>DoNotMail\\</code>.</p>
-     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -35,8 +29,6 @@ public class GetValidateFileStatusResponseBody extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The name of the file that was uploaded when the task was submitted.</p>
-     * 
      * <strong>example:</strong>
      * <p>file.txt</p>
      */
@@ -44,8 +36,6 @@ public class GetValidateFileStatusResponseBody extends TeaModel {
     public String fileName;
 
     /**
-     * <p>The number of email addresses with the validation result \<code>Invalid\\</code>.</p>
-     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -53,8 +43,6 @@ public class GetValidateFileStatusResponseBody extends TeaModel {
     public String invalidNum;
 
     /**
-     * <p>The progress of the task execution.</p>
-     * 
      * <strong>example:</strong>
      * <p>100%</p>
      */
@@ -62,8 +50,6 @@ public class GetValidateFileStatusResponseBody extends TeaModel {
     public String percentage;
 
     /**
-     * <p>The number of email addresses that have been validated.</p>
-     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -71,8 +57,6 @@ public class GetValidateFileStatusResponseBody extends TeaModel {
     public String processedNum;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>yyyy-yyyy-yyyy-yyyy</p>
      */
@@ -80,8 +64,6 @@ public class GetValidateFileStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task status.</p>
-     * 
      * <strong>example:</strong>
      * <p>completed</p>
      */
@@ -89,8 +71,6 @@ public class GetValidateFileStatusResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The total number of email addresses to validate.</p>
-     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -98,8 +78,6 @@ public class GetValidateFileStatusResponseBody extends TeaModel {
     public String totalNum;
 
     /**
-     * <p>The number of email addresses with the validation result \<code>Unknown\\</code>.</p>
-     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -107,8 +85,6 @@ public class GetValidateFileStatusResponseBody extends TeaModel {
     public String unknownNum;
 
     /**
-     * <p>The time when the file was submitted.</p>
-     * 
      * <strong>example:</strong>
      * <p>2000-01-01T00:00:00Z</p>
      */
@@ -116,8 +92,6 @@ public class GetValidateFileStatusResponseBody extends TeaModel {
     public String uploadTime;
 
     /**
-     * <p>The number of email addresses with the validation result \<code>Valid\\</code>.</p>
-     * 
      * <strong>example:</strong>
      * <p>4</p>
      */

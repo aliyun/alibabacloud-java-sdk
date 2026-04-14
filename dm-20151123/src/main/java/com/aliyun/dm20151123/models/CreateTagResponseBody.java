@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTagResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
@@ -14,7 +14,7 @@ public class CreateTagResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The tag ID.</p>
+     * <p>Tag ID</p>
      * 
      * <strong>example:</strong>
      * <p>91141</p>

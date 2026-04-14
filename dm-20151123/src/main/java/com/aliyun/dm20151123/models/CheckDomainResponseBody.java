@@ -7,10 +7,8 @@ public class CheckDomainResponseBody extends TeaModel {
     /**
      * <p>Domain status. Indicates whether the verification was successful, with values as follows:</p>
      * <ul>
-     * <li><p><strong>0</strong>: Available, verified successfully</p>
-     * </li>
-     * <li><p><strong>1</strong>: Unavailable, verification failed</p>
-     * </li>
+     * <li><strong>0</strong>: Available, verified successfully</li>
+     * <li><strong>1</strong>: Unavailable, verification failed</li>
      * </ul>
      * 
      * <strong>example:</strong>

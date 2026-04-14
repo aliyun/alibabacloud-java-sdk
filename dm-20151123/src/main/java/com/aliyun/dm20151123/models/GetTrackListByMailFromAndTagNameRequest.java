@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetTrackListByMailFromAndTagNameRequest extends TeaModel {
     /**
-     * <p>The sender address.</p>
+     * <p>Sender address.</p>
      * <blockquote>
-     * <p>If you leave this parameter empty, data for all addresses is returned. This parameter is required if you specify TagName.</p>
+     * <p>If not filled, it represents all addresses; if there is a TagName, this parameter must not be empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -16,37 +16,17 @@ public class GetTrackListByMailFromAndTagNameRequest extends TeaModel {
     @NameInMap("AccountName")
     public String accountName;
 
-    /**
-     * <p>The configuration set ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>xxx</p>
-     */
     @NameInMap("ConfigSetId")
     public String configSetId;
 
-    /**
-     * <p>The dedicated IP address. This parameter is available only for users of dedicated IPs.</p>
-     * <p>If you do not specify this parameter, data for all IPs is returned.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>xxx.xxx.xxx.xxx</p>
-     */
     @NameInMap("DedicatedIp")
     public String dedicatedIp;
 
-    /**
-     * <p>The ID of the dedicated IP pool. This parameter is available only for users of dedicated IPs.</p>
-     * <p>If you do not specify this parameter, data for all IP pools is returned.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>xxx</p>
-     */
     @NameInMap("DedicatedIpPoolId")
     public String dedicatedIpPoolId;
 
     /**
-     * <p>The end time. The time span between the start time and end time cannot exceed 15 days. The format is yyyy-MM-dd.</p>
+     * <p>End time, with a span from the start time that cannot exceed 15 days. Format: yyyy-MM-dd.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,30 +35,11 @@ public class GetTrackListByMailFromAndTagNameRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The Email Service Provider (ESP). This parameter is available only for users of dedicated IPs. Valid values:</p>
-     * <ul>
-     * <li><p>gmail.com</p>
-     * </li>
-     * <li><p>yahoo.com</p>
-     * </li>
-     * <li><p>outlook.com</p>
-     * </li>
-     * <li><p>icloud.com</p>
-     * </li>
-     * <li><p>others (data for ESPs other than the ones listed above)</p>
-     * </li>
-     * </ul>
-     * <p>If you do not specify this parameter, data for all ESPs is returned.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>gmail.com</p>
-     */
     @NameInMap("Esp")
     public String esp;
 
     /**
-     * <p>The value is 0 for the first query and 1 for subsequent queries. A value of 1 indicates a paged query in chronological order. (This field is deprecated)</p>
+     * <p>For the first query, set to 0; for subsequent queries, fixed at 1. 1 indicates pagination in ascending order by time. (This field is deprecated)</p>
      * 
      * <strong>example:</strong>
      * <p>（本字段已废弃）</p>
@@ -87,7 +48,7 @@ public class GetTrackListByMailFromAndTagNameRequest extends TeaModel {
     public String offset;
 
     /**
-     * <p>Used for paging. Do not set this parameter for the first query. For subsequent queries, set this parameter to the OffsetCreateTime value from the previous response. (This field is deprecated)</p>
+     * <p>Used for pagination. Not set for the first query; for subsequent queries, set to the value of OffsetCreateTime from the previous response. (This field is deprecated)</p>
      * 
      * <strong>example:</strong>
      * <p>（本字段已废弃）</p>
@@ -108,7 +69,7 @@ public class GetTrackListByMailFromAndTagNameRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The current page number.</p>
+     * <p>Current page number</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -117,7 +78,7 @@ public class GetTrackListByMailFromAndTagNameRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>Page size</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -132,7 +93,7 @@ public class GetTrackListByMailFromAndTagNameRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The start time. The time cannot be earlier than 30 days ago. The format is yyyy-MM-dd.</p>
+     * <p>Start time, which cannot be earlier than 30 days. Format: yyyy-MM-dd.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -142,7 +103,7 @@ public class GetTrackListByMailFromAndTagNameRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The email tag. If you leave this parameter empty, data for all tags is returned.</p>
+     * <p>Email tag. If not filled, it represents all tags.</p>
      * 
      * <strong>example:</strong>
      * <p>Subscription</p>

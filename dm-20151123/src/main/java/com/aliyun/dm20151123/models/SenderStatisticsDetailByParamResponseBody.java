@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
     /**
-     * <p>Used for paging. If more results are available, set the \<code>NextStart\\</code> parameter in your next request to this return value.</p>
+     * <p>Used for pagination. If there are more results, set this returned value to the NextStart in the next request.</p>
      * 
      * <strong>example:</strong>
      * <p>90f0243616#203#a***@example.net-1658817689#a***@example.net.247141122178</p>
@@ -14,7 +14,7 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
     public String nextStart;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>B5AB8EBB-EE64-4BB2-B085-B92CC5DEDC41</p>

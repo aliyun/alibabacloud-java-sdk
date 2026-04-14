@@ -8,7 +8,7 @@ public class DeleteReceiverDetailRequest extends TeaModel {
      * <p>The single recipient to be deleted from the recipient list</p>
      * 
      * <strong>example:</strong>
-     * <p>账号+@+域名</p>
+     * <p><a href="mailto:test@example.com">test@example.com</a></p>
      */
     @NameInMap("Email")
     public String email;

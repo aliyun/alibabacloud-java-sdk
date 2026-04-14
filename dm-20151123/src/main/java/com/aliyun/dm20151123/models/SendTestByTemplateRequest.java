@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class SendTestByTemplateRequest extends TeaModel {
     /**
-     * <p>The sender address. The length cannot exceed 60 characters.</p>
+     * <p>Sender address, with a maximum length of 60 characters</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>账号+@+域名</p>
+     * <p><a href="mailto:test@example.com">test@example.com</a></p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
-     * <p>The birthday. The length cannot exceed 30 characters.</p>
+     * <p>Birthday, with a maximum length of 30 characters</p>
      * 
      * <strong>example:</strong>
      * <p>2000/01/01</p>
@@ -24,26 +24,26 @@ public class SendTestByTemplateRequest extends TeaModel {
     public String birthday;
 
     /**
-     * <p>The recipient email address. The length cannot exceed 60 characters.</p>
+     * <p>Recipient address, with a maximum length of 60 characters</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>账号+@+域名</p>
+     * <p><a href="mailto:test1@example.com">test1@example.com</a></p>
      */
     @NameInMap("Email")
     public String email;
 
     /**
-     * <p>The gender. The length cannot exceed 30 characters.</p>
+     * <p>Gender, with a maximum length of 30 characters</p>
      * 
      * <strong>example:</strong>
-     * <p>先生</p>
+     * <p>doctor</p>
      */
     @NameInMap("Gender")
     public String gender;
 
     /**
-     * <p>The mobile number. The length cannot exceed 30 characters.</p>
+     * <p>Mobile, with a maximum length of 30 characters</p>
      * 
      * <strong>example:</strong>
      * <p>1380000****</p>
@@ -52,10 +52,10 @@ public class SendTestByTemplateRequest extends TeaModel {
     public String mobile;
 
     /**
-     * <p>The nickname. The length cannot exceed 30 characters.</p>
+     * <p>NickName, with a maximum length of 30 characters</p>
      * 
      * <strong>example:</strong>
-     * <p>昵称</p>
+     * <p>LC</p>
      */
     @NameInMap("NickName")
     public String nickName;
@@ -70,7 +70,7 @@ public class SendTestByTemplateRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The template ID.</p>
+     * <p>Template ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -87,10 +87,10 @@ public class SendTestByTemplateRequest extends TeaModel {
     public String templateParams;
 
     /**
-     * <p>The user name. The length cannot exceed 30 characters.</p>
+     * <p>UserName, with a maximum length of 30 characters</p>
      * 
      * <strong>example:</strong>
-     * <p>姓名</p>
+     * <p>Lucy</p>
      */
     @NameInMap("UserName")
     public String userName;

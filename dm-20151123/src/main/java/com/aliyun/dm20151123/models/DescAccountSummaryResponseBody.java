@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescAccountSummaryResponseBody extends TeaModel {
     /**
-     * <p>The daily quota.</p>
+     * <p>Daily quota</p>
      * 
      * <strong>example:</strong>
      * <p>2000</p>
@@ -14,7 +14,7 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     public Integer dailyQuota;
 
     /**
-     * <p>The remaining daily free quota.</p>
+     * <p>remaining amount of daily free quota</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -23,7 +23,7 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     public Integer dailyRemainFreeQuota;
 
     /**
-     * <p>The status of Dayu. This parameter is deprecated and retained for compatibility.</p>
+     * <p>Dayu status (deprecated, retained for compatibility reasons.)</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -32,7 +32,7 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     public Integer dayuStatus;
 
     /**
-     * <p>The number of domain names.</p>
+     * <p>Number of domains</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     public Integer domains;
 
     /**
-     * <p>The effective period.</p>
+     * <p>Effective time</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -50,17 +50,6 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     public Integer enableTimes;
 
     /**
-     * <p>The type of the outbound IP channel.</p>
-     * <ol>
-     * <li><p>backup: A backup IP channel that is not actively maintained. Customers using this channel are advised to purchase a dedicated IP for better stability.</p>
-     * </li>
-     * <li><p>normal: A normal IP channel that is continuously maintained by the email delivery team to ensure stable and reliable service.</p>
-     * </li>
-     * </ol>
-     * 
-     * <strong>example:</strong>
-     * <p>normal</p>
-     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -68,7 +57,7 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     public String ipChannelType;
 
     /**
-     * <p>The number of sender addresses.</p>
+     * <p>Number of sending addresses</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -77,7 +66,7 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     public Integer mailAddresses;
 
     /**
-     * <p>The maximum reputation level.</p>
+     * <p>Maximum level</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -86,7 +75,7 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     public Integer maxQuotaLevel;
 
     /**
-     * <p>The monthly quota.</p>
+     * <p>Monthly quota</p>
      * 
      * <strong>example:</strong>
      * <p>60000</p>
@@ -95,7 +84,7 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     public Integer monthQuota;
 
     /**
-     * <p>The reputation level.</p>
+     * <p>Credit level</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -104,7 +93,7 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     public Integer quotaLevel;
 
     /**
-     * <p>The number of recipients.</p>
+     * <p>Number of recipients</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -113,7 +102,7 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     public Integer receivers;
 
     /**
-     * <p>The remaining free quota.</p>
+     * <p>Remaining amount of total free quota</p>
      * 
      * <strong>example:</strong>
      * <p>1910</p>
@@ -122,7 +111,7 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     public Integer remainFreeQuota;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>82B295BB-7E69-491F-9896-ECEAFF09E1A4</p>
@@ -131,7 +120,7 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>This parameter is deprecated. It is retained for compatibility.</p>
+     * <p>Deprecated, retained for compatibility reasons.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -140,7 +129,7 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     public Integer smsRecord;
 
     /**
-     * <p>This parameter is deprecated. It is retained for compatibility.</p>
+     * <p>Deprecated, retained for compatibility reasons.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -149,7 +138,7 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     public Integer smsSign;
 
     /**
-     * <p>This parameter is deprecated. It is retained for compatibility.</p>
+     * <p>Deprecated, retained for compatibility reasons.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -158,7 +147,7 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     public Integer smsTemplates;
 
     /**
-     * <p>The number of tags.</p>
+     * <p>Number of tags</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -167,7 +156,7 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     public Integer tags;
 
     /**
-     * <p>The number of templates.</p>
+     * <p>Number of templates</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -176,7 +165,11 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     public Integer templates;
 
     /**
-     * <p>The status of the user. Valid values: 0: Normal. 1: Freeze. 2: Overdue payment. 4: Outbound messages are restricted. 8: The user is logically deleted.</p>
+     * <p>User status:
+     * 1 Frozen
+     * 2 In arrears
+     * 4 Restricted from sending
+     * 8 Logically deleted</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

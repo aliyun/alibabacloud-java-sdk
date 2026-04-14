@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class SendValidateFileRequest extends TeaModel {
     /**
-     * <p>The column that contains the email addresses in the file. The index starts from 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +14,6 @@ public class SendValidateFileRequest extends TeaModel {
     public Integer addressColumn;
 
     /**
-     * <p>The name of the file that contains the list of email addresses.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +23,6 @@ public class SendValidateFileRequest extends TeaModel {
     public String fileName;
 
     /**
-     * <p>The URL of the file that contains the list of email addresses.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +32,6 @@ public class SendValidateFileRequest extends TeaModel {
     public String fileUrl;
 
     /**
-     * <p>Specifies whether the first row is a table header.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +41,6 @@ public class SendValidateFileRequest extends TeaModel {
     public Boolean hasHeaderRow;
 
     /**
-     * <p>Specifies whether to remove duplicate email addresses in the output file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -4,15 +4,10 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class ListBlockSendingResponseBody extends TeaModel {
-    /**
-     * <p>A list of data about unsubscribes or spam reports.</p>
-     */
     @NameInMap("Data")
     public java.util.List<ListBlockSendingResponseBodyData> data;
 
     /**
-     * <p>The maximum number of entries returned.</p>
-     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -20,8 +15,6 @@ public class ListBlockSendingResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results. An empty string indicates that no more data is available.</p>
-     * 
      * <strong>example:</strong>
      * <p>xxxxyyyy</p>
      */
@@ -29,8 +22,6 @@ public class ListBlockSendingResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</p>
      */
@@ -76,8 +67,6 @@ public class ListBlockSendingResponseBody extends TeaModel {
 
     public static class ListBlockSendingResponseBodyData extends TeaModel {
         /**
-         * <p>The recipient email address.</p>
-         * 
          * <strong>example:</strong>
          * <p><a href="mailto:xxxx@rcpt.com">xxxx@rcpt.com</a></p>
          */
@@ -85,8 +74,6 @@ public class ListBlockSendingResponseBody extends TeaModel {
         public String blockEmail;
 
         /**
-         * <p>The time the block was initiated.</p>
-         * 
          * <strong>example:</strong>
          * <p>1723259364</p>
          */
@@ -94,18 +81,6 @@ public class ListBlockSendingResponseBody extends TeaModel {
         public Integer blockTime;
 
         /**
-         * <p>The reason for the block. The value is a bitset. The meaning of each bit is as follows:</p>
-         * <ul>
-         * <li><p>0: The reason is not specified.</p>
-         * </li>
-         * <li><p>1: The recipient is not interested in the content.</p>
-         * </li>
-         * <li><p>2: The content is repetitive.</p>
-         * </li>
-         * <li><p>3: The content is sent too frequently.</p>
-         * </li>
-         * </ul>
-         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -113,8 +88,6 @@ public class ListBlockSendingResponseBody extends TeaModel {
         public Integer reason;
 
         /**
-         * <p>The time the email was sent.</p>
-         * 
          * <strong>example:</strong>
          * <p>1723249364</p>
          */
@@ -122,8 +95,6 @@ public class ListBlockSendingResponseBody extends TeaModel {
         public Integer sendTime;
 
         /**
-         * <p>The sender email address.</p>
-         * 
          * <strong>example:</strong>
          * <p><a href="mailto:xxxx@sender.com">xxxx@sender.com</a></p>
          */

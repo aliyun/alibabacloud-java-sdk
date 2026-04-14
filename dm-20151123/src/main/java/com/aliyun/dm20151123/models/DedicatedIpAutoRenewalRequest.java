@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DedicatedIpAutoRenewalRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable auto-renewal.</p>
+     * <p>Whether to enable auto-renewal</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DedicatedIpAutoRenewalRequest extends TeaModel {
     public String autoRenewal;
 
     /**
-     * <p>The IDs of the purchased instances. Separate multiple IDs with commas.</p>
+     * <p>Purchase instance ID, separated by English commas if multiple.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

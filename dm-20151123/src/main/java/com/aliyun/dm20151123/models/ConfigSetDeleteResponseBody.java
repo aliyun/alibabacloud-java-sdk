@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class ConfigSetDeleteResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchSendMailRequest extends TeaModel {
     /**
-     * <p>The sender address configured in the console.</p>
+     * <p>The sending address configured in the management console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,10 +16,8 @@ public class BatchSendMailRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li><p>0: Random account</p>
-     * </li>
-     * <li><p>1: Sender address</p>
-     * </li>
+     * <li>0: Random account</li>
+     * <li>1: Sending address</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -31,10 +29,8 @@ public class BatchSendMailRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li><p>1: Enables the data tracking feature.</p>
-     * </li>
-     * <li><p>0 (default): Disables the data tracking feature.</p>
-     * </li>
+     * <li>1: Enable data tracking function</li>
+     * <li>0 (default): Disable data tracking function</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,58 +39,27 @@ public class BatchSendMailRequest extends TeaModel {
     @NameInMap("ClickTrace")
     public String clickTrace;
 
-    /**
-     * <p>Enables domain-level authentication.</p>
-     * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
-     * </ul>
-     * <p>Use this parameter only for domain-level authentication. Ignore it for sender address-level authentication.</p>
-     * <p>1\. The console creates the address \<code>domain-auth-created-by-system\\@example.com\\</code>. Do not change the prefix before the at sign (@). Replace the domain suffix with your own domain.</p>
-     * <p>2\.</p>
-     * <p><strong>API scenario</strong></p>
-     * <p>Set \<code>AccountName\\</code> to your domain. Recipients see \<code>domain-auth-created-by-system\\@example.com\\</code> as the sender.</p>
-     * <p><strong>SMTP scenario</strong></p>
-     * <p>a. Use the \<code>ModifyPWByDomain\\</code> API to set a password for your domain.</p>
-     * <p>b. Authenticate using your domain and the password. Set the actual sender address (\<code>mailfrom\\</code>) to a custom address, such as \<code>user\\@example.com\\</code>. Recipients see \<code>user\\@example.com\\</code> as the sender.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("DomainAuth")
     public Boolean domainAuth;
 
     /**
-     * <p>Message header settings.</p>
-     * <p>All fields, standard or non-standard, must follow standard header syntax. For API calls, the \<code>headers\\</code> field supports up to 10 headers. Any headers beyond this limit are ignored. SMTP does not have a header limit.</p>
-     * <p>1\. Standard fields</p>
-     * <p>\<code>Message-ID\\</code>, \<code>List-Unsubscribe\\</code>, \<code>List-Unsubscribe-Post\\</code></p>
-     * <p>Standard fields overwrite existing values in the message header.</p>
-     * <p>2\. Non-standard fields</p>
-     * <p>Case-insensitive</p>
-     * <p>a. Start with \<code>X-User-\\</code>. These fields are not pushed to EventBridge or Message Service. They are required only for API calls. SMTP supports any custom header.</p>
-     * <p>b. Start with \<code>X-User-Notify-\\</code>. These fields are pushed to EventBridge and Message Service. They are supported by both API and SMTP.</p>
-     * <p>When pushed to EventBridge or Message Service, these fields appear under the \<code>headers\\</code> object.</p>
+     * <p>Currently, the standard fields that can be added to the email header are Message-ID, List-Unsubscribe, and List-Unsubscribe-Post. Standard fields will overwrite the existing values in the email header, while non-standard fields must start with X-User- and will be appended to the email header. Currently, up to 10 headers can be passed in JSON format, and both standard and non-standard fields must comply with the syntax requirements for headers.</p>
      * 
      * <strong>example:</strong>
      * <p>{
-     *       &quot;Message-ID&quot;: &quot;<a href="mailto:d52ce63e-a0d5-4f95-b6a9-e1256a44f5fb@example.net">d52ce63e-a0d5-4f95-b6a9-e1256a44f5fb@example.net</a>&quot;,
-     *       &quot;X-User-UID1&quot;: &quot;UID-1-000001&quot;,
-     *       &quot;X-User-UID2&quot;: &quot;UID-2-000001&quot;,
-     *       &quot;X-User-Notify-UID1&quot;: &quot;UID-3-000001&quot;,
-     *       &quot;X-User-Notify-UID2&quot;: &quot;UID-4-000001&quot;</p>
-     * <p>}</p>
+     *   &quot;Message-ID&quot;: &quot;<a href="mailto:msg0001@example.com">msg0001@example.com</a>&quot;,
+     *   &quot;X-User-UID1&quot;: &quot;UID-1-000001&quot;,
+     *   &quot;X-User-UID2&quot;: &quot;UID-2-000001&quot;
+     * }</p>
      */
     @NameInMap("Headers")
     public String headers;
 
     /**
-     * <p>The ID of the dedicated IP address pool. If you purchased dedicated IP addresses, use this parameter to specify the egress IP address for sending the email.</p>
+     * <p>dedicated IP pool ID. Users who have purchased an dedicated IP can use this parameter to specify the outgoing IP for this send operation.</p>
      * 
      * <strong>example:</strong>
-     * <p>e4xxxxxe-4xx0-4xx3-8xxa-74cxxxxx1cef</p>
+     * <p>xxx</p>
      */
     @NameInMap("IpPoolId")
     public String ipPoolId;
@@ -103,10 +68,7 @@ public class BatchSendMailRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The name of a pre-created recipient list to which recipients have been uploaded.</p>
-     * <p>Note:</p>
-     * <p>The number of recipients in the list must not exceed your remaining daily quota. Otherwise, email sending fails.</p>
-     * <p>Do not delete the recipient list for at least 10 minutes after triggering the task. Otherwise, email sending may fail.</p>
+     * <p>The name of the recipient list that has been created and uploaded with recipients. Note: The recipient list should not be deleted until at least 10 minutes after the task is triggered, otherwise it may cause sending failure.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -116,7 +78,7 @@ public class BatchSendMailRequest extends TeaModel {
     public String receiversName;
 
     /**
-     * <p>The reply-to address.</p>
+     * <p>Reply address</p>
      * 
      * <strong>example:</strong>
      * <p>test2***@example.net</p>
@@ -125,10 +87,10 @@ public class BatchSendMailRequest extends TeaModel {
     public String replyAddress;
 
     /**
-     * <p>The alias for the reply-to address.</p>
+     * <p>Alias for the reply address</p>
      * 
      * <strong>example:</strong>
-     * <p>小红</p>
+     * <p>Lucy</p>
      */
     @NameInMap("ReplyAddressAlias")
     public String replyAddressAlias;
@@ -140,7 +102,7 @@ public class BatchSendMailRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The name of the email tag.</p>
+     * <p>Email tag name.</p>
      * 
      * <strong>example:</strong>
      * <p>test3</p>
@@ -149,7 +111,7 @@ public class BatchSendMailRequest extends TeaModel {
     public String tagName;
 
     /**
-     * <p>The name of a pre-created and approved template.</p>
+     * <p>The name of the template that has been created and approved in advance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -159,18 +121,13 @@ public class BatchSendMailRequest extends TeaModel {
     public String templateName;
 
     /**
-     * <p>The filtering level. For more information, see <a href="https://help.aliyun.com/document_detail/2689048.html">Unsubscribe link generation and filtering mechanism</a>.</p>
+     * <p>Filtering level. Refer to the <a href="https://help.aliyun.com/document_detail/2689048.html">Unsubscribe Function Link Generation and Filtering Mechanism</a> document.</p>
      * <ul>
-     * <li><p>disabled: No filtering.</p>
-     * </li>
-     * <li><p>default: Uses the default policy. Batch emails are filtered at the sender address level.</p>
-     * </li>
-     * <li><p>mailfrom: Filters at the sender address level.</p>
-     * </li>
-     * <li><p>mailfrom_domain: Filters at the email domain level.</p>
-     * </li>
-     * <li><p>edm_id: Filters at the account level.</p>
-     * </li>
+     * <li>disabled: No filtering</li>
+     * <li>default: Use the default strategy, bulk addresses use sender address-level filtering</li>
+     * <li>mailfrom: Sender address-level filtering</li>
+     * <li>mailfrom_domain: Sender domain-level filtering</li>
+     * <li>edm_id: Account-level filtering</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -180,14 +137,15 @@ public class BatchSendMailRequest extends TeaModel {
     public String unSubscribeFilterLevel;
 
     /**
-     * <p>The type of unsubscribe link to generate. For more information, see <a href="https://help.aliyun.com/document_detail/2689048.html">Unsubscribe link generation and filtering mechanism</a>.</p>
+     * <p>The type of generated unsubscribe link. Refer to the <a href="https://help.aliyun.com/document_detail/2689048.html">Unsubscribe Function Link Generation and Filtering Mechanism</a> document.</p>
      * <ul>
-     * <li><p>disabled: Does not generate a link.</p>
-     * </li>
-     * <li><p>default: Uses the default policy. An unsubscribe link is generated when batch emails are sent from a sender address to specific domains, such as those containing the keywords &quot;gmail&quot;, &quot;yahoo&quot;, &quot;google&quot;, &quot;aol.com&quot;, &quot;hotmail&quot;, &quot;outlook&quot;, or &quot;ymail.com&quot;.</p>
-     * </li>
+     * <li>disabled: Do not generate</li>
+     * <li>default: Use the default strategy: Generate an unsubscribe link when a bulk-type sending address sends to specific domains, such as those containing keywords like &quot;gmail&quot;, &quot;yahoo&quot;,
+     * &quot;google&quot;, &quot;aol.com&quot;, &quot;hotmail&quot;,
+     * &quot;outlook&quot;, &quot;ymail.com&quot;, etc.</li>
+     * <li>zh-cn: Generate, for future content preparation</li>
+     * <li>en-us: Generate, for future content preparation</li>
      * </ul>
-     * <p>The language of the unsubscribe link matches the recipient\&quot;s browser language setting.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>

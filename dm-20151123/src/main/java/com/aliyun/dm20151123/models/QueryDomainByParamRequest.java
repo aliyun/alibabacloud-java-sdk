@@ -42,10 +42,8 @@ public class QueryDomainByParamRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li><p>0 indicates normal</p>
-     * </li>
-     * <li><p>1 indicates abnormal</p>
-     * </li>
+     * <li>0 indicates normal</li>
+     * <li>1 indicates abnormal</li>
      * </ul>
      * 
      * <strong>example:</strong>

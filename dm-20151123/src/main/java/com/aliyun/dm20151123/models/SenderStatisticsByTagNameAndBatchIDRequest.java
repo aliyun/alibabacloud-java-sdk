@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SenderStatisticsByTagNameAndBatchIDRequest extends TeaModel {
     /**
-     * <p>The sender address. If you do not specify this parameter, statistics for all sender addresses are returned.</p>
+     * <p>Sending address. If not filled, it represents all addresses.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -13,23 +13,9 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends TeaModel {
     @NameInMap("AccountName")
     public String accountName;
 
-    /**
-     * <p>If you use Dedicated IPs, use this parameter to filter statistics by a specific Dedicated IP.</p>
-     * <p>If you do not specify this parameter, statistics for all dedicated IPs that match the other criteria are returned.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>xxx.xxx.xxx.xxx</p>
-     */
     @NameInMap("DedicatedIp")
     public String dedicatedIp;
 
-    /**
-     * <p>If you use Dedicated IPs, specify the ID of the dedicated IP pool to query.</p>
-     * <p>If you do not specify this parameter, statistics for all resources are returned.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>xxx</p>
-     */
     @NameInMap("DedicatedIpPoolId")
     public String dedicatedIpPoolId;
 
@@ -41,7 +27,7 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>The end time for the query. The time range between <code>StartTime</code> and <code>EndTime</code> cannot exceed 7 days. The format must be <code>YYYY-MM-DD</code>.</p>
+     * <p>End time, which cannot exceed 7 days from the start time, in the format yyyy-MM-dd.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,25 +36,6 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>If you use Dedicated IPs, use this parameter to filter statistics by a specific Email Service Provider (ESP). Valid values are:</p>
-     * <ul>
-     * <li><p><code>gmail.com</code></p>
-     * </li>
-     * <li><p><code>yahoo.com</code></p>
-     * </li>
-     * <li><p><code>outlook.com</code></p>
-     * </li>
-     * <li><p><code>icloud.com</code></p>
-     * </li>
-     * <li><p><code>others</code> (matches data for all other ESPs)</p>
-     * </li>
-     * </ul>
-     * <p>If you do not specify this parameter, statistics for all ESPs are returned.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>gmail.com</p>
-     */
     @NameInMap("Esp")
     public String esp;
 
@@ -82,7 +49,7 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The start time for the query. The date cannot be more than 30 days in the past. The format must be <code>YYYY-MM-DD</code>.</p>
+     * <p>Start time, in the format yyyy-MM-dd.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -92,7 +59,7 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The email tag. If you do not specify this parameter, statistics for all tags are returned.</p>
+     * <p>Email tag. If not filled, it represents all tags.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>

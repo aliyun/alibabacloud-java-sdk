@@ -17,7 +17,7 @@ public class ModifyPWByDomainResponseBody extends TeaModel {
      * <p>Description of the status code</p>
      * 
      * <strong>example:</strong>
-     * <p>请求成功</p>
+     * <p>test</p>
      */
     @NameInMap("Message")
     public String message;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescDomainRequest extends TeaModel {
     /**
-     * <p>The domain name ID. Obtain this ID by calling the QueryDomainByParam operation.</p>
+     * <p>Domain ID. Can be obtained through QueryDomainByParam.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescDomainRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Specifies whether to perform real-time DNS parsing.</p>
+     * <p>Determines whether to perform real-time DNS resolution</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

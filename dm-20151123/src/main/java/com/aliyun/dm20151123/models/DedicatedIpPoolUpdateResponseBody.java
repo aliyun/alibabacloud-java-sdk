@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DedicatedIpPoolUpdateResponseBody extends TeaModel {
     /**
-     * <p>The ID of the IP pool.</p>
+     * <p>IP pool ID</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -14,7 +14,7 @@ public class DedicatedIpPoolUpdateResponseBody extends TeaModel {
     public String id;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>

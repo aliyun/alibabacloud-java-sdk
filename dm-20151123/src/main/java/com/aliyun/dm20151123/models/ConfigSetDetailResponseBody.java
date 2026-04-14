@@ -4,15 +4,10 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class ConfigSetDetailResponseBody extends TeaModel {
-    /**
-     * <p>The details of the configuration set.</p>
-     */
     @NameInMap("Detail")
     public ConfigSetDetailResponseBodyDetail detail;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -42,8 +37,6 @@ public class ConfigSetDetailResponseBody extends TeaModel {
 
     public static class ConfigSetDetailResponseBodyDetailIpPool extends TeaModel {
         /**
-         * <p>The ID of the associated IP pool.</p>
-         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -51,8 +44,6 @@ public class ConfigSetDetailResponseBody extends TeaModel {
         public String ipPoolId;
 
         /**
-         * <p>The name of the associated IP pool.</p>
-         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -84,8 +75,6 @@ public class ConfigSetDetailResponseBody extends TeaModel {
 
     public static class ConfigSetDetailResponseBodyDetail extends TeaModel {
         /**
-         * <p>The description.</p>
-         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -93,23 +82,16 @@ public class ConfigSetDetailResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the configuration set.</p>
-         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
         @NameInMap("Id")
         public String id;
 
-        /**
-         * <p>The associated IP pool.</p>
-         */
         @NameInMap("IpPool")
         public ConfigSetDetailResponseBodyDetailIpPool ipPool;
 
         /**
-         * <p>The name of the configuration set.</p>
-         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */

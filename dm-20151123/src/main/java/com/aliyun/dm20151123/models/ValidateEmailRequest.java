@@ -4,17 +4,10 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class ValidateEmailRequest extends TeaModel {
-    /**
-     * <p>Specifies whether to check the graylist. The default value is false. The result is sent through an asynchronous notification message from EventBridge.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("CheckGraylist")
     public Boolean checkGraylist;
 
     /**
-     * <p>The email address to validate.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,8 +17,6 @@ public class ValidateEmailRequest extends TeaModel {
     public String email;
 
     /**
-     * <p>The timeout period. The default value is 60 seconds.</p>
-     * 
      * <strong>example:</strong>
      * <p>20</p>
      */

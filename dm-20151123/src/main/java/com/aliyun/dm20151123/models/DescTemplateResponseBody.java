@@ -5,81 +5,39 @@ import com.aliyun.tea.*;
 
 public class DescTemplateResponseBody extends TeaModel {
     /**
-     * <p>The time when the template was created.</p>
-     * 
      * <strong>example:</strong>
-     * <p>2025-11-14T13:28Z</p>
+     * <p>2019-09-29T13:28Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
-    /**
-     * <p>This parameter is deprecated. It is retained for historical compatibility.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Abandoned, historical reasons for compatibility</p>
-     */
     @NameInMap("Remark")
     public String remark;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>95xxx5F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>This parameter is deprecated. It is retained for historical compatibility.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Abandoned, historical reasons for compatibility</p>
-     */
     @NameInMap("SmsContent")
     public String smsContent;
 
-    /**
-     * <p>This parameter is deprecated. It is retained for historical compatibility.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Abandoned, historical reasons for compatibility</p>
-     */
     @NameInMap("SmsType")
     public String smsType;
 
     /**
-     * <p>The template name.</p>
-     * 
      * <strong>example:</strong>
      * <p>test1</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
 
-    /**
-     * <p>This parameter is deprecated. It is retained for historical compatibility.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Abandoned, historical reasons for compatibility</p>
-     */
     @NameInMap("TemplateNickName")
     public String templateNickName;
 
     /**
-     * <p>The status of the template. Valid values:</p>
-     * <ul>
-     * <li><p>0: The template is a draft.</p>
-     * </li>
-     * <li><p>1: The template is pending approval.</p>
-     * </li>
-     * <li><p>2: The template is approved.</p>
-     * </li>
-     * <li><p>3: The template is rejected.</p>
-     * </li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -87,8 +45,6 @@ public class DescTemplateResponseBody extends TeaModel {
     public String templateStatus;
 
     /**
-     * <p>The template subject, which is used to create the email subject.</p>
-     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -96,20 +52,12 @@ public class DescTemplateResponseBody extends TeaModel {
     public String templateSubject;
 
     /**
-     * <p>The template content.</p>
-     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("TemplateText")
     public String templateText;
 
-    /**
-     * <p>This parameter is deprecated. It is retained for historical compatibility.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Abandoned, historical reasons for compatibility</p>
-     */
     @NameInMap("TemplateType")
     public String templateType;
 

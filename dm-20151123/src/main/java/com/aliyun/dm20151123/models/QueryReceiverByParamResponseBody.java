@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryReceiverByParamResponseBody extends TeaModel {
     /**
-     * <p>Used for paging. If more results are available, set this value as the NextStart parameter in your next request.</p>
+     * <p>Used for pagination. If there are more results, set this returned value to the NextStart in the next request.</p>
      * 
      * <strong>example:</strong>
      * <p>6aec200853#102#1638894326#<a href="mailto:test@example.com">test@example.com</a></p>
@@ -14,7 +14,7 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
     public String nextStart;
 
     /**
-     * <p>Number of entries per page.</p>
+     * <p>Number of items displayed per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Request ID.</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
@@ -32,7 +32,7 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of entries.</p>
+     * <p>Total count</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>

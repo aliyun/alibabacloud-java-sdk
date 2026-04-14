@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SingleSendMailResponseBody extends TeaModel {
     /**
-     * <p>The event ID.</p>
+     * <p>Event ID</p>
      * 
      * <strong>example:</strong>
      * <p>600000xxxxxxxxxx642</p>
@@ -14,7 +14,7 @@ public class SingleSendMailResponseBody extends TeaModel {
     public String envId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>2D086F6-xxxx-xxxx-xxxx-006DED011A85</p>

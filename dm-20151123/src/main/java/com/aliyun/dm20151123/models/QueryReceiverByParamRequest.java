@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryReceiverByParamRequest extends TeaModel {
     /**
-     * <p>Search keyword. Default value: all information.</p>
+     * <p>Keyword, defaults to all information if not specified</p>
      * 
      * <strong>example:</strong>
      * <p>mesh-notification</p>
@@ -17,7 +17,7 @@ public class QueryReceiverByParamRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Page number.</p>
+     * <p>Current page number</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +26,7 @@ public class QueryReceiverByParamRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>Number of entries per page. Default value: 10.</p>
+     * <p>Number of items per page, default: 10</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,12 +41,12 @@ public class QueryReceiverByParamRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>List status. Valid values:</p>
+     * <p>Delivery result. If not filled, it represents all statuses. Values:</p>
      * <ul>
-     * <li><p>0: uploading</p>
-     * </li>
-     * <li><p>1: upload complete</p>
-     * </li>
+     * <li>0: Success</li>
+     * <li>2: Invalid address</li>
+     * <li>3: Spam</li>
+     * <li>4: Failure</li>
      * </ul>
      * 
      * <strong>example:</strong>

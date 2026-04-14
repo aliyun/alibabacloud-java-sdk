@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class ConfigSetCancelRelationFromAddressRequest extends TeaModel {
     /**
-     * <p>The sender address. This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p><a href="mailto:xxx@xxx.com">xxx@xxx.com</a></p>
      */
@@ -14,8 +12,6 @@ public class ConfigSetCancelRelationFromAddressRequest extends TeaModel {
     public String fromAddress;
 
     /**
-     * <p>The ID of the configuration set. This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */

@@ -8,7 +8,7 @@ public class SaveReceiverDetailResponseBody extends TeaModel {
     public SaveReceiverDetailResponseBodyData data;
 
     /**
-     * <p>The number of errors.</p>
+     * <p>Number of errors.</p>
      * 
      * <strong>example:</strong>
      * <p>638</p>
@@ -17,7 +17,7 @@ public class SaveReceiverDetailResponseBody extends TeaModel {
     public Integer errorCount;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
@@ -26,7 +26,7 @@ public class SaveReceiverDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of successful records.</p>
+     * <p>Number of successes.</p>
      * 
      * <strong>example:</strong>
      * <p>274</p>

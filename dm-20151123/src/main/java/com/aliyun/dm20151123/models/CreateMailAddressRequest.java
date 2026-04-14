@@ -9,7 +9,7 @@ public class CreateMailAddressRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>账号+@+域名</p>
+     * <p><a href="mailto:test1@example.com">test1@example.com</a></p>
      */
     @NameInMap("AccountName")
     public String accountName;
@@ -21,7 +21,7 @@ public class CreateMailAddressRequest extends TeaModel {
      * <p>Reply-to address</p>
      * 
      * <strong>example:</strong>
-     * <p>test1***@example.net</p>
+     * <p><a href="mailto:test2@example.com">test2@example.com</a></p>
      */
     @NameInMap("ReplyAddress")
     public String replyAddress;

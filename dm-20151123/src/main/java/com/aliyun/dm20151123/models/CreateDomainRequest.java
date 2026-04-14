@@ -25,18 +25,13 @@ public class CreateDomainRequest extends TeaModel {
 
     /**
      * <p>The selector field in the DKIM protocol, used to identify a specific public key. It is recommended to leave it blank, as the system will automatically generate it based on cluster information. If the user specifies it manually, for example, if the sending domain is &quot;sub.example.com&quot; and dkimSelector is set to &quot;default&quot;, then the host record will be &quot;default._domainkey.sub&quot;
-     * Constraints:</p>
+     * Constraints: </p>
      * <ol>
-     * <li><p>The length must not exceed 60 characters.</p>
-     * </li>
-     * <li><p>It must consist of visible characters only.</p>
-     * </li>
-     * <li><p>It cannot start with a hyphen (-).</p>
-     * </li>
-     * <li><p>It cannot end with a hyphen (-).</p>
-     * </li>
-     * <li><p>It cannot contain any of the following characters: _ :;/!\*\~.@#$%^&amp;()+=[{]}|?&lt;&gt;,\&quot;&quot;</p>
-     * </li>
+     * <li>The length must not exceed 60 characters. </li>
+     * <li>It must consist of visible characters only. </li>
+     * <li>It cannot start with a hyphen (-). </li>
+     * <li>It cannot end with a hyphen (-). </li>
+     * <li>It cannot contain any of the following characters: _ :;/!*~.@#$%^&amp;()+=[{]}|?&lt;&gt;,\&quot;&quot;</li>
      * </ol>
      * 
      * <strong>example:</strong>

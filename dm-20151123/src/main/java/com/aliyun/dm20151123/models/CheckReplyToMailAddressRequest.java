@@ -9,7 +9,7 @@ public class CheckReplyToMailAddressRequest extends TeaModel {
      * <p>en is English, and any other value or an empty value defaults to Chinese.</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;

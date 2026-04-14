@@ -5,22 +5,20 @@ import com.aliyun.tea.*;
 
 public class UnblockSendingRequest extends TeaModel {
     /**
-     * <p>The blacklisted recipient address.</p>
+     * <p>Blacklisted recipient\&quot;s email address</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p><a href="mailto:recipient@yyy.com">recipient@yyy.com</a></p>
+     * <p><a href="mailto:recipient@example.com">recipient@example.com</a></p>
      */
     @NameInMap("BlockEmail")
     public String blockEmail;
 
     /**
-     * <p>The blacklist type.</p>
+     * <p>Blacklist type</p>
      * <ul>
-     * <li><p>UNSUB: Unsubscribe</p>
-     * </li>
-     * <li><p>REPORT: Complaint</p>
-     * </li>
+     * <li>UNSUB: Unsubscribe</li>
+     * <li>REPORT: Report</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -31,11 +29,11 @@ public class UnblockSendingRequest extends TeaModel {
     public String blockType;
 
     /**
-     * <p>The sender address.</p>
+     * <p>Sender\&quot;s email address</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p><a href="mailto:sender@xxx.com">sender@xxx.com</a></p>
+     * <p><a href="mailto:sender@example.com">sender@example.com</a></p>
      */
     @NameInMap("SenderEmail")
     public String senderEmail;

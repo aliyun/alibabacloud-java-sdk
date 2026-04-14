@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DedicatedIpListResponseBody extends TeaModel {
     /**
-     * <p>The current page number.</p>
+     * <p>Current page</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DedicatedIpListResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Indicates whether the next page exists.</p>
+     * <p>Whether there is a next page</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -23,13 +23,13 @@ public class DedicatedIpListResponseBody extends TeaModel {
     public Boolean hasMore;
 
     /**
-     * <p>The list of IP addresses.</p>
+     * <p>IP list</p>
      */
     @NameInMap("Ips")
     public java.util.List<DedicatedIpListResponseBodyIps> ips;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>Page size</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class DedicatedIpListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -47,7 +47,7 @@ public class DedicatedIpListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of purchased IP addresses.</p>
+     * <p>Total amount of purchased IP data</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -110,7 +110,7 @@ public class DedicatedIpListResponseBody extends TeaModel {
 
     public static class DedicatedIpListResponseBodyIpsIpExt extends TeaModel {
         /**
-         * <p>Indicates whether auto-renewal is enabled.</p>
+         * <p>Whether auto-renewal is enabled</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -119,7 +119,7 @@ public class DedicatedIpListResponseBody extends TeaModel {
         public Boolean autoRenewal;
 
         /**
-         * <p>Indicates whether emails have been sent.</p>
+         * <p>Whether an email has been sent</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -163,7 +163,7 @@ public class DedicatedIpListResponseBody extends TeaModel {
 
     public static class DedicatedIpListResponseBodyIps extends TeaModel {
         /**
-         * <p>The expiration time.</p>
+         * <p>Expiration time</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-12T09:19:20Z</p>
@@ -172,7 +172,7 @@ public class DedicatedIpListResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
-         * <p>The IP address ID. This is the same as the purchased instance ID.</p>
+         * <p>IP ID, consistent with the purchased instance ID</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -181,7 +181,7 @@ public class DedicatedIpListResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The ID of the purchased instance.</p>
+         * <p>Purchased instance ID</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -190,7 +190,7 @@ public class DedicatedIpListResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The IP address.</p>
+         * <p>IP address</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -199,13 +199,13 @@ public class DedicatedIpListResponseBody extends TeaModel {
         public String ip;
 
         /**
-         * <p>The extended information.</p>
+         * <p>Extended information</p>
          */
         @NameInMap("IpExt")
         public DedicatedIpListResponseBodyIpsIpExt ipExt;
 
         /**
-         * <p>The name of the IP pool to which the IP address belongs.</p>
+         * <p>Name of the IP pool</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -214,7 +214,7 @@ public class DedicatedIpListResponseBody extends TeaModel {
         public String ipPoolName;
 
         /**
-         * <p>The purchase time.</p>
+         * <p>Purchase time</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-12T09:19:20Z</p>
@@ -223,7 +223,7 @@ public class DedicatedIpListResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The status of the IP address.</p>
+         * <p>IP status</p>
          * 
          * <strong>example:</strong>
          * <p>sold</p>
@@ -232,7 +232,7 @@ public class DedicatedIpListResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The prefetch status.</p>
+         * <p>Warm-up status</p>
          * 
          * <strong>example:</strong>
          * <p>finish</p>
@@ -241,7 +241,7 @@ public class DedicatedIpListResponseBody extends TeaModel {
         public String warmupStatus;
 
         /**
-         * <p>The prefetch method.</p>
+         * <p>Warm-up method</p>
          * 
          * <strong>example:</strong>
          * <p>cusSelfManager</p>
