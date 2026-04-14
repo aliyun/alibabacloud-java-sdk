@@ -110,6 +110,9 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         @NameInMap("EncryptType")
         public String encryptType;
 
+        @NameInMap("KbUuidList")
+        public java.util.List<String> kbUuidList;
+
         /**
          * <strong>example:</strong>
          * <p>CHINESE</p>
@@ -179,6 +182,14 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         }
         public String getEncryptType() {
             return this.encryptType;
+        }
+
+        public CreateDataAgentSessionResponseBodyDataSessionConfig setKbUuidList(java.util.List<String> kbUuidList) {
+            this.kbUuidList = kbUuidList;
+            return this;
+        }
+        public java.util.List<String> getKbUuidList() {
+            return this.kbUuidList;
         }
 
         public CreateDataAgentSessionResponseBodyDataSessionConfig setLanguage(String language) {

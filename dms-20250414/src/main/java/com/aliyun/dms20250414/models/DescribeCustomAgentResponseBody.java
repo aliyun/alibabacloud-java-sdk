@@ -205,6 +205,9 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         @NameInMap("AccessType")
         public String accessType;
 
+        @NameInMap("KbUuid")
+        public String kbUuid;
+
         @NameInMap("McpServerId")
         public String mcpServerId;
 
@@ -219,6 +222,14 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         }
         public String getAccessType() {
             return this.accessType;
+        }
+
+        public DescribeCustomAgentResponseBodyDataKnowledgeConfigList setKbUuid(String kbUuid) {
+            this.kbUuid = kbUuid;
+            return this;
+        }
+        public String getKbUuid() {
+            return this.kbUuid;
         }
 
         public DescribeCustomAgentResponseBodyDataKnowledgeConfigList setMcpServerId(String mcpServerId) {

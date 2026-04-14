@@ -104,6 +104,9 @@ public class CreateDataAgentSessionRequest extends TeaModel {
         @NameInMap("EncryptType")
         public String encryptType;
 
+        @NameInMap("KbUuidList")
+        public java.util.List<String> kbUuidList;
+
         /**
          * <strong>example:</strong>
          * <p>CHINESE</p>
@@ -173,6 +176,14 @@ public class CreateDataAgentSessionRequest extends TeaModel {
         }
         public String getEncryptType() {
             return this.encryptType;
+        }
+
+        public CreateDataAgentSessionRequestSessionConfig setKbUuidList(java.util.List<String> kbUuidList) {
+            this.kbUuidList = kbUuidList;
+            return this;
+        }
+        public java.util.List<String> getKbUuidList() {
+            return this.kbUuidList;
         }
 
         public CreateDataAgentSessionRequestSessionConfig setLanguage(String language) {

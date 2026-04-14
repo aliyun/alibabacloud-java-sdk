@@ -299,6 +299,9 @@ public class CreateCustomAgentRequest extends TeaModel {
         @NameInMap("AccessType")
         public String accessType;
 
+        @NameInMap("KbUuid")
+        public String kbUuid;
+
         /**
          * <strong>example:</strong>
          * <p>nhdpt9adf6ac**********ca</p>
@@ -317,6 +320,14 @@ public class CreateCustomAgentRequest extends TeaModel {
         }
         public String getAccessType() {
             return this.accessType;
+        }
+
+        public CreateCustomAgentRequestKnowledgeConfigList setKbUuid(String kbUuid) {
+            this.kbUuid = kbUuid;
+            return this;
+        }
+        public String getKbUuid() {
+            return this.kbUuid;
         }
 
         public CreateCustomAgentRequestKnowledgeConfigList setMcpServerId(String mcpServerId) {
