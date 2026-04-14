@@ -26,6 +26,10 @@ public class UpdateAuditRequestShrinkRequest extends TeaModel {
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1500111740532860</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -38,9 +42,17 @@ public class UpdateAuditRequestShrinkRequest extends TeaModel {
     @NameInMap("RequestNo")
     public String requestNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:user1@example.com">user1@example.com</a>&quot;</p>
+     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1577495724967111</p>
+     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 

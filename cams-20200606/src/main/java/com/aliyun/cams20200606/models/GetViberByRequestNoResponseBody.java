@@ -250,10 +250,38 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>6944**@gmail.com</p>
+         */
+        @NameInMap("ContactEmail")
+        public String contactEmail;
+
+        /**
+         * <strong>example:</strong>
          * <p>示例值示例值</p>
          */
         @NameInMap("ContactMail")
         public String contactMail;
+
+        /**
+         * <strong>example:</strong>
+         * <p>qwq</p>
+         */
+        @NameInMap("ContactName")
+        public String contactName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>861151515***</p>
+         */
+        @NameInMap("ContactPhone")
+        public String contactPhone;
+
+        /**
+         * <strong>example:</strong>
+         * <p>职员</p>
+         */
+        @NameInMap("ContactPosition")
+        public String contactPosition;
 
         /**
          * <strong>example:</strong>
@@ -458,12 +486,44 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
             return this.completeAddressOfHeadquarters;
         }
 
+        public GetViberByRequestNoResponseBodyDataAuditRecord setContactEmail(String contactEmail) {
+            this.contactEmail = contactEmail;
+            return this;
+        }
+        public String getContactEmail() {
+            return this.contactEmail;
+        }
+
         public GetViberByRequestNoResponseBodyDataAuditRecord setContactMail(String contactMail) {
             this.contactMail = contactMail;
             return this;
         }
         public String getContactMail() {
             return this.contactMail;
+        }
+
+        public GetViberByRequestNoResponseBodyDataAuditRecord setContactName(String contactName) {
+            this.contactName = contactName;
+            return this;
+        }
+        public String getContactName() {
+            return this.contactName;
+        }
+
+        public GetViberByRequestNoResponseBodyDataAuditRecord setContactPhone(String contactPhone) {
+            this.contactPhone = contactPhone;
+            return this;
+        }
+        public String getContactPhone() {
+            return this.contactPhone;
+        }
+
+        public GetViberByRequestNoResponseBodyDataAuditRecord setContactPosition(String contactPosition) {
+            this.contactPosition = contactPosition;
+            return this;
+        }
+        public String getContactPosition() {
+            return this.contactPosition;
         }
 
         public GetViberByRequestNoResponseBodyDataAuditRecord setEnableAutoReply(String enableAutoReply) {

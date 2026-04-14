@@ -73,15 +73,6 @@ public class UpdateInstanceRequest extends TeaModel {
     @NameInMap("OfficeAddress")
     public String officeAddress;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     public static UpdateInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateInstanceRequest self = new UpdateInstanceRequest();
         return TeaModel.build(map, self);
@@ -157,30 +148,6 @@ public class UpdateInstanceRequest extends TeaModel {
     }
     public String getOfficeAddress() {
         return this.officeAddress;
-    }
-
-    public UpdateInstanceRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public UpdateInstanceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public UpdateInstanceRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
 }

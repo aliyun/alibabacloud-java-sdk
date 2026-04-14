@@ -23,12 +23,24 @@ public class AddAuditViberOpenShrinkRequest extends TeaModel {
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1651322271196729</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:testuser@testdomain.co">testuser@testdomain.co</a></p>
+     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1754580903499898</p>
+     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 

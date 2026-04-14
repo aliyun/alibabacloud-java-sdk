@@ -32,9 +32,6 @@ public class ListInstanceRequest extends TeaModel {
     @NameInMap("InstanceName")
     public String instanceName;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     /**
      * <strong>example:</strong>
      * <p>92</p>
@@ -55,12 +52,6 @@ public class ListInstanceRequest extends TeaModel {
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
 
     /**
      * <strong>example:</strong>
@@ -106,14 +97,6 @@ public class ListInstanceRequest extends TeaModel {
         return this.instanceName;
     }
 
-    public ListInstanceRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public ListInstanceRequest setPageIndex(Long pageIndex) {
         this.pageIndex = pageIndex;
         return this;
@@ -136,22 +119,6 @@ public class ListInstanceRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    public ListInstanceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public ListInstanceRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public ListInstanceRequest setSubmitTime(String submitTime) {

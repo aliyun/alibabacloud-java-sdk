@@ -36,6 +36,13 @@ public class AddChatGroupRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://t.me/testgroup">https://t.me/testgroup</a></p>
+     */
+    @NameInMap("GroupLink")
+    public String groupLink;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -46,8 +53,6 @@ public class AddChatGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>示例值示例值</p>
      */
@@ -89,6 +94,14 @@ public class AddChatGroupRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public AddChatGroupRequest setGroupLink(String groupLink) {
+        this.groupLink = groupLink;
+        return this;
+    }
+    public String getGroupLink() {
+        return this.groupLink;
     }
 
     public AddChatGroupRequest setOwnerId(Long ownerId) {

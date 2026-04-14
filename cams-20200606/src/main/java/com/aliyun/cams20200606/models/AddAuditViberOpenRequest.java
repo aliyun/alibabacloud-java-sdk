@@ -23,12 +23,24 @@ public class AddAuditViberOpenRequest extends TeaModel {
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1651322271196729</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:testuser@testdomain.co">testuser@testdomain.co</a></p>
+     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1754580903499898</p>
+     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
@@ -233,10 +245,38 @@ public class AddAuditViberOpenRequest extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>7151***<a href="mailto:5@qq.com">5@qq.com</a></p>
+         */
+        @NameInMap("ContactEmail")
+        public String contactEmail;
+
+        /**
+         * <strong>example:</strong>
          * <p><a href="mailto:123@123.com">123@123.com</a></p>
          */
         @NameInMap("ContactMail")
         public String contactMail;
+
+        /**
+         * <strong>example:</strong>
+         * <p>mary</p>
+         */
+        @NameInMap("ContactName")
+        public String contactName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>8615115**777</p>
+         */
+        @NameInMap("ContactPhone")
+        public String contactPhone;
+
+        /**
+         * <strong>example:</strong>
+         * <p>职员</p>
+         */
+        @NameInMap("ContactPosition")
+        public String contactPosition;
 
         /**
          * <strong>example:</strong>
@@ -410,12 +450,44 @@ public class AddAuditViberOpenRequest extends TeaModel {
             return this.completeAddressOfHeadquarters;
         }
 
+        public AddAuditViberOpenRequestAuditRecord setContactEmail(String contactEmail) {
+            this.contactEmail = contactEmail;
+            return this;
+        }
+        public String getContactEmail() {
+            return this.contactEmail;
+        }
+
         public AddAuditViberOpenRequestAuditRecord setContactMail(String contactMail) {
             this.contactMail = contactMail;
             return this;
         }
         public String getContactMail() {
             return this.contactMail;
+        }
+
+        public AddAuditViberOpenRequestAuditRecord setContactName(String contactName) {
+            this.contactName = contactName;
+            return this;
+        }
+        public String getContactName() {
+            return this.contactName;
+        }
+
+        public AddAuditViberOpenRequestAuditRecord setContactPhone(String contactPhone) {
+            this.contactPhone = contactPhone;
+            return this;
+        }
+        public String getContactPhone() {
+            return this.contactPhone;
+        }
+
+        public AddAuditViberOpenRequestAuditRecord setContactPosition(String contactPosition) {
+            this.contactPosition = contactPosition;
+            return this;
+        }
+        public String getContactPosition() {
+            return this.contactPosition;
         }
 
         public AddAuditViberOpenRequestAuditRecord setEnableAutoReply(String enableAutoReply) {

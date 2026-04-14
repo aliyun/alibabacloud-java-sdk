@@ -73,21 +73,12 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("OfficeAddress")
     public String officeAddress;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     /**
      * <strong>example:</strong>
      * <p>示例值</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
 
     public static CreateInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceRequest self = new CreateInstanceRequest();
@@ -166,36 +157,12 @@ public class CreateInstanceRequest extends TeaModel {
         return this.officeAddress;
     }
 
-    public CreateInstanceRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public CreateInstanceRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    public CreateInstanceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public CreateInstanceRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
 }

@@ -26,6 +26,10 @@ public class UpdateAuditRequestRequest extends TeaModel {
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1500111740532860</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -38,9 +42,17 @@ public class UpdateAuditRequestRequest extends TeaModel {
     @NameInMap("RequestNo")
     public String requestNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:user1@example.com">user1@example.com</a>&quot;</p>
+     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1577495724967111</p>
+     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
@@ -260,10 +272,38 @@ public class UpdateAuditRequestRequest extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>5**<a href="mailto:8585@gmail.com">8585@gmail.com</a></p>
+         */
+        @NameInMap("ContactEmail")
+        public String contactEmail;
+
+        /**
+         * <strong>example:</strong>
          * <p><a href="mailto:xxxx@gamil.com">xxxx@gamil.com</a></p>
          */
         @NameInMap("ContactMail")
         public String contactMail;
+
+        /**
+         * <strong>example:</strong>
+         * <p>mary</p>
+         */
+        @NameInMap("ContactName")
+        public String contactName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>861515115***</p>
+         */
+        @NameInMap("ContactPhone")
+        public String contactPhone;
+
+        /**
+         * <strong>example:</strong>
+         * <p>job</p>
+         */
+        @NameInMap("ContactPosition")
+        public String contactPosition;
 
         /**
          * <strong>example:</strong>
@@ -462,12 +502,44 @@ public class UpdateAuditRequestRequest extends TeaModel {
             return this.completeAddressOfHeadquarters;
         }
 
+        public UpdateAuditRequestRequestAuditRecord setContactEmail(String contactEmail) {
+            this.contactEmail = contactEmail;
+            return this;
+        }
+        public String getContactEmail() {
+            return this.contactEmail;
+        }
+
         public UpdateAuditRequestRequestAuditRecord setContactMail(String contactMail) {
             this.contactMail = contactMail;
             return this;
         }
         public String getContactMail() {
             return this.contactMail;
+        }
+
+        public UpdateAuditRequestRequestAuditRecord setContactName(String contactName) {
+            this.contactName = contactName;
+            return this;
+        }
+        public String getContactName() {
+            return this.contactName;
+        }
+
+        public UpdateAuditRequestRequestAuditRecord setContactPhone(String contactPhone) {
+            this.contactPhone = contactPhone;
+            return this;
+        }
+        public String getContactPhone() {
+            return this.contactPhone;
+        }
+
+        public UpdateAuditRequestRequestAuditRecord setContactPosition(String contactPosition) {
+            this.contactPosition = contactPosition;
+            return this;
+        }
+        public String getContactPosition() {
+            return this.contactPosition;
         }
 
         public UpdateAuditRequestRequestAuditRecord setEnableAutoReply(String enableAutoReply) {

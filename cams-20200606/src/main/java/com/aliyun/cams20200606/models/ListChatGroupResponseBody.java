@@ -101,10 +101,24 @@ public class ListChatGroupResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>示例值</p>
+         */
+        @NameInMap("BusinessRole")
+        public String businessRole;
+
+        /**
+         * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
+
+        /**
+         * <strong>example:</strong>
+         * <p>94</p>
+         */
+        @NameInMap("GmtModifier")
+        public Long gmtModifier;
 
         /**
          * <strong>example:</strong>
@@ -115,10 +129,24 @@ public class ListChatGroupResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>示例值示例值</p>
+         */
+        @NameInMap("GroupLink")
+        public String groupLink;
+
+        /**
+         * <strong>example:</strong>
          * <p>ACTIVE</p>
          */
         @NameInMap("GroupStatus")
         public String groupStatus;
+
+        /**
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
+         */
+        @NameInMap("GroupType")
+        public String groupType;
 
         /**
          * <strong>example:</strong>
@@ -141,6 +169,13 @@ public class ListChatGroupResponseBody extends TeaModel {
         @NameInMap("Subject")
         public String subject;
 
+        /**
+         * <strong>example:</strong>
+         * <p>35</p>
+         */
+        @NameInMap("TotalParticipantCount")
+        public Long totalParticipantCount;
+
         public static ListChatGroupResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             ListChatGroupResponseBodyDataList self = new ListChatGroupResponseBodyDataList();
             return TeaModel.build(map, self);
@@ -154,12 +189,28 @@ public class ListChatGroupResponseBody extends TeaModel {
             return this.businessNumber;
         }
 
+        public ListChatGroupResponseBodyDataList setBusinessRole(String businessRole) {
+            this.businessRole = businessRole;
+            return this;
+        }
+        public String getBusinessRole() {
+            return this.businessRole;
+        }
+
         public ListChatGroupResponseBodyDataList setDescription(String description) {
             this.description = description;
             return this;
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListChatGroupResponseBodyDataList setGmtModifier(Long gmtModifier) {
+            this.gmtModifier = gmtModifier;
+            return this;
+        }
+        public Long getGmtModifier() {
+            return this.gmtModifier;
         }
 
         public ListChatGroupResponseBodyDataList setGroupId(String groupId) {
@@ -170,12 +221,28 @@ public class ListChatGroupResponseBody extends TeaModel {
             return this.groupId;
         }
 
+        public ListChatGroupResponseBodyDataList setGroupLink(String groupLink) {
+            this.groupLink = groupLink;
+            return this;
+        }
+        public String getGroupLink() {
+            return this.groupLink;
+        }
+
         public ListChatGroupResponseBodyDataList setGroupStatus(String groupStatus) {
             this.groupStatus = groupStatus;
             return this;
         }
         public String getGroupStatus() {
             return this.groupStatus;
+        }
+
+        public ListChatGroupResponseBodyDataList setGroupType(String groupType) {
+            this.groupType = groupType;
+            return this;
+        }
+        public String getGroupType() {
+            return this.groupType;
         }
 
         public ListChatGroupResponseBodyDataList setInviteLink(String inviteLink) {
@@ -200,6 +267,14 @@ public class ListChatGroupResponseBody extends TeaModel {
         }
         public String getSubject() {
             return this.subject;
+        }
+
+        public ListChatGroupResponseBodyDataList setTotalParticipantCount(Long totalParticipantCount) {
+            this.totalParticipantCount = totalParticipantCount;
+            return this;
+        }
+        public Long getTotalParticipantCount() {
+            return this.totalParticipantCount;
         }
 
     }

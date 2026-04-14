@@ -31,10 +31,24 @@ public class ListChatGroupRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
+    @NameInMap("GroupLink")
+    public String groupLink;
+
+    /**
+     * <strong>example:</strong>
      * <p>ACTIVE</p>
      */
     @NameInMap("GroupStatus")
     public String groupStatus;
+
+    /**
+     * <strong>example:</strong>
+     * <p>示例值</p>
+     */
+    @NameInMap("GroupType")
+    public String groupType;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -87,12 +101,28 @@ public class ListChatGroupRequest extends TeaModel {
         return this.custSpaceId;
     }
 
+    public ListChatGroupRequest setGroupLink(String groupLink) {
+        this.groupLink = groupLink;
+        return this;
+    }
+    public String getGroupLink() {
+        return this.groupLink;
+    }
+
     public ListChatGroupRequest setGroupStatus(String groupStatus) {
         this.groupStatus = groupStatus;
         return this;
     }
     public String getGroupStatus() {
         return this.groupStatus;
+    }
+
+    public ListChatGroupRequest setGroupType(String groupType) {
+        this.groupType = groupType;
+        return this;
+    }
+    public String getGroupType() {
+        return this.groupType;
     }
 
     public ListChatGroupRequest setOwnerId(Long ownerId) {
