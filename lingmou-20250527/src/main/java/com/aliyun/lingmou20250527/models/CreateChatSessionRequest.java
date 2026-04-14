@@ -5,6 +5,20 @@ import com.aliyun.tea.*;
 
 public class CreateChatSessionRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>emaPet0p1tWYNkqD</p>
+     */
+    @NameInMap("appId")
+    public String appId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>xzzx1SIcXGYSju3S</p>
+     */
+    @NameInMap("deviceId")
+    public String deviceId;
+
+    /**
      * <p>需要在<a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.457876812ETi6y&commodityCode=avatar_2dchat_public_cn">数字人实时交互服务</a>购买完成对应的服务购买，当前有可用的服务时，前往阿里云-<a href="https://billing-cost.console.aliyun.com/order/list">我的订单</a>页面对应订单详情下进行查询</p>
      * <p>This parameter is required.</p>
      * 
@@ -35,6 +49,22 @@ public class CreateChatSessionRequest extends TeaModel {
     public static CreateChatSessionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateChatSessionRequest self = new CreateChatSessionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateChatSessionRequest setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    public String getAppId() {
+        return this.appId;
+    }
+
+    public CreateChatSessionRequest setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    public String getDeviceId() {
+        return this.deviceId;
     }
 
     public CreateChatSessionRequest setInstanceId(String instanceId) {
