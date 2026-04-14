@@ -4,9 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
-    /**
-     * <p>The information about policies. The information is an array of IpControlPolicyItem data.</p>
-     */
     @NameInMap("IpControlPolicyItems")
     public DescribeIpControlPolicyItemsResponseBodyIpControlPolicyItems ipControlPolicyItems;
 
@@ -92,48 +89,18 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
     }
 
     public static class DescribeIpControlPolicyItemsResponseBodyIpControlPolicyItemsIpControlPolicyItem extends TeaModel {
-        /**
-         * <p>The ID of the application.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>11112</p>
-         */
         @NameInMap("AppId")
         public String appId;
 
-        /**
-         * <p>The IP addresses or CIDR blocks.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>113.125.XX.XX;101.11.XX.XX</p>
-         */
         @NameInMap("CidrIp")
         public String cidrIp;
 
-        /**
-         * <p>The time when the policy was created. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-01-17T06:20:08Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The time when the policy was modified. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-01-17T06:25:13Z</p>
-         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
-        /**
-         * <p>The ID of the policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>P151617000829241</p>
-         */
         @NameInMap("PolicyItemId")
         public String policyItemId;
 

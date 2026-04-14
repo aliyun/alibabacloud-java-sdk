@@ -61,9 +61,6 @@ public class DescribeApiDocResponseBody extends TeaModel {
     @NameInMap("DisableInternet")
     public Boolean disableInternet;
 
-    /**
-     * <p>The sample error codes returned by the backend service.</p>
-     */
     @NameInMap("ErrorCodeSamples")
     public DescribeApiDocResponseBodyErrorCodeSamples errorCodeSamples;
 
@@ -130,9 +127,6 @@ public class DescribeApiDocResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The returned frontend input parameters in the API. It is an array consisting of RequestParameter data.</p>
-     */
     @NameInMap("RequestParameters")
     public DescribeApiDocResponseBodyRequestParameters requestParameters;
 
@@ -334,30 +328,12 @@ public class DescribeApiDocResponseBody extends TeaModel {
     }
 
     public static class DescribeApiDocResponseBodyErrorCodeSamplesErrorCodeSample extends TeaModel {
-        /**
-         * <p>The returned error code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Error</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <p>The error description.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Unauthorized</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The returned error message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>error message</p>
-         */
         @NameInMap("Message")
         public String message;
 
@@ -545,156 +521,54 @@ public class DescribeApiDocResponseBody extends TeaModel {
     }
 
     public static class DescribeApiDocResponseBodyRequestParametersRequestParameter extends TeaModel {
-        /**
-         * <p>The name of the parameter in the API request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Length</p>
-         */
         @NameInMap("ApiParameterName")
         public String apiParameterName;
 
-        /**
-         * <p>The type of the array element.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>String</p>
-         */
         @NameInMap("ArrayItemsType")
         public String arrayItemsType;
 
-        /**
-         * <p>The default value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
-        /**
-         * <p>The example value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("DemoValue")
         public String demoValue;
 
-        /**
-         * <p>The parameter description.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Parameters</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The order in which the parameter is sorted in the document.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("DocOrder")
         public Integer docOrder;
 
-        /**
-         * <p>Indicates whether the document is public. Valid values: <strong>PUBLIC</strong> and <strong>PRIVATE</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PUBLIC</p>
-         */
         @NameInMap("DocShow")
         public String docShow;
 
-        /**
-         * <p>The hash values that are supported when <strong>ParameterType</strong> is set to Int, Long, Float, Double, or String. Separate values with commas (,). Examples: 1,2,3,4,9 and A,B,C,E,F.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>boy,girl</p>
-         */
         @NameInMap("EnumValue")
         public String enumValue;
 
-        /**
-         * <p>JSON scheme</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{}</p>
-         */
         @NameInMap("JsonScheme")
         public String jsonScheme;
 
-        /**
-         * <p>The parameter location. Valid values: BODY, HEAD, QUERY, and PATH.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>HEAD</p>
-         */
         @NameInMap("Location")
         public String location;
 
-        /**
-         * <p>The maximum length.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123456</p>
-         */
         @NameInMap("MaxLength")
         public Long maxLength;
 
-        /**
-         * <p>The maximum value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
-         */
         @NameInMap("MaxValue")
         public Long maxValue;
 
-        /**
-         * <p>The minimum length.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("MinLength")
         public Long minLength;
 
-        /**
-         * <p>The minimum value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123456</p>
-         */
         @NameInMap("MinValue")
         public Long minValue;
 
-        /**
-         * <p>The data type of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>String</p>
-         */
         @NameInMap("ParameterType")
         public String parameterType;
 
-        /**
-         * <p>The regular expression that is used for parameter validation when <strong>ParameterType</strong> is set to String.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
         @NameInMap("RegularExpression")
         public String regularExpression;
 
-        /**
-         * <p>Indicates whether the parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>OPTIONAL</p>
-         */
         @NameInMap("Required")
         public String required;
 

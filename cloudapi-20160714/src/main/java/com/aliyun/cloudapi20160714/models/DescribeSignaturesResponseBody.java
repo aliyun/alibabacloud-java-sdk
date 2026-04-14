@@ -31,9 +31,6 @@ public class DescribeSignaturesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The returned signature information. It is an array consisting of SignatureInfo data.</p>
-     */
     @NameInMap("SignatureInfos")
     public DescribeSignaturesResponseBodySignatureInfos signatureInfos;
 
@@ -92,66 +89,24 @@ public class DescribeSignaturesResponseBody extends TeaModel {
     }
 
     public static class DescribeSignaturesResponseBodySignatureInfosSignatureInfo extends TeaModel {
-        /**
-         * <p>The creation time of the key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2016-07-23T08:28:48Z</p>
-         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
-        /**
-         * <p>The last modification time of the key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2016-07-24T08:28:48Z</p>
-         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
-        /**
-         * <p>The region where the key is located.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-qingdao</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The ID of the backend signature key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dd05f1c54d6749eda95f9fa6d491449a</p>
-         */
         @NameInMap("SignatureId")
         public String signatureId;
 
-        /**
-         * <p>The Key value of the backend signature key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>qwertyuiop</p>
-         */
         @NameInMap("SignatureKey")
         public String signatureKey;
 
-        /**
-         * <p>The name of the backend signature key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>backendsignature</p>
-         */
         @NameInMap("SignatureName")
         public String signatureName;
 
-        /**
-         * <p>The Secret value of the backend signature key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>asdfghjkl</p>
-         */
         @NameInMap("SignatureSecret")
         public String signatureSecret;
 

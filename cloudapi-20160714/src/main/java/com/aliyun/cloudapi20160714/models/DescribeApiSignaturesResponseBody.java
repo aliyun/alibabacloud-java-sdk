@@ -4,9 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApiSignaturesResponseBody extends TeaModel {
-    /**
-     * <p>The returned signature key information. It is an array consisting of ApiSignatureItem data.</p>
-     */
     @NameInMap("ApiSignatures")
     public DescribeApiSignaturesResponseBodyApiSignatures apiSignatures;
 
@@ -92,48 +89,18 @@ public class DescribeApiSignaturesResponseBody extends TeaModel {
     }
 
     public static class DescribeApiSignaturesResponseBodyApiSignaturesApiSignatureItem extends TeaModel {
-        /**
-         * <p>The ID of the API.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>46fbb52840d146f186e38e8e70fc8c90</p>
-         */
         @NameInMap("ApiId")
         public String apiId;
 
-        /**
-         * <p>The name of the API.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testapi</p>
-         */
         @NameInMap("ApiName")
         public String apiName;
 
-        /**
-         * <p>The time when the backend signature key was bound.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2016-07-23T08:28:48Z</p>
-         */
         @NameInMap("BoundTime")
         public String boundTime;
 
-        /**
-         * <p>The ID of the backend signature key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dd05f1c54d6749eda95f9fa6d491449a</p>
-         */
         @NameInMap("SignatureId")
         public String signatureId;
 
-        /**
-         * <p>The name of the backend signature key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>backendsignature</p>
-         */
         @NameInMap("SignatureName")
         public String signatureName;
 

@@ -4,9 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogConfigResponseBody extends TeaModel {
-    /**
-     * <p>Info of the log config.</p>
-     */
     @NameInMap("LogInfos")
     public DescribeLogConfigResponseBodyLogInfos logInfos;
 
@@ -41,39 +38,15 @@ public class DescribeLogConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeLogConfigResponseBodyLogInfosLogInfo extends TeaModel {
-        /**
-         * <p>The log type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PROVIDER</p>
-         */
         @NameInMap("LogType")
         public String logType;
 
-        /**
-         * <p>The region ID of the Logstore.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The name of the Logstore in Log Service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>slsstore</p>
-         */
         @NameInMap("SlsLogStore")
         public String slsLogStore;
 
-        /**
-         * <p>The name of the Log Service project.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>slsproject</p>
-         */
         @NameInMap("SlsProject")
         public String slsProject;
 

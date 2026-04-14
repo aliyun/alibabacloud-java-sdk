@@ -4,9 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApiProductsByAppResponseBody extends TeaModel {
-    /**
-     * <p>The information about API products.</p>
-     */
     @NameInMap("ApiProductInfoList")
     public DescribeApiProductsByAppResponseBodyApiProductInfoList apiProductInfoList;
 
@@ -92,12 +89,6 @@ public class DescribeApiProductsByAppResponseBody extends TeaModel {
     }
 
     public static class DescribeApiProductsByAppResponseBodyApiProductInfoListApiProductInfo extends TeaModel {
-        /**
-         * <p>The ID of the API product.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>117b7a64a8b3f064eaa4a47ac62aac5e</p>
-         */
         @NameInMap("ApiProductId")
         public String apiProductId;
 

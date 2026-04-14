@@ -4,9 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApisResponseBody extends TeaModel {
-    /**
-     * <p>The queried API definitions.</p>
-     */
     @NameInMap("ApiSummarys")
     public DescribeApisResponseBodyApiSummarys apiSummarys;
 
@@ -92,35 +89,12 @@ public class DescribeApisResponseBody extends TeaModel {
     }
 
     public static class DescribeApisResponseBodyApiSummarysApiSummaryDeployedInfosDeployedInfo extends TeaModel {
-        /**
-         * <p>The deployment status. Valid values: DEPLOYED and NONDEPLOYED.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DEPLOYED</p>
-         */
         @NameInMap("DeployedStatus")
         public String deployedStatus;
 
-        /**
-         * <p>The deployed version.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20220103170737313</p>
-         */
         @NameInMap("EffectiveVersion")
         public String effectiveVersion;
 
-        /**
-         * <p>Stage Name:</p>
-         * <ul>
-         * <li><strong>RELEASE</strong>: production environment</li>
-         * <li><strong>PRE</strong>: staging environment</li>
-         * <li><strong>TEST</strong>: test environment</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>RELEASE</p>
-         */
         @NameInMap("StageName")
         public String stageName;
 
@@ -175,21 +149,9 @@ public class DescribeApisResponseBody extends TeaModel {
     }
 
     public static class DescribeApisResponseBodyApiSummarysApiSummaryTagListTag extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>tagKey</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>tagValue</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -236,118 +198,42 @@ public class DescribeApisResponseBody extends TeaModel {
     }
 
     public static class DescribeApisResponseBodyApiSummarysApiSummary extends TeaModel {
-        /**
-         * <p>The API ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5af418828f0344a3b588c0cc1331a3bc</p>
-         */
         @NameInMap("ApiId")
         public String apiId;
 
-        /**
-         * <p>The HTTP method of the API request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>GET</p>
-         */
         @NameInMap("ApiMethod")
         public String apiMethod;
 
-        /**
-         * <p>The API name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CreateObject</p>
-         */
         @NameInMap("ApiName")
         public String apiName;
 
-        /**
-         * <p>The request path of the API.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>/sqb/</p>
-         */
         @NameInMap("ApiPath")
         public String apiPath;
 
-        /**
-         * <p>The time when the API was created. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2016-05-20T18:18:25Z</p>
-         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
-        /**
-         * <p>The API publishing statuses.</p>
-         */
         @NameInMap("DeployedInfos")
         public DescribeApisResponseBodyApiSummarysApiSummaryDeployedInfos deployedInfos;
 
-        /**
-         * <p>The API description.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Creates an object</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The API group ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1084f9034c744137901057206b39d2b6</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The name of the API group to which the API belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>myGroup2</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 
-        /**
-         * <p>The time when the API was modified. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2016-07-23T08:28:48Z</p>
-         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
-        /**
-         * <p>The ID of the region to which the API belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-qingdao</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The tags that are added to the APIs.</p>
-         */
         @NameInMap("TagList")
         public DescribeApisResponseBodyApiSummarysApiSummaryTagList tagList;
 
-        /**
-         * <p>Indicates whether the API is public. Valid values:</p>
-         * <ul>
-         * <li><strong>PUBLIC</strong>: The API is public.</li>
-         * <li><strong>PRIVATE</strong>: The API is private.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>PUBLIC</p>
-         */
         @NameInMap("Visibility")
         public String visibility;
 

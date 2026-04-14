@@ -940,7 +940,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建API分组</p>
+     * <p>Creates an API group.</p>
      * 
      * @param request CreateApiGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -992,7 +992,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建API分组</p>
+     * <p>Creates an API group.</p>
      * 
      * @param request CreateApiGroupRequest
      * @return CreateApiGroupResponse
@@ -1088,7 +1088,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an application for calling APIs in API Gateway.</p>
+     * <p>Creates an app for API Gateway.</p>
      * 
      * @param request CreateAppRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1158,7 +1158,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an application for calling APIs in API Gateway.</p>
+     * <p>Creates an app for API Gateway.</p>
      * 
      * @param request CreateAppRequest
      * @return CreateAppResponse
@@ -1338,7 +1338,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建后端服务在环境上的配置</p>
+     * <p>Creates a backend service configuration in an environment.</p>
      * 
      * @param request CreateBackendModelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1390,7 +1390,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建后端服务在环境上的配置</p>
+     * <p>Creates a backend service configuration in an environment.</p>
      * 
      * @param request CreateBackendModelRequest
      * @return CreateBackendModelResponse
@@ -1462,7 +1462,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建自定义数据集条目</p>
+     * <p>Creates a data entry in a custom dataset.</p>
      * 
      * @param request CreateDatasetItemRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1510,7 +1510,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建自定义数据集条目</p>
+     * <p>Creates a data entry in a custom dataset.</p>
      * 
      * @param request CreateDatasetItemRequest
      * @return CreateDatasetItemResponse
@@ -1618,7 +1618,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建内网域名</p>
+     * <p>Grants an internal second-level domain name to an API group.</p>
      * 
      * @param request CreateIntranetDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1654,7 +1654,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建内网域名</p>
+     * <p>Grants an internal second-level domain name to an API group.</p>
      * 
      * @param request CreateIntranetDomainRequest
      * @return CreateIntranetDomainResponse
@@ -2589,7 +2589,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an application.</p>
+     * <p>Deletes a specified app.</p>
      * 
      * @param request DeleteAppRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2636,7 +2636,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an application.</p>
+     * <p>Deletes a specified app.</p>
      * 
      * @param request DeleteAppRequest
      * @return DeleteAppResponse
@@ -2848,7 +2848,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除自定义数据集</p>
+     * <p>Deletes a custom dataset.</p>
      * 
      * @param request DeleteDatasetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2884,7 +2884,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除自定义数据集</p>
+     * <p>Deletes a custom dataset.</p>
      * 
      * @param request DeleteDatasetRequest
      * @return DeleteDatasetResponse
@@ -3180,7 +3180,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete the specified log configuration.</p>
+     * <p>Deletes a log configuration.</p>
      * 
      * @param request DeleteLogConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3216,7 +3216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete the specified log configuration.</p>
+     * <p>Deletes a log configuration.</p>
      * 
      * @param request DeleteLogConfigRequest
      * @return DeleteLogConfigResponse
@@ -3649,7 +3649,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Publishes an API to an environment.</p>
+     * <p>Publishes an API to a specified environment.</p>
      * 
      * @param request DeployApiRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3704,7 +3704,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Publishes an API to an environment.</p>
+     * <p>Publishes an API to a specified environment.</p>
      * 
      * @param request DeployApiRequest
      * @return DeployApiResponse
@@ -3716,7 +3716,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询批量下线API任务</p>
+     * <p>Queries the progress of an API unpublishing task.</p>
      * 
      * @param request DescribeAbolishApiTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3752,7 +3752,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询批量下线API任务</p>
+     * <p>Queries the progress of an API unpublishing task.</p>
      * 
      * @param request DescribeAbolishApiTaskRequest
      * @return DescribeAbolishApiTaskResponse
@@ -5478,7 +5478,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries APIs by application. The environment information is also returned.</p>
+     * <p>Queries APIs by application and returns the result by environment.</p>
      * 
      * @param request DescribeApisWithStageNameIntegratedByAppRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5542,7 +5542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries APIs by application. The environment information is also returned.</p>
+     * <p>Queries APIs by application and returns the result by environment.</p>
      * 
      * @param request DescribeApisWithStageNameIntegratedByAppRequest
      * @return DescribeApisWithStageNameIntegratedByAppResponse
@@ -7649,6 +7649,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Language", request.language);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
             query.put("SecurityToken", request.securityToken);
         }
@@ -8154,7 +8162,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询插件列表</p>
+     * <p>Describes the plug-in modes supported by API Gateway.</p>
      * 
      * @param request DescribePluginSchemasRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8190,7 +8198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询插件列表</p>
+     * <p>Describes the plug-in modes supported by API Gateway.</p>
      * 
      * @param request DescribePluginSchemasRequest
      * @return DescribePluginSchemasResponse
@@ -8344,7 +8352,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the plug-ins that are bound to a running API in an environment.</p>
+     * <p>Queries the plug-ins that are bound to a running API in a specified environment.</p>
      * 
      * @param request DescribePluginsByApiRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8402,7 +8410,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the plug-ins that are bound to a running API in an environment.</p>
+     * <p>Queries the plug-ins that are bound to a running API in a specified environment.</p>
      * 
      * @param request DescribePluginsByApiRequest
      * @return DescribePluginsByApiResponse
@@ -8574,7 +8582,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries APIs that are purchased from Alibaba Cloud Marketplace.</p>
+     * <p>Queries the APIs purchased in the Alibaba Cloud Marketplace.</p>
      * 
      * @param request DescribePurchasedApisRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8634,7 +8642,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries APIs that are purchased from Alibaba Cloud Marketplace.</p>
+     * <p>Queries the APIs purchased in the Alibaba Cloud Marketplace.</p>
      * 
      * @param request DescribePurchasedApisRequest
      * @return DescribePurchasedApisResponse
@@ -9088,7 +9096,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询批量更新API后端元定结果</p>
+     * <p>Queries the update results of associated published APIs after the definition of a backend service is modified in an environment.</p>
      * 
      * @param request DescribeUpdateBackendTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9124,7 +9132,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询批量更新API后端元定结果</p>
+     * <p>Queries the update results of associated published APIs after the definition of a backend service is modified in an environment.</p>
      * 
      * @param request DescribeUpdateBackendTaskRequest
      * @return DescribeUpdateBackendTaskResponse
@@ -9136,7 +9144,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询更新VPC授权的任务</p>
+     * <p>Queries the update progress of an API that is being published after its associated VPC access authorization is updated.</p>
      * 
      * @param request DescribeUpdateVpcInfoTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9172,7 +9180,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询更新VPC授权的任务</p>
+     * <p>Queries the update progress of an API that is being published after its associated VPC access authorization is updated.</p>
      * 
      * @param request DescribeUpdateVpcInfoTaskRequest
      * @return DescribeUpdateVpcInfoTaskResponse
@@ -9420,7 +9428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解绑插件</p>
+     * <p>Unbinds a plug-in from an API.</p>
      * 
      * @param request DetachPluginRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9468,7 +9476,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解绑插件</p>
+     * <p>Unbinds a plug-in from an API.</p>
      * 
      * @param request DetachPluginRequest
      * @return DetachPluginResponse
@@ -9728,7 +9736,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导出OAS</p>
+     * <p>Exports APIs based on OpenAPI Specification (OAS).</p>
      * 
      * @param tmpReq ExportOASRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9794,7 +9802,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导出OAS</p>
+     * <p>Exports APIs based on OpenAPI Specification (OAS).</p>
      * 
      * @param request ExportOASRequest
      * @return ExportOASResponse
@@ -9806,7 +9814,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Imports APIs based on the OAS standard.</p>
+     * <p>Imports OpenAPI Specification (OAS)-compliant data to create an API.</p>
      * 
      * @param request ImportOASRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9876,7 +9884,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Imports APIs based on the OAS standard.</p>
+     * <p>Imports OpenAPI Specification (OAS)-compliant data to create an API.</p>
      * 
      * @param request ImportOASRequest
      * @return ImportOASResponse
@@ -10290,7 +10298,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the draft definition of an API. This operation is different from the ModifyApi operation. This operation does not require all information about the API. You need to only specify the parameters that you want to modify. For example, if you want to change the authentication method of the API from Anonymous to APP, you specify APP as the value of AuthType and do not need to configure other parameters.</p>
+     * <p>This API operation is used to modify the draft definition of an API. It is different from the ModifyApi operation in that it does not require all information about the API. You need to only specify the parameters that you want to modify. For example, if you want to change the authentication method of the API from Anonymous to APP, you need to only specify the value of AuthType, which is APP.</p>
      * 
      * @param request ModifyApiConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10462,7 +10470,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the draft definition of an API. This operation is different from the ModifyApi operation. This operation does not require all information about the API. You need to only specify the parameters that you want to modify. For example, if you want to change the authentication method of the API from Anonymous to APP, you specify APP as the value of AuthType and do not need to configure other parameters.</p>
+     * <p>This API operation is used to modify the draft definition of an API. It is different from the ModifyApi operation in that it does not require all information about the API. You need to only specify the parameters that you want to modify. For example, if you want to change the authentication method of the API from Anonymous to APP, you need to only specify the value of AuthType, which is APP.</p>
      * 
      * @param request ModifyApiConfigurationRequest
      * @return ModifyApiConfigurationResponse
@@ -10860,7 +10868,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改后端服务</p>
+     * <p>Modifies the basic information of a backend service, such as name and description. The backend service type cannot be modified once the backend service is created.</p>
      * 
      * @param request ModifyBackendRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10908,7 +10916,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改后端服务</p>
+     * <p>Modifies the basic information of a backend service, such as name and description. The backend service type cannot be modified once the backend service is created.</p>
      * 
      * @param request ModifyBackendRequest
      * @return ModifyBackendResponse
@@ -10920,7 +10928,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改后端服务在环境上的定义</p>
+     * <p>Modifies the definition of a backend service in the environment. After the modification, the backend paths of the APIs that use the backend service in the same environment will be updated at the same time automatically. You do not need to manually publish the APIs again.</p>
      * 
      * @param request ModifyBackendModelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10976,7 +10984,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改后端服务在环境上的定义</p>
+     * <p>Modifies the definition of a backend service in the environment. After the modification, the backend paths of the APIs that use the backend service in the same environment will be updated at the same time automatically. You do not need to manually publish the APIs again.</p>
      * 
      * @param request ModifyBackendModelRequest
      * @return ModifyBackendModelResponse
@@ -11044,7 +11052,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the expiration time and description of a data entry in a custom dataset.</p>
+     * <p>Modifies the timeout period and description of a data entry in a custom dataset.</p>
      * 
      * @param request ModifyDatasetItemRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11092,7 +11100,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the expiration time and description of a data entry in a custom dataset.</p>
+     * <p>Modifies the timeout period and description of a data entry in a custom dataset.</p>
      * 
      * @param request ModifyDatasetItemRequest
      * @return ModifyDatasetItemResponse
@@ -11874,7 +11882,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a virtual private cloud (VPC) authorization and updates the metadata of the API associated with the VPC authorization.</p>
+     * <p>Modifies the information of a VPC access authorization and updates the metadata of the associated API.</p>
      * 
      * @param request ModifyVpcAccessAndUpdateApisRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11938,7 +11946,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a virtual private cloud (VPC) authorization and updates the metadata of the API associated with the VPC authorization.</p>
+     * <p>Modifies the information of a VPC access authorization and updates the metadata of the associated API.</p>
      * 
      * @param request ModifyVpcAccessAndUpdateApisRequest
      * @return ModifyVpcAccessAndUpdateApisResponse
@@ -11950,9 +11958,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开通API网关服务</p>
+     * <p>Activates the API Gateway service.</p>
      * 
-     * @param request OpenApiGatewayServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return OpenApiGatewayServiceResponse
      */
@@ -11974,7 +11981,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开通API网关服务</p>
+     * <p>Activates the API Gateway service.</p>
      * @return OpenApiGatewayServiceResponse
      */
     public OpenApiGatewayServiceResponse openApiGatewayService() throws Exception {
@@ -12100,7 +12107,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除访问控制策略中IP条目</p>
+     * <p>This feature provides instance-level access control for dedicated instances. Deletes an IP address entry from an access control policy.</p>
      * 
      * @param request RemoveAccessControlListEntryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12140,7 +12147,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除访问控制策略中IP条目</p>
+     * <p>This feature provides instance-level access control for dedicated instances. Deletes an IP address entry from an access control policy.</p>
      * 
      * @param request RemoveAccessControlListEntryRequest
      * @return RemoveAccessControlListEntryResponse
@@ -12292,7 +12299,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Revokes the access permissions on a specified API from multiple applications. In this case, multiple applications map to a single API.</p>
+     * <p>Revokes the access permissions on a specified API from multiple apps. In this case, multiple apps map to a single API.</p>
      * 
      * @param request RemoveAppsAuthoritiesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12346,7 +12353,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Revokes the access permissions on a specified API from multiple applications. In this case, multiple applications map to a single API.</p>
+     * <p>Revokes the access permissions on a specified API from multiple apps. In this case, multiple apps map to a single API.</p>
      * 
      * @param request RemoveAppsAuthoritiesRequest
      * @return RemoveAppsAuthoritiesResponse
@@ -12641,7 +12648,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a VPC authorization without unpublishing the associated APIs.</p>
+     * <p>Deletes a VPC access authorization without unpublishing the associated APIs.</p>
      * 
      * @param request RemoveVpcAccessRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12698,7 +12705,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a VPC authorization without unpublishing the associated APIs.</p>
+     * <p>Deletes a VPC access authorization without unpublishing the associated APIs.</p>
      * 
      * @param request RemoveVpcAccessRequest
      * @return RemoveVpcAccessResponse
@@ -12710,7 +12717,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除VPC授权并下线关联API</p>
+     * <p>Deletes a VPC access authorization and unpublishes the associated API.</p>
      * 
      * @param request RemoveVpcAccessAndAbolishApisRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12758,7 +12765,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除VPC授权并下线关联API</p>
+     * <p>Deletes a VPC access authorization and unpublishes the associated API.</p>
      * 
      * @param request RemoveVpcAccessAndAbolishApisRequest
      * @return RemoveVpcAccessAndAbolishApisResponse
@@ -12829,7 +12836,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Resets the key of an application.</p>
+     * <p>Resets the key for an app.</p>
      * 
      * @param request ResetAppSecretRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12880,7 +12887,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Resets the key of an application.</p>
+     * <p>Resets the key for an app.</p>
      * 
      * @param request ResetAppSecretRequest
      * @return ResetAppSecretResponse
@@ -12892,7 +12899,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据APP生成SDK</p>
+     * <p>Generates an SDK by application.</p>
      * 
      * @param request SdkGenerateByAppRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12932,7 +12939,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据APP生成SDK</p>
+     * <p>Generates an SDK by application.</p>
      * 
      * @param request SdkGenerateByAppRequest
      * @return SdkGenerateByAppResponse
@@ -12996,7 +13003,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据分组生成SDK</p>
+     * <p>Generates an SDK by API group.</p>
      * 
      * @param request SdkGenerateByGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13036,7 +13043,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据分组生成SDK</p>
+     * <p>Generates an SDK by API group.</p>
      * 
      * @param request SdkGenerateByGroupRequest
      * @return SdkGenerateByGroupResponse
@@ -13048,7 +13055,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改访问控制策略的名称</p>
+     * <p>This feature provides instance-level access control for dedicated instances. Modifies the name of an access control policy.</p>
      * 
      * @param request SetAccessControlListAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13088,7 +13095,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改访问控制策略的名称</p>
+     * <p>This feature provides instance-level access control for dedicated instances. Modifies the name of an access control policy.</p>
      * 
      * @param request SetAccessControlListAttributeRequest
      * @return SetAccessControlListAttributeResponse
@@ -14081,7 +14088,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a tag-resource relationship.</p>
+     * <p>Adds user tags to resources.</p>
      * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14134,7 +14141,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a tag-resource relationship.</p>
+     * <p>Adds user tags to resources.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse

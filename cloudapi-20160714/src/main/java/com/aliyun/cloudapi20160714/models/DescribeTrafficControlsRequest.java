@@ -40,12 +40,6 @@ public class DescribeTrafficControlsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>436fa39b-b3b9-40c5-ae5d-ce3e000e38c5</p>
-     */
     @NameInMap("SecurityToken")
     public String securityToken;
 

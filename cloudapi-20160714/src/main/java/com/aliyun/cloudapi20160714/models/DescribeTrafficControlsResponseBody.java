@@ -40,9 +40,6 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    /**
-     * <p>The returned throttling policy information. It is an array consisting of TrafficControl data.</p>
-     */
     @NameInMap("TrafficControls")
     public DescribeTrafficControlsResponseBodyTrafficControls trafficControls;
 
@@ -92,21 +89,9 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
     }
 
     public static class DescribeTrafficControlsResponseBodyTrafficControlsTrafficControlSpecialPoliciesSpecialPolicySpecialsSpecial extends TeaModel {
-        /**
-         * <p>The AppId or user account corresponding to SpecialType.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:test_wg@aliyun.com">test_wg@aliyun.com</a></p>
-         */
         @NameInMap("SpecialKey")
         public String specialKey;
 
-        /**
-         * <p>The throttling value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("TrafficValue")
         public Integer trafficValue;
 
@@ -153,22 +138,9 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
     }
 
     public static class DescribeTrafficControlsResponseBodyTrafficControlsTrafficControlSpecialPoliciesSpecialPolicy extends TeaModel {
-        /**
-         * <p>The type of the special throttling policy. Valid values:</p>
-         * <ul>
-         * <li><strong>APP</strong></li>
-         * <li><strong>USER</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>USER</p>
-         */
         @NameInMap("SpecialType")
         public String specialType;
 
-        /**
-         * <p>The returned information about a special throttling policy. It is an array consisting of Special data.</p>
-         */
         @NameInMap("Specials")
         public DescribeTrafficControlsResponseBodyTrafficControlsTrafficControlSpecialPoliciesSpecialPolicySpecials specials;
 
@@ -215,95 +187,33 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
     }
 
     public static class DescribeTrafficControlsResponseBodyTrafficControlsTrafficControl extends TeaModel {
-        /**
-         * <p>The default throttling value for each API.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20000</p>
-         */
         @NameInMap("ApiDefault")
         public Integer apiDefault;
 
-        /**
-         * <p>The default throttling value for each app.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>8000</p>
-         */
         @NameInMap("AppDefault")
         public Integer appDefault;
 
-        /**
-         * <p>The creation time (UTC) of the throttling policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2016-01-27T10:19:39Z</p>
-         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
-        /**
-         * <p>The description of the throttling policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The last modification time (UTC) of the throttling policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2016-01-27T10:34:38Z</p>
-         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
-        /**
-         * <p>The returned information about a special throttling policy. It is an array consisting of SpecialPolicy data.</p>
-         */
         @NameInMap("SpecialPolicies")
         public DescribeTrafficControlsResponseBodyTrafficControlsTrafficControlSpecialPolicies specialPolicies;
 
-        /**
-         * <p>The ID of the throttling policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cfed6c970d45481dbe136d6b5ac68c41</p>
-         */
         @NameInMap("TrafficControlId")
         public String trafficControlId;
 
-        /**
-         * <p>The name of the throttling policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>wulingtestq1</p>
-         */
         @NameInMap("TrafficControlName")
         public String trafficControlName;
 
-        /**
-         * <p>The unit to be used in the throttling policy. Valid values:</p>
-         * <ul>
-         * <li>MINUTE</li>
-         * <li>HOUR</li>
-         * <li>DAY</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Minute</p>
-         */
         @NameInMap("TrafficControlUnit")
         public String trafficControlUnit;
 
-        /**
-         * <p>The default throttling value for each user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>15000</p>
-         */
         @NameInMap("UserDefault")
         public Integer userDefault;
 

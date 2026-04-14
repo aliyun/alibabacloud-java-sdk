@@ -4,9 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessControlListsResponseBody extends TeaModel {
-    /**
-     * <p>The ACLs.</p>
-     */
     @NameInMap("Acls")
     public DescribeAccessControlListsResponseBodyAcls acls;
 
@@ -92,34 +89,12 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessControlListsResponseBodyAclsAcl extends TeaModel {
-        /**
-         * <p>The ID of the access control policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>acl-3nsohdozz0ru8fi5onwz1</p>
-         */
         @NameInMap("AclId")
         public String aclId;
 
-        /**
-         * <p>The name of the access control policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testAcl</p>
-         */
         @NameInMap("AclName")
         public String aclName;
 
-        /**
-         * <p>访问控制策略组的IP版本。</p>
-         * <ul>
-         * <li><strong>IPv4</strong>。</li>
-         * <li><strong>IPv6</strong>。</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ipv4</p>
-         */
         @NameInMap("AddressIPVersion")
         public String addressIPVersion;
 

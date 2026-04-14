@@ -24,12 +24,6 @@ public class SetTrafficControlApisRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
-    /**
-     * <p>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>556d15cb-0808-432d-ab07-33e6b961b703</p>
-     */
     @NameInMap("SecurityToken")
     public String securityToken;
 

@@ -13,9 +13,6 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <p>The list of domain names.</p>
-     */
     @NameInMap("Domains")
     public DescribePurchasedApiGroupResponseBodyDomains domains;
 
@@ -147,12 +144,6 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
     }
 
     public static class DescribePurchasedApiGroupResponseBodyDomainsDomainItem extends TeaModel {
-        /**
-         * <p>The domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test_domain.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 

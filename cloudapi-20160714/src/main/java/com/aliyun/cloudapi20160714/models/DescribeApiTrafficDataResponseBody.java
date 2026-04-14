@@ -4,15 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApiTrafficDataResponseBody extends TeaModel {
-    /**
-     * <p>The returned downlink traffic data of API calls. It is an array consisting of MonitorItem data.</p>
-     */
     @NameInMap("CallDownloads")
     public DescribeApiTrafficDataResponseBodyCallDownloads callDownloads;
 
-    /**
-     * <p>The returned uplink traffic data of API calls. It is an array consisting of MonitorItem data.</p>
-     */
     @NameInMap("CallUploads")
     public DescribeApiTrafficDataResponseBodyCallUploads callUploads;
 
@@ -55,21 +49,9 @@ public class DescribeApiTrafficDataResponseBody extends TeaModel {
     }
 
     public static class DescribeApiTrafficDataResponseBodyCallDownloadsMonitorItem extends TeaModel {
-        /**
-         * <p>The time of the monitoring metric. The time format follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2016-07-28T08:20:00Z</p>
-         */
         @NameInMap("ItemTime")
         public String itemTime;
 
-        /**
-         * <p>The value corresponding to the monitoring metric.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("ItemValue")
         public String itemValue;
 
@@ -116,21 +98,9 @@ public class DescribeApiTrafficDataResponseBody extends TeaModel {
     }
 
     public static class DescribeApiTrafficDataResponseBodyCallUploadsMonitorItem extends TeaModel {
-        /**
-         * <p>The time of the monitoring metric. The time format follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2016-07-28T08:20:00Z</p>
-         */
         @NameInMap("ItemTime")
         public String itemTime;
 
-        /**
-         * <p>The value corresponding to the monitoring metric.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>670</p>
-         */
         @NameInMap("ItemValue")
         public String itemValue;
 

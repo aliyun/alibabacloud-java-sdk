@@ -4,9 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppsResponseBody extends TeaModel {
-    /**
-     * <p>The returned app information. It is an array consisting of AppItem data.</p>
-     */
     @NameInMap("Apps")
     public DescribeAppsResponseBodyApps apps;
 
@@ -92,30 +89,12 @@ public class DescribeAppsResponseBody extends TeaModel {
     }
 
     public static class DescribeAppsResponseBodyAppsAppItem extends TeaModel {
-        /**
-         * <p>The ID of the app.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20112314518278</p>
-         */
         @NameInMap("AppId")
         public Long appId;
 
-        /**
-         * <p>The name of the app.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CreateApptest</p>
-         */
         @NameInMap("AppName")
         public String appName;
 
-        /**
-         * <p>The description of the app.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>App test</p>
-         */
         @NameInMap("Description")
         public String description;
 

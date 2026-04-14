@@ -13,9 +13,6 @@ public class DescribeGroupTrafficResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The traffic information per second.</p>
-     */
     @NameInMap("TrafficPerSecond")
     public DescribeGroupTrafficResponseBodyTrafficPerSecond trafficPerSecond;
 
@@ -41,34 +38,12 @@ public class DescribeGroupTrafficResponseBody extends TeaModel {
     }
 
     public static class DescribeGroupTrafficResponseBodyTrafficPerSecondMonitorItem extends TeaModel {
-        /**
-         * <p>The metric. Valid values:</p>
-         * <ul>
-         * <li>inbound: traffic consumed by requests</li>
-         * <li>outbound: traffic consumed by responses</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>inbound</p>
-         */
         @NameInMap("Item")
         public String item;
 
-        /**
-         * <p>The corresponding time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2023-01-29T01:30:00Z</p>
-         */
         @NameInMap("ItemTime")
         public String itemTime;
 
-        /**
-         * <p>The traffic volume per second.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100.0</p>
-         */
         @NameInMap("ItemValue")
         public String itemValue;
 

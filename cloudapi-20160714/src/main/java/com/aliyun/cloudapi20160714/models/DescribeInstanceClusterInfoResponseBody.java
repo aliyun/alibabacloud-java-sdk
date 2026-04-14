@@ -73,9 +73,6 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
     @NameInMap("InstanceClusterVersion")
     public String instanceClusterVersion;
 
-    /**
-     * <p>The dedicated instances contained in the cluster.</p>
-     */
     @NameInMap("InstanceList")
     public DescribeInstanceClusterInfoResponseBodyInstanceList instanceList;
 
@@ -603,39 +600,15 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceClusterInfoResponseBodyInstanceListInstance extends TeaModel {
-        /**
-         * <p>The error message returned if the call fails.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Instance not found.</p>
-         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        /**
-         * <p>The instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>apigateway-ht-04e41d95e9c1</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The instance name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>tf-testacceu-central-1apigatewayinstance8752</p>
-         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        /**
-         * <p>The instance status.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>RUNNING</p>
-         */
         @NameInMap("Status")
         public String status;
 

@@ -4,9 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApisByIpControlResponseBody extends TeaModel {
-    /**
-     * <p>The returned API information. It is an array of ApiInfo data.</p>
-     */
     @NameInMap("ApiInfos")
     public DescribeApisByIpControlResponseBodyApiInfos apiInfos;
 
@@ -92,92 +89,30 @@ public class DescribeApisByIpControlResponseBody extends TeaModel {
     }
 
     public static class DescribeApisByIpControlResponseBodyApiInfosApiInfo extends TeaModel {
-        /**
-         * <p>The ID of the API.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3b81fd160f5645e097cc8855d75a1cf6</p>
-         */
         @NameInMap("ApiId")
         public String apiId;
 
-        /**
-         * <p>The name of the API</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testapi</p>
-         */
         @NameInMap("ApiName")
         public String apiName;
 
-        /**
-         * <p>The time of API binding.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2016-07-23T08:28:48Z</p>
-         */
         @NameInMap("BoundTime")
         public String boundTime;
 
-        /**
-         * <p>The description of the API.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Description</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the API group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0009db9c828549768a200320714b8930</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The name of the API group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>mygroup</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 
-        /**
-         * <p>The region in which the API is located.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-qingdao</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The name of the runtime environment. Valid values:</p>
-         * <ul>
-         * <li><strong>RELEASE</strong></li>
-         * <li>**TEST.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>TEST</p>
-         */
         @NameInMap("StageName")
         public String stageName;
 
-        /**
-         * <p>The visibility of the API. Valid values:</p>
-         * <ul>
-         * <li><strong>PUBLIC</strong></li>
-         * <li><strong>PRIVATE</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>PUBLIC</p>
-         */
         @NameInMap("Visibility")
         public String visibility;
 

@@ -4,9 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpControlsResponseBody extends TeaModel {
-    /**
-     * <p>The information about the ACL. The information is an array that consists of IpControlInfo data. The information does not include specific policies.</p>
-     */
     @NameInMap("IpControlInfos")
     public DescribeIpControlsResponseBodyIpControlInfos ipControlInfos;
 
@@ -92,66 +89,24 @@ public class DescribeIpControlsResponseBody extends TeaModel {
     }
 
     public static class DescribeIpControlsResponseBodyIpControlInfosIpControlInfo extends TeaModel {
-        /**
-         * <p>The time when the ACL was created. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-01-17T05:48:11Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The description of the ACL.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>description</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the ACL.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>7ea91319a34d48a09b5c9c871d9768b1</p>
-         */
         @NameInMap("IpControlId")
         public String ipControlId;
 
-        /**
-         * <p>The name of the ACL.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testControl11</p>
-         */
         @NameInMap("IpControlName")
         public String ipControlName;
 
-        /**
-         * <p>The type of the ACL.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ALLOW</p>
-         */
         @NameInMap("IpControlType")
         public String ipControlType;
 
-        /**
-         * <p>The time when the ACL was modified. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-01-17T06:00:38Z</p>
-         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
-        /**
-         * <p>The ID of the region in which the ACL is deployed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-qingdao</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 

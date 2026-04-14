@@ -4,21 +4,12 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class ImportOASResponseBody extends TeaModel {
-    /**
-     * <p>The error messages that appear due to the invalid data in the imported file.</p>
-     */
     @NameInMap("ErrorMessages")
     public ImportOASResponseBodyErrorMessages errorMessages;
 
-    /**
-     * <p>The APIs that failed to pass the precheck.</p>
-     */
     @NameInMap("FailedApis")
     public ImportOASResponseBodyFailedApis failedApis;
 
-    /**
-     * <p>The information about the models that failed to pass the precheck.</p>
-     */
     @NameInMap("FailedModels")
     public ImportOASResponseBodyFailedModels failedModels;
 
@@ -40,21 +31,12 @@ public class ImportOASResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information about the APIs that have passed the precheck.</p>
-     */
     @NameInMap("SuccessApis")
     public ImportOASResponseBodySuccessApis successApis;
 
-    /**
-     * <p>The information about the models that have passed the precheck.</p>
-     */
     @NameInMap("SuccessModels")
     public ImportOASResponseBodySuccessModels successModels;
 
-    /**
-     * <p>The warning messages that appear due to the invalid data in the imported file.</p>
-     */
     @NameInMap("WarningMessages")
     public ImportOASResponseBodyWarningMessages warningMessages;
 
@@ -147,30 +129,12 @@ public class ImportOASResponseBody extends TeaModel {
     }
 
     public static class ImportOASResponseBodyFailedApisFailedApi extends TeaModel {
-        /**
-         * <p>The error message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Invalid Api Definition.</p>
-         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
-        /**
-         * <p>The HTTP method configured when you created the API.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>POST</p>
-         */
         @NameInMap("HttpMethod")
         public String httpMethod;
 
-        /**
-         * <p>The request path configured when you created the API.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>/st1</p>
-         */
         @NameInMap("Path")
         public String path;
 
@@ -225,30 +189,12 @@ public class ImportOASResponseBody extends TeaModel {
     }
 
     public static class ImportOASResponseBodyFailedModelsFailedModel extends TeaModel {
-        /**
-         * <p>The error message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Invalid Model Definition.</p>
-         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
-        /**
-         * <p>The ID of the API group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2c1bc62e19614cc68c6b0b484bc9c5db</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The name of the model.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("ModelName")
         public String modelName;
 
@@ -303,39 +249,15 @@ public class ImportOASResponseBody extends TeaModel {
     }
 
     public static class ImportOASResponseBodySuccessApisSuccessApi extends TeaModel {
-        /**
-         * <p>The ID of the API.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>92af1abffc2443eaa2b815fdbd9c13f1</p>
-         */
         @NameInMap("ApiId")
         public String apiId;
 
-        /**
-         * <p>Indicates that the operation is CREATE or MODIFY.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CREATE</p>
-         */
         @NameInMap("ApiOperation")
         public String apiOperation;
 
-        /**
-         * <p>The HTTP method configured when you created the API.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>POST</p>
-         */
         @NameInMap("HttpMethod")
         public String httpMethod;
 
-        /**
-         * <p>The request path configured when you created the API.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>/st1</p>
-         */
         @NameInMap("Path")
         public String path;
 
@@ -398,39 +320,15 @@ public class ImportOASResponseBody extends TeaModel {
     }
 
     public static class ImportOASResponseBodySuccessModelsSuccessModel extends TeaModel {
-        /**
-         * <p>The ID of the API group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>feaccf67040643bcbdedb253e59eb527</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The name of the model.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("ModelName")
         public String modelName;
 
-        /**
-         * <p>The operation of the model. Valid values: CREATE and MODIFY.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CREATE</p>
-         */
         @NameInMap("ModelOperation")
         public String modelOperation;
 
-        /**
-         * <p>The UID of the model.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1r4efwee19614cc68c6b0b484bc9c5dbs</p>
-         */
         @NameInMap("ModelUid")
         public String modelUid;
 

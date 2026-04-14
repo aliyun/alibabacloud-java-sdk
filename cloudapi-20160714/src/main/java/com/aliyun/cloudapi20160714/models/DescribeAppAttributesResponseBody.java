@@ -4,9 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppAttributesResponseBody extends TeaModel {
-    /**
-     * <p>The returned app information. It is an array that consists of AppAttribute data.</p>
-     */
     @NameInMap("Apps")
     public DescribeAppAttributesResponseBodyApps apps;
 
@@ -92,21 +89,9 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeAppAttributesResponseBodyAppsAppAttributeTagsTagInfo extends TeaModel {
-        /**
-         * <p>The key of the tag.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>appid</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The value of the tag.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -153,66 +138,27 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeAppAttributesResponseBodyAppsAppAttribute extends TeaModel {
-        /**
-         * <p>The ID of the app.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20112314518278</p>
-         */
         @NameInMap("AppId")
         public Long appId;
 
-        /**
-         * <p>The name of the app.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CreateApptest</p>
-         */
         @NameInMap("AppName")
         public String appName;
 
-        /**
-         * <p>The creation time (UTC) of the app.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2016-07-31T04:10:19Z</p>
-         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
-        /**
-         * <p>The description of the app.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>App test</p>
-         */
         @NameInMap("Description")
         public String description;
 
         @NameInMap("Disabled")
         public Boolean disabled;
 
-        /**
-         * <p>扩展信息</p>
-         * 
-         * <strong>example:</strong>
-         * <p>110461946884</p>
-         */
         @NameInMap("Extend")
         public String extend;
 
-        /**
-         * <p>The modification time (UTC) of the app.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2016-07-31T04:10:19Z</p>
-         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
-        /**
-         * <p>The tags.</p>
-         */
         @NameInMap("Tags")
         public DescribeAppAttributesResponseBodyAppsAppAttributeTags tags;
 

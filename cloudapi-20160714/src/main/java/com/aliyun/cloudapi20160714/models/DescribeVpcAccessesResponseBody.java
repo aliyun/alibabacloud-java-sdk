@@ -40,9 +40,6 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    /**
-     * <p>The information about the VPC access authorization. The information is an array consisting of VpcAccessAttribute data.</p>
-     */
     @NameInMap("VpcAccessAttributes")
     public DescribeVpcAccessesResponseBodyVpcAccessAttributes vpcAccessAttributes;
 
@@ -92,21 +89,9 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttributeTagsTagInfo extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PROJECT</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6427a17ae6041d1be62414e4</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -153,90 +138,33 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttribute extends TeaModel {
-        /**
-         * <p>The time when the authorization was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2017-01-30T04:10:19Z</p>
-         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
-        /**
-         * <p>The description of the VPC access authorization.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Test</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of an Elastic Compute Service (ECS) or Server Load Balancer (SLB) instance in the VPC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-uf6bzcg1pr4oh5jjmxxx</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The name of the authorization.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The port number that corresponds to the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>80</p>
-         */
         @NameInMap("Port")
         public Integer port;
 
-        /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The tags.</p>
-         */
         @NameInMap("Tags")
         public DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttributeTags tags;
 
-        /**
-         * <p>The ID of the VPC access authorization.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-*****ssds24</p>
-         */
         @NameInMap("VpcAccessId")
         public String vpcAccessId;
 
-        /**
-         * <p>The VPC ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-uf657qec7lx42paw3qxxx</p>
-         */
         @NameInMap("VpcId")
         public String vpcId;
 
-        /**
-         * <p>The host of the backend service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>hos-a***.fh-**nc.com</p>
-         */
         @NameInMap("VpcTargetHostName")
         public String vpcTargetHostName;
 

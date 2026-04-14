@@ -4,9 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribePluginGroupsResponseBody extends TeaModel {
-    /**
-     * <p>Collection of group information</p>
-     */
     @NameInMap("GroupSummarys")
     public DescribePluginGroupsResponseBodyGroupSummarys groupSummarys;
 
@@ -92,71 +89,24 @@ public class DescribePluginGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribePluginGroupsResponseBodyGroupSummarysGroupPluginSummary extends TeaModel {
-        /**
-         * <p>API root path</p>
-         * 
-         * <strong>example:</strong>
-         * <p>/rpew</p>
-         */
         @NameInMap("BasePath")
         public String basePath;
 
-        /**
-         * <p>Description</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>API group ID</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4ed31575e2de43de8c51eb1217a1f56b</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>API group name</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ECP_API</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 
-        /**
-         * <p>Region ID where the API group is located</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-beijing</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>Stage name Alias</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DEV</p>
-         */
         @NameInMap("StageAlias")
         public String stageAlias;
 
-        /**
-         * <p>Environment name, possible values:</p>
-         * <ul>
-         * <li><strong>RELEASE</strong>: Production</li>
-         * <li><strong>PRE</strong>: Pre-release</li>
-         * <li><strong>TEST</strong>: Testing</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>RELEASE</p>
-         */
         @NameInMap("StageName")
         public String stageName;
 

@@ -22,9 +22,6 @@ public class DescribePluginsByGroupResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>Returns information about the plugins</p>
-     */
     @NameInMap("Plugins")
     public DescribePluginsByGroupResponseBodyPlugins plugins;
 
@@ -92,75 +89,27 @@ public class DescribePluginsByGroupResponseBody extends TeaModel {
     }
 
     public static class DescribePluginsByGroupResponseBodyPluginsPluginAttribute extends TeaModel {
-        /**
-         * <p>Creation time, in GMT</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2024-12-20T02:05:57Z</p>
-         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
-        /**
-         * <p>Plugin description</p>
-         * 
-         * <strong>example:</strong>
-         * <p>traffic controll</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>Last modified time, in GMT</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-03-15T02:30:18Z</p>
-         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
-        /**
-         * <p>Plugin definition statement</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{\&quot;unit\&quot;:\&quot;MINUTE\&quot;,\&quot;apiDefault\&quot;:20}</p>
-         */
         @NameInMap("PluginData")
         public String pluginData;
 
-        /**
-         * <p>Plugin ID</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5e204eeb4aa94c919a49f471ad3fc716</p>
-         */
         @NameInMap("PluginId")
         public String pluginId;
 
-        /**
-         * <p>Plugin name</p>
-         * 
-         * <strong>example:</strong>
-         * <p>firstPlugin</p>
-         */
         @NameInMap("PluginName")
         public String pluginName;
 
-        /**
-         * <p>Plugin type</p>
-         * 
-         * <strong>example:</strong>
-         * <p>trafficControl</p>
-         */
         @NameInMap("PluginType")
         public String pluginType;
 
-        /**
-         * <p>插件所在Region</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 

@@ -39,6 +39,16 @@ public class DescribeInstancesRequest extends TeaModel {
     @NameInMap("Language")
     public String language;
 
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    /**
+     * <strong>example:</strong>
+     * <p>500</p>
+     */
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("SecurityToken")
     public String securityToken;
 
@@ -83,6 +93,22 @@ public class DescribeInstancesRequest extends TeaModel {
     }
     public String getLanguage() {
         return this.language;
+    }
+
+    public DescribeInstancesRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeInstancesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeInstancesRequest setSecurityToken(String securityToken) {

@@ -4,21 +4,12 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class ImportSwaggerResponseBody extends TeaModel {
-    /**
-     * <p>The APIs that failed to be created based on the Swagger-compliant data imported this time.</p>
-     */
     @NameInMap("Failed")
     public ImportSwaggerResponseBodyFailed failed;
 
-    /**
-     * <p>The models that failed to be imported through the Swagger-compliant data this time.</p>
-     */
     @NameInMap("ModelFailed")
     public ImportSwaggerResponseBodyModelFailed modelFailed;
 
-    /**
-     * <p>The models that were imported through the Swagger-compliant data this time.</p>
-     */
     @NameInMap("ModelSuccess")
     public ImportSwaggerResponseBodyModelSuccess modelSuccess;
 
@@ -31,9 +22,6 @@ public class ImportSwaggerResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The APIs that are created based on the Swagger-compliant data imported this time.</p>
-     */
     @NameInMap("Success")
     public ImportSwaggerResponseBodySuccess success;
 
@@ -83,30 +71,12 @@ public class ImportSwaggerResponseBody extends TeaModel {
     }
 
     public static class ImportSwaggerResponseBodyFailedApiImportSwaggerFailed extends TeaModel {
-        /**
-         * <p>The error message returned when the API is created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>api already exists : apiUid ===&gt; 8e274ec61cf6468e83b68371956831cb</p>
-         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
-        /**
-         * <p>The HTTP method configured when the API is created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>post</p>
-         */
         @NameInMap("HttpMethod")
         public String httpMethod;
 
-        /**
-         * <p>The request path configured when the API is created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>/http/get/mapping</p>
-         */
         @NameInMap("Path")
         public String path;
 
@@ -161,30 +131,12 @@ public class ImportSwaggerResponseBody extends TeaModel {
     }
 
     public static class ImportSwaggerResponseBodyModelFailedApiImportModelFailed extends TeaModel {
-        /**
-         * <p>The error message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>error msg</p>
-         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
-        /**
-         * <p>The ID of the API group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>36d4bcfaec1946e1870d90b2d7519710</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The name of the model.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Region</p>
-         */
         @NameInMap("ModelName")
         public String modelName;
 
@@ -239,39 +191,15 @@ public class ImportSwaggerResponseBody extends TeaModel {
     }
 
     public static class ImportSwaggerResponseBodyModelSuccessApiImportModelSuccess extends TeaModel {
-        /**
-         * <p>The ID of the API group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>b2d552ed90ca435b86f7bf8d45414793</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The name of the model.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>NewInstance</p>
-         */
         @NameInMap("ModelName")
         public String modelName;
 
-        /**
-         * <p>The model operation</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CREATE</p>
-         */
         @NameInMap("ModelOperation")
         public String modelOperation;
 
-        /**
-         * <p>The UID of the model.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>d4bcfaec1946e1870d</p>
-         */
         @NameInMap("ModelUid")
         public String modelUid;
 
@@ -334,39 +262,15 @@ public class ImportSwaggerResponseBody extends TeaModel {
     }
 
     public static class ImportSwaggerResponseBodySuccessApiImportSwaggerSuccess extends TeaModel {
-        /**
-         * <p>Specifies whether the operation is CREATE or MODIFY.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CREATE</p>
-         */
         @NameInMap("ApiOperation")
         public String apiOperation;
 
-        /**
-         * <p>The UID of the successfully imported API.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>8e274ec61cf6468e83b68371956831cb</p>
-         */
         @NameInMap("ApiUid")
         public String apiUid;
 
-        /**
-         * <p>The HTTP method configured when the API is created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>get</p>
-         */
         @NameInMap("HttpMethod")
         public String httpMethod;
 
-        /**
-         * <p>The request path configured when the API is created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>/http/get/mapping</p>
-         */
         @NameInMap("Path")
         public String path;
 

@@ -4,9 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceClusterListResponseBody extends TeaModel {
-    /**
-     * <p>The instance cluster list.</p>
-     */
     @NameInMap("InstanceClusters")
     public DescribeInstanceClusterListResponseBodyInstanceClusters instanceClusters;
 
@@ -92,75 +89,27 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceClusterListResponseBodyInstanceClustersInstanceCluster extends TeaModel {
-        /**
-         * <p>The time when the cluster was created. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2023-08-14T17:46:59+08:00</p>
-         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
-        /**
-         * <p>The cluster description.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Test TrafficControl</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The cluster ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>apigateway-cluster-hz-xxxxxxxxxxxx</p>
-         */
         @NameInMap("InstanceClusterId")
         public String instanceClusterId;
 
-        /**
-         * <p>The cluster name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test-cluster</p>
-         */
         @NameInMap("InstanceClusterName")
         public String instanceClusterName;
 
-        /**
-         * <p>The cluster status.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>RUNNING</p>
-         */
         @NameInMap("InstanceClusterStatus")
         public String instanceClusterStatus;
 
-        /**
-         * <p>The cluster type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>normal</p>
-         */
         @NameInMap("InstanceClusterType")
         public String instanceClusterType;
 
-        /**
-         * <p>The time when the cluster was last modified. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2024-01-12T10:11:08+08:00</p>
-         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
-        /**
-         * <p>The region ID of the cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shenzhen</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 

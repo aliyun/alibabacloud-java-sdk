@@ -4,9 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceHttpCodeResponseBody extends TeaModel {
-    /**
-     * <p>The HTTP status codes.</p>
-     */
     @NameInMap("InstanceHttpCode")
     public DescribeInstanceHttpCodeResponseBodyInstanceHttpCode instanceHttpCode;
 
@@ -41,21 +38,9 @@ public class DescribeInstanceHttpCodeResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceHttpCodeResponseBodyInstanceHttpCodeMonitorItem extends TeaModel {
-        /**
-         * <p>The HTTP status code returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>404</p>
-         */
         @NameInMap("ItemTime")
         public String itemTime;
 
-        /**
-         * <p>The corresponding value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("ItemValue")
         public String itemValue;
 

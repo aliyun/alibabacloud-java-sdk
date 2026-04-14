@@ -4,9 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeModelsResponseBody extends TeaModel {
-    /**
-     * <p>The returned information about models. It is an array consisting of ModelDetail data.</p>
-     */
     @NameInMap("ModelDetails")
     public DescribeModelsResponseBodyModelDetails modelDetails;
 
@@ -92,21 +89,9 @@ public class DescribeModelsResponseBody extends TeaModel {
     }
 
     public static class DescribeModelsResponseBodyModelDetailsModelDetailTagsTagInfo extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ENV</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ST4</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -153,81 +138,30 @@ public class DescribeModelsResponseBody extends TeaModel {
     }
 
     public static class DescribeModelsResponseBodyModelDetailsModelDetail extends TeaModel {
-        /**
-         * <p>The time when the model was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-01-29T11:07:48Z</p>
-         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
-        /**
-         * <p>The description of the model definition.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Model Description</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the API group to which the model belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>30e792398d6c4569b04c0e53a3494381</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The ID of the model.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>766c0b9538a04bdf974953b5576783ba</p>
-         */
         @NameInMap("ModelId")
         public String modelId;
 
-        /**
-         * <p>The name of the model.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Test</p>
-         */
         @NameInMap("ModelName")
         public String modelName;
 
-        /**
-         * <p>The URI of the model.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="https://apigateway.aliyun.com/models/30e792398d6c4569b04c0e53a3494381/766c0b9538a04bdf974953b5576783ba">https://apigateway.aliyun.com/models/30e792398d6c4569b04c0e53a3494381/766c0b9538a04bdf974953b5576783ba</a></p>
-         */
         @NameInMap("ModelRef")
         public String modelRef;
 
-        /**
-         * <p>The time when the model was last modified.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-01-29T11:07:48Z</p>
-         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
-        /**
-         * <p>The definition of the model.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{\&quot;type\&quot;:\&quot;object\&quot;,\&quot;properties\&quot;:{\&quot;id\&quot;:{\&quot;format\&quot;:\&quot;int64\&quot;,\&quot;maximum\&quot;:100,\&quot;exclusiveMaximum\&quot;:true,\&quot;type\&quot;:\&quot;integer\&quot;},\&quot;name\&quot;:{\&quot;maxLength\&quot;:10,\&quot;type\&quot;:\&quot;string\&quot;}}}</p>
-         */
         @NameInMap("Schema")
         public String schema;
 
-        /**
-         * <p>The tags of the model.</p>
-         */
         @NameInMap("Tags")
         public DescribeModelsResponseBodyModelDetailsModelDetailTags tags;
 

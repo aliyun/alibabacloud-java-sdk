@@ -4,9 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
-    /**
-     * <p>The information about the access control policy.</p>
-     */
     @NameInMap("AclEntrys")
     public DescribeAccessControlListAttributeResponseBodyAclEntrys aclEntrys;
 
@@ -92,21 +89,9 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessControlListAttributeResponseBodyAclEntrysAclEntry extends TeaModel {
-        /**
-         * <p>The entry description.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>default</p>
-         */
         @NameInMap("AclEntryComment")
         public String aclEntryComment;
 
-        /**
-         * <p>The ACL entry.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>192.168.1.0/24</p>
-         */
         @NameInMap("AclEntryIp")
         public String aclEntryIp;
 

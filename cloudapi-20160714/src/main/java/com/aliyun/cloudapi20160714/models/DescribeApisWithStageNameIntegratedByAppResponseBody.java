@@ -4,9 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaModel {
-    /**
-     * <p>The authorization information of the API.</p>
-     */
     @NameInMap("AppApiRelationInfos")
     public DescribeApisWithStageNameIntegratedByAppResponseBodyAppApiRelationInfos appApiRelationInfos;
 
@@ -92,112 +89,39 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
     }
 
     public static class DescribeApisWithStageNameIntegratedByAppResponseBodyAppApiRelationInfosAppApiRelationInfo extends TeaModel {
-        /**
-         * <p>The API ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>c625795a1e664782a918eaa629e96ab5</p>
-         */
         @NameInMap("ApiId")
         public String apiId;
 
-        /**
-         * <p>The API name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sd2_h5_player_history_competition</p>
-         */
         @NameInMap("ApiName")
         public String apiName;
 
-        /**
-         * <p>The authorization source.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>SELF</p>
-         */
         @NameInMap("AuthorizationSource")
         public String authorizationSource;
 
-        /**
-         * <p>The time when the authorization was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Sun, 02 Jan 2022 16:00:00 GMT</p>
-         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
-        /**
-         * <p>The API description.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>b1008kz</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the API group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>38bed48d664149e4b9b5ea576319673f</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The name of the API group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>manager_vehicles</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 
-        /**
-         * <p>The request HTTP method of the API.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>POST</p>
-         */
         @NameInMap("Method")
         public String method;
 
-        /**
-         * <p>The authorizer. Valid values:</p>
-         * <ul>
-         * <li><strong>PROVIDER:</strong> the API owner</li>
-         * <li><strong>CONSUMER:</strong> the API caller</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>PROVIDER</p>
-         */
         @NameInMap("Operator")
         public String operator;
 
-        /**
-         * <p>The request path of the API.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>/api/offline/cacheData</p>
-         */
         @NameInMap("Path")
         public String path;
 
-        /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The mapping information between environments and authorizations.</p>
-         */
         @NameInMap("StageNameAndAuth")
         public java.util.Map<String, String> stageNameAndAuth;
 

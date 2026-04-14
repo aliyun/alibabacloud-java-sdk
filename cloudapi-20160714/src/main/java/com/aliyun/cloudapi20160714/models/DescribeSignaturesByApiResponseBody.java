@@ -13,9 +13,6 @@ public class DescribeSignaturesByApiResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The returned signature key information. It is an array consisting of SignatureItem data.</p>
-     */
     @NameInMap("Signatures")
     public DescribeSignaturesByApiResponseBodySignatures signatures;
 
@@ -41,30 +38,12 @@ public class DescribeSignaturesByApiResponseBody extends TeaModel {
     }
 
     public static class DescribeSignaturesByApiResponseBodySignaturesSignatureItem extends TeaModel {
-        /**
-         * <p>The time when the key was bound.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2016-07-23T08:28:48Z</p>
-         */
         @NameInMap("BoundTime")
         public String boundTime;
 
-        /**
-         * <p>The ID of the backend signature key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dd05f1c54d6749eda95f9fa6d491449a</p>
-         */
         @NameInMap("SignatureId")
         public String signatureId;
 
-        /**
-         * <p>The name of the backend signature key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>mysecret</p>
-         */
         @NameInMap("SignatureName")
         public String signatureName;
 

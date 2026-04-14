@@ -86,9 +86,6 @@ public class DescribeApiResponseBody extends TeaModel {
     @NameInMap("BackendEnable")
     public Boolean backendEnable;
 
-    /**
-     * <p>System parameters sent by API Gateway to the backend service</p>
-     */
     @NameInMap("ConstantParameters")
     public DescribeApiResponseBodyConstantParameters constantParameters;
 
@@ -101,15 +98,9 @@ public class DescribeApiResponseBody extends TeaModel {
     @NameInMap("CreatedTime")
     public String createdTime;
 
-    /**
-     * <p>Custom system parameters</p>
-     */
     @NameInMap("CustomSystemParameters")
     public DescribeApiResponseBodyCustomSystemParameters customSystemParameters;
 
-    /**
-     * <p>The API publishing status.</p>
-     */
     @NameInMap("DeployedInfos")
     public DescribeApiResponseBodyDeployedInfos deployedInfos;
 
@@ -135,9 +126,6 @@ public class DescribeApiResponseBody extends TeaModel {
     @NameInMap("DisableInternet")
     public Boolean disableInternet;
 
-    /**
-     * <p>The sample error codes returned by the backend service.</p>
-     */
     @NameInMap("ErrorCodeSamples")
     public DescribeApiResponseBodyErrorCodeSamples errorCodeSamples;
 
@@ -242,9 +230,6 @@ public class DescribeApiResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The parameters of API requests sent by the consumer to API Gateway.</p>
-     */
     @NameInMap("RequestParameters")
     public DescribeApiResponseBodyRequestParameters requestParameters;
 
@@ -281,27 +266,15 @@ public class DescribeApiResponseBody extends TeaModel {
     @NameInMap("ServiceConfig")
     public DescribeApiResponseBodyServiceConfig serviceConfig;
 
-    /**
-     * <p>The parameters of API requests sent by API Gateway to the backend service.</p>
-     */
     @NameInMap("ServiceParameters")
     public DescribeApiResponseBodyServiceParameters serviceParameters;
 
-    /**
-     * <p>The mappings between parameters of requests sent by the consumer to API Gateway and parameters of requests sent by API Gateway to the backend service.</p>
-     */
     @NameInMap("ServiceParametersMap")
     public DescribeApiResponseBodyServiceParametersMap serviceParametersMap;
 
-    /**
-     * <p>System parameters sent by API Gateway to the backend service</p>
-     */
     @NameInMap("SystemParameters")
     public DescribeApiResponseBodySystemParameters systemParameters;
 
-    /**
-     * <p>Tag List.</p>
-     */
     @NameInMap("TagList")
     public DescribeApiResponseBodyTagList tagList;
 
@@ -686,39 +659,15 @@ public class DescribeApiResponseBody extends TeaModel {
     }
 
     public static class DescribeApiResponseBodyConstantParametersConstantParameter extends TeaModel {
-        /**
-         * <p>The constant parameter value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>constance</p>
-         */
         @NameInMap("ConstantValue")
         public String constantValue;
 
-        /**
-         * <p>The parameter description.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>constance</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The parameter location. Valid values: BODY, HEAD, QUERY, and PATH.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>HEAD</p>
-         */
         @NameInMap("Location")
         public String location;
 
-        /**
-         * <p>The mapped parameter name in the backend service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>constance</p>
-         */
         @NameInMap("ServiceParameterName")
         public String serviceParameterName;
 
@@ -781,48 +730,18 @@ public class DescribeApiResponseBody extends TeaModel {
     }
 
     public static class DescribeApiResponseBodyCustomSystemParametersCustomSystemParameter extends TeaModel {
-        /**
-         * <p>The example value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>192.168.1.1</p>
-         */
         @NameInMap("DemoValue")
         public String demoValue;
 
-        /**
-         * <p>The parameter description.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Client IP Address</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The parameter location. Valid values: BODY, HEAD, QUERY, and PATH.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>HEAD</p>
-         */
         @NameInMap("Location")
         public String location;
 
-        /**
-         * <p>The name of the system parameter. Valid values: CaClientIp, CaDomain, CaRequestHandleTime, CaAppId, CaRequestId, CaHttpSchema, and CaProxy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CaClientIp</p>
-         */
         @NameInMap("ParameterName")
         public String parameterName;
 
-        /**
-         * <p>The mapped parameter name in the backend service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>clientIp</p>
-         */
         @NameInMap("ServiceParameterName")
         public String serviceParameterName;
 
@@ -893,30 +812,12 @@ public class DescribeApiResponseBody extends TeaModel {
     }
 
     public static class DescribeApiResponseBodyDeployedInfosDeployedInfo extends TeaModel {
-        /**
-         * <p>The deployment status. Valid values: DEPLOYED and NONDEPLOYED.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DEPLOYED</p>
-         */
         @NameInMap("DeployedStatus")
         public String deployedStatus;
 
-        /**
-         * <p>The effective version.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
         @NameInMap("EffectiveVersion")
         public String effectiveVersion;
 
-        /**
-         * <p>The environment to which the API is published. Valid values: RELEASE and TEST.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>RELEASE</p>
-         */
         @NameInMap("StageName")
         public String stageName;
 
@@ -971,39 +872,15 @@ public class DescribeApiResponseBody extends TeaModel {
     }
 
     public static class DescribeApiResponseBodyErrorCodeSamplesErrorCodeSample extends TeaModel {
-        /**
-         * <p>The returned error code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>400</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <p>The error description.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>The UserId parameter is missing from the request.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The returned error message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Missing the parameter UserId</p>
-         */
         @NameInMap("Message")
         public String message;
 
-        /**
-         * <p>The model.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[\&quot;*\&quot;]</p>
-         */
         @NameInMap("Model")
         public String model;
 
@@ -1291,156 +1168,54 @@ public class DescribeApiResponseBody extends TeaModel {
     }
 
     public static class DescribeApiResponseBodyRequestParametersRequestParameter extends TeaModel {
-        /**
-         * <p>The parameter name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>age</p>
-         */
         @NameInMap("ApiParameterName")
         public String apiParameterName;
 
-        /**
-         * <p>The type of the array element.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>String</p>
-         */
         @NameInMap("ArrayItemsType")
         public String arrayItemsType;
 
-        /**
-         * <p>The default value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
-        /**
-         * <p>The example value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("DemoValue")
         public String demoValue;
 
-        /**
-         * <p>The parameter description.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Age</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The order in which the parameter is sorted in the document.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("DocOrder")
         public Integer docOrder;
 
-        /**
-         * <p>Indicates whether the document is public. Valid values: <strong>PUBLIC</strong> and <strong>PRIVATE</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PUBLIC</p>
-         */
         @NameInMap("DocShow")
         public String docShow;
 
-        /**
-         * <p>The hash values that are supported when <strong>ParameterType</strong> is set to Int, Long, Float, Double, or String. Separate values with commas (,). Examples: 1,2,3,4,9 and A,B,C,E,F.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>boy,girl</p>
-         */
         @NameInMap("EnumValue")
         public String enumValue;
 
-        /**
-         * <p>The JSON Schema used for JSON validation when <strong>ParameterType</strong> is set to String.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>JSON</p>
-         */
         @NameInMap("JsonScheme")
         public String jsonScheme;
 
-        /**
-         * <p>The parameter location. Valid values: BODY, HEAD, QUERY, and PATH.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>HEAD</p>
-         */
         @NameInMap("Location")
         public String location;
 
-        /**
-         * <p>The maximum parameter length when <strong>ParameterType</strong> is set to String.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123456</p>
-         */
         @NameInMap("MaxLength")
         public Long maxLength;
 
-        /**
-         * <p>The maximum parameter value when <strong>ParameterType</strong> is set to Int, Long, Float, or Double.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123456</p>
-         */
         @NameInMap("MaxValue")
         public Long maxValue;
 
-        /**
-         * <p>The minimum parameter length when <strong>ParameterType</strong> is set to String.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123456</p>
-         */
         @NameInMap("MinLength")
         public Long minLength;
 
-        /**
-         * <p>The minimum parameter value when <strong>ParameterType</strong> is set to Int, Long, Float, or Double.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123456</p>
-         */
         @NameInMap("MinValue")
         public Long minValue;
 
-        /**
-         * <p>The data type of the parameter. Valid values: String, Int, Long, Float, Double, and Boolean.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>String</p>
-         */
         @NameInMap("ParameterType")
         public String parameterType;
 
-        /**
-         * <p>The regular expression that is used for parameter validation when <strong>ParameterType</strong> is set to String.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
         @NameInMap("RegularExpression")
         public String regularExpression;
 
-        /**
-         * <p>Indicates whether the parameter is required. Valid values: <strong>REQUIRED</strong> and <strong>OPTIONAL</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>OPTIONAL</p>
-         */
         @NameInMap("Required")
         public String required;
 
@@ -1929,21 +1704,9 @@ public class DescribeApiResponseBody extends TeaModel {
     }
 
     public static class DescribeApiResponseBodyServiceConfigMockHeadersMockHeader extends TeaModel {
-        /**
-         * <p>The HTTP header.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Content-Length</p>
-         */
         @NameInMap("HeaderName")
         public String headerName;
 
-        /**
-         * <p>The value of the HTTP header.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>86400</p>
-         */
         @NameInMap("HeaderValue")
         public String headerValue;
 
@@ -2225,9 +1988,6 @@ public class DescribeApiResponseBody extends TeaModel {
         @NameInMap("Mock")
         public String mock;
 
-        /**
-         * <p>The simulated headers.</p>
-         */
         @NameInMap("MockHeaders")
         public DescribeApiResponseBodyServiceConfigMockHeaders mockHeaders;
 
@@ -2461,30 +2221,12 @@ public class DescribeApiResponseBody extends TeaModel {
     }
 
     public static class DescribeApiResponseBodyServiceParametersServiceParameter extends TeaModel {
-        /**
-         * <p>The parameter location. Valid values: BODY, HEAD, QUERY, and PATH.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>HEAD</p>
-         */
         @NameInMap("Location")
         public String location;
 
-        /**
-         * <p>The data type of the parameter. Valid values: STRING, NUMBER, and BOOLEAN.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>String</p>
-         */
         @NameInMap("ParameterType")
         public String parameterType;
 
-        /**
-         * <p>The mapped parameter name in the backend service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>clientIp</p>
-         */
         @NameInMap("ServiceParameterName")
         public String serviceParameterName;
 
@@ -2539,21 +2281,9 @@ public class DescribeApiResponseBody extends TeaModel {
     }
 
     public static class DescribeApiResponseBodyServiceParametersMapServiceParameterMap extends TeaModel {
-        /**
-         * <p>The corresponding frontend parameter name. The value must be contained in RequestParametersObject and match RequestParam.ApiParameterName.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sex</p>
-         */
         @NameInMap("RequestParameterName")
         public String requestParameterName;
 
-        /**
-         * <p>The mapped parameter name in the backend service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sex</p>
-         */
         @NameInMap("ServiceParameterName")
         public String serviceParameterName;
 
@@ -2600,48 +2330,18 @@ public class DescribeApiResponseBody extends TeaModel {
     }
 
     public static class DescribeApiResponseBodySystemParametersSystemParameter extends TeaModel {
-        /**
-         * <p>The example value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>192.168.1.1</p>
-         */
         @NameInMap("DemoValue")
         public String demoValue;
 
-        /**
-         * <p>The parameter description.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Client IP Address</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The parameter location. Valid values: BODY, HEAD, QUERY, and PATH.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>HEAD</p>
-         */
         @NameInMap("Location")
         public String location;
 
-        /**
-         * <p>The system parameter. Valid values: CaClientIp, CaDomain, CaRequestHandleTime, CaAppId, CaRequestId, CaHttpSchema, and CaProxy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CaClientIp</p>
-         */
         @NameInMap("ParameterName")
         public String parameterName;
 
-        /**
-         * <p>The mapped parameter name in the backend service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>clientIp</p>
-         */
         @NameInMap("ServiceParameterName")
         public String serviceParameterName;
 
@@ -2712,21 +2412,9 @@ public class DescribeApiResponseBody extends TeaModel {
     }
 
     public static class DescribeApiResponseBodyTagListTag extends TeaModel {
-        /**
-         * <p>Label key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>APP</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>Label value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>value3</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 

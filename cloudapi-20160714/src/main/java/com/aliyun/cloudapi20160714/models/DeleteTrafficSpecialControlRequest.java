@@ -4,12 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DeleteTrafficSpecialControlRequest extends TeaModel {
-    /**
-     * <p>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>7c51b234-48d3-44e1-9b36-e2ddccc738e3</p>
-     */
     @NameInMap("SecurityToken")
     public String securityToken;
 

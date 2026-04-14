@@ -75,6 +75,12 @@ public class ModifyApiRequest extends TeaModel {
     @NameInMap("BackendId")
     public String backendId;
 
+    /**
+     * <p>The constant parameters sent by API Gateway to the backend service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{\&quot;ServiceParameterName\&quot;:\&quot;HOST\&quot;,\&quot;ConstantValue\&quot;:\&quot;uat-cgi.smarket.net.cn\&quot;,\&quot;Location\&quot;:\&quot;HEAD\&quot;,\&quot;Description\&quot;:\&quot;\\u540e\\u7aefVPC-HOST\&quot;}]</p>
+     */
     @NameInMap("ConstantParameters")
     public String constantParameters;
 
@@ -102,9 +108,22 @@ public class ModifyApiRequest extends TeaModel {
     @NameInMap("DisableInternet")
     public Boolean disableInternet;
 
+    /**
+     * <p>The sample error codes returned by the backend service.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/44392.html">ErrorCodeSample</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;Code&quot;:&quot;400&quot;,&quot;Message&quot;:&quot;Missing the userId&quot;,&quot;Description&quot;:&quot;param invalid&quot;}]</p>
+     */
     @NameInMap("ErrorCodeSamples")
     public String errorCodeSamples;
 
+    /**
+     * <p>The sample error response from the backend service. This value is used only to generate documents. It does not affect the returned result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;errorCode&quot;:&quot;fail&quot;,&quot;errorMessage&quot;:&quot;param invalid&quot;}</p>
+     */
     @NameInMap("FailResultSample")
     public String failResultSample;
 
@@ -155,6 +174,13 @@ public class ModifyApiRequest extends TeaModel {
     @NameInMap("RequestConfig")
     public String requestConfig;
 
+    /**
+     * <p>The parameters of API requests sent by the consumer to API Gateway.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/43986.html">RequestParameter</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{\\&quot;ParameterName\\&quot;: \\&quot;CaAppId\\&quot;, \\&quot;Location\\&quot;: \\&quot;HEAD\\&quot;, \\&quot;ServiceParameterName\\&quot;: \\&quot;x-ca-appid\\&quot;}]</p>
+     */
     @NameInMap("RequestParameters")
     public String requestParameters;
 
@@ -170,9 +196,21 @@ public class ModifyApiRequest extends TeaModel {
     @NameInMap("ResultBodyModel")
     public String resultBodyModel;
 
+    /**
+     * <p>The descriptions of API responses.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
+     */
     @NameInMap("ResultDescriptions")
     public String resultDescriptions;
 
+    /**
+     * <p>The sample response that is returned from the backend service. This value is used only to generate documents. It does not affect the actually returned result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("ResultSample")
     public String resultSample;
 
@@ -198,12 +236,32 @@ public class ModifyApiRequest extends TeaModel {
     @NameInMap("ServiceConfig")
     public String serviceConfig;
 
+    /**
+     * <p>The parameters of API requests sent by API Gateway to the back-end service.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/43988.html">ServiceParameter</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;ServiceParameterName&quot;:&quot;age&quot;,&quot;Location&quot;:&quot;Head&quot;,&quot;Type&quot;:&quot;Number&quot;,&quot;ParameterCatalog&quot;:&quot;REQUEST&quot;},{&quot;ServiceParameterName&quot;:&quot;sex&quot;,&quot;Location&quot;:&quot;Query&quot;,&quot;Type&quot;:&quot;String&quot;,&quot;ParameterCatalog&quot;:&quot;REQUEST&quot;},{&quot;ServiceParameterName&quot;:&quot;userId&quot;,&quot;Location&quot;:&quot;Path&quot;,&quot;Type&quot;:&quot;Number&quot;,&quot;ParameterCatalog&quot;:&quot;REQUEST&quot;},{&quot;ServiceParameterName&quot;:&quot;clientIp&quot;,&quot;Location&quot;:&quot;Head&quot;,&quot;Type&quot;:&quot;String&quot;,&quot;ParameterCatalog&quot;:&quot;SYSTEM&quot;},{&quot;ServiceParameterName&quot;:&quot;constance&quot;,&quot;Location&quot;:&quot;Head&quot;,&quot;Type&quot;:&quot;String&quot;,&quot;ParameterCatalog&quot;:&quot;CONSTANT&quot;}]</p>
+     */
     @NameInMap("ServiceParameters")
     public String serviceParameters;
 
+    /**
+     * <p>The mappings between parameters of requests sent by the consumer to API Gateway and parameters of requests sent by API Gateway to the back-end service.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/43989.html">ServiceParameterMap</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;ServiceParameterName&quot;:&quot;age&quot;,&quot;RequestParameterName&quot;:&quot;age&quot;},{&quot;ServiceParameterName&quot;:&quot;sex&quot;,&quot;RequestParameterName&quot;:&quot;sex&quot;},{&quot;ServiceParameterName&quot;:&quot;userId&quot;,&quot;RequestParameterName&quot;:&quot;userId&quot;},{&quot;ServiceParameterName&quot;:&quot;clientIp&quot;,&quot;RequestParameterName&quot;:&quot;CaClientIp&quot;},{&quot;ServiceParameterName&quot;:&quot;constance&quot;,&quot;RequestParameterName&quot;:&quot;constance&quot;}]</p>
+     */
     @NameInMap("ServiceParametersMap")
     public String serviceParametersMap;
 
+    /**
+     * <p>The system parameters sent by API Gateway to the backend service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{\&quot;ParameterName\&quot;: \&quot;CaAppId\&quot;, \&quot;Location\&quot;: \&quot;HEAD\&quot;, \&quot;ServiceParameterName\&quot;: \&quot;x-ca-appid\&quot;}]</p>
+     */
     @NameInMap("SystemParameters")
     public String systemParameters;
 

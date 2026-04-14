@@ -4,9 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeployedApisResponseBody extends TeaModel {
-    /**
-     * <p>The returned API information. It is an array consisting of DeployedApiItem data.</p>
-     */
     @NameInMap("DeployedApis")
     public DescribeDeployedApisResponseBodyDeployedApis deployedApis;
 
@@ -92,110 +89,36 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
     }
 
     public static class DescribeDeployedApisResponseBodyDeployedApisDeployedApiItem extends TeaModel {
-        /**
-         * <p>The ID of the API.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>c076144d7878437b8f82fb85890ce6a0</p>
-         */
         @NameInMap("ApiId")
         public String apiId;
 
-        /**
-         * <p>The HTTP method of the API request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>POST</p>
-         */
         @NameInMap("ApiMethod")
         public String apiMethod;
 
-        /**
-         * <p>The name of the API.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DescribeObjects</p>
-         */
         @NameInMap("ApiName")
         public String apiName;
 
-        /**
-         * <p>The request path of the API.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>/trademark/search</p>
-         */
         @NameInMap("ApiPath")
         public String apiPath;
 
-        /**
-         * <p>The publising time (UTC) of the API.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2016-07-23T08:28:48Z</p>
-         */
         @NameInMap("DeployedTime")
         public String deployedTime;
 
-        /**
-         * <p>The description of the API.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Queries objects by pages</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the API group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>63be9002440b4778a61122f14c2b2bbb</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The name of the group to which the API belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>myGroup3</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 
-        /**
-         * <p>The region where the API is located.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-qingdao</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The name of the runtime environment. Valid values:</p>
-         * <ul>
-         * <li><strong>RELEASE</strong></li>
-         * <li><strong>TEST</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>RELEASE</p>
-         */
         @NameInMap("StageName")
         public String stageName;
 
-        /**
-         * <p>Indicates whether the API is public. Valid values:</p>
-         * <ul>
-         * <li><strong>PUBLIC</strong></li>
-         * <li><strong>PRIVATE</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>PUBLIC</p>
-         */
         @NameInMap("Visibility")
         public String visibility;
 

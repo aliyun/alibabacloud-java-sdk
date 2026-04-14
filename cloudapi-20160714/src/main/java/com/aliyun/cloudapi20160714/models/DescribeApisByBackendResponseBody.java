@@ -4,9 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApisByBackendResponseBody extends TeaModel {
-    /**
-     * <p>The information about the returned API list.</p>
-     */
     @NameInMap("ApiInfoList")
     public DescribeApisByBackendResponseBodyApiInfoList apiInfoList;
 
@@ -92,66 +89,24 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
     }
 
     public static class DescribeApisByBackendResponseBodyApiInfoListApiInfo extends TeaModel {
-        /**
-         * <p>The ID of the API.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20bcdc9453524b78a8beb1f6de21edb7</p>
-         */
         @NameInMap("ApiId")
         public String apiId;
 
-        /**
-         * <p>The name of the API.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testApi</p>
-         */
         @NameInMap("ApiName")
         public String apiName;
 
-        /**
-         * <p>The description of the API.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the API group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>15bcdc9453524b7gs8beb1f6de21edb7</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The name of the API group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testApiGroup</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 
-        /**
-         * <p>The request method of the API.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>GET</p>
-         */
         @NameInMap("Method")
         public String method;
 
-        /**
-         * <p>The request path of the API.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>/test</p>
-         */
         @NameInMap("Path")
         public String path;
 

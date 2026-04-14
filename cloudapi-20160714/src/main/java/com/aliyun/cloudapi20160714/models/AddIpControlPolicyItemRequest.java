@@ -40,12 +40,6 @@ public class AddIpControlPolicyItemRequest extends TeaModel {
     @NameInMap("IpControlId")
     public String ipControlId;
 
-    /**
-     * <p>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>4223a10e-eed3-46a6-8b7c-23003f488153</p>
-     */
     @NameInMap("SecurityToken")
     public String securityToken;
 

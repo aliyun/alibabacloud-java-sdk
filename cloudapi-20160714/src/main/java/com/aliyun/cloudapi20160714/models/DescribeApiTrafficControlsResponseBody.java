@@ -4,9 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApiTrafficControlsResponseBody extends TeaModel {
-    /**
-     * <p>The returned throttling policy information. It is an array consisting of ApiTrafficControlItem data.</p>
-     */
     @NameInMap("ApiTrafficControls")
     public DescribeApiTrafficControlsResponseBodyApiTrafficControls apiTrafficControls;
 
@@ -92,48 +89,18 @@ public class DescribeApiTrafficControlsResponseBody extends TeaModel {
     }
 
     public static class DescribeApiTrafficControlsResponseBodyApiTrafficControlsApiTrafficControlItem extends TeaModel {
-        /**
-         * <p>The ID of the API.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>46fbb52840d146f186e38e8e70fc8c90</p>
-         */
         @NameInMap("ApiId")
         public String apiId;
 
-        /**
-         * <p>API operation</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testapi</p>
-         */
         @NameInMap("ApiName")
         public String apiName;
 
-        /**
-         * <p>The binding time of the throttling policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2016-07-23T08:28:48Z</p>
-         */
         @NameInMap("BoundTime")
         public String boundTime;
 
-        /**
-         * <p>The ID of the throttling policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dd05f1c54d6749eda95f9fa6d491449a</p>
-         */
         @NameInMap("TrafficControlId")
         public String trafficControlId;
 
-        /**
-         * <p>The name of the throttling policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>backendsignature</p>
-         */
         @NameInMap("TrafficControlName")
         public String trafficControlName;
 

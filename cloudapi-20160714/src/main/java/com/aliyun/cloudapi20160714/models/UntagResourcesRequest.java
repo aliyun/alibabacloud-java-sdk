@@ -42,12 +42,6 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
-    /**
-     * <p>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>0f96f124-1276-4f81-b52b-c554240beb4c</p>
-     */
     @NameInMap("SecurityToken")
     public String securityToken;
 

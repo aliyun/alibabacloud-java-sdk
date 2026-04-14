@@ -13,9 +13,6 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The returned information about system parameters. It is an array that consists of SystemParam data.</p>
-     */
     @NameInMap("SystemParams")
     public DescribeSystemParametersResponseBodySystemParams systemParams;
 
@@ -41,39 +38,15 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
     }
 
     public static class DescribeSystemParametersResponseBodySystemParamsSystemParamItem extends TeaModel {
-        /**
-         * <p>Examples</p>
-         * 
-         * <strong>example:</strong>
-         * <p>192.168.1.1</p>
-         */
         @NameInMap("DemoValue")
         public String demoValue;
 
-        /**
-         * <p>The description of a parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Client IP Address</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The name of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CaClientIp</p>
-         */
         @NameInMap("ParamName")
         public String paramName;
 
-        /**
-         * <p>The type of the parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>string</p>
-         */
         @NameInMap("ParamType")
         public String paramType;
 

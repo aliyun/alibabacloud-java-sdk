@@ -4,9 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceQpsResponseBody extends TeaModel {
-    /**
-     * <p>The list of requests sent to the APIs in the instance.</p>
-     */
     @NameInMap("InstanceQps")
     public DescribeInstanceQpsResponseBodyInstanceQps instanceQps;
 
@@ -41,21 +38,9 @@ public class DescribeInstanceQpsResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceQpsResponseBodyInstanceQpsMonitorItem extends TeaModel {
-        /**
-         * <p>The monitoring time. The time follows the ISO 8601 standard. Format: YYYY-MM-DDThh:mm:ssZ</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-03-29T06:25:00Z</p>
-         */
         @NameInMap("ItemTime")
         public String itemTime;
 
-        /**
-         * <p>The number of requests sent to the APIs in the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>500</p>
-         */
         @NameInMap("ItemValue")
         public String itemValue;
 

@@ -4,9 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApiIpControlsResponseBody extends TeaModel {
-    /**
-     * <p>The information about the ACLs. The information is an array of ApiIpControlItem data.</p>
-     */
     @NameInMap("ApiIpControls")
     public DescribeApiIpControlsResponseBodyApiIpControls apiIpControls;
 
@@ -92,48 +89,18 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
     }
 
     public static class DescribeApiIpControlsResponseBodyApiIpControlsApiIpControlItem extends TeaModel {
-        /**
-         * <p>The ID of the API.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>46fbb52840d146f186e38e8e70fc8c90</p>
-         */
         @NameInMap("ApiId")
         public String apiId;
 
-        /**
-         * <p>The name of the API.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testapi</p>
-         */
         @NameInMap("ApiName")
         public String apiName;
 
-        /**
-         * <p>The time of binding.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2016-07-23T08:28:48Z</p>
-         */
         @NameInMap("BoundTime")
         public String boundTime;
 
-        /**
-         * <p>The ID of the ACL.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dd05f1c54d6749eda95f9fa6d491449a</p>
-         */
         @NameInMap("IpControlId")
         public String ipControlId;
 
-        /**
-         * <p>The name of the ACL.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testControlName</p>
-         */
         @NameInMap("IpControlName")
         public String ipControlName;
 

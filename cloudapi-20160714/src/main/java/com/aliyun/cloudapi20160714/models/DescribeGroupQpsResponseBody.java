@@ -4,9 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupQpsResponseBody extends TeaModel {
-    /**
-     * <p>The number of requests directed to the API group.</p>
-     */
     @NameInMap("GroupQps")
     public DescribeGroupQpsResponseBodyGroupQps groupQps;
 
@@ -41,21 +38,9 @@ public class DescribeGroupQpsResponseBody extends TeaModel {
     }
 
     public static class DescribeGroupQpsResponseBodyGroupQpsMonitorItem extends TeaModel {
-        /**
-         * <p>The point in time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2023-08-02T09:15:00Z</p>
-         */
         @NameInMap("ItemTime")
         public String itemTime;
 
-        /**
-         * <p>The number of requests at the specified point in time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>17</p>
-         */
         @NameInMap("ItemValue")
         public String itemValue;
 

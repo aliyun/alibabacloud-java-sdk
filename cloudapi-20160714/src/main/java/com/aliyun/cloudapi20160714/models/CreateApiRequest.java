@@ -66,6 +66,13 @@ public class CreateApiRequest extends TeaModel {
     @NameInMap("BackendId")
     public String backendId;
 
+    /**
+     * <p>The parameters of API requests sent by API Gateway to the backend service.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/43988.html">ServiceParameter</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;ServiceParameterName&quot;:&quot;age&quot;,&quot;Location&quot;:&quot;Head&quot;,&quot;Type&quot;:&quot;Number&quot;,&quot;ParameterCatalog&quot;:&quot;REQUEST&quot;},{&quot;ServiceParameterName&quot;:&quot;sex&quot;,&quot;Location&quot;:&quot;Query&quot;,&quot;Type&quot;:&quot;String&quot;,&quot;ParameterCatalog&quot;:&quot;REQUEST&quot;},{&quot;ServiceParameterName&quot;:&quot;userId&quot;,&quot;Location&quot;:&quot;Path&quot;,&quot;Type&quot;:&quot;Number&quot;,&quot;ParameterCatalog&quot;:&quot;REQUEST&quot;},{&quot;ServiceParameterName&quot;:&quot;clientIp&quot;,&quot;Location&quot;:&quot;Head&quot;,&quot;Type&quot;:&quot;String&quot;,&quot;ParameterCatalog&quot;:&quot;SYSTEM&quot;},{&quot;ServiceParameterName&quot;:&quot;constance&quot;,&quot;Location&quot;:&quot;Head&quot;,&quot;Type&quot;:&quot;String&quot;,&quot;ParameterCatalog&quot;:&quot;CONSTANT&quot;}]</p>
+     */
     @NameInMap("ConstantParameters")
     public String constantParameters;
 
@@ -93,9 +100,22 @@ public class CreateApiRequest extends TeaModel {
     @NameInMap("DisableInternet")
     public Boolean disableInternet;
 
+    /**
+     * <p>The return description of the API.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
+     */
     @NameInMap("ErrorCodeSamples")
     public String errorCodeSamples;
 
+    /**
+     * <p>The sample error codes returned by the backend service.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/44392.html">ErrorCodeSample</a>.(Support up to 16KB)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;errorCode&quot;:&quot;fail&quot;,&quot;errorMessage&quot;:&quot;param invalid&quot;}</p>
+     */
     @NameInMap("FailResultSample")
     public String failResultSample;
 
@@ -145,6 +165,12 @@ public class CreateApiRequest extends TeaModel {
     @NameInMap("RequestConfig")
     public String requestConfig;
 
+    /**
+     * <p>The common parameters of APIs in JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{\\&quot;demoValue\\&quot;:\\&quot;12345678\\&quot;,\\&quot;description\\&quot;:\\&quot;ConsumerAppKey\\&quot;,\\&quot;location\\&quot;:\\&quot;HEAD\\&quot;,\\&quot;parameterName\\&quot;:\\&quot;CaAppKey\\&quot;,\\&quot;serviceParameterName\\&quot;:\\&quot;X-Ca-Key\\&quot;}]</p>
+     */
     @NameInMap("RequestParameters")
     public String requestParameters;
 
@@ -160,9 +186,21 @@ public class CreateApiRequest extends TeaModel {
     @NameInMap("ResultBodyModel")
     public String resultBodyModel;
 
+    /**
+     * <p>The switch status of ACL. Valid values:- <strong>on</strong> and <strong>off</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
+     */
     @NameInMap("ResultDescriptions")
     public String resultDescriptions;
 
+    /**
+     * <p>An example of a response returned by the backend service. This value is used only to generate documentation. The actually returned result shall prevail.(Support up to 32KB)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("ResultSample")
     public String resultSample;
 
@@ -189,12 +227,31 @@ public class CreateApiRequest extends TeaModel {
     @NameInMap("ServiceConfig")
     public String serviceConfig;
 
+    /**
+     * <p>The mappings between parameters of requests sent by the consumer to API Gateway and parameters of requests sent by API Gateway to the backend service.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/43989.html">ServiceParameterMap</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;ServiceParameterName&quot;:&quot;age&quot;,&quot;Location&quot;:&quot;Head&quot;,&quot;Type&quot;:&quot;Number&quot;,&quot;ParameterCatalog&quot;:&quot;REQUEST&quot;},{&quot;ServiceParameterName&quot;:&quot;sex&quot;,&quot;Location&quot;:&quot;Query&quot;,&quot;Type&quot;:&quot;String&quot;,&quot;ParameterCatalog&quot;:&quot;REQUEST&quot;},{&quot;ServiceParameterName&quot;:&quot;userId&quot;,&quot;Location&quot;:&quot;Path&quot;,&quot;Type&quot;:&quot;Number&quot;,&quot;ParameterCatalog&quot;:&quot;REQUEST&quot;},{&quot;ServiceParameterName&quot;:&quot;clientIp&quot;,&quot;Location&quot;:&quot;Head&quot;,&quot;Type&quot;:&quot;String&quot;,&quot;ParameterCatalog&quot;:&quot;SYSTEM&quot;},{&quot;ServiceParameterName&quot;:&quot;constance&quot;,&quot;Location&quot;:&quot;Head&quot;,&quot;Type&quot;:&quot;String&quot;,&quot;ParameterCatalog&quot;:&quot;CONSTANT&quot;}]</p>
+     */
     @NameInMap("ServiceParameters")
     public String serviceParameters;
 
+    /**
+     * <p>The format of the response from the backend service. Valid values: JSON, TEXT, BINARY, XML, and HTML. Default value: JSON.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;ServiceParameterName&quot;:&quot;age&quot;,&quot;RequestParameterName&quot;:&quot;age&quot;},{&quot;ServiceParameterName&quot;:&quot;sex&quot;,&quot;RequestParameterName&quot;:&quot;sex&quot;},{&quot;ServiceParameterName&quot;:&quot;userId&quot;,&quot;RequestParameterName&quot;:&quot;userId&quot;},{&quot;ServiceParameterName&quot;:&quot;clientIp&quot;,&quot;RequestParameterName&quot;:&quot;CaClientIp&quot;},{&quot;ServiceParameterName&quot;:&quot;constance&quot;,&quot;RequestParameterName&quot;:&quot;constance&quot;}]</p>
+     */
     @NameInMap("ServiceParametersMap")
     public String serviceParametersMap;
 
+    /**
+     * <p>The parameters of the API.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{\&quot;demoValue\&quot;:\&quot;12345678\&quot;,\&quot;description\&quot;:\&quot;ConsumerAppKey\&quot;,\&quot;location\&quot;:\&quot;HEAD\&quot;,\&quot;parameterName\&quot;:\&quot;CaAppKey\&quot;,\&quot;serviceParameterName\&quot;:\&quot;X-Ca-Key\&quot;}]</p>
+     */
     @NameInMap("SystemParameters")
     public String systemParameters;
 
