@@ -71,6 +71,9 @@ public class GetAlertStrategyResponseBody extends TeaModel {
         @NameInMap("clusters")
         public java.util.List<String> clusters;
 
+        @NameInMap("destinations")
+        public Object destinations;
+
         @NameInMap("items")
         public Object items;
 
@@ -85,6 +88,14 @@ public class GetAlertStrategyResponseBody extends TeaModel {
         }
         public java.util.List<String> getClusters() {
             return this.clusters;
+        }
+
+        public GetAlertStrategyResponseBodyDataStrategy setDestinations(Object destinations) {
+            this.destinations = destinations;
+            return this;
+        }
+        public Object getDestinations() {
+            return this.destinations;
         }
 
         public GetAlertStrategyResponseBodyDataStrategy setItems(Object items) {

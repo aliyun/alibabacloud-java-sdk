@@ -89,6 +89,9 @@ public class UpdateAlertStrategyRequest extends TeaModel {
         @NameInMap("clusters")
         public java.util.List<String> clusters;
 
+        @NameInMap("destinations")
+        public java.util.List<Integer> destinations;
+
         @NameInMap("items")
         public java.util.List<String> items;
 
@@ -103,6 +106,14 @@ public class UpdateAlertStrategyRequest extends TeaModel {
         }
         public java.util.List<String> getClusters() {
             return this.clusters;
+        }
+
+        public UpdateAlertStrategyRequestStrategy setDestinations(java.util.List<Integer> destinations) {
+            this.destinations = destinations;
+            return this;
+        }
+        public java.util.List<Integer> getDestinations() {
+            return this.destinations;
         }
 
         public UpdateAlertStrategyRequestStrategy setItems(java.util.List<String> items) {

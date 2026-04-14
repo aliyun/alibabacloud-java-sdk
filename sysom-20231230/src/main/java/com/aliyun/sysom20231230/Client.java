@@ -134,6 +134,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>cpu高agent流式接口</p>
+     * 
+     * @param request CpuHighAgentStreamResponseRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CpuHighAgentStreamResponseResponse
+     */
+    public CpuHighAgentStreamResponseResponse cpuHighAgentStreamResponseWithOptions(CpuHighAgentStreamResponseRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.llmParamString)) {
+            body.put("llmParamString", request.llmParamString);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CpuHighAgentStreamResponse"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/highCpuAgent/streamResponse"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CpuHighAgentStreamResponseResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>cpu高agent流式接口</p>
+     * 
+     * @param request CpuHighAgentStreamResponseRequest
+     * @return CpuHighAgentStreamResponseResponse
+     */
+    public CpuHighAgentStreamResponseResponse cpuHighAgentStreamResponse(CpuHighAgentStreamResponseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.cpuHighAgentStreamResponseWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>新增推送告警的策略</p>
      * 
      * @param request CreateAlertStrategyRequest
@@ -2588,7 +2635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一定时间内集群节点/Pod健康度列表</p>
+     * <p>Obtain a list of cluster node or pod health degrees within a specified time period.</p>
      * 
      * @param request ListInstanceHealthRequest
      * @param headers map
@@ -2642,7 +2689,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一定时间内集群节点/Pod健康度列表</p>
+     * <p>Obtain a list of cluster node or pod health degrees within a specified time period.</p>
      * 
      * @param request ListInstanceHealthRequest
      * @return ListInstanceHealthResponse

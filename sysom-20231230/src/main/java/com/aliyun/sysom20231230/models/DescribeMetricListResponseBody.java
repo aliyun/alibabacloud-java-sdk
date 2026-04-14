@@ -17,7 +17,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>分析ID: 56dae746-ef55-4f77-8373-cb3594c41457
-     * 机器i-bp164ns76pzirbwv0snt分析失败, 失败原因: Not get GPU trace data for &quot;56dae746-ef55-4f77-8373-cb3594c41457&quot; &quot;[&quot;93811&quot;]&quot;!</p>
+     * 机器i-bp164ns76pzirbwv0snt分析失败, 失败原因: Not get GPU trace data for \&quot;56dae746-ef55-4f77-8373-cb3594c41457\&quot; \&quot;[\&quot;93811\&quot;]\&quot;!</p>
      */
     @NameInMap("message")
     public String message;

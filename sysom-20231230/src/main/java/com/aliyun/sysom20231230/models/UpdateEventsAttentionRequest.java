@@ -4,14 +4,25 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class UpdateEventsAttentionRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("mode")
     public Integer mode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cluster</p>
+     */
     @NameInMap("range")
     public String range;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>03de78af-f49f-433d-b5b1-0f6a70c493ba</p>
      */
     @NameInMap("uuid")
     public String uuid;
