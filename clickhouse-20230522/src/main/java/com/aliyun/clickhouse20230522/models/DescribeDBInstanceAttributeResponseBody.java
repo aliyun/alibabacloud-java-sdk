@@ -303,6 +303,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        @NameInMap("LangfuseInstanceIds")
+        public java.util.List<String> langfuseInstanceIds;
+
         /**
          * <p>The latest minor engine version.</p>
          * 
@@ -616,6 +619,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getExpireTime() {
             return this.expireTime;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyData setLangfuseInstanceIds(java.util.List<String> langfuseInstanceIds) {
+            this.langfuseInstanceIds = langfuseInstanceIds;
+            return this;
+        }
+        public java.util.List<String> getLangfuseInstanceIds() {
+            return this.langfuseInstanceIds;
         }
 
         public DescribeDBInstanceAttributeResponseBodyData setLatestEngineMinorVersion(String latestEngineMinorVersion) {

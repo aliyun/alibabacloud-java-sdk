@@ -8,6 +8,8 @@ public class DetachWhitelistTemplateToInstanceResponseBody extends TeaModel {
     public DetachWhitelistTemplateToInstanceResponseBodyData data;
 
     /**
+     * <p>Request ID。</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567890</p>
      */

@@ -8,6 +8,8 @@ public class ListInstanceLinkedWhitelistTemplatesResponseBody extends TeaModel {
     public ListInstanceLinkedWhitelistTemplatesResponseBodyData data;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567890</p>
      */

@@ -8,6 +8,8 @@ public class ListWhitelistTemplatesResponseBody extends TeaModel {
     public ListWhitelistTemplatesResponseBodyData data;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567890</p>
      */

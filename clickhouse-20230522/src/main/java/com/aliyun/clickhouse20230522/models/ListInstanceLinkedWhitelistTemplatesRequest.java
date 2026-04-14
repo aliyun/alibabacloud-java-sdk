@@ -14,6 +14,7 @@ public class ListInstanceLinkedWhitelistTemplatesRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>RegionId</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

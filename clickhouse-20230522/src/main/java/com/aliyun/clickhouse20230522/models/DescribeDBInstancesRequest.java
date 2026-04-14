@@ -70,6 +70,13 @@ public class DescribeDBInstancesRequest extends TeaModel {
     @NameInMap("Tags")
     public java.util.List<DescribeDBInstancesRequestTags> tags;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vpc-2ze4ee9z******,vpc-2ze4ee9z5l******</p>
+     */
+    @NameInMap("VpcIds")
+    public String vpcIds;
+
     public static DescribeDBInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstancesRequest self = new DescribeDBInstancesRequest();
         return TeaModel.build(map, self);
@@ -137,6 +144,14 @@ public class DescribeDBInstancesRequest extends TeaModel {
     }
     public java.util.List<DescribeDBInstancesRequestTags> getTags() {
         return this.tags;
+    }
+
+    public DescribeDBInstancesRequest setVpcIds(String vpcIds) {
+        this.vpcIds = vpcIds;
+        return this;
+    }
+    public String getVpcIds() {
+        return this.vpcIds;
     }
 
     public static class DescribeDBInstancesRequestTags extends TeaModel {

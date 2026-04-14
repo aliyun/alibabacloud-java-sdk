@@ -19,6 +19,7 @@ public class ListWhitelistTemplatesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>RegionId</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
