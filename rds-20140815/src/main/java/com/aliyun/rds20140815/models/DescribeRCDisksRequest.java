@@ -51,6 +51,13 @@ public class DescribeRCDisksRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <strong>example:</strong>
+     * <p>All</p>
+     */
+    @NameInMap("Status")
+    public String status;
+
+    /**
      * <p>The list of the tags.</p>
      */
     @NameInMap("Tag")
@@ -99,6 +106,14 @@ public class DescribeRCDisksRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeRCDisksRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public DescribeRCDisksRequest setTag(java.util.List<DescribeRCDisksRequestTag> tag) {

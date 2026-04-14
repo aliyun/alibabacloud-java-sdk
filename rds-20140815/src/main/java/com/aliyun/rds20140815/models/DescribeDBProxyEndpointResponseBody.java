@@ -44,6 +44,9 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     @NameInMap("DBProxyConnectStringPort")
     public String DBProxyConnectStringPort;
 
+    @NameInMap("DBProxyEndpointCostThresholdForDuckdb")
+    public String DBProxyEndpointCostThresholdForDuckdb;
+
     /**
      * <p>The ID of the proxy endpoint.</p>
      * 
@@ -228,6 +231,14 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     }
     public String getDBProxyConnectStringPort() {
         return this.DBProxyConnectStringPort;
+    }
+
+    public DescribeDBProxyEndpointResponseBody setDBProxyEndpointCostThresholdForDuckdb(String DBProxyEndpointCostThresholdForDuckdb) {
+        this.DBProxyEndpointCostThresholdForDuckdb = DBProxyEndpointCostThresholdForDuckdb;
+        return this;
+    }
+    public String getDBProxyEndpointCostThresholdForDuckdb() {
+        return this.DBProxyEndpointCostThresholdForDuckdb;
     }
 
     public DescribeDBProxyEndpointResponseBody setDBProxyEndpointId(String DBProxyEndpointId) {

@@ -86,6 +86,9 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     @NameInMap("DbEndpointAliases")
     public String dbEndpointAliases;
 
+    @NameInMap("DbEndpointCostThresholdForDuckdb")
+    public String dbEndpointCostThresholdForDuckdb;
+
     /**
      * <p>The minimum number of reserved instances.</p>
      * 
@@ -304,6 +307,14 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     }
     public String getDbEndpointAliases() {
         return this.dbEndpointAliases;
+    }
+
+    public ModifyDBProxyEndpointRequest setDbEndpointCostThresholdForDuckdb(String dbEndpointCostThresholdForDuckdb) {
+        this.dbEndpointCostThresholdForDuckdb = dbEndpointCostThresholdForDuckdb;
+        return this;
+    }
+    public String getDbEndpointCostThresholdForDuckdb() {
+        return this.dbEndpointCostThresholdForDuckdb;
     }
 
     public ModifyDBProxyEndpointRequest setDbEndpointMinSlaveCount(String dbEndpointMinSlaveCount) {

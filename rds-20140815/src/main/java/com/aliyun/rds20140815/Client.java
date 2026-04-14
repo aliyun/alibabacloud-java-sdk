@@ -27741,6 +27741,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DbEndpointAliases", request.dbEndpointAliases);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dbEndpointCostThresholdForDuckdb)) {
+            query.put("DbEndpointCostThresholdForDuckdb", request.dbEndpointCostThresholdForDuckdb);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dbEndpointMinSlaveCount)) {
             query.put("DbEndpointMinSlaveCount", request.dbEndpointMinSlaveCount);
         }
@@ -34155,6 +34159,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.autoUseCoupon)) {
             query.put("AutoUseCoupon", request.autoUseCoupon);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.businessInfo)) {
+            query.put("BusinessInfo", request.businessInfo);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
