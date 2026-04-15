@@ -272,6 +272,9 @@ public class TextTranslateRequest extends TeaModel {
         @NameInMap("examples")
         public java.util.List<TextTranslateRequestExtExamples> examples;
 
+        @NameInMap("langDetect")
+        public Boolean langDetect;
+
         @NameInMap("paramMap")
         public Object paramMap;
 
@@ -322,6 +325,14 @@ public class TextTranslateRequest extends TeaModel {
         }
         public java.util.List<TextTranslateRequestExtExamples> getExamples() {
             return this.examples;
+        }
+
+        public TextTranslateRequestExt setLangDetect(Boolean langDetect) {
+            this.langDetect = langDetect;
+            return this;
+        }
+        public Boolean getLangDetect() {
+            return this.langDetect;
         }
 
         public TextTranslateRequestExt setParamMap(Object paramMap) {

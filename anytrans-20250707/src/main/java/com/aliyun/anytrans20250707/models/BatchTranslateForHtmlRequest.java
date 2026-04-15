@@ -288,6 +288,9 @@ public class BatchTranslateForHtmlRequest extends TeaModel {
         @NameInMap("examples")
         public java.util.List<BatchTranslateForHtmlRequestExtExamples> examples;
 
+        @NameInMap("langDetect")
+        public Boolean langDetect;
+
         @NameInMap("sensitives")
         public java.util.List<String> sensitives;
 
@@ -324,6 +327,14 @@ public class BatchTranslateForHtmlRequest extends TeaModel {
         }
         public java.util.List<BatchTranslateForHtmlRequestExtExamples> getExamples() {
             return this.examples;
+        }
+
+        public BatchTranslateForHtmlRequestExt setLangDetect(Boolean langDetect) {
+            this.langDetect = langDetect;
+            return this;
+        }
+        public Boolean getLangDetect() {
+            return this.langDetect;
         }
 
         public BatchTranslateForHtmlRequestExt setSensitives(java.util.List<String> sensitives) {
