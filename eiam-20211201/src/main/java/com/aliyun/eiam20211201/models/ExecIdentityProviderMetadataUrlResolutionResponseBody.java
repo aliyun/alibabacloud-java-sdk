@@ -128,12 +128,87 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
 
     }
 
+    public static class ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfigurationCertificates extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE----- MIIE+zCCA0egAwIBAgIJAJZY0ZY0ZY0Z -----END CERTIFICATE-----</p>
+         */
+        @NameInMap("Content")
+        public String content;
+
+        public static ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfigurationCertificates build(java.util.Map<String, ?> map) throws Exception {
+            ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfigurationCertificates self = new ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfigurationCertificates();
+            return TeaModel.build(map, self);
+        }
+
+        public ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfigurationCertificates setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+    }
+
+    public static class ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfiguration extends TeaModel {
+        @NameInMap("Certificates")
+        public java.util.List<ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfigurationCertificates> certificates;
+
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://dc.test.com/adfs/services/trust">http://dc.test.com/adfs/services/trust</a></p>
+         */
+        @NameInMap("IdPEntityId")
+        public String idPEntityId;
+
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://dc.test.com/adfs/ls/">https://dc.test.com/adfs/ls/</a></p>
+         */
+        @NameInMap("IdPSsoUrl")
+        public String idPSsoUrl;
+
+        public static ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfiguration build(java.util.Map<String, ?> map) throws Exception {
+            ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfiguration self = new ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfiguration();
+            return TeaModel.build(map, self);
+        }
+
+        public ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfiguration setCertificates(java.util.List<ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfigurationCertificates> certificates) {
+            this.certificates = certificates;
+            return this;
+        }
+        public java.util.List<ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfigurationCertificates> getCertificates() {
+            return this.certificates;
+        }
+
+        public ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfiguration setIdPEntityId(String idPEntityId) {
+            this.idPEntityId = idPEntityId;
+            return this;
+        }
+        public String getIdPEntityId() {
+            return this.idPEntityId;
+        }
+
+        public ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfiguration setIdPSsoUrl(String idPSsoUrl) {
+            this.idPSsoUrl = idPSsoUrl;
+            return this;
+        }
+        public String getIdPSsoUrl() {
+            return this.idPSsoUrl;
+        }
+
+    }
+
     public static class ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadata extends TeaModel {
         /**
          * <p>OIDC IdP的Meta信息。</p>
          */
         @NameInMap("OidcOpenIdConfiguration")
         public ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataOidcOpenIdConfiguration oidcOpenIdConfiguration;
+
+        @NameInMap("SamlMetadataConfiguration")
+        public ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfiguration samlMetadataConfiguration;
 
         public static ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadata build(java.util.Map<String, ?> map) throws Exception {
             ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadata self = new ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadata();
@@ -146,6 +221,14 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
         }
         public ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataOidcOpenIdConfiguration getOidcOpenIdConfiguration() {
             return this.oidcOpenIdConfiguration;
+        }
+
+        public ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadata setSamlMetadataConfiguration(ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfiguration samlMetadataConfiguration) {
+            this.samlMetadataConfiguration = samlMetadataConfiguration;
+            return this;
+        }
+        public ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfiguration getSamlMetadataConfiguration() {
+            return this.samlMetadataConfiguration;
         }
 
     }

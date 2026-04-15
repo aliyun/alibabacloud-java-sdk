@@ -30,13 +30,19 @@ public class ExecIdentityProviderMetadataUrlResolutionRequest extends TeaModel {
 
     /**
      * <p>OIDC Issuer地址。</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://login.example.com/.well-known/openid-configuration">https://login.example.com/.well-known/openid-configuration</a></p>
      */
     @NameInMap("OidcIssuer")
     public String oidcIssuer;
+
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://dc.test.com/FederationMetadata/2007-06/FederationMetadata.xml">https://dc.test.com/FederationMetadata/2007-06/FederationMetadata.xml</a></p>
+     */
+    @NameInMap("SamlMetadataUrl")
+    public String samlMetadataUrl;
 
     public static ExecIdentityProviderMetadataUrlResolutionRequest build(java.util.Map<String, ?> map) throws Exception {
         ExecIdentityProviderMetadataUrlResolutionRequest self = new ExecIdentityProviderMetadataUrlResolutionRequest();
@@ -73,6 +79,14 @@ public class ExecIdentityProviderMetadataUrlResolutionRequest extends TeaModel {
     }
     public String getOidcIssuer() {
         return this.oidcIssuer;
+    }
+
+    public ExecIdentityProviderMetadataUrlResolutionRequest setSamlMetadataUrl(String samlMetadataUrl) {
+        this.samlMetadataUrl = samlMetadataUrl;
+        return this;
+    }
+    public String getSamlMetadataUrl() {
+        return this.samlMetadataUrl;
     }
 
 }

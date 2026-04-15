@@ -72,6 +72,9 @@ public class UpdateIdentityProviderRequest extends TeaModel {
     @NameInMap("OidcConfig")
     public UpdateIdentityProviderRequestOidcConfig oidcConfig;
 
+    @NameInMap("SamlConfig")
+    public UpdateIdentityProviderRequestSamlConfig samlConfig;
+
     /**
      * <p>企业微信基本信息</p>
      */
@@ -161,6 +164,14 @@ public class UpdateIdentityProviderRequest extends TeaModel {
     }
     public UpdateIdentityProviderRequestOidcConfig getOidcConfig() {
         return this.oidcConfig;
+    }
+
+    public UpdateIdentityProviderRequest setSamlConfig(UpdateIdentityProviderRequestSamlConfig samlConfig) {
+        this.samlConfig = samlConfig;
+        return this;
+    }
+    public UpdateIdentityProviderRequestSamlConfig getSamlConfig() {
+        return this.samlConfig;
     }
 
     public UpdateIdentityProviderRequest setWeComConfig(UpdateIdentityProviderRequestWeComConfig weComConfig) {
@@ -686,6 +697,123 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         }
         public Boolean getPkceRequired() {
             return this.pkceRequired;
+        }
+
+    }
+
+    public static class UpdateIdentityProviderRequestSamlConfigCertificates extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE----- MIIC0jCCAbqgAwIBAgIQXXXXX-----END CERTIFICATE-----</p>
+         */
+        @NameInMap("Content")
+        public String content;
+
+        public static UpdateIdentityProviderRequestSamlConfigCertificates build(java.util.Map<String, ?> map) throws Exception {
+            UpdateIdentityProviderRequestSamlConfigCertificates self = new UpdateIdentityProviderRequestSamlConfigCertificates();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateIdentityProviderRequestSamlConfigCertificates setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+    }
+
+    public static class UpdateIdentityProviderRequestSamlConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>HTTP-REDIRECT</p>
+         */
+        @NameInMap("BindingMethod")
+        public String bindingMethod;
+
+        @NameInMap("Certificates")
+        public java.util.List<UpdateIdentityProviderRequestSamlConfigCertificates> certificates;
+
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://dc.test.com/adfs/services/trust">http://dc.test.com/adfs/services/trust</a></p>
+         */
+        @NameInMap("IdPEntityId")
+        public String idPEntityId;
+
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://dc.test.com/adfs/ls/">https://dc.test.com/adfs/ls/</a></p>
+         */
+        @NameInMap("IdPSsoUrl")
+        public String idPSsoUrl;
+
+        /**
+         * <strong>example:</strong>
+         * <p>180</p>
+         */
+        @NameInMap("MaxClockSkew")
+        public Long maxClockSkew;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("RequireRequestSigned")
+        public Boolean requireRequestSigned;
+
+        public static UpdateIdentityProviderRequestSamlConfig build(java.util.Map<String, ?> map) throws Exception {
+            UpdateIdentityProviderRequestSamlConfig self = new UpdateIdentityProviderRequestSamlConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateIdentityProviderRequestSamlConfig setBindingMethod(String bindingMethod) {
+            this.bindingMethod = bindingMethod;
+            return this;
+        }
+        public String getBindingMethod() {
+            return this.bindingMethod;
+        }
+
+        public UpdateIdentityProviderRequestSamlConfig setCertificates(java.util.List<UpdateIdentityProviderRequestSamlConfigCertificates> certificates) {
+            this.certificates = certificates;
+            return this;
+        }
+        public java.util.List<UpdateIdentityProviderRequestSamlConfigCertificates> getCertificates() {
+            return this.certificates;
+        }
+
+        public UpdateIdentityProviderRequestSamlConfig setIdPEntityId(String idPEntityId) {
+            this.idPEntityId = idPEntityId;
+            return this;
+        }
+        public String getIdPEntityId() {
+            return this.idPEntityId;
+        }
+
+        public UpdateIdentityProviderRequestSamlConfig setIdPSsoUrl(String idPSsoUrl) {
+            this.idPSsoUrl = idPSsoUrl;
+            return this;
+        }
+        public String getIdPSsoUrl() {
+            return this.idPSsoUrl;
+        }
+
+        public UpdateIdentityProviderRequestSamlConfig setMaxClockSkew(Long maxClockSkew) {
+            this.maxClockSkew = maxClockSkew;
+            return this;
+        }
+        public Long getMaxClockSkew() {
+            return this.maxClockSkew;
+        }
+
+        public UpdateIdentityProviderRequestSamlConfig setRequireRequestSigned(Boolean requireRequestSigned) {
+            this.requireRequestSigned = requireRequestSigned;
+            return this;
+        }
+        public Boolean getRequireRequestSigned() {
+            return this.requireRequestSigned;
         }
 
     }

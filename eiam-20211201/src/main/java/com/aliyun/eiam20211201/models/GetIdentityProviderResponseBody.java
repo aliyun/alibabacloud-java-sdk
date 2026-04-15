@@ -318,6 +318,59 @@ public class GetIdentityProviderResponseBody extends TeaModel {
 
     }
 
+    public static class GetIdentityProviderResponseBodyIdentityProviderDetailEndpointMetadata extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://9test.aliyunidaas.com/login/saml2/idp_nhlraxfiwsx7w7zp26qzyoxxxx/acs">https://9test.aliyunidaas.com/login/saml2/idp_nhlraxfiwsx7w7zp26qzyoxxxx/acs</a></p>
+         */
+        @NameInMap("SamlAcsEndpoint")
+        public String samlAcsEndpoint;
+
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://9test.aliyunidaas.com/login/saml2/idp_nhlraxfiwsx7w7zp26qzyoxxxx/meta">https://9test.aliyunidaas.com/login/saml2/idp_nhlraxfiwsx7w7zp26qzyoxxxx/meta</a></p>
+         */
+        @NameInMap("SamlEntityId")
+        public String samlEntityId;
+
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://9test.aliyunidaas.com/login/saml2/idp_nhlraxfiwsx7w7zp26qzyoxxxx/meta">https://9test.aliyunidaas.com/login/saml2/idp_nhlraxfiwsx7w7zp26qzyoxxxx/meta</a></p>
+         */
+        @NameInMap("SamlMetaEndpoint")
+        public String samlMetaEndpoint;
+
+        public static GetIdentityProviderResponseBodyIdentityProviderDetailEndpointMetadata build(java.util.Map<String, ?> map) throws Exception {
+            GetIdentityProviderResponseBodyIdentityProviderDetailEndpointMetadata self = new GetIdentityProviderResponseBodyIdentityProviderDetailEndpointMetadata();
+            return TeaModel.build(map, self);
+        }
+
+        public GetIdentityProviderResponseBodyIdentityProviderDetailEndpointMetadata setSamlAcsEndpoint(String samlAcsEndpoint) {
+            this.samlAcsEndpoint = samlAcsEndpoint;
+            return this;
+        }
+        public String getSamlAcsEndpoint() {
+            return this.samlAcsEndpoint;
+        }
+
+        public GetIdentityProviderResponseBodyIdentityProviderDetailEndpointMetadata setSamlEntityId(String samlEntityId) {
+            this.samlEntityId = samlEntityId;
+            return this;
+        }
+        public String getSamlEntityId() {
+            return this.samlEntityId;
+        }
+
+        public GetIdentityProviderResponseBodyIdentityProviderDetailEndpointMetadata setSamlMetaEndpoint(String samlMetaEndpoint) {
+            this.samlMetaEndpoint = samlMetaEndpoint;
+            return this;
+        }
+        public String getSamlMetaEndpoint() {
+            return this.samlMetaEndpoint;
+        }
+
+    }
+
     public static class GetIdentityProviderResponseBodyIdentityProviderDetailLarkConfig extends TeaModel {
         /**
          * <p>The application ID.</p>
@@ -808,6 +861,172 @@ public class GetIdentityProviderResponseBody extends TeaModel {
 
     }
 
+    public static class GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfigCertificatesCertificateMetadata extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1704067200000</p>
+         */
+        @NameInMap("NotAfter")
+        public Long notAfter;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1672531200000</p>
+         */
+        @NameInMap("NotBefore")
+        public Long notBefore;
+
+        public static GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfigCertificatesCertificateMetadata build(java.util.Map<String, ?> map) throws Exception {
+            GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfigCertificatesCertificateMetadata self = new GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfigCertificatesCertificateMetadata();
+            return TeaModel.build(map, self);
+        }
+
+        public GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfigCertificatesCertificateMetadata setNotAfter(Long notAfter) {
+            this.notAfter = notAfter;
+            return this;
+        }
+        public Long getNotAfter() {
+            return this.notAfter;
+        }
+
+        public GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfigCertificatesCertificateMetadata setNotBefore(Long notBefore) {
+            this.notBefore = notBefore;
+            return this;
+        }
+        public Long getNotBefore() {
+            return this.notBefore;
+        }
+
+    }
+
+    public static class GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfigCertificates extends TeaModel {
+        @NameInMap("CertificateMetadata")
+        public GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfigCertificatesCertificateMetadata certificateMetadata;
+
+        /**
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE----- MIIC0jCCAbqgAwIBAgIQXXXXX -----END CERTIFICATE-----</p>
+         */
+        @NameInMap("Content")
+        public String content;
+
+        public static GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfigCertificates build(java.util.Map<String, ?> map) throws Exception {
+            GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfigCertificates self = new GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfigCertificates();
+            return TeaModel.build(map, self);
+        }
+
+        public GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfigCertificates setCertificateMetadata(GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfigCertificatesCertificateMetadata certificateMetadata) {
+            this.certificateMetadata = certificateMetadata;
+            return this;
+        }
+        public GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfigCertificatesCertificateMetadata getCertificateMetadata() {
+            return this.certificateMetadata;
+        }
+
+        public GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfigCertificates setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+    }
+
+    public static class GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>HTTP-REDIRECT</p>
+         */
+        @NameInMap("BindingMethod")
+        public String bindingMethod;
+
+        @NameInMap("Certificates")
+        public java.util.List<GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfigCertificates> certificates;
+
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://dc.test.com/adfs/services/trust">http://dc.test.com/adfs/services/trust</a></p>
+         */
+        @NameInMap("IdPEntityId")
+        public String idPEntityId;
+
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://dc.test.com/adfs/ls/">https://dc.test.com/adfs/ls/</a></p>
+         */
+        @NameInMap("IdPSsoUrl")
+        public String idPSsoUrl;
+
+        /**
+         * <strong>example:</strong>
+         * <p>180</p>
+         */
+        @NameInMap("MaxClockSkew")
+        public Long maxClockSkew;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("RequireRequestSigned")
+        public Boolean requireRequestSigned;
+
+        public static GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfig self = new GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfig setBindingMethod(String bindingMethod) {
+            this.bindingMethod = bindingMethod;
+            return this;
+        }
+        public String getBindingMethod() {
+            return this.bindingMethod;
+        }
+
+        public GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfig setCertificates(java.util.List<GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfigCertificates> certificates) {
+            this.certificates = certificates;
+            return this;
+        }
+        public java.util.List<GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfigCertificates> getCertificates() {
+            return this.certificates;
+        }
+
+        public GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfig setIdPEntityId(String idPEntityId) {
+            this.idPEntityId = idPEntityId;
+            return this;
+        }
+        public String getIdPEntityId() {
+            return this.idPEntityId;
+        }
+
+        public GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfig setIdPSsoUrl(String idPSsoUrl) {
+            this.idPSsoUrl = idPSsoUrl;
+            return this;
+        }
+        public String getIdPSsoUrl() {
+            return this.idPSsoUrl;
+        }
+
+        public GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfig setMaxClockSkew(Long maxClockSkew) {
+            this.maxClockSkew = maxClockSkew;
+            return this;
+        }
+        public Long getMaxClockSkew() {
+            return this.maxClockSkew;
+        }
+
+        public GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfig setRequireRequestSigned(Boolean requireRequestSigned) {
+            this.requireRequestSigned = requireRequestSigned;
+            return this;
+        }
+        public Boolean getRequireRequestSigned() {
+            return this.requireRequestSigned;
+        }
+
+    }
+
     public static class GetIdentityProviderResponseBodyIdentityProviderDetailUdPullConfigUdSyncScopeConfig extends TeaModel {
         /**
          * <p>Synchronization source node.</p>
@@ -1155,6 +1374,9 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         @NameInMap("DingtalkProvisioningConfig")
         public GetIdentityProviderResponseBodyIdentityProviderDetailDingtalkProvisioningConfig dingtalkProvisioningConfig;
 
+        @NameInMap("EndpointMetadata")
+        public GetIdentityProviderResponseBodyIdentityProviderDetailEndpointMetadata endpointMetadata;
+
         /**
          * <p>Identity provider external ID.</p>
          * 
@@ -1253,6 +1475,9 @@ public class GetIdentityProviderResponseBody extends TeaModel {
          */
         @NameInMap("OidcConfig")
         public GetIdentityProviderResponseBodyIdentityProviderDetailOidcConfig oidcConfig;
+
+        @NameInMap("SamlConfig")
+        public GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfig samlConfig;
 
         /**
          * <p>Sync in configuration.</p>
@@ -1368,6 +1593,14 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             return this.dingtalkProvisioningConfig;
         }
 
+        public GetIdentityProviderResponseBodyIdentityProviderDetail setEndpointMetadata(GetIdentityProviderResponseBodyIdentityProviderDetailEndpointMetadata endpointMetadata) {
+            this.endpointMetadata = endpointMetadata;
+            return this;
+        }
+        public GetIdentityProviderResponseBodyIdentityProviderDetailEndpointMetadata getEndpointMetadata() {
+            return this.endpointMetadata;
+        }
+
         public GetIdentityProviderResponseBodyIdentityProviderDetail setIdentityProviderExternalId(String identityProviderExternalId) {
             this.identityProviderExternalId = identityProviderExternalId;
             return this;
@@ -1462,6 +1695,14 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         }
         public GetIdentityProviderResponseBodyIdentityProviderDetailOidcConfig getOidcConfig() {
             return this.oidcConfig;
+        }
+
+        public GetIdentityProviderResponseBodyIdentityProviderDetail setSamlConfig(GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfig samlConfig) {
+            this.samlConfig = samlConfig;
+            return this;
+        }
+        public GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfig getSamlConfig() {
+            return this.samlConfig;
         }
 
         public GetIdentityProviderResponseBodyIdentityProviderDetail setUdPullConfig(GetIdentityProviderResponseBodyIdentityProviderDetailUdPullConfig udPullConfig) {

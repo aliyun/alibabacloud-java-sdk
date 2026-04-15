@@ -2499,6 +2499,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OidcConfig", request.oidcConfig);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.samlConfig)) {
+            query.put("SamlConfig", request.samlConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.udPullConfig)) {
             query.put("UdPullConfig", request.udPullConfig);
         }
@@ -7247,6 +7251,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OidcIssuer", request.oidcIssuer);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.samlMetadataUrl)) {
+            query.put("SamlMetadataUrl", request.samlMetadataUrl);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -8800,7 +8808,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get identity provider</p>
+     * <p>Obtains an identity provider (IdP).</p>
      * 
      * @param request GetIdentityProviderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8836,7 +8844,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get identity provider</p>
+     * <p>Obtains an identity provider (IdP).</p>
      * 
      * @param request GetIdentityProviderRequest
      * @return GetIdentityProviderResponse
@@ -18262,6 +18270,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.oidcConfig)) {
             query.put("OidcConfig", request.oidcConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.samlConfig)) {
+            query.put("SamlConfig", request.samlConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.weComConfig)) {
