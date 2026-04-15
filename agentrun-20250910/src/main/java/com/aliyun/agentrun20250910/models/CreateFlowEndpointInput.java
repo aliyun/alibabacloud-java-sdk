@@ -33,15 +33,6 @@ public class CreateFlowEndpointInput extends TeaModel {
     public java.util.List<FlowEndpointRoutingConfig> routingConfiguration;
 
     /**
-     * <p>工作流端点的标签信息</p>
-     * 
-     * <strong>example:</strong>
-     * <p>production</p>
-     */
-    @NameInMap("tags")
-    public java.util.List<String> tags;
-
-    /**
      * <p>工作流端点指向的目标版本号</p>
      * 
      * <strong>example:</strong>
@@ -77,14 +68,6 @@ public class CreateFlowEndpointInput extends TeaModel {
     }
     public java.util.List<FlowEndpointRoutingConfig> getRoutingConfiguration() {
         return this.routingConfiguration;
-    }
-
-    public CreateFlowEndpointInput setTags(java.util.List<String> tags) {
-        this.tags = tags;
-        return this;
-    }
-    public java.util.List<String> getTags() {
-        return this.tags;
     }
 
     public CreateFlowEndpointInput setTargetVersion(String targetVersion) {

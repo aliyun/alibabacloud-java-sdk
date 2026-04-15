@@ -522,7 +522,7 @@ public class ConvertFlowDSLData extends TeaModel {
          * <p>This parameter is required.</p>
          */
         @NameInMap("spec")
-        public java.util.Map<String, String> spec;
+        public java.util.Map<String, ?> spec;
 
         public static ConvertFlowDSLDataToolsetInstallations build(java.util.Map<String, ?> map) throws Exception {
             ConvertFlowDSLDataToolsetInstallations self = new ConvertFlowDSLDataToolsetInstallations();
@@ -545,11 +545,11 @@ public class ConvertFlowDSLData extends TeaModel {
             return this.name;
         }
 
-        public ConvertFlowDSLDataToolsetInstallations setSpec(java.util.Map<String, String> spec) {
+        public ConvertFlowDSLDataToolsetInstallations setSpec(java.util.Map<String, ?> spec) {
             this.spec = spec;
             return this;
         }
-        public java.util.Map<String, String> getSpec() {
+        public java.util.Map<String, ?> getSpec() {
             return this.spec;
         }
 

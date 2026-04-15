@@ -79,6 +79,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>将第三方工作流DSL（如Dify、n8n等）转换为AgentRun Flow定义。支持兼容性检查、插件识别和元数据提取，返回转换后的Flow配置、兼容性分析报告和所需的Toolset安装配置。此操作为dry-run模式，不会创建实际的Flow资源。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>转换Flow DSL</p>
+     * 
+     * @param request ConvertFlowDSLRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ConvertFlowDSLResponse
+     */
+    public ConvertFlowDSLResponse convertFlowDSLWithOptions(ConvertFlowDSLRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ConvertFlowDSL"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/flows/action/convertDsl"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ConvertFlowDSLResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>将第三方工作流DSL（如Dify、n8n等）转换为AgentRun Flow定义。支持兼容性检查、插件识别和元数据提取，返回转换后的Flow配置、兼容性分析报告和所需的Toolset安装配置。此操作为dry-run模式，不会创建实际的Flow资源。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>转换Flow DSL</p>
+     * 
+     * @param request ConvertFlowDSLRequest
+     * @return ConvertFlowDSLResponse
+     */
+    public ConvertFlowDSLResponse convertFlowDSL(ConvertFlowDSLRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.convertFlowDSLWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>创建一个新的智能体运行时实例，用于执行AI代理任务。智能体运行时是AgentRun服务的核心组件，提供代码执行、浏览器操作、内存管理等能力。</p>
      * 
      * <b>summary</b> : 
@@ -351,6 +399,102 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createCustomDomainWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>创建一个新的工作流实例，用于定义和执行自动化流程。工作流是AgentRun服务的核心组件，支持可视化编排和版本管理。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建工作流</p>
+     * 
+     * @param request CreateFlowRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateFlowResponse
+     */
+    public CreateFlowResponse createFlowWithOptions(CreateFlowRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateFlow"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/flows"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFlowResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>创建一个新的工作流实例，用于定义和执行自动化流程。工作流是AgentRun服务的核心组件，支持可视化编排和版本管理。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建工作流</p>
+     * 
+     * @param request CreateFlowRequest
+     * @return CreateFlowResponse
+     */
+    public CreateFlowResponse createFlow(CreateFlowRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createFlowWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>为指定工作流创建一个新的端点，用于对外提供服务访问。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建工作流端点</p>
+     * 
+     * @param request CreateFlowEndpointRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateFlowEndpointResponse
+     */
+    public CreateFlowEndpointResponse createFlowEndpointWithOptions(String flowName, CreateFlowEndpointRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateFlowEndpoint"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/flows/" + com.aliyun.openapiutil.Client.getEncodeParam(flowName) + "/endpoints"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFlowEndpointResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>为指定工作流创建一个新的端点，用于对外提供服务访问。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建工作流端点</p>
+     * 
+     * @param request CreateFlowEndpointRequest
+     * @return CreateFlowEndpointResponse
+     */
+    public CreateFlowEndpointResponse createFlowEndpoint(String flowName, CreateFlowEndpointRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createFlowEndpointWithOptions(flowName, request, headers, runtime);
     }
 
     /**
@@ -975,6 +1119,147 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteCustomDomainWithOptions(domainName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>删除指定的工作流实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除工作流</p>
+     * 
+     * @param request DeleteFlowRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteFlowResponse
+     */
+    public DeleteFlowResponse deleteFlowWithOptions(String flowName, DeleteFlowRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteFlow"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/flows/" + com.aliyun.openapiutil.Client.getEncodeParam(flowName) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFlowResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>删除指定的工作流实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除工作流</p>
+     * 
+     * @param request DeleteFlowRequest
+     * @return DeleteFlowResponse
+     */
+    public DeleteFlowResponse deleteFlow(String flowName, DeleteFlowRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteFlowWithOptions(flowName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>删除指定的工作流端点。删除操作不可逆，请谨慎操作。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除工作流端点</p>
+     * 
+     * @param request DeleteFlowEndpointRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteFlowEndpointResponse
+     */
+    public DeleteFlowEndpointResponse deleteFlowEndpointWithOptions(String flowName, String flowEndpointName, DeleteFlowEndpointRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteFlowEndpoint"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/flows/" + com.aliyun.openapiutil.Client.getEncodeParam(flowName) + "/endpoints/" + com.aliyun.openapiutil.Client.getEncodeParam(flowEndpointName) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFlowEndpointResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>删除指定的工作流端点。删除操作不可逆，请谨慎操作。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除工作流端点</p>
+     * 
+     * @param request DeleteFlowEndpointRequest
+     * @return DeleteFlowEndpointResponse
+     */
+    public DeleteFlowEndpointResponse deleteFlowEndpoint(String flowName, String flowEndpointName, DeleteFlowEndpointRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteFlowEndpointWithOptions(flowName, flowEndpointName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>删除指定工作流的指定版本。删除操作不可逆，请谨慎操作。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除工作流版本</p>
+     * 
+     * @param request DeleteFlowVersionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteFlowVersionResponse
+     */
+    public DeleteFlowVersionResponse deleteFlowVersionWithOptions(String flowName, String flowVersion, DeleteFlowVersionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteFlowVersion"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/flows/" + com.aliyun.openapiutil.Client.getEncodeParam(flowName) + "/versions/" + com.aliyun.openapiutil.Client.getEncodeParam(flowVersion) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFlowVersionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>删除指定工作流的指定版本。删除操作不可逆，请谨慎操作。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除工作流版本</p>
+     * 
+     * @param request DeleteFlowVersionRequest
+     * @return DeleteFlowVersionResponse
+     */
+    public DeleteFlowVersionResponse deleteFlowVersion(String flowName, String flowVersion, DeleteFlowVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteFlowVersionWithOptions(flowName, flowVersion, request, headers, runtime);
     }
 
     /**
@@ -1646,6 +1931,194 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getCustomDomainWithOptions(domainName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>根据工作流ID获取指定工作流的详细信息，包括配置、定义、版本信息等。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>获取工作流详情</p>
+     * 
+     * @param request GetFlowRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetFlowResponse
+     */
+    public GetFlowResponse getFlowWithOptions(String flowName, GetFlowRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFlow"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/flows/" + com.aliyun.openapiutil.Client.getEncodeParam(flowName) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFlowResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>根据工作流ID获取指定工作流的详细信息，包括配置、定义、版本信息等。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>获取工作流详情</p>
+     * 
+     * @param request GetFlowRequest
+     * @return GetFlowResponse
+     */
+    public GetFlowResponse getFlow(String flowName, GetFlowRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getFlowWithOptions(flowName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>获取指定工作流的草稿版本，返回草稿中的配置信息。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>获取工作流草稿</p>
+     * 
+     * @param request GetFlowDraftRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetFlowDraftResponse
+     */
+    public GetFlowDraftResponse getFlowDraftWithOptions(String flowName, GetFlowDraftRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFlowDraft"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/flows/" + com.aliyun.openapiutil.Client.getEncodeParam(flowName) + "/draft"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFlowDraftResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>获取指定工作流的草稿版本，返回草稿中的配置信息。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>获取工作流草稿</p>
+     * 
+     * @param request GetFlowDraftRequest
+     * @return GetFlowDraftResponse
+     */
+    public GetFlowDraftResponse getFlowDraft(String flowName, GetFlowDraftRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getFlowDraftWithOptions(flowName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>根据工作流ID和端点ID获取指定工作流端点的详细信息。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>获取工作流端点详情</p>
+     * 
+     * @param request GetFlowEndpointRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetFlowEndpointResponse
+     */
+    public GetFlowEndpointResponse getFlowEndpointWithOptions(String flowName, String flowEndpointName, GetFlowEndpointRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFlowEndpoint"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/flows/" + com.aliyun.openapiutil.Client.getEncodeParam(flowName) + "/endpoints/" + com.aliyun.openapiutil.Client.getEncodeParam(flowEndpointName) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFlowEndpointResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>根据工作流ID和端点ID获取指定工作流端点的详细信息。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>获取工作流端点详情</p>
+     * 
+     * @param request GetFlowEndpointRequest
+     * @return GetFlowEndpointResponse
+     */
+    public GetFlowEndpointResponse getFlowEndpoint(String flowName, String flowEndpointName, GetFlowEndpointRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getFlowEndpointWithOptions(flowName, flowEndpointName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>根据工作流名称和版本号获取指定版本的详细信息，包括该版本的完整配置快照（定义、环境变量、追踪配置、日志配置等）。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>获取工作流版本详情</p>
+     * 
+     * @param request GetFlowVersionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetFlowVersionResponse
+     */
+    public GetFlowVersionResponse getFlowVersionWithOptions(String flowName, String flowVersion, GetFlowVersionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFlowVersion"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/flows/" + com.aliyun.openapiutil.Client.getEncodeParam(flowName) + "/versions/" + com.aliyun.openapiutil.Client.getEncodeParam(flowVersion) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFlowVersionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>根据工作流名称和版本号获取指定版本的详细信息，包括该版本的完整配置快照（定义、环境变量、追踪配置、日志配置等）。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>获取工作流版本详情</p>
+     * 
+     * @param request GetFlowVersionRequest
+     * @return GetFlowVersionResponse
+     */
+    public GetFlowVersionResponse getFlowVersion(String flowName, String flowVersion, GetFlowVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getFlowVersionWithOptions(flowName, flowVersion, request, headers, runtime);
     }
 
     /**
@@ -2519,6 +2992,189 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>获取指定工作流的所有端点列表，支持分页查询。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>列出工作流端点</p>
+     * 
+     * @param request ListFlowEndpointsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListFlowEndpointsResponse
+     */
+    public ListFlowEndpointsResponse listFlowEndpointsWithOptions(String flowId, ListFlowEndpointsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListFlowEndpoints"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/flows/" + com.aliyun.openapiutil.Client.getEncodeParam(flowId) + "/endpoints"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListFlowEndpointsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>获取指定工作流的所有端点列表，支持分页查询。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>列出工作流端点</p>
+     * 
+     * @param request ListFlowEndpointsRequest
+     * @return ListFlowEndpointsResponse
+     */
+    public ListFlowEndpointsResponse listFlowEndpoints(String flowId, ListFlowEndpointsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listFlowEndpointsWithOptions(flowId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>获取指定工作流的所有版本列表，支持分页查询。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>列出工作流版本</p>
+     * 
+     * @param request ListFlowVersionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListFlowVersionsResponse
+     */
+    public ListFlowVersionsResponse listFlowVersionsWithOptions(String flowName, ListFlowVersionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListFlowVersions"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/flows/" + com.aliyun.openapiutil.Client.getEncodeParam(flowName) + "/versions"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListFlowVersionsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>获取指定工作流的所有版本列表，支持分页查询。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>列出工作流版本</p>
+     * 
+     * @param request ListFlowVersionsRequest
+     * @return ListFlowVersionsResponse
+     */
+    public ListFlowVersionsResponse listFlowVersions(String flowName, ListFlowVersionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listFlowVersionsWithOptions(flowName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>获取当前用户的工作流列表，支持按名称、工作空间等条件过滤，支持分页查询。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>列出工作流</p>
+     * 
+     * @param request ListFlowsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListFlowsResponse
+     */
+    public ListFlowsResponse listFlowsWithOptions(ListFlowsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.flowName)) {
+            query.put("flowName", request.flowName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("workspaceId", request.workspaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceIds)) {
+            query.put("workspaceIds", request.workspaceIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListFlows"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/flows"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListFlowsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>获取当前用户的工作流列表，支持按名称、工作空间等条件过滤，支持分页查询。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>列出工作流</p>
+     * 
+     * @param request ListFlowsRequest
+     * @return ListFlowsResponse
+     */
+    public ListFlowsResponse listFlows(ListFlowsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listFlowsWithOptions(request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>列出知识库</p>
      * 
@@ -3190,6 +3846,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>为指定工作流发布新版本，用于版本管理和回滚。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>发布工作流版本</p>
+     * 
+     * @param request PublishFlowVersionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PublishFlowVersionResponse
+     */
+    public PublishFlowVersionResponse publishFlowVersionWithOptions(String flowName, PublishFlowVersionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PublishFlowVersion"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/flows/" + com.aliyun.openapiutil.Client.getEncodeParam(flowName) + "/versions"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PublishFlowVersionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>为指定工作流发布新版本，用于版本管理和回滚。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>发布工作流版本</p>
+     * 
+     * @param request PublishFlowVersionRequest
+     * @return PublishFlowVersionResponse
+     */
+    public PublishFlowVersionResponse publishFlowVersion(String flowName, PublishFlowVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.publishFlowVersionWithOptions(flowName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>为指定的智能体运行时发布新版本，用于版本管理和部署。新版本可以包含代码更新、配置变更等内容。</p>
      * 
      * <b>summary</b> : 
@@ -3537,6 +4241,150 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateCustomDomainWithOptions(domainName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>更新指定工作流的配置信息，包括定义、执行模式、环境变量等。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>更新工作流</p>
+     * 
+     * @param request UpdateFlowRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateFlowResponse
+     */
+    public UpdateFlowResponse updateFlowWithOptions(String flowName, UpdateFlowRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateFlow"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/flows/" + com.aliyun.openapiutil.Client.getEncodeParam(flowName) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateFlowResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>更新指定工作流的配置信息，包括定义、执行模式、环境变量等。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>更新工作流</p>
+     * 
+     * @param request UpdateFlowRequest
+     * @return UpdateFlowResponse
+     */
+    public UpdateFlowResponse updateFlow(String flowName, UpdateFlowRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateFlowWithOptions(flowName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>更新指定工作流的草稿版本，草稿更新不影响已发布的工作流版本。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>更新工作流草稿</p>
+     * 
+     * @param request UpdateFlowDraftRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateFlowDraftResponse
+     */
+    public UpdateFlowDraftResponse updateFlowDraftWithOptions(String flowName, UpdateFlowDraftRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateFlowDraft"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/flows/" + com.aliyun.openapiutil.Client.getEncodeParam(flowName) + "/draft"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateFlowDraftResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>更新指定工作流的草稿版本，草稿更新不影响已发布的工作流版本。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>更新工作流草稿</p>
+     * 
+     * @param request UpdateFlowDraftRequest
+     * @return UpdateFlowDraftResponse
+     */
+    public UpdateFlowDraftResponse updateFlowDraft(String flowName, UpdateFlowDraftRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateFlowDraftWithOptions(flowName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>更新指定工作流端点的配置信息，包括目标版本、路由配置等。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>更新工作流端点</p>
+     * 
+     * @param request UpdateFlowEndpointRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateFlowEndpointResponse
+     */
+    public UpdateFlowEndpointResponse updateFlowEndpointWithOptions(String flowName, String flowEndpointName, UpdateFlowEndpointRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateFlowEndpoint"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/flows/" + com.aliyun.openapiutil.Client.getEncodeParam(flowName) + "/endpoints/" + com.aliyun.openapiutil.Client.getEncodeParam(flowEndpointName) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateFlowEndpointResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>更新指定工作流端点的配置信息，包括目标版本、路由配置等。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>更新工作流端点</p>
+     * 
+     * @param request UpdateFlowEndpointRequest
+     * @return UpdateFlowEndpointResponse
+     */
+    public UpdateFlowEndpointResponse updateFlowEndpoint(String flowName, String flowEndpointName, UpdateFlowEndpointRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateFlowEndpointWithOptions(flowName, flowEndpointName, request, headers, runtime);
     }
 
     /**

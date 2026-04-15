@@ -72,15 +72,6 @@ public class CreateFlowInput extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>工作流的标签信息，用于资源分类和管理</p>
-     * 
-     * <strong>example:</strong>
-     * <p>production,automation</p>
-     */
-    @NameInMap("tags")
-    public java.util.List<String> tags;
-
-    /**
      * <p>工作流的链路追踪配置</p>
      */
     @NameInMap("tracingConfiguration")
@@ -162,14 +153,6 @@ public class CreateFlowInput extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    public CreateFlowInput setTags(java.util.List<String> tags) {
-        this.tags = tags;
-        return this;
-    }
-    public java.util.List<String> getTags() {
-        return this.tags;
     }
 
     public CreateFlowInput setTracingConfiguration(TracingConfiguration tracingConfiguration) {

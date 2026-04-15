@@ -1,0 +1,45 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.agentrun20250910.models;
+
+import com.aliyun.tea.*;
+
+public class ListFlowsResponse extends TeaModel {
+    @NameInMap("headers")
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("statusCode")
+    public Integer statusCode;
+
+    @NameInMap("body")
+    public ListFlowsResult body;
+
+    public static ListFlowsResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListFlowsResponse self = new ListFlowsResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public ListFlowsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ListFlowsResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    public ListFlowsResponse setBody(ListFlowsResult body) {
+        this.body = body;
+        return this;
+    }
+    public ListFlowsResult getBody() {
+        return this.body;
+    }
+
+}
