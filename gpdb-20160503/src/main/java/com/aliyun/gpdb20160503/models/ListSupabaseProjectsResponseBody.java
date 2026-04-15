@@ -126,6 +126,9 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
     }
 
     public static class ListSupabaseProjectsResponseBodyItems extends TeaModel {
+        @NameInMap("AutoScale")
+        public String autoScale;
+
         /**
          * <p>The creation time.</p>
          * 
@@ -313,6 +316,14 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         public static ListSupabaseProjectsResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             ListSupabaseProjectsResponseBodyItems self = new ListSupabaseProjectsResponseBodyItems();
             return TeaModel.build(map, self);
+        }
+
+        public ListSupabaseProjectsResponseBodyItems setAutoScale(String autoScale) {
+            this.autoScale = autoScale;
+            return this;
+        }
+        public String getAutoScale() {
+            return this.autoScale;
         }
 
         public ListSupabaseProjectsResponseBodyItems setCreateTime(String createTime) {

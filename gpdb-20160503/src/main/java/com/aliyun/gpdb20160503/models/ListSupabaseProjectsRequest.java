@@ -40,6 +40,18 @@ public class ListSupabaseProjectsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("SearchField")
+    public String searchField;
+
+    @NameInMap("SearchValue")
+    public String searchValue;
+
+    @NameInMap("SortField")
+    public String sortField;
+
+    @NameInMap("SortOrder")
+    public String sortOrder;
+
     public static ListSupabaseProjectsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSupabaseProjectsRequest self = new ListSupabaseProjectsRequest();
         return TeaModel.build(map, self);
@@ -83,6 +95,38 @@ public class ListSupabaseProjectsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListSupabaseProjectsRequest setSearchField(String searchField) {
+        this.searchField = searchField;
+        return this;
+    }
+    public String getSearchField() {
+        return this.searchField;
+    }
+
+    public ListSupabaseProjectsRequest setSearchValue(String searchValue) {
+        this.searchValue = searchValue;
+        return this;
+    }
+    public String getSearchValue() {
+        return this.searchValue;
+    }
+
+    public ListSupabaseProjectsRequest setSortField(String sortField) {
+        this.sortField = sortField;
+        return this;
+    }
+    public String getSortField() {
+        return this.sortField;
+    }
+
+    public ListSupabaseProjectsRequest setSortOrder(String sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    public String getSortOrder() {
+        return this.sortOrder;
     }
 
 }

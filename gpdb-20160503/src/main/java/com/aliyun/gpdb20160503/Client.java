@@ -76,7 +76,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 TeaRequest request_ = new TeaRequest();
                 java.util.Map<String, Object> form = com.aliyun.teautil.Common.assertAsMap(data);
                 String boundary = com.aliyun.fileform.Client.getBoundary();
-                String host = com.aliyun.teautil.Common.assertAsString(form.get("host"));
+                String tmp = com.aliyun.teautil.Common.assertAsString(form.get("host"));
+                String host = "" + bucketName + "." + tmp + "";
                 request_.protocol = "HTTPS";
                 request_.method = "POST";
                 request_.pathname = "/";
@@ -3141,6 +3142,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.accountPassword)) {
             query.put("AccountPassword", request.accountPassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoScale)) {
+            query.put("AutoScale", request.autoScale);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
@@ -12471,6 +12476,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.searchField)) {
+            query.put("SearchField", request.searchField);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchValue)) {
+            query.put("SearchValue", request.searchValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortField)) {
+            query.put("SortField", request.sortField);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortOrder)) {
+            query.put("SortOrder", request.sortOrder);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -15039,7 +15060,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("contentType", "")
             ));
             ossHeader = TeaConverter.buildMap(
-                new TeaPair("host", "" + authResponseBody.get("Bucket") + "." + com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType) + ""),
+                new TeaPair("host", com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType)),
                 new TeaPair("OSSAccessKeyId", authResponseBody.get("AccessKeyId")),
                 new TeaPair("policy", authResponseBody.get("EncodedPolicy")),
                 new TeaPair("Signature", authResponseBody.get("Signature")),
@@ -16881,7 +16902,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("contentType", "")
             ));
             ossHeader = TeaConverter.buildMap(
-                new TeaPair("host", "" + authResponseBody.get("Bucket") + "." + com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType) + ""),
+                new TeaPair("host", com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType)),
                 new TeaPair("OSSAccessKeyId", authResponseBody.get("AccessKeyId")),
                 new TeaPair("policy", authResponseBody.get("EncodedPolicy")),
                 new TeaPair("Signature", authResponseBody.get("Signature")),
@@ -17243,7 +17264,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("contentType", "")
             ));
             ossHeader = TeaConverter.buildMap(
-                new TeaPair("host", "" + authResponseBody.get("Bucket") + "." + com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType) + ""),
+                new TeaPair("host", com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType)),
                 new TeaPair("OSSAccessKeyId", authResponseBody.get("AccessKeyId")),
                 new TeaPair("policy", authResponseBody.get("EncodedPolicy")),
                 new TeaPair("Signature", authResponseBody.get("Signature")),

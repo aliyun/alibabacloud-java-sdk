@@ -4,6 +4,9 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class GetSupabaseProjectResponseBody extends TeaModel {
+    @NameInMap("AutoScale")
+    public String autoScale;
+
     /**
      * <p>The creation time.</p>
      * 
@@ -211,6 +214,14 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
     public static GetSupabaseProjectResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetSupabaseProjectResponseBody self = new GetSupabaseProjectResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetSupabaseProjectResponseBody setAutoScale(String autoScale) {
+        this.autoScale = autoScale;
+        return this;
+    }
+    public String getAutoScale() {
+        return this.autoScale;
     }
 
     public GetSupabaseProjectResponseBody setCreateTime(String createTime) {

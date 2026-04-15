@@ -19,6 +19,9 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     @NameInMap("AccountPassword")
     public String accountPassword;
 
+    @NameInMap("AutoScale")
+    public Boolean autoScale;
+
     /**
      * <p>The client token that is used to ensure the idempotence of the request. For more information, see <a href="https://help.aliyun.com/document_detail/327176.html">How to ensure idempotence</a>.</p>
      * 
@@ -164,6 +167,14 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     }
     public String getAccountPassword() {
         return this.accountPassword;
+    }
+
+    public CreateSupabaseProjectRequest setAutoScale(Boolean autoScale) {
+        this.autoScale = autoScale;
+        return this;
+    }
+    public Boolean getAutoScale() {
+        return this.autoScale;
     }
 
     public CreateSupabaseProjectRequest setClientToken(String clientToken) {
