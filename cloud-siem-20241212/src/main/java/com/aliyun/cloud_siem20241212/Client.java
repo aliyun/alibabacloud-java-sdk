@@ -954,6 +954,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建自动响应规则</p>
+     * 
+     * @param request CreateResponseRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateResponseRuleResponse
+     */
+    public CreateResponseRuleResponse createResponseRuleWithOptions(CreateResponseRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            body.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseActionConfig)) {
+            body.put("ResponseActionConfig", request.responseActionConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseActionType)) {
+            body.put("ResponseActionType", request.responseActionType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseExecutionCondition)) {
+            body.put("ResponseExecutionCondition", request.responseExecutionCondition);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseRuleName)) {
+            body.put("ResponseRuleName", request.responseRuleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseRulePriority)) {
+            body.put("ResponseRulePriority", request.responseRulePriority);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseTriggerType)) {
+            body.put("ResponseTriggerType", request.responseTriggerType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleFor)) {
+            body.put("RoleFor", request.roleFor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleType)) {
+            body.put("RoleType", request.roleType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateResponseRule"),
+            new TeaPair("version", "2024-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateResponseRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建自动响应规则</p>
+     * 
+     * @param request CreateResponseRuleRequest
+     * @return CreateResponseRuleResponse
+     */
+    public CreateResponseRuleResponse createResponseRule(CreateResponseRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createResponseRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建厂商</p>
      * 
      * @param request CreateVendorRequest
@@ -1534,6 +1622,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除自动响应规则</p>
+     * 
+     * @param request DeleteResponseRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteResponseRuleResponse
+     */
+    public DeleteResponseRuleResponse deleteResponseRuleWithOptions(DeleteResponseRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            body.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseRuleId)) {
+            body.put("ResponseRuleId", request.responseRuleId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteResponseRule"),
+            new TeaPair("version", "2024-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteResponseRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除自动响应规则</p>
+     * 
+     * @param request DeleteResponseRuleRequest
+     * @return DeleteResponseRuleResponse
+     */
+    public DeleteResponseRuleResponse deleteResponseRule(DeleteResponseRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteResponseRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>删除厂商</p>
      * 
      * @param request DeleteVendorRequest
@@ -2062,7 +2210,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取事件列表</p>
+     * <p>Queries the details of a management event.</p>
      * 
      * @param request GetIncidentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2106,7 +2254,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取事件列表</p>
+     * <p>Queries the details of a management event.</p>
      * 
      * @param request GetIncidentRequest
      * @return GetIncidentResponse
@@ -3072,7 +3220,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取事件列表</p>
+     * <p>Queries the management event list.</p>
      * 
      * @param tmpReq ListIncidentsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3192,7 +3340,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取事件列表</p>
+     * <p>Queries the management event list.</p>
      * 
      * @param request ListIncidentsRequest
      * @return ListIncidentsResponse
@@ -3914,6 +4062,98 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListProductsResponse listProducts(ListProductsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listProductsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询自动响应规则</p>
+     * 
+     * @param request ListResponseRulesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListResponseRulesResponse
+     */
+    public ListResponseRulesResponse listResponseRulesWithOptions(ListResponseRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            body.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseActionType)) {
+            body.put("ResponseActionType", request.responseActionType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseRuleName)) {
+            body.put("ResponseRuleName", request.responseRuleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseRuleStatus)) {
+            body.put("ResponseRuleStatus", request.responseRuleStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseRuleType)) {
+            body.put("ResponseRuleType", request.responseRuleType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseTriggerType)) {
+            body.put("ResponseTriggerType", request.responseTriggerType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleFor)) {
+            body.put("RoleFor", request.roleFor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleType)) {
+            body.put("RoleType", request.roleType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListResponseRules"),
+            new TeaPair("version", "2024-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListResponseRulesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询自动响应规则</p>
+     * 
+     * @param request ListResponseRulesRequest
+     * @return ListResponseRulesResponse
+     */
+    public ListResponseRulesResponse listResponseRules(ListResponseRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listResponseRulesWithOptions(request, runtime);
     }
 
     /**
@@ -5468,6 +5708,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateProductResponse updateProduct(UpdateProductRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateProductWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新自动响应规则</p>
+     * 
+     * @param request UpdateResponseRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateResponseRuleResponse
+     */
+    public UpdateResponseRuleResponse updateResponseRuleWithOptions(UpdateResponseRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            body.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseActionConfig)) {
+            body.put("ResponseActionConfig", request.responseActionConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseActionType)) {
+            body.put("ResponseActionType", request.responseActionType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseExecutionCondition)) {
+            body.put("ResponseExecutionCondition", request.responseExecutionCondition);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseRuleId)) {
+            body.put("ResponseRuleId", request.responseRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseRuleName)) {
+            body.put("ResponseRuleName", request.responseRuleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseRulePriority)) {
+            body.put("ResponseRulePriority", request.responseRulePriority);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseRuleStatus)) {
+            body.put("ResponseRuleStatus", request.responseRuleStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseTriggerType)) {
+            body.put("ResponseTriggerType", request.responseTriggerType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateResponseRule"),
+            new TeaPair("version", "2024-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateResponseRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新自动响应规则</p>
+     * 
+     * @param request UpdateResponseRuleRequest
+     * @return UpdateResponseRuleResponse
+     */
+    public UpdateResponseRuleResponse updateResponseRule(UpdateResponseRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateResponseRuleWithOptions(request, runtime);
     }
 
     /**
