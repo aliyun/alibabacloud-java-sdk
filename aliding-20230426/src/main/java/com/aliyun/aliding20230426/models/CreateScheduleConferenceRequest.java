@@ -13,6 +13,10 @@ public class CreateScheduleConferenceRequest extends TeaModel {
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>预约会议设置</p>
+     */
     @NameInMap("ScheduleConfSettingModel")
     public CreateScheduleConferenceRequestScheduleConfSettingModel scheduleConfSettingModel;
 
@@ -82,7 +86,79 @@ public class CreateScheduleConferenceRequest extends TeaModel {
         return this.title;
     }
 
+    public static class CreateScheduleConferenceRequestScheduleConfSettingModelAiAgentSummarySetting extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("AllowAllParticipantsStart")
+        public Integer allowAllParticipantsStart;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("ReceiverType")
+        public Integer receiverType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("RestrictShareMinutesSummaryOnly")
+        public Integer restrictShareMinutesSummaryOnly;
+
+        /**
+         * <strong>example:</strong>
+         * <p>disable</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateScheduleConferenceRequestScheduleConfSettingModelAiAgentSummarySetting build(java.util.Map<String, ?> map) throws Exception {
+            CreateScheduleConferenceRequestScheduleConfSettingModelAiAgentSummarySetting self = new CreateScheduleConferenceRequestScheduleConfSettingModelAiAgentSummarySetting();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateScheduleConferenceRequestScheduleConfSettingModelAiAgentSummarySetting setAllowAllParticipantsStart(Integer allowAllParticipantsStart) {
+            this.allowAllParticipantsStart = allowAllParticipantsStart;
+            return this;
+        }
+        public Integer getAllowAllParticipantsStart() {
+            return this.allowAllParticipantsStart;
+        }
+
+        public CreateScheduleConferenceRequestScheduleConfSettingModelAiAgentSummarySetting setReceiverType(Integer receiverType) {
+            this.receiverType = receiverType;
+            return this;
+        }
+        public Integer getReceiverType() {
+            return this.receiverType;
+        }
+
+        public CreateScheduleConferenceRequestScheduleConfSettingModelAiAgentSummarySetting setRestrictShareMinutesSummaryOnly(Integer restrictShareMinutesSummaryOnly) {
+            this.restrictShareMinutesSummaryOnly = restrictShareMinutesSummaryOnly;
+            return this;
+        }
+        public Integer getRestrictShareMinutesSummaryOnly() {
+            return this.restrictShareMinutesSummaryOnly;
+        }
+
+        public CreateScheduleConferenceRequestScheduleConfSettingModelAiAgentSummarySetting setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class CreateScheduleConferenceRequestScheduleConfSettingModelMoziConfOpenRecordSetting extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsFollowHost")
         public Boolean isFollowHost;
 
@@ -106,6 +182,13 @@ public class CreateScheduleConferenceRequest extends TeaModel {
          */
         @NameInMap("RecordAutoStartType")
         public Integer recordAutoStartType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("RestrictShareMinutesSummaryOnly")
+        public Integer restrictShareMinutesSummaryOnly;
 
         public static CreateScheduleConferenceRequestScheduleConfSettingModelMoziConfOpenRecordSetting build(java.util.Map<String, ?> map) throws Exception {
             CreateScheduleConferenceRequestScheduleConfSettingModelMoziConfOpenRecordSetting self = new CreateScheduleConferenceRequestScheduleConfSettingModelMoziConfOpenRecordSetting();
@@ -144,6 +227,14 @@ public class CreateScheduleConferenceRequest extends TeaModel {
             return this.recordAutoStartType;
         }
 
+        public CreateScheduleConferenceRequestScheduleConfSettingModelMoziConfOpenRecordSetting setRestrictShareMinutesSummaryOnly(Integer restrictShareMinutesSummaryOnly) {
+            this.restrictShareMinutesSummaryOnly = restrictShareMinutesSummaryOnly;
+            return this;
+        }
+        public Integer getRestrictShareMinutesSummaryOnly() {
+            return this.restrictShareMinutesSummaryOnly;
+        }
+
     }
 
     public static class CreateScheduleConferenceRequestScheduleConfSettingModelMoziConfVirtualExtraSettingMoziConfExtensionAppSettings extends TeaModel {
@@ -156,7 +247,7 @@ public class CreateScheduleConferenceRequest extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>xxxx</p>
          */
         @NameInMap("CoolAppCode")
         public String coolAppCode;
@@ -214,8 +305,19 @@ public class CreateScheduleConferenceRequest extends TeaModel {
         @NameInMap("EnableChat")
         public Integer enableChat;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableWebAnonymousJoin")
         public Boolean enableWebAnonymousJoin;
+
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("HiddenOwnerNick")
+        public Boolean hiddenOwnerNick;
 
         /**
          * <strong>example:</strong>
@@ -238,18 +340,51 @@ public class CreateScheduleConferenceRequest extends TeaModel {
         @NameInMap("LockNick")
         public Integer lockNick;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MinutesOwnerUserId")
         public String minutesOwnerUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("MinutesSummaryDiyTemplateVersion")
+        public String minutesSummaryDiyTemplateVersion;
+
+        @NameInMap("MinutesSummaryTemplateId")
+        public String minutesSummaryTemplateId;
+
+        @NameInMap("MinutesSummaryTemplateType")
+        public String minutesSummaryTemplateType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("MoziConfExtensionAppSettings")
         public java.util.List<CreateScheduleConferenceRequestScheduleConfSettingModelMoziConfVirtualExtraSettingMoziConfExtensionAppSettings> moziConfExtensionAppSettings;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("PushAllMeetingRecords")
         public Boolean pushAllMeetingRecords;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("PushCloudRecordCard")
         public Boolean pushCloudRecordCard;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("PushMinutesCard")
         public Boolean pushMinutesCard;
 
@@ -289,6 +424,14 @@ public class CreateScheduleConferenceRequest extends TeaModel {
             return this.enableWebAnonymousJoin;
         }
 
+        public CreateScheduleConferenceRequestScheduleConfSettingModelMoziConfVirtualExtraSetting setHiddenOwnerNick(Boolean hiddenOwnerNick) {
+            this.hiddenOwnerNick = hiddenOwnerNick;
+            return this;
+        }
+        public Boolean getHiddenOwnerNick() {
+            return this.hiddenOwnerNick;
+        }
+
         public CreateScheduleConferenceRequestScheduleConfSettingModelMoziConfVirtualExtraSetting setJoinBeforeHost(Integer joinBeforeHost) {
             this.joinBeforeHost = joinBeforeHost;
             return this;
@@ -319,6 +462,30 @@ public class CreateScheduleConferenceRequest extends TeaModel {
         }
         public String getMinutesOwnerUserId() {
             return this.minutesOwnerUserId;
+        }
+
+        public CreateScheduleConferenceRequestScheduleConfSettingModelMoziConfVirtualExtraSetting setMinutesSummaryDiyTemplateVersion(String minutesSummaryDiyTemplateVersion) {
+            this.minutesSummaryDiyTemplateVersion = minutesSummaryDiyTemplateVersion;
+            return this;
+        }
+        public String getMinutesSummaryDiyTemplateVersion() {
+            return this.minutesSummaryDiyTemplateVersion;
+        }
+
+        public CreateScheduleConferenceRequestScheduleConfSettingModelMoziConfVirtualExtraSetting setMinutesSummaryTemplateId(String minutesSummaryTemplateId) {
+            this.minutesSummaryTemplateId = minutesSummaryTemplateId;
+            return this;
+        }
+        public String getMinutesSummaryTemplateId() {
+            return this.minutesSummaryTemplateId;
+        }
+
+        public CreateScheduleConferenceRequestScheduleConfSettingModelMoziConfVirtualExtraSetting setMinutesSummaryTemplateType(String minutesSummaryTemplateType) {
+            this.minutesSummaryTemplateType = minutesSummaryTemplateType;
+            return this;
+        }
+        public String getMinutesSummaryTemplateType() {
+            return this.minutesSummaryTemplateType;
         }
 
         public CreateScheduleConferenceRequestScheduleConfSettingModelMoziConfVirtualExtraSetting setMoziConfExtensionAppSettings(java.util.List<CreateScheduleConferenceRequestScheduleConfSettingModelMoziConfVirtualExtraSettingMoziConfExtensionAppSettings> moziConfExtensionAppSettings) {
@@ -364,6 +531,17 @@ public class CreateScheduleConferenceRequest extends TeaModel {
     }
 
     public static class CreateScheduleConferenceRequestScheduleConfSettingModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        @NameInMap("AiAgentSummarySetting")
+        public CreateScheduleConferenceRequestScheduleConfSettingModelAiAgentSummarySetting aiAgentSummarySetting;
+
+        /**
+         * <strong>example:</strong>
+         * <p>[&quot;012345&quot;]</p>
+         */
         @NameInMap("CohostUserIds")
         public java.util.List<String> cohostUserIds;
 
@@ -388,9 +566,17 @@ public class CreateScheduleConferenceRequest extends TeaModel {
         @NameInMap("LockRoom")
         public Integer lockRoom;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("MoziConfOpenRecordSetting")
         public CreateScheduleConferenceRequestScheduleConfSettingModelMoziConfOpenRecordSetting moziConfOpenRecordSetting;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("MoziConfVirtualExtraSetting")
         public CreateScheduleConferenceRequestScheduleConfSettingModelMoziConfVirtualExtraSetting moziConfVirtualExtraSetting;
 
@@ -411,6 +597,14 @@ public class CreateScheduleConferenceRequest extends TeaModel {
         public static CreateScheduleConferenceRequestScheduleConfSettingModel build(java.util.Map<String, ?> map) throws Exception {
             CreateScheduleConferenceRequestScheduleConfSettingModel self = new CreateScheduleConferenceRequestScheduleConfSettingModel();
             return TeaModel.build(map, self);
+        }
+
+        public CreateScheduleConferenceRequestScheduleConfSettingModel setAiAgentSummarySetting(CreateScheduleConferenceRequestScheduleConfSettingModelAiAgentSummarySetting aiAgentSummarySetting) {
+            this.aiAgentSummarySetting = aiAgentSummarySetting;
+            return this;
+        }
+        public CreateScheduleConferenceRequestScheduleConfSettingModelAiAgentSummarySetting getAiAgentSummarySetting() {
+            return this.aiAgentSummarySetting;
         }
 
         public CreateScheduleConferenceRequestScheduleConfSettingModel setCohostUserIds(java.util.List<String> cohostUserIds) {

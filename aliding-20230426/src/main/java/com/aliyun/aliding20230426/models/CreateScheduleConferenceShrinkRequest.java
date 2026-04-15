@@ -13,6 +13,10 @@ public class CreateScheduleConferenceShrinkRequest extends TeaModel {
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>预约会议设置</p>
+     */
     @NameInMap("ScheduleConfSettingModel")
     public String scheduleConfSettingModelShrink;
 

@@ -41,6 +41,20 @@ public class CreateScheduleConferenceResponseBody extends TeaModel {
     @NameInMap("url")
     public String url;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
+    @NameInMap("vendorRequestId")
+    public String vendorRequestId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>dingtalk</p>
+     */
+    @NameInMap("vendorType")
+    public String vendorType;
+
     public static CreateScheduleConferenceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateScheduleConferenceResponseBody self = new CreateScheduleConferenceResponseBody();
         return TeaModel.build(map, self);
@@ -84,6 +98,22 @@ public class CreateScheduleConferenceResponseBody extends TeaModel {
     }
     public String getUrl() {
         return this.url;
+    }
+
+    public CreateScheduleConferenceResponseBody setVendorRequestId(String vendorRequestId) {
+        this.vendorRequestId = vendorRequestId;
+        return this;
+    }
+    public String getVendorRequestId() {
+        return this.vendorRequestId;
+    }
+
+    public CreateScheduleConferenceResponseBody setVendorType(String vendorType) {
+        this.vendorType = vendorType;
+        return this;
+    }
+    public String getVendorType() {
+        return this.vendorType;
     }
 
 }
