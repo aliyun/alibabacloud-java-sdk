@@ -495,6 +495,9 @@ public class ListStackConfigsResponseBody extends TeaModel {
         @NameInMap("deploymentContent")
         public String deploymentContent;
 
+        @NameInMap("failedReason")
+        public String failedReason;
+
         /**
          * <strong>example:</strong>
          * <p>Deployed</p>
@@ -552,6 +555,14 @@ public class ListStackConfigsResponseBody extends TeaModel {
         }
         public String getDeploymentContent() {
             return this.deploymentContent;
+        }
+
+        public ListStackConfigsResponseBodyConfigs setFailedReason(String failedReason) {
+            this.failedReason = failedReason;
+            return this;
+        }
+        public String getFailedReason() {
+            return this.failedReason;
         }
 
         public ListStackConfigsResponseBodyConfigs setStatus(String status) {
