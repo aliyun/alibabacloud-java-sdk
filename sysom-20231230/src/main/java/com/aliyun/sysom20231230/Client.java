@@ -181,6 +181,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建一个告警联系人</p>
+     * 
+     * @param request CreateAlertDestinationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAlertDestinationResponse
+     */
+    public CreateAlertDestinationResponse createAlertDestinationWithOptions(CreateAlertDestinationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.params)) {
+            body.put("params", request.params);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            body.put("source", request.source);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.target)) {
+            body.put("target", request.target);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAlertDestination"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/alertPusher/alert/createDestination"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAlertDestinationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建一个告警联系人</p>
+     * 
+     * @param request CreateAlertDestinationRequest
+     * @return CreateAlertDestinationResponse
+     */
+    public CreateAlertDestinationResponse createAlertDestination(CreateAlertDestinationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createAlertDestinationWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>新增推送告警的策略</p>
      * 
      * @param request CreateAlertStrategyRequest
@@ -299,6 +358,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createVmcoreDiagnosisTaskWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除告警联系人</p>
+     * 
+     * @param request DeleteAlertDestinationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAlertDestinationResponse
+     */
+    public DeleteAlertDestinationResponse deleteAlertDestinationWithOptions(DeleteAlertDestinationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAlertDestination"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/alertPusher/alert/deleteDestination"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAlertDestinationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除告警联系人</p>
+     * 
+     * @param request DeleteAlertDestinationRequest
+     * @return DeleteAlertDestinationResponse
+     */
+    public DeleteAlertDestinationResponse deleteAlertDestination(DeleteAlertDestinationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteAlertDestinationWithOptions(request, headers, runtime);
     }
 
     /**
@@ -715,6 +821,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getAgentTaskWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取告警联系人详情</p>
+     * 
+     * @param request GetAlertDestinationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAlertDestinationResponse
+     */
+    public GetAlertDestinationResponse getAlertDestinationWithOptions(GetAlertDestinationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAlertDestination"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/alertPusher/alert/getDestination"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAlertDestinationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取告警联系人详情</p>
+     * 
+     * @param request GetAlertDestinationRequest
+     * @return GetAlertDestinationResponse
+     */
+    public GetAlertDestinationResponse getAlertDestination(GetAlertDestinationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getAlertDestinationWithOptions(request, headers, runtime);
     }
 
     /**
@@ -2255,6 +2408,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查看告警联系人列表</p>
+     * 
+     * @param request ListAlertDestinationsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAlertDestinationsResponse
+     */
+    public ListAlertDestinationsResponse listAlertDestinationsWithOptions(ListAlertDestinationsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.current)) {
+            query.put("current", request.current);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAlertDestinations"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/alertPusher/alert/listDestinations"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAlertDestinationsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看告警联系人列表</p>
+     * 
+     * @param request ListAlertDestinationsRequest
+     * @return ListAlertDestinationsResponse
+     */
+    public ListAlertDestinationsResponse listAlertDestinations(ListAlertDestinationsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listAlertDestinationsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取所有告警项</p>
      * 
      * @param headers map
@@ -3474,6 +3690,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.uninstallAgentForClusterWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>、</p>
+     * 
+     * <b>summary</b> : 
+     * <p>更新告警联系人</p>
+     * 
+     * @param request UpdateAlertDestinationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAlertDestinationResponse
+     */
+    public UpdateAlertDestinationResponse updateAlertDestinationWithOptions(UpdateAlertDestinationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.params)) {
+            body.put("params", request.params);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            body.put("source", request.source);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.target)) {
+            body.put("target", request.target);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAlertDestination"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/alertPusher/alert/updateDestination"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAlertDestinationResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>、</p>
+     * 
+     * <b>summary</b> : 
+     * <p>更新告警联系人</p>
+     * 
+     * @param request UpdateAlertDestinationRequest
+     * @return UpdateAlertDestinationResponse
+     */
+    public UpdateAlertDestinationResponse updateAlertDestination(UpdateAlertDestinationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateAlertDestinationWithOptions(request, headers, runtime);
     }
 
     /**
