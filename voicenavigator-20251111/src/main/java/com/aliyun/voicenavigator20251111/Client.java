@@ -80,6 +80,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建语言模型配置信息</p>
+     * 
+     * @param tmpReq CreateLlmAccessProfileRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateLlmAccessProfileResponse
+     */
+    public CreateLlmAccessProfileResponse createLlmAccessProfileWithOptions(CreateLlmAccessProfileRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateLlmAccessProfileShrinkRequest request = new CreateLlmAccessProfileShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.profile)) {
+            request.profileShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.profile, "Profile", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.profileShrink)) {
+            body.put("Profile", request.profileShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateLlmAccessProfile"),
+            new TeaPair("version", "2025-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateLlmAccessProfileResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建语言模型配置信息</p>
+     * 
+     * @param request CreateLlmAccessProfileRequest
+     * @return CreateLlmAccessProfileResponse
+     */
+    public CreateLlmAccessProfileResponse createLlmAccessProfile(CreateLlmAccessProfileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createLlmAccessProfileWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建实例</p>
      * 
      * @param request CreateScriptRequest
@@ -454,6 +508,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteCloneVoiceResponse deleteCloneVoice(DeleteCloneVoiceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteCloneVoiceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除语言模型配置信息</p>
+     * 
+     * @param request DeleteLlmAccessProfileRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteLlmAccessProfileResponse
+     */
+    public DeleteLlmAccessProfileResponse deleteLlmAccessProfileWithOptions(DeleteLlmAccessProfileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessProfileId)) {
+            body.put("AccessProfileId", request.accessProfileId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteLlmAccessProfile"),
+            new TeaPair("version", "2025-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteLlmAccessProfileResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除语言模型配置信息</p>
+     * 
+     * @param request DeleteLlmAccessProfileRequest
+     * @return DeleteLlmAccessProfileResponse
+     */
+    public DeleteLlmAccessProfileResponse deleteLlmAccessProfile(DeleteLlmAccessProfileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteLlmAccessProfileWithOptions(request, runtime);
     }
 
     /**
@@ -1456,6 +1558,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取语言模型配置信息</p>
+     * 
+     * @param request ListLlmAccessProfilesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListLlmAccessProfilesResponse
+     */
+    public ListLlmAccessProfilesResponse listLlmAccessProfilesWithOptions(ListLlmAccessProfilesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListLlmAccessProfiles"),
+            new TeaPair("version", "2025-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListLlmAccessProfilesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取语言模型配置信息</p>
+     * 
+     * @param request ListLlmAccessProfilesRequest
+     * @return ListLlmAccessProfilesResponse
+     */
+    public ListLlmAccessProfilesResponse listLlmAccessProfiles(ListLlmAccessProfilesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listLlmAccessProfilesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取对话模型列表</p>
      * 
      * @param request ListNluModelsRequest
@@ -2064,6 +2218,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateCloneVoiceResponse updateCloneVoice(UpdateCloneVoiceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateCloneVoiceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新语言模型配置信息</p>
+     * 
+     * @param tmpReq UpdateLlmAccessProfileRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateLlmAccessProfileResponse
+     */
+    public UpdateLlmAccessProfileResponse updateLlmAccessProfileWithOptions(UpdateLlmAccessProfileRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateLlmAccessProfileShrinkRequest request = new UpdateLlmAccessProfileShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.profile)) {
+            request.profileShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.profile, "Profile", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessProfileId)) {
+            body.put("AccessProfileId", request.accessProfileId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.profileShrink)) {
+            body.put("Profile", request.profileShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateLlmAccessProfile"),
+            new TeaPair("version", "2025-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateLlmAccessProfileResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新语言模型配置信息</p>
+     * 
+     * @param request UpdateLlmAccessProfileRequest
+     * @return UpdateLlmAccessProfileResponse
+     */
+    public UpdateLlmAccessProfileResponse updateLlmAccessProfile(UpdateLlmAccessProfileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateLlmAccessProfileWithOptions(request, runtime);
     }
 
     /**
