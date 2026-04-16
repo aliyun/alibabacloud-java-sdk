@@ -3,7 +3,7 @@ package com.aliyun.dyvmsapi20170525.models;
 
 import com.aliyun.tea.*;
 
-public class QueryVirtualNumberResponse extends TeaModel {
+public class CloudCreateTaskResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class QueryVirtualNumberResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public QueryVirtualNumberResponseBody body;
+    public CloudCreateTaskResponseBody body;
 
-    public static QueryVirtualNumberResponse build(java.util.Map<String, ?> map) throws Exception {
-        QueryVirtualNumberResponse self = new QueryVirtualNumberResponse();
+    public static CloudCreateTaskResponse build(java.util.Map<String, ?> map) throws Exception {
+        CloudCreateTaskResponse self = new CloudCreateTaskResponse();
         return TeaModel.build(map, self);
     }
 
-    public QueryVirtualNumberResponse setHeaders(java.util.Map<String, String> headers) {
+    public CloudCreateTaskResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class QueryVirtualNumberResponse extends TeaModel {
         return this.headers;
     }
 
-    public QueryVirtualNumberResponse setStatusCode(Integer statusCode) {
+    public CloudCreateTaskResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class QueryVirtualNumberResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public QueryVirtualNumberResponse setBody(QueryVirtualNumberResponseBody body) {
+    public CloudCreateTaskResponse setBody(CloudCreateTaskResponseBody body) {
         this.body = body;
         return this;
     }
-    public QueryVirtualNumberResponseBody getBody() {
+    public CloudCreateTaskResponseBody getBody() {
         return this.body;
     }
 

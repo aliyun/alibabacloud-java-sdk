@@ -32,7 +32,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 200 times per second per account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds the association relationship between a virtual number and real numbers in batches.</p>
+     * <p>Binds multiple real numbers to a service instance at a time.</p>
      * 
      * @param request AddVirtualNumberRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -96,7 +96,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 200 times per second per account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds the association relationship between a virtual number and real numbers in batches.</p>
+     * <p>Binds multiple real numbers to a service instance at a time.</p>
      * 
      * @param request AddVirtualNumberRelationRequest
      * @return AddVirtualNumberRelationResponse
@@ -123,7 +123,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Initiates an outbound robocall task.</p>
+     * <p>Initiates outbound robocall tasks in a batch. You can set up to 100 numbers in a task.</p>
      * 
      * @param request BatchRobotSmartCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -222,7 +222,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Initiates an outbound robocall task.</p>
+     * <p>Initiates outbound robocall tasks in a batch. You can set up to 100 numbers in a task.</p>
      * 
      * @param request BatchRobotSmartCallRequest
      * @return BatchRobotSmartCallResponse
@@ -233,6 +233,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Cancels the two-way call that is initiated by calling the ClickToDial operation.</p>
+     * 
      * @param request CancelCallRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CancelCallResponse
@@ -274,6 +277,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Cancels the two-way call that is initiated by calling the ClickToDial operation.</p>
+     * 
      * @param request CancelCallRequest
      * @return CancelCallResponse
      */
@@ -481,13 +487,671 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>新增任务</p>
+     * 
+     * @param request CloudCreateTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CloudCreateTaskResponse
+     */
+    public CloudCreateTaskResponse cloudCreateTaskWithOptions(CloudCreateTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentGroup)) {
+            query.put("AgentGroup", request.agentGroup);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentTimeout)) {
+            query.put("AgentTimeout", request.agentTimeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.answerRate)) {
+            query.put("AnswerRate", request.answerRate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoComplete)) {
+            query.put("AutoComplete", request.autoComplete);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoDelete)) {
+            query.put("AutoDelete", request.autoDelete);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoStart)) {
+            query.put("AutoStart", request.autoStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoStartDay)) {
+            query.put("AutoStartDay", request.autoStartDay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoStartTime)) {
+            query.put("AutoStartTime", request.autoStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoStop)) {
+            query.put("AutoStop", request.autoStop);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoStopDay)) {
+            query.put("AutoStopDay", request.autoStopDay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoStopTime)) {
+            query.put("AutoStopTime", request.autoStopTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoTaskType)) {
+            query.put("AutoTaskType", request.autoTaskType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoTriggerTimeStrategy)) {
+            query.put("AutoTriggerTimeStrategy", request.autoTriggerTimeStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callGroupType)) {
+            query.put("CallGroupType", request.callGroupType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callLimitStrategy)) {
+            query.put("CallLimitStrategy", request.callLimitStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callPriorityStrategy)) {
+            query.put("CallPriorityStrategy", request.callPriorityStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callRouteStrategy)) {
+            query.put("CallRouteStrategy", request.callRouteStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callStrategy)) {
+            query.put("CallStrategy", request.callStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callVariables)) {
+            query.put("CallVariables", request.callVariables);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clidProperty)) {
+            query.put("ClidProperty", request.clidProperty);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cnos)) {
+            query.put("Cnos", request.cnos);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.concurrency)) {
+            query.put("Concurrency", request.concurrency);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customerClidType)) {
+            query.put("CustomerClidType", request.customerClidType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customerClidWeight)) {
+            query.put("CustomerClidWeight", request.customerClidWeight);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customerClidWeightFlag)) {
+            query.put("CustomerClidWeightFlag", request.customerClidWeightFlag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customerClids)) {
+            query.put("CustomerClids", request.customerClids);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customerClidsCategory)) {
+            query.put("CustomerClidsCategory", request.customerClidsCategory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customerClidsGroup)) {
+            query.put("CustomerClidsGroup", request.customerClidsGroup);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customerMoh)) {
+            query.put("CustomerMoh", request.customerMoh);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customerTimeout)) {
+            query.put("CustomerTimeout", request.customerTimeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customerVoice)) {
+            query.put("CustomerVoice", request.customerVoice);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.forceEndFlag)) {
+            query.put("ForceEndFlag", request.forceEndFlag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isRewarm)) {
+            query.put("IsRewarm", request.isRewarm);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ivrId)) {
+            query.put("IvrId", request.ivrId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ivrName)) {
+            query.put("IvrName", request.ivrName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxWaitTime)) {
+            query.put("MaxWaitTime", request.maxWaitTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minAvailableAgentCount)) {
+            query.put("MinAvailableAgentCount", request.minAvailableAgentCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.predictAdjust)) {
+            query.put("PredictAdjust", request.predictAdjust);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quotiety)) {
+            query.put("Quotiety", request.quotiety);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.retryStrategy)) {
+            query.put("RetryStrategy", request.retryStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.retryStrategyOnlyToday)) {
+            query.put("RetryStrategyOnlyToday", request.retryStrategyOnlyToday);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.retryStrategyTimeType)) {
+            query.put("RetryStrategyTimeType", request.retryStrategyTimeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
+            query.put("TemplateName", request.templateName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeStrategy)) {
+            query.put("TimeStrategy", request.timeStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userFields)) {
+            query.put("UserFields", request.userFields);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.warmUpDuration)) {
+            query.put("WarmUpDuration", request.warmUpDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wrapup)) {
+            query.put("Wrapup", request.wrapup);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CloudCreateTask"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CloudCreateTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新增任务</p>
+     * 
+     * @param request CloudCreateTaskRequest
+     * @return CloudCreateTaskResponse
+     */
+    public CloudCreateTaskResponse cloudCreateTask(CloudCreateTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.cloudCreateTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>任务号码导入</p>
+     * 
+     * @param tmpReq CloudImportTaskTelRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CloudImportTaskTelResponse
+     */
+    public CloudImportTaskTelResponse cloudImportTaskTelWithOptions(CloudImportTaskTelRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CloudImportTaskTelShrinkRequest request = new CloudImportTaskTelShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.taskTelList)) {
+            request.taskTelListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.taskTelList, "TaskTelList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bridgeVoicePath)) {
+            query.put("BridgeVoicePath", request.bridgeVoicePath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bridgeVoiceType)) {
+            query.put("BridgeVoiceType", request.bridgeVoiceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileId)) {
+            query.put("FileId", request.fileId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.importTelAutoStart)) {
+            query.put("ImportTelAutoStart", request.importTelAutoStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isRepeat)) {
+            query.put("IsRepeat", request.isRepeat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            query.put("Priority", request.priority);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskTelListShrink)) {
+            query.put("TaskTelList", request.taskTelListShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CloudImportTaskTel"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CloudImportTaskTelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>任务号码导入</p>
+     * 
+     * @param request CloudImportTaskTelRequest
+     * @return CloudImportTaskTelResponse
+     */
+    public CloudImportTaskTelResponse cloudImportTaskTel(CloudImportTaskTelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.cloudImportTaskTelWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>任务启动</p>
+     * 
+     * @param request CloudStartTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CloudStartTaskResponse
+     */
+    public CloudStartTaskResponse cloudStartTaskWithOptions(CloudStartTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CloudStartTask"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CloudStartTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>任务启动</p>
+     * 
+     * @param request CloudStartTaskRequest
+     * @return CloudStartTaskResponse
+     */
+    public CloudStartTaskResponse cloudStartTask(CloudStartTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.cloudStartTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新任务</p>
+     * 
+     * @param request CloudUpdateTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CloudUpdateTaskResponse
+     */
+    public CloudUpdateTaskResponse cloudUpdateTaskWithOptions(CloudUpdateTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentGroup)) {
+            query.put("AgentGroup", request.agentGroup);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentTimeout)) {
+            query.put("AgentTimeout", request.agentTimeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.answerRate)) {
+            query.put("AnswerRate", request.answerRate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoComplete)) {
+            query.put("AutoComplete", request.autoComplete);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoStart)) {
+            query.put("AutoStart", request.autoStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoStartDay)) {
+            query.put("AutoStartDay", request.autoStartDay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoStartTime)) {
+            query.put("AutoStartTime", request.autoStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoStop)) {
+            query.put("AutoStop", request.autoStop);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoStopDay)) {
+            query.put("AutoStopDay", request.autoStopDay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoStopTime)) {
+            query.put("AutoStopTime", request.autoStopTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoTaskType)) {
+            query.put("AutoTaskType", request.autoTaskType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoTriggerTimeStrategy)) {
+            query.put("AutoTriggerTimeStrategy", request.autoTriggerTimeStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callLimitStrategy)) {
+            query.put("CallLimitStrategy", request.callLimitStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callPriorityStrategy)) {
+            query.put("CallPriorityStrategy", request.callPriorityStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callRouteStrategy)) {
+            query.put("CallRouteStrategy", request.callRouteStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callStrategy)) {
+            query.put("CallStrategy", request.callStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callVariables)) {
+            query.put("CallVariables", request.callVariables);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clidProperty)) {
+            query.put("ClidProperty", request.clidProperty);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cnos)) {
+            query.put("Cnos", request.cnos);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.concurrency)) {
+            query.put("Concurrency", request.concurrency);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customerClidType)) {
+            query.put("CustomerClidType", request.customerClidType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customerClidWeight)) {
+            query.put("CustomerClidWeight", request.customerClidWeight);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customerClidWeightFlag)) {
+            query.put("CustomerClidWeightFlag", request.customerClidWeightFlag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customerClids)) {
+            query.put("CustomerClids", request.customerClids);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customerClidsCategory)) {
+            query.put("CustomerClidsCategory", request.customerClidsCategory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customerClidsGroup)) {
+            query.put("CustomerClidsGroup", request.customerClidsGroup);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customerMoh)) {
+            query.put("CustomerMoh", request.customerMoh);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customerTimeout)) {
+            query.put("CustomerTimeout", request.customerTimeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customerVoice)) {
+            query.put("CustomerVoice", request.customerVoice);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.forceEndFlag)) {
+            query.put("ForceEndFlag", request.forceEndFlag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isRewarm)) {
+            query.put("IsRewarm", request.isRewarm);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ivrId)) {
+            query.put("IvrId", request.ivrId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ivrName)) {
+            query.put("IvrName", request.ivrName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxWaitTime)) {
+            query.put("MaxWaitTime", request.maxWaitTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minAvailableAgentCount)) {
+            query.put("MinAvailableAgentCount", request.minAvailableAgentCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.predictAdjust)) {
+            query.put("PredictAdjust", request.predictAdjust);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quotiety)) {
+            query.put("Quotiety", request.quotiety);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.retryStrategy)) {
+            query.put("RetryStrategy", request.retryStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.retryStrategyOnlyToday)) {
+            query.put("RetryStrategyOnlyToday", request.retryStrategyOnlyToday);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.retryStrategyTimeType)) {
+            query.put("RetryStrategyTimeType", request.retryStrategyTimeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeStrategy)) {
+            query.put("TimeStrategy", request.timeStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userFields)) {
+            query.put("UserFields", request.userFields);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.warmUpDuration)) {
+            query.put("WarmUpDuration", request.warmUpDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wrapup)) {
+            query.put("Wrapup", request.wrapup);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CloudUpdateTask"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CloudUpdateTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新任务</p>
+     * 
+     * @param request CloudUpdateTaskRequest
+     * @return CloudUpdateTaskResponse
+     */
+    public CloudUpdateTaskResponse cloudUpdateTask(CloudUpdateTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.cloudUpdateTaskWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can create up to 1,000 voice notifications for each task.</p>
      * <h3>QPS limits</h3>
      * <p>You can call this operation up to 100 times per second per account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a task for sending voice notifications or voice verification codes.</p>
+     * <p>Uses a service instance to create a text-to-speech (TTS) task, a voice notification task, or a voice verification code task for multiple called numbers.</p>
      * 
      * @param request CreateCallTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -576,7 +1240,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 100 times per second per account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a task for sending voice notifications or voice verification codes.</p>
+     * <p>Uses a service instance to create a text-to-speech (TTS) task, a voice notification task, or a voice verification code task for multiple called numbers.</p>
      * 
      * @param request CreateCallTaskRequest
      * @return CreateCallTaskResponse
@@ -690,7 +1354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DegradeVideoFile</p>
+     * <p>Downgrades from a video call to a voice call.</p>
      * 
      * @param request DegradeVideoFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -746,7 +1410,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DegradeVideoFile</p>
+     * <p>Downgrades from a video call to a voice call.</p>
      * 
      * @param request DegradeVideoFileRequest
      * @return DegradeVideoFileResponse
@@ -896,7 +1560,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>GetCallMediaType</p>
+     * <p>Obtains the call type during a call.</p>
      * 
      * @param request GetCallMediaTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -944,7 +1608,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>GetCallMediaType</p>
+     * <p>Obtains the call type during a call.</p>
      * 
      * @param request GetCallMediaTypeRequest
      * @return GetCallMediaTypeResponse
@@ -1080,7 +1744,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>GetTemporaryFileUrl</p>
+     * <p>Obtains a temporary URL of a video or audio file. You can view the video or audio file immediately by using this temporary URL.</p>
      * 
      * @param request GetTemporaryFileUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1124,7 +1788,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>GetTemporaryFileUrl</p>
+     * <p>Obtains a temporary URL of a video or audio file. You can view the video or audio file immediately by using this temporary URL.</p>
      * 
      * @param request GetTemporaryFileUrlRequest
      * @return GetTemporaryFileUrlResponse
@@ -1370,7 +2034,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 100 times per second per account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries task information.</p>
+     * <p>Queries the information about a voice call task after the task is created, including the task ID, task status, and templates used by the task.</p>
      * 
      * @param request ListCallTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1442,7 +2106,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 100 times per second per account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries task information.</p>
+     * <p>Queries the information about a voice call task after the task is created, including the task ID, task status, and templates used by the task.</p>
      * 
      * @param request ListCallTaskRequest
      * @return ListCallTaskResponse
@@ -1458,7 +2122,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 100 times per second per account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a task based on the task ID.</p>
+     * <p>Queries the details of call tasks based on task IDs after call tasks are complete.</p>
      * 
      * @param request ListCallTaskDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1522,7 +2186,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 100 times per second per account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a task based on the task ID.</p>
+     * <p>Queries the details of call tasks based on task IDs after call tasks are complete.</p>
      * 
      * @param request ListCallTaskDetailRequest
      * @return ListCallTaskDetailResponse
@@ -1688,7 +2352,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>PauseVideoFile</p>
+     * <p>Pauses video playback when a video file is played back during a voice call.</p>
      * 
      * @param request PauseVideoFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1736,7 +2400,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>PauseVideoFile</p>
+     * <p>Pauses video playback when a video file is played back during a voice call.</p>
      * 
      * @param request PauseVideoFileRequest
      * @return PauseVideoFileResponse
@@ -1748,7 +2412,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>PlayVideoFile</p>
+     * <p>Plays back a video file during a voice call.</p>
      * 
      * @param request PlayVideoFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1808,7 +2472,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>PlayVideoFile</p>
+     * <p>Plays back a video file during a voice call.</p>
      * 
      * @param request PlayVideoFileRequest
      * @return PlayVideoFileResponse
@@ -2102,7 +2766,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of robots.</p>
+     * <p>Queries a list of robots to obtain their details.</p>
      * 
      * @param request QueryRobotInfoListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2146,7 +2810,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of robots.</p>
+     * <p>Queries a list of robots to obtain their details.</p>
      * 
      * @param request QueryRobotInfoListRequest
      * @return QueryRobotInfoListResponse
@@ -2162,7 +2826,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 100 times per second per account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the call details of a called number in a robocall task.</p>
+     * <p>Queries the call details of a called number.</p>
      * 
      * @param request QueryRobotTaskCallDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2218,7 +2882,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 100 times per second per account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the call details of a called number in a robocall task.</p>
+     * <p>Queries the call details of a called number.</p>
      * 
      * @param request QueryRobotTaskCallDetailRequest
      * @return QueryRobotTaskCallDetailResponse
@@ -2534,7 +3198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>QueryVideoPlayProgress</p>
+     * <p>Queries the video playback progress after you play a video file during a voice call.</p>
      * 
      * @param request QueryVideoPlayProgressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2582,7 +3246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>QueryVideoPlayProgress</p>
+     * <p>Queries the video playback progress after you play a video file during a voice call.</p>
      * 
      * @param request QueryVideoPlayProgressRequest
      * @return QueryVideoPlayProgressResponse
@@ -2595,86 +3259,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>QPS limits</h3>
-     * <p>You can call this operation up to 100 times per second per account.</p>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries a list of virtual numbers.</p>
-     * 
-     * @param request QueryVirtualNumberRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return QueryVirtualNumberResponse
-     */
-    public QueryVirtualNumberResponse queryVirtualNumberWithOptions(QueryVirtualNumberRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
-            query.put("PageNo", request.pageNo);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            query.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.prodCode)) {
-            query.put("ProdCode", request.prodCode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
-            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
-            query.put("ResourceOwnerId", request.resourceOwnerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.routeType)) {
-            query.put("RouteType", request.routeType);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "QueryVirtualNumber"),
-            new TeaPair("version", "2017-05-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryVirtualNumberResponse());
-    }
-
-    /**
-     * <b>description</b> :
-     * <h3>QPS limits</h3>
-     * <p>You can call this operation up to 100 times per second per account.</p>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries a list of virtual numbers.</p>
-     * 
-     * @param request QueryVirtualNumberRequest
-     * @return QueryVirtualNumberResponse
-     */
-    public QueryVirtualNumberResponse queryVirtualNumber(QueryVirtualNumberRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.queryVirtualNumberWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>description</b> :
-     * <h3>QPS limits</h3>
      * <p>You can call this operation up to 200 times per second per account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of associations between virtual numbers and real numbers.</p>
+     * <p>Lists real numbers bound to service instances. The returned data includes the binding time, the number activation time, and the number of real numbers bound to a service instance.</p>
      * 
      * @param request QueryVirtualNumberRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2754,7 +3342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 200 times per second per account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of associations between virtual numbers and real numbers.</p>
+     * <p>Lists real numbers bound to service instances. The returned data includes the binding time, the number activation time, and the number of real numbers bound to a service instance.</p>
      * 
      * @param request QueryVirtualNumberRelationRequest
      * @return QueryVirtualNumberRelationResponse
@@ -3026,7 +3614,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ResumeVideoFile</p>
+     * <p>Resumes video playback after you pause video playback during a voice call.</p>
      * 
      * @param request ResumeVideoFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3074,7 +3662,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ResumeVideoFile</p>
+     * <p>Resumes video playback after you pause video playback during a voice call.</p>
      * 
      * @param request ResumeVideoFileRequest
      * @return ResumeVideoFileResponse
@@ -3398,7 +3986,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>语音视频单呼接口</p>
+     * <p>Sends voice file notifications or video file notifications to a single called number.</p>
      * 
      * @param request SingleCallByVideoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3470,7 +4058,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>语音视频单呼接口</p>
+     * <p>Sends voice file notifications or video file notifications to a single called number.</p>
      * 
      * @param request SingleCallByVideoRequest
      * @return SingleCallByVideoResponse
@@ -3578,7 +4166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>SkipVideoFile</p>
+     * <p>Fast forwards or rewinds a video when you play the video.</p>
      * 
      * @param request SkipVideoFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3634,7 +4222,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>SkipVideoFile</p>
+     * <p>Fast forwards or rewinds a video when you play the video.</p>
      * 
      * @param request SkipVideoFileRequest
      * @return SkipVideoFileResponse
@@ -4096,7 +4684,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 100 times per second per account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits a China 400 number for registration.</p>
+     * <p>Submits a 400 number for registration.</p>
      * 
      * @param request SubmitHotlineTransferRegisterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4180,7 +4768,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 100 times per second per account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits a China 400 number for registration.</p>
+     * <p>Submits a 400 number for registration.</p>
      * 
      * @param request SubmitHotlineTransferRegisterRequest
      * @return SubmitHotlineTransferRegisterResponse
@@ -4192,7 +4780,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>UpgradeVideoFile</p>
+     * <p>Upgrades from a voice call to a video call.</p>
      * 
      * @param request UpgradeVideoFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4248,7 +4836,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>UpgradeVideoFile</p>
+     * <p>Upgrades from a voice call to a video call.</p>
      * 
      * @param request UpgradeVideoFileRequest
      * @return UpgradeVideoFileResponse
