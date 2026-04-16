@@ -33,6 +33,15 @@ public class ModelRouterQueryModelListResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>maxResults</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
+    @NameInMap("maxResults")
+    public Integer maxResults;
+
+    /**
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -81,6 +90,14 @@ public class ModelRouterQueryModelListResponseBody extends TeaModel {
     }
     public Integer getHttpStatusCode() {
         return this.httpStatusCode;
+    }
+
+    public ModelRouterQueryModelListResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     public ModelRouterQueryModelListResponseBody setRequestId(String requestId) {

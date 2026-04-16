@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>aicontent20240611</artifactId>
-  <version>7.0.1</version>
+  <version>7.0.2</version>
   <packaging>jar</packaging>
   <name>aicontent20240611</name>
   <description>Alibaba Cloud AiContent (20240611) SDK for Java
@@ -174,7 +174,7 @@
       <plugin>
         <groupId>org.sonatype.central</groupId>
         <artifactId>central-publishing-maven-plugin</artifactId>
-        <version>0.9.0</version>
+        <version>0.10.0</version>
         <extensions>true</extensions>
         <configuration>
           <publishingServerId>central</publishingServerId>

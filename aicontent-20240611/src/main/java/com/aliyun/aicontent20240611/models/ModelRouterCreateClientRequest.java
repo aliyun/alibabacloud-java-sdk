@@ -27,6 +27,13 @@ public class ModelRouterCreateClientRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>1.0</p>
+     */
+    @NameInMap("discount")
+    public Double discount;
+
+    /**
+     * <strong>example:</strong>
      * <p>我的客户</p>
      */
     @NameInMap("name")
@@ -73,6 +80,14 @@ public class ModelRouterCreateClientRequest extends TeaModel {
     }
     public String getContact() {
         return this.contact;
+    }
+
+    public ModelRouterCreateClientRequest setDiscount(Double discount) {
+        this.discount = discount;
+        return this;
+    }
+    public Double getDiscount() {
+        return this.discount;
     }
 
     public ModelRouterCreateClientRequest setName(String name) {

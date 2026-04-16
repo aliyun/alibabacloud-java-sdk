@@ -2380,6 +2380,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("contact", request.contact);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.discount)) {
+            body.put("discount", request.discount);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             body.put("name", request.name);
         }
@@ -3609,6 +3613,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.contact)) {
             body.put("contact", request.contact);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.discount)) {
+            body.put("discount", request.discount);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {

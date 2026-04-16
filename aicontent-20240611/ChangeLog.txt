@@ -1,3 +1,9 @@
+2026-04-16 Version: 7.0.2
+- Update API ModelRouterCreateClient: add request parameters body.discount.
+- Update API ModelRouterQueryModelList: add response parameters Body.maxResults.
+- Update API ModelRouterUpdateClient: add request parameters body.discount.
+
+
 2026-04-02 Version: 7.0.1
 - Update API ModelRouterCreateClient: add request parameters body.parentId.
 - Update API ModelRouterCreateModel: add request parameters body.extensions.

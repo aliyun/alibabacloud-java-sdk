@@ -48,6 +48,13 @@ public class ModelDTO extends TeaModel {
     public String gmtModified;
 
     /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("hasBillingRule")
+    public Boolean hasBillingRule;
+
+    /**
      * <p>ID</p>
      * 
      * <strong>example:</strong>
@@ -180,6 +187,14 @@ public class ModelDTO extends TeaModel {
     }
     public String getGmtModified() {
         return this.gmtModified;
+    }
+
+    public ModelDTO setHasBillingRule(Boolean hasBillingRule) {
+        this.hasBillingRule = hasBillingRule;
+        return this;
+    }
+    public Boolean getHasBillingRule() {
+        return this.hasBillingRule;
     }
 
     public ModelDTO setId(Long id) {

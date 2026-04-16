@@ -48,6 +48,13 @@ public class ClientTreeDTO extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>1.0</p>
+     */
+    @NameInMap("discount")
+    public Double discount;
+
+    /**
+     * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>
      */
     @NameInMap("gmtCreate")
@@ -153,6 +160,14 @@ public class ClientTreeDTO extends TeaModel {
     }
     public Integer getDeleteTag() {
         return this.deleteTag;
+    }
+
+    public ClientTreeDTO setDiscount(Double discount) {
+        this.discount = discount;
+        return this;
+    }
+    public Double getDiscount() {
+        return this.discount;
     }
 
     public ClientTreeDTO setGmtCreate(String gmtCreate) {
