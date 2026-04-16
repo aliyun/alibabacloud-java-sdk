@@ -70,6 +70,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("BlktagUsed")
     public Long blktagUsed;
 
+    @NameInMap("Branch")
+    public DescribeDBClusterAttributeResponseBodyBranch branch;
+
     /**
      * <strong>example:</strong>
      * <p>false</p>
@@ -788,6 +791,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         return this.blktagUsed;
     }
 
+    public DescribeDBClusterAttributeResponseBody setBranch(DescribeDBClusterAttributeResponseBodyBranch branch) {
+        this.branch = branch;
+        return this;
+    }
+    public DescribeDBClusterAttributeResponseBodyBranch getBranch() {
+        return this.branch;
+    }
+
     public DescribeDBClusterAttributeResponseBody setBurstingEnabled(String burstingEnabled) {
         this.burstingEnabled = burstingEnabled;
         return this;
@@ -1290,6 +1301,121 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
     public String getZoneIds() {
         return this.zoneIds;
+    }
+
+    public static class DescribeDBClusterAttributeResponseBodyBranchChildBranch extends TeaModel {
+        @NameInMap("BranchLsn")
+        public String branchLsn;
+
+        @NameInMap("BranchTime")
+        public String branchTime;
+
+        @NameInMap("DBClusterDescription")
+        public String DBClusterDescription;
+
+        @NameInMap("HasChild")
+        public Boolean hasChild;
+
+        @NameInMap("InsName")
+        public String insName;
+
+        public static DescribeDBClusterAttributeResponseBodyBranchChildBranch build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBClusterAttributeResponseBodyBranchChildBranch self = new DescribeDBClusterAttributeResponseBodyBranchChildBranch();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBClusterAttributeResponseBodyBranchChildBranch setBranchLsn(String branchLsn) {
+            this.branchLsn = branchLsn;
+            return this;
+        }
+        public String getBranchLsn() {
+            return this.branchLsn;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyBranchChildBranch setBranchTime(String branchTime) {
+            this.branchTime = branchTime;
+            return this;
+        }
+        public String getBranchTime() {
+            return this.branchTime;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyBranchChildBranch setDBClusterDescription(String DBClusterDescription) {
+            this.DBClusterDescription = DBClusterDescription;
+            return this;
+        }
+        public String getDBClusterDescription() {
+            return this.DBClusterDescription;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyBranchChildBranch setHasChild(Boolean hasChild) {
+            this.hasChild = hasChild;
+            return this;
+        }
+        public Boolean getHasChild() {
+            return this.hasChild;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyBranchChildBranch setInsName(String insName) {
+            this.insName = insName;
+            return this;
+        }
+        public String getInsName() {
+            return this.insName;
+        }
+
+    }
+
+    public static class DescribeDBClusterAttributeResponseBodyBranch extends TeaModel {
+        @NameInMap("BranchLsn")
+        public String branchLsn;
+
+        @NameInMap("BranchTime")
+        public String branchTime;
+
+        @NameInMap("ChildBranch")
+        public java.util.List<DescribeDBClusterAttributeResponseBodyBranchChildBranch> childBranch;
+
+        @NameInMap("ParentInsName")
+        public String parentInsName;
+
+        public static DescribeDBClusterAttributeResponseBodyBranch build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBClusterAttributeResponseBodyBranch self = new DescribeDBClusterAttributeResponseBodyBranch();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBClusterAttributeResponseBodyBranch setBranchLsn(String branchLsn) {
+            this.branchLsn = branchLsn;
+            return this;
+        }
+        public String getBranchLsn() {
+            return this.branchLsn;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyBranch setBranchTime(String branchTime) {
+            this.branchTime = branchTime;
+            return this;
+        }
+        public String getBranchTime() {
+            return this.branchTime;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyBranch setChildBranch(java.util.List<DescribeDBClusterAttributeResponseBodyBranchChildBranch> childBranch) {
+            this.childBranch = childBranch;
+            return this;
+        }
+        public java.util.List<DescribeDBClusterAttributeResponseBodyBranchChildBranch> getChildBranch() {
+            return this.childBranch;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyBranch setParentInsName(String parentInsName) {
+            this.parentInsName = parentInsName;
+            return this;
+        }
+        public String getParentInsName() {
+            return this.parentInsName;
+        }
+
     }
 
     public static class DescribeDBClusterAttributeResponseBodyDBNodes extends TeaModel {

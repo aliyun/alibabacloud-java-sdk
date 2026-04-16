@@ -978,6 +978,9 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         @NameInMap("AuthCallbackURL")
         public String authCallbackURL;
 
+        @NameInMap("AuthProviders")
+        public java.util.List<String> authProviders;
+
         @NameInMap("SupabaseClusterId")
         public String supabaseClusterId;
 
@@ -992,6 +995,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
         public String getAuthCallbackURL() {
             return this.authCallbackURL;
+        }
+
+        public DescribeApplicationAttributeResponseBodyPolarClawSaaSApplicationAttribute setAuthProviders(java.util.List<String> authProviders) {
+            this.authProviders = authProviders;
+            return this;
+        }
+        public java.util.List<String> getAuthProviders() {
+            return this.authProviders;
         }
 
         public DescribeApplicationAttributeResponseBodyPolarClawSaaSApplicationAttribute setSupabaseClusterId(String supabaseClusterId) {

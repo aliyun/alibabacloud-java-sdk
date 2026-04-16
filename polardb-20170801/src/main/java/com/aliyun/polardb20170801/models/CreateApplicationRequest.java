@@ -86,6 +86,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("Endpoints")
     public java.util.List<CreateApplicationRequestEndpoints> endpoints;
 
+    @NameInMap("KnowledgeApplicationSpec")
+    public CreateApplicationRequestKnowledgeApplicationSpec knowledgeApplicationSpec;
+
     @NameInMap("MemApplicationSpec")
     public CreateApplicationRequestMemApplicationSpec memApplicationSpec;
 
@@ -333,6 +336,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public java.util.List<CreateApplicationRequestEndpoints> getEndpoints() {
         return this.endpoints;
+    }
+
+    public CreateApplicationRequest setKnowledgeApplicationSpec(CreateApplicationRequestKnowledgeApplicationSpec knowledgeApplicationSpec) {
+        this.knowledgeApplicationSpec = knowledgeApplicationSpec;
+        return this;
+    }
+    public CreateApplicationRequestKnowledgeApplicationSpec getKnowledgeApplicationSpec() {
+        return this.knowledgeApplicationSpec;
     }
 
     public CreateApplicationRequest setMemApplicationSpec(CreateApplicationRequestMemApplicationSpec memApplicationSpec) {
@@ -711,6 +722,47 @@ public class CreateApplicationRequest extends TeaModel {
         }
         public String getEndpointType() {
             return this.endpointType;
+        }
+
+    }
+
+    public static class CreateApplicationRequestKnowledgeApplicationSpec extends TeaModel {
+        @NameInMap("DashboardPassword")
+        public String dashboardPassword;
+
+        @NameInMap("DbPassword")
+        public String dbPassword;
+
+        @NameInMap("LlmModel")
+        public String llmModel;
+
+        public static CreateApplicationRequestKnowledgeApplicationSpec build(java.util.Map<String, ?> map) throws Exception {
+            CreateApplicationRequestKnowledgeApplicationSpec self = new CreateApplicationRequestKnowledgeApplicationSpec();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateApplicationRequestKnowledgeApplicationSpec setDashboardPassword(String dashboardPassword) {
+            this.dashboardPassword = dashboardPassword;
+            return this;
+        }
+        public String getDashboardPassword() {
+            return this.dashboardPassword;
+        }
+
+        public CreateApplicationRequestKnowledgeApplicationSpec setDbPassword(String dbPassword) {
+            this.dbPassword = dbPassword;
+            return this;
+        }
+        public String getDbPassword() {
+            return this.dbPassword;
+        }
+
+        public CreateApplicationRequestKnowledgeApplicationSpec setLlmModel(String llmModel) {
+            this.llmModel = llmModel;
+            return this;
+        }
+        public String getLlmModel() {
+            return this.llmModel;
         }
 
     }

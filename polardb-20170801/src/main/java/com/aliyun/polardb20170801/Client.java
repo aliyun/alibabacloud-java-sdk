@@ -1815,6 +1815,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.endpointsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.endpoints, "Endpoints", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.knowledgeApplicationSpec)) {
+            request.knowledgeApplicationSpecShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.knowledgeApplicationSpec, "KnowledgeApplicationSpec", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.memApplicationSpec)) {
             request.memApplicationSpecShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.memApplicationSpec, "MemApplicationSpec", "json");
         }
@@ -1878,6 +1882,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.endpointsShrink)) {
             query.put("Endpoints", request.endpointsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeApplicationSpecShrink)) {
+            query.put("KnowledgeApplicationSpec", request.knowledgeApplicationSpecShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.memApplicationSpecShrink)) {
@@ -7245,6 +7253,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeAvailableCrossRegionsResponse describeAvailableCrossRegions(DescribeAvailableCrossRegionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeAvailableCrossRegionsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取ai集群模型列表</p>
+     * 
+     * @param request DescribeAvailableModelsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAvailableModelsResponse
+     */
+    public DescribeAvailableModelsResponse describeAvailableModelsWithOptions(DescribeAvailableModelsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.kubeType)) {
+            query.put("KubeType", request.kubeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAvailableModels"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAvailableModelsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取ai集群模型列表</p>
+     * 
+     * @param request DescribeAvailableModelsRequest
+     * @return DescribeAvailableModelsResponse
+     */
+    public DescribeAvailableModelsResponse describeAvailableModels(DescribeAvailableModelsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAvailableModelsWithOptions(request, runtime);
     }
 
     /**
@@ -13083,7 +13139,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>查询资源包列表</p>
      * 
-     * @param request DescribeResourcePackagesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeResourcePackagesResponse
      */
@@ -21285,6 +21340,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RevokeAccountPrivilegeZonalResponse revokeAccountPrivilegeZonal(RevokeAccountPrivilegeZonalRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.revokeAccountPrivilegeZonalWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>检索记忆</p>
+     * 
+     * @param request SearchMemoriesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SearchMemoriesResponse
+     */
+    public SearchMemoriesResponse searchMemoriesWithOptions(SearchMemoriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.createTimeBegin)) {
+            query.put("CreateTimeBegin", request.createTimeBegin);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.createTimeEnd)) {
+            query.put("CreateTimeEnd", request.createTimeEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memoryAgentId)) {
+            query.put("MemoryAgentId", request.memoryAgentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memoryUserId)) {
+            query.put("MemoryUserId", request.memoryUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            query.put("Query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topK)) {
+            query.put("TopK", request.topK);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SearchMemories"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchMemoriesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>检索记忆</p>
+     * 
+     * @param request SearchMemoriesRequest
+     * @return SearchMemoriesResponse
+     */
+    public SearchMemoriesResponse searchMemories(SearchMemoriesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.searchMemoriesWithOptions(request, runtime);
     }
 
     /**

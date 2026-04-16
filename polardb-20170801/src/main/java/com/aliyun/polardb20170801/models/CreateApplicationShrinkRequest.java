@@ -86,6 +86,9 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     @NameInMap("Endpoints")
     public String endpointsShrink;
 
+    @NameInMap("KnowledgeApplicationSpec")
+    public String knowledgeApplicationSpecShrink;
+
     @NameInMap("MemApplicationSpec")
     public String memApplicationSpecShrink;
 
@@ -333,6 +336,14 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     }
     public String getEndpointsShrink() {
         return this.endpointsShrink;
+    }
+
+    public CreateApplicationShrinkRequest setKnowledgeApplicationSpecShrink(String knowledgeApplicationSpecShrink) {
+        this.knowledgeApplicationSpecShrink = knowledgeApplicationSpecShrink;
+        return this;
+    }
+    public String getKnowledgeApplicationSpecShrink() {
+        return this.knowledgeApplicationSpecShrink;
     }
 
     public CreateApplicationShrinkRequest setMemApplicationSpecShrink(String memApplicationSpecShrink) {
