@@ -1669,6 +1669,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ThinkingBudget", request.thinkingBudget);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.toolChoice)) {
+            query.put("ToolChoice", request.toolChoice);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tools)) {
+            query.put("Tools", request.tools);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.topK)) {
             query.put("TopK", request.topK);
         }

@@ -224,6 +224,20 @@ public class ChatWithDesensitizeSSERequest extends TeaModel {
     public Integer thinkingBudget;
 
     /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
+    @NameInMap("ToolChoice")
+    public String toolChoice;
+
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
+    @NameInMap("Tools")
+    public String tools;
+
+    /**
      * <p>Specifies the number of candidate tokens to consider during sampling. Higher values increase randomness, while lower values make the output more deterministic. Set to null or a value greater than 100 to disable.</p>
      * 
      * <strong>example:</strong>
@@ -463,6 +477,22 @@ public class ChatWithDesensitizeSSERequest extends TeaModel {
     }
     public Integer getThinkingBudget() {
         return this.thinkingBudget;
+    }
+
+    public ChatWithDesensitizeSSERequest setToolChoice(String toolChoice) {
+        this.toolChoice = toolChoice;
+        return this;
+    }
+    public String getToolChoice() {
+        return this.toolChoice;
+    }
+
+    public ChatWithDesensitizeSSERequest setTools(String tools) {
+        this.tools = tools;
+        return this;
+    }
+    public String getTools() {
+        return this.tools;
     }
 
     public ChatWithDesensitizeSSERequest setTopK(Integer topK) {
