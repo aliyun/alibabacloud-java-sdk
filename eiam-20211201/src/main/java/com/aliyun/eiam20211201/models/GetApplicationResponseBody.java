@@ -303,6 +303,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("ServiceManaged")
         public Boolean serviceManaged;
 
+        @NameInMap("SmartConfigCapabilities")
+        public java.util.List<String> smartConfigCapabilities;
+
         /**
          * <p>The type of the single sign-on (SSO) protocol. Valid values:</p>
          * <ul>
@@ -533,6 +536,14 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public Boolean getServiceManaged() {
             return this.serviceManaged;
+        }
+
+        public GetApplicationResponseBodyApplication setSmartConfigCapabilities(java.util.List<String> smartConfigCapabilities) {
+            this.smartConfigCapabilities = smartConfigCapabilities;
+            return this;
+        }
+        public java.util.List<String> getSmartConfigCapabilities() {
+            return this.smartConfigCapabilities;
         }
 
         public GetApplicationResponseBodyApplication setSsoType(String ssoType) {
