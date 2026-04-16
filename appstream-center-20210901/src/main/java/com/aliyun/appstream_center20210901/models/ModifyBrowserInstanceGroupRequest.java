@@ -30,6 +30,13 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
     public String cloudBrowserName;
 
     /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
+    @NameInMap("MaxAmount")
+    public Integer maxAmount;
+
+    /**
      * <p>The network configurations.</p>
      */
     @NameInMap("Network")
@@ -40,6 +47,9 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
      */
     @NameInMap("Policy")
     public ModifyBrowserInstanceGroupRequestPolicy policy;
+
+    @NameInMap("StoragePolicy")
+    public ModifyBrowserInstanceGroupRequestStoragePolicy storagePolicy;
 
     /**
      * <p>The timer.</p>
@@ -76,6 +86,14 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         return this.cloudBrowserName;
     }
 
+    public ModifyBrowserInstanceGroupRequest setMaxAmount(Integer maxAmount) {
+        this.maxAmount = maxAmount;
+        return this;
+    }
+    public Integer getMaxAmount() {
+        return this.maxAmount;
+    }
+
     public ModifyBrowserInstanceGroupRequest setNetwork(ModifyBrowserInstanceGroupRequestNetwork network) {
         this.network = network;
         return this;
@@ -90,6 +108,14 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
     }
     public ModifyBrowserInstanceGroupRequestPolicy getPolicy() {
         return this.policy;
+    }
+
+    public ModifyBrowserInstanceGroupRequest setStoragePolicy(ModifyBrowserInstanceGroupRequestStoragePolicy storagePolicy) {
+        this.storagePolicy = storagePolicy;
+        return this;
+    }
+    public ModifyBrowserInstanceGroupRequestStoragePolicy getStoragePolicy() {
+        return this.storagePolicy;
     }
 
     public ModifyBrowserInstanceGroupRequest setTimers(java.util.List<ModifyBrowserInstanceGroupRequestTimers> timers) {
@@ -186,6 +212,13 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public java.util.List<ModifyBrowserInstanceGroupRequestBrowserConfigBookmarks> bookmarks;
 
         /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou/aig_upm/xxx/temp/BrowserBookmarks/浏览器书签模版.csv</p>
+         */
+        @NameInMap("BookmarksFilePath")
+        public String bookmarksFilePath;
+
+        /**
          * <p>The startup parameter.</p>
          * 
          * <strong>example:</strong>
@@ -193,6 +226,13 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
          */
         @NameInMap("BrowserParam")
         public String browserParam;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("CookiesSync")
+        public String cookiesSync;
 
         /**
          * <p>The home page.</p>
@@ -222,12 +262,28 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
             return this.bookmarks;
         }
 
+        public ModifyBrowserInstanceGroupRequestBrowserConfig setBookmarksFilePath(String bookmarksFilePath) {
+            this.bookmarksFilePath = bookmarksFilePath;
+            return this;
+        }
+        public String getBookmarksFilePath() {
+            return this.bookmarksFilePath;
+        }
+
         public ModifyBrowserInstanceGroupRequestBrowserConfig setBrowserParam(String browserParam) {
             this.browserParam = browserParam;
             return this;
         }
         public String getBrowserParam() {
             return this.browserParam;
+        }
+
+        public ModifyBrowserInstanceGroupRequestBrowserConfig setCookiesSync(String cookiesSync) {
+            this.cookiesSync = cookiesSync;
+            return this;
+        }
+        public String getCookiesSync() {
+            return this.cookiesSync;
         }
 
         public ModifyBrowserInstanceGroupRequestBrowserConfig setHomepage(String homepage) {
@@ -316,6 +372,13 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         @NameInMap("RestrictedURLs")
         public java.util.List<ModifyBrowserInstanceGroupRequestNetworkRestrictedURLs> restrictedURLs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou/aig_upm/xxx/temp/BrowserRestrictionUrls/URL白名单模版.csv</p>
+         */
+        @NameInMap("RestrictedURLsFilePath")
+        public String restrictedURLsFilePath;
+
         public static ModifyBrowserInstanceGroupRequestNetwork build(java.util.Map<String, ?> map) throws Exception {
             ModifyBrowserInstanceGroupRequestNetwork self = new ModifyBrowserInstanceGroupRequestNetwork();
             return TeaModel.build(map, self);
@@ -343,6 +406,14 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         }
         public java.util.List<ModifyBrowserInstanceGroupRequestNetworkRestrictedURLs> getRestrictedURLs() {
             return this.restrictedURLs;
+        }
+
+        public ModifyBrowserInstanceGroupRequestNetwork setRestrictedURLsFilePath(String restrictedURLsFilePath) {
+            this.restrictedURLsFilePath = restrictedURLsFilePath;
+            return this;
+        }
+        public String getRestrictedURLsFilePath() {
+            return this.restrictedURLsFilePath;
         }
 
     }
@@ -387,6 +458,10 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         @NameInMap("ClipboardScope")
         public String clipboardScope;
 
+        /**
+         * <strong>example:</strong>
+         * <p>B</p>
+         */
         @NameInMap("ClipboardSizeUnit")
         public String clipboardSizeUnit;
 
@@ -431,9 +506,17 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         @NameInMap("RichTextClipboard")
         public String richTextClipboard;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RichTextClipboardLimit")
         public Integer richTextClipboardLimit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>B</p>
+         */
         @NameInMap("RichTextClipboardSizeUnit")
         public String richTextClipboardSizeUnit;
 
@@ -648,9 +731,17 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         @NameInMap("Html5FileTransfer")
         public String html5FileTransfer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
         @NameInMap("NoOperationDisconnect")
         public String noOperationDisconnect;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("NoOperationDisconnectTime")
         public Integer noOperationDisconnectTime;
 
@@ -771,6 +862,44 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         }
         public ModifyBrowserInstanceGroupRequestPolicyWatermarkPolicy getWatermarkPolicy() {
             return this.watermarkPolicy;
+        }
+
+    }
+
+    public static class ModifyBrowserInstanceGroupRequestStoragePolicyUserProfile extends TeaModel {
+        @NameInMap("UserProfileSwitch")
+        public Boolean userProfileSwitch;
+
+        public static ModifyBrowserInstanceGroupRequestStoragePolicyUserProfile build(java.util.Map<String, ?> map) throws Exception {
+            ModifyBrowserInstanceGroupRequestStoragePolicyUserProfile self = new ModifyBrowserInstanceGroupRequestStoragePolicyUserProfile();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyBrowserInstanceGroupRequestStoragePolicyUserProfile setUserProfileSwitch(Boolean userProfileSwitch) {
+            this.userProfileSwitch = userProfileSwitch;
+            return this;
+        }
+        public Boolean getUserProfileSwitch() {
+            return this.userProfileSwitch;
+        }
+
+    }
+
+    public static class ModifyBrowserInstanceGroupRequestStoragePolicy extends TeaModel {
+        @NameInMap("UserProfile")
+        public ModifyBrowserInstanceGroupRequestStoragePolicyUserProfile userProfile;
+
+        public static ModifyBrowserInstanceGroupRequestStoragePolicy build(java.util.Map<String, ?> map) throws Exception {
+            ModifyBrowserInstanceGroupRequestStoragePolicy self = new ModifyBrowserInstanceGroupRequestStoragePolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyBrowserInstanceGroupRequestStoragePolicy setUserProfile(ModifyBrowserInstanceGroupRequestStoragePolicyUserProfile userProfile) {
+            this.userProfile = userProfile;
+            return this;
+        }
+        public ModifyBrowserInstanceGroupRequestStoragePolicyUserProfile getUserProfile() {
+            return this.userProfile;
         }
 
     }

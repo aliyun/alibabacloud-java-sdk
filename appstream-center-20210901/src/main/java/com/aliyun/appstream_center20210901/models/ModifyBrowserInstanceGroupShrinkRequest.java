@@ -30,6 +30,13 @@ public class ModifyBrowserInstanceGroupShrinkRequest extends TeaModel {
     public String cloudBrowserName;
 
     /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
+    @NameInMap("MaxAmount")
+    public Integer maxAmount;
+
+    /**
      * <p>The network configurations.</p>
      */
     @NameInMap("Network")
@@ -40,6 +47,9 @@ public class ModifyBrowserInstanceGroupShrinkRequest extends TeaModel {
      */
     @NameInMap("Policy")
     public String policyShrink;
+
+    @NameInMap("StoragePolicy")
+    public String storagePolicyShrink;
 
     /**
      * <p>The timer.</p>
@@ -76,6 +86,14 @@ public class ModifyBrowserInstanceGroupShrinkRequest extends TeaModel {
         return this.cloudBrowserName;
     }
 
+    public ModifyBrowserInstanceGroupShrinkRequest setMaxAmount(Integer maxAmount) {
+        this.maxAmount = maxAmount;
+        return this;
+    }
+    public Integer getMaxAmount() {
+        return this.maxAmount;
+    }
+
     public ModifyBrowserInstanceGroupShrinkRequest setNetworkShrink(String networkShrink) {
         this.networkShrink = networkShrink;
         return this;
@@ -90,6 +108,14 @@ public class ModifyBrowserInstanceGroupShrinkRequest extends TeaModel {
     }
     public String getPolicyShrink() {
         return this.policyShrink;
+    }
+
+    public ModifyBrowserInstanceGroupShrinkRequest setStoragePolicyShrink(String storagePolicyShrink) {
+        this.storagePolicyShrink = storagePolicyShrink;
+        return this;
+    }
+    public String getStoragePolicyShrink() {
+        return this.storagePolicyShrink;
     }
 
     public ModifyBrowserInstanceGroupShrinkRequest setTimersShrink(String timersShrink) {

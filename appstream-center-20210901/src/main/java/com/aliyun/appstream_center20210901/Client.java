@@ -2148,7 +2148,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the configurations of the administrator account, such as whether the resource expiration reminder feature is enabled.</p>
      * 
-     * @param request ListTenantConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTenantConfigResponse
      */
@@ -2530,6 +2529,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.policyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.policy, "Policy", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.storagePolicy)) {
+            request.storagePolicyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.storagePolicy, "StoragePolicy", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.timers)) {
             request.timersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.timers, "Timers", "json");
         }
@@ -2556,8 +2559,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("CloudBrowserName", request.cloudBrowserName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.maxAmount)) {
+            body.put("MaxAmount", request.maxAmount);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.networkShrink)) {
             body.put("Network", request.networkShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storagePolicyShrink)) {
+            body.put("StoragePolicy", request.storagePolicyShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
