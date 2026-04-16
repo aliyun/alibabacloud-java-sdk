@@ -16,6 +16,9 @@ public class JobSpec extends TeaModel {
     @NameInMap("AutoScalingSpec")
     public AutoScalingSpec autoScalingSpec;
 
+    @NameInMap("ConsiderInSuccessPolicy")
+    public Boolean considerInSuccessPolicy;
+
     /**
      * <p>The hardware specifications of the worker. For more information, see <a href="https://help.aliyun.com/document_detail/171758.html">Billing of DLC</a> of PAI.</p>
      * <blockquote>
@@ -159,6 +162,14 @@ public class JobSpec extends TeaModel {
     }
     public AutoScalingSpec getAutoScalingSpec() {
         return this.autoScalingSpec;
+    }
+
+    public JobSpec setConsiderInSuccessPolicy(Boolean considerInSuccessPolicy) {
+        this.considerInSuccessPolicy = considerInSuccessPolicy;
+        return this;
+    }
+    public Boolean getConsiderInSuccessPolicy() {
+        return this.considerInSuccessPolicy;
     }
 
     public JobSpec setEcsSpec(String ecsSpec) {
