@@ -1123,6 +1123,9 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         @NameInMap("compactionServiceCuConstraint")
         public DescribeResourceConstraintsResponseBodyDataCompactionServiceCuConstraint compactionServiceCuConstraint;
 
+        @NameInMap("zoneSupportCompactionService")
+        public java.util.Map<String, java.util.List<DataZoneSupportCompactionServiceValue>> zoneSupportCompactionService;
+
         public static DescribeResourceConstraintsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeResourceConstraintsResponseBodyData self = new DescribeResourceConstraintsResponseBodyData();
             return TeaModel.build(map, self);
@@ -1286,6 +1289,14 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         }
         public DescribeResourceConstraintsResponseBodyDataCompactionServiceCuConstraint getCompactionServiceCuConstraint() {
             return this.compactionServiceCuConstraint;
+        }
+
+        public DescribeResourceConstraintsResponseBodyData setZoneSupportCompactionService(java.util.Map<String, java.util.List<DataZoneSupportCompactionServiceValue>> zoneSupportCompactionService) {
+            this.zoneSupportCompactionService = zoneSupportCompactionService;
+            return this;
+        }
+        public java.util.Map<String, java.util.List<DataZoneSupportCompactionServiceValue>> getZoneSupportCompactionService() {
+            return this.zoneSupportCompactionService;
         }
 
     }
