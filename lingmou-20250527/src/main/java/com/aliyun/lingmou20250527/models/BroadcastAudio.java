@@ -18,6 +18,9 @@ public class BroadcastAudio extends TeaModel {
     @NameInMap("createTime")
     public String createTime;
 
+    @NameInMap("errorCode")
+    public String errorCode;
+
     /**
      * <strong>example:</strong>
      * <p>M1Ju6XhHog_e-lSeb80Slp9g</p>
@@ -61,6 +64,14 @@ public class BroadcastAudio extends TeaModel {
     }
     public String getCreateTime() {
         return this.createTime;
+    }
+
+    public BroadcastAudio setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public BroadcastAudio setId(String id) {
