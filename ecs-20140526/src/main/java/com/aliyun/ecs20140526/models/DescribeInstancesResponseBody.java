@@ -112,6 +112,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("EnableHighDensityMode")
         public Boolean enableHighDensityMode;
 
+        @NameInMap("NodeSerialNumber")
+        public String nodeSerialNumber;
+
         public static DescribeInstancesResponseBodyInstancesInstanceAdditionalInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstancesResponseBodyInstancesInstanceAdditionalInfo self = new DescribeInstancesResponseBodyInstancesInstanceAdditionalInfo();
             return TeaModel.build(map, self);
@@ -123,6 +126,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public Boolean getEnableHighDensityMode() {
             return this.enableHighDensityMode;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceAdditionalInfo setNodeSerialNumber(String nodeSerialNumber) {
+            this.nodeSerialNumber = nodeSerialNumber;
+            return this;
+        }
+        public String getNodeSerialNumber() {
+            return this.nodeSerialNumber;
         }
 
     }
@@ -155,6 +166,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         @NameInMap("EnableVRDT")
         public Boolean enableVRDT;
+
+        /**
+         * <strong>example:</strong>
+         * <p>enabled</p>
+         */
+        @NameInMap("NestedVirtualization")
+        public String nestedVirtualization;
 
         @NameInMap("Numa")
         public String numa;
@@ -195,6 +213,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public Boolean getEnableVRDT() {
             return this.enableVRDT;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceCpuOptions setNestedVirtualization(String nestedVirtualization) {
+            this.nestedVirtualization = nestedVirtualization;
+            return this;
+        }
+        public String getNestedVirtualization() {
+            return this.nestedVirtualization;
         }
 
         public DescribeInstancesResponseBodyInstancesInstanceCpuOptions setNuma(String numa) {
