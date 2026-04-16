@@ -4009,6 +4009,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("IncDataCheckStatus")
         public DescribeDtsJobsResponseBodyDtsJobListIncDataCheckStatus incDataCheckStatus;
 
+        @NameInMap("InsightModule")
+        public Boolean insightModule;
+
         /**
          * <p>The type of the DTS task. Valid values:</p>
          * <ul>
@@ -4470,6 +4473,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
         public DescribeDtsJobsResponseBodyDtsJobListIncDataCheckStatus getIncDataCheckStatus() {
             return this.incDataCheckStatus;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setInsightModule(Boolean insightModule) {
+            this.insightModule = insightModule;
+            return this;
+        }
+        public Boolean getInsightModule() {
+            return this.insightModule;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobList setJobType(String jobType) {
