@@ -91,6 +91,9 @@ public class ConfigSetDetailResponseBody extends TeaModel {
         @NameInMap("IpPool")
         public ConfigSetDetailResponseBodyDetailIpPool ipPool;
 
+        @NameInMap("IsPublicChannelBackoff")
+        public Boolean isPublicChannelBackoff;
+
         /**
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -125,6 +128,14 @@ public class ConfigSetDetailResponseBody extends TeaModel {
         }
         public ConfigSetDetailResponseBodyDetailIpPool getIpPool() {
             return this.ipPool;
+        }
+
+        public ConfigSetDetailResponseBodyDetail setIsPublicChannelBackoff(Boolean isPublicChannelBackoff) {
+            this.isPublicChannelBackoff = isPublicChannelBackoff;
+            return this;
+        }
+        public Boolean getIsPublicChannelBackoff() {
+            return this.isPublicChannelBackoff;
         }
 
         public ConfigSetDetailResponseBodyDetail setName(String name) {

@@ -25,6 +25,9 @@ public class ConfigSetUpdateRequest extends TeaModel {
     @NameInMap("IpPoolId")
     public String ipPoolId;
 
+    @NameInMap("IsPublicChannelBackoff")
+    public Boolean isPublicChannelBackoff;
+
     /**
      * <strong>example:</strong>
      * <p>XXX</p>
@@ -59,6 +62,14 @@ public class ConfigSetUpdateRequest extends TeaModel {
     }
     public String getIpPoolId() {
         return this.ipPoolId;
+    }
+
+    public ConfigSetUpdateRequest setIsPublicChannelBackoff(Boolean isPublicChannelBackoff) {
+        this.isPublicChannelBackoff = isPublicChannelBackoff;
+        return this;
+    }
+    public Boolean getIsPublicChannelBackoff() {
+        return this.isPublicChannelBackoff;
     }
 
     public ConfigSetUpdateRequest setName(String name) {

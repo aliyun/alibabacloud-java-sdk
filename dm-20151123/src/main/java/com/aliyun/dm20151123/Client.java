@@ -638,6 +638,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IpPoolId", request.ipPoolId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.isPublicChannelBackoff)) {
+            query.put("IsPublicChannelBackoff", request.isPublicChannelBackoff);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
         }
@@ -888,6 +892,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ipPoolId)) {
             query.put("IpPoolId", request.ipPoolId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isPublicChannelBackoff)) {
+            query.put("IsPublicChannelBackoff", request.isPublicChannelBackoff);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
