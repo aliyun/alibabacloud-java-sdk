@@ -104,6 +104,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String category;
 
     /**
+     * <strong>example:</strong>
+     * <p>OFF</p>
+     */
+    @NameInMap("ColumnTable")
+    public String columnTable;
+
+    /**
      * <p>Whether storage compression is enabled. Values are as follows:</p>
      * <ul>
      * <li>ON: Enabled</li>
@@ -813,6 +820,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
     public String getCategory() {
         return this.category;
+    }
+
+    public DescribeDBClusterAttributeResponseBody setColumnTable(String columnTable) {
+        this.columnTable = columnTable;
+        return this;
+    }
+    public String getColumnTable() {
+        return this.columnTable;
     }
 
     public DescribeDBClusterAttributeResponseBody setCompressStorageMode(String compressStorageMode) {
