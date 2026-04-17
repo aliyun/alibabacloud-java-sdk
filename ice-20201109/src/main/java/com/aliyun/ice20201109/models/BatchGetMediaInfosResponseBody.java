@@ -51,6 +51,212 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class BatchGetMediaInfosResponseBodyMediaInfosFileInfoListAudioStreamInfoList extends TeaModel {
+        @NameInMap("Bitrate")
+        public String bitrate;
+
+        @NameInMap("ChannelLayout")
+        public String channelLayout;
+
+        @NameInMap("Channels")
+        public String channels;
+
+        @NameInMap("CodecLongName")
+        public String codecLongName;
+
+        @NameInMap("CodecName")
+        public String codecName;
+
+        @NameInMap("CodecTag")
+        public String codecTag;
+
+        @NameInMap("CodecTagString")
+        public String codecTagString;
+
+        @NameInMap("CodecTimeBase")
+        public String codecTimeBase;
+
+        @NameInMap("Duration")
+        public String duration;
+
+        @NameInMap("Fps")
+        public String fps;
+
+        @NameInMap("Index")
+        public String index;
+
+        @NameInMap("Lang")
+        public String lang;
+
+        @NameInMap("NumFrames")
+        public String numFrames;
+
+        @NameInMap("Profile")
+        public String profile;
+
+        @NameInMap("SampleFmt")
+        public String sampleFmt;
+
+        @NameInMap("SampleRate")
+        public String sampleRate;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("Timebase")
+        public String timebase;
+
+        public static BatchGetMediaInfosResponseBodyMediaInfosFileInfoListAudioStreamInfoList build(java.util.Map<String, ?> map) throws Exception {
+            BatchGetMediaInfosResponseBodyMediaInfosFileInfoListAudioStreamInfoList self = new BatchGetMediaInfosResponseBodyMediaInfosFileInfoListAudioStreamInfoList();
+            return TeaModel.build(map, self);
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListAudioStreamInfoList setBitrate(String bitrate) {
+            this.bitrate = bitrate;
+            return this;
+        }
+        public String getBitrate() {
+            return this.bitrate;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListAudioStreamInfoList setChannelLayout(String channelLayout) {
+            this.channelLayout = channelLayout;
+            return this;
+        }
+        public String getChannelLayout() {
+            return this.channelLayout;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListAudioStreamInfoList setChannels(String channels) {
+            this.channels = channels;
+            return this;
+        }
+        public String getChannels() {
+            return this.channels;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListAudioStreamInfoList setCodecLongName(String codecLongName) {
+            this.codecLongName = codecLongName;
+            return this;
+        }
+        public String getCodecLongName() {
+            return this.codecLongName;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListAudioStreamInfoList setCodecName(String codecName) {
+            this.codecName = codecName;
+            return this;
+        }
+        public String getCodecName() {
+            return this.codecName;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListAudioStreamInfoList setCodecTag(String codecTag) {
+            this.codecTag = codecTag;
+            return this;
+        }
+        public String getCodecTag() {
+            return this.codecTag;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListAudioStreamInfoList setCodecTagString(String codecTagString) {
+            this.codecTagString = codecTagString;
+            return this;
+        }
+        public String getCodecTagString() {
+            return this.codecTagString;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListAudioStreamInfoList setCodecTimeBase(String codecTimeBase) {
+            this.codecTimeBase = codecTimeBase;
+            return this;
+        }
+        public String getCodecTimeBase() {
+            return this.codecTimeBase;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListAudioStreamInfoList setDuration(String duration) {
+            this.duration = duration;
+            return this;
+        }
+        public String getDuration() {
+            return this.duration;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListAudioStreamInfoList setFps(String fps) {
+            this.fps = fps;
+            return this;
+        }
+        public String getFps() {
+            return this.fps;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListAudioStreamInfoList setIndex(String index) {
+            this.index = index;
+            return this;
+        }
+        public String getIndex() {
+            return this.index;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListAudioStreamInfoList setLang(String lang) {
+            this.lang = lang;
+            return this;
+        }
+        public String getLang() {
+            return this.lang;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListAudioStreamInfoList setNumFrames(String numFrames) {
+            this.numFrames = numFrames;
+            return this;
+        }
+        public String getNumFrames() {
+            return this.numFrames;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListAudioStreamInfoList setProfile(String profile) {
+            this.profile = profile;
+            return this;
+        }
+        public String getProfile() {
+            return this.profile;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListAudioStreamInfoList setSampleFmt(String sampleFmt) {
+            this.sampleFmt = sampleFmt;
+            return this;
+        }
+        public String getSampleFmt() {
+            return this.sampleFmt;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListAudioStreamInfoList setSampleRate(String sampleRate) {
+            this.sampleRate = sampleRate;
+            return this;
+        }
+        public String getSampleRate() {
+            return this.sampleRate;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListAudioStreamInfoList setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListAudioStreamInfoList setTimebase(String timebase) {
+            this.timebase = timebase;
+            return this;
+        }
+        public String getTimebase() {
+            return this.timebase;
+        }
+
+    }
+
     public static class BatchGetMediaInfosResponseBodyMediaInfosFileInfoListFileBasicInfo extends TeaModel {
         /**
          * <p>The bitrate.</p>
@@ -246,16 +452,423 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
 
     }
 
+    public static class BatchGetMediaInfosResponseBodyMediaInfosFileInfoListSubtitleStreamInfoList extends TeaModel {
+        @NameInMap("CodecLongName")
+        public String codecLongName;
+
+        @NameInMap("CodecName")
+        public String codecName;
+
+        @NameInMap("CodecTag")
+        public String codecTag;
+
+        @NameInMap("CodecTagString")
+        public String codecTagString;
+
+        @NameInMap("CodecTimeBase")
+        public String codecTimeBase;
+
+        @NameInMap("Duration")
+        public String duration;
+
+        @NameInMap("Index")
+        public String index;
+
+        @NameInMap("Lang")
+        public String lang;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("Timebase")
+        public String timebase;
+
+        public static BatchGetMediaInfosResponseBodyMediaInfosFileInfoListSubtitleStreamInfoList build(java.util.Map<String, ?> map) throws Exception {
+            BatchGetMediaInfosResponseBodyMediaInfosFileInfoListSubtitleStreamInfoList self = new BatchGetMediaInfosResponseBodyMediaInfosFileInfoListSubtitleStreamInfoList();
+            return TeaModel.build(map, self);
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListSubtitleStreamInfoList setCodecLongName(String codecLongName) {
+            this.codecLongName = codecLongName;
+            return this;
+        }
+        public String getCodecLongName() {
+            return this.codecLongName;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListSubtitleStreamInfoList setCodecName(String codecName) {
+            this.codecName = codecName;
+            return this;
+        }
+        public String getCodecName() {
+            return this.codecName;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListSubtitleStreamInfoList setCodecTag(String codecTag) {
+            this.codecTag = codecTag;
+            return this;
+        }
+        public String getCodecTag() {
+            return this.codecTag;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListSubtitleStreamInfoList setCodecTagString(String codecTagString) {
+            this.codecTagString = codecTagString;
+            return this;
+        }
+        public String getCodecTagString() {
+            return this.codecTagString;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListSubtitleStreamInfoList setCodecTimeBase(String codecTimeBase) {
+            this.codecTimeBase = codecTimeBase;
+            return this;
+        }
+        public String getCodecTimeBase() {
+            return this.codecTimeBase;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListSubtitleStreamInfoList setDuration(String duration) {
+            this.duration = duration;
+            return this;
+        }
+        public String getDuration() {
+            return this.duration;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListSubtitleStreamInfoList setIndex(String index) {
+            this.index = index;
+            return this;
+        }
+        public String getIndex() {
+            return this.index;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListSubtitleStreamInfoList setLang(String lang) {
+            this.lang = lang;
+            return this;
+        }
+        public String getLang() {
+            return this.lang;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListSubtitleStreamInfoList setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListSubtitleStreamInfoList setTimebase(String timebase) {
+            this.timebase = timebase;
+            return this;
+        }
+        public String getTimebase() {
+            return this.timebase;
+        }
+
+    }
+
+    public static class BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList extends TeaModel {
+        @NameInMap("AvgFPS")
+        public String avgFPS;
+
+        @NameInMap("Bitrate")
+        public String bitrate;
+
+        @NameInMap("CodecLongName")
+        public String codecLongName;
+
+        @NameInMap("CodecName")
+        public String codecName;
+
+        @NameInMap("CodecTag")
+        public String codecTag;
+
+        @NameInMap("CodecTagString")
+        public String codecTagString;
+
+        @NameInMap("CodecTimeBase")
+        public String codecTimeBase;
+
+        @NameInMap("Dar")
+        public String dar;
+
+        @NameInMap("Duration")
+        public String duration;
+
+        @NameInMap("Fps")
+        public String fps;
+
+        @NameInMap("HasBFrames")
+        public String hasBFrames;
+
+        @NameInMap("Height")
+        public String height;
+
+        @NameInMap("Index")
+        public String index;
+
+        @NameInMap("Lang")
+        public String lang;
+
+        @NameInMap("Level")
+        public String level;
+
+        @NameInMap("Nb_frames")
+        public String nbFrames;
+
+        @NameInMap("NumFrames")
+        public String numFrames;
+
+        @NameInMap("PixFmt")
+        public String pixFmt;
+
+        @NameInMap("Profile")
+        public String profile;
+
+        @NameInMap("Rotate")
+        public String rotate;
+
+        @NameInMap("Sar")
+        public String sar;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("Timebase")
+        public String timebase;
+
+        @NameInMap("Width")
+        public String width;
+
+        public static BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList build(java.util.Map<String, ?> map) throws Exception {
+            BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList self = new BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList();
+            return TeaModel.build(map, self);
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList setAvgFPS(String avgFPS) {
+            this.avgFPS = avgFPS;
+            return this;
+        }
+        public String getAvgFPS() {
+            return this.avgFPS;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList setBitrate(String bitrate) {
+            this.bitrate = bitrate;
+            return this;
+        }
+        public String getBitrate() {
+            return this.bitrate;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList setCodecLongName(String codecLongName) {
+            this.codecLongName = codecLongName;
+            return this;
+        }
+        public String getCodecLongName() {
+            return this.codecLongName;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList setCodecName(String codecName) {
+            this.codecName = codecName;
+            return this;
+        }
+        public String getCodecName() {
+            return this.codecName;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList setCodecTag(String codecTag) {
+            this.codecTag = codecTag;
+            return this;
+        }
+        public String getCodecTag() {
+            return this.codecTag;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList setCodecTagString(String codecTagString) {
+            this.codecTagString = codecTagString;
+            return this;
+        }
+        public String getCodecTagString() {
+            return this.codecTagString;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList setCodecTimeBase(String codecTimeBase) {
+            this.codecTimeBase = codecTimeBase;
+            return this;
+        }
+        public String getCodecTimeBase() {
+            return this.codecTimeBase;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList setDar(String dar) {
+            this.dar = dar;
+            return this;
+        }
+        public String getDar() {
+            return this.dar;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList setDuration(String duration) {
+            this.duration = duration;
+            return this;
+        }
+        public String getDuration() {
+            return this.duration;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList setFps(String fps) {
+            this.fps = fps;
+            return this;
+        }
+        public String getFps() {
+            return this.fps;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList setHasBFrames(String hasBFrames) {
+            this.hasBFrames = hasBFrames;
+            return this;
+        }
+        public String getHasBFrames() {
+            return this.hasBFrames;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList setHeight(String height) {
+            this.height = height;
+            return this;
+        }
+        public String getHeight() {
+            return this.height;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList setIndex(String index) {
+            this.index = index;
+            return this;
+        }
+        public String getIndex() {
+            return this.index;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList setLang(String lang) {
+            this.lang = lang;
+            return this;
+        }
+        public String getLang() {
+            return this.lang;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList setNbFrames(String nbFrames) {
+            this.nbFrames = nbFrames;
+            return this;
+        }
+        public String getNbFrames() {
+            return this.nbFrames;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList setNumFrames(String numFrames) {
+            this.numFrames = numFrames;
+            return this;
+        }
+        public String getNumFrames() {
+            return this.numFrames;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList setPixFmt(String pixFmt) {
+            this.pixFmt = pixFmt;
+            return this;
+        }
+        public String getPixFmt() {
+            return this.pixFmt;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList setProfile(String profile) {
+            this.profile = profile;
+            return this;
+        }
+        public String getProfile() {
+            return this.profile;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList setRotate(String rotate) {
+            this.rotate = rotate;
+            return this;
+        }
+        public String getRotate() {
+            return this.rotate;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList setSar(String sar) {
+            this.sar = sar;
+            return this;
+        }
+        public String getSar() {
+            return this.sar;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList setTimebase(String timebase) {
+            this.timebase = timebase;
+            return this;
+        }
+        public String getTimebase() {
+            return this.timebase;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList setWidth(String width) {
+            this.width = width;
+            return this;
+        }
+        public String getWidth() {
+            return this.width;
+        }
+
+    }
+
     public static class BatchGetMediaInfosResponseBodyMediaInfosFileInfoList extends TeaModel {
+        @NameInMap("AudioStreamInfoList")
+        public java.util.List<BatchGetMediaInfosResponseBodyMediaInfosFileInfoListAudioStreamInfoList> audioStreamInfoList;
+
         /**
          * <p>The basic information of the file, including the duration and size.</p>
          */
         @NameInMap("FileBasicInfo")
         public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListFileBasicInfo fileBasicInfo;
 
+        @NameInMap("SubtitleStreamInfoList")
+        public java.util.List<BatchGetMediaInfosResponseBodyMediaInfosFileInfoListSubtitleStreamInfoList> subtitleStreamInfoList;
+
+        @NameInMap("VideoStreamInfoList")
+        public java.util.List<BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList> videoStreamInfoList;
+
         public static BatchGetMediaInfosResponseBodyMediaInfosFileInfoList build(java.util.Map<String, ?> map) throws Exception {
             BatchGetMediaInfosResponseBodyMediaInfosFileInfoList self = new BatchGetMediaInfosResponseBodyMediaInfosFileInfoList();
             return TeaModel.build(map, self);
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoList setAudioStreamInfoList(java.util.List<BatchGetMediaInfosResponseBodyMediaInfosFileInfoListAudioStreamInfoList> audioStreamInfoList) {
+            this.audioStreamInfoList = audioStreamInfoList;
+            return this;
+        }
+        public java.util.List<BatchGetMediaInfosResponseBodyMediaInfosFileInfoListAudioStreamInfoList> getAudioStreamInfoList() {
+            return this.audioStreamInfoList;
         }
 
         public BatchGetMediaInfosResponseBodyMediaInfosFileInfoList setFileBasicInfo(BatchGetMediaInfosResponseBodyMediaInfosFileInfoListFileBasicInfo fileBasicInfo) {
@@ -264,6 +877,22 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         }
         public BatchGetMediaInfosResponseBodyMediaInfosFileInfoListFileBasicInfo getFileBasicInfo() {
             return this.fileBasicInfo;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoList setSubtitleStreamInfoList(java.util.List<BatchGetMediaInfosResponseBodyMediaInfosFileInfoListSubtitleStreamInfoList> subtitleStreamInfoList) {
+            this.subtitleStreamInfoList = subtitleStreamInfoList;
+            return this;
+        }
+        public java.util.List<BatchGetMediaInfosResponseBodyMediaInfosFileInfoListSubtitleStreamInfoList> getSubtitleStreamInfoList() {
+            return this.subtitleStreamInfoList;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosFileInfoList setVideoStreamInfoList(java.util.List<BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList> videoStreamInfoList) {
+            this.videoStreamInfoList = videoStreamInfoList;
+            return this;
+        }
+        public java.util.List<BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList> getVideoStreamInfoList() {
+            return this.videoStreamInfoList;
         }
 
     }
