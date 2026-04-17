@@ -79,6 +79,134 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Lindormv2创建预校验</p>
+     * 
+     * @param request CheckCreateLindormV2InstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckCreateLindormV2InstanceResponse
+     */
+    public CheckCreateLindormV2InstanceResponse checkCreateLindormV2InstanceWithOptions(CheckCreateLindormV2InstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.arbiterVSwitchId)) {
+            query.put("ArbiterVSwitchId", request.arbiterVSwitchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.arbiterZoneId)) {
+            query.put("ArbiterZoneId", request.arbiterZoneId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.archVersion)) {
+            query.put("ArchVersion", request.archVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudStorageSize)) {
+            query.put("CloudStorageSize", request.cloudStorageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudStorageType)) {
+            query.put("CloudStorageType", request.cloudStorageType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterPattern)) {
+            query.put("ClusterPattern", request.clusterPattern);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.engineList)) {
+            query.put("EngineList", request.engineList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceAlias)) {
+            query.put("InstanceAlias", request.instanceAlias);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.primaryVSwitchId)) {
+            query.put("PrimaryVSwitchId", request.primaryVSwitchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.primaryZoneId)) {
+            query.put("PrimaryZoneId", request.primaryZoneId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.standbyVSwitchId)) {
+            query.put("StandbyVSwitchId", request.standbyVSwitchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.standbyZoneId)) {
+            query.put("StandbyZoneId", request.standbyZoneId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.VPCId)) {
+            query.put("VPCId", request.VPCId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
+            query.put("VSwitchId", request.vSwitchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckCreateLindormV2Instance"),
+            new TeaPair("version", "2020-06-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckCreateLindormV2InstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Lindormv2创建预校验</p>
+     * 
+     * @param request CheckCreateLindormV2InstanceRequest
+     * @return CheckCreateLindormV2InstanceResponse
+     */
+    public CheckCreateLindormV2InstanceResponse checkCreateLindormV2Instance(CheckCreateLindormV2InstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.checkCreateLindormV2InstanceWithOptions(request, runtime);
+    }
+
+    /**
      * @param request CheckLdpsColumnarIndexStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CheckLdpsColumnarIndexStatusResponse
@@ -134,6 +262,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CheckLdpsColumnarIndexStatusResponse checkLdpsColumnarIndexStatus(CheckLdpsColumnarIndexStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.checkLdpsColumnarIndexStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>vpc打通</p>
+     * 
+     * @param request CreateAdditionalVpcLinkRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAdditionalVpcLinkResponse
+     */
+    public CreateAdditionalVpcLinkResponse createAdditionalVpcLinkWithOptions(CreateAdditionalVpcLinkRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.additionalVpcId)) {
+            query.put("AdditionalVpcId", request.additionalVpcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.additionalVswitchId)) {
+            query.put("AdditionalVswitchId", request.additionalVswitchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAdditionalVpcLink"),
+            new TeaPair("version", "2020-06-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAdditionalVpcLinkResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>vpc打通</p>
+     * 
+     * @param request CreateAdditionalVpcLinkRequest
+     * @return CreateAdditionalVpcLinkResponse
+     */
+    public CreateAdditionalVpcLinkResponse createAdditionalVpcLink(CreateAdditionalVpcLinkRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAdditionalVpcLinkWithOptions(request, runtime);
     }
 
     /**
@@ -4346,7 +4534,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates tags with a single or multiple Lindorm instances.</p>
+     * <p>Adds tags to one or more Lindorm instances.</p>
      * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4410,7 +4598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates tags with a single or multiple Lindorm instances.</p>
+     * <p>Adds tags to one or more Lindorm instances.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse

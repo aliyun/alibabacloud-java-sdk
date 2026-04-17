@@ -629,6 +629,9 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         @NameInMap("EnableCDC")
         public String enableCDC;
 
+        @NameInMap("EnableMaaS")
+        public String enableMaaS;
+
         @NameInMap("Engine")
         public String engine;
 
@@ -671,6 +674,14 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         }
         public String getEnableCDC() {
             return this.enableCDC;
+        }
+
+        public GetLindormV2InstanceResponseBodyEngineList setEnableMaaS(String enableMaaS) {
+            this.enableMaaS = enableMaaS;
+            return this;
+        }
+        public String getEnableMaaS() {
+            return this.enableMaaS;
         }
 
         public GetLindormV2InstanceResponseBodyEngineList setEngine(String engine) {
