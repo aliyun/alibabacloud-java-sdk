@@ -248,6 +248,69 @@ public class UpgradePrePayOrderRequest extends TeaModel {
         return this.topicQuota;
     }
 
+    public static class UpgradePrePayOrderRequestConfluentConfigKsqlList extends TeaModel {
+        @NameInMap("Cu")
+        public Integer cu;
+
+        @NameInMap("InternalId")
+        public String internalId;
+
+        @NameInMap("Replica")
+        public Integer replica;
+
+        @NameInMap("Storage")
+        public Integer storage;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static UpgradePrePayOrderRequestConfluentConfigKsqlList build(java.util.Map<String, ?> map) throws Exception {
+            UpgradePrePayOrderRequestConfluentConfigKsqlList self = new UpgradePrePayOrderRequestConfluentConfigKsqlList();
+            return TeaModel.build(map, self);
+        }
+
+        public UpgradePrePayOrderRequestConfluentConfigKsqlList setCu(Integer cu) {
+            this.cu = cu;
+            return this;
+        }
+        public Integer getCu() {
+            return this.cu;
+        }
+
+        public UpgradePrePayOrderRequestConfluentConfigKsqlList setInternalId(String internalId) {
+            this.internalId = internalId;
+            return this;
+        }
+        public String getInternalId() {
+            return this.internalId;
+        }
+
+        public UpgradePrePayOrderRequestConfluentConfigKsqlList setReplica(Integer replica) {
+            this.replica = replica;
+            return this;
+        }
+        public Integer getReplica() {
+            return this.replica;
+        }
+
+        public UpgradePrePayOrderRequestConfluentConfigKsqlList setStorage(Integer storage) {
+            this.storage = storage;
+            return this;
+        }
+        public Integer getStorage() {
+            return this.storage;
+        }
+
+        public UpgradePrePayOrderRequestConfluentConfigKsqlList setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class UpgradePrePayOrderRequestConfluentConfig extends TeaModel {
         @NameInMap("ConnectCU")
         public Integer connectCU;
@@ -281,6 +344,9 @@ public class UpgradePrePayOrderRequest extends TeaModel {
 
         @NameInMap("KsqlCU")
         public Integer ksqlCU;
+
+        @NameInMap("KsqlList")
+        public java.util.List<UpgradePrePayOrderRequestConfluentConfigKsqlList> ksqlList;
 
         @NameInMap("KsqlReplica")
         public Integer ksqlReplica;
@@ -394,6 +460,14 @@ public class UpgradePrePayOrderRequest extends TeaModel {
         }
         public Integer getKsqlCU() {
             return this.ksqlCU;
+        }
+
+        public UpgradePrePayOrderRequestConfluentConfig setKsqlList(java.util.List<UpgradePrePayOrderRequestConfluentConfigKsqlList> ksqlList) {
+            this.ksqlList = ksqlList;
+            return this;
+        }
+        public java.util.List<UpgradePrePayOrderRequestConfluentConfigKsqlList> getKsqlList() {
+            return this.ksqlList;
         }
 
         public UpgradePrePayOrderRequestConfluentConfig setKsqlReplica(Integer ksqlReplica) {

@@ -13,9 +13,6 @@ public class DescribeAclsResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <p>The access control lists (ACLs).</p>
-     */
     @NameInMap("KafkaAclList")
     public DescribeAclsResponseBodyKafkaAclList kafkaAclList;
 
@@ -92,97 +89,24 @@ public class DescribeAclsResponseBody extends TeaModel {
     }
 
     public static class DescribeAclsResponseBodyKafkaAclListKafkaAclVO extends TeaModel {
-        /**
-         * <p>The types of operations allowed by the ACL. Separate multiple operation types with commas (,).</p>
-         * <ul>
-         * <li>Valid values:</li>
-         * <li>Write</li>
-         * <li>Read</li>
-         * <li>Describe: reads of transactional IDs.</li>
-         * <li>IdempotentWrite: idempotent data writes to clusters.</li>
-         * <li>IDEMPOTENT_WRITE: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.</li>
-         * <li>DESCRIBE_CONFIGS: queries of configurations. This value is available only for ApsaraMQ for Kafka V3 instances.<blockquote>
-         * <p>This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
-         * </blockquote>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Write</p>
-         */
         @NameInMap("AclOperationType")
         public String aclOperationType;
 
-        /**
-         * <p>The authorization method. Valid values:</p>
-         * <ul>
-         * <li>DENY</li>
-         * <li>ALLOW<blockquote>
-         * <p>This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
-         * </blockquote>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>DENY</p>
-         */
         @NameInMap("AclPermissionType")
         public String aclPermissionType;
 
-        /**
-         * <p>The resource name.</p>
-         * <ul>
-         * <li>The value can be the name of a topic or consumer group.</li>
-         * <li>You can use the asterisk (\*) wildcard character to specify the names of all topics or consumer groups.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>demo</p>
-         */
         @NameInMap("AclResourceName")
         public String aclResourceName;
 
-        /**
-         * <p>The matching mode. Valid values:</p>
-         * <ul>
-         * <li><strong>LITERAL:</strong> full-name match</li>
-         * <li><strong>PREFIXED</strong>: prefix match</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>LITERAL</p>
-         */
         @NameInMap("AclResourcePatternType")
         public String aclResourcePatternType;
 
-        /**
-         * <p>The resource type. Valid values:</p>
-         * <ul>
-         * <li><strong>Topic</strong></li>
-         * <li><strong>Group</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Topic</p>
-         */
         @NameInMap("AclResourceType")
         public String aclResourceType;
 
-        /**
-         * <p>The host.</p>
-         * 
-         * <strong>example:</strong>
-         * <hr>
-         */
         @NameInMap("Host")
         public String host;
 
-        /**
-         * <p>The username.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test12***</p>
-         */
         @NameInMap("Username")
         public String username;
 

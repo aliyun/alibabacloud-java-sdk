@@ -31,9 +31,6 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The Simple Authentication and Security Layer (SASL) users.</p>
-     */
     @NameInMap("SaslUserList")
     public DescribeSaslUsersResponseBodySaslUserList saslUserList;
 
@@ -92,48 +89,15 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
     }
 
     public static class DescribeSaslUsersResponseBodySaslUserListSaslUserVO extends TeaModel {
-        /**
-         * <p>The encryption method.</p>
-         * <blockquote>
-         * <p> This parameter is available only for serverless ApsaraMQ for Kafka instances.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>SCRAM-SHA-256</p>
-         */
         @NameInMap("Mechanism")
         public String mechanism;
 
-        /**
-         * <p>The password.</p>
-         * 
-         * <strong>example:</strong>
-         * <hr>
-         */
         @NameInMap("Password")
         public String password;
 
-        /**
-         * <p>The type of the SASL user. Valid values:</p>
-         * <ul>
-         * <li><strong>plain</strong>: a simple mechanism that uses usernames and passwords to verify user identities. ApsaraMQ for Kafka provides an improved PLAIN mechanism that allows you to dynamically add SASL users without the need to restart an instance.</li>
-         * <li><strong>SCRAM</strong>: a mechanism that uses usernames and passwords to verify user identities. Compared with the PLAIN mechanism, this mechanism provides better security protection. ApsaraMQ for Kafka uses the SCRAM-SHA-256 algorithm.</li>
-         * <li><strong>LDAP</strong>: This value is available only for the SASL users of ApsaraMQ for Confluent instances.</li>
-         * </ul>
-         * <p>Default value: <strong>plain</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>scram</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>The username.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test12***</p>
-         */
         @NameInMap("Username")
         public String username;
 

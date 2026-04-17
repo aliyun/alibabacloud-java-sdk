@@ -92,57 +92,21 @@ public class GetConsumerProgressResponseBody extends TeaModel {
     }
 
     public static class GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoListRebalanceInfoList extends TeaModel {
-        /**
-         * <p>The number of rebalances.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("Generation")
         public Long generation;
 
-        /**
-         * <p>The group ID of the subscriber.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>falcon-uat</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The time when the last rebalance occurred. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1709199270</p>
-         */
         @NameInMap("LastRebalanceTimestamp")
         public Long lastRebalanceTimestamp;
 
-        /**
-         * <p>The cause of the rebalance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>removing member consumer-1-cd14eb9c-379b-4b8e-9bbd-76f147f8536f on LeaveGroup</p>
-         */
         @NameInMap("Reason")
         public String reason;
 
-        /**
-         * <p>Indicates whether new members are added to the consumer group in the rebalance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("RebalanceSuccess")
         public Boolean rebalanceSuccess;
 
-        /**
-         * <p>The duration of the rebalance. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("RebalanceTimeConsuming")
         public Long rebalanceTimeConsuming;
 
@@ -224,66 +188,24 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         @NameInMap("Accumulate")
         public Long accumulate;
 
-        /**
-         * <p>The latest offset in the partition of the topic.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>9</p>
-         */
         @NameInMap("BrokerOffset")
         public Long brokerOffset;
 
-        /**
-         * <p>Client ID of the application.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>client-id-KafkaConsumerDemo</p>
-         */
         @NameInMap("ClientId")
         public String clientId;
 
-        /**
-         * <p>The IP address of the client.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>172.16.11.3</p>
-         */
         @NameInMap("ClientIp")
         public String clientIp;
 
-        /**
-         * <p>The consumer offset in the partition of the topic.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>9</p>
-         */
         @NameInMap("ConsumerOffset")
         public Long consumerOffset;
 
-        /**
-         * <p>The time when the last consumed message in the partition was generated.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1566874931649</p>
-         */
         @NameInMap("LastTimestamp")
         public Long lastTimestamp;
 
-        /**
-         * <p>Member ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>client-id-KafkaConsumerDemo-70b64883-a911-4882-8084-598b958848b4</p>
-         */
         @NameInMap("MemberId")
         public String memberId;
 
-        /**
-         * <p>The partition ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Partition")
         public Integer partition;
 
@@ -378,36 +300,15 @@ public class GetConsumerProgressResponseBody extends TeaModel {
     }
 
     public static class GetConsumerProgressResponseBodyConsumerProgressTopicListTopicList extends TeaModel {
-        /**
-         * <p>The time when the last consumed message in the topic was generated.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1566874931649</p>
-         */
         @NameInMap("LastTimestamp")
         public Long lastTimestamp;
 
-        /**
-         * <p>The consumer offsets.</p>
-         */
         @NameInMap("OffsetList")
         public GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetList offsetList;
 
-        /**
-         * <p>The topic name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>kafka-test</p>
-         */
         @NameInMap("Topic")
         public String topic;
 
-        /**
-         * <p>The number of unconsumed messages in the topic to which the consumer group subscribes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("TotalDiff")
         public Long totalDiff;
 
@@ -479,15 +380,9 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         @NameInMap("LastTimestamp")
         public Long lastTimestamp;
 
-        /**
-         * <p>The details of rebalances in the consumer group.</p>
-         */
         @NameInMap("RebalanceInfoList")
         public GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoList rebalanceInfoList;
 
-        /**
-         * <p>The consumer progress of each topic to which the consumer group subscribes.</p>
-         */
         @NameInMap("TopicList")
         public GetConsumerProgressResponseBodyConsumerProgressTopicList topicList;
 

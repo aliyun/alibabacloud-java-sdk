@@ -334,7 +334,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建后付费实例。</p>
+     * <p>Creates a pay-as-you-go instance and returns the instance ID and order ID.</p>
      * 
      * @param tmpReq CreatePostPayInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -416,7 +416,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建后付费实例。</p>
+     * <p>Creates a pay-as-you-go instance and returns the instance ID and order ID.</p>
      * 
      * @param request CreatePostPayInstanceRequest
      * @return CreatePostPayInstanceResponse
@@ -536,7 +536,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建预付费实例</p>
+     * <p>Creates a subscription instance and returns the instance ID and order ID.</p>
      * 
      * @param tmpReq CreatePrePayInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -622,7 +622,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建预付费实例</p>
+     * <p>Creates a subscription instance and returns the instance ID and order ID.</p>
      * 
      * @param request CreatePrePayInstanceRequest
      * @return CreatePrePayInstanceResponse
@@ -1420,7 +1420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询acl资源名</p>
+     * <p>Queries the name of the resource with which an access control list (ACL) is associated.</p>
      * 
      * @param request DescribeAclResourceNameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1464,7 +1464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询acl资源名</p>
+     * <p>Queries the name of the resource with which an access control list (ACL) is associated.</p>
      * 
      * @param request DescribeAclResourceNameRequest
      * @return DescribeAclResourceNameResponse
@@ -2644,7 +2644,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Rebalance详情</p>
+     * <p>Obtains the rebalance details of a consumer group.</p>
      * 
      * @param request ListRebalanceInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2684,7 +2684,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Rebalance详情</p>
+     * <p>Obtains the rebalance details of a consumer group.</p>
      * 
      * @param request ListRebalanceInfoRequest
      * @return ListRebalanceInfoResponse
@@ -3997,7 +3997,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Before you call this operation, make sure that you understand the billing method and pricing of subscription Message Queue for Apache Kafka instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Upgrades a Message Queue for Apache Kafka instance that uses the subscription billing method.</p>
+     * <p>Upgrade Prepaid Instance</p>
      * 
      * @param tmpReq UpgradePrePayOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4082,7 +4082,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Before you call this operation, make sure that you understand the billing method and pricing of subscription Message Queue for Apache Kafka instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Upgrades a Message Queue for Apache Kafka instance that uses the subscription billing method.</p>
+     * <p>Upgrade Prepaid Instance</p>
      * 
      * @param request UpgradePrePayOrderRequest
      * @return UpgradePrePayOrderResponse

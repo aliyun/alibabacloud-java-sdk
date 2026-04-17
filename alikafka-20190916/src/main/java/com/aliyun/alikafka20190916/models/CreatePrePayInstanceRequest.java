@@ -198,6 +198,69 @@ public class CreatePrePayInstanceRequest extends TeaModel {
         return this.tag;
     }
 
+    public static class CreatePrePayInstanceRequestConfluentConfigKsqlList extends TeaModel {
+        @NameInMap("InternalId")
+        public String internalId;
+
+        @NameInMap("cu")
+        public Integer cu;
+
+        @NameInMap("replica")
+        public Integer replica;
+
+        @NameInMap("storage")
+        public Integer storage;
+
+        @NameInMap("type")
+        public String type;
+
+        public static CreatePrePayInstanceRequestConfluentConfigKsqlList build(java.util.Map<String, ?> map) throws Exception {
+            CreatePrePayInstanceRequestConfluentConfigKsqlList self = new CreatePrePayInstanceRequestConfluentConfigKsqlList();
+            return TeaModel.build(map, self);
+        }
+
+        public CreatePrePayInstanceRequestConfluentConfigKsqlList setInternalId(String internalId) {
+            this.internalId = internalId;
+            return this;
+        }
+        public String getInternalId() {
+            return this.internalId;
+        }
+
+        public CreatePrePayInstanceRequestConfluentConfigKsqlList setCu(Integer cu) {
+            this.cu = cu;
+            return this;
+        }
+        public Integer getCu() {
+            return this.cu;
+        }
+
+        public CreatePrePayInstanceRequestConfluentConfigKsqlList setReplica(Integer replica) {
+            this.replica = replica;
+            return this;
+        }
+        public Integer getReplica() {
+            return this.replica;
+        }
+
+        public CreatePrePayInstanceRequestConfluentConfigKsqlList setStorage(Integer storage) {
+            this.storage = storage;
+            return this;
+        }
+        public Integer getStorage() {
+            return this.storage;
+        }
+
+        public CreatePrePayInstanceRequestConfluentConfigKsqlList setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class CreatePrePayInstanceRequestConfluentConfig extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -275,6 +338,9 @@ public class CreatePrePayInstanceRequest extends TeaModel {
          */
         @NameInMap("KsqlCU")
         public Integer ksqlCU;
+
+        @NameInMap("KsqlList")
+        public java.util.List<CreatePrePayInstanceRequestConfluentConfigKsqlList> ksqlList;
 
         /**
          * <strong>example:</strong>
@@ -416,6 +482,14 @@ public class CreatePrePayInstanceRequest extends TeaModel {
         }
         public Integer getKsqlCU() {
             return this.ksqlCU;
+        }
+
+        public CreatePrePayInstanceRequestConfluentConfig setKsqlList(java.util.List<CreatePrePayInstanceRequestConfluentConfigKsqlList> ksqlList) {
+            this.ksqlList = ksqlList;
+            return this;
+        }
+        public java.util.List<CreatePrePayInstanceRequestConfluentConfigKsqlList> getKsqlList() {
+            return this.ksqlList;
         }
 
         public CreatePrePayInstanceRequestConfluentConfig setKsqlReplica(Integer ksqlReplica) {

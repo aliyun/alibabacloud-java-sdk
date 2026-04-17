@@ -81,45 +81,21 @@ public class ListRebalanceInfoResponseBody extends TeaModel {
     }
 
     public static class ListRebalanceInfoResponseBodyDataRebalanceInfoList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("Generation")
         public Long generation;
 
-        /**
-         * <strong>example:</strong>
-         * <p>kafka-test</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1709199270</p>
-         */
         @NameInMap("LastRebalanceTimestamp")
         public Long lastRebalanceTimestamp;
 
-        /**
-         * <strong>example:</strong>
-         * <p>removing member consumer-1-cd14eb9c-379b-4b8e-9bbd-76f147f8536f on LeaveGroup</p>
-         */
         @NameInMap("Reason")
         public String reason;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("RebalanceSuccess")
         public Boolean rebalanceSuccess;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12</p>
-         */
         @NameInMap("RebalanceTimeConsuming")
         public Long rebalanceTimeConsuming;
 

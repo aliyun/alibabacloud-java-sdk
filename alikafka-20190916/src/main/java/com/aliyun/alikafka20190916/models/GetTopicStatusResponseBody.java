@@ -92,48 +92,18 @@ public class GetTopicStatusResponseBody extends TeaModel {
     }
 
     public static class GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable extends TeaModel {
-        /**
-         * <p>The last time when the partition was modified.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1566470063547</p>
-         */
         @NameInMap("LastUpdateTimestamp")
         public Long lastUpdateTimestamp;
 
-        /**
-         * <p>The latest offset in the partition of the topic.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>76</p>
-         */
         @NameInMap("MaxOffset")
         public Long maxOffset;
 
-        /**
-         * <p>The earliest offset in the partition of the topic.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("MinOffset")
         public Long minOffset;
 
-        /**
-         * <p>The ID of the partition.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Partition")
         public Integer partition;
 
-        /**
-         * <p>The name of the topic.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testkafka</p>
-         */
         @NameInMap("Topic")
         public String topic;
 
@@ -213,9 +183,6 @@ public class GetTopicStatusResponseBody extends TeaModel {
         @NameInMap("LastTimeStamp")
         public Long lastTimeStamp;
 
-        /**
-         * <p>The information about offsets in the topic.</p>
-         */
         @NameInMap("OffsetTable")
         public GetTopicStatusResponseBodyTopicStatusOffsetTable offsetTable;
 

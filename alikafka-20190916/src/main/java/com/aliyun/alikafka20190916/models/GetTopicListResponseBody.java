@@ -58,9 +58,6 @@ public class GetTopicListResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    /**
-     * <p>The topics.</p>
-     */
     @NameInMap("TopicList")
     public GetTopicListResponseBodyTopicList topicList;
 
@@ -143,21 +140,9 @@ public class GetTopicListResponseBody extends TeaModel {
     }
 
     public static class GetTopicListResponseBodyTopicListTopicVOTagsTagVO extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Test</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Test</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -204,137 +189,42 @@ public class GetTopicListResponseBody extends TeaModel {
     }
 
     public static class GetTopicListResponseBodyTopicListTopicVO extends TeaModel {
-        /**
-         * <p>Indicates whether the topic was automatically created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("AutoCreate")
         public Boolean autoCreate;
 
-        /**
-         * <p>The log cleanup policy for the topic. This parameter is returned only if <strong>LocalTopic</strong> is set to <strong>true</strong>. Valid values:</p>
-         * <ul>
-         * <li>false: the default log cleanup policy.</li>
-         * <li>true: the Apache Kafka log compaction policy.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("CompactTopic")
         public Boolean compactTopic;
 
-        /**
-         * <p>The timestamp that indicates when the topic was created. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1576563109000</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        /**
-         * <p>The instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>alikafka_pre-cn-0pp1954n****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The storage type that is used for the topic. Valid values:</p>
-         * <ul>
-         * <li>false: cloud storage</li>
-         * <li>true: local storage</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("LocalTopic")
         public Boolean localTopic;
 
-        /**
-         * <p>The number of partitions in the topic.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6</p>
-         */
         @NameInMap("PartitionNum")
         public Integer partitionNum;
 
-        /**
-         * <p>The ID of the region where the instance resides.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The topic description. Valid values:</p>
-         * <ul>
-         * <li>The description can contain only letters, digits, hyphens (-), and underscores (_).</li>
-         * <li>The description must be 3 to 64 characters in length.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Remark")
         public String remark;
 
-        /**
-         * <p>The topic status. Valid value:</p>
-         * <p><strong>0</strong>: running.</p>
-         * <p>If the topic is deleted, this parameter is not returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Status")
         public Integer status;
 
-        /**
-         * <p>The topic status. Valid value:</p>
-         * <p><strong>Running</strong>.</p>
-         * <p>If the topic is deleted, this parameter is not returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Running</p>
-         */
         @NameInMap("StatusName")
         public String statusName;
 
-        /**
-         * <p>The tags.</p>
-         */
         @NameInMap("Tags")
         public GetTopicListResponseBodyTopicListTopicVOTags tags;
 
-        /**
-         * <p>The topic name. Valid values:</p>
-         * <ul>
-         * <li>The name can contain only letters, digits, hyphens (-), and underscores (_).</li>
-         * <li>The name must be 3 to 64 characters in length. If the name contains more than 64 characters, the system automatically truncates the name.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>topic_name</p>
-         */
         @NameInMap("Topic")
         public String topic;
 
-        /**
-         * <p>The topic configuration.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{&quot;replication-factor&quot;:3}</p>
-         */
         @NameInMap("TopicConfig")
         public String topicConfig;
 

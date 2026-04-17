@@ -13,9 +13,6 @@ public class GetConsumerListResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <p>The consumer groups.</p>
-     */
     @NameInMap("ConsumerList")
     public GetConsumerListResponseBodyConsumerList consumerList;
 
@@ -143,21 +140,9 @@ public class GetConsumerListResponseBody extends TeaModel {
     }
 
     public static class GetConsumerListResponseBodyConsumerListConsumerVOTagsTagVO extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -204,63 +189,24 @@ public class GetConsumerListResponseBody extends TeaModel {
     }
 
     public static class GetConsumerListResponseBodyConsumerListConsumerVO extends TeaModel {
-        /**
-         * <p>Indicates that the consumer group was automatically created by the system.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("AutomaticallyCreatedGroup")
         public Boolean automaticallyCreatedGroup;
 
-        /**
-         * <p>The consumer group ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>kafka-test</p>
-         */
         @NameInMap("ConsumerId")
         public String consumerId;
 
-        /**
-         * <p>The timestamp that indicates when the consumer group was created. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1729736584002</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        /**
-         * <p>The instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>alikafka_post-cn-v0h18sav****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The ID of the region where the instance resides.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The instance description.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Remark")
         public String remark;
 
-        /**
-         * <p>The tags.</p>
-         */
         @NameInMap("Tags")
         public GetConsumerListResponseBodyConsumerListConsumerVOTags tags;
 

@@ -92,24 +92,9 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
     }
 
     public static class GetKafkaClientIpResponseBodyDataDataDataDataData extends TeaModel {
-        /**
-         * <p>The IP address of the client.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>58.210.117.154</p>
-         */
         @NameInMap("Ip")
         public String ip;
 
-        /**
-         * <p>The statistics.</p>
-         * <blockquote>
-         * <p> The value of this parameter indicates the number of connections on different ports of the IP address within the specified period of time.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("Num")
         public Long num;
 
@@ -156,21 +141,9 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
     }
 
     public static class GetKafkaClientIpResponseBodyDataDataData extends TeaModel {
-        /**
-         * <p>The response parameters.</p>
-         */
         @NameInMap("Data")
         public GetKafkaClientIpResponseBodyDataDataDataData data;
 
-        /**
-         * <p>The request name.</p>
-         * <blockquote>
-         * <p> The value of this parameter indicates the type of request that the client sends to the broker within the specified period of time.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>OFFSET_COMMIT</p>
-         */
         @NameInMap("Name")
         public String name;
 
@@ -229,9 +202,6 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
         @NameInMap("Alert")
         public Boolean alert;
 
-        /**
-         * <p>The data returned.</p>
-         */
         @NameInMap("Data")
         public GetKafkaClientIpResponseBodyDataData data;
 

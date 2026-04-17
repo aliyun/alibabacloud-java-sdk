@@ -22,9 +22,6 @@ public class ListTagResourcesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Details of the resource and tags, such as the resource ID, the resource type, tag keys, and tag values.</p>
-     */
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
 
@@ -58,50 +55,15 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
-        /**
-         * <p>The ID of the resource. A resource ID complies with the following rules:</p>
-         * <ul>
-         * <li>The resource ID of an instance is the value of the instanceId parameter.</li>
-         * <li>The resource ID of a topic is the value of the Kafka_alikafka_instanceId_topic parameter.</li>
-         * <li>The resource ID of a consumer group is the value of the Kafka_alikafka_instanceId_consumerGroup parameter.</li>
-         * </ul>
-         * <p>For example, the resources whose tags you want to query include the alikafka_post-cn-v0h1fgs2xxxx instance, the test-topic topic, and the test-consumer-group consumer group. In this case, their resource IDs are alikafka_post-cn-v0h1fgs2xxxx, Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-topic, and Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-consumer-group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>alikafka_post-cn-v0h1fgs2****</p>
-         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <p>The type of the resource. The value is an enumerated value. Valid values:</p>
-         * <ul>
-         * <li><strong>Instance</strong></li>
-         * <li><strong>Topic</strong></li>
-         * <li><strong>Consumergroup</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>instance</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        /**
-         * <p>The key of the tag.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FinanceDept</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The value of the tag.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FinanceJoshua</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 
