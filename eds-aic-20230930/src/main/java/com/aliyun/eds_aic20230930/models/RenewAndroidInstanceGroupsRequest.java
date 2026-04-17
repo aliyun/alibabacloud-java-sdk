@@ -24,6 +24,9 @@ public class RenewAndroidInstanceGroupsRequest extends TeaModel {
     @NameInMap("InstanceGroupIds")
     public java.util.List<String> instanceGroupIds;
 
+    @NameInMap("PaidCallBackUrl")
+    public String paidCallBackUrl;
+
     /**
      * <p>The duration of the renewal, measured in units defined by PeriodUnit.</p>
      * 
@@ -69,6 +72,14 @@ public class RenewAndroidInstanceGroupsRequest extends TeaModel {
     }
     public java.util.List<String> getInstanceGroupIds() {
         return this.instanceGroupIds;
+    }
+
+    public RenewAndroidInstanceGroupsRequest setPaidCallBackUrl(String paidCallBackUrl) {
+        this.paidCallBackUrl = paidCallBackUrl;
+        return this;
+    }
+    public String getPaidCallBackUrl() {
+        return this.paidCallBackUrl;
     }
 
     public RenewAndroidInstanceGroupsRequest setPeriod(Integer period) {

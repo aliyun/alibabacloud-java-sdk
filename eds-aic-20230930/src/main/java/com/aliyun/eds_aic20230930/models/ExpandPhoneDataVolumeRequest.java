@@ -21,6 +21,9 @@ public class ExpandPhoneDataVolumeRequest extends TeaModel {
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    @NameInMap("PaidCallBackUrl")
+    public String paidCallBackUrl;
+
     /**
      * <strong>example:</strong>
      * <p>10</p>
@@ -62,6 +65,14 @@ public class ExpandPhoneDataVolumeRequest extends TeaModel {
     }
     public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
+    }
+
+    public ExpandPhoneDataVolumeRequest setPaidCallBackUrl(String paidCallBackUrl) {
+        this.paidCallBackUrl = paidCallBackUrl;
+        return this;
+    }
+    public String getPaidCallBackUrl() {
+        return this.paidCallBackUrl;
     }
 
     public ExpandPhoneDataVolumeRequest setPhoneDataVolume(Integer phoneDataVolume) {

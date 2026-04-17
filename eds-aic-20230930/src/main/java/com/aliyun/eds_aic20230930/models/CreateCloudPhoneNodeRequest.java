@@ -122,6 +122,9 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
     @NameInMap("NodeName")
     public String nodeName;
 
+    @NameInMap("PaidCallBackUrl")
+    public String paidCallBackUrl;
+
     /**
      * <p>The subscription duration. The unit is specified by <code>PeriodUnit</code>. Valid values:</p>
      * <ul>
@@ -363,6 +366,14 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
     }
     public String getNodeName() {
         return this.nodeName;
+    }
+
+    public CreateCloudPhoneNodeRequest setPaidCallBackUrl(String paidCallBackUrl) {
+        this.paidCallBackUrl = paidCallBackUrl;
+        return this;
+    }
+    public String getPaidCallBackUrl() {
+        return this.paidCallBackUrl;
     }
 
     public CreateCloudPhoneNodeRequest setPeriod(Integer period) {

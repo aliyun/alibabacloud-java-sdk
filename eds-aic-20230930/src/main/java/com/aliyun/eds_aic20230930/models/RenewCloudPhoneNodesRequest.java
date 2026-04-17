@@ -27,6 +27,9 @@ public class RenewCloudPhoneNodesRequest extends TeaModel {
     @NameInMap("NodeIds")
     public java.util.List<String> nodeIds;
 
+    @NameInMap("PaidCallBackUrl")
+    public String paidCallBackUrl;
+
     /**
      * <p>The subscription duration. The unit is specified by <code>PeriodUnit</code>. Valid values:</p>
      * <ul>
@@ -84,6 +87,14 @@ public class RenewCloudPhoneNodesRequest extends TeaModel {
     }
     public java.util.List<String> getNodeIds() {
         return this.nodeIds;
+    }
+
+    public RenewCloudPhoneNodesRequest setPaidCallBackUrl(String paidCallBackUrl) {
+        this.paidCallBackUrl = paidCallBackUrl;
+        return this;
+    }
+    public String getPaidCallBackUrl() {
+        return this.paidCallBackUrl;
     }
 
     public RenewCloudPhoneNodesRequest setPeriod(Integer period) {

@@ -36,6 +36,9 @@ public class UpgradeAndroidInstanceGroupRequest extends TeaModel {
     @NameInMap("InstanceGroupId")
     public String instanceGroupId;
 
+    @NameInMap("PaidCallBackUrl")
+    public String paidCallBackUrl;
+
     @NameInMap("PromotionId")
     public String promotionId;
 
@@ -66,6 +69,14 @@ public class UpgradeAndroidInstanceGroupRequest extends TeaModel {
     }
     public String getInstanceGroupId() {
         return this.instanceGroupId;
+    }
+
+    public UpgradeAndroidInstanceGroupRequest setPaidCallBackUrl(String paidCallBackUrl) {
+        this.paidCallBackUrl = paidCallBackUrl;
+        return this;
+    }
+    public String getPaidCallBackUrl() {
+        return this.paidCallBackUrl;
     }
 
     public UpgradeAndroidInstanceGroupRequest setPromotionId(String promotionId) {

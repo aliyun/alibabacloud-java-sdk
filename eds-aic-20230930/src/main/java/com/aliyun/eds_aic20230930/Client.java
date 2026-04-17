@@ -422,6 +422,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>取消云手机实例上正在运行的Agent任务。</p>
+     * 
+     * @param request CancelAgentTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelAgentTaskResponse
+     */
+    public CancelAgentTaskResponse cancelAgentTaskWithOptions(CancelAgentTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskIds)) {
+            query.put("TaskIds", request.taskIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CancelAgentTask"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelAgentTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>取消云手机实例上正在运行的Agent任务。</p>
+     * 
+     * @param request CancelAgentTaskRequest
+     * @return CancelAgentTaskResponse
+     */
+    public CancelAgentTaskResponse cancelAgentTask(CancelAgentTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.cancelAgentTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>修改云手机矩阵的配置</p>
      * 
      * @param request ChangeCloudPhoneNodeRequest
@@ -951,6 +995,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.nodeName)) {
             query.put("NodeName", request.nodeName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paidCallBackUrl)) {
+            query.put("PaidCallBackUrl", request.paidCallBackUrl);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.period)) {
@@ -3365,6 +3413,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NodeIds", request.nodeIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.paidCallBackUrl)) {
+            query.put("PaidCallBackUrl", request.paidCallBackUrl);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.phoneDataVolume)) {
             query.put("PhoneDataVolume", request.phoneDataVolume);
         }
@@ -3427,6 +3479,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
             query.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paidCallBackUrl)) {
+            query.put("PaidCallBackUrl", request.paidCallBackUrl);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.phoneDataVolume)) {
@@ -5017,6 +5073,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceGroupIds", request.instanceGroupIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.paidCallBackUrl)) {
+            query.put("PaidCallBackUrl", request.paidCallBackUrl);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.period)) {
             query.put("Period", request.period);
         }
@@ -5071,6 +5131,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
             query.put("AutoPay", request.autoPay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paidCallBackUrl)) {
+            query.put("PaidCallBackUrl", request.paidCallBackUrl);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.promotionId)) {
@@ -6192,6 +6256,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceGroupId)) {
             query.put("InstanceGroupId", request.instanceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paidCallBackUrl)) {
+            query.put("PaidCallBackUrl", request.paidCallBackUrl);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.promotionId)) {

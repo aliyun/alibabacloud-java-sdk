@@ -55,6 +55,9 @@ public class UninstallAppResponseBody extends TeaModel {
     }
 
     public static class UninstallAppResponseBodyChildTaskInfo extends TeaModel {
+        @NameInMap("AppId")
+        public String appId;
+
         /**
          * <strong>example:</strong>
          * <p>t-ybde48cevxxxx</p>
@@ -72,6 +75,14 @@ public class UninstallAppResponseBody extends TeaModel {
         public static UninstallAppResponseBodyChildTaskInfo build(java.util.Map<String, ?> map) throws Exception {
             UninstallAppResponseBodyChildTaskInfo self = new UninstallAppResponseBodyChildTaskInfo();
             return TeaModel.build(map, self);
+        }
+
+        public UninstallAppResponseBodyChildTaskInfo setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
         }
 
         public UninstallAppResponseBodyChildTaskInfo setChildTaskId(String childTaskId) {

@@ -25,6 +25,9 @@ public class RunCommandResponseBody extends TeaModel {
     @NameInMap("RunCommandInfos")
     public java.util.List<RunCommandResponseBodyRunCommandInfos> runCommandInfos;
 
+    @NameInMap("TaskId")
+    public String taskId;
+
     public static RunCommandResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RunCommandResponseBody self = new RunCommandResponseBody();
         return TeaModel.build(map, self);
@@ -54,7 +57,18 @@ public class RunCommandResponseBody extends TeaModel {
         return this.runCommandInfos;
     }
 
+    public RunCommandResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
+    }
+
     public static class RunCommandResponseBodyRunCommandInfos extends TeaModel {
+        @NameInMap("ChildTaskId")
+        public String childTaskId;
+
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -64,6 +78,14 @@ public class RunCommandResponseBody extends TeaModel {
         public static RunCommandResponseBodyRunCommandInfos build(java.util.Map<String, ?> map) throws Exception {
             RunCommandResponseBodyRunCommandInfos self = new RunCommandResponseBodyRunCommandInfos();
             return TeaModel.build(map, self);
+        }
+
+        public RunCommandResponseBodyRunCommandInfos setChildTaskId(String childTaskId) {
+            this.childTaskId = childTaskId;
+            return this;
+        }
+        public String getChildTaskId() {
+            return this.childTaskId;
         }
 
         public RunCommandResponseBodyRunCommandInfos setInstanceId(String instanceId) {

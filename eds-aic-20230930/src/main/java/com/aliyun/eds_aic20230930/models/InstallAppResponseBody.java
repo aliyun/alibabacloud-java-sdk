@@ -55,6 +55,9 @@ public class InstallAppResponseBody extends TeaModel {
     }
 
     public static class InstallAppResponseBodyChildTaskInfo extends TeaModel {
+        @NameInMap("AppId")
+        public String appId;
+
         /**
          * <strong>example:</strong>
          * <p>t-ybde48cevxxxx</p>
@@ -72,6 +75,14 @@ public class InstallAppResponseBody extends TeaModel {
         public static InstallAppResponseBodyChildTaskInfo build(java.util.Map<String, ?> map) throws Exception {
             InstallAppResponseBodyChildTaskInfo self = new InstallAppResponseBodyChildTaskInfo();
             return TeaModel.build(map, self);
+        }
+
+        public InstallAppResponseBodyChildTaskInfo setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
         }
 
         public InstallAppResponseBodyChildTaskInfo setChildTaskId(String childTaskId) {
