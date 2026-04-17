@@ -6735,6 +6735,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("MaxResults", request.maxResults);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
             query.put("NextToken", request.nextToken);
         }

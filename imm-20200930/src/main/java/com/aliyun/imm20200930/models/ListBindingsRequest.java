@@ -26,6 +26,13 @@ public class ListBindingsRequest extends TeaModel {
     public Long maxResults;
 
     /**
+     * <strong>example:</strong>
+     * <p>imm</p>
+     */
+    @NameInMap("Name")
+    public String name;
+
+    /**
      * <ul>
      * <li>The pagination token that is used in the next request to retrieve a new page of results if the total number of results exceeds the value of the MaxResults parameter.</li>
      * <li>The next call to the operation returns results lexicographically after the NextToken parameter value.</li>
@@ -67,6 +74,14 @@ public class ListBindingsRequest extends TeaModel {
     }
     public Long getMaxResults() {
         return this.maxResults;
+    }
+
+    public ListBindingsRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public ListBindingsRequest setNextToken(String nextToken) {

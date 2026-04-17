@@ -26,7 +26,6 @@ public class GetBindingRequest extends TeaModel {
     /**
      * <p>The URI of the OSS bucket to which you bind the dataset.</p>
      * <p>Specify the value in the oss://${Bucket} format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region as the current project.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://examplebucket</p>
