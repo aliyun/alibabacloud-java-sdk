@@ -21,6 +21,9 @@ public class MigrateDesktopsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("TargetMemberIp")
+    public String targetMemberIp;
+
     /**
      * <p>The ID of the destination office network.</p>
      * <p>This parameter is required.</p>
@@ -30,6 +33,17 @@ public class MigrateDesktopsRequest extends TeaModel {
      */
     @NameInMap("TargetOfficeSiteId")
     public String targetOfficeSiteId;
+
+    /**
+     * <blockquote>
+     * <p>This parameter is for internal use only.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
+    @NameInMap("TargetSubnetId")
+    public String targetSubnetId;
 
     public static MigrateDesktopsRequest build(java.util.Map<String, ?> map) throws Exception {
         MigrateDesktopsRequest self = new MigrateDesktopsRequest();
@@ -52,12 +66,28 @@ public class MigrateDesktopsRequest extends TeaModel {
         return this.regionId;
     }
 
+    public MigrateDesktopsRequest setTargetMemberIp(String targetMemberIp) {
+        this.targetMemberIp = targetMemberIp;
+        return this;
+    }
+    public String getTargetMemberIp() {
+        return this.targetMemberIp;
+    }
+
     public MigrateDesktopsRequest setTargetOfficeSiteId(String targetOfficeSiteId) {
         this.targetOfficeSiteId = targetOfficeSiteId;
         return this;
     }
     public String getTargetOfficeSiteId() {
         return this.targetOfficeSiteId;
+    }
+
+    public MigrateDesktopsRequest setTargetSubnetId(String targetSubnetId) {
+        this.targetSubnetId = targetSubnetId;
+        return this;
+    }
+    public String getTargetSubnetId() {
+        return this.targetSubnetId;
     }
 
 }

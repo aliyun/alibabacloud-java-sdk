@@ -14670,8 +14670,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.targetMemberIp)) {
+            query.put("TargetMemberIp", request.targetMemberIp);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.targetOfficeSiteId)) {
             query.put("TargetOfficeSiteId", request.targetOfficeSiteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetSubnetId)) {
+            query.put("TargetSubnetId", request.targetSubnetId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
