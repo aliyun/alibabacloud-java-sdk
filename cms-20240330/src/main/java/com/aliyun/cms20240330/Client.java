@@ -6270,6 +6270,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("runId", request.runId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.searchType)) {
+            body.put("searchType", request.searchType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.threshold)) {
             body.put("threshold", request.threshold);
         }

@@ -51,6 +51,13 @@ public class SearchMemoriesRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>experience</p>
+     */
+    @NameInMap("searchType")
+    public String searchType;
+
+    /**
+     * <strong>example:</strong>
      * <p>0.3</p>
      */
     @NameInMap("threshold")
@@ -129,6 +136,14 @@ public class SearchMemoriesRequest extends TeaModel {
     }
     public String getRunId() {
         return this.runId;
+    }
+
+    public SearchMemoriesRequest setSearchType(String searchType) {
+        this.searchType = searchType;
+        return this;
+    }
+    public String getSearchType() {
+        return this.searchType;
     }
 
     public SearchMemoriesRequest setThreshold(Double threshold) {
