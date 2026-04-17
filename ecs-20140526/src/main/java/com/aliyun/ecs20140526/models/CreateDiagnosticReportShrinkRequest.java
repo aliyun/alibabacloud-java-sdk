@@ -3,9 +3,9 @@ package com.aliyun.ecs20140526.models;
 
 import com.aliyun.tea.*;
 
-public class CreateDiagnosticReportRequest extends TeaModel {
+public class CreateDiagnosticReportShrinkRequest extends TeaModel {
     @NameInMap("AdditionalOptions")
-    public java.util.Map<String, String> additionalOptions;
+    public String additionalOptionsShrink;
 
     /**
      * <p>The end time. This parameter takes effect only for diagnostic metrics that do not need to be assessed by running Cloud Assistant commands in guest operating systems.</p>
@@ -54,20 +54,20 @@ public class CreateDiagnosticReportRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
-    public static CreateDiagnosticReportRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateDiagnosticReportRequest self = new CreateDiagnosticReportRequest();
+    public static CreateDiagnosticReportShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateDiagnosticReportShrinkRequest self = new CreateDiagnosticReportShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateDiagnosticReportRequest setAdditionalOptions(java.util.Map<String, String> additionalOptions) {
-        this.additionalOptions = additionalOptions;
+    public CreateDiagnosticReportShrinkRequest setAdditionalOptionsShrink(String additionalOptionsShrink) {
+        this.additionalOptionsShrink = additionalOptionsShrink;
         return this;
     }
-    public java.util.Map<String, String> getAdditionalOptions() {
-        return this.additionalOptions;
+    public String getAdditionalOptionsShrink() {
+        return this.additionalOptionsShrink;
     }
 
-    public CreateDiagnosticReportRequest setEndTime(String endTime) {
+    public CreateDiagnosticReportShrinkRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
@@ -75,7 +75,7 @@ public class CreateDiagnosticReportRequest extends TeaModel {
         return this.endTime;
     }
 
-    public CreateDiagnosticReportRequest setMetricSetId(String metricSetId) {
+    public CreateDiagnosticReportShrinkRequest setMetricSetId(String metricSetId) {
         this.metricSetId = metricSetId;
         return this;
     }
@@ -83,7 +83,7 @@ public class CreateDiagnosticReportRequest extends TeaModel {
         return this.metricSetId;
     }
 
-    public CreateDiagnosticReportRequest setRegionId(String regionId) {
+    public CreateDiagnosticReportShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -91,7 +91,7 @@ public class CreateDiagnosticReportRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreateDiagnosticReportRequest setResourceId(String resourceId) {
+    public CreateDiagnosticReportShrinkRequest setResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
@@ -99,7 +99,7 @@ public class CreateDiagnosticReportRequest extends TeaModel {
         return this.resourceId;
     }
 
-    public CreateDiagnosticReportRequest setStartTime(String startTime) {
+    public CreateDiagnosticReportShrinkRequest setStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
