@@ -14401,6 +14401,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改Supabase自动启停策略</p>
+     * 
+     * @param request ModifySupabaseAutoScalePolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifySupabaseAutoScalePolicyResponse
+     */
+    public ModifySupabaseAutoScalePolicyResponse modifySupabaseAutoScalePolicyWithOptions(ModifySupabaseAutoScalePolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoScale)) {
+            query.put("AutoScale", request.autoScale);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifySupabaseAutoScalePolicy"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifySupabaseAutoScalePolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改Supabase自动启停策略</p>
+     * 
+     * @param request ModifySupabaseAutoScalePolicyRequest
+     * @return ModifySupabaseAutoScalePolicyResponse
+     */
+    public ModifySupabaseAutoScalePolicyResponse modifySupabaseAutoScalePolicy(ModifySupabaseAutoScalePolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifySupabaseAutoScalePolicyWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Before you can connect to a Supabase project, you must add your client\&quot;s IP address or CIDR block to the project\&quot;s whitelist.</p>
      * 
