@@ -502,6 +502,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取文件上传信息</p>
+     * 
+     * @param request GenerateFileUploadParamsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GenerateFileUploadParamsResponse
+     */
+    public GenerateFileUploadParamsResponse generateFileUploadParamsWithOptions(GenerateFileUploadParamsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessType)) {
+            body.put("BusinessType", request.businessType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.businessUnitId)) {
+            body.put("BusinessUnitId", request.businessUnitId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
+            body.put("FileName", request.fileName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GenerateFileUploadParams"),
+            new TeaPair("version", "2025-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateFileUploadParamsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文件上传信息</p>
+     * 
+     * @param request GenerateFileUploadParamsRequest
+     * @return GenerateFileUploadParamsResponse
+     */
+    public GenerateFileUploadParamsResponse generateFileUploadParams(GenerateFileUploadParamsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.generateFileUploadParamsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Get应用</p>
      * 
      * @param request GetApplicationRequest

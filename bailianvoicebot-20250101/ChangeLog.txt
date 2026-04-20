@@ -1,3 +1,7 @@
+2026-04-20 Version: 1.3.0
+- Support API GenerateFileUploadParams.
+
+
 2026-04-07 Version: 1.2.0
 - Support API CreateCloneVoice.
 - Support API CreateVariable.
