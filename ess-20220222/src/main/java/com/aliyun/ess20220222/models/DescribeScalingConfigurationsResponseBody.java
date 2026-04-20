@@ -91,6 +91,25 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsCpuOptions extends TeaModel {
+        @NameInMap("NestedVirtualization")
+        public String nestedVirtualization;
+
+        public static DescribeScalingConfigurationsResponseBodyScalingConfigurationsCpuOptions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeScalingConfigurationsResponseBodyScalingConfigurationsCpuOptions self = new DescribeScalingConfigurationsResponseBodyScalingConfigurationsCpuOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsCpuOptions setNestedVirtualization(String nestedVirtualization) {
+            this.nestedVirtualization = nestedVirtualization;
+            return this;
+        }
+        public String getNestedVirtualization() {
+            return this.nestedVirtualization;
+        }
+
+    }
+
     public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsCustomPriorities extends TeaModel {
         /**
          * <p>The ECS instance type.</p>
@@ -1206,6 +1225,9 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("Cpu")
         public Integer cpu;
 
+        @NameInMap("CpuOptions")
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsCpuOptions cpuOptions;
+
         /**
          * <p>The time at which the scaling configuration was created.</p>
          * 
@@ -1937,6 +1959,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         }
         public Integer getCpu() {
             return this.cpu;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurations setCpuOptions(DescribeScalingConfigurationsResponseBodyScalingConfigurationsCpuOptions cpuOptions) {
+            this.cpuOptions = cpuOptions;
+            return this;
+        }
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsCpuOptions getCpuOptions() {
+            return this.cpuOptions;
         }
 
         public DescribeScalingConfigurationsResponseBodyScalingConfigurations setCreationTime(String creationTime) {
