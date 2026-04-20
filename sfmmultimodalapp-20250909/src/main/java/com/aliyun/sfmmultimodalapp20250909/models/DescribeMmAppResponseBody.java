@@ -4,6 +4,9 @@ package com.aliyun.sfmmultimodalapp20250909.models;
 import com.aliyun.tea.*;
 
 public class DescribeMmAppResponseBody extends TeaModel {
+    @NameInMap("AppConfig")
+    public DescribeMmAppResponseBodyAppConfig appConfig;
+
     /**
      * <strong>example:</strong>
      * <p>mm_xxxx</p>
@@ -17,6 +20,9 @@ public class DescribeMmAppResponseBody extends TeaModel {
      */
     @NameInMap("AppName")
     public String appName;
+
+    @NameInMap("BindingConfig")
+    public DescribeMmAppResponseBodyBindingConfig bindingConfig;
 
     @NameInMap("ConversationConfig")
     public DescribeMmAppResponseBodyConversationConfig conversationConfig;
@@ -81,6 +87,8 @@ public class DescribeMmAppResponseBody extends TeaModel {
     public Long publishVersion;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */
@@ -99,6 +107,14 @@ public class DescribeMmAppResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeMmAppResponseBody setAppConfig(DescribeMmAppResponseBodyAppConfig appConfig) {
+        this.appConfig = appConfig;
+        return this;
+    }
+    public DescribeMmAppResponseBodyAppConfig getAppConfig() {
+        return this.appConfig;
+    }
+
     public DescribeMmAppResponseBody setAppId(String appId) {
         this.appId = appId;
         return this;
@@ -113,6 +129,14 @@ public class DescribeMmAppResponseBody extends TeaModel {
     }
     public String getAppName() {
         return this.appName;
+    }
+
+    public DescribeMmAppResponseBody setBindingConfig(DescribeMmAppResponseBodyBindingConfig bindingConfig) {
+        this.bindingConfig = bindingConfig;
+        return this;
+    }
+    public DescribeMmAppResponseBodyBindingConfig getBindingConfig() {
+        return this.bindingConfig;
     }
 
     public DescribeMmAppResponseBody setConversationConfig(DescribeMmAppResponseBodyConversationConfig conversationConfig) {
@@ -211,6 +235,243 @@ public class DescribeMmAppResponseBody extends TeaModel {
         return this.status;
     }
 
+    public static class DescribeMmAppResponseBodyAppConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("EnableTransition")
+        public Boolean enableTransition;
+
+        public static DescribeMmAppResponseBodyAppConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMmAppResponseBodyAppConfig self = new DescribeMmAppResponseBodyAppConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMmAppResponseBodyAppConfig setEnableTransition(Boolean enableTransition) {
+            this.enableTransition = enableTransition;
+            return this;
+        }
+        public Boolean getEnableTransition() {
+            return this.enableTransition;
+        }
+
+    }
+
+    public static class DescribeMmAppResponseBodyBindingConfigCommands extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
+        @NameInMap("DomainCode")
+        public String domainCode;
+
+        @NameInMap("Tools")
+        public java.util.List<String> tools;
+
+        /**
+         * <strong>example:</strong>
+         * <p>BAILIAN</p>
+         */
+        @NameInMap("Type")
+        public String type;
+
+        public static DescribeMmAppResponseBodyBindingConfigCommands build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMmAppResponseBodyBindingConfigCommands self = new DescribeMmAppResponseBodyBindingConfigCommands();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMmAppResponseBodyBindingConfigCommands setDomainCode(String domainCode) {
+            this.domainCode = domainCode;
+            return this;
+        }
+        public String getDomainCode() {
+            return this.domainCode;
+        }
+
+        public DescribeMmAppResponseBodyBindingConfigCommands setTools(java.util.List<String> tools) {
+            this.tools = tools;
+            return this;
+        }
+        public java.util.List<String> getTools() {
+            return this.tools;
+        }
+
+        public DescribeMmAppResponseBodyBindingConfigCommands setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class DescribeMmAppResponseBodyBindingConfigMcps extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>mcp-xxxx</p>
+         */
+        @NameInMap("Code")
+        public String code;
+
+        @NameInMap("ToolList")
+        public java.util.List<String> toolList;
+
+        public static DescribeMmAppResponseBodyBindingConfigMcps build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMmAppResponseBodyBindingConfigMcps self = new DescribeMmAppResponseBodyBindingConfigMcps();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMmAppResponseBodyBindingConfigMcps setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public DescribeMmAppResponseBodyBindingConfigMcps setToolList(java.util.List<String> toolList) {
+            this.toolList = toolList;
+            return this;
+        }
+        public java.util.List<String> getToolList() {
+            return this.toolList;
+        }
+
+    }
+
+    public static class DescribeMmAppResponseBodyBindingConfigRagConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("EnableSearch")
+        public String enableSearch;
+
+        @NameInMap("KnowledgeBaseCodeList")
+        public java.util.List<String> knowledgeBaseCodeList;
+
+        /**
+         * <strong>example:</strong>
+         * <p>top_k</p>
+         */
+        @NameInMap("PromptStrategy")
+        public String promptStrategy;
+
+        @NameInMap("RankWeights")
+        public java.util.Map<String, Double> rankWeights;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
+        @NameInMap("RetrieveMaxLength")
+        public Integer retrieveMaxLength;
+
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
+        @NameInMap("TopK")
+        public Integer topK;
+
+        public static DescribeMmAppResponseBodyBindingConfigRagConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMmAppResponseBodyBindingConfigRagConfig self = new DescribeMmAppResponseBodyBindingConfigRagConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMmAppResponseBodyBindingConfigRagConfig setEnableSearch(String enableSearch) {
+            this.enableSearch = enableSearch;
+            return this;
+        }
+        public String getEnableSearch() {
+            return this.enableSearch;
+        }
+
+        public DescribeMmAppResponseBodyBindingConfigRagConfig setKnowledgeBaseCodeList(java.util.List<String> knowledgeBaseCodeList) {
+            this.knowledgeBaseCodeList = knowledgeBaseCodeList;
+            return this;
+        }
+        public java.util.List<String> getKnowledgeBaseCodeList() {
+            return this.knowledgeBaseCodeList;
+        }
+
+        public DescribeMmAppResponseBodyBindingConfigRagConfig setPromptStrategy(String promptStrategy) {
+            this.promptStrategy = promptStrategy;
+            return this;
+        }
+        public String getPromptStrategy() {
+            return this.promptStrategy;
+        }
+
+        public DescribeMmAppResponseBodyBindingConfigRagConfig setRankWeights(java.util.Map<String, Double> rankWeights) {
+            this.rankWeights = rankWeights;
+            return this;
+        }
+        public java.util.Map<String, Double> getRankWeights() {
+            return this.rankWeights;
+        }
+
+        public DescribeMmAppResponseBodyBindingConfigRagConfig setRetrieveMaxLength(Integer retrieveMaxLength) {
+            this.retrieveMaxLength = retrieveMaxLength;
+            return this;
+        }
+        public Integer getRetrieveMaxLength() {
+            return this.retrieveMaxLength;
+        }
+
+        public DescribeMmAppResponseBodyBindingConfigRagConfig setTopK(Integer topK) {
+            this.topK = topK;
+            return this;
+        }
+        public Integer getTopK() {
+            return this.topK;
+        }
+
+    }
+
+    public static class DescribeMmAppResponseBodyBindingConfig extends TeaModel {
+        @NameInMap("Commands")
+        public java.util.List<DescribeMmAppResponseBodyBindingConfigCommands> commands;
+
+        @NameInMap("Mcps")
+        public java.util.List<DescribeMmAppResponseBodyBindingConfigMcps> mcps;
+
+        @NameInMap("RagConfig")
+        public DescribeMmAppResponseBodyBindingConfigRagConfig ragConfig;
+
+        public static DescribeMmAppResponseBodyBindingConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMmAppResponseBodyBindingConfig self = new DescribeMmAppResponseBodyBindingConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMmAppResponseBodyBindingConfig setCommands(java.util.List<DescribeMmAppResponseBodyBindingConfigCommands> commands) {
+            this.commands = commands;
+            return this;
+        }
+        public java.util.List<DescribeMmAppResponseBodyBindingConfigCommands> getCommands() {
+            return this.commands;
+        }
+
+        public DescribeMmAppResponseBodyBindingConfig setMcps(java.util.List<DescribeMmAppResponseBodyBindingConfigMcps> mcps) {
+            this.mcps = mcps;
+            return this;
+        }
+        public java.util.List<DescribeMmAppResponseBodyBindingConfigMcps> getMcps() {
+            return this.mcps;
+        }
+
+        public DescribeMmAppResponseBodyBindingConfig setRagConfig(DescribeMmAppResponseBodyBindingConfigRagConfig ragConfig) {
+            this.ragConfig = ragConfig;
+            return this;
+        }
+        public DescribeMmAppResponseBodyBindingConfigRagConfig getRagConfig() {
+            return this.ragConfig;
+        }
+
+    }
+
     public static class DescribeMmAppResponseBodyConversationConfig extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -286,6 +547,9 @@ public class DescribeMmAppResponseBody extends TeaModel {
         @NameInMap("ModelType")
         public String modelType;
 
+        @NameInMap("OpenMemory")
+        public Boolean openMemory;
+
         @NameInMap("OpenWebSearch")
         public Boolean openWebSearch;
 
@@ -315,6 +579,14 @@ public class DescribeMmAppResponseBody extends TeaModel {
         }
         public String getModelType() {
             return this.modelType;
+        }
+
+        public DescribeMmAppResponseBodyModelConfig setOpenMemory(Boolean openMemory) {
+            this.openMemory = openMemory;
+            return this;
+        }
+        public Boolean getOpenMemory() {
+            return this.openMemory;
         }
 
         public DescribeMmAppResponseBodyModelConfig setOpenWebSearch(Boolean openWebSearch) {
