@@ -109,6 +109,15 @@ public class ConvertFlowDSLInput extends TeaModel {
         @NameInMap("compatibilityCheck")
         public Boolean compatibilityCheck;
 
+        @NameInMap("credentialName")
+        public String credentialName;
+
+        @NameInMap("flowName")
+        public String flowName;
+
+        @NameInMap("vpcEndpointName")
+        public String vpcEndpointName;
+
         public static ConvertFlowDSLInputOptions build(java.util.Map<String, ?> map) throws Exception {
             ConvertFlowDSLInputOptions self = new ConvertFlowDSLInputOptions();
             return TeaModel.build(map, self);
@@ -120,6 +129,30 @@ public class ConvertFlowDSLInput extends TeaModel {
         }
         public Boolean getCompatibilityCheck() {
             return this.compatibilityCheck;
+        }
+
+        public ConvertFlowDSLInputOptions setCredentialName(String credentialName) {
+            this.credentialName = credentialName;
+            return this;
+        }
+        public String getCredentialName() {
+            return this.credentialName;
+        }
+
+        public ConvertFlowDSLInputOptions setFlowName(String flowName) {
+            this.flowName = flowName;
+            return this;
+        }
+        public String getFlowName() {
+            return this.flowName;
+        }
+
+        public ConvertFlowDSLInputOptions setVpcEndpointName(String vpcEndpointName) {
+            this.vpcEndpointName = vpcEndpointName;
+            return this;
+        }
+        public String getVpcEndpointName() {
+            return this.vpcEndpointName;
         }
 
     }
