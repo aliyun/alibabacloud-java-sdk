@@ -55,6 +55,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("CategoryType", request.categoryType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.connectorId)) {
+            body.put("ConnectorId", request.connectorId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.parentCategoryId)) {
             body.put("ParentCategoryId", request.parentCategoryId);
         }

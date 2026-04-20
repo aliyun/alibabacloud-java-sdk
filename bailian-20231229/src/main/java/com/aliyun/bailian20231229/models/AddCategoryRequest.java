@@ -19,6 +19,9 @@ public class AddCategoryRequest extends TeaModel {
     @NameInMap("CategoryType")
     public String categoryType;
 
+    @NameInMap("ConnectorId")
+    public String connectorId;
+
     /**
      * <strong>example:</strong>
      * <p>cate_cdd11b1b79a74e8bbd675c356a91ee3XXXXXXXX</p>
@@ -45,6 +48,14 @@ public class AddCategoryRequest extends TeaModel {
     }
     public String getCategoryType() {
         return this.categoryType;
+    }
+
+    public AddCategoryRequest setConnectorId(String connectorId) {
+        this.connectorId = connectorId;
+        return this;
+    }
+    public String getConnectorId() {
+        return this.connectorId;
     }
 
     public AddCategoryRequest setParentCategoryId(String parentCategoryId) {
