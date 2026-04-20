@@ -264,6 +264,15 @@ public class AgentRuntime extends TeaModel {
     public String statusReason;
 
     /**
+     * <p>智能体运行时的系统标签信息，用于系统级别的资源分类和管理</p>
+     * 
+     * <strong>example:</strong>
+     * <p>system-tag-1,system-tag-2</p>
+     */
+    @NameInMap("systemTags")
+    public java.util.List<String> systemTags;
+
+    /**
      * <p>智能体运行时所属的工作空间标识符，用于资源隔离和权限管理</p>
      * 
      * <strong>example:</strong>
@@ -516,6 +525,14 @@ public class AgentRuntime extends TeaModel {
     }
     public String getStatusReason() {
         return this.statusReason;
+    }
+
+    public AgentRuntime setSystemTags(java.util.List<String> systemTags) {
+        this.systemTags = systemTags;
+        return this;
+    }
+    public java.util.List<String> getSystemTags() {
+        return this.systemTags;
     }
 
     public AgentRuntime setWorkspaceId(String workspaceId) {

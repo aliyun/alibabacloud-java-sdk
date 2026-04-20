@@ -195,6 +195,15 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     @NameInMap("sessionIdleTimeoutSeconds")
     public Integer sessionIdleTimeoutSeconds;
 
+    /**
+     * <p>智能体运行时的系统标签信息，用于系统级别的资源分类和管理</p>
+     * 
+     * <strong>example:</strong>
+     * <p>system-tag-1,system-tag-2</p>
+     */
+    @NameInMap("systemTags")
+    public java.util.List<String> systemTags;
+
     @NameInMap("workspaceId")
     public String workspaceId;
 
@@ -385,6 +394,14 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     }
     public Integer getSessionIdleTimeoutSeconds() {
         return this.sessionIdleTimeoutSeconds;
+    }
+
+    public UpdateAgentRuntimeInput setSystemTags(java.util.List<String> systemTags) {
+        this.systemTags = systemTags;
+        return this;
+    }
+    public java.util.List<String> getSystemTags() {
+        return this.systemTags;
     }
 
     public UpdateAgentRuntimeInput setWorkspaceId(String workspaceId) {
