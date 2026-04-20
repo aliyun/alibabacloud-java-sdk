@@ -28,6 +28,220 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>开启会话</p>
+     * 
+     * @param request BeginSessionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BeginSessionResponse
+     */
+    public BeginSessionResponse beginSessionWithOptions(BeginSessionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.draftVersion)) {
+            query.put("DraftVersion", request.draftVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scriptId)) {
+            query.put("ScriptId", request.scriptId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vendorParams)) {
+            query.put("VendorParams", request.vendorParams);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BeginSession"),
+            new TeaPair("version", "2025-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BeginSessionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>开启会话</p>
+     * 
+     * @param request BeginSessionRequest
+     * @return BeginSessionResponse
+     */
+    public BeginSessionResponse beginSession(BeginSessionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.beginSessionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>发起呼叫</p>
+     * 
+     * @param request BridgeWebCallRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BridgeWebCallResponse
+     */
+    public BridgeWebCallResponse bridgeWebCallWithOptions(BridgeWebCallRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessChannelId)) {
+            query.put("AccessChannelId", request.accessChannelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accessChannelType)) {
+            query.put("AccessChannelType", request.accessChannelType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.caller)) {
+            query.put("Caller", request.caller);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceId)) {
+            query.put("DeviceId", request.deviceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.draftVersion)) {
+            query.put("DraftVersion", request.draftVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sampleRate)) {
+            query.put("SampleRate", request.sampleRate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scriptId)) {
+            query.put("ScriptId", request.scriptId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("Tags", request.tags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeoutSeconds)) {
+            query.put("TimeoutSeconds", request.timeoutSeconds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BridgeWebCall"),
+            new TeaPair("version", "2025-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BridgeWebCallResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>发起呼叫</p>
+     * 
+     * @param request BridgeWebCallRequest
+     * @return BridgeWebCallResponse
+     */
+    public BridgeWebCallResponse bridgeWebCall(BridgeWebCallRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.bridgeWebCallWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建服务提供商</p>
+     * 
+     * @param request CreateCallCenterProviderRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCallCenterProviderResponse
+     */
+    public CreateCallCenterProviderResponse createCallCenterProviderWithOptions(CreateCallCenterProviderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            query.put("DisplayName", request.displayName);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.destination)) {
+            body.put("Destination", request.destination);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extras)) {
+            body.put("Extras", request.extras);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originator)) {
+            body.put("Originator", request.originator);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.providerType)) {
+            body.put("ProviderType", request.providerType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.referTo)) {
+            body.put("ReferTo", request.referTo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trunkId)) {
+            body.put("TrunkId", request.trunkId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCallCenterProvider"),
+            new TeaPair("version", "2025-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCallCenterProviderResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建服务提供商</p>
+     * 
+     * @param request CreateCallCenterProviderRequest
+     * @return CreateCallCenterProviderResponse
+     */
+    public CreateCallCenterProviderResponse createCallCenterProvider(CreateCallCenterProviderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createCallCenterProviderWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建实例</p>
      * 
      * @param request CreateCloneVoiceRequest
@@ -76,6 +290,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateCloneVoiceResponse createCloneVoice(CreateCloneVoiceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createCloneVoiceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建指令</p>
+     * 
+     * @param request CreateInstructionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateInstructionResponse
+     */
+    public CreateInstructionResponse createInstructionWithOptions(CreateInstructionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.code)) {
+            body.put("Code", request.code);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            body.put("Config", request.config);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateInstruction"),
+            new TeaPair("version", "2025-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateInstructionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建指令</p>
+     * 
+     * @param request CreateInstructionRequest
+     * @return CreateInstructionResponse
+     */
+    public CreateInstructionResponse createInstruction(CreateInstructionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createInstructionWithOptions(request, runtime);
     }
 
     /**
@@ -464,6 +738,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除服务提供商</p>
+     * 
+     * @param request DeleteCallCenterProviderRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCallCenterProviderResponse
+     */
+    public DeleteCallCenterProviderResponse deleteCallCenterProviderWithOptions(DeleteCallCenterProviderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.providerId)) {
+            body.put("ProviderId", request.providerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCallCenterProvider"),
+            new TeaPair("version", "2025-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCallCenterProviderResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除服务提供商</p>
+     * 
+     * @param request DeleteCallCenterProviderRequest
+     * @return DeleteCallCenterProviderResponse
+     */
+    public DeleteCallCenterProviderResponse deleteCallCenterProvider(DeleteCallCenterProviderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteCallCenterProviderWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>删除场景</p>
      * 
      * @param request DeleteCloneVoiceRequest
@@ -508,6 +830,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteCloneVoiceResponse deleteCloneVoice(DeleteCloneVoiceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteCloneVoiceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除指令</p>
+     * 
+     * @param request DeleteInstructionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteInstructionResponse
+     */
+    public DeleteInstructionResponse deleteInstructionWithOptions(DeleteInstructionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.code)) {
+            body.put("Code", request.code);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteInstruction"),
+            new TeaPair("version", "2025-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInstructionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除指令</p>
+     * 
+     * @param request DeleteInstructionRequest
+     * @return DeleteInstructionResponse
+     */
+    public DeleteInstructionResponse deleteInstruction(DeleteInstructionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteInstructionWithOptions(request, runtime);
     }
 
     /**
@@ -752,6 +1122,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>开启会话</p>
+     * 
+     * @param request DialogueRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DialogueResponse
+     */
+    public DialogueResponse dialogueWithOptions(DialogueRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.extras)) {
+            query.put("Extras", request.extras);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scriptId)) {
+            query.put("ScriptId", request.scriptId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("SessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.utterance)) {
+            query.put("Utterance", request.utterance);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "Dialogue"),
+            new TeaPair("version", "2025-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DialogueResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>开启会话</p>
+     * 
+     * @param request DialogueRequest
+     * @return DialogueResponse
+     */
+    public DialogueResponse dialogue(DialogueRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.dialogueWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>禁用消息订阅</p>
      * 
      * @param request DisableSubscriptionRequest
@@ -792,6 +1222,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DisableSubscriptionResponse disableSubscription(DisableSubscriptionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.disableSubscriptionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>结束会话</p>
+     * 
+     * @param request EndSessionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EndSessionResponse
+     */
+    public EndSessionResponse endSessionWithOptions(EndSessionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scriptId)) {
+            query.put("ScriptId", request.scriptId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("SessionId", request.sessionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EndSession"),
+            new TeaPair("version", "2025-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EndSessionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>结束会话</p>
+     * 
+     * @param request EndSessionRequest
+     * @return EndSessionResponse
+     */
+    public EndSessionResponse endSession(EndSessionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.endSessionWithOptions(request, runtime);
     }
 
     /**
@@ -994,6 +1476,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetCallDetailRecordResponse getCallDetailRecord(GetCallDetailRecordRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getCallDetailRecordWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取语音对话参数</p>
+     * 
+     * @param request GetDataChannelCredentialRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDataChannelCredentialResponse
+     */
+    public GetDataChannelCredentialResponse getDataChannelCredentialWithOptions(GetDataChannelCredentialRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceId)) {
+            query.put("DeviceId", request.deviceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDataChannelCredential"),
+            new TeaPair("version", "2025-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDataChannelCredentialResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取语音对话参数</p>
+     * 
+     * @param request GetDataChannelCredentialRequest
+     * @return GetDataChannelCredentialResponse
+     */
+    public GetDataChannelCredentialResponse getDataChannelCredential(GetDataChannelCredentialRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDataChannelCredentialWithOptions(request, runtime);
     }
 
     /**
@@ -1330,6 +1860,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询服务提供商</p>
+     * 
+     * @param request ListCallCenterProvidersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCallCenterProvidersResponse
+     */
+    public ListCallCenterProvidersResponse listCallCenterProvidersWithOptions(ListCallCenterProvidersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.providerId)) {
+            body.put("ProviderId", request.providerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCallCenterProviders"),
+            new TeaPair("version", "2025-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCallCenterProvidersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询服务提供商</p>
+     * 
+     * @param request ListCallCenterProvidersRequest
+     * @return ListCallCenterProvidersResponse
+     */
+    public ListCallCenterProvidersResponse listCallCenterProviders(ListCallCenterProvidersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCallCenterProvidersWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取实例详情</p>
      * 
      * @param tmpReq ListCallDetailRecordsRequest
@@ -1554,6 +2140,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListCloneVoiceModelsResponse listCloneVoiceModels(ListCloneVoiceModelsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listCloneVoiceModelsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询指令</p>
+     * 
+     * @param request ListInstructionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListInstructionsResponse
+     */
+    public ListInstructionsResponse listInstructionsWithOptions(ListInstructionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.providerId)) {
+            body.put("ProviderId", request.providerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListInstructions"),
+            new TeaPair("version", "2025-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstructionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询指令</p>
+     * 
+     * @param request ListInstructionsRequest
+     * @return ListInstructionsResponse
+     */
+    public ListInstructionsResponse listInstructions(ListInstructionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listInstructionsWithOptions(request, runtime);
     }
 
     /**
@@ -2170,6 +2812,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>修改服务提供商</p>
+     * 
+     * @param request UpdateCallCenterProviderRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCallCenterProviderResponse
+     */
+    public UpdateCallCenterProviderResponse updateCallCenterProviderWithOptions(UpdateCallCenterProviderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            query.put("DisplayName", request.displayName);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.destination)) {
+            body.put("Destination", request.destination);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extras)) {
+            body.put("Extras", request.extras);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originator)) {
+            body.put("Originator", request.originator);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.providerId)) {
+            body.put("ProviderId", request.providerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.providerType)) {
+            body.put("ProviderType", request.providerType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.referTo)) {
+            body.put("ReferTo", request.referTo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trunkId)) {
+            body.put("TrunkId", request.trunkId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCallCenterProvider"),
+            new TeaPair("version", "2025-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCallCenterProviderResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改服务提供商</p>
+     * 
+     * @param request UpdateCallCenterProviderRequest
+     * @return UpdateCallCenterProviderResponse
+     */
+    public UpdateCallCenterProviderResponse updateCallCenterProvider(UpdateCallCenterProviderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCallCenterProviderWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>更新实例</p>
      * 
      * @param request UpdateCloneVoiceRequest
@@ -2218,6 +2942,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateCloneVoiceResponse updateCloneVoice(UpdateCloneVoiceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateCloneVoiceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改指令</p>
+     * 
+     * @param request UpdateInstructionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateInstructionResponse
+     */
+    public UpdateInstructionResponse updateInstructionWithOptions(UpdateInstructionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.code)) {
+            body.put("Code", request.code);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            body.put("Config", request.config);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateInstruction"),
+            new TeaPair("version", "2025-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateInstructionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改指令</p>
+     * 
+     * @param request UpdateInstructionRequest
+     * @return UpdateInstructionResponse
+     */
+    public UpdateInstructionResponse updateInstruction(UpdateInstructionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateInstructionWithOptions(request, runtime);
     }
 
     /**
