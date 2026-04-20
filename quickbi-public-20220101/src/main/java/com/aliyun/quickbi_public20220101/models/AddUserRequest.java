@@ -64,6 +64,9 @@ public class AddUserRequest extends TeaModel {
     @Deprecated
     public Boolean authAdminUser;
 
+    @NameInMap("CopilotModules")
+    public String copilotModules;
+
     /**
      * <p>Aliyun account nickname.</p>
      * <ul>
@@ -145,6 +148,14 @@ public class AddUserRequest extends TeaModel {
     }
     public Boolean getAuthAdminUser() {
         return this.authAdminUser;
+    }
+
+    public AddUserRequest setCopilotModules(String copilotModules) {
+        this.copilotModules = copilotModules;
+        return this;
+    }
+    public String getCopilotModules() {
+        return this.copilotModules;
     }
 
     public AddUserRequest setNickName(String nickName) {

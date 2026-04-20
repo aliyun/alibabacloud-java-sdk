@@ -33,6 +33,9 @@ public class UpdateUserRequest extends TeaModel {
     @NameInMap("AuthAdminUser")
     public Boolean authAdminUser;
 
+    @NameInMap("CopilotModules")
+    public String copilotModules;
+
     /**
      * <p>User status: </p>
      * <ul>
@@ -111,6 +114,14 @@ public class UpdateUserRequest extends TeaModel {
     }
     public Boolean getAuthAdminUser() {
         return this.authAdminUser;
+    }
+
+    public UpdateUserRequest setCopilotModules(String copilotModules) {
+        this.copilotModules = copilotModules;
+        return this;
+    }
+    public String getCopilotModules() {
+        return this.copilotModules;
     }
 
     public UpdateUserRequest setIsDeleted(Boolean isDeleted) {

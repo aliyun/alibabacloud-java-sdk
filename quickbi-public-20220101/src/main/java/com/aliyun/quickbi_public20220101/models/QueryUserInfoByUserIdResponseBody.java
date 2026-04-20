@@ -106,6 +106,9 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
         @NameInMap("AuthAdminUser")
         public Boolean authAdminUser;
 
+        @NameInMap("CopilotModules")
+        public java.util.List<String> copilotModules;
+
         /**
          * <p>The email address of the user.</p>
          * 
@@ -194,6 +197,14 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
         }
         public Boolean getAuthAdminUser() {
             return this.authAdminUser;
+        }
+
+        public QueryUserInfoByUserIdResponseBodyResult setCopilotModules(java.util.List<String> copilotModules) {
+            this.copilotModules = copilotModules;
+            return this;
+        }
+        public java.util.List<String> getCopilotModules() {
+            return this.copilotModules;
         }
 
         public QueryUserInfoByUserIdResponseBodyResult setEmail(String email) {

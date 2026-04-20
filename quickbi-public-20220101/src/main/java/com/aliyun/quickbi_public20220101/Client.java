@@ -85,7 +85,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>ROW_LEVEL</p>
      * 
      * <b>summary</b> : 
-     * <p>43342<em><strong>435,1553a</strong></em>*41231</p>
+     * <p>Modifies the whitelist of the row and column permissions for a specified dataset.</p>
      * 
      * @param request AddDataLevelPermissionWhiteListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -136,7 +136,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>ROW_LEVEL</p>
      * 
      * <b>summary</b> : 
-     * <p>43342<em><strong>435,1553a</strong></em>*41231</p>
+     * <p>Modifies the whitelist of the row and column permissions for a specified dataset.</p>
      * 
      * @param request AddDataLevelPermissionWhiteListRequest
      * @return AddDataLevelPermissionWhiteListResponse
@@ -275,6 +275,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.authAdminUser)) {
             query.put("AuthAdminUser", request.authAdminUser);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.copilotModules)) {
+            query.put("CopilotModules", request.copilotModules);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.nickName)) {
@@ -514,6 +518,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AddUserToWorkspaceResponse addUserToWorkspace(AddUserToWorkspaceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addUserToWorkspaceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新增作品的协同授权记录</p>
+     * 
+     * @param request AddWorksAuthorizationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddWorksAuthorizationResponse
+     */
+    public AddWorksAuthorizationResponse addWorksAuthorizationWithOptions(AddWorksAuthorizationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authPoints)) {
+            query.put("AuthPoints", request.authPoints);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizeScope)) {
+            query.put("AuthorizeScope", request.authorizeScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizedId)) {
+            query.put("AuthorizedId", request.authorizedId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expireDay)) {
+            query.put("ExpireDay", request.expireDay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddWorksAuthorization"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddWorksAuthorizationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新增作品的协同授权记录</p>
+     * 
+     * @param request AddWorksAuthorizationRequest
+     * @return AddWorksAuthorizationResponse
+     */
+    public AddWorksAuthorizationResponse addWorksAuthorization(AddWorksAuthorizationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addWorksAuthorizationWithOptions(request, runtime);
     }
 
     /**
@@ -1691,7 +1759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>{&quot;ruleId&quot;:&quot;a5bb24da-<em><strong>-a891683e14da&quot;,&quot;cubeId&quot;:&quot;7c7223ae-</strong></em>-3c744528014b&quot;,&quot;delModel&quot;:{&quot;userGroups&quot;:[&quot;0d5fb19b-<em><strong>-1248fc27ca51&quot;,&quot;3d2c23d4-</strong></em>-f6390f325c2d&quot;],&quot;users&quot;:[&quot;4334<em><strong>358&quot;,&quot;Huang</strong></em>3fa822&quot;]}}</p>
      * 
      * <b>summary</b> : 
-     * <p>{ &quot;ruleId&quot;: &quot;a5bb24da- ***-a891683e14da&quot;, // The ID of the row-column permission rule. &quot;cubeId&quot;: &quot;7c7223ae- ***-3c744528014b&quot;, // The ID of the dataset. &quot;delModel&quot;: { &quot;userGroups&quot;: [ &quot;0d5fb19b- <em><strong>-1248 fc27ca51&quot;, // Delete the user group ID of the user group. &quot;3d2c23d4-</strong></em>-f6390f325c2d&quot; ], &quot;users&quot;: [ &quot;4334 <em><strong>358&quot;, // Delete the UserID of the user group. &quot;Huang</strong></em>3fa822&quot; ] } }</p>
+     * <p>Deletes a selected group of people for a single row and column permission rule.</p>
      * 
      * @param request DeleteDataLevelPermissionRuleUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1726,7 +1794,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>{&quot;ruleId&quot;:&quot;a5bb24da-<em><strong>-a891683e14da&quot;,&quot;cubeId&quot;:&quot;7c7223ae-</strong></em>-3c744528014b&quot;,&quot;delModel&quot;:{&quot;userGroups&quot;:[&quot;0d5fb19b-<em><strong>-1248fc27ca51&quot;,&quot;3d2c23d4-</strong></em>-f6390f325c2d&quot;],&quot;users&quot;:[&quot;4334<em><strong>358&quot;,&quot;Huang</strong></em>3fa822&quot;]}}</p>
      * 
      * <b>summary</b> : 
-     * <p>{ &quot;ruleId&quot;: &quot;a5bb24da- ***-a891683e14da&quot;, // The ID of the row-column permission rule. &quot;cubeId&quot;: &quot;7c7223ae- ***-3c744528014b&quot;, // The ID of the dataset. &quot;delModel&quot;: { &quot;userGroups&quot;: [ &quot;0d5fb19b- <em><strong>-1248 fc27ca51&quot;, // Delete the user group ID of the user group. &quot;3d2c23d4-</strong></em>-f6390f325c2d&quot; ], &quot;users&quot;: [ &quot;4334 <em><strong>358&quot;, // Delete the UserID of the user group. &quot;Huang</strong></em>3fa822&quot; ] } }</p>
+     * <p>Deletes a selected group of people for a single row and column permission rule.</p>
      * 
      * @param request DeleteDataLevelPermissionRuleUsersRequest
      * @return DeleteDataLevelPermissionRuleUsersResponse
@@ -1741,7 +1809,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The ID of the training dataset that you want to remove from the specified custom linguistic model.</p>
      * 
      * <b>summary</b> : 
-     * <p>The ID of the request.</p>
+     * <p>Deletes a single row or column permission rule.</p>
      * 
      * @param request DeleteDataLevelRuleConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1780,7 +1848,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The ID of the training dataset that you want to remove from the specified custom linguistic model.</p>
      * 
      * <b>summary</b> : 
-     * <p>The ID of the request.</p>
+     * <p>Deletes a single row or column permission rule.</p>
      * 
      * @param request DeleteDataLevelRuleConfigRequest
      * @return DeleteDataLevelRuleConfigResponse
@@ -2856,7 +2924,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Retrieve the list of custom roles at the organization level.</p>
      * 
-     * @param request ListOrganizationRolesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListOrganizationRolesResponse
      */
@@ -4313,8 +4380,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>Indicates whether the table is a custom SQL table. Valid values:
-     * \*   true: custom SQL table
-     * \*   false: non-custom SQL table</p>
+     * \\*   true: custom SQL table
+     * \\*   false: non-custom SQL table</p>
      * 
      * @param request QueryDatasetInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4347,8 +4414,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>Indicates whether the table is a custom SQL table. Valid values:
-     * \*   true: custom SQL table
-     * \*   false: non-custom SQL table</p>
+     * \\*   true: custom SQL table
+     * \\*   false: non-custom SQL table</p>
      * 
      * @param request QueryDatasetInfoRequest
      * @return QueryDatasetInfoResponse
@@ -4360,7 +4427,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The name of the training dataset.</p>
+     * <p>Queries the datasets of a specified workspace. The datasets are sorted in descending order by creation time.</p>
      * 
      * @param request QueryDatasetListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4412,7 +4479,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The name of the training dataset.</p>
+     * <p>Queries the datasets of a specified workspace. The datasets are sorted in descending order by creation time.</p>
      * 
      * @param request QueryDatasetListRequest
      * @return QueryDatasetListResponse
@@ -4524,7 +4591,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Obtain the embedding configuration in the organization, including the maximum number of embeddings and the number of embeddings.</p>
      * 
-     * @param request QueryEmbeddedInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryEmbeddedInfoResponse
      */
@@ -5462,7 +5528,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the metadata list of member tags in an organization.</p>
      * 
-     * @param request QueryUserTagMetaListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryUserTagMetaListResponse
      */
@@ -6167,7 +6232,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Used for batch management of smart Q&amp;A authorizations. Repeatedly adding an authorization will be treated as a new addition; repeatedly deleting an authorization will be skipped by default and will not be recorded in the audit log.</p>
      * 
      * <b>summary</b> : 
-     * <p>Batch Management of Smart Q\\\&amp;A Authorizations</p>
+     * <p>Batch Management of Smart Q\\\\\\&amp;A Authorizations</p>
      * 
      * @param request SmartqAuthorizeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6222,7 +6287,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Used for batch management of smart Q&amp;A authorizations. Repeatedly adding an authorization will be treated as a new addition; repeatedly deleting an authorization will be skipped by default and will not be recorded in the audit log.</p>
      * 
      * <b>summary</b> : 
-     * <p>Batch Management of Smart Q\\\&amp;A Authorizations</p>
+     * <p>Batch Management of Smart Q\\\\\\&amp;A Authorizations</p>
      * 
      * @param request SmartqAuthorizeRequest
      * @return SmartqAuthorizeResponse
@@ -6363,11 +6428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
-     * </ul>
+     * <p>Updates the status of the row and column permission switch for a dataset.</p>
      * 
      * @param request UpdateDataLevelPermissionStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6414,11 +6475,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
-     * </ul>
+     * <p>Updates the status of the row and column permission switch for a dataset.</p>
      * 
      * @param request UpdateDataLevelPermissionStatusRequest
      * @return UpdateDataLevelPermissionStatusResponse
@@ -6585,6 +6642,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.authAdminUser)) {
             query.put("AuthAdminUser", request.authAdminUser);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.copilotModules)) {
+            query.put("CopilotModules", request.copilotModules);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.isDeleted)) {
