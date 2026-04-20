@@ -1429,6 +1429,9 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         @NameInMap("ServiceSpecText")
         public String serviceSpecText;
 
+        @NameInMap("UpgradeStatus")
+        public String upgradeStatus;
+
         public static GetAppInstanceForPartnerResponseBodyModuleAppServiceListProfile build(java.util.Map<String, ?> map) throws Exception {
             GetAppInstanceForPartnerResponseBodyModuleAppServiceListProfile self = new GetAppInstanceForPartnerResponseBodyModuleAppServiceListProfile();
             return TeaModel.build(map, self);
@@ -1512,6 +1515,14 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         }
         public String getServiceSpecText() {
             return this.serviceSpecText;
+        }
+
+        public GetAppInstanceForPartnerResponseBodyModuleAppServiceListProfile setUpgradeStatus(String upgradeStatus) {
+            this.upgradeStatus = upgradeStatus;
+            return this;
+        }
+        public String getUpgradeStatus() {
+            return this.upgradeStatus;
         }
 
     }
@@ -2205,6 +2216,9 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         @NameInMap("Thumbnail")
         public String thumbnail;
 
+        @NameInMap("UpgradeStatus")
+        public String upgradeStatus;
+
         public static GetAppInstanceForPartnerResponseBodyModuleProfile build(java.util.Map<String, ?> map) throws Exception {
             GetAppInstanceForPartnerResponseBodyModuleProfile self = new GetAppInstanceForPartnerResponseBodyModuleProfile();
             return TeaModel.build(map, self);
@@ -2450,6 +2464,14 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             return this.thumbnail;
         }
 
+        public GetAppInstanceForPartnerResponseBodyModuleProfile setUpgradeStatus(String upgradeStatus) {
+            this.upgradeStatus = upgradeStatus;
+            return this;
+        }
+        public String getUpgradeStatus() {
+            return this.upgradeStatus;
+        }
+
     }
 
     public static class GetAppInstanceForPartnerResponseBodyModuleRelatedInstanceListProfile extends TeaModel {
@@ -2662,6 +2684,9 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
          */
         @NameInMap("Thumbnail")
         public String thumbnail;
+
+        @NameInMap("UpgradeStatus")
+        public String upgradeStatus;
 
         public static GetAppInstanceForPartnerResponseBodyModuleRelatedInstanceListProfile build(java.util.Map<String, ?> map) throws Exception {
             GetAppInstanceForPartnerResponseBodyModuleRelatedInstanceListProfile self = new GetAppInstanceForPartnerResponseBodyModuleRelatedInstanceListProfile();
@@ -2906,6 +2931,14 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         }
         public String getThumbnail() {
             return this.thumbnail;
+        }
+
+        public GetAppInstanceForPartnerResponseBodyModuleRelatedInstanceListProfile setUpgradeStatus(String upgradeStatus) {
+            this.upgradeStatus = upgradeStatus;
+            return this;
+        }
+        public String getUpgradeStatus() {
+            return this.upgradeStatus;
         }
 
     }

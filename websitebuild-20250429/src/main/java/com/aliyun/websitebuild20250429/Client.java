@@ -1410,7 +1410,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>查询万小智灵感值服务</p>
      * 
-     * @param request GetAppTokenServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAppTokenServiceResponse
      */
@@ -1792,10 +1791,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>获取商品配置信息</p>
      * 
-     * @param request ListAppCommoditySpecificationsForPartnerRequest
+     * @deprecated OpenAPI ListAppCommoditySpecificationsForPartner is deprecated, please use WebsiteBuild::2025-04-29::ListAppCommoditySpecificationsV2ForPartner instead.
+     * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAppCommoditySpecificationsForPartnerResponse
      */
+    @Deprecated
+    // Deprecated
     public ListAppCommoditySpecificationsForPartnerResponse listAppCommoditySpecificationsForPartnerWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -1815,8 +1817,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>获取商品配置信息</p>
+     * 
+     * @deprecated OpenAPI ListAppCommoditySpecificationsForPartner is deprecated, please use WebsiteBuild::2025-04-29::ListAppCommoditySpecificationsV2ForPartner instead.
      * @return ListAppCommoditySpecificationsForPartnerResponse
      */
+    @Deprecated
+    // Deprecated
     public ListAppCommoditySpecificationsForPartnerResponse listAppCommoditySpecificationsForPartner() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listAppCommoditySpecificationsForPartnerWithOptions(runtime);
@@ -2764,7 +2770,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>查询灵感值余额总览</p>
      * 
-     * @param request QueryInspirationBalanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryInspirationBalanceResponse
      */
