@@ -786,6 +786,36 @@ public class CreateScriptVersionRequest extends TeaModel {
 
     }
 
+    public static class CreateScriptVersionRequestTranscriberConfigCorrectionRules extends TeaModel {
+        @NameInMap("Pattern")
+        public String pattern;
+
+        @NameInMap("Replacement")
+        public String replacement;
+
+        public static CreateScriptVersionRequestTranscriberConfigCorrectionRules build(java.util.Map<String, ?> map) throws Exception {
+            CreateScriptVersionRequestTranscriberConfigCorrectionRules self = new CreateScriptVersionRequestTranscriberConfigCorrectionRules();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateScriptVersionRequestTranscriberConfigCorrectionRules setPattern(String pattern) {
+            this.pattern = pattern;
+            return this;
+        }
+        public String getPattern() {
+            return this.pattern;
+        }
+
+        public CreateScriptVersionRequestTranscriberConfigCorrectionRules setReplacement(String replacement) {
+            this.replacement = replacement;
+            return this;
+        }
+        public String getReplacement() {
+            return this.replacement;
+        }
+
+    }
+
     public static class CreateScriptVersionRequestTranscriberConfigNlsAccessProfile extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -810,6 +840,9 @@ public class CreateScriptVersionRequest extends TeaModel {
     }
 
     public static class CreateScriptVersionRequestTranscriberConfig extends TeaModel {
+        @NameInMap("CorrectionRules")
+        public java.util.List<CreateScriptVersionRequestTranscriberConfigCorrectionRules> correctionRules;
+
         /**
          * <strong>example:</strong>
          * <p>cd97223f-42f2-4cd9-95af-e734e2fe1fe4</p>
@@ -865,6 +898,14 @@ public class CreateScriptVersionRequest extends TeaModel {
         public static CreateScriptVersionRequestTranscriberConfig build(java.util.Map<String, ?> map) throws Exception {
             CreateScriptVersionRequestTranscriberConfig self = new CreateScriptVersionRequestTranscriberConfig();
             return TeaModel.build(map, self);
+        }
+
+        public CreateScriptVersionRequestTranscriberConfig setCorrectionRules(java.util.List<CreateScriptVersionRequestTranscriberConfigCorrectionRules> correctionRules) {
+            this.correctionRules = correctionRules;
+            return this;
+        }
+        public java.util.List<CreateScriptVersionRequestTranscriberConfigCorrectionRules> getCorrectionRules() {
+            return this.correctionRules;
         }
 
         public CreateScriptVersionRequestTranscriberConfig setCustomizationId(String customizationId) {

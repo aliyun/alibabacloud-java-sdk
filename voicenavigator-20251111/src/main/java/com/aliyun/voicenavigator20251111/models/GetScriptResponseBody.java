@@ -784,6 +784,36 @@ public class GetScriptResponseBody extends TeaModel {
 
     }
 
+    public static class GetScriptResponseBodyDataDraftVersionTranscriberConfigCorrectionRules extends TeaModel {
+        @NameInMap("Pattern")
+        public String pattern;
+
+        @NameInMap("Replacement")
+        public String replacement;
+
+        public static GetScriptResponseBodyDataDraftVersionTranscriberConfigCorrectionRules build(java.util.Map<String, ?> map) throws Exception {
+            GetScriptResponseBodyDataDraftVersionTranscriberConfigCorrectionRules self = new GetScriptResponseBodyDataDraftVersionTranscriberConfigCorrectionRules();
+            return TeaModel.build(map, self);
+        }
+
+        public GetScriptResponseBodyDataDraftVersionTranscriberConfigCorrectionRules setPattern(String pattern) {
+            this.pattern = pattern;
+            return this;
+        }
+        public String getPattern() {
+            return this.pattern;
+        }
+
+        public GetScriptResponseBodyDataDraftVersionTranscriberConfigCorrectionRules setReplacement(String replacement) {
+            this.replacement = replacement;
+            return this;
+        }
+        public String getReplacement() {
+            return this.replacement;
+        }
+
+    }
+
     public static class GetScriptResponseBodyDataDraftVersionTranscriberConfigNlsAccessProfile extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -808,6 +838,9 @@ public class GetScriptResponseBody extends TeaModel {
     }
 
     public static class GetScriptResponseBodyDataDraftVersionTranscriberConfig extends TeaModel {
+        @NameInMap("CorrectionRules")
+        public java.util.List<GetScriptResponseBodyDataDraftVersionTranscriberConfigCorrectionRules> correctionRules;
+
         /**
          * <strong>example:</strong>
          * <p>0c4f978a-73bb-4841-bd84-75c0398edd6f</p>
@@ -863,6 +896,14 @@ public class GetScriptResponseBody extends TeaModel {
         public static GetScriptResponseBodyDataDraftVersionTranscriberConfig build(java.util.Map<String, ?> map) throws Exception {
             GetScriptResponseBodyDataDraftVersionTranscriberConfig self = new GetScriptResponseBodyDataDraftVersionTranscriberConfig();
             return TeaModel.build(map, self);
+        }
+
+        public GetScriptResponseBodyDataDraftVersionTranscriberConfig setCorrectionRules(java.util.List<GetScriptResponseBodyDataDraftVersionTranscriberConfigCorrectionRules> correctionRules) {
+            this.correctionRules = correctionRules;
+            return this;
+        }
+        public java.util.List<GetScriptResponseBodyDataDraftVersionTranscriberConfigCorrectionRules> getCorrectionRules() {
+            return this.correctionRules;
         }
 
         public GetScriptResponseBodyDataDraftVersionTranscriberConfig setCustomizationId(String customizationId) {
@@ -1727,6 +1768,36 @@ public class GetScriptResponseBody extends TeaModel {
 
     }
 
+    public static class GetScriptResponseBodyDataPublishedVersionTranscriberConfigCorrectionRules extends TeaModel {
+        @NameInMap("Pattern")
+        public String pattern;
+
+        @NameInMap("Replacement")
+        public String replacement;
+
+        public static GetScriptResponseBodyDataPublishedVersionTranscriberConfigCorrectionRules build(java.util.Map<String, ?> map) throws Exception {
+            GetScriptResponseBodyDataPublishedVersionTranscriberConfigCorrectionRules self = new GetScriptResponseBodyDataPublishedVersionTranscriberConfigCorrectionRules();
+            return TeaModel.build(map, self);
+        }
+
+        public GetScriptResponseBodyDataPublishedVersionTranscriberConfigCorrectionRules setPattern(String pattern) {
+            this.pattern = pattern;
+            return this;
+        }
+        public String getPattern() {
+            return this.pattern;
+        }
+
+        public GetScriptResponseBodyDataPublishedVersionTranscriberConfigCorrectionRules setReplacement(String replacement) {
+            this.replacement = replacement;
+            return this;
+        }
+        public String getReplacement() {
+            return this.replacement;
+        }
+
+    }
+
     public static class GetScriptResponseBodyDataPublishedVersionTranscriberConfigNlsAccessProfile extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -1751,6 +1822,9 @@ public class GetScriptResponseBody extends TeaModel {
     }
 
     public static class GetScriptResponseBodyDataPublishedVersionTranscriberConfig extends TeaModel {
+        @NameInMap("CorrectionRules")
+        public java.util.List<GetScriptResponseBodyDataPublishedVersionTranscriberConfigCorrectionRules> correctionRules;
+
         /**
          * <strong>example:</strong>
          * <p>cd97223f-42f2-4cd9-95af-e734e2fe1fe4</p>
@@ -1806,6 +1880,14 @@ public class GetScriptResponseBody extends TeaModel {
         public static GetScriptResponseBodyDataPublishedVersionTranscriberConfig build(java.util.Map<String, ?> map) throws Exception {
             GetScriptResponseBodyDataPublishedVersionTranscriberConfig self = new GetScriptResponseBodyDataPublishedVersionTranscriberConfig();
             return TeaModel.build(map, self);
+        }
+
+        public GetScriptResponseBodyDataPublishedVersionTranscriberConfig setCorrectionRules(java.util.List<GetScriptResponseBodyDataPublishedVersionTranscriberConfigCorrectionRules> correctionRules) {
+            this.correctionRules = correctionRules;
+            return this;
+        }
+        public java.util.List<GetScriptResponseBodyDataPublishedVersionTranscriberConfigCorrectionRules> getCorrectionRules() {
+            return this.correctionRules;
         }
 
         public GetScriptResponseBodyDataPublishedVersionTranscriberConfig setCustomizationId(String customizationId) {
