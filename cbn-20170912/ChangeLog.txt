@@ -1,3 +1,7 @@
+2026-04-20 Version: 1.4.1
+- Update API CreateCenInterRegionTrafficQosPolicy: add request parameters ConsoleDryRun.
+
+
 2026-03-26 Version: 1.4.0
 - Support API ModifyGrantInstanceToTransitRouter.
 

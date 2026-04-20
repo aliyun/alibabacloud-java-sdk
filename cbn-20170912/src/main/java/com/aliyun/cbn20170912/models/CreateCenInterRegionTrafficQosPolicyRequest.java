@@ -27,6 +27,9 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("ConsoleDryRun")
+    public Boolean consoleDryRun;
+
     /**
      * <p>Specifies whether only to precheck the API request. Valid values:</p>
      * <ul>
@@ -118,6 +121,14 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateCenInterRegionTrafficQosPolicyRequest setConsoleDryRun(Boolean consoleDryRun) {
+        this.consoleDryRun = consoleDryRun;
+        return this;
+    }
+    public Boolean getConsoleDryRun() {
+        return this.consoleDryRun;
     }
 
     public CreateCenInterRegionTrafficQosPolicyRequest setDryRun(Boolean dryRun) {
