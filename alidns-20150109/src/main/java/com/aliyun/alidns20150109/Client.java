@@ -3369,7 +3369,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @param request DescribeCloudGtmSystemLinesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCloudGtmSystemLinesResponse
      */

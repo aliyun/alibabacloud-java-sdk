@@ -58,6 +58,13 @@ public class DescribeCloudGtmGlobalAlertResponseBody extends TeaModel {
         @NameInMap("NoticeType")
         public String noticeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("QpsThreshold")
+        public Long qpsThreshold;
+
         @NameInMap("SmsNotice")
         public Boolean smsNotice;
 
@@ -95,6 +102,14 @@ public class DescribeCloudGtmGlobalAlertResponseBody extends TeaModel {
         }
         public String getNoticeType() {
             return this.noticeType;
+        }
+
+        public DescribeCloudGtmGlobalAlertResponseBodyAlertConfigAlertConfig setQpsThreshold(Long qpsThreshold) {
+            this.qpsThreshold = qpsThreshold;
+            return this;
+        }
+        public Long getQpsThreshold() {
+            return this.qpsThreshold;
         }
 
         public DescribeCloudGtmGlobalAlertResponseBodyAlertConfigAlertConfig setSmsNotice(Boolean smsNotice) {

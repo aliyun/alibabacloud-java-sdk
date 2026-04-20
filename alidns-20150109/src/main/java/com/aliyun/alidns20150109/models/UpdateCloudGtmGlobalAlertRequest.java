@@ -118,6 +118,13 @@ public class UpdateCloudGtmGlobalAlertRequest extends TeaModel {
         public String noticeType;
 
         /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("QpsThreshold")
+        public Long qpsThreshold;
+
+        /**
          * <p>Specifies whether to configure text message notifications. Valid values:</p>
          * <ul>
          * <li>true: configures text message notifications. Text messages are sent when alerts are triggered.</li>
@@ -165,6 +172,14 @@ public class UpdateCloudGtmGlobalAlertRequest extends TeaModel {
         }
         public String getNoticeType() {
             return this.noticeType;
+        }
+
+        public UpdateCloudGtmGlobalAlertRequestAlertConfig setQpsThreshold(Long qpsThreshold) {
+            this.qpsThreshold = qpsThreshold;
+            return this;
+        }
+        public Long getQpsThreshold() {
+            return this.qpsThreshold;
         }
 
         public UpdateCloudGtmGlobalAlertRequestAlertConfig setSmsNotice(Boolean smsNotice) {
