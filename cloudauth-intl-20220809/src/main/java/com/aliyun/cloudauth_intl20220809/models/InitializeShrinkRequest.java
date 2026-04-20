@@ -584,6 +584,15 @@ public class InitializeShrinkRequest extends TeaModel {
     @NameInMap("TargetFacePictureUrl")
     public String targetFacePictureUrl;
 
+    @NameInMap("TemplateConfig")
+    public String templateConfig;
+
+    @NameInMap("TemplateRanCount")
+    public String templateRanCount;
+
+    @NameInMap("TemplateType")
+    public String templateType;
+
     /**
      * <p>Optional to enable NFC verification when <strong>DocType</strong>=01000000 (global passport).</p>
      * <ul>
@@ -1009,6 +1018,30 @@ public class InitializeShrinkRequest extends TeaModel {
     }
     public String getTargetFacePictureUrl() {
         return this.targetFacePictureUrl;
+    }
+
+    public InitializeShrinkRequest setTemplateConfig(String templateConfig) {
+        this.templateConfig = templateConfig;
+        return this;
+    }
+    public String getTemplateConfig() {
+        return this.templateConfig;
+    }
+
+    public InitializeShrinkRequest setTemplateRanCount(String templateRanCount) {
+        this.templateRanCount = templateRanCount;
+        return this;
+    }
+    public String getTemplateRanCount() {
+        return this.templateRanCount;
+    }
+
+    public InitializeShrinkRequest setTemplateType(String templateType) {
+        this.templateType = templateType;
+        return this;
+    }
+    public String getTemplateType() {
+        return this.templateType;
     }
 
     public InitializeShrinkRequest setUseNFC(String useNFC) {

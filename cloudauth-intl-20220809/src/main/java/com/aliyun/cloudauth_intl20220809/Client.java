@@ -3240,6 +3240,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TargetFacePictureUrl", request.targetFacePictureUrl);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.templateConfig)) {
+            query.put("TemplateConfig", request.templateConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateRanCount)) {
+            query.put("TemplateRanCount", request.templateRanCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateType)) {
+            query.put("TemplateType", request.templateType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.useNFC)) {
             query.put("UseNFC", request.useNFC);
         }
