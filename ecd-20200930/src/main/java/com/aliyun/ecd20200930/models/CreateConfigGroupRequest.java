@@ -127,6 +127,9 @@ public class CreateConfigGroupRequest extends TeaModel {
         @NameInMap("AppointmentTimer")
         public Long appointmentTimer;
 
+        @NameInMap("CreateSnapshot")
+        public Boolean createSnapshot;
+
         @NameInMap("EndCronExpression")
         public String endCronExpression;
 
@@ -155,6 +158,13 @@ public class CreateConfigGroupRequest extends TeaModel {
 
         @NameInMap("OperationType")
         public String operationType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>KB5082063</p>
+         */
+        @NameInMap("PatchId")
+        public String patchId;
 
         @NameInMap("ProcessWhitelist")
         public java.util.List<String> processWhitelist;
@@ -185,6 +195,14 @@ public class CreateConfigGroupRequest extends TeaModel {
         }
         public Long getAppointmentTimer() {
             return this.appointmentTimer;
+        }
+
+        public CreateConfigGroupRequestConfigTimersSegmentTimers setCreateSnapshot(Boolean createSnapshot) {
+            this.createSnapshot = createSnapshot;
+            return this;
+        }
+        public Boolean getCreateSnapshot() {
+            return this.createSnapshot;
         }
 
         public CreateConfigGroupRequestConfigTimersSegmentTimers setEndCronExpression(String endCronExpression) {
@@ -241,6 +259,14 @@ public class CreateConfigGroupRequest extends TeaModel {
         }
         public String getOperationType() {
             return this.operationType;
+        }
+
+        public CreateConfigGroupRequestConfigTimersSegmentTimers setPatchId(String patchId) {
+            this.patchId = patchId;
+            return this;
+        }
+        public String getPatchId() {
+            return this.patchId;
         }
 
         public CreateConfigGroupRequestConfigTimersSegmentTimers setProcessWhitelist(java.util.List<String> processWhitelist) {

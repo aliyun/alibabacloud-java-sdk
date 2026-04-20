@@ -48,6 +48,9 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         @NameInMap("AppointmentTimer")
         public Long appointmentTimer;
 
+        @NameInMap("CreateSnapshot")
+        public Boolean createSnapshot;
+
         @NameInMap("EndCronExpression")
         public String endCronExpression;
 
@@ -76,6 +79,13 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
 
         @NameInMap("OperationType")
         public String operationType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>KB5082063</p>
+         */
+        @NameInMap("PatchId")
+        public String patchId;
 
         @NameInMap("ProcessWhitelist")
         public java.util.List<String> processWhitelist;
@@ -106,6 +116,14 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         }
         public Long getAppointmentTimer() {
             return this.appointmentTimer;
+        }
+
+        public DescribeTimerGroupResponseBodyDataConfigTimersSegmentTimers setCreateSnapshot(Boolean createSnapshot) {
+            this.createSnapshot = createSnapshot;
+            return this;
+        }
+        public Boolean getCreateSnapshot() {
+            return this.createSnapshot;
         }
 
         public DescribeTimerGroupResponseBodyDataConfigTimersSegmentTimers setEndCronExpression(String endCronExpression) {
@@ -162,6 +180,14 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         }
         public String getOperationType() {
             return this.operationType;
+        }
+
+        public DescribeTimerGroupResponseBodyDataConfigTimersSegmentTimers setPatchId(String patchId) {
+            this.patchId = patchId;
+            return this;
+        }
+        public String getPatchId() {
+            return this.patchId;
         }
 
         public DescribeTimerGroupResponseBodyDataConfigTimersSegmentTimers setProcessWhitelist(java.util.List<String> processWhitelist) {

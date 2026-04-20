@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class StopDesktopsRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("CreateSnapshot")
+    public String createSnapshot;
+
+    /**
      * <p>The cloud computer IDs. You can specify the IDs of 1 to 100 cloud computers.</p>
      * <p>This parameter is required.</p>
      * 
@@ -22,6 +29,13 @@ public class StopDesktopsRequest extends TeaModel {
      */
     @NameInMap("OsUpdate")
     public Boolean osUpdate;
+
+    /**
+     * <strong>example:</strong>
+     * <p>KB5082063</p>
+     */
+    @NameInMap("PatchId")
+    public String patchId;
 
     /**
      * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
@@ -63,6 +77,14 @@ public class StopDesktopsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public StopDesktopsRequest setCreateSnapshot(String createSnapshot) {
+        this.createSnapshot = createSnapshot;
+        return this;
+    }
+    public String getCreateSnapshot() {
+        return this.createSnapshot;
+    }
+
     public StopDesktopsRequest setDesktopId(java.util.List<String> desktopId) {
         this.desktopId = desktopId;
         return this;
@@ -77,6 +99,14 @@ public class StopDesktopsRequest extends TeaModel {
     }
     public Boolean getOsUpdate() {
         return this.osUpdate;
+    }
+
+    public StopDesktopsRequest setPatchId(String patchId) {
+        this.patchId = patchId;
+        return this;
+    }
+    public String getPatchId() {
+        return this.patchId;
     }
 
     public StopDesktopsRequest setRegionId(String regionId) {

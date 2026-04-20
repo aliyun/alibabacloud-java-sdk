@@ -18854,12 +18854,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RebootDesktopsResponse rebootDesktopsWithOptions(RebootDesktopsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.createSnapshot)) {
+            query.put("CreateSnapshot", request.createSnapshot);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.desktopId)) {
             query.put("DesktopId", request.desktopId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.osUpdate)) {
             query.put("OsUpdate", request.osUpdate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.patchId)) {
+            query.put("PatchId", request.patchId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -20432,12 +20440,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StopDesktopsResponse stopDesktopsWithOptions(StopDesktopsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.createSnapshot)) {
+            query.put("CreateSnapshot", request.createSnapshot);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.desktopId)) {
             query.put("DesktopId", request.desktopId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.osUpdate)) {
             query.put("OsUpdate", request.osUpdate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.patchId)) {
+            query.put("PatchId", request.patchId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
