@@ -256,6 +256,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.sendSmsPlanShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sendSmsPlan, "SendSmsPlan", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.weekTag)) {
+            request.weekTagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.weekTag, "WeekTag", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.callTimeListShrink)) {
             query.put("CallTimeList", request.callTimeListShrink);
@@ -347,6 +351,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateType)) {
             query.put("TemplateType", request.templateType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.weekTagShrink)) {
+            query.put("WeekTag", request.weekTagShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1036,6 +1044,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.sendSmsPlanShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sendSmsPlan, "SendSmsPlan", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.weekTag)) {
+            request.weekTagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.weekTag, "WeekTag", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.callTimeListShrink)) {
             query.put("CallTimeList", request.callTimeListShrink);
@@ -1127,6 +1139,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateType)) {
             query.put("TemplateType", request.templateType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.weekTagShrink)) {
+            query.put("WeekTag", request.weekTagShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

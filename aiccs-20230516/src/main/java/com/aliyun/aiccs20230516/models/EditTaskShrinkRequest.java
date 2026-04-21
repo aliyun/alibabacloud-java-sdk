@@ -6,17 +6,11 @@ import com.aliyun.tea.*;
 public class EditTaskShrinkRequest extends TeaModel {
     /**
      * <p>外呼时间</p>
-     * 
-     * <strong>example:</strong>
-     * <p>[]</p>
      */
     @NameInMap("CallTimeList")
     public String callTimeListShrink;
 
     /**
-     * <p>外呼时间:精确到分钟.如果两个字段都存在值，以该字段为准。建议用该字段，精确到分钟, 08:31-12:05 13:33-19:00 则传[[&quot;08:31&quot;,&quot;12:05&quot;][&quot;13:33&quot;,&quot;19:00&quot;]]；默认为[[&quot;08:00&quot;,&quot;20:00&quot;]]</p>
-     * 
-     * <strong>example:</strong>
      * <p>外呼时间:精确到分钟.如果两个字段都存在值，以该字段为准。建议用该字段，精确到分钟, 08:31-12:05 13:33-19:00 则传[[&quot;08:31&quot;,&quot;12:05&quot;][&quot;13:33&quot;,&quot;19:00&quot;]]；默认为[[&quot;08:00&quot;,&quot;20:00&quot;]]</p>
      */
     @NameInMap("CallTimeStrList")
@@ -69,7 +63,7 @@ public class EditTaskShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>456789123456</p>
+     * <p>无需填写</p>
      */
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -142,14 +136,14 @@ public class EditTaskShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>${&quot;curl 2W7xHcIl.popscan.xaliyun.com&quot;}</p>
+     * <p>无需填写</p>
      */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     /**
      * <strong>example:</strong>
-     * <p>1418129172157144</p>
+     * <p>无需填写</p>
      */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
@@ -196,6 +190,12 @@ public class EditTaskShrinkRequest extends TeaModel {
      */
     @NameInMap("TemplateType")
     public Long templateType;
+
+    /**
+     * <p>外呼时间需要的按星期几进行外呼，例：“1,2,3,4,5,6,7”，代表周一到周日都外呼</p>
+     */
+    @NameInMap("WeekTag")
+    public String weekTagShrink;
 
     public static EditTaskShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         EditTaskShrinkRequest self = new EditTaskShrinkRequest();
@@ -384,6 +384,14 @@ public class EditTaskShrinkRequest extends TeaModel {
     }
     public Long getTemplateType() {
         return this.templateType;
+    }
+
+    public EditTaskShrinkRequest setWeekTagShrink(String weekTagShrink) {
+        this.weekTagShrink = weekTagShrink;
+        return this;
+    }
+    public String getWeekTagShrink() {
+        return this.weekTagShrink;
     }
 
 }
