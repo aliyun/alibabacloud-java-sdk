@@ -13,6 +13,9 @@ public class DeployHttpApiResponseBody extends TeaModel {
     @NameInMap("code")
     public String code;
 
+    @NameInMap("data")
+    public DeployHttpApiResponseBodyData data;
+
     /**
      * <p>Response message.</p>
      * 
@@ -44,6 +47,14 @@ public class DeployHttpApiResponseBody extends TeaModel {
         return this.code;
     }
 
+    public DeployHttpApiResponseBody setData(DeployHttpApiResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DeployHttpApiResponseBodyData getData() {
+        return this.data;
+    }
+
     public DeployHttpApiResponseBody setMessage(String message) {
         this.message = message;
         return this;
@@ -58,6 +69,25 @@ public class DeployHttpApiResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class DeployHttpApiResponseBodyData extends TeaModel {
+        @NameInMap("httpApiId")
+        public String httpApiId;
+
+        public static DeployHttpApiResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            DeployHttpApiResponseBodyData self = new DeployHttpApiResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public DeployHttpApiResponseBodyData setHttpApiId(String httpApiId) {
+            this.httpApiId = httpApiId;
+            return this;
+        }
+        public String getHttpApiId() {
+            return this.httpApiId;
+        }
+
     }
 
 }
