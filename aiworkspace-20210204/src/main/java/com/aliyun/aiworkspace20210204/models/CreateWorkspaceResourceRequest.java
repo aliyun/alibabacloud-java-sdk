@@ -93,7 +93,6 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
     public static class CreateWorkspaceResourceRequestResourcesQuotas extends TeaModel {
         /**
          * <p>The quota ID. You can call <a href="https://help.aliyun.com/document_detail/449144.html">ListQuotas</a> to obtain the quota ID.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>232892******92912</p>
