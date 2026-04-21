@@ -111,6 +111,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("GmtModified")
     public String gmtModified;
 
+    @NameInMap("LangfuseInstanceIds")
+    public java.util.List<String> langfuseInstanceIds;
+
     /**
      * <p>The lock mode of the instance. Set the value to <strong>lock</strong>, which specifies that the instance is locked when it automatically expires or has an overdue payment.</p>
      * 
@@ -395,6 +398,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
     public String getGmtModified() {
         return this.gmtModified;
+    }
+
+    public DescribeDBInstanceAttributeResponseBody setLangfuseInstanceIds(java.util.List<String> langfuseInstanceIds) {
+        this.langfuseInstanceIds = langfuseInstanceIds;
+        return this;
+    }
+    public java.util.List<String> getLangfuseInstanceIds() {
+        return this.langfuseInstanceIds;
     }
 
     public DescribeDBInstanceAttributeResponseBody setLockMode(Long lockMode) {
