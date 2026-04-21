@@ -4,6 +4,10 @@ package com.aliyun.iqs20241121.models;
 import com.aliyun.tea.*;
 
 public class OperationResult extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("success")
     public Boolean success;
 

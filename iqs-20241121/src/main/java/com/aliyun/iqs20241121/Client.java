@@ -370,6 +370,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询转正用户调用量信息</p>
+     * 
+     * @param request GetNormalServiceConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetNormalServiceConfigResponse
+     */
+    public GetNormalServiceConfigResponse getNormalServiceConfigWithOptions(GetNormalServiceConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetNormalServiceConfig"),
+            new TeaPair("version", "2024-11-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/linked-retrieval/linked-retrieval-admin/console/v1/services/commands/normalServiceConfig"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetNormalServiceConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询转正用户调用量信息</p>
+     * 
+     * @param request GetNormalServiceConfigRequest
+     * @return GetNormalServiceConfigResponse
+     */
+    public GetNormalServiceConfigResponse getNormalServiceConfig(GetNormalServiceConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getNormalServiceConfigWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询服务额度信息</p>
      * 
      * @param headers map
@@ -474,6 +515,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>api基础信息</p>
+     * 
+     * @param request ListApiInfosRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListApiInfosResponse
+     */
+    public ListApiInfosResponse listApiInfosWithOptions(ListApiInfosRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListApiInfos"),
+            new TeaPair("version", "2024-11-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/linked-retrieval/linked-retrieval-admin/console/v1/monitors/commands/apiInfos"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListApiInfosResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>api基础信息</p>
+     * 
+     * @param request ListApiInfosRequest
+     * @return ListApiInfosResponse
+     */
+    public ListApiInfosResponse listApiInfos(ListApiInfosRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listApiInfosWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Api名称列表</p>
      * 
      * @param headers map
@@ -507,6 +589,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listApiNamesWithOptions(headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>api基础信息</p>
+     * 
+     * @param request ListLimitationsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListLimitationsResponse
+     */
+    public ListLimitationsResponse listLimitationsWithOptions(ListLimitationsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListLimitations"),
+            new TeaPair("version", "2024-11-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/linked-retrieval/linked-retrieval-admin/openService/v1/console/limitation/commands/list/account"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListLimitationsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>api基础信息</p>
+     * 
+     * @param request ListLimitationsRequest
+     * @return ListLimitationsResponse
+     */
+    public ListLimitationsResponse listLimitations(ListLimitationsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listLimitationsWithOptions(request, headers, runtime);
     }
 
     /**
@@ -657,5 +780,87 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.manageSearchAccountInfoWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停止自动转正</p>
+     * 
+     * @param request OpenAutoNormalReviewRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return OpenAutoNormalReviewResponse
+     */
+    public OpenAutoNormalReviewResponse openAutoNormalReviewWithOptions(OpenAutoNormalReviewRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "OpenAutoNormalReview"),
+            new TeaPair("version", "2024-11-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/linked-retrieval/linked-retrieval-admin/openService/v1/account/commands/openAutoNormalReview"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new OpenAutoNormalReviewResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停止自动转正</p>
+     * 
+     * @param request OpenAutoNormalReviewRequest
+     * @return OpenAutoNormalReviewResponse
+     */
+    public OpenAutoNormalReviewResponse openAutoNormalReview(OpenAutoNormalReviewRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.openAutoNormalReviewWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停止自动转正</p>
+     * 
+     * @param request StopAutoNormalReviewRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopAutoNormalReviewResponse
+     */
+    public StopAutoNormalReviewResponse stopAutoNormalReviewWithOptions(StopAutoNormalReviewRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopAutoNormalReview"),
+            new TeaPair("version", "2024-11-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/linked-retrieval/linked-retrieval-admin/openService/v1/account/commands/stopAutoNormalReview"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopAutoNormalReviewResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停止自动转正</p>
+     * 
+     * @param request StopAutoNormalReviewRequest
+     * @return StopAutoNormalReviewResponse
+     */
+    public StopAutoNormalReviewResponse stopAutoNormalReview(StopAutoNormalReviewRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.stopAutoNormalReviewWithOptions(request, headers, runtime);
     }
 }

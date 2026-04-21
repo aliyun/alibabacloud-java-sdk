@@ -4,9 +4,17 @@ package com.aliyun.iqs20241121.models;
 import com.aliyun.tea.*;
 
 public class ExpendExpiredTimeRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>280451935746041600</p>
+     */
     @NameInMap("accountId")
     public String accountId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2025:02:24 00:00:00</p>
+     */
     @NameInMap("testStartTime")
     public String testStartTime;
 
