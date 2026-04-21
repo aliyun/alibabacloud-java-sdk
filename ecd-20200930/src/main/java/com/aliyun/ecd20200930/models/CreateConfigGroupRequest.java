@@ -184,6 +184,12 @@ public class CreateConfigGroupRequest extends TeaModel {
         @NameInMap("TriggerType")
         public String triggerType;
 
+        @NameInMap("VerificationNotificationTime")
+        public Integer verificationNotificationTime;
+
+        @NameInMap("VerificationTime")
+        public Integer verificationTime;
+
         public static CreateConfigGroupRequestConfigTimersSegmentTimers build(java.util.Map<String, ?> map) throws Exception {
             CreateConfigGroupRequestConfigTimersSegmentTimers self = new CreateConfigGroupRequestConfigTimersSegmentTimers();
             return TeaModel.build(map, self);
@@ -315,6 +321,22 @@ public class CreateConfigGroupRequest extends TeaModel {
         }
         public String getTriggerType() {
             return this.triggerType;
+        }
+
+        public CreateConfigGroupRequestConfigTimersSegmentTimers setVerificationNotificationTime(Integer verificationNotificationTime) {
+            this.verificationNotificationTime = verificationNotificationTime;
+            return this;
+        }
+        public Integer getVerificationNotificationTime() {
+            return this.verificationNotificationTime;
+        }
+
+        public CreateConfigGroupRequestConfigTimersSegmentTimers setVerificationTime(Integer verificationTime) {
+            this.verificationTime = verificationTime;
+            return this;
+        }
+        public Integer getVerificationTime() {
+            return this.verificationTime;
         }
 
     }

@@ -105,6 +105,12 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         @NameInMap("TriggerType")
         public String triggerType;
 
+        @NameInMap("VerificationNotificationTime")
+        public Integer verificationNotificationTime;
+
+        @NameInMap("VerificationTime")
+        public Integer verificationTime;
+
         public static DescribeTimerGroupResponseBodyDataConfigTimersSegmentTimers build(java.util.Map<String, ?> map) throws Exception {
             DescribeTimerGroupResponseBodyDataConfigTimersSegmentTimers self = new DescribeTimerGroupResponseBodyDataConfigTimersSegmentTimers();
             return TeaModel.build(map, self);
@@ -236,6 +242,22 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         }
         public String getTriggerType() {
             return this.triggerType;
+        }
+
+        public DescribeTimerGroupResponseBodyDataConfigTimersSegmentTimers setVerificationNotificationTime(Integer verificationNotificationTime) {
+            this.verificationNotificationTime = verificationNotificationTime;
+            return this;
+        }
+        public Integer getVerificationNotificationTime() {
+            return this.verificationNotificationTime;
+        }
+
+        public DescribeTimerGroupResponseBodyDataConfigTimersSegmentTimers setVerificationTime(Integer verificationTime) {
+            this.verificationTime = verificationTime;
+            return this;
+        }
+        public Integer getVerificationTime() {
+            return this.verificationTime;
         }
 
     }
