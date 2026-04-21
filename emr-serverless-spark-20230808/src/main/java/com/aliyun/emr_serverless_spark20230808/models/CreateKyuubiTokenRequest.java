@@ -17,6 +17,9 @@ public class CreateKyuubiTokenRequest extends TeaModel {
     @NameInMap("name")
     public String name;
 
+    @NameInMap("sparkRole")
+    public java.util.List<String> sparkRole;
+
     /**
      * <strong>example:</strong>
      * <p>rjy7ejhej9gkzjjuun49jnx2xk8if2cu</p>
@@ -58,6 +61,14 @@ public class CreateKyuubiTokenRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateKyuubiTokenRequest setSparkRole(java.util.List<String> sparkRole) {
+        this.sparkRole = sparkRole;
+        return this;
+    }
+    public java.util.List<String> getSparkRole() {
+        return this.sparkRole;
     }
 
     public CreateKyuubiTokenRequest setToken(String token) {

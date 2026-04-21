@@ -344,6 +344,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("name", request.name);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sparkRole)) {
+            body.put("sparkRole", request.sparkRole);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.token)) {
             body.put("token", request.token);
         }
@@ -4017,6 +4021,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sparkRole)) {
+            body.put("sparkRole", request.sparkRole);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.token)) {

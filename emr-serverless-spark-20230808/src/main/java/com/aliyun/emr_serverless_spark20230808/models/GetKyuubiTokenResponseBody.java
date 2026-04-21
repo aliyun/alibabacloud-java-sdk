@@ -115,6 +115,9 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        @NameInMap("sparkRole")
+        public java.util.List<String> sparkRole;
+
         /**
          * <strong>example:</strong>
          * <p>dxj**********wfg</p>
@@ -190,6 +193,14 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetKyuubiTokenResponseBodyData setSparkRole(java.util.List<String> sparkRole) {
+            this.sparkRole = sparkRole;
+            return this;
+        }
+        public java.util.List<String> getSparkRole() {
+            return this.sparkRole;
         }
 
         public GetKyuubiTokenResponseBodyData setToken(String token) {
