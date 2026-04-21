@@ -84,6 +84,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建用户自动处置配置</p>
+     * 
+     * @param request CreateAutoDisposeConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAutoDisposeConfigResponse
+     */
+    public CreateAutoDisposeConfigResponse createAutoDisposeConfigWithOptions(CreateAutoDisposeConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoDecisionStatus)) {
+            body.put("AutoDecisionStatus", request.autoDecisionStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            body.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            body.put("ProductCode", request.productCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAutoDisposeConfig"),
+            new TeaPair("version", "2024-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAutoDisposeConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建用户自动处置配置</p>
+     * 
+     * @param request CreateAutoDisposeConfigRequest
+     * @return CreateAutoDisposeConfigResponse
+     */
+    public CreateAutoDisposeConfigResponse createAutoDisposeConfig(CreateAutoDisposeConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAutoDisposeConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建数据源</p>
      * 
      * @param request CreateDataIngestionRequest
@@ -1858,6 +1910,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>手动处置告警</p>
+     * 
+     * @param request ExecuteAutoDisposeRecordsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExecuteAutoDisposeRecordsResponse
+     */
+    public ExecuteAutoDisposeRecordsResponse executeAutoDisposeRecordsWithOptions(ExecuteAutoDisposeRecordsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            body.put("Lang", request.lang);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.selectedEntityList)) {
+            bodyFlat.put("SelectedEntityList", request.selectedEntityList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.unSelectedEntityList)) {
+            bodyFlat.put("UnSelectedEntityList", request.unSelectedEntityList);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExecuteAutoDisposeRecords"),
+            new TeaPair("version", "2024-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteAutoDisposeRecordsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>手动处置告警</p>
+     * 
+     * @param request ExecuteAutoDisposeRecordsRequest
+     * @return ExecuteAutoDisposeRecordsResponse
+     */
+    public ExecuteAutoDisposeRecordsResponse executeAutoDisposeRecords(ExecuteAutoDisposeRecordsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.executeAutoDisposeRecordsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查看LogStore</p>
      * 
      * @param request ExecuteLogQueryRequest
@@ -1994,6 +2103,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ExecuteUpgradeResponse executeUpgrade(ExecuteUpgradeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.executeUpgradeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取用户自动处置配置</p>
+     * 
+     * @param request GetAutoDisposeConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAutoDisposeConfigResponse
+     */
+    public GetAutoDisposeConfigResponse getAutoDisposeConfigWithOptions(GetAutoDisposeConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            body.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            body.put("ProductCode", request.productCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAutoDisposeConfig"),
+            new TeaPair("version", "2024-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAutoDisposeConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取用户自动处置配置</p>
+     * 
+     * @param request GetAutoDisposeConfigRequest
+     * @return GetAutoDisposeConfigResponse
+     */
+    public GetAutoDisposeConfigResponse getAutoDisposeConfig(GetAutoDisposeConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAutoDisposeConfigWithOptions(request, runtime);
     }
 
     /**
@@ -2546,6 +2703,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetUserConfigResponse getUserConfig(GetUserConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getUserConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取AI研判实体列表</p>
+     * 
+     * @param tmpReq ListAutoDisposeEntitiesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAutoDisposeEntitiesResponse
+     */
+    public ListAutoDisposeEntitiesResponse listAutoDisposeEntitiesWithOptions(ListAutoDisposeEntitiesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListAutoDisposeEntitiesShrinkRequest request = new ListAutoDisposeEntitiesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.autoDisposeRecordIds)) {
+            request.autoDisposeRecordIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.autoDisposeRecordIds, "AutoDisposeRecordIds", "simple");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoDisposeRecordIdsShrink)) {
+            body.put("AutoDisposeRecordIds", request.autoDisposeRecordIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            body.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceType)) {
+            body.put("DataSourceType", request.dataSourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            body.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uuid)) {
+            body.put("Uuid", request.uuid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAutoDisposeEntities"),
+            new TeaPair("version", "2024-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAutoDisposeEntitiesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取AI研判实体列表</p>
+     * 
+     * @param request ListAutoDisposeEntitiesRequest
+     * @return ListAutoDisposeEntitiesResponse
+     */
+    public ListAutoDisposeEntitiesResponse listAutoDisposeEntities(ListAutoDisposeEntitiesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAutoDisposeEntitiesWithOptions(request, runtime);
     }
 
     /**
@@ -4546,6 +4781,118 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SetDefaultNormalizationRuleVersionResponse setDefaultNormalizationRuleVersion(SetDefaultNormalizationRuleVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setDefaultNormalizationRuleVersionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新用户自动处置配置</p>
+     * 
+     * @param request UpdateAutoDisposeConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAutoDisposeConfigResponse
+     */
+    public UpdateAutoDisposeConfigResponse updateAutoDisposeConfigWithOptions(UpdateAutoDisposeConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoDecisionStatus)) {
+            body.put("AutoDecisionStatus", request.autoDecisionStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            body.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            body.put("ProductCode", request.productCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAutoDisposeConfig"),
+            new TeaPair("version", "2024-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAutoDisposeConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新用户自动处置配置</p>
+     * 
+     * @param request UpdateAutoDisposeConfigRequest
+     * @return UpdateAutoDisposeConfigResponse
+     */
+    public UpdateAutoDisposeConfigResponse updateAutoDisposeConfig(UpdateAutoDisposeConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAutoDisposeConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>同步研判结果</p>
+     * 
+     * @param request UpdateAutoDisposeRecordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAutoDisposeRecordResponse
+     */
+    public UpdateAutoDisposeRecordResponse updateAutoDisposeRecordWithOptions(UpdateAutoDisposeRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoDecisionConclusion)) {
+            body.put("AutoDecisionConclusion", request.autoDecisionConclusion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoDecisionEntityList)) {
+            body.put("AutoDecisionEntityList", request.autoDecisionEntityList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoDecisionResult)) {
+            body.put("AutoDecisionResult", request.autoDecisionResult);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoDisposeRecordId)) {
+            body.put("AutoDisposeRecordId", request.autoDisposeRecordId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            body.put("Lang", request.lang);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAutoDisposeRecord"),
+            new TeaPair("version", "2024-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAutoDisposeRecordResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>同步研判结果</p>
+     * 
+     * @param request UpdateAutoDisposeRecordRequest
+     * @return UpdateAutoDisposeRecordResponse
+     */
+    public UpdateAutoDisposeRecordResponse updateAutoDisposeRecord(UpdateAutoDisposeRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAutoDisposeRecordWithOptions(request, runtime);
     }
 
     /**
