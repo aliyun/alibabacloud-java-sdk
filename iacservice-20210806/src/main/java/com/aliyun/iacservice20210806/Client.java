@@ -716,7 +716,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建模板版本</p>
+     * <p>Publish a template version.</p>
      * 
      * @param request CreateModuleVersionRequest
      * @param headers map
@@ -758,7 +758,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建模板版本</p>
+     * <p>Publish a template version.</p>
      * 
      * @param request CreateModuleVersionRequest
      * @return CreateModuleVersionResponse

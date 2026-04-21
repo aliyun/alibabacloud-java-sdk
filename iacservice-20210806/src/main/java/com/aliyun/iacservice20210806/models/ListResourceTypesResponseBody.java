@@ -108,6 +108,9 @@ public class ListResourceTypesResponseBody extends TeaModel {
         @NameInMap("resourceListPageUrl")
         public String resourceListPageUrl;
 
+        @NameInMap("resourceType")
+        public String resourceType;
+
         /**
          * <strong>example:</strong>
          * <p>Available</p>
@@ -196,6 +199,14 @@ public class ListResourceTypesResponseBody extends TeaModel {
         }
         public String getResourceListPageUrl() {
             return this.resourceListPageUrl;
+        }
+
+        public ListResourceTypesResponseBodyResourceTypes setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
         }
 
         public ListResourceTypesResponseBodyResourceTypes setStatus(String status) {
