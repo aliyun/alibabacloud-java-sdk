@@ -357,6 +357,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>医疗问答</p>
+     * 
+     * @param request MedicalAnswerRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return MedicalAnswerResponse
+     */
+    public MedicalAnswerResponse medicalAnswerWithOptions(MedicalAnswerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "MedicalAnswer"),
+            new TeaPair("version", "2024-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/linked-retrieval/linked-retrieval-entry/v1/iqs/domain/medical/answer"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new MedicalAnswerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>医疗问答</p>
+     * 
+     * @param request MedicalAnswerRequest
+     * @return MedicalAnswerResponse
+     */
+    public MedicalAnswerResponse medicalAnswer(MedicalAnswerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.medicalAnswerWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>医疗图谱</p>
+     * 
+     * @param request MedicalKnowledgeRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return MedicalKnowledgeResponse
+     */
+    public MedicalKnowledgeResponse medicalKnowledgeWithOptions(MedicalKnowledgeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "MedicalKnowledge"),
+            new TeaPair("version", "2024-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/linked-retrieval/linked-retrieval-entry/v1/iqs/domain/medical/know"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new MedicalKnowledgeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>医疗图谱</p>
+     * 
+     * @param request MedicalKnowledgeRequest
+     * @return MedicalKnowledgeResponse
+     */
+    public MedicalKnowledgeResponse medicalKnowledge(MedicalKnowledgeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.medicalKnowledgeWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>多模态搜索</p>
      * 
      * @param request MultimodalSearchRequest
@@ -395,6 +479,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.multimodalSearchWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通用问答</p>
+     * 
+     * @param request OmniAnswerRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return OmniAnswerResponse
+     */
+    public OmniAnswerResponse omniAnswerWithOptions(OmniAnswerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "OmniAnswer"),
+            new TeaPair("version", "2024-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/linked-retrieval/linked-retrieval-entry/v1/iqs/answer/omni/search"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "string")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new OmniAnswerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通用问答</p>
+     * 
+     * @param request OmniAnswerRequest
+     * @return OmniAnswerResponse
+     */
+    public OmniAnswerResponse omniAnswer(OmniAnswerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.omniAnswerWithOptions(request, headers, runtime);
     }
 
     /**

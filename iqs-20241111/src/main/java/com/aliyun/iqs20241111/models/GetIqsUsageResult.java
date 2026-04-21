@@ -48,6 +48,9 @@ public class GetIqsUsageResult extends TeaModel {
         @NameInMap("successCalls")
         public Integer successCalls;
 
+        @NameInMap("totalBillStatCalls")
+        public Integer totalBillStatCalls;
+
         @NameInMap("totalCalls")
         public Integer totalCalls;
 
@@ -132,6 +135,14 @@ public class GetIqsUsageResult extends TeaModel {
         }
         public Integer getSuccessCalls() {
             return this.successCalls;
+        }
+
+        public GetIqsUsageResultRecords setTotalBillStatCalls(Integer totalBillStatCalls) {
+            this.totalBillStatCalls = totalBillStatCalls;
+            return this;
+        }
+        public Integer getTotalBillStatCalls() {
+            return this.totalBillStatCalls;
         }
 
         public GetIqsUsageResultRecords setTotalCalls(Integer totalCalls) {
