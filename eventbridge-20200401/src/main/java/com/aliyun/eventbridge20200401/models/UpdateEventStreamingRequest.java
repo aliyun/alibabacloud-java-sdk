@@ -478,6 +478,47 @@ public class UpdateEventStreamingRequest extends TeaModel {
 
     }
 
+    public static class UpdateEventStreamingRequestSinkSinkApacheKafkaParametersDynamicTopic extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static UpdateEventStreamingRequestSinkSinkApacheKafkaParametersDynamicTopic build(java.util.Map<String, ?> map) throws Exception {
+            UpdateEventStreamingRequestSinkSinkApacheKafkaParametersDynamicTopic self = new UpdateEventStreamingRequestSinkSinkApacheKafkaParametersDynamicTopic();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateEventStreamingRequestSinkSinkApacheKafkaParametersDynamicTopic setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkApacheKafkaParametersDynamicTopic setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkApacheKafkaParametersDynamicTopic setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class UpdateEventStreamingRequestSinkSinkApacheKafkaParametersHeaders extends TeaModel {
         @NameInMap("Form")
         public String form;
@@ -642,6 +683,36 @@ public class UpdateEventStreamingRequest extends TeaModel {
 
     }
 
+    public static class UpdateEventStreamingRequestSinkSinkApacheKafkaParametersSslKeystoreKey extends TeaModel {
+        @NameInMap("KmsArn")
+        public String kmsArn;
+
+        @NameInMap("KmsSecretValueKey")
+        public String kmsSecretValueKey;
+
+        public static UpdateEventStreamingRequestSinkSinkApacheKafkaParametersSslKeystoreKey build(java.util.Map<String, ?> map) throws Exception {
+            UpdateEventStreamingRequestSinkSinkApacheKafkaParametersSslKeystoreKey self = new UpdateEventStreamingRequestSinkSinkApacheKafkaParametersSslKeystoreKey();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateEventStreamingRequestSinkSinkApacheKafkaParametersSslKeystoreKey setKmsArn(String kmsArn) {
+            this.kmsArn = kmsArn;
+            return this;
+        }
+        public String getKmsArn() {
+            return this.kmsArn;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkApacheKafkaParametersSslKeystoreKey setKmsSecretValueKey(String kmsSecretValueKey) {
+            this.kmsSecretValueKey = kmsSecretValueKey;
+            return this;
+        }
+        public String getKmsSecretValueKey() {
+            return this.kmsSecretValueKey;
+        }
+
+    }
+
     public static class UpdateEventStreamingRequestSinkSinkApacheKafkaParametersVSwitchIds extends TeaModel {
         @NameInMap("Form")
         public String form;
@@ -775,6 +846,9 @@ public class UpdateEventStreamingRequest extends TeaModel {
         @NameInMap("CompressionType")
         public String compressionType;
 
+        @NameInMap("DynamicTopic")
+        public UpdateEventStreamingRequestSinkSinkApacheKafkaParametersDynamicTopic dynamicTopic;
+
         @NameInMap("Headers")
         public UpdateEventStreamingRequestSinkSinkApacheKafkaParametersHeaders headers;
 
@@ -798,6 +872,15 @@ public class UpdateEventStreamingRequest extends TeaModel {
 
         @NameInMap("SecurityProtocol")
         public String securityProtocol;
+
+        @NameInMap("SslKeyPassword")
+        public String sslKeyPassword;
+
+        @NameInMap("SslKeystoreCertificateChain")
+        public String sslKeystoreCertificateChain;
+
+        @NameInMap("SslKeystoreKey")
+        public UpdateEventStreamingRequestSinkSinkApacheKafkaParametersSslKeystoreKey sslKeystoreKey;
 
         @NameInMap("SslTruststoreCertificates")
         public String sslTruststoreCertificates;
@@ -841,6 +924,14 @@ public class UpdateEventStreamingRequest extends TeaModel {
         }
         public String getCompressionType() {
             return this.compressionType;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkApacheKafkaParameters setDynamicTopic(UpdateEventStreamingRequestSinkSinkApacheKafkaParametersDynamicTopic dynamicTopic) {
+            this.dynamicTopic = dynamicTopic;
+            return this;
+        }
+        public UpdateEventStreamingRequestSinkSinkApacheKafkaParametersDynamicTopic getDynamicTopic() {
+            return this.dynamicTopic;
         }
 
         public UpdateEventStreamingRequestSinkSinkApacheKafkaParameters setHeaders(UpdateEventStreamingRequestSinkSinkApacheKafkaParametersHeaders headers) {
@@ -905,6 +996,30 @@ public class UpdateEventStreamingRequest extends TeaModel {
         }
         public String getSecurityProtocol() {
             return this.securityProtocol;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkApacheKafkaParameters setSslKeyPassword(String sslKeyPassword) {
+            this.sslKeyPassword = sslKeyPassword;
+            return this;
+        }
+        public String getSslKeyPassword() {
+            return this.sslKeyPassword;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkApacheKafkaParameters setSslKeystoreCertificateChain(String sslKeystoreCertificateChain) {
+            this.sslKeystoreCertificateChain = sslKeystoreCertificateChain;
+            return this;
+        }
+        public String getSslKeystoreCertificateChain() {
+            return this.sslKeystoreCertificateChain;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkApacheKafkaParameters setSslKeystoreKey(UpdateEventStreamingRequestSinkSinkApacheKafkaParametersSslKeystoreKey sslKeystoreKey) {
+            this.sslKeystoreKey = sslKeystoreKey;
+            return this;
+        }
+        public UpdateEventStreamingRequestSinkSinkApacheKafkaParametersSslKeystoreKey getSslKeystoreKey() {
+            return this.sslKeystoreKey;
         }
 
         public UpdateEventStreamingRequestSinkSinkApacheKafkaParameters setSslTruststoreCertificates(String sslTruststoreCertificates) {
@@ -4189,6 +4304,47 @@ public class UpdateEventStreamingRequest extends TeaModel {
 
     }
 
+    public static class UpdateEventStreamingRequestSinkSinkKafkaParametersDynamicTopic extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static UpdateEventStreamingRequestSinkSinkKafkaParametersDynamicTopic build(java.util.Map<String, ?> map) throws Exception {
+            UpdateEventStreamingRequestSinkSinkKafkaParametersDynamicTopic self = new UpdateEventStreamingRequestSinkSinkKafkaParametersDynamicTopic();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateEventStreamingRequestSinkSinkKafkaParametersDynamicTopic setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkKafkaParametersDynamicTopic setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkKafkaParametersDynamicTopic setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class UpdateEventStreamingRequestSinkSinkKafkaParametersHeaders extends TeaModel {
         /**
          * <p>The method that you want to use to transform events. Valid values:</p>
@@ -4500,6 +4656,9 @@ public class UpdateEventStreamingRequest extends TeaModel {
         @NameInMap("CompressionType")
         public String compressionType;
 
+        @NameInMap("DynamicTopic")
+        public UpdateEventStreamingRequestSinkSinkKafkaParametersDynamicTopic dynamicTopic;
+
         /**
          * <p>The metadata added to messages in the ApsaraMQ for Kafka instance.</p>
          */
@@ -4549,6 +4708,14 @@ public class UpdateEventStreamingRequest extends TeaModel {
         }
         public String getCompressionType() {
             return this.compressionType;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkKafkaParameters setDynamicTopic(UpdateEventStreamingRequestSinkSinkKafkaParametersDynamicTopic dynamicTopic) {
+            this.dynamicTopic = dynamicTopic;
+            return this;
+        }
+        public UpdateEventStreamingRequestSinkSinkKafkaParametersDynamicTopic getDynamicTopic() {
+            return this.dynamicTopic;
         }
 
         public UpdateEventStreamingRequestSinkSinkKafkaParameters setHeaders(UpdateEventStreamingRequestSinkSinkKafkaParametersHeaders headers) {
@@ -9008,6 +9175,36 @@ public class UpdateEventStreamingRequest extends TeaModel {
 
     }
 
+    public static class UpdateEventStreamingRequestSourceSourceApacheKafkaParametersSslKeystoreKey extends TeaModel {
+        @NameInMap("KmsArn")
+        public String kmsArn;
+
+        @NameInMap("KmsSecretValueKey")
+        public String kmsSecretValueKey;
+
+        public static UpdateEventStreamingRequestSourceSourceApacheKafkaParametersSslKeystoreKey build(java.util.Map<String, ?> map) throws Exception {
+            UpdateEventStreamingRequestSourceSourceApacheKafkaParametersSslKeystoreKey self = new UpdateEventStreamingRequestSourceSourceApacheKafkaParametersSslKeystoreKey();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateEventStreamingRequestSourceSourceApacheKafkaParametersSslKeystoreKey setKmsArn(String kmsArn) {
+            this.kmsArn = kmsArn;
+            return this;
+        }
+        public String getKmsArn() {
+            return this.kmsArn;
+        }
+
+        public UpdateEventStreamingRequestSourceSourceApacheKafkaParametersSslKeystoreKey setKmsSecretValueKey(String kmsSecretValueKey) {
+            this.kmsSecretValueKey = kmsSecretValueKey;
+            return this;
+        }
+        public String getKmsSecretValueKey() {
+            return this.kmsSecretValueKey;
+        }
+
+    }
+
     public static class UpdateEventStreamingRequestSourceSourceApacheKafkaParameters extends TeaModel {
         @NameInMap("Bootstraps")
         public String bootstraps;
@@ -9035,6 +9232,15 @@ public class UpdateEventStreamingRequest extends TeaModel {
 
         @NameInMap("SecurityProtocol")
         public String securityProtocol;
+
+        @NameInMap("SslKeyPassword")
+        public String sslKeyPassword;
+
+        @NameInMap("SslKeystoreCertificateChain")
+        public String sslKeystoreCertificateChain;
+
+        @NameInMap("SslKeystoreKey")
+        public UpdateEventStreamingRequestSourceSourceApacheKafkaParametersSslKeystoreKey sslKeystoreKey;
 
         @NameInMap("SslTruststoreCertificates")
         public String sslTruststoreCertificates;
@@ -9126,6 +9332,30 @@ public class UpdateEventStreamingRequest extends TeaModel {
         }
         public String getSecurityProtocol() {
             return this.securityProtocol;
+        }
+
+        public UpdateEventStreamingRequestSourceSourceApacheKafkaParameters setSslKeyPassword(String sslKeyPassword) {
+            this.sslKeyPassword = sslKeyPassword;
+            return this;
+        }
+        public String getSslKeyPassword() {
+            return this.sslKeyPassword;
+        }
+
+        public UpdateEventStreamingRequestSourceSourceApacheKafkaParameters setSslKeystoreCertificateChain(String sslKeystoreCertificateChain) {
+            this.sslKeystoreCertificateChain = sslKeystoreCertificateChain;
+            return this;
+        }
+        public String getSslKeystoreCertificateChain() {
+            return this.sslKeystoreCertificateChain;
+        }
+
+        public UpdateEventStreamingRequestSourceSourceApacheKafkaParameters setSslKeystoreKey(UpdateEventStreamingRequestSourceSourceApacheKafkaParametersSslKeystoreKey sslKeystoreKey) {
+            this.sslKeystoreKey = sslKeystoreKey;
+            return this;
+        }
+        public UpdateEventStreamingRequestSourceSourceApacheKafkaParametersSslKeystoreKey getSslKeystoreKey() {
+            return this.sslKeystoreKey;
         }
 
         public UpdateEventStreamingRequestSourceSourceApacheKafkaParameters setSslTruststoreCertificates(String sslTruststoreCertificates) {

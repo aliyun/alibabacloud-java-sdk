@@ -3280,6 +3280,47 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
 
+    public static class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkKafkaParametersDynamicTopic extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkKafkaParametersDynamicTopic build(java.util.Map<String, ?> map) throws Exception {
+            ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkKafkaParametersDynamicTopic self = new ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkKafkaParametersDynamicTopic();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkKafkaParametersDynamicTopic setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkKafkaParametersDynamicTopic setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkKafkaParametersDynamicTopic setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkKafkaParametersInstanceId extends TeaModel {
         /**
          * <p>The method that is used to transform events. Default value: CONSTANT.</p>
@@ -3524,6 +3565,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         @NameInMap("CompressionType")
         public String compressionType;
 
+        @NameInMap("DynamicTopic")
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkKafkaParametersDynamicTopic dynamicTopic;
+
         /**
          * <p>The ID of the ApsaraMQ for Kafka instance.</p>
          */
@@ -3567,6 +3611,14 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
         public String getCompressionType() {
             return this.compressionType;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkKafkaParameters setDynamicTopic(ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkKafkaParametersDynamicTopic dynamicTopic) {
+            this.dynamicTopic = dynamicTopic;
+            return this;
+        }
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkKafkaParametersDynamicTopic getDynamicTopic() {
+            return this.dynamicTopic;
         }
 
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkKafkaParameters setInstanceId(ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkKafkaParametersInstanceId instanceId) {

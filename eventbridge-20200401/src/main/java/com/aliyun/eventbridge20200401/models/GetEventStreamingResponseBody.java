@@ -495,6 +495,47 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     }
 
+    public static class GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersDynamicTopic extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersDynamicTopic build(java.util.Map<String, ?> map) throws Exception {
+            GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersDynamicTopic self = new GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersDynamicTopic();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersDynamicTopic setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersDynamicTopic setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersDynamicTopic setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersHeaders extends TeaModel {
         @NameInMap("Form")
         public String form;
@@ -659,6 +700,36 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     }
 
+    public static class GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersSslKeystoreKey extends TeaModel {
+        @NameInMap("KmsArn")
+        public String kmsArn;
+
+        @NameInMap("KmsSecretValueKey")
+        public String kmsSecretValueKey;
+
+        public static GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersSslKeystoreKey build(java.util.Map<String, ?> map) throws Exception {
+            GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersSslKeystoreKey self = new GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersSslKeystoreKey();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersSslKeystoreKey setKmsArn(String kmsArn) {
+            this.kmsArn = kmsArn;
+            return this;
+        }
+        public String getKmsArn() {
+            return this.kmsArn;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersSslKeystoreKey setKmsSecretValueKey(String kmsSecretValueKey) {
+            this.kmsSecretValueKey = kmsSecretValueKey;
+            return this;
+        }
+        public String getKmsSecretValueKey() {
+            return this.kmsSecretValueKey;
+        }
+
+    }
+
     public static class GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersVSwitchIds extends TeaModel {
         @NameInMap("Form")
         public String form;
@@ -792,6 +863,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @NameInMap("CompressionType")
         public String compressionType;
 
+        @NameInMap("DynamicTopic")
+        public GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersDynamicTopic dynamicTopic;
+
         @NameInMap("Headers")
         public GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersHeaders headers;
 
@@ -815,6 +889,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
         @NameInMap("SecurityProtocol")
         public String securityProtocol;
+
+        @NameInMap("SslKeyPassword")
+        public String sslKeyPassword;
+
+        @NameInMap("SslKeystoreCertificateChain")
+        public String sslKeystoreCertificateChain;
+
+        @NameInMap("SslKeystoreKey")
+        public GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersSslKeystoreKey sslKeystoreKey;
 
         @NameInMap("SslTruststoreCertificates")
         public String sslTruststoreCertificates;
@@ -858,6 +941,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
         public String getCompressionType() {
             return this.compressionType;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParameters setDynamicTopic(GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersDynamicTopic dynamicTopic) {
+            this.dynamicTopic = dynamicTopic;
+            return this;
+        }
+        public GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersDynamicTopic getDynamicTopic() {
+            return this.dynamicTopic;
         }
 
         public GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParameters setHeaders(GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersHeaders headers) {
@@ -922,6 +1013,30 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
         public String getSecurityProtocol() {
             return this.securityProtocol;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParameters setSslKeyPassword(String sslKeyPassword) {
+            this.sslKeyPassword = sslKeyPassword;
+            return this;
+        }
+        public String getSslKeyPassword() {
+            return this.sslKeyPassword;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParameters setSslKeystoreCertificateChain(String sslKeystoreCertificateChain) {
+            this.sslKeystoreCertificateChain = sslKeystoreCertificateChain;
+            return this;
+        }
+        public String getSslKeystoreCertificateChain() {
+            return this.sslKeystoreCertificateChain;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParameters setSslKeystoreKey(GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersSslKeystoreKey sslKeystoreKey) {
+            this.sslKeystoreKey = sslKeystoreKey;
+            return this;
+        }
+        public GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersSslKeystoreKey getSslKeystoreKey() {
+            return this.sslKeystoreKey;
         }
 
         public GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParameters setSslTruststoreCertificates(String sslTruststoreCertificates) {
@@ -3697,6 +3812,47 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     }
 
+    public static class GetEventStreamingResponseBodyDataSinkSinkKafkaParametersDynamicTopic extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetEventStreamingResponseBodyDataSinkSinkKafkaParametersDynamicTopic build(java.util.Map<String, ?> map) throws Exception {
+            GetEventStreamingResponseBodyDataSinkSinkKafkaParametersDynamicTopic self = new GetEventStreamingResponseBodyDataSinkSinkKafkaParametersDynamicTopic();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkKafkaParametersDynamicTopic setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkKafkaParametersDynamicTopic setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkKafkaParametersDynamicTopic setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class GetEventStreamingResponseBodyDataSinkSinkKafkaParametersHeaders extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -4000,6 +4156,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @NameInMap("CompressionType")
         public String compressionType;
 
+        @NameInMap("DynamicTopic")
+        public GetEventStreamingResponseBodyDataSinkSinkKafkaParametersDynamicTopic dynamicTopic;
+
         @NameInMap("Headers")
         public GetEventStreamingResponseBodyDataSinkSinkKafkaParametersHeaders headers;
 
@@ -4046,6 +4205,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
         public String getCompressionType() {
             return this.compressionType;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkKafkaParameters setDynamicTopic(GetEventStreamingResponseBodyDataSinkSinkKafkaParametersDynamicTopic dynamicTopic) {
+            this.dynamicTopic = dynamicTopic;
+            return this;
+        }
+        public GetEventStreamingResponseBodyDataSinkSinkKafkaParametersDynamicTopic getDynamicTopic() {
+            return this.dynamicTopic;
         }
 
         public GetEventStreamingResponseBodyDataSinkSinkKafkaParameters setHeaders(GetEventStreamingResponseBodyDataSinkSinkKafkaParametersHeaders headers) {
@@ -7483,6 +7650,36 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     }
 
+    public static class GetEventStreamingResponseBodyDataSourceSourceApacheKafkaParametersSslKeystoreKey extends TeaModel {
+        @NameInMap("KmsArn")
+        public String kmsArn;
+
+        @NameInMap("KmsSecretValueKey")
+        public String kmsSecretValueKey;
+
+        public static GetEventStreamingResponseBodyDataSourceSourceApacheKafkaParametersSslKeystoreKey build(java.util.Map<String, ?> map) throws Exception {
+            GetEventStreamingResponseBodyDataSourceSourceApacheKafkaParametersSslKeystoreKey self = new GetEventStreamingResponseBodyDataSourceSourceApacheKafkaParametersSslKeystoreKey();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEventStreamingResponseBodyDataSourceSourceApacheKafkaParametersSslKeystoreKey setKmsArn(String kmsArn) {
+            this.kmsArn = kmsArn;
+            return this;
+        }
+        public String getKmsArn() {
+            return this.kmsArn;
+        }
+
+        public GetEventStreamingResponseBodyDataSourceSourceApacheKafkaParametersSslKeystoreKey setKmsSecretValueKey(String kmsSecretValueKey) {
+            this.kmsSecretValueKey = kmsSecretValueKey;
+            return this;
+        }
+        public String getKmsSecretValueKey() {
+            return this.kmsSecretValueKey;
+        }
+
+    }
+
     public static class GetEventStreamingResponseBodyDataSourceSourceApacheKafkaParameters extends TeaModel {
         @NameInMap("Bootstraps")
         public String bootstraps;
@@ -7510,6 +7707,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
         @NameInMap("SecurityProtocol")
         public String securityProtocol;
+
+        @NameInMap("SslKeyPassword")
+        public String sslKeyPassword;
+
+        @NameInMap("SslKeystoreCertificateChain")
+        public String sslKeystoreCertificateChain;
+
+        @NameInMap("SslKeystoreKey")
+        public GetEventStreamingResponseBodyDataSourceSourceApacheKafkaParametersSslKeystoreKey sslKeystoreKey;
 
         @NameInMap("SslTruststoreCertificates")
         public String sslTruststoreCertificates;
@@ -7601,6 +7807,30 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
         public String getSecurityProtocol() {
             return this.securityProtocol;
+        }
+
+        public GetEventStreamingResponseBodyDataSourceSourceApacheKafkaParameters setSslKeyPassword(String sslKeyPassword) {
+            this.sslKeyPassword = sslKeyPassword;
+            return this;
+        }
+        public String getSslKeyPassword() {
+            return this.sslKeyPassword;
+        }
+
+        public GetEventStreamingResponseBodyDataSourceSourceApacheKafkaParameters setSslKeystoreCertificateChain(String sslKeystoreCertificateChain) {
+            this.sslKeystoreCertificateChain = sslKeystoreCertificateChain;
+            return this;
+        }
+        public String getSslKeystoreCertificateChain() {
+            return this.sslKeystoreCertificateChain;
+        }
+
+        public GetEventStreamingResponseBodyDataSourceSourceApacheKafkaParameters setSslKeystoreKey(GetEventStreamingResponseBodyDataSourceSourceApacheKafkaParametersSslKeystoreKey sslKeystoreKey) {
+            this.sslKeystoreKey = sslKeystoreKey;
+            return this;
+        }
+        public GetEventStreamingResponseBodyDataSourceSourceApacheKafkaParametersSslKeystoreKey getSslKeystoreKey() {
+            return this.sslKeystoreKey;
         }
 
         public GetEventStreamingResponseBodyDataSourceSourceApacheKafkaParameters setSslTruststoreCertificates(String sslTruststoreCertificates) {
