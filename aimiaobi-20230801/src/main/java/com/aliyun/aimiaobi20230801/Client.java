@@ -5562,6 +5562,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>初始化PPT创建操作V2</p>
+     * 
+     * @param request InitiatePptCreationV2Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InitiatePptCreationV2Response
+     */
+    public InitiatePptCreationV2Response initiatePptCreationV2WithOptions(InitiatePptCreationV2Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.externalUserId)) {
+            body.put("ExternalUserId", request.externalUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isMobile)) {
+            body.put("IsMobile", request.isMobile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outline)) {
+            body.put("Outline", request.outline);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pptTemplateId)) {
+            body.put("PptTemplateId", request.pptTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pptTemplateType)) {
+            body.put("PptTemplateType", request.pptTemplateType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.processType)) {
+            body.put("ProcessType", request.processType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InitiatePptCreationV2"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InitiatePptCreationV2Response());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>初始化PPT创建操作V2</p>
+     * 
+     * @param request InitiatePptCreationV2Request
+     * @return InitiatePptCreationV2Response
+     */
+    public InitiatePptCreationV2Response initiatePptCreationV2(InitiatePptCreationV2Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.initiatePptCreationV2WithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>设置干预全局回复</p>
      * 
      * @param tmpReq InsertInterveneGlobalReplyRequest
@@ -6854,6 +6926,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListDocumentRetrieveResponse listDocumentRetrieve(ListDocumentRetrieveRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDocumentRetrieveWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询PPT模板列表</p>
+     * 
+     * @param request ListEnterprisePptTemplatesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListEnterprisePptTemplatesResponse
+     */
+    public ListEnterprisePptTemplatesResponse listEnterprisePptTemplatesWithOptions(ListEnterprisePptTemplatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skip)) {
+            query.put("Skip", request.skip);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListEnterprisePptTemplates"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListEnterprisePptTemplatesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询PPT模板列表</p>
+     * 
+     * @param request ListEnterprisePptTemplatesRequest
+     * @return ListEnterprisePptTemplatesResponse
+     */
+    public ListEnterprisePptTemplatesResponse listEnterprisePptTemplates(ListEnterprisePptTemplatesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listEnterprisePptTemplatesWithOptions(request, runtime);
     }
 
     /**
