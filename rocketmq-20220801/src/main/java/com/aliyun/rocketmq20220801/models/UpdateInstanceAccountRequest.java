@@ -27,6 +27,13 @@ public class UpdateInstanceAccountRequest extends TeaModel {
     @NameInMap("password")
     public String password;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
+    @NameInMap("remark")
+    public String remark;
+
     public static UpdateInstanceAccountRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateInstanceAccountRequest self = new UpdateInstanceAccountRequest();
         return TeaModel.build(map, self);
@@ -46,6 +53,14 @@ public class UpdateInstanceAccountRequest extends TeaModel {
     }
     public String getPassword() {
         return this.password;
+    }
+
+    public UpdateInstanceAccountRequest setRemark(String remark) {
+        this.remark = remark;
+        return this;
+    }
+    public String getRemark() {
+        return this.remark;
     }
 
 }

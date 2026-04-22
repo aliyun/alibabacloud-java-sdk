@@ -423,6 +423,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("password", request.password);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            body.put("remark", request.remark);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.username)) {
             body.put("username", request.username);
         }
@@ -3510,6 +3514,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.password)) {
             query.put("password", request.password);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("remark", request.remark);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

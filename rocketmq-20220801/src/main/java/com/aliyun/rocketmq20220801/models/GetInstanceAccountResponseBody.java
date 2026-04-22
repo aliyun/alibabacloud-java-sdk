@@ -167,6 +167,13 @@ public class GetInstanceAccountResponseBody extends TeaModel {
         public String password;
 
         /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("remark")
+        public String remark;
+
+        /**
          * <p>The username of the account.</p>
          * 
          * <strong>example:</strong>
@@ -194,6 +201,14 @@ public class GetInstanceAccountResponseBody extends TeaModel {
         }
         public String getPassword() {
             return this.password;
+        }
+
+        public GetInstanceAccountResponseBodyData setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
         }
 
         public GetInstanceAccountResponseBodyData setUsername(String username) {

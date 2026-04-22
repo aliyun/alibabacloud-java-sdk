@@ -206,6 +206,13 @@ public class ListInstanceAccountResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("remark")
+        public String remark;
+
+        /**
          * <p>The username of the account.</p>
          * 
          * <strong>example:</strong>
@@ -249,6 +256,14 @@ public class ListInstanceAccountResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ListInstanceAccountResponseBodyDataList setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
         }
 
         public ListInstanceAccountResponseBodyDataList setUsername(String username) {
