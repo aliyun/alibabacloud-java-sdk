@@ -407,6 +407,9 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends TeaModel 
         @NameInMap("RecallType")
         public String recallType;
 
+        @NameInMap("SortFields")
+        public String sortFields;
+
         @NameInMap("UserVectorField")
         public String userVectorField;
 
@@ -504,6 +507,14 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends TeaModel 
         }
         public String getRecallType() {
             return this.recallType;
+        }
+
+        public UpdateRecallManagementServiceVersionConfigRequestRecallConfig setSortFields(String sortFields) {
+            this.sortFields = sortFields;
+            return this;
+        }
+        public String getSortFields() {
+            return this.sortFields;
         }
 
         public UpdateRecallManagementServiceVersionConfigRequestRecallConfig setUserVectorField(String userVectorField) {

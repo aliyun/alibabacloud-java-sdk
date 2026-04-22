@@ -569,6 +569,9 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
         @NameInMap("RecallType")
         public String recallType;
 
+        @NameInMap("SortFields")
+        public String sortFields;
+
         /**
          * <strong>example:</strong>
          * <p>user_embedding</p>
@@ -682,6 +685,14 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
         }
         public String getRecallType() {
             return this.recallType;
+        }
+
+        public GetRecallManagementServiceVersionResponseBodyConfigsRecallConfigs setSortFields(String sortFields) {
+            this.sortFields = sortFields;
+            return this;
+        }
+        public String getSortFields() {
+            return this.sortFields;
         }
 
         public GetRecallManagementServiceVersionResponseBodyConfigsRecallConfigs setUserVectorField(String userVectorField) {
