@@ -2,6 +2,10 @@
 - Support API DescribeApplicationLogs.
 
 
+2026-04-22 Version: 6.11.0
+- Support API DescribeApplicationLogs.
+
+
 2026-04-20 Version: 6.10.0
 - Support API CreateAIDBClusterDataset.
 - Support API CreateAIDBClusterTask.
