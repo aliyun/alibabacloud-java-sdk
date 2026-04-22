@@ -6526,6 +6526,278 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>公网权威解析统计信息全局总览</p>
+     * 
+     * @param request DescribeInterAuthStatisticsGlobalOverviewRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeInterAuthStatisticsGlobalOverviewResponse
+     */
+    public DescribeInterAuthStatisticsGlobalOverviewResponse describeInterAuthStatisticsGlobalOverviewWithOptions(DescribeInterAuthStatisticsGlobalOverviewRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.overviewPeriod)) {
+            query.put("OverviewPeriod", request.overviewPeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serverRegion)) {
+            query.put("ServerRegion", request.serverRegion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeInterAuthStatisticsGlobalOverview"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInterAuthStatisticsGlobalOverviewResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>公网权威解析统计信息全局总览</p>
+     * 
+     * @param request DescribeInterAuthStatisticsGlobalOverviewRequest
+     * @return DescribeInterAuthStatisticsGlobalOverviewResponse
+     */
+    public DescribeInterAuthStatisticsGlobalOverviewResponse describeInterAuthStatisticsGlobalOverview(DescribeInterAuthStatisticsGlobalOverviewRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeInterAuthStatisticsGlobalOverviewWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>公网权威解析统计信息趋势</p>
+     * 
+     * @param request DescribeInterAuthStatisticsHistoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeInterAuthStatisticsHistoryResponse
+     */
+    public DescribeInterAuthStatisticsHistoryResponse describeInterAuthStatisticsHistoryWithOptions(DescribeInterAuthStatisticsHistoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTimestamp)) {
+            query.put("EndTimestamp", request.endTimestamp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rcode)) {
+            query.put("Rcode", request.rcode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serverRegion)) {
+            query.put("ServerRegion", request.serverRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTimestamp)) {
+            query.put("StartTimestamp", request.startTimestamp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statisticalType)) {
+            query.put("StatisticalType", request.statisticalType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneName)) {
+            query.put("ZoneName", request.zoneName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeInterAuthStatisticsHistory"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInterAuthStatisticsHistoryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>公网权威解析统计信息趋势</p>
+     * 
+     * @param request DescribeInterAuthStatisticsHistoryRequest
+     * @return DescribeInterAuthStatisticsHistoryResponse
+     */
+    public DescribeInterAuthStatisticsHistoryResponse describeInterAuthStatisticsHistory(DescribeInterAuthStatisticsHistoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeInterAuthStatisticsHistoryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>公网权威解析统计信息摘要列表</p>
+     * 
+     * @param request DescribeInterAuthStatisticsSummaryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeInterAuthStatisticsSummaryResponse
+     */
+    public DescribeInterAuthStatisticsSummaryResponse describeInterAuthStatisticsSummaryWithOptions(DescribeInterAuthStatisticsSummaryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.direction)) {
+            query.put("Direction", request.direction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTimestamp)) {
+            query.put("EndTimestamp", request.endTimestamp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.growType)) {
+            query.put("GrowType", request.growType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            query.put("OrderBy", request.orderBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rcode)) {
+            query.put("Rcode", request.rcode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serverRegion)) {
+            query.put("ServerRegion", request.serverRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
+            query.put("SourceType", request.sourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTimestamp)) {
+            query.put("StartTimestamp", request.startTimestamp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statisticalType)) {
+            query.put("StatisticalType", request.statisticalType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneName)) {
+            query.put("ZoneName", request.zoneName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeInterAuthStatisticsSummary"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInterAuthStatisticsSummaryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>公网权威解析统计信息摘要列表</p>
+     * 
+     * @param request DescribeInterAuthStatisticsSummaryRequest
+     * @return DescribeInterAuthStatisticsSummaryResponse
+     */
+    public DescribeInterAuthStatisticsSummaryResponse describeInterAuthStatisticsSummary(DescribeInterAuthStatisticsSummaryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeInterAuthStatisticsSummaryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>公网权威解析统计信息Zone维度总览</p>
+     * 
+     * @param request DescribeInterAuthStatisticsZoneOverviewRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeInterAuthStatisticsZoneOverviewResponse
+     */
+    public DescribeInterAuthStatisticsZoneOverviewResponse describeInterAuthStatisticsZoneOverviewWithOptions(DescribeInterAuthStatisticsZoneOverviewRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.overviewPeriod)) {
+            query.put("OverviewPeriod", request.overviewPeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serverRegion)) {
+            query.put("ServerRegion", request.serverRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneName)) {
+            query.put("ZoneName", request.zoneName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeInterAuthStatisticsZoneOverview"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInterAuthStatisticsZoneOverviewResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>公网权威解析统计信息Zone维度总览</p>
+     * 
+     * @param request DescribeInterAuthStatisticsZoneOverviewRequest
+     * @return DescribeInterAuthStatisticsZoneOverviewResponse
+     */
+    public DescribeInterAuthStatisticsZoneOverviewResponse describeInterAuthStatisticsZoneOverview(DescribeInterAuthStatisticsZoneOverviewRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeInterAuthStatisticsZoneOverviewWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询解析日志</p>
      * 
      * @param request DescribeInternetDnsLogsRequest
