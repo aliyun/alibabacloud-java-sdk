@@ -1194,6 +1194,366 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取用户可以分析的VPC列表</p>
+     * 
+     * @param request DescribeIntranetUserCanAnalysisVpcsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeIntranetUserCanAnalysisVpcsResponse
+     */
+    public DescribeIntranetUserCanAnalysisVpcsResponse describeIntranetUserCanAnalysisVpcsWithOptions(DescribeIntranetUserCanAnalysisVpcsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.networkType)) {
+            query.put("NetworkType", request.networkType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryTreeLevel)) {
+            query.put("QueryTreeLevel", request.queryTreeLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcOwner)) {
+            query.put("VpcOwner", request.vpcOwner);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcType)) {
+            query.put("VpcType", request.vpcType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeIntranetUserCanAnalysisVpcs"),
+            new TeaPair("version", "2018-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeIntranetUserCanAnalysisVpcsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取用户可以分析的VPC列表</p>
+     * 
+     * @param request DescribeIntranetUserCanAnalysisVpcsRequest
+     * @return DescribeIntranetUserCanAnalysisVpcsResponse
+     */
+    public DescribeIntranetUserCanAnalysisVpcsResponse describeIntranetUserCanAnalysisVpcs(DescribeIntranetUserCanAnalysisVpcsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeIntranetUserCanAnalysisVpcsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Pvtz解析统计信息全局总览</p>
+     * 
+     * @param request DescribePvtzStatisticsGlobalOverviewRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePvtzStatisticsGlobalOverviewResponse
+     */
+    public DescribePvtzStatisticsGlobalOverviewResponse describePvtzStatisticsGlobalOverviewWithOptions(DescribePvtzStatisticsGlobalOverviewRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.networkParams)) {
+            query.put("NetworkParams", request.networkParams);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.overviewPeriod)) {
+            query.put("OverviewPeriod", request.overviewPeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serverRegion)) {
+            query.put("ServerRegion", request.serverRegion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePvtzStatisticsGlobalOverview"),
+            new TeaPair("version", "2018-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePvtzStatisticsGlobalOverviewResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Pvtz解析统计信息全局总览</p>
+     * 
+     * @param request DescribePvtzStatisticsGlobalOverviewRequest
+     * @return DescribePvtzStatisticsGlobalOverviewResponse
+     */
+    public DescribePvtzStatisticsGlobalOverviewResponse describePvtzStatisticsGlobalOverview(DescribePvtzStatisticsGlobalOverviewRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePvtzStatisticsGlobalOverviewWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Pvtz解析统计信息趋势</p>
+     * 
+     * @param request DescribePvtzStatisticsHistoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePvtzStatisticsHistoryResponse
+     */
+    public DescribePvtzStatisticsHistoryResponse describePvtzStatisticsHistoryWithOptions(DescribePvtzStatisticsHistoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTimestamp)) {
+            query.put("EndTimestamp", request.endTimestamp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.module)) {
+            query.put("Module", request.module);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkParams)) {
+            query.put("NetworkParams", request.networkParams);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rcode)) {
+            query.put("Rcode", request.rcode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serverRegion)) {
+            query.put("ServerRegion", request.serverRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTimestamp)) {
+            query.put("StartTimestamp", request.startTimestamp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statisticalType)) {
+            query.put("StatisticalType", request.statisticalType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneName)) {
+            query.put("ZoneName", request.zoneName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePvtzStatisticsHistory"),
+            new TeaPair("version", "2018-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePvtzStatisticsHistoryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Pvtz解析统计信息趋势</p>
+     * 
+     * @param request DescribePvtzStatisticsHistoryRequest
+     * @return DescribePvtzStatisticsHistoryResponse
+     */
+    public DescribePvtzStatisticsHistoryResponse describePvtzStatisticsHistory(DescribePvtzStatisticsHistoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePvtzStatisticsHistoryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Pvtz解析统计信息摘要列表</p>
+     * 
+     * @param request DescribePvtzStatisticsSummaryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePvtzStatisticsSummaryResponse
+     */
+    public DescribePvtzStatisticsSummaryResponse describePvtzStatisticsSummaryWithOptions(DescribePvtzStatisticsSummaryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.direction)) {
+            query.put("Direction", request.direction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTimestamp)) {
+            query.put("EndTimestamp", request.endTimestamp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.growType)) {
+            query.put("GrowType", request.growType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.module)) {
+            query.put("Module", request.module);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkParams)) {
+            query.put("NetworkParams", request.networkParams);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            query.put("OrderBy", request.orderBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rcode)) {
+            query.put("Rcode", request.rcode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serverRegion)) {
+            query.put("ServerRegion", request.serverRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTimestamp)) {
+            query.put("StartTimestamp", request.startTimestamp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statisticalType)) {
+            query.put("StatisticalType", request.statisticalType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneName)) {
+            query.put("ZoneName", request.zoneName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePvtzStatisticsSummary"),
+            new TeaPair("version", "2018-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePvtzStatisticsSummaryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Pvtz解析统计信息摘要列表</p>
+     * 
+     * @param request DescribePvtzStatisticsSummaryRequest
+     * @return DescribePvtzStatisticsSummaryResponse
+     */
+    public DescribePvtzStatisticsSummaryResponse describePvtzStatisticsSummary(DescribePvtzStatisticsSummaryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePvtzStatisticsSummaryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Pvtz解析统计信息Zone维度总览</p>
+     * 
+     * @param request DescribePvtzStatisticsZoneOverviewRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePvtzStatisticsZoneOverviewResponse
+     */
+    public DescribePvtzStatisticsZoneOverviewResponse describePvtzStatisticsZoneOverviewWithOptions(DescribePvtzStatisticsZoneOverviewRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.module)) {
+            query.put("Module", request.module);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkParams)) {
+            query.put("NetworkParams", request.networkParams);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.overviewPeriod)) {
+            query.put("OverviewPeriod", request.overviewPeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serverRegion)) {
+            query.put("ServerRegion", request.serverRegion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePvtzStatisticsZoneOverview"),
+            new TeaPair("version", "2018-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePvtzStatisticsZoneOverviewResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Pvtz解析统计信息Zone维度总览</p>
+     * 
+     * @param request DescribePvtzStatisticsZoneOverviewRequest
+     * @return DescribePvtzStatisticsZoneOverviewResponse
+     */
+    public DescribePvtzStatisticsZoneOverviewResponse describePvtzStatisticsZoneOverview(DescribePvtzStatisticsZoneOverviewRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePvtzStatisticsZoneOverviewWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries a list of regions for selection based on the scenario and virtual private cloud (VPC) type.</p>
      * 
      * @param request DescribeRegionsRequest
