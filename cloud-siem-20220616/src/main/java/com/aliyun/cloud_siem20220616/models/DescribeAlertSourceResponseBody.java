@@ -99,6 +99,9 @@ public class DescribeAlertSourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAlertSourceResponseBodyData extends TeaModel {
+        @NameInMap("Modules")
+        public java.util.List<String> modules;
+
         /**
          * <p>The internal code of the alert data source.</p>
          * 
@@ -120,6 +123,14 @@ public class DescribeAlertSourceResponseBody extends TeaModel {
         public static DescribeAlertSourceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeAlertSourceResponseBodyData self = new DescribeAlertSourceResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAlertSourceResponseBodyData setModules(java.util.List<String> modules) {
+            this.modules = modules;
+            return this;
+        }
+        public java.util.List<String> getModules() {
+            return this.modules;
         }
 
         public DescribeAlertSourceResponseBodyData setSource(String source) {
