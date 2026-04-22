@@ -57,8 +57,6 @@ public class VerifyInstanceADAuthServerRequest extends TeaModel {
     public String isSSL;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <hr>
      */

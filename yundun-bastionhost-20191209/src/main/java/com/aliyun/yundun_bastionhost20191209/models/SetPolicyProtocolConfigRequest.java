@@ -394,6 +394,13 @@ public class SetPolicyProtocolConfigRequest extends TeaModel {
         public String SSHChannel;
 
         /**
+         * <strong>example:</strong>
+         * <p>Enable</p>
+         */
+        @NameInMap("TcpForwarding")
+        public String tcpForwarding;
+
+        /**
          * <p>Specifies whether to enable X11 forwarding. Valid values:</p>
          * <ul>
          * <li>Enable</li>
@@ -500,6 +507,14 @@ public class SetPolicyProtocolConfigRequest extends TeaModel {
         }
         public String getSSHChannel() {
             return this.SSHChannel;
+        }
+
+        public SetPolicyProtocolConfigRequestProtocolConfigSSH setTcpForwarding(String tcpForwarding) {
+            this.tcpForwarding = tcpForwarding;
+            return this;
+        }
+        public String getTcpForwarding() {
+            return this.tcpForwarding;
         }
 
         public SetPolicyProtocolConfigRequestProtocolConfigSSH setX11Forwarding(String x11Forwarding) {

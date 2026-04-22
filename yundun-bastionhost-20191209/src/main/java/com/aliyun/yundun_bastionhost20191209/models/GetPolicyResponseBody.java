@@ -312,6 +312,20 @@ public class GetPolicyResponseBody extends TeaModel {
         public String diskRedirection;
 
         /**
+         * <strong>example:</strong>
+         * <p>Enable</p>
+         */
+        @NameInMap("DiskRedirectionDownload")
+        public String diskRedirectionDownload;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Enable</p>
+         */
+        @NameInMap("DiskRedirectionUpload")
+        public String diskRedirectionUpload;
+
+        /**
          * <p>Indicates whether keyboard recording is enabled. Valid values:</p>
          * <ul>
          * <li>Enable</li>
@@ -353,6 +367,22 @@ public class GetPolicyResponseBody extends TeaModel {
             return this.diskRedirection;
         }
 
+        public GetPolicyResponseBodyPolicyProtocolConfigRDP setDiskRedirectionDownload(String diskRedirectionDownload) {
+            this.diskRedirectionDownload = diskRedirectionDownload;
+            return this;
+        }
+        public String getDiskRedirectionDownload() {
+            return this.diskRedirectionDownload;
+        }
+
+        public GetPolicyResponseBodyPolicyProtocolConfigRDP setDiskRedirectionUpload(String diskRedirectionUpload) {
+            this.diskRedirectionUpload = diskRedirectionUpload;
+            return this;
+        }
+        public String getDiskRedirectionUpload() {
+            return this.diskRedirectionUpload;
+        }
+
         public GetPolicyResponseBodyPolicyProtocolConfigRDP setRecordKeyboard(String recordKeyboard) {
             this.recordKeyboard = recordKeyboard;
             return this;
@@ -364,6 +394,20 @@ public class GetPolicyResponseBody extends TeaModel {
     }
 
     public static class GetPolicyResponseBodyPolicyProtocolConfigSSH extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Enable</p>
+         */
+        @NameInMap("AllowDirectTcp")
+        public String allowDirectTcp;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Enable</p>
+         */
+        @NameInMap("AllowTcpForwarding")
+        public String allowTcpForwarding;
+
         /**
          * <p>Indicates whether remote command execution is enabled. Valid values:</p>
          * <ul>
@@ -482,6 +526,13 @@ public class GetPolicyResponseBody extends TeaModel {
         public String SSHChannel;
 
         /**
+         * <strong>example:</strong>
+         * <p>Enable</p>
+         */
+        @NameInMap("TcpForwarding")
+        public String tcpForwarding;
+
+        /**
          * <p>Indicates whether X11 forwarding is enabled. Valid values:</p>
          * <ul>
          * <li>Enable</li>
@@ -497,6 +548,22 @@ public class GetPolicyResponseBody extends TeaModel {
         public static GetPolicyResponseBodyPolicyProtocolConfigSSH build(java.util.Map<String, ?> map) throws Exception {
             GetPolicyResponseBodyPolicyProtocolConfigSSH self = new GetPolicyResponseBodyPolicyProtocolConfigSSH();
             return TeaModel.build(map, self);
+        }
+
+        public GetPolicyResponseBodyPolicyProtocolConfigSSH setAllowDirectTcp(String allowDirectTcp) {
+            this.allowDirectTcp = allowDirectTcp;
+            return this;
+        }
+        public String getAllowDirectTcp() {
+            return this.allowDirectTcp;
+        }
+
+        public GetPolicyResponseBodyPolicyProtocolConfigSSH setAllowTcpForwarding(String allowTcpForwarding) {
+            this.allowTcpForwarding = allowTcpForwarding;
+            return this;
+        }
+        public String getAllowTcpForwarding() {
+            return this.allowTcpForwarding;
         }
 
         public GetPolicyResponseBodyPolicyProtocolConfigSSH setExecCommand(String execCommand) {
@@ -569,6 +636,14 @@ public class GetPolicyResponseBody extends TeaModel {
         }
         public String getSSHChannel() {
             return this.SSHChannel;
+        }
+
+        public GetPolicyResponseBodyPolicyProtocolConfigSSH setTcpForwarding(String tcpForwarding) {
+            this.tcpForwarding = tcpForwarding;
+            return this;
+        }
+        public String getTcpForwarding() {
+            return this.tcpForwarding;
         }
 
         public GetPolicyResponseBodyPolicyProtocolConfigSSH setX11Forwarding(String x11Forwarding) {
