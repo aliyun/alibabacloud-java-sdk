@@ -1528,6 +1528,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取实例指标趋势详情</p>
+     * 
+     * @param request GetInstanceTrendingReportRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetInstanceTrendingReportResponse
+     */
+    public GetInstanceTrendingReportResponse getInstanceTrendingReportWithOptions(GetInstanceTrendingReportRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            body.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            body.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeInterval)) {
+            body.put("TimeInterval", request.timeInterval);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetInstanceTrendingReport"),
+            new TeaPair("version", "2025-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceTrendingReportResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取实例指标趋势详情</p>
+     * 
+     * @param request GetInstanceTrendingReportRequest
+     * @return GetInstanceTrendingReportResponse
+     */
+    public GetInstanceTrendingReportResponse getInstanceTrendingReport(GetInstanceTrendingReportRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getInstanceTrendingReportWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取实例实时指标</p>
      * 
      * @param request GetRealtimeInstanceStatsRequest
@@ -1568,6 +1624,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetRealtimeInstanceStatsResponse getRealtimeInstanceStats(GetRealtimeInstanceStatsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getRealtimeInstanceStatsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取场景实时指标</p>
+     * 
+     * @param request GetRealtimeScriptStatsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRealtimeScriptStatsResponse
+     */
+    public GetRealtimeScriptStatsResponse getRealtimeScriptStatsWithOptions(GetRealtimeScriptStatsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scriptId)) {
+            body.put("ScriptId", request.scriptId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRealtimeScriptStats"),
+            new TeaPair("version", "2025-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRealtimeScriptStatsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取场景实时指标</p>
+     * 
+     * @param request GetRealtimeScriptStatsRequest
+     * @return GetRealtimeScriptStatsResponse
+     */
+    public GetRealtimeScriptStatsResponse getRealtimeScriptStats(GetRealtimeScriptStatsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getRealtimeScriptStatsWithOptions(request, runtime);
     }
 
     /**
@@ -1664,6 +1768,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetScriptResponse getScript(GetScriptRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getScriptWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取场景指标趋势详情</p>
+     * 
+     * @param request GetScriptTrendingReportRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetScriptTrendingReportResponse
+     */
+    public GetScriptTrendingReportResponse getScriptTrendingReportWithOptions(GetScriptTrendingReportRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            body.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scriptId)) {
+            body.put("ScriptId", request.scriptId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            body.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeInterval)) {
+            body.put("TimeInterval", request.timeInterval);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetScriptTrendingReport"),
+            new TeaPair("version", "2025-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetScriptTrendingReportResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取场景指标趋势详情</p>
+     * 
+     * @param request GetScriptTrendingReportRequest
+     * @return GetScriptTrendingReportResponse
+     */
+    public GetScriptTrendingReportResponse getScriptTrendingReport(GetScriptTrendingReportRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getScriptTrendingReportWithOptions(request, runtime);
     }
 
     /**
@@ -2144,6 +2308,142 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取实例指标汇总数据</p>
+     * 
+     * @param tmpReq ListHistoricalInstanceReportRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListHistoricalInstanceReportResponse
+     */
+    public ListHistoricalInstanceReportResponse listHistoricalInstanceReportWithOptions(ListHistoricalInstanceReportRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListHistoricalInstanceReportShrinkRequest request = new ListHistoricalInstanceReportShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.instanceIds)) {
+            request.instanceIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.instanceIds, "InstanceIds", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            body.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIdsShrink)) {
+            body.put("InstanceIds", request.instanceIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            body.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListHistoricalInstanceReport"),
+            new TeaPair("version", "2025-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListHistoricalInstanceReportResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取实例指标汇总数据</p>
+     * 
+     * @param request ListHistoricalInstanceReportRequest
+     * @return ListHistoricalInstanceReportResponse
+     */
+    public ListHistoricalInstanceReportResponse listHistoricalInstanceReport(ListHistoricalInstanceReportRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listHistoricalInstanceReportWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取场景指标汇总数据</p>
+     * 
+     * @param tmpReq ListHistoricalScriptReportRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListHistoricalScriptReportResponse
+     */
+    public ListHistoricalScriptReportResponse listHistoricalScriptReportWithOptions(ListHistoricalScriptReportRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListHistoricalScriptReportShrinkRequest request = new ListHistoricalScriptReportShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.scriptIds)) {
+            request.scriptIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.scriptIds, "ScriptIds", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            body.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scriptIdsShrink)) {
+            body.put("ScriptIds", request.scriptIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            body.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListHistoricalScriptReport"),
+            new TeaPair("version", "2025-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListHistoricalScriptReportResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取场景指标汇总数据</p>
+     * 
+     * @param request ListHistoricalScriptReportRequest
+     * @return ListHistoricalScriptReportResponse
+     */
+    public ListHistoricalScriptReportResponse listHistoricalScriptReport(ListHistoricalScriptReportRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listHistoricalScriptReportWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询指令</p>
      * 
      * @param request ListInstructionsRequest
@@ -2292,6 +2592,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListNluModelsResponse listNluModels(ListNluModelsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listNluModelsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取实例实时指标</p>
+     * 
+     * @param tmpReq ListRealtimeInstanceStatsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRealtimeInstanceStatsResponse
+     */
+    public ListRealtimeInstanceStatsResponse listRealtimeInstanceStatsWithOptions(ListRealtimeInstanceStatsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListRealtimeInstanceStatsShrinkRequest request = new ListRealtimeInstanceStatsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.instanceIds)) {
+            request.instanceIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.instanceIds, "InstanceIds", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIdsShrink)) {
+            body.put("InstanceIds", request.instanceIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListRealtimeInstanceStats"),
+            new TeaPair("version", "2025-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRealtimeInstanceStatsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取实例实时指标</p>
+     * 
+     * @param request ListRealtimeInstanceStatsRequest
+     * @return ListRealtimeInstanceStatsResponse
+     */
+    public ListRealtimeInstanceStatsResponse listRealtimeInstanceStats(ListRealtimeInstanceStatsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listRealtimeInstanceStatsWithOptions(request, runtime);
     }
 
     /**
