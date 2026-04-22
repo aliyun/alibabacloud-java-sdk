@@ -13,6 +13,9 @@ public class ModifyEmbodiedAIPlatformShrinkRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    @NameInMap("DeviceCount")
+    public String deviceCount;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -22,9 +25,6 @@ public class ModifyEmbodiedAIPlatformShrinkRequest extends TeaModel {
     @NameInMap("PlatformName")
     public String platformName;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("RayConfig")
     public String rayConfigShrink;
 
@@ -38,8 +38,6 @@ public class ModifyEmbodiedAIPlatformShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>large</p>
      */
@@ -57,6 +55,14 @@ public class ModifyEmbodiedAIPlatformShrinkRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public ModifyEmbodiedAIPlatformShrinkRequest setDeviceCount(String deviceCount) {
+        this.deviceCount = deviceCount;
+        return this;
+    }
+    public String getDeviceCount() {
+        return this.deviceCount;
     }
 
     public ModifyEmbodiedAIPlatformShrinkRequest setPlatformName(String platformName) {

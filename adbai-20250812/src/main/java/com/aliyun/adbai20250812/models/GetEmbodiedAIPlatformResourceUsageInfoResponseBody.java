@@ -4,6 +4,9 @@ package com.aliyun.adbai20250812.models;
 import com.aliyun.tea.*;
 
 public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel {
+    @NameInMap("AcuDetails")
+    public GetEmbodiedAIPlatformResourceUsageInfoResponseBodyAcuDetails acuDetails;
+
     @NameInMap("GpuDetails")
     public java.util.List<GetEmbodiedAIPlatformResourceUsageInfoResponseBodyGpuDetails> gpuDetails;
 
@@ -39,6 +42,14 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
     public static GetEmbodiedAIPlatformResourceUsageInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetEmbodiedAIPlatformResourceUsageInfoResponseBody self = new GetEmbodiedAIPlatformResourceUsageInfoResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetEmbodiedAIPlatformResourceUsageInfoResponseBody setAcuDetails(GetEmbodiedAIPlatformResourceUsageInfoResponseBodyAcuDetails acuDetails) {
+        this.acuDetails = acuDetails;
+        return this;
+    }
+    public GetEmbodiedAIPlatformResourceUsageInfoResponseBodyAcuDetails getAcuDetails() {
+        return this.acuDetails;
     }
 
     public GetEmbodiedAIPlatformResourceUsageInfoResponseBody setGpuDetails(java.util.List<GetEmbodiedAIPlatformResourceUsageInfoResponseBodyGpuDetails> gpuDetails) {
@@ -87,6 +98,58 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
     }
     public GetEmbodiedAIPlatformResourceUsageInfoResponseBodyStorageUsage getStorageUsage() {
         return this.storageUsage;
+    }
+
+    public static class GetEmbodiedAIPlatformResourceUsageInfoResponseBodyAcuDetails extends TeaModel {
+        @NameInMap("EapWebserverACUCount")
+        public Double eapWebserverACUCount;
+
+        @NameInMap("RayHeadACUCount")
+        public Double rayHeadACUCount;
+
+        @NameInMap("RayWorkerACUCount")
+        public Double rayWorkerACUCount;
+
+        @NameInMap("TotalACUCount")
+        public Double totalACUCount;
+
+        public static GetEmbodiedAIPlatformResourceUsageInfoResponseBodyAcuDetails build(java.util.Map<String, ?> map) throws Exception {
+            GetEmbodiedAIPlatformResourceUsageInfoResponseBodyAcuDetails self = new GetEmbodiedAIPlatformResourceUsageInfoResponseBodyAcuDetails();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEmbodiedAIPlatformResourceUsageInfoResponseBodyAcuDetails setEapWebserverACUCount(Double eapWebserverACUCount) {
+            this.eapWebserverACUCount = eapWebserverACUCount;
+            return this;
+        }
+        public Double getEapWebserverACUCount() {
+            return this.eapWebserverACUCount;
+        }
+
+        public GetEmbodiedAIPlatformResourceUsageInfoResponseBodyAcuDetails setRayHeadACUCount(Double rayHeadACUCount) {
+            this.rayHeadACUCount = rayHeadACUCount;
+            return this;
+        }
+        public Double getRayHeadACUCount() {
+            return this.rayHeadACUCount;
+        }
+
+        public GetEmbodiedAIPlatformResourceUsageInfoResponseBodyAcuDetails setRayWorkerACUCount(Double rayWorkerACUCount) {
+            this.rayWorkerACUCount = rayWorkerACUCount;
+            return this;
+        }
+        public Double getRayWorkerACUCount() {
+            return this.rayWorkerACUCount;
+        }
+
+        public GetEmbodiedAIPlatformResourceUsageInfoResponseBodyAcuDetails setTotalACUCount(Double totalACUCount) {
+            this.totalACUCount = totalACUCount;
+            return this;
+        }
+        public Double getTotalACUCount() {
+            return this.totalACUCount;
+        }
+
     }
 
     public static class GetEmbodiedAIPlatformResourceUsageInfoResponseBodyGpuDetails extends TeaModel {

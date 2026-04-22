@@ -13,6 +13,9 @@ public class CreateEmbodiedAIPlatformRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    @NameInMap("DeviceCount")
+    public Integer deviceCount;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -52,6 +55,14 @@ public class CreateEmbodiedAIPlatformRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public CreateEmbodiedAIPlatformRequest setDeviceCount(Integer deviceCount) {
+        this.deviceCount = deviceCount;
+        return this;
+    }
+    public Integer getDeviceCount() {
+        return this.deviceCount;
     }
 
     public CreateEmbodiedAIPlatformRequest setPlatformName(String platformName) {
