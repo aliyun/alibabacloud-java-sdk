@@ -46,6 +46,9 @@ public class GetChatContentResponseBody extends TeaModel {
     @NameInMap("level")
     public Long level;
 
+    @NameInMap("timestamp")
+    public String timestamp;
+
     public static GetChatContentResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetChatContentResponseBody self = new GetChatContentResponseBody();
         return TeaModel.build(map, self);
@@ -97,6 +100,14 @@ public class GetChatContentResponseBody extends TeaModel {
     }
     public Long getLevel() {
         return this.level;
+    }
+
+    public GetChatContentResponseBody setTimestamp(String timestamp) {
+        this.timestamp = timestamp;
+        return this;
+    }
+    public String getTimestamp() {
+        return this.timestamp;
     }
 
 }
