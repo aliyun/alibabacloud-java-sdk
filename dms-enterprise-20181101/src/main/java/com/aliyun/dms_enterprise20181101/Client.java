@@ -1864,6 +1864,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>查询资产盘点任务的执行状态与进度信息，包含子任务列表、进度百分比、知识统计等</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询资产盘点任务的执行状态与进度信息</p>
+     * 
+     * @param request CheckInventoryJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckInventoryJobResponse
+     */
+    public CheckInventoryJobResponse checkInventoryJobWithOptions(CheckInventoryJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckInventoryJob"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckInventoryJobResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>查询资产盘点任务的执行状态与进度信息，包含子任务列表、进度百分比、知识统计等</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询资产盘点任务的执行状态与进度信息</p>
+     * 
+     * @param request CheckInventoryJobRequest
+     * @return CheckInventoryJobResponse
+     */
+    public CheckInventoryJobResponse checkInventoryJob(CheckInventoryJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.checkInventoryJobWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Closes a ticket.</p>
      * 
@@ -1913,6 +1963,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CloseOrderResponse closeOrder(CloseOrderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.closeOrderWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>确认盘点任务中的单条知识，将其标记为已认证状态（解锁级别）</p>
+     * 
+     * <b>summary</b> : 
+     * <p>确认盘点任务中的单条知识，将其标记为已认证</p>
+     * 
+     * @param request ConfirmInventoryKnowledgeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ConfirmInventoryKnowledgeResponse
+     */
+    public ConfirmInventoryKnowledgeResponse confirmInventoryKnowledgeWithOptions(ConfirmInventoryKnowledgeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.entityId)) {
+            query.put("EntityId", request.entityId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeType)) {
+            query.put("KnowledgeType", request.knowledgeType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ConfirmInventoryKnowledge"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ConfirmInventoryKnowledgeResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>确认盘点任务中的单条知识，将其标记为已认证状态（解锁级别）</p>
+     * 
+     * <b>summary</b> : 
+     * <p>确认盘点任务中的单条知识，将其标记为已认证</p>
+     * 
+     * @param request ConfirmInventoryKnowledgeRequest
+     * @return ConfirmInventoryKnowledgeResponse
+     */
+    public ConfirmInventoryKnowledgeResponse confirmInventoryKnowledge(ConfirmInventoryKnowledgeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.confirmInventoryKnowledgeWithOptions(request, runtime);
     }
 
     /**
@@ -3335,6 +3443,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateFreeLockCorrectOrderResponse createFreeLockCorrectOrder(CreateFreeLockCorrectOrderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createFreeLockCorrectOrderWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>创建资产盘点任务，支持选择实例、数据库、表维度进行知识盘点，返回任务ID</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建资产盘点任务，对指定实例/数据库/表进行知识盘点</p>
+     * 
+     * @param request CreateInventoryJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateInventoryJobResponse
+     */
+    public CreateInventoryJobResponse createInventoryJobWithOptions(CreateInventoryJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.param)) {
+            query.put("Param", request.param);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateInventoryJob"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateInventoryJobResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>创建资产盘点任务，支持选择实例、数据库、表维度进行知识盘点，返回任务ID</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建资产盘点任务，对指定实例/数据库/表进行知识盘点</p>
+     * 
+     * @param request CreateInventoryJobRequest
+     * @return CreateInventoryJobResponse
+     */
+    public CreateInventoryJobResponse createInventoryJob(CreateInventoryJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createInventoryJobWithOptions(request, runtime);
     }
 
     /**
@@ -17195,6 +17353,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SearchDatabaseResponse searchDatabase(SearchDatabaseRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.searchDatabaseWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>分页查询盘点任务产出的知识列表，支持按关键词、知识类型、排序方式等条件筛选</p>
+     * 
+     * <b>summary</b> : 
+     * <p>分页查询盘点任务产出的知识列表，支持按关键词、知识类型等条件筛选</p>
+     * 
+     * @param request SearchInventoryKnowledgeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SearchInventoryKnowledgeResponse
+     */
+    public SearchInventoryKnowledgeResponse searchInventoryKnowledgeWithOptions(SearchInventoryKnowledgeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            query.put("Offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            query.put("Query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.showType)) {
+            query.put("ShowType", request.showType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("Size", request.size);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortOrder)) {
+            query.put("SortOrder", request.sortOrder);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SearchInventoryKnowledge"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchInventoryKnowledgeResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>分页查询盘点任务产出的知识列表，支持按关键词、知识类型、排序方式等条件筛选</p>
+     * 
+     * <b>summary</b> : 
+     * <p>分页查询盘点任务产出的知识列表，支持按关键词、知识类型等条件筛选</p>
+     * 
+     * @param request SearchInventoryKnowledgeRequest
+     * @return SearchInventoryKnowledgeResponse
+     */
+    public SearchInventoryKnowledgeResponse searchInventoryKnowledge(SearchInventoryKnowledgeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.searchInventoryKnowledgeWithOptions(request, runtime);
     }
 
     /**
