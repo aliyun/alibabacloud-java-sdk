@@ -148,6 +148,9 @@ public class UpdateInstanceRequest extends TeaModel {
         @NameInMap("cuNum")
         public Integer cuNum;
 
+        @NameInMap("cuType")
+        public String cuType;
+
         @NameInMap("payType")
         public String payType;
 
@@ -180,6 +183,14 @@ public class UpdateInstanceRequest extends TeaModel {
         }
         public Integer getCuNum() {
             return this.cuNum;
+        }
+
+        public UpdateInstanceRequestComponents setCuType(String cuType) {
+            this.cuType = cuType;
+            return this;
+        }
+        public String getCuType() {
+            return this.cuType;
         }
 
         public UpdateInstanceRequestComponents setPayType(String payType) {
