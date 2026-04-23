@@ -499,6 +499,9 @@ public class SendChatMessageRequest extends TeaModel {
         @NameInMap("Language")
         public String language;
 
+        @NameInMap("Mode")
+        public String mode;
+
         @NameInMap("ReportWaterMark")
         public String reportWaterMark;
 
@@ -529,6 +532,14 @@ public class SendChatMessageRequest extends TeaModel {
         }
         public String getLanguage() {
             return this.language;
+        }
+
+        public SendChatMessageRequestSessionConfig setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
         }
 
         public SendChatMessageRequestSessionConfig setReportWaterMark(String reportWaterMark) {

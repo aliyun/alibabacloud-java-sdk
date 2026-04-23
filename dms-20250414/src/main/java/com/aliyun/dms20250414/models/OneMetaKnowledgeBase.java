@@ -10,6 +10,12 @@ public class OneMetaKnowledgeBase extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Domain")
+    public String domain;
+
+    @NameInMap("ExtraInfo")
+    public String extraInfo;
+
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
@@ -47,6 +53,22 @@ public class OneMetaKnowledgeBase extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public OneMetaKnowledgeBase setDomain(String domain) {
+        this.domain = domain;
+        return this;
+    }
+    public String getDomain() {
+        return this.domain;
+    }
+
+    public OneMetaKnowledgeBase setExtraInfo(String extraInfo) {
+        this.extraInfo = extraInfo;
+        return this;
+    }
+    public String getExtraInfo() {
+        return this.extraInfo;
     }
 
     public OneMetaKnowledgeBase setGmtCreate(String gmtCreate) {
