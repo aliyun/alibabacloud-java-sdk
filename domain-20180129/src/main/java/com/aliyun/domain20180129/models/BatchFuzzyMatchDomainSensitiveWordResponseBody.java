@@ -36,10 +36,6 @@ public class BatchFuzzyMatchDomainSensitiveWordResponseBody extends TeaModel {
     }
 
     public static class BatchFuzzyMatchDomainSensitiveWordResponseBodySensitiveWordMatchResultListSensitiveWordMatchResultMatchedSentiveWordsMatchedSensitiveWord extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
         @NameInMap("Word")
         public String word;
 
@@ -78,17 +74,9 @@ public class BatchFuzzyMatchDomainSensitiveWordResponseBody extends TeaModel {
     }
 
     public static class BatchFuzzyMatchDomainSensitiveWordResponseBodySensitiveWordMatchResultListSensitiveWordMatchResult extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Exist")
         public Boolean exist;
 
-        /**
-         * <strong>example:</strong>
-         * <p>example.com,aliyundoc.com</p>
-         */
         @NameInMap("Keyword")
         public String keyword;
 

@@ -197,145 +197,69 @@ public class QueryAdvancedDomainListResponseBody extends TeaModel {
         @NameInMap("DnsList")
         public QueryAdvancedDomainListResponseBodyDataDomainDnsList dnsList;
 
-        /**
-         * <strong>example:</strong>
-         * <p>SUCCEED</p>
-         */
         @NameInMap("DomainAuditStatus")
         public String domainAuditStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>-1</p>
-         */
         @NameInMap("DomainGroupId")
         public String domainGroupId;
 
         @NameInMap("DomainGroupName")
         public String domainGroupName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>5</p>
-         */
         @NameInMap("DomainStatus")
         public String domainStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>gTLD</p>
-         */
         @NameInMap("DomainType")
         public String domainType;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="mailto:username@example.com">username@example.com</a></p>
-         */
         @NameInMap("Email")
         public String email;
 
-        /**
-         * <strong>example:</strong>
-         * <p>356</p>
-         */
         @NameInMap("ExpirationCurrDateDiff")
         public Integer expirationCurrDateDiff;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2019-04-09 17:07:03</p>
-         */
         @NameInMap("ExpirationDate")
         public String expirationDate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1554800823000</p>
-         */
         @NameInMap("ExpirationDateLong")
         public Long expirationDateLong;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("ExpirationDateStatus")
         public String expirationDateStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>S20182000000000</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("Premium")
         public Boolean premium;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2a</p>
-         */
         @NameInMap("ProductId")
         public String productId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Tom</p>
-         */
         @NameInMap("RegistrantOrganization")
         public String registrantOrganization;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("RegistrantType")
         public String registrantType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2018-04-09 17:07:03</p>
-         */
         @NameInMap("RegistrationDate")
         public String registrationDate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1523264823000</p>
-         */
         @NameInMap("RegistrationDateLong")
         public Long registrationDateLong;
 
         @NameInMap("Remark")
         public String remark;
 
-        /**
-         * <strong>example:</strong>
-         * <p>rg-aek2yyciz557g3q</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         @NameInMap("Tag")
         public QueryAdvancedDomainListResponseBodyDataDomainTag tag;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Tom</p>
-         */
         @NameInMap("ZhRegistrantOrganization")
         public String zhRegistrantOrganization;
 

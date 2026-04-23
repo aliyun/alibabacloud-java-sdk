@@ -126,72 +126,36 @@ public class QueryTaskListResponseBody extends TeaModel {
     }
 
     public static class QueryTaskListResponseBodyDataTaskInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>127.0.0.1</p>
-         */
         @NameInMap("Clientip")
         public String clientip;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Dec 26,2017 11:00:54</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("TaskBizType")
         public String taskBizType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>INIT</p>
-         */
         @NameInMap("TaskCancelStatus")
         public String taskCancelStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("TaskCancelStatusCode")
         public Integer taskCancelStatusCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>8b1cd755-4928-4b02-adee-e5d41d7b1939</p>
-         */
         @NameInMap("TaskNo")
         public String taskNo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("TaskNum")
         public Integer taskNum;
 
         @NameInMap("TaskResult")
         public String taskResult;
 
-        /**
-         * <strong>example:</strong>
-         * <p>COMPLETE</p>
-         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("TaskStatusCode")
         public Integer taskStatusCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CREATE_DNSHOST</p>
-         */
         @NameInMap("TaskType")
         public String taskType;
 

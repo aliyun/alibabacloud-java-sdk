@@ -141,48 +141,24 @@ public class QueryChangeLogListResponseBody extends TeaModel {
     }
 
     public static class QueryChangeLogListResponseBodyDataChangeLog extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>dns1;dns2 -&gt; dns3;dns4</p>
-         */
         @NameInMap("Details")
         public String details;
 
-        /**
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>DNS modification</p>
-         */
         @NameInMap("Operation")
         public String operation;
 
-        /**
-         * <strong>example:</strong>
-         * <p>127.0.0.1</p>
-         */
         @NameInMap("OperationIPAddress")
         public String operationIPAddress;
 
         @NameInMap("Remark")
         public String remark;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Failed</p>
-         */
         @NameInMap("Result")
         public String result;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2017-12-26 12:00:00</p>
-         */
         @NameInMap("Time")
         public String time;
 

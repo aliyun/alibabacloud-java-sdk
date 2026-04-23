@@ -332,7 +332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改实例所在资源组</p>
+     * <p>ChangeResourceGroup</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -380,7 +380,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改实例所在资源组</p>
+     * <p>ChangeResourceGroup</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -391,6 +391,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Checks whether a domain name can be registered.</p>
+     * 
      * @param request CheckDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CheckDomainResponse
@@ -436,6 +439,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Checks whether a domain name can be registered.</p>
+     * 
      * @param request CheckDomainRequest
      * @return CheckDomainResponse
      */
@@ -492,7 +498,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>校验在售国际一口价域名状态和询价</p>
+     * <p>Checks the domain name status and price inquiries of a fixed-price order at the international site (alibabacloud.com).</p>
      * 
      * @param request CheckIntlFixPriceDomainStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -524,7 +530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>校验在售国际一口价域名状态和询价</p>
+     * <p>Checks the domain name status and price inquiries of a fixed-price order at the international site (alibabacloud.com).</p>
      * 
      * @param request CheckIntlFixPriceDomainStatusRequest
      * @return CheckIntlFixPriceDomainStatusResponse
@@ -736,7 +742,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建国际一口价订单</p>
+     * <p>Creates a fixed-price order at the international site (alibabacloud.com).</p>
      * 
      * @param request CreateIntlFixedPriceDomainOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -780,7 +786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建国际一口价订单</p>
+     * <p>Creates a fixed-price order at the international site (alibabacloud.com).</p>
      * 
      * @param request CreateIntlFixedPriceDomainOrderRequest
      * @return CreateIntlFixedPriceDomainOrderResponse
@@ -1548,7 +1554,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>搜索域名列表</p>
+     * <p>Searches for domain names by using the advanced search feature.</p>
      * 
      * @param request QueryAdvancedDomainListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1692,7 +1698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>搜索域名列表</p>
+     * <p>Searches for domain names by using the advanced search feature.</p>
      * 
      * @param request QueryAdvancedDomainListRequest
      * @return QueryAdvancedDomainListResponse
@@ -1750,7 +1756,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询操作记录</p>
+     * <p>Queries the operations logs of a domain name.</p>
      * 
      * @param request QueryChangeLogListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1806,7 +1812,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询操作记录</p>
+     * <p>Queries the operations logs of a domain name.</p>
      * 
      * @param request QueryChangeLogListRequest
      * @return QueryChangeLogListResponse
@@ -2106,7 +2112,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询域名分组信息</p>
+     * <p>Queries a list of domain name groups.</p>
      * 
      * @param request QueryDomainGroupListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2158,7 +2164,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询域名分组信息</p>
+     * <p>Queries a list of domain name groups.</p>
      * 
      * @param request QueryDomainGroupListRequest
      * @return QueryDomainGroupListResponse
@@ -2179,6 +2185,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryDomainListResponse queryDomainListWithOptions(QueryDomainListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenewEnabled)) {
+            query.put("AutoRenewEnabled", request.autoRenewEnabled);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ccompany)) {
             query.put("Ccompany", request.ccompany);
         }
@@ -2784,7 +2794,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询国际一口价订单列表</p>
+     * <p>Queries the list of fixed-price orders at the international site (alibabacloud.com).</p>
      * 
      * @param request QueryIntlFixedPriceOrderListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2828,7 +2838,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询国际一口价订单列表</p>
+     * <p>Queries the list of fixed-price orders at the international site (alibabacloud.com).</p>
      * 
      * @param request QueryIntlFixedPriceOrderListRequest
      * @return QueryIntlFixedPriceOrderListResponse
@@ -3438,7 +3448,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询任务列表</p>
+     * <p>Queries the domain name tasks under your account by page.</p>
      * 
      * @param request QueryTaskListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3490,7 +3500,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询任务列表</p>
+     * <p>Queries the domain name tasks under your account by page.</p>
      * 
      * @param request QueryTaskListRequest
      * @return QueryTaskListResponse
@@ -3547,6 +3557,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the domain names that are transferred to Alibaba Cloud.</p>
+     * 
      * @param request QueryTransferInListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryTransferInListResponse
@@ -3604,6 +3617,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the domain names that are transferred to Alibaba Cloud.</p>
+     * 
      * @param request QueryTransferInListRequest
      * @return QueryTransferInListResponse
      */
@@ -3938,7 +3954,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>保存批量任务-注册订单</p>
+     * <p>Submits a task to register multiple domain names at a time.</p>
      * 
      * @param request SaveBatchTaskForCreatingOrderActivateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3994,7 +4010,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>保存批量任务-注册订单</p>
+     * <p>Submits a task to register multiple domain names at a time.</p>
      * 
      * @param request SaveBatchTaskForCreatingOrderActivateRequest
      * @return SaveBatchTaskForCreatingOrderActivateResponse
@@ -4372,7 +4388,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交批量预定删除抢注域名任务</p>
+     * <p>Submits a task to reserve multiple domain names that are provided by HiChina.</p>
      * 
      * @param request SaveBatchTaskForReserveDropListDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4408,7 +4424,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交批量预定删除抢注域名任务</p>
+     * <p>Submits a task to reserve multiple domain names that are provided by HiChina.</p>
      * 
      * @param request SaveBatchTaskForReserveDropListDomainRequest
      * @return SaveBatchTaskForReserveDropListDomainResponse
@@ -4420,7 +4436,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>基于转移码的批量转出任务提交</p>
+     * <p>Submits multiple transfer-out tasks based on the transfer keys of domain names.</p>
      * 
      * @param request SaveBatchTaskForTransferOutByAuthorizationCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4452,7 +4468,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>基于转移码的批量转出任务提交</p>
+     * <p>Submits multiple transfer-out tasks based on the transfer keys of domain names.</p>
      * 
      * @param request SaveBatchTaskForTransferOutByAuthorizationCodeRequest
      * @return SaveBatchTaskForTransferOutByAuthorizationCodeResponse
@@ -6547,7 +6563,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The task ID.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submit a single transfer-out task based on the transfer key of domain names.</p>
+     * <p>Submits a single transfer-out task based on the transfer key of a domain name.</p>
      * 
      * @param request SaveSingleTaskForTransferOutByAuthorizationCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6586,7 +6602,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The task ID.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submit a single transfer-out task based on the transfer key of domain names.</p>
+     * <p>Submits a single transfer-out task based on the transfer key of a domain name.</p>
      * 
      * @param request SaveSingleTaskForTransferOutByAuthorizationCodeRequest
      * @return SaveSingleTaskForTransferOutByAuthorizationCodeResponse

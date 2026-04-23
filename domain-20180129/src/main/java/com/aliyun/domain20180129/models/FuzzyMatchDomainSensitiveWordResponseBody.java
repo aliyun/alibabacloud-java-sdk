@@ -66,10 +66,6 @@ public class FuzzyMatchDomainSensitiveWordResponseBody extends TeaModel {
     }
 
     public static class FuzzyMatchDomainSensitiveWordResponseBodyMatchedSentiveWordsMatchedSensitiveWord extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
         @NameInMap("Word")
         public String word;
 

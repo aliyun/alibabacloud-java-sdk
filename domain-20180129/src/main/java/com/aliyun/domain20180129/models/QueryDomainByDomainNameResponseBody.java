@@ -4,9 +4,6 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryDomainByDomainNameResponseBody extends TeaModel {
-    /**
-     * <p>The Domain Name System (DNS) servers of the domain name.</p>
-     */
     @NameInMap("DnsList")
     public QueryDomainByDomainNameResponseBodyDnsList dnsList;
 
@@ -234,6 +231,9 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
     @NameInMap("RegistrantUpdatingStatus")
     public String registrantUpdatingStatus;
 
+    @NameInMap("Registrar")
+    public String registrar;
+
     /**
      * <p>The time when the domain name was registered.</p>
      * 
@@ -276,9 +276,6 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    /**
-     * <p>The tags.</p>
-     */
     @NameInMap("Tag")
     public QueryDomainByDomainNameResponseBodyTag tag;
 
@@ -525,6 +522,14 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         return this.registrantUpdatingStatus;
     }
 
+    public QueryDomainByDomainNameResponseBody setRegistrar(String registrar) {
+        this.registrar = registrar;
+        return this;
+    }
+    public String getRegistrar() {
+        return this.registrar;
+    }
+
     public QueryDomainByDomainNameResponseBody setRegistrationDate(String registrationDate) {
         this.registrationDate = registrationDate;
         return this;
@@ -641,15 +646,9 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
     }
 
     public static class QueryDomainByDomainNameResponseBodyTagTag extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value.</p>
-         */
         @NameInMap("Vaue")
         public String vaue;
 

@@ -4,6 +4,9 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryDomainListRequest extends TeaModel {
+    @NameInMap("AutoRenewEnabled")
+    public Boolean autoRenewEnabled;
+
     /**
      * <p>The name of the domain name registrant.</p>
      * 
@@ -193,6 +196,14 @@ public class QueryDomainListRequest extends TeaModel {
     public static QueryDomainListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryDomainListRequest self = new QueryDomainListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryDomainListRequest setAutoRenewEnabled(Boolean autoRenewEnabled) {
+        this.autoRenewEnabled = autoRenewEnabled;
+        return this;
+    }
+    public Boolean getAutoRenewEnabled() {
+        return this.autoRenewEnabled;
     }
 
     public QueryDomainListRequest setCcompany(String ccompany) {

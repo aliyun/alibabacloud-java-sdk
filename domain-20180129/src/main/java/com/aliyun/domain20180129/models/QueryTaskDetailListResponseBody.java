@@ -13,9 +13,6 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
     @NameInMap("CurrentPageNum")
     public Integer currentPageNum;
 
-    /**
-     * <p>The tasks.</p>
-     */
     @NameInMap("Data")
     public QueryTaskDetailListResponseBodyData data;
 
@@ -143,154 +140,45 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
     }
 
     public static class QueryTaskDetailListResponseBodyDataTaskDetail extends TeaModel {
-        /**
-         * <p>The time when the task was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-01-25 20:46:57</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The error message returned when the task failed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>The operation is successful.</p>
-         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
-        /**
-         * <p>The cause of a domain name task failure.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Purchase record exists for the domain name in Aliyun</p>
-         */
         @NameInMap("FailReason")
         public String failReason;
 
-        /**
-         * <p>The instance ID of the domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>S20179H1BBI9test</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The ID of the task details.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>75addb07-28a3-450e-b5ec-test</p>
-         */
         @NameInMap("TaskDetailNo")
         public String taskDetailNo;
 
-        /**
-         * <p>The task ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>60d6e201-8ee5-47ab-8fdc-test</p>
-         */
         @NameInMap("TaskNo")
         public String taskNo;
 
-        /**
-         * <p>The result of the task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>12345</p>
-         */
         @NameInMap("TaskResult")
         public String taskResult;
 
-        /**
-         * <p>The task status. Valid values:</p>
-         * <ul>
-         * <li><strong>WAITING_EXECUTE</strong>: To be executed</li>
-         * <li><strong>EXECUTING</strong>: being executed</li>
-         * <li><strong>EXECUTE_SUCCESS</strong>: successful</li>
-         * <li><strong>EXECUTE_FAILURE</strong>: failed</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>EXECUTE_SUCCESS</p>
-         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
-        /**
-         * <p>The status code of the task. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: waiting for execution</li>
-         * <li><strong>1</strong>: being executed</li>
-         * <li><strong>2</strong>: successful</li>
-         * <li><strong>3</strong>: failed</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("TaskStatusCode")
         public Integer taskStatusCode;
 
-        /**
-         * <p>The task type. Valid values:</p>
-         * <ul>
-         * <li><strong>CHG_HOLDER</strong>: The task is run to modify the domain name registrant.</li>
-         * <li><strong>CHG_DNS</strong>: The task is run to change the Domain Name System (DNS) servers.</li>
-         * <li><strong>SET_WHOIS_PROTECT</strong>: The task is run to configure privacy protection for the domain name.</li>
-         * <li><strong>UPDATE_ADMIN_CONTACT</strong>: The task is run to modify the information about the administrator of the domain name.</li>
-         * <li><strong>UPDATE_BILLING_CONTACT</strong>: The task is run to modify the information about the payer for the domain name.</li>
-         * <li><strong>UPDATE_TECH_CONTACT</strong>: The task is run to modify the information about the technical support for the domain name.</li>
-         * <li><strong>SET_UPDATE_PROHIBITED</strong>: The task is run to configure the security lock for the domain name.</li>
-         * <li><strong>SET_TRANSFER_PROHIBITED</strong>: The task is run to configure the transfer lock for the domain name.</li>
-         * <li><strong>ORDER_ACTIVATE</strong>: The task is run to create a registration order for the domain name.</li>
-         * <li><strong>ORDER_RENEW</strong>: The task is run to create a renewal order for the domain name.</li>
-         * <li><strong>ORDER_REDEEM</strong>: The task is run to create a redemption order for the domain name.</li>
-         * <li><strong>CREATE_DNSHOST</strong>: The task is run to create a DNS server for the domain name.</li>
-         * <li><strong>UPDATE_DNSHOST</strong>: The task is run to update the information about a DNS server for the domain name.</li>
-         * <li><strong>SYNC_DNSHOST</strong>: The task is run to synchronize a DNS server for the domain name.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ORDER_RENEW</p>
-         */
         @NameInMap("TaskType")
         public String taskType;
 
-        /**
-         * <p>The description of the task type.</p>
-         */
         @NameInMap("TaskTypeDescription")
         public String taskTypeDescription;
 
-        /**
-         * <p>The number of times the task was retried.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("TryCount")
         public Integer tryCount;
 
-        /**
-         * <p>The last time when the task was run.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-01-25 20:47:01</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

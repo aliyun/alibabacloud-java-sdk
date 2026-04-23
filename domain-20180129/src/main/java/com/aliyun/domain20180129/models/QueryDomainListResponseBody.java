@@ -13,9 +13,6 @@ public class QueryDomainListResponseBody extends TeaModel {
     @NameInMap("CurrentPageNum")
     public Integer currentPageNum;
 
-    /**
-     * <p>The domain names.</p>
-     */
     @NameInMap("Data")
     public QueryDomainListResponseBodyData data;
 
@@ -162,21 +159,9 @@ public class QueryDomainListResponseBody extends TeaModel {
     }
 
     public static class QueryDomainListResponseBodyDataDomainTagTag extends TeaModel {
-        /**
-         * <p>The key of the tag added to the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testKey</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The value of the tag added to the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testValue</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -223,230 +208,89 @@ public class QueryDomainListResponseBody extends TeaModel {
     }
 
     public static class QueryDomainListResponseBodyDataDomain extends TeaModel {
-        /**
-         * <p>The name of the domain name registrant.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Guangzhou Forest Advertising Decoration Co., LTD</p>
-         */
+        @NameInMap("AutoRenewEnabled")
+        public Boolean autoRenewEnabled;
+
         @NameInMap("Ccompany")
         public String ccompany;
 
-        /**
-         * <p>domain transfer status. value:</p>
-         * <ul>
-         * <li>0: domain status normal.</li>
-         * <li>1: domain is pending change holder.</li>
-         * <li>2: change holder failed.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("ChgholderStatus")
         public String chgholderStatus;
 
         @NameInMap("DnsList")
         public QueryDomainListResponseBodyDataDomainDnsList dnsList;
 
-        /**
-         * <p>The state of real-name verification for the domain name. Valid values:</p>
-         * <ul>
-         * <li><strong>FAILED</strong>: Real-name verification for the domain name fails.</li>
-         * <li><strong>SUCCEED</strong>: Real-name verification for the domain name is successful.</li>
-         * <li><strong>NONAUDIT</strong>: Real-name verification for the domain name is not performed.</li>
-         * <li><strong>AUDITING</strong>: Real-name verification for the domain name is in progress.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>FAILED</p>
-         */
         @NameInMap("DomainAuditStatus")
         public String domainAuditStatus;
 
-        /**
-         * <p>The ID of the domain name group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123456</p>
-         */
         @NameInMap("DomainGroupId")
         public String domainGroupId;
 
-        /**
-         * <p>The name of the domain name group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test group</p>
-         */
         @NameInMap("DomainGroupName")
         public String domainGroupName;
 
-        /**
-         * <p>The domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The state of the domain name. Valid values:</p>
-         * <ul>
-         * <li><strong>1</strong>: The domain name needs to be renewed.</li>
-         * <li><strong>2</strong>: The domain name needs to be redeemed.</li>
-         * <li><strong>3</strong>: The domain name is normal.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("DomainStatus")
         public String domainStatus;
 
-        /**
-         * <p>The type of the domain name. Valid values:</p>
-         * <ul>
-         * <li><strong>New gTLD</strong></li>
-         * <li><strong>gTLD</strong></li>
-         * <li><strong>ccTLD</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>gTLD</p>
-         */
         @NameInMap("DomainType")
         public String domainType;
 
-        /**
-         * <p>The number of days from the expiration date of the domain name to the current date.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>-30</p>
-         */
         @NameInMap("ExpirationCurrDateDiff")
         public Integer expirationCurrDateDiff;
 
-        /**
-         * <p>The time when the domain name expires.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2017-11-02 04:00:45</p>
-         */
         @NameInMap("ExpirationDate")
         public String expirationDate;
 
-        /**
-         * <p>The validity period of the domain name. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1522080000000</p>
-         */
         @NameInMap("ExpirationDateLong")
         public Long expirationDateLong;
 
-        /**
-         * <p>Indicates whether the domain name expires. Valid values:</p>
-         * <ul>
-         * <li><strong>1</strong>: The domain name does not expire.</li>
-         * <li><strong>2</strong>: The domain name expires.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("ExpirationDateStatus")
         public String expirationDateStatus;
 
-        /**
-         * <p>The instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ST20151102120031118</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>Indicates whether the domain name is a premium domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Premium")
         public Boolean premium;
 
-        /**
-         * <p>The service ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2a</p>
-         */
         @NameInMap("ProductId")
         public String productId;
 
-        /**
-         * <p>The registration type of the domain name. Valid values:</p>
-         * <ul>
-         * <li><strong>1</strong>: individual</li>
-         * <li><strong>2</strong>: enterprise</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("RegistrantType")
         public String registrantType;
 
         @NameInMap("Registrar")
         public String registrar;
 
-        /**
-         * <p>The time when the domain name was registered.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2017-11-02 04:00:45</p>
-         */
         @NameInMap("RegistrationDate")
         public String registrationDate;
 
-        /**
-         * <p>Indicates how long the domain name has been registered. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1522080000000</p>
-         */
         @NameInMap("RegistrationDateLong")
         public Long registrationDateLong;
 
-        /**
-         * <p>The remarks of the domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test remark</p>
-         */
         @NameInMap("Remark")
         public String remark;
 
-        /**
-         * <p>The ID of the resource group to which the domain name belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-aek2yyciz557g3q</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        /**
-         * <p>The tags added to the resource.</p>
-         */
         @NameInMap("Tag")
         public QueryDomainListResponseBodyDataDomainTag tag;
 
         public static QueryDomainListResponseBodyDataDomain build(java.util.Map<String, ?> map) throws Exception {
             QueryDomainListResponseBodyDataDomain self = new QueryDomainListResponseBodyDataDomain();
             return TeaModel.build(map, self);
+        }
+
+        public QueryDomainListResponseBodyDataDomain setAutoRenewEnabled(Boolean autoRenewEnabled) {
+            this.autoRenewEnabled = autoRenewEnabled;
+            return this;
+        }
+        public Boolean getAutoRenewEnabled() {
+            return this.autoRenewEnabled;
         }
 
         public QueryDomainListResponseBodyDataDomain setCcompany(String ccompany) {

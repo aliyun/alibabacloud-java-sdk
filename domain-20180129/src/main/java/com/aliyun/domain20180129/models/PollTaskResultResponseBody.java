@@ -126,90 +126,42 @@ public class PollTaskResultResponseBody extends TeaModel {
     }
 
     public static class PollTaskResultResponseBodyDataTaskDetail extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2018-03-26 15:08:20</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>The operation is successful.</p>
-         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
-        /**
-         * <strong>example:</strong>
-         * <p>S201817141000000</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>15fee9d10d514bada66bd08c5723c583</p>
-         */
         @NameInMap("TaskDetailNo")
         public String taskDetailNo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>b95bc334-f7d8-4f39-8a62-4c4302a243d8</p>
-         */
         @NameInMap("TaskNo")
         public String taskNo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("TaskResult")
         public String taskResult;
 
-        /**
-         * <strong>example:</strong>
-         * <p>EXECUTE_SUCCESS</p>
-         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("TaskStatusCode")
         public Integer taskStatusCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CHG_DNS</p>
-         */
         @NameInMap("TaskType")
         public String taskType;
 
         @NameInMap("TaskTypeDescription")
         public String taskTypeDescription;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("TryCount")
         public Integer tryCount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2018-03-26 15:22:18</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

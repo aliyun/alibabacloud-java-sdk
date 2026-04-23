@@ -66,17 +66,9 @@ public class QueryQualificationDetailResponseBody extends TeaModel {
     }
 
     public static class QueryQualificationDetailResponseBodyCredentialsQualificationCredential extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>92610725MA7G2E****</p>
-         */
         @NameInMap("CredentialNo")
         public String credentialNo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>SHSQB</p>
-         */
         @NameInMap("CredentialType")
         public String credentialType;
 
