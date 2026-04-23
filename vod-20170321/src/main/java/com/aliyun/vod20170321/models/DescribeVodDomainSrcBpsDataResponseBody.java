@@ -40,9 +40,6 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The origin bandwidth data at each time interval.</p>
-     */
     @NameInMap("SrcBpsDataPerInterval")
     public DescribeVodDomainSrcBpsDataResponseBodySrcBpsDataPerInterval srcBpsDataPerInterval;
 
@@ -109,30 +106,12 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodDomainSrcBpsDataResponseBodySrcBpsDataPerIntervalDataModule extends TeaModel {
-        /**
-         * <p>The bandwidth consumed for fetching resources from the origin over HTTPS.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("HttpsValue")
         public String httpsValue;
 
-        /**
-         * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-08-23T02:02:57Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The total origin bandwidth data. Unit: bit/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Value")
         public String value;
 

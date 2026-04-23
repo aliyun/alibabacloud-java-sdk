@@ -31,9 +31,6 @@ public class DescribeVodDomainQpsDataResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The list of QPS records at each interval.</p>
-     */
     @NameInMap("QpsDataInterval")
     public DescribeVodDomainQpsDataResponseBodyQpsDataInterval qpsDataInterval;
 
@@ -109,120 +106,42 @@ public class DescribeVodDomainQpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodDomainQpsDataResponseBodyQpsDataIntervalDataModule extends TeaModel {
-        /**
-         * <p>The number of requests in the Chinese mainland.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("AccDomesticValue")
         public String accDomesticValue;
 
-        /**
-         * <p>The number of requests outside the Chinese mainland.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("AccOverseasValue")
         public String accOverseasValue;
 
-        /**
-         * <p>The total number of requests.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("AccValue")
         public String accValue;
 
-        /**
-         * <p>The QPS data in the Chinese mainland.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("DomesticValue")
         public String domesticValue;
 
-        /**
-         * <p>The QPS that is calculated based on the HTTPS requests sent to POPs in the Chinese mainland.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("HttpsAccDomesticValue")
         public String httpsAccDomesticValue;
 
-        /**
-         * <p>The number of HTTPS requests sent to POPs outside the Chinese mainland.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("HttpsAccOverseasValue")
         public String httpsAccOverseasValue;
 
-        /**
-         * <p>The number of HTTPS requests sent to POPs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("HttpsAccValue")
         public String httpsAccValue;
 
-        /**
-         * <p>The QPS that is calculated based on the HTTPS requests sent to POPs in the Chinese mainland.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("HttpsDomesticValue")
         public String httpsDomesticValue;
 
-        /**
-         * <p>The QPS that is calculated based on the HTTPS requests sent to POPs outside the Chinese mainland.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("HttpsOverseasValue")
         public String httpsOverseasValue;
 
-        /**
-         * <p>The QPS that is calculated based on the HTTPS requests sent to points of presence (POPs).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("HttpsValue")
         public String httpsValue;
 
-        /**
-         * <p>The QPS data outside the Chinese mainland.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("OverseasValue")
         public String overseasValue;
 
-        /**
-         * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2023-06-27 10:10:58</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The total QPS.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Value")
         public String value;
 

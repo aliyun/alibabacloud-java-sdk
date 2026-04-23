@@ -144,7 +144,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a video category. You can call this operation to categorize media assets including audio or video files, images, and short video materials in ApsaraVideo VOD. This simplifies the query and management of media assets.</p>
+     * <p>Creates a category to classify media assets that are stored in ApsaraVideo VOD. This helps you query and manage resources in a more efficient and convenient way.</p>
      * 
      * @param request AddCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -190,7 +190,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a video category. You can call this operation to categorize media assets including audio or video files, images, and short video materials in ApsaraVideo VOD. This simplifies the query and management of media assets.</p>
+     * <p>Creates a category to classify media assets that are stored in ApsaraVideo VOD. This helps you query and manage resources in a more efficient and convenient way.</p>
      * 
      * @param request AddCategoryRequest
      * @return AddCategoryResponse
@@ -659,7 +659,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an image or text watermark. ApsaraVideo VOD allows you to create watermark templates to reuse your parameter configurations such as watermark position, size, font, and color. Each watermark template is assigned a unique ID. This simplifies the progress of creating watermark tasks.</p>
+     * <p>Creates an image or text watermark template. ApsaraVideo VOD allows you to create watermark templates to reuse your parameter configurations such as watermark position, size, font, and color. Each watermark template is assigned a unique ID. This simplifies the processing of watermark tasks.</p>
      * 
      * @param request AddWatermarkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -714,7 +714,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an image or text watermark. ApsaraVideo VOD allows you to create watermark templates to reuse your parameter configurations such as watermark position, size, font, and color. Each watermark template is assigned a unique ID. This simplifies the progress of creating watermark tasks.</p>
+     * <p>Creates an image or text watermark template. ApsaraVideo VOD allows you to create watermark templates to reuse your parameter configurations such as watermark position, size, font, and color. Each watermark template is assigned a unique ID. This simplifies the processing of watermark tasks.</p>
      * 
      * @param request AddWatermarkRequest
      * @return AddWatermarkResponse
@@ -1283,7 +1283,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtains an upload URL and an upload credential for an auxiliary media asset such as a watermark image, subtitle file, or material and generates the media ID. ApsaraVideo VOD issues upload URLs and credentials to perform authorization and ensure security. This prevents unauthorized users from uploading media files. ApsaraVideo VOD generates media IDs together with upload URLs and credentials. Media IDs are used in lifecycle management and media processing.</p>
+     * <p>Obtain an upload credential and create auxiliary media assets, such as watermarks and subtitles. The upload URL and credential are provided by ApsaraVideo VOD to resolve authorization and security issues, prevent malicious uploads, and automatically create media IDs (Mediaid) for management and processing.</p>
      * 
      * @param request CreateUploadAttachedMediaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1364,7 +1364,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtains an upload URL and an upload credential for an auxiliary media asset such as a watermark image, subtitle file, or material and generates the media ID. ApsaraVideo VOD issues upload URLs and credentials to perform authorization and ensure security. This prevents unauthorized users from uploading media files. ApsaraVideo VOD generates media IDs together with upload URLs and credentials. Media IDs are used in lifecycle management and media processing.</p>
+     * <p>Obtain an upload credential and create auxiliary media assets, such as watermarks and subtitles. The upload URL and credential are provided by ApsaraVideo VOD to resolve authorization and security issues, prevent malicious uploads, and automatically create media IDs (Mediaid) for management and processing.</p>
      * 
      * @param request CreateUploadAttachedMediaRequest
      * @return CreateUploadAttachedMediaResponse
@@ -1385,7 +1385,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries a URL and a credential for uploading an image.</p>
+     * <p>ApsaraVideo VOD returns the upload URL and credential to ensure authorization and security, prevent malicious uploads, and automatically create an image ID for management. Obtains an upload URL and an upload credential for uploading an audio or video file and generates the audio or video ID.</p>
      * 
      * @param request CreateUploadImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1462,7 +1462,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries a URL and a credential for uploading an image.</p>
+     * <p>ApsaraVideo VOD returns the upload URL and credential to ensure authorization and security, prevent malicious uploads, and automatically create an image ID for management. Obtains an upload URL and an upload credential for uploading an audio or video file and generates the audio or video ID.</p>
      * 
      * @param request CreateUploadImageRequest
      * @return CreateUploadImageResponse
@@ -1763,7 +1763,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Application with resources can not be deleted.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an application.</p>
+     * <p>Deletes the information about applications.</p>
      * 
      * @param request DeleteAppInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1798,7 +1798,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Application with resources can not be deleted.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an application.</p>
+     * <p>Deletes the information about applications.</p>
      * 
      * @param request DeleteAppInfoRequest
      * @return DeleteAppInfoResponse
@@ -1816,7 +1816,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes auxiliary media assets from ApsaraVideo VOD. You can delete multiple auxiliary media assets such as watermark images, subtitle files, and materials in a batch.</p>
+     * <p>Deletes auxiliary media assets from ApsaraVideo VOD. You can delete one or more auxiliary media assets such as watermark images, subtitle files, and materials in a batch.</p>
      * 
      * @param request DeleteAttachedMediaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1854,7 +1854,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes auxiliary media assets from ApsaraVideo VOD. You can delete multiple auxiliary media assets such as watermark images, subtitle files, and materials in a batch.</p>
+     * <p>Deletes auxiliary media assets from ApsaraVideo VOD. You can delete one or more auxiliary media assets such as watermark images, subtitle files, and materials in a batch.</p>
      * 
      * @param request DeleteAttachedMediaRequest
      * @return DeleteAttachedMediaResponse
@@ -2046,7 +2046,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除剪辑资源</p>
+     * <p>Deletes the materials to be edited for an online editing project.</p>
      * 
      * @param request DeleteEditingProjectMaterialsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2102,7 +2102,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除剪辑资源</p>
+     * <p>Deletes the materials to be edited for an online editing project.</p>
      * 
      * @param request DeleteEditingProjectMaterialsRequest
      * @return DeleteEditingProjectMaterialsResponse
@@ -2370,7 +2370,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes one or more video or audio streams and their storage files at a time.</p>
+     * <p>Deletes media streams such as video or audio streams and their storage files.</p>
      * 
      * @param request DeleteStreamRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2410,7 +2410,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes one or more video or audio streams and their storage files at a time.</p>
+     * <p>Deletes media streams such as video or audio streams and their storage files.</p>
      * 
      * @param request DeleteStreamRequest
      * @return DeleteStreamResponse
@@ -3398,7 +3398,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Queries the bandwidth data by protocol.</p>
+     * <p>Queries the bandwidth data for one or more accelerated domain names by the protocol type.</p>
      * 
      * @param request DescribeVodDomainBpsDataByLayerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3490,7 +3490,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Queries the bandwidth data by protocol.</p>
+     * <p>Queries the bandwidth data for one or more accelerated domain names by the protocol type.</p>
      * 
      * @param request DescribeVodDomainBpsDataByLayerRequest
      * @return DescribeVodDomainBpsDataByLayerResponse
@@ -3516,6 +3516,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
             query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.heraApiAutoVersion)) {
+            query.put("HeraApiAutoVersion", request.heraApiAutoVersion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
@@ -5490,7 +5494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>点播云剪辑用量查询</p>
+     * <p>Queries the online editing usage in ApsaraVideo VOD.</p>
      * 
      * @param request DescribeVodEditingUsageDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5542,7 +5546,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>点播云剪辑用量查询</p>
+     * <p>Queries the online editing usage in ApsaraVideo VOD.</p>
      * 
      * @param request DescribeVodEditingUsageDataRequest
      * @return DescribeVodEditingUsageDataResponse
@@ -7056,7 +7060,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of an AI template.</p>
+     * <p>Queries AI templates.</p>
      * 
      * @param request GetAITemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7094,7 +7098,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of an AI template.</p>
+     * <p>Queries AI templates.</p>
      * 
      * @param request GetAITemplateRequest
      * @return GetAITemplateResponse
@@ -7458,7 +7462,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>支持区域化媒资ID级别播放数据查询</p>
+     * <p>Obtains all media traffic data of a specific date and region. The data is generated based on Alibaba Cloud CDN traffic logs and reflects the traffic consumption of videos. The data is exported as a CSV file, including the date, video ID, domain name, traffic, application ID, and category ID. You can download the file to your local storage for operational data analysis and billing.</p>
      * 
      * @param request GetDailyPlayRegionStatisRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7494,7 +7498,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>支持区域化媒资ID级别播放数据查询</p>
+     * <p>Obtains all media traffic data of a specific date and region. The data is generated based on Alibaba Cloud CDN traffic logs and reflects the traffic consumption of videos. The data is exported as a CSV file, including the date, video ID, domain name, traffic, application ID, and category ID. You can download the file to your local storage for operational data analysis and billing.</p>
      * 
      * @param request GetDailyPlayRegionStatisRequest
      * @return GetDailyPlayRegionStatisResponse
@@ -7512,7 +7516,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about the default AI template.</p>
+     * <p>Queries the default AI template.</p>
      * 
      * @param request GetDefaultAITemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7550,7 +7554,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about the default AI template.</p>
+     * <p>Queries the default AI template.</p>
      * 
      * @param request GetDefaultAITemplateRequest
      * @return GetDefaultAITemplateResponse
@@ -7644,7 +7648,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取剪辑工程</p>
+     * <p>Queries the details of an online editing project.</p>
      * 
      * @param request GetEditingProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7692,7 +7696,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取剪辑工程</p>
+     * <p>Queries the details of an online editing project.</p>
      * 
      * @param request GetEditingProjectRequest
      * @return GetEditingProjectResponse
@@ -7707,7 +7711,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>During editing, you can add materials to the timeline, but some of them may not be used.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries materials to be edited for an online editing project.</p>
+     * <p>Queries materials that are waiting to be edited in an online editing project.</p>
      * 
      * @param request GetEditingProjectMaterialsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7766,7 +7770,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>During editing, you can add materials to the timeline, but some of them may not be used.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries materials to be edited for an online editing project.</p>
+     * <p>Queries materials that are waiting to be edited in an online editing project.</p>
      * 
      * @param request GetEditingProjectMaterialsRequest
      * @return GetEditingProjectMaterialsResponse
@@ -7778,7 +7782,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the basic information and access URL of an image based on the image ID.</p>
+     * <p>Queries the basic information and URL of an image based on the image ID after you upload the image to ApsaraVideo VOD.</p>
      * 
      * @param request GetImageInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7818,7 +7822,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the basic information and access URL of an image based on the image ID.</p>
+     * <p>Queries the basic information and URL of an image based on the image ID after you upload the image to ApsaraVideo VOD.</p>
      * 
      * @param request GetImageInfoRequest
      * @return GetImageInfoResponse
@@ -8191,7 +8195,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Regions that support this operation: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a media fingerprinting result. After a media fingerprinting job is complete, you can call this operation to query the media fingerprinting result.</p>
+     * <p>Queries the results of video fingerprinting jobs. After a media fingerprinting job is complete, you can call this operation to query the media fingerprinting result.</p>
      * 
      * @param request GetMediaDNAResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8242,7 +8246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Regions that support this operation: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a media fingerprinting result. After a media fingerprinting job is complete, you can call this operation to query the media fingerprinting result.</p>
+     * <p>Queries the results of video fingerprinting jobs. After a media fingerprinting job is complete, you can call this operation to query the media fingerprinting result.</p>
      * 
      * @param request GetMediaDNAResultRequest
      * @return GetMediaDNAResultResponse
@@ -8309,7 +8313,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the callback method, callback URL, and event type for event notifications.</p>
+     * <p>Queries the callback method, callback URL, and event type of an event notification.</p>
      * 
      * @param request GetMessageCallbackRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8350,7 +8354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the callback method, callback URL, and event type for event notifications.</p>
+     * <p>Queries the callback method, callback URL, and event type of an event notification.</p>
      * 
      * @param request GetMessageCallbackRequest
      * @return GetMessageCallbackResponse
@@ -9100,7 +9104,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a single snapshot template.</p>
+     * <p>Queries details of a snapshot template.</p>
      * 
      * @param request GetVodTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9132,7 +9136,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a single snapshot template.</p>
+     * <p>Queries details of a snapshot template.</p>
      * 
      * @param request GetVodTemplateRequest
      * @return GetVodTemplateResponse
@@ -9144,7 +9148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an image or text watermark based on the watermark template ID. You can call this operation to obtain information such as the position, size, and display time of an image watermark or the content, position, font, and font color of a text watermark.</p>
+     * <p>Queries the configurations of an image or text watermark template based on tits ID. You can call this operation to obtain information such as the position, size, and display time of an image watermark or the content, position, font, and font color of a text watermark.</p>
      * 
      * @param request GetWatermarkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9176,7 +9180,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an image or text watermark based on the watermark template ID. You can call this operation to obtain information such as the position, size, and display time of an image watermark or the content, position, font, and font color of a text watermark.</p>
+     * <p>Queries the configurations of an image or text watermark template based on tits ID. You can call this operation to obtain information such as the position, size, and display time of an image watermark or the content, position, font, and font color of a text watermark.</p>
      * 
      * @param request GetWatermarkRequest
      * @return GetWatermarkResponse
@@ -9250,7 +9254,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries AI jobs. After a job is submitted, ApsaraVideo VOD asynchronously processes the job. You can call this operation to query the job information in real time.</p>
+     * <p>Queries a smart tagging or video fingerprinting job. After you submit a smart tagging or video fingerprinting job, ApsaraVideo VOD asynchronously processes the job. You can call this operation to query the job information in real time.</p>
      * 
      * @param request ListAIJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9304,7 +9308,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries AI jobs. After a job is submitted, ApsaraVideo VOD asynchronously processes the job. You can call this operation to query the job information in real time.</p>
+     * <p>Queries a smart tagging or video fingerprinting job. After you submit a smart tagging or video fingerprinting job, ApsaraVideo VOD asynchronously processes the job. You can call this operation to query the job information in real time.</p>
      * 
      * @param request ListAIJobRequest
      * @return ListAIJobResponse
@@ -9502,7 +9506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the IP addresses in a review security group.</p>
+     * <p>Queries the IP addresses in a security group.</p>
      * 
      * @param request ListAuditSecurityIpRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9534,7 +9538,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the IP addresses in a review security group.</p>
+     * <p>Queries the IP addresses in a security group.</p>
      * 
      * @param request ListAuditSecurityIpRequest
      * @return ListAuditSecurityIpResponse
@@ -9546,7 +9550,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about animated stickers of a video based on the video ID.</p>
+     * <p>Queries the information about animated images of a video based on the video ID.</p>
      * 
      * @param request ListDynamicImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9578,7 +9582,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about animated stickers of a video based on the video ID.</p>
+     * <p>Queries the information about animated images of a video based on the video ID.</p>
      * 
      * @param request ListDynamicImageRequest
      * @return ListDynamicImageResponse
@@ -9737,7 +9741,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>If multiple snapshots exist for a video, you can call this operation to query information about the latest snapshot.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the snapshots that are captured by submitting snapshot jobs or snapshots that are generated by the system when you upload the video.</p>
+     * <p>Queries snapshots that were captured by submitting snapshot jobs or the thumbnail that was generated by the system when you uploaded a video.</p>
      * 
      * @param request ListSnapshotsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9788,7 +9792,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>If multiple snapshots exist for a video, you can call this operation to query information about the latest snapshot.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the snapshots that are captured by submitting snapshot jobs or snapshots that are generated by the system when you upload the video.</p>
+     * <p>Queries snapshots that were captured by submitting snapshot jobs or the thumbnail that was generated by the system when you uploaded a video.</p>
      * 
      * @param request ListSnapshotsRequest
      * @return ListSnapshotsResponse
@@ -10899,7 +10903,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can play videos in the Checking or Blocked state only from the IP addresses that are added to review security groups.</p>
      * 
      * <b>summary</b> : 
-     * <p>Manages the IP addresses in review security groups.</p>
+     * <p>Sets IP addresses in review security groups.</p>
      * 
      * @param request SetAuditSecurityIpRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10942,7 +10946,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can play videos in the Checking or Blocked state only from the IP addresses that are added to review security groups.</p>
      * 
      * <b>summary</b> : 
-     * <p>Manages the IP addresses in review security groups.</p>
+     * <p>Sets IP addresses in review security groups.</p>
      * 
      * @param request SetAuditSecurityIpRequest
      * @return SetAuditSecurityIpResponse
@@ -12473,7 +12477,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can modify the information about up to 20 auxiliary media assets at a time.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the information about multiple auxiliary media assets such as watermark images, subtitle files, and materials in a batch based on IDs. You can modify information such as the title, description, tags, and category.</p>
+     * <p>Modifies the information about multiple auxiliary media assets at a time. After you upload auxiliary media assets, such as images that contain watermarks, subtitle files, or other materials, to ApsaraVideo VOD, you can call this operation to update their titles, descriptions, tags, and categories at a time based on the unique identifiers (IDs) of the auxiliary media assets.</p>
      * 
      * @param request UpdateAttachedMediaInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12508,7 +12512,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can modify the information about up to 20 auxiliary media assets at a time.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the information about multiple auxiliary media assets such as watermark images, subtitle files, and materials in a batch based on IDs. You can modify information such as the title, description, tags, and category.</p>
+     * <p>Modifies the information about multiple auxiliary media assets at a time. After you upload auxiliary media assets, such as images that contain watermarks, subtitle files, or other materials, to ApsaraVideo VOD, you can call this operation to update their titles, descriptions, tags, and categories at a time based on the unique identifiers (IDs) of the auxiliary media assets.</p>
      * 
      * @param request UpdateAttachedMediaInfosRequest
      * @return UpdateAttachedMediaInfosResponse
@@ -12523,7 +12527,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>After you create a category, you can call this operation to modify the name of the category. If you have classified specific media resources to this category, the category names that are labeled on the media resources are automatically updated.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies a video category.</p>
+     * <p>Updates the category name.</p>
      * 
      * @param request UpdateCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12562,7 +12566,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>After you create a category, you can call this operation to modify the name of the category. If you have classified specific media resources to this category, the category names that are labeled on the media resources are automatically updated.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies a video category.</p>
+     * <p>Updates the category name.</p>
      * 
      * @param request UpdateCategoryRequest
      * @return UpdateCategoryResponse
@@ -12656,7 +12660,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the information about one or more images at a time.</p>
+     * <p>Modifies the information about multiple images at a time. After you upload images to ApsaraVideo VOD, you can call this operation to update their titles, descriptions, tags, and categories at a time based on the IDs of the images.</p>
      * 
      * @param request UpdateImageInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12694,7 +12698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the information about one or more images at a time.</p>
+     * <p>Modifies the information about multiple images at a time. After you upload images to ApsaraVideo VOD, you can call this operation to update their titles, descriptions, tags, and categories at a time based on the IDs of the images.</p>
      * 
      * @param request UpdateImageInfosRequest
      * @return UpdateImageInfosResponse
@@ -12931,7 +12935,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The specific parameter of a video is updated only when a new value is passed in the parameter.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the information about multiple videos at a time.</p>
+     * <p>Modifies information about multiple audio or video files at a time.</p>
      * 
      * @param request UpdateVideoInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12966,7 +12970,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The specific parameter of a video is updated only when a new value is passed in the parameter.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the information about multiple videos at a time.</p>
+     * <p>Modifies information about multiple audio or video files at a time.</p>
      * 
      * @param request UpdateVideoInfosRequest
      * @return UpdateVideoInfosResponse

@@ -58,9 +58,6 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
     @NameInMap("TotalTraffic")
     public String totalTraffic;
 
-    /**
-     * <p>The amount of network traffic at each time interval.</p>
-     */
     @NameInMap("TrafficDataPerInterval")
     public DescribeVodDomainTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval;
 
@@ -126,66 +123,24 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule extends TeaModel {
-        /**
-         * <p>The amount of network traffic in the Chinese mainland. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("DomesticValue")
         public String domesticValue;
 
-        /**
-         * <p>The amount of HTTPS network traffic on points of presence (POPs) in the Chinese mainland. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("HttpsDomesticValue")
         public String httpsDomesticValue;
 
-        /**
-         * <p>The amount of HTTPS network traffic on POPs outside the Chinese mainland. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("HttpsOverseasValue")
         public String httpsOverseasValue;
 
-        /**
-         * <p>The total amount of HTTPS network traffic on POPs. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("HttpsValue")
         public String httpsValue;
 
-        /**
-         * <p>The amount of network traffic outside the Chinese mainland. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("OverseasValue")
         public String overseasValue;
 
-        /**
-         * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-01-15T19:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The total traffic. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Value")
         public String value;
 

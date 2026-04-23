@@ -4,9 +4,6 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
-    /**
-     * <p>The bandwidth data that is collected for each interval.</p>
-     */
     @NameInMap("BpsDataPerInterval")
     public DescribeVodDomainBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval;
 
@@ -143,66 +140,24 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodDomainBpsDataResponseBodyBpsDataPerIntervalDataModule extends TeaModel {
-        /**
-         * <p>The bandwidth in mainland China. Unit: bit/s. When the bandwidth data is queried by ISP, no value is returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>11286111</p>
-         */
         @NameInMap("DomesticValue")
         public String domesticValue;
 
-        /**
-         * <p>The HTTPS bandwidth on L1 nodes in mainland China. Unit: bit/s. When the bandwidth data is queried by ISP, no value is returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>11286111</p>
-         */
         @NameInMap("HttpsDomesticValue")
         public String httpsDomesticValue;
 
-        /**
-         * <p>The HTTPS bandwidth on L1 nodes outside mainland China. Unit: bit/s. When the bandwidth data is queried by ISP, no value is returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2000</p>
-         */
         @NameInMap("HttpsOverseasValue")
         public String httpsOverseasValue;
 
-        /**
-         * <p>The total HTTPS bandwidth on L1 nodes. Unit: bit/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>11288111</p>
-         */
         @NameInMap("HttpsValue")
         public String httpsValue;
 
-        /**
-         * <p>The bandwidth outside mainland China. Unit: bit/s. When the bandwidth data is queried by ISP, no value is returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2000</p>
-         */
         @NameInMap("OverseasValue")
         public String overseasValue;
 
-        /**
-         * <p>The timestamp of the returned data. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-12-10T13:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The bandwidth. Unit: bit/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>11288111</p>
-         */
         @NameInMap("Value")
         public String value;
 

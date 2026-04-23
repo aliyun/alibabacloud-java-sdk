@@ -4,9 +4,6 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodDomainConfigsResponseBody extends TeaModel {
-    /**
-     * <p>The configurations of the domain name.</p>
-     */
     @NameInMap("DomainConfigs")
     public DescribeVodDomainConfigsResponseBodyDomainConfigs domainConfigs;
 
@@ -41,21 +38,9 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgsFunctionArg extends TeaModel {
-        /**
-         * <p>The parameter name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>file_type</p>
-         */
         @NameInMap("ArgName")
         public String argName;
 
-        /**
-         * <p>The parameter value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>txt</p>
-         */
         @NameInMap("ArgValue")
         public String argValue;
 
@@ -102,42 +87,15 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfig extends TeaModel {
-        /**
-         * <p>The configuration ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5003576</p>
-         */
         @NameInMap("ConfigId")
         public String configId;
 
-        /**
-         * <p>The feature parameters.</p>
-         */
         @NameInMap("FunctionArgs")
         public DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgs functionArgs;
 
-        /**
-         * <p>The feature name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>set_req_host_header</p>
-         */
         @NameInMap("FunctionName")
         public String functionName;
 
-        /**
-         * <p>The configuration status. Valid values:</p>
-         * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>testing</strong></li>
-         * <li><strong>failed</strong></li>
-         * <li><strong>configuring</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>success</p>
-         */
         @NameInMap("Status")
         public String status;
 

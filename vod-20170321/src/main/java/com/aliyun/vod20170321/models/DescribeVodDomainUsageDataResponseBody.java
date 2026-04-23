@@ -71,9 +71,6 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
     @NameInMap("Type")
     public String type;
 
-    /**
-     * <p>The traffic or bandwidth data returned at each interval.</p>
-     */
     @NameInMap("UsageDataPerInterval")
     public DescribeVodDomainUsageDataResponseBodyUsageDataPerInterval usageDataPerInterval;
 
@@ -147,21 +144,9 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodDomainUsageDataResponseBodyUsageDataPerIntervalDataModule extends TeaModel {
-        /**
-         * <p>The timestamp of the returned data. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-12-10T10:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The traffic or bandwidth data. Unit: bit/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2592.3920000000003</p>
-         */
         @NameInMap("Value")
         public String value;
 

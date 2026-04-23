@@ -32,9 +32,6 @@ public class DescribeVodDomainRealTimeTrafficDataResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The details of traffic data in each time interval.</p>
-     */
     @NameInMap("RealTimeTrafficDataPerInterval")
     public DescribeVodDomainRealTimeTrafficDataResponseBodyRealTimeTrafficDataPerInterval realTimeTrafficDataPerInterval;
 
@@ -110,21 +107,9 @@ public class DescribeVodDomainRealTimeTrafficDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodDomainRealTimeTrafficDataResponseBodyRealTimeTrafficDataPerIntervalDataModule extends TeaModel {
-        /**
-         * <p>The timestamp of the data returned. The time follows the ISO 8601 standard. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-12-10T20:01:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The traffic data. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Value")
         public String value;
 

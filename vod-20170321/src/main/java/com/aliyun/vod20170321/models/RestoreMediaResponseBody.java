@@ -4,15 +4,9 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class RestoreMediaResponseBody extends TeaModel {
-    /**
-     * <p>The IDs of the media asset that failed to be processed.</p>
-     */
     @NameInMap("ForbiddenList")
     public RestoreMediaResponseBodyForbiddenList forbiddenList;
 
-    /**
-     * <p>The IDs of the media assets that failed to be obtained.</p>
-     */
     @NameInMap("IgnoredList")
     public RestoreMediaResponseBodyIgnoredList ignoredList;
 
@@ -72,21 +66,9 @@ public class RestoreMediaResponseBody extends TeaModel {
     }
 
     public static class RestoreMediaResponseBodyForbiddenListMediaForbiddenReasonDTO extends TeaModel {
-        /**
-         * <p>The ID of the media asset.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>fa10ee70898671edb99f6eb3690d****</p>
-         */
         @NameInMap("MediaId")
         public String mediaId;
 
-        /**
-         * <p>The reason for the failure.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Forbidden.RestoreMedia</p>
-         */
         @NameInMap("Reason")
         public String reason;
 

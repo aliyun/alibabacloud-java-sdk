@@ -13,9 +13,6 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The daily playback statistics on the video.</p>
-     */
     @NameInMap("VideoPlayStatisDetails")
     public DescribePlayVideoStatisResponseBodyVideoPlayStatisDetails videoPlayStatisDetails;
 
@@ -41,57 +38,21 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
     }
 
     public static class DescribePlayVideoStatisResponseBodyVideoPlayStatisDetailsVideoPlayStatisDetail extends TeaModel {
-        /**
-         * <p>The date. The time follows the ISO 8601 standard in the <em>YYYY-MM-DD</em>T<em>hh:mm:ss</em> format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20170120</p>
-         */
         @NameInMap("Date")
         public String date;
 
-        /**
-         * <p>The total playback duration. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>967277</p>
-         */
         @NameInMap("PlayDuration")
         public String playDuration;
 
-        /**
-         * <p>The distribution of the playback duration.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>&lt;=1m:79.2%;&gt;1&lt;=5m:16.7%;&gt;5&lt;=10m:4.2%</p>
-         */
         @NameInMap("PlayRange")
         public String playRange;
 
-        /**
-         * <p>The video title.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Four streams (one stream encrypted): LD-HLS + SD-MP4 + HD-HLS-encrypted + UHD-MP4</p>
-         */
         @NameInMap("Title")
         public String title;
 
-        /**
-         * <p>The number of unique visitors.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("UV")
         public String UV;
 
-        /**
-         * <p>The number of video views.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>24</p>
-         */
         @NameInMap("VV")
         public String VV;
 

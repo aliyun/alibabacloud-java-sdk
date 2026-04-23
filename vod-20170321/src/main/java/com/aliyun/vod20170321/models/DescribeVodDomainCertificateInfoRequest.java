@@ -14,6 +14,9 @@ public class DescribeVodDomainCertificateInfoRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
+    @NameInMap("HeraApiAutoVersion")
+    public String heraApiAutoVersion;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -28,6 +31,14 @@ public class DescribeVodDomainCertificateInfoRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
+    }
+
+    public DescribeVodDomainCertificateInfoRequest setHeraApiAutoVersion(String heraApiAutoVersion) {
+        this.heraApiAutoVersion = heraApiAutoVersion;
+        return this;
+    }
+    public String getHeraApiAutoVersion() {
+        return this.heraApiAutoVersion;
     }
 
     public DescribeVodDomainCertificateInfoRequest setOwnerId(Long ownerId) {

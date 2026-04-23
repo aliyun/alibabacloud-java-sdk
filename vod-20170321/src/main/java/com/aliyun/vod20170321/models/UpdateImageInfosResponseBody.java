@@ -4,9 +4,6 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class UpdateImageInfosResponseBody extends TeaModel {
-    /**
-     * <p>The IDs of the images that do not exist.</p>
-     */
     @NameInMap("NonExistImageIds")
     public UpdateImageInfosResponseBodyNonExistImageIds nonExistImageIds;
 

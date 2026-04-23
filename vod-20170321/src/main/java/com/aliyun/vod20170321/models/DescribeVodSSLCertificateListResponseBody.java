@@ -41,66 +41,24 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
     }
 
     public static class DescribeVodSSLCertificateListResponseBodyCertificateListModelCertListCert extends TeaModel {
-        /**
-         * <p>The ID of the certificate.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>235437</p>
-         */
         @NameInMap("CertId")
         public Long certId;
 
-        /**
-         * <p>The name of the certificate.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>video-ssl</p>
-         */
         @NameInMap("CertName")
         public String certName;
 
-        /**
-         * <p>The region of the certificate. Valid values: <strong>cn-hangzhou</strong> and <strong>ap-southeast-1</strong>. Default value: <strong>cn-hangzhou</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("CertRegion")
         public String certRegion;
 
-        /**
-         * <p>The Common Name (CN) attribute of the certificate. In most cases, the CN is a domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Common")
         public String common;
 
-        /**
-         * <p>The fingerprint of the certificate.</p>
-         * 
-         * <strong>example:</strong>
-         * <hr>
-         */
         @NameInMap("Fingerprint")
         public String fingerprint;
 
-        /**
-         * <p>The certificate authority (CA) that issued the certificate.</p>
-         * 
-         * <strong>example:</strong>
-         * <hr>
-         */
         @NameInMap("Issuer")
         public String issuer;
 
-        /**
-         * <p>The time when the certificate was last modified. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1512388610</p>
-         */
         @NameInMap("LastTime")
         public Long lastTime;
 
@@ -187,9 +145,6 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
     }
 
     public static class DescribeVodSSLCertificateListResponseBodyCertificateListModel extends TeaModel {
-        /**
-         * <p>The list of certificates.</p>
-         */
         @NameInMap("CertList")
         public DescribeVodSSLCertificateListResponseBodyCertificateListModelCertList certList;
 

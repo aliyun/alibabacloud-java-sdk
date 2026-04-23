@@ -31,9 +31,6 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The daily playback statistics on each top video.</p>
-     */
     @NameInMap("TopPlayVideos")
     public DescribePlayTopVideosResponseBodyTopPlayVideos topPlayVideos;
 
@@ -92,48 +89,18 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
     }
 
     public static class DescribePlayTopVideosResponseBodyTopPlayVideosTopPlayVideoStatis extends TeaModel {
-        /**
-         * <p>The total playback duration. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4640369</p>
-         */
         @NameInMap("PlayDuration")
         public String playDuration;
 
-        /**
-         * <p>The title of the video.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Four streams (two streams encrypted): LD-HLS-encrypted + SD-MP4 + HD-H</p>
-         */
         @NameInMap("Title")
         public String title;
 
-        /**
-         * <p>The number of unique visitors.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("UV")
         public String UV;
 
-        /**
-         * <p>The number of video views.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>107</p>
-         */
         @NameInMap("VV")
         public String VV;
 
-        /**
-         * <p>The ID of the video.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2a8d4cb9ecbb487681473a15****8fda</p>
-         */
         @NameInMap("VideoId")
         public String videoId;
 

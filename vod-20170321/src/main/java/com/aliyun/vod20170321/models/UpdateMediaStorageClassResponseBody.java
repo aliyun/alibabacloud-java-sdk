@@ -4,15 +4,9 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class UpdateMediaStorageClassResponseBody extends TeaModel {
-    /**
-     * <p>The IDs of the media assets that failed to be processed.</p>
-     */
     @NameInMap("ForbiddenList")
     public UpdateMediaStorageClassResponseBodyForbiddenList forbiddenList;
 
-    /**
-     * <p>The IDs of the media assets that failed to be obtained.</p>
-     */
     @NameInMap("IgnoredList")
     public UpdateMediaStorageClassResponseBodyIgnoredList ignoredList;
 
@@ -76,21 +70,9 @@ public class UpdateMediaStorageClassResponseBody extends TeaModel {
     }
 
     public static class UpdateMediaStorageClassResponseBodyForbiddenListMediaForbiddenReasonDTO extends TeaModel {
-        /**
-         * <p>The ID of the media asset.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>19e231ee6e3e417fbf2e92ec2680****</p>
-         */
         @NameInMap("MediaId")
         public String mediaId;
 
-        /**
-         * <p>The reason for the failure.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TargetStorageClassInconsistent</p>
-         */
         @NameInMap("Reason")
         public String reason;
 

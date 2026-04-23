@@ -31,9 +31,6 @@ public class DescribeVodDomainHitRateDataResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The byte hit rate data at each time interval.</p>
-     */
     @NameInMap("HitRateInterval")
     public DescribeVodDomainHitRateDataResponseBodyHitRateInterval hitRateInterval;
 
@@ -109,30 +106,12 @@ public class DescribeVodDomainHitRateDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodDomainHitRateDataResponseBodyHitRateIntervalDataModule extends TeaModel {
-        /**
-         * <p>The HTTPS byte hit rate.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>50</p>
-         */
         @NameInMap("HttpsValue")
         public String httpsValue;
 
-        /**
-         * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2024-01-20T13:59:58Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <p>The total byte hit rate.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("Value")
         public String value;
 

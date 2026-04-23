@@ -19,9 +19,6 @@ public class GetCategoriesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The details of the subcategory.</p>
-     */
     @NameInMap("SubCategories")
     public GetCategoriesResponseBodySubCategories subCategories;
 
@@ -174,66 +171,21 @@ public class GetCategoriesResponseBody extends TeaModel {
     }
 
     public static class GetCategoriesResponseBodySubCategoriesCategory extends TeaModel {
-        /**
-         * <p>The ID of the category.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("CateId")
         public Long cateId;
 
-        /**
-         * <p>The name of the category.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>film</p>
-         */
         @NameInMap("CateName")
         public String cateName;
 
-        /**
-         * <p>The level of the category. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: level 1 category</li>
-         * <li><strong>1</strong>: level 2 category</li>
-         * <li><strong>2</strong>: level 3 category</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Level")
         public Long level;
 
-        /**
-         * <p>The ID of the parent category.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10020****</p>
-         */
         @NameInMap("ParentId")
         public Long parentId;
 
-        /**
-         * <p>The total number of subcategories.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("SubTotal")
         public Long subTotal;
 
-        /**
-         * <p>The type of the subcategory. Valid values:</p>
-         * <ul>
-         * <li><strong>default</strong>: audio, video, and image files</li>
-         * <li><strong>material</strong>: short video materials</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>default</p>
-         */
         @NameInMap("Type")
         public String type;
 

@@ -4,9 +4,6 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
-    /**
-     * <p>Details of the 95th percentile bandwidth.</p>
-     */
     @NameInMap("DetailData")
     public DescribeVodDomainMax95BpsDataResponseBodyDetailData detailData;
 
@@ -148,39 +145,15 @@ public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodDomainMax95BpsDataResponseBodyDetailDataMax95Detail extends TeaModel {
-        /**
-         * <p>The billable region where the peak 95 data was collected.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CN</p>
-         */
         @NameInMap("Area")
         public String area;
 
-        /**
-         * <p>The 95th percentile bandwidth.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>16777590.28</p>
-         */
         @NameInMap("Max95Bps")
         public Float max95Bps;
 
-        /**
-         * <p>The time corresponding to the 95th percentile bandwidth peak.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2015-12-11T21:05:00Z</p>
-         */
         @NameInMap("Max95BpsPeakTime")
         public String max95BpsPeakTime;
 
-        /**
-         * <p>The timestamp of the returned data.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2024-01-18 10:11:32</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

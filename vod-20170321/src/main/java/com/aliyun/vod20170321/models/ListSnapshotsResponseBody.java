@@ -41,21 +41,9 @@ public class ListSnapshotsResponseBody extends TeaModel {
     }
 
     public static class ListSnapshotsResponseBodyMediaSnapshotSnapshotsSnapshot extends TeaModel {
-        /**
-         * <p>The index of the snapshot.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Index")
         public Long index;
 
-        /**
-         * <p>The URL of the snapshot.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://example.aliyundoc.com/snapshot/sample00001****.jpg">http://example.aliyundoc.com/snapshot/sample00001****.jpg</a></p>
-         */
         @NameInMap("Url")
         public String url;
 
@@ -129,9 +117,6 @@ public class ListSnapshotsResponseBody extends TeaModel {
         @NameInMap("Regular")
         public String regular;
 
-        /**
-         * <p>The details of the snapshot.</p>
-         */
         @NameInMap("Snapshots")
         public ListSnapshotsResponseBodyMediaSnapshotSnapshots snapshots;
 

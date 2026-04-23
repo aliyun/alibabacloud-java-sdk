@@ -13,9 +13,6 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The daily playback statistics.</p>
-     */
     @NameInMap("UserPlayStatisTotals")
     public DescribePlayUserTotalResponseBodyUserPlayStatisTotals userPlayStatisTotals;
 
@@ -41,39 +38,15 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
     }
 
     public static class DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalUV extends TeaModel {
-        /**
-         * <p>The total number of unique visitors who use ApsaraVideo Player SDK for Android.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("Android")
         public String android;
 
-        /**
-         * <p>The total number of unique visitors who use the Flash player.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Flash")
         public String flash;
 
-        /**
-         * <p>The total number of unique visitors who use the HTML5 player.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("HTML5")
         public String HTML5;
 
-        /**
-         * <p>The total number of unique visitors who use ApsaraVideo Player SDK for iOS.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("iOS")
         public String iOS;
 
@@ -117,39 +90,15 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
     }
 
     public static class DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalVV extends TeaModel {
-        /**
-         * <p>The total number of video views played by using ApsaraVideo Player SDK for Android.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>161</p>
-         */
         @NameInMap("Android")
         public String android;
 
-        /**
-         * <p>The total number of video views played by using the Flash player.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("Flash")
         public String flash;
 
-        /**
-         * <p>The total number of video views played by using the HTML5 player.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("HTML5")
         public String HTML5;
 
-        /**
-         * <p>The total number of video views played by using ApsaraVideo Player SDK for iOS.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("iOS")
         public String iOS;
 
@@ -193,42 +142,18 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
     }
 
     public static class DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotal extends TeaModel {
-        /**
-         * <p>The date. The date is displayed in the yyyy-MM-dd format.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20170120</p>
-         */
         @NameInMap("Date")
         public String date;
 
-        /**
-         * <p>The total playback duration. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>9340070</p>
-         */
         @NameInMap("PlayDuration")
         public String playDuration;
 
-        /**
-         * <p>The distribution of the playback duration.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>&quot;&lt;=1m:74.3%;&gt;1&lt;=5m:22.8%;&gt;5&lt;=10m:1.0%;&gt;10&lt;=15m:1.0%;&gt;15&lt;=30m:1.0%&quot;</p>
-         */
         @NameInMap("PlayRange")
         public String playRange;
 
-        /**
-         * <p>The total number of unique visitors.</p>
-         */
         @NameInMap("UV")
         public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalUV UV;
 
-        /**
-         * <p>The total number of video views.</p>
-         */
         @NameInMap("VV")
         public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalVV VV;
 

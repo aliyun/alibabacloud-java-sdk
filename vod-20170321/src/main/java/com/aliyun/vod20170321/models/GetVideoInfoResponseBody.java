@@ -215,9 +215,6 @@ public class GetVideoInfoResponseBody extends TeaModel {
         @NameInMap("Size")
         public Long size;
 
-        /**
-         * <p>The video snapshot URLs.</p>
-         */
         @NameInMap("Snapshots")
         public GetVideoInfoResponseBodyVideoSnapshots snapshots;
 

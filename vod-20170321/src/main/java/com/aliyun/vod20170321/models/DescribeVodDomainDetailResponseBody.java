@@ -41,66 +41,21 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeVodDomainDetailResponseBodyDomainDetailSourcesSource extends TeaModel {
-        /**
-         * <p>The address of the origin server.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>****.oss-cn-hangzhou.aliyuncs.com</p>
-         */
         @NameInMap("Content")
         public String content;
 
-        /**
-         * <p>The status of the origin server. Valid values:</p>
-         * <ul>
-         * <li><strong>online</strong>: indicates that the origin server is enabled.</li>
-         * <li><strong>offline</strong>: indicates that the origin server is disabled.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>online</p>
-         */
         @NameInMap("Enabled")
         public String enabled;
 
-        /**
-         * <p>The port number. Valid values: 443 and 80.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>80</p>
-         */
         @NameInMap("Port")
         public Integer port;
 
-        /**
-         * <p>The priority of the origin server.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>50</p>
-         */
         @NameInMap("Priority")
         public String priority;
 
-        /**
-         * <p>The type of the origin server. Valid values:</p>
-         * <ul>
-         * <li><strong>ipaddr</strong>: a server that you can access by using an IP address.</li>
-         * <li><strong>domain</strong>: a server that you can access by using a domain name.</li>
-         * <li><strong>oss</strong>: the URL of an Object Storage Service (OSS) bucket.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>oss</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>The weight of the origin server if multiple origin servers have been specified.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("Weight")
         public String weight;
 
@@ -286,9 +241,6 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
         @NameInMap("Scope")
         public String scope;
 
-        /**
-         * <p>The information about the origin server.</p>
-         */
         @NameInMap("Sources")
         public DescribeVodDomainDetailResponseBodyDomainDetailSources sources;
 

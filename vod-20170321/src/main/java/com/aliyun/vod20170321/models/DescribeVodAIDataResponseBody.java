@@ -4,9 +4,6 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodAIDataResponseBody extends TeaModel {
-    /**
-     * <p>The statistics on video AI.</p>
-     */
     @NameInMap("AIData")
     public DescribeVodAIDataResponseBodyAIData AIData;
 
@@ -62,26 +59,9 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodAIDataResponseBodyAIDataAIDataItemDataDataItem extends TeaModel {
-        /**
-         * <p>The type of video AI. Valid values:</p>
-         * <ul>
-         * <li><strong>AIVideoCensor</strong>: automated review</li>
-         * <li><strong>AIVideoFPShot</strong>: media fingerprinting</li>
-         * <li><strong>AIVideoTag</strong>: smart tagging</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>AIVideoCensor</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The processing duration. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>111</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -128,18 +108,9 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodAIDataResponseBodyAIDataAIDataItem extends TeaModel {
-        /**
-         * <p>The statistics on video AI of each type.</p>
-         */
         @NameInMap("Data")
         public DescribeVodAIDataResponseBodyAIDataAIDataItemData data;
 
-        /**
-         * <p>The timestamp of the returned data. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-02-01T13:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

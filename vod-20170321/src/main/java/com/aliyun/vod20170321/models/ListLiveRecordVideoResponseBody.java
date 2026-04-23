@@ -4,9 +4,6 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ListLiveRecordVideoResponseBody extends TeaModel {
-    /**
-     * <p>The list of videos.</p>
-     */
     @NameInMap("LiveRecordVideoList")
     public ListLiveRecordVideoResponseBodyLiveRecordVideoList liveRecordVideoList;
 
@@ -77,135 +74,45 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
     }
 
     public static class ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideo extends TeaModel {
-        /**
-         * <p>The ID of the video category.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>78</p>
-         */
         @NameInMap("CateId")
         public Integer cateId;
 
-        /**
-         * <p>The category of the video.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Category name</p>
-         */
         @NameInMap("CateName")
         public String cateName;
 
-        /**
-         * <p>The URL of the video thumbnail.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="https://example.aliyundoc.com/coversample.jpg">https://example.aliyundoc.com/coversample.jpg</a></p>
-         */
         @NameInMap("CoverURL")
         public String coverURL;
 
-        /**
-         * <p>The time when the audio or video file was created. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2017-12-08T07:40:56Z</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>The description of the video file.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Description of the ApsaraVideo VOD video</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The duration of the video file. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>135.6</p>
-         */
         @NameInMap("Duration")
         public Float duration;
 
-        /**
-         * <p>The time when the video was updated. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2017-12-08T09:40:56Z</p>
-         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
-        /**
-         * <p>The size of the source video file. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10897890</p>
-         */
         @NameInMap("Size")
         public Long size;
 
-        /**
-         * <p>The array of video snapshot URLs.</p>
-         */
         @NameInMap("Snapshots")
         public ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideoSnapshots snapshots;
 
-        /**
-         * <p>The status of the video. Valid values:</p>
-         * <ul>
-         * <li><strong>Uploading</strong></li>
-         * <li><strong>UploadFail</strong></li>
-         * <li><strong>UploadSuccess</strong></li>
-         * <li><strong>Transcoding</strong></li>
-         * <li><strong>TranscodeFail</strong></li>
-         * <li><strong>Blocked</strong></li>
-         * <li><strong>Normal</strong>: The video is normal.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Normal</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The tags of the video. Multiple tags are separated with commas (,).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>tag1, tag2</p>
-         */
         @NameInMap("Tags")
         public String tags;
 
-        /**
-         * <p>The ID of the transcoding template group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("TemplateGroupId")
         public String templateGroupId;
 
-        /**
-         * <p>The title of the video.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Title of the ApsaraVideo VOD video</p>
-         */
         @NameInMap("Title")
         public String title;
 
-        /**
-         * <p>The ID of the video.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>93ab850b4f6f*****54b6e91d24d81d4</p>
-         */
         @NameInMap("VideoId")
         public String videoId;
 
@@ -329,63 +236,24 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
     }
 
     public static class ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideo extends TeaModel {
-        /**
-         * <p>The name of the app.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testApp</p>
-         */
         @NameInMap("AppName")
         public String appName;
 
-        /**
-         * <p>The domain name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The ID of the playlist.</p>
-         * 
-         * <strong>example:</strong>
-         * <hr>
-         */
         @NameInMap("PlaylistId")
         public String playlistId;
 
-        /**
-         * <p>The recording end time. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2017-12-08T08:44:56Z</p>
-         */
         @NameInMap("RecordEndTime")
         public String recordEndTime;
 
-        /**
-         * <p>The recording start time. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2017-12-08T07:40:56Z</p>
-         */
         @NameInMap("RecordStartTime")
         public String recordStartTime;
 
-        /**
-         * <p>The name of the live-to-VOD file.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>live-test</p>
-         */
         @NameInMap("StreamName")
         public String streamName;
 
-        /**
-         * <p>The information about the live-to-VOD file.</p>
-         */
         @NameInMap("Video")
         public ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideo video;
 

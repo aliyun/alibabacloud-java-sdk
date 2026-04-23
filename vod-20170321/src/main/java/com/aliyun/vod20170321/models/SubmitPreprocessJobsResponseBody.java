@@ -4,9 +4,6 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SubmitPreprocessJobsResponseBody extends TeaModel {
-    /**
-     * <p>The information about the job.</p>
-     */
     @NameInMap("PreprocessJobs")
     public SubmitPreprocessJobsResponseBodyPreprocessJobs preprocessJobs;
 
@@ -41,12 +38,6 @@ public class SubmitPreprocessJobsResponseBody extends TeaModel {
     }
 
     public static class SubmitPreprocessJobsResponseBodyPreprocessJobsPreprocessJob extends TeaModel {
-        /**
-         * <p>The ID of the job.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>bb396607fd11fee9effbb99c4****</p>
-         */
         @NameInMap("JobId")
         public String jobId;
 

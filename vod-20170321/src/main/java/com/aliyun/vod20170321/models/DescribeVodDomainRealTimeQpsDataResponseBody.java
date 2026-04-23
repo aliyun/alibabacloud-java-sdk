@@ -4,9 +4,6 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodDomainRealTimeQpsDataResponseBody extends TeaModel {
-    /**
-     * <p>The returned data.</p>
-     */
     @NameInMap("Data")
     public DescribeVodDomainRealTimeQpsDataResponseBodyData data;
 
@@ -41,21 +38,9 @@ public class DescribeVodDomainRealTimeQpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodDomainRealTimeQpsDataResponseBodyDataQpsModel extends TeaModel {
-        /**
-         * <p>The number of queries per second.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1851.25</p>
-         */
         @NameInMap("Qps")
         public Float qps;
 
-        /**
-         * <p>The timestamp of the returned data. The time follows the ISO 8601 standard. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-12-02T11:25:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

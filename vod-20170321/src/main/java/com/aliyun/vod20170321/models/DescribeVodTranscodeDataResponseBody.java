@@ -26,9 +26,6 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The transcoding statistics returned.</p>
-     */
     @NameInMap("TranscodeData")
     public DescribeVodTranscodeDataResponseBodyTranscodeData transcodeData;
 
@@ -62,26 +59,9 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItemDataDataItem extends TeaModel {
-        /**
-         * <p>The transcoding specification. Valid values:</p>
-         * <ul>
-         * <li><strong>Audio</strong>: audio transcoding</li>
-         * <li><strong>Segmentation</strong>: container format conversion</li>
-         * <li><strong>H264.LD, H264.SD, H264.HD, H264.2K, H264.4K, and more</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>H264.SD</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The transcoding duration. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>111</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -128,18 +108,9 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItem extends TeaModel {
-        /**
-         * <p>The statistics on transcoding of different specifications.</p>
-         */
         @NameInMap("Data")
         public DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItemData data;
 
-        /**
-         * <p>The timestamp of the returned data. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-02-01T16:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

@@ -26,9 +26,6 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The storage usage data returned.</p>
-     */
     @NameInMap("StorageData")
     public DescribeVodStorageDataResponseBodyStorageData storageData;
 
@@ -62,30 +59,12 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodStorageDataResponseBodyStorageDataStorageDataItem extends TeaModel {
-        /**
-         * <p>The outbound traffic. Unit: bytes. The outbound traffic is generated when videos are directly downloaded or played from OSS buckets without Alibaba Cloud CDN acceleration.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>111111</p>
-         */
         @NameInMap("NetworkOut")
         public String networkOut;
 
-        /**
-         * <p>The detailed usage data of storage-related resources. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>111111</p>
-         */
         @NameInMap("StorageUtilization")
         public String storageUtilization;
 
-        /**
-         * <p>The timestamp of the returned data. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-02-01T15:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
