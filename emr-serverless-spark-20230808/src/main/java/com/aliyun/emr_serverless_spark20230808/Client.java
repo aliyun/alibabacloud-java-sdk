@@ -2139,6 +2139,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>列出作业executor的日志文件列表</p>
+     * 
+     * @param request ListExecutorLogsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListExecutorLogsResponse
+     */
+    public ListExecutorLogsResponse listExecutorLogsWithOptions(String workspaceId, String jobRunId, String executorId, ListExecutorLogsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.logType)) {
+            query.put("logType", request.logType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListExecutorLogs"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/jobRuns/" + com.aliyun.openapiutil.Client.getEncodeParam(jobRunId) + "/executors/" + com.aliyun.openapiutil.Client.getEncodeParam(executorId) + "/logs"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListExecutorLogsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出作业executor的日志文件列表</p>
+     * 
+     * @param request ListExecutorLogsRequest
+     * @return ListExecutorLogsResponse
+     */
+    public ListExecutorLogsResponse listExecutorLogs(String workspaceId, String jobRunId, String executorId, ListExecutorLogsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listExecutorLogsWithOptions(workspaceId, jobRunId, executorId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>列出作业的executors</p>
      * 
      * @param request ListJobExecutorsRequest
