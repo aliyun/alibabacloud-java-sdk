@@ -2958,6 +2958,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SccMode", request.sccMode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.VPCId)) {
+            query.put("VPCId", request.VPCId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
+            query.put("VSwitchId", request.vSwitchId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));

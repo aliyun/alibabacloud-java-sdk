@@ -188,6 +188,20 @@ public class CreateDBClusterEndpointRequest extends TeaModel {
     @NameInMap("SccMode")
     public String sccMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vpc-2zehr7ghqovftils0****</p>
+     */
+    @NameInMap("VPCId")
+    public String VPCId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-2ze775gnf7jn33ua****</p>
+     */
+    @NameInMap("VSwitchId")
+    public String vSwitchId;
+
     public static CreateDBClusterEndpointRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDBClusterEndpointRequest self = new CreateDBClusterEndpointRequest();
         return TeaModel.build(map, self);
@@ -319,6 +333,22 @@ public class CreateDBClusterEndpointRequest extends TeaModel {
     }
     public String getSccMode() {
         return this.sccMode;
+    }
+
+    public CreateDBClusterEndpointRequest setVPCId(String VPCId) {
+        this.VPCId = VPCId;
+        return this;
+    }
+    public String getVPCId() {
+        return this.VPCId;
+    }
+
+    public CreateDBClusterEndpointRequest setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
+        return this;
+    }
+    public String getVSwitchId() {
+        return this.vSwitchId;
     }
 
 }
