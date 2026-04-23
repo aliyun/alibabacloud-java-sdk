@@ -339,7 +339,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建StarRocks集群</p>
+     * <p>Restarts an E-MapReduce (EMR) Serverless StarRocks instance.</p>
      * 
      * @param request CreateInstanceV1Request
      * @param headers map
@@ -497,7 +497,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建StarRocks集群</p>
+     * <p>Restarts an E-MapReduce (EMR) Serverless StarRocks instance.</p>
      * 
      * @param request CreateInstanceV1Request
      * @return CreateInstanceV1Response
@@ -2271,6 +2271,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listOperationHistoryWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取集群SSL详情</p>
+     * 
+     * @param request ListSSLDetailsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSSLDetailsResponse
+     */
+    public ListSSLDetailsResponse listSSLDetailsWithOptions(ListSSLDetailsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSSLDetails"),
+            new TeaPair("version", "2022-10-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/webapi/starrocks/listSSLDetails"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSSLDetailsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取集群SSL详情</p>
+     * 
+     * @param request ListSSLDetailsRequest
+     * @return ListSSLDetailsResponse
+     */
+    public ListSSLDetailsResponse listSSLDetails(ListSSLDetailsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listSSLDetailsWithOptions(request, headers, runtime);
     }
 
     /**
