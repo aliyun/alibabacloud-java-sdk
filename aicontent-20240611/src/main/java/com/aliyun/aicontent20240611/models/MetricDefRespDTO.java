@@ -11,10 +11,6 @@ public class MetricDefRespDTO extends TeaModel {
     @NameInMap("key")
     public String key;
 
-    /**
-     * <strong>example:</strong>
-     * <p>调用次数</p>
-     */
     @NameInMap("label")
     public String label;
 
@@ -25,10 +21,6 @@ public class MetricDefRespDTO extends TeaModel {
     @NameInMap("sortable")
     public Boolean sortable;
 
-    /**
-     * <strong>example:</strong>
-     * <p>次</p>
-     */
     @NameInMap("unit")
     public String unit;
 

@@ -11,10 +11,6 @@ public class CostTabDTO extends TeaModel {
     @NameInMap("key")
     public String key;
 
-    /**
-     * <strong>example:</strong>
-     * <p>全部</p>
-     */
     @NameInMap("label")
     public String label;
 

@@ -11,6 +11,10 @@ public class CostModelDetailRowDTO extends TeaModel {
     @NameInMap("timestamp")
     public Long timestamp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;{\&quot;total_calls\&quot;:3,\&quot;video_duration\&quot;:0,\&quot;total_amount\&quot;:0.6,\&quot;image_count\&quot;:3,\&quot;timestamp\&quot;:1776787200}&quot;</p>
+     */
     @NameInMap("values")
     public String values;
 

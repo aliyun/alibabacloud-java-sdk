@@ -18,13 +18,13 @@ public class ModelRowDTO extends TeaModel {
     @NameInMap("modelId")
     public Long modelId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>通义千问-Plus</p>
-     */
     @NameInMap("modelName")
     public String modelName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;{\&quot;total_calls\&quot;:21,\&quot;video_duration\&quot;:210,\&quot;total_amount\&quot;:126,\&quot;image_count\&quot;:0}&quot;</p>
+     */
     @NameInMap("values")
     public String values;
 

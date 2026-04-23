@@ -21,10 +21,6 @@ public class CostModelDetailRespDTO extends TeaModel {
     @NameInMap("modelId")
     public Long modelId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>通义千问-Plus</p>
-     */
     @NameInMap("modelName")
     public String modelName;
 

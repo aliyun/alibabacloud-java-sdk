@@ -2232,6 +2232,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>计费管理/获取成本监控Tab配置</p>
+     * 
+     * @param request ModelRouterBillingCostTabsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterBillingCostTabsResponse
+     */
+    public ModelRouterBillingCostTabsResponse modelRouterBillingCostTabsWithOptions(ModelRouterBillingCostTabsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterBillingCostTabs"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/billing/cost/tabs"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterBillingCostTabsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>计费管理/获取成本监控Tab配置</p>
+     * 
+     * @param request ModelRouterBillingCostTabsRequest
+     * @return ModelRouterBillingCostTabsResponse
+     */
+    public ModelRouterBillingCostTabsResponse modelRouterBillingCostTabs(ModelRouterBillingCostTabsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterBillingCostTabsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>聊天/聊天接口</p>
      * 
      * @param request ModelRouterChatCompletionsRequest
@@ -2354,6 +2405,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.modelRouterCreateApiKeyWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>计费管理/创建计费规则</p>
+     * 
+     * @param request ModelRouterCreateBillingRuleRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterCreateBillingRuleResponse
+     */
+    public ModelRouterCreateBillingRuleResponse modelRouterCreateBillingRuleWithOptions(ModelRouterCreateBillingRuleRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.billingType)) {
+            body.put("billingType", request.billingType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.effectiveTime)) {
+            body.put("effectiveTime", request.effectiveTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expireTime)) {
+            body.put("expireTime", request.expireTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
+            body.put("modelId", request.modelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pricingConfig)) {
+            body.put("pricingConfig", request.pricingConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            body.put("version", request.version);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterCreateBillingRule"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/billing/rules"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterCreateBillingRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>计费管理/创建计费规则</p>
+     * 
+     * @param request ModelRouterCreateBillingRuleRequest
+     * @return ModelRouterCreateBillingRuleResponse
+     */
+    public ModelRouterCreateBillingRuleResponse modelRouterCreateBillingRule(ModelRouterCreateBillingRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterCreateBillingRuleWithOptions(request, headers, runtime);
     }
 
     /**
@@ -2847,6 +2965,136 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>计费管理/查询计费规则列表</p>
+     * 
+     * @param request ModelRouterQueryBillingRuleListRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterQueryBillingRuleListResponse
+     */
+    public ModelRouterQueryBillingRuleListResponse modelRouterQueryBillingRuleListWithOptions(ModelRouterQueryBillingRuleListRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.activeOnly)) {
+            query.put("activeOnly", request.activeOnly);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelCode)) {
+            query.put("modelCode", request.modelCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
+            query.put("modelId", request.modelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelType)) {
+            query.put("modelType", request.modelType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageIndex)) {
+            query.put("pageIndex", request.pageIndex);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterQueryBillingRuleList"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/billing/rules"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterQueryBillingRuleListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>计费管理/查询计费规则列表</p>
+     * 
+     * @param request ModelRouterQueryBillingRuleListRequest
+     * @return ModelRouterQueryBillingRuleListResponse
+     */
+    public ModelRouterQueryBillingRuleListResponse modelRouterQueryBillingRuleList(ModelRouterQueryBillingRuleListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterQueryBillingRuleListWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>客户管理/获取部门折扣修改历史</p>
+     * 
+     * @param request ModelRouterQueryClientDiscountLogsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterQueryClientDiscountLogsResponse
+     */
+    public ModelRouterQueryClientDiscountLogsResponse modelRouterQueryClientDiscountLogsWithOptions(String id, ModelRouterQueryClientDiscountLogsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterQueryClientDiscountLogs"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/discount-logs"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterQueryClientDiscountLogsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>客户管理/获取部门折扣修改历史</p>
+     * 
+     * @param request ModelRouterQueryClientDiscountLogsRequest
+     * @return ModelRouterQueryClientDiscountLogsResponse
+     */
+    public ModelRouterQueryClientDiscountLogsResponse modelRouterQueryClientDiscountLogs(String id, ModelRouterQueryClientDiscountLogsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterQueryClientDiscountLogsWithOptions(id, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>客户管理/获取客户列表</p>
      * 
      * @param request ModelRouterQueryClientListRequest
@@ -2926,6 +3174,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.modelRouterQueryClientListWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>客户管理/获取客户树</p>
+     * 
+     * @param request ModelRouterQueryClientTreeRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterQueryClientTreeResponse
+     */
+    public ModelRouterQueryClientTreeResponse modelRouterQueryClientTreeWithOptions(ModelRouterQueryClientTreeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterQueryClientTree"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/tree"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterQueryClientTreeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>客户管理/获取客户树</p>
+     * 
+     * @param request ModelRouterQueryClientTreeRequest
+     * @return ModelRouterQueryClientTreeResponse
+     */
+    public ModelRouterQueryClientTreeResponse modelRouterQueryClientTree(ModelRouterQueryClientTreeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterQueryClientTreeWithOptions(request, headers, runtime);
     }
 
     /**
@@ -3046,6 +3345,302 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.modelRouterQueryConversationListWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>计费管理/获取模型明细</p>
+     * 
+     * @param request ModelRouterQueryCostModelDetailRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterQueryCostModelDetailResponse
+     */
+    public ModelRouterQueryCostModelDetailResponse modelRouterQueryCostModelDetailWithOptions(ModelRouterQueryCostModelDetailRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
+            query.put("clientId", request.clientId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("endTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
+            query.put("modelId", request.modelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageIndex)) {
+            query.put("pageIndex", request.pageIndex);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("startTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterQueryCostModelDetail"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/billing/cost/model-detail"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterQueryCostModelDetailResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>计费管理/获取模型明细</p>
+     * 
+     * @param request ModelRouterQueryCostModelDetailRequest
+     * @return ModelRouterQueryCostModelDetailResponse
+     */
+    public ModelRouterQueryCostModelDetailResponse modelRouterQueryCostModelDetail(ModelRouterQueryCostModelDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterQueryCostModelDetailWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>计费管理/获取调用模型列表</p>
+     * 
+     * @param request ModelRouterQueryCostModelListRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterQueryCostModelListResponse
+     */
+    public ModelRouterQueryCostModelListResponse modelRouterQueryCostModelListWithOptions(ModelRouterQueryCostModelListRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
+            query.put("clientId", request.clientId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("endTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.granularity)) {
+            query.put("granularity", request.granularity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelTypes)) {
+            query.put("modelTypes", request.modelTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.search)) {
+            query.put("search", request.search);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("startTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterQueryCostModelList"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/billing/cost/models"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterQueryCostModelListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>计费管理/获取调用模型列表</p>
+     * 
+     * @param request ModelRouterQueryCostModelListRequest
+     * @return ModelRouterQueryCostModelListResponse
+     */
+    public ModelRouterQueryCostModelListResponse modelRouterQueryCostModelList(ModelRouterQueryCostModelListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterQueryCostModelListWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>计费管理/获取成本概览指标</p>
+     * 
+     * @param request ModelRouterQueryCostOverviewMetricsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterQueryCostOverviewMetricsResponse
+     */
+    public ModelRouterQueryCostOverviewMetricsResponse modelRouterQueryCostOverviewMetricsWithOptions(ModelRouterQueryCostOverviewMetricsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
+            query.put("clientId", request.clientId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("endTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.granularity)) {
+            query.put("granularity", request.granularity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelTypes)) {
+            query.put("modelTypes", request.modelTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("startTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterQueryCostOverviewMetrics"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/billing/cost/overview"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterQueryCostOverviewMetricsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>计费管理/获取成本概览指标</p>
+     * 
+     * @param request ModelRouterQueryCostOverviewMetricsRequest
+     * @return ModelRouterQueryCostOverviewMetricsResponse
+     */
+    public ModelRouterQueryCostOverviewMetricsResponse modelRouterQueryCostOverviewMetrics(ModelRouterQueryCostOverviewMetricsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterQueryCostOverviewMetricsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>计费管理/获取费用趋势</p>
+     * 
+     * @param request ModelRouterQueryCostTrendMetricsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterQueryCostTrendMetricsResponse
+     */
+    public ModelRouterQueryCostTrendMetricsResponse modelRouterQueryCostTrendMetricsWithOptions(ModelRouterQueryCostTrendMetricsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
+            query.put("clientId", request.clientId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("endTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.granularity)) {
+            query.put("granularity", request.granularity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelTypes)) {
+            query.put("modelTypes", request.modelTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("startTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterQueryCostTrendMetrics"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/billing/cost/trend"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterQueryCostTrendMetricsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>计费管理/获取费用趋势</p>
+     * 
+     * @param request ModelRouterQueryCostTrendMetricsRequest
+     * @return ModelRouterQueryCostTrendMetricsResponse
+     */
+    public ModelRouterQueryCostTrendMetricsResponse modelRouterQueryCostTrendMetrics(ModelRouterQueryCostTrendMetricsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterQueryCostTrendMetricsWithOptions(request, headers, runtime);
     }
 
     /**
@@ -3589,6 +4184,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.modelRouterQueryObservationMetricsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>计费管理/更新计费规则</p>
+     * 
+     * @param request ModelRouterUpdateBillingRuleRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterUpdateBillingRuleResponse
+     */
+    public ModelRouterUpdateBillingRuleResponse modelRouterUpdateBillingRuleWithOptions(String id, ModelRouterUpdateBillingRuleRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.billingType)) {
+            body.put("billingType", request.billingType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.effectiveTime)) {
+            body.put("effectiveTime", request.effectiveTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expireTime)) {
+            body.put("expireTime", request.expireTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pricingConfig)) {
+            body.put("pricingConfig", request.pricingConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            body.put("version", request.version);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterUpdateBillingRule"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/billing/rules/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterUpdateBillingRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>计费管理/更新计费规则</p>
+     * 
+     * @param request ModelRouterUpdateBillingRuleRequest
+     * @return ModelRouterUpdateBillingRuleResponse
+     */
+    public ModelRouterUpdateBillingRuleResponse modelRouterUpdateBillingRule(String id, ModelRouterUpdateBillingRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterUpdateBillingRuleWithOptions(id, request, headers, runtime);
     }
 
     /**

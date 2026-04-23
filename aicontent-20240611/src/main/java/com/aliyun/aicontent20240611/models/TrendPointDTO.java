@@ -11,6 +11,10 @@ public class TrendPointDTO extends TeaModel {
     @NameInMap("timestamp")
     public Long timestamp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;{\&quot;total_calls\&quot;:0,\&quot;video_duration\&quot;:0,\&quot;total_amount\&quot;:0,\&quot;model_count\&quot;:0,\&quot;image_count\&quot;:0}&quot;</p>
+     */
     @NameInMap("values")
     public String values;
 

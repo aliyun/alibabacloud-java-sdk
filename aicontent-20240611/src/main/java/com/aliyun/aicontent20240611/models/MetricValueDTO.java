@@ -11,17 +11,9 @@ public class MetricValueDTO extends TeaModel {
     @NameInMap("key")
     public String key;
 
-    /**
-     * <strong>example:</strong>
-     * <p>调用次数</p>
-     */
     @NameInMap("label")
     public String label;
 
-    /**
-     * <strong>example:</strong>
-     * <p>次</p>
-     */
     @NameInMap("unit")
     public String unit;
 
