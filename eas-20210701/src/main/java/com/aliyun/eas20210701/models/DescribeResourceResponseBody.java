@@ -182,6 +182,9 @@ public class DescribeResourceResponseBody extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    @NameInMap("ServiceCount")
+    public String serviceCount;
+
     /**
      * <p>The state of the resource group.</p>
      * 
@@ -382,6 +385,14 @@ public class DescribeResourceResponseBody extends TeaModel {
     }
     public String getResourceType() {
         return this.resourceType;
+    }
+
+    public DescribeResourceResponseBody setServiceCount(String serviceCount) {
+        this.serviceCount = serviceCount;
+        return this;
+    }
+    public String getServiceCount() {
+        return this.serviceCount;
     }
 
     public DescribeResourceResponseBody setStatus(String status) {

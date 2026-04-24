@@ -140,6 +140,9 @@ public class Resource extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    @NameInMap("ServiceCount")
+    public Integer serviceCount;
+
     /**
      * <p>The status of the resource group.</p>
      * 
@@ -338,6 +341,14 @@ public class Resource extends TeaModel {
     }
     public String getResourceType() {
         return this.resourceType;
+    }
+
+    public Resource setServiceCount(Integer serviceCount) {
+        this.serviceCount = serviceCount;
+        return this;
+    }
+    public Integer getServiceCount() {
+        return this.serviceCount;
     }
 
     public Resource setStatus(String status) {
