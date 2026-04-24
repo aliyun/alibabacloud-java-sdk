@@ -81,7 +81,7 @@ public class ConvertFlowDSLData extends TeaModel {
          * <p>问题的详细信息（JSON对象）</p>
          */
         @NameInMap("details")
-        public java.util.Map<String, String> details;
+        public java.util.Map<String, ?> details;
 
         /**
          * <p>问题类型：needs_config, needs_conversion, unsupported</p>
@@ -154,11 +154,11 @@ public class ConvertFlowDSLData extends TeaModel {
             return this.description;
         }
 
-        public ConvertFlowDSLDataConversionPlanIssues setDetails(java.util.Map<String, String> details) {
+        public ConvertFlowDSLDataConversionPlanIssues setDetails(java.util.Map<String, ?> details) {
             this.details = details;
             return this;
         }
-        public java.util.Map<String, String> getDetails() {
+        public java.util.Map<String, ?> getDetails() {
             return this.details;
         }
 

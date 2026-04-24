@@ -115,8 +115,20 @@ public class ConvertFlowDSLInput extends TeaModel {
         @NameInMap("flowName")
         public String flowName;
 
+        /**
+         * <p>全局VPC端点名称，对所有节点统一生效。如果指定了vpcEndpoints映射，则映射中的节点优先使用映射值</p>
+         */
         @NameInMap("vpcEndpointName")
         public String vpcEndpointName;
+
+        /**
+         * <p>按节点名称指定VPC端点，key为节点名称(stateName)，value为该节点使用的VPC端点名称。优先级高于vpcEndpointName</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;LLM节点&quot;:&quot;vpc-endpoint-1&quot;,&quot;Agent节点&quot;:&quot;vpc-endpoint-2&quot;}</p>
+         */
+        @NameInMap("vpcEndpoints")
+        public java.util.Map<String, String> vpcEndpoints;
 
         public static ConvertFlowDSLInputOptions build(java.util.Map<String, ?> map) throws Exception {
             ConvertFlowDSLInputOptions self = new ConvertFlowDSLInputOptions();
@@ -153,6 +165,14 @@ public class ConvertFlowDSLInput extends TeaModel {
         }
         public String getVpcEndpointName() {
             return this.vpcEndpointName;
+        }
+
+        public ConvertFlowDSLInputOptions setVpcEndpoints(java.util.Map<String, String> vpcEndpoints) {
+            this.vpcEndpoints = vpcEndpoints;
+            return this;
+        }
+        public java.util.Map<String, String> getVpcEndpoints() {
+            return this.vpcEndpoints;
         }
 
     }
