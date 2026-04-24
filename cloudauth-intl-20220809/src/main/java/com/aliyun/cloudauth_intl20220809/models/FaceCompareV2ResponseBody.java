@@ -67,7 +67,93 @@ public class FaceCompareV2ResponseBody extends TeaModel {
         return this.result;
     }
 
+    public static class FaceCompareV2ResponseBodyResultExtFaceInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>39.04</p>
+         */
+        @NameInMap("FaceQualityScore")
+        public Double faceQualityScore;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0.02</p>
+         */
+        @NameInMap("IlluminationScore")
+        public Double illuminationScore;
+
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
+        @NameInMap("KaOcclusionScore")
+        public Double kaOcclusionScore;
+
+        /**
+         * <strong>example:</strong>
+         * <p>50.26</p>
+         */
+        @NameInMap("OcclusionScore")
+        public Double occlusionScore;
+
+        /**
+         * <strong>example:</strong>
+         * <p>86.47</p>
+         */
+        @NameInMap("SharpnessScore")
+        public Double sharpnessScore;
+
+        public static FaceCompareV2ResponseBodyResultExtFaceInfo build(java.util.Map<String, ?> map) throws Exception {
+            FaceCompareV2ResponseBodyResultExtFaceInfo self = new FaceCompareV2ResponseBodyResultExtFaceInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public FaceCompareV2ResponseBodyResultExtFaceInfo setFaceQualityScore(Double faceQualityScore) {
+            this.faceQualityScore = faceQualityScore;
+            return this;
+        }
+        public Double getFaceQualityScore() {
+            return this.faceQualityScore;
+        }
+
+        public FaceCompareV2ResponseBodyResultExtFaceInfo setIlluminationScore(Double illuminationScore) {
+            this.illuminationScore = illuminationScore;
+            return this;
+        }
+        public Double getIlluminationScore() {
+            return this.illuminationScore;
+        }
+
+        public FaceCompareV2ResponseBodyResultExtFaceInfo setKaOcclusionScore(Double kaOcclusionScore) {
+            this.kaOcclusionScore = kaOcclusionScore;
+            return this;
+        }
+        public Double getKaOcclusionScore() {
+            return this.kaOcclusionScore;
+        }
+
+        public FaceCompareV2ResponseBodyResultExtFaceInfo setOcclusionScore(Double occlusionScore) {
+            this.occlusionScore = occlusionScore;
+            return this;
+        }
+        public Double getOcclusionScore() {
+            return this.occlusionScore;
+        }
+
+        public FaceCompareV2ResponseBodyResultExtFaceInfo setSharpnessScore(Double sharpnessScore) {
+            this.sharpnessScore = sharpnessScore;
+            return this;
+        }
+        public Double getSharpnessScore() {
+            return this.sharpnessScore;
+        }
+
+    }
+
     public static class FaceCompareV2ResponseBodyResult extends TeaModel {
+        @NameInMap("ExtFaceInfo")
+        public FaceCompareV2ResponseBodyResultExtFaceInfo extFaceInfo;
+
         /**
          * <strong>example:</strong>
          * <p>98</p>
@@ -92,6 +178,14 @@ public class FaceCompareV2ResponseBody extends TeaModel {
         public static FaceCompareV2ResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             FaceCompareV2ResponseBodyResult self = new FaceCompareV2ResponseBodyResult();
             return TeaModel.build(map, self);
+        }
+
+        public FaceCompareV2ResponseBodyResult setExtFaceInfo(FaceCompareV2ResponseBodyResultExtFaceInfo extFaceInfo) {
+            this.extFaceInfo = extFaceInfo;
+            return this;
+        }
+        public FaceCompareV2ResponseBodyResultExtFaceInfo getExtFaceInfo() {
+            return this.extFaceInfo;
         }
 
         public FaceCompareV2ResponseBodyResult setFaceComparisonScore(Double faceComparisonScore) {

@@ -14,6 +14,13 @@ public class FaceCompareRequest extends TeaModel {
     public String facePictureQualityCheck;
 
     /**
+     * <strong>example:</strong>
+     * <p>Y</p>
+     */
+    @NameInMap("FaceQualityCheck")
+    public String faceQualityCheck;
+
+    /**
      * <p>A custom unique business ID used for troubleshooting. It can be a combination of up to 32 letters and digits. Make sure that the ID is unique.</p>
      * 
      * <strong>example:</strong>
@@ -81,6 +88,14 @@ public class FaceCompareRequest extends TeaModel {
     }
     public String getFacePictureQualityCheck() {
         return this.facePictureQualityCheck;
+    }
+
+    public FaceCompareRequest setFaceQualityCheck(String faceQualityCheck) {
+        this.faceQualityCheck = faceQualityCheck;
+        return this;
+    }
+    public String getFaceQualityCheck() {
+        return this.faceQualityCheck;
     }
 
     public FaceCompareRequest setMerchantBizId(String merchantBizId) {

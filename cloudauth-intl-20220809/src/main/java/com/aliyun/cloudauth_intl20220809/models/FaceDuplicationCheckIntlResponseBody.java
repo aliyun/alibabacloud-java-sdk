@@ -74,6 +74,89 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
         return this.result;
     }
 
+    public static class FaceDuplicationCheckIntlResponseBodyResultExtFaceInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>39.04</p>
+         */
+        @NameInMap("FaceQualityScore")
+        public Double faceQualityScore;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0.02</p>
+         */
+        @NameInMap("IlluminationScore")
+        public Double illuminationScore;
+
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
+        @NameInMap("KaOcclusionScore")
+        public Double kaOcclusionScore;
+
+        /**
+         * <strong>example:</strong>
+         * <p>50.26</p>
+         */
+        @NameInMap("OcclusionScore")
+        public Double occlusionScore;
+
+        /**
+         * <strong>example:</strong>
+         * <p>86.47</p>
+         */
+        @NameInMap("SharpnessScore")
+        public Double sharpnessScore;
+
+        public static FaceDuplicationCheckIntlResponseBodyResultExtFaceInfo build(java.util.Map<String, ?> map) throws Exception {
+            FaceDuplicationCheckIntlResponseBodyResultExtFaceInfo self = new FaceDuplicationCheckIntlResponseBodyResultExtFaceInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public FaceDuplicationCheckIntlResponseBodyResultExtFaceInfo setFaceQualityScore(Double faceQualityScore) {
+            this.faceQualityScore = faceQualityScore;
+            return this;
+        }
+        public Double getFaceQualityScore() {
+            return this.faceQualityScore;
+        }
+
+        public FaceDuplicationCheckIntlResponseBodyResultExtFaceInfo setIlluminationScore(Double illuminationScore) {
+            this.illuminationScore = illuminationScore;
+            return this;
+        }
+        public Double getIlluminationScore() {
+            return this.illuminationScore;
+        }
+
+        public FaceDuplicationCheckIntlResponseBodyResultExtFaceInfo setKaOcclusionScore(Double kaOcclusionScore) {
+            this.kaOcclusionScore = kaOcclusionScore;
+            return this;
+        }
+        public Double getKaOcclusionScore() {
+            return this.kaOcclusionScore;
+        }
+
+        public FaceDuplicationCheckIntlResponseBodyResultExtFaceInfo setOcclusionScore(Double occlusionScore) {
+            this.occlusionScore = occlusionScore;
+            return this;
+        }
+        public Double getOcclusionScore() {
+            return this.occlusionScore;
+        }
+
+        public FaceDuplicationCheckIntlResponseBodyResultExtFaceInfo setSharpnessScore(Double sharpnessScore) {
+            this.sharpnessScore = sharpnessScore;
+            return this;
+        }
+        public Double getSharpnessScore() {
+            return this.sharpnessScore;
+        }
+
+    }
+
     public static class FaceDuplicationCheckIntlResponseBodyResult extends TeaModel {
         /**
          * <p>Returns the face library face ID and UserID when a duplicate face is detected.</p>
@@ -85,6 +168,9 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
          */
         @NameInMap("DuplicateFace")
         public String duplicateFace;
+
+        @NameInMap("ExtFaceInfo")
+        public FaceDuplicationCheckIntlResponseBodyResultExtFaceInfo extFaceInfo;
 
         /**
          * <p>The estimated age of the face, which may not be returned if the prediction fails.</p>
@@ -202,6 +288,14 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
         }
         public String getDuplicateFace() {
             return this.duplicateFace;
+        }
+
+        public FaceDuplicationCheckIntlResponseBodyResult setExtFaceInfo(FaceDuplicationCheckIntlResponseBodyResultExtFaceInfo extFaceInfo) {
+            this.extFaceInfo = extFaceInfo;
+            return this;
+        }
+        public FaceDuplicationCheckIntlResponseBodyResultExtFaceInfo getExtFaceInfo() {
+            return this.extFaceInfo;
         }
 
         public FaceDuplicationCheckIntlResponseBodyResult setFaceAge(String faceAge) {

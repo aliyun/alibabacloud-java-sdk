@@ -2268,6 +2268,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FacePictureQualityCheck", request.facePictureQualityCheck);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.faceQualityCheck)) {
+            query.put("FaceQualityCheck", request.faceQualityCheck);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.merchantBizId)) {
             query.put("MerchantBizId", request.merchantBizId);
         }
@@ -2332,6 +2336,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.facePictureQualityCheck)) {
             query.put("FacePictureQualityCheck", request.facePictureQualityCheck);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.faceQualityCheck)) {
+            query.put("FaceQualityCheck", request.faceQualityCheck);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.merchantBizId)) {
@@ -2615,6 +2623,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("FaceGroupCodes", request.faceGroupCodes);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.faceQualityCheck)) {
+            body.put("FaceQualityCheck", request.faceQualityCheck);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.faceRegisterGroupCode)) {
             body.put("FaceRegisterGroupCode", request.faceRegisterGroupCode);
         }
@@ -2778,6 +2790,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.faceQuality)) {
             query.put("FaceQuality", request.faceQuality);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.faceQualityCheck)) {
+            query.put("FaceQualityCheck", request.faceQualityCheck);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.merchantBizId)) {

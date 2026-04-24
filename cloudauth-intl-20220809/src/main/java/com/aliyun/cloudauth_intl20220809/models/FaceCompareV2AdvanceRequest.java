@@ -13,6 +13,13 @@ public class FaceCompareV2AdvanceRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>Y</p>
+     */
+    @NameInMap("FaceQualityCheck")
+    public String faceQualityCheck;
+
+    /**
+     * <strong>example:</strong>
      * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
      */
     @NameInMap("MerchantBizId")
@@ -71,6 +78,14 @@ public class FaceCompareV2AdvanceRequest extends TeaModel {
     }
     public String getFacePictureQualityCheck() {
         return this.facePictureQualityCheck;
+    }
+
+    public FaceCompareV2AdvanceRequest setFaceQualityCheck(String faceQualityCheck) {
+        this.faceQualityCheck = faceQualityCheck;
+        return this;
+    }
+    public String getFaceQualityCheck() {
+        return this.faceQualityCheck;
     }
 
     public FaceCompareV2AdvanceRequest setMerchantBizId(String merchantBizId) {

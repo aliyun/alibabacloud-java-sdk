@@ -27,6 +27,13 @@ public class FaceDuplicationCheckIntlRequest extends TeaModel {
     public String faceGroupCodes;
 
     /**
+     * <strong>example:</strong>
+     * <p>Y</p>
+     */
+    @NameInMap("FaceQualityCheck")
+    public String faceQualityCheck;
+
+    /**
      * <p>Face registration library.</p>
      * 
      * <strong>example:</strong>
@@ -192,6 +199,14 @@ public class FaceDuplicationCheckIntlRequest extends TeaModel {
     }
     public String getFaceGroupCodes() {
         return this.faceGroupCodes;
+    }
+
+    public FaceDuplicationCheckIntlRequest setFaceQualityCheck(String faceQualityCheck) {
+        this.faceQualityCheck = faceQualityCheck;
+        return this;
+    }
+    public String getFaceQualityCheck() {
+        return this.faceQualityCheck;
     }
 
     public FaceDuplicationCheckIntlRequest setFaceRegisterGroupCode(String faceRegisterGroupCode) {

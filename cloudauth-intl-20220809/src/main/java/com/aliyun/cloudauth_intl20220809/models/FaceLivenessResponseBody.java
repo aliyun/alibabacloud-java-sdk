@@ -118,6 +118,20 @@ public class FaceLivenessResponseBody extends TeaModel {
         public Double faceQualityScore;
 
         /**
+         * <strong>example:</strong>
+         * <p>0.02</p>
+         */
+        @NameInMap("IlluminationScore")
+        public Double illuminationScore;
+
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
+        @NameInMap("KaOcclusionScore")
+        public Double kaOcclusionScore;
+
+        /**
          * <p>Optional. Indicates whether the face is occluded. Y means the face is occluded. N means the face is not occluded.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +139,20 @@ public class FaceLivenessResponseBody extends TeaModel {
          */
         @NameInMap("OcclusionResult")
         public String occlusionResult;
+
+        /**
+         * <strong>example:</strong>
+         * <p>50.26</p>
+         */
+        @NameInMap("OcclusionScore")
+        public Double occlusionScore;
+
+        /**
+         * <strong>example:</strong>
+         * <p>86.47</p>
+         */
+        @NameInMap("SharpnessScore")
+        public Double sharpnessScore;
 
         public static FaceLivenessResponseBodyResultExtFaceInfo build(java.util.Map<String, ?> map) throws Exception {
             FaceLivenessResponseBodyResultExtFaceInfo self = new FaceLivenessResponseBodyResultExtFaceInfo();
@@ -163,12 +191,44 @@ public class FaceLivenessResponseBody extends TeaModel {
             return this.faceQualityScore;
         }
 
+        public FaceLivenessResponseBodyResultExtFaceInfo setIlluminationScore(Double illuminationScore) {
+            this.illuminationScore = illuminationScore;
+            return this;
+        }
+        public Double getIlluminationScore() {
+            return this.illuminationScore;
+        }
+
+        public FaceLivenessResponseBodyResultExtFaceInfo setKaOcclusionScore(Double kaOcclusionScore) {
+            this.kaOcclusionScore = kaOcclusionScore;
+            return this;
+        }
+        public Double getKaOcclusionScore() {
+            return this.kaOcclusionScore;
+        }
+
         public FaceLivenessResponseBodyResultExtFaceInfo setOcclusionResult(String occlusionResult) {
             this.occlusionResult = occlusionResult;
             return this;
         }
         public String getOcclusionResult() {
             return this.occlusionResult;
+        }
+
+        public FaceLivenessResponseBodyResultExtFaceInfo setOcclusionScore(Double occlusionScore) {
+            this.occlusionScore = occlusionScore;
+            return this;
+        }
+        public Double getOcclusionScore() {
+            return this.occlusionScore;
+        }
+
+        public FaceLivenessResponseBodyResultExtFaceInfo setSharpnessScore(Double sharpnessScore) {
+            this.sharpnessScore = sharpnessScore;
+            return this;
+        }
+        public Double getSharpnessScore() {
+            return this.sharpnessScore;
         }
 
     }

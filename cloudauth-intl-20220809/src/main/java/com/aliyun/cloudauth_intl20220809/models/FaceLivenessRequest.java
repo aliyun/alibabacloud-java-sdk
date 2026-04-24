@@ -53,6 +53,13 @@ public class FaceLivenessRequest extends TeaModel {
     public String faceQuality;
 
     /**
+     * <strong>example:</strong>
+     * <p>Y</p>
+     */
+    @NameInMap("FaceQualityCheck")
+    public String faceQualityCheck;
+
+    /**
      * <p>A custom unique business identifier. You can use this identifier to track and troubleshoot issues. The identifier can be up to 32 characters in length and can contain letters and digits. Make sure the identifier is unique.</p>
      * <blockquote>
      * <p>Alibaba Cloud servers do not check the uniqueness of this value. For better tracking, ensure this value is unique.</p>
@@ -132,6 +139,14 @@ public class FaceLivenessRequest extends TeaModel {
     }
     public String getFaceQuality() {
         return this.faceQuality;
+    }
+
+    public FaceLivenessRequest setFaceQualityCheck(String faceQualityCheck) {
+        this.faceQualityCheck = faceQualityCheck;
+        return this;
+    }
+    public String getFaceQualityCheck() {
+        return this.faceQualityCheck;
     }
 
     public FaceLivenessRequest setMerchantBizId(String merchantBizId) {
