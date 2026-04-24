@@ -488,6 +488,146 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>座席新增</p>
+     * 
+     * @param request CloudCreateAgentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CloudCreateAgentResponse
+     */
+    public CloudCreateAgentResponse cloudCreateAgentWithOptions(CloudCreateAgentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.active)) {
+            query.put("Active", request.active);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.areaCode)) {
+            query.put("AreaCode", request.areaCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callPower)) {
+            query.put("CallPower", request.callPower);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cno)) {
+            query.put("Cno", request.cno);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.comment)) {
+            query.put("Comment", request.comment);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ibRecord)) {
+            query.put("IbRecord", request.ibRecord);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isAsr)) {
+            query.put("IsAsr", request.isAsr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isOb)) {
+            query.put("IsOb", request.isOb);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isObRemember)) {
+            query.put("IsObRemember", request.isObRemember);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isQualityCheck)) {
+            query.put("IsQualityCheck", request.isQualityCheck);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.obClid)) {
+            query.put("ObClid", request.obClid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.obClidProperty)) {
+            query.put("ObClidProperty", request.obClidProperty);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.obClidType)) {
+            query.put("ObClidType", request.obClidType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.obRecord)) {
+            query.put("ObRecord", request.obRecord);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.permitObPreviewTime)) {
+            query.put("PermitObPreviewTime", request.permitObPreviewTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.power)) {
+            query.put("Power", request.power);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillIds)) {
+            query.put("SkillIds", request.skillIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillLevels)) {
+            query.put("SkillLevels", request.skillLevels);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.webrtcUrlType)) {
+            query.put("WebrtcUrlType", request.webrtcUrlType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wrapup)) {
+            query.put("Wrapup", request.wrapup);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CloudCreateAgent"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CloudCreateAgentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>座席新增</p>
+     * 
+     * @param request CloudCreateAgentRequest
+     * @return CloudCreateAgentResponse
+     */
+    public CloudCreateAgentResponse cloudCreateAgent(CloudCreateAgentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.cloudCreateAgentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>新增任务</p>
      * 
      * @param request CloudCreateTaskRequest
