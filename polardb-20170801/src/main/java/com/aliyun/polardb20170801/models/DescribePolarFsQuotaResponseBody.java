@@ -27,6 +27,13 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>/data</p>
+     */
+    @NameInMap("Path")
+    public String path;
+
+    /**
+     * <strong>example:</strong>
      * <p>pfs-2ze0i74ka607*****</p>
      */
     @NameInMap("PolarFsInstanceId")
@@ -34,6 +41,9 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
 
     @NameInMap("PolicyItems")
     public java.util.List<DescribePolarFsQuotaResponseBodyPolicyItems> policyItems;
+
+    @NameInMap("QuotaItems")
+    public java.util.List<DescribePolarFsQuotaResponseBodyQuotaItems> quotaItems;
 
     /**
      * <p>Id of the request</p>
@@ -80,6 +90,14 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribePolarFsQuotaResponseBody setPath(String path) {
+        this.path = path;
+        return this;
+    }
+    public String getPath() {
+        return this.path;
+    }
+
     public DescribePolarFsQuotaResponseBody setPolarFsInstanceId(String polarFsInstanceId) {
         this.polarFsInstanceId = polarFsInstanceId;
         return this;
@@ -94,6 +112,14 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
     }
     public java.util.List<DescribePolarFsQuotaResponseBodyPolicyItems> getPolicyItems() {
         return this.policyItems;
+    }
+
+    public DescribePolarFsQuotaResponseBody setQuotaItems(java.util.List<DescribePolarFsQuotaResponseBodyQuotaItems> quotaItems) {
+        this.quotaItems = quotaItems;
+        return this;
+    }
+    public java.util.List<DescribePolarFsQuotaResponseBodyQuotaItems> getQuotaItems() {
+        return this.quotaItems;
     }
 
     public DescribePolarFsQuotaResponseBody setRequestId(String requestId) {
@@ -281,6 +307,89 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         }
         public Long getSizeLimit() {
             return this.sizeLimit;
+        }
+
+    }
+
+    public static class DescribePolarFsQuotaResponseBodyQuotaItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1073741824</p>
+         */
+        @NameInMap("Capacity")
+        public Long capacity;
+
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("Inodes")
+        public Long inodes;
+
+        /**
+         * <strong>example:</strong>
+         * <p>/data</p>
+         */
+        @NameInMap("Path")
+        public String path;
+
+        /**
+         * <strong>example:</strong>
+         * <p>104857600</p>
+         */
+        @NameInMap("UsedCapacity")
+        public Long usedCapacity;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("UsedInodes")
+        public Long usedInodes;
+
+        public static DescribePolarFsQuotaResponseBodyQuotaItems build(java.util.Map<String, ?> map) throws Exception {
+            DescribePolarFsQuotaResponseBodyQuotaItems self = new DescribePolarFsQuotaResponseBodyQuotaItems();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePolarFsQuotaResponseBodyQuotaItems setCapacity(Long capacity) {
+            this.capacity = capacity;
+            return this;
+        }
+        public Long getCapacity() {
+            return this.capacity;
+        }
+
+        public DescribePolarFsQuotaResponseBodyQuotaItems setInodes(Long inodes) {
+            this.inodes = inodes;
+            return this;
+        }
+        public Long getInodes() {
+            return this.inodes;
+        }
+
+        public DescribePolarFsQuotaResponseBodyQuotaItems setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
+        public DescribePolarFsQuotaResponseBodyQuotaItems setUsedCapacity(Long usedCapacity) {
+            this.usedCapacity = usedCapacity;
+            return this;
+        }
+        public Long getUsedCapacity() {
+            return this.usedCapacity;
+        }
+
+        public DescribePolarFsQuotaResponseBodyQuotaItems setUsedInodes(Long usedInodes) {
+            this.usedInodes = usedInodes;
+            return this;
+        }
+        public Long getUsedInodes() {
+            return this.usedInodes;
         }
 
     }

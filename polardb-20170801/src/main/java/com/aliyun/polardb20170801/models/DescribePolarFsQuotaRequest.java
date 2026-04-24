@@ -12,6 +12,13 @@ public class DescribePolarFsQuotaRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <strong>example:</strong>
+     * <p>/data</p>
+     */
+    @NameInMap("Path")
+    public String path;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,6 +26,13 @@ public class DescribePolarFsQuotaRequest extends TeaModel {
      */
     @NameInMap("PolarFsInstanceId")
     public String polarFsInstanceId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>quotaPolicy</p>
+     */
+    @NameInMap("QuotaType")
+    public String quotaType;
 
     /**
      * <strong>example:</strong>
@@ -40,12 +54,28 @@ public class DescribePolarFsQuotaRequest extends TeaModel {
         return this.DBClusterId;
     }
 
+    public DescribePolarFsQuotaRequest setPath(String path) {
+        this.path = path;
+        return this;
+    }
+    public String getPath() {
+        return this.path;
+    }
+
     public DescribePolarFsQuotaRequest setPolarFsInstanceId(String polarFsInstanceId) {
         this.polarFsInstanceId = polarFsInstanceId;
         return this;
     }
     public String getPolarFsInstanceId() {
         return this.polarFsInstanceId;
+    }
+
+    public DescribePolarFsQuotaRequest setQuotaType(String quotaType) {
+        this.quotaType = quotaType;
+        return this;
+    }
+    public String getQuotaType() {
+        return this.quotaType;
     }
 
     public DescribePolarFsQuotaRequest setRegionId(String regionId) {

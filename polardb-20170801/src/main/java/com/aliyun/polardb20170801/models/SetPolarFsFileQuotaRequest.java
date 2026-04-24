@@ -58,10 +58,24 @@ public class SetPolarFsFileQuotaRequest extends TeaModel {
     public static class SetPolarFsFileQuotaRequestFilePathQuotas extends TeaModel {
         /**
          * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("Capacity")
+        public Long capacity;
+
+        /**
+         * <strong>example:</strong>
          * <p>/a/project</p>
          */
         @NameInMap("FilePathId")
         public String filePathId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("Inodes")
+        public Long inodes;
 
         /**
          * <strong>example:</strong>
@@ -89,12 +103,28 @@ public class SetPolarFsFileQuotaRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public SetPolarFsFileQuotaRequestFilePathQuotas setCapacity(Long capacity) {
+            this.capacity = capacity;
+            return this;
+        }
+        public Long getCapacity() {
+            return this.capacity;
+        }
+
         public SetPolarFsFileQuotaRequestFilePathQuotas setFilePathId(String filePathId) {
             this.filePathId = filePathId;
             return this;
         }
         public String getFilePathId() {
             return this.filePathId;
+        }
+
+        public SetPolarFsFileQuotaRequestFilePathQuotas setInodes(Long inodes) {
+            this.inodes = inodes;
+            return this;
+        }
+        public Long getInodes() {
+            return this.inodes;
         }
 
         public SetPolarFsFileQuotaRequestFilePathQuotas setMaxDepth(Integer maxDepth) {
