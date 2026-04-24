@@ -10,6 +10,12 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
     @NameInMap("instances")
     public java.util.List<ListPrometheusVirtualInstancesResponseBodyInstances> instances;
 
+    @NameInMap("maxResults")
+    public String maxResults;
+
+    @NameInMap("nextToken")
+    public String nextToken;
+
     /**
      * <p>ID of the request</p>
      * 
@@ -18,6 +24,9 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
      */
     @NameInMap("requestId")
     public String requestId;
+
+    @NameInMap("totalCount")
+    public String totalCount;
 
     public static ListPrometheusVirtualInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListPrometheusVirtualInstancesResponseBody self = new ListPrometheusVirtualInstancesResponseBody();
@@ -32,12 +41,36 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
         return this.instances;
     }
 
+    public ListPrometheusVirtualInstancesResponseBody setMaxResults(String maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public String getMaxResults() {
+        return this.maxResults;
+    }
+
+    public ListPrometheusVirtualInstancesResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
     public ListPrometheusVirtualInstancesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListPrometheusVirtualInstancesResponseBody setTotalCount(String totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public String getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListPrometheusVirtualInstancesResponseBodyInstances extends TeaModel {

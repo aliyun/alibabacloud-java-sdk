@@ -5224,8 +5224,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListPrometheusVirtualInstancesResponse listPrometheusVirtualInstancesWithOptions(ListPrometheusVirtualInstancesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
             query.put("namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {

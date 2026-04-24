@@ -232,6 +232,9 @@ public class GetPrometheusViewResponseBody extends TeaModel {
         @NameInMap("httpApiInterUrl")
         public String httpApiInterUrl;
 
+        @NameInMap("httpApiInternalUrl")
+        public String httpApiInternalUrl;
+
         /**
          * <p>Private HTTP address.</p>
          * 
@@ -309,6 +312,9 @@ public class GetPrometheusViewResponseBody extends TeaModel {
          */
         @NameInMap("remoteReadInterUrl")
         public String remoteReadInterUrl;
+
+        @NameInMap("remoteReadInternalUrl")
+        public String remoteReadInternalUrl;
 
         /**
          * <p>Remote read intranet URL.</p>
@@ -462,6 +468,14 @@ public class GetPrometheusViewResponseBody extends TeaModel {
             return this.httpApiInterUrl;
         }
 
+        public GetPrometheusViewResponseBodyPrometheusView setHttpApiInternalUrl(String httpApiInternalUrl) {
+            this.httpApiInternalUrl = httpApiInternalUrl;
+            return this;
+        }
+        public String getHttpApiInternalUrl() {
+            return this.httpApiInternalUrl;
+        }
+
         public GetPrometheusViewResponseBodyPrometheusView setHttpApiIntraUrl(String httpApiIntraUrl) {
             this.httpApiIntraUrl = httpApiIntraUrl;
             return this;
@@ -532,6 +546,14 @@ public class GetPrometheusViewResponseBody extends TeaModel {
         }
         public String getRemoteReadInterUrl() {
             return this.remoteReadInterUrl;
+        }
+
+        public GetPrometheusViewResponseBodyPrometheusView setRemoteReadInternalUrl(String remoteReadInternalUrl) {
+            this.remoteReadInternalUrl = remoteReadInternalUrl;
+            return this;
+        }
+        public String getRemoteReadInternalUrl() {
+            return this.remoteReadInternalUrl;
         }
 
         public GetPrometheusViewResponseBodyPrometheusView setRemoteReadIntraUrl(String remoteReadIntraUrl) {

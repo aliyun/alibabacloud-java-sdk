@@ -707,6 +707,12 @@ public class AlertRuleQuery extends TeaModel {
         @NameInMap("expr")
         public String expr;
 
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("promQl")
+        public String promQl;
+
         /**
          * <p>Applicable query type: SLS_MULTI_QUERY.
          * SLS query time offset start time (relative).
@@ -789,6 +795,22 @@ public class AlertRuleQuery extends TeaModel {
         }
         public String getExpr() {
             return this.expr;
+        }
+
+        public AlertRuleQueryQueries setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public AlertRuleQueryQueries setPromQl(String promQl) {
+            this.promQl = promQl;
+            return this;
+        }
+        public String getPromQl() {
+            return this.promQl;
         }
 
         public AlertRuleQueryQueries setStart(Long start) {

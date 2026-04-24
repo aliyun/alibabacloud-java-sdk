@@ -43,6 +43,9 @@ public class AlertRuleNotification extends TeaModel {
     @NameInMap("notifyTime")
     public AlertRuleTimeSpan notifyTime;
 
+    @NameInMap("qwencloudContacts")
+    public java.util.Map<String, java.util.Map<String, ?>> qwencloudContacts;
+
     /**
      * <p>Notification silence duration, in seconds.</p>
      * 
@@ -123,6 +126,14 @@ public class AlertRuleNotification extends TeaModel {
     }
     public AlertRuleTimeSpan getNotifyTime() {
         return this.notifyTime;
+    }
+
+    public AlertRuleNotification setQwencloudContacts(java.util.Map<String, java.util.Map<String, ?>> qwencloudContacts) {
+        this.qwencloudContacts = qwencloudContacts;
+        return this;
+    }
+    public java.util.Map<String, java.util.Map<String, ?>> getQwencloudContacts() {
+        return this.qwencloudContacts;
     }
 
     public AlertRuleNotification setSilenceTime(Long silenceTime) {

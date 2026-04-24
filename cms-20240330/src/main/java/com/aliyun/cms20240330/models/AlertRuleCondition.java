@@ -35,6 +35,9 @@ public class AlertRuleCondition extends TeaModel {
     @NameInMap("compositeEscalation")
     public AlertRuleConditionCompositeEscalation compositeEscalation;
 
+    @NameInMap("enableSeveritySuppression")
+    public Boolean enableSeveritySuppression;
+
     /**
      * <p>Applicable condition type: CMS_BASIC_CONDITION.
      * Valid values:</p>
@@ -128,6 +131,9 @@ public class AlertRuleCondition extends TeaModel {
     @NameInMap("simpleEscalation")
     public AlertRuleConditionSimpleEscalation simpleEscalation;
 
+    @NameInMap("triggers")
+    public java.util.List<AlertRuleConditionTriggers> triggers;
+
     /**
      * <p>Rule condition type, valid values:</p>
      * <p>SLS_CONDITION (SLS alert condition),
@@ -185,6 +191,14 @@ public class AlertRuleCondition extends TeaModel {
     }
     public AlertRuleConditionCompositeEscalation getCompositeEscalation() {
         return this.compositeEscalation;
+    }
+
+    public AlertRuleCondition setEnableSeveritySuppression(Boolean enableSeveritySuppression) {
+        this.enableSeveritySuppression = enableSeveritySuppression;
+        return this;
+    }
+    public Boolean getEnableSeveritySuppression() {
+        return this.enableSeveritySuppression;
     }
 
     public AlertRuleCondition setEscalationType(String escalationType) {
@@ -249,6 +263,14 @@ public class AlertRuleCondition extends TeaModel {
     }
     public AlertRuleConditionSimpleEscalation getSimpleEscalation() {
         return this.simpleEscalation;
+    }
+
+    public AlertRuleCondition setTriggers(java.util.List<AlertRuleConditionTriggers> triggers) {
+        this.triggers = triggers;
+        return this;
+    }
+    public java.util.List<AlertRuleConditionTriggers> getTriggers() {
+        return this.triggers;
     }
 
     public AlertRuleCondition setType(String type) {
@@ -969,6 +991,140 @@ public class AlertRuleCondition extends TeaModel {
         }
         public Long getPeriod() {
             return this.period;
+        }
+
+    }
+
+    public static class AlertRuleConditionTriggersExpressionConditions extends TeaModel {
+        @NameInMap("expressionType")
+        public String expressionType;
+
+        @NameInMap("operator")
+        public String operator;
+
+        @NameInMap("queryName")
+        public String queryName;
+
+        @NameInMap("threshold")
+        public Double threshold;
+
+        public static AlertRuleConditionTriggersExpressionConditions build(java.util.Map<String, ?> map) throws Exception {
+            AlertRuleConditionTriggersExpressionConditions self = new AlertRuleConditionTriggersExpressionConditions();
+            return TeaModel.build(map, self);
+        }
+
+        public AlertRuleConditionTriggersExpressionConditions setExpressionType(String expressionType) {
+            this.expressionType = expressionType;
+            return this;
+        }
+        public String getExpressionType() {
+            return this.expressionType;
+        }
+
+        public AlertRuleConditionTriggersExpressionConditions setOperator(String operator) {
+            this.operator = operator;
+            return this;
+        }
+        public String getOperator() {
+            return this.operator;
+        }
+
+        public AlertRuleConditionTriggersExpressionConditions setQueryName(String queryName) {
+            this.queryName = queryName;
+            return this;
+        }
+        public String getQueryName() {
+            return this.queryName;
+        }
+
+        public AlertRuleConditionTriggersExpressionConditions setThreshold(Double threshold) {
+            this.threshold = threshold;
+            return this;
+        }
+        public Double getThreshold() {
+            return this.threshold;
+        }
+
+    }
+
+    public static class AlertRuleConditionTriggersExpression extends TeaModel {
+        @NameInMap("conditions")
+        public java.util.List<AlertRuleConditionTriggersExpressionConditions> conditions;
+
+        @NameInMap("expressionType")
+        public String expressionType;
+
+        @NameInMap("logicOperator")
+        public String logicOperator;
+
+        public static AlertRuleConditionTriggersExpression build(java.util.Map<String, ?> map) throws Exception {
+            AlertRuleConditionTriggersExpression self = new AlertRuleConditionTriggersExpression();
+            return TeaModel.build(map, self);
+        }
+
+        public AlertRuleConditionTriggersExpression setConditions(java.util.List<AlertRuleConditionTriggersExpressionConditions> conditions) {
+            this.conditions = conditions;
+            return this;
+        }
+        public java.util.List<AlertRuleConditionTriggersExpressionConditions> getConditions() {
+            return this.conditions;
+        }
+
+        public AlertRuleConditionTriggersExpression setExpressionType(String expressionType) {
+            this.expressionType = expressionType;
+            return this;
+        }
+        public String getExpressionType() {
+            return this.expressionType;
+        }
+
+        public AlertRuleConditionTriggersExpression setLogicOperator(String logicOperator) {
+            this.logicOperator = logicOperator;
+            return this;
+        }
+        public String getLogicOperator() {
+            return this.logicOperator;
+        }
+
+    }
+
+    public static class AlertRuleConditionTriggers extends TeaModel {
+        @NameInMap("durationSecs")
+        public Integer durationSecs;
+
+        @NameInMap("expression")
+        public AlertRuleConditionTriggersExpression expression;
+
+        @NameInMap("severity")
+        public String severity;
+
+        public static AlertRuleConditionTriggers build(java.util.Map<String, ?> map) throws Exception {
+            AlertRuleConditionTriggers self = new AlertRuleConditionTriggers();
+            return TeaModel.build(map, self);
+        }
+
+        public AlertRuleConditionTriggers setDurationSecs(Integer durationSecs) {
+            this.durationSecs = durationSecs;
+            return this;
+        }
+        public Integer getDurationSecs() {
+            return this.durationSecs;
+        }
+
+        public AlertRuleConditionTriggers setExpression(AlertRuleConditionTriggersExpression expression) {
+            this.expression = expression;
+            return this;
+        }
+        public AlertRuleConditionTriggersExpression getExpression() {
+            return this.expression;
+        }
+
+        public AlertRuleConditionTriggers setSeverity(String severity) {
+            this.severity = severity;
+            return this;
+        }
+        public String getSeverity() {
+            return this.severity;
         }
 
     }

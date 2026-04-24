@@ -225,6 +225,9 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @NameInMap("httpApiInterUrl")
         public String httpApiInterUrl;
 
+        @NameInMap("httpApiInternalUrl")
+        public String httpApiInternalUrl;
+
         /**
          * <p>HTTP intranet address.</p>
          * 
@@ -299,6 +302,9 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @NameInMap("pushGatewayInterUrl")
         public String pushGatewayInterUrl;
 
+        @NameInMap("pushGatewayInternalUrl")
+        public String pushGatewayInternalUrl;
+
         /**
          * <p>Intranet address of PushGateway.</p>
          * 
@@ -326,6 +332,9 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @NameInMap("remoteReadInterUrl")
         public String remoteReadInterUrl;
 
+        @NameInMap("remoteReadInternalUrl")
+        public String remoteReadInternalUrl;
+
         /**
          * <p>Intranet read address.</p>
          * 
@@ -343,6 +352,9 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
          */
         @NameInMap("remoteWriteInterUrl")
         public String remoteWriteInterUrl;
+
+        @NameInMap("remoteWriteInternalUrl")
+        public String remoteWriteInternalUrl;
 
         /**
          * <p>Intranet write address.</p>
@@ -545,6 +557,14 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             return this.httpApiInterUrl;
         }
 
+        public GetPrometheusInstanceResponseBodyPrometheusInstance setHttpApiInternalUrl(String httpApiInternalUrl) {
+            this.httpApiInternalUrl = httpApiInternalUrl;
+            return this;
+        }
+        public String getHttpApiInternalUrl() {
+            return this.httpApiInternalUrl;
+        }
+
         public GetPrometheusInstanceResponseBodyPrometheusInstance setHttpApiIntraUrl(String httpApiIntraUrl) {
             this.httpApiIntraUrl = httpApiIntraUrl;
             return this;
@@ -609,6 +629,14 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             return this.pushGatewayInterUrl;
         }
 
+        public GetPrometheusInstanceResponseBodyPrometheusInstance setPushGatewayInternalUrl(String pushGatewayInternalUrl) {
+            this.pushGatewayInternalUrl = pushGatewayInternalUrl;
+            return this;
+        }
+        public String getPushGatewayInternalUrl() {
+            return this.pushGatewayInternalUrl;
+        }
+
         public GetPrometheusInstanceResponseBodyPrometheusInstance setPushGatewayIntraUrl(String pushGatewayIntraUrl) {
             this.pushGatewayIntraUrl = pushGatewayIntraUrl;
             return this;
@@ -633,6 +661,14 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             return this.remoteReadInterUrl;
         }
 
+        public GetPrometheusInstanceResponseBodyPrometheusInstance setRemoteReadInternalUrl(String remoteReadInternalUrl) {
+            this.remoteReadInternalUrl = remoteReadInternalUrl;
+            return this;
+        }
+        public String getRemoteReadInternalUrl() {
+            return this.remoteReadInternalUrl;
+        }
+
         public GetPrometheusInstanceResponseBodyPrometheusInstance setRemoteReadIntraUrl(String remoteReadIntraUrl) {
             this.remoteReadIntraUrl = remoteReadIntraUrl;
             return this;
@@ -647,6 +683,14 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         }
         public String getRemoteWriteInterUrl() {
             return this.remoteWriteInterUrl;
+        }
+
+        public GetPrometheusInstanceResponseBodyPrometheusInstance setRemoteWriteInternalUrl(String remoteWriteInternalUrl) {
+            this.remoteWriteInternalUrl = remoteWriteInternalUrl;
+            return this;
+        }
+        public String getRemoteWriteInternalUrl() {
+            return this.remoteWriteInternalUrl;
         }
 
         public GetPrometheusInstanceResponseBodyPrometheusInstance setRemoteWriteIntraUrl(String remoteWriteIntraUrl) {

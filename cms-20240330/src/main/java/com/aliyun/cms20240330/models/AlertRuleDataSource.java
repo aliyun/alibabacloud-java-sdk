@@ -54,6 +54,9 @@ public class AlertRuleDataSource extends TeaModel {
     @NameInMap("regionId")
     public String regionId;
 
+    @NameInMap("tenantId")
+    public String tenantId;
+
     /**
      * <p>Data source type.
      * Valid values:</p>
@@ -115,6 +118,14 @@ public class AlertRuleDataSource extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public AlertRuleDataSource setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
     public AlertRuleDataSource setType(String type) {
