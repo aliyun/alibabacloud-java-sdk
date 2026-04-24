@@ -142,6 +142,12 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
+        @NameInMap("ErrorInfo")
+        public String errorInfo;
+
         @NameInMap("ExecutionId")
         public String executionId;
 
@@ -177,6 +183,22 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         }
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        public DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSet setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        public DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSet setErrorInfo(String errorInfo) {
+            this.errorInfo = errorInfo;
+            return this;
+        }
+        public String getErrorInfo() {
+            return this.errorInfo;
         }
 
         public DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSet setExecutionId(String executionId) {
