@@ -19,6 +19,8 @@ public class UpdateRecursionRecordEnableStatusRequest extends TeaModel {
     public String enableStatus;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>1781234321</p>
      */

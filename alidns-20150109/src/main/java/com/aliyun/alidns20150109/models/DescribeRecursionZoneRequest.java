@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeRecursionZoneRequest extends TeaModel {
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>169783221000012</p>
      */

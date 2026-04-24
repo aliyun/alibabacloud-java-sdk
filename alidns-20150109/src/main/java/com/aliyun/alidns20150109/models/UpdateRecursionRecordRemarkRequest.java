@@ -13,6 +13,7 @@ public class UpdateRecursionRecordRemarkRequest extends TeaModel {
 
     /**
      * <p>record id</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>173671468000010</p>

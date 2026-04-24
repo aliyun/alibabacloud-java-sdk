@@ -69,6 +69,7 @@ public class AddRecursionRecordRequest extends TeaModel {
 
     /**
      * <p>Zone ID。</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>173671468000011</p>

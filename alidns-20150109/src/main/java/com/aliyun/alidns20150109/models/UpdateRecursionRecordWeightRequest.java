@@ -12,6 +12,8 @@ public class UpdateRecursionRecordWeightRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>17363242424</p>
      */

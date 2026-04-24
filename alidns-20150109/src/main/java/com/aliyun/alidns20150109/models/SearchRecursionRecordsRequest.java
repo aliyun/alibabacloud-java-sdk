@@ -107,6 +107,8 @@ public class SearchRecursionRecordsRequest extends TeaModel {
     public Integer weight;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>169438909000011</p>
      */

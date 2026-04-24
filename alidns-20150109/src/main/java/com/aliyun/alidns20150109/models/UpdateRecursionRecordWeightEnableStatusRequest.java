@@ -40,6 +40,8 @@ public class UpdateRecursionRecordWeightEnableStatusRequest extends TeaModel {
     public String type;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>176432424234</p>
      */

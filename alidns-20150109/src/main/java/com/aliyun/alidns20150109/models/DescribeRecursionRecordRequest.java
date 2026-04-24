@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeRecursionRecordRequest extends TeaModel {
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>1917628665627259904</p>
      */

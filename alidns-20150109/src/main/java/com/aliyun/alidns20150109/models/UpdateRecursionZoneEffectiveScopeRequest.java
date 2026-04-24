@@ -15,6 +15,8 @@ public class UpdateRecursionZoneEffectiveScopeRequest extends TeaModel {
     public java.util.List<UpdateRecursionZoneEffectiveScopeRequestEffectiveScopes> effectiveScopes;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>173671468000011</p>
      */

@@ -19,6 +19,8 @@ public class UpdateRecursionRecordRequest extends TeaModel {
     public Integer priority;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>9*******</p>
      */
