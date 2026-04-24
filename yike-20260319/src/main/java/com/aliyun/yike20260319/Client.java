@@ -636,6 +636,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询一刻口播视频生成任务</p>
+     * 
+     * @param request GetYikeVoiceNarratorJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetYikeVoiceNarratorJobResponse
+     */
+    public GetYikeVoiceNarratorJobResponse getYikeVoiceNarratorJobWithOptions(GetYikeVoiceNarratorJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            body.put("JobId", request.jobId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetYikeVoiceNarratorJob"),
+            new TeaPair("version", "2026-03-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetYikeVoiceNarratorJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询一刻口播视频生成任务</p>
+     * 
+     * @param request GetYikeVoiceNarratorJobRequest
+     * @return GetYikeVoiceNarratorJobResponse
+     */
+    public GetYikeVoiceNarratorJobResponse getYikeVoiceNarratorJob(GetYikeVoiceNarratorJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getYikeVoiceNarratorJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取一刻文件夹列表</p>
      * 
      * @param request ListYikeAssetFoldersRequest
@@ -1190,5 +1234,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitYikeStoryboardJobResponse submitYikeStoryboardJob(SubmitYikeStoryboardJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitYikeStoryboardJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交一刻口播视频生成任务</p>
+     * 
+     * @param request SubmitYikeVoiceNarratorJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitYikeVoiceNarratorJobResponse
+     */
+    public SubmitYikeVoiceNarratorJobResponse submitYikeVoiceNarratorJobWithOptions(SubmitYikeVoiceNarratorJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobParams)) {
+            body.put("JobParams", request.jobParams);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            body.put("UserData", request.userData);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitYikeVoiceNarratorJob"),
+            new TeaPair("version", "2026-03-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitYikeVoiceNarratorJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交一刻口播视频生成任务</p>
+     * 
+     * @param request SubmitYikeVoiceNarratorJobRequest
+     * @return SubmitYikeVoiceNarratorJobResponse
+     */
+    public SubmitYikeVoiceNarratorJobResponse submitYikeVoiceNarratorJob(SubmitYikeVoiceNarratorJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitYikeVoiceNarratorJobWithOptions(request, runtime);
     }
 }
