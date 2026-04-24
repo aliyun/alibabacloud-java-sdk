@@ -92,6 +92,9 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         @NameInMap("Data")
         public String data;
 
+        @NameInMap("RefTableName")
+        public String refTableName;
+
         public static ListNodeDependenciesResponseBodyPagingInfoNodesInputsNodeOutputs build(java.util.Map<String, ?> map) throws Exception {
             ListNodeDependenciesResponseBodyPagingInfoNodesInputsNodeOutputs self = new ListNodeDependenciesResponseBodyPagingInfoNodesInputsNodeOutputs();
             return TeaModel.build(map, self);
@@ -103,6 +106,14 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         }
         public String getData() {
             return this.data;
+        }
+
+        public ListNodeDependenciesResponseBodyPagingInfoNodesInputsNodeOutputs setRefTableName(String refTableName) {
+            this.refTableName = refTableName;
+            return this;
+        }
+        public String getRefTableName() {
+            return this.refTableName;
         }
 
     }
@@ -357,6 +368,9 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         @NameInMap("Data")
         public String data;
 
+        @NameInMap("RefTableName")
+        public String refTableName;
+
         public static ListNodeDependenciesResponseBodyPagingInfoNodesOutputsNodeOutputs build(java.util.Map<String, ?> map) throws Exception {
             ListNodeDependenciesResponseBodyPagingInfoNodesOutputsNodeOutputs self = new ListNodeDependenciesResponseBodyPagingInfoNodesOutputsNodeOutputs();
             return TeaModel.build(map, self);
@@ -368,6 +382,14 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         }
         public String getData() {
             return this.data;
+        }
+
+        public ListNodeDependenciesResponseBodyPagingInfoNodesOutputsNodeOutputs setRefTableName(String refTableName) {
+            this.refTableName = refTableName;
+            return this;
+        }
+        public String getRefTableName() {
+            return this.refTableName;
         }
 
     }

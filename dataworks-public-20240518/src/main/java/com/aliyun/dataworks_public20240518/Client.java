@@ -301,6 +301,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Adds a custom image to a workspace.</p>
+     * 
+     * @param request AssociateProjectToImageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AssociateProjectToImageResponse
+     */
+    public AssociateProjectToImageResponse associateProjectToImageWithOptions(AssociateProjectToImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AssociateProjectToImage"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AssociateProjectToImageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Adds a custom image to a workspace.</p>
+     * 
+     * @param request AssociateProjectToImageRequest
+     * @return AssociateProjectToImageResponse
+     */
+    public AssociateProjectToImageResponse associateProjectToImage(AssociateProjectToImageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.associateProjectToImageWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <ol>
      * <li>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</li>
@@ -494,7 +542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消并停止Agent当前正在进行中的Session会话</p>
+     * <p>Interrupts an agent call for a specified session. Streaming response interruption is supported.</p>
      * 
      * @param tmpReq CancelAgentSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -540,7 +588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消并停止Agent当前正在进行中的Session会话</p>
+     * <p>Interrupts an agent call for a specified session. Streaming response interruption is supported.</p>
      * 
      * @param request CancelAgentSessionRequest
      * @return CancelAgentSessionResponse
@@ -618,7 +666,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一个Agent Session会话</p>
+     * <p>Creates a new Agent session and returns the session ID.</p>
      * 
      * @param tmpReq CreateAgentSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -664,7 +712,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一个Agent Session会话</p>
+     * <p>Creates a new Agent session and returns the session ID.</p>
      * 
      * @param request CreateAgentSessionRequest
      * @return CreateAgentSessionResponse
@@ -5717,6 +5765,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Disassociates an image from a workspace.</p>
+     * 
+     * @param request DissociateProjectFromImageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DissociateProjectFromImageResponse
+     */
+    public DissociateProjectFromImageResponse dissociateProjectFromImageWithOptions(DissociateProjectFromImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DissociateProjectFromImage"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DissociateProjectFromImageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Disassociates an image from a workspace.</p>
+     * 
+     * @param request DissociateProjectFromImageRequest
+     * @return DissociateProjectFromImageResponse
+     */
+    public DissociateProjectFromImageResponse dissociateProjectFromImage(DissociateProjectFromImageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.dissociateProjectFromImageWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <ol>
      * <li>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</li>
@@ -5986,7 +6082,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Agent指定Session下的模型产出物详情</p>
+     * <p>Obtains the metadata and body content of an Artifact based on the session ID and file path.</p>
      * 
      * @param tmpReq GetAgentSessionArtifactMetaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6032,7 +6128,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Agent指定Session下的模型产出物详情</p>
+     * <p>Obtains the metadata and body content of an Artifact based on the session ID and file path.</p>
      * 
      * @param request GetAgentSessionArtifactMetaRequest
      * @return GetAgentSessionArtifactMetaResponse
@@ -6044,7 +6140,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Agent指定Session下的Token用量</p>
+     * <p>Queries the cumulative AI token usage of a session aggregated by session ID.</p>
      * 
      * @param tmpReq GetAgentSessionTokenUsageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6090,7 +6186,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Agent指定Session下的Token用量</p>
+     * <p>Queries the cumulative AI token usage of a session aggregated by session ID.</p>
      * 
      * @param request GetAgentSessionTokenUsageRequest
      * @return GetAgentSessionTokenUsageResponse
@@ -7522,6 +7618,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Obtains the details of a specified image by image ID.</p>
+     * 
+     * @param request GetImageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetImageResponse
+     */
+    public GetImageResponse getImageWithOptions(GetImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageVersion)) {
+            query.put("ImageVersion", request.imageVersion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetImage"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetImageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the details of a specified image by image ID.</p>
+     * 
+     * @param request GetImageRequest
+     * @return GetImageResponse
+     */
+    public GetImageResponse getImage(GetImageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getImageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the status information of an asynchronous task. After you call an asynchronous operation, an asynchronous task is generated. You can call the GetJobStatus operation to query the status of the asynchronous task.</p>
      * 
      * @param request GetJobStatusRequest
@@ -8822,7 +8966,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Agent指定Session下的模型产出物清单列表</p>
+     * <p>Queries the Artifact files that are produced by a specified session.</p>
      * 
      * @param tmpReq ListAgentSessionArtifactsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8868,7 +9012,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Agent指定Session下的模型产出物清单列表</p>
+     * <p>Queries the Artifact files that are produced by a specified session.</p>
      * 
      * @param request ListAgentSessionArtifactsRequest
      * @return ListAgentSessionArtifactsResponse
@@ -8880,7 +9024,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>加载Agent Session对话历史列表</p>
+     * <p>Loads the conversation history list of an Agent Session.</p>
      * 
      * @param tmpReq ListAgentSessionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8926,7 +9070,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>加载Agent Session对话历史列表</p>
+     * <p>Loads the conversation history list of an Agent Session.</p>
      * 
      * @param request ListAgentSessionsRequest
      * @return ListAgentSessionsResponse
@@ -8938,7 +9082,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取DataAgent的Agent定义列表</p>
+     * <p>Queries the list of agents available for the current tenant. Supports filtering by name and pagination.</p>
      * 
      * @param tmpReq ListAgentsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8984,7 +9128,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取DataAgent的Agent定义列表</p>
+     * <p>Queries the list of agents available for the current tenant. Supports filtering by name and pagination.</p>
      * 
      * @param request ListAgentsRequest
      * @return ListAgentsResponse
@@ -11211,6 +11355,220 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the workspaces associated with an image.</p>
+     * 
+     * @param request ListImageAssociatedProjectsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListImageAssociatedProjectsResponse
+     */
+    public ListImageAssociatedProjectsResponse listImageAssociatedProjectsWithOptions(ListImageAssociatedProjectsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListImageAssociatedProjects"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListImageAssociatedProjectsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the workspaces associated with an image.</p>
+     * 
+     * @param request ListImageAssociatedProjectsRequest
+     * @return ListImageAssociatedProjectsResponse
+     */
+    public ListImageAssociatedProjectsResponse listImageAssociatedProjects(ListImageAssociatedProjectsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listImageAssociatedProjectsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified image version.</p>
+     * 
+     * @param request ListImageVersionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListImageVersionsResponse
+     */
+    public ListImageVersionsResponse listImageVersionsWithOptions(ListImageVersionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListImageVersions"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListImageVersionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified image version.</p>
+     * 
+     * @param request ListImageVersionsRequest
+     * @return ListImageVersionsResponse
+     */
+    public ListImageVersionsResponse listImageVersions(ListImageVersionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listImageVersionsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of images.</p>
+     * 
+     * @param tmpReq ListImagesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListImagesResponse
+     */
+    public ListImagesResponse listImagesWithOptions(ListImagesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListImagesShrinkRequest request = new ListImagesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.projectIds)) {
+            request.projectIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.projectIds, "ProjectIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.providerTypes)) {
+            request.providerTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.providerTypes, "ProviderTypes", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.stages)) {
+            request.stagesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.stages, "Stages", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.statuses)) {
+            request.statusesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.statuses, "Statuses", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.supportedModules)) {
+            request.supportedModulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.supportedModules, "SupportedModules", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.supportedTaskTypes)) {
+            request.supportedTaskTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.supportedTaskTypes, "SupportedTaskTypes", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessibility)) {
+            query.put("Accessibility", request.accessibility);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.official)) {
+            query.put("Official", request.official);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectIdsShrink)) {
+            query.put("ProjectIds", request.projectIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.providerTypesShrink)) {
+            query.put("ProviderTypes", request.providerTypesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchAll)) {
+            query.put("SearchAll", request.searchAll);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stagesShrink)) {
+            query.put("Stages", request.stagesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statusesShrink)) {
+            query.put("Statuses", request.statusesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.supportedModulesShrink)) {
+            query.put("SupportedModules", request.supportedModulesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.supportedTaskTypesShrink)) {
+            query.put("SupportedTaskTypes", request.supportedTaskTypesShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListImages"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListImagesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of images.</p>
+     * 
+     * @param request ListImagesRequest
+     * @return ListImagesResponse
+     */
+    public ListImagesResponse listImages(ListImagesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listImagesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the lineage between two entities, such as tables, fields, and Object Storage Service (OSS) files, in Data Map.</p>
      * 
      * @param request ListLineageRelationshipsRequest
@@ -12993,7 +13351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>加载Agent Session对话历史</p>
+     * <p>Loads historical messages of an existing session and returns them in SSE streaming mode. If the session does not exist, a JSONRPCResponse.error with code 400 is output through SSE. Content-Type is text/event-stream. Applicable to scenarios where the session context needs to be restored.</p>
      * 
      * @param tmpReq LoadAgentSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13039,7 +13397,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>加载Agent Session对话历史</p>
+     * <p>Loads historical messages of an existing session and returns them in SSE streaming mode. If the session does not exist, a JSONRPCResponse.error with code 400 is output through SSE. Content-Type is text/event-stream. Applicable to scenarios where the session context needs to be restored.</p>
      * 
      * @param request LoadAgentSessionRequest
      * @return LoadAgentSessionResponse
@@ -13303,7 +13661,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>在当前的Agent Session中发起一轮新的对话</p>
+     * <p>Sends a user prompt to an existing session and streams back the agent response.</p>
      * 
      * @param tmpReq PromptAgentSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13349,7 +13707,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>在当前的Agent Session中发起一轮新的对话</p>
+     * <p>Sends a user prompt to an existing session and streams back the agent response.</p>
      * 
      * @param request PromptAgentSessionRequest
      * @return PromptAgentSessionResponse

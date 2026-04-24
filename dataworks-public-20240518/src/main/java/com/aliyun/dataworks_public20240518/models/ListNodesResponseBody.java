@@ -92,6 +92,9 @@ public class ListNodesResponseBody extends TeaModel {
         @NameInMap("Data")
         public String data;
 
+        @NameInMap("RefTableName")
+        public String refTableName;
+
         public static ListNodesResponseBodyPagingInfoNodesInputsNodeOutputs build(java.util.Map<String, ?> map) throws Exception {
             ListNodesResponseBodyPagingInfoNodesInputsNodeOutputs self = new ListNodesResponseBodyPagingInfoNodesInputsNodeOutputs();
             return TeaModel.build(map, self);
@@ -103,6 +106,14 @@ public class ListNodesResponseBody extends TeaModel {
         }
         public String getData() {
             return this.data;
+        }
+
+        public ListNodesResponseBodyPagingInfoNodesInputsNodeOutputs setRefTableName(String refTableName) {
+            this.refTableName = refTableName;
+            return this;
+        }
+        public String getRefTableName() {
+            return this.refTableName;
         }
 
     }
@@ -357,6 +368,9 @@ public class ListNodesResponseBody extends TeaModel {
         @NameInMap("Data")
         public String data;
 
+        @NameInMap("RefTableName")
+        public String refTableName;
+
         public static ListNodesResponseBodyPagingInfoNodesOutputsNodeOutputs build(java.util.Map<String, ?> map) throws Exception {
             ListNodesResponseBodyPagingInfoNodesOutputsNodeOutputs self = new ListNodesResponseBodyPagingInfoNodesOutputsNodeOutputs();
             return TeaModel.build(map, self);
@@ -368,6 +382,14 @@ public class ListNodesResponseBody extends TeaModel {
         }
         public String getData() {
             return this.data;
+        }
+
+        public ListNodesResponseBodyPagingInfoNodesOutputsNodeOutputs setRefTableName(String refTableName) {
+            this.refTableName = refTableName;
+            return this;
+        }
+        public String getRefTableName() {
+            return this.refTableName;
         }
 
     }
