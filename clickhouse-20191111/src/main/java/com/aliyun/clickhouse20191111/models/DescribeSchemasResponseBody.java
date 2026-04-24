@@ -4,9 +4,6 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeSchemasResponseBody extends TeaModel {
-    /**
-     * <p>The information about the databases of the cluster.</p>
-     */
     @NameInMap("Items")
     public DescribeSchemasResponseBodyItems items;
 
@@ -41,21 +38,9 @@ public class DescribeSchemasResponseBody extends TeaModel {
     }
 
     public static class DescribeSchemasResponseBodyItemsSchema extends TeaModel {
-        /**
-         * <p>The cluster ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cc-bp108z124a8o7****</p>
-         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
-        /**
-         * <p>The database name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>database</p>
-         */
         @NameInMap("SchemaName")
         public String schemaName;
 

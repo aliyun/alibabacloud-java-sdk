@@ -41,106 +41,36 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeSlowLogRecordsResponseBodySlowLogRecordsDataResultSet extends TeaModel {
-        /**
-         * <p>The IP address of the client that initiated the query.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>::ffff:100.104.XX.XX</p>
-         */
         @NameInMap("InitialAddress")
         public String initialAddress;
 
-        /**
-         * <p>The query ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>\&quot;b51496f2-6b0b-4546-aff9-e17951cb9410\&quot;</p>
-         */
         @NameInMap("InitialQueryId")
         public String initialQueryId;
 
-        /**
-         * <p>The username that is used to initiate the query.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test_users</p>
-         */
         @NameInMap("InitialUser")
         public String initialUser;
 
-        /**
-         * <p>The peak memory usage for the query. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1048576</p>
-         */
         @NameInMap("MemoryUsage")
         public String memoryUsage;
 
-        /**
-         * <p>The statement that was executed in the query.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Select * from table</p>
-         */
         @NameInMap("Query")
         public String query;
 
-        /**
-         * <p>The duration of the query. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2000</p>
-         */
         @NameInMap("QueryDurationMs")
         public String queryDurationMs;
 
-        /**
-         * <p>The beginning of the time range to query. The time is in the yyyy-MM-dd hh:mm:ss format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-05-22 20:00:01</p>
-         */
         @NameInMap("QueryStartTime")
         public String queryStartTime;
 
-        /**
-         * <p>The size of the data read by executing the statement. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1048576</p>
-         */
         @NameInMap("ReadBytes")
         public String readBytes;
 
-        /**
-         * <p>The number of rows read by executing the statement.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10027008</p>
-         */
         @NameInMap("ReadRows")
         public String readRows;
 
-        /**
-         * <p>The size of the result data. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1024</p>
-         */
         @NameInMap("ResultBytes")
         public String resultBytes;
 
-        /**
-         * <p>The query status. Valid values:</p>
-         * <ul>
-         * <li><strong>QueryFinish</strong>: The query is complete.</li>
-         * <li><strong>Processing</strong>: The query is running.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>QueryFinish</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -318,21 +248,9 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeSlowLogRecordsResponseBodySlowLogRecordsTableSchemaResultSet extends TeaModel {
-        /**
-         * <p>The name of the column.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>name</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The type of the column.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>String</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -379,9 +297,6 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeSlowLogRecordsResponseBodySlowLogRecords extends TeaModel {
-        /**
-         * <p>Details about the slow query logs.</p>
-         */
         @NameInMap("Data")
         public DescribeSlowLogRecordsResponseBodySlowLogRecordsData data;
 
@@ -409,9 +324,6 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         @NameInMap("Statistics")
         public DescribeSlowLogRecordsResponseBodySlowLogRecordsStatistics statistics;
 
-        /**
-         * <p>The schema of the table in the database.</p>
-         */
         @NameInMap("TableSchema")
         public DescribeSlowLogRecordsResponseBodySlowLogRecordsTableSchema tableSchema;
 

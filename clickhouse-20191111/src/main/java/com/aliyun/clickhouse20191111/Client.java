@@ -346,7 +346,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消预约重启</p>
+     * <p>Cancels the scheduled restart time of an ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request CancelRestartInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -410,7 +410,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消预约重启</p>
+     * <p>Cancels the scheduled restart time of an ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request CancelRestartInstanceRequest
      * @return CancelRestartInstanceResponse
@@ -3999,6 +3999,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the trend of slow query logs for an ApsaraDB for ClickHouse cluster.</p>
+     * 
      * @param request DescribeSlowLogTrendRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSlowLogTrendResponse
@@ -4060,6 +4063,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the trend of slow query logs for an ApsaraDB for ClickHouse cluster.</p>
+     * 
      * @param request DescribeSlowLogTrendRequest
      * @return DescribeSlowLogTrendResponse
      */

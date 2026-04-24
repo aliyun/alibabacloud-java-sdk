@@ -4,9 +4,6 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccountsResponseBody extends TeaModel {
-    /**
-     * <p>The database accounts.</p>
-     */
     @NameInMap("Accounts")
     public DescribeAccountsResponseBodyAccounts accounts;
 
@@ -92,61 +89,18 @@ public class DescribeAccountsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccountsResponseBodyAccountsAccount extends TeaModel {
-        /**
-         * <p>The description of the database account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("AccountDescription")
         public String accountDescription;
 
-        /**
-         * <p>The name of the database account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("AccountName")
         public String accountName;
 
-        /**
-         * <p>The state of the database account. Valid values:</p>
-         * <ul>
-         * <li><strong>Creating</strong></li>
-         * <li><strong>Available</strong></li>
-         * <li><strong>AuthorityModifying</strong></li>
-         * <li><strong>Deleting</strong></li>
-         * </ul>
-         * <blockquote>
-         * <p> Only XML-configured database accounts can be in the <strong>AuthorityModifying</strong> state.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>Creating</p>
-         */
         @NameInMap("AccountStatus")
         public String accountStatus;
 
-        /**
-         * <p>The type of the database account. Valid values:</p>
-         * <ul>
-         * <li><strong>Super</strong>: privileged account</li>
-         * <li><strong>Normal</strong>: standard account</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Super</p>
-         */
         @NameInMap("AccountType")
         public String accountType;
 
-        /**
-         * <p>The configuration mode of the database account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>SQL</p>
-         */
         @NameInMap("ConfigType")
         public String configType;
 

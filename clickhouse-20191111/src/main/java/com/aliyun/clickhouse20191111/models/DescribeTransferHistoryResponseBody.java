@@ -4,9 +4,6 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeTransferHistoryResponseBody extends TeaModel {
-    /**
-     * <p>The migration information.</p>
-     */
     @NameInMap("HistoryDetails")
     public DescribeTransferHistoryResponseBodyHistoryDetails historyDetails;
 
@@ -41,130 +38,49 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeTransferHistoryResponseBodyHistoryDetailsHistoryDetail extends TeaModel {
-        /**
-         * <p>The amount of data that is migrated per minute.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10240</p>
-         */
         @NameInMap("BytesPerMinute")
         public Long bytesPerMinute;
 
         /**
-         * <p>The time window during which write operations are stopped.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2025-02-08T00:00:00+08:00,2025-02-12T00:00:00+08:00</p>
-         * 
          * <strong>if can be null:</strong>
          * <p>false</p>
          */
         @NameInMap("DisableWriteWindows")
         public String disableWriteWindows;
 
-        /**
-         * <p>The number of parts that are migrated per minute.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1.24</p>
-         */
         @NameInMap("PartsPerMinute")
         public Double partsPerMinute;
 
-        /**
-         * <p>The progress of the data migration.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100%</p>
-         */
         @NameInMap("Progress")
         public String progress;
 
-        /**
-         * <p>The control version of the source cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>v1</p>
-         */
         @NameInMap("SourceControlVersion")
         public String sourceControlVersion;
 
-        /**
-         * <p>The ID of the source cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cc-bp108z124a8o7****</p>
-         */
         @NameInMap("SourceDBCluster")
         public String sourceDBCluster;
 
-        /**
-         * <p>The status of the data migration task. Valid values:</p>
-         * <ul>
-         * <li><strong>Finished</strong>: The data migration task is complete.</li>
-         * <li><strong>Processing</strong>: The data migration task is in progress.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Finished</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The running subtask.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>SubJob</p>
-         */
         @NameInMap("SubJob")
         public String subJob;
 
         @NameInMap("SubJobMessage")
         public String subJobMessage;
 
-        /**
-         * <p>The subtask status.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>running</p>
-         */
         @NameInMap("SubJobStatus")
         public String subJobStatus;
 
-        /**
-         * <p>The control version of the destination cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>v2</p>
-         */
         @NameInMap("TargetControlVersion")
         public String targetControlVersion;
 
-        /**
-         * <p>The ID of the destination cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cc-bp13zkh9uw523****</p>
-         */
         @NameInMap("TargetDBCluster")
         public String targetDBCluster;
 
-        /**
-         * <p>The amount of data that is not migrated.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>102400</p>
-         */
         @NameInMap("UnsyncedBytes")
         public Long unsyncedBytes;
 
-        /**
-         * <p>The number of parts that are not migrated.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1000</p>
-         */
         @NameInMap("UnsyncedParts")
         public Long unsyncedParts;
 

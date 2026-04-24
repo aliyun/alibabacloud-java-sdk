@@ -84,38 +84,18 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
         @NameInMap("AutoRenewEnabled")
         public Boolean autoRenewEnabled;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cc-2ze57pg09*****</p>
-         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Duration")
         public Integer duration;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Year</p>
-         */
         @NameInMap("PeriodUnit")
         public String periodUnit;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cn-beijing</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>AutoRenewal</p>
-         */
         @NameInMap("RenewalStatus")
         public String renewalStatus;
 

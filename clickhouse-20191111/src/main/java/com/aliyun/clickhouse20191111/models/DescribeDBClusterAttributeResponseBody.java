@@ -89,21 +89,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterAttributeResponseBodyDBClusterTagsTag extends TeaModel {
-        /**
-         * <p>The tag name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>department</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>it</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -669,9 +657,6 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("SupportOss")
         public Integer supportOss;
 
-        /**
-         * <p>The tags.</p>
-         */
         @NameInMap("Tags")
         public DescribeDBClusterAttributeResponseBodyDBClusterTags tags;
 
@@ -710,6 +695,20 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         @NameInMap("VpcIpAddr")
         public String vpcIpAddr;
+
+        /**
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
+        @NameInMap("WebUISnatStatus")
+        public String webUISnatStatus;
+
+        /**
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
+        @NameInMap("WebUIStatus")
+        public String webUIStatus;
 
         /**
          * <p>The zone ID.</p>
@@ -1173,6 +1172,22 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getVpcIpAddr() {
             return this.vpcIpAddr;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setWebUISnatStatus(String webUISnatStatus) {
+            this.webUISnatStatus = webUISnatStatus;
+            return this;
+        }
+        public String getWebUISnatStatus() {
+            return this.webUISnatStatus;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setWebUIStatus(String webUIStatus) {
+            this.webUIStatus = webUIStatus;
+            return this;
+        }
+        public String getWebUIStatus() {
+            return this.webUIStatus;
         }
 
         public DescribeDBClusterAttributeResponseBodyDBCluster setZoneId(String zoneId) {

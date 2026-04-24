@@ -49,9 +49,6 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The error information returned for a check failure.</p>
-     */
     @NameInMap("TableDetails")
     public CheckScaleOutBalancedResponseBodyTableDetails tableDetails;
 
@@ -135,43 +132,15 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
     }
 
     public static class CheckScaleOutBalancedResponseBodyTableDetailsTableDetail extends TeaModel {
-        /**
-         * <p>The cluster. The value is fixed as <strong>default</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>default</p>
-         */
         @NameInMap("Cluster")
         public String cluster;
 
-        /**
-         * <p>The database name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>db_name</p>
-         */
         @NameInMap("Database")
         public String database;
 
-        /**
-         * <p>The error details. Valid values:</p>
-         * <ul>
-         * <li><strong>1</strong>: The unique distributed table is missing.</li>
-         * <li><strong>2</strong>: More than one distributed table exists for the local table.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Detail")
         public Integer detail;
 
-        /**
-         * <p>The name of the local table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("TableName")
         public String tableName;
 

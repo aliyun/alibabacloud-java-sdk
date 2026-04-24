@@ -36,38 +36,18 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
     }
 
     public static class DescribeSlowLogTrendResponseBodySlowLogTrendDataResultSet extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2000</p>
-         */
         @NameInMap("AvgQueryDurationMs")
         public String avgQueryDurationMs;
 
-        /**
-         * <strong>example:</strong>
-         * <p>4000</p>
-         */
         @NameInMap("Count")
         public String count;
 
-        /**
-         * <strong>example:</strong>
-         * <p>3000</p>
-         */
         @NameInMap("MaxQueryDurationMs")
         public String maxQueryDurationMs;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1000</p>
-         */
         @NameInMap("MinQueryDurationMs")
         public String minQueryDurationMs;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2022-05-22 20:00:01</p>
-         */
         @NameInMap("QueryStartTime")
         public String queryStartTime;
 
@@ -191,17 +171,9 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
     }
 
     public static class DescribeSlowLogTrendResponseBodySlowLogTrendTableSchemaResultSet extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>query_start_time</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>UInt64</p>
-         */
         @NameInMap("Type")
         public String type;
 

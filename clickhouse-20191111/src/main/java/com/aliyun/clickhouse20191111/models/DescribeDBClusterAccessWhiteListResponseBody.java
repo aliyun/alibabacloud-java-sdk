@@ -4,9 +4,6 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
-    /**
-     * <p>The details about the IP address whitelist.</p>
-     */
     @NameInMap("DBClusterAccessWhiteList")
     public DescribeDBClusterAccessWhiteListResponseBodyDBClusterAccessWhiteList DBClusterAccessWhiteList;
 
@@ -41,30 +38,12 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterAccessWhiteListResponseBodyDBClusterAccessWhiteListIPArray extends TeaModel {
-        /**
-         * <p>The attribute of the IP address whitelist.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>default</p>
-         */
         @NameInMap("DBClusterIPArrayAttribute")
         public String DBClusterIPArrayAttribute;
 
-        /**
-         * <p>The name of the IP address whitelist.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>default</p>
-         */
         @NameInMap("DBClusterIPArrayName")
         public String DBClusterIPArrayName;
 
-        /**
-         * <p>The IP addresses in the IP address whitelist.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>192.168.xx.xx,192.168.xx.xx</p>
-         */
         @NameInMap("SecurityIPList")
         public String securityIPList;
 
