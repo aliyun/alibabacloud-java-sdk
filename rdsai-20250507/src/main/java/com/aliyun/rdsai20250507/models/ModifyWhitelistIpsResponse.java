@@ -3,7 +3,7 @@ package com.aliyun.rdsai20250507.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeEdgeFunctionsResponse extends TeaModel {
+public class ModifyWhitelistIpsResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DescribeEdgeFunctionsResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DescribeEdgeFunctionsResponseBody body;
+    public ModifyWhitelistIpsResponseBody body;
 
-    public static DescribeEdgeFunctionsResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeEdgeFunctionsResponse self = new DescribeEdgeFunctionsResponse();
+    public static ModifyWhitelistIpsResponse build(java.util.Map<String, ?> map) throws Exception {
+        ModifyWhitelistIpsResponse self = new ModifyWhitelistIpsResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeEdgeFunctionsResponse setHeaders(java.util.Map<String, String> headers) {
+    public ModifyWhitelistIpsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DescribeEdgeFunctionsResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeEdgeFunctionsResponse setStatusCode(Integer statusCode) {
+    public ModifyWhitelistIpsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DescribeEdgeFunctionsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeEdgeFunctionsResponse setBody(DescribeEdgeFunctionsResponseBody body) {
+    public ModifyWhitelistIpsResponse setBody(ModifyWhitelistIpsResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeEdgeFunctionsResponseBody getBody() {
+    public ModifyWhitelistIpsResponseBody getBody() {
         return this.body;
     }
 

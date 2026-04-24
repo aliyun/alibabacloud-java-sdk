@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>rdsai20250507</artifactId>
-  <version>2.5.0</version>
+  <version>3.0.0</version>
   <packaging>jar</packaging>
   <name>rdsai20250507</name>
   <description>Alibaba Cloud RdsAi (20250507) SDK for Java
@@ -174,7 +174,7 @@
       <plugin>
         <groupId>org.sonatype.central</groupId>
         <artifactId>central-publishing-maven-plugin</artifactId>
-        <version>0.9.0</version>
+        <version>0.10.0</version>
         <extensions>true</extensions>
         <configuration>
           <publishingServerId>central</publishingServerId>

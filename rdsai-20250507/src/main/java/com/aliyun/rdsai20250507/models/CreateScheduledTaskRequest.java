@@ -29,6 +29,9 @@ public class CreateScheduledTaskRequest extends TeaModel {
     @NameInMap("Frequency")
     public String frequency;
 
+    @NameInMap("InspectionItems")
+    public String inspectionItems;
+
     /**
      * <p>The IDs of the related instances. Separate multiple IDs with commas (,).</p>
      * 
@@ -94,6 +97,14 @@ public class CreateScheduledTaskRequest extends TeaModel {
     }
     public String getFrequency() {
         return this.frequency;
+    }
+
+    public CreateScheduledTaskRequest setInspectionItems(String inspectionItems) {
+        this.inspectionItems = inspectionItems;
+        return this;
+    }
+    public String getInspectionItems() {
+        return this.inspectionItems;
     }
 
     public CreateScheduledTaskRequest setInstanceIds(String instanceIds) {

@@ -141,6 +141,9 @@ public class GetScheduledReportsResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
+        @NameInMap("InspectionItems")
+        public String inspectionItems;
+
         @NameInMap("RegionId")
         public String regionId;
 
@@ -196,6 +199,14 @@ public class GetScheduledReportsResponseBody extends TeaModel {
         }
         public String getEndTime() {
             return this.endTime;
+        }
+
+        public GetScheduledReportsResponseBodyReports setInspectionItems(String inspectionItems) {
+            this.inspectionItems = inspectionItems;
+            return this;
+        }
+        public String getInspectionItems() {
+            return this.inspectionItems;
         }
 
         public GetScheduledReportsResponseBodyReports setRegionId(String regionId) {

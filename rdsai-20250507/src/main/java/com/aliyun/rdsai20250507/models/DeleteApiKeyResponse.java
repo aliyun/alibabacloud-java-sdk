@@ -3,7 +3,7 @@ package com.aliyun.rdsai20250507.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteEdgeFunctionResponse extends TeaModel {
+public class DeleteApiKeyResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DeleteEdgeFunctionResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DeleteEdgeFunctionResponseBody body;
+    public DeleteApiKeyResponseBody body;
 
-    public static DeleteEdgeFunctionResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteEdgeFunctionResponse self = new DeleteEdgeFunctionResponse();
+    public static DeleteApiKeyResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeleteApiKeyResponse self = new DeleteApiKeyResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteEdgeFunctionResponse setHeaders(java.util.Map<String, String> headers) {
+    public DeleteApiKeyResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DeleteEdgeFunctionResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteEdgeFunctionResponse setStatusCode(Integer statusCode) {
+    public DeleteApiKeyResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DeleteEdgeFunctionResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DeleteEdgeFunctionResponse setBody(DeleteEdgeFunctionResponseBody body) {
+    public DeleteApiKeyResponse setBody(DeleteApiKeyResponseBody body) {
         this.body = body;
         return this;
     }
-    public DeleteEdgeFunctionResponseBody getBody() {
+    public DeleteApiKeyResponseBody getBody() {
         return this.body;
     }
 
