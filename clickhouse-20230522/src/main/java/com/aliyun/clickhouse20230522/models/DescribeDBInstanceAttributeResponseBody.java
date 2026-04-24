@@ -488,6 +488,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String vpcId;
 
         /**
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
+        @NameInMap("WebUISnatStatus")
+        public String webUISnatStatus;
+
+        /**
          * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
@@ -803,6 +810,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getVpcId() {
             return this.vpcId;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyData setWebUISnatStatus(String webUISnatStatus) {
+            this.webUISnatStatus = webUISnatStatus;
+            return this;
+        }
+        public String getWebUISnatStatus() {
+            return this.webUISnatStatus;
         }
 
         public DescribeDBInstanceAttributeResponseBodyData setZoneId(String zoneId) {
