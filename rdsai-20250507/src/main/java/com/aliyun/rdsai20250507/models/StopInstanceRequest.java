@@ -4,6 +4,9 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class StopInstanceRequest extends TeaModel {
+    @NameInMap("Force")
+    public Boolean force;
+
     /**
      * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
@@ -26,6 +29,14 @@ public class StopInstanceRequest extends TeaModel {
     public static StopInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         StopInstanceRequest self = new StopInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StopInstanceRequest setForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    public Boolean getForce() {
+        return this.force;
     }
 
     public StopInstanceRequest setInstanceName(String instanceName) {
