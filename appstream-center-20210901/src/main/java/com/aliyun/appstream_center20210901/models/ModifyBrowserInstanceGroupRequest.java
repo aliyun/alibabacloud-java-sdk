@@ -227,12 +227,8 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         @NameInMap("BrowserParam")
         public String browserParam;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("CookiesSync")
-        public String cookiesSync;
+        public Boolean cookiesSync;
 
         /**
          * <p>The home page.</p>
@@ -278,11 +274,11 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
             return this.browserParam;
         }
 
-        public ModifyBrowserInstanceGroupRequestBrowserConfig setCookiesSync(String cookiesSync) {
+        public ModifyBrowserInstanceGroupRequestBrowserConfig setCookiesSync(Boolean cookiesSync) {
             this.cookiesSync = cookiesSync;
             return this;
         }
-        public String getCookiesSync() {
+        public Boolean getCookiesSync() {
             return this.cookiesSync;
         }
 
