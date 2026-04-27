@@ -89,6 +89,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateWorkspaceResponse createWorkspaceWithOptions(CreateWorkspaceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceSite)) {
+            query.put("serviceSite", request.serviceSite);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceName)) {
             query.put("workspaceName", request.workspaceName);
         }
@@ -279,6 +283,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
             query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("workspaceId", request.workspaceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceName)) {

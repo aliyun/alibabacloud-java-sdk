@@ -20,6 +20,13 @@ public class ListWorkspacesRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>ws-32klhjk2312334jkh</p>
+     */
+    @NameInMap("workspaceId")
+    public String workspaceId;
+
+    /**
+     * <strong>example:</strong>
      * <p>ws_test</p>
      */
     @NameInMap("workspaceName")
@@ -44,6 +51,14 @@ public class ListWorkspacesRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListWorkspacesRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
     public ListWorkspacesRequest setWorkspaceName(String workspaceName) {
