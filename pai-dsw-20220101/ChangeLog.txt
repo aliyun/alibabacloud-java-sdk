@@ -1,3 +1,8 @@
+2026-04-27 Version: 2.4.1
+- Update API GetInstance: add response parameters Body.TenantId.
+- Update API ListInstances: add response parameters Body.Instances.$.TenantId.
+
+
 2026-04-02 Version: 2.4.0
 - Support API CreateTempFile.
 - Support API CreateTempFileTask.

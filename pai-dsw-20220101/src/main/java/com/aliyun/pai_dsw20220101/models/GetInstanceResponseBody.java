@@ -424,6 +424,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("Tags")
     public java.util.List<GetInstanceResponseBodyTags> tags;
 
+    @NameInMap("TenantId")
+    public String tenantId;
+
     /**
      * <p>The terminal URL.</p>
      * 
@@ -875,6 +878,14 @@ public class GetInstanceResponseBody extends TeaModel {
     }
     public java.util.List<GetInstanceResponseBodyTags> getTags() {
         return this.tags;
+    }
+
+    public GetInstanceResponseBody setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
     public GetInstanceResponseBody setTerminalUrl(String terminalUrl) {

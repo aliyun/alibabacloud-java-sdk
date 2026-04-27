@@ -1554,6 +1554,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("Tags")
         public java.util.List<ListInstancesResponseBodyInstancesTags> tags;
 
+        @NameInMap("TenantId")
+        public String tenantId;
+
         /**
          * <p>The terminal URL.</p>
          * 
@@ -1930,6 +1933,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public java.util.List<ListInstancesResponseBodyInstancesTags> getTags() {
             return this.tags;
+        }
+
+        public ListInstancesResponseBodyInstances setTenantId(String tenantId) {
+            this.tenantId = tenantId;
+            return this;
+        }
+        public String getTenantId() {
+            return this.tenantId;
         }
 
         public ListInstancesResponseBodyInstances setTerminalUrl(String terminalUrl) {
