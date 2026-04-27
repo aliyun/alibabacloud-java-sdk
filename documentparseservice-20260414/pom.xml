@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>documentparseservice20260414</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
   <name>documentparseservice20260414</name>
   <description>Alibaba Cloud DocumentParseService (20260414) SDK for Java
