@@ -5769,8 +5769,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("rerank", request.rerank);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.retrieveLevel)) {
-            body.put("retrieveLevel", request.retrieveLevel);
+        if (!com.aliyun.teautil.Common.isUnset(request.retrievalOption)) {
+            body.put("retrievalOption", request.retrievalOption);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.runId)) {

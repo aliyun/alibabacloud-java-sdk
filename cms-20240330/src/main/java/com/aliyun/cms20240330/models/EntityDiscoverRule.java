@@ -17,7 +17,7 @@ public class EntityDiscoverRule extends TeaModel {
     public java.util.List<String> instanceIds;
 
     @NameInMap("ipMatchRule")
-    public java.util.List<EntityDiscoverRuleIpMatchRule> ipMatchRule;
+    public EntityDiscoverRuleIpMatchRule ipMatchRule;
 
     @NameInMap("labels")
     public java.util.List<EntityDiscoverRuleLabels> labels;
@@ -72,11 +72,11 @@ public class EntityDiscoverRule extends TeaModel {
         return this.instanceIds;
     }
 
-    public EntityDiscoverRule setIpMatchRule(java.util.List<EntityDiscoverRuleIpMatchRule> ipMatchRule) {
+    public EntityDiscoverRule setIpMatchRule(EntityDiscoverRuleIpMatchRule ipMatchRule) {
         this.ipMatchRule = ipMatchRule;
         return this;
     }
-    public java.util.List<EntityDiscoverRuleIpMatchRule> getIpMatchRule() {
+    public EntityDiscoverRuleIpMatchRule getIpMatchRule() {
         return this.ipMatchRule;
     }
 
@@ -211,17 +211,9 @@ public class EntityDiscoverRule extends TeaModel {
     }
 
     public static class EntityDiscoverRuleIpMatchRule extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>192.168.0.1/10</p>
-         */
         @NameInMap("ipCIDR")
         public String ipCIDR;
 
-        /**
-         * <strong>example:</strong>
-         * <p>hostIp</p>
-         */
         @NameInMap("ipFieldKey")
         public String ipFieldKey;
 

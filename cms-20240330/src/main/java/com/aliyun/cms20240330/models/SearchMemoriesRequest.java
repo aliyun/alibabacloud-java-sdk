@@ -37,10 +37,10 @@ public class SearchMemoriesRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>L1</p>
+     * <p>reranker,llm_rank</p>
      */
-    @NameInMap("retrieveLevel")
-    public String retrieveLevel;
+    @NameInMap("retrievalOption")
+    public String retrievalOption;
 
     /**
      * <strong>example:</strong>
@@ -122,12 +122,12 @@ public class SearchMemoriesRequest extends TeaModel {
         return this.rerank;
     }
 
-    public SearchMemoriesRequest setRetrieveLevel(String retrieveLevel) {
-        this.retrieveLevel = retrieveLevel;
+    public SearchMemoriesRequest setRetrievalOption(String retrievalOption) {
+        this.retrievalOption = retrievalOption;
         return this;
     }
-    public String getRetrieveLevel() {
-        return this.retrieveLevel;
+    public String getRetrievalOption() {
+        return this.retrievalOption;
     }
 
     public SearchMemoriesRequest setRunId(String runId) {
