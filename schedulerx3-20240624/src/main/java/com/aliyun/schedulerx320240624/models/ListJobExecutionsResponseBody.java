@@ -249,6 +249,13 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         @NameInMap("WorkflowName")
         public String workflowName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;sessionId&quot;:&quot;ac21f9f6-5a88-4f97-abd1-b51989166035&quot;}</p>
+         */
+        @NameInMap("XAttrs")
+        public String XAttrs;
+
         public static ListJobExecutionsResponseBodyDataRecords build(java.util.Map<String, ?> map) throws Exception {
             ListJobExecutionsResponseBodyDataRecords self = new ListJobExecutionsResponseBodyDataRecords();
             return TeaModel.build(map, self);
@@ -436,6 +443,14 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         }
         public String getWorkflowName() {
             return this.workflowName;
+        }
+
+        public ListJobExecutionsResponseBodyDataRecords setXAttrs(String XAttrs) {
+            this.XAttrs = XAttrs;
+            return this;
+        }
+        public String getXAttrs() {
+            return this.XAttrs;
         }
 
     }

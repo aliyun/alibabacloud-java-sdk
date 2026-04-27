@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class UpdateClusterRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxljob-c20f7ec9a78</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xx-test-1107</p>
+     */
     @NameInMap("ClusterName")
     public String clusterName;
 

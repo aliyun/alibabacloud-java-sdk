@@ -144,6 +144,10 @@ public class ListAppsResponseBody extends TeaModel {
         @NameInMap("JobNum")
         public Integer jobNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("LabelRouteStrategy")
         public Integer labelRouteStrategy;
 
@@ -181,10 +185,21 @@ public class ListAppsResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>k8s_service</p>
+         * <p>1</p>
          */
+        @NameInMap("WorkerId")
+        public Integer workerId;
+
         @NameInMap("WorkerRegistry")
+        @Deprecated
         public String workerRegistry;
+
+        /**
+         * <strong>example:</strong>
+         * <p>openclaw</p>
+         */
+        @NameInMap("WorkerType")
+        public String workerType;
 
         /**
          * <strong>example:</strong>
@@ -311,12 +326,29 @@ public class ListAppsResponseBody extends TeaModel {
             return this.updater;
         }
 
+        public ListAppsResponseBodyDataRecords setWorkerId(Integer workerId) {
+            this.workerId = workerId;
+            return this;
+        }
+        public Integer getWorkerId() {
+            return this.workerId;
+        }
+
+        @Deprecated
         public ListAppsResponseBodyDataRecords setWorkerRegistry(String workerRegistry) {
             this.workerRegistry = workerRegistry;
             return this;
         }
         public String getWorkerRegistry() {
             return this.workerRegistry;
+        }
+
+        public ListAppsResponseBodyDataRecords setWorkerType(String workerType) {
+            this.workerType = workerType;
+            return this;
+        }
+        public String getWorkerType() {
+            return this.workerType;
         }
 
         public ListAppsResponseBodyDataRecords setWorkflowNum(Integer workflowNum) {

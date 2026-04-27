@@ -1,3 +1,20 @@
+2026-04-27 Version: 1.7.0
+- Support API CreateExecutorGroup.
+- Support API DeleteExecutorGroup.
+- Support API GetPageLog.
+- Support API UpdateExecutorGroup.
+- Update API CreateCluster: add request parameters ClusterType.
+- Update API CreateJob: add request parameters XAttrs.
+- Update API GetCluster: add response parameters Body.Data.ClusterType.
+- Update API ListApps: add response parameters Body.Data.Records.$.WorkerId.
+- Update API ListApps: add response parameters Body.Data.Records.$.WorkerType.
+- Update API ListClusters: add request parameters ClusterType.
+- Update API ListClusters: add response parameters Body.Data.Records.$.ClusterType.
+- Update API ListJobExecutions: add response parameters Body.Data.Records.$.XAttrs.
+- Update API UpdateApp: add request parameters WorkerId.
+- Update API UpdateJob: add request parameters XAttrs.
+
+
 2026-01-28 Version: 1.6.0
 - Support API CreateDatasource.
 - Support API DeleteDatasource.

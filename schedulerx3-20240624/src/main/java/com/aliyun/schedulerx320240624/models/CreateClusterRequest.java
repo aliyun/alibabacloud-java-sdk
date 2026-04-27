@@ -21,13 +21,18 @@ public class CreateClusterRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>scx.dev.x1</p>
      */
     @NameInMap("ClusterSpec")
     public String clusterSpec;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("ClusterType")
+    public Integer clusterType;
 
     /**
      * <strong>example:</strong>
@@ -37,8 +42,6 @@ public class CreateClusterRequest extends TeaModel {
     public Integer duration;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>xxljob</p>
      */
@@ -55,15 +58,11 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<CreateClusterRequestTag> tag;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("VSwitches")
     public java.util.List<CreateClusterRequestVSwitches> vSwitches;
 
     /**
      * <p>VPC id</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-aa1a18236n90rqhuhhnhh</p>
@@ -98,6 +97,14 @@ public class CreateClusterRequest extends TeaModel {
     }
     public String getClusterSpec() {
         return this.clusterSpec;
+    }
+
+    public CreateClusterRequest setClusterType(Integer clusterType) {
+        this.clusterType = clusterType;
+        return this;
+    }
+    public Integer getClusterType() {
+        return this.clusterType;
     }
 
     public CreateClusterRequest setDuration(Integer duration) {
@@ -180,8 +187,6 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestVSwitches extends TeaModel {
         /**
-         * <p>This parameter is required.</p>
-         * 
          * <strong>example:</strong>
          * <p>vsw-2ze745n3r2sfqtahhubpl</p>
          */
@@ -189,8 +194,6 @@ public class CreateClusterRequest extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>This parameter is required.</p>
-         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-j</p>
          */

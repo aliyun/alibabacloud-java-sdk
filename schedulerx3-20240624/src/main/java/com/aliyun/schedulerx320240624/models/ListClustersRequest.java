@@ -20,6 +20,13 @@ public class ListClustersRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("ClusterType")
+    public Integer clusterType;
+
+    /**
+     * <strong>example:</strong>
      * <p>5</p>
      */
     @NameInMap("PageNum")
@@ -54,6 +61,14 @@ public class ListClustersRequest extends TeaModel {
     }
     public String getClusterName() {
         return this.clusterName;
+    }
+
+    public ListClustersRequest setClusterType(Integer clusterType) {
+        this.clusterType = clusterType;
+        return this;
+    }
+    public Integer getClusterType() {
+        return this.clusterType;
     }
 
     public ListClustersRequest setPageNum(Integer pageNum) {

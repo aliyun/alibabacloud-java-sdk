@@ -191,6 +191,13 @@ public class CreateJobShrinkRequest extends TeaModel {
     @NameInMap("Weight")
     public Integer weight;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;responseMode&quot;:&quot;streaming&quot;}</p>
+     */
+    @NameInMap("XAttrs")
+    public String XAttrs;
+
     public static CreateJobShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateJobShrinkRequest self = new CreateJobShrinkRequest();
         return TeaModel.build(map, self);
@@ -410,6 +417,14 @@ public class CreateJobShrinkRequest extends TeaModel {
     }
     public Integer getWeight() {
         return this.weight;
+    }
+
+    public CreateJobShrinkRequest setXAttrs(String XAttrs) {
+        this.XAttrs = XAttrs;
+        return this;
+    }
+    public String getXAttrs() {
+        return this.XAttrs;
     }
 
 }

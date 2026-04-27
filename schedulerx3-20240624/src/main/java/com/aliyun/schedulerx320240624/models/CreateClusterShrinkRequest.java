@@ -21,13 +21,18 @@ public class CreateClusterShrinkRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>scx.dev.x1</p>
      */
     @NameInMap("ClusterSpec")
     public String clusterSpec;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("ClusterType")
+    public Integer clusterType;
 
     /**
      * <strong>example:</strong>
@@ -37,8 +42,6 @@ public class CreateClusterShrinkRequest extends TeaModel {
     public Integer duration;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>xxljob</p>
      */
@@ -55,15 +58,11 @@ public class CreateClusterShrinkRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<CreateClusterShrinkRequestTag> tag;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("VSwitches")
     public String vSwitchesShrink;
 
     /**
      * <p>VPC id</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-aa1a18236n90rqhuhhnhh</p>
@@ -98,6 +97,14 @@ public class CreateClusterShrinkRequest extends TeaModel {
     }
     public String getClusterSpec() {
         return this.clusterSpec;
+    }
+
+    public CreateClusterShrinkRequest setClusterType(Integer clusterType) {
+        this.clusterType = clusterType;
+        return this;
+    }
+    public Integer getClusterType() {
+        return this.clusterType;
     }
 
     public CreateClusterShrinkRequest setDuration(Integer duration) {

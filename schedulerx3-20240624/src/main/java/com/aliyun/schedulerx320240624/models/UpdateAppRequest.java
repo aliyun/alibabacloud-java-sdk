@@ -36,6 +36,10 @@ public class UpdateAppRequest extends TeaModel {
     @NameInMap("EnableLog")
     public Boolean enableLog;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LabelRouteStrategy")
     public Integer labelRouteStrategy;
 
@@ -51,6 +55,13 @@ public class UpdateAppRequest extends TeaModel {
      */
     @NameInMap("Title")
     public String title;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("WorkerId")
+    public Integer workerId;
 
     public static UpdateAppRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAppRequest self = new UpdateAppRequest();
@@ -111,6 +122,14 @@ public class UpdateAppRequest extends TeaModel {
     }
     public String getTitle() {
         return this.title;
+    }
+
+    public UpdateAppRequest setWorkerId(Integer workerId) {
+        this.workerId = workerId;
+        return this;
+    }
+    public Integer getWorkerId() {
+        return this.workerId;
     }
 
 }

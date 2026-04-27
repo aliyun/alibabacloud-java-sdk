@@ -154,6 +154,13 @@ public class GetClusterResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("ClusterType")
+        public Integer clusterType;
+
+        /**
+         * <strong>example:</strong>
          * <p>2024-10-29 15:56:36</p>
          */
         @NameInMap("CreateTime")
@@ -339,6 +346,14 @@ public class GetClusterResponseBody extends TeaModel {
         }
         public String getClusterSpec() {
             return this.clusterSpec;
+        }
+
+        public GetClusterResponseBodyData setClusterType(Integer clusterType) {
+            this.clusterType = clusterType;
+            return this;
+        }
+        public Integer getClusterType() {
+            return this.clusterType;
         }
 
         public GetClusterResponseBodyData setCreateTime(String createTime) {
