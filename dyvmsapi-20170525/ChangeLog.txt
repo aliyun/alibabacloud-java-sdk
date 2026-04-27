@@ -1,3 +1,28 @@
+2026-04-27 Version: 5.2.0
+- Support API CloudAgentLogin.
+- Support API CloudAgentLogout.
+- Support API CloudAgentSetUserData.
+- Support API CloudAgentUnlink.
+- Support API CloudBatchCreateAgent.
+- Support API CloudBatchGetAgentStatus.
+- Support API CloudBatchUpdateAgent.
+- Support API CloudDeleteAgent.
+- Support API CloudDeleteAgentTel.
+- Support API CloudGetAgent.
+- Support API CloudGetAgentStatus.
+- Support API CloudInterruptIvr.
+- Support API CloudListAgentTel.
+- Support API CloudListFreeAgent.
+- Support API CloudListOnlineAgent.
+- Support API CloudPreviewoutcall.
+- Support API CloudQueryAgent.
+- Support API CloudQueryAgentCnoAndName.
+- Support API CloudQueryAgentGroup.
+- Support API CloudQueryAgentSkill.
+- Support API CloudUpdateAgent.
+- Support API CloudWebcall.
+
+
 2026-04-24 Version: 5.1.0
 - Support API CloudCreateAgent.
 
