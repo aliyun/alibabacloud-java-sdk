@@ -31,6 +31,9 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     @NameInMap("AutoProvisioningGroupType")
     public String autoProvisioningGroupType;
 
+    @NameInMap("CandidateOptions")
+    public CreateAutoProvisioningGroupShrinkRequestCandidateOptions candidateOptions;
+
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
@@ -366,6 +369,14 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     }
     public String getAutoProvisioningGroupType() {
         return this.autoProvisioningGroupType;
+    }
+
+    public CreateAutoProvisioningGroupShrinkRequest setCandidateOptions(CreateAutoProvisioningGroupShrinkRequestCandidateOptions candidateOptions) {
+        this.candidateOptions = candidateOptions;
+        return this;
+    }
+    public CreateAutoProvisioningGroupShrinkRequestCandidateOptions getCandidateOptions() {
+        return this.candidateOptions;
     }
 
     public CreateAutoProvisioningGroupShrinkRequest setClientToken(String clientToken) {
@@ -2089,6 +2100,40 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         }
         public String getSpotInterruptionBehavior() {
             return this.spotInterruptionBehavior;
+        }
+
+    }
+
+    public static class CreateAutoProvisioningGroupShrinkRequestCandidateOptions extends TeaModel {
+        @NameInMap("Evaluate")
+        public Boolean evaluate;
+
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
+        @NameInMap("TimeoutMinutes")
+        public Integer timeoutMinutes;
+
+        public static CreateAutoProvisioningGroupShrinkRequestCandidateOptions build(java.util.Map<String, ?> map) throws Exception {
+            CreateAutoProvisioningGroupShrinkRequestCandidateOptions self = new CreateAutoProvisioningGroupShrinkRequestCandidateOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAutoProvisioningGroupShrinkRequestCandidateOptions setEvaluate(Boolean evaluate) {
+            this.evaluate = evaluate;
+            return this;
+        }
+        public Boolean getEvaluate() {
+            return this.evaluate;
+        }
+
+        public CreateAutoProvisioningGroupShrinkRequestCandidateOptions setTimeoutMinutes(Integer timeoutMinutes) {
+            this.timeoutMinutes = timeoutMinutes;
+            return this;
+        }
+        public Integer getTimeoutMinutes() {
+            return this.timeoutMinutes;
         }
 
     }

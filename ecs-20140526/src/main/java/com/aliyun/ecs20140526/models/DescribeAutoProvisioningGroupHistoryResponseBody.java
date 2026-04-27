@@ -88,9 +88,143 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailCreatedInstanceIds extends TeaModel {
+        @NameInMap("CreatedInstanceId")
+        public java.util.List<String> createdInstanceId;
+
+        public static DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailCreatedInstanceIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailCreatedInstanceIds self = new DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailCreatedInstanceIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailCreatedInstanceIds setCreatedInstanceId(java.util.List<String> createdInstanceId) {
+            this.createdInstanceId = createdInstanceId;
+            return this;
+        }
+        public java.util.List<String> getCreatedInstanceId() {
+            return this.createdInstanceId;
+        }
+
+    }
+
+    public static class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailDestroyedInstanceIds extends TeaModel {
+        @NameInMap("DestroyedInstanceId")
+        public java.util.List<String> destroyedInstanceId;
+
+        public static DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailDestroyedInstanceIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailDestroyedInstanceIds self = new DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailDestroyedInstanceIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailDestroyedInstanceIds setDestroyedInstanceId(java.util.List<String> destroyedInstanceId) {
+            this.destroyedInstanceId = destroyedInstanceId;
+            return this;
+        }
+        public java.util.List<String> getDestroyedInstanceId() {
+            return this.destroyedInstanceId;
+        }
+
+    }
+
+    public static class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailErrorMessagesErrorMessageFailedInstanceIds extends TeaModel {
+        @NameInMap("FailedInstanceId")
+        public java.util.List<String> failedInstanceId;
+
+        public static DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailErrorMessagesErrorMessageFailedInstanceIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailErrorMessagesErrorMessageFailedInstanceIds self = new DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailErrorMessagesErrorMessageFailedInstanceIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailErrorMessagesErrorMessageFailedInstanceIds setFailedInstanceId(java.util.List<String> failedInstanceId) {
+            this.failedInstanceId = failedInstanceId;
+            return this;
+        }
+        public java.util.List<String> getFailedInstanceId() {
+            return this.failedInstanceId;
+        }
+
+    }
+
+    public static class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailErrorMessagesErrorMessage extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>InvalidSecurityGroupId.NotFound</p>
+         */
+        @NameInMap("Code")
+        public String code;
+
+        @NameInMap("FailedInstanceIds")
+        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailErrorMessagesErrorMessageFailedInstanceIds failedInstanceIds;
+
+        /**
+         * <strong>example:</strong>
+         * <p>The specified SecurityGroupId &quot;sg-bp1d8modxxxxx&quot; is not found.</p>
+         */
+        @NameInMap("Message")
+        public String message;
+
+        public static DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailErrorMessagesErrorMessage build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailErrorMessagesErrorMessage self = new DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailErrorMessagesErrorMessage();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailErrorMessagesErrorMessage setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailErrorMessagesErrorMessage setFailedInstanceIds(DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailErrorMessagesErrorMessageFailedInstanceIds failedInstanceIds) {
+            this.failedInstanceIds = failedInstanceIds;
+            return this;
+        }
+        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailErrorMessagesErrorMessageFailedInstanceIds getFailedInstanceIds() {
+            return this.failedInstanceIds;
+        }
+
+        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailErrorMessagesErrorMessage setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+    }
+
+    public static class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailErrorMessages extends TeaModel {
+        @NameInMap("ErrorMessage")
+        public java.util.List<DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailErrorMessagesErrorMessage> errorMessage;
+
+        public static DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailErrorMessages build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailErrorMessages self = new DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailErrorMessages();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailErrorMessages setErrorMessage(java.util.List<DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailErrorMessagesErrorMessage> errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public java.util.List<DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailErrorMessagesErrorMessage> getErrorMessage() {
+            return this.errorMessage;
+        }
+
+    }
+
     public static class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetail extends TeaModel {
+        @NameInMap("CreatedInstanceIds")
+        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailCreatedInstanceIds createdInstanceIds;
+
+        @NameInMap("DestroyedInstanceIds")
+        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailDestroyedInstanceIds destroyedInstanceIds;
+
         @NameInMap("Detail")
         public String detail;
+
+        @NameInMap("ErrorMessages")
+        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailErrorMessages errorMessages;
 
         @NameInMap("Status")
         public String status;
@@ -100,12 +234,36 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetail setCreatedInstanceIds(DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailCreatedInstanceIds createdInstanceIds) {
+            this.createdInstanceIds = createdInstanceIds;
+            return this;
+        }
+        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailCreatedInstanceIds getCreatedInstanceIds() {
+            return this.createdInstanceIds;
+        }
+
+        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetail setDestroyedInstanceIds(DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailDestroyedInstanceIds destroyedInstanceIds) {
+            this.destroyedInstanceIds = destroyedInstanceIds;
+            return this;
+        }
+        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailDestroyedInstanceIds getDestroyedInstanceIds() {
+            return this.destroyedInstanceIds;
+        }
+
         public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetail setDetail(String detail) {
             this.detail = detail;
             return this;
         }
         public String getDetail() {
             return this.detail;
+        }
+
+        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetail setErrorMessages(DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailErrorMessages errorMessages) {
+            this.errorMessages = errorMessages;
+            return this;
+        }
+        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailErrorMessages getErrorMessages() {
+            return this.errorMessages;
         }
 
         public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetail setStatus(String status) {

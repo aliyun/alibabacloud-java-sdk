@@ -3323,6 +3323,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AutoProvisioningGroupType", request.autoProvisioningGroupType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.candidateOptions)) {
+            query.put("CandidateOptions", request.candidateOptions);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
         }
@@ -11640,6 +11644,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.autoProvisioningGroupStatus)) {
             query.put("AutoProvisioningGroupStatus", request.autoProvisioningGroupStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoProvisioningGroupTypes)) {
+            query.put("AutoProvisioningGroupTypes", request.autoProvisioningGroupTypes);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {

@@ -31,6 +31,9 @@ public class DescribeAutoProvisioningGroupsRequest extends TeaModel {
     @NameInMap("AutoProvisioningGroupStatus")
     public java.util.List<String> autoProvisioningGroupStatus;
 
+    @NameInMap("AutoProvisioningGroupTypes")
+    public java.util.List<String> autoProvisioningGroupTypes;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -117,6 +120,14 @@ public class DescribeAutoProvisioningGroupsRequest extends TeaModel {
     }
     public java.util.List<String> getAutoProvisioningGroupStatus() {
         return this.autoProvisioningGroupStatus;
+    }
+
+    public DescribeAutoProvisioningGroupsRequest setAutoProvisioningGroupTypes(java.util.List<String> autoProvisioningGroupTypes) {
+        this.autoProvisioningGroupTypes = autoProvisioningGroupTypes;
+        return this;
+    }
+    public java.util.List<String> getAutoProvisioningGroupTypes() {
+        return this.autoProvisioningGroupTypes;
     }
 
     public DescribeAutoProvisioningGroupsRequest setOwnerAccount(String ownerAccount) {

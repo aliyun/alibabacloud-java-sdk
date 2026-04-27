@@ -77,6 +77,13 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         @NameInMap("Amount")
         public Integer amount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Low</p>
+         */
+        @NameInMap("CandidateEvaluateLevel")
+        public String candidateEvaluateLevel;
+
         @NameInMap("ErrorCode")
         public String errorCode;
 
@@ -106,6 +113,14 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         }
         public Integer getAmount() {
             return this.amount;
+        }
+
+        public CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResult setCandidateEvaluateLevel(String candidateEvaluateLevel) {
+            this.candidateEvaluateLevel = candidateEvaluateLevel;
+            return this;
+        }
+        public String getCandidateEvaluateLevel() {
+            return this.candidateEvaluateLevel;
         }
 
         public CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResult setErrorCode(String errorCode) {

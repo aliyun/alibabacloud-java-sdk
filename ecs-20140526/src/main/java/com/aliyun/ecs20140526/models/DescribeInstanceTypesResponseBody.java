@@ -151,6 +151,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         @NameInMap("HyperThreadingAdjustable")
         public Boolean hyperThreadingAdjustable;
 
+        @NameInMap("NestedVirtualizationSupport")
+        public String nestedVirtualizationSupport;
+
         @NameInMap("SupportedTopologyTypes")
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptionsSupportedTopologyTypes supportedTopologyTypes;
 
@@ -184,6 +187,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
         public Boolean getHyperThreadingAdjustable() {
             return this.hyperThreadingAdjustable;
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptions setNestedVirtualizationSupport(String nestedVirtualizationSupport) {
+            this.nestedVirtualizationSupport = nestedVirtualizationSupport;
+            return this;
+        }
+        public String getNestedVirtualizationSupport() {
+            return this.nestedVirtualizationSupport;
         }
 
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptions setSupportedTopologyTypes(DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptionsSupportedTopologyTypes supportedTopologyTypes) {

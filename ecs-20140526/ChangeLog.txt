@@ -1,3 +1,16 @@
+2026-04-27 Version: 8.7.5
+- Update API CreateAutoProvisioningGroup: add request parameters CandidateOptions.
+- Update API CreateAutoProvisioningGroup: add response parameters Body.LaunchResults.$.CandidateEvaluateLevel.
+- Update API DescribeAutoProvisioningGroupHistory: add response parameters Body.AutoProvisioningGroupHistories.$.ActivityDetails.$.CreatedInstanceIds.
+- Update API DescribeAutoProvisioningGroupHistory: add response parameters Body.AutoProvisioningGroupHistories.$.ActivityDetails.$.DestroyedInstanceIds.
+- Update API DescribeAutoProvisioningGroupHistory: add response parameters Body.AutoProvisioningGroupHistories.$.ActivityDetails.$.ErrorMessages.
+- Update API DescribeAutoProvisioningGroups: add request parameters AutoProvisioningGroupTypes.
+- Update API DescribeAutoProvisioningGroups: add response parameters Body.AutoProvisioningGroups.$.CandidateOptions.
+- Update API DescribeAutoProvisioningGroups: add response parameters Body.AutoProvisioningGroups.$.CapacitySpecification.
+- Update API DescribeAutoProvisioningGroups: add response parameters Body.AutoProvisioningGroups.$.SuspendedProcesses.
+- Update API DescribeInstanceTypes: add response parameters Body.InstanceTypes.$.CpuOptions.NestedVirtualizationSupport.
+
+
 2026-04-24 Version: 8.7.4
 - Update API DescribeImagePipelineExecutions: add response parameters Body.ImagePipelineExecution.$.ErrorCode.
 - Update API DescribeImagePipelineExecutions: add response parameters Body.ImagePipelineExecution.$.ErrorInfo.
