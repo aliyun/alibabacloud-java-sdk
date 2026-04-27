@@ -20,6 +20,13 @@ public class ClientTreeDTO extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>null</p>
+     */
+    @NameInMap("balance")
+    public ClientBalanceDTO balance;
+
+    /**
+     * <strong>example:</strong>
      * <p>[]</p>
      */
     @NameInMap("children")
@@ -128,6 +135,14 @@ public class ClientTreeDTO extends TeaModel {
     }
     public String getAllowedModels() {
         return this.allowedModels;
+    }
+
+    public ClientTreeDTO setBalance(ClientBalanceDTO balance) {
+        this.balance = balance;
+        return this;
+    }
+    public ClientBalanceDTO getBalance() {
+        return this.balance;
     }
 
     public ClientTreeDTO setChildren(java.util.List<ClientTreeDTO> children) {
