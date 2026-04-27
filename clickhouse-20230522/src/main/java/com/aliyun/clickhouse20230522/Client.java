@@ -2333,13 +2333,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Modifies the elastic scaling settings of an ApsaraDB for ClickHouse cluster.</p>
      * 
-     * @param request ModifyDBInstanceClassRequest
+     * @param tmpReq ModifyDBInstanceClassRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBInstanceClassResponse
      */
-    public ModifyDBInstanceClassResponse modifyDBInstanceClassWithOptions(ModifyDBInstanceClassRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ModifyDBInstanceClassResponse modifyDBInstanceClassWithOptions(ModifyDBInstanceClassRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyDBInstanceClassShrinkRequest request = new ModifyDBInstanceClassShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.autoScaleConfig)) {
+            request.autoScaleConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.autoScaleConfig, "AutoScaleConfig", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoScaleConfigShrink)) {
+            query.put("AutoScaleConfig", request.autoScaleConfigShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.computingGroupId)) {
             query.put("ComputingGroupId", request.computingGroupId);
         }

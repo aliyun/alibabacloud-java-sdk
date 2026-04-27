@@ -4,6 +4,13 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceClassRequest extends TeaModel {
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("AutoScaleConfig")
+    public ModifyDBInstanceClassRequestAutoScaleConfig autoScaleConfig;
+
     @NameInMap("ComputingGroupId")
     public String computingGroupId;
 
@@ -84,6 +91,14 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyDBInstanceClassRequest setAutoScaleConfig(ModifyDBInstanceClassRequestAutoScaleConfig autoScaleConfig) {
+        this.autoScaleConfig = autoScaleConfig;
+        return this;
+    }
+    public ModifyDBInstanceClassRequestAutoScaleConfig getAutoScaleConfig() {
+        return this.autoScaleConfig;
+    }
+
     public ModifyDBInstanceClassRequest setComputingGroupId(String computingGroupId) {
         this.computingGroupId = computingGroupId;
         return this;
@@ -162,6 +177,89 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
     }
     public String getStorageType() {
         return this.storageType;
+    }
+
+    public static class ModifyDBInstanceClassRequestAutoScaleConfigVSwitchInfos extends TeaModel {
+        @NameInMap("VSwitchIds")
+        public java.util.List<String> vSwitchIds;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cn-beijing-XXX</p>
+         */
+        @NameInMap("ZoneId")
+        public String zoneId;
+
+        public static ModifyDBInstanceClassRequestAutoScaleConfigVSwitchInfos build(java.util.Map<String, ?> map) throws Exception {
+            ModifyDBInstanceClassRequestAutoScaleConfigVSwitchInfos self = new ModifyDBInstanceClassRequestAutoScaleConfigVSwitchInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyDBInstanceClassRequestAutoScaleConfigVSwitchInfos setVSwitchIds(java.util.List<String> vSwitchIds) {
+            this.vSwitchIds = vSwitchIds;
+            return this;
+        }
+        public java.util.List<String> getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        public ModifyDBInstanceClassRequestAutoScaleConfigVSwitchInfos setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+    }
+
+    public static class ModifyDBInstanceClassRequestAutoScaleConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("BurstNum")
+        public Integer burstNum;
+
+        /**
+         * <strong>example:</strong>
+         * <p>enable</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("VSwitchInfos")
+        public java.util.List<ModifyDBInstanceClassRequestAutoScaleConfigVSwitchInfos> vSwitchInfos;
+
+        public static ModifyDBInstanceClassRequestAutoScaleConfig build(java.util.Map<String, ?> map) throws Exception {
+            ModifyDBInstanceClassRequestAutoScaleConfig self = new ModifyDBInstanceClassRequestAutoScaleConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyDBInstanceClassRequestAutoScaleConfig setBurstNum(Integer burstNum) {
+            this.burstNum = burstNum;
+            return this;
+        }
+        public Integer getBurstNum() {
+            return this.burstNum;
+        }
+
+        public ModifyDBInstanceClassRequestAutoScaleConfig setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ModifyDBInstanceClassRequestAutoScaleConfig setVSwitchInfos(java.util.List<ModifyDBInstanceClassRequestAutoScaleConfigVSwitchInfos> vSwitchInfos) {
+            this.vSwitchInfos = vSwitchInfos;
+            return this;
+        }
+        public java.util.List<ModifyDBInstanceClassRequestAutoScaleConfigVSwitchInfos> getVSwitchInfos() {
+            return this.vSwitchInfos;
+        }
+
     }
 
 }
