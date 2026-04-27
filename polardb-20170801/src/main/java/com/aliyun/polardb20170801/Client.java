@@ -1204,6 +1204,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API允许用户验证指定PolarFS实例内的配额配置是否一致，包括但不限于目录路径上的存储容量和inode限制。如果存在不一致的情况，将返回具体的不一致路径列表及可能的错误信息。</p>
+     * <h3>注意事项</h3>
+     * <ul>
+     * <li>确保<code>PolarFsInstanceId</code>参数正确无误地指向了目标PolarFS实例。</li>
+     * <li>当系统检测到配额不一致时，除了返回<code>IsConsistent=false</code>外，还会提供<code>InconsistentPaths</code>数组来指示具体哪些路径存在问题。</li>
+     * <li>如果请求成功但没有发现任何不一致，则<code>InconsistentPaths</code>为空数组，并且<code>IsConsistent=true</code>。</li>
+     * <li>错误处理：若请求过程中遇到权限不足、资源不存在等问题，请参考提供的错误码定义部分以获取更详细的错误信息。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>用于检查PolarFS实例中配额设置的一致性状态。</p>
+     * 
+     * @param request CheckPolarFsQuotaConsistencyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckPolarFsQuotaConsistencyResponse
+     */
+    public CheckPolarFsQuotaConsistencyResponse checkPolarFsQuotaConsistencyWithOptions(CheckPolarFsQuotaConsistencyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enableRepair)) {
+            query.put("EnableRepair", request.enableRepair);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableStrictCalculate)) {
+            query.put("EnableStrictCalculate", request.enableStrictCalculate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.path)) {
+            query.put("Path", request.path);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.polarFsInstanceId)) {
+            query.put("PolarFsInstanceId", request.polarFsInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckPolarFsQuotaConsistency"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckPolarFsQuotaConsistencyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API允许用户验证指定PolarFS实例内的配额配置是否一致，包括但不限于目录路径上的存储容量和inode限制。如果存在不一致的情况，将返回具体的不一致路径列表及可能的错误信息。</p>
+     * <h3>注意事项</h3>
+     * <ul>
+     * <li>确保<code>PolarFsInstanceId</code>参数正确无误地指向了目标PolarFS实例。</li>
+     * <li>当系统检测到配额不一致时，除了返回<code>IsConsistent=false</code>外，还会提供<code>InconsistentPaths</code>数组来指示具体哪些路径存在问题。</li>
+     * <li>如果请求成功但没有发现任何不一致，则<code>InconsistentPaths</code>为空数组，并且<code>IsConsistent=true</code>。</li>
+     * <li>错误处理：若请求过程中遇到权限不足、资源不存在等问题，请参考提供的错误码定义部分以获取更详细的错误信息。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>用于检查PolarFS实例中配额设置的一致性状态。</p>
+     * 
+     * @param request CheckPolarFsQuotaConsistencyRequest
+     * @return CheckPolarFsQuotaConsistencyResponse
+     */
+    public CheckPolarFsQuotaConsistencyResponse checkPolarFsQuotaConsistency(CheckPolarFsQuotaConsistencyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.checkPolarFsQuotaConsistencyWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Checks whether a service-linked role (SLR) is created.</p>
      * 
@@ -4259,6 +4337,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateParameterGroupResponse createParameterGroup(CreateParameterGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createParameterGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><strong>Path</strong>：需要创建的目录绝对路径。</li>
+     * <li><strong>Recursive</strong>：是否递归创建父目录，默认为 <code>false</code>。</li>
+     * <li>该接口支持在指定的PolarFS实例中创建单个或多个层级的目录结构。</li>
+     * <li>如果设置 <code>Recursive</code> 为 <code>true</code>，则会自动创建所有不存在的父目录。</li>
+     * <li>创建目录时，请确保具有足够的权限。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>用于在指定PolarFS实例中创建新的目录。</p>
+     * 
+     * @param request CreatePolarFsObjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePolarFsObjectResponse
+     */
+    public CreatePolarFsObjectResponse createPolarFsObjectWithOptions(CreatePolarFsObjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.path)) {
+            query.put("Path", request.path);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.polarFsInstanceId)) {
+            query.put("PolarFsInstanceId", request.polarFsInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreatePolarFsObject"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePolarFsObjectResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><strong>Path</strong>：需要创建的目录绝对路径。</li>
+     * <li><strong>Recursive</strong>：是否递归创建父目录，默认为 <code>false</code>。</li>
+     * <li>该接口支持在指定的PolarFS实例中创建单个或多个层级的目录结构。</li>
+     * <li>如果设置 <code>Recursive</code> 为 <code>true</code>，则会自动创建所有不存在的父目录。</li>
+     * <li>创建目录时，请确保具有足够的权限。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>用于在指定PolarFS实例中创建新的目录。</p>
+     * 
+     * @param request CreatePolarFsObjectRequest
+     * @return CreatePolarFsObjectResponse
+     */
+    public CreatePolarFsObjectResponse createPolarFsObject(CreatePolarFsObjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createPolarFsObjectWithOptions(request, runtime);
     }
 
     /**
@@ -13614,6 +13760,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><strong>Path</strong> 参数必须提供一个绝对路径。</li>
+     * <li><strong>Recursive</strong> 参数默认为 <code>false</code>，如果设置为 <code>true</code>，则会递归列出所有子目录的内容。</li>
+     * <li><strong>Depth</strong> 参数用于限制递归深度，默认值为 <code>1</code>。</li>
+     * <li><strong>Filter</strong> 参数支持通配符或正则表达式过滤结果。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>列出指定路径下的文件和子目录信息。</p>
+     * 
+     * @param request DescribePolarFsObjectsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePolarFsObjectsResponse
+     */
+    public DescribePolarFsObjectsResponse describePolarFsObjectsWithOptions(DescribePolarFsObjectsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.path)) {
+            query.put("Path", request.path);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.polarFsInstanceId)) {
+            query.put("PolarFsInstanceId", request.polarFsInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePolarFsObjects"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePolarFsObjectsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><strong>Path</strong> 参数必须提供一个绝对路径。</li>
+     * <li><strong>Recursive</strong> 参数默认为 <code>false</code>，如果设置为 <code>true</code>，则会递归列出所有子目录的内容。</li>
+     * <li><strong>Depth</strong> 参数用于限制递归深度，默认值为 <code>1</code>。</li>
+     * <li><strong>Filter</strong> 参数支持通配符或正则表达式过滤结果。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>列出指定路径下的文件和子目录信息。</p>
+     * 
+     * @param request DescribePolarFsObjectsRequest
+     * @return DescribePolarFsObjectsResponse
+     */
+    public DescribePolarFsObjectsResponse describePolarFsObjects(DescribePolarFsObjectsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePolarFsObjectsWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>查询配额规则</p>
      * 
@@ -21128,6 +21340,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyScheduleTaskResponse modifyScheduleTask(ModifyScheduleTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyScheduleTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>重命名或移动文件</p>
+     * 
+     * @param request MovePolarFsObjectsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return MovePolarFsObjectsResponse
+     */
+    public MovePolarFsObjectsResponse movePolarFsObjectsWithOptions(MovePolarFsObjectsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.objectsToMove)) {
+            query.put("ObjectsToMove", request.objectsToMove);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.polarFsInstanceId)) {
+            query.put("PolarFsInstanceId", request.polarFsInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "MovePolarFsObjects"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new MovePolarFsObjectsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>重命名或移动文件</p>
+     * 
+     * @param request MovePolarFsObjectsRequest
+     * @return MovePolarFsObjectsResponse
+     */
+    public MovePolarFsObjectsResponse movePolarFsObjects(MovePolarFsObjectsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.movePolarFsObjectsWithOptions(request, runtime);
     }
 
     /**
