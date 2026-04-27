@@ -10559,7 +10559,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation to query a list of API keys for a Supabase project.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of API keys for a Supabase project.</p>
+     * <p>Queries the API keys and JWT secrets of a Supabase instance.</p>
      * 
      * @param request GetSupabaseProjectApiKeysRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10598,7 +10598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation to query a list of API keys for a Supabase project.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of API keys for a Supabase project.</p>
+     * <p>Queries the API keys and JWT secrets of a Supabase instance.</p>
      * 
      * @param request GetSupabaseProjectApiKeysRequest
      * @return GetSupabaseProjectApiKeysResponse
@@ -14402,7 +14402,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改Supabase自动启停策略</p>
+     * <p>Modify the auto pause/resume policy of Supabase.</p>
      * 
      * @param request ModifySupabaseAutoScalePolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14442,7 +14442,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改Supabase自动启停策略</p>
+     * <p>Modify the auto pause/resume policy of Supabase.</p>
      * 
      * @param request ModifySupabaseAutoScalePolicyRequest
      * @return ModifySupabaseAutoScalePolicyResponse
@@ -14450,6 +14450,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifySupabaseAutoScalePolicyResponse modifySupabaseAutoScalePolicy(ModifySupabaseAutoScalePolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifySupabaseAutoScalePolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modify the resources of a Supabase instance. You can upgrade or decrease the quota of compute resources and scale out storage resources (disk size).</p>
+     * 
+     * @param request ModifySupabaseProjectResourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifySupabaseProjectResourceResponse
+     */
+    public ModifySupabaseProjectResourceResponse modifySupabaseProjectResourceWithOptions(ModifySupabaseProjectResourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.modifyType)) {
+            query.put("ModifyType", request.modifyType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectSpec)) {
+            query.put("ProjectSpec", request.projectSpec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageSize)) {
+            query.put("StorageSize", request.storageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifySupabaseProjectResource"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifySupabaseProjectResourceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modify the resources of a Supabase instance. You can upgrade or decrease the quota of compute resources and scale out storage resources (disk size).</p>
+     * 
+     * @param request ModifySupabaseProjectResourceRequest
+     * @return ModifySupabaseProjectResourceResponse
+     */
+    public ModifySupabaseProjectResourceResponse modifySupabaseProjectResource(ModifySupabaseProjectResourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifySupabaseProjectResourceWithOptions(request, runtime);
     }
 
     /**
