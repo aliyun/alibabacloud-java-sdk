@@ -952,6 +952,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BusinessChannel", request.businessChannel);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.includeOrgIds)) {
+            query.put("IncludeOrgIds", request.includeOrgIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("MaxResults", request.maxResults);
         }
@@ -1074,6 +1078,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeResourceGroupsResponse describeResourceGroups(DescribeResourceGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeResourceGroupsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query basic user information</p>
+     * 
+     * @param request DescribeUserRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeUserResponse
+     */
+    public DescribeUserResponse describeUserWithOptions(DescribeUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endUserId)) {
+            query.put("EndUserId", request.endUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requireExtraAttributes)) {
+            query.put("RequireExtraAttributes", request.requireExtraAttributes);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeUser"),
+            new TeaPair("version", "2021-03-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeUserResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query basic user information</p>
+     * 
+     * @param request DescribeUserRequest
+     * @return DescribeUserResponse
+     */
+    public DescribeUserResponse describeUser(DescribeUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeUserWithOptions(request, runtime);
     }
 
     /**
@@ -1291,6 +1347,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.propertyKeyValueFilterParam)) {
             query.put("PropertyKeyValueFilterParam", request.propertyKeyValueFilterParam);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.showExtras)) {
+            query.put("ShowExtras", request.showExtras);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
@@ -2302,7 +2362,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Synchronizes all education information.</p>
      * 
-     * @param request SyncAllEduInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SyncAllEduInfoResponse
      */

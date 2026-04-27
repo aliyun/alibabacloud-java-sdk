@@ -159,6 +159,9 @@ public class FilterUsersRequest extends TeaModel {
     @NameInMap("PropertyKeyValueFilterParam")
     public java.util.List<FilterUsersRequestPropertyKeyValueFilterParam> propertyKeyValueFilterParam;
 
+    @NameInMap("ShowExtras")
+    public java.util.Map<String, String> showExtras;
+
     /**
      * <p>The status.</p>
      * 
@@ -307,6 +310,14 @@ public class FilterUsersRequest extends TeaModel {
     }
     public java.util.List<FilterUsersRequestPropertyKeyValueFilterParam> getPropertyKeyValueFilterParam() {
         return this.propertyKeyValueFilterParam;
+    }
+
+    public FilterUsersRequest setShowExtras(java.util.Map<String, String> showExtras) {
+        this.showExtras = showExtras;
+        return this;
+    }
+    public java.util.Map<String, String> getShowExtras() {
+        return this.showExtras;
     }
 
     public FilterUsersRequest setStatus(Integer status) {

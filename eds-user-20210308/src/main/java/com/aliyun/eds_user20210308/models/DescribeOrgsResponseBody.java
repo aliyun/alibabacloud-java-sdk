@@ -57,6 +57,36 @@ public class DescribeOrgsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeOrgsResponseBodyOrgsResourcePolicyList extends TeaModel {
+        @NameInMap("PolicyId")
+        public String policyId;
+
+        @NameInMap("PolicyName")
+        public String policyName;
+
+        public static DescribeOrgsResponseBodyOrgsResourcePolicyList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeOrgsResponseBodyOrgsResourcePolicyList self = new DescribeOrgsResponseBodyOrgsResourcePolicyList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeOrgsResponseBodyOrgsResourcePolicyList setPolicyId(String policyId) {
+            this.policyId = policyId;
+            return this;
+        }
+        public String getPolicyId() {
+            return this.policyId;
+        }
+
+        public DescribeOrgsResponseBodyOrgsResourcePolicyList setPolicyName(String policyName) {
+            this.policyName = policyName;
+            return this;
+        }
+        public String getPolicyName() {
+            return this.policyName;
+        }
+
+    }
+
     public static class DescribeOrgsResponseBodyOrgs extends TeaModel {
         /**
          * <p>The organization ID.</p>
@@ -87,6 +117,9 @@ public class DescribeOrgsResponseBody extends TeaModel {
          */
         @NameInMap("ParentOrgId")
         public String parentOrgId;
+
+        @NameInMap("ResourcePolicyList")
+        public java.util.List<DescribeOrgsResponseBodyOrgsResourcePolicyList> resourcePolicyList;
 
         public static DescribeOrgsResponseBodyOrgs build(java.util.Map<String, ?> map) throws Exception {
             DescribeOrgsResponseBodyOrgs self = new DescribeOrgsResponseBodyOrgs();
@@ -123,6 +156,14 @@ public class DescribeOrgsResponseBody extends TeaModel {
         }
         public String getParentOrgId() {
             return this.parentOrgId;
+        }
+
+        public DescribeOrgsResponseBodyOrgs setResourcePolicyList(java.util.List<DescribeOrgsResponseBodyOrgsResourcePolicyList> resourcePolicyList) {
+            this.resourcePolicyList = resourcePolicyList;
+            return this;
+        }
+        public java.util.List<DescribeOrgsResponseBodyOrgsResourcePolicyList> getResourcePolicyList() {
+            return this.resourcePolicyList;
         }
 
     }

@@ -57,9 +57,42 @@ public class DescribeUsersResponseBody extends TeaModel {
         return this.users;
     }
 
+    public static class DescribeUsersResponseBodyUsersExtrasResourcePolicyList extends TeaModel {
+        @NameInMap("PolicyId")
+        public String policyId;
+
+        @NameInMap("PolicyName")
+        public String policyName;
+
+        public static DescribeUsersResponseBodyUsersExtrasResourcePolicyList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeUsersResponseBodyUsersExtrasResourcePolicyList self = new DescribeUsersResponseBodyUsersExtrasResourcePolicyList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeUsersResponseBodyUsersExtrasResourcePolicyList setPolicyId(String policyId) {
+            this.policyId = policyId;
+            return this;
+        }
+        public String getPolicyId() {
+            return this.policyId;
+        }
+
+        public DescribeUsersResponseBodyUsersExtrasResourcePolicyList setPolicyName(String policyName) {
+            this.policyName = policyName;
+            return this;
+        }
+        public String getPolicyName() {
+            return this.policyName;
+        }
+
+    }
+
     public static class DescribeUsersResponseBodyUsersExtras extends TeaModel {
         @NameInMap("AssignedResourceCount")
         public java.util.Map<String, ?> assignedResourceCount;
+
+        @NameInMap("ResourcePolicyList")
+        public java.util.List<DescribeUsersResponseBodyUsersExtrasResourcePolicyList> resourcePolicyList;
 
         public static DescribeUsersResponseBodyUsersExtras build(java.util.Map<String, ?> map) throws Exception {
             DescribeUsersResponseBodyUsersExtras self = new DescribeUsersResponseBodyUsersExtras();
@@ -72,6 +105,14 @@ public class DescribeUsersResponseBody extends TeaModel {
         }
         public java.util.Map<String, ?> getAssignedResourceCount() {
             return this.assignedResourceCount;
+        }
+
+        public DescribeUsersResponseBodyUsersExtras setResourcePolicyList(java.util.List<DescribeUsersResponseBodyUsersExtrasResourcePolicyList> resourcePolicyList) {
+            this.resourcePolicyList = resourcePolicyList;
+            return this;
+        }
+        public java.util.List<DescribeUsersResponseBodyUsersExtrasResourcePolicyList> getResourcePolicyList() {
+            return this.resourcePolicyList;
         }
 
     }

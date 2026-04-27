@@ -179,6 +179,36 @@ public class FilterUsersResponseBody extends TeaModel {
 
     }
 
+    public static class FilterUsersResponseBodyUsersResourcePolicyList extends TeaModel {
+        @NameInMap("PolicyId")
+        public String policyId;
+
+        @NameInMap("PolicyName")
+        public String policyName;
+
+        public static FilterUsersResponseBodyUsersResourcePolicyList build(java.util.Map<String, ?> map) throws Exception {
+            FilterUsersResponseBodyUsersResourcePolicyList self = new FilterUsersResponseBodyUsersResourcePolicyList();
+            return TeaModel.build(map, self);
+        }
+
+        public FilterUsersResponseBodyUsersResourcePolicyList setPolicyId(String policyId) {
+            this.policyId = policyId;
+            return this;
+        }
+        public String getPolicyId() {
+            return this.policyId;
+        }
+
+        public FilterUsersResponseBodyUsersResourcePolicyList setPolicyName(String policyName) {
+            this.policyName = policyName;
+            return this;
+        }
+        public String getPolicyName() {
+            return this.policyName;
+        }
+
+    }
+
     public static class FilterUsersResponseBodyUsersSupportLoginIdps extends TeaModel {
         /**
          * <p>The enterprise identity provider ID.</p>
@@ -546,6 +576,9 @@ public class FilterUsersResponseBody extends TeaModel {
         @NameInMap("Remark")
         public String remark;
 
+        @NameInMap("ResourcePolicyList")
+        public java.util.List<FilterUsersResponseBodyUsersResourcePolicyList> resourcePolicyList;
+
         /**
          * <p>The remarks on the convenience account.</p>
          * <p>Valid values:</p>
@@ -711,6 +744,14 @@ public class FilterUsersResponseBody extends TeaModel {
         }
         public String getRemark() {
             return this.remark;
+        }
+
+        public FilterUsersResponseBodyUsers setResourcePolicyList(java.util.List<FilterUsersResponseBodyUsersResourcePolicyList> resourcePolicyList) {
+            this.resourcePolicyList = resourcePolicyList;
+            return this;
+        }
+        public java.util.List<FilterUsersResponseBodyUsersResourcePolicyList> getResourcePolicyList() {
+            return this.resourcePolicyList;
         }
 
         public FilterUsersResponseBodyUsers setStatus(Long status) {

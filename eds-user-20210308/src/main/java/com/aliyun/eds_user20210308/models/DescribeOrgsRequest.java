@@ -11,6 +11,9 @@ public class DescribeOrgsRequest extends TeaModel {
     @NameInMap("BusinessChannel")
     public String businessChannel;
 
+    @NameInMap("IncludeOrgIds")
+    public java.util.List<String> includeOrgIds;
+
     /**
      * <p>The maximum number of entries to return. Valid values: 1 to 100.\
      * Default value: 100.</p>
@@ -62,6 +65,14 @@ public class DescribeOrgsRequest extends TeaModel {
     }
     public String getBusinessChannel() {
         return this.businessChannel;
+    }
+
+    public DescribeOrgsRequest setIncludeOrgIds(java.util.List<String> includeOrgIds) {
+        this.includeOrgIds = includeOrgIds;
+        return this;
+    }
+    public java.util.List<String> getIncludeOrgIds() {
+        return this.includeOrgIds;
     }
 
     public DescribeOrgsRequest setMaxResults(Long maxResults) {

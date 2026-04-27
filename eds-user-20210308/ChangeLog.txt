@@ -1,3 +1,12 @@
+2026-04-27 Version: 2.1.0
+- Support API DescribeUser.
+- Update API DescribeOrgs: add request parameters IncludeOrgIds.
+- Update API DescribeOrgs: add response parameters Body.Orgs.$.ResourcePolicyList.
+- Update API DescribeUsers: add response parameters Body.Users.$.Extras.ResourcePolicyList.
+- Update API FilterUsers: add request parameters ShowExtras.
+- Update API FilterUsers: add response parameters Body.Users.$.ResourcePolicyList.
+
+
 2026-03-19 Version: 2.0.1
 - Update API CreateResourceGroup: add request parameters EnableAliyunResourceGroup.
 

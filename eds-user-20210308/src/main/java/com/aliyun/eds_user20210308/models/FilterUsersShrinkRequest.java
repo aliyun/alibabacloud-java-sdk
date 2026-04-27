@@ -159,6 +159,9 @@ public class FilterUsersShrinkRequest extends TeaModel {
     @NameInMap("PropertyKeyValueFilterParam")
     public java.util.List<FilterUsersShrinkRequestPropertyKeyValueFilterParam> propertyKeyValueFilterParam;
 
+    @NameInMap("ShowExtras")
+    public java.util.Map<String, String> showExtras;
+
     /**
      * <p>The status.</p>
      * 
@@ -307,6 +310,14 @@ public class FilterUsersShrinkRequest extends TeaModel {
     }
     public java.util.List<FilterUsersShrinkRequestPropertyKeyValueFilterParam> getPropertyKeyValueFilterParam() {
         return this.propertyKeyValueFilterParam;
+    }
+
+    public FilterUsersShrinkRequest setShowExtras(java.util.Map<String, String> showExtras) {
+        this.showExtras = showExtras;
+        return this;
+    }
+    public java.util.Map<String, String> getShowExtras() {
+        return this.showExtras;
     }
 
     public FilterUsersShrinkRequest setStatus(Integer status) {
