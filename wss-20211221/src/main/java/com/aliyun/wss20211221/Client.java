@@ -92,7 +92,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>查询物流地址</p>
      * 
-     * @param request DescribeDeliveryAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDeliveryAddressResponse
      */

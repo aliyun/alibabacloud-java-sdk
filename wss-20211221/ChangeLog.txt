@@ -1,3 +1,7 @@
+2026-04-27 Version: 1.5.6
+- Update API DescribeMultiPrice: add request parameters OrderItems.$.Data.
+
+
 2026-03-21 Version: 1.5.5
 - Update API DescribePackageDeductions: add response parameters Body.TotalUsedTimeDecimal.
 - Update API DescribePackageDeductions: add response parameters Body.Deductions.$.UsedTimeDecimal.

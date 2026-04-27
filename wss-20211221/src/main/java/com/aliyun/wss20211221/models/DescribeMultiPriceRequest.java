@@ -114,6 +114,9 @@ public class DescribeMultiPriceRequest extends TeaModel {
         @NameInMap("Components")
         public java.util.List<DescribeMultiPriceRequestOrderItemsComponents> components;
 
+        @NameInMap("Data")
+        public String data;
+
         @NameInMap("InstanceIds")
         public java.util.List<String> instanceIds;
 
@@ -170,6 +173,14 @@ public class DescribeMultiPriceRequest extends TeaModel {
         }
         public java.util.List<DescribeMultiPriceRequestOrderItemsComponents> getComponents() {
             return this.components;
+        }
+
+        public DescribeMultiPriceRequestOrderItems setData(String data) {
+            this.data = data;
+            return this;
+        }
+        public String getData() {
+            return this.data;
         }
 
         public DescribeMultiPriceRequestOrderItems setInstanceIds(java.util.List<String> instanceIds) {
