@@ -621,6 +621,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @NameInMap("ProtocolType")
         public String protocolType;
 
+        @NameInMap("QosRuleId")
+        public String qosRuleId;
+
         /**
          * <p>The threshold for the ratio of connected sessions, which triggers automatic scaling of cloud computers within the multi-session many-to-many share. To calculate the ratio of connected sessions, use the following formula:</p>
          * <p><code>Ratio of connected sessions = Number of connected sessions/(Total number of cloud computers × Maximum number of sessions allowed for each cloud computer) × 100%</code></p>
@@ -1116,6 +1119,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
         public String getProtocolType() {
             return this.protocolType;
+        }
+
+        public DescribeDesktopGroupsResponseBodyDesktopGroups setQosRuleId(String qosRuleId) {
+            this.qosRuleId = qosRuleId;
+            return this;
+        }
+        public String getQosRuleId() {
+            return this.qosRuleId;
         }
 
         public DescribeDesktopGroupsResponseBodyDesktopGroups setRatioThreshold(Float ratioThreshold) {

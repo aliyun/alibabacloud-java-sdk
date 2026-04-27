@@ -267,6 +267,9 @@ public class CreateDesktopsRequest extends TeaModel {
     @NameInMap("PromotionId")
     public String promotionId;
 
+    @NameInMap("PurchaseOptions")
+    public CreateDesktopsRequestPurchaseOptions purchaseOptions;
+
     @NameInMap("QosRuleId")
     public String qosRuleId;
 
@@ -598,6 +601,14 @@ public class CreateDesktopsRequest extends TeaModel {
     }
     public String getPromotionId() {
         return this.promotionId;
+    }
+
+    public CreateDesktopsRequest setPurchaseOptions(CreateDesktopsRequestPurchaseOptions purchaseOptions) {
+        this.purchaseOptions = purchaseOptions;
+        return this;
+    }
+    public CreateDesktopsRequestPurchaseOptions getPurchaseOptions() {
+        return this.purchaseOptions;
     }
 
     public CreateDesktopsRequest setQosRuleId(String qosRuleId) {
@@ -1282,6 +1293,25 @@ public class CreateDesktopsRequest extends TeaModel {
         }
         public Integer getUseDuration() {
             return this.useDuration;
+        }
+
+    }
+
+    public static class CreateDesktopsRequestPurchaseOptions extends TeaModel {
+        @NameInMap("MonthlyCredits")
+        public Integer monthlyCredits;
+
+        public static CreateDesktopsRequestPurchaseOptions build(java.util.Map<String, ?> map) throws Exception {
+            CreateDesktopsRequestPurchaseOptions self = new CreateDesktopsRequestPurchaseOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDesktopsRequestPurchaseOptions setMonthlyCredits(Integer monthlyCredits) {
+            this.monthlyCredits = monthlyCredits;
+            return this;
+        }
+        public Integer getMonthlyCredits() {
+            return this.monthlyCredits;
         }
 
     }

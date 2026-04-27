@@ -1,3 +1,13 @@
+2026-04-27 Version: 4.23.3
+- Update API CreateDesktops: add request parameters PurchaseOptions.
+- Update API CreateQosRule: add request parameters AuthDesktopGroupId.
+- Update API DescribeDesktopGroups: add request parameters QosRuleId.
+- Update API DescribeDesktopGroups: add response parameters Body.DesktopGroups.$.QosRuleId.
+- Update API DescribeQosRules: add response parameters Body.QosRules.$.DesktopGroupCount.
+- Update API ModifyQosEntries: add request parameters AuthDesktopGroupId.
+- Update API ModifyQosEntries: add request parameters RevokeDesktopGroupId.
+
+
 2026-04-21 Version: 4.23.2
 - Update API CreateConfigGroup: add request parameters ConfigTimers.$.SegmentTimers.$.VerificationNotificationTime.
 - Update API CreateConfigGroup: add request parameters ConfigTimers.$.SegmentTimers.$.VerificationTime.

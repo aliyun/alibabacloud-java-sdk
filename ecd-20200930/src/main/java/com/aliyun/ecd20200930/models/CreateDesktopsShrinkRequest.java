@@ -267,6 +267,9 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     @NameInMap("PromotionId")
     public String promotionId;
 
+    @NameInMap("PurchaseOptions")
+    public String purchaseOptionsShrink;
+
     @NameInMap("QosRuleId")
     public String qosRuleId;
 
@@ -598,6 +601,14 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     }
     public String getPromotionId() {
         return this.promotionId;
+    }
+
+    public CreateDesktopsShrinkRequest setPurchaseOptionsShrink(String purchaseOptionsShrink) {
+        this.purchaseOptionsShrink = purchaseOptionsShrink;
+        return this;
+    }
+    public String getPurchaseOptionsShrink() {
+        return this.purchaseOptionsShrink;
     }
 
     public CreateDesktopsShrinkRequest setQosRuleId(String qosRuleId) {

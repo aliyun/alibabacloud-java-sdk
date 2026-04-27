@@ -3815,6 +3815,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.desktopAttachmentShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.desktopAttachment, "DesktopAttachment", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.purchaseOptions)) {
+            request.purchaseOptionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.purchaseOptions, "PurchaseOptions", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.amount)) {
             query.put("Amount", request.amount);
@@ -3910,6 +3914,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.promotionId)) {
             query.put("PromotionId", request.promotionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.purchaseOptionsShrink)) {
+            query.put("PurchaseOptions", request.purchaseOptionsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.qosRuleId)) {
@@ -4939,6 +4947,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.authAndroidId)) {
             query.put("AuthAndroidId", request.authAndroidId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authDesktopGroupId)) {
+            query.put("AuthDesktopGroupId", request.authDesktopGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.authDesktopId)) {
@@ -8380,6 +8392,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.protocolType)) {
             query.put("ProtocolType", request.protocolType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qosRuleId)) {
+            query.put("QosRuleId", request.qosRuleId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -18068,6 +18084,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AuthAndroidId", request.authAndroidId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.authDesktopGroupId)) {
+            query.put("AuthDesktopGroupId", request.authDesktopGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.authDesktopId)) {
             query.put("AuthDesktopId", request.authDesktopId);
         }
@@ -18078,6 +18098,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.revokeAndroidId)) {
             query.put("RevokeAndroidId", request.revokeAndroidId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.revokeDesktopGroupId)) {
+            query.put("RevokeDesktopGroupId", request.revokeDesktopGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.revokeDesktopId)) {

@@ -187,6 +187,9 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     @NameInMap("ProtocolType")
     public String protocolType;
 
+    @NameInMap("QosRuleId")
+    public String qosRuleId;
+
     /**
      * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by WUYING Workspace.</p>
      * <p>This parameter is required.</p>
@@ -357,6 +360,14 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     }
     public String getProtocolType() {
         return this.protocolType;
+    }
+
+    public DescribeDesktopGroupsRequest setQosRuleId(String qosRuleId) {
+        this.qosRuleId = qosRuleId;
+        return this;
+    }
+    public String getQosRuleId() {
+        return this.qosRuleId;
     }
 
     public DescribeDesktopGroupsRequest setRegionId(String regionId) {

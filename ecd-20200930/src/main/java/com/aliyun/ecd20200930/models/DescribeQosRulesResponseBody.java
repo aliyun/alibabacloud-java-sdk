@@ -43,6 +43,9 @@ public class DescribeQosRulesResponseBody extends TeaModel {
         @NameInMap("DesktopCount")
         public String desktopCount;
 
+        @NameInMap("DesktopGroupCount")
+        public Integer desktopGroupCount;
+
         /**
          * <strong>example:</strong>
          * <p>10</p>
@@ -89,6 +92,14 @@ public class DescribeQosRulesResponseBody extends TeaModel {
         }
         public String getDesktopCount() {
             return this.desktopCount;
+        }
+
+        public DescribeQosRulesResponseBodyQosRules setDesktopGroupCount(Integer desktopGroupCount) {
+            this.desktopGroupCount = desktopGroupCount;
+            return this;
+        }
+        public Integer getDesktopGroupCount() {
+            return this.desktopGroupCount;
         }
 
         public DescribeQosRulesResponseBodyQosRules setDownload(String download) {

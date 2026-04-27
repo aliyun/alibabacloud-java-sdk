@@ -7,6 +7,9 @@ public class CreateQosRuleRequest extends TeaModel {
     @NameInMap("AuthAndroidId")
     public java.util.List<String> authAndroidId;
 
+    @NameInMap("AuthDesktopGroupId")
+    public java.util.List<String> authDesktopGroupId;
+
     @NameInMap("AuthDesktopId")
     public java.util.List<String> authDesktopId;
 
@@ -54,6 +57,14 @@ public class CreateQosRuleRequest extends TeaModel {
     }
     public java.util.List<String> getAuthAndroidId() {
         return this.authAndroidId;
+    }
+
+    public CreateQosRuleRequest setAuthDesktopGroupId(java.util.List<String> authDesktopGroupId) {
+        this.authDesktopGroupId = authDesktopGroupId;
+        return this;
+    }
+    public java.util.List<String> getAuthDesktopGroupId() {
+        return this.authDesktopGroupId;
     }
 
     public CreateQosRuleRequest setAuthDesktopId(java.util.List<String> authDesktopId) {
