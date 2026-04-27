@@ -610,7 +610,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>查询高级查询历史记录</p>
      * 
-     * @param request DescribeAdvancedQueryHistoryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAdvancedQueryHistoryResponse
      */
@@ -887,6 +886,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取投递监控指标</p>
+     * 
+     * @param request DescribeTrailDeliveryMetricDataRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeTrailDeliveryMetricDataResponse
+     */
+    public DescribeTrailDeliveryMetricDataResponse describeTrailDeliveryMetricDataWithOptions(DescribeTrailDeliveryMetricDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeTrailDeliveryMetricData"),
+            new TeaPair("version", "2020-07-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeTrailDeliveryMetricDataResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取投递监控指标</p>
+     * 
+     * @param request DescribeTrailDeliveryMetricDataRequest
+     * @return DescribeTrailDeliveryMetricDataResponse
+     */
+    public DescribeTrailDeliveryMetricDataResponse describeTrailDeliveryMetricData(DescribeTrailDeliveryMetricDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeTrailDeliveryMetricDataWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>This topic shows you how to query the information about the single-account trails within an Alibaba Cloud account. In this example, the information about a trail named <code>test-4</code> is returned.</p>
      * 
@@ -1038,6 +1077,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeUserLogCountResponse describeUserLogCount(DescribeUserLogCountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeUserLogCountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询用户跟踪量</p>
+     * 
+     * @param request DescribeUserTrailCountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeUserTrailCountResponse
+     */
+    public DescribeUserTrailCountResponse describeUserTrailCountWithOptions(DescribeUserTrailCountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeUserTrailCount"),
+            new TeaPair("version", "2020-07-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeUserTrailCountResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询用户跟踪量</p>
+     * 
+     * @param request DescribeUserTrailCountRequest
+     * @return DescribeUserTrailCountResponse
+     */
+    public DescribeUserTrailCountResponse describeUserTrailCount(DescribeUserTrailCountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeUserTrailCountWithOptions(request, runtime);
     }
 
     /**
@@ -1560,7 +1636,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the region where global events are stored.</p>
      * 
-     * @param request GetGlobalEventsStorageRegionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetGlobalEventsStorageRegionResponse
      */
@@ -1598,7 +1673,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>操作审计成熟度查询接口</p>
      * 
-     * @param request GetGovernanceMetricsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetGovernanceMetricsResponse
      */
@@ -1676,7 +1750,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>获取查询账号开启insight的类型</p>
      * 
-     * @param request GetInsightTypesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetInsightTypesResponse
      */
