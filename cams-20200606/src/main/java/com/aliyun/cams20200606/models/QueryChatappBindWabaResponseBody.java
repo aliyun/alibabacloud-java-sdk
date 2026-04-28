@@ -182,6 +182,13 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <strong>example:</strong>
+         * <p>N</p>
+         */
+        @NameInMap("IsOnBizApp")
+        public String isOnBizApp;
+
+        /**
          * <p>The Marketing Messaging Lite status.</p>
          * 
          * <strong>example:</strong>
@@ -268,6 +275,14 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         }
         public String getId() {
             return this.id;
+        }
+
+        public QueryChatappBindWabaResponseBodyData setIsOnBizApp(String isOnBizApp) {
+            this.isOnBizApp = isOnBizApp;
+            return this;
+        }
+        public String getIsOnBizApp() {
+            return this.isOnBizApp;
         }
 
         public QueryChatappBindWabaResponseBodyData setMarketingMessageLiteStatus(String marketingMessageLiteStatus) {
