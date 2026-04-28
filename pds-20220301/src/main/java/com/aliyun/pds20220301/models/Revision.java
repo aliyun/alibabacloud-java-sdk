@@ -4,66 +4,186 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class Revision extends TeaModel {
+    /**
+     * <p>The hash value of the content.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EA4942AA8761213890A5C386F88E6464D2C31CA3</p>
+     */
     @NameInMap("content_hash")
     public String contentHash;
 
+    /**
+     * <p>The name of the hash algorithm.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sha1</p>
+     */
     @NameInMap("content_hash_name")
     public String contentHashName;
 
+    /**
+     * <p>The CRC64 value of the version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3574582125365864471</p>
+     */
     @NameInMap("crc64_hash")
     public String crc64Hash;
 
+    /**
+     * <p>The time when the version was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-08-20T06:51:27.292Z</p>
+     */
     @NameInMap("created_at")
     public String createdAt;
 
+    /**
+     * <p>The ID of the user who created the version.</p>
+     */
     @NameInMap("creator_id")
     public String creatorId;
 
+    /**
+     * <p>The name of the user who created the version.</p>
+     */
     @NameInMap("creator_name")
     public String creatorName;
 
+    /**
+     * <p>The domain ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bj1</p>
+     */
     @NameInMap("domain_id")
     public String domainId;
 
+    /**
+     * <p>The download URL. The ListRevision operation does not return this value. The GetRevision, UpdateRevision, and RestoreRevision operations return this value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899eff525?Expires=xxx&OSSAccessKeyId=xxx&Signature=xxx">https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899eff525?Expires=xxx&amp;OSSAccessKeyId=xxx&amp;Signature=xxx</a></p>
+     */
     @NameInMap("download_url")
     public String downloadUrl;
 
+    /**
+     * <p>The drive ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <p>The file extension.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mov</p>
+     */
     @NameInMap("file_extension")
     public String fileExtension;
 
+    /**
+     * <p>The file ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9520943DC264</p>
+     */
     @NameInMap("file_id")
     public String fileId;
 
+    /**
+     * <p>Indicates whether it is the latest version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("is_latest_version")
     public Boolean isLatestVersion;
 
+    /**
+     * <p>Indicates whether the version is permanently retained.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("keep_forever")
     public Boolean keepForever;
 
+    /**
+     * <p>The description of the version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aaa</p>
+     */
     @NameInMap("revision_description")
     public String revisionDescription;
 
+    /**
+     * <p>The version ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40CB7794C929</p>
+     */
     @NameInMap("revision_id")
     public String revisionId;
 
+    /**
+     * <p>The version name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.mov</p>
+     */
     @NameInMap("revision_name")
     public String revisionName;
 
+    /**
+     * <p>The version number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("revision_version")
     public Long revisionVersion;
 
+    /**
+     * <p>The version size.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1024</p>
+     */
     @NameInMap("size")
     public Long size;
 
+    /**
+     * <p>The URL of the thumbnail.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899eff525?Expires=xxx&OSSAccessKeyId=xxx&Signature=xxx">https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899eff525?Expires=xxx&amp;OSSAccessKeyId=xxx&amp;Signature=xxx</a></p>
+     */
     @NameInMap("thumbnail")
     public String thumbnail;
 
+    /**
+     * <p>The time when the version was modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-08-20T06:51:27.292Z</p>
+     */
     @NameInMap("updated_at")
     public String updatedAt;
 
+    /**
+     * <p>The preview URL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899eff525?Expires=xxx&OSSAccessKeyId=xxx&Signature=xxx">https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899eff525?Expires=xxx&amp;OSSAccessKeyId=xxx&amp;Signature=xxx</a></p>
+     */
     @NameInMap("url")
     public String url;
 

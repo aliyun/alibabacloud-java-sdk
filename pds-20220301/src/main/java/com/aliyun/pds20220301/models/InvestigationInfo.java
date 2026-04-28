@@ -4,12 +4,41 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class InvestigationInfo extends TeaModel {
+    /**
+     * <p>The status of the review.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>0: The review is not performed.</li>
+     * <li>1: The review is not supported.</li>
+     * <li>2: The review fails.</li>
+     * <li>3: The review is in progress.</li>
+     * <li>4: The review is complete.</li>
+     * <li>5: Penalty methods are applied.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("status")
     public Long status;
 
+    /**
+     * <p>The recommended operation provided by the review.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>pass: The review is passed..</li>
+     * <li>block: The review is not passed. It is recommended to limit the use of the image.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>block</p>
+     */
     @NameInMap("suggestion")
     public String suggestion;
 
+    /**
+     * <p>Video review information</p>
+     */
     @NameInMap("video_detail")
     public InvestigationInfoVideoDetail videoDetail;
 
@@ -43,12 +72,30 @@ public class InvestigationInfo extends TeaModel {
     }
 
     public static class InvestigationInfoVideoDetailBlockFrames extends TeaModel {
+        /**
+         * <p>Category of review results</p>
+         * 
+         * <strong>example:</strong>
+         * <p>porn</p>
+         */
         @NameInMap("label")
         public String label;
 
+        /**
+         * <p>Time (in seconds)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("offset")
         public Long offset;
 
+        /**
+         * <p>The confidence level. Valid values: 0 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99.1</p>
+         */
         @NameInMap("rate")
         public Double rate;
 
@@ -84,6 +131,9 @@ public class InvestigationInfo extends TeaModel {
     }
 
     public static class InvestigationInfoVideoDetail extends TeaModel {
+        /**
+         * <p>Violation frame information</p>
+         */
         @NameInMap("block_frames")
         public java.util.List<InvestigationInfoVideoDetailBlockFrames> blockFrames;
 

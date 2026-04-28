@@ -4,111 +4,312 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class File extends TeaModel {
+    /**
+     * <p>The permissions.</p>
+     */
     @NameInMap("action_list")
     public java.util.List<String> actionList;
 
+    /**
+     * <p>The remaining time until the file is automatically deleted from the recycle bin (if in it).</p>
+     */
     @NameInMap("auto_delete_left_sec")
     public Long autoDeleteLeftSec;
 
+    /**
+     * <p>The category. Drive and Photo Service (PDS) classifies files based on their extensions and mime-type. The supported categories include doc, image, audio, and video.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>image</p>
+     */
     @NameInMap("category")
     public String category;
 
+    /**
+     * <p>The hash value of the content.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EA4942AA8761213890A5C386F88E6464D2C31CA3</p>
+     */
     @NameInMap("content_hash")
     public String contentHash;
 
+    /**
+     * <p>The name of the hash algorithm. Set the value to sha1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sha1</p>
+     */
     @NameInMap("content_hash_name")
     public String contentHashName;
 
+    /**
+     * <p>The type of the content.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>application/json</p>
+     */
     @NameInMap("content_type")
     public String contentType;
 
+    /**
+     * <p>crc64</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3574582125365864471</p>
+     */
     @NameInMap("crc64_hash")
     public String crc64Hash;
 
+    /**
+     * <p>The time when the file was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-08-20T06:51:27.292Z</p>
+     */
     @NameInMap("created_at")
     public String createdAt;
 
+    /**
+     * <p>The description of the file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>image file</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The information about the folder structure. This parameter is returned only if you include the dir_size field in the fields parameter by calling the ListFile or GetFile operation.</p>
+     */
     @NameInMap("dir_size_info")
     public FileDirSizeInfo dirSizeInfo;
 
+    /**
+     * <p>The domain ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bj1</p>
+     */
     @NameInMap("domain_id")
     public String domainId;
 
+    /**
+     * <p>The download URL. The default validity period of the download URL is 15 minutes. If the URL expires, you can obtain the URL by calling the GetFile operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899eff525?Expires=xxx&OSSAccessKeyId=xxx&Signature=xxx">https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899eff525?Expires=xxx&amp;OSSAccessKeyId=xxx&amp;Signature=xxx</a></p>
+     */
     @NameInMap("download_url")
     public String downloadUrl;
 
+    /**
+     * <p>The drive ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <p>The file name extension.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>txt</p>
+     */
     @NameInMap("file_extension")
     public String fileExtension;
 
+    /**
+     * <p>The file ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5d79206586bb5dd69fb34c349282718146c55da7</p>
+     */
     @NameInMap("file_id")
     public String fileId;
 
+    /**
+     * <p>Specifies whether to hide the file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("hidden")
     public Boolean hidden;
 
+    /**
+     * <p>The file ID path.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>id1/id2</p>
+     */
     @NameInMap("id_path")
     public String idPath;
 
+    /**
+     * <p>The image metadata. This parameter takes effect only if the value-added image processing feature is enabled.</p>
+     */
     @NameInMap("image_media_metadata")
     public ImageMediaMetadata imageMediaMetadata;
 
+    /**
+     * <p>The labels of the file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;label1:1&quot;, &quot;label2:2&quot;]</p>
+     */
     @NameInMap("labels")
     public java.util.List<String> labels;
 
+    /**
+     * <p>The time when the local file was created. The time refers to the local time when the file was uploaded. This parameter helps identify the local upload time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-08-20T06:51:27.292Z</p>
+     */
     @NameInMap("local_created_at")
     public String localCreatedAt;
 
+    /**
+     * <p>The time when the local file was modified. The time refers to the local time when the modified file was uploaded. This parameter helps identify the local update time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-08-20T06:51:27.292Z</p>
+     */
     @NameInMap("local_modified_at")
     public String localModifiedAt;
 
+    /**
+     * <p>The file name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.mov</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The file path.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>root/f1/f2</p>
+     */
     @NameInMap("name_path")
     public String namePath;
 
+    /**
+     * <p>The parent folder ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3d5b846942cf94fa72324c8a4bda34e81da635a</p>
+     */
     @NameInMap("parent_file_id")
     public String parentFileId;
 
+    /**
+     * <p>The version ID. If a file that has the same file ID with an existing one is uploaded, a new version ID is generated for the file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5d5b846942cf94fa72324c14a4bda34e81da635d</p>
+     */
     @NameInMap("revision_id")
     public String revisionId;
 
+    /**
+     * <p>The file size</p>
+     * <p>or folder size. The folder size is calculated based on all descendant files and folders in the folder. Note: The folder size can be returned only when you call the ListFile or GetFile operation and include the dir_size field in the fields parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1024</p>
+     */
     @NameInMap("size")
     public Long size;
 
+    /**
+     * <p>Specifies whether to add the file to favorites.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("starred")
     public Boolean starred;
 
+    /**
+     * <p>The status of the file. Only files and directories in the available state can be accessed. If you call the GetFile operation to obtain a file that is in the uploading state, a response indicating that the file does not exist is returned. If you call the ListFile operation to query files, files in the uploading state are not returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>available</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>The URL of the thumbnail. This parameter is deprecated and we recommend that you use thumbnail_urls.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899eff525?Expires=xxx&OSSAccessKeyId=xxx&Signature=xxx">https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899eff525?Expires=xxx&amp;OSSAccessKeyId=xxx&amp;Signature=xxx</a></p>
+     */
     @NameInMap("thumbnail")
     public String thumbnail;
 
+    /**
+     * <p>The information about the returned thumbnail. The value corresponds to the key that is specified by thumbnail_processes.</p>
+     */
     @NameInMap("thumbnail_urls")
     public java.util.Map<String, String> thumbnailUrls;
 
+    /**
+     * <p>The time when the file was put into the recycle bin.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-08-20T06:51:27.292Z</p>
+     */
     @NameInMap("trashed_at")
     public String trashedAt;
 
+    /**
+     * <p>The file type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>file</li>
+     * <li>folder</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>file</p>
+     */
     @NameInMap("type")
     public String type;
 
+    /**
+     * <p>The time when the file was modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-08-20T06:51:27.292Z</p>
+     */
     @NameInMap("updated_at")
     public String updatedAt;
 
+    /**
+     * <p>The upload ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C9DCFE5A82644AC7A02DB74C30C934A6</p>
+     */
     @NameInMap("upload_id")
     public String uploadId;
 
+    /**
+     * <p>The custom tags.</p>
+     */
     @NameInMap("user_tags")
     public java.util.Map<String, String> userTags;
 
+    /**
+     * <p>The audio and video information.</p>
+     */
     @NameInMap("video_media_metadata")
     public VideoMediaMetadata videoMediaMetadata;
 
@@ -406,9 +607,21 @@ public class File extends TeaModel {
     }
 
     public static class FileDirSizeInfo extends TeaModel {
+        /**
+         * <p>The number of all descendant folders in the folder, which is calculated recursively.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("dir_count")
         public Long dirCount;
 
+        /**
+         * <p>The number of all descendant files in the folder, which is calculated recursively.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("file_count")
         public Long fileCount;
 

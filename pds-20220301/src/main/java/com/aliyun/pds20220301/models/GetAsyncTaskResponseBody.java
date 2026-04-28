@@ -133,6 +133,9 @@ public class GetAsyncTaskResponseBody extends TeaModel {
     @NameInMap("status")
     public String status;
 
+    @NameInMap("task_type")
+    public String taskType;
+
     /**
      * <p>The total amount of work to be done in the asynchronous task, such as the number of files to be packaged for package download on the server.</p>
      * 
@@ -272,6 +275,14 @@ public class GetAsyncTaskResponseBody extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public GetAsyncTaskResponseBody setTaskType(String taskType) {
+        this.taskType = taskType;
+        return this;
+    }
+    public String getTaskType() {
+        return this.taskType;
     }
 
     public GetAsyncTaskResponseBody setTotalProcess(Long totalProcess) {

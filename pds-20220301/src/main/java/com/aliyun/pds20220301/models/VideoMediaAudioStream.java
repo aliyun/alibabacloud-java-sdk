@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class VideoMediaAudioStream extends TeaModel {
     /**
+     * <p>The bitrate of the audio stream. Unit: bit/s.</p>
+     * 
      * <strong>example:</strong>
      * <p>129280</p>
      */
@@ -12,6 +14,8 @@ public class VideoMediaAudioStream extends TeaModel {
     public String bitRate;
 
     /**
+     * <p>The audio encoding mode.</p>
+     * 
      * <strong>example:</strong>
      * <p>aac</p>
      */
@@ -19,6 +23,8 @@ public class VideoMediaAudioStream extends TeaModel {
     public String codeName;
 
     /**
+     * <p>The duration of the audio stream. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>7704.573000</p>
      */

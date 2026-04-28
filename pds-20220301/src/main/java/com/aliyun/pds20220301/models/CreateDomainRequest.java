@@ -5,26 +5,26 @@ import com.aliyun.tea.*;
 
 public class CreateDomainRequest extends TeaModel {
     /**
-     * <p>domain 描述</p>
+     * <p>The description of the domain.</p>
      * 
      * <strong>example:</strong>
-     * <p>你好企业网盘开发环境</p>
+     * <p>cloud drive dev</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>If you want to perform secondary operations based on Drive and Photo Service and perform fine-grained control on your tenants, you can use the parent-child domain feature of Drive and Photo Service. For more information, join the DingTalk group whose ID is 23146118.</p>
+     * <p>The name of the domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>你好企业网盘</p>
+     * <p>cloud drive</p>
      */
     @NameInMap("domain_name")
     public String domainName;
 
     /**
-     * <p>https</p>
+     * <p>Specifies whether to enable the default drive feature. A value of true specifies that all users are assigned a drive by default on the first logon. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -33,7 +33,7 @@ public class CreateDomainRequest extends TeaModel {
     public Boolean initDriveEnable;
 
     /**
-     * <p>http</p>
+     * <p>This parameter is required when the init_drive_enable is set to true. The size of the default drive. Unit: bytes. The default is 0, meaning the created drive size is 0, and files cannot be uploaded. If you need to initialize the drive, set this value. A value of -1 indicates that the size is unlimited.</p>
      * 
      * <strong>example:</strong>
      * <p>1073741824</p>
@@ -42,7 +42,7 @@ public class CreateDomainRequest extends TeaModel {
     public Long initDriveSize;
 
     /**
-     * <p>Create domain.</p>
+     * <p>The ID of the parent domain. If you want to create a child domain, specify parent_domain_id. In most cases, you do not need to create a child domain. If you want to perform secondary operations based on Drive and Photo Service, contact the customer service.</p>
      * 
      * <strong>example:</strong>
      * <p>bj1</p>
@@ -51,7 +51,7 @@ public class CreateDomainRequest extends TeaModel {
     public String parentDomainId;
 
     /**
-     * <p>The ID of the parent domain. If you want to create a child domain, specify parent_domain_id. In most cases, you do not need to create a child domain. If you want to perform secondary operations based on Drive and Photo Service, contact the customer service.</p>
+     * <p>The total storage quota for all drives in the domain. A value of 0 indicates that the quota is unlimited.</p>
      * 
      * <strong>example:</strong>
      * <p>1099511627776</p>
@@ -60,7 +60,20 @@ public class CreateDomainRequest extends TeaModel {
     public Long sizeQuota;
 
     /**
-     * <p>The information about the domain.</p>
+     * <p>Specifies the storage redundancy type. Valid values:</p>
+     * <ul>
+     * <li>LRS: locally redundant storage</li>
+     * <li>ZRS: zone-redundant storage</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>LRS</p>
+     */
+    @NameInMap("store_redundancy_type")
+    public String storeRedundancyType;
+
+    /**
+     * <p>The largest number of users that can be created in the domain. A value of 0 specifies that the number is unlimited.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -119,6 +132,14 @@ public class CreateDomainRequest extends TeaModel {
     }
     public Long getSizeQuota() {
         return this.sizeQuota;
+    }
+
+    public CreateDomainRequest setStoreRedundancyType(String storeRedundancyType) {
+        this.storeRedundancyType = storeRedundancyType;
+        return this;
+    }
+    public String getStoreRedundancyType() {
+        return this.storeRedundancyType;
     }
 
     public CreateDomainRequest setUserCountQuota(Long userCountQuota) {

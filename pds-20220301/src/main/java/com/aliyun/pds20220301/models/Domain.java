@@ -4,42 +4,114 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class Domain extends TeaModel {
+    /**
+     * <p>The time when the domain was created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-08-20T06:51:27.292Z</p>
+     */
     @NameInMap("created_at")
     public String createdAt;
 
+    /**
+     * <p>The method used to calculate the hash value of the data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sha1</p>
+     */
     @NameInMap("data_hash_name")
     public String dataHashName;
 
+    /**
+     * <p>The description of the domain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my domain</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>domain ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bj2</p>
+     */
     @NameInMap("domain_id")
     public String domainId;
 
+    /**
+     * <p>The name of the domain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pdsdomain</p>
+     */
     @NameInMap("domain_name")
     public String domainName;
 
+    /**
+     * <p>Specifies whether to enable the default drive feature. Valid values: true and false. A value of true specifies that all users are assigned a drive by default on the first logon. Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("init_drive_enable")
     public Boolean initDriveEnable;
 
+    /**
+     * <p>The size of the default drive. Unit: bytes. This parameter is required if you set init_drive_enable to true. Default value: 0. A value of 0 indicates that the size of the default drive is 0 byte and you cannot upload files to the drive. To initialize the default drive, set init_drive_size to a positive number or -1. A value of -1 indicates that the size is unlimited.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1073741824</p>
+     */
     @NameInMap("init_drive_size")
     public Long initDriveSize;
 
+    /**
+     * <p>The ID of the parent domain. If the parent domain exists, the current domain is a child domain. Otherwise, the current domain is a common domain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bj1</p>
+     */
     @NameInMap("parent_domain_id")
     public String parentDomainId;
 
+    /**
+     * <p>The access policy of the application.</p>
+     */
     @NameInMap("published_app_access_strategy")
     public AppAccessStrategy publishedAppAccessStrategy;
 
+    /**
+     * <p>Specifies whether to enable sharing.</p>
+     */
     @NameInMap("sharable")
     public Boolean sharable;
 
+    /**
+     * <p>The total storage quota for all drives in the domain. A value of 0 indicates that the quota is unlimited.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1099511627776</p>
+     */
     @NameInMap("size_quota")
     public Long sizeQuota;
 
+    /**
+     * <p>The used storage quota of all drives in the domain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1099511627776</p>
+     */
     @NameInMap("size_quota_used")
     public Long sizeQuotaUsed;
 
+    /**
+     * <p>The status of the domain. 1: The domain runs normally. 2: The domain is being created. 6: The domain has expired.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("status")
     public Long status;
 
@@ -50,12 +122,30 @@ public class Domain extends TeaModel {
     @NameInMap("store_redundancy_type")
     public String storeRedundancyType;
 
+    /**
+     * <p>The time when the domain was last modified. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-08-20T06:51:27.292Z</p>
+     */
     @NameInMap("updated_at")
     public String updatedAt;
 
+    /**
+     * <p>The usage of the logic space. Unit: bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1099511627776</p>
+     */
     @NameInMap("used_size")
     public Long usedSize;
 
+    /**
+     * <p>The maximum allowed number of users.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("user_count_quota")
     public Long userCountQuota;
 

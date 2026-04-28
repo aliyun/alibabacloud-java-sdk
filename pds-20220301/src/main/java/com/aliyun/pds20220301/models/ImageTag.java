@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class ImageTag extends TeaModel {
     /**
+     * <p>The number of files in the group.</p>
+     * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>1</p>
      */
     @NameInMap("count")
     public Long count;
 
     /**
+     * <p>The category of the cover image.</p>
+     * 
      * <strong>example:</strong>
      * <p>image</p>
      */
@@ -19,6 +23,8 @@ public class ImageTag extends TeaModel {
     public String coverFileCategory;
 
     /**
+     * <p>The ID of the cover file.</p>
+     * 
      * <strong>example:</strong>
      * <p>5d79206586bb5dd69fb34c349282718146c55da7</p>
      */
@@ -26,6 +32,8 @@ public class ImageTag extends TeaModel {
     public String coverFileId;
 
     /**
+     * <p>The score of the cover image.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.736</p>
      */
@@ -33,6 +41,8 @@ public class ImageTag extends TeaModel {
     public Float coverOverallScore;
 
     /**
+     * <p>The confidence level of the cover image tag.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +50,8 @@ public class ImageTag extends TeaModel {
     public Float coverTagConfidence;
 
     /**
+     * <p>The URL of the cover image.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899eff525?Expires=xxx&OSSAccessKeyId=xxx&Signature=xxx">https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899eff525?Expires=xxx&amp;OSSAccessKeyId=xxx&amp;Signature=xxx</a></p>
      */
@@ -47,8 +59,7 @@ public class ImageTag extends TeaModel {
     public String coverUrl;
 
     /**
-     * <strong>example:</strong>
-     * <p>动物</p>
+     * <p>The name of the tag.</p>
      */
     @NameInMap("name")
     public String name;

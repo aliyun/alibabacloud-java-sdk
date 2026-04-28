@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SystemTag extends TeaModel {
     /**
+     * <p>The center value of the tag, which specifies whether the tag is the subject in the image. Valid values: 0 to 1. A value of 0 specifies the lowest proportion. A value of 1 specifies the highest proportion.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.877</p>
      */
@@ -12,6 +14,8 @@ public class SystemTag extends TeaModel {
     public Float centricScore;
 
     /**
+     * <p>The confidence level of the tag. Valid values: 0 to 1. A value of 0 specifies the lowest confidence level. A value of 1 specifies the highest confidence level.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.98</p>
      */
@@ -19,20 +23,26 @@ public class SystemTag extends TeaModel {
     public Float confidence;
 
     /**
+     * <p>The name of the tag.</p>
+     * 
      * <strong>example:</strong>
-     * <p>篮球</p>
+     * <p>basketball</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
+     * <p>The name of the parent tag of the tag.</p>
+     * 
      * <strong>example:</strong>
-     * <p>运动</p>
+     * <p>sport</p>
      */
     @NameInMap("parent_name")
     public String parentName;
 
     /**
+     * <p>The level of the tag. The value must be greater than or equal to 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */

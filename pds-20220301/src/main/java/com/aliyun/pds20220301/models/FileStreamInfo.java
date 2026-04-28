@@ -14,7 +14,7 @@ public class FileStreamInfo extends TeaModel {
     public String contentMd5;
 
     @NameInMap("part_info_list")
-    public UploadPartInfo partInfoList;
+    public java.util.List<UploadPartInfo> partInfoList;
 
     @NameInMap("pre_hash")
     public String preHash;
@@ -57,11 +57,11 @@ public class FileStreamInfo extends TeaModel {
         return this.contentMd5;
     }
 
-    public FileStreamInfo setPartInfoList(UploadPartInfo partInfoList) {
+    public FileStreamInfo setPartInfoList(java.util.List<UploadPartInfo> partInfoList) {
         this.partInfoList = partInfoList;
         return this;
     }
-    public UploadPartInfo getPartInfoList() {
+    public java.util.List<UploadPartInfo> getPartInfoList() {
         return this.partInfoList;
     }
 

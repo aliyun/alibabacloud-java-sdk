@@ -4,36 +4,81 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class Token extends TeaModel {
+    /**
+     * <p>The access token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjOWI3YTVhYTA0ZDE0YWUzODY3ZmRjODg2ZmEwMWRhNCIsImN1c3RvbUpzb24iOiJ7XCJjbGllbnRJZFwiOlwiMjVkelgzdmJZcWt0Vnh5WFwiLFwiZG9tYWluSWRcIjpcImJqMjlcIixcInNjb3BlXCI6W1wiRFJJVkUuQUxMXCIsXCJTSEFSRS5BTExcIixcIkZJTEUuQUxMXCIsXCJVU0VSLkFMTFwiLFwiVklFVy5BTExcIixcIlNUT1JBR0UuQUxMXCIsXCJTVE9SQUdFRklMRS5MSVNUXCIsXCJCQVRDSFwiLFwiT0FVVEguQUxMXCIsXCJJTUFHRS5BTExcIixcIklOVklURS5BTExcIixcIkFDQ09VTlQuQUxMXCJdLFwicm9sZVwiOlwidXNlclwiLFwicmVmXCI6XCJodHRwczovL3d3dy5hbGl5dW5kcml2ZS5jb20vXCIsXCJkZXZpY2VfaWRcIjpcImIyODIwNWU1YzU5NzRjY2JiODI3MDNiNjhkYjhjNDUxXCJ9IiwiZXhwIjoxNjQ4NjE0NDkzLCJpYXQiOjE2NDg2MDcyMzN9.d3HVLvv_LFw2QhPrhvjH_kICWQJX9sKKt7NjQEqI_xE2JO_b7D8rPsFTZz93PLvZ7MhCmudTjGImUpd-ehFnI4Go-1S7BGaKaHFILvP-sWy18Wpikowjxx9mSbzBM_cO6D1LI-kyYhXKWHgVdADfVIPniTDA7-ffhUpi7cAebEs</p>
+     */
     @NameInMap("access_token")
     public String accessToken;
 
+    /**
+     * <p>The profile picture of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyunpds.com/a.jpg</p>
+     */
     @NameInMap("avatar")
     public String avatar;
 
+    /**
+     * <p>The ID of the default space of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("default_drive_id")
     public String defaultDriveId;
 
     @NameInMap("default_sbox_drive_id")
     public String defaultSboxDriveId;
 
-    @NameInMap("device_id")
-    public String deviceId;
-
+    /**
+     * <p>The name of the device that is bound to OAuth 2.0 Device Authorization Grant.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4683C25F</p>
+     */
     @NameInMap("device_name")
     public String deviceName;
 
+    /**
+     * <p>The domain ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bj1</p>
+     */
     @NameInMap("domain_id")
     public String domainId;
 
     @NameInMap("exist_link")
     public java.util.List<LinkInfo> existLink;
 
+    /**
+     * <p>The time when the credential expires.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-09-01T06:57:48.813Z</p>
+     */
     @NameInMap("expire_time")
     public String expireTime;
 
+    /**
+     * <p>The validity period of the token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3600</p>
+     */
     @NameInMap("expires_in")
     public Long expiresIn;
 
+    /**
+     * <p>Indicates whether this is the first logon of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("is_first_login")
     public Boolean isFirstLogin;
 
@@ -43,33 +88,78 @@ public class Token extends TeaModel {
     @NameInMap("need_rp_verify")
     public Boolean needRpVerify;
 
+    /**
+     * <p>The nickname of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pdsuser</p>
+     */
     @NameInMap("nick_name")
     public String nickName;
 
     @NameInMap("pin_setup")
     public Boolean pinSetup;
 
+    /**
+     * <p>The refresh token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>060e78d36afb4879b51e4264e9541c16</p>
+     */
     @NameInMap("refresh_token")
     public String refreshToken;
 
+    /**
+     * <p>The role of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>admin</p>
+     */
     @NameInMap("role")
     public String role;
 
     @NameInMap("state")
     public String state;
 
+    /**
+     * <p>The status of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>enabled</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>The type of the token.</p>
+     * <ul>
+     * <li>Only Bearer is supported.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Bearer</p>
+     */
     @NameInMap("token_type")
     public String tokenType;
 
     @NameInMap("user_data")
     public java.util.Map<String, String> userData;
 
+    /**
+     * <p>The user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DING-xxxxx</p>
+     */
     @NameInMap("user_id")
     public String userId;
 
+    /**
+     * <p>The name of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pdsuser</p>
+     */
     @NameInMap("user_name")
     public String userName;
 
@@ -108,14 +198,6 @@ public class Token extends TeaModel {
     }
     public String getDefaultSboxDriveId() {
         return this.defaultSboxDriveId;
-    }
-
-    public Token setDeviceId(String deviceId) {
-        this.deviceId = deviceId;
-        return this;
-    }
-    public String getDeviceId() {
-        return this.deviceId;
     }
 
     public Token setDeviceName(String deviceName) {

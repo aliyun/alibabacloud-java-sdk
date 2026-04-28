@@ -5,19 +5,29 @@ import com.aliyun.tea.*;
 
 public class VideoMediaMetadata extends TeaModel {
     /**
+     * <p>The height of the video image. Unit: pixel.</p>
+     * 
      * <strong>example:</strong>
      * <p>1080</p>
      */
     @NameInMap("height")
     public Long height;
 
+    /**
+     * <p>The information about the audio stream.</p>
+     */
     @NameInMap("video_media_audio_stream")
     public java.util.List<VideoMediaAudioStream> videoMediaAudioStream;
 
+    /**
+     * <p>The information about the video stream.</p>
+     */
     @NameInMap("video_media_video_stream")
     public java.util.List<VideoMediaVideoStream> videoMediaVideoStream;
 
     /**
+     * <p>The width of the video image. Unit: pixel.</p>
+     * 
      * <strong>example:</strong>
      * <p>1920</p>
      */

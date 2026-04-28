@@ -51,6 +51,15 @@ public class MoveFileResponseBody extends TeaModel {
     @NameInMap("file_id")
     public String fileId;
 
+    @NameInMap("file_name")
+    public String fileName;
+
+    @NameInMap("revision_id")
+    public String revisionId;
+
+    @NameInMap("updated_at")
+    public String updatedAt;
+
     public static MoveFileResponseBody build(java.util.Map<String, ?> map) throws Exception {
         MoveFileResponseBody self = new MoveFileResponseBody();
         return TeaModel.build(map, self);
@@ -94,6 +103,30 @@ public class MoveFileResponseBody extends TeaModel {
     }
     public String getFileId() {
         return this.fileId;
+    }
+
+    public MoveFileResponseBody setFileName(String fileName) {
+        this.fileName = fileName;
+        return this;
+    }
+    public String getFileName() {
+        return this.fileName;
+    }
+
+    public MoveFileResponseBody setRevisionId(String revisionId) {
+        this.revisionId = revisionId;
+        return this;
+    }
+    public String getRevisionId() {
+        return this.revisionId;
+    }
+
+    public MoveFileResponseBody setUpdatedAt(String updatedAt) {
+        this.updatedAt = updatedAt;
+        return this;
+    }
+    public String getUpdatedAt() {
+        return this.updatedAt;
     }
 
 }

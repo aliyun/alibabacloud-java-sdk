@@ -102,12 +102,6 @@ public class CreateFileRequest extends TeaModel {
     public Boolean hidden;
 
     /**
-     * <p>The information about the image specified by the client.</p>
-     */
-    @NameInMap("image_media_metadata")
-    public ImageMediaMetadata imageMediaMetadata;
-
-    /**
      * <p>The time when the local file was created. By default, this parameter is left empty. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format based on the UTC+0 time zone.</p>
      * 
      * <strong>example:</strong>
@@ -225,12 +219,6 @@ public class CreateFileRequest extends TeaModel {
     @NameInMap("user_tags")
     public java.util.List<UserTag> userTags;
 
-    /**
-     * <p>The information about the video specified by the client.</p>
-     */
-    @NameInMap("video_media_metadata")
-    public VideoMediaMetadata videoMediaMetadata;
-
     public static CreateFileRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateFileRequest self = new CreateFileRequest();
         return TeaModel.build(map, self);
@@ -298,14 +286,6 @@ public class CreateFileRequest extends TeaModel {
     }
     public Boolean getHidden() {
         return this.hidden;
-    }
-
-    public CreateFileRequest setImageMediaMetadata(ImageMediaMetadata imageMediaMetadata) {
-        this.imageMediaMetadata = imageMediaMetadata;
-        return this;
-    }
-    public ImageMediaMetadata getImageMediaMetadata() {
-        return this.imageMediaMetadata;
     }
 
     public CreateFileRequest setLocalCreatedAt(String localCreatedAt) {
@@ -396,14 +376,6 @@ public class CreateFileRequest extends TeaModel {
         return this.userTags;
     }
 
-    public CreateFileRequest setVideoMediaMetadata(VideoMediaMetadata videoMediaMetadata) {
-        this.videoMediaMetadata = videoMediaMetadata;
-        return this;
-    }
-    public VideoMediaMetadata getVideoMediaMetadata() {
-        return this.videoMediaMetadata;
-    }
-
     public static class CreateFileRequestPartInfoListParallelSha1Ctx extends TeaModel {
         /**
          * <p>The first to fifth 32-bit variables of the SHA-1 hash value of the file content before the file part. This parameter takes effect only if the parallel upload feature is enabled.</p>
@@ -454,6 +426,13 @@ public class CreateFileRequest extends TeaModel {
         public String contentMd5;
 
         /**
+         * <strong>example:</strong>
+         * <p>application/json</p>
+         */
+        @NameInMap("content_type")
+        public String contentType;
+
+        /**
          * <p>The SHA-1 hash value of the file content before the file part. This parameter takes effect only if the parallel upload feature is enabled.</p>
          */
         @NameInMap("parallel_sha1_ctx")
@@ -479,6 +458,14 @@ public class CreateFileRequest extends TeaModel {
         }
         public String getContentMd5() {
             return this.contentMd5;
+        }
+
+        public CreateFileRequestPartInfoList setContentType(String contentType) {
+            this.contentType = contentType;
+            return this;
+        }
+        public String getContentType() {
+            return this.contentType;
         }
 
         public CreateFileRequestPartInfoList setParallelSha1Ctx(CreateFileRequestPartInfoListParallelSha1Ctx parallelSha1Ctx) {

@@ -4,36 +4,93 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class Permission extends TeaModel {
+    /**
+     * <p>Action list.</p>
+     */
     @NameInMap("action_list")
     public java.util.List<PermissionActionList> actionList;
 
+    /**
+     * <p>The permission set. Set this parameter to global for global permissions. In other scenarios, this parameter is empty by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>global</p>
+     */
     @NameInMap("collection")
     public String collection;
 
+    /**
+     * <p>Condition</p>
+     */
     @NameInMap("condition")
     public PermissionCondition condition;
 
+    /**
+     * <p>The creation time in the millisecond timestamp format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1703648502811</p>
+     */
     @NameInMap("created_at")
     public Long createdAt;
 
+    /**
+     * <p>Effect. Valid values: allow, deny.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>deny</p>
+     */
     @NameInMap("effect")
     public String effect;
 
+    /**
+     * <p>Identity ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>af22***</p>
+     */
     @NameInMap("identity_id")
     public String identityId;
 
+    /**
+     * <p>Identity type. Valid values: IT_User, IT_Group, IT_Role.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IT_User</p>
+     */
     @NameInMap("identity_type")
     public String identityType;
 
+    /**
+     * <p>The ID of the resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fa212***</p>
+     */
     @NameInMap("resource")
     public String resource;
 
+    /**
+     * <p>The type of the resource. The file type resource is RT_File.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RT_File</p>
+     */
     @NameInMap("resource_type")
     public String resourceType;
 
+    /**
+     * <p>The time when the modification was made. The value is a millisecond timestamp.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1703648502811</p>
+     */
     @NameInMap("updated_at")
     public Long updatedAt;
 
+    /**
+     * <p>Custom tag.</p>
+     */
     @NameInMap("user_tags")
     public java.util.List<String> userTags;
 
@@ -131,6 +188,12 @@ public class Permission extends TeaModel {
     }
 
     public static class PermissionActionList extends TeaModel {
+        /**
+         * <p>Specific action, such as FILE.ALL</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FILE.ALL</p>
+         */
         @NameInMap("action")
         public String action;
 

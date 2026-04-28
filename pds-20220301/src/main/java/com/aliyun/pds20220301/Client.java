@@ -751,7 +751,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The description of the domain.</p>
      * 
      * <b>summary</b> : 
-     * <p>test_domain</p>
+     * <p>Creates a domain.</p>
      * 
      * @param request CreateDomainRequest
      * @param headers map
@@ -785,6 +785,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("size_quota", request.sizeQuota);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.storeRedundancyType)) {
+            body.put("store_redundancy_type", request.storeRedundancyType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.userCountQuota)) {
             body.put("user_count_quota", request.userCountQuota);
         }
@@ -812,7 +816,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The description of the domain.</p>
      * 
      * <b>summary</b> : 
-     * <p>test_domain</p>
+     * <p>Creates a domain.</p>
      * 
      * @param request CreateDomainRequest
      * @return CreateDomainResponse
@@ -942,10 +946,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("hidden", request.hidden);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.imageMediaMetadata)) {
-            body.put("image_media_metadata", request.imageMediaMetadata);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.localCreatedAt)) {
             body.put("local_created_at", request.localCreatedAt);
         }
@@ -988,10 +988,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.userTags)) {
             body.put("user_tags", request.userTags);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.videoMediaMetadata)) {
-            body.put("video_media_metadata", request.videoMediaMetadata);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2577,7 +2573,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the download URL of a file. For more information about best practices, visit <a href="https://help.aliyun.com/document_detail/175889.html">https://help.aliyun.com/document_detail/175889.html</a>.</p>
+     * <p>Obtains the download URL of the file.</p>
      * 
      * @param request GetDownloadUrlRequest
      * @param headers map
@@ -2631,7 +2627,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the download URL of a file. For more information about best practices, visit <a href="https://help.aliyun.com/document_detail/175889.html">https://help.aliyun.com/document_detail/175889.html</a>.</p>
+     * <p>Obtains the download URL of the file.</p>
      * 
      * @param request GetDownloadUrlRequest
      * @return GetDownloadUrlResponse
@@ -5085,6 +5081,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Penalizes files.</p>
+     * 
+     * @param request PunishFileRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PunishFileResponse
+     */
+    public PunishFileResponse punishFileWithOptions(PunishFileRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.actionCode)) {
+            body.put("action_code", request.actionCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.driveId)) {
+            body.put("drive_id", request.driveId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileId)) {
+            body.put("file_id", request.fileId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.punishReason)) {
+            body.put("punish_reason", request.punishReason);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PunishFile"),
+            new TeaPair("version", "2022-03-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/csi/business/punish_file"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new PunishFileResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Penalizes files.</p>
+     * 
+     * @param request PunishFileRequest
+     * @return PunishFileResponse
+     */
+    public PunishFileResponse punishFile(PunishFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.punishFileWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询凌霄订单价格</p>
      * 
      * @param request QueryOrderPriceRequest
@@ -5561,7 +5616,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Search domain with specified attributes</p>
+     * <p>Searches for domains</p>
      * 
      * @param request SearchDomainsRequest
      * @param headers map
@@ -5607,7 +5662,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Search domain with specified attributes</p>
+     * <p>Searches for domains</p>
      * 
      * @param request SearchDomainsRequest
      * @return SearchDomainsResponse

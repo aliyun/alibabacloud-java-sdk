@@ -4,24 +4,68 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class UncompressedFileInfo extends TeaModel {
+    /**
+     * <p>The drive ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5060</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <p>The file ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>66972349b2b12fa309a143fb9db29647b2ddabfd</p>
+     */
     @NameInMap("file_id")
     public String fileId;
 
+    /**
+     * <p>Whether it is a folder.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("is_folder")
     public Boolean isFolder;
 
+    /**
+     * <p>Subfiles</p>
+     */
     @NameInMap("items")
     public java.util.List<UncompressedFileInfo> items;
 
+    /**
+     * <p>The name of the file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.mov</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The size of the file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>218052</p>
+     */
     @NameInMap("size")
     public Long size;
 
+    /**
+     * <p>Update time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1721368014000</p>
+     */
     @NameInMap("updated_at")
     public Long updatedAt;
 

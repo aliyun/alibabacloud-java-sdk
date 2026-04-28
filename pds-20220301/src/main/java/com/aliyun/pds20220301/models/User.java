@@ -4,48 +4,144 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class User extends TeaModel {
+    /**
+     * <p>The profile picture.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://aa.com/1.jpg">http://aa.com/1.jpg</a></p>
+     */
     @NameInMap("avatar")
     public String avatar;
 
+    /**
+     * <p>The time when the user was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1639762579768</p>
+     */
     @NameInMap("created_at")
     public Long createdAt;
 
+    /**
+     * <p>The user who created the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user1</p>
+     */
     @NameInMap("creator")
     public String creator;
 
+    /**
+     * <p>The default drive ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("default_drive_id")
     public String defaultDriveId;
 
+    /**
+     * <p>The description of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vipuser</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The domain ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bj1</p>
+     */
     @NameInMap("domain_id")
     public String domainId;
 
+    /**
+     * <p>The email address of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:a@aliyunpds.com">a@aliyunpds.com</a></p>
+     */
     @NameInMap("email")
     public String email;
 
+    /**
+     * <p>The nickname of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>001</p>
+     */
     @NameInMap("nick_name")
     public String nickName;
 
+    /**
+     * <p>The mobile number of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>13900001111</p>
+     */
     @NameInMap("phone")
     public String phone;
 
+    /**
+     * <p>The role of the user. Valid values:</p>
+     * <ul>
+     * <li>superadmin</li>
+     * <li>admin</li>
+     * <li>user</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>user</p>
+     */
     @NameInMap("role")
     public String role;
 
+    /**
+     * <p>The status of the user. Valid values:</p>
+     * <ul>
+     * <li>disabled: The user is prohibited from logon.</li>
+     * <li>enabled: The user is in a normal state.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>enabled</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>The time when the user was modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1639762579768</p>
+     */
     @NameInMap("updated_at")
     public Long updatedAt;
 
+    /**
+     * <p>The custom data of the user.</p>
+     */
     @NameInMap("user_data")
     public java.util.Map<String, String> userData;
 
+    /**
+     * <p>The user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c9b7a5aa04d14ae3867fdc886fa01da4</p>
+     */
     @NameInMap("user_id")
     public String userId;
 
+    /**
+     * <p>The name of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pds</p>
+     */
     @NameInMap("user_name")
     public String userName;
 

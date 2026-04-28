@@ -5,21 +5,35 @@ import com.aliyun.tea.*;
 
 public class VideoPreviewPlayMeta extends TeaModel {
     /**
+     * <p>Category</p>
+     * 
      * <strong>example:</strong>
      * <p>live_transcoding</p>
      */
     @NameInMap("category")
     public String category;
 
+    /**
+     * <p>Status of the live transcoding job.</p>
+     */
     @NameInMap("live_transcoding_task_list")
     public java.util.List<VideoPreviewPlayMetaLiveTranscodingTaskList> liveTranscodingTaskList;
 
+    /**
+     * <p>Video meta information.</p>
+     */
     @NameInMap("meta")
     public VideoPreviewPlayMetaMeta meta;
 
+    /**
+     * <p>The status of the offline transcoding job.</p>
+     */
     @NameInMap("offline_video_transcoding_list")
     public java.util.List<VideoPreviewPlayMetaOfflineVideoTranscodingList> offlineVideoTranscodingList;
 
+    /**
+     * <p>The state of the transcoding job.</p>
+     */
     @NameInMap("quick_video_list")
     public java.util.List<VideoPreviewPlayMetaQuickVideoList> quickVideoList;
 
@@ -70,6 +84,13 @@ public class VideoPreviewPlayMeta extends TeaModel {
 
     public static class VideoPreviewPlayMetaLiveTranscodingTaskList extends TeaModel {
         /**
+         * <p>Whether the original resolution is maintained.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -77,6 +98,13 @@ public class VideoPreviewPlayMeta extends TeaModel {
         public Boolean keepOriginalResolution;
 
         /**
+         * <p>The status. Valid values:</p>
+         * <ul>
+         * <li>finished: The index is complete, and the url can be obtained.</li>
+         * <li>running: Indexing in progress. Wait a moment and try again.</li>
+         * <li>failed: Transcoding failed. Check the media file. If you have any questions, contact customer service.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>finished</p>
          */
@@ -84,6 +112,8 @@ public class VideoPreviewPlayMeta extends TeaModel {
         public String status;
 
         /**
+         * <p>Template ID</p>
+         * 
          * <strong>example:</strong>
          * <p>264_720p</p>
          */
@@ -123,6 +153,8 @@ public class VideoPreviewPlayMeta extends TeaModel {
 
     public static class VideoPreviewPlayMetaMeta extends TeaModel {
         /**
+         * <p>Length of the video.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -130,6 +162,8 @@ public class VideoPreviewPlayMeta extends TeaModel {
         public Double duration;
 
         /**
+         * <p>Height of the video.</p>
+         * 
          * <strong>example:</strong>
          * <p>720</p>
          */
@@ -137,6 +171,8 @@ public class VideoPreviewPlayMeta extends TeaModel {
         public Long height;
 
         /**
+         * <p>Width of the video.</p>
+         * 
          * <strong>example:</strong>
          * <p>1280</p>
          */
@@ -176,6 +212,8 @@ public class VideoPreviewPlayMeta extends TeaModel {
 
     public static class VideoPreviewPlayMetaOfflineVideoTranscodingList extends TeaModel {
         /**
+         * <p>Whether the original resolution is maintained.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -183,6 +221,8 @@ public class VideoPreviewPlayMeta extends TeaModel {
         public String keepOriginalResolution;
 
         /**
+         * <p>The status. finished: The index is completed, and the url can be obtained. running: Indexing in progress. Wait a moment and try again. failed: Transcoding failed. Check the media file. If you have any questions, contact customer service.</p>
+         * 
          * <strong>example:</strong>
          * <p>finished</p>
          */
@@ -190,6 +230,8 @@ public class VideoPreviewPlayMeta extends TeaModel {
         public String status;
 
         /**
+         * <p>Template ID</p>
+         * 
          * <strong>example:</strong>
          * <p>264_720p</p>
          */
@@ -229,6 +271,8 @@ public class VideoPreviewPlayMeta extends TeaModel {
 
     public static class VideoPreviewPlayMetaQuickVideoList extends TeaModel {
         /**
+         * <p>The status. finished: The index is completed, and the url can be obtained. running: Indexing in progress. Wait a moment and try again. failed: Transcoding failed. Check the media file. If you have any questions, contact customer service.</p>
+         * 
          * <strong>example:</strong>
          * <p>finished</p>
          */
@@ -236,6 +280,8 @@ public class VideoPreviewPlayMeta extends TeaModel {
         public String status;
 
         /**
+         * <p>Template ID</p>
+         * 
          * <strong>example:</strong>
          * <p>264_720p</p>
          */

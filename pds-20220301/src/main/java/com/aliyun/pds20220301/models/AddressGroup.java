@@ -4,21 +4,45 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class AddressGroup extends TeaModel {
+    /**
+     * <p>The information about the site.</p>
+     */
     @NameInMap("address_detail")
     public Address addressDetail;
 
+    /**
+     * <p>The number of files in the site group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("count")
     public Long count;
 
+    /**
+     * <p>The ID of the cover image of the site.</p>
+     */
     @NameInMap("cover_file_id")
     public String coverFileId;
 
+    /**
+     * <p>The URL of the cover image of the site.</p>
+     */
     @NameInMap("cover_url")
     public String coverUrl;
 
+    /**
+     * <p>The latitude and longitude of the site.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30.12231,120.1212</p>
+     */
     @NameInMap("location")
     public String location;
 
+    /**
+     * <p>The name of the site.</p>
+     */
     @NameInMap("name")
     public String name;
 

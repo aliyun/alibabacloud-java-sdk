@@ -5,57 +5,80 @@ import com.aliyun.tea.*;
 
 public class ImageMediaMetadata extends TeaModel {
     /**
+     * <p>The full address.</p>
+     * 
      * <strong>example:</strong>
-     * <p>浙江省杭州市滨江区西兴街道江陵路</p>
+     * <p>Jiangling Road, Xixing Street, Binjiang District, Hangzhou, Zhejiang</p>
      */
     @NameInMap("address_line")
     public String addressLine;
 
     /**
+     * <p>The city in which the image was taken.</p>
+     * 
      * <strong>example:</strong>
-     * <p>杭州市</p>
+     * <p>Hangzhou</p>
      */
     @NameInMap("city")
     public String city;
 
     /**
+     * <p>The country or region in which the image was taken.</p>
+     * 
      * <strong>example:</strong>
-     * <p>中国</p>
+     * <p>China</p>
      */
     @NameInMap("country")
     public String country;
 
     /**
+     * <p>The district in which the image was taken.</p>
+     * 
      * <strong>example:</strong>
-     * <p>滨江区</p>
+     * <p>Binjiang District</p>
      */
     @NameInMap("district")
     public String district;
 
     /**
+     * <p>The EXIF information about the image.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;Compression&quot;:{&quot;value&quot;:&quot;6&quot;},&quot;DateTime&quot;:{&quot;value&quot;:&quot;2020:08:19 17:11:11&quot;}}</p>
      */
     @NameInMap("exif")
     public String exif;
 
+    /**
+     * <p>The thumbnails of the faces.</p>
+     */
     @NameInMap("faces_thumbnail")
     public java.util.List<FaceThumbnail> facesThumbnail;
 
     /**
+     * <p>The height of the image. Unit: pixel.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1080</p>
+     * <p>1024</p>
      */
     @NameInMap("height")
     public Long height;
 
+    /**
+     * <p>The rating of the image.</p>
+     */
     @NameInMap("image_quality")
     public ImageQuality imageQuality;
 
+    /**
+     * <p>The details of the image tags.</p>
+     */
     @NameInMap("image_tags")
     public java.util.List<SystemTag> imageTags;
 
     /**
+     * <p>The location of the image.</p>
+     * 
      * <strong>example:</strong>
      * <p>30.185453,120.218522</p>
      */
@@ -63,13 +86,17 @@ public class ImageMediaMetadata extends TeaModel {
     public String location;
 
     /**
+     * <p>The province in which the image was taken.</p>
+     * 
      * <strong>example:</strong>
-     * <p>浙江省</p>
+     * <p>Zhejiang</p>
      */
     @NameInMap("province")
     public String province;
 
     /**
+     * <p>The time when the image was taken. The time follows the RFC3339 standard.</p>
+     * 
      * <strong>example:</strong>
      * <p>2006-01-02T15:04:05.000Z07:00</p>
      */
@@ -77,15 +104,19 @@ public class ImageMediaMetadata extends TeaModel {
     public String time;
 
     /**
+     * <p>The street in which the image was taken.</p>
+     * 
      * <strong>example:</strong>
-     * <p>西兴街道</p>
+     * <p>Xixing Street</p>
      */
     @NameInMap("township")
     public String township;
 
     /**
+     * <p>The width of the image. Unit: pixel.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1920</p>
+     * <p>1024</p>
      */
     @NameInMap("width")
     public Long width;

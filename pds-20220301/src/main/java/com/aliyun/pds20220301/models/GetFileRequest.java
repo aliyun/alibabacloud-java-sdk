@@ -18,7 +18,7 @@ public class GetFileRequest extends TeaModel {
      * <ol>
      * <li>If this parameter is set to \*, all fields of the file except the fields that must be specified are returned.</li>
      * <li>If only specific fields are required, you can specify the following fields: url, thumbnail, exif, cropping_suggestion, characteristic_hash, video_metadata, and video_preview_metadata. If multiple fields are required, separate them with commas (,). Example: url,thumbnail.</li>
-     * <li>The investigation_info field is returned only if you specify this field.</li>
+     * <li>The investigation_info field is returned only if it is specified.</li>
      * </ol>
      * <p>By default, all fields except the fields that must be specified are returned.</p>
      * 
@@ -41,7 +41,7 @@ public class GetFileRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The share ID. If you want to manage a file by using a share link, carry the <code>x-share-token</code> header for authentication in the request and specify share_id. In this case, <code>drive_id</code> is invalid. Otherwise, use an <code>AccessKey pair</code> or <code>access token</code> for authentication and specify <code>drive_id</code>. You must specify one of <code>share_id</code> and <code>drive_id</code>.</p>
+     * <p>The share ID. If you want to share a file, carry the <code>x-share-token</code> header for authentication in the request and specify share_id. In this case, <code>drive_id</code> is invalid. Otherwise, use an <code>AccessKey pair</code> or <code>access token</code> for authentication and specify <code>drive_id</code>. You must specify one of <code>share_id</code> and <code>drive_id</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>7JQX1FswpQ8</p>
@@ -50,7 +50,7 @@ public class GetFileRequest extends TeaModel {
     public String shareId;
 
     /**
-     * <p>缩略图配置，可一次性返回最多5个缩略图，map的key可以自定义，返回时按key返回对应的缩略图链接</p>
+     * <p>The thumbnail configurations. Up to five thumbnails can be returned at a time. The value contains key-value pairs. You can customize the keys. The URL of a thumbnail is returned based on the key.</p>
      */
     @NameInMap("thumbnail_processes")
     public java.util.Map<String, ImageProcess> thumbnailProcesses;
