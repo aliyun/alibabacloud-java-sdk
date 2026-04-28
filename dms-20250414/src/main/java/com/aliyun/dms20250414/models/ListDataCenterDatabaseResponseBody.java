@@ -128,6 +128,9 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
         @NameInMap("DmsInstanceId")
         public Long dmsInstanceId;
 
+        @NameInMap("DownloadLink")
+        public String downloadLink;
+
         /**
          * <strong>example:</strong>
          * <p>2025-12-11T14:04:32.000+00:00</p>
@@ -149,6 +152,9 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
         @NameInMap("InstanceName")
         public String instanceName;
 
+        @NameInMap("IntranetDownloadLink")
+        public String intranetDownloadLink;
+
         /**
          * <strong>example:</strong>
          * <p>N</p>
@@ -156,12 +162,18 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
         @NameInMap("IsInternal")
         public String isInternal;
 
+        @NameInMap("OssBucket")
+        public String ossBucket;
+
         /**
          * <strong>example:</strong>
          * <p>999</p>
          */
         @NameInMap("Size")
         public Long size;
+
+        @NameInMap("UseUserOssBucket")
+        public Boolean useUserOssBucket;
 
         public static ListDataCenterDatabaseResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListDataCenterDatabaseResponseBodyData self = new ListDataCenterDatabaseResponseBodyData();
@@ -224,6 +236,14 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
             return this.dmsInstanceId;
         }
 
+        public ListDataCenterDatabaseResponseBodyData setDownloadLink(String downloadLink) {
+            this.downloadLink = downloadLink;
+            return this;
+        }
+        public String getDownloadLink() {
+            return this.downloadLink;
+        }
+
         public ListDataCenterDatabaseResponseBodyData setGmtCreated(String gmtCreated) {
             this.gmtCreated = gmtCreated;
             return this;
@@ -248,6 +268,14 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
             return this.instanceName;
         }
 
+        public ListDataCenterDatabaseResponseBodyData setIntranetDownloadLink(String intranetDownloadLink) {
+            this.intranetDownloadLink = intranetDownloadLink;
+            return this;
+        }
+        public String getIntranetDownloadLink() {
+            return this.intranetDownloadLink;
+        }
+
         public ListDataCenterDatabaseResponseBodyData setIsInternal(String isInternal) {
             this.isInternal = isInternal;
             return this;
@@ -256,12 +284,28 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
             return this.isInternal;
         }
 
+        public ListDataCenterDatabaseResponseBodyData setOssBucket(String ossBucket) {
+            this.ossBucket = ossBucket;
+            return this;
+        }
+        public String getOssBucket() {
+            return this.ossBucket;
+        }
+
         public ListDataCenterDatabaseResponseBodyData setSize(Long size) {
             this.size = size;
             return this;
         }
         public Long getSize() {
             return this.size;
+        }
+
+        public ListDataCenterDatabaseResponseBodyData setUseUserOssBucket(Boolean useUserOssBucket) {
+            this.useUserOssBucket = useUserOssBucket;
+            return this;
+        }
+        public Boolean getUseUserOssBucket() {
+            return this.useUserOssBucket;
         }
 
     }
