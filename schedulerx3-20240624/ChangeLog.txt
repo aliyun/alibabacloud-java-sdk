@@ -1,3 +1,7 @@
+2026-04-28 Version: 1.8.0
+- Support API ListExecutorGroup.
+
+
 2026-04-27 Version: 1.7.0
 - Support API CreateExecutorGroup.
 - Support API DeleteExecutorGroup.
