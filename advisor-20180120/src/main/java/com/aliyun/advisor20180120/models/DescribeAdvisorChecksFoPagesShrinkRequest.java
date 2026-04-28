@@ -30,6 +30,9 @@ public class DescribeAdvisorChecksFoPagesShrinkRequest extends TeaModel {
     @NameInMap("CheckTypes")
     public String checkTypesShrink;
 
+    @NameInMap("Language")
+    public String language;
+
     /**
      * <strong>example:</strong>
      * <hr>
@@ -116,6 +119,14 @@ public class DescribeAdvisorChecksFoPagesShrinkRequest extends TeaModel {
     }
     public String getCheckTypesShrink() {
         return this.checkTypesShrink;
+    }
+
+    public DescribeAdvisorChecksFoPagesShrinkRequest setLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    public String getLanguage() {
+        return this.language;
     }
 
     public DescribeAdvisorChecksFoPagesShrinkRequest setName(String name) {

@@ -235,6 +235,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>巡检</p>
+     * 
      * @param request DescribeAdvisorChecksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAdvisorChecksResponse
@@ -268,6 +271,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>巡检</p>
+     * 
      * @param request DescribeAdvisorChecksRequest
      * @return DescribeAdvisorChecksResponse
      */
@@ -307,6 +313,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.checkTypesShrink)) {
             query.put("CheckTypes", request.checkTypesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
@@ -367,6 +377,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询资源</p>
+     * 
      * @param request DescribeAdvisorResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAdvisorResourcesResponse
@@ -416,6 +429,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询资源</p>
+     * 
      * @param request DescribeAdvisorResourcesRequest
      * @return DescribeAdvisorResourcesResponse
      */
@@ -615,6 +631,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("GroupBy", request.groupBy);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.product)) {
             query.put("Product", request.product);
         }
@@ -747,6 +767,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>历史</p>
+     * 
      * @param request GetHistoryAdvicesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetHistoryAdvicesResponse
@@ -804,6 +827,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>历史</p>
+     * 
      * @param request GetHistoryAdvicesRequest
      * @return GetHistoryAdvicesResponse
      */
@@ -875,6 +901,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetProductListResponse getProductListWithOptions(GetProductListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.token)) {
             query.put("Token", request.token);
         }

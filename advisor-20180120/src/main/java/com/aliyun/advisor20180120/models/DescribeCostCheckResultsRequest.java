@@ -20,6 +20,9 @@ public class DescribeCostCheckResultsRequest extends TeaModel {
     @NameInMap("GroupBy")
     public String groupBy;
 
+    @NameInMap("Language")
+    public String language;
+
     /**
      * <strong>example:</strong>
      * <p>ecs</p>
@@ -97,6 +100,14 @@ public class DescribeCostCheckResultsRequest extends TeaModel {
     }
     public String getGroupBy() {
         return this.groupBy;
+    }
+
+    public DescribeCostCheckResultsRequest setLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    public String getLanguage() {
+        return this.language;
     }
 
     public DescribeCostCheckResultsRequest setProduct(String product) {

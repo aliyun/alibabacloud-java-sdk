@@ -4,6 +4,9 @@ package com.aliyun.advisor20180120.models;
 import com.aliyun.tea.*;
 
 public class GetProductListRequest extends TeaModel {
+    @NameInMap("Language")
+    public String language;
+
     /**
      * <strong>example:</strong>
      * <hr>
@@ -14,6 +17,14 @@ public class GetProductListRequest extends TeaModel {
     public static GetProductListRequest build(java.util.Map<String, ?> map) throws Exception {
         GetProductListRequest self = new GetProductListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetProductListRequest setLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    public String getLanguage() {
+        return this.language;
     }
 
     public GetProductListRequest setToken(String token) {

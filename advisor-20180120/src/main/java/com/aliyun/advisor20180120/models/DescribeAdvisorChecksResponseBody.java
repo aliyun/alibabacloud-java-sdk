@@ -51,34 +51,18 @@ public class DescribeAdvisorChecksResponseBody extends TeaModel {
     }
 
     public static class DescribeAdvisorChecksResponseBodyDataAdvisorCheck extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Category")
         public String category;
 
-        /**
-         * <strong>example:</strong>
-         * <p>EcsHighCpuUtilization</p>
-         */
         @NameInMap("Code")
         public String code;
 
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2023-07-01 00:00:00</p>
-         */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2023-07-01 00:00:00</p>
-         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
@@ -88,40 +72,15 @@ public class DescribeAdvisorChecksResponseBody extends TeaModel {
         @NameInMap("OperateColumn")
         public String operateColumn;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ecs</p>
-         */
         @NameInMap("Product")
         public String product;
 
-        /**
-         * <strong>example:</strong>
-         * <p>enabled</p>
-         */
         @NameInMap("Status")
         public String status;
 
         @NameInMap("Tips")
         public String tips;
 
-        /**
-         * <strong>example:</strong>
-         * <p>[
-         *     {
-         *         &quot;key&quot;:&quot;EcsHighCpuUtilization_xxxx&quot;,
-         *         &quot;type&quot;:&quot;DEFAULT&quot;
-         *     },
-         *     {
-         *         &quot;key&quot;:&quot;EcsHighCpuUtilization_xxxx&quot;,
-         *         &quot;type&quot;:&quot;DEFAULT&quot;
-         *     },
-         *     {
-         *         &quot;key&quot;:&quot;EcsHighCpuUtilization_xxxx&quot;,
-         *         &quot;type&quot;:&quot;DEFAULT&quot;
-         *     },
-         * ]</p>
-         */
         @NameInMap("ViewColumn")
         public String viewColumn;
 

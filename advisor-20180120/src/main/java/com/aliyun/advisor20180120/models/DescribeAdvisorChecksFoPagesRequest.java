@@ -30,6 +30,9 @@ public class DescribeAdvisorChecksFoPagesRequest extends TeaModel {
     @NameInMap("CheckTypes")
     public java.util.List<Long> checkTypes;
 
+    @NameInMap("Language")
+    public String language;
+
     /**
      * <strong>example:</strong>
      * <hr>
@@ -116,6 +119,14 @@ public class DescribeAdvisorChecksFoPagesRequest extends TeaModel {
     }
     public java.util.List<Long> getCheckTypes() {
         return this.checkTypes;
+    }
+
+    public DescribeAdvisorChecksFoPagesRequest setLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    public String getLanguage() {
+        return this.language;
     }
 
     public DescribeAdvisorChecksFoPagesRequest setName(String name) {

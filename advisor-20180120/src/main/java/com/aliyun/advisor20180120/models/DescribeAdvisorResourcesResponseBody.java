@@ -36,42 +36,18 @@ public class DescribeAdvisorResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeAdvisorResourcesResponseBodyDataResultResource extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>{
-         *     &quot;resourceId&quot;: &quot;xxxxx&quot;,
-         *     &quot;deviceAvailable&quot;: true,
-         *     ...
-         * }</p>
-         */
         @NameInMap("Data")
         public String data;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ecs</p>
-         */
         @NameInMap("Product")
         public String product;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>i-bp67acfmxazb4p****</p>
-         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ecs-20230701</p>
-         */
         @NameInMap("ResourceName")
         public String resourceName;
 

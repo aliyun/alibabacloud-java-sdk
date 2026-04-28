@@ -36,17 +36,9 @@ public class DescribeAdvicesResponseBody extends TeaModel {
     }
 
     public static class DescribeAdvicesResponseBodyDataAdvice extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1234567891234567</p>
-         */
         @NameInMap("AliyunId")
         public Long aliyunId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>EcsHighCpuUtilization</p>
-         */
         @NameInMap("CheckId")
         public String checkId;
 
@@ -56,89 +48,33 @@ public class DescribeAdvicesResponseBody extends TeaModel {
         @NameInMap("CheckPlanId")
         public Long checkPlanId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>[
-         *     {
-         *         &quot;key&quot;:&quot;EcsHighCpuUtilization_xxxx&quot;,
-         *         &quot;value&quot;:xxx
-         *     },
-         *     {
-         *         &quot;key&quot;:&quot;EcsHighCpuUtilization_xxxx&quot;,
-         *         &quot;value&quot;:xxx
-         *     },
-         *     {
-         *         &quot;key&quot;:&quot;EcsHighCpuUtilization_xxxx&quot;,
-         *         &quot;value&quot;:xxx
-         *     },
-         * ]</p>
-         */
         @NameInMap("Content")
         public String content;
 
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2023-07-01 00:00:00</p>
-         */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2023-07-01 00:00:00</p>
-         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        /**
-         * <p>ID</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("IsExpired")
         public Boolean isExpired;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ecs</p>
-         */
         @NameInMap("Product")
         public String product;
 
-        /**
-         * <strong>example:</strong>
-         * <p>{
-         *     &quot;resourceId&quot;: xxxx,
-         *     &quot;resourceName&quot;: xxxxxx,
-         *     &quot;regionId&quot;: xxxx,
-         *     ...
-         * }</p>
-         */
         @NameInMap("Resource")
         public String resource;
 
-        /**
-         * <strong>example:</strong>
-         * <p>i-bp67acfmxazb4p****</p>
-         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Severity")
         public Integer severity;
 
