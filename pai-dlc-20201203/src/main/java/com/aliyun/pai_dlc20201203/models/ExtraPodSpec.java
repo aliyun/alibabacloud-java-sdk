@@ -16,6 +16,9 @@ public class ExtraPodSpec extends TeaModel {
     @NameInMap("Lifecycle")
     public Lifecycle lifecycle;
 
+    @NameInMap("MainContainerSecurityContext")
+    public SecurityContext mainContainerSecurityContext;
+
     /**
      * <p>The pod annotations.</p>
      */
@@ -61,6 +64,14 @@ public class ExtraPodSpec extends TeaModel {
     }
     public Lifecycle getLifecycle() {
         return this.lifecycle;
+    }
+
+    public ExtraPodSpec setMainContainerSecurityContext(SecurityContext mainContainerSecurityContext) {
+        this.mainContainerSecurityContext = mainContainerSecurityContext;
+        return this;
+    }
+    public SecurityContext getMainContainerSecurityContext() {
+        return this.mainContainerSecurityContext;
     }
 
     @Deprecated
