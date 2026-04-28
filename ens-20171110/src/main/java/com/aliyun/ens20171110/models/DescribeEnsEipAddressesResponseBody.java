@@ -94,6 +94,48 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressOperationLocksLock extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>financial</p>
+         */
+        @NameInMap("LockReason")
+        public String lockReason;
+
+        public static DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressOperationLocksLock build(java.util.Map<String, ?> map) throws Exception {
+            DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressOperationLocksLock self = new DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressOperationLocksLock();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressOperationLocksLock setLockReason(String lockReason) {
+            this.lockReason = lockReason;
+            return this;
+        }
+        public String getLockReason() {
+            return this.lockReason;
+        }
+
+    }
+
+    public static class DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressOperationLocks extends TeaModel {
+        @NameInMap("Lock")
+        public java.util.List<DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressOperationLocksLock> lock;
+
+        public static DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressOperationLocks build(java.util.Map<String, ?> map) throws Exception {
+            DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressOperationLocks self = new DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressOperationLocks();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressOperationLocks setLock(java.util.List<DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressOperationLocksLock> lock) {
+            this.lock = lock;
+            return this;
+        }
+        public java.util.List<DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressOperationLocksLock> getLock() {
+            return this.lock;
+        }
+
+    }
+
     public static class DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressTagsTag extends TeaModel {
         /**
          * <p>标签键</p>
@@ -222,6 +264,20 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         public Integer bandwidth;
 
         /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("BandwidthPackageBandwidth")
+        public Integer bandwidthPackageBandwidth;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cbwp-5***</p>
+         */
+        @NameInMap("BandwidthPackageId")
+        public String bandwidthPackageId;
+
+        /**
          * <p>EIP的计费模式。</p>
          * <ul>
          * <li><p><strong>PrePaid</strong>：包年包月。</p>
@@ -343,6 +399,9 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("OperationLocks")
+        public DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressOperationLocks operationLocks;
+
         /**
          * <p>该EIP是否是备用。</p>
          * 
@@ -404,6 +463,22 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         }
         public Integer getBandwidth() {
             return this.bandwidth;
+        }
+
+        public DescribeEnsEipAddressesResponseBodyEipAddressesEipAddress setBandwidthPackageBandwidth(Integer bandwidthPackageBandwidth) {
+            this.bandwidthPackageBandwidth = bandwidthPackageBandwidth;
+            return this;
+        }
+        public Integer getBandwidthPackageBandwidth() {
+            return this.bandwidthPackageBandwidth;
+        }
+
+        public DescribeEnsEipAddressesResponseBodyEipAddressesEipAddress setBandwidthPackageId(String bandwidthPackageId) {
+            this.bandwidthPackageId = bandwidthPackageId;
+            return this;
+        }
+        public String getBandwidthPackageId() {
+            return this.bandwidthPackageId;
         }
 
         public DescribeEnsEipAddressesResponseBodyEipAddressesEipAddress setChargeType(String chargeType) {
@@ -492,6 +567,14 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeEnsEipAddressesResponseBodyEipAddressesEipAddress setOperationLocks(DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressOperationLocks operationLocks) {
+            this.operationLocks = operationLocks;
+            return this;
+        }
+        public DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressOperationLocks getOperationLocks() {
+            return this.operationLocks;
         }
 
         public DescribeEnsEipAddressesResponseBodyEipAddressesEipAddress setStandby(Boolean standby) {

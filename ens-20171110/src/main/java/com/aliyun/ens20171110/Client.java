@@ -7482,6 +7482,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IcmpReplyEnabled", request.icmpReplyEnabled);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.lockReason)) {
+            query.put("LockReason", request.lockReason);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
         }
@@ -7492,6 +7496,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.standby)) {
             query.put("Standby", request.standby);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

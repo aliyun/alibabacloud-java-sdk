@@ -72,6 +72,13 @@ public class DescribeEnsEipAddressesRequest extends TeaModel {
     public Boolean icmpReplyEnabled;
 
     /**
+     * <strong>example:</strong>
+     * <p>financial</p>
+     */
+    @NameInMap("LockReason")
+    public String lockReason;
+
+    /**
      * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -101,6 +108,9 @@ public class DescribeEnsEipAddressesRequest extends TeaModel {
      */
     @NameInMap("Standby")
     public String standby;
+
+    @NameInMap("Status")
+    public String status;
 
     public static DescribeEnsEipAddressesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEnsEipAddressesRequest self = new DescribeEnsEipAddressesRequest();
@@ -171,6 +181,14 @@ public class DescribeEnsEipAddressesRequest extends TeaModel {
         return this.icmpReplyEnabled;
     }
 
+    public DescribeEnsEipAddressesRequest setLockReason(String lockReason) {
+        this.lockReason = lockReason;
+        return this;
+    }
+    public String getLockReason() {
+        return this.lockReason;
+    }
+
     public DescribeEnsEipAddressesRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -193,6 +211,14 @@ public class DescribeEnsEipAddressesRequest extends TeaModel {
     }
     public String getStandby() {
         return this.standby;
+    }
+
+    public DescribeEnsEipAddressesRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
 }
