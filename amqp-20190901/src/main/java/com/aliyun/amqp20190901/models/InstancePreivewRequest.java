@@ -7,6 +7,9 @@ public class InstancePreivewRequest extends TeaModel {
     @NameInMap("ConsoleSessionId")
     public String consoleSessionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("Tags")
     public String tags;
 
@@ -21,6 +24,14 @@ public class InstancePreivewRequest extends TeaModel {
     }
     public String getConsoleSessionId() {
         return this.consoleSessionId;
+    }
+
+    public InstancePreivewRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public InstancePreivewRequest setTags(String tags) {
