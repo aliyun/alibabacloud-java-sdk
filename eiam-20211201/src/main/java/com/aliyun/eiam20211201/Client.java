@@ -9105,6 +9105,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetInstanceControlConfigurationResponse getInstanceControlConfigurationWithOptions(GetInstanceControlConfigurationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.elementName)) {
+            query.put("ElementName", request.elementName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }

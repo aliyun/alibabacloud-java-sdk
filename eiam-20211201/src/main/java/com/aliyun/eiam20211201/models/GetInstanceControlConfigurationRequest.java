@@ -4,6 +4,9 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceControlConfigurationRequest extends TeaModel {
+    @NameInMap("ElementName")
+    public String elementName;
+
     /**
      * <p>IDaaS EIAM实例的ID。</p>
      * <p>This parameter is required.</p>
@@ -17,6 +20,14 @@ public class GetInstanceControlConfigurationRequest extends TeaModel {
     public static GetInstanceControlConfigurationRequest build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceControlConfigurationRequest self = new GetInstanceControlConfigurationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetInstanceControlConfigurationRequest setElementName(String elementName) {
+        this.elementName = elementName;
+        return this;
+    }
+    public String getElementName() {
+        return this.elementName;
     }
 
     public GetInstanceControlConfigurationRequest setInstanceId(String instanceId) {
