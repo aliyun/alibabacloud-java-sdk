@@ -50,6 +50,13 @@ public class GetDataStorageResponseBody extends TeaModel {
         @NameInMap("LogStoreTtl")
         public Integer logStoreTtl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10.333</p>
+         */
+        @NameInMap("UsedCapacity")
+        public Double usedCapacity;
+
         public static GetDataStorageResponseBodyDataNormalizationLogStores build(java.util.Map<String, ?> map) throws Exception {
             GetDataStorageResponseBodyDataNormalizationLogStores self = new GetDataStorageResponseBodyDataNormalizationLogStores();
             return TeaModel.build(map, self);
@@ -69,6 +76,14 @@ public class GetDataStorageResponseBody extends TeaModel {
         }
         public Integer getLogStoreTtl() {
             return this.logStoreTtl;
+        }
+
+        public GetDataStorageResponseBodyDataNormalizationLogStores setUsedCapacity(Double usedCapacity) {
+            this.usedCapacity = usedCapacity;
+            return this;
+        }
+        public Double getUsedCapacity() {
+            return this.usedCapacity;
         }
 
     }
@@ -268,6 +283,13 @@ public class GetDataStorageResponseBody extends TeaModel {
         @NameInMap("LogStoreTtl")
         public Integer logStoreTtl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10.333</p>
+         */
+        @NameInMap("UsedCapacity")
+        public Double usedCapacity;
+
         public static GetDataStorageResponseBodyDataSasLogStores build(java.util.Map<String, ?> map) throws Exception {
             GetDataStorageResponseBodyDataSasLogStores self = new GetDataStorageResponseBodyDataSasLogStores();
             return TeaModel.build(map, self);
@@ -353,6 +375,67 @@ public class GetDataStorageResponseBody extends TeaModel {
             return this.logStoreTtl;
         }
 
+        public GetDataStorageResponseBodyDataSasLogStores setUsedCapacity(Double usedCapacity) {
+            this.usedCapacity = usedCapacity;
+            return this;
+        }
+        public Double getUsedCapacity() {
+            return this.usedCapacity;
+        }
+
+    }
+
+    public static class GetDataStorageResponseBodyDataUnusedLogStores extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cloud-siem</p>
+         */
+        @NameInMap("LogStoreName")
+        public String logStoreName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>180</p>
+         */
+        @NameInMap("LogStoreTtl")
+        public Integer logStoreTtl;
+
+        /**
+         * <strong>example:</strong>
+         * <p>10.333</p>
+         */
+        @NameInMap("UsedCapacity")
+        public Double usedCapacity;
+
+        public static GetDataStorageResponseBodyDataUnusedLogStores build(java.util.Map<String, ?> map) throws Exception {
+            GetDataStorageResponseBodyDataUnusedLogStores self = new GetDataStorageResponseBodyDataUnusedLogStores();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDataStorageResponseBodyDataUnusedLogStores setLogStoreName(String logStoreName) {
+            this.logStoreName = logStoreName;
+            return this;
+        }
+        public String getLogStoreName() {
+            return this.logStoreName;
+        }
+
+        public GetDataStorageResponseBodyDataUnusedLogStores setLogStoreTtl(Integer logStoreTtl) {
+            this.logStoreTtl = logStoreTtl;
+            return this;
+        }
+        public Integer getLogStoreTtl() {
+            return this.logStoreTtl;
+        }
+
+        public GetDataStorageResponseBodyDataUnusedLogStores setUsedCapacity(Double usedCapacity) {
+            this.usedCapacity = usedCapacity;
+            return this;
+        }
+        public Double getUsedCapacity() {
+            return this.usedCapacity;
+        }
+
     }
 
     public static class GetDataStorageResponseBodyData extends TeaModel {
@@ -413,6 +496,9 @@ public class GetDataStorageResponseBody extends TeaModel {
 
         @NameInMap("SasLogStores")
         public java.util.List<GetDataStorageResponseBodyDataSasLogStores> sasLogStores;
+
+        @NameInMap("UnusedLogStores")
+        public java.util.List<GetDataStorageResponseBodyDataUnusedLogStores> unusedLogStores;
 
         public static GetDataStorageResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetDataStorageResponseBodyData self = new GetDataStorageResponseBodyData();
@@ -497,6 +583,14 @@ public class GetDataStorageResponseBody extends TeaModel {
         }
         public java.util.List<GetDataStorageResponseBodyDataSasLogStores> getSasLogStores() {
             return this.sasLogStores;
+        }
+
+        public GetDataStorageResponseBodyData setUnusedLogStores(java.util.List<GetDataStorageResponseBodyDataUnusedLogStores> unusedLogStores) {
+            this.unusedLogStores = unusedLogStores;
+            return this;
+        }
+        public java.util.List<GetDataStorageResponseBodyDataUnusedLogStores> getUnusedLogStores() {
+            return this.unusedLogStores;
         }
 
     }
