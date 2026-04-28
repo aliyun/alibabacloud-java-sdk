@@ -1730,6 +1730,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>关闭Supabase的沙箱和边缘函数能力</p>
+     * 
+     * @param request DisableAgentRuntimeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableAgentRuntimeResponse
+     */
+    public DisableAgentRuntimeResponse disableAgentRuntimeWithOptions(DisableAgentRuntimeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
+            query.put("InstanceName", request.instanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisableAgentRuntime"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableAgentRuntimeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>关闭Supabase的沙箱和边缘函数能力</p>
+     * 
+     * @param request DisableAgentRuntimeRequest
+     * @return DisableAgentRuntimeResponse
+     */
+    public DisableAgentRuntimeResponse disableAgentRuntime(DisableAgentRuntimeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.disableAgentRuntimeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>启用Supabase的沙箱和边缘函数能力</p>
      * 
      * @param request EnableAgentRuntimeRequest
@@ -1998,7 +2050,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询MO订单信息</p>
+     * <p>Obtain RDS AI Assistant Ultimate order information</p>
      * 
      * @param request GetModelOperatorOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2023,7 +2075,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询MO订单信息</p>
+     * <p>Obtain RDS AI Assistant Ultimate order information</p>
      * 
      * @param request GetModelOperatorOrderRequest
      * @return GetModelOperatorOrderResponse

@@ -4,10 +4,15 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class GetModelOperatorOrderResponseBody extends TeaModel {
+    /**
+     * <p>The query result.</p>
+     */
     @NameInMap("Data")
     public GetModelOperatorOrderResponseBodyData data;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -24,6 +29,8 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Request result.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -69,6 +76,8 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
 
     public static class GetModelOperatorOrderResponseBodyDataInstanceList extends TeaModel {
         /**
+         * <p>The instance end time (format: Timestamp).</p>
+         * 
          * <strong>example:</strong>
          * <p>1775145600000</p>
          */
@@ -76,6 +85,8 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
         public Long endTime;
 
         /**
+         * <p>instance type</p>
+         * 
          * <strong>example:</strong>
          * <p>xlarge</p>
          */
@@ -83,6 +94,8 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
         public String instanceClass;
 
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>rds_copilot***_public_cn-*********6</p>
          */
@@ -90,6 +103,8 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The instance start time (format: Timestamp).</p>
+         * 
          * <strong>example:</strong>
          * <p>1772439028000</p>
          */
@@ -97,6 +112,8 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
         public Long startTime;
 
         /**
+         * <p>The instance status.</p>
+         * 
          * <strong>example:</strong>
          * <p>active/creating</p>
          */
@@ -152,12 +169,17 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
 
     public static class GetModelOperatorOrderResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether a valid order exists.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("HasValidOrder")
         public Boolean hasValidOrder;
 
+        /**
+         * <p>The instance list.</p>
+         */
         @NameInMap("InstanceList")
         public java.util.List<GetModelOperatorOrderResponseBodyDataInstanceList> instanceList;
 

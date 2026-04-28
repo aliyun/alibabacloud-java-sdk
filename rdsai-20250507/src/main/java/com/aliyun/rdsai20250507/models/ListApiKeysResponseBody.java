@@ -101,6 +101,9 @@ public class ListApiKeysResponseBody extends TeaModel {
         @NameInMap("LimitType")
         public String limitType;
 
+        @NameInMap("ThresholdPercent")
+        public Integer thresholdPercent;
+
         /**
          * <strong>example:</strong>
          * <p>10000</p>
@@ -153,6 +156,14 @@ public class ListApiKeysResponseBody extends TeaModel {
             return this.limitType;
         }
 
+        public ListApiKeysResponseBodyDataCustomKeyList setThresholdPercent(Integer thresholdPercent) {
+            this.thresholdPercent = thresholdPercent;
+            return this;
+        }
+        public Integer getThresholdPercent() {
+            return this.thresholdPercent;
+        }
+
         public ListApiKeysResponseBodyDataCustomKeyList setTokenQuota(Long tokenQuota) {
             this.tokenQuota = tokenQuota;
             return this;
@@ -197,6 +208,9 @@ public class ListApiKeysResponseBody extends TeaModel {
          */
         @NameInMap("SystemApiKey")
         public String systemApiKey;
+
+        @NameInMap("ThresholdPercent")
+        public Integer thresholdPercent;
 
         /**
          * <strong>example:</strong>
@@ -256,6 +270,14 @@ public class ListApiKeysResponseBody extends TeaModel {
         }
         public String getSystemApiKey() {
             return this.systemApiKey;
+        }
+
+        public ListApiKeysResponseBodyData setThresholdPercent(Integer thresholdPercent) {
+            this.thresholdPercent = thresholdPercent;
+            return this;
+        }
+        public Integer getThresholdPercent() {
+            return this.thresholdPercent;
         }
 
         public ListApiKeysResponseBodyData setTotal(Integer total) {
