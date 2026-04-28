@@ -15,6 +15,13 @@ public class ListDataSetRecordsRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>{&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;}</p>
+     */
+    @NameInMap("Filter")
+    public String filter;
+
+    /**
+     * <strong>example:</strong>
      * <p>zh</p>
      */
     @NameInMap("Lang")
@@ -33,6 +40,20 @@ public class ListDataSetRecordsRequest extends TeaModel {
      */
     @NameInMap("NextToken")
     public String nextToken;
+
+    /**
+     * <strong>example:</strong>
+     * <p>desc</p>
+     */
+    @NameInMap("Order")
+    public String order;
+
+    /**
+     * <strong>example:</strong>
+     * <p>updatetime</p>
+     */
+    @NameInMap("OrderField")
+    public String orderField;
 
     /**
      * <p>This parameter is required.</p>
@@ -79,6 +100,14 @@ public class ListDataSetRecordsRequest extends TeaModel {
         return this.dataSetId;
     }
 
+    public ListDataSetRecordsRequest setFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    public String getFilter() {
+        return this.filter;
+    }
+
     public ListDataSetRecordsRequest setLang(String lang) {
         this.lang = lang;
         return this;
@@ -101,6 +130,22 @@ public class ListDataSetRecordsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListDataSetRecordsRequest setOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    public String getOrder() {
+        return this.order;
+    }
+
+    public ListDataSetRecordsRequest setOrderField(String orderField) {
+        this.orderField = orderField;
+        return this;
+    }
+    public String getOrderField() {
+        return this.orderField;
     }
 
     public ListDataSetRecordsRequest setPageNumber(Integer pageNumber) {

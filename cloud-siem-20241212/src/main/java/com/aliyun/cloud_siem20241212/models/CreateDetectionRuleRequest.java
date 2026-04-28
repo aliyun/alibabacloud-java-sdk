@@ -11,6 +11,9 @@ public class CreateDetectionRuleRequest extends TeaModel {
     @NameInMap("AlertAttCk")
     public String alertAttCk;
 
+    @NameInMap("AlertAttCkMapping")
+    public String alertAttCkMapping;
+
     @NameInMap("AlertDescription")
     public String alertDescription;
 
@@ -22,6 +25,9 @@ public class CreateDetectionRuleRequest extends TeaModel {
      */
     @NameInMap("AlertLevel")
     public String alertLevel;
+
+    @NameInMap("AlertLevelMapping")
+    public String alertLevelMapping;
 
     @NameInMap("AlertName")
     public String alertName;
@@ -71,6 +77,9 @@ public class CreateDetectionRuleRequest extends TeaModel {
      */
     @NameInMap("AlertType")
     public String alertType;
+
+    @NameInMap("AlertTypeMapping")
+    public String alertTypeMapping;
 
     /**
      * <strong>example:</strong>
@@ -276,6 +285,14 @@ public class CreateDetectionRuleRequest extends TeaModel {
         return this.alertAttCk;
     }
 
+    public CreateDetectionRuleRequest setAlertAttCkMapping(String alertAttCkMapping) {
+        this.alertAttCkMapping = alertAttCkMapping;
+        return this;
+    }
+    public String getAlertAttCkMapping() {
+        return this.alertAttCkMapping;
+    }
+
     public CreateDetectionRuleRequest setAlertDescription(String alertDescription) {
         this.alertDescription = alertDescription;
         return this;
@@ -290,6 +307,14 @@ public class CreateDetectionRuleRequest extends TeaModel {
     }
     public String getAlertLevel() {
         return this.alertLevel;
+    }
+
+    public CreateDetectionRuleRequest setAlertLevelMapping(String alertLevelMapping) {
+        this.alertLevelMapping = alertLevelMapping;
+        return this;
+    }
+    public String getAlertLevelMapping() {
+        return this.alertLevelMapping;
     }
 
     public CreateDetectionRuleRequest setAlertName(String alertName) {
@@ -346,6 +371,14 @@ public class CreateDetectionRuleRequest extends TeaModel {
     }
     public String getAlertType() {
         return this.alertType;
+    }
+
+    public CreateDetectionRuleRequest setAlertTypeMapping(String alertTypeMapping) {
+        this.alertTypeMapping = alertTypeMapping;
+        return this;
+    }
+    public String getAlertTypeMapping() {
+        return this.alertTypeMapping;
     }
 
     public CreateDetectionRuleRequest setDetectionExpressionContent(String detectionExpressionContent) {

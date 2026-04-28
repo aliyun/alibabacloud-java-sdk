@@ -457,12 +457,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("AlertAttCk", request.alertAttCk);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.alertAttCkMapping)) {
+            body.put("AlertAttCkMapping", request.alertAttCkMapping);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.alertDescription)) {
             body.put("AlertDescription", request.alertDescription);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.alertLevel)) {
             body.put("AlertLevel", request.alertLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.alertLevelMapping)) {
+            body.put("AlertLevelMapping", request.alertLevelMapping);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.alertName)) {
@@ -491,6 +499,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.alertType)) {
             body.put("AlertType", request.alertType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.alertTypeMapping)) {
+            body.put("AlertTypeMapping", request.alertTypeMapping);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.detectionExpressionContent)) {
@@ -2956,6 +2968,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DataSetId", request.dataSetId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            body.put("Filter", request.filter);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             body.put("Lang", request.lang);
         }
@@ -2966,6 +2982,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
             body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            body.put("Order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderField)) {
+            body.put("OrderField", request.orderField);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
@@ -5650,12 +5674,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("AlertAttCk", request.alertAttCk);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.alertAttCkMapping)) {
+            body.put("AlertAttCkMapping", request.alertAttCkMapping);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.alertDescription)) {
             body.put("AlertDescription", request.alertDescription);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.alertLevel)) {
             body.put("AlertLevel", request.alertLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.alertLevelMapping)) {
+            body.put("AlertLevelMapping", request.alertLevelMapping);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.alertName)) {
@@ -5684,6 +5716,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.alertType)) {
             body.put("AlertType", request.alertType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.alertTypeMapping)) {
+            body.put("AlertTypeMapping", request.alertTypeMapping);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.detectionExpressionContent)) {
