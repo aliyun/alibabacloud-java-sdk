@@ -127,6 +127,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>文件打包下载</p>
+     * 
+     * @param request ArchiveFilesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ArchiveFilesResponse
+     */
+    public ArchiveFilesResponse archiveFilesWithOptions(ArchiveFilesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.driveId)) {
+            body.put("drive_id", request.driveId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileIds)) {
+            body.put("file_ids", request.fileIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shareId)) {
+            body.put("share_id", request.shareId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ArchiveFiles"),
+            new TeaPair("version", "2022-03-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/file/archive_files"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new ArchiveFilesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>文件打包下载</p>
+     * 
+     * @param request ArchiveFilesRequest
+     * @return ArchiveFilesResponse
+     */
+    public ArchiveFilesResponse archiveFiles(ArchiveFilesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.archiveFilesWithOptions(request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to assign a group administrator role to a user.</p>
      * 
