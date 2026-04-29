@@ -69,6 +69,20 @@ public class GetTableMetaResponseBody extends TeaModel {
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Maxcompute</p>
+     */
+    @NameInMap("ResourceType")
+    public String resourceType;
+
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
+    @NameInMap("ResourceUri")
+    public String resourceUri;
+
     @NameInMap("TableMetaId")
     public String tableMetaId;
 
@@ -184,6 +198,22 @@ public class GetTableMetaResponseBody extends TeaModel {
     }
     public String getResourceId() {
         return this.resourceId;
+    }
+
+    public GetTableMetaResponseBody setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    public GetTableMetaResponseBody setResourceUri(String resourceUri) {
+        this.resourceUri = resourceUri;
+        return this;
+    }
+    public String getResourceUri() {
+        return this.resourceUri;
     }
 
     public GetTableMetaResponseBody setTableMetaId(String tableMetaId) {

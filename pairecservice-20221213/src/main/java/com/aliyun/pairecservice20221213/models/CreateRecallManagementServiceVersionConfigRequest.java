@@ -304,14 +304,14 @@ public class CreateRecallManagementServiceVersionConfigRequest extends TeaModel 
          * <p>20</p>
          */
         @NameInMap("FieldQuantityLimit")
-        public String fieldQuantityLimit;
+        public Integer fieldQuantityLimit;
 
         /**
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("IsRandSort")
-        public String isRandSort;
+        public Boolean isRandSort;
 
         /**
          * <strong>example:</strong>
@@ -333,19 +333,19 @@ public class CreateRecallManagementServiceVersionConfigRequest extends TeaModel 
             return this.field;
         }
 
-        public CreateRecallManagementServiceVersionConfigRequestRecallConfigOperatorsTriggerConfig setFieldQuantityLimit(String fieldQuantityLimit) {
+        public CreateRecallManagementServiceVersionConfigRequestRecallConfigOperatorsTriggerConfig setFieldQuantityLimit(Integer fieldQuantityLimit) {
             this.fieldQuantityLimit = fieldQuantityLimit;
             return this;
         }
-        public String getFieldQuantityLimit() {
+        public Integer getFieldQuantityLimit() {
             return this.fieldQuantityLimit;
         }
 
-        public CreateRecallManagementServiceVersionConfigRequestRecallConfigOperatorsTriggerConfig setIsRandSort(String isRandSort) {
+        public CreateRecallManagementServiceVersionConfigRequestRecallConfigOperatorsTriggerConfig setIsRandSort(Boolean isRandSort) {
             this.isRandSort = isRandSort;
             return this;
         }
-        public String getIsRandSort() {
+        public Boolean getIsRandSort() {
             return this.isRandSort;
         }
 

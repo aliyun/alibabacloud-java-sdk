@@ -65,12 +65,8 @@ public class ListRecallManagementServiceVersionsResponseBody extends TeaModel {
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
-        @NameInMap("IsDefault")
-        public String isDefault;
+        @NameInMap("IsEffective")
+        public Boolean isEffective;
 
         /**
          * <strong>example:</strong>
@@ -107,12 +103,12 @@ public class ListRecallManagementServiceVersionsResponseBody extends TeaModel {
             return this.gmtModifiedTime;
         }
 
-        public ListRecallManagementServiceVersionsResponseBodyRecallManagementServiceVersions setIsDefault(String isDefault) {
-            this.isDefault = isDefault;
+        public ListRecallManagementServiceVersionsResponseBodyRecallManagementServiceVersions setIsEffective(Boolean isEffective) {
+            this.isEffective = isEffective;
             return this;
         }
-        public String getIsDefault() {
-            return this.isDefault;
+        public Boolean getIsEffective() {
+            return this.isEffective;
         }
 
         public ListRecallManagementServiceVersionsResponseBodyRecallManagementServiceVersions setName(String name) {

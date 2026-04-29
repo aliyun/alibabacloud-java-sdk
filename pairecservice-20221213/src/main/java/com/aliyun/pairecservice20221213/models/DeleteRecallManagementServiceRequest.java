@@ -4,6 +4,10 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class DeleteRecallManagementServiceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>pairec-cn-test123</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

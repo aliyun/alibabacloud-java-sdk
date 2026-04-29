@@ -521,6 +521,13 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
 
         /**
          * <strong>example:</strong>
+         * <p>4</p>
+         */
+        @NameInMap("RecallManagementServiceVersionConfigId")
+        public String recallManagementServiceVersionConfigId;
+
+        /**
+         * <strong>example:</strong>
          * <p>3</p>
          */
         @NameInMap("RecallManagementTableId")
@@ -625,6 +632,14 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
         }
         public Long getPriority() {
             return this.priority;
+        }
+
+        public GetRecallManagementServiceVersionConfigResponseBodyRecallConfig setRecallManagementServiceVersionConfigId(String recallManagementServiceVersionConfigId) {
+            this.recallManagementServiceVersionConfigId = recallManagementServiceVersionConfigId;
+            return this;
+        }
+        public String getRecallManagementServiceVersionConfigId() {
+            return this.recallManagementServiceVersionConfigId;
         }
 
         public GetRecallManagementServiceVersionConfigResponseBodyRecallConfig setRecallManagementTableId(String recallManagementTableId) {

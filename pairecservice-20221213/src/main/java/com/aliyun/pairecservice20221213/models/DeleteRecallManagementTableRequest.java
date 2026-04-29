@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteRecallManagementTableRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pairec-cn-test123</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

@@ -21,13 +21,6 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
-    /**
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
-    @NameInMap("IsDefault")
-    public String isDefault;
-
     @NameInMap("IsEffective")
     public Boolean isEffective;
 
@@ -81,14 +74,6 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
     }
     public String getGmtModifiedTime() {
         return this.gmtModifiedTime;
-    }
-
-    public GetRecallManagementServiceVersionResponseBody setIsDefault(String isDefault) {
-        this.isDefault = isDefault;
-        return this;
-    }
-    public String getIsDefault() {
-        return this.isDefault;
     }
 
     public GetRecallManagementServiceVersionResponseBody setIsEffective(Boolean isEffective) {
@@ -366,14 +351,14 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
          * <p>20</p>
          */
         @NameInMap("FieldQuantityLimit")
-        public String fieldQuantityLimit;
+        public Integer fieldQuantityLimit;
 
         /**
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("IsRandSort")
-        public String isRandSort;
+        public Boolean isRandSort;
 
         /**
          * <strong>example:</strong>
@@ -395,19 +380,19 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
             return this.field;
         }
 
-        public GetRecallManagementServiceVersionResponseBodyConfigsRecallConfigsOperatorsTriggerConfig setFieldQuantityLimit(String fieldQuantityLimit) {
+        public GetRecallManagementServiceVersionResponseBodyConfigsRecallConfigsOperatorsTriggerConfig setFieldQuantityLimit(Integer fieldQuantityLimit) {
             this.fieldQuantityLimit = fieldQuantityLimit;
             return this;
         }
-        public String getFieldQuantityLimit() {
+        public Integer getFieldQuantityLimit() {
             return this.fieldQuantityLimit;
         }
 
-        public GetRecallManagementServiceVersionResponseBodyConfigsRecallConfigsOperatorsTriggerConfig setIsRandSort(String isRandSort) {
+        public GetRecallManagementServiceVersionResponseBodyConfigsRecallConfigsOperatorsTriggerConfig setIsRandSort(Boolean isRandSort) {
             this.isRandSort = isRandSort;
             return this;
         }
-        public String getIsRandSort() {
+        public Boolean getIsRandSort() {
             return this.isRandSort;
         }
 

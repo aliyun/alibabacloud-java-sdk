@@ -4,9 +4,17 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class UpdateRecallManagementServiceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>reso-2s416t146ffjc3yefx</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pairec-cn-test123</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

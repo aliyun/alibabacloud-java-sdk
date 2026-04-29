@@ -183,6 +183,20 @@ public class ListTableMetasResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>Maxcompute</p>
+         */
+        @NameInMap("ResourceType")
+        public String resourceType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("ResourceUri")
+        public String resourceUri;
+
+        /**
+         * <strong>example:</strong>
          * <p>3</p>
          */
         @NameInMap("TableMetaId")
@@ -292,6 +306,22 @@ public class ListTableMetasResponseBody extends TeaModel {
         }
         public String getResourceId() {
             return this.resourceId;
+        }
+
+        public ListTableMetasResponseBodyTableMetas setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public ListTableMetasResponseBodyTableMetas setResourceUri(String resourceUri) {
+            this.resourceUri = resourceUri;
+            return this;
+        }
+        public String getResourceUri() {
+            return this.resourceUri;
         }
 
         public ListTableMetasResponseBodyTableMetas setTableMetaId(String tableMetaId) {

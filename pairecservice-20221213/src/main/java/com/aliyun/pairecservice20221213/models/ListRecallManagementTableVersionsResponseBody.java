@@ -7,9 +7,17 @@ public class ListRecallManagementTableVersionsResponseBody extends TeaModel {
     @NameInMap("RecallManagementTableVersions")
     public java.util.List<ListRecallManagementTableVersionsResponseBodyRecallManagementTableVersions> recallManagementTableVersions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,27 +51,59 @@ public class ListRecallManagementTableVersionsResponseBody extends TeaModel {
     }
 
     public static class ListRecallManagementTableVersionsResponseBodyRecallManagementTableVersions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ds=20250701</p>
+         */
         @NameInMap("DataVersion")
         public String dataVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132</p>
+         */
         @NameInMap("EffectiveTime")
         public String effectiveTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132</p>
+         */
         @NameInMap("PublishEndTime")
         public String publishEndTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-12-15T22:24:33.132</p>
+         */
         @NameInMap("PublishStartTime")
         public String publishStartTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>202507010000</p>
+         */
         @NameInMap("RecallManagementTableVersionId")
         public String recallManagementTableVersionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("SourceTableDataSize")
         public Long sourceTableDataSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("SourceTableRowCount")
         public Long sourceTableRowCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Online</p>
+         */
         @NameInMap("Status")
         public String status;
 
