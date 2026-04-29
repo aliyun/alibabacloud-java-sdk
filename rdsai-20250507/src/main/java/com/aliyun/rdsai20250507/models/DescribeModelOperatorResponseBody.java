@@ -310,6 +310,9 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
         @NameInMap("KeyUsageList")
         public java.util.List<DescribeModelOperatorResponseBodyDataKeyUsageList> keyUsageList;
 
+        @NameInMap("PrefixCacheEnabled")
+        public Boolean prefixCacheEnabled;
+
         /**
          * <strong>example:</strong>
          * <p>1772439028000</p>
@@ -413,6 +416,14 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
         }
         public java.util.List<DescribeModelOperatorResponseBodyDataKeyUsageList> getKeyUsageList() {
             return this.keyUsageList;
+        }
+
+        public DescribeModelOperatorResponseBodyData setPrefixCacheEnabled(Boolean prefixCacheEnabled) {
+            this.prefixCacheEnabled = prefixCacheEnabled;
+            return this;
+        }
+        public Boolean getPrefixCacheEnabled() {
+            return this.prefixCacheEnabled;
         }
 
         public DescribeModelOperatorResponseBodyData setStartTime(Long startTime) {
