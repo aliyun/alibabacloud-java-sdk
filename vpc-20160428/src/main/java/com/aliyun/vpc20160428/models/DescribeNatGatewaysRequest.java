@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeNatGatewaysRequest extends TeaModel {
+    @NameInMap("AvailabilityMode")
+    public String availabilityMode;
+
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
@@ -170,6 +173,14 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     public static DescribeNatGatewaysRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeNatGatewaysRequest self = new DescribeNatGatewaysRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeNatGatewaysRequest setAvailabilityMode(String availabilityMode) {
+        this.availabilityMode = availabilityMode;
+        return this;
+    }
+    public String getAvailabilityMode() {
+        return this.availabilityMode;
     }
 
     public DescribeNatGatewaysRequest setDryRun(Boolean dryRun) {

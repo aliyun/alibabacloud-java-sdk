@@ -447,6 +447,9 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         @NameInMap("AutoPay")
         public Boolean autoPay;
 
+        @NameInMap("AvailabilityMode")
+        public String availabilityMode;
+
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
@@ -560,6 +563,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
         public Boolean getAutoPay() {
             return this.autoPay;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setAvailabilityMode(String availabilityMode) {
+            this.availabilityMode = availabilityMode;
+            return this;
+        }
+        public String getAvailabilityMode() {
+            return this.availabilityMode;
         }
 
         public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setBusinessStatus(String businessStatus) {

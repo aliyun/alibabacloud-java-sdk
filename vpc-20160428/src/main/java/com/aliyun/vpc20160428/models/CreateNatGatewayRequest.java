@@ -22,6 +22,9 @@ public class CreateNatGatewayRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    @NameInMap("AvailabilityMode")
+    public String availabilityMode;
+
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
@@ -274,6 +277,14 @@ public class CreateNatGatewayRequest extends TeaModel {
     }
     public Boolean getAutoPay() {
         return this.autoPay;
+    }
+
+    public CreateNatGatewayRequest setAvailabilityMode(String availabilityMode) {
+        this.availabilityMode = availabilityMode;
+        return this;
+    }
+    public String getAvailabilityMode() {
+        return this.availabilityMode;
     }
 
     public CreateNatGatewayRequest setClientToken(String clientToken) {

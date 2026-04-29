@@ -10,6 +10,9 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     @NameInMap("AccessMode")
     public GetNatGatewayAttributeResponseBodyAccessMode accessMode;
 
+    @NameInMap("AvailabilityMode")
+    public String availabilityMode;
+
     /**
      * <p>The billing information.</p>
      */
@@ -253,6 +256,14 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     }
     public GetNatGatewayAttributeResponseBodyAccessMode getAccessMode() {
         return this.accessMode;
+    }
+
+    public GetNatGatewayAttributeResponseBody setAvailabilityMode(String availabilityMode) {
+        this.availabilityMode = availabilityMode;
+        return this;
+    }
+    public String getAvailabilityMode() {
+        return this.availabilityMode;
     }
 
     public GetNatGatewayAttributeResponseBody setBillingConfig(GetNatGatewayAttributeResponseBodyBillingConfig billingConfig) {
