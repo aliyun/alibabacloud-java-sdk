@@ -96,17 +96,9 @@ public class QueryBrokerDemandRecordResponseBody extends TeaModel {
     }
 
     public static class QueryBrokerDemandRecordResponseBodyDataBrokerDemandRecord extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>SE20183A0Q7C5556</p>
-         */
         @NameInMap("BizId")
         public String bizId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1525249317000</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 

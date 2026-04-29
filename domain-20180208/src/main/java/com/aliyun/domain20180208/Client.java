@@ -653,7 +653,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @param request GetIntlDomainDownloadUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetIntlDomainDownloadUrlResponse
      */
@@ -682,7 +681,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @param request GetReserveDomainUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetReserveDomainUrlResponse
      */
@@ -1002,7 +1000,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询回购订单列表</p>
+     * <p>Queries the details of requests.</p>
      * 
      * @param request QueryBrokerDemandRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1046,7 +1044,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询回购订单列表</p>
+     * <p>Queries the details of requests.</p>
      * 
      * @param request QueryBrokerDemandRequest
      * @return QueryBrokerDemandResponse
