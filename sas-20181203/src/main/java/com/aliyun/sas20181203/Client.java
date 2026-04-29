@@ -1391,6 +1391,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>新增未知威胁分析进程</p>
+     * 
+     * @param request AddUnknownThreatDetectProcessRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddUnknownThreatDetectProcessResponse
+     */
+    public AddUnknownThreatDetectProcessResponse addUnknownThreatDetectProcessWithOptions(AddUnknownThreatDetectProcessRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eventIdList)) {
+            query.put("EventIdList", request.eventIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.processList)) {
+            query.put("ProcessList", request.processList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uuidList)) {
+            query.put("UuidList", request.uuidList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddUnknownThreatDetectProcess"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddUnknownThreatDetectProcessResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新增未知威胁分析进程</p>
+     * 
+     * @param request AddUnknownThreatDetectProcessRequest
+     * @return AddUnknownThreatDetectProcessResponse
+     */
+    public AddUnknownThreatDetectProcessResponse addUnknownThreatDetectProcess(AddUnknownThreatDetectProcessRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addUnknownThreatDetectProcessWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a honeypot.</p>
      * 
      * @param request AddVpcHoneyPotRequest
@@ -2207,7 +2259,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Checks a Security Token Service (STS) token and returns the ID of the Alibaba Cloud account.</p>
      * 
-     * @param request CheckStsTokenAuthRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CheckStsTokenAuthResponse
      */
@@ -5811,6 +5862,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建未知威胁发现的策略</p>
+     * 
+     * @param request CreateUnknownThreatDetectStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateUnknownThreatDetectStrategyResponse
+     */
+    public CreateUnknownThreatDetectStrategyResponse createUnknownThreatDetectStrategyWithOptions(CreateUnknownThreatDetectStrategyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.assetSelectionType)) {
+            query.put("AssetSelectionType", request.assetSelectionType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.durationDaysAfterInit)) {
+            query.put("DurationDaysAfterInit", request.durationDaysAfterInit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.durationDaysAfterStop)) {
+            query.put("DurationDaysAfterStop", request.durationDaysAfterStop);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.studyMode)) {
+            query.put("StudyMode", request.studyMode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateUnknownThreatDetectStrategy"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateUnknownThreatDetectStrategyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建未知威胁发现的策略</p>
+     * 
+     * @param request CreateUnknownThreatDetectStrategyRequest
+     * @return CreateUnknownThreatDetectStrategyResponse
+     */
+    public CreateUnknownThreatDetectStrategyResponse createUnknownThreatDetectStrategy(CreateUnknownThreatDetectStrategyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createUnknownThreatDetectStrategyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates the risk level settings for baseline check items.</p>
      * 
      * @param request CreateUserSettingRequest
@@ -8491,6 +8602,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除未知威胁发现进程</p>
+     * 
+     * @param request DeleteUnknownThreatDetectProcessRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteUnknownThreatDetectProcessResponse
+     */
+    public DeleteUnknownThreatDetectProcessResponse deleteUnknownThreatDetectProcessWithOptions(DeleteUnknownThreatDetectProcessRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.processIdList)) {
+            query.put("ProcessIdList", request.processIdList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteUnknownThreatDetectProcess"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteUnknownThreatDetectProcessResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除未知威胁发现进程</p>
+     * 
+     * @param request DeleteUnknownThreatDetectProcessRequest
+     * @return DeleteUnknownThreatDetectProcessResponse
+     */
+    public DeleteUnknownThreatDetectProcessResponse deleteUnknownThreatDetectProcess(DeleteUnknownThreatDetectProcessRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteUnknownThreatDetectProcessWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除未知威胁发现策略</p>
+     * 
+     * @param request DeleteUnknownThreatDetectStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteUnknownThreatDetectStrategyResponse
+     */
+    public DeleteUnknownThreatDetectStrategyResponse deleteUnknownThreatDetectStrategyWithOptions(DeleteUnknownThreatDetectStrategyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.idList)) {
+            query.put("IdList", request.idList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteUnknownThreatDetectStrategy"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteUnknownThreatDetectStrategyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除未知威胁发现策略</p>
+     * 
+     * @param request DeleteUnknownThreatDetectStrategyRequest
+     * @return DeleteUnknownThreatDetectStrategyResponse
+     */
+    public DeleteUnknownThreatDetectStrategyResponse deleteUnknownThreatDetectStrategy(DeleteUnknownThreatDetectStrategyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteUnknownThreatDetectStrategyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes a honeypot.</p>
      * 
      * @param request DeleteVpcHoneyPotRequest
@@ -8637,7 +8836,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the overview of user AI assets.</p>
      * 
-     * @param request DescribeAIAssetSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAIAssetSummaryResponse
      */
@@ -9191,7 +9389,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the information about all assets. The information includes asset group IDs and asset names.</p>
      * 
-     * @param request DescribeAllEntityRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAllEntityResponse
      */
@@ -9433,7 +9630,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the scan cycle for application vulnerabilities.</p>
      * 
-     * @param request DescribeAppVulScanCycleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAppVulScanCycleResponse
      */
@@ -9585,7 +9781,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      * 
-     * @param request DescribeAssetSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAssetSummaryResponse
      */
@@ -9727,10 +9922,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the statistics of attack analysis.</p>
      * 
+     * @deprecated OpenAPI DescribeAttackAnalysisData is deprecated, please use Sas::2018-12-03::ListAttackEventInfo instead.
+     * 
      * @param request DescribeAttackAnalysisDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAttackAnalysisDataResponse
      */
+    @Deprecated
+    // Deprecated
     public DescribeAttackAnalysisDataResponse describeAttackAnalysisDataWithOptions(DescribeAttackAnalysisDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9787,9 +9986,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the statistics of attack analysis.</p>
      * 
+     * @deprecated OpenAPI DescribeAttackAnalysisData is deprecated, please use Sas::2018-12-03::ListAttackEventInfo instead.
+     * 
      * @param request DescribeAttackAnalysisDataRequest
      * @return DescribeAttackAnalysisDataResponse
      */
+    @Deprecated
+    // Deprecated
     public DescribeAttackAnalysisDataResponse describeAttackAnalysisData(DescribeAttackAnalysisDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeAttackAnalysisDataWithOptions(request, runtime);
@@ -9859,7 +10062,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the number of days during which a detected vulnerability is retained before the vulnerability is automatically deleted.</p>
      * 
-     * @param request DescribeAutoDelConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAutoDelConfigResponse
      */
@@ -10218,7 +10420,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the statistics of restoration tasks.</p>
      * 
-     * @param request DescribeBackupRestoreCountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeBackupRestoreCountResponse
      */
@@ -10435,7 +10636,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Check if the asset can be sold by VPC</p>
      * 
-     * @param request DescribeCanAccessVpcSaleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCanAccessVpcSaleResponse
      */
@@ -10617,7 +10817,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Checks the permissions on the trial use of Security Center.</p>
      * 
-     * @param request DescribeCanTrySasRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCanTrySasResponse
      */
@@ -10863,7 +11062,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the result of the ISO 27001 compliance check.</p>
      * 
-     * @param request DescribeCheckResultRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCheckResultResponse
      */
@@ -11525,7 +11723,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * 
      * @deprecated OpenAPI DescribeCloudProductFieldStatistics is deprecated, please use Sas::2018-12-03::GetCloudAssetSummary instead.
      * 
-     * @param request DescribeCloudProductFieldStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCloudProductFieldStatisticsResponse
      */
@@ -11635,7 +11832,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get the cloud product access template for vendors</p>
+     * <p>Multicloud configuration management queries the CTDR cloud vendor product access template configuration.</p>
      * 
      * @param request DescribeCloudVendorProductTemplateConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11671,7 +11868,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get the cloud product access template for vendors</p>
+     * <p>Multicloud configuration management queries the CTDR cloud vendor product access template configuration.</p>
      * 
      * @param request DescribeCloudVendorProductTemplateConfigRequest
      * @return DescribeCloudVendorProductTemplateConfigResponse
@@ -12453,7 +12650,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the statistical information about containers.</p>
      * 
-     * @param request DescribeContainerFieldStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeContainerFieldStatisticsResponse
      */
@@ -12905,7 +13101,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the number of images that are not scanned.</p>
      * 
-     * @param request DescribeCountNotScannedImageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCountNotScannedImageResponse
      */
@@ -12939,7 +13134,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the number of images that are scanned.</p>
      * 
-     * @param request DescribeCountScannedImageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCountScannedImageResponse
      */
@@ -13557,7 +13751,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the default installation version of the proxy that is used in hybrid-cloud scenarios.</p>
      * 
-     * @param request DescribeDefaultProxyInstallVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDefaultProxyInstallVersionResponse
      */
@@ -14203,7 +14396,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries whether Security Center is authorized to scan for urgent vulnerabilities.</p>
      * 
-     * @param request DescribeEmgUserAgreementRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeEmgUserAgreementResponse
      */
@@ -14765,7 +14957,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the exposure statistics of the assets on the Internet.</p>
      * 
-     * @param request DescribeExposedStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeExposedStatisticsResponse
      */
@@ -14931,7 +15122,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the number of vulnerabilities that are fixed by the pay-as-you-go vulnerability fixing feature.</p>
      * 
-     * @param request DescribeFixUsedCountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeFixUsedCountResponse
      */
@@ -16733,7 +16923,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the configurations of the scheduled fix of image risks.</p>
      * 
-     * @param request DescribeImageFixCycleConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeImageFixCycleConfigResponse
      */
@@ -17557,7 +17746,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the number of images on which security alerts are generated. Security alerts are generated for risks such as vulnerabilities, baselines risks, and malicious samples.</p>
      * 
-     * @param request DescribeImageRiskLevelStatisticRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeImageRiskLevelStatisticResponse
      */
@@ -17591,7 +17779,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the details of the quota for container image scan.</p>
      * 
-     * @param request DescribeImageScanAuthCountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeImageScanAuthCountResponse
      */
@@ -17863,7 +18050,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the risk statistics of container images.</p>
      * 
-     * @param request DescribeImageStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeImageStatisticsResponse
      */
@@ -18177,7 +18363,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the installation verification code that is used to run the installation command of the Security Center agent.</p>
      * 
-     * @param request DescribeInstallCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstallCodeResponse
      */
@@ -18216,7 +18401,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the commands that are used to manually install the Security Center Agent.</p>
      * 
-     * @param request DescribeInstallCodesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstallCodesResponse
      */
@@ -18463,7 +18647,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the progress of the last virus scan task.</p>
      * 
-     * @param request DescribeLatestScanTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeLatestScanTaskResponse
      */
@@ -18653,7 +18836,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the alerting status for unapproved logon IP addresses, unapproved logon time ranges, or unapproved logon accounts.</p>
      * 
-     * @param request DescribeLoginSwitchConfigsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeLoginSwitchConfigsResponse
      */
@@ -18831,7 +19013,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the configurations of the asset fingerprint module.</p>
      * 
-     * @param request DescribeModuleConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeModuleConfigResponse
      */
@@ -18865,7 +19046,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the list of accounts that are added to the multi-account management feature as members.</p>
      * 
-     * @param request DescribeMonitorAccountsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeMonitorAccountsResponse
      */
@@ -19385,7 +19565,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Asset Fingerprint Scheduled Task Details</p>
+     * <p>Queries the detailed info of the Schedule Job List in host Assets.</p>
      * 
      * @param request DescribePropertyCronDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19449,7 +19629,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Asset Fingerprint Scheduled Task Details</p>
+     * <p>Queries the detailed info of the Schedule Job List in host Assets.</p>
      * 
      * @param request DescribePropertyCronDetailRequest
      * @return DescribePropertyCronDetailResponse
@@ -22833,7 +23013,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the time when a system vulnerability was last detected.</p>
      * 
-     * @param request DescribeSupervisonInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSupervisonInfoResponse
      */
@@ -22867,7 +23046,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the regions in which the anti-ransomware feature is supported.</p>
      * 
-     * @param request DescribeSupportRegionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSupportRegionResponse
      */
@@ -23373,7 +23551,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Query Alarm Security Event Statistics</p>
      * 
-     * @param request DescribeSuspiciousSecurityEventyStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSuspiciousSecurityEventyStatisticsResponse
      */
@@ -24019,7 +24196,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the statistics on backups based on anti-ransomware policies.</p>
      * 
-     * @param request DescribeUniBackupStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUniBackupStatisticsResponse
      */
@@ -24109,7 +24285,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the region that is supported by anti-ransomware for databases.</p>
      * 
-     * @param request DescribeUniSupportRegionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUniSupportRegionResponse
      */
@@ -24143,7 +24318,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the information about the servers to which an anti-ransomware policy is applied.</p>
      * 
-     * @param request DescribeUserBackupMachinesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUserBackupMachinesResponse
      */
@@ -24373,7 +24547,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the service providers whose assets can be added to Security Center.</p>
      * 
-     * @param request DescribeVendorListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeVendorListResponse
      */
@@ -24617,7 +24790,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the information about virtual private clouds (VPCs).</p>
      * 
-     * @param request DescribeVpcListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeVpcListResponse
      */
@@ -24909,7 +25081,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the statistics of vulnerability fixes.</p>
      * 
-     * @param request DescribeVulFixStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeVulFixStatisticsResponse
      */
@@ -25131,7 +25302,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the statistics of vulnerabilities in Security Center.</p>
      * 
-     * @param request DescribeVulMetaCountStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeVulMetaCountStatisticsResponse
      */
@@ -25621,7 +25791,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the types of files that are excluded from web tamper proofing.</p>
      * 
-     * @param request DescribeWebLockExclusiveFileTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeWebLockExclusiveFileTypeResponse
      */
@@ -25771,7 +25940,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the summary information about the types of files for which web tamper proofing is enabled.</p>
      * 
-     * @param request DescribeWebLockFileTypeSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeWebLockFileTypeSummaryResponse
      */
@@ -25805,7 +25973,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the types of files that can be protected by web tamper proofing.</p>
      * 
-     * @param request DescribeWebLockInclusiveFileTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeWebLockInclusiveFileTypeResponse
      */
@@ -25995,7 +26162,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the number of times that the files protected by web tamper proofing are changed.</p>
      * 
-     * @param request DescribeWebLockTotalFileChangeCountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeWebLockTotalFileChangeCountResponse
      */
@@ -26882,7 +27048,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Enable the multi-account management feature of Security Center.</p>
      * 
-     * @param request EnableServiceAccessResourceDirectoryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableServiceAccessResourceDirectoryResponse
      */
@@ -28575,7 +28740,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Attack Path Event Details.</p>
+     * <p>Query attack path management event details.</p>
      * 
      * @param request GetAttackPathEventDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -28615,7 +28780,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Attack Path Event Details.</p>
+     * <p>Query attack path management event details.</p>
      * 
      * @param request GetAttackPathEventDetailRequest
      * @return GetAttackPathEventDetailResponse
@@ -28629,7 +28794,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Query Attack Path Event Statistics.</p>
      * 
-     * @param request GetAttackPathEventStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAttackPathEventStatisticsResponse
      */
@@ -28755,7 +28919,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries a list of attack types on the Attack Analysis page.</p>
      * 
-     * @param request GetAttackTypeListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAttackTypeListResponse
      */
@@ -28789,7 +28952,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the statistics of asset protection quota.</p>
      * 
-     * @param request GetAuthSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAuthSummaryResponse
      */
@@ -28823,7 +28985,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the statistics about the numbers of assets protected by each edition of Security Center.</p>
      * 
-     * @param request GetAuthVersionStatisticRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAuthVersionStatisticResponse
      */
@@ -28857,7 +29018,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Checks whether the managed anti-ransomware feature can automatically configure an anti-ransomware policy for servers.</p>
      * 
-     * @param request GetBackupAutoConfigStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetBackupAutoConfigStatusResponse
      */
@@ -28891,7 +29051,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the anti-ransomware capacity that is used.</p>
      * 
-     * @param request GetBackupStorageCountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetBackupStorageCountResponse
      */
@@ -29017,7 +29176,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the information about an automatic configuration check on cloud services.</p>
      * 
-     * @param request GetCheckConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetCheckConfigResponse
      */
@@ -29913,7 +30071,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the number of policies in each cluster.</p>
      * 
-     * @param request GetClusterStrategyCountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetClusterStrategyCountResponse
      */
@@ -30135,7 +30292,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the publish details of the Security Center agent.</p>
      * 
-     * @param request GetCurrentVersionPublishRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetCurrentVersionPublishResponse
      */
@@ -30225,7 +30381,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the numbers of handled alerts of the precision defense type and the web tamper proofing type.</p>
      * 
-     * @param request GetDefenceCountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDefenceCountResponse
      */
@@ -30347,7 +30502,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Obtains the usage information of the malicious file detection SDK.</p>
      * 
-     * @param request GetFileDetectApiInvokeInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetFileDetectApiInvokeInfoResponse
      */
@@ -30499,7 +30653,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries information about the core file monitoring feature, including the number of effective rules and the installation status of the Security Center agent on servers.</p>
      * 
-     * @param request GetFileProtectDashboardRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetFileProtectDashboardResponse
      */
@@ -30665,7 +30818,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the queries per second (QPS) limit on the files uploaded from the client.</p>
      * 
-     * @param request GetFileUploadLimitRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetFileUploadLimitResponse
      */
@@ -31313,7 +31465,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Count the number of security events for a single instance</p>
+     * <p>Queries the alerting statistics information of a server.</p>
      * 
      * @param request GetInstanceAlarmStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31349,7 +31501,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Count the number of security events for a single instance</p>
+     * <p>Queries the alerting statistics information of a server.</p>
      * 
      * @param request GetInstanceAlarmStatisticsRequest
      * @return GetInstanceAlarmStatisticsResponse
@@ -31363,7 +31515,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Get Instance Authorization Value Range</p>
      * 
-     * @param request GetInstanceAuthRangeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetInstanceAuthRangeResponse
      */
@@ -31967,7 +32118,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the baselines that are supported by at-risk image blocking.</p>
      * 
-     * @param request GetOpaClusterBaseLineListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetOpaClusterBaseLineListResponse
      */
@@ -32257,7 +32407,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the usage statistics about the templates provided in the feature of proactive defense for containers for rules of the at-risk image blocking type.</p>
      * 
-     * @param request GetOpaStrategyTemplateSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetOpaStrategyTemplateSummaryResponse
      */
@@ -32435,7 +32584,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Get Publish Time Configuration</p>
      * 
-     * @param request GetPublishCronRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetPublishCronResponse
      */
@@ -32472,7 +32620,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the organizational structure of a resource directory by using the multi-account management feature.</p>
      * 
-     * @param request GetRdTreeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetRdTreeResponse
      */
@@ -32509,7 +32656,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the time range of image scans.</p>
      * 
-     * @param request GetRegistryScanDayNumRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetRegistryScanDayNumResponse
      */
@@ -32543,7 +32689,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the numbers of system defense rules and custom defense rules.</p>
      * 
-     * @param request GetRulesCountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetRulesCountResponse
      */
@@ -33141,7 +33286,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Checks whether you can submit a free quick scan task, which includes vulnerability detection in the free category and free check items of Cloud Security Posture Management (CSPM).</p>
      * 
-     * @param request GetTenantCheckAvailableRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTenantCheckAvailableResponse
      */
@@ -33173,9 +33317,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取未知威胁发现的统计信息</p>
+     * 
+     * @param request GetUnknownThreatDetectStatisticRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetUnknownThreatDetectStatisticResponse
+     */
+    public GetUnknownThreatDetectStatisticResponse getUnknownThreatDetectStatisticWithOptions(GetUnknownThreatDetectStatisticRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUnknownThreatDetectStatistic"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUnknownThreatDetectStatisticResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取未知威胁发现的统计信息</p>
+     * 
+     * @param request GetUnknownThreatDetectStatisticRequest
+     * @return GetUnknownThreatDetectStatisticResponse
+     */
+    public GetUnknownThreatDetectStatisticResponse getUnknownThreatDetectStatistic(GetUnknownThreatDetectStatisticRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getUnknownThreatDetectStatisticWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the language settings of log analysis.</p>
      * 
-     * @param request GetUserLangRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetUserLangResponse
      */
@@ -33305,7 +33485,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the information about the latest virus scan task.</p>
      * 
-     * @param request GetVirusScanLatestTaskStatisticRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetVirusScanLatestTaskStatisticResponse
      */
@@ -33545,6 +33724,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>文件检测告警处理操作</p>
+     * 
+     * @param request HandleObjectScanEventRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return HandleObjectScanEventResponse
+     */
+    public HandleObjectScanEventResponse handleObjectScanEventWithOptions(HandleObjectScanEventRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.batchType)) {
+            query.put("BatchType", request.batchType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventId)) {
+            query.put("EventId", request.eventId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventIdList)) {
+            query.put("EventIdList", request.eventIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleConditionList)) {
+            query.put("RuleConditionList", request.ruleConditionList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "HandleObjectScanEvent"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new HandleObjectScanEventResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>文件检测告警处理操作</p>
+     * 
+     * @param request HandleObjectScanEventRequest
+     * @return HandleObjectScanEventResponse
+     */
+    public HandleObjectScanEventResponse handleObjectScanEvent(HandleObjectScanEventRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.handleObjectScanEventWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Handles alert events.</p>
      * 
      * @param request HandleSecurityEventsRequest
@@ -33747,6 +33994,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public HandleSimilarSecurityEventsResponse handleSimilarSecurityEvents(HandleSimilarSecurityEventsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.handleSimilarSecurityEventsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>处理未知威胁分析告警</p>
+     * 
+     * @param request HandleUnknownThreatDetectEventRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return HandleUnknownThreatDetectEventResponse
+     */
+    public HandleUnknownThreatDetectEventResponse handleUnknownThreatDetectEventWithOptions(HandleUnknownThreatDetectEventRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eventIdList)) {
+            query.put("EventIdList", request.eventIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "HandleUnknownThreatDetectEvent"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new HandleUnknownThreatDetectEventResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>处理未知威胁分析告警</p>
+     * 
+     * @param request HandleUnknownThreatDetectEventRequest
+     * @return HandleUnknownThreatDetectEventResponse
+     */
+    public HandleUnknownThreatDetectEventResponse handleUnknownThreatDetectEvent(HandleUnknownThreatDetectEventRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.handleUnknownThreatDetectEventWithOptions(request, runtime);
     }
 
     /**
@@ -34324,7 +34619,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries members in the resource directory that is involved when the multi-account management feature is enabled.</p>
      * 
-     * @param request ListAccountsInResourceDirectoryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAccountsInResourceDirectoryResponse
      */
@@ -34631,7 +34925,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the regions that are supported by the agentless detection feature.</p>
      * 
-     * @param request ListAgentlessRegionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAgentlessRegionResponse
      */
@@ -34905,7 +35198,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the configurations for cleaning offline hosts whose provider cannot be identified.</p>
      * 
-     * @param request ListAssetCleanConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAssetCleanConfigResponse
      */
@@ -36007,7 +36299,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List User Policies</p>
+     * <p>In the custom check items feature of Cloud Security Posture Management, query the attribution standard, attribution regulation, or attribution section in the check item categorization settings.</p>
      * 
      * @param request ListCheckPoliciesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -36035,7 +36327,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List User Policies</p>
+     * <p>In the custom check items feature of Cloud Security Posture Management, query the attribution standard, attribution regulation, or attribution section in the check item categorization settings.</p>
      * 
      * @param request ListCheckPoliciesRequest
      * @return ListCheckPoliciesResponse
@@ -36421,7 +36713,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the supported types of custom defense rules.</p>
      * 
-     * @param request ListClientUserDefineRuleTypesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListClientUserDefineRuleTypesResponse
      */
@@ -37103,7 +37394,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries a list of clusters that are included in a rule for non-image program defense.</p>
      * 
-     * @param request ListContainerDefenseRuleClustersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListContainerDefenseRuleClustersResponse
      */
@@ -38771,7 +39061,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the regions supported by the log delivery feature that uses the pay-as-you-go billing method.</p>
      * 
-     * @param request ListLogShipperRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListLogShipperRegionsResponse
      */
@@ -39667,7 +39956,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the information about the self-managed Kubernetes clusters that are added to Security Center.</p>
      * 
-     * @param request ListPrivateK8sRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListPrivateK8sResponse
      */
@@ -39848,7 +40136,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the automatic management policies of members that are added to Security Center for multi-account management. The members in the automatic control management directory are automatically added to the member list of Security Center.</p>
      * 
-     * @param request ListRdDefaultSyncListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListRdDefaultSyncListResponse
      */
@@ -40041,7 +40328,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries supported file suffixes.</p>
      * 
-     * @param request ListSupportObjectSuffixRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListSupportObjectSuffixResponse
      */
@@ -40115,7 +40401,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the types of system rules.</p>
      * 
-     * @param request ListSystemClientRuleTypesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListSystemClientRuleTypesResponse
      */
@@ -40491,6 +40776,294 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListUninstallAegisMachinesResponse listUninstallAegisMachines(ListUninstallAegisMachinesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listUninstallAegisMachinesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询未知威胁发现事件</p>
+     * 
+     * @param request ListUnknownThreatDetectEventRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListUnknownThreatDetectEventResponse
+     */
+    public ListUnknownThreatDetectEventResponse listUnknownThreatDetectEventWithOptions(ListUnknownThreatDetectEventRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hashKey)) {
+            query.put("HashKey", request.hashKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentProcessPath)) {
+            query.put("ParentProcessPath", request.parentProcessPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.processPath)) {
+            query.put("ProcessPath", request.processPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uuid)) {
+            query.put("Uuid", request.uuid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListUnknownThreatDetectEvent"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListUnknownThreatDetectEventResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询未知威胁发现事件</p>
+     * 
+     * @param request ListUnknownThreatDetectEventRequest
+     * @return ListUnknownThreatDetectEventResponse
+     */
+    public ListUnknownThreatDetectEventResponse listUnknownThreatDetectEvent(ListUnknownThreatDetectEventRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listUnknownThreatDetectEventWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询未知威胁发现的机器列表</p>
+     * 
+     * @param request ListUnknownThreatDetectMachineRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListUnknownThreatDetectMachineResponse
+     */
+    public ListUnknownThreatDetectMachineResponse listUnknownThreatDetectMachineWithOptions(ListUnknownThreatDetectMachineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.studyMode)) {
+            query.put("StudyMode", request.studyMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.studyTimeEnd)) {
+            query.put("StudyTimeEnd", request.studyTimeEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.studyTimeStart)) {
+            query.put("StudyTimeStart", request.studyTimeStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uuid)) {
+            query.put("Uuid", request.uuid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListUnknownThreatDetectMachine"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListUnknownThreatDetectMachineResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询未知威胁发现的机器列表</p>
+     * 
+     * @param request ListUnknownThreatDetectMachineRequest
+     * @return ListUnknownThreatDetectMachineResponse
+     */
+    public ListUnknownThreatDetectMachineResponse listUnknownThreatDetectMachine(ListUnknownThreatDetectMachineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listUnknownThreatDetectMachineWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询未知威胁发现进程列表</p>
+     * 
+     * @param request ListUnknownThreatDetectProcessRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListUnknownThreatDetectProcessResponse
+     */
+    public ListUnknownThreatDetectProcessResponse listUnknownThreatDetectProcessWithOptions(ListUnknownThreatDetectProcessRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.analyzeResult)) {
+            query.put("AnalyzeResult", request.analyzeResult);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.firstTimeEnd)) {
+            query.put("FirstTimeEnd", request.firstTimeEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.firstTimeStart)) {
+            query.put("FirstTimeStart", request.firstTimeStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.md5)) {
+            query.put("Md5", request.md5);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.path)) {
+            query.put("Path", request.path);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.processPath)) {
+            query.put("ProcessPath", request.processPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sha256)) {
+            query.put("Sha256", request.sha256);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uuid)) {
+            query.put("Uuid", request.uuid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListUnknownThreatDetectProcess"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListUnknownThreatDetectProcessResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询未知威胁发现进程列表</p>
+     * 
+     * @param request ListUnknownThreatDetectProcessRequest
+     * @return ListUnknownThreatDetectProcessResponse
+     */
+    public ListUnknownThreatDetectProcessResponse listUnknownThreatDetectProcess(ListUnknownThreatDetectProcessRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listUnknownThreatDetectProcessWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询未知威胁发现策略列表</p>
+     * 
+     * @param request ListUnknownThreatDetectStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListUnknownThreatDetectStrategyResponse
+     */
+    public ListUnknownThreatDetectStrategyResponse listUnknownThreatDetectStrategyWithOptions(ListUnknownThreatDetectStrategyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.studyMode)) {
+            query.put("StudyMode", request.studyMode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListUnknownThreatDetectStrategy"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListUnknownThreatDetectStrategyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询未知威胁发现策略列表</p>
+     * 
+     * @param request ListUnknownThreatDetectStrategyRequest
+     * @return ListUnknownThreatDetectStrategyResponse
+     */
+    public ListUnknownThreatDetectStrategyResponse listUnknownThreatDetectStrategy(ListUnknownThreatDetectStrategyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listUnknownThreatDetectStrategyWithOptions(request, runtime);
     }
 
     /**
@@ -44261,7 +44834,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Manage Serverless Asset Authorization</p>
+     * <p>Serverless Asset authorization Management.</p>
      * 
      * @param request ModifyServerlessAuthToMachineRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -44349,7 +44922,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Manage Serverless Asset Authorization</p>
+     * <p>Serverless Asset authorization Management.</p>
      * 
      * @param request ModifyServerlessAuthToMachineRequest
      * @return ModifyServerlessAuthToMachineResponse
@@ -46281,6 +46854,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>修改未知威胁发现的机器状态</p>
+     * 
+     * @param request OperateUnknownThreatDetectMachineRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return OperateUnknownThreatDetectMachineResponse
+     */
+    public OperateUnknownThreatDetectMachineResponse operateUnknownThreatDetectMachineWithOptions(OperateUnknownThreatDetectMachineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.operateType)) {
+            query.put("OperateType", request.operateType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uuidList)) {
+            query.put("UuidList", request.uuidList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "OperateUnknownThreatDetectMachine"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new OperateUnknownThreatDetectMachineResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改未知威胁发现的机器状态</p>
+     * 
+     * @param request OperateUnknownThreatDetectMachineRequest
+     * @return OperateUnknownThreatDetectMachineResponse
+     */
+    public OperateUnknownThreatDetectMachineResponse operateUnknownThreatDetectMachine(OperateUnknownThreatDetectMachineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.operateUnknownThreatDetectMachineWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Handles alert events that are generated by the antivirus feature. You can perform in-depth detection and removal, add alert events to the whitelist, ignore alert events, or manually handle alert events.</p>
      * 
      * @param request OperateVirusEventsRequest
@@ -47219,7 +47844,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the list of beginner tasks. Security Center provides rewards for users who complete tasks. The rewards include the quota for a value-added feature and log storage capacity.</p>
      * 
-     * @param request QueryGuidTaskListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryGuidTaskListResponse
      */
@@ -47541,7 +48165,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Refreshes the list of Object Storage Service (OSS) buckets.</p>
      * 
-     * @param request RefreshOssBucketScanInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RefreshOssBucketScanInfoResponse
      */
@@ -48891,7 +49514,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Starts a database scan task.</p>
      * 
-     * @param request StartDiscoverDatabaseTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartDiscoverDatabaseTaskResponse
      */
@@ -48973,7 +49595,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Starts an IDC scan task.</p>
      * 
-     * @param request StartIdcProbeScanRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartIdcProbeScanResponse
      */
@@ -49263,7 +49884,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Submits a free quick scan task, which includes vulnerability detection in the free category and free check items of Cloud Security Posture Management (CSPM).</p>
      * 
-     * @param request SubmitTenantCheckRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SubmitTenantCheckResponse
      */
@@ -49297,7 +49917,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Triggers ISO 27001 compliance checks of Security Center.</p>
      * 
-     * @param request TriggerCheckRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TriggerCheckResponse
      */
@@ -51759,6 +52378,114 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateTargetListByBatchResponse updateTargetListByBatch(UpdateTargetListByBatchRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateTargetListByBatchWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新未知威胁发现的进程详情</p>
+     * 
+     * @param request UpdateUnknownThreatDetectProcessRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateUnknownThreatDetectProcessResponse
+     */
+    public UpdateUnknownThreatDetectProcessResponse updateUnknownThreatDetectProcessWithOptions(UpdateUnknownThreatDetectProcessRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.processId)) {
+            query.put("ProcessId", request.processId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateUnknownThreatDetectProcess"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateUnknownThreatDetectProcessResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新未知威胁发现的进程详情</p>
+     * 
+     * @param request UpdateUnknownThreatDetectProcessRequest
+     * @return UpdateUnknownThreatDetectProcessResponse
+     */
+    public UpdateUnknownThreatDetectProcessResponse updateUnknownThreatDetectProcess(UpdateUnknownThreatDetectProcessRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateUnknownThreatDetectProcessWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新未知威胁发现策略</p>
+     * 
+     * @param request UpdateUnknownThreatDetectStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateUnknownThreatDetectStrategyResponse
+     */
+    public UpdateUnknownThreatDetectStrategyResponse updateUnknownThreatDetectStrategyWithOptions(UpdateUnknownThreatDetectStrategyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.durationDaysAfterInit)) {
+            query.put("DurationDaysAfterInit", request.durationDaysAfterInit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.durationDaysAfterStop)) {
+            query.put("DurationDaysAfterStop", request.durationDaysAfterStop);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.studyMode)) {
+            query.put("StudyMode", request.studyMode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateUnknownThreatDetectStrategy"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateUnknownThreatDetectStrategyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新未知威胁发现策略</p>
+     * 
+     * @param request UpdateUnknownThreatDetectStrategyRequest
+     * @return UpdateUnknownThreatDetectStrategyResponse
+     */
+    public UpdateUnknownThreatDetectStrategyResponse updateUnknownThreatDetectStrategy(UpdateUnknownThreatDetectStrategyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateUnknownThreatDetectStrategyWithOptions(request, runtime);
     }
 
     /**
