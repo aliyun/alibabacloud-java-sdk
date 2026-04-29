@@ -1,3 +1,43 @@
+2026-04-29 Version: 5.4.0
+- Support API CloudAgentMonitorStatistics.
+- Support API CloudAgentWorkloadReport.
+- Support API CloudAssignAgentGroup.
+- Support API CloudCreateAgentGroup.
+- Support API CloudCreateAsr.
+- Support API CloudCreateEnterpriseTime.
+- Support API CloudCreateExten.
+- Support API CloudCreateQueue.
+- Support API CloudCreateQueueSkill.
+- Support API CloudCreateSkill.
+- Support API CloudDeleteAgentGroup.
+- Support API CloudDeleteEnterpriseTime.
+- Support API CloudDeleteExten.
+- Support API CloudDeleteQueue.
+- Support API CloudDeleteQueueSkill.
+- Support API CloudDeleteSkill.
+- Support API CloudDeleteTask.
+- Support API CloudDeleteTaskTel.
+- Support API CloudGetAreaCode.
+- Support API CloudGetAsr.
+- Support API CloudGetExten.
+- Support API CloudGetQueue.
+- Support API CloudGetTask.
+- Support API CloudListAgentGroup.
+- Support API CloudListAssignedAgentGroup.
+- Support API CloudListCurlLog.
+- Support API CloudListEnterpriseTime.
+- Support API CloudListExten.
+- Support API CloudListQueue.
+- Support API CloudListQueueSkill.
+- Support API CloudListSkill.
+- Support API CloudListTaskFile.
+- Support API CloudMonitorTask.
+- Support API CloudPauseTask.
+- Support API CloudQueryRasrEvent.
+- Support API CloudQueryTask.
+- Support API CloudUnassignAgentGroup.
+
+
 2026-04-28 Version: 5.3.0
 - Support API CloudGetObCdr.
 - Support API CloudGetRecordUrl.
