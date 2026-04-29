@@ -203,6 +203,9 @@ public class CreateFeatureViewRequest extends TeaModel {
     }
 
     public static class CreateFeatureViewRequestFieldsTransformInput extends TeaModel {
+        @NameInMap("Modality")
+        public String modality;
+
         /**
          * <strong>example:</strong>
          * <p>f1</p>
@@ -220,6 +223,14 @@ public class CreateFeatureViewRequest extends TeaModel {
         public static CreateFeatureViewRequestFieldsTransformInput build(java.util.Map<String, ?> map) throws Exception {
             CreateFeatureViewRequestFieldsTransformInput self = new CreateFeatureViewRequestFieldsTransformInput();
             return TeaModel.build(map, self);
+        }
+
+        public CreateFeatureViewRequestFieldsTransformInput setModality(String modality) {
+            this.modality = modality;
+            return this;
+        }
+        public String getModality() {
+            return this.modality;
         }
 
         public CreateFeatureViewRequestFieldsTransformInput setName(String name) {

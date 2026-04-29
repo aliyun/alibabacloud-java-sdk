@@ -36,6 +36,9 @@ public class UpdateLLMConfigRequest extends TeaModel {
     @NameInMap("EmbeddingDimension")
     public Integer embeddingDimension;
 
+    @NameInMap("EnableFusion")
+    public Boolean enableFusion;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -53,6 +56,9 @@ public class UpdateLLMConfigRequest extends TeaModel {
      */
     @NameInMap("Model")
     public String model;
+
+    @NameInMap("ModelType")
+    public String modelType;
 
     /**
      * <p>This parameter is required.</p>
@@ -109,6 +115,14 @@ public class UpdateLLMConfigRequest extends TeaModel {
         return this.embeddingDimension;
     }
 
+    public UpdateLLMConfigRequest setEnableFusion(Boolean enableFusion) {
+        this.enableFusion = enableFusion;
+        return this;
+    }
+    public Boolean getEnableFusion() {
+        return this.enableFusion;
+    }
+
     public UpdateLLMConfigRequest setMaxTokens(Integer maxTokens) {
         this.maxTokens = maxTokens;
         return this;
@@ -123,6 +137,14 @@ public class UpdateLLMConfigRequest extends TeaModel {
     }
     public String getModel() {
         return this.model;
+    }
+
+    public UpdateLLMConfigRequest setModelType(String modelType) {
+        this.modelType = modelType;
+        return this;
+    }
+    public String getModelType() {
+        return this.modelType;
     }
 
     public UpdateLLMConfigRequest setName(String name) {

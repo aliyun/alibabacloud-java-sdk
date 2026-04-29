@@ -117,6 +117,9 @@ public class ListLLMConfigsResponseBody extends TeaModel {
         @NameInMap("EmbeddingDimension")
         public Integer embeddingDimension;
 
+        @NameInMap("EnableFusion")
+        public Boolean enableFusion;
+
         /**
          * <strong>example:</strong>
          * <p>2023-07-04T11:26:09.036+08:00</p>
@@ -151,6 +154,9 @@ public class ListLLMConfigsResponseBody extends TeaModel {
          */
         @NameInMap("Model")
         public String model;
+
+        @NameInMap("ModelType")
+        public String modelType;
 
         /**
          * <strong>example:</strong>
@@ -217,6 +223,14 @@ public class ListLLMConfigsResponseBody extends TeaModel {
             return this.embeddingDimension;
         }
 
+        public ListLLMConfigsResponseBodyLLMConfigs setEnableFusion(Boolean enableFusion) {
+            this.enableFusion = enableFusion;
+            return this;
+        }
+        public Boolean getEnableFusion() {
+            return this.enableFusion;
+        }
+
         public ListLLMConfigsResponseBodyLLMConfigs setGmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
             return this;
@@ -255,6 +269,14 @@ public class ListLLMConfigsResponseBody extends TeaModel {
         }
         public String getModel() {
             return this.model;
+        }
+
+        public ListLLMConfigsResponseBodyLLMConfigs setModelType(String modelType) {
+            this.modelType = modelType;
+            return this;
+        }
+        public String getModelType() {
+            return this.modelType;
         }
 
         public ListLLMConfigsResponseBodyLLMConfigs setName(String name) {

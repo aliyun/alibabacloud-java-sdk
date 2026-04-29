@@ -383,6 +383,9 @@ public class GetFeatureViewResponseBody extends TeaModel {
     }
 
     public static class GetFeatureViewResponseBodyFieldsTransformInput extends TeaModel {
+        @NameInMap("Modality")
+        public String modality;
+
         /**
          * <strong>example:</strong>
          * <p>f1</p>
@@ -400,6 +403,14 @@ public class GetFeatureViewResponseBody extends TeaModel {
         public static GetFeatureViewResponseBodyFieldsTransformInput build(java.util.Map<String, ?> map) throws Exception {
             GetFeatureViewResponseBodyFieldsTransformInput self = new GetFeatureViewResponseBodyFieldsTransformInput();
             return TeaModel.build(map, self);
+        }
+
+        public GetFeatureViewResponseBodyFieldsTransformInput setModality(String modality) {
+            this.modality = modality;
+            return this;
+        }
+        public String getModality() {
+            return this.modality;
         }
 
         public GetFeatureViewResponseBodyFieldsTransformInput setName(String name) {

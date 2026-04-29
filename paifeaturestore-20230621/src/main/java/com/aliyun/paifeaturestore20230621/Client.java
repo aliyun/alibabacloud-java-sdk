@@ -120,7 +120,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建数据源。</p>
+     * <p>Register a datasource under a FeatureStore Instance. A datasource provides offline storage (<strong>MaxCompute</strong>) or online storage (<strong>Hologres</strong>, <strong>TableStore</strong>, or <strong>FeatureDB</strong>) for projects in the Instance.</p>
      * 
      * @param request CreateDatasourceRequest
      * @param headers map
@@ -170,7 +170,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建数据源。</p>
+     * <p>Register a datasource under a FeatureStore Instance. A datasource provides offline storage (<strong>MaxCompute</strong>) or online storage (<strong>Hologres</strong>, <strong>TableStore</strong>, or <strong>FeatureDB</strong>) for projects in the Instance.</p>
      * 
      * @param request CreateDatasourceRequest
      * @return CreateDatasourceResponse
@@ -410,12 +410,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("EmbeddingDimension", request.embeddingDimension);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableFusion)) {
+            body.put("EnableFusion", request.enableFusion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxTokens)) {
             body.put("MaxTokens", request.maxTokens);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.model)) {
             body.put("Model", request.model);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelType)) {
+            body.put("ModelType", request.modelType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
@@ -589,7 +597,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建FeatureStore项目</p>
+     * <p>Create a FeatureStore project under a PAI workspace. A project groups FeatureEntities, FeatureViews, and ModelFeatures sharing one <strong>MaxCompute</strong> offline datasource and one online datasource (<strong>Hologres</strong>, <strong>TableStore</strong>, or <strong>FeatureDB</strong>).</p>
      * 
      * @param request CreateProjectRequest
      * @param headers map
@@ -643,7 +651,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建FeatureStore项目</p>
+     * <p>Create a FeatureStore project under a PAI workspace. A project groups FeatureEntities, FeatureViews, and ModelFeatures sharing one <strong>MaxCompute</strong> offline datasource and one online datasource (<strong>Hologres</strong>, <strong>TableStore</strong>, or <strong>FeatureDB</strong>).</p>
      * 
      * @param request CreateProjectRequest
      * @return CreateProjectResponse
@@ -703,7 +711,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定数据源。</p>
+     * <p>Delete a datasource from a FeatureStore Instance.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -729,7 +737,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定数据源。</p>
+     * <p>Delete a datasource from a FeatureStore Instance.</p>
      * @return DeleteDatasourceResponse
      */
     public DeleteDatasourceResponse deleteDatasource(String InstanceId, String DatasourceId) throws Exception {
@@ -1025,7 +1033,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据源详细信息。</p>
+     * <p>Get the details of a datasource, including its type, connection info, and Config.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1051,7 +1059,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据源详细信息。</p>
+     * <p>Get the details of a datasource, including its type, connection info, and Config.</p>
      * @return GetDatasourceResponse
      */
     public GetDatasourceResponse getDatasource(String InstanceId, String DatasourceId) throws Exception {
@@ -1689,7 +1697,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据源列表。</p>
+     * <p>List datasources under a FeatureStore Instance, filtered by workspace, type, or name.</p>
      * 
      * @param request ListDatasourcesRequest
      * @param headers map
@@ -1747,7 +1755,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据源列表。</p>
+     * <p>List datasources under a FeatureStore Instance, filtered by workspace, type, or name.</p>
      * 
      * @param request ListDatasourcesRequest
      * @return ListDatasourcesResponse
@@ -2833,7 +2841,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新数据源信息。</p>
+     * <p>Update a datasource\&quot;s info. The datasource type and workspace cannot be changed.</p>
      * 
      * @param request UpdateDatasourceRequest
      * @param headers map
@@ -2875,7 +2883,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新数据源信息。</p>
+     * <p>Update a datasource\&quot;s info. The datasource type and workspace cannot be changed.</p>
      * 
      * @param request UpdateDatasourceRequest
      * @return UpdateDatasourceResponse
@@ -2884,6 +2892,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateDatasourceWithOptions(InstanceId, DatasourceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新特征视图。</p>
+     * 
+     * @param request UpdateFeatureViewRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateFeatureViewResponse
+     */
+    public UpdateFeatureViewResponse updateFeatureViewWithOptions(String InstanceId, String FeatureViewId, UpdateFeatureViewRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fields)) {
+            body.put("Fields", request.fields);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateFeatureView"),
+            new TeaPair("version", "2023-06-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceId) + "/featureviews/" + com.aliyun.openapiutil.Client.getEncodeParam(FeatureViewId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateFeatureViewResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新特征视图。</p>
+     * 
+     * @param request UpdateFeatureViewRequest
+     * @return UpdateFeatureViewResponse
+     */
+    public UpdateFeatureViewResponse updateFeatureView(String InstanceId, String FeatureViewId, UpdateFeatureViewRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateFeatureViewWithOptions(InstanceId, FeatureViewId, request, headers, runtime);
     }
 
     /**
@@ -2914,12 +2969,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("EmbeddingDimension", request.embeddingDimension);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableFusion)) {
+            body.put("EnableFusion", request.enableFusion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxTokens)) {
             body.put("MaxTokens", request.maxTokens);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.model)) {
             body.put("Model", request.model);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelType)) {
+            body.put("ModelType", request.modelType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
