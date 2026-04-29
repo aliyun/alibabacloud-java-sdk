@@ -8721,6 +8721,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ScalingRuleTimer", request.scalingRuleTimer);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.scalingRuleType)) {
+            query.put("ScalingRuleType", request.scalingRuleType);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))

@@ -166,6 +166,9 @@ public class UpdateApplicationScalingRuleRequest extends TeaModel {
     @NameInMap("ScalingRuleTimer")
     public String scalingRuleTimer;
 
+    @NameInMap("ScalingRuleType")
+    public String scalingRuleType;
+
     public static UpdateApplicationScalingRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateApplicationScalingRuleRequest self = new UpdateApplicationScalingRuleRequest();
         return TeaModel.build(map, self);
@@ -225,6 +228,14 @@ public class UpdateApplicationScalingRuleRequest extends TeaModel {
     }
     public String getScalingRuleTimer() {
         return this.scalingRuleTimer;
+    }
+
+    public UpdateApplicationScalingRuleRequest setScalingRuleType(String scalingRuleType) {
+        this.scalingRuleType = scalingRuleType;
+        return this;
+    }
+    public String getScalingRuleType() {
+        return this.scalingRuleType;
     }
 
 }
