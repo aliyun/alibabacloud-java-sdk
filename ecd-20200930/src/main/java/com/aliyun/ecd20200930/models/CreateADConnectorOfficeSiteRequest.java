@@ -4,6 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateADConnectorOfficeSiteRequest extends TeaModel {
+    @NameInMap("AccessAttribute")
+    public String accessAttribute;
+
     /**
      * <p>The hostname of the domain controller. The hostname must comply with the naming conventions for Windows hosts.</p>
      * 
@@ -279,6 +282,14 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
     public static CreateADConnectorOfficeSiteRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateADConnectorOfficeSiteRequest self = new CreateADConnectorOfficeSiteRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateADConnectorOfficeSiteRequest setAccessAttribute(String accessAttribute) {
+        this.accessAttribute = accessAttribute;
+        return this;
+    }
+    public String getAccessAttribute() {
+        return this.accessAttribute;
     }
 
     public CreateADConnectorOfficeSiteRequest setAdHostname(String adHostname) {

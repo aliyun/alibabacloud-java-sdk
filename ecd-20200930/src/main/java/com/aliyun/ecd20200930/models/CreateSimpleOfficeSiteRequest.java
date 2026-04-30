@@ -4,6 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateSimpleOfficeSiteRequest extends TeaModel {
+    @NameInMap("AccessAttribute")
+    public String accessAttribute;
+
     @NameInMap("AccountType")
     public String accountType;
 
@@ -209,6 +212,14 @@ public class CreateSimpleOfficeSiteRequest extends TeaModel {
     public static CreateSimpleOfficeSiteRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSimpleOfficeSiteRequest self = new CreateSimpleOfficeSiteRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSimpleOfficeSiteRequest setAccessAttribute(String accessAttribute) {
+        this.accessAttribute = accessAttribute;
+        return this;
+    }
+    public String getAccessAttribute() {
+        return this.accessAttribute;
     }
 
     public CreateSimpleOfficeSiteRequest setAccountType(String accountType) {

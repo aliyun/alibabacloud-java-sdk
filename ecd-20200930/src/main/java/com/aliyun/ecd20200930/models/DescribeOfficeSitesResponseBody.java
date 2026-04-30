@@ -342,6 +342,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @NameInMap("AcceleratorId")
         public String acceleratorId;
 
+        @NameInMap("AccessAttribute")
+        public String accessAttribute;
+
         @NameInMap("AccountType")
         public String accountType;
 
@@ -930,6 +933,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
         public String getAcceleratorId() {
             return this.acceleratorId;
+        }
+
+        public DescribeOfficeSitesResponseBodyOfficeSites setAccessAttribute(String accessAttribute) {
+            this.accessAttribute = accessAttribute;
+            return this;
+        }
+        public String getAccessAttribute() {
+            return this.accessAttribute;
         }
 
         public DescribeOfficeSitesResponseBodyOfficeSites setAccountType(String accountType) {

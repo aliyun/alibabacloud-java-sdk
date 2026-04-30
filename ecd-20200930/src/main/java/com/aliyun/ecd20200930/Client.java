@@ -1902,6 +1902,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateADConnectorOfficeSiteResponse createADConnectorOfficeSiteWithOptions(CreateADConnectorOfficeSiteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessAttribute)) {
+            query.put("AccessAttribute", request.accessAttribute);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.adHostname)) {
             query.put("AdHostname", request.adHostname);
         }
@@ -5219,6 +5223,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateSimpleOfficeSiteResponse createSimpleOfficeSiteWithOptions(CreateSimpleOfficeSiteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessAttribute)) {
+            query.put("AccessAttribute", request.accessAttribute);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.accountType)) {
             query.put("AccountType", request.accountType);
         }

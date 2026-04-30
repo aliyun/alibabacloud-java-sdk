@@ -346,6 +346,9 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         @NameInMap("OfficeSites")
         public java.util.List<DescribeNASFileSystemsResponseBodyFileSystemsOfficeSites> officeSites;
 
+        @NameInMap("ProductType")
+        public String productType;
+
         /**
          * <p>Indicates whether the User Profile Management (UPM) feature is supported.</p>
          * 
@@ -377,6 +380,9 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
          */
         @NameInMap("Scene")
         public String scene;
+
+        @NameInMap("SizeQuota")
+        public Long sizeQuota;
 
         /**
          * <p>The storage type of the NAS file system. Valid values:</p>
@@ -550,6 +556,14 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             return this.officeSites;
         }
 
+        public DescribeNASFileSystemsResponseBodyFileSystems setProductType(String productType) {
+            this.productType = productType;
+            return this;
+        }
+        public String getProductType() {
+            return this.productType;
+        }
+
         public DescribeNASFileSystemsResponseBodyFileSystems setProfileCompatible(Boolean profileCompatible) {
             this.profileCompatible = profileCompatible;
             return this;
@@ -572,6 +586,14 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         }
         public String getScene() {
             return this.scene;
+        }
+
+        public DescribeNASFileSystemsResponseBodyFileSystems setSizeQuota(Long sizeQuota) {
+            this.sizeQuota = sizeQuota;
+            return this;
+        }
+        public Long getSizeQuota() {
+            return this.sizeQuota;
         }
 
         public DescribeNASFileSystemsResponseBodyFileSystems setStorageType(String storageType) {

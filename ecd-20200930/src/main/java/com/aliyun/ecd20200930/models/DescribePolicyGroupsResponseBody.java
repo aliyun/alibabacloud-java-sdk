@@ -1128,6 +1128,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("EndUserApplyAdminCoordinate")
         public String endUserApplyAdminCoordinate;
 
+        @NameInMap("EndUserCount")
+        public String endUserCount;
+
         /**
          * <p>Indicates whether the User Stream Collaboration switch is turned on.</p>
          * <p>Valid values:</p>
@@ -1426,6 +1429,12 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         @NameInMap("NetRedirectRule")
         public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsNetRedirectRule> netRedirectRule;
+
+        @NameInMap("NetworkPrinter")
+        public String networkPrinter;
+
+        @NameInMap("OrganizationCount")
+        public String organizationCount;
 
         /**
          * <p>The ID of the cloud computer policy.</p>
@@ -2417,6 +2426,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             return this.endUserApplyAdminCoordinate;
         }
 
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setEndUserCount(String endUserCount) {
+            this.endUserCount = endUserCount;
+            return this;
+        }
+        public String getEndUserCount() {
+            return this.endUserCount;
+        }
+
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setEndUserGroupCoordinate(String endUserGroupCoordinate) {
             this.endUserGroupCoordinate = endUserGroupCoordinate;
             return this;
@@ -2703,6 +2720,22 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsNetRedirectRule> getNetRedirectRule() {
             return this.netRedirectRule;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setNetworkPrinter(String networkPrinter) {
+            this.networkPrinter = networkPrinter;
+            return this;
+        }
+        public String getNetworkPrinter() {
+            return this.networkPrinter;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setOrganizationCount(String organizationCount) {
+            this.organizationCount = organizationCount;
+            return this;
+        }
+        public String getOrganizationCount() {
+            return this.organizationCount;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setPolicyGroupId(String policyGroupId) {
