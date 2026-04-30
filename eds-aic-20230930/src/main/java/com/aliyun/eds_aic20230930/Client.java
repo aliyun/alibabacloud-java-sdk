@@ -2558,6 +2558,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询JVS实例信息</p>
+     * 
+     * @param request DescribeJVSInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeJVSInstanceResponse
+     */
+    public DescribeJVSInstanceResponse describeJVSInstanceWithOptions(DescribeJVSInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeJVSInstance"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeJVSInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询JVS实例信息</p>
+     * 
+     * @param request DescribeJVSInstanceRequest
+     * @return DescribeJVSInstanceResponse
+     */
+    public DescribeJVSInstanceResponse describeJVSInstance(DescribeJVSInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeJVSInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries one or more key pairs.</p>
      * 
      * @param request DescribeKeyPairsRequest
@@ -4534,6 +4586,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyInstanceChargeTypeResponse modifyInstanceChargeType(ModifyInstanceChargeTypeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyInstanceChargeTypeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改JVS信息</p>
+     * 
+     * @param request ModifyJVSInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyJVSInstanceResponse
+     */
+    public ModifyJVSInstanceResponse modifyJVSInstanceWithOptions(ModifyJVSInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applyToAll)) {
+            query.put("ApplyToAll", request.applyToAll);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.creditConfig)) {
+            query.put("CreditConfig", request.creditConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
+            query.put("InstanceName", request.instanceName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyJVSInstance"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyJVSInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改JVS信息</p>
+     * 
+     * @param request ModifyJVSInstanceRequest
+     * @return ModifyJVSInstanceResponse
+     */
+    public ModifyJVSInstanceResponse modifyJVSInstance(ModifyJVSInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyJVSInstanceWithOptions(request, runtime);
     }
 
     /**
