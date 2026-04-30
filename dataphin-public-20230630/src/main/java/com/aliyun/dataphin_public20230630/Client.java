@@ -5436,6 +5436,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询数据目录资产详情。</p>
+     * 
+     * @param tmpReq GetCatalogAssetDetailsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCatalogAssetDetailsResponse
+     */
+    public GetCatalogAssetDetailsResponse getCatalogAssetDetailsWithOptions(GetCatalogAssetDetailsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetCatalogAssetDetailsShrinkRequest request = new GetCatalogAssetDetailsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.getCatalogAssetDetailsQuery)) {
+            request.getCatalogAssetDetailsQueryShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.getCatalogAssetDetailsQuery, "GetCatalogAssetDetailsQuery", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.getCatalogAssetDetailsQueryShrink)) {
+            body.put("GetCatalogAssetDetailsQuery", request.getCatalogAssetDetailsQueryShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCatalogAssetDetails"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCatalogAssetDetailsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询数据目录资产详情。</p>
+     * 
+     * @param request GetCatalogAssetDetailsRequest
+     * @return GetCatalogAssetDetailsResponse
+     */
+    public GetCatalogAssetDetailsResponse getCatalogAssetDetails(GetCatalogAssetDetailsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCatalogAssetDetailsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询数据源连通性检查任务。</p>
      * 
      * @param request GetCheckConnectivityJobsRequest
@@ -10236,6 +10292,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListBizUnitsResponse listBizUnits(ListBizUnitsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listBizUnitsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询数据目录资产列表。</p>
+     * 
+     * @param tmpReq ListCatalogAssetsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCatalogAssetsResponse
+     */
+    public ListCatalogAssetsResponse listCatalogAssetsWithOptions(ListCatalogAssetsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListCatalogAssetsShrinkRequest request = new ListCatalogAssetsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.listCatalogAssetsQuery)) {
+            request.listCatalogAssetsQueryShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.listCatalogAssetsQuery, "ListCatalogAssetsQuery", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.listCatalogAssetsQueryShrink)) {
+            body.put("ListCatalogAssetsQuery", request.listCatalogAssetsQueryShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCatalogAssets"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCatalogAssetsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询数据目录资产列表。</p>
+     * 
+     * @param request ListCatalogAssetsRequest
+     * @return ListCatalogAssetsResponse
+     */
+    public ListCatalogAssetsResponse listCatalogAssets(ListCatalogAssetsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCatalogAssetsWithOptions(request, runtime);
     }
 
     /**
