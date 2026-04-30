@@ -1725,6 +1725,174 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建AI集群</p>
+     * 
+     * @param request CreateAIDBClusterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAIDBClusterResponse
+     */
+    public CreateAIDBClusterResponse createAIDBClusterWithOptions(CreateAIDBClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ackAdmin)) {
+            query.put("AckAdmin", request.ackAdmin);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
+            query.put("AutoRenew", request.autoRenew);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoUseCoupon)) {
+            query.put("AutoUseCoupon", request.autoUseCoupon);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterDescription)) {
+            query.put("DBClusterDescription", request.DBClusterDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBNodeClass)) {
+            query.put("DBNodeClass", request.DBNodeClass);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extension)) {
+            query.put("Extension", request.extension);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inferenceEngine)) {
+            query.put("InferenceEngine", request.inferenceEngine);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kubeClusterId)) {
+            query.put("KubeClusterId", request.kubeClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kubeConfig)) {
+            query.put("KubeConfig", request.kubeConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kubeManagement)) {
+            query.put("KubeManagement", request.kubeManagement);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kubeType)) {
+            query.put("KubeType", request.kubeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kubernetesConfig)) {
+            query.put("KubernetesConfig", request.kubernetesConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.managementMode)) {
+            query.put("ManagementMode", request.managementMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modeName)) {
+            query.put("ModeName", request.modeName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.password)) {
+            query.put("Password", request.password);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.payType)) {
+            query.put("PayType", request.payType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionCode)) {
+            query.put("PromotionCode", request.promotionCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityGroupId)) {
+            query.put("SecurityGroupId", request.securityGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageSpace)) {
+            query.put("StorageSpace", request.storageSpace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageType)) {
+            query.put("StorageType", request.storageType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeSlices)) {
+            query.put("TimeSlices", request.timeSlices);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usedTime)) {
+            query.put("UsedTime", request.usedTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.VPCId)) {
+            query.put("VPCId", request.VPCId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
+            query.put("VSwitchId", request.vSwitchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAIDBCluster"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAIDBClusterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建AI集群</p>
+     * 
+     * @param request CreateAIDBClusterRequest
+     * @return CreateAIDBClusterResponse
+     */
+    public CreateAIDBClusterResponse createAIDBCluster(CreateAIDBClusterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAIDBClusterWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建数据集</p>
      * 
      * @param request CreateAIDBClusterDatasetRequest
