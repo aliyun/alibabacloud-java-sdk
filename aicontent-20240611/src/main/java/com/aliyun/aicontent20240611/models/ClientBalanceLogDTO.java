@@ -53,10 +53,6 @@ public class ClientBalanceLogDTO extends TeaModel {
     @NameInMap("id")
     public Long id;
 
-    /**
-     * <strong>example:</strong>
-     * <p>充值</p>
-     */
     @NameInMap("remark")
     public String remark;
 

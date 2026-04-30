@@ -2325,6 +2325,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>客户管理/启用部门余额限流</p>
+     * 
+     * @param request ModelRouterConfigureClientBalanceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterConfigureClientBalanceResponse
+     */
+    public ModelRouterConfigureClientBalanceResponse modelRouterConfigureClientBalanceWithOptions(String id, ModelRouterConfigureClientBalanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.balanceType)) {
+            body.put("balanceType", request.balanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableBalance)) {
+            body.put("enableBalance", request.enableBalance);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.initialBalance)) {
+            body.put("initialBalance", request.initialBalance);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterConfigureClientBalance"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/balance"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterConfigureClientBalanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>客户管理/启用部门余额限流</p>
+     * 
+     * @param request ModelRouterConfigureClientBalanceRequest
+     * @return ModelRouterConfigureClientBalanceResponse
+     */
+    public ModelRouterConfigureClientBalanceResponse modelRouterConfigureClientBalance(String id, ModelRouterConfigureClientBalanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterConfigureClientBalanceWithOptions(id, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>API密钥管理/复制API密钥</p>
      * 
      * @param headers map
@@ -2405,6 +2460,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.modelRouterCreateApiKeyWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>客户管理/创建余额交易</p>
+     * 
+     * @param request ModelRouterCreateBalanceTransactionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterCreateBalanceTransactionResponse
+     */
+    public ModelRouterCreateBalanceTransactionResponse modelRouterCreateBalanceTransactionWithOptions(String id, ModelRouterCreateBalanceTransactionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.amount)) {
+            body.put("amount", request.amount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            body.put("remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterCreateBalanceTransaction"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/balance/transactions"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterCreateBalanceTransactionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>客户管理/创建余额交易</p>
+     * 
+     * @param request ModelRouterCreateBalanceTransactionRequest
+     * @return ModelRouterCreateBalanceTransactionResponse
+     */
+    public ModelRouterCreateBalanceTransactionResponse modelRouterCreateBalanceTransaction(String id, ModelRouterCreateBalanceTransactionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterCreateBalanceTransactionWithOptions(id, request, headers, runtime);
     }
 
     /**
@@ -2837,6 +2947,110 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.modelRouterDeleteModelWithOptions(id, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>客户管理/获取部门余额</p>
+     * 
+     * @param request ModelRouterGetClientBalanceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterGetClientBalanceResponse
+     */
+    public ModelRouterGetClientBalanceResponse modelRouterGetClientBalanceWithOptions(String id, ModelRouterGetClientBalanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterGetClientBalance"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/balance"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterGetClientBalanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>客户管理/获取部门余额</p>
+     * 
+     * @param request ModelRouterGetClientBalanceRequest
+     * @return ModelRouterGetClientBalanceResponse
+     */
+    public ModelRouterGetClientBalanceResponse modelRouterGetClientBalance(String id, ModelRouterGetClientBalanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterGetClientBalanceWithOptions(id, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>客户管理/获取部门余额变更日志</p>
+     * 
+     * @param request ModelRouterGetClientBalanceLogsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterGetClientBalanceLogsResponse
+     */
+    public ModelRouterGetClientBalanceLogsResponse modelRouterGetClientBalanceLogsWithOptions(String id, ModelRouterGetClientBalanceLogsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.changeType)) {
+            query.put("changeType", request.changeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("size", request.size);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterGetClientBalanceLogs"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/balance/logs"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterGetClientBalanceLogsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>客户管理/获取部门余额变更日志</p>
+     * 
+     * @param request ModelRouterGetClientBalanceLogsRequest
+     * @return ModelRouterGetClientBalanceLogsResponse
+     */
+    public ModelRouterGetClientBalanceLogsResponse modelRouterGetClientBalanceLogs(String id, ModelRouterGetClientBalanceLogsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterGetClientBalanceLogsWithOptions(id, request, headers, runtime);
     }
 
     /**
