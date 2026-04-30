@@ -36,10 +36,6 @@ public class ListTagsResponseBody extends TeaModel {
     }
 
     public static class ListTagsResponseBodyTagInfosTagInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>test_tag2</p>
-         */
         @NameInMap("TagName")
         public String tagName;
 

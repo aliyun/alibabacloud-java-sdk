@@ -36,10 +36,6 @@ public class QueryAliasesResponseBody extends TeaModel {
     }
 
     public static class QueryAliasesResponseBodyAliasInfosAliasInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>test_alias1</p>
-         */
         @NameInMap("AliasName")
         public String aliasName;
 

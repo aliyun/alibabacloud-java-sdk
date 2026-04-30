@@ -36,24 +36,12 @@ public class QueryDeviceStatResponseBody extends TeaModel {
     }
 
     public static class QueryDeviceStatResponseBodyAppDeviceStatsAppDeviceStat extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("Count")
         public Long count;
 
-        /**
-         * <strong>example:</strong>
-         * <p>iOS</p>
-         */
         @NameInMap("DeviceType")
         public String deviceType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2016-07-28T16:00:00Z</p>
-         */
         @NameInMap("Time")
         public String time;
 

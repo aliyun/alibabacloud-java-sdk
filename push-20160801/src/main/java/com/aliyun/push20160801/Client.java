@@ -542,7 +542,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * 
      * @deprecated OpenAPI ListSummaryApps is deprecated, please use Mhub::2017-08-25::ListApps instead.
      * 
-     * @param request ListSummaryAppsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListSummaryAppsResponse
      */
@@ -941,6 +940,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.androidTargetUserType)) {
             query.put("AndroidTargetUserType", request.androidTargetUserType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.androidVivoLiveMessage)) {
+            query.put("AndroidVivoLiveMessage", request.androidVivoLiveMessage);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.androidVivoPushMode)) {

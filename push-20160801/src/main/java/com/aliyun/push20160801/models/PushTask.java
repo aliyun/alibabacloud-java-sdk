@@ -4,6 +4,10 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class PushTask extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>PUSH_IMMEDIATELY</p>
+     */
     @NameInMap("Action")
     public String action;
 
@@ -65,9 +69,17 @@ public class PushTask extends TeaModel {
     }
 
     public static class PushTaskMessage extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;: &quot;value&quot;}</p>
+         */
         @NameInMap("Body")
         public String body;
 
+        /**
+         * <strong>example:</strong>
+         * <p>title</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -95,24 +107,52 @@ public class PushTask extends TeaModel {
     }
 
     public static class PushTaskNotificationAndroidOptionsAccs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CustomStyle")
         public Integer customStyle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NONE</p>
+         */
         @NameInMap("NotifyType")
         public String notifyType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>com.alibaba.cloudpushdemo.bizactivity</p>
+         */
         @NameInMap("OpenActivity")
         public String openActivity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>APPLICATION</p>
+         */
         @NameInMap("OpenType")
         public String openType;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
+         */
         @NameInMap("OpenUrl")
         public String openUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <strong>example:</strong>
+         * <p>order_ORD20231201001</p>
+         */
         @NameInMap("ThreadId")
         public String threadId;
 
@@ -180,6 +220,10 @@ public class PushTask extends TeaModel {
     }
 
     public static class PushTaskNotificationAndroidOptionsHonor extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Importance")
         public Integer importance;
 
@@ -202,18 +246,34 @@ public class PushTask extends TeaModel {
         @NameInMap("BusinessType")
         public Integer businessType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>VOIP</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Importance")
         public Integer importance;
 
         @NameInMap("LiveNotificationPayload")
         public String liveNotificationPayload;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RCP4C123456</p>
+         */
         @NameInMap("ReceiptId")
         public String receiptId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
         @NameInMap("Urgency")
         public String urgency;
 
@@ -292,6 +352,10 @@ public class PushTask extends TeaModel {
     }
 
     public static class PushTaskNotificationAndroidOptionsOppo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>NEWS</p>
+         */
         @NameInMap("Category")
         public String category;
 
@@ -301,6 +365,10 @@ public class PushTask extends TeaModel {
         @NameInMap("IntelligentIntent")
         public String intelligentIntent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("NotifyLevel")
         public Long notifyLevel;
 
@@ -377,12 +445,27 @@ public class PushTask extends TeaModel {
     }
 
     public static class PushTaskNotificationAndroidOptionsVivo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>MARKETING</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Importance")
         public Integer importance;
 
+        @NameInMap("LiveMessage")
+        public String liveMessage;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1232221</p>
+         */
         @NameInMap("ReceiptId")
         public String receiptId;
 
@@ -407,6 +490,14 @@ public class PushTask extends TeaModel {
             return this.importance;
         }
 
+        public PushTaskNotificationAndroidOptionsVivo setLiveMessage(String liveMessage) {
+            this.liveMessage = liveMessage;
+            return this;
+        }
+        public String getLiveMessage() {
+            return this.liveMessage;
+        }
+
         public PushTaskNotificationAndroidOptionsVivo setReceiptId(String receiptId) {
             this.receiptId = receiptId;
             return this;
@@ -418,6 +509,10 @@ public class PushTask extends TeaModel {
     }
 
     public static class PushTaskNotificationAndroidOptionsXiaomi extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>michannel</p>
+         */
         @NameInMap("Channel")
         public String channel;
 
@@ -522,48 +617,100 @@ public class PushTask extends TeaModel {
     }
 
     public static class PushTaskNotificationAndroid extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>com.alibaba.cloudpushdemo.bizactivity</p>
+         */
         @NameInMap("BadgeActivity")
         public String badgeActivity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("BadgeAddNum")
         public Integer badgeAddNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("BadgeSetNum")
         public Integer badgeSetNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8.0up</p>
+         */
         @NameInMap("ChannelId")
         public String channelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;key1&quot;:&quot;value1&quot;}</p>
+         */
         @NameInMap("ExtParameters")
         public String extParameters;
 
+        /**
+         * <strong>example:</strong>
+         * <p>group-1</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://imag.example.com/image.png">https://imag.example.com/image.png</a></p>
+         */
         @NameInMap("ImageUrl")
         public String imageUrl;
 
         @NameInMap("InboxContent")
         public java.util.List<String> inboxContent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>alicloud_notification_sound</p>
+         */
         @NameInMap("Music")
         public String music;
 
+        /**
+         * <strong>example:</strong>
+         * <p>233856727</p>
+         */
         @NameInMap("NotifyId")
         public Integer notifyId;
 
         @NameInMap("Options")
         public PushTaskNotificationAndroidOptions options;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://imag.example.com/image.png">https://imag.example.com/image.png</a></p>
+         */
         @NameInMap("PictureUrl")
         public String pictureUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RenderStyle")
         public String renderStyle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("TestMessage")
         public Boolean testMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>com.alibaba.cloudpushdemo.bizactivity</p>
+         */
         @NameInMap("VendorChannelActivity")
         public String vendorChannelActivity;
 
@@ -695,27 +842,59 @@ public class PushTask extends TeaModel {
     }
 
     public static class PushTaskNotificationHmos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>com.example.action</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("BadgeAddNum")
         public Integer badgeAddNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("BadgeSetNum")
         public Integer badgeSetNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>IM</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;: &quot;value&quot;}</p>
+         */
         @NameInMap("ExtParameters")
         public String extParameters;
 
+        /**
+         * <strong>example:</strong>
+         * <p>text</p>
+         */
         @NameInMap("ExtensionExtraData")
         public String extensionExtraData;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("ExtensionPush")
         public Boolean extensionPush;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/xxx.png">https://example.com/xxx.png</a></p>
+         */
         @NameInMap("ImageUrl")
         public String imageUrl;
 
@@ -725,15 +904,31 @@ public class PushTask extends TeaModel {
         @NameInMap("LiveViewPayload")
         public String liveViewPayload;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("NotifyId")
         public Integer notifyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RCPB***DFD5</p>
+         */
         @NameInMap("ReceiptId")
         public String receiptId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
         @NameInMap("RenderStyle")
         public String renderStyle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SOCIAL_COMMUNICATION</p>
+         */
         @NameInMap("SlotType")
         public String slotType;
 
@@ -743,9 +938,17 @@ public class PushTask extends TeaModel {
         @NameInMap("SoundDuration")
         public Integer soundDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("TestMessage")
         public Boolean testMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://www.example.com:8080/push/example">https://www.example.com:8080/push/example</a></p>
+         */
         @NameInMap("Uri")
         public String uri;
 
@@ -904,21 +1107,41 @@ public class PushTask extends TeaModel {
         @NameInMap("Attributes")
         public String attributes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OrderActivityAttributes</p>
+         */
         @NameInMap("AttributesType")
         public String attributesType;
 
         @NameInMap("ContentState")
         public String contentState;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1701439800</p>
+         */
         @NameInMap("DismissalDate")
         public Long dismissalDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>start</p>
+         */
         @NameInMap("Event")
         public String event;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FOOD_DELIVERY_ORD20231201001</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1701425400</p>
+         */
         @NameInMap("StaleDate")
         public Long staleDate;
 
@@ -986,45 +1209,93 @@ public class PushTask extends TeaModel {
     }
 
     public static class PushTaskNotificationIos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>DEV</p>
+         */
         @NameInMap("ApnsEnv")
         public String apnsEnv;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Badge")
         public Integer badge;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("BadgeAutoIncrement")
         public Boolean badgeAutoIncrement;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MESSAGE_REPLY</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <strong>example:</strong>
+         * <p>order_status_update_12345</p>
+         */
         @NameInMap("CollapseId")
         public String collapseId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;attachment&quot;: &quot;<a href="https://xxxx.xxx/notification_pic.png%22%7D">https://xxxx.xxx/notification_pic.png&quot;}</a></p>
+         */
         @NameInMap("ExtParameters")
         public String extParameters;
 
+        /**
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
         @NameInMap("InterruptionLevel")
         public String interruptionLevel;
 
         @NameInMap("LiveActivity")
         public PushTaskNotificationIosLiveActivity liveActivity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("Music")
         public String music;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Mutable")
         public Boolean mutable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.5</p>
+         */
         @NameInMap("RelevanceScore")
         public Double relevanceScore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Silent")
         public Boolean silent;
 
         @NameInMap("Subtitle")
         public String subtitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>news_category_tech</p>
+         */
         @NameInMap("ThreadId")
         public String threadId;
 
@@ -1211,18 +1482,34 @@ public class PushTask extends TeaModel {
     }
 
     public static class PushTaskOptionsSms extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>150</p>
+         */
         @NameInMap("DelaySecs")
         public Long delaySecs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>key1=value1&amp;key2=value2</p>
+         */
         @NameInMap("Params")
         public String params;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PUSH_NOT_RECEIVED</p>
+         */
         @NameInMap("SendPolicy")
         public String sendPolicy;
 
         @NameInMap("SignName")
         public String signName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SMS_123456789</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 
@@ -1274,24 +1561,48 @@ public class PushTask extends TeaModel {
     }
 
     public static class PushTaskOptions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2025-06-21T12:00:00Z</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>jobkey1727749697913</p>
+         */
         @NameInMap("JobKey")
         public String jobKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1174754033128****</p>
+         */
         @NameInMap("MessageId")
         public Long messageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2025-06-19T12:00:00Z</p>
+         */
         @NameInMap("PushTime")
         public String pushTime;
 
         @NameInMap("Sms")
         public PushTaskOptionsSms sms;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Trim")
         public Boolean trim;
 
+        /**
+         * <strong>example:</strong>
+         * <p>accs,apns</p>
+         */
         @NameInMap("UseChannels")
         public String useChannels;
 
@@ -1359,12 +1670,24 @@ public class PushTask extends TeaModel {
     }
 
     public static class PushTaskTarget extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>IOS</p>
+         */
         @NameInMap("Platform")
         public String platform;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DEVICE</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>value</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -256,6 +256,9 @@ public class PushShrinkRequest extends TeaModel {
     @NameInMap("AndroidTargetUserType")
     public Integer androidTargetUserType;
 
+    @NameInMap("AndroidVivoLiveMessage")
+    public String androidVivoLiveMessage;
+
     /**
      * <strong>example:</strong>
      * <p>0</p>
@@ -994,6 +997,14 @@ public class PushShrinkRequest extends TeaModel {
     }
     public Integer getAndroidTargetUserType() {
         return this.androidTargetUserType;
+    }
+
+    public PushShrinkRequest setAndroidVivoLiveMessage(String androidVivoLiveMessage) {
+        this.androidVivoLiveMessage = androidVivoLiveMessage;
+        return this;
+    }
+    public String getAndroidVivoLiveMessage() {
+        return this.androidVivoLiveMessage;
     }
 
     public PushShrinkRequest setAndroidVivoPushMode(Integer androidVivoPushMode) {

@@ -36,17 +36,9 @@ public class QueryUniqueDeviceStatResponseBody extends TeaModel {
     }
 
     public static class QueryUniqueDeviceStatResponseBodyAppDeviceStatsAppDeviceStat extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("Count")
         public Long count;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2016-07-25T00:00:00Z</p>
-         */
         @NameInMap("Time")
         public String time;
 

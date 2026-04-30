@@ -315,6 +315,9 @@ public class MassPushRequest extends TeaModel {
         @NameInMap("AndroidTargetUserType")
         public Integer androidTargetUserType;
 
+        @NameInMap("AndroidVivoLiveMessage")
+        public String androidVivoLiveMessage;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -1017,6 +1020,14 @@ public class MassPushRequest extends TeaModel {
         }
         public Integer getAndroidTargetUserType() {
             return this.androidTargetUserType;
+        }
+
+        public MassPushRequestPushTask setAndroidVivoLiveMessage(String androidVivoLiveMessage) {
+            this.androidVivoLiveMessage = androidVivoLiveMessage;
+            return this;
+        }
+        public String getAndroidVivoLiveMessage() {
+            return this.androidVivoLiveMessage;
         }
 
         public MassPushRequestPushTask setAndroidVivoPushMode(Integer androidVivoPushMode) {

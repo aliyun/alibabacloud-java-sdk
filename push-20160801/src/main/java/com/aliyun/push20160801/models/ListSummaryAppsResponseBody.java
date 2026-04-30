@@ -36,17 +36,9 @@ public class ListSummaryAppsResponseBody extends TeaModel {
     }
 
     public static class ListSummaryAppsResponseBodySummaryAppInfosSummaryAppInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>23****07</p>
-         */
         @NameInMap("AppKey")
         public Long appKey;
 
-        /**
-         * <strong>example:</strong>
-         * <p>abc</p>
-         */
         @NameInMap("AppName")
         public String appName;
 
