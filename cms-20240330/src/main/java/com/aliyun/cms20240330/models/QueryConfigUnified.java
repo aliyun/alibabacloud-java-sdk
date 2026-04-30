@@ -34,6 +34,9 @@ public class QueryConfigUnified extends TeaModel {
     @NameInMap("entityType")
     public String entityType;
 
+    @NameInMap("expr")
+    public String expr;
+
     /**
      * <p>APM 过滤条件列表</p>
      */
@@ -126,6 +129,14 @@ public class QueryConfigUnified extends TeaModel {
     }
     public String getEntityType() {
         return this.entityType;
+    }
+
+    public QueryConfigUnified setExpr(String expr) {
+        this.expr = expr;
+        return this;
+    }
+    public String getExpr() {
+        return this.expr;
     }
 
     public QueryConfigUnified setFilterList(java.util.List<ApmFilterConfig> filterList) {
