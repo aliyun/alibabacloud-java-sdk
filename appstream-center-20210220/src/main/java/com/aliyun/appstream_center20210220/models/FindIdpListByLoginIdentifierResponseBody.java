@@ -225,6 +225,9 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
+        @NameInMap("PreferVpcAccess")
+        public Boolean preferVpcAccess;
+
         /**
          * <strong>example:</strong>
          * <p>26842</p>
@@ -241,6 +244,9 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
 
         @NameInMap("SsoServiceUrl")
         public String ssoServiceUrl;
+
+        @NameInMap("VpcAccessAddress")
+        public String vpcAccessAddress;
 
         public static FindIdpListByLoginIdentifierResponseBodyOfficeSiteInfo build(java.util.Map<String, ?> map) throws Exception {
             FindIdpListByLoginIdentifierResponseBodyOfficeSiteInfo self = new FindIdpListByLoginIdentifierResponseBodyOfficeSiteInfo();
@@ -261,6 +267,14 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
         }
         public String getOfficeSiteId() {
             return this.officeSiteId;
+        }
+
+        public FindIdpListByLoginIdentifierResponseBodyOfficeSiteInfo setPreferVpcAccess(Boolean preferVpcAccess) {
+            this.preferVpcAccess = preferVpcAccess;
+            return this;
+        }
+        public Boolean getPreferVpcAccess() {
+            return this.preferVpcAccess;
         }
 
         public FindIdpListByLoginIdentifierResponseBodyOfficeSiteInfo setProviderId(String providerId) {
@@ -287,6 +301,14 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
             return this.ssoServiceUrl;
         }
 
+        public FindIdpListByLoginIdentifierResponseBodyOfficeSiteInfo setVpcAccessAddress(String vpcAccessAddress) {
+            this.vpcAccessAddress = vpcAccessAddress;
+            return this;
+        }
+        public String getVpcAccessAddress() {
+            return this.vpcAccessAddress;
+        }
+
     }
 
     public static class FindIdpListByLoginIdentifierResponseBodyTenantAliasInfo extends TeaModel {
@@ -297,12 +319,18 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
         @NameInMap("AccessType")
         public String accessType;
 
+        @NameInMap("PreferVpcAccess")
+        public Boolean preferVpcAccess;
+
         /**
          * <strong>example:</strong>
          * <p>Or09****</p>
          */
         @NameInMap("TenantAlias")
         public String tenantAlias;
+
+        @NameInMap("VpcAccessAddress")
+        public String vpcAccessAddress;
 
         public static FindIdpListByLoginIdentifierResponseBodyTenantAliasInfo build(java.util.Map<String, ?> map) throws Exception {
             FindIdpListByLoginIdentifierResponseBodyTenantAliasInfo self = new FindIdpListByLoginIdentifierResponseBodyTenantAliasInfo();
@@ -317,12 +345,28 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
             return this.accessType;
         }
 
+        public FindIdpListByLoginIdentifierResponseBodyTenantAliasInfo setPreferVpcAccess(Boolean preferVpcAccess) {
+            this.preferVpcAccess = preferVpcAccess;
+            return this;
+        }
+        public Boolean getPreferVpcAccess() {
+            return this.preferVpcAccess;
+        }
+
         public FindIdpListByLoginIdentifierResponseBodyTenantAliasInfo setTenantAlias(String tenantAlias) {
             this.tenantAlias = tenantAlias;
             return this;
         }
         public String getTenantAlias() {
             return this.tenantAlias;
+        }
+
+        public FindIdpListByLoginIdentifierResponseBodyTenantAliasInfo setVpcAccessAddress(String vpcAccessAddress) {
+            this.vpcAccessAddress = vpcAccessAddress;
+            return this;
+        }
+        public String getVpcAccessAddress() {
+            return this.vpcAccessAddress;
         }
 
     }
