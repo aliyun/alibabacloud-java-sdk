@@ -511,10 +511,38 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("RichTextClipboardReadLimit")
+        public Integer richTextClipboardReadLimit;
+
+        /**
+         * <strong>example:</strong>
+         * <p>KB</p>
+         */
+        @NameInMap("RichTextClipboardReadSizeUnit")
+        public String richTextClipboardReadSizeUnit;
+
+        /**
+         * <strong>example:</strong>
          * <p>B</p>
          */
         @NameInMap("RichTextClipboardSizeUnit")
         public String richTextClipboardSizeUnit;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("RichTextClipboardWriteLimit")
+        public Integer richTextClipboardWriteLimit;
+
+        /**
+         * <strong>example:</strong>
+         * <p>KB</p>
+         */
+        @NameInMap("RichTextClipboardWriteSizeUnit")
+        public String richTextClipboardWriteSizeUnit;
 
         /**
          * <p>The text clipboard policy.</p>
@@ -531,6 +559,34 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
          */
         @NameInMap("TextClipboard")
         public String textClipboard;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("TextClipboardReadLimit")
+        public Integer textClipboardReadLimit;
+
+        /**
+         * <strong>example:</strong>
+         * <p>KB</p>
+         */
+        @NameInMap("TextClipboardReadSizeUnit")
+        public String textClipboardReadSizeUnit;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("TextClipboardWriteLimit")
+        public Integer textClipboardWriteLimit;
+
+        /**
+         * <strong>example:</strong>
+         * <p>KB</p>
+         */
+        @NameInMap("TextClipboardWriteSizeUnit")
+        public String textClipboardWriteSizeUnit;
 
         public static ModifyBrowserInstanceGroupRequestPolicyClipboardPolicy build(java.util.Map<String, ?> map) throws Exception {
             ModifyBrowserInstanceGroupRequestPolicyClipboardPolicy self = new ModifyBrowserInstanceGroupRequestPolicyClipboardPolicy();
@@ -601,6 +657,22 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
             return this.richTextClipboardLimit;
         }
 
+        public ModifyBrowserInstanceGroupRequestPolicyClipboardPolicy setRichTextClipboardReadLimit(Integer richTextClipboardReadLimit) {
+            this.richTextClipboardReadLimit = richTextClipboardReadLimit;
+            return this;
+        }
+        public Integer getRichTextClipboardReadLimit() {
+            return this.richTextClipboardReadLimit;
+        }
+
+        public ModifyBrowserInstanceGroupRequestPolicyClipboardPolicy setRichTextClipboardReadSizeUnit(String richTextClipboardReadSizeUnit) {
+            this.richTextClipboardReadSizeUnit = richTextClipboardReadSizeUnit;
+            return this;
+        }
+        public String getRichTextClipboardReadSizeUnit() {
+            return this.richTextClipboardReadSizeUnit;
+        }
+
         public ModifyBrowserInstanceGroupRequestPolicyClipboardPolicy setRichTextClipboardSizeUnit(String richTextClipboardSizeUnit) {
             this.richTextClipboardSizeUnit = richTextClipboardSizeUnit;
             return this;
@@ -609,12 +681,60 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
             return this.richTextClipboardSizeUnit;
         }
 
+        public ModifyBrowserInstanceGroupRequestPolicyClipboardPolicy setRichTextClipboardWriteLimit(Integer richTextClipboardWriteLimit) {
+            this.richTextClipboardWriteLimit = richTextClipboardWriteLimit;
+            return this;
+        }
+        public Integer getRichTextClipboardWriteLimit() {
+            return this.richTextClipboardWriteLimit;
+        }
+
+        public ModifyBrowserInstanceGroupRequestPolicyClipboardPolicy setRichTextClipboardWriteSizeUnit(String richTextClipboardWriteSizeUnit) {
+            this.richTextClipboardWriteSizeUnit = richTextClipboardWriteSizeUnit;
+            return this;
+        }
+        public String getRichTextClipboardWriteSizeUnit() {
+            return this.richTextClipboardWriteSizeUnit;
+        }
+
         public ModifyBrowserInstanceGroupRequestPolicyClipboardPolicy setTextClipboard(String textClipboard) {
             this.textClipboard = textClipboard;
             return this;
         }
         public String getTextClipboard() {
             return this.textClipboard;
+        }
+
+        public ModifyBrowserInstanceGroupRequestPolicyClipboardPolicy setTextClipboardReadLimit(Integer textClipboardReadLimit) {
+            this.textClipboardReadLimit = textClipboardReadLimit;
+            return this;
+        }
+        public Integer getTextClipboardReadLimit() {
+            return this.textClipboardReadLimit;
+        }
+
+        public ModifyBrowserInstanceGroupRequestPolicyClipboardPolicy setTextClipboardReadSizeUnit(String textClipboardReadSizeUnit) {
+            this.textClipboardReadSizeUnit = textClipboardReadSizeUnit;
+            return this;
+        }
+        public String getTextClipboardReadSizeUnit() {
+            return this.textClipboardReadSizeUnit;
+        }
+
+        public ModifyBrowserInstanceGroupRequestPolicyClipboardPolicy setTextClipboardWriteLimit(Integer textClipboardWriteLimit) {
+            this.textClipboardWriteLimit = textClipboardWriteLimit;
+            return this;
+        }
+        public Integer getTextClipboardWriteLimit() {
+            return this.textClipboardWriteLimit;
+        }
+
+        public ModifyBrowserInstanceGroupRequestPolicyClipboardPolicy setTextClipboardWriteSizeUnit(String textClipboardWriteSizeUnit) {
+            this.textClipboardWriteSizeUnit = textClipboardWriteSizeUnit;
+            return this;
+        }
+        public String getTextClipboardWriteSizeUnit() {
+            return this.textClipboardWriteSizeUnit;
         }
 
     }
@@ -719,6 +839,13 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public Integer disconnectKeepSessionTime;
 
         /**
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
+        @NameInMap("FileManager")
+        public String fileManager;
+
+        /**
          * <p>The file transfer policy on the web client.</p>
          * 
          * <strong>example:</strong>
@@ -802,6 +929,14 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         }
         public Integer getDisconnectKeepSessionTime() {
             return this.disconnectKeepSessionTime;
+        }
+
+        public ModifyBrowserInstanceGroupRequestPolicy setFileManager(String fileManager) {
+            this.fileManager = fileManager;
+            return this;
+        }
+        public String getFileManager() {
+            return this.fileManager;
         }
 
         public ModifyBrowserInstanceGroupRequestPolicy setHtml5FileTransfer(String html5FileTransfer) {
