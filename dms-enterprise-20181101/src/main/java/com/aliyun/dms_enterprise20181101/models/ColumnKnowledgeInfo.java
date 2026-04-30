@@ -34,6 +34,9 @@ public class ColumnKnowledgeInfo extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Level")
+    public Integer level;
+
     /**
      * <p>The field order in the CREATE TABLE statement.</p>
      */
@@ -83,6 +86,14 @@ public class ColumnKnowledgeInfo extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ColumnKnowledgeInfo setLevel(Integer level) {
+        this.level = level;
+        return this;
+    }
+    public Integer getLevel() {
+        return this.level;
     }
 
     public ColumnKnowledgeInfo setPosition(Integer position) {

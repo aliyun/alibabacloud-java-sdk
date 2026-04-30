@@ -28,6 +28,9 @@ public class TableKnowledgeInfo extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Level")
+    public Integer level;
+
     /**
      * <p>Table business description, which can be edited via EditMetaKnowledgeAsset.</p>
      */
@@ -75,6 +78,14 @@ public class TableKnowledgeInfo extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public TableKnowledgeInfo setLevel(Integer level) {
+        this.level = level;
+        return this;
+    }
+    public Integer getLevel() {
+        return this.level;
     }
 
     public TableKnowledgeInfo setSummary(String summary) {

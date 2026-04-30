@@ -9920,6 +9920,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>查询表的字段知识列表，返回每个字段的元信息（类型、可空、自增等）、业务描述、术语、数据标准、安全等级与索引信息</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询表的字段知识列表，包含字段元信息、业务描述、安全信息等</p>
+     * 
+     * @param request GetTableColumnListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTableColumnListResponse
+     */
+    public GetTableColumnListResponse getTableColumnListWithOptions(GetTableColumnListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbId)) {
+            query.put("DbId", request.dbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableName)) {
+            query.put("TableName", request.tableName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTableColumnList"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTableColumnListResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>查询表的字段知识列表，返回每个字段的元信息（类型、可空、自增等）、业务描述、术语、数据标准、安全等级与索引信息</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询表的字段知识列表，包含字段元信息、业务描述、安全信息等</p>
+     * 
+     * @param request GetTableColumnListRequest
+     * @return GetTableColumnListResponse
+     */
+    public GetTableColumnListResponse getTableColumnList(GetTableColumnListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getTableColumnListWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Queries the topology of a data table.</p>
      * 
@@ -10061,6 +10115,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetTableDesignProjectInfoResponse getTableDesignProjectInfo(GetTableDesignProjectInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getTableDesignProjectInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>查询表的业务知识/使用说明，返回 AI 增强业务描述、表业务摘要、关联资产列表，用于辅助语义找表与表用法说明</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询表的业务知识/使用说明（业务描述、摘要、关联资产）</p>
+     * 
+     * @param request GetTableInstructionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTableInstructionsResponse
+     */
+    public GetTableInstructionsResponse getTableInstructionsWithOptions(GetTableInstructionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbId)) {
+            query.put("DbId", request.dbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableName)) {
+            query.put("TableName", request.tableName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTableInstructions"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTableInstructionsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>查询表的业务知识/使用说明，返回 AI 增强业务描述、表业务摘要、关联资产列表，用于辅助语义找表与表用法说明</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询表的业务知识/使用说明（业务描述、摘要、关联资产）</p>
+     * 
+     * @param request GetTableInstructionsRequest
+     * @return GetTableInstructionsResponse
+     */
+    public GetTableInstructionsResponse getTableInstructions(GetTableInstructionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getTableInstructionsWithOptions(request, runtime);
     }
 
     /**
@@ -17509,6 +17617,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SearchTableResponse searchTable(SearchTableRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.searchTableWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>分页查询某张表相关的资产知识列表，支持按知识类型、关键词等条件筛选，返回 KnowledgeBaseVO 分页结果</p>
+     * 
+     * <b>summary</b> : 
+     * <p>分页查询某张表相关的资产知识列表（含表/字段/SQL/片段等）</p>
+     * 
+     * @param request SearchTableAssetKnowledgeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SearchTableAssetKnowledgeResponse
+     */
+    public SearchTableAssetKnowledgeResponse searchTableAssetKnowledgeWithOptions(SearchTableAssetKnowledgeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbId)) {
+            query.put("DbId", request.dbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            query.put("Offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchKey)) {
+            query.put("SearchKey", request.searchKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.showType)) {
+            query.put("ShowType", request.showType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("Size", request.size);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableName)) {
+            query.put("TableName", request.tableName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SearchTableAssetKnowledge"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchTableAssetKnowledgeResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>分页查询某张表相关的资产知识列表，支持按知识类型、关键词等条件筛选，返回 KnowledgeBaseVO 分页结果</p>
+     * 
+     * <b>summary</b> : 
+     * <p>分页查询某张表相关的资产知识列表（含表/字段/SQL/片段等）</p>
+     * 
+     * @param request SearchTableAssetKnowledgeRequest
+     * @return SearchTableAssetKnowledgeResponse
+     */
+    public SearchTableAssetKnowledgeResponse searchTableAssetKnowledge(SearchTableAssetKnowledgeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.searchTableAssetKnowledgeWithOptions(request, runtime);
     }
 
     /**
