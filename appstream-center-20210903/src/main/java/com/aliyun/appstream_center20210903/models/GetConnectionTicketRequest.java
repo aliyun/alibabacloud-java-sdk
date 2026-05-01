@@ -125,6 +125,13 @@ public class GetConnectionTicketRequest extends TeaModel {
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("RequireUuidValidation")
+    public Boolean requireUuidValidation;
+
     @NameInMap("ResourceId")
     public String resourceId;
 
@@ -319,6 +326,14 @@ public class GetConnectionTicketRequest extends TeaModel {
     }
     public String getProductType() {
         return this.productType;
+    }
+
+    public GetConnectionTicketRequest setRequireUuidValidation(Boolean requireUuidValidation) {
+        this.requireUuidValidation = requireUuidValidation;
+        return this;
+    }
+    public Boolean getRequireUuidValidation() {
+        return this.requireUuidValidation;
     }
 
     public GetConnectionTicketRequest setResourceId(String resourceId) {

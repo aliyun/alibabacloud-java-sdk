@@ -117,6 +117,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ProductType", request.productType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.requireUuidValidation)) {
+            body.put("RequireUuidValidation", request.requireUuidValidation);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
             body.put("ResourceId", request.resourceId);
         }
