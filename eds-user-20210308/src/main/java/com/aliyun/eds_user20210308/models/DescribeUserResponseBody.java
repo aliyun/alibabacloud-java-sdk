@@ -169,6 +169,9 @@ public class DescribeUserResponseBody extends TeaModel {
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        @NameInMap("NickName")
+        public String nickName;
+
         @NameInMap("OrgIds")
         public java.util.List<String> orgIds;
 
@@ -249,6 +252,14 @@ public class DescribeUserResponseBody extends TeaModel {
         }
         public Long getGmtCreate() {
             return this.gmtCreate;
+        }
+
+        public DescribeUserResponseBodyUser setNickName(String nickName) {
+            this.nickName = nickName;
+            return this;
+        }
+        public String getNickName() {
+            return this.nickName;
         }
 
         public DescribeUserResponseBodyUser setOrgIds(java.util.List<String> orgIds) {

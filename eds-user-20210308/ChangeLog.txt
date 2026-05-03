@@ -1,3 +1,7 @@
+2026-05-03 Version: 2.1.1
+- Update API DescribeUser: add response parameters Body.User.NickName.
+
+
 2026-04-27 Version: 2.1.0
 - Support API DescribeUser.
 - Update API DescribeOrgs: add request parameters IncludeOrgIds.
