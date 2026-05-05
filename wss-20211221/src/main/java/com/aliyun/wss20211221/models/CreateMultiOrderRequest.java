@@ -123,6 +123,9 @@ public class CreateMultiOrderRequest extends TeaModel {
         @NameInMap("Components")
         public java.util.List<CreateMultiOrderRequestOrderItemsComponents> components;
 
+        @NameInMap("InstanceIds")
+        public java.util.List<String> instanceIds;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -199,6 +202,14 @@ public class CreateMultiOrderRequest extends TeaModel {
         }
         public java.util.List<CreateMultiOrderRequestOrderItemsComponents> getComponents() {
             return this.components;
+        }
+
+        public CreateMultiOrderRequestOrderItems setInstanceIds(java.util.List<String> instanceIds) {
+            this.instanceIds = instanceIds;
+            return this;
+        }
+        public java.util.List<String> getInstanceIds() {
+            return this.instanceIds;
         }
 
         public CreateMultiOrderRequestOrderItems setPeriod(Integer period) {

@@ -123,6 +123,9 @@ public class CreateMultiOrderShrinkRequest extends TeaModel {
         @NameInMap("Components")
         public java.util.List<CreateMultiOrderShrinkRequestOrderItemsComponents> components;
 
+        @NameInMap("InstanceIds")
+        public java.util.List<String> instanceIds;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -199,6 +202,14 @@ public class CreateMultiOrderShrinkRequest extends TeaModel {
         }
         public java.util.List<CreateMultiOrderShrinkRequestOrderItemsComponents> getComponents() {
             return this.components;
+        }
+
+        public CreateMultiOrderShrinkRequestOrderItems setInstanceIds(java.util.List<String> instanceIds) {
+            this.instanceIds = instanceIds;
+            return this;
+        }
+        public java.util.List<String> getInstanceIds() {
+            return this.instanceIds;
         }
 
         public CreateMultiOrderShrinkRequestOrderItems setPeriod(Integer period) {
