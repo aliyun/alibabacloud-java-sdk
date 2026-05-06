@@ -3,7 +3,14 @@ package com.aliyun.quanmiaolightapp20240801.models;
 
 import com.aliyun.tea.*;
 
-public class SubmitEssayCorrectionTaskShrinkRequest extends TeaModel {
+public class RunEssayCorrectionShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
+    @NameInMap("answer")
+    public String answer;
+
     /**
      * <strong>example:</strong>
      * <p>[{&quot;name&quot;: &quot;内容完整度&quot;, &quot;rubric&quot;: &quot;文章内容是否完整，是否涵盖了题目的核心要求&quot;, &quot;maxScore&quot;: 30}]</p>
@@ -13,14 +20,14 @@ public class SubmitEssayCorrectionTaskShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>高中二年级</p>
+     * <p>高一</p>
      */
     @NameInMap("grade")
     public String grade;
 
     /**
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>qwen-custom-correction-v1</p>
      */
     @NameInMap("modelId")
     public String modelId;
@@ -34,7 +41,7 @@ public class SubmitEssayCorrectionTaskShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>xx</p>
      */
     @NameInMap("question")
     public String question;
@@ -48,24 +55,25 @@ public class SubmitEssayCorrectionTaskShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>[{&quot;grade&quot;: &quot;高中二年级&quot;, &quot;subject&quot;: &quot;语文&quot;, &quot;totalScore&quot;: 60, &quot;question&quot;: &quot;请以我的梦想为主题写一篇作文&quot;, &quot;answer&quot;: &quot;我的梦想是成为一名科学家...&quot;, &quot;customId&quot;: &quot;task-001&quot;}]</p>
-     */
-    @NameInMap("tasks")
-    public String tasksShrink;
-
-    /**
-     * <strong>example:</strong>
      * <p>60</p>
      */
     @NameInMap("totalScore")
     public Integer totalScore;
 
-    public static SubmitEssayCorrectionTaskShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
-        SubmitEssayCorrectionTaskShrinkRequest self = new SubmitEssayCorrectionTaskShrinkRequest();
+    public static RunEssayCorrectionShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        RunEssayCorrectionShrinkRequest self = new RunEssayCorrectionShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public SubmitEssayCorrectionTaskShrinkRequest setDimensionsShrink(String dimensionsShrink) {
+    public RunEssayCorrectionShrinkRequest setAnswer(String answer) {
+        this.answer = answer;
+        return this;
+    }
+    public String getAnswer() {
+        return this.answer;
+    }
+
+    public RunEssayCorrectionShrinkRequest setDimensionsShrink(String dimensionsShrink) {
         this.dimensionsShrink = dimensionsShrink;
         return this;
     }
@@ -73,7 +81,7 @@ public class SubmitEssayCorrectionTaskShrinkRequest extends TeaModel {
         return this.dimensionsShrink;
     }
 
-    public SubmitEssayCorrectionTaskShrinkRequest setGrade(String grade) {
+    public RunEssayCorrectionShrinkRequest setGrade(String grade) {
         this.grade = grade;
         return this;
     }
@@ -81,7 +89,7 @@ public class SubmitEssayCorrectionTaskShrinkRequest extends TeaModel {
         return this.grade;
     }
 
-    public SubmitEssayCorrectionTaskShrinkRequest setModelId(String modelId) {
+    public RunEssayCorrectionShrinkRequest setModelId(String modelId) {
         this.modelId = modelId;
         return this;
     }
@@ -89,7 +97,7 @@ public class SubmitEssayCorrectionTaskShrinkRequest extends TeaModel {
         return this.modelId;
     }
 
-    public SubmitEssayCorrectionTaskShrinkRequest setOtherReviewPoints(String otherReviewPoints) {
+    public RunEssayCorrectionShrinkRequest setOtherReviewPoints(String otherReviewPoints) {
         this.otherReviewPoints = otherReviewPoints;
         return this;
     }
@@ -97,7 +105,7 @@ public class SubmitEssayCorrectionTaskShrinkRequest extends TeaModel {
         return this.otherReviewPoints;
     }
 
-    public SubmitEssayCorrectionTaskShrinkRequest setQuestion(String question) {
+    public RunEssayCorrectionShrinkRequest setQuestion(String question) {
         this.question = question;
         return this;
     }
@@ -105,7 +113,7 @@ public class SubmitEssayCorrectionTaskShrinkRequest extends TeaModel {
         return this.question;
     }
 
-    public SubmitEssayCorrectionTaskShrinkRequest setSubject(String subject) {
+    public RunEssayCorrectionShrinkRequest setSubject(String subject) {
         this.subject = subject;
         return this;
     }
@@ -113,15 +121,7 @@ public class SubmitEssayCorrectionTaskShrinkRequest extends TeaModel {
         return this.subject;
     }
 
-    public SubmitEssayCorrectionTaskShrinkRequest setTasksShrink(String tasksShrink) {
-        this.tasksShrink = tasksShrink;
-        return this;
-    }
-    public String getTasksShrink() {
-        return this.tasksShrink;
-    }
-
-    public SubmitEssayCorrectionTaskShrinkRequest setTotalScore(Integer totalScore) {
+    public RunEssayCorrectionShrinkRequest setTotalScore(Integer totalScore) {
         this.totalScore = totalScore;
         return this;
     }

@@ -97,6 +97,74 @@ public class GetEssayCorrectionTaskResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetEssayCorrectionTaskResponseBodyDataResultsDimensionResults extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>文章内容较为完整，涵盖了题目的核心要求，但部分论述略显简略。</p>
+         */
+        @NameInMap("analysis")
+        public String analysis;
+
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
+        @NameInMap("maxScore")
+        public Double maxScore;
+
+        /**
+         * <strong>example:</strong>
+         * <p>内容完整度</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <strong>example:</strong>
+         * <p>25.5</p>
+         */
+        @NameInMap("score")
+        public Double score;
+
+        public static GetEssayCorrectionTaskResponseBodyDataResultsDimensionResults build(java.util.Map<String, ?> map) throws Exception {
+            GetEssayCorrectionTaskResponseBodyDataResultsDimensionResults self = new GetEssayCorrectionTaskResponseBodyDataResultsDimensionResults();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEssayCorrectionTaskResponseBodyDataResultsDimensionResults setAnalysis(String analysis) {
+            this.analysis = analysis;
+            return this;
+        }
+        public String getAnalysis() {
+            return this.analysis;
+        }
+
+        public GetEssayCorrectionTaskResponseBodyDataResultsDimensionResults setMaxScore(Double maxScore) {
+            this.maxScore = maxScore;
+            return this;
+        }
+        public Double getMaxScore() {
+            return this.maxScore;
+        }
+
+        public GetEssayCorrectionTaskResponseBodyDataResultsDimensionResults setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetEssayCorrectionTaskResponseBodyDataResultsDimensionResults setScore(Double score) {
+            this.score = score;
+            return this;
+        }
+        public Double getScore() {
+            return this.score;
+        }
+
+    }
+
     public static class GetEssayCorrectionTaskResponseBodyDataResults extends TeaModel {
         /**
          * <p>xxx</p>
@@ -107,6 +175,34 @@ public class GetEssayCorrectionTaskResponseBody extends TeaModel {
         @NameInMap("customId")
         public String customId;
 
+        @NameInMap("dimensionResults")
+        public java.util.List<GetEssayCorrectionTaskResponseBodyDataResultsDimensionResults> dimensionResults;
+
+        /**
+         * <strong>example:</strong>
+         * <p>RateLimit</p>
+         */
+        @NameInMap("errorCode")
+        public String errorCode;
+
+        /**
+         * <strong>example:</strong>
+         * <p>触发模型限流</p>
+         */
+        @NameInMap("errorMessage")
+        public String errorMessage;
+
+        /**
+         * <strong>example:</strong>
+         * <p>整体表现良好，建议在论述深度上进一步加强。</p>
+         */
+        @NameInMap("overallComment")
+        public String overallComment;
+
+        /**
+         * <strong>example:</strong>
+         * <p>本文整体结构清晰，语言流畅...</p>
+         */
         @NameInMap("result")
         public String result;
 
@@ -131,6 +227,38 @@ public class GetEssayCorrectionTaskResponseBody extends TeaModel {
         }
         public String getCustomId() {
             return this.customId;
+        }
+
+        public GetEssayCorrectionTaskResponseBodyDataResults setDimensionResults(java.util.List<GetEssayCorrectionTaskResponseBodyDataResultsDimensionResults> dimensionResults) {
+            this.dimensionResults = dimensionResults;
+            return this;
+        }
+        public java.util.List<GetEssayCorrectionTaskResponseBodyDataResultsDimensionResults> getDimensionResults() {
+            return this.dimensionResults;
+        }
+
+        public GetEssayCorrectionTaskResponseBodyDataResults setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        public GetEssayCorrectionTaskResponseBodyDataResults setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public GetEssayCorrectionTaskResponseBodyDataResults setOverallComment(String overallComment) {
+            this.overallComment = overallComment;
+            return this;
+        }
+        public String getOverallComment() {
+            return this.overallComment;
         }
 
         public GetEssayCorrectionTaskResponseBodyDataResults setResult(String result) {

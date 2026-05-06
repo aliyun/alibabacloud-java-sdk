@@ -146,7 +146,92 @@ public class RunEssayCorrectionResponseBody extends TeaModel {
 
     }
 
+    public static class RunEssayCorrectionResponseBodyPayloadOutputDimensionResults extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>文章内容较为完整，涵盖了题目的核心要求，但部分论述略显简略。</p>
+         */
+        @NameInMap("analysis")
+        public String analysis;
+
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
+        @NameInMap("maxScore")
+        public Double maxScore;
+
+        /**
+         * <strong>example:</strong>
+         * <p>内容完整度</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <strong>example:</strong>
+         * <p>25.5</p>
+         */
+        @NameInMap("score")
+        public Double score;
+
+        public static RunEssayCorrectionResponseBodyPayloadOutputDimensionResults build(java.util.Map<String, ?> map) throws Exception {
+            RunEssayCorrectionResponseBodyPayloadOutputDimensionResults self = new RunEssayCorrectionResponseBodyPayloadOutputDimensionResults();
+            return TeaModel.build(map, self);
+        }
+
+        public RunEssayCorrectionResponseBodyPayloadOutputDimensionResults setAnalysis(String analysis) {
+            this.analysis = analysis;
+            return this;
+        }
+        public String getAnalysis() {
+            return this.analysis;
+        }
+
+        public RunEssayCorrectionResponseBodyPayloadOutputDimensionResults setMaxScore(Double maxScore) {
+            this.maxScore = maxScore;
+            return this;
+        }
+        public Double getMaxScore() {
+            return this.maxScore;
+        }
+
+        public RunEssayCorrectionResponseBodyPayloadOutputDimensionResults setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public RunEssayCorrectionResponseBodyPayloadOutputDimensionResults setScore(Double score) {
+            this.score = score;
+            return this;
+        }
+        public Double getScore() {
+            return this.score;
+        }
+
+    }
+
     public static class RunEssayCorrectionResponseBodyPayloadOutput extends TeaModel {
+        @NameInMap("dimensionResults")
+        public java.util.List<RunEssayCorrectionResponseBodyPayloadOutputDimensionResults> dimensionResults;
+
+        /**
+         * <strong>example:</strong>
+         * <p>整体表现良好，建议在论述深度上进一步加强。</p>
+         */
+        @NameInMap("overallComment")
+        public String overallComment;
+
+        /**
+         * <strong>example:</strong>
+         * <p>首先分析文章结构，发现开头、正文、结尾完整...</p>
+         */
+        @NameInMap("reasoningContent")
+        public String reasoningContent;
+
         /**
          * <strong>example:</strong>
          * <p>50</p>
@@ -154,12 +239,40 @@ public class RunEssayCorrectionResponseBody extends TeaModel {
         @NameInMap("score")
         public Integer score;
 
+        /**
+         * <strong>example:</strong>
+         * <p>本文整体结构清晰，语言流畅...</p>
+         */
         @NameInMap("text")
         public String text;
 
         public static RunEssayCorrectionResponseBodyPayloadOutput build(java.util.Map<String, ?> map) throws Exception {
             RunEssayCorrectionResponseBodyPayloadOutput self = new RunEssayCorrectionResponseBodyPayloadOutput();
             return TeaModel.build(map, self);
+        }
+
+        public RunEssayCorrectionResponseBodyPayloadOutput setDimensionResults(java.util.List<RunEssayCorrectionResponseBodyPayloadOutputDimensionResults> dimensionResults) {
+            this.dimensionResults = dimensionResults;
+            return this;
+        }
+        public java.util.List<RunEssayCorrectionResponseBodyPayloadOutputDimensionResults> getDimensionResults() {
+            return this.dimensionResults;
+        }
+
+        public RunEssayCorrectionResponseBodyPayloadOutput setOverallComment(String overallComment) {
+            this.overallComment = overallComment;
+            return this;
+        }
+        public String getOverallComment() {
+            return this.overallComment;
+        }
+
+        public RunEssayCorrectionResponseBodyPayloadOutput setReasoningContent(String reasoningContent) {
+            this.reasoningContent = reasoningContent;
+            return this;
+        }
+        public String getReasoningContent() {
+            return this.reasoningContent;
         }
 
         public RunEssayCorrectionResponseBodyPayloadOutput setScore(Integer score) {

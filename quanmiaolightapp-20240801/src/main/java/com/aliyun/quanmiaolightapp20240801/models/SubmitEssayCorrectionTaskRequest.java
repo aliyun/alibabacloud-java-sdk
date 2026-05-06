@@ -6,6 +6,13 @@ import com.aliyun.tea.*;
 public class SubmitEssayCorrectionTaskRequest extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>[{&quot;name&quot;: &quot;内容完整度&quot;, &quot;rubric&quot;: &quot;文章内容是否完整，是否涵盖了题目的核心要求&quot;, &quot;maxScore&quot;: 30}]</p>
+     */
+    @NameInMap("dimensions")
+    public java.util.List<SubmitEssayCorrectionTaskRequestDimensions> dimensions;
+
+    /**
+     * <strong>example:</strong>
      * <p>高中二年级</p>
      */
     @NameInMap("grade")
@@ -39,6 +46,10 @@ public class SubmitEssayCorrectionTaskRequest extends TeaModel {
     @NameInMap("subject")
     public String subject;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[{&quot;grade&quot;: &quot;高中二年级&quot;, &quot;subject&quot;: &quot;语文&quot;, &quot;totalScore&quot;: 60, &quot;question&quot;: &quot;请以我的梦想为主题写一篇作文&quot;, &quot;answer&quot;: &quot;我的梦想是成为一名科学家...&quot;, &quot;customId&quot;: &quot;task-001&quot;}]</p>
+     */
     @NameInMap("tasks")
     public java.util.List<SubmitEssayCorrectionTaskRequestTasks> tasks;
 
@@ -52,6 +63,14 @@ public class SubmitEssayCorrectionTaskRequest extends TeaModel {
     public static SubmitEssayCorrectionTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitEssayCorrectionTaskRequest self = new SubmitEssayCorrectionTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitEssayCorrectionTaskRequest setDimensions(java.util.List<SubmitEssayCorrectionTaskRequestDimensions> dimensions) {
+        this.dimensions = dimensions;
+        return this;
+    }
+    public java.util.List<SubmitEssayCorrectionTaskRequestDimensions> getDimensions() {
+        return this.dimensions;
     }
 
     public SubmitEssayCorrectionTaskRequest setGrade(String grade) {
@@ -110,6 +129,59 @@ public class SubmitEssayCorrectionTaskRequest extends TeaModel {
         return this.totalScore;
     }
 
+    public static class SubmitEssayCorrectionTaskRequestDimensions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
+        @NameInMap("maxScore")
+        public Integer maxScore;
+
+        /**
+         * <strong>example:</strong>
+         * <p>内容完整度</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <strong>example:</strong>
+         * <p>文章内容是否完整，是否涵盖了题目的核心要求</p>
+         */
+        @NameInMap("rubric")
+        public String rubric;
+
+        public static SubmitEssayCorrectionTaskRequestDimensions build(java.util.Map<String, ?> map) throws Exception {
+            SubmitEssayCorrectionTaskRequestDimensions self = new SubmitEssayCorrectionTaskRequestDimensions();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitEssayCorrectionTaskRequestDimensions setMaxScore(Integer maxScore) {
+            this.maxScore = maxScore;
+            return this;
+        }
+        public Integer getMaxScore() {
+            return this.maxScore;
+        }
+
+        public SubmitEssayCorrectionTaskRequestDimensions setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public SubmitEssayCorrectionTaskRequestDimensions setRubric(String rubric) {
+            this.rubric = rubric;
+            return this;
+        }
+        public String getRubric() {
+            return this.rubric;
+        }
+
+    }
+
     public static class SubmitEssayCorrectionTaskRequestTasks extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -118,6 +190,10 @@ public class SubmitEssayCorrectionTaskRequest extends TeaModel {
         @NameInMap("answer")
         public String answer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>task-001</p>
+         */
         @NameInMap("customId")
         public String customId;
 

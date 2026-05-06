@@ -872,16 +872,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>作业批改</p>
      * 
-     * @param request RunEssayCorrectionRequest
+     * @param tmpReq RunEssayCorrectionRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return RunEssayCorrectionResponse
      */
-    public RunEssayCorrectionResponse runEssayCorrectionWithOptions(String workspaceId, RunEssayCorrectionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public RunEssayCorrectionResponse runEssayCorrectionWithOptions(String workspaceId, RunEssayCorrectionRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        RunEssayCorrectionShrinkRequest request = new RunEssayCorrectionShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dimensions)) {
+            request.dimensionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dimensions, "dimensions", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.answer)) {
             body.put("answer", request.answer);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dimensionsShrink)) {
+            body.put("dimensions", request.dimensionsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.grade)) {
@@ -2209,11 +2219,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SubmitEssayCorrectionTaskShrinkRequest request = new SubmitEssayCorrectionTaskShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dimensions)) {
+            request.dimensionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dimensions, "dimensions", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.tasks)) {
             request.tasksShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tasks, "tasks", "json");
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dimensionsShrink)) {
+            body.put("dimensions", request.dimensionsShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.grade)) {
             body.put("grade", request.grade);
         }
