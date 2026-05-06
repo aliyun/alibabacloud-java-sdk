@@ -25,6 +25,9 @@ public class CreateApplicationVersionRequest extends TeaModel {
     @NameInMap("InteractionConfig")
     public CreateApplicationVersionRequestInteractionConfig interactionConfig;
 
+    @NameInMap("RagConfig")
+    public CreateApplicationVersionRequestRagConfig ragConfig;
+
     @NameInMap("ScriptProfile")
     public CreateApplicationVersionRequestScriptProfile scriptProfile;
 
@@ -68,6 +71,14 @@ public class CreateApplicationVersionRequest extends TeaModel {
     }
     public CreateApplicationVersionRequestInteractionConfig getInteractionConfig() {
         return this.interactionConfig;
+    }
+
+    public CreateApplicationVersionRequest setRagConfig(CreateApplicationVersionRequestRagConfig ragConfig) {
+        this.ragConfig = ragConfig;
+        return this;
+    }
+    public CreateApplicationVersionRequestRagConfig getRagConfig() {
+        return this.ragConfig;
     }
 
     public CreateApplicationVersionRequest setScriptProfile(CreateApplicationVersionRequestScriptProfile scriptProfile) {
@@ -140,6 +151,69 @@ public class CreateApplicationVersionRequest extends TeaModel {
         }
         public CreateApplicationVersionRequestInteractionConfigSilenceDetectionConfig getSilenceDetectionConfig() {
             return this.silenceDetectionConfig;
+        }
+
+    }
+
+    public static class CreateApplicationVersionRequestRagConfig extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("KnowledgeBaseIds")
+        public java.util.List<String> knowledgeBaseIds;
+
+        @NameInMap("MaxContentLength")
+        public Integer maxContentLength;
+
+        @NameInMap("RagEngine")
+        public String ragEngine;
+
+        @NameInMap("TopN")
+        public Integer topN;
+
+        public static CreateApplicationVersionRequestRagConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateApplicationVersionRequestRagConfig self = new CreateApplicationVersionRequestRagConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateApplicationVersionRequestRagConfig setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public CreateApplicationVersionRequestRagConfig setKnowledgeBaseIds(java.util.List<String> knowledgeBaseIds) {
+            this.knowledgeBaseIds = knowledgeBaseIds;
+            return this;
+        }
+        public java.util.List<String> getKnowledgeBaseIds() {
+            return this.knowledgeBaseIds;
+        }
+
+        public CreateApplicationVersionRequestRagConfig setMaxContentLength(Integer maxContentLength) {
+            this.maxContentLength = maxContentLength;
+            return this;
+        }
+        public Integer getMaxContentLength() {
+            return this.maxContentLength;
+        }
+
+        public CreateApplicationVersionRequestRagConfig setRagEngine(String ragEngine) {
+            this.ragEngine = ragEngine;
+            return this;
+        }
+        public String getRagEngine() {
+            return this.ragEngine;
+        }
+
+        public CreateApplicationVersionRequestRagConfig setTopN(Integer topN) {
+            this.topN = topN;
+            return this;
+        }
+        public Integer getTopN() {
+            return this.topN;
         }
 
     }

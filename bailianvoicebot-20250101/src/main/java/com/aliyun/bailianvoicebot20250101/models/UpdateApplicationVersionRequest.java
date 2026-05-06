@@ -25,6 +25,9 @@ public class UpdateApplicationVersionRequest extends TeaModel {
     @NameInMap("InteractionConfig")
     public UpdateApplicationVersionRequestInteractionConfig interactionConfig;
 
+    @NameInMap("RagConfig")
+    public UpdateApplicationVersionRequestRagConfig ragConfig;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -81,6 +84,14 @@ public class UpdateApplicationVersionRequest extends TeaModel {
     }
     public UpdateApplicationVersionRequestInteractionConfig getInteractionConfig() {
         return this.interactionConfig;
+    }
+
+    public UpdateApplicationVersionRequest setRagConfig(UpdateApplicationVersionRequestRagConfig ragConfig) {
+        this.ragConfig = ragConfig;
+        return this;
+    }
+    public UpdateApplicationVersionRequestRagConfig getRagConfig() {
+        return this.ragConfig;
     }
 
     public UpdateApplicationVersionRequest setScriptProfile(UpdateApplicationVersionRequestScriptProfile scriptProfile) {
@@ -153,6 +164,69 @@ public class UpdateApplicationVersionRequest extends TeaModel {
         }
         public UpdateApplicationVersionRequestInteractionConfigSilenceDetectionConfig getSilenceDetectionConfig() {
             return this.silenceDetectionConfig;
+        }
+
+    }
+
+    public static class UpdateApplicationVersionRequestRagConfig extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("KnowledgeBaseIds")
+        public java.util.List<String> knowledgeBaseIds;
+
+        @NameInMap("MaxContentLength")
+        public Integer maxContentLength;
+
+        @NameInMap("RagEngine")
+        public String ragEngine;
+
+        @NameInMap("TopN")
+        public Integer topN;
+
+        public static UpdateApplicationVersionRequestRagConfig build(java.util.Map<String, ?> map) throws Exception {
+            UpdateApplicationVersionRequestRagConfig self = new UpdateApplicationVersionRequestRagConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateApplicationVersionRequestRagConfig setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public UpdateApplicationVersionRequestRagConfig setKnowledgeBaseIds(java.util.List<String> knowledgeBaseIds) {
+            this.knowledgeBaseIds = knowledgeBaseIds;
+            return this;
+        }
+        public java.util.List<String> getKnowledgeBaseIds() {
+            return this.knowledgeBaseIds;
+        }
+
+        public UpdateApplicationVersionRequestRagConfig setMaxContentLength(Integer maxContentLength) {
+            this.maxContentLength = maxContentLength;
+            return this;
+        }
+        public Integer getMaxContentLength() {
+            return this.maxContentLength;
+        }
+
+        public UpdateApplicationVersionRequestRagConfig setRagEngine(String ragEngine) {
+            this.ragEngine = ragEngine;
+            return this;
+        }
+        public String getRagEngine() {
+            return this.ragEngine;
+        }
+
+        public UpdateApplicationVersionRequestRagConfig setTopN(Integer topN) {
+            this.topN = topN;
+            return this;
+        }
+        public Integer getTopN() {
+            return this.topN;
         }
 
     }

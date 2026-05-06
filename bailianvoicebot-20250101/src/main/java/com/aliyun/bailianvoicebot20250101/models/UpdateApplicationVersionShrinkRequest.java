@@ -25,6 +25,9 @@ public class UpdateApplicationVersionShrinkRequest extends TeaModel {
     @NameInMap("InteractionConfig")
     public String interactionConfigShrink;
 
+    @NameInMap("RagConfig")
+    public String ragConfigShrink;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -81,6 +84,14 @@ public class UpdateApplicationVersionShrinkRequest extends TeaModel {
     }
     public String getInteractionConfigShrink() {
         return this.interactionConfigShrink;
+    }
+
+    public UpdateApplicationVersionShrinkRequest setRagConfigShrink(String ragConfigShrink) {
+        this.ragConfigShrink = ragConfigShrink;
+        return this;
+    }
+    public String getRagConfigShrink() {
+        return this.ragConfigShrink;
     }
 
     public UpdateApplicationVersionShrinkRequest setScriptProfileShrink(String scriptProfileShrink) {

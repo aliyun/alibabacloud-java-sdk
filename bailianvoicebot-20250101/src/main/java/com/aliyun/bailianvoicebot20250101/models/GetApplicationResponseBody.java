@@ -122,6 +122,69 @@ public class GetApplicationResponseBody extends TeaModel {
 
     }
 
+    public static class GetApplicationResponseBodyDataDraftVersionRagConfig extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("KnowledgeBaseIds")
+        public java.util.List<String> knowledgeBaseIds;
+
+        @NameInMap("MaxContentLength")
+        public Integer maxContentLength;
+
+        @NameInMap("RagEngine")
+        public String ragEngine;
+
+        @NameInMap("TopN")
+        public Integer topN;
+
+        public static GetApplicationResponseBodyDataDraftVersionRagConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationResponseBodyDataDraftVersionRagConfig self = new GetApplicationResponseBodyDataDraftVersionRagConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionRagConfig setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionRagConfig setKnowledgeBaseIds(java.util.List<String> knowledgeBaseIds) {
+            this.knowledgeBaseIds = knowledgeBaseIds;
+            return this;
+        }
+        public java.util.List<String> getKnowledgeBaseIds() {
+            return this.knowledgeBaseIds;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionRagConfig setMaxContentLength(Integer maxContentLength) {
+            this.maxContentLength = maxContentLength;
+            return this;
+        }
+        public Integer getMaxContentLength() {
+            return this.maxContentLength;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionRagConfig setRagEngine(String ragEngine) {
+            this.ragEngine = ragEngine;
+            return this;
+        }
+        public String getRagEngine() {
+            return this.ragEngine;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionRagConfig setTopN(Integer topN) {
+            this.topN = topN;
+            return this;
+        }
+        public Integer getTopN() {
+            return this.topN;
+        }
+
+    }
+
     public static class GetApplicationResponseBodyDataDraftVersionScriptProfileAgentProfile extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -386,6 +449,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("InteractionConfig")
         public GetApplicationResponseBodyDataDraftVersionInteractionConfig interactionConfig;
 
+        @NameInMap("RagConfig")
+        public GetApplicationResponseBodyDataDraftVersionRagConfig ragConfig;
+
         @NameInMap("ScriptProfile")
         public GetApplicationResponseBodyDataDraftVersionScriptProfile scriptProfile;
 
@@ -413,6 +479,14 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public GetApplicationResponseBodyDataDraftVersionInteractionConfig getInteractionConfig() {
             return this.interactionConfig;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersion setRagConfig(GetApplicationResponseBodyDataDraftVersionRagConfig ragConfig) {
+            this.ragConfig = ragConfig;
+            return this;
+        }
+        public GetApplicationResponseBodyDataDraftVersionRagConfig getRagConfig() {
+            return this.ragConfig;
         }
 
         public GetApplicationResponseBodyDataDraftVersion setScriptProfile(GetApplicationResponseBodyDataDraftVersionScriptProfile scriptProfile) {
@@ -487,6 +561,69 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public GetApplicationResponseBodyDataPublishedVersionInteractionConfigSilenceDetectionConfig getSilenceDetectionConfig() {
             return this.silenceDetectionConfig;
+        }
+
+    }
+
+    public static class GetApplicationResponseBodyDataPublishedVersionRagConfig extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("KnowledgeBaseIds")
+        public java.util.List<String> knowledgeBaseIds;
+
+        @NameInMap("MaxContentLength")
+        public Integer maxContentLength;
+
+        @NameInMap("RagEngine")
+        public String ragEngine;
+
+        @NameInMap("TopN")
+        public Integer topN;
+
+        public static GetApplicationResponseBodyDataPublishedVersionRagConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationResponseBodyDataPublishedVersionRagConfig self = new GetApplicationResponseBodyDataPublishedVersionRagConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionRagConfig setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionRagConfig setKnowledgeBaseIds(java.util.List<String> knowledgeBaseIds) {
+            this.knowledgeBaseIds = knowledgeBaseIds;
+            return this;
+        }
+        public java.util.List<String> getKnowledgeBaseIds() {
+            return this.knowledgeBaseIds;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionRagConfig setMaxContentLength(Integer maxContentLength) {
+            this.maxContentLength = maxContentLength;
+            return this;
+        }
+        public Integer getMaxContentLength() {
+            return this.maxContentLength;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionRagConfig setRagEngine(String ragEngine) {
+            this.ragEngine = ragEngine;
+            return this;
+        }
+        public String getRagEngine() {
+            return this.ragEngine;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionRagConfig setTopN(Integer topN) {
+            this.topN = topN;
+            return this;
+        }
+        public Integer getTopN() {
+            return this.topN;
         }
 
     }
@@ -755,6 +892,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("InteractionConfig")
         public GetApplicationResponseBodyDataPublishedVersionInteractionConfig interactionConfig;
 
+        @NameInMap("RagConfig")
+        public GetApplicationResponseBodyDataPublishedVersionRagConfig ragConfig;
+
         @NameInMap("ScriptProfile")
         public GetApplicationResponseBodyDataPublishedVersionScriptProfile scriptProfile;
 
@@ -782,6 +922,14 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public GetApplicationResponseBodyDataPublishedVersionInteractionConfig getInteractionConfig() {
             return this.interactionConfig;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersion setRagConfig(GetApplicationResponseBodyDataPublishedVersionRagConfig ragConfig) {
+            this.ragConfig = ragConfig;
+            return this;
+        }
+        public GetApplicationResponseBodyDataPublishedVersionRagConfig getRagConfig() {
+            return this.ragConfig;
         }
 
         public GetApplicationResponseBodyDataPublishedVersion setScriptProfile(GetApplicationResponseBodyDataPublishedVersionScriptProfile scriptProfile) {

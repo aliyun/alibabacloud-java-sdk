@@ -25,6 +25,9 @@ public class CreateApplicationVersionShrinkRequest extends TeaModel {
     @NameInMap("InteractionConfig")
     public String interactionConfigShrink;
 
+    @NameInMap("RagConfig")
+    public String ragConfigShrink;
+
     @NameInMap("ScriptProfile")
     public String scriptProfileShrink;
 
@@ -68,6 +71,14 @@ public class CreateApplicationVersionShrinkRequest extends TeaModel {
     }
     public String getInteractionConfigShrink() {
         return this.interactionConfigShrink;
+    }
+
+    public CreateApplicationVersionShrinkRequest setRagConfigShrink(String ragConfigShrink) {
+        this.ragConfigShrink = ragConfigShrink;
+        return this;
+    }
+    public String getRagConfigShrink() {
+        return this.ragConfigShrink;
     }
 
     public CreateApplicationVersionShrinkRequest setScriptProfileShrink(String scriptProfileShrink) {
