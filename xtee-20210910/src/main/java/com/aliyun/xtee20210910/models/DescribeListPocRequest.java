@@ -44,9 +44,25 @@ public class DescribeListPocRequest extends TeaModel {
     @NameInMap("RegId")
     public String regId;
 
+    /**
+     * <p>Task name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Task_001</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 
+    /**
+     * <p>The status of the import task. Valid values:</p>
+     * <ul>
+     * <li>DOING</li>
+     * <li>FINISH</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FINISH</p>
+     */
     @NameInMap("TaskStatus")
     public String taskStatus;
 
