@@ -10173,6 +10173,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>查询表的资产知识详情，返回表的基本元信息、AI 增强的业务描述、汇总信息以及字段知识列表</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询表的资产知识详情，包含表元信息、业务描述、字段列表等</p>
+     * 
+     * @param request GetTableKnowledgeDetailsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTableKnowledgeDetailsResponse
+     */
+    public GetTableKnowledgeDetailsResponse getTableKnowledgeDetailsWithOptions(GetTableKnowledgeDetailsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbId)) {
+            query.put("DbId", request.dbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableName)) {
+            query.put("TableName", request.tableName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTableKnowledgeDetails"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTableKnowledgeDetailsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>查询表的资产知识详情，返回表的基本元信息、AI 增强的业务描述、汇总信息以及字段知识列表</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询表的资产知识详情，包含表元信息、业务描述、字段列表等</p>
+     * 
+     * @param request GetTableKnowledgeDetailsRequest
+     * @return GetTableKnowledgeDetailsResponse
+     */
+    public GetTableKnowledgeDetailsResponse getTableKnowledgeDetails(GetTableKnowledgeDetailsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getTableKnowledgeDetailsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>This API can be called only for database instances that are enabled for security hosting.</p>
      * 
      * <b>summary</b> : 
