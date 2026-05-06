@@ -12,15 +12,6 @@ public class BlockObjectShrinkRequest extends TeaModel {
     public String contentShrink;
 
     /**
-     * <p>The blocking period that you can extend. Set the value to 2year.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2year</p>
-     */
-    @NameInMap("Extension")
-    public String extension;
-
-    /**
      * <p>The period of time during which the URL is blocked. Unit: seconds. Specify this parameter if Type is set to block.</p>
      * 
      * <strong>example:</strong>
@@ -64,14 +55,6 @@ public class BlockObjectShrinkRequest extends TeaModel {
     }
     public String getContentShrink() {
         return this.contentShrink;
-    }
-
-    public BlockObjectShrinkRequest setExtension(String extension) {
-        this.extension = extension;
-        return this;
-    }
-    public String getExtension() {
-        return this.extension;
     }
 
     public BlockObjectShrinkRequest setMaxage(Integer maxage) {

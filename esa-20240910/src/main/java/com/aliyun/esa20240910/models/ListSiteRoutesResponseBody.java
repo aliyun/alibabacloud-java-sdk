@@ -218,6 +218,9 @@ public class ListSiteRoutesResponseBody extends TeaModel {
         @NameInMap("SiteVersion")
         public Integer siteVersion;
 
+        @NameInMap("Timeout")
+        public String timeout;
+
         public static ListSiteRoutesResponseBodyConfigs build(java.util.Map<String, ?> map) throws Exception {
             ListSiteRoutesResponseBodyConfigs self = new ListSiteRoutesResponseBodyConfigs();
             return TeaModel.build(map, self);
@@ -309,6 +312,14 @@ public class ListSiteRoutesResponseBody extends TeaModel {
         }
         public Integer getSiteVersion() {
             return this.siteVersion;
+        }
+
+        public ListSiteRoutesResponseBodyConfigs setTimeout(String timeout) {
+            this.timeout = timeout;
+            return this;
+        }
+        public String getTimeout() {
+            return this.timeout;
         }
 
     }

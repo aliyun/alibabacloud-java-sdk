@@ -7,12 +7,20 @@ public class WafTimer extends TeaModel {
     @NameInMap("Periods")
     public java.util.List<WafTimerPeriods> periods;
 
+    /**
+     * <strong>example:</strong>
+     * <p>permanent</p>
+     */
     @NameInMap("Scopes")
     public String scopes;
 
     @NameInMap("WeeklyPeriods")
     public java.util.List<WafTimerWeeklyPeriods> weeklyPeriods;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("Zone")
     public Integer zone;
 
@@ -54,9 +62,17 @@ public class WafTimer extends TeaModel {
     }
 
     public static class WafTimerPeriods extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2025-01-01T01:00:00Z</p>
+         */
         @NameInMap("End")
         public String end;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2025-01-01T00:00:00Z</p>
+         */
         @NameInMap("Start")
         public String start;
 
@@ -84,9 +100,17 @@ public class WafTimer extends TeaModel {
     }
 
     public static class WafTimerWeeklyPeriodsDailyPeriods extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>01:00:00</p>
+         */
         @NameInMap("End")
         public String end;
 
+        /**
+         * <strong>example:</strong>
+         * <p>00:00:00</p>
+         */
         @NameInMap("Start")
         public String start;
 
@@ -117,6 +141,10 @@ public class WafTimer extends TeaModel {
         @NameInMap("DailyPeriods")
         public java.util.List<WafTimerWeeklyPeriodsDailyPeriods> dailyPeriods;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Days")
         public String days;
 

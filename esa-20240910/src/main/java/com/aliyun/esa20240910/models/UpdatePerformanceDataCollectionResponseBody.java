@@ -1,0 +1,29 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.esa20240910.models;
+
+import com.aliyun.tea.*;
+
+public class UpdatePerformanceDataCollectionResponseBody extends TeaModel {
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CB1A380B-09F0-41BB-280B-72F8FD6DA2FE</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    public static UpdatePerformanceDataCollectionResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdatePerformanceDataCollectionResponseBody self = new UpdatePerformanceDataCollectionResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public UpdatePerformanceDataCollectionResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+}

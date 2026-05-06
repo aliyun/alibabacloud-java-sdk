@@ -344,6 +344,9 @@ public class ListTransportLayerApplicationsResponseBody extends TeaModel {
         @NameInMap("Ipv6")
         public String ipv6;
 
+        @NameInMap("KeepAliveProtection")
+        public String keepAliveProtection;
+
         /**
          * <p>Domain name of the Layer 4 application.</p>
          * 
@@ -442,6 +445,14 @@ public class ListTransportLayerApplicationsResponseBody extends TeaModel {
         }
         public String getIpv6() {
             return this.ipv6;
+        }
+
+        public ListTransportLayerApplicationsResponseBodyApplications setKeepAliveProtection(String keepAliveProtection) {
+            this.keepAliveProtection = keepAliveProtection;
+            return this;
+        }
+        public String getKeepAliveProtection() {
+            return this.keepAliveProtection;
         }
 
         public ListTransportLayerApplicationsResponseBodyApplications setRecordName(String recordName) {

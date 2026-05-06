@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class GetPurgeQuotaRequest extends TeaModel {
     /**
      * <p>The website ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>123456789****</p>
@@ -23,6 +24,7 @@ public class GetPurgeQuotaRequest extends TeaModel {
      * <li><strong>hostname</strong>: purges the cache by hostname.</li>
      * <li><strong>purgeall</strong>: purges all cache.</li>
      * </ul>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>file</p>

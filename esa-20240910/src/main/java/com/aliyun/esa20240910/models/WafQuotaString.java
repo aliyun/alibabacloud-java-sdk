@@ -4,6 +4,10 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class WafQuotaString extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>^\d+$</p>
+     */
     @NameInMap("Regexp")
     public String regexp;
 

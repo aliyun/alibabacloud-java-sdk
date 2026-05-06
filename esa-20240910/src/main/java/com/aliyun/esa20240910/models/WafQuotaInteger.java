@@ -4,18 +4,48 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class WafQuotaInteger extends TeaModel {
+    /**
+     * <p>Is equal to</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Equal")
     public Integer equal;
 
+    /**
+     * <p>Is greater than</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("GreaterThan")
     public Integer greaterThan;
 
+    /**
+     * <p>Is greater than or equal to</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("GreaterThanOrEqual")
     public Integer greaterThanOrEqual;
 
+    /**
+     * <p>Is less than</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LessThan")
     public Integer lessThan;
 
+    /**
+     * <p>Is less than or equal to</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LessThanOrEqual")
     public Integer lessThanOrEqual;
 

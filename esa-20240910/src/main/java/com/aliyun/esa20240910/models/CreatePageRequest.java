@@ -46,6 +46,9 @@ public class CreatePageRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("SiteIds")
+    public java.util.List<Long> siteIds;
+
     public static CreatePageRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePageRequest self = new CreatePageRequest();
         return TeaModel.build(map, self);
@@ -81,6 +84,14 @@ public class CreatePageRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreatePageRequest setSiteIds(java.util.List<Long> siteIds) {
+        this.siteIds = siteIds;
+        return this;
+    }
+    public java.util.List<Long> getSiteIds() {
+        return this.siteIds;
     }
 
 }

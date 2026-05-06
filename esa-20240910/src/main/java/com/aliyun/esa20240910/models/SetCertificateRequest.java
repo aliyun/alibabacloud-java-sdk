@@ -43,9 +43,6 @@ public class SetCertificateRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     /**
      * <p>The private key of the certificate.</p>
      * 
@@ -134,14 +131,6 @@ public class SetCertificateRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public SetCertificateRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public SetCertificateRequest setPrivateKey(String privateKey) {

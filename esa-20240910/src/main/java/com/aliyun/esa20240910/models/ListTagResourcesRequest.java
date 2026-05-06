@@ -25,9 +25,6 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     /**
      * <p>The ID of the region where the resources reside.</p>
      * <p>This parameter is required.</p>
@@ -82,14 +79,6 @@ public class ListTagResourcesRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
-    }
-
-    public ListTagResourcesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public ListTagResourcesRequest setRegionId(String regionId) {

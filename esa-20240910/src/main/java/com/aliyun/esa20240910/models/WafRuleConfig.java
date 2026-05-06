@@ -4,57 +4,141 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class WafRuleConfig extends TeaModel {
+    /**
+     * <p>The operation to perform after the WAF rule is matched.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>deny</p>
+     */
     @NameInMap("Action")
     public String action;
 
+    /**
+     * <p>The extended action configurations.</p>
+     */
     @NameInMap("Actions")
     public WafRuleConfigActions actions;
 
+    /**
+     * <p>The configuration of secondary package detection.</p>
+     */
     @NameInMap("AppPackage")
     public WafRuleConfigAppPackage appPackage;
 
+    /**
+     * <p>The SDK configuration for apps.</p>
+     */
     @NameInMap("AppSdk")
     public WafRuleConfigAppSdk appSdk;
 
+    /**
+     * <p>The match expression.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ip.src eq 1.1.1.1</p>
+     */
     @NameInMap("Expression")
     public String expression;
 
+    /**
+     * <p>The ID of the WAF rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20000001</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The ID of the managed rule group, which is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30000001</p>
+     */
     @NameInMap("ManagedGroupId")
     public Long managedGroupId;
 
+    /**
+     * <p>The managed list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>intelligence_crawler</p>
+     */
     @NameInMap("ManagedList")
     public String managedList;
 
+    /**
+     * <p>The managed rulesets.</p>
+     */
     @NameInMap("ManagedRulesets")
     public java.util.List<WafRuleConfigManagedRulesets> managedRulesets;
 
+    /**
+     * <p>The name of the WAF rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The remarks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example notes</p>
+     */
     @NameInMap("Notes")
     public String notes;
 
+    /**
+     * <p>The configuration of the rate limiting rule.</p>
+     */
     @NameInMap("RateLimit")
     public WafRuleConfigRateLimit rateLimit;
 
+    /**
+     * <p>The security level.</p>
+     */
     @NameInMap("SecurityLevel")
     public WafRuleConfigSecurityLevel securityLevel;
 
+    /**
+     * <p>The token verification configurations.</p>
+     */
     @NameInMap("Sigchl")
     public java.util.List<String> sigchl;
 
+    /**
+     * <p>The status of the WAF rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The timer.</p>
+     */
     @NameInMap("Timer")
     public WafTimer timer;
 
+    /**
+     * <p>The name of the WAF rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>http_custom</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>Defines whether the IP can access.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.0.1</p>
+     */
     @NameInMap("Value")
     public String value;
 
@@ -208,18 +292,36 @@ public class WafRuleConfig extends TeaModel {
     }
 
     public static class WafRuleConfigActionsBypass extends TeaModel {
+        /**
+         * <p>The IDs of custom rules.</p>
+         */
         @NameInMap("CustomRules")
         public java.util.List<Long> customRules;
 
+        /**
+         * <p>The IDs of managed rules.</p>
+         */
         @NameInMap("RegularRules")
         public java.util.List<Long> regularRules;
 
+        /**
+         * <p>The types of managed rules.</p>
+         */
         @NameInMap("RegularTypes")
         public java.util.List<String> regularTypes;
 
+        /**
+         * <p>The skip scope applied when requests match conditions defined in the whitelist rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>part</p>
+         */
         @NameInMap("Skip")
         public String skip;
 
+        /**
+         * <p>The skipped rule categories when requests match conditions defined in the whitelist rule.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
@@ -271,9 +373,21 @@ public class WafRuleConfig extends TeaModel {
     }
 
     public static class WafRuleConfigActionsResponse extends TeaModel {
+        /**
+         * <p>The custom response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403</p>
+         */
         @NameInMap("Code")
         public Integer code;
 
+        /**
+         * <p>The ID of the custom error page, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50000001</p>
+         */
         @NameInMap("Id")
         public Long id;
 
@@ -301,9 +415,15 @@ public class WafRuleConfig extends TeaModel {
     }
 
     public static class WafRuleConfigActions extends TeaModel {
+        /**
+         * <p>The skip configuration specified by the whitelist rule.</p>
+         */
         @NameInMap("Bypass")
         public WafRuleConfigActionsBypass bypass;
 
+        /**
+         * <p>The custom error page.</p>
+         */
         @NameInMap("Response")
         public WafRuleConfigActionsResponse response;
 
@@ -331,9 +451,21 @@ public class WafRuleConfig extends TeaModel {
     }
 
     public static class WafRuleConfigAppPackagePackageSigns extends TeaModel {
+        /**
+         * <p>The valid package name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The valid package signature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sign</p>
+         */
         @NameInMap("Sign")
         public String sign;
 
@@ -361,6 +493,9 @@ public class WafRuleConfig extends TeaModel {
     }
 
     public static class WafRuleConfigAppPackage extends TeaModel {
+        /**
+         * <p>The package signatures.</p>
+         */
         @NameInMap("PackageSigns")
         public java.util.List<WafRuleConfigAppPackagePackageSigns> packageSigns;
 
@@ -380,9 +515,21 @@ public class WafRuleConfig extends TeaModel {
     }
 
     public static class WafRuleConfigAppSdkCustomSign extends TeaModel {
+        /**
+         * <p>The field name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sign</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The field value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>examplesignvalue</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -410,12 +557,24 @@ public class WafRuleConfig extends TeaModel {
     }
 
     public static class WafRuleConfigAppSdk extends TeaModel {
+        /**
+         * <p>The custom signature field.</p>
+         */
         @NameInMap("CustomSign")
         public WafRuleConfigAppSdkCustomSign customSign;
 
+        /**
+         * <p>Indicates whether to configure the custom signature field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
         @NameInMap("CustomSignStatus")
         public String customSignStatus;
 
+        /**
+         * <p>The app anomalies.</p>
+         */
         @NameInMap("FeatureAbnormal")
         public java.util.List<String> featureAbnormal;
 
@@ -451,12 +610,30 @@ public class WafRuleConfig extends TeaModel {
     }
 
     public static class WafRuleConfigManagedRulesetsManagedRules extends TeaModel {
+        /**
+         * <p>The action performed on requests that match the managed rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deny</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The ID of the managed rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100001</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The status of the managed rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -492,21 +669,54 @@ public class WafRuleConfig extends TeaModel {
     }
 
     public static class WafRuleConfigManagedRulesets extends TeaModel {
+        /**
+         * <p>The action.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deny</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The attack type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("AttackType")
         public Integer attackType;
 
+        /**
+         * <p>The managed rules.</p>
+         */
         @NameInMap("ManagedRules")
         public java.util.List<WafRuleConfigManagedRulesetsManagedRules> managedRules;
 
+        /**
+         * <p>The number of enabled rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("NumberEnabled")
         public Integer numberEnabled;
 
+        /**
+         * <p>The total number of rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("NumberTotal")
         public Integer numberTotal;
 
+        /**
+         * <p>The protection level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("ProtectionLevel")
         public Integer protectionLevel;
 
@@ -566,12 +776,30 @@ public class WafRuleConfig extends TeaModel {
     }
 
     public static class WafRuleConfigRateLimitThresholdResponseStatus extends TeaModel {
+        /**
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>404</p>
+         */
         @NameInMap("Code")
         public Integer code;
 
+        /**
+         * <p>The maximum number of times that the status code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The percentage of the occurrences of the status code to total status codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Ratio")
         public Integer ratio;
 
@@ -607,18 +835,45 @@ public class WafRuleConfig extends TeaModel {
     }
 
     public static class WafRuleConfigRateLimitThreshold extends TeaModel {
+        /**
+         * <p>The maximum number of managed rules that are triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("DistinctManagedRules")
         public Integer distinctManagedRules;
 
+        /**
+         * <p>The maximum number of times that the managed rule is triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("ManagedRulesBlocked")
         public Integer managedRulesBlocked;
 
+        /**
+         * <p>The request threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Request")
         public Integer request;
 
+        /**
+         * <p>The configuration of the status code threshold.</p>
+         */
         @NameInMap("ResponseStatus")
         public WafRuleConfigRateLimitThresholdResponseStatus responseStatus;
 
+        /**
+         * <p>The traffic threshold, which is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10Gb</p>
+         */
         @NameInMap("Traffic")
         public String traffic;
 
@@ -670,18 +925,42 @@ public class WafRuleConfig extends TeaModel {
     }
 
     public static class WafRuleConfigRateLimit extends TeaModel {
+        /**
+         * <p>The statistical objects to which the rule applies.</p>
+         */
         @NameInMap("Characteristics")
         public WafRatelimitCharacteristics characteristics;
 
+        /**
+         * <p>The statistical interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Interval")
         public Integer interval;
 
+        /**
+         * <p>Indicates whether to apply the rule to requests that hit the cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("OnHit")
         public Boolean onHit;
 
+        /**
+         * <p>The timeout period for creating the stack.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("TTL")
         public Integer TTL;
 
+        /**
+         * <p>The thresholds.</p>
+         */
         @NameInMap("Threshold")
         public WafRuleConfigRateLimitThreshold threshold;
 
@@ -733,6 +1012,20 @@ public class WafRuleConfig extends TeaModel {
     }
 
     public static class WafRuleConfigSecurityLevel extends TeaModel {
+        /**
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>off</li>
+         * <li>essentially_off</li>
+         * <li>low</li>
+         * <li>medium</li>
+         * <li>high</li>
+         * <li>under_attack</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>low</p>
+         */
         @NameInMap("Value")
         public String value;
 

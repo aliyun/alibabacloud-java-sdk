@@ -18,9 +18,6 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("All")
     public Boolean all;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     /**
      * <p>The ID of the region where the resources reside. Set the value to <strong>cn-hangzhou</strong>.</p>
      * <p>This parameter is required.</p>
@@ -68,14 +65,6 @@ public class UntagResourcesRequest extends TeaModel {
     }
     public Boolean getAll() {
         return this.all;
-    }
-
-    public UntagResourcesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public UntagResourcesRequest setRegionId(String regionId) {

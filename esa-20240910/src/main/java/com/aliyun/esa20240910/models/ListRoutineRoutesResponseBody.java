@@ -246,6 +246,13 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
         @NameInMap("SiteVersion")
         public Integer siteVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
+        @NameInMap("Timeout")
+        public String timeout;
+
         public static ListRoutineRoutesResponseBodyConfigs build(java.util.Map<String, ?> map) throws Exception {
             ListRoutineRoutesResponseBodyConfigs self = new ListRoutineRoutesResponseBodyConfigs();
             return TeaModel.build(map, self);
@@ -353,6 +360,14 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
         }
         public Integer getSiteVersion() {
             return this.siteVersion;
+        }
+
+        public ListRoutineRoutesResponseBodyConfigs setTimeout(String timeout) {
+            this.timeout = timeout;
+            return this;
+        }
+        public String getTimeout() {
+            return this.timeout;
         }
 
     }

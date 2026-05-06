@@ -270,6 +270,36 @@ public class GetWafQuotaResponseBody extends TeaModel {
 
     }
 
+    public static class GetWafQuotaResponseBodyQuotaSliderCaptchaPage extends TeaModel {
+        @NameInMap("Enable")
+        public Boolean enable;
+
+        @NameInMap("NumberTotal")
+        public WafQuotaInteger numberTotal;
+
+        public static GetWafQuotaResponseBodyQuotaSliderCaptchaPage build(java.util.Map<String, ?> map) throws Exception {
+            GetWafQuotaResponseBodyQuotaSliderCaptchaPage self = new GetWafQuotaResponseBodyQuotaSliderCaptchaPage();
+            return TeaModel.build(map, self);
+        }
+
+        public GetWafQuotaResponseBodyQuotaSliderCaptchaPage setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public GetWafQuotaResponseBodyQuotaSliderCaptchaPage setNumberTotal(WafQuotaInteger numberTotal) {
+            this.numberTotal = numberTotal;
+            return this;
+        }
+        public WafQuotaInteger getNumberTotal() {
+            return this.numberTotal;
+        }
+
+    }
+
     public static class GetWafQuotaResponseBodyQuota extends TeaModel {
         @NameInMap("Captcha")
         public GetWafQuotaResponseBodyQuotaCaptcha captcha;
@@ -297,6 +327,9 @@ public class GetWafQuotaResponseBody extends TeaModel {
          */
         @NameInMap("ScenePolicy")
         public GetWafQuotaResponseBodyQuotaScenePolicy scenePolicy;
+
+        @NameInMap("SliderCaptchaPage")
+        public GetWafQuotaResponseBodyQuotaSliderCaptchaPage sliderCaptchaPage;
 
         public static GetWafQuotaResponseBodyQuota build(java.util.Map<String, ?> map) throws Exception {
             GetWafQuotaResponseBodyQuota self = new GetWafQuotaResponseBodyQuota();
@@ -341,6 +374,14 @@ public class GetWafQuotaResponseBody extends TeaModel {
         }
         public GetWafQuotaResponseBodyQuotaScenePolicy getScenePolicy() {
             return this.scenePolicy;
+        }
+
+        public GetWafQuotaResponseBodyQuota setSliderCaptchaPage(GetWafQuotaResponseBodyQuotaSliderCaptchaPage sliderCaptchaPage) {
+            this.sliderCaptchaPage = sliderCaptchaPage;
+            return this;
+        }
+        public GetWafQuotaResponseBodyQuotaSliderCaptchaPage getSliderCaptchaPage() {
+            return this.sliderCaptchaPage;
         }
 
     }

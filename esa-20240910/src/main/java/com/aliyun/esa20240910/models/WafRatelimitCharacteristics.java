@@ -4,12 +4,27 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class WafRatelimitCharacteristics extends TeaModel {
+    /**
+     * <p>The details of logical databases.</p>
+     */
     @NameInMap("Criteria")
     public java.util.List<WafRatelimitCharacteristicsCriteria> criteria;
 
+    /**
+     * <p>The logical judgment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>and</p>
+     */
     @NameInMap("Logic")
     public String logic;
 
+    /**
+     * <p>The matching type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ip.src</p>
+     */
     @NameInMap("MatchType")
     public String matchType;
 
@@ -43,6 +58,12 @@ public class WafRatelimitCharacteristics extends TeaModel {
     }
 
     public static class WafRatelimitCharacteristicsCriteriaCriteriaCriteria extends TeaModel {
+        /**
+         * <p>The matching type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip.src</p>
+         */
         @NameInMap("MatchType")
         public String matchType;
 
@@ -62,12 +83,27 @@ public class WafRatelimitCharacteristics extends TeaModel {
     }
 
     public static class WafRatelimitCharacteristicsCriteriaCriteria extends TeaModel {
+        /**
+         * <p>The details of logical databases.</p>
+         */
         @NameInMap("Criteria")
         public java.util.List<WafRatelimitCharacteristicsCriteriaCriteriaCriteria> criteria;
 
+        /**
+         * <p>The logical judgment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>and</p>
+         */
         @NameInMap("Logic")
         public String logic;
 
+        /**
+         * <p>The matching type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip.src</p>
+         */
         @NameInMap("MatchType")
         public String matchType;
 
@@ -103,12 +139,27 @@ public class WafRatelimitCharacteristics extends TeaModel {
     }
 
     public static class WafRatelimitCharacteristicsCriteria extends TeaModel {
+        /**
+         * <p>The details of logical databases.</p>
+         */
         @NameInMap("Criteria")
         public java.util.List<WafRatelimitCharacteristicsCriteriaCriteria> criteria;
 
+        /**
+         * <p>The logical judgment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>and</p>
+         */
         @NameInMap("Logic")
         public String logic;
 
+        /**
+         * <p>The matching type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip.src</p>
+         */
         @NameInMap("MatchType")
         public String matchType;
 

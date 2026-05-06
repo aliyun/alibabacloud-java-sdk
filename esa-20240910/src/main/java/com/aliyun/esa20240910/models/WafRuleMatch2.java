@@ -4,24 +4,57 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class WafRuleMatch2 extends TeaModel {
+    /**
+     * <p>Transforms input to lowercase to ensure case-insensitivity.</p>
+     */
     @NameInMap("ConvertToLower")
     public Boolean convertToLower;
 
+    /**
+     * <p>The details of logical databases.</p>
+     */
     @NameInMap("Criteria")
     public java.util.List<WafRuleMatch2Criteria> criteria;
 
+    /**
+     * <p>The logical judgment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>and</p>
+     */
     @NameInMap("Logic")
     public String logic;
 
+    /**
+     * <p>The matching operator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eq</p>
+     */
     @NameInMap("MatchOperator")
     public String matchOperator;
 
+    /**
+     * <p>The matching type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ip.src</p>
+     */
     @NameInMap("MatchType")
     public String matchType;
 
+    /**
+     * <p>The value of the matching condition.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.1.1.1</p>
+     */
     @NameInMap("MatchValue")
     public Object matchValue;
 
+    /**
+     * <p>Converts a value or condition to its opposite.</p>
+     */
     @NameInMap("Negate")
     public Boolean negate;
 
@@ -87,18 +120,42 @@ public class WafRuleMatch2 extends TeaModel {
     }
 
     public static class WafRuleMatch2CriteriaCriteriaCriteria extends TeaModel {
+        /**
+         * <p>Transforms input to lowercase to ensure case-insensitivity.</p>
+         */
         @NameInMap("ConvertToLower")
         public Boolean convertToLower;
 
+        /**
+         * <p>The matching operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eq</p>
+         */
         @NameInMap("MatchOperator")
         public String matchOperator;
 
+        /**
+         * <p>The matching type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip.src</p>
+         */
         @NameInMap("MatchType")
         public String matchType;
 
+        /**
+         * <p>The value of the matching condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.1.1</p>
+         */
         @NameInMap("MatchValue")
         public Object matchValue;
 
+        /**
+         * <p>Converts a value or condition to its opposite.</p>
+         */
         @NameInMap("Negate")
         public Boolean negate;
 
@@ -150,24 +207,57 @@ public class WafRuleMatch2 extends TeaModel {
     }
 
     public static class WafRuleMatch2CriteriaCriteria extends TeaModel {
+        /**
+         * <p>Transforms input to lowercase to ensure case-insensitivity.</p>
+         */
         @NameInMap("ConvertToLower")
         public Boolean convertToLower;
 
+        /**
+         * <p>The details of logical databases.</p>
+         */
         @NameInMap("Criteria")
         public java.util.List<WafRuleMatch2CriteriaCriteriaCriteria> criteria;
 
+        /**
+         * <p>The logical judgment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>and</p>
+         */
         @NameInMap("Logic")
         public String logic;
 
+        /**
+         * <p>The matching operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eq</p>
+         */
         @NameInMap("MatchOperator")
         public String matchOperator;
 
+        /**
+         * <p>The matching type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip.src</p>
+         */
         @NameInMap("MatchType")
         public String matchType;
 
+        /**
+         * <p>The value of the matching condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.1.1</p>
+         */
         @NameInMap("MatchValue")
         public Object matchValue;
 
+        /**
+         * <p>Converts a value or condition to its opposite.</p>
+         */
         @NameInMap("Negate")
         public Boolean negate;
 
@@ -235,24 +325,57 @@ public class WafRuleMatch2 extends TeaModel {
     }
 
     public static class WafRuleMatch2Criteria extends TeaModel {
+        /**
+         * <p>Transforms input to lowercase to ensure case-insensitivity.</p>
+         */
         @NameInMap("ConvertToLower")
         public Boolean convertToLower;
 
+        /**
+         * <p>The details of logical databases.</p>
+         */
         @NameInMap("Criteria")
         public java.util.List<WafRuleMatch2CriteriaCriteria> criteria;
 
+        /**
+         * <p>The logical judgment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>and</p>
+         */
         @NameInMap("Logic")
         public String logic;
 
+        /**
+         * <p>The matching operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eq</p>
+         */
         @NameInMap("MatchOperator")
         public String matchOperator;
 
+        /**
+         * <p>The matching type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip.src</p>
+         */
         @NameInMap("MatchType")
         public String matchType;
 
+        /**
+         * <p>The value of the matching condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.1.1</p>
+         */
         @NameInMap("MatchValue")
         public Object matchValue;
 
+        /**
+         * <p>Converts a value or condition to its opposite.</p>
+         */
         @NameInMap("Negate")
         public Boolean negate;
 

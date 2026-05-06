@@ -4,24 +4,42 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class WafSiteSettings extends TeaModel {
+    /**
+     * <p>Adds a bot protection header.</p>
+     */
     @NameInMap("AddBotProtectionHeaders")
     public WafSiteSettingsAddBotProtectionHeaders addBotProtectionHeaders;
 
+    /**
+     * <p>Adds security request header.</p>
+     */
     @NameInMap("AddSecurityHeaders")
     public WafSiteSettingsAddSecurityHeaders addSecurityHeaders;
 
     @NameInMap("BandwidthAbuseProtection")
     public WafSiteSettingsBandwidthAbuseProtection bandwidthAbuseProtection;
 
+    /**
+     * <p>Bot management.</p>
+     */
     @NameInMap("BotManagement")
     public WafSiteSettingsBotManagement botManagement;
 
+    /**
+     * <p>Identifies the IP address of the client.</p>
+     */
     @NameInMap("ClientIpIdentifier")
     public WafSiteSettingsClientIpIdentifier clientIpIdentifier;
 
     @NameInMap("DisableSecurityModule")
     public WafSiteSettingsDisableSecurityModule disableSecurityModule;
 
+    @NameInMap("RequestBodyInspection")
+    public WafSiteSettingsRequestBodyInspection requestBodyInspection;
+
+    /**
+     * <p>The security level.</p>
+     */
     @NameInMap("SecurityLevel")
     public WafSiteSettingsSecurityLevel securityLevel;
 
@@ -78,6 +96,14 @@ public class WafSiteSettings extends TeaModel {
         return this.disableSecurityModule;
     }
 
+    public WafSiteSettings setRequestBodyInspection(WafSiteSettingsRequestBodyInspection requestBodyInspection) {
+        this.requestBodyInspection = requestBodyInspection;
+        return this;
+    }
+    public WafSiteSettingsRequestBodyInspection getRequestBodyInspection() {
+        return this.requestBodyInspection;
+    }
+
     public WafSiteSettings setSecurityLevel(WafSiteSettingsSecurityLevel securityLevel) {
         this.securityLevel = securityLevel;
         return this;
@@ -87,6 +113,9 @@ public class WafSiteSettings extends TeaModel {
     }
 
     public static class WafSiteSettingsAddBotProtectionHeaders extends TeaModel {
+        /**
+         * <p>Indicates whether the parameter is enabled.</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
@@ -106,6 +135,9 @@ public class WafSiteSettings extends TeaModel {
     }
 
     public static class WafSiteSettingsAddSecurityHeaders extends TeaModel {
+        /**
+         * <p>Indicates whether the parameter is enabled.</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
@@ -166,9 +198,21 @@ public class WafSiteSettings extends TeaModel {
     }
 
     public static class WafSiteSettingsBotManagementDefiniteBots extends TeaModel {
+        /**
+         * <p>The action that you want to perform on requests that match the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>captcha</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20000001</p>
+         */
         @NameInMap("Id")
         public Long id;
 
@@ -196,6 +240,9 @@ public class WafSiteSettings extends TeaModel {
     }
 
     public static class WafSiteSettingsBotManagementEffectOnStatic extends TeaModel {
+        /**
+         * <p>Indicates whether the parameter is enabled.</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
@@ -215,6 +262,9 @@ public class WafSiteSettings extends TeaModel {
     }
 
     public static class WafSiteSettingsBotManagementJSDetection extends TeaModel {
+        /**
+         * <p>Indicates whether the parameter is enabled.</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
@@ -234,9 +284,21 @@ public class WafSiteSettings extends TeaModel {
     }
 
     public static class WafSiteSettingsBotManagementLikelyBots extends TeaModel {
+        /**
+         * <p>The action that you want to perform on requests that match the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deny</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20000002</p>
+         */
         @NameInMap("Id")
         public Long id;
 
@@ -264,9 +326,21 @@ public class WafSiteSettings extends TeaModel {
     }
 
     public static class WafSiteSettingsBotManagementVerifiedBots extends TeaModel {
+        /**
+         * <p>The action that you want to perform on requests that match the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bypass</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20000003</p>
+         */
         @NameInMap("Id")
         public Long id;
 
@@ -294,18 +368,33 @@ public class WafSiteSettings extends TeaModel {
     }
 
     public static class WafSiteSettingsBotManagement extends TeaModel {
+        /**
+         * <p>Definite Bots</p>
+         */
         @NameInMap("DefiniteBots")
         public WafSiteSettingsBotManagementDefiniteBots definiteBots;
 
+        /**
+         * <p>Takes effect on static resource requests.</p>
+         */
         @NameInMap("EffectOnStatic")
         public WafSiteSettingsBotManagementEffectOnStatic effectOnStatic;
 
+        /**
+         * <p>JavaScript detection.</p>
+         */
         @NameInMap("JSDetection")
         public WafSiteSettingsBotManagementJSDetection JSDetection;
 
+        /**
+         * <p>Likely Bots</p>
+         */
         @NameInMap("LikelyBots")
         public WafSiteSettingsBotManagementLikelyBots likelyBots;
 
+        /**
+         * <p>Verified Bots</p>
+         */
         @NameInMap("VerifiedBots")
         public WafSiteSettingsBotManagementVerifiedBots verifiedBots;
 
@@ -357,9 +446,23 @@ public class WafSiteSettings extends TeaModel {
     }
 
     public static class WafSiteSettingsClientIpIdentifier extends TeaModel {
+        /**
+         * <p>Specify headers.</p>
+         */
         @NameInMap("Headers")
         public java.util.List<String> headers;
 
+        /**
+         * <p>Identifies the mode.</p>
+         * <p>Enumerated values:</p>
+         * <ul>
+         * <li>headers: specifies the headers.</li>
+         * <li>connection_ip: the IP address for establishing a connection.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>headers</p>
+         */
         @NameInMap("Mode")
         public String mode;
 
@@ -405,7 +508,63 @@ public class WafSiteSettings extends TeaModel {
 
     }
 
+    public static class WafSiteSettingsRequestBodyInspection extends TeaModel {
+        @NameInMap("Action")
+        public String action;
+
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("SizeLimit")
+        public String sizeLimit;
+
+        public static WafSiteSettingsRequestBodyInspection build(java.util.Map<String, ?> map) throws Exception {
+            WafSiteSettingsRequestBodyInspection self = new WafSiteSettingsRequestBodyInspection();
+            return TeaModel.build(map, self);
+        }
+
+        public WafSiteSettingsRequestBodyInspection setAction(String action) {
+            this.action = action;
+            return this;
+        }
+        public String getAction() {
+            return this.action;
+        }
+
+        public WafSiteSettingsRequestBodyInspection setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public WafSiteSettingsRequestBodyInspection setSizeLimit(String sizeLimit) {
+            this.sizeLimit = sizeLimit;
+            return this;
+        }
+        public String getSizeLimit() {
+            return this.sizeLimit;
+        }
+
+    }
+
     public static class WafSiteSettingsSecurityLevel extends TeaModel {
+        /**
+         * <p>The security level value.</p>
+         * <p>Enumerated values:</p>
+         * <ul>
+         * <li>high: high.</li>
+         * <li>low: low.</li>
+         * <li>under_attack: I am under attack.</li>
+         * <li>medium: medium.</li>
+         * <li>essentially_off: essentially off.</li>
+         * <li>off: completely off.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>low</p>
+         */
         @NameInMap("Value")
         public String value;
 

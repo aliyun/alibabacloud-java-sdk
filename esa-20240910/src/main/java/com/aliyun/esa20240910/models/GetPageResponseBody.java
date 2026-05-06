@@ -70,6 +70,9 @@ public class GetPageResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("SiteIds")
+    public java.util.List<Long> siteIds;
+
     /**
      * <p>The time when the custom error page was last modified.</p>
      * 
@@ -138,6 +141,14 @@ public class GetPageResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetPageResponseBody setSiteIds(java.util.List<Long> siteIds) {
+        this.siteIds = siteIds;
+        return this;
+    }
+    public java.util.List<Long> getSiteIds() {
+        return this.siteIds;
     }
 
     public GetPageResponseBody setUpdateTime(String updateTime) {

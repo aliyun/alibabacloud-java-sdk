@@ -13,6 +13,9 @@ public class GetPurgeQuotaResponseBody extends TeaModel {
     @NameInMap("Quota")
     public String quota;
 
+    @NameInMap("Quota30Day")
+    public String quota30Day;
+
     /**
      * <p>The request ID.</p>
      * 
@@ -31,6 +34,9 @@ public class GetPurgeQuotaResponseBody extends TeaModel {
     @NameInMap("Usage")
     public String usage;
 
+    @NameInMap("Usage30Day")
+    public String usage30Day;
+
     public static GetPurgeQuotaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetPurgeQuotaResponseBody self = new GetPurgeQuotaResponseBody();
         return TeaModel.build(map, self);
@@ -42,6 +48,14 @@ public class GetPurgeQuotaResponseBody extends TeaModel {
     }
     public String getQuota() {
         return this.quota;
+    }
+
+    public GetPurgeQuotaResponseBody setQuota30Day(String quota30Day) {
+        this.quota30Day = quota30Day;
+        return this;
+    }
+    public String getQuota30Day() {
+        return this.quota30Day;
     }
 
     public GetPurgeQuotaResponseBody setRequestId(String requestId) {
@@ -58,6 +72,14 @@ public class GetPurgeQuotaResponseBody extends TeaModel {
     }
     public String getUsage() {
         return this.usage;
+    }
+
+    public GetPurgeQuotaResponseBody setUsage30Day(String usage30Day) {
+        this.usage30Day = usage30Day;
+        return this;
+    }
+    public String getUsage30Day() {
+        return this.usage30Day;
     }
 
 }

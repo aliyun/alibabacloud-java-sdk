@@ -58,6 +58,9 @@ public class UpdatePageRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("SiteIds")
+    public java.util.List<Long> siteIds;
+
     public static UpdatePageRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdatePageRequest self = new UpdatePageRequest();
         return TeaModel.build(map, self);
@@ -101,6 +104,14 @@ public class UpdatePageRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public UpdatePageRequest setSiteIds(java.util.List<Long> siteIds) {
+        this.siteIds = siteIds;
+        return this;
+    }
+    public java.util.List<Long> getSiteIds() {
+        return this.siteIds;
     }
 
 }

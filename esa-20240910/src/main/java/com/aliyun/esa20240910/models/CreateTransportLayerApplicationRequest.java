@@ -39,6 +39,9 @@ public class CreateTransportLayerApplicationRequest extends TeaModel {
     @NameInMap("Ipv6")
     public String ipv6;
 
+    @NameInMap("KeepAliveProtection")
+    public String keepAliveProtection;
+
     /**
      * <p>Domain name of the transport layer application.</p>
      * <p>This parameter is required.</p>
@@ -96,6 +99,14 @@ public class CreateTransportLayerApplicationRequest extends TeaModel {
     }
     public String getIpv6() {
         return this.ipv6;
+    }
+
+    public CreateTransportLayerApplicationRequest setKeepAliveProtection(String keepAliveProtection) {
+        this.keepAliveProtection = keepAliveProtection;
+        return this;
+    }
+    public String getKeepAliveProtection() {
+        return this.keepAliveProtection;
     }
 
     public CreateTransportLayerApplicationRequest setRecordName(String recordName) {

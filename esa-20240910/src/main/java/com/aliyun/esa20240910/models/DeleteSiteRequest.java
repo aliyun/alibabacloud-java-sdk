@@ -4,9 +4,6 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class DeleteSiteRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("SecurityToken")
     public String securityToken;
 
@@ -22,14 +19,6 @@ public class DeleteSiteRequest extends TeaModel {
     public static DeleteSiteRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteSiteRequest self = new DeleteSiteRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteSiteRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DeleteSiteRequest setSecurityToken(String securityToken) {

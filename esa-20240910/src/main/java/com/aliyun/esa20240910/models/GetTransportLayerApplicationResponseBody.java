@@ -51,6 +51,9 @@ public class GetTransportLayerApplicationResponseBody extends TeaModel {
     @NameInMap("Ipv6")
     public String ipv6;
 
+    @NameInMap("KeepAliveProtection")
+    public String keepAliveProtection;
+
     /**
      * <p>Query Transport Layer Acceleration Application</p>
      * 
@@ -158,6 +161,14 @@ public class GetTransportLayerApplicationResponseBody extends TeaModel {
     }
     public String getIpv6() {
         return this.ipv6;
+    }
+
+    public GetTransportLayerApplicationResponseBody setKeepAliveProtection(String keepAliveProtection) {
+        this.keepAliveProtection = keepAliveProtection;
+        return this;
+    }
+    public String getKeepAliveProtection() {
+        return this.keepAliveProtection;
     }
 
     public GetTransportLayerApplicationResponseBody setRecordName(String recordName) {

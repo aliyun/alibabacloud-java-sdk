@@ -189,9 +189,6 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
         @NameInMap("PublishingVersion")
         public String publishingVersion;
 
-        /**
-         * <p>The regions to which the version is released.</p>
-         */
         @NameInMap("Regions")
         public GetEdgeContainerAppStatusResponseBodyAppStatusRegions regions;
 

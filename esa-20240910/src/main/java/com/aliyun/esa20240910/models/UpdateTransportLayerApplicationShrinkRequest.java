@@ -49,6 +49,9 @@ public class UpdateTransportLayerApplicationShrinkRequest extends TeaModel {
     @NameInMap("Ipv6")
     public String ipv6;
 
+    @NameInMap("KeepAliveProtection")
+    public String keepAliveProtection;
+
     /**
      * <p>Forwarding rule list. Details of each rule. Except for the comment, all other parameters are required.</p>
      */
@@ -103,6 +106,14 @@ public class UpdateTransportLayerApplicationShrinkRequest extends TeaModel {
     }
     public String getIpv6() {
         return this.ipv6;
+    }
+
+    public UpdateTransportLayerApplicationShrinkRequest setKeepAliveProtection(String keepAliveProtection) {
+        this.keepAliveProtection = keepAliveProtection;
+        return this;
+    }
+    public String getKeepAliveProtection() {
+        return this.keepAliveProtection;
     }
 
     public UpdateTransportLayerApplicationShrinkRequest setRulesShrink(String rulesShrink) {

@@ -12,15 +12,6 @@ public class BlockObjectRequest extends TeaModel {
     public java.util.List<String> content;
 
     /**
-     * <p>The blocking period that you can extend. Set the value to 2year.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2year</p>
-     */
-    @NameInMap("Extension")
-    public String extension;
-
-    /**
      * <p>The period of time during which the URL is blocked. Unit: seconds. Specify this parameter if Type is set to block.</p>
      * 
      * <strong>example:</strong>
@@ -64,14 +55,6 @@ public class BlockObjectRequest extends TeaModel {
     }
     public java.util.List<String> getContent() {
         return this.content;
-    }
-
-    public BlockObjectRequest setExtension(String extension) {
-        this.extension = extension;
-        return this;
-    }
-    public String getExtension() {
-        return this.extension;
     }
 
     public BlockObjectRequest setMaxage(Integer maxage) {

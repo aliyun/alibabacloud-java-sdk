@@ -55,12 +55,27 @@ public class ListPagesRequest extends TeaModel {
     }
 
     public static class ListPagesRequestQueryArgs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>application/json</p>
+         */
+        @NameInMap("ContentType")
+        public String contentType;
+
         @NameInMap("NameDescriptionLike")
         public String nameDescriptionLike;
 
         public static ListPagesRequestQueryArgs build(java.util.Map<String, ?> map) throws Exception {
             ListPagesRequestQueryArgs self = new ListPagesRequestQueryArgs();
             return TeaModel.build(map, self);
+        }
+
+        public ListPagesRequestQueryArgs setContentType(String contentType) {
+            this.contentType = contentType;
+            return this;
+        }
+        public String getContentType() {
+            return this.contentType;
         }
 
         public ListPagesRequestQueryArgs setNameDescriptionLike(String nameDescriptionLike) {

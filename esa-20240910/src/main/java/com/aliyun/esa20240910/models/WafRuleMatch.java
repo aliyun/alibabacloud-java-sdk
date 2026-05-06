@@ -10,15 +10,31 @@ public class WafRuleMatch extends TeaModel {
     @NameInMap("Criteria")
     public java.util.List<WafRuleMatch> criteria;
 
+    /**
+     * <strong>example:</strong>
+     * <p>and</p>
+     */
     @NameInMap("Logic")
     public String logic;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eq</p>
+     */
     @NameInMap("MatchOperator")
     public String matchOperator;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ip.src</p>
+     */
     @NameInMap("MatchType")
     public String matchType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.1.1.1</p>
+     */
     @NameInMap("MatchValue")
     public Object matchValue;
 

@@ -99,6 +99,13 @@ public class UpdateRoutineRouteRequest extends TeaModel {
     @NameInMap("SiteId")
     public Long siteId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
+    @NameInMap("Timeout")
+    public String timeout;
+
     public static UpdateRoutineRouteRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateRoutineRouteRequest self = new UpdateRoutineRouteRequest();
         return TeaModel.build(map, self);
@@ -174,6 +181,14 @@ public class UpdateRoutineRouteRequest extends TeaModel {
     }
     public Long getSiteId() {
         return this.siteId;
+    }
+
+    public UpdateRoutineRouteRequest setTimeout(String timeout) {
+        this.timeout = timeout;
+        return this;
+    }
+    public String getTimeout() {
+        return this.timeout;
     }
 
 }

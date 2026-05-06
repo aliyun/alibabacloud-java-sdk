@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class CreateCustomResponseCodeRuleRequest extends TeaModel {
     /**
      * <p>Response page.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -15,6 +16,7 @@ public class CreateCustomResponseCodeRuleRequest extends TeaModel {
 
     /**
      * <p>Response code.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>400</p>
