@@ -4,6 +4,9 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class Instance extends TeaModel {
+    @NameInMap("CreateTime")
+    public String createTime;
+
     /**
      * <p>The current hourly price of the spot instance.</p>
      * 
@@ -260,6 +263,14 @@ public class Instance extends TeaModel {
     public static Instance build(java.util.Map<String, ?> map) throws Exception {
         Instance self = new Instance();
         return TeaModel.build(map, self);
+    }
+
+    public Instance setCreateTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    public String getCreateTime() {
+        return this.createTime;
     }
 
     public Instance setCurrentAmount(Float currentAmount) {
