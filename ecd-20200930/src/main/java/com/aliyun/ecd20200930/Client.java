@@ -10982,6 +10982,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param request DescribeOnlineUserCountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeOnlineUserCountResponse
+     */
+    public DescribeOnlineUserCountResponse describeOnlineUserCountWithOptions(DescribeOnlineUserCountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            query.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
+            query.put("OfficeSiteId", request.officeSiteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchRegionId)) {
+            query.put("SearchRegionId", request.searchRegionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeOnlineUserCount"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeOnlineUserCountResponse());
+    }
+
+    /**
+     * @param request DescribeOnlineUserCountRequest
+     * @return DescribeOnlineUserCountResponse
+     */
+    public DescribeOnlineUserCountResponse describeOnlineUserCount(DescribeOnlineUserCountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeOnlineUserCountWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Queries the details of a cloud computer policy.</p>
      * 
@@ -18814,6 +18864,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryHistoryActiveUserCountResponse queryHistoryActiveUserCount(QueryHistoryActiveUserCountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryHistoryActiveUserCountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询桌面平均指标列表</p>
+     * 
+     * @param tmpReq QueryHistoryAvgMetricListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryHistoryAvgMetricListResponse
+     */
+    public QueryHistoryAvgMetricListResponse queryHistoryAvgMetricListWithOptions(QueryHistoryAvgMetricListRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        QueryHistoryAvgMetricListShrinkRequest request = new QueryHistoryAvgMetricListShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.range)) {
+            request.rangeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.range, "Range", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataDate)) {
+            query.put("DataDate", request.dataDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopId)) {
+            query.put("DesktopId", request.desktopId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metricName)) {
+            query.put("MetricName", request.metricName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("PageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rangeShrink)) {
+            query.put("Range", request.rangeShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceRegionId)) {
+            query.put("ResourceRegionId", request.resourceRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortType)) {
+            query.put("SortType", request.sortType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryHistoryAvgMetricList"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryHistoryAvgMetricListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询桌面平均指标列表</p>
+     * 
+     * @param request QueryHistoryAvgMetricListRequest
+     * @return QueryHistoryAvgMetricListResponse
+     */
+    public QueryHistoryAvgMetricListResponse queryHistoryAvgMetricList(QueryHistoryAvgMetricListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryHistoryAvgMetricListWithOptions(request, runtime);
     }
 
     /**
