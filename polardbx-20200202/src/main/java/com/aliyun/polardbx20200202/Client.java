@@ -4216,7 +4216,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @param request DescribeRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRegionsResponse
      */
@@ -6788,6 +6787,176 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RestartDataImportTaskResponse restartDataImportTask(RestartDataImportTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.restartDataImportTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>克隆PolarDB-X实例</p>
+     * 
+     * @param request RestoreDBInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RestoreDBInstanceResponse
+     */
+    public RestoreDBInstanceResponse restoreDBInstanceWithOptions(RestoreDBInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
+            query.put("AutoRenew", request.autoRenew);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.backupSetId)) {
+            query.put("BackupSetId", request.backupSetId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.backupSetRegion)) {
+            query.put("BackupSetRegion", request.backupSetRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.CNNodeCount)) {
+            query.put("CNNodeCount", request.CNNodeCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloneInstanceName)) {
+            query.put("CloneInstanceName", request.cloneInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cnClass)) {
+            query.put("CnClass", request.cnClass);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBNodeClass)) {
+            query.put("DBNodeClass", request.DBNodeClass);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBNodeCount)) {
+            query.put("DBNodeCount", request.DBNodeCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DNNodeCount)) {
+            query.put("DNNodeCount", request.DNNodeCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dnClass)) {
+            query.put("DnClass", request.dnClass);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.engineVersion)) {
+            query.put("EngineVersion", request.engineVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gdnRole)) {
+            query.put("GdnRole", request.gdnRole);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkType)) {
+            query.put("NetworkType", request.networkType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.payType)) {
+            query.put("PayType", request.payType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.primaryZone)) {
+            query.put("PrimaryZone", request.primaryZone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recoveryTypeCode)) {
+            query.put("RecoveryTypeCode", request.recoveryTypeCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.restoreTime)) {
+            query.put("RestoreTime", request.restoreTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.secondaryZone)) {
+            query.put("SecondaryZone", request.secondaryZone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.series)) {
+            query.put("Series", request.series);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceInstanceRegion)) {
+            query.put("SourceInstanceRegion", request.sourceInstanceRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageType)) {
+            query.put("StorageType", request.storageType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tertiaryZone)) {
+            query.put("TertiaryZone", request.tertiaryZone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topologyType)) {
+            query.put("TopologyType", request.topologyType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usedTime)) {
+            query.put("UsedTime", request.usedTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.VPCId)) {
+            query.put("VPCId", request.VPCId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
+            query.put("VSwitchId", request.vSwitchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RestoreDBInstance"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RestoreDBInstanceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>克隆PolarDB-X实例</p>
+     * 
+     * @param request RestoreDBInstanceRequest
+     * @return RestoreDBInstanceResponse
+     */
+    public RestoreDBInstanceResponse restoreDBInstance(RestoreDBInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.restoreDBInstanceWithOptions(request, runtime);
     }
 
     /**
