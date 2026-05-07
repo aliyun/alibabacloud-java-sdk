@@ -4,6 +4,12 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class RegisterMediaRequest extends TeaModel {
+    @NameInMap("EnableFirstFrameCover")
+    public Boolean enableFirstFrameCover;
+
+    @NameInMap("GenerateThumbnail")
+    public Boolean generateThumbnail;
+
     /**
      * <p>The metadata of the media files. The value must be a JSON string. You can specify the metadata for up to 10 media files at a time. For more information about the metadata of media files, see the <strong>RegisterMetadata</strong> section of this topic.</p>
      * <p>This parameter is required.</p>
@@ -63,6 +69,22 @@ public class RegisterMediaRequest extends TeaModel {
     public static RegisterMediaRequest build(java.util.Map<String, ?> map) throws Exception {
         RegisterMediaRequest self = new RegisterMediaRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RegisterMediaRequest setEnableFirstFrameCover(Boolean enableFirstFrameCover) {
+        this.enableFirstFrameCover = enableFirstFrameCover;
+        return this;
+    }
+    public Boolean getEnableFirstFrameCover() {
+        return this.enableFirstFrameCover;
+    }
+
+    public RegisterMediaRequest setGenerateThumbnail(Boolean generateThumbnail) {
+        this.generateThumbnail = generateThumbnail;
+        return this;
+    }
+    public Boolean getGenerateThumbnail() {
+        return this.generateThumbnail;
     }
 
     public RegisterMediaRequest setRegisterMetadatas(String registerMetadatas) {

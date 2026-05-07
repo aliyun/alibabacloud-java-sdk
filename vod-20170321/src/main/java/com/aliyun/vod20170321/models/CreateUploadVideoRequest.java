@@ -49,6 +49,9 @@ public class CreateUploadVideoRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("EnableFirstFrameCover")
+    public Boolean enableFirstFrameCover;
+
     /**
      * <p>The name of the source file.</p>
      * <ul>
@@ -71,6 +74,9 @@ public class CreateUploadVideoRequest extends TeaModel {
      */
     @NameInMap("FileSize")
     public Long fileSize;
+
+    @NameInMap("GenerateThumbnail")
+    public Boolean generateThumbnail;
 
     /**
      * <strong>example:</strong>
@@ -206,6 +212,14 @@ public class CreateUploadVideoRequest extends TeaModel {
         return this.description;
     }
 
+    public CreateUploadVideoRequest setEnableFirstFrameCover(Boolean enableFirstFrameCover) {
+        this.enableFirstFrameCover = enableFirstFrameCover;
+        return this;
+    }
+    public Boolean getEnableFirstFrameCover() {
+        return this.enableFirstFrameCover;
+    }
+
     public CreateUploadVideoRequest setFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -220,6 +234,14 @@ public class CreateUploadVideoRequest extends TeaModel {
     }
     public Long getFileSize() {
         return this.fileSize;
+    }
+
+    public CreateUploadVideoRequest setGenerateThumbnail(Boolean generateThumbnail) {
+        this.generateThumbnail = generateThumbnail;
+        return this;
+    }
+    public Boolean getGenerateThumbnail() {
+        return this.generateThumbnail;
     }
 
     public CreateUploadVideoRequest setReferenceId(String referenceId) {

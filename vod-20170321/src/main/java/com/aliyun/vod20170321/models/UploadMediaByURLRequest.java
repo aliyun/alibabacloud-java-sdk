@@ -13,6 +13,12 @@ public class UploadMediaByURLRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("EnableFirstFrameCover")
+    public Boolean enableFirstFrameCover;
+
+    @NameInMap("GenerateThumbnail")
+    public Boolean generateThumbnail;
+
     /**
      * <p>The custom identifier for deduplication. If you specify this parameter and send a request, an error is returned if a request with the same identifier was sent in the last 10 minutes. A custom identifier can be up to 50 characters in length and can contain letters, digits, hyphens (-), and underscores (_). If you do not specify this parameter or leave this parameter empty, duplicate requests are not filtered.</p>
      * 
@@ -127,6 +133,22 @@ public class UploadMediaByURLRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public UploadMediaByURLRequest setEnableFirstFrameCover(Boolean enableFirstFrameCover) {
+        this.enableFirstFrameCover = enableFirstFrameCover;
+        return this;
+    }
+    public Boolean getEnableFirstFrameCover() {
+        return this.enableFirstFrameCover;
+    }
+
+    public UploadMediaByURLRequest setGenerateThumbnail(Boolean generateThumbnail) {
+        this.generateThumbnail = generateThumbnail;
+        return this;
+    }
+    public Boolean getGenerateThumbnail() {
+        return this.generateThumbnail;
     }
 
     public UploadMediaByURLRequest setSessionId(String sessionId) {

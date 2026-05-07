@@ -1510,12 +1510,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableFirstFrameCover)) {
+            query.put("EnableFirstFrameCover", request.enableFirstFrameCover);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
             query.put("FileName", request.fileName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.fileSize)) {
             query.put("FileSize", request.fileSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.generateThumbnail)) {
+            query.put("GenerateThumbnail", request.generateThumbnail);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.referenceId)) {
@@ -10542,6 +10550,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RegisterMediaResponse registerMediaWithOptions(RegisterMediaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enableFirstFrameCover)) {
+            query.put("EnableFirstFrameCover", request.enableFirstFrameCover);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.generateThumbnail)) {
+            query.put("GenerateThumbnail", request.generateThumbnail);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.registerMetadatas)) {
             query.put("RegisterMetadatas", request.registerMetadatas);
         }
@@ -13185,6 +13201,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
             query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableFirstFrameCover)) {
+            query.put("EnableFirstFrameCover", request.enableFirstFrameCover);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.generateThumbnail)) {
+            query.put("GenerateThumbnail", request.generateThumbnail);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
