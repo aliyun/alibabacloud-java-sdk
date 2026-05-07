@@ -102,6 +102,9 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("IsSessionShareEnabled")
+        public Boolean isSessionShareEnabled;
+
         /**
          * <strong>example:</strong>
          * <p>1765962516</p>
@@ -171,6 +174,14 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public UpdateDataAgentSpaceInfoResponseBodyData setIsSessionShareEnabled(Boolean isSessionShareEnabled) {
+            this.isSessionShareEnabled = isSessionShareEnabled;
+            return this;
+        }
+        public Boolean getIsSessionShareEnabled() {
+            return this.isSessionShareEnabled;
         }
 
         public UpdateDataAgentSpaceInfoResponseBodyData setModifyTime(String modifyTime) {

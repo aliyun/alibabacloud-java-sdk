@@ -641,6 +641,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DMSUnit", request.DMSUnit);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.isSessionShareEnabled)) {
+            query.put("IsSessionShareEnabled", request.isSessionShareEnabled);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceDesc)) {
             query.put("WorkspaceDesc", request.workspaceDesc);
         }
@@ -3909,6 +3913,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.DMSUnit)) {
             query.put("DMSUnit", request.DMSUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isSessionShareEnabled)) {
+            query.put("IsSessionShareEnabled", request.isSessionShareEnabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceDesc)) {

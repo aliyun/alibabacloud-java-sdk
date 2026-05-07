@@ -11,6 +11,9 @@ public class CreateDataAgentWorkspaceRequest extends TeaModel {
     @NameInMap("DMSUnit")
     public String DMSUnit;
 
+    @NameInMap("IsSessionShareEnabled")
+    public Boolean isSessionShareEnabled;
+
     /**
      * <strong>example:</strong>
      * <p>Space for test</p>
@@ -36,6 +39,14 @@ public class CreateDataAgentWorkspaceRequest extends TeaModel {
     }
     public String getDMSUnit() {
         return this.DMSUnit;
+    }
+
+    public CreateDataAgentWorkspaceRequest setIsSessionShareEnabled(Boolean isSessionShareEnabled) {
+        this.isSessionShareEnabled = isSessionShareEnabled;
+        return this;
+    }
+    public Boolean getIsSessionShareEnabled() {
+        return this.isSessionShareEnabled;
     }
 
     public CreateDataAgentWorkspaceRequest setWorkspaceDesc(String workspaceDesc) {

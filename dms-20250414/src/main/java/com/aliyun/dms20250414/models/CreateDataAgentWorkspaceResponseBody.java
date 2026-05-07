@@ -95,6 +95,9 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
         @NameInMap("Creator")
         public String creator;
 
+        @NameInMap("IsSessionShareEnabled")
+        public Boolean isSessionShareEnabled;
+
         /**
          * <strong>example:</strong>
          * <p>1765961516</p>
@@ -163,6 +166,14 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
         }
         public String getCreator() {
             return this.creator;
+        }
+
+        public CreateDataAgentWorkspaceResponseBodyData setIsSessionShareEnabled(Boolean isSessionShareEnabled) {
+            this.isSessionShareEnabled = isSessionShareEnabled;
+            return this;
+        }
+        public Boolean getIsSessionShareEnabled() {
+            return this.isSessionShareEnabled;
         }
 
         public CreateDataAgentWorkspaceResponseBodyData setModifyTime(Long modifyTime) {

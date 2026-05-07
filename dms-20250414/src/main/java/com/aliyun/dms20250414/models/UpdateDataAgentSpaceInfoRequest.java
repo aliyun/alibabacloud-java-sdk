@@ -11,6 +11,9 @@ public class UpdateDataAgentSpaceInfoRequest extends TeaModel {
     @NameInMap("DMSUnit")
     public String DMSUnit;
 
+    @NameInMap("IsSessionShareEnabled")
+    public Boolean isSessionShareEnabled;
+
     /**
      * <strong>example:</strong>
      * <p>space for test new</p>
@@ -43,6 +46,14 @@ public class UpdateDataAgentSpaceInfoRequest extends TeaModel {
     }
     public String getDMSUnit() {
         return this.DMSUnit;
+    }
+
+    public UpdateDataAgentSpaceInfoRequest setIsSessionShareEnabled(Boolean isSessionShareEnabled) {
+        this.isSessionShareEnabled = isSessionShareEnabled;
+        return this;
+    }
+    public Boolean getIsSessionShareEnabled() {
+        return this.isSessionShareEnabled;
     }
 
     public UpdateDataAgentSpaceInfoRequest setWorkspaceDesc(String workspaceDesc) {

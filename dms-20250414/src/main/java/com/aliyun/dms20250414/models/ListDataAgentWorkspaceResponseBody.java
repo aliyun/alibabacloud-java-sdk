@@ -132,6 +132,9 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("IsSessionShareEnabled")
+        public Boolean isSessionShareEnabled;
+
         /**
          * <strong>example:</strong>
          * <p>1765961516</p>
@@ -201,6 +204,14 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListDataAgentWorkspaceResponseBodyDataContent setIsSessionShareEnabled(Boolean isSessionShareEnabled) {
+            this.isSessionShareEnabled = isSessionShareEnabled;
+            return this;
+        }
+        public Boolean getIsSessionShareEnabled() {
+            return this.isSessionShareEnabled;
         }
 
         public ListDataAgentWorkspaceResponseBodyDataContent setModifyTime(Long modifyTime) {
