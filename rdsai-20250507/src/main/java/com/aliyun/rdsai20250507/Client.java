@@ -1842,6 +1842,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>GetAvailableLLMModels</p>
+     * 
+     * @param request GetAvailableLLMModelsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAvailableLLMModelsResponse
+     */
+    public GetAvailableLLMModelsResponse getAvailableLLMModelsWithOptions(GetAvailableLLMModelsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
+            query.put("InstanceName", request.instanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAvailableLLMModels"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAvailableLLMModelsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>GetAvailableLLMModels</p>
+     * 
+     * @param request GetAvailableLLMModelsRequest
+     * @return GetAvailableLLMModelsResponse
+     */
+    public GetAvailableLLMModelsResponse getAvailableLLMModels(GetAvailableLLMModelsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAvailableLLMModelsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the history conversations of a user.</p>
      * 
      * @param request GetConversationsRequest
@@ -2436,6 +2488,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListCustomAgentToolsResponse listCustomAgentTools() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listCustomAgentToolsWithOptions(runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>ListLLMTokenUsage</p>
+     * 
+     * @param request ListLLMTokenUsageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListLLMTokenUsageResponse
+     */
+    public ListLLMTokenUsageResponse listLLMTokenUsageWithOptions(ListLLMTokenUsageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
+            query.put("InstanceName", request.instanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.model)) {
+            query.put("Model", request.model);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListLLMTokenUsage"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListLLMTokenUsageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>ListLLMTokenUsage</p>
+     * 
+     * @param request ListLLMTokenUsageRequest
+     * @return ListLLMTokenUsageResponse
+     */
+    public ListLLMTokenUsageResponse listLLMTokenUsage(ListLLMTokenUsageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listLLMTokenUsageWithOptions(request, runtime);
     }
 
     /**
