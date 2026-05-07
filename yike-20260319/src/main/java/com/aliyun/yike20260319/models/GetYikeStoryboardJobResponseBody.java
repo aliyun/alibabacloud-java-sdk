@@ -275,6 +275,13 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p><a href="https://bucket.oss-cn-shanghai.aliyuncs.com/test/110412818/6bf24c75285142f395464d4b9c2bcf07.srt?Expires=1778220836&OSSAccessKeyId=*******&Signature=">https://bucket.oss-cn-shanghai.aliyuncs.com/test/110412818/6bf24c75285142f395464d4b9c2bcf07.srt?Expires=1778220836&amp;OSSAccessKeyId=*******&amp;Signature=</a>*******</p>
+         */
+        @NameInMap("SrtFileUrl")
+        public String srtFileUrl;
+
+        /**
+         * <strong>example:</strong>
          * <p>[{\&quot;storyboardId\&quot;:\&quot;st_1541525214\&quot;,\&quot;title\&quot;:\&quot;test_1\&quot;,\&quot;status\&quot;:\&quot;Produced\&quot;,\&quot;subStatus\&quot;:\&quot;ProduceSucc\&quot;},{\&quot;storyboardId\&quot;:\&quot;st_1633435355\&quot;,\&quot;title\&quot;:\&quot;test_2\&quot;,\&quot;status\&quot;:\&quot;Produced\&quot;,\&quot;subStatus\&quot;:\&quot;ProduceSucc\&quot;}]</p>
          */
         @NameInMap("StoryboardInfoList")
@@ -321,6 +328,14 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
         }
         public String getOutputUrl() {
             return this.outputUrl;
+        }
+
+        public GetYikeStoryboardJobResponseBodyJobResult setSrtFileUrl(String srtFileUrl) {
+            this.srtFileUrl = srtFileUrl;
+            return this;
+        }
+        public String getSrtFileUrl() {
+            return this.srtFileUrl;
         }
 
         public GetYikeStoryboardJobResponseBodyJobResult setStoryboardInfoList(String storyboardInfoList) {
