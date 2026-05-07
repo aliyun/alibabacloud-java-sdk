@@ -62,10 +62,24 @@ public class GetRecallManagementConfigResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
+        @NameInMap("PublicEndpoint")
+        public String publicEndpoint;
+
+        /**
+         * <strong>example:</strong>
          * <p>Connecting</p>
          */
         @NameInMap("Status")
         public String status;
+
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
+        @NameInMap("Token")
+        public String token;
 
         /**
          * <strong>example:</strong>
@@ -90,12 +104,28 @@ public class GetRecallManagementConfigResponseBody extends TeaModel {
             return this.privateLinkAddress;
         }
 
+        public GetRecallManagementConfigResponseBodyNetworkConfigs setPublicEndpoint(String publicEndpoint) {
+            this.publicEndpoint = publicEndpoint;
+            return this;
+        }
+        public String getPublicEndpoint() {
+            return this.publicEndpoint;
+        }
+
         public GetRecallManagementConfigResponseBodyNetworkConfigs setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetRecallManagementConfigResponseBodyNetworkConfigs setToken(String token) {
+            this.token = token;
+            return this;
+        }
+        public String getToken() {
+            return this.token;
         }
 
         public GetRecallManagementConfigResponseBodyNetworkConfigs setVpcId(String vpcId) {

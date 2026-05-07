@@ -9,6 +9,13 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>learn-pairec-xxx</p>
+     */
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    /**
+     * <strong>example:</strong>
      * <p>4</p>
      */
     @NameInMap("SourceRecallManagementServiceVersionId")
@@ -25,6 +32,14 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
     }
     public CreateRecallManagementServiceVersionRequestConfigs getConfigs() {
         return this.configs;
+    }
+
+    public CreateRecallManagementServiceVersionRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public CreateRecallManagementServiceVersionRequest setSourceRecallManagementServiceVersionId(String sourceRecallManagementServiceVersionId) {

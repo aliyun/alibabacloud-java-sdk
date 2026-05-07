@@ -2073,6 +2073,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Configs", request.configs);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sourceRecallManagementServiceVersionId)) {
             body.put("SourceRecallManagementServiceVersionId", request.sourceRecallManagementServiceVersionId);
         }
@@ -3219,6 +3223,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteEngineConfigResponse deleteEngineConfigWithOptions(String EngineConfigId, DeleteEngineConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deleteAll)) {
+            query.put("DeleteAll", request.deleteAll);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
