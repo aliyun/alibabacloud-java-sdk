@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class RunBookIntroductionRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("CleanCache")
+    public Boolean cleanCache;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,6 +20,10 @@ public class RunBookIntroductionRequest extends TeaModel {
     @NameInMap("DocId")
     public String docId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>用英文输出</p>
+     */
     @NameInMap("KeyPointPrompt")
     public String keyPointPrompt;
 
@@ -25,6 +36,10 @@ public class RunBookIntroductionRequest extends TeaModel {
     @NameInMap("SessionId")
     public String sessionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>用英文输出</p>
+     */
     @NameInMap("SummaryPrompt")
     public String summaryPrompt;
 
@@ -40,6 +55,14 @@ public class RunBookIntroductionRequest extends TeaModel {
     public static RunBookIntroductionRequest build(java.util.Map<String, ?> map) throws Exception {
         RunBookIntroductionRequest self = new RunBookIntroductionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RunBookIntroductionRequest setCleanCache(Boolean cleanCache) {
+        this.cleanCache = cleanCache;
+        return this;
+    }
+    public Boolean getCleanCache() {
+        return this.cleanCache;
     }
 
     public RunBookIntroductionRequest setDocId(String docId) {

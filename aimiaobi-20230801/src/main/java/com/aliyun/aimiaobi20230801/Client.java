@@ -8925,6 +8925,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Prompt", request.prompt);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.responseFormat)) {
+            body.put("ResponseFormat", request.responseFormat);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
             body.put("SessionId", request.sessionId);
         }
@@ -8977,6 +8981,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RunBookIntroductionResponse runBookIntroductionWithOptions(RunBookIntroductionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cleanCache)) {
+            body.put("CleanCache", request.cleanCache);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.docId)) {
             body.put("DocId", request.docId);
         }
@@ -9457,6 +9465,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
             body.put("Prompt", request.prompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseFormat)) {
+            body.put("ResponseFormat", request.responseFormat);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {

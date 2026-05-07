@@ -4,6 +4,10 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunDocBrainmapRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("CleanCache")
     public Boolean cleanCache;
 
@@ -16,14 +20,33 @@ public class RunDocBrainmapRequest extends TeaModel {
     @NameInMap("DocId")
     public String docId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>quanmiao-max、quanmiao-plus</p>
+     */
     @NameInMap("ModelName")
     public String modelName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("NodeNumber")
     public Integer nodeNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>请按英文输出</p>
+     */
     @NameInMap("Prompt")
     public String prompt;
+
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("ResponseFormat")
+    public Integer responseFormat;
 
     /**
      * <p>This parameter is required.</p>
@@ -34,18 +57,24 @@ public class RunDocBrainmapRequest extends TeaModel {
     @NameInMap("SessionId")
     public String sessionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("WordNumber")
     public Integer wordNumber;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>llm-xxx</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>要生成脑图的内容</p>
+     */
     @NameInMap("referenceContent")
     public String referenceContent;
 
@@ -92,6 +121,14 @@ public class RunDocBrainmapRequest extends TeaModel {
     }
     public String getPrompt() {
         return this.prompt;
+    }
+
+    public RunDocBrainmapRequest setResponseFormat(Integer responseFormat) {
+        this.responseFormat = responseFormat;
+        return this;
+    }
+    public Integer getResponseFormat() {
+        return this.responseFormat;
     }
 
     public RunDocBrainmapRequest setSessionId(String sessionId) {

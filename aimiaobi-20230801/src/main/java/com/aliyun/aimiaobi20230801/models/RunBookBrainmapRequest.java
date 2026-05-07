@@ -27,8 +27,19 @@ public class RunBookBrainmapRequest extends TeaModel {
     @NameInMap("NodeNumber")
     public Integer nodeNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>按英文输出</p>
+     */
     @NameInMap("Prompt")
     public String prompt;
+
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("ResponseFormat")
+    public Integer responseFormat;
 
     /**
      * <p>This parameter is required.</p>
@@ -90,6 +101,14 @@ public class RunBookBrainmapRequest extends TeaModel {
     }
     public String getPrompt() {
         return this.prompt;
+    }
+
+    public RunBookBrainmapRequest setResponseFormat(Integer responseFormat) {
+        this.responseFormat = responseFormat;
+        return this;
+    }
+    public Integer getResponseFormat() {
+        return this.responseFormat;
     }
 
     public RunBookBrainmapRequest setSessionId(String sessionId) {

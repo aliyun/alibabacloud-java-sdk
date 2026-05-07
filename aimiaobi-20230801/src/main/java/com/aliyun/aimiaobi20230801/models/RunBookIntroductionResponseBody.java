@@ -161,7 +161,123 @@ public class RunBookIntroductionResponseBody extends TeaModel {
 
     }
 
+    public static class RunBookIntroductionResponseBodyPayloadOutputIntroductionsBlocks extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("BeginTime")
+        public Long beginTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1200</p>
+         */
+        @NameInMap("EndTime")
+        public Long endTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>600</p>
+         */
+        @NameInMap("Height")
+        public Integer height;
+
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("PageId")
+        public Integer pageId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>600</p>
+         */
+        @NameInMap("Width")
+        public Integer width;
+
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("X")
+        public Integer x;
+
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("Y")
+        public Integer y;
+
+        public static RunBookIntroductionResponseBodyPayloadOutputIntroductionsBlocks build(java.util.Map<String, ?> map) throws Exception {
+            RunBookIntroductionResponseBodyPayloadOutputIntroductionsBlocks self = new RunBookIntroductionResponseBodyPayloadOutputIntroductionsBlocks();
+            return TeaModel.build(map, self);
+        }
+
+        public RunBookIntroductionResponseBodyPayloadOutputIntroductionsBlocks setBeginTime(Long beginTime) {
+            this.beginTime = beginTime;
+            return this;
+        }
+        public Long getBeginTime() {
+            return this.beginTime;
+        }
+
+        public RunBookIntroductionResponseBodyPayloadOutputIntroductionsBlocks setEndTime(Long endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        public RunBookIntroductionResponseBodyPayloadOutputIntroductionsBlocks setHeight(Integer height) {
+            this.height = height;
+            return this;
+        }
+        public Integer getHeight() {
+            return this.height;
+        }
+
+        public RunBookIntroductionResponseBodyPayloadOutputIntroductionsBlocks setPageId(Integer pageId) {
+            this.pageId = pageId;
+            return this;
+        }
+        public Integer getPageId() {
+            return this.pageId;
+        }
+
+        public RunBookIntroductionResponseBodyPayloadOutputIntroductionsBlocks setWidth(Integer width) {
+            this.width = width;
+            return this;
+        }
+        public Integer getWidth() {
+            return this.width;
+        }
+
+        public RunBookIntroductionResponseBodyPayloadOutputIntroductionsBlocks setX(Integer x) {
+            this.x = x;
+            return this;
+        }
+        public Integer getX() {
+            return this.x;
+        }
+
+        public RunBookIntroductionResponseBodyPayloadOutputIntroductionsBlocks setY(Integer y) {
+            this.y = y;
+            return this;
+        }
+        public Integer getY() {
+            return this.y;
+        }
+
+    }
+
     public static class RunBookIntroductionResponseBodyPayloadOutputIntroductions extends TeaModel {
+        @NameInMap("Blocks")
+        public java.util.List<RunBookIntroductionResponseBodyPayloadOutputIntroductionsBlocks> blocks;
+
         /**
          * <strong>example:</strong>
          * <p>本段摘要内容</p>
@@ -179,6 +295,14 @@ public class RunBookIntroductionResponseBody extends TeaModel {
         public static RunBookIntroductionResponseBodyPayloadOutputIntroductions build(java.util.Map<String, ?> map) throws Exception {
             RunBookIntroductionResponseBodyPayloadOutputIntroductions self = new RunBookIntroductionResponseBodyPayloadOutputIntroductions();
             return TeaModel.build(map, self);
+        }
+
+        public RunBookIntroductionResponseBodyPayloadOutputIntroductions setBlocks(java.util.List<RunBookIntroductionResponseBodyPayloadOutputIntroductionsBlocks> blocks) {
+            this.blocks = blocks;
+            return this;
+        }
+        public java.util.List<RunBookIntroductionResponseBodyPayloadOutputIntroductionsBlocks> getBlocks() {
+            return this.blocks;
         }
 
         public RunBookIntroductionResponseBodyPayloadOutputIntroductions setSummary(String summary) {
