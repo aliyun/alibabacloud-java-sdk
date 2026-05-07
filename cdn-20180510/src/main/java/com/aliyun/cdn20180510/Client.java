@@ -1422,7 +1422,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>The ID of the request.</p>
      * 
-     * @param request DeleteCdnSubTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteCdnSubTaskResponse
      */
@@ -3477,7 +3476,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the tracking tasks that you have created.</p>
      * 
-     * @param request DescribeCdnSubListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnSubListResponse
      */
@@ -9458,7 +9456,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries node IP addresses in the staging environment.</p>
      * 
-     * @param request DescribeStagingIpRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeStagingIpResponse
      */
@@ -9682,7 +9679,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the number of domain names whose SSL certificates are about to expire or have already expired.</p>
      * 
-     * @param request DescribeUserCertificateExpireCountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUserCertificateExpireCountResponse
      */
@@ -9890,7 +9886,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries user tags.</p>
      * 
-     * @param request DescribeUserTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUserTagsResponse
      */
@@ -10239,6 +10234,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Generates a link to the detection tool based on the access URL.</p>
+     * 
+     * @param request GenerateCdnDiagnoseRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GenerateCdnDiagnoseResponse
+     */
+    public GenerateCdnDiagnoseResponse generateCdnDiagnoseWithOptions(GenerateCdnDiagnoseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            query.put("Url", request.url);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GenerateCdnDiagnose"),
+            new TeaPair("version", "2018-05-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateCdnDiagnoseResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Generates a link to the detection tool based on the access URL.</p>
+     * 
+     * @param request GenerateCdnDiagnoseRequest
+     * @return GenerateCdnDiagnoseResponse
+     */
+    public GenerateCdnDiagnoseResponse generateCdnDiagnose(GenerateCdnDiagnoseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.generateCdnDiagnoseWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the canary release configurations, such as canary release status and progress, by domain name and function name.</p>
      * 
      * @param request GetGrayDomainFunctionRequest
@@ -10389,7 +10428,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries all real-time log delivery tasks within your Alibaba Cloud account.</p>
      * 
-     * @param request ListRealtimeLogDeliveryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListRealtimeLogDeliveryResponse
      */
@@ -10478,7 +10516,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the information about the real-time log delivery feature in a specified region.</p>
      * 
-     * @param request ListRealtimeLogDeliveryInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListRealtimeLogDeliveryInfosResponse
      */
@@ -10586,7 +10623,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries all custom log configurations in your account.</p>
      * 
-     * @param request ListUserCustomLogConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListUserCustomLogConfigResponse
      */
