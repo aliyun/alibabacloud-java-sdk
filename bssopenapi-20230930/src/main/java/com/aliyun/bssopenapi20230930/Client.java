@@ -656,7 +656,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a bill report subscription.</p>
+     * <p>Creates a billing report subscription.</p>
      * 
      * @param request CreateReportDefinitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -738,7 +738,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a bill report subscription.</p>
+     * <p>Creates a billing report subscription.</p>
      * 
      * @param request CreateReportDefinitionRequest
      * @return CreateReportDefinitionResponse
@@ -976,7 +976,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询优惠券列表</p>
+     * <p>Queries the list of coupons.</p>
      * 
      * @param tmpReq DescribeCouponRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1035,6 +1035,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ExpireStartDate", request.expireStartDate);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.includeShare)) {
+            query.put("IncludeShare", request.includeShare);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("MaxResults", request.maxResults);
         }
@@ -1049,6 +1053,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
@@ -1074,7 +1082,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询优惠券列表</p>
+     * <p>Queries the list of coupons.</p>
      * 
      * @param request DescribeCouponRequest
      * @return DescribeCouponResponse
@@ -1086,7 +1094,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询优惠券可用商品列表</p>
+     * <p>Query the list of products for which a coupon is applicable.</p>
      * 
      * @param tmpReq DescribeCouponItemListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1144,7 +1152,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询优惠券可用商品列表</p>
+     * <p>Query the list of products for which a coupon is applicable.</p>
      * 
      * @param request DescribeCouponItemListRequest
      * @return DescribeCouponItemListResponse
@@ -2190,7 +2198,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>发票抬头查询服务</p>
      * 
-     * @param request ListInvoiceTitleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListInvoiceTitleResponse
      */

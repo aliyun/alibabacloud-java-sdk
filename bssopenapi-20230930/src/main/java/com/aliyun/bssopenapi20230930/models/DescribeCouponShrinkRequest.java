@@ -68,6 +68,9 @@ public class DescribeCouponShrinkRequest extends TeaModel {
     @NameInMap("ExpireStartDate")
     public Long expireStartDate;
 
+    @NameInMap("IncludeShare")
+    public Boolean includeShare;
+
     @NameInMap("MaxResults")
     public Integer maxResults;
 
@@ -89,6 +92,9 @@ public class DescribeCouponShrinkRequest extends TeaModel {
      */
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("ProductCode")
+    public String productCode;
 
     /**
      * <strong>example:</strong>
@@ -182,6 +188,14 @@ public class DescribeCouponShrinkRequest extends TeaModel {
         return this.expireStartDate;
     }
 
+    public DescribeCouponShrinkRequest setIncludeShare(Boolean includeShare) {
+        this.includeShare = includeShare;
+        return this;
+    }
+    public Boolean getIncludeShare() {
+        return this.includeShare;
+    }
+
     public DescribeCouponShrinkRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -212,6 +226,14 @@ public class DescribeCouponShrinkRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeCouponShrinkRequest setProductCode(String productCode) {
+        this.productCode = productCode;
+        return this;
+    }
+    public String getProductCode() {
+        return this.productCode;
     }
 
     public DescribeCouponShrinkRequest setStatus(String status) {
