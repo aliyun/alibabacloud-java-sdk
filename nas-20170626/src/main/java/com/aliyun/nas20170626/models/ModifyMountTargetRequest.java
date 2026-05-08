@@ -13,6 +13,9 @@ public class ModifyMountTargetRequest extends TeaModel {
     @NameInMap("AccessGroupName")
     public String accessGroupName;
 
+    @NameInMap("AccessPointAccessOnly")
+    public Boolean accessPointAccessOnly;
+
     /**
      * <p>The dual-stack (IPv4 and IPv6) domain name of the mount target.</p>
      * <blockquote>
@@ -76,6 +79,14 @@ public class ModifyMountTargetRequest extends TeaModel {
     }
     public String getAccessGroupName() {
         return this.accessGroupName;
+    }
+
+    public ModifyMountTargetRequest setAccessPointAccessOnly(Boolean accessPointAccessOnly) {
+        this.accessPointAccessOnly = accessPointAccessOnly;
+        return this;
+    }
+    public Boolean getAccessPointAccessOnly() {
+        return this.accessPointAccessOnly;
     }
 
     public ModifyMountTargetRequest setDualStackMountTargetDomain(String dualStackMountTargetDomain) {

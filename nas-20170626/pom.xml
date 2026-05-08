@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>nas20170626</artifactId>
-  <version>3.4.0</version>
+  <version>3.4.1</version>
   <packaging>jar</packaging>
   <name>nas20170626</name>
   <description>Alibaba Cloud Apsara File Storage NAS (20170626) SDK for Java
@@ -174,7 +174,7 @@
       <plugin>
         <groupId>org.sonatype.central</groupId>
         <artifactId>central-publishing-maven-plugin</artifactId>
-        <version>0.9.0</version>
+        <version>0.10.0</version>
         <extensions>true</extensions>
         <configuration>
           <publishingServerId>central</publishingServerId>

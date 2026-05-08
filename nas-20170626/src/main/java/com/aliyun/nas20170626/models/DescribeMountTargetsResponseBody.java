@@ -201,6 +201,9 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         @NameInMap("AccessGroup")
         public String accessGroup;
 
+        @NameInMap("AccessPointAccessOnly")
+        public Boolean accessPointAccessOnly;
+
         @NameInMap("ClientMasterNodes")
         public DescribeMountTargetsResponseBodyMountTargetsMountTargetClientMasterNodes clientMasterNodes;
 
@@ -239,6 +242,14 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         }
         public String getAccessGroup() {
             return this.accessGroup;
+        }
+
+        public DescribeMountTargetsResponseBodyMountTargetsMountTarget setAccessPointAccessOnly(Boolean accessPointAccessOnly) {
+            this.accessPointAccessOnly = accessPointAccessOnly;
+            return this;
+        }
+        public Boolean getAccessPointAccessOnly() {
+            return this.accessPointAccessOnly;
         }
 
         public DescribeMountTargetsResponseBodyMountTargetsMountTarget setClientMasterNodes(DescribeMountTargetsResponseBodyMountTargetsMountTargetClientMasterNodes clientMasterNodes) {

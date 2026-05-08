@@ -4816,7 +4816,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询生命周期策略日志</p>
+     * <p>Queries the operational logs of a lifecycle policy. You can query up to 1000 log entries in the last 90 days. Only CPFS for Lingjun supports this operation.</p>
      * 
      * @param request DescribeLifecyclePolicyLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4860,7 +4860,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询生命周期策略日志</p>
+     * <p>Queries the operational logs of a lifecycle policy. You can query up to 1000 log entries in the last 90 days. Only CPFS for Lingjun supports this operation.</p>
      * 
      * @param request DescribeLifecyclePolicyLogsRequest
      * @return DescribeLifecyclePolicyLogsResponse
@@ -7169,6 +7169,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AccessGroupName", request.accessGroupName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.accessPointAccessOnly)) {
+            query.put("AccessPointAccessOnly", request.accessPointAccessOnly);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dualStackMountTargetDomain)) {
             query.put("DualStackMountTargetDomain", request.dualStackMountTargetDomain);
         }
@@ -7426,7 +7430,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Activates File Storage NAS.</p>
      * 
-     * @param request OpenNASServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return OpenNASServiceResponse
      */
@@ -7874,7 +7877,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动生命周期策略运行</p>
+     * <p>Starts the execution of lifecycle policies.</p>
      * 
      * @param request StartLifecyclePolicyExecutionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7910,7 +7913,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动生命周期策略运行</p>
+     * <p>Starts the execution of lifecycle policies.</p>
      * 
      * @param request StartLifecyclePolicyExecutionRequest
      * @return StartLifecyclePolicyExecutionResponse
@@ -7998,7 +8001,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止生命周期策略运行</p>
+     * <p>Stops the execution of lifecycle policies.</p>
      * 
      * @param request StopLifecyclePolicyExecutionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8034,7 +8037,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止生命周期策略运行</p>
+     * <p>Stops the execution of lifecycle policies.</p>
      * 
      * @param request StopLifecyclePolicyExecutionRequest
      * @return StopLifecyclePolicyExecutionResponse
@@ -8154,7 +8157,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新生命周期策略</p>
+     * <p>Updates a rule of a lifecycle management policy. Only CPFS for Lingjun supports this operation. The UpdateLifecyclePolicy specifies the overwriting semantics. If you do not specify an optional parameter, the corresponding field is deleted. If you want to configure a new lifecycle rule for a bucket, call the DescribeLifecyclePolicies operation to query the configurations of the existing lifecycle rule, add new lifecycle rules, and then call the UpdateLifecyclePolicy operation to update the configurations.</p>
      * 
      * @param request UpdateLifecyclePolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8210,7 +8213,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新生命周期策略</p>
+     * <p>Updates a rule of a lifecycle management policy. Only CPFS for Lingjun supports this operation. The UpdateLifecyclePolicy specifies the overwriting semantics. If you do not specify an optional parameter, the corresponding field is deleted. If you want to configure a new lifecycle rule for a bucket, call the DescribeLifecyclePolicies operation to query the configurations of the existing lifecycle rule, add new lifecycle rules, and then call the UpdateLifecyclePolicy operation to update the configurations.</p>
      * 
      * @param request UpdateLifecyclePolicyRequest
      * @return UpdateLifecyclePolicyResponse

@@ -89,6 +89,9 @@ public class ModifyFileSystemRequest extends TeaModel {
         @NameInMap("EnableOplock")
         public Boolean enableOplock;
 
+        @NameInMap("VscAccessPointAccessOnly")
+        public Boolean vscAccessPointAccessOnly;
+
         public static ModifyFileSystemRequestOptions build(java.util.Map<String, ?> map) throws Exception {
             ModifyFileSystemRequestOptions self = new ModifyFileSystemRequestOptions();
             return TeaModel.build(map, self);
@@ -108,6 +111,14 @@ public class ModifyFileSystemRequest extends TeaModel {
         }
         public Boolean getEnableOplock() {
             return this.enableOplock;
+        }
+
+        public ModifyFileSystemRequestOptions setVscAccessPointAccessOnly(Boolean vscAccessPointAccessOnly) {
+            this.vscAccessPointAccessOnly = vscAccessPointAccessOnly;
+            return this;
+        }
+        public Boolean getVscAccessPointAccessOnly() {
+            return this.vscAccessPointAccessOnly;
         }
 
     }
