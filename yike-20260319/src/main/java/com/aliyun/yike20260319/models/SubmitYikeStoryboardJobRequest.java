@@ -25,6 +25,9 @@ public class SubmitYikeStoryboardJobRequest extends TeaModel {
     @NameInMap("FileURL")
     public String fileURL;
 
+    @NameInMap("KeepOriginDialogue")
+    public Boolean keepOriginDialogue;
+
     /**
      * <strong>example:</strong>
      * <p>{
@@ -133,6 +136,14 @@ public class SubmitYikeStoryboardJobRequest extends TeaModel {
     }
     public String getFileURL() {
         return this.fileURL;
+    }
+
+    public SubmitYikeStoryboardJobRequest setKeepOriginDialogue(Boolean keepOriginDialogue) {
+        this.keepOriginDialogue = keepOriginDialogue;
+        return this;
+    }
+    public Boolean getKeepOriginDialogue() {
+        return this.keepOriginDialogue;
     }
 
     public SubmitYikeStoryboardJobRequest setModelParams(String modelParams) {

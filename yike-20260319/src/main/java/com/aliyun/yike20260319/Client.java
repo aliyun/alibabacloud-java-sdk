@@ -1236,7 +1236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交一刻故事板任务</p>
+     * <p>提交一刻故事板全链路编排任务</p>
      * 
      * @param request SubmitYikeStoryboardJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1251,6 +1251,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.execMode)) {
             query.put("ExecMode", request.execMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keepOriginDialogue)) {
+            query.put("KeepOriginDialogue", request.keepOriginDialogue);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.modelParams)) {
@@ -1322,7 +1326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交一刻故事板任务</p>
+     * <p>提交一刻故事板全链路编排任务</p>
      * 
      * @param request SubmitYikeStoryboardJobRequest
      * @return SubmitYikeStoryboardJobResponse
