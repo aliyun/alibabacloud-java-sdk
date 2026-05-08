@@ -16,6 +16,9 @@ public class SinkApiDestinationParameters extends TeaModel {
     @NameInMap("QueryStringParameters")
     public SinkApiDestinationParametersQueryStringParameters queryStringParameters;
 
+    @NameInMap("Timeout")
+    public Integer timeout;
+
     public static SinkApiDestinationParameters build(java.util.Map<String, ?> map) throws Exception {
         SinkApiDestinationParameters self = new SinkApiDestinationParameters();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class SinkApiDestinationParameters extends TeaModel {
     }
     public SinkApiDestinationParametersQueryStringParameters getQueryStringParameters() {
         return this.queryStringParameters;
+    }
+
+    public SinkApiDestinationParameters setTimeout(Integer timeout) {
+        this.timeout = timeout;
+        return this;
+    }
+    public Integer getTimeout() {
+        return this.timeout;
     }
 
     public static class SinkApiDestinationParametersBodyParameters extends TeaModel {
