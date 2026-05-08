@@ -136,6 +136,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>DAS大模型能力异步逻辑接口</p>
+     * 
+     * @param request ChatRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ChatResponse
+     */
+    public ChatResponse chatWithOptions(ChatRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            query.put("AgentId", request.agentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.message)) {
+            query.put("Message", request.message);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("SessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.summary)) {
+            query.put("Summary", request.summary);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "Chat"),
+            new TeaPair("version", "2020-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ChatResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DAS大模型能力异步逻辑接口</p>
+     * 
+     * @param request ChatRequest
+     * @return ChatResponse
+     */
+    public ChatResponse chat(ChatRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.chatWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, take note of the following items:</p>
      * <ul>
@@ -4754,72 +4810,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @param request GetEndpointSwitchTaskRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return GetEndpointSwitchTaskResponse
-     */
-    public GetEndpointSwitchTaskResponse getEndpointSwitchTaskWithOptions(GetEndpointSwitchTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
-            query.put("TaskId", request.taskId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.uid)) {
-            query.put("Uid", request.uid);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
-            query.put("UserId", request.userId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.context)) {
-            query.put("__context", request.context);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.accessKey)) {
-            query.put("accessKey", request.accessKey);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.signature)) {
-            query.put("signature", request.signature);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.skipAuth)) {
-            query.put("skipAuth", request.skipAuth);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.timestamp)) {
-            query.put("timestamp", request.timestamp);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetEndpointSwitchTask"),
-            new TeaPair("version", "2020-01-16"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetEndpointSwitchTaskResponse());
-    }
-
-    /**
-     * @param request GetEndpointSwitchTaskRequest
-     * @return GetEndpointSwitchTaskResponse
-     */
-    public GetEndpointSwitchTaskResponse getEndpointSwitchTask(GetEndpointSwitchTaskRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getEndpointSwitchTaskWithOptions(request, runtime);
-    }
-
-    /**
      * <b>description</b> :
      * <blockquote>
      * <p> GetErrorRequestSample is an asynchronous operation. After a request is sent, the complete results are not returned immediately. If the value of <strong>isFinish</strong> is <strong>false</strong> in the response, wait for 1 second and then send a request again. If the value of <strong>isFinish</strong> is <strong>true</strong>, the complete results are returned.</p>
@@ -5259,134 +5249,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetFullRequestStatResultByInstanceIdResponse getFullRequestStatResultByInstanceId(GetFullRequestStatResultByInstanceIdRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getFullRequestStatResultByInstanceIdWithOptions(request, runtime);
-    }
-
-    /**
-     * @param request GetHDMAliyunResourceSyncResultRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return GetHDMAliyunResourceSyncResultResponse
-     */
-    public GetHDMAliyunResourceSyncResultResponse getHDMAliyunResourceSyncResultWithOptions(GetHDMAliyunResourceSyncResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
-            query.put("TaskId", request.taskId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.uid)) {
-            query.put("Uid", request.uid);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
-            query.put("UserId", request.userId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.context)) {
-            query.put("__context", request.context);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.accessKey)) {
-            query.put("accessKey", request.accessKey);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.signature)) {
-            query.put("signature", request.signature);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.skipAuth)) {
-            query.put("skipAuth", request.skipAuth);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.timestamp)) {
-            query.put("timestamp", request.timestamp);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetHDMAliyunResourceSyncResult"),
-            new TeaPair("version", "2020-01-16"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetHDMAliyunResourceSyncResultResponse());
-    }
-
-    /**
-     * @param request GetHDMAliyunResourceSyncResultRequest
-     * @return GetHDMAliyunResourceSyncResultResponse
-     */
-    public GetHDMAliyunResourceSyncResultResponse getHDMAliyunResourceSyncResult(GetHDMAliyunResourceSyncResultRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getHDMAliyunResourceSyncResultWithOptions(request, runtime);
-    }
-
-    /**
-     * @param request GetHDMLastAliyunResourceSyncResultRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return GetHDMLastAliyunResourceSyncResultResponse
-     */
-    public GetHDMLastAliyunResourceSyncResultResponse getHDMLastAliyunResourceSyncResultWithOptions(GetHDMLastAliyunResourceSyncResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.uid)) {
-            query.put("Uid", request.uid);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
-            query.put("UserId", request.userId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.context)) {
-            query.put("__context", request.context);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.accessKey)) {
-            query.put("accessKey", request.accessKey);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.signature)) {
-            query.put("signature", request.signature);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.skipAuth)) {
-            query.put("skipAuth", request.skipAuth);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.timestamp)) {
-            query.put("timestamp", request.timestamp);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetHDMLastAliyunResourceSyncResult"),
-            new TeaPair("version", "2020-01-16"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetHDMLastAliyunResourceSyncResultResponse());
-    }
-
-    /**
-     * @param request GetHDMLastAliyunResourceSyncResultRequest
-     * @return GetHDMLastAliyunResourceSyncResultResponse
-     */
-    public GetHDMLastAliyunResourceSyncResultResponse getHDMLastAliyunResourceSyncResult(GetHDMLastAliyunResourceSyncResultRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getHDMLastAliyunResourceSyncResultWithOptions(request, runtime);
     }
 
     /**

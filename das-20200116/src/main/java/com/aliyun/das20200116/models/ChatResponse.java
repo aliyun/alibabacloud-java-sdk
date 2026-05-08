@@ -3,7 +3,7 @@ package com.aliyun.das20200116.models;
 
 import com.aliyun.tea.*;
 
-public class GetEndpointSwitchTaskResponse extends TeaModel {
+public class ChatResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class GetEndpointSwitchTaskResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public GetEndpointSwitchTaskResponseBody body;
+    public ChatResponseBody body;
 
-    public static GetEndpointSwitchTaskResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetEndpointSwitchTaskResponse self = new GetEndpointSwitchTaskResponse();
+    public static ChatResponse build(java.util.Map<String, ?> map) throws Exception {
+        ChatResponse self = new ChatResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetEndpointSwitchTaskResponse setHeaders(java.util.Map<String, String> headers) {
+    public ChatResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class GetEndpointSwitchTaskResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetEndpointSwitchTaskResponse setStatusCode(Integer statusCode) {
+    public ChatResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class GetEndpointSwitchTaskResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetEndpointSwitchTaskResponse setBody(GetEndpointSwitchTaskResponseBody body) {
+    public ChatResponse setBody(ChatResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetEndpointSwitchTaskResponseBody getBody() {
+    public ChatResponseBody getBody() {
         return this.body;
     }
 
