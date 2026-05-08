@@ -30,6 +30,10 @@ public class BuildAICoachScriptRecordResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("scriptRecordId")
     public String scriptRecordId;
 

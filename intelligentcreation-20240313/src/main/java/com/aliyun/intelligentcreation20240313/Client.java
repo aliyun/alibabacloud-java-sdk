@@ -729,6 +729,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建离线评测任务</p>
+     * 
+     * @param request CreateAICoachTaskReportRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAICoachTaskReportResponse
+     */
+    public CreateAICoachTaskReportResponse createAICoachTaskReportWithOptions(CreateAICoachTaskReportRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dialogueList)) {
+            body.put("dialogueList", request.dialogueList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idempotentId)) {
+            body.put("idempotentId", request.idempotentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("taskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAICoachTaskReport"),
+            new TeaPair("version", "2024-03-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/yic/yic-console/openService/v1/aicoach/startSessionReport"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAICoachTaskReportResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建离线评测任务</p>
+     * 
+     * @param request CreateAICoachTaskReportRequest
+     * @return CreateAICoachTaskReportResponse
+     */
+    public CreateAICoachTaskReportResponse createAICoachTaskReport(CreateAICoachTaskReportRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createAICoachTaskReportWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>学员开启对练会话</p>
      * 
      * @param request CreateAICoachTaskSessionRequest

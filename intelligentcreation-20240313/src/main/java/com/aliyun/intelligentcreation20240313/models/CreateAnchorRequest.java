@@ -4,6 +4,12 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class CreateAnchorRequest extends TeaModel {
+    /**
+     * <p>类型</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VIDEO_ANCHOR</p>
+     */
     @NameInMap("anchorCategory")
     public String anchorCategory;
 
@@ -12,7 +18,7 @@ public class CreateAnchorRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p><a href="https://yic-pre.oss-cn-hangzhou.aliyuncs.com/common/image/anchor/1733474220549-1733474198960image.png?Expires=3311144948&OSSAccessKeyId=LTAI5tPHLyFPhh4UoRias4Zg&Signature=qldDufvRDj9IUTmOtb9r2451RIU%3D">https://yic-pre.oss-cn-hangzhou.aliyuncs.com/common/image/anchor/1733474220549-1733474198960image.png?Expires=3311144948&amp;OSSAccessKeyId=LTAI5tPHLyFPhh4UoRias4Zg&amp;Signature=qldDufvRDj9IUTmOtb9r2451RIU%3D</a></p>
+     * <p><a href="https://xxx">https://xxx</a></p>
      */
     @NameInMap("coverUrl")
     public String coverUrl;
@@ -34,6 +40,12 @@ public class CreateAnchorRequest extends TeaModel {
     @NameInMap("useScene")
     public String useScene;
 
+    /**
+     * <p>视频文件osskey</p>
+     * 
+     * <strong>example:</strong>
+     * <p>path/key.mp4</p>
+     */
     @NameInMap("videoOssKey")
     public String videoOssKey;
 

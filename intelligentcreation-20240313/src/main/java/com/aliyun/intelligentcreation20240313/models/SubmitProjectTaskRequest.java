@@ -109,7 +109,7 @@ public class SubmitProjectTaskRequest extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p><a href="https://meeting.dingtalk.com/j/1COFppy0POR">https://meeting.dingtalk.com/j/1COFppy0POR</a></p>
+         * <p><a href="https://xxx">https://xxx</a></p>
          */
         @NameInMap("url")
         public String url;
@@ -450,7 +450,7 @@ public class SubmitProjectTaskRequest extends TeaModel {
     public static class SubmitProjectTaskRequestFramesVideoScript extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p><a href="https://meeting.dingtalk.com/j/1COFppy0POR">https://meeting.dingtalk.com/j/1COFppy0POR</a></p>
+         * <p><a href="https://xxx">https://xxx</a></p>
          */
         @NameInMap("audioUrl")
         public String audioUrl;

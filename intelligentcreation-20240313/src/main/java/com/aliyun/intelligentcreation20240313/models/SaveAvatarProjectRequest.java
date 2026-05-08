@@ -182,7 +182,7 @@ public class SaveAvatarProjectRequest extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p><a href="https://alidocs.dingtalk.com/i/nodes/vy20BglGWOxjGpq0C5G4DlN0VA7depqY">https://alidocs.dingtalk.com/i/nodes/vy20BglGWOxjGpq0C5G4DlN0VA7depqY</a></p>
+         * <p><a href="https://xxx">https://xxx</a></p>
          */
         @NameInMap("url")
         public String url;

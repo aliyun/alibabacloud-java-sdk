@@ -28,6 +28,10 @@ public class ListAICoachScriptPageRequest extends TeaModel {
     @NameInMap("status")
     public Integer status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("type")
     public Integer type;
 

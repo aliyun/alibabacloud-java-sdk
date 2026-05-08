@@ -151,6 +151,10 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
     }
 
     public static class ListAICoachScriptPageResponseBodyListCustomReplyRulesActionParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("assessPoint")
         public String assessPoint;
 
@@ -211,6 +215,10 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
     }
 
     public static class ListAICoachScriptPageResponseBodyListCustomReplyRulesMainConditionParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("assessPoint")
         public String assessPoint;
 
@@ -282,15 +290,28 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         @NameInMap("action")
         public ListAICoachScriptPageResponseBodyListCustomReplyRulesAction action;
 
+        /**
+         * <strong>example:</strong>
+         * <p>and
+         * or</p>
+         */
         @NameInMap("logic")
         public String logic;
 
         @NameInMap("mainCondition")
         public ListAICoachScriptPageResponseBodyListCustomReplyRulesMainCondition mainCondition;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("priority")
         public Integer priority;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("sortNo")
         public Integer sortNo;
 
@@ -387,9 +408,17 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
     }
 
     public static class ListAICoachScriptPageResponseBodyListScoreConfigLevels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("max")
         public Integer max;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("min")
         public Integer min;
 
@@ -428,15 +457,27 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
     }
 
     public static class ListAICoachScriptPageResponseBodyListScoreConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("enabled")
         public Boolean enabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("levelEnabled")
         public Boolean levelEnabled;
 
         @NameInMap("levels")
         public java.util.List<ListAICoachScriptPageResponseBodyListScoreConfigLevels> levels;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("passScore")
         public Integer passScore;
 
@@ -487,9 +528,17 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         @NameInMap("assessmentPoint")
         public Integer assessmentPoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("assessmentPointEnabled")
         public Boolean assessmentPointEnabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("customReplyRuleEnabled")
         public Boolean customReplyRuleEnabled;
 
@@ -500,15 +549,31 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         @NameInMap("expressiveness")
         public Integer expressiveness;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("expressivenessEnabled")
         public Boolean expressivenessEnabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("pointDeductionRule")
         public Integer pointDeductionRule;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("pointDeductionRuleEnabled")
         public Boolean pointDeductionRuleEnabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("similarPronunciationScoringEnabled")
         public Boolean similarPronunciationScoringEnabled;
 
@@ -614,9 +679,17 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
     }
 
     public static class ListAICoachScriptPageResponseBodyList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("appendQuestionFlag")
         public String appendQuestionFlag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>point</p>
+         */
         @NameInMap("assessmentScope")
         public String assessmentScope;
 
@@ -628,7 +701,7 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p><a href="https://oss-ata.alibaba.com/front/live/banner1.png">https://oss-ata.alibaba.com/front/live/banner1.png</a></p>
+         * <p><a href="https://xxx/cover.png">https://xxx/cover.png</a></p>
          */
         @NameInMap("coverUrl")
         public String coverUrl;
@@ -636,21 +709,41 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         @NameInMap("customReplyRules")
         public java.util.List<ListAICoachScriptPageResponseBodyListCustomReplyRules> customReplyRules;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("dialogueTextFlag")
         public Boolean dialogueTextFlag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("dialogueTipFlag")
         public Boolean dialogueTipFlag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("evaluateReportFlag")
         public Boolean evaluateReportFlag;
 
         @NameInMap("expressiveness")
         public java.util.Map<String, String> expressiveness;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://xxx.gif">https://xxx.gif</a></p>
+         */
         @NameInMap("gifDynamicUrl")
         public String gifDynamicUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://xxx.gif">https://xxx.gif</a></p>
+         */
         @NameInMap("gifStaticUrl")
         public String gifStaticUrl;
 
@@ -695,6 +788,10 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         @NameInMap("openingRemarks")
         public String openingRemarks;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("orderAckFlag")
         public Boolean orderAckFlag;
 
@@ -724,9 +821,17 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         @NameInMap("status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("studentThinkTimeFlag")
         public Boolean studentThinkTimeFlag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("type")
         public Integer type;
 
