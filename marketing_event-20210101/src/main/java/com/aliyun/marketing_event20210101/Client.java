@@ -455,6 +455,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询新加坡千问大会票证信息</p>
+     * 
+     * @param request QueryQwenConferenceSgTicketPopRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryQwenConferenceSgTicketPopResponse
+     */
+    public QueryQwenConferenceSgTicketPopResponse queryQwenConferenceSgTicketPopWithOptions(QueryQwenConferenceSgTicketPopRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ticketToken)) {
+            query.put("TicketToken", request.ticketToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryQwenConferenceSgTicketPop"),
+            new TeaPair("version", "2021-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryQwenConferenceSgTicketPopResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询新加坡千问大会票证信息</p>
+     * 
+     * @param request QueryQwenConferenceSgTicketPopRequest
+     * @return QueryQwenConferenceSgTicketPopResponse
+     */
+    public QueryQwenConferenceSgTicketPopResponse queryQwenConferenceSgTicketPop(QueryQwenConferenceSgTicketPopRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryQwenConferenceSgTicketPopWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>千问大会搜索票据信息</p>
+     * 
+     * @param request QueryQwenConferenceSgTicketSearchPopRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryQwenConferenceSgTicketSearchPopResponse
+     */
+    public QueryQwenConferenceSgTicketSearchPopResponse queryQwenConferenceSgTicketSearchPopWithOptions(QueryQwenConferenceSgTicketSearchPopRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryQwenConferenceSgTicketSearchPop"),
+            new TeaPair("version", "2021-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryQwenConferenceSgTicketSearchPopResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>千问大会搜索票据信息</p>
+     * 
+     * @param request QueryQwenConferenceSgTicketSearchPopRequest
+     * @return QueryQwenConferenceSgTicketSearchPopResponse
+     */
+    public QueryQwenConferenceSgTicketSearchPopResponse queryQwenConferenceSgTicketSearchPop(QueryQwenConferenceSgTicketSearchPopRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryQwenConferenceSgTicketSearchPopWithOptions(request, runtime);
+    }
+
+    /**
      * @param request QuerySessionByActivityIdPopRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QuerySessionByActivityIdPopResponse
