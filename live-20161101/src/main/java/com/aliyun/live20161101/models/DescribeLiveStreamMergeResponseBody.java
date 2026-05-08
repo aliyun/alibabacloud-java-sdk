@@ -83,6 +83,9 @@ public class DescribeLiveStreamMergeResponseBody extends TeaModel {
         @NameInMap("StreamUsing")
         public String streamUsing;
 
+        @NameInMap("SwitchMode")
+        public String switchMode;
+
         public static DescribeLiveStreamMergeResponseBodyLiveStreamMergeListLiveStreamMerge build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveStreamMergeResponseBodyLiveStreamMergeListLiveStreamMerge self = new DescribeLiveStreamMergeResponseBodyLiveStreamMergeListLiveStreamMerge();
             return TeaModel.build(map, self);
@@ -206,6 +209,14 @@ public class DescribeLiveStreamMergeResponseBody extends TeaModel {
         }
         public String getStreamUsing() {
             return this.streamUsing;
+        }
+
+        public DescribeLiveStreamMergeResponseBodyLiveStreamMergeListLiveStreamMerge setSwitchMode(String switchMode) {
+            this.switchMode = switchMode;
+            return this;
+        }
+        public String getSwitchMode() {
+            return this.switchMode;
         }
 
     }

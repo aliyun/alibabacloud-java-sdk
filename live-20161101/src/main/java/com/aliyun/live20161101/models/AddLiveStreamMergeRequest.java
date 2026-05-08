@@ -103,6 +103,12 @@ public class AddLiveStreamMergeRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("SelectAppName")
+    public String selectAppName;
+
+    @NameInMap("SelectStreamName")
+    public String selectStreamName;
+
     /**
      * <p>The start time of the stream mixing.</p>
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
@@ -123,6 +129,9 @@ public class AddLiveStreamMergeRequest extends TeaModel {
      */
     @NameInMap("StreamName")
     public String streamName;
+
+    @NameInMap("SwitchMode")
+    public String switchMode;
 
     public static AddLiveStreamMergeRequest build(java.util.Map<String, ?> map) throws Exception {
         AddLiveStreamMergeRequest self = new AddLiveStreamMergeRequest();
@@ -225,6 +234,22 @@ public class AddLiveStreamMergeRequest extends TeaModel {
         return this.regionId;
     }
 
+    public AddLiveStreamMergeRequest setSelectAppName(String selectAppName) {
+        this.selectAppName = selectAppName;
+        return this;
+    }
+    public String getSelectAppName() {
+        return this.selectAppName;
+    }
+
+    public AddLiveStreamMergeRequest setSelectStreamName(String selectStreamName) {
+        this.selectStreamName = selectStreamName;
+        return this;
+    }
+    public String getSelectStreamName() {
+        return this.selectStreamName;
+    }
+
     public AddLiveStreamMergeRequest setStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -239,6 +264,14 @@ public class AddLiveStreamMergeRequest extends TeaModel {
     }
     public String getStreamName() {
         return this.streamName;
+    }
+
+    public AddLiveStreamMergeRequest setSwitchMode(String switchMode) {
+        this.switchMode = switchMode;
+        return this;
+    }
+    public String getSwitchMode() {
+        return this.switchMode;
     }
 
 }

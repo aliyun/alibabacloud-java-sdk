@@ -2579,12 +2579,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.selectAppName)) {
+            query.put("SelectAppName", request.selectAppName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.selectStreamName)) {
+            query.put("SelectStreamName", request.selectStreamName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
             query.put("StartTime", request.startTime);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.streamName)) {
             query.put("StreamName", request.streamName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.switchMode)) {
+            query.put("SwitchMode", request.switchMode);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
