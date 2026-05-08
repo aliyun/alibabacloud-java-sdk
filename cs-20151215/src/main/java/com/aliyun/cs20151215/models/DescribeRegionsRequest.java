@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
     /**
+     * <p>The language in which the results are returned.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>zh-CN</li>
+     * <li>en-US</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
      */
@@ -12,6 +19,14 @@ public class DescribeRegionsRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The type of the cluster.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>ExternalKubernetes: registered clusters.</li>
+     * <li>ManagedKubernetes: managed clusters.</li>
+     * <li>Kubernetes: dedicated clusters.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ManagedKubernetes</p>
      */
@@ -19,6 +34,15 @@ public class DescribeRegionsRequest extends TeaModel {
     public String clusterType;
 
     /**
+     * <p>The subtype of the managed cluster.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Lingjun: ACK Lingjun clusters.</li>
+     * <li>Serverless: ACK serverless clusters.</li>
+     * <li>Default: ACK managed clusters.</li>
+     * <li>Edge: ACK Edge clusters.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Default</p>
      */

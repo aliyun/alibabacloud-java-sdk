@@ -10,6 +10,9 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
     @NameInMap("events")
     public java.util.List<DescribeClusterEventsResponseBodyEvents> events;
 
+    @NameInMap("next_token")
+    public String nextToken;
+
     /**
      * <p>The pagination information.</p>
      */
@@ -27,6 +30,14 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
     }
     public java.util.List<DescribeClusterEventsResponseBodyEvents> getEvents() {
         return this.events;
+    }
+
+    public DescribeClusterEventsResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeClusterEventsResponseBody setPageInfo(DescribeClusterEventsResponseBodyPageInfo pageInfo) {

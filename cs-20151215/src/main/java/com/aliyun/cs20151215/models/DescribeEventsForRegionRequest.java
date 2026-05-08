@@ -13,6 +13,12 @@ public class DescribeEventsForRegionRequest extends TeaModel {
     @NameInMap("cluster_id")
     public String clusterId;
 
+    @NameInMap("max_results")
+    public Integer maxResults;
+
+    @NameInMap("next_token")
+    public String nextToken;
+
     /**
      * <p>The number of pages.</p>
      * 
@@ -42,6 +48,22 @@ public class DescribeEventsForRegionRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public DescribeEventsForRegionRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public DescribeEventsForRegionRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeEventsForRegionRequest setPageNumber(Long pageNumber) {

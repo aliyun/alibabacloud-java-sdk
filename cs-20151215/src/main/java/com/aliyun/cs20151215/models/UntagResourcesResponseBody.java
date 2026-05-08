@@ -8,7 +8,7 @@ public class UntagResourcesResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>2D69A58F-345C-4FDE-88E4-BF51894XXXXX</p>
+     * <p>2D69A58F-345C-4FDE-88E4-BF51894******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -4,12 +4,21 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class InstallNodePoolComponentsRequest extends TeaModel {
+    /**
+     * <p>A list of node components to be installed.</p>
+     */
     @NameInMap("components")
     public java.util.List<InstallNodePoolComponentsRequestComponents> components;
 
+    /**
+     * <p>A list of specific node names where the component should be installed. If not specified, the component will be installed on all nodes in the node pool.</p>
+     */
     @NameInMap("nodeNames")
     public java.util.List<String> nodeNames;
 
+    /**
+     * <p>Configuration for the rolling update process.</p>
+     */
     @NameInMap("rollingPolicy")
     public InstallNodePoolComponentsRequestRollingPolicy rollingPolicy;
 
@@ -43,6 +52,9 @@ public class InstallNodePoolComponentsRequest extends TeaModel {
     }
 
     public static class InstallNodePoolComponentsRequestComponentsConfig extends TeaModel {
+        /**
+         * <p>Custom parameters for the component.</p>
+         */
         @NameInMap("customConfig")
         public java.util.Map<String, String> customConfig;
 
@@ -62,10 +74,14 @@ public class InstallNodePoolComponentsRequest extends TeaModel {
     }
 
     public static class InstallNodePoolComponentsRequestComponents extends TeaModel {
+        /**
+         * <p>The configuration details for the component.</p>
+         */
         @NameInMap("config")
         public InstallNodePoolComponentsRequestComponentsConfig config;
 
         /**
+         * <p>The name of the component.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -75,6 +91,8 @@ public class InstallNodePoolComponentsRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The version of the component.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.28.9-aliyun.1</p>
          */
@@ -114,6 +132,8 @@ public class InstallNodePoolComponentsRequest extends TeaModel {
 
     public static class InstallNodePoolComponentsRequestRollingPolicy extends TeaModel {
         /**
+         * <p>The time interval between update batches, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -121,6 +141,8 @@ public class InstallNodePoolComponentsRequest extends TeaModel {
         public Long batchInterval;
 
         /**
+         * <p>The maximum number of nodes that can be updated concurrently in each batch. Default: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -128,6 +150,8 @@ public class InstallNodePoolComponentsRequest extends TeaModel {
         public Long maxParallelism;
 
         /**
+         * <p>The strategy for automatic pausing during the update process. Valid values: NotPause, FirstBatchPause, EveryBatchPause.</p>
+         * 
          * <strong>example:</strong>
          * <p>NotPause</p>
          */

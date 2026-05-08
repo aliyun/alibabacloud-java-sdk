@@ -4,6 +4,12 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterEventsRequest extends TeaModel {
+    @NameInMap("max_results")
+    public Integer maxResults;
+
+    @NameInMap("next_token")
+    public String nextToken;
+
     /**
      * <p>The number of the page to return.</p>
      * 
@@ -34,6 +40,22 @@ public class DescribeClusterEventsRequest extends TeaModel {
     public static DescribeClusterEventsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeClusterEventsRequest self = new DescribeClusterEventsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeClusterEventsRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public DescribeClusterEventsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeClusterEventsRequest setPageNumber(Long pageNumber) {

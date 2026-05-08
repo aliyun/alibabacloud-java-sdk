@@ -13,6 +13,12 @@ public class DescribeEventsRequest extends TeaModel {
     @NameInMap("cluster_id")
     public String clusterId;
 
+    @NameInMap("max_results")
+    public Integer maxResults;
+
+    @NameInMap("next_token")
+    public String nextToken;
+
     /**
      * <p>The page number.</p>
      * 
@@ -69,6 +75,22 @@ public class DescribeEventsRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public DescribeEventsRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public DescribeEventsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeEventsRequest setPageNumber(Long pageNumber) {

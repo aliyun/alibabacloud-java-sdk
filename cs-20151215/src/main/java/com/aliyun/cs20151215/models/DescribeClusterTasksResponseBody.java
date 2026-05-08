@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterTasksResponseBody extends TeaModel {
+    @NameInMap("next_token")
+    public String nextToken;
+
     /**
      * <p>The pagination information.</p>
      */
@@ -28,6 +31,14 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
     public static DescribeClusterTasksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeClusterTasksResponseBody self = new DescribeClusterTasksResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeClusterTasksResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeClusterTasksResponseBody setPageInfo(DescribeClusterTasksResponseBodyPageInfo pageInfo) {

@@ -602,7 +602,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询自愈规则</p>
+     * <p>Creates an auto-repair policy.</p>
      * 
      * @param request CreateAutoRepairPolicyRequest
      * @param headers map
@@ -648,7 +648,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询自愈规则</p>
+     * <p>Creates an auto-repair policy.</p>
      * 
      * @param request CreateAutoRepairPolicyRequest
      * @return CreateAutoRepairPolicyResponse
@@ -2811,6 +2811,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeClusterEventsResponse describeClusterEventsWithOptions(String ClusterId, DescribeClusterEventsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("max_results", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("next_token", request.nextToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("page_number", request.pageNumber);
         }
@@ -3097,6 +3105,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeClusterTasksResponse describeClusterTasksWithOptions(String clusterId, DescribeClusterTasksRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("max_results", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("next_token", request.nextToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("page_number", request.pageNumber);
         }
@@ -3297,7 +3313,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all the clusters that belong to the current Alibaba Cloud account, including Kubernetes clusters and Swarm clusters.</p>
+     * <p>Queries all existing clusters in ACK, including Kubernetes clusters and Swarm clusters.</p>
      * 
      * @deprecated OpenAPI DescribeClusters is deprecated
      * 
@@ -3343,7 +3359,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all the clusters that belong to the current Alibaba Cloud account, including Kubernetes clusters and Swarm clusters.</p>
+     * <p>Queries all existing clusters in ACK, including Kubernetes clusters and Swarm clusters.</p>
      * 
      * @deprecated OpenAPI DescribeClusters is deprecated
      * 
@@ -3520,6 +3536,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("cluster_id", request.clusterId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("max_results", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("next_token", request.nextToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("page_number", request.pageNumber);
         }
@@ -3577,6 +3601,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
             query.put("cluster_id", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("max_results", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("next_token", request.nextToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
@@ -4002,7 +4034,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询地域列表</p>
+     * <p>Queries the list of available regions.</p>
      * 
      * @param request DescribeRegionsRequest
      * @param headers map
@@ -4044,7 +4076,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询地域列表</p>
+     * <p>Queries the list of available regions.</p>
      * 
      * @param request DescribeRegionsRequest
      * @return DescribeRegionsResponse
@@ -5082,7 +5114,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为ACK集群节点池安装节点组件</p>
+     * <p>Installs components onto the nodes within a specified node pool. This API supports custom configurations and allows you to target specific nodes for the installation.</p>
      * 
      * @param request InstallNodePoolComponentsRequest
      * @param headers map
@@ -5124,7 +5156,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为ACK集群节点池安装节点组件</p>
+     * <p>Installs components onto the nodes within a specified node pool. This API supports custom configurations and allows you to target specific nodes for the installation.</p>
      * 
      * @param request InstallNodePoolComponentsRequest
      * @return InstallNodePoolComponentsResponse
@@ -5204,7 +5236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询自愈规则</p>
+     * <p>List auto-repair policies.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5230,7 +5262,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询自愈规则</p>
+     * <p>List auto-repair policies.</p>
      * @return ListAutoRepairPoliciesResponse
      */
     public ListAutoRepairPoliciesResponse listAutoRepairPolicies(String clusterId) throws Exception {
@@ -5241,7 +5273,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取集群组件实例的资源列表</p>
+     * <p>Queries the list of resources associated with installed cluster add-ons, including Kubernetes resources and Helm release information.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5267,7 +5299,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取集群组件实例的资源列表</p>
+     * <p>Queries the list of resources associated with installed cluster add-ons, including Kubernetes resources and Helm release information.</p>
      * @return ListClusterAddonInstanceResourcesResponse
      */
     public ListClusterAddonInstanceResourcesResponse listClusterAddonInstanceResources(String clusterId, String instanceName) throws Exception {
@@ -7300,7 +7332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can add labels in key-value pairs to clusters. This allows cluster developers or O\\\&amp;M engineers to classify and manage clusters in a more flexible manner. This also meets the requirements for monitoring, cost analysis, and tenant isolation. You can call the TagResources operation to add labels to a cluster.</p>
+     * <p>You can add labels in key-value pairs to clusters. This allows cluster developers or O\\\\\\&amp;M engineers to classify and manage clusters in a more flexible manner. This also meets the requirements for monitoring, cost analysis, and tenant isolation. You can call the TagResources operation to add labels to a cluster.</p>
      * 
      * @param request TagResourcesRequest
      * @param headers map
@@ -7346,7 +7378,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can add labels in key-value pairs to clusters. This allows cluster developers or O\\\&amp;M engineers to classify and manage clusters in a more flexible manner. This also meets the requirements for monitoring, cost analysis, and tenant isolation. You can call the TagResources operation to add labels to a cluster.</p>
+     * <p>You can add labels in key-value pairs to clusters. This allows cluster developers or O\\\\\\&amp;M engineers to classify and manage clusters in a more flexible manner. This also meets the requirements for monitoring, cost analysis, and tenant isolation. You can call the TagResources operation to add labels to a cluster.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -7767,7 +7799,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新 Secret 落盘加密配置</p>
+     * <p>Updates the Secret encryption at rest configuration for a specified cluster by cluster ID.</p>
      * 
      * @param request UpdateKMSEncryptionRequest
      * @param headers map
@@ -7805,7 +7837,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新 Secret 落盘加密配置</p>
+     * <p>Updates the Secret encryption at rest configuration for a specified cluster by cluster ID.</p>
      * 
      * @param request UpdateKMSEncryptionRequest
      * @return UpdateKMSEncryptionResponse
@@ -7818,7 +7850,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新节点组件</p>
+     * <p>Updates a specific component within a node pool, such as the kubelet.</p>
      * 
      * @param request UpdateNodePoolComponentRequest
      * @param headers map
@@ -7872,7 +7904,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新节点组件</p>
+     * <p>Updates a specific component within a node pool, such as the kubelet.</p>
      * 
      * @param request UpdateNodePoolComponentRequest
      * @return UpdateNodePoolComponentResponse
@@ -8148,7 +8180,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates cluster add-ons to newer versions for enhanced functionality.</p>
+     * <p>Updates cluster components to use new features and patch vulnerabilities. You must update cluster components one after one and update a component only after the previous one is successfully updated. Before you update a component, we recommend that you read the update notes for each component. Cluster component updates may affect your businesses. Assess the impact, back up data, and perform the update during off-peak hours.</p>
      * 
      * @param request UpgradeClusterAddonsRequest
      * @param headers map
@@ -8177,7 +8209,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates cluster add-ons to newer versions for enhanced functionality.</p>
+     * <p>Updates cluster components to use new features and patch vulnerabilities. You must update cluster components one after one and update a component only after the previous one is successfully updated. Before you update a component, we recommend that you read the update notes for each component. Cluster component updates may affect your businesses. Assess the impact, back up data, and perform the update during off-peak hours.</p>
      * 
      * @param request UpgradeClusterAddonsRequest
      * @return UpgradeClusterAddonsResponse

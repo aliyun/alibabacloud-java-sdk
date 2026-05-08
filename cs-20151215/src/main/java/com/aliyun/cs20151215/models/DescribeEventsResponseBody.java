@@ -10,6 +10,9 @@ public class DescribeEventsResponseBody extends TeaModel {
     @NameInMap("events")
     public java.util.List<DescribeEventsResponseBodyEvents> events;
 
+    @NameInMap("next_token")
+    public String nextToken;
+
     /**
      * <p>The pagination information.</p>
      */
@@ -27,6 +30,14 @@ public class DescribeEventsResponseBody extends TeaModel {
     }
     public java.util.List<DescribeEventsResponseBodyEvents> getEvents() {
         return this.events;
+    }
+
+    public DescribeEventsResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeEventsResponseBody setPageInfo(DescribeEventsResponseBodyPageInfo pageInfo) {
@@ -106,7 +117,7 @@ public class DescribeEventsResponseBody extends TeaModel {
          * <p>The ID of the cluster.</p>
          * 
          * <strong>example:</strong>
-         * <p>cluster-id</p>
+         * <p>cf62854ac2130470897be7a27ed1f****</p>
          */
         @NameInMap("cluster_id")
         public String clusterId;
@@ -121,13 +132,16 @@ public class DescribeEventsResponseBody extends TeaModel {
          * <p>The event ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>A234-1234-1234</p>
+         * <p>e-dba703c8-953b-40d8-82e8-cb713590****</p>
          */
         @NameInMap("event_id")
         public String eventId;
 
         /**
          * <p>The source of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task</p>
          */
         @NameInMap("source")
         public String source;
@@ -136,7 +150,7 @@ public class DescribeEventsResponseBody extends TeaModel {
          * <p>The subject of the event.</p>
          * 
          * <strong>example:</strong>
-         * <p>nodePool-id</p>
+         * <p>np6a5c86f4ecae436f8f4a3dc034a7****</p>
          */
         @NameInMap("subject")
         public String subject;
@@ -145,7 +159,7 @@ public class DescribeEventsResponseBody extends TeaModel {
          * <p>The time when the event started.</p>
          * 
          * <strong>example:</strong>
-         * <p>2022-11-23T20:48:01+08:00</p>
+         * <p>2025-04-23T20:48:01+08:00</p>
          */
         @NameInMap("time")
         public String time;

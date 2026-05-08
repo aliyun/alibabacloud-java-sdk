@@ -10,6 +10,9 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
     @NameInMap("events")
     public java.util.List<DescribeEventsForRegionResponseBodyEvents> events;
 
+    @NameInMap("next_token")
+    public String nextToken;
+
     /**
      * <p>The pagination details.</p>
      */
@@ -27,6 +30,14 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
     }
     public java.util.List<DescribeEventsForRegionResponseBodyEvents> getEvents() {
         return this.events;
+    }
+
+    public DescribeEventsForRegionResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeEventsForRegionResponseBody setPageInfo(DescribeEventsForRegionResponseBodyPageInfo pageInfo) {
