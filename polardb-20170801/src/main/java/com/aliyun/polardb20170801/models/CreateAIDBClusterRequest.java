@@ -25,6 +25,9 @@ public class CreateAIDBClusterRequest extends TeaModel {
     @NameInMap("AutoUseCoupon")
     public Boolean autoUseCoupon;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
      * <strong>example:</strong>
      * <p>test</p>
@@ -165,8 +168,6 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>sg-bp**************</p>
      */
@@ -251,6 +252,14 @@ public class CreateAIDBClusterRequest extends TeaModel {
     }
     public Boolean getAutoUseCoupon() {
         return this.autoUseCoupon;
+    }
+
+    public CreateAIDBClusterRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateAIDBClusterRequest setDBClusterDescription(String DBClusterDescription) {

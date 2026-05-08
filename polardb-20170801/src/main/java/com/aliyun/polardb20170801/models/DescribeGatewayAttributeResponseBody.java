@@ -18,6 +18,9 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
+    @NameInMap("CurrentVersion")
+    public String currentVersion;
+
     /**
      * <strong>example:</strong>
      * <p>MySQL</p>
@@ -48,6 +51,9 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
     @NameInMap("GwDescription")
     public String gwDescription;
 
+    @NameInMap("LatestVersion")
+    public String latestVersion;
+
     /**
      * <strong>example:</strong>
      * <p>2025-10-07T02:19:55Z</p>
@@ -77,6 +83,9 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
      */
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("RunningVersion")
+    public String runningVersion;
 
     @NameInMap("SecurityIPArrays")
     public java.util.List<DescribeGatewayAttributeResponseBodySecurityIPArrays> securityIPArrays;
@@ -121,6 +130,14 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
     }
     public String getCreateTime() {
         return this.createTime;
+    }
+
+    public DescribeGatewayAttributeResponseBody setCurrentVersion(String currentVersion) {
+        this.currentVersion = currentVersion;
+        return this;
+    }
+    public String getCurrentVersion() {
+        return this.currentVersion;
     }
 
     public DescribeGatewayAttributeResponseBody setDbType(String dbType) {
@@ -171,6 +188,14 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
         return this.gwDescription;
     }
 
+    public DescribeGatewayAttributeResponseBody setLatestVersion(String latestVersion) {
+        this.latestVersion = latestVersion;
+        return this;
+    }
+    public String getLatestVersion() {
+        return this.latestVersion;
+    }
+
     public DescribeGatewayAttributeResponseBody setModifyTime(String modifyTime) {
         this.modifyTime = modifyTime;
         return this;
@@ -201,6 +226,14 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeGatewayAttributeResponseBody setRunningVersion(String runningVersion) {
+        this.runningVersion = runningVersion;
+        return this;
+    }
+    public String getRunningVersion() {
+        return this.runningVersion;
     }
 
     public DescribeGatewayAttributeResponseBody setSecurityIPArrays(java.util.List<DescribeGatewayAttributeResponseBodySecurityIPArrays> securityIPArrays) {

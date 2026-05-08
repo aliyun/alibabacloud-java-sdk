@@ -1746,6 +1746,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AutoUseCoupon", request.autoUseCoupon);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterDescription)) {
             query.put("DBClusterDescription", request.DBClusterDescription);
         }
