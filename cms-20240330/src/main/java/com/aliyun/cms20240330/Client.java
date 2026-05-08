@@ -28,6 +28,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>写入上下文</p>
+     * 
+     * @param request AddContextsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddContextsResponse
+     */
+    public AddContextsResponse addContextsWithOptions(String workspace, String contextStoreName, AddContextsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.contextType)) {
+            body.put("contextType", request.contextType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.items)) {
+            body.put("items", request.items);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memoryType)) {
+            body.put("memoryType", request.memoryType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddContexts"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/contextstore/" + com.aliyun.openapiutil.Client.getEncodeParam(contextStoreName) + "/context"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddContextsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>写入上下文</p>
+     * 
+     * @param request AddContextsRequest
+     * @return AddContextsResponse
+     */
+    public AddContextsResponse addContexts(String workspace, String contextStoreName, AddContextsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.addContextsWithOptions(workspace, contextStoreName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>添加记忆</p>
      * 
      * @param request AddMemoriesRequest
@@ -539,6 +594,116 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createCloudResourceWithOptions(headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建上下文库</p>
+     * 
+     * @param request CreateContextStoreRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateContextStoreResponse
+     */
+    public CreateContextStoreResponse createContextStoreWithOptions(String workspace, CreateContextStoreRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            body.put("config", request.config);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contextStoreName)) {
+            body.put("contextStoreName", request.contextStoreName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contextType)) {
+            body.put("contextType", request.contextType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataset)) {
+            body.put("dataset", request.dataset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateContextStore"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/contextstore"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateContextStoreResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建上下文库</p>
+     * 
+     * @param request CreateContextStoreRequest
+     * @return CreateContextStoreResponse
+     */
+    public CreateContextStoreResponse createContextStore(String workspace, CreateContextStoreRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createContextStoreWithOptions(workspace, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建 API Key</p>
+     * 
+     * @param request CreateContextStoreAPIKeyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateContextStoreAPIKeyResponse
+     */
+    public CreateContextStoreAPIKeyResponse createContextStoreAPIKeyWithOptions(String workspace, String contextStoreName, CreateContextStoreAPIKeyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateContextStoreAPIKey"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/contextstore/" + com.aliyun.openapiutil.Client.getEncodeParam(contextStoreName) + "/apikey"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateContextStoreAPIKeyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建 API Key</p>
+     * 
+     * @param request CreateContextStoreAPIKeyRequest
+     * @return CreateContextStoreAPIKeyResponse
+     */
+    public CreateContextStoreAPIKeyResponse createContextStoreAPIKey(String workspace, String contextStoreName, CreateContextStoreAPIKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createContextStoreAPIKeyWithOptions(workspace, contextStoreName, request, headers, runtime);
     }
 
     /**
@@ -1613,6 +1778,180 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteCloudResourceWithOptions(headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除上下文</p>
+     * 
+     * @param request DeleteContextRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteContextResponse
+     */
+    public DeleteContextResponse deleteContextWithOptions(String workspace, String contextStoreName, String contextId, DeleteContextRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteContext"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/contextstore/" + com.aliyun.openapiutil.Client.getEncodeParam(contextStoreName) + "/context/" + com.aliyun.openapiutil.Client.getEncodeParam(contextId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteContextResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除上下文</p>
+     * 
+     * @param request DeleteContextRequest
+     * @return DeleteContextResponse
+     */
+    public DeleteContextResponse deleteContext(String workspace, String contextStoreName, String contextId, DeleteContextRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteContextWithOptions(workspace, contextStoreName, contextId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除上下文库</p>
+     * 
+     * @param request DeleteContextStoreRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteContextStoreResponse
+     */
+    public DeleteContextStoreResponse deleteContextStoreWithOptions(String workspace, String contextStoreName, DeleteContextStoreRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteContextStore"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/contextstore/" + com.aliyun.openapiutil.Client.getEncodeParam(contextStoreName) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteContextStoreResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除上下文库</p>
+     * 
+     * @param request DeleteContextStoreRequest
+     * @return DeleteContextStoreResponse
+     */
+    public DeleteContextStoreResponse deleteContextStore(String workspace, String contextStoreName, DeleteContextStoreRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteContextStoreWithOptions(workspace, contextStoreName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除 API Key</p>
+     * 
+     * @param request DeleteContextStoreAPIKeyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteContextStoreAPIKeyResponse
+     */
+    public DeleteContextStoreAPIKeyResponse deleteContextStoreAPIKeyWithOptions(String workspace, String contextStoreName, String name, DeleteContextStoreAPIKeyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteContextStoreAPIKey"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/contextstore/" + com.aliyun.openapiutil.Client.getEncodeParam(contextStoreName) + "/apikey/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteContextStoreAPIKeyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除 API Key</p>
+     * 
+     * @param request DeleteContextStoreAPIKeyRequest
+     * @return DeleteContextStoreAPIKeyResponse
+     */
+    public DeleteContextStoreAPIKeyResponse deleteContextStoreAPIKey(String workspace, String contextStoreName, String name, DeleteContextStoreAPIKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteContextStoreAPIKeyWithOptions(workspace, contextStoreName, name, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量删除上下文</p>
+     * 
+     * @param request DeleteContextsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteContextsResponse
+     */
+    public DeleteContextsResponse deleteContextsWithOptions(String workspace, String contextStoreName, DeleteContextsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.contextIds)) {
+            query.put("contextIds", request.contextIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            query.put("filter", request.filter);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteContexts"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/contextstore/" + com.aliyun.openapiutil.Client.getEncodeParam(contextStoreName) + "/context"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteContextsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量删除上下文</p>
+     * 
+     * @param request DeleteContextsRequest
+     * @return DeleteContextsResponse
+     */
+    public DeleteContextsResponse deleteContexts(String workspace, String contextStoreName, DeleteContextsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteContextsWithOptions(workspace, contextStoreName, request, headers, runtime);
     }
 
     /**
@@ -2935,6 +3274,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getCmsServiceWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询单条上下文</p>
+     * 
+     * @param request GetContextRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetContextResponse
+     */
+    public GetContextResponse getContextWithOptions(String workspace, String contextStoreName, String contextId, GetContextRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.formatted)) {
+            query.put("formatted", request.formatted);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetContext"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/contextstore/" + com.aliyun.openapiutil.Client.getEncodeParam(contextStoreName) + "/context/" + com.aliyun.openapiutil.Client.getEncodeParam(contextId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetContextResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询单条上下文</p>
+     * 
+     * @param request GetContextRequest
+     * @return GetContextResponse
+     */
+    public GetContextResponse getContext(String workspace, String contextStoreName, String contextId, GetContextRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getContextWithOptions(workspace, contextStoreName, contextId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询上下文库</p>
+     * 
+     * @param request GetContextStoreRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetContextStoreResponse
+     */
+    public GetContextStoreResponse getContextStoreWithOptions(String workspace, String contextStoreName, GetContextStoreRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetContextStore"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/contextstore/" + com.aliyun.openapiutil.Client.getEncodeParam(contextStoreName) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetContextStoreResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询上下文库</p>
+     * 
+     * @param request GetContextStoreRequest
+     * @return GetContextStoreResponse
+     */
+    public GetContextStoreResponse getContextStore(String workspace, String contextStoreName, GetContextStoreRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getContextStoreWithOptions(workspace, contextStoreName, request, headers, runtime);
     }
 
     /**
@@ -4505,6 +4932,116 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取 API Key 列表</p>
+     * 
+     * @param request ListContextStoreAPIKeysRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListContextStoreAPIKeysResponse
+     */
+    public ListContextStoreAPIKeysResponse listContextStoreAPIKeysWithOptions(String workspace, String contextStoreName, ListContextStoreAPIKeysRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListContextStoreAPIKeys"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/contextstore/" + com.aliyun.openapiutil.Client.getEncodeParam(contextStoreName) + "/apikey"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListContextStoreAPIKeysResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取 API Key 列表</p>
+     * 
+     * @param request ListContextStoreAPIKeysRequest
+     * @return ListContextStoreAPIKeysResponse
+     */
+    public ListContextStoreAPIKeysResponse listContextStoreAPIKeys(String workspace, String contextStoreName, ListContextStoreAPIKeysRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listContextStoreAPIKeysWithOptions(workspace, contextStoreName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询上下文库列表</p>
+     * 
+     * @param request ListContextStoresRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListContextStoresResponse
+     */
+    public ListContextStoresResponse listContextStoresWithOptions(String workspace, ListContextStoresRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.contextStoreName)) {
+            query.put("contextStoreName", request.contextStoreName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contextType)) {
+            query.put("contextType", request.contextType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListContextStores"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/contextstore"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListContextStoresResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询上下文库列表</p>
+     * 
+     * @param request ListContextStoresRequest
+     * @return ListContextStoresResponse
+     */
+    public ListContextStoresResponse listContextStores(String workspace, ListContextStoresRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listContextStoresWithOptions(workspace, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询数据集列表</p>
      * 
      * @param request ListDatasetsRequest
@@ -5943,6 +6480,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>搜索上下文</p>
+     * 
+     * @param request SearchContextRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SearchContextResponse
+     */
+    public SearchContextResponse searchContextWithOptions(String workspace, String contextStoreName, SearchContextRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            body.put("filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.formatted)) {
+            body.put("formatted", request.formatted);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            body.put("limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            body.put("query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.retrievalOption)) {
+            body.put("retrievalOption", request.retrievalOption);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.threshold)) {
+            body.put("threshold", request.threshold);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SearchContext"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/contextstore/" + com.aliyun.openapiutil.Client.getEncodeParam(contextStoreName) + "/context/search"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchContextResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>搜索上下文</p>
+     * 
+     * @param request SearchContextRequest
+     * @return SearchContextResponse
+     */
+    public SearchContextResponse searchContext(String workspace, String contextStoreName, SearchContextRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.searchContextWithOptions(workspace, contextStoreName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>搜索记忆</p>
      * 
      * @param request SearchMemoriesRequest
@@ -6489,6 +7093,128 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateBizTraceWithOptions(bizTraceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改上下文</p>
+     * 
+     * @param request UpdateContextRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateContextResponse
+     */
+    public UpdateContextResponse updateContextWithOptions(String workspace, String contextStoreName, String contextId, UpdateContextRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
+            body.put("content", request.content);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.experience)) {
+            body.put("experience", request.experience);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metadata)) {
+            body.put("metadata", request.metadata);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.payload)) {
+            body.put("payload", request.payload);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.triggerCondition)) {
+            body.put("triggerCondition", request.triggerCondition);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateContext"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/contextstore/" + com.aliyun.openapiutil.Client.getEncodeParam(contextStoreName) + "/context/" + com.aliyun.openapiutil.Client.getEncodeParam(contextId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateContextResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改上下文</p>
+     * 
+     * @param request UpdateContextRequest
+     * @return UpdateContextResponse
+     */
+    public UpdateContextResponse updateContext(String workspace, String contextStoreName, String contextId, UpdateContextRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateContextWithOptions(workspace, contextStoreName, contextId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改上下文库配置</p>
+     * 
+     * @param request UpdateContextStoreRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateContextStoreResponse
+     */
+    public UpdateContextStoreResponse updateContextStoreWithOptions(String workspace, String contextStoreName, UpdateContextStoreRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            body.put("config", request.config);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contextType)) {
+            body.put("contextType", request.contextType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataset)) {
+            body.put("dataset", request.dataset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateContextStore"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/contextstore/" + com.aliyun.openapiutil.Client.getEncodeParam(contextStoreName) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateContextStoreResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改上下文库配置</p>
+     * 
+     * @param request UpdateContextStoreRequest
+     * @return UpdateContextStoreResponse
+     */
+    public UpdateContextStoreResponse updateContextStore(String workspace, String contextStoreName, UpdateContextStoreRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateContextStoreWithOptions(workspace, contextStoreName, request, headers, runtime);
     }
 
     /**
