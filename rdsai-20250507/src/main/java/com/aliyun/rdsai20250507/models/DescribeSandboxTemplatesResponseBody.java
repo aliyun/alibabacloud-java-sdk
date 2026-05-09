@@ -148,6 +148,9 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("Replicas")
+        public Long replicas;
+
         /**
          * <strong>example:</strong>
          * <p>code-interpreter-asdxxxx</p>
@@ -198,6 +201,14 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeSandboxTemplatesResponseBodySandboxTemplates setReplicas(Long replicas) {
+            this.replicas = replicas;
+            return this;
+        }
+        public Long getReplicas() {
+            return this.replicas;
         }
 
         public DescribeSandboxTemplatesResponseBodySandboxTemplates setTemplateId(String templateId) {
