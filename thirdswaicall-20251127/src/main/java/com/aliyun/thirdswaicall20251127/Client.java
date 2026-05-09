@@ -28,6 +28,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询当前任务的并发数</p>
+     * 
+     * @param request QueryTaskConcurrencyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryTaskConcurrencyResponse
+     */
+    public QueryTaskConcurrencyResponse queryTaskConcurrencyWithOptions(QueryTaskConcurrencyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryTaskConcurrency"),
+            new TeaPair("version", "2025-11-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryTaskConcurrencyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询当前任务的并发数</p>
+     * 
+     * @param request QueryTaskConcurrencyRequest
+     * @return QueryTaskConcurrencyResponse
+     */
+    public QueryTaskConcurrencyResponse queryTaskConcurrency(QueryTaskConcurrencyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryTaskConcurrencyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>外呼任务通话列表查询</p>
      * 
      * @param tmpReq ReadOutboundTaskCallListRequest
