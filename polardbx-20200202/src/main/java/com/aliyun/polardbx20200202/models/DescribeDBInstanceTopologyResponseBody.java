@@ -304,6 +304,9 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         @NameInMap("EngineVersion")
         public String engineVersion;
 
+        @NameInMap("InstanceClusterName")
+        public String instanceClusterName;
+
         /**
          * <strong>example:</strong>
          * <p>0</p>
@@ -343,6 +346,9 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
 
         @NameInMap("PhyInstanceName")
         public String phyInstanceName;
+
+        @NameInMap("ReadType")
+        public String readType;
 
         /**
          * <strong>example:</strong>
@@ -500,6 +506,14 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             return this.engineVersion;
         }
 
+        public DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems setInstanceClusterName(String instanceClusterName) {
+            this.instanceClusterName = instanceClusterName;
+            return this;
+        }
+        public String getInstanceClusterName() {
+            return this.instanceClusterName;
+        }
+
         public DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems setLockMode(Integer lockMode) {
             this.lockMode = lockMode;
             return this;
@@ -562,6 +576,14 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         }
         public String getPhyInstanceName() {
             return this.phyInstanceName;
+        }
+
+        public DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems setReadType(String readType) {
+            this.readType = readType;
+            return this;
+        }
+        public String getReadType() {
+            return this.readType;
         }
 
         public DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems setRegion(String region) {

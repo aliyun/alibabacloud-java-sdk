@@ -20,6 +20,10 @@ public class CreateGdnInstanceRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>gdn_mode_master_slave, gdn_mode_bidirectional</p>
+     */
     @NameInMap("GdnMode")
     public String gdnMode;
 
@@ -32,9 +36,17 @@ public class CreateGdnInstanceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DIRECT_OVERWRITE, OVERWRITE, IGNORE, INTERRUPT</p>
+     */
     @NameInMap("RplConflictStrategy")
     public String rplConflictStrategy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MERGE,  SERIAL, TRANSACTION, SPLIT</p>
+     */
     @NameInMap("RplDmlStrategy")
     public String rplDmlStrategy;
 

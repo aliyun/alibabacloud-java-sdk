@@ -13,6 +13,9 @@ public class ModifyDBInstanceVipRequest extends TeaModel {
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    @NameInMap("InstanceClusterName")
+    public String instanceClusterName;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -51,6 +54,14 @@ public class ModifyDBInstanceVipRequest extends TeaModel {
     }
     public String getDBInstanceName() {
         return this.DBInstanceName;
+    }
+
+    public ModifyDBInstanceVipRequest setInstanceClusterName(String instanceClusterName) {
+        this.instanceClusterName = instanceClusterName;
+        return this;
+    }
+    public String getInstanceClusterName() {
+        return this.instanceClusterName;
     }
 
     public ModifyDBInstanceVipRequest setRegionId(String regionId) {

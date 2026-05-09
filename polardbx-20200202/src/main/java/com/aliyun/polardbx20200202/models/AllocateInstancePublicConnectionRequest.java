@@ -22,6 +22,13 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
+    @NameInMap("InstanceClusterName")
+    public String instanceClusterName;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -69,6 +76,14 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     }
     public String getDBInstanceName() {
         return this.DBInstanceName;
+    }
+
+    public AllocateInstancePublicConnectionRequest setInstanceClusterName(String instanceClusterName) {
+        this.instanceClusterName = instanceClusterName;
+        return this;
+    }
+    public String getInstanceClusterName() {
+        return this.instanceClusterName;
     }
 
     public AllocateInstancePublicConnectionRequest setOwnerAccount(String ownerAccount) {
