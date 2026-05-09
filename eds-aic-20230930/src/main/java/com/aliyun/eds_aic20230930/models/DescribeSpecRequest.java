@@ -11,6 +11,9 @@ public class DescribeSpecRequest extends TeaModel {
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
+    @NameInMap("ChargeType")
+    public String chargeType;
+
     /**
      * <p>The matrix specification.</p>
      * <p>Valid values:</p>
@@ -91,6 +94,14 @@ public class DescribeSpecRequest extends TeaModel {
     }
     public String getBizRegionId() {
         return this.bizRegionId;
+    }
+
+    public DescribeSpecRequest setChargeType(String chargeType) {
+        this.chargeType = chargeType;
+        return this;
+    }
+    public String getChargeType() {
+        return this.chargeType;
     }
 
     public DescribeSpecRequest setMatrixSpec(String matrixSpec) {

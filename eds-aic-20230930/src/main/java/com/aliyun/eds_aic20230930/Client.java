@@ -2949,6 +2949,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BizRegionId", request.bizRegionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
+            query.put("ChargeType", request.chargeType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.matrixSpec)) {
             query.put("MatrixSpec", request.matrixSpec);
         }
