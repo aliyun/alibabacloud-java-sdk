@@ -132,6 +132,9 @@ public class CreateFunctionInput extends TeaModel {
     @NameInMap("internetAccess")
     public Boolean internetAccess;
 
+    @NameInMap("juiceFsConfig")
+    public JuiceFsConfig juiceFsConfig;
+
     /**
      * <p>The layers. Multiple layers are merged based on the order of array subscripts. If two layers have the same file name, the content of the layer with the smaller subscript will overwrite the content of the layer with the larger subscript.</p>
      */
@@ -384,6 +387,14 @@ public class CreateFunctionInput extends TeaModel {
     }
     public Boolean getInternetAccess() {
         return this.internetAccess;
+    }
+
+    public CreateFunctionInput setJuiceFsConfig(JuiceFsConfig juiceFsConfig) {
+        this.juiceFsConfig = juiceFsConfig;
+        return this;
+    }
+    public JuiceFsConfig getJuiceFsConfig() {
+        return this.juiceFsConfig;
     }
 
     public CreateFunctionInput setLayers(java.util.List<String> layers) {

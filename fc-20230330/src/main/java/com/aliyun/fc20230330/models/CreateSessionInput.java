@@ -7,6 +7,9 @@ public class CreateSessionInput extends TeaModel {
     @NameInMap("disableSessionIdReuse")
     public Boolean disableSessionIdReuse;
 
+    @NameInMap("juiceFsConfig")
+    public JuiceFsConfig juiceFsConfig;
+
     @NameInMap("nasConfig")
     public NASConfig nasConfig;
 
@@ -48,6 +51,14 @@ public class CreateSessionInput extends TeaModel {
     }
     public Boolean getDisableSessionIdReuse() {
         return this.disableSessionIdReuse;
+    }
+
+    public CreateSessionInput setJuiceFsConfig(JuiceFsConfig juiceFsConfig) {
+        this.juiceFsConfig = juiceFsConfig;
+        return this;
+    }
+    public JuiceFsConfig getJuiceFsConfig() {
+        return this.juiceFsConfig;
     }
 
     public CreateSessionInput setNasConfig(NASConfig nasConfig) {

@@ -34,6 +34,9 @@ public class Session extends TeaModel {
     @NameInMap("functionName")
     public String functionName;
 
+    @NameInMap("juiceFsConfig")
+    public JuiceFsConfig juiceFsConfig;
+
     /**
      * <p>The time when the session was last updated.</p>
      * 
@@ -144,6 +147,14 @@ public class Session extends TeaModel {
     }
     public String getFunctionName() {
         return this.functionName;
+    }
+
+    public Session setJuiceFsConfig(JuiceFsConfig juiceFsConfig) {
+        this.juiceFsConfig = juiceFsConfig;
+        return this;
+    }
+    public JuiceFsConfig getJuiceFsConfig() {
+        return this.juiceFsConfig;
     }
 
     public Session setLastModifiedTime(String lastModifiedTime) {

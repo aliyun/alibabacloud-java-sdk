@@ -172,6 +172,9 @@ public class Function extends TeaModel {
     @NameInMap("invocationRestriction")
     public FunctionRestriction invocationRestriction;
 
+    @NameInMap("juiceFsConfig")
+    public JuiceFsConfig juiceFsConfig;
+
     /**
      * <p>The last time the function was updated.</p>
      * 
@@ -533,6 +536,14 @@ public class Function extends TeaModel {
     }
     public FunctionRestriction getInvocationRestriction() {
         return this.invocationRestriction;
+    }
+
+    public Function setJuiceFsConfig(JuiceFsConfig juiceFsConfig) {
+        this.juiceFsConfig = juiceFsConfig;
+        return this;
+    }
+    public JuiceFsConfig getJuiceFsConfig() {
+        return this.juiceFsConfig;
     }
 
     public Function setLastModifiedTime(String lastModifiedTime) {
