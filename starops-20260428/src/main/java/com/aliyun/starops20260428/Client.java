@@ -288,6 +288,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建票据</p>
+     * 
+     * @param request CreateTicketRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateTicketResponse
+     */
+    public CreateTicketResponse createTicketWithOptions(CreateTicketRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessTokenExpirationTime)) {
+            query.put("accessTokenExpirationTime", request.accessTokenExpirationTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expirationTime)) {
+            query.put("expirationTime", request.expirationTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateTicket"),
+            new TeaPair("version", "2026-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/tickets"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTicketResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建票据</p>
+     * 
+     * @param request CreateTicketRequest
+     * @return CreateTicketResponse
+     */
+    public CreateTicketResponse createTicket(CreateTicketRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createTicketWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>删除DigitalEmployee</p>
      * 
      * @param request DeleteDigitalEmployeeRequest
@@ -407,6 +458,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteThreadWithOptions(name, threadId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>下载产物文件</p>
+     * 
+     * @param request GetArtifactRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetArtifactResponse
+     */
+    public GetArtifactResponse getArtifactWithOptions(String name, GetArtifactRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.artifactPath)) {
+            query.put("artifactPath", request.artifactPath);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetArtifact"),
+            new TeaPair("version", "2026-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/digitalEmployee/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/artifact"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "binary")
+        ));
+        GetArtifactResponse res = new GetArtifactResponse();
+        java.util.Map<String, Object> tmp = com.aliyun.teautil.Common.assertAsMap(this.callApi(params, req, runtime));
+        if (!com.aliyun.teautil.Common.isUnset(tmp.get("body"))) {
+            java.io.InputStream respBody = com.aliyun.teautil.Common.assertAsReadable(tmp.get("body"));
+            res.body = respBody;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmp.get("headers"))) {
+            java.util.Map<String, Object> respHeaders = com.aliyun.teautil.Common.assertAsMap(tmp.get("headers"));
+            res.headers = com.aliyun.teautil.Common.stringifyMapValue(respHeaders);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmp.get("statusCode"))) {
+            Integer statusCode = com.aliyun.teautil.Common.assertAsInteger(tmp.get("statusCode"));
+            res.statusCode = statusCode;
+        }
+
+        return res;
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>下载产物文件</p>
+     * 
+     * @param request GetArtifactRequest
+     * @return GetArtifactResponse
+     */
+    public GetArtifactResponse getArtifact(String name, GetArtifactRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getArtifactWithOptions(name, request, headers, runtime);
     }
 
     /**
@@ -587,6 +702,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getThreadDataWithOptions(name, threadId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出产物文件</p>
+     * 
+     * @param request ListArtifactsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListArtifactsResponse
+     */
+    public ListArtifactsResponse listArtifactsWithOptions(String name, ListArtifactsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.artifactPath)) {
+            query.put("artifactPath", request.artifactPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListArtifacts"),
+            new TeaPair("version", "2026-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/digitalEmployee/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/artifacts"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListArtifactsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出产物文件</p>
+     * 
+     * @param request ListArtifactsRequest
+     * @return ListArtifactsResponse
+     */
+    public ListArtifactsResponse listArtifacts(String name, ListArtifactsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listArtifactsWithOptions(name, request, headers, runtime);
     }
 
     /**
