@@ -39,6 +39,9 @@ public class CreateResourceGroupRequest extends TeaModel {
     @NameInMap("Platform")
     public String platform;
 
+    @NameInMap("ResourceClassification")
+    public String resourceClassification;
+
     /**
      * <p>The name of the resource group.</p>
      */
@@ -80,6 +83,14 @@ public class CreateResourceGroupRequest extends TeaModel {
     }
     public String getPlatform() {
         return this.platform;
+    }
+
+    public CreateResourceGroupRequest setResourceClassification(String resourceClassification) {
+        this.resourceClassification = resourceClassification;
+        return this;
+    }
+    public String getResourceClassification() {
+        return this.resourceClassification;
     }
 
     public CreateResourceGroupRequest setResourceGroupName(String resourceGroupName) {

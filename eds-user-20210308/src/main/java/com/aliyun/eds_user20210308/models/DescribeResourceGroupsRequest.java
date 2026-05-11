@@ -57,6 +57,9 @@ public class DescribeResourceGroupsRequest extends TeaModel {
     @NameInMap("Platform")
     public String platform;
 
+    @NameInMap("ResourceClassification")
+    public String resourceClassification;
+
     /**
      * <p>The IDs of the resource groups that you want to query.</p>
      */
@@ -120,6 +123,14 @@ public class DescribeResourceGroupsRequest extends TeaModel {
     }
     public String getPlatform() {
         return this.platform;
+    }
+
+    public DescribeResourceGroupsRequest setResourceClassification(String resourceClassification) {
+        this.resourceClassification = resourceClassification;
+        return this;
+    }
+    public String getResourceClassification() {
+        return this.resourceClassification;
     }
 
     public DescribeResourceGroupsRequest setResourceGroupIds(java.util.List<String> resourceGroupIds) {
