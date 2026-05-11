@@ -1,3 +1,10 @@
+2026-05-11 Version: 7.7.0
+- Support API CreateServiceRollout.
+- Support API DeleteServiceRollout.
+- Support API DescribeServiceRollout.
+- Support API UpdateServiceRollout.
+
+
 2026-05-06 Version: 7.6.6
 - Generated java 2021-07-01 for eas.
 

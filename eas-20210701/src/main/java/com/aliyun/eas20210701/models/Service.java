@@ -452,6 +452,9 @@ public class Service extends TeaModel {
     @NameInMap("Weight")
     public Integer weight;
 
+    @NameInMap("WorkloadType")
+    public String workloadType;
+
     /**
      * <p>The ID of the workspace to which the service belongs.</p>
      * 
@@ -872,6 +875,14 @@ public class Service extends TeaModel {
     }
     public Integer getWeight() {
         return this.weight;
+    }
+
+    public Service setWorkloadType(String workloadType) {
+        this.workloadType = workloadType;
+        return this;
+    }
+    public String getWorkloadType() {
+        return this.workloadType;
     }
 
     public Service setWorkspaceId(String workspaceId) {

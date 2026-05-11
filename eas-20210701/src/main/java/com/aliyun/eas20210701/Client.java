@@ -1115,6 +1115,83 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><strong>策略互斥</strong>：<code>Partition</code>（分区发布）和<code>Batch</code>（批量发布）两种策略只能选择其中一种，不能同时使用。</li>
+     * <li><strong>请求速率限制</strong>：每秒最多100次请求。</li>
+     * <li><strong>授权信息</strong>：需要具备<code>eas:CreateServiceRollout</code>权限才能调用此接口。</li>
+     * <li><strong>资源ARN</strong>：<code>acs:eas:{#regionId}:{#accountId}:service/{#ServiceName}</code>。</li>
+     * <li><strong>暂停发布</strong>：通过设置<code>Paused</code>参数为<code>true</code>可以暂停发布流程，之后可通过<code>UpdateServiceRollout</code>接口恢复或取消发布。</li>
+     * <li><strong>监控与回滚</strong>：在发布过程中建议持续监控服务指标，以便及时发现并处理问题；如需回滚，可以通过调整<code>Partition</code>值或删除发布策略来实现。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>创建服务更新计划</p>
+     * 
+     * @param request CreateServiceRolloutRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateServiceRolloutResponse
+     */
+    public CreateServiceRolloutResponse createServiceRolloutWithOptions(String ClusterId, String ServiceName, CreateServiceRolloutRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.batch)) {
+            body.put("Batch", request.batch);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.partition)) {
+            body.put("Partition", request.partition);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paused)) {
+            body.put("Paused", request.paused);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateServiceRollout"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/services/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/" + com.aliyun.openapiutil.Client.getEncodeParam(ServiceName) + "/rollout"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServiceRolloutResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><strong>策略互斥</strong>：<code>Partition</code>（分区发布）和<code>Batch</code>（批量发布）两种策略只能选择其中一种，不能同时使用。</li>
+     * <li><strong>请求速率限制</strong>：每秒最多100次请求。</li>
+     * <li><strong>授权信息</strong>：需要具备<code>eas:CreateServiceRollout</code>权限才能调用此接口。</li>
+     * <li><strong>资源ARN</strong>：<code>acs:eas:{#regionId}:{#accountId}:service/{#ServiceName}</code>。</li>
+     * <li><strong>暂停发布</strong>：通过设置<code>Paused</code>参数为<code>true</code>可以暂停发布流程，之后可通过<code>UpdateServiceRollout</code>接口恢复或取消发布。</li>
+     * <li><strong>监控与回滚</strong>：在发布过程中建议持续监控服务指标，以便及时发现并处理问题；如需回滚，可以通过调整<code>Partition</code>值或删除发布策略来实现。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>创建服务更新计划</p>
+     * 
+     * @param request CreateServiceRolloutRequest
+     * @return CreateServiceRolloutResponse
+     */
+    public CreateServiceRolloutResponse createServiceRollout(String ClusterId, String ServiceName, CreateServiceRolloutRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createServiceRolloutWithOptions(ClusterId, ServiceName, request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Creates a virtual resource group.</p>
      * 
@@ -2042,6 +2119,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><strong>不可恢复</strong>：删除操作不可撤销，请谨慎操作。</li>
+     * <li><strong>不自动回退</strong>：删除策略不会回退已更新的副本。</li>
+     * <li><strong>停止发布</strong>：正在进行的发布会立即停止。</li>
+     * <li><strong>状态保留</strong>：已更新的副本保持新版本，未更新的保持旧版本。</li>
+     * <li>删除后，后续服务更新将采用默认的滚动更新方式。</li>
+     * <li>在删除前，请确认要删除的服务名称和地域，并了解当前发布状态（可以通过调用<code>DescribeServiceRollout</code>接口获取）。</li>
+     * <li>如果需要回退版本，请在删除策略后通过重新创建策略或直接更新服务镜像来实现。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>删除服务更新计划</p>
+     * 
+     * @param request DeleteServiceRolloutRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteServiceRolloutResponse
+     */
+    public DeleteServiceRolloutResponse deleteServiceRolloutWithOptions(String ClusterId, String ServiceName, DeleteServiceRolloutRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteServiceRollout"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/services/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/" + com.aliyun.openapiutil.Client.getEncodeParam(ServiceName) + "/rollout"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteServiceRolloutResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><strong>不可恢复</strong>：删除操作不可撤销，请谨慎操作。</li>
+     * <li><strong>不自动回退</strong>：删除策略不会回退已更新的副本。</li>
+     * <li><strong>停止发布</strong>：正在进行的发布会立即停止。</li>
+     * <li><strong>状态保留</strong>：已更新的副本保持新版本，未更新的保持旧版本。</li>
+     * <li>删除后，后续服务更新将采用默认的滚动更新方式。</li>
+     * <li>在删除前，请确认要删除的服务名称和地域，并了解当前发布状态（可以通过调用<code>DescribeServiceRollout</code>接口获取）。</li>
+     * <li>如果需要回退版本，请在删除策略后通过重新创建策略或直接更新服务镜像来实现。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>删除服务更新计划</p>
+     * 
+     * @param request DeleteServiceRolloutRequest
+     * @return DeleteServiceRolloutResponse
+     */
+    public DeleteServiceRolloutResponse deleteServiceRollout(String ClusterId, String ServiceName, DeleteServiceRolloutRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteServiceRolloutWithOptions(ClusterId, ServiceName, request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Deletes a virtual resource group that contains no resources or instances.</p>
      * 
@@ -2945,6 +3087,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeServiceMirrorWithOptions(ClusterId, ServiceName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该接口用于查询特定服务的发布策略（Rollout）配置和当前执行状态。</li>
+     * <li>返回的信息包括但不限于发布策略的具体参数、当前发布进度等。</li>
+     * <li>请求时需提供<code>ClusterId</code>和服务名称<code>ServiceName</code>作为路径参数。</li>
+     * <li>注意，请求速率限制为每秒最多100次。</li>
+     * <li>如果服务不存在或未创建发布策略，调用此接口将返回错误。</li>
+     * <li>返回的状态是实时查询的结果，可能会随时间而变化，请根据实际需要调整轮询间隔。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>查看服务更新计划</p>
+     * 
+     * @param request DescribeServiceRolloutRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeServiceRolloutResponse
+     */
+    public DescribeServiceRolloutResponse describeServiceRolloutWithOptions(String ClusterId, String ServiceName, DescribeServiceRolloutRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeServiceRollout"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/services/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/" + com.aliyun.openapiutil.Client.getEncodeParam(ServiceName) + "/rollout"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeServiceRolloutResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该接口用于查询特定服务的发布策略（Rollout）配置和当前执行状态。</li>
+     * <li>返回的信息包括但不限于发布策略的具体参数、当前发布进度等。</li>
+     * <li>请求时需提供<code>ClusterId</code>和服务名称<code>ServiceName</code>作为路径参数。</li>
+     * <li>注意，请求速率限制为每秒最多100次。</li>
+     * <li>如果服务不存在或未创建发布策略，调用此接口将返回错误。</li>
+     * <li>返回的状态是实时查询的结果，可能会随时间而变化，请根据实际需要调整轮询间隔。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>查看服务更新计划</p>
+     * 
+     * @param request DescribeServiceRolloutRequest
+     * @return DescribeServiceRolloutResponse
+     */
+    public DescribeServiceRolloutResponse describeServiceRollout(String ClusterId, String ServiceName, DescribeServiceRolloutRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeServiceRolloutWithOptions(ClusterId, ServiceName, request, headers, runtime);
     }
 
     /**
@@ -5715,6 +5920,81 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateServiceMirrorWithOptions(ClusterId, ServiceName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><strong>至少提供一个参数</strong>：必须在请求中指定<code>Partition</code>、<code>Batch</code>或<code>Paused</code>中的至少一个参数。</li>
+     * <li><strong>互斥策略</strong>：不能同时提供<code>Partition</code>和<code>Batch</code>配置。</li>
+     * <li><strong>实时生效</strong>：更新将立即生效，影响正在进行的服务发布过程。</li>
+     * <li><strong>回退操作</strong>：通过增加<code>Partition</code>值可以实现版本回退，但不会自动触发，需要手动更新服务镜像。</li>
+     * <li><strong>暂停不影响参数</strong>：暂停发布不会改变已设置的<code>Partition</code>或<code>Batch</code>参数，仅暂停执行当前策略。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>更新服务发布计划</p>
+     * 
+     * @param request UpdateServiceRolloutRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateServiceRolloutResponse
+     */
+    public UpdateServiceRolloutResponse updateServiceRolloutWithOptions(String ClusterId, String ServiceName, UpdateServiceRolloutRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.batch)) {
+            body.put("Batch", request.batch);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.partition)) {
+            body.put("Partition", request.partition);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paused)) {
+            body.put("Paused", request.paused);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateServiceRollout"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/services/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/" + com.aliyun.openapiutil.Client.getEncodeParam(ServiceName) + "/rollout"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateServiceRolloutResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><strong>至少提供一个参数</strong>：必须在请求中指定<code>Partition</code>、<code>Batch</code>或<code>Paused</code>中的至少一个参数。</li>
+     * <li><strong>互斥策略</strong>：不能同时提供<code>Partition</code>和<code>Batch</code>配置。</li>
+     * <li><strong>实时生效</strong>：更新将立即生效，影响正在进行的服务发布过程。</li>
+     * <li><strong>回退操作</strong>：通过增加<code>Partition</code>值可以实现版本回退，但不会自动触发，需要手动更新服务镜像。</li>
+     * <li><strong>暂停不影响参数</strong>：暂停发布不会改变已设置的<code>Partition</code>或<code>Batch</code>参数，仅暂停执行当前策略。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>更新服务发布计划</p>
+     * 
+     * @param request UpdateServiceRolloutRequest
+     * @return UpdateServiceRolloutResponse
+     */
+    public UpdateServiceRolloutResponse updateServiceRollout(String ClusterId, String ServiceName, UpdateServiceRolloutRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateServiceRolloutWithOptions(ClusterId, ServiceName, request, headers, runtime);
     }
 
     /**
