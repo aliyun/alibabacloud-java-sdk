@@ -227,6 +227,13 @@ public class GetJobResponseBody extends TeaModel {
         public GetJobResponseBodyJobInfoDeploymentPolicyNetwork network;
 
         /**
+         * <strong>example:</strong>
+         * <p>testpool</p>
+         */
+        @NameInMap("Pool")
+        public String pool;
+
+        /**
          * <p>The list of job tags.</p>
          */
         @NameInMap("Tags")
@@ -259,6 +266,14 @@ public class GetJobResponseBody extends TeaModel {
         }
         public GetJobResponseBodyJobInfoDeploymentPolicyNetwork getNetwork() {
             return this.network;
+        }
+
+        public GetJobResponseBodyJobInfoDeploymentPolicy setPool(String pool) {
+            this.pool = pool;
+            return this;
+        }
+        public String getPool() {
+            return this.pool;
         }
 
         public GetJobResponseBodyJobInfoDeploymentPolicy setTags(java.util.List<GetJobResponseBodyJobInfoDeploymentPolicyTags> tags) {

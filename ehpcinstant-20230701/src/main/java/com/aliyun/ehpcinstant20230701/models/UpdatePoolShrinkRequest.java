@@ -37,6 +37,13 @@ public class UpdatePoolShrinkRequest extends TeaModel {
     @NameInMap("ResourceLimits")
     public String resourceLimitsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>policy-xxxx</p>
+     */
+    @NameInMap("SchedulingPolicyId")
+    public String schedulingPolicyId;
+
     public static UpdatePoolShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdatePoolShrinkRequest self = new UpdatePoolShrinkRequest();
         return TeaModel.build(map, self);
@@ -64,6 +71,14 @@ public class UpdatePoolShrinkRequest extends TeaModel {
     }
     public String getResourceLimitsShrink() {
         return this.resourceLimitsShrink;
+    }
+
+    public UpdatePoolShrinkRequest setSchedulingPolicyId(String schedulingPolicyId) {
+        this.schedulingPolicyId = schedulingPolicyId;
+        return this;
+    }
+    public String getSchedulingPolicyId() {
+        return this.schedulingPolicyId;
     }
 
 }

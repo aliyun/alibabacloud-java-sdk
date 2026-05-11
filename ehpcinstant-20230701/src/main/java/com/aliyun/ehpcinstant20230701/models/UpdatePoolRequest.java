@@ -37,6 +37,13 @@ public class UpdatePoolRequest extends TeaModel {
     @NameInMap("ResourceLimits")
     public UpdatePoolRequestResourceLimits resourceLimits;
 
+    /**
+     * <strong>example:</strong>
+     * <p>policy-xxxx</p>
+     */
+    @NameInMap("SchedulingPolicyId")
+    public String schedulingPolicyId;
+
     public static UpdatePoolRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdatePoolRequest self = new UpdatePoolRequest();
         return TeaModel.build(map, self);
@@ -66,27 +73,29 @@ public class UpdatePoolRequest extends TeaModel {
         return this.resourceLimits;
     }
 
+    public UpdatePoolRequest setSchedulingPolicyId(String schedulingPolicyId) {
+        this.schedulingPolicyId = schedulingPolicyId;
+        return this;
+    }
+    public String getSchedulingPolicyId() {
+        return this.schedulingPolicyId;
+    }
+
     public static class UpdatePoolRequestResourceLimits extends TeaModel {
-        /**
-         * <p>The maximum number of concurrent execution nodes in a resource pool.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2000</p>
-         */
-        @NameInMap("MaxExectorNum")
-        public Integer maxExectorNum;
+        @NameInMap("MaxExecutorNum")
+        public Integer maxExecutorNum;
 
         public static UpdatePoolRequestResourceLimits build(java.util.Map<String, ?> map) throws Exception {
             UpdatePoolRequestResourceLimits self = new UpdatePoolRequestResourceLimits();
             return TeaModel.build(map, self);
         }
 
-        public UpdatePoolRequestResourceLimits setMaxExectorNum(Integer maxExectorNum) {
-            this.maxExectorNum = maxExectorNum;
+        public UpdatePoolRequestResourceLimits setMaxExecutorNum(Integer maxExecutorNum) {
+            this.maxExecutorNum = maxExecutorNum;
             return this;
         }
-        public Integer getMaxExectorNum() {
-            return this.maxExectorNum;
+        public Integer getMaxExecutorNum() {
+            return this.maxExecutorNum;
         }
 
     }

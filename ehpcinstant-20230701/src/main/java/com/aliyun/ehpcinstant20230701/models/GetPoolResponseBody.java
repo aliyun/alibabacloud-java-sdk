@@ -50,14 +50,8 @@ public class GetPoolResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The usage of execution nodes that are running in a resource pool.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
-        @NameInMap("ExectorUsage")
-        public Integer exectorUsage;
+        @NameInMap("ExecutorUsage")
+        public Integer executorUsage;
 
         /**
          * <p>Indices whether the resource pool is the default resource pool. Valid values:</p>
@@ -72,14 +66,8 @@ public class GetPoolResponseBody extends TeaModel {
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
-        /**
-         * <p>The maximum number of execution nodes that can run concurrently in a resource pool.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2000</p>
-         */
-        @NameInMap("MaxExectorNum")
-        public Integer maxExectorNum;
+        @NameInMap("MaxExecutorNum")
+        public Integer maxExecutorNum;
 
         /**
          * <p>The name of the resource group.</p>
@@ -115,6 +103,13 @@ public class GetPoolResponseBody extends TeaModel {
          */
         @NameInMap("Reason")
         public String reason;
+
+        /**
+         * <strong>example:</strong>
+         * <p>policy-xxx</p>
+         */
+        @NameInMap("SchedulingPolicyId")
+        public String schedulingPolicyId;
 
         /**
          * <p>The status of the resource pool. Valid values:</p>
@@ -154,12 +149,12 @@ public class GetPoolResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public GetPoolResponseBodyPoolInfo setExectorUsage(Integer exectorUsage) {
-            this.exectorUsage = exectorUsage;
+        public GetPoolResponseBodyPoolInfo setExecutorUsage(Integer executorUsage) {
+            this.executorUsage = executorUsage;
             return this;
         }
-        public Integer getExectorUsage() {
-            return this.exectorUsage;
+        public Integer getExecutorUsage() {
+            return this.executorUsage;
         }
 
         public GetPoolResponseBodyPoolInfo setIsDefault(Boolean isDefault) {
@@ -170,12 +165,12 @@ public class GetPoolResponseBody extends TeaModel {
             return this.isDefault;
         }
 
-        public GetPoolResponseBodyPoolInfo setMaxExectorNum(Integer maxExectorNum) {
-            this.maxExectorNum = maxExectorNum;
+        public GetPoolResponseBodyPoolInfo setMaxExecutorNum(Integer maxExecutorNum) {
+            this.maxExecutorNum = maxExecutorNum;
             return this;
         }
-        public Integer getMaxExectorNum() {
-            return this.maxExectorNum;
+        public Integer getMaxExecutorNum() {
+            return this.maxExecutorNum;
         }
 
         public GetPoolResponseBodyPoolInfo setPoolName(String poolName) {
@@ -200,6 +195,14 @@ public class GetPoolResponseBody extends TeaModel {
         }
         public String getReason() {
             return this.reason;
+        }
+
+        public GetPoolResponseBodyPoolInfo setSchedulingPolicyId(String schedulingPolicyId) {
+            this.schedulingPolicyId = schedulingPolicyId;
+            return this;
+        }
+        public String getSchedulingPolicyId() {
+            return this.schedulingPolicyId;
         }
 
         public GetPoolResponseBodyPoolInfo setStatus(String status) {

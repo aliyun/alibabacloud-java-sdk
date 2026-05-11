@@ -315,6 +315,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceLimits", request.resourceLimitsShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.schedulingPolicyId)) {
+            query.put("SchedulingPolicyId", request.schedulingPolicyId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -944,6 +948,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetJobResponse getJob(GetJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询作业保留时长</p>
+     * 
+     * @param request GetJobRecordDurationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetJobRecordDurationResponse
+     */
+    public GetJobRecordDurationResponse getJobRecordDurationWithOptions(GetJobRecordDurationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetJobRecordDuration"),
+            new TeaPair("version", "2023-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetJobRecordDurationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询作业保留时长</p>
+     * 
+     * @param request GetJobRecordDurationRequest
+     * @return GetJobRecordDurationResponse
+     */
+    public GetJobRecordDurationResponse getJobRecordDuration(GetJobRecordDurationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getJobRecordDurationWithOptions(request, runtime);
     }
 
     /**
@@ -1814,6 +1855,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>更新作业保留时长</p>
+     * 
+     * @param request UpdateJobRecordDurationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateJobRecordDurationResponse
+     */
+    public UpdateJobRecordDurationResponse updateJobRecordDurationWithOptions(UpdateJobRecordDurationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobRecordDuration)) {
+            query.put("JobRecordDuration", request.jobRecordDuration);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateJobRecordDuration"),
+            new TeaPair("version", "2023-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateJobRecordDurationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新作业保留时长</p>
+     * 
+     * @param request UpdateJobRecordDurationRequest
+     * @return UpdateJobRecordDurationResponse
+     */
+    public UpdateJobRecordDurationResponse updateJobRecordDuration(UpdateJobRecordDurationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateJobRecordDurationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Update the resource pool configuration.</p>
      * 
      * @param tmpReq UpdatePoolRequest
@@ -1839,6 +1924,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceLimitsShrink)) {
             query.put("ResourceLimits", request.resourceLimitsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schedulingPolicyId)) {
+            query.put("SchedulingPolicyId", request.schedulingPolicyId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

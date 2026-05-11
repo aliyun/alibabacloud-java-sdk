@@ -93,6 +93,13 @@ public class ListPoolsResponseBody extends TeaModel {
 
     public static class ListPoolsResponseBodyPoolList extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>2026-04-20 11:09:59</p>
+         */
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        /**
          * <p>Indices whether the resource pool is the default resource pool. Valid values:</p>
          * <ul>
          * <li><strong>true</strong></li>
@@ -105,14 +112,8 @@ public class ListPoolsResponseBody extends TeaModel {
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
-        /**
-         * <p>The maximum number of execution nodes that can run concurrently in a resource pool.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2000</p>
-         */
-        @NameInMap("MaxExectorNum")
-        public Integer maxExectorNum;
+        @NameInMap("MaxExecutorNum")
+        public Integer maxExecutorNum;
 
         /**
          * <p>The name of the resource pool.</p>
@@ -141,6 +142,13 @@ public class ListPoolsResponseBody extends TeaModel {
         public Integer priority;
 
         /**
+         * <strong>example:</strong>
+         * <p>policy-xxx</p>
+         */
+        @NameInMap("SchedulingPolicyId")
+        public String schedulingPolicyId;
+
+        /**
          * <p>The status of the resource pool. Valid values:</p>
          * <ul>
          * <li>Creating: The resource pool is being created.</li>
@@ -156,9 +164,24 @@ public class ListPoolsResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2026-04-20 11:09:59</p>
+         */
+        @NameInMap("UpdateTime")
+        public String updateTime;
+
         public static ListPoolsResponseBodyPoolList build(java.util.Map<String, ?> map) throws Exception {
             ListPoolsResponseBodyPoolList self = new ListPoolsResponseBodyPoolList();
             return TeaModel.build(map, self);
+        }
+
+        public ListPoolsResponseBodyPoolList setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public ListPoolsResponseBodyPoolList setIsDefault(Boolean isDefault) {
@@ -169,12 +192,12 @@ public class ListPoolsResponseBody extends TeaModel {
             return this.isDefault;
         }
 
-        public ListPoolsResponseBodyPoolList setMaxExectorNum(Integer maxExectorNum) {
-            this.maxExectorNum = maxExectorNum;
+        public ListPoolsResponseBodyPoolList setMaxExecutorNum(Integer maxExecutorNum) {
+            this.maxExecutorNum = maxExecutorNum;
             return this;
         }
-        public Integer getMaxExectorNum() {
-            return this.maxExectorNum;
+        public Integer getMaxExecutorNum() {
+            return this.maxExecutorNum;
         }
 
         public ListPoolsResponseBodyPoolList setPoolName(String poolName) {
@@ -193,12 +216,28 @@ public class ListPoolsResponseBody extends TeaModel {
             return this.priority;
         }
 
+        public ListPoolsResponseBodyPoolList setSchedulingPolicyId(String schedulingPolicyId) {
+            this.schedulingPolicyId = schedulingPolicyId;
+            return this;
+        }
+        public String getSchedulingPolicyId() {
+            return this.schedulingPolicyId;
+        }
+
         public ListPoolsResponseBodyPoolList setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListPoolsResponseBodyPoolList setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
         }
 
     }
