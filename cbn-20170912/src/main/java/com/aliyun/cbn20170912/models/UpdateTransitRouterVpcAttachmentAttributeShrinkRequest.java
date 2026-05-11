@@ -43,6 +43,9 @@ public class UpdateTransitRouterVpcAttachmentAttributeShrinkRequest extends TeaM
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    @NameInMap("Options")
+    public String optionsShrink;
+
     /**
      * <strong>example:</strong>
      * <p>PayByCenOwner</p>
@@ -125,6 +128,14 @@ public class UpdateTransitRouterVpcAttachmentAttributeShrinkRequest extends TeaM
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public UpdateTransitRouterVpcAttachmentAttributeShrinkRequest setOptionsShrink(String optionsShrink) {
+        this.optionsShrink = optionsShrink;
+        return this;
+    }
+    public String getOptionsShrink() {
+        return this.optionsShrink;
     }
 
     public UpdateTransitRouterVpcAttachmentAttributeShrinkRequest setOrderType(String orderType) {

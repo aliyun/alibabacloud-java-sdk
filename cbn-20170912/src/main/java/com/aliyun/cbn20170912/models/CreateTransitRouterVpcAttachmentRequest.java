@@ -61,6 +61,9 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    @NameInMap("Options")
+    public CreateTransitRouterVpcAttachmentRequestOptions options;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -200,6 +203,14 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
         return this.dryRun;
     }
 
+    public CreateTransitRouterVpcAttachmentRequest setOptions(CreateTransitRouterVpcAttachmentRequestOptions options) {
+        this.options = options;
+        return this;
+    }
+    public CreateTransitRouterVpcAttachmentRequestOptions getOptions() {
+        return this.options;
+    }
+
     public CreateTransitRouterVpcAttachmentRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -302,6 +313,36 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     }
     public java.util.List<CreateTransitRouterVpcAttachmentRequestZoneMappings> getZoneMappings() {
         return this.zoneMappings;
+    }
+
+    public static class CreateTransitRouterVpcAttachmentRequestOptions extends TeaModel {
+        @NameInMap("ApplianceModeSupport")
+        public String applianceModeSupport;
+
+        @NameInMap("Ipv6Support")
+        public String ipv6Support;
+
+        public static CreateTransitRouterVpcAttachmentRequestOptions build(java.util.Map<String, ?> map) throws Exception {
+            CreateTransitRouterVpcAttachmentRequestOptions self = new CreateTransitRouterVpcAttachmentRequestOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTransitRouterVpcAttachmentRequestOptions setApplianceModeSupport(String applianceModeSupport) {
+            this.applianceModeSupport = applianceModeSupport;
+            return this;
+        }
+        public String getApplianceModeSupport() {
+            return this.applianceModeSupport;
+        }
+
+        public CreateTransitRouterVpcAttachmentRequestOptions setIpv6Support(String ipv6Support) {
+            this.ipv6Support = ipv6Support;
+            return this;
+        }
+        public String getIpv6Support() {
+            return this.ipv6Support;
+        }
+
     }
 
     public static class CreateTransitRouterVpcAttachmentRequestTag extends TeaModel {

@@ -95,6 +95,36 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         return this.transitRouterAttachments;
     }
 
+    public static class ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsOptions extends TeaModel {
+        @NameInMap("ApplianceModeSupport")
+        public String applianceModeSupport;
+
+        @NameInMap("Ipv6Support")
+        public String ipv6Support;
+
+        public static ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsOptions build(java.util.Map<String, ?> map) throws Exception {
+            ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsOptions self = new ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsOptions setApplianceModeSupport(String applianceModeSupport) {
+            this.applianceModeSupport = applianceModeSupport;
+            return this;
+        }
+        public String getApplianceModeSupport() {
+            return this.applianceModeSupport;
+        }
+
+        public ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsOptions setIpv6Support(String ipv6Support) {
+            this.ipv6Support = ipv6Support;
+            return this;
+        }
+        public String getIpv6Support() {
+            return this.ipv6Support;
+        }
+
+    }
+
     public static class ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsTags extends TeaModel {
         /**
          * <p>The tag key.</p>
@@ -241,6 +271,9 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
 
         @NameInMap("ManagedService")
         public String managedService;
+
+        @NameInMap("Options")
+        public ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsOptions options;
 
         /**
          * <p>The entity that pays the fees of the network instance. Valid values:</p>
@@ -403,6 +436,14 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         }
         public String getManagedService() {
             return this.managedService;
+        }
+
+        public ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachments setOptions(ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsOptions options) {
+            this.options = options;
+            return this;
+        }
+        public ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsOptions getOptions() {
+            return this.options;
         }
 
         public ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachments setOrderType(String orderType) {

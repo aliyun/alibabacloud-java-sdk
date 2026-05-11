@@ -43,6 +43,9 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    @NameInMap("Options")
+    public UpdateTransitRouterVpcAttachmentAttributeRequestOptions options;
+
     /**
      * <strong>example:</strong>
      * <p>PayByCenOwner</p>
@@ -127,6 +130,14 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends TeaModel {
         return this.dryRun;
     }
 
+    public UpdateTransitRouterVpcAttachmentAttributeRequest setOptions(UpdateTransitRouterVpcAttachmentAttributeRequestOptions options) {
+        this.options = options;
+        return this;
+    }
+    public UpdateTransitRouterVpcAttachmentAttributeRequestOptions getOptions() {
+        return this.options;
+    }
+
     public UpdateTransitRouterVpcAttachmentAttributeRequest setOrderType(String orderType) {
         this.orderType = orderType;
         return this;
@@ -197,6 +208,36 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends TeaModel {
     }
     public java.util.Map<String, String> getTransitRouterVPCAttachmentOptions() {
         return this.transitRouterVPCAttachmentOptions;
+    }
+
+    public static class UpdateTransitRouterVpcAttachmentAttributeRequestOptions extends TeaModel {
+        @NameInMap("ApplianceModeSupport")
+        public String applianceModeSupport;
+
+        @NameInMap("Ipv6Support")
+        public String ipv6Support;
+
+        public static UpdateTransitRouterVpcAttachmentAttributeRequestOptions build(java.util.Map<String, ?> map) throws Exception {
+            UpdateTransitRouterVpcAttachmentAttributeRequestOptions self = new UpdateTransitRouterVpcAttachmentAttributeRequestOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateTransitRouterVpcAttachmentAttributeRequestOptions setApplianceModeSupport(String applianceModeSupport) {
+            this.applianceModeSupport = applianceModeSupport;
+            return this;
+        }
+        public String getApplianceModeSupport() {
+            return this.applianceModeSupport;
+        }
+
+        public UpdateTransitRouterVpcAttachmentAttributeRequestOptions setIpv6Support(String ipv6Support) {
+            this.ipv6Support = ipv6Support;
+            return this;
+        }
+        public String getIpv6Support() {
+            return this.ipv6Support;
+        }
+
     }
 
 }

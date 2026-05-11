@@ -61,6 +61,9 @@ public class CreateTransitRouterVpcAttachmentShrinkRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    @NameInMap("Options")
+    public String optionsShrink;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -198,6 +201,14 @@ public class CreateTransitRouterVpcAttachmentShrinkRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public CreateTransitRouterVpcAttachmentShrinkRequest setOptionsShrink(String optionsShrink) {
+        this.optionsShrink = optionsShrink;
+        return this;
+    }
+    public String getOptionsShrink() {
+        return this.optionsShrink;
     }
 
     public CreateTransitRouterVpcAttachmentShrinkRequest setOwnerAccount(String ownerAccount) {
