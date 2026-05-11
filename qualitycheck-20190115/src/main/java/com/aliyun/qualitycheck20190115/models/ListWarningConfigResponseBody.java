@@ -81,17 +81,9 @@ public class ListWarningConfigResponseBody extends TeaModel {
     }
 
     public static class ListWarningConfigResponseBodyDataWarningConfigInfoChannelsChannel extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Type")
         public Integer type;
 
-        /**
-         * <strong>example:</strong>
-         * <p>oapi.dingtalk.com/robot/send?access_token=c55628f700eb9ad2a3ca</p>
-         */
         @NameInMap("Url")
         public String url;
 
@@ -157,10 +149,6 @@ public class ListWarningConfigResponseBody extends TeaModel {
     }
 
     public static class ListWarningConfigResponseBodyDataWarningConfigInfoRuleListWarningRule extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>33452</p>
-         */
         @NameInMap("Rid")
         public Long rid;
 
@@ -213,20 +201,12 @@ public class ListWarningConfigResponseBody extends TeaModel {
         @NameInMap("Channels")
         public ListWarningConfigResponseBodyDataWarningConfigInfoChannels channels;
 
-        /**
-         * <strong>example:</strong>
-         * <p>32</p>
-         */
         @NameInMap("ConfigId")
         public Long configId;
 
         @NameInMap("ConfigName")
         public String configName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2019-10-29T15:30Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -236,17 +216,9 @@ public class ListWarningConfigResponseBody extends TeaModel {
         @NameInMap("RuleList")
         public ListWarningConfigResponseBodyDataWarningConfigInfoRuleList ruleList;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Status")
         public Integer status;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2019-10-29T17:24Z</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

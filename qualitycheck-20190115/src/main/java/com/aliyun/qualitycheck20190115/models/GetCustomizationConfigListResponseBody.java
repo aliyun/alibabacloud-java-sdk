@@ -84,41 +84,21 @@ public class GetCustomizationConfigListResponseBody extends TeaModel {
         @NameInMap("AsrVersion")
         public Integer asrVersion;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2019-01-08</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cdae396590bb479a9ec40f3476e274fc</p>
-         */
         @NameInMap("ModeCustomizationId")
         public String modeCustomizationId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("ModelId")
         public Long modelId;
 
         @NameInMap("ModelName")
         public String modelName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>5</p>
-         */
         @NameInMap("ModelStatus")
         public Integer modelStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("TaskType")
         public Integer taskType;
 

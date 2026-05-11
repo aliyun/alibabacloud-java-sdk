@@ -126,17 +126,9 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
     }
 
     public static class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgentsAgent extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>202526561358712105</p>
-         */
         @NameInMap("AgentId")
         public String agentId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>agent</p>
-         */
         @NameInMap("AgentName")
         public String agentName;
 
@@ -183,10 +175,6 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
     }
 
     public static class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewersReviewer extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2337235457340978</p>
-         */
         @NameInMap("ReviewerId")
         public String reviewerId;
 
@@ -239,10 +227,6 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2312</p>
-         */
         @NameInMap("Rid")
         public String rid;
 
@@ -289,17 +273,9 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
     }
 
     public static class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingModeSamplingModeAgentsSamplingModeAgent extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("AgentId")
         public String agentId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>zhangsan</p>
-         */
         @NameInMap("AgentName")
         public String agentName;
 
@@ -346,52 +322,24 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
     }
 
     public static class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingMode extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>60</p>
-         */
         @NameInMap("AnyNumberOfDraws")
         public Integer anyNumberOfDraws;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Designated")
         public Boolean designated;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Dimension")
         public Integer dimension;
 
-        /**
-         * <strong>example:</strong>
-         * <p>30</p>
-         */
         @NameInMap("Limit")
         public Integer limit;
 
-        /**
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("NumberOfDraws")
         public Integer numberOfDraws;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0.1</p>
-         */
         @NameInMap("Proportion")
         public Float proportion;
 
-        /**
-         * <strong>example:</strong>
-         * <p>5</p>
-         */
         @NameInMap("RandomInspectionNumber")
         public Integer randomInspectionNumber;
 
@@ -470,10 +418,6 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
     }
 
     public static class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSkillGroupsSkillGroup extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>XXX</p>
-         */
         @NameInMap("SkillId")
         public String skillId;
 
@@ -526,83 +470,39 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         @NameInMap("Agents")
         public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgents agents;
 
-        /**
-         * <strong>example:</strong>
-         * <p>XX</p>
-         */
         @NameInMap("AgentsStr")
         public String agentsStr;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("AssignmentType")
         public Integer assignmentType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>39600</p>
-         */
         @NameInMap("CallTimeEnd")
         public Long callTimeEnd;
 
-        /**
-         * <strong>example:</strong>
-         * <p>39600</p>
-         */
         @NameInMap("CallTimeStart")
         public Long callTimeStart;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("CallType")
         public Integer callType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2019-07-12T14:47Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>400</p>
-         */
         @NameInMap("DurationMax")
         public Integer durationMax;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("DurationMin")
         public Integer durationMin;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Enabled")
         public Integer enabled;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Priority")
         public Integer priority;
 
         @NameInMap("Reviewers")
         public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewers reviewers;
 
-        /**
-         * <strong>example:</strong>
-         * <p>23</p>
-         */
         @NameInMap("RuleId")
         public Long ruleId;
 
@@ -618,17 +518,9 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         @NameInMap("SkillGroups")
         public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSkillGroups skillGroups;
 
-        /**
-         * <strong>example:</strong>
-         * <p>XX</p>
-         */
         @NameInMap("SkillGroupsStr")
         public String skillGroupsStr;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2019-07-12T14:47Z</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

@@ -81,10 +81,6 @@ public class GetAsrVocabResponseBody extends TeaModel {
     }
 
     public static class GetAsrVocabResponseBodyDataWordsWord extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Weight")
         public Integer weight;
 

@@ -122,8 +122,14 @@ public class UploadDataSyncForLLMResponseBody extends TeaModel {
     }
 
     public static class UploadDataSyncForLLMResponseBodyDataResultInfoRulesRuleHitInfoHitConditionHitInfoHitKeyWordsHitKeyWord extends TeaModel {
+        @NameInMap("CustomizeCode")
+        public String customizeCode;
+
         @NameInMap("From")
         public Integer from;
+
+        @NameInMap("IsMatch")
+        public Boolean isMatch;
 
         @NameInMap("Pid")
         public Integer pid;
@@ -142,12 +148,28 @@ public class UploadDataSyncForLLMResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public UploadDataSyncForLLMResponseBodyDataResultInfoRulesRuleHitInfoHitConditionHitInfoHitKeyWordsHitKeyWord setCustomizeCode(String customizeCode) {
+            this.customizeCode = customizeCode;
+            return this;
+        }
+        public String getCustomizeCode() {
+            return this.customizeCode;
+        }
+
         public UploadDataSyncForLLMResponseBodyDataResultInfoRulesRuleHitInfoHitConditionHitInfoHitKeyWordsHitKeyWord setFrom(Integer from) {
             this.from = from;
             return this;
         }
         public Integer getFrom() {
             return this.from;
+        }
+
+        public UploadDataSyncForLLMResponseBodyDataResultInfoRulesRuleHitInfoHitConditionHitInfoHitKeyWordsHitKeyWord setIsMatch(Boolean isMatch) {
+            this.isMatch = isMatch;
+            return this;
+        }
+        public Boolean getIsMatch() {
+            return this.isMatch;
         }
 
         public UploadDataSyncForLLMResponseBodyDataResultInfoRulesRuleHitInfoHitConditionHitInfoHitKeyWordsHitKeyWord setPid(Integer pid) {
@@ -344,6 +366,9 @@ public class UploadDataSyncForLLMResponseBody extends TeaModel {
         @NameInMap("Hit")
         public UploadDataSyncForLLMResponseBodyDataResultInfoRulesRuleHitInfoHit hit;
 
+        @NameInMap("LlmResponse")
+        public String llmResponse;
+
         @NameInMap("Rid")
         public String rid;
 
@@ -369,6 +394,14 @@ public class UploadDataSyncForLLMResponseBody extends TeaModel {
         }
         public UploadDataSyncForLLMResponseBodyDataResultInfoRulesRuleHitInfoHit getHit() {
             return this.hit;
+        }
+
+        public UploadDataSyncForLLMResponseBodyDataResultInfoRulesRuleHitInfo setLlmResponse(String llmResponse) {
+            this.llmResponse = llmResponse;
+            return this;
+        }
+        public String getLlmResponse() {
+            return this.llmResponse;
         }
 
         public UploadDataSyncForLLMResponseBodyDataResultInfoRulesRuleHitInfo setRid(String rid) {

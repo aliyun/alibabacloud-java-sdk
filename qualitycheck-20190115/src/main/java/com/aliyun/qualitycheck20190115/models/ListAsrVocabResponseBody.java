@@ -84,17 +84,9 @@ public class ListAsrVocabResponseBody extends TeaModel {
         @NameInMap("AsrVersion")
         public Integer asrVersion;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2019-04-15T14:57Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>18</p>
-         */
         @NameInMap("Id")
         public String id;
 
@@ -104,17 +96,9 @@ public class ListAsrVocabResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2019-04-15T14:57Z</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>a01daaaxxxxxxxxx</p>
-         */
         @NameInMap("VocabularyId")
         public String vocabularyId;
 

@@ -178,6 +178,9 @@ public class OperatorBasicInfo extends TeaModel {
         @NameInMap("DelayTime")
         public Integer delayTime;
 
+        /**
+         * <p>different_role</p>
+         */
         @NameInMap("Different_role")
         public Boolean differentRole;
 
@@ -193,6 +196,9 @@ public class OperatorBasicInfo extends TeaModel {
         @NameInMap("From")
         public Integer from;
 
+        /**
+         * <p>from_end</p>
+         */
         @NameInMap("From_end")
         public Boolean fromEnd;
 
@@ -295,9 +301,15 @@ public class OperatorBasicInfo extends TeaModel {
         @NameInMap("Synonyms")
         public java.util.Map<String, java.util.List<String>> synonyms;
 
+        /**
+         * <p>target</p>
+         */
         @NameInMap("Target")
         public Integer target;
 
+        /**
+         * <p>target_role</p>
+         */
         @NameInMap("Target_role")
         public String targetRole;
 
@@ -310,6 +322,9 @@ public class OperatorBasicInfo extends TeaModel {
         @NameInMap("Velocity")
         public Double velocity;
 
+        /**
+         * <p>velocityInMint</p>
+         */
         @NameInMap("VelocityInMint")
         public Integer velocityInMint;
 

@@ -7,12 +7,26 @@ public class GraphFlowNode extends TeaModel {
     @NameInMap("Conditions")
     public java.util.List<ConditionBasicInfo> conditions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>index</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Index")
     public Integer index;
 
@@ -22,15 +36,27 @@ public class GraphFlowNode extends TeaModel {
     @NameInMap("NextNodes")
     public java.util.List<GraphFlowNodeNextNodes> nextNodes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>startNode</p>
+     */
     @NameInMap("NodeType")
     public String nodeType;
 
     @NameInMap("Properties")
     public GraphFlowNodeProperties properties;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Rid")
     public Long rid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("UseConditions")
     public Boolean useConditions;
 
@@ -120,18 +146,38 @@ public class GraphFlowNode extends TeaModel {
     }
 
     public static class GraphFlowNodeNextNodes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CheckType")
         public Integer checkType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Index")
         public Integer index;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a</p>
+         */
         @NameInMap("Lambda")
         public String lambda;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>31533</p>
+         */
         @NameInMap("NextNodeId")
         public Long nextNodeId;
 
@@ -194,45 +240,89 @@ public class GraphFlowNode extends TeaModel {
     }
 
     public static class GraphFlowNodeProperties extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AutoReview")
         public Integer autoReview;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("BranchJudge")
         public Boolean branchJudge;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CheckMoreSize")
         public Integer checkMoreSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CheckType")
         public Integer checkType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a</p>
+         */
         @NameInMap("Lambda")
         public String lambda;
 
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RuleScoreType")
         public Integer ruleScoreType;
 
         @NameInMap("SayType")
         public String sayType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ScoreNum")
         public Integer scoreNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ScoreNumType")
         public Integer scoreNumType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ScoreRuleHitType")
         public Integer scoreRuleHitType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ScoreType")
         public Integer scoreType;
 
         @NameInMap("Triggers")
         public java.util.List<String> triggers;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Type")
         public String type;
 

@@ -81,17 +81,9 @@ public class GetRuleCategoryResponseBody extends TeaModel {
     }
 
     public static class GetRuleCategoryResponseBodyDataRuleCountInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("Select")
         public Boolean select;
 
-        /**
-         * <strong>example:</strong>
-         * <p>22</p>
-         */
         @NameInMap("Type")
         public Integer type;
 

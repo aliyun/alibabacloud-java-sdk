@@ -81,20 +81,12 @@ public class GetBusinessCategoryListResponseBody extends TeaModel {
     }
 
     public static class GetBusinessCategoryListResponseBodyDataBusinessCategoryBasicInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Bid")
         public Integer bid;
 
         @NameInMap("BusinessName")
         public String businessName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("ServiceType")
         public Integer serviceType;
 

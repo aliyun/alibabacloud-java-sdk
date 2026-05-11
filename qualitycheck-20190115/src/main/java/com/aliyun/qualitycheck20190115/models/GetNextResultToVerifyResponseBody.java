@@ -103,10 +103,6 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         @NameInMap("Line")
         public GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltasDeltaSourceLine line;
 
-        /**
-         * <strong>example:</strong>
-         * <p>5</p>
-         */
         @NameInMap("Position")
         public Integer position;
 
@@ -156,10 +152,6 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         @NameInMap("Line")
         public GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltasDeltaTargetLine line;
 
-        /**
-         * <strong>example:</strong>
-         * <p>5</p>
-         */
         @NameInMap("Position")
         public Integer position;
 
@@ -193,10 +185,6 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         @NameInMap("Target")
         public GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltasDeltaTarget target;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CHANGE</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -251,61 +239,33 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
     }
 
     public static class GetNextResultToVerifyResponseBodyDataDialoguesDialogue extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>980</p>
-         */
         @NameInMap("Begin")
         public Long begin;
 
-        /**
-         * <strong>example:</strong>
-         * <p>XXX</p>
-         */
         @NameInMap("BeginTime")
         public String beginTime;
 
         @NameInMap("Deltas")
         public GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltas deltas;
 
-        /**
-         * <strong>example:</strong>
-         * <p>6</p>
-         */
         @NameInMap("EmotionValue")
         public Integer emotionValue;
 
-        /**
-         * <strong>example:</strong>
-         * <p>3422</p>
-         */
         @NameInMap("End")
         public Long end;
 
-        /**
-         * <strong>example:</strong>
-         * <p>00:00:07</p>
-         */
         @NameInMap("HourMinSec")
         public String hourMinSec;
 
         @NameInMap("Identity")
         public String identity;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("IncorrectWords")
         public Integer incorrectWords;
 
         @NameInMap("Role")
         public String role;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("SilenceDuration")
         public Integer silenceDuration;
 
@@ -315,10 +275,6 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         @NameInMap("SourceWords")
         public String sourceWords;
 
-        /**
-         * <strong>example:</strong>
-         * <p>332</p>
-         */
         @NameInMap("SpeechRate")
         public Integer speechRate;
 

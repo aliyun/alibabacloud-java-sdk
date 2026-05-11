@@ -81,27 +81,15 @@ public class GetScoreInfoResponseBody extends TeaModel {
     }
 
     public static class GetScoreInfoResponseBodyDataScorePoScoreInfosScoreParam extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>32</p>
-         */
         @NameInMap("ScoreNum")
         public Integer scoreNum;
 
-        /**
-         * <strong>example:</strong>
-         * <p>3422</p>
-         */
         @NameInMap("ScoreSubId")
         public Integer scoreSubId;
 
         @NameInMap("ScoreSubName")
         public String scoreSubName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("ScoreType")
         public Integer scoreType;
 
@@ -164,10 +152,6 @@ public class GetScoreInfoResponseBody extends TeaModel {
     }
 
     public static class GetScoreInfoResponseBodyDataScorePo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>34</p>
-         */
         @NameInMap("ScoreId")
         public Integer scoreId;
 

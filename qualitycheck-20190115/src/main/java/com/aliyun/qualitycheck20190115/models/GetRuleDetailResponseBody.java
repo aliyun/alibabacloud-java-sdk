@@ -81,24 +81,12 @@ public class GetRuleDetailResponseBody extends TeaModel {
     }
 
     public static class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeAnchor extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>7</p>
-         */
         @NameInMap("AnchorCid")
         public String anchorCid;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("HitTime")
         public Integer hitTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>AFTER</p>
-         */
         @NameInMap("Location")
         public String location;
 
@@ -134,17 +122,9 @@ public class GetRuleDetailResponseBody extends TeaModel {
     }
 
     public static class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeRange extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("From")
         public Integer from;
 
-        /**
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("To")
         public Integer to;
 
@@ -172,10 +152,6 @@ public class GetRuleDetailResponseBody extends TeaModel {
     }
 
     public static class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRange extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Absolute")
         public Boolean absolute;
 
@@ -345,118 +321,54 @@ public class GetRuleDetailResponseBody extends TeaModel {
         @NameInMap("AntModelInfo")
         public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamAntModelInfo antModelInfo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Average")
         public Boolean average;
 
-        /**
-         * <strong>example:</strong>
-         * <p>DIALOGUE</p>
-         */
         @NameInMap("BeginType")
         public String beginType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("CheckType")
         public Integer checkType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>gt</p>
-         */
         @NameInMap("CompareOperator")
         public String compareOperator;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("ContextChatMatch")
         public Boolean contextChatMatch;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1000</p>
-         */
         @NameInMap("DelayTime")
         public Integer delayTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("DifferentRole")
         public Boolean differentRole;
 
         @NameInMap("Excludes")
         public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamExcludes excludes;
 
-        /**
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("From")
         public Integer from;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("FromEnd")
         public Boolean fromEnd;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("HitTime")
         public Integer hitTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("InSentence")
         public Boolean inSentence;
 
-        /**
-         * <strong>example:</strong>
-         * <p>5000</p>
-         */
         @NameInMap("Interval")
         public Integer interval;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("KeywordExtension")
         public Boolean keywordExtension;
 
-        /**
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("KeywordMatchSize")
         public Integer keywordMatchSize;
 
-        /**
-         * <strong>example:</strong>
-         * <p>8</p>
-         */
         @NameInMap("MaxEmotionChangeValue")
         public Integer maxEmotionChangeValue;
 
-        /**
-         * <strong>example:</strong>
-         * <p>4</p>
-         */
         @NameInMap("MinWordSize")
         public Integer minWordSize;
 
@@ -466,10 +378,6 @@ public class GetRuleDetailResponseBody extends TeaModel {
         @NameInMap("OperKeyWords")
         public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamOperKeyWords operKeyWords;
 
-        /**
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
         @NameInMap("Phrase")
         public String phrase;
 
@@ -482,44 +390,24 @@ public class GetRuleDetailResponseBody extends TeaModel {
         @NameInMap("Regex")
         public String regex;
 
-        /**
-         * <strong>example:</strong>
-         * <p>80</p>
-         */
         @NameInMap("Score")
         public Integer score;
 
-        /**
-         * <strong>example:</strong>
-         * <p>90</p>
-         */
         @NameInMap("Similarity_threshold")
         public Float similarityThreshold;
 
         @NameInMap("SimilarlySentences")
         public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamSimilarlySentences similarlySentences;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Target")
         public Integer target;
 
         @NameInMap("TargetRole")
         public String targetRole;
 
-        /**
-         * <strong>example:</strong>
-         * <p>4</p>
-         */
         @NameInMap("Threshold")
         public Float threshold;
 
-        /**
-         * <strong>example:</strong>
-         * <p>280</p>
-         */
         @NameInMap("VelocityInMint")
         public Integer velocityInMint;
 
@@ -779,27 +667,15 @@ public class GetRuleDetailResponseBody extends TeaModel {
     }
 
     public static class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>8</p>
-         */
         @NameInMap("Oid")
         public String oid;
 
-        /**
-         * <strong>example:</strong>
-         * <p>operator demo</p>
-         */
         @NameInMap("OperName")
         public String operName;
 
         @NameInMap("Param")
         public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam param;
 
-        /**
-         * <strong>example:</strong>
-         * <p>REGULAR_EXPRESSION</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -865,17 +741,9 @@ public class GetRuleDetailResponseBody extends TeaModel {
         @NameInMap("CheckRange")
         public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRange checkRange;
 
-        /**
-         * <strong>example:</strong>
-         * <p>7</p>
-         */
         @NameInMap("ConditionInfoCid")
         public String conditionInfoCid;
 
-        /**
-         * <strong>example:</strong>
-         * <p>7</p>
-         */
         @NameInMap("OperLambda")
         public String operLambda;
 
@@ -941,20 +809,12 @@ public class GetRuleDetailResponseBody extends TeaModel {
     }
 
     public static class GetRuleDetailResponseBodyDataRulesRuleBasicInfoBusinessCategoriesBusinessCategoryBasicInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>264971810</p>
-         */
         @NameInMap("Bid")
         public Integer bid;
 
         @NameInMap("BusinessName")
         public String businessName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("ServiceType")
         public Integer serviceType;
 
@@ -1031,17 +891,9 @@ public class GetRuleDetailResponseBody extends TeaModel {
         @NameInMap("BusinessCategories")
         public GetRuleDetailResponseBodyDataRulesRuleBasicInfoBusinessCategories businessCategories;
 
-        /**
-         * <strong>example:</strong>
-         * <p>4</p>
-         */
         @NameInMap("Rid")
         public String rid;
 
-        /**
-         * <strong>example:</strong>
-         * <p>7&amp;&amp;!8</p>
-         */
         @NameInMap("RuleLambda")
         public String ruleLambda;
 

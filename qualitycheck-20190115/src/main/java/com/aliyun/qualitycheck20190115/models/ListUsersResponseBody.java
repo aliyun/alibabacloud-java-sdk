@@ -126,66 +126,30 @@ public class ListUsersResponseBody extends TeaModel {
     }
 
     public static class ListUsersResponseBodyDataUser extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2951869706989****</p>
-         */
         @NameInMap("AliUid")
         public String aliUid;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2020-03-11T16:54Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>XXX</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
         @NameInMap("DisplayName")
         public String displayName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("LoginUserType")
         public Integer loginUserType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>AGENT</p>
-         */
         @NameInMap("RoleName")
         public String roleName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2020-03-11T16:54Z</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
         @NameInMap("UserName")
         public String userName;
 

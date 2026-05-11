@@ -81,17 +81,9 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
     }
 
     public static class GetSkillGroupConfigResponseBodyDataAllRuleListRuleNameInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>12</p>
-         */
         @NameInMap("Rid")
         public Long rid;
 
-        /**
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("RuleName")
         public String ruleName;
 
@@ -138,17 +130,9 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
     }
 
     public static class GetSkillGroupConfigResponseBodyDataRuleListRuleNameInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>222</p>
-         */
         @NameInMap("Rid")
         public Long rid;
 
-        /**
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("RuleName")
         public String ruleName;
 

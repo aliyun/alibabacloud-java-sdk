@@ -326,17 +326,9 @@ public class ListSessionGroupResponseBody extends TeaModel {
     }
 
     public static class ListSessionGroupResponseBodyDataData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("AssignStatus")
         public Integer assignStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2022-09-26 10:09:14</p>
-         */
         @NameInMap("CallStartTime")
         public String callStartTime;
 
@@ -355,65 +347,33 @@ public class ListSessionGroupResponseBody extends TeaModel {
         @NameInMap("CustomerServiceNameList")
         public ListSessionGroupResponseBodyDataDataCustomerServiceNameList customerServiceNameList;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("HitSessionCount")
         public Integer hitSessionCount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>4498420@a_z@93EAADF1-01D3-44BD-8AC9-F57F447EFCE8_1614*****</p>
-         */
         @NameInMap("LastDataId")
         public String lastDataId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("ReviewStatus")
         public Integer reviewStatus;
 
         @NameInMap("ReviewerList")
         public ListSessionGroupResponseBodyDataDataReviewerList reviewerList;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("SchemeTaskConfigId")
         public Long schemeTaskConfigId;
 
         @NameInMap("SchemeTaskConfigName")
         public String schemeTaskConfigName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("Score")
         public Long score;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("SessionCount")
         public Integer sessionCount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>SessionGroupA</p>
-         */
         @NameInMap("SessionGroupId")
         public String sessionGroupId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("SessionGroupReviewedOrComplained")
         public Boolean sessionGroupReviewedOrComplained;
 

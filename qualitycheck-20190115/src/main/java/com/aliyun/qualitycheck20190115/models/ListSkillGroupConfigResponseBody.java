@@ -81,17 +81,9 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
     }
 
     public static class ListSkillGroupConfigResponseBodyDataSkillGroupConfigAllRuleListRuleNameInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>221</p>
-         */
         @NameInMap("Rid")
         public Long rid;
 
-        /**
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("RuleName")
         public String ruleName;
 
@@ -138,17 +130,9 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
     }
 
     public static class ListSkillGroupConfigResponseBodyDataSkillGroupConfigRuleListRuleNameInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2221</p>
-         */
         @NameInMap("Rid")
         public Long rid;
 
-        /**
-         * <strong>example:</strong>
-         * <p>x\&quot;x\&quot;x</p>
-         */
         @NameInMap("RuleName")
         public String ruleName;
 
@@ -195,24 +179,12 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
     }
 
     public static class ListSkillGroupConfigResponseBodyDataSkillGroupConfigSkillGroupScreensSkillGroupScreen extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("DataType")
         public Integer dataType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>customerName</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Symbol")
         public Integer symbol;
 
@@ -278,145 +250,69 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
     }
 
     public static class ListSkillGroupConfigResponseBodyDataSkillGroupConfig extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("AllContentQualityCheck")
         public Integer allContentQualityCheck;
 
-        /**
-         * <strong>example:</strong>
-         * <p>223</p>
-         */
         @NameInMap("AllRids")
         public String allRids;
 
         @NameInMap("AllRuleList")
         public ListSkillGroupConfigResponseBodyDataSkillGroupConfigAllRuleList allRuleList;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2020-12-01T15:12Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>221</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>211</p>
-         */
         @NameInMap("ModelId")
         public Long modelId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
         @NameInMap("ModelName")
         public String modelName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("QualityCheckType")
         public Integer qualityCheckType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2221</p>
-         */
         @NameInMap("Rid")
         public String rid;
 
         @NameInMap("RuleList")
         public ListSkillGroupConfigResponseBodyDataSkillGroupConfigRuleList ruleList;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("ScreenSwitch")
         public Boolean screenSwitch;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("SkillGroupFrom")
         public Integer skillGroupFrom;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("SkillGroupId")
         public String skillGroupId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
         @NameInMap("SkillGroupName")
         public String skillGroupName;
 
         @NameInMap("SkillGroupScreens")
         public ListSkillGroupConfigResponseBodyDataSkillGroupConfigSkillGroupScreens skillGroupScreens;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Status")
         public Integer status;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Type")
         public Integer type;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2020-12-01T19:28Z</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>323</p>
-         */
         @NameInMap("VocabId")
         public Long vocabId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
         @NameInMap("VocabName")
         public String vocabName;
 

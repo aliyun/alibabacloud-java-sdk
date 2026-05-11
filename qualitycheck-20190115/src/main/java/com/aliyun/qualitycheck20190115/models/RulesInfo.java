@@ -11,6 +11,10 @@ public class RulesInfo extends TeaModel {
     @NameInMap("Conditions")
     public java.util.List<ConditionBasicInfo> conditions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
@@ -21,9 +25,17 @@ public class RulesInfo extends TeaModel {
     @NameInMap("Dialogues")
     public java.util.List<RuleTestDialogue> dialogues;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

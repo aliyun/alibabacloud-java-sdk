@@ -4,24 +4,48 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class JudgeNodeMetaDesc extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>xx</p>
+     */
     @NameInMap("ActualValue")
     public String actualValue;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("DataType")
     public Integer dataType;
 
     @NameInMap("ExpressionMetaDesc")
     public JudgeNodeMetaDescExpressionMetaDesc expressionMetaDesc;
 
+    /**
+     * <strong>example:</strong>
+     * <p>remark1</p>
+     */
     @NameInMap("Field")
     public String field;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("FieldType")
     public Integer fieldType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Symbol")
     public Integer symbol;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("Value")
     public String value;
 

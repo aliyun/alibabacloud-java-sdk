@@ -81,34 +81,18 @@ public class GetPrecisionTaskResponseBody extends TeaModel {
     }
 
     public static class GetPrecisionTaskResponseBodyDataPrecisionsPrecision extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2311</p>
-         */
         @NameInMap("ModelId")
         public Long modelId;
 
         @NameInMap("ModelName")
         public String modelName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0.98</p>
-         */
         @NameInMap("Precision")
         public Float precision;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Status")
         public Integer status;
 
-        /**
-         * <strong>example:</strong>
-         * <p>593A04C0-E6E9-4CDC-8C99-B120C******</p>
-         */
         @NameInMap("TaskId")
         public String taskId;
 

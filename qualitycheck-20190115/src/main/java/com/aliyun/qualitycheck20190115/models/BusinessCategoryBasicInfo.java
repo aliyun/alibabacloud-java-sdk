@@ -10,6 +10,9 @@ public class BusinessCategoryBasicInfo extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>originalId</p>
+     */
     @NameInMap("OriginalId")
     public Long originalId;
 

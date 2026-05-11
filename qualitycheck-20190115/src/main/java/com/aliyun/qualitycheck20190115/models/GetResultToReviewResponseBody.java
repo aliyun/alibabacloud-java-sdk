@@ -81,41 +81,21 @@ public class GetResultToReviewResponseBody extends TeaModel {
     }
 
     public static class GetResultToReviewResponseBodyDataDialoguesDialogue extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>72000</p>
-         */
         @NameInMap("Begin")
         public Long begin;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2019-10-01 11:12:01</p>
-         */
         @NameInMap("BeginTime")
         public String beginTime;
 
         @NameInMap("BeginTimeMs")
         public Long beginTimeMs;
 
-        /**
-         * <strong>example:</strong>
-         * <p>7</p>
-         */
         @NameInMap("EmotionValue")
         public Integer emotionValue;
 
-        /**
-         * <strong>example:</strong>
-         * <p>80000</p>
-         */
         @NameInMap("End")
         public Long end;
 
-        /**
-         * <strong>example:</strong>
-         * <p>00:08</p>
-         */
         @NameInMap("HourMinSec")
         public String hourMinSec;
 
@@ -125,17 +105,9 @@ public class GetResultToReviewResponseBody extends TeaModel {
         @NameInMap("Role")
         public String role;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("SilenceDuration")
         public Integer silenceDuration;
 
-        /**
-         * <strong>example:</strong>
-         * <p>200</p>
-         */
         @NameInMap("SpeechRate")
         public Integer speechRate;
 
@@ -260,24 +232,12 @@ public class GetResultToReviewResponseBody extends TeaModel {
         @NameInMap("Comments")
         public String comments;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2020-10-16T11:13Z</p>
-         */
         @NameInMap("OperationTime")
         public String operationTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>5</p>
-         */
         @NameInMap("OperationType")
         public Integer operationType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123456</p>
-         */
         @NameInMap("Operator")
         public Long operator;
 
@@ -370,48 +330,24 @@ public class GetResultToReviewResponseBody extends TeaModel {
     }
 
     public static class GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoKeyWordsKeyWord extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2000</p>
-         */
         @NameInMap("Cid")
         public String cid;
 
-        /**
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
         @NameInMap("CustomizeCode")
         public String customizeCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("From")
         public Integer from;
 
         @NameInMap("IsMatch")
         public Boolean isMatch;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("Pid")
         public Integer pid;
 
-        /**
-         * <strong>example:</strong>
-         * <p>6fa76916-3ce6-45d8-ac64-01b7f31c7295</p>
-         */
         @NameInMap("Tid")
         public String tid;
 
-        /**
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("To")
         public Integer to;
 
@@ -509,34 +445,18 @@ public class GetResultToReviewResponseBody extends TeaModel {
     }
 
     public static class GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoPhrase extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>72000</p>
-         */
         @NameInMap("Begin")
         public Long begin;
 
-        /**
-         * <strong>example:</strong>
-         * <p>7</p>
-         */
         @NameInMap("EmotionValue")
         public Integer emotionValue;
 
-        /**
-         * <strong>example:</strong>
-         * <p>80000</p>
-         */
         @NameInMap("End")
         public Long end;
 
         @NameInMap("Identity")
         public String identity;
 
-        /**
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("Pid")
         public Integer pid;
 
@@ -846,38 +766,18 @@ public class GetResultToReviewResponseBody extends TeaModel {
         @NameInMap("Comment")
         public String comment;
 
-        /**
-         * <strong>example:</strong>
-         * <p>013c68142fec4f0899fa6ee0exxx</p>
-         */
         @NameInMap("HitId")
         public String hitId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("ReviewResult")
         public Integer reviewResult;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2019-10-12 17:06:00</p>
-         */
         @NameInMap("ReviewTime")
         public String reviewTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("Reviewer")
         public String reviewer;
 
-        /**
-         * <strong>example:</strong>
-         * <p>451</p>
-         */
         @NameInMap("Rid")
         public Long rid;
 
@@ -948,20 +848,12 @@ public class GetResultToReviewResponseBody extends TeaModel {
     }
 
     public static class GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("AutoReview")
         public Integer autoReview;
 
         @NameInMap("ComplainHistories")
         public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoComplainHistories complainHistories;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Complainable")
         public Boolean complainable;
 
@@ -977,41 +869,21 @@ public class GetResultToReviewResponseBody extends TeaModel {
         @NameInMap("ReviewInfo")
         public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfo reviewInfo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>451</p>
-         */
         @NameInMap("Rid")
         public Long rid;
 
         @NameInMap("RuleName")
         public String ruleName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
         @NameInMap("ScoreId")
         public Long scoreId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>-10</p>
-         */
         @NameInMap("ScoreNum")
         public Integer scoreNum;
 
-        /**
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
         @NameInMap("ScoreSubId")
         public Long scoreSubId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
         @NameInMap("ScoreSubName")
         public String scoreSubName;
 
@@ -1149,24 +1021,12 @@ public class GetResultToReviewResponseBody extends TeaModel {
         @NameInMap("Comments")
         public String comments;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2020-10-16T11:13Z</p>
-         */
         @NameInMap("OperationTime")
         public String operationTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>5</p>
-         */
         @NameInMap("OperationType")
         public Integer operationType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123456</p>
-         */
         @NameInMap("Operator")
         public Long operator;
 
@@ -1243,31 +1103,15 @@ public class GetResultToReviewResponseBody extends TeaModel {
         @NameInMap("ComplainHistories")
         public GetResultToReviewResponseBodyDataManualScoreInfoListManualScoreInfoComplainHistories complainHistories;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Complainable")
         public Boolean complainable;
 
-        /**
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
         @NameInMap("ScoreId")
         public Long scoreId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>-10</p>
-         */
         @NameInMap("ScoreNum")
         public Integer scoreNum;
 
-        /**
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
         @NameInMap("ScoreSubId")
         public Long scoreSubId;
 
@@ -1401,17 +1245,9 @@ public class GetResultToReviewResponseBody extends TeaModel {
         @NameInMap("Comments")
         public String comments;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("ComplainResult")
         public Integer complainResult;
 
-        /**
-         * <strong>example:</strong>
-         * <p>90</p>
-         */
         @NameInMap("OldScore")
         public Integer oldScore;
 
@@ -1424,37 +1260,21 @@ public class GetResultToReviewResponseBody extends TeaModel {
         @NameInMap("ReviewManagerType")
         public String reviewManagerType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("ReviewResult")
         public Integer reviewResult;
 
         @NameInMap("ReviewRightRule")
         public GetResultToReviewResponseBodyDataReviewHistoryListReviewHistoryReviewRightRule reviewRightRule;
 
-        /**
-         * <strong>example:</strong>
-         * <p>95</p>
-         */
         @NameInMap("Score")
         public Integer score;
 
         @NameInMap("Time")
         public Long time;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2019-10-28 15:21:00</p>
-         */
         @NameInMap("TimeStr")
         public String timeStr;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Type")
         public Integer type;
 

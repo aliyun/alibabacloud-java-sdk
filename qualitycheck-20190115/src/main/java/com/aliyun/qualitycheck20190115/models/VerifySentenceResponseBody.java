@@ -148,10 +148,6 @@ public class VerifySentenceResponseBody extends TeaModel {
         @NameInMap("Line")
         public VerifySentenceResponseBodyDataDeltaSourceLine line;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Position")
         public Integer position;
 
@@ -201,10 +197,6 @@ public class VerifySentenceResponseBody extends TeaModel {
         @NameInMap("Line")
         public VerifySentenceResponseBodyDataDeltaTargetLine line;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Position")
         public Integer position;
 
@@ -238,10 +230,6 @@ public class VerifySentenceResponseBody extends TeaModel {
         @NameInMap("Target")
         public VerifySentenceResponseBodyDataDeltaTarget target;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CHANGE</p>
-         */
         @NameInMap("Type")
         public String type;
 
