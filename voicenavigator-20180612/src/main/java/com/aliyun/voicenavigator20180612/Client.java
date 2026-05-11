@@ -85,6 +85,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>AuditTTSVoice</p>
+     * 
      * @param request AuditTTSVoiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AuditTTSVoiceResponse
@@ -150,6 +153,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>AuditTTSVoice</p>
+     * 
      * @param request AuditTTSVoiceRequest
      * @return AuditTTSVoiceResponse
      */
@@ -159,6 +165,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>开启会话</p>
+     * 
      * @param request BeginDialogueRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BeginDialogueResponse
@@ -208,6 +217,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>开启会话</p>
+     * 
      * @param request BeginDialogueRequest
      * @return BeginDialogueResponse
      */
@@ -271,6 +283,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>CreateDownloadUrl</p>
+     * 
      * @param request CreateDownloadUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDownloadUrlResponse
@@ -296,6 +311,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>CreateDownloadUrl</p>
+     * 
      * @param request CreateDownloadUrlRequest
      * @return CreateDownloadUrlResponse
      */
@@ -417,6 +435,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>DebugCollectedNumber</p>
+     * 
      * @param request DebugCollectedNumberRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DebugCollectedNumberResponse
@@ -454,6 +475,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>DebugCollectedNumber</p>
+     * 
      * @param request DebugCollectedNumberRequest
      * @return DebugCollectedNumberResponse
      */
@@ -585,6 +609,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>DescribeConversationContext</p>
+     * 
      * @param request DescribeConversationContextRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeConversationContextResponse
@@ -610,6 +637,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>DescribeConversationContext</p>
+     * 
      * @param request DescribeConversationContextRequest
      * @return DescribeConversationContextResponse
      */
@@ -619,6 +649,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>DescribeExportProgress</p>
+     * 
      * @param request DescribeExportProgressRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeExportProgressResponse
@@ -644,6 +677,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>DescribeExportProgress</p>
+     * 
      * @param request DescribeExportProgressRequest
      * @return DescribeExportProgressResponse
      */
@@ -789,6 +825,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取TTS配置</p>
+     * 
      * @param request DescribeTTSConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeTTSConfigResponse
@@ -814,6 +853,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取TTS配置</p>
+     * 
      * @param request DescribeTTSConfigRequest
      * @return DescribeTTSConfigResponse
      */
@@ -1015,6 +1057,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>ExportConversationDetails</p>
+     * 
      * @param request ExportConversationDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ExportConversationDetailsResponse
@@ -1032,6 +1077,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.callingNumber)) {
             query.put("CallingNumber", request.callingNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.debugConversation)) {
+            query.put("DebugConversation", request.debugConversation);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
@@ -1072,6 +1121,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>ExportConversationDetails</p>
+     * 
      * @param request ExportConversationDetailsRequest
      * @return ExportConversationDetailsResponse
      */
@@ -1135,136 +1187,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @param request GenerateUploadUrlRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return GenerateUploadUrlResponse
-     */
-    public GenerateUploadUrlResponse generateUploadUrlWithOptions(GenerateUploadUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.callerBid)) {
-            body.put("CallerBid", request.callerBid);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.callerIp)) {
-            body.put("CallerIp", request.callerIp);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.callerParentId)) {
-            body.put("CallerParentId", request.callerParentId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.callerType)) {
-            body.put("CallerType", request.callerType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.callerUid)) {
-            body.put("CallerUid", request.callerUid);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.clientIp)) {
-            body.put("ClientIp", request.clientIp);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.environment)) {
-            body.put("Environment", request.environment);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
-            body.put("FileName", request.fileName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
-            body.put("InstanceId", request.instanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceOwnerId)) {
-            body.put("InstanceOwnerId", request.instanceOwnerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.key)) {
-            body.put("Key", request.key);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mfaPresent)) {
-            body.put("MfaPresent", request.mfaPresent);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.proxyOriginalSecurityTransport)) {
-            body.put("ProxyOriginalSecurityTransport", request.proxyOriginalSecurityTransport);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.proxyOriginalSourceIp)) {
-            body.put("ProxyOriginalSourceIp", request.proxyOriginalSourceIp);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.proxyTrustTransportInfo)) {
-            body.put("ProxyTrustTransportInfo", request.proxyTrustTransportInfo);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
-            body.put("RequestId", request.requestId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
-            body.put("SecurityToken", request.securityToken);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.securityTransport)) {
-            body.put("SecurityTransport", request.securityTransport);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
-            body.put("TenantId", request.tenantId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tenantName)) {
-            body.put("TenantName", request.tenantName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
-            body.put("UserId", request.userId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
-            body.put("UserName", request.userName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xspaceServicerId)) {
-            body.put("XspaceServicerId", request.xspaceServicerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xspaceTenantBuId)) {
-            body.put("XspaceTenantBuId", request.xspaceTenantBuId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GenerateUploadUrl"),
-            new TeaPair("version", "2018-06-12"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateUploadUrlResponse());
-    }
-
-    /**
-     * @param request GenerateUploadUrlRequest
-     * @return GenerateUploadUrlResponse
-     */
-    public GenerateUploadUrlResponse generateUploadUrl(GenerateUploadUrlRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.generateUploadUrlWithOptions(request, runtime);
-    }
-
-    /**
+     * <b>summary</b> : 
+     * <p>获取Asr配置</p>
+     * 
      * @param request GetAsrConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAsrConfigResponse
@@ -1298,6 +1223,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取Asr配置</p>
+     * 
      * @param request GetAsrConfigRequest
      * @return GetAsrConfigResponse
      */
@@ -1307,6 +1235,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetRealTimeConcurrency</p>
+     * 
      * @param request GetRealTimeConcurrencyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetRealTimeConcurrencyResponse
@@ -1332,6 +1263,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetRealTimeConcurrency</p>
+     * 
      * @param request GetRealTimeConcurrencyRequest
      * @return GetRealTimeConcurrencyResponse
      */
@@ -1409,6 +1343,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询会话列表</p>
+     * 
      * @param request ListConversationsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListConversationsResponse
@@ -1434,6 +1371,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询会话列表</p>
+     * 
      * @param request ListConversationsRequest
      * @return ListConversationsResponse
      */
@@ -1443,13 +1383,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>下载列表</p>
+     * 
      * @param request ListDownloadTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDownloadTasksResponse
      */
     public ListDownloadTasksResponse listDownloadTasksWithOptions(ListDownloadTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1458,7 +1409,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2018-06-12"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
             new TeaPair("reqBodyType", "formData"),
@@ -1468,6 +1419,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>下载列表</p>
+     * 
      * @param request ListDownloadTasksRequest
      * @return ListDownloadTasksResponse
      */
@@ -1511,6 +1465,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改Asr配置</p>
+     * 
      * @param request ModifyAsrConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyAsrConfigResponse
@@ -1518,6 +1475,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyAsrConfigResponse modifyAsrConfigWithOptions(ModifyAsrConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appKey)) {
+            query.put("AppKey", request.appKey);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.asrAcousticModelId)) {
             query.put("AsrAcousticModelId", request.asrAcousticModelId);
         }
@@ -1528,6 +1489,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.asrCustomizationId)) {
             query.put("AsrCustomizationId", request.asrCustomizationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.asrOverrides)) {
+            query.put("AsrOverrides", request.asrOverrides);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.asrVocabularyId)) {
@@ -1544,6 +1509,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.entryId)) {
             query.put("EntryId", request.entryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nlsServiceType)) {
+            query.put("NlsServiceType", request.nlsServiceType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1564,6 +1533,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改Asr配置</p>
+     * 
      * @param request ModifyAsrConfigRequest
      * @return ModifyAsrConfigResponse
      */
@@ -1743,6 +1715,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改TTS配置</p>
+     * 
      * @param request ModifyTTSConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyTTSConfigResponse
@@ -1774,8 +1749,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NlsServiceType", request.nlsServiceType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.pitchRate)) {
+            query.put("PitchRate", request.pitchRate);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.speechRate)) {
             query.put("SpeechRate", request.speechRate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ttsOverrides)) {
+            query.put("TtsOverrides", request.ttsOverrides);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.voice)) {
@@ -1804,6 +1787,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改TTS配置</p>
+     * 
      * @param request ModifyTTSConfigRequest
      * @return ModifyTTSConfigResponse
      */

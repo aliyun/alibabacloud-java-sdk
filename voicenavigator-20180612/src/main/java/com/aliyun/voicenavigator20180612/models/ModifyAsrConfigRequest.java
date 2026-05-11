@@ -6,6 +6,13 @@ import com.aliyun.tea.*;
 public class ModifyAsrConfigRequest extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>your_app_key</p>
+     */
+    @NameInMap("AppKey")
+    public String appKey;
+
+    /**
+     * <strong>example:</strong>
      * <p>6cc9f5ca-2cb6-4cc7-a46b-2bbfd3e61b22</p>
      */
     @NameInMap("AsrAcousticModelId")
@@ -24,6 +31,9 @@ public class ModifyAsrConfigRequest extends TeaModel {
      */
     @NameInMap("AsrCustomizationId")
     public String asrCustomizationId;
+
+    @NameInMap("AsrOverrides")
+    public String asrOverrides;
 
     /**
      * <strong>example:</strong>
@@ -49,9 +59,24 @@ public class ModifyAsrConfigRequest extends TeaModel {
     @NameInMap("EntryId")
     public String entryId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>语音识别</p>
+     */
+    @NameInMap("NlsServiceType")
+    public String nlsServiceType;
+
     public static ModifyAsrConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyAsrConfigRequest self = new ModifyAsrConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyAsrConfigRequest setAppKey(String appKey) {
+        this.appKey = appKey;
+        return this;
+    }
+    public String getAppKey() {
+        return this.appKey;
     }
 
     public ModifyAsrConfigRequest setAsrAcousticModelId(String asrAcousticModelId) {
@@ -76,6 +101,14 @@ public class ModifyAsrConfigRequest extends TeaModel {
     }
     public String getAsrCustomizationId() {
         return this.asrCustomizationId;
+    }
+
+    public ModifyAsrConfigRequest setAsrOverrides(String asrOverrides) {
+        this.asrOverrides = asrOverrides;
+        return this;
+    }
+    public String getAsrOverrides() {
+        return this.asrOverrides;
     }
 
     public ModifyAsrConfigRequest setAsrVocabularyId(String asrVocabularyId) {
@@ -108,6 +141,14 @@ public class ModifyAsrConfigRequest extends TeaModel {
     }
     public String getEntryId() {
         return this.entryId;
+    }
+
+    public ModifyAsrConfigRequest setNlsServiceType(String nlsServiceType) {
+        this.nlsServiceType = nlsServiceType;
+        return this;
+    }
+    public String getNlsServiceType() {
+        return this.nlsServiceType;
     }
 
 }

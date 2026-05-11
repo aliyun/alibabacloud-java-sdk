@@ -28,12 +28,18 @@ public class ModifyTTSConfigRequest extends TeaModel {
     @NameInMap("NlsServiceType")
     public String nlsServiceType;
 
+    @NameInMap("PitchRate")
+    public String pitchRate;
+
     /**
      * <strong>example:</strong>
      * <p>100</p>
      */
     @NameInMap("SpeechRate")
     public String speechRate;
+
+    @NameInMap("TtsOverrides")
+    public String ttsOverrides;
 
     /**
      * <strong>example:</strong>
@@ -102,12 +108,28 @@ public class ModifyTTSConfigRequest extends TeaModel {
         return this.nlsServiceType;
     }
 
+    public ModifyTTSConfigRequest setPitchRate(String pitchRate) {
+        this.pitchRate = pitchRate;
+        return this;
+    }
+    public String getPitchRate() {
+        return this.pitchRate;
+    }
+
     public ModifyTTSConfigRequest setSpeechRate(String speechRate) {
         this.speechRate = speechRate;
         return this;
     }
     public String getSpeechRate() {
         return this.speechRate;
+    }
+
+    public ModifyTTSConfigRequest setTtsOverrides(String ttsOverrides) {
+        this.ttsOverrides = ttsOverrides;
+        return this;
+    }
+    public String getTtsOverrides() {
+        return this.ttsOverrides;
     }
 
     public ModifyTTSConfigRequest setVoice(String voice) {

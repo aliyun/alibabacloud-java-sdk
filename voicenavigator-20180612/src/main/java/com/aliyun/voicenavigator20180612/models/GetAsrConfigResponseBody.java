@@ -98,6 +98,13 @@ public class GetAsrConfigResponseBody extends TeaModel {
     public static class GetAsrConfigResponseBodyData extends TeaModel {
         /**
          * <strong>example:</strong>
+         * <p>your-app-key</p>
+         */
+        @NameInMap("AppKey")
+        public String appKey;
+
+        /**
+         * <strong>example:</strong>
          * <p>3b1d3031-8b6e-460a-8640-d330f2ca50b8</p>
          */
         @NameInMap("AsrAcousticModelId")
@@ -117,6 +124,9 @@ public class GetAsrConfigResponseBody extends TeaModel {
         @NameInMap("AsrCustomizationId")
         public String asrCustomizationId;
 
+        @NameInMap("AsrOverrides")
+        public String asrOverrides;
+
         /**
          * <strong>example:</strong>
          * <p>3b1d3031-8b6e-460a-8640-d330f2ca50b8</p>
@@ -124,15 +134,38 @@ public class GetAsrConfigResponseBody extends TeaModel {
         @NameInMap("AsrVocabularyId")
         public String asrVocabularyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ali</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EngineXufei</p>
+         */
         @NameInMap("EngineXufei")
         public String engineXufei;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Authorized</p>
+         */
+        @NameInMap("NlsServiceType")
+        public String nlsServiceType;
 
         public static GetAsrConfigResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetAsrConfigResponseBodyData self = new GetAsrConfigResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetAsrConfigResponseBodyData setAppKey(String appKey) {
+            this.appKey = appKey;
+            return this;
+        }
+        public String getAppKey() {
+            return this.appKey;
         }
 
         public GetAsrConfigResponseBodyData setAsrAcousticModelId(String asrAcousticModelId) {
@@ -159,6 +192,14 @@ public class GetAsrConfigResponseBody extends TeaModel {
             return this.asrCustomizationId;
         }
 
+        public GetAsrConfigResponseBodyData setAsrOverrides(String asrOverrides) {
+            this.asrOverrides = asrOverrides;
+            return this;
+        }
+        public String getAsrOverrides() {
+            return this.asrOverrides;
+        }
+
         public GetAsrConfigResponseBodyData setAsrVocabularyId(String asrVocabularyId) {
             this.asrVocabularyId = asrVocabularyId;
             return this;
@@ -181,6 +222,14 @@ public class GetAsrConfigResponseBody extends TeaModel {
         }
         public String getEngineXufei() {
             return this.engineXufei;
+        }
+
+        public GetAsrConfigResponseBodyData setNlsServiceType(String nlsServiceType) {
+            this.nlsServiceType = nlsServiceType;
+            return this;
+        }
+        public String getNlsServiceType() {
+            return this.nlsServiceType;
         }
 
     }

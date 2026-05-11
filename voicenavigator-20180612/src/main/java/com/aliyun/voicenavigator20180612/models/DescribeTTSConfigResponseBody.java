@@ -36,6 +36,9 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
     @NameInMap("SpeechRate")
     public Integer speechRate;
 
+    @NameInMap("TtsOverrides")
+    public String ttsOverrides;
+
     /**
      * <strong>example:</strong>
      * <p>aixia</p>
@@ -117,6 +120,14 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
     }
     public Integer getSpeechRate() {
         return this.speechRate;
+    }
+
+    public DescribeTTSConfigResponseBody setTtsOverrides(String ttsOverrides) {
+        this.ttsOverrides = ttsOverrides;
+        return this;
+    }
+    public String getTtsOverrides() {
+        return this.ttsOverrides;
     }
 
     public DescribeTTSConfigResponseBody setVoice(String voice) {

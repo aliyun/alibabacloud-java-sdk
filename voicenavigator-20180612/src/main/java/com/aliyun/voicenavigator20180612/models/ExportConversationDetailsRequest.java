@@ -25,6 +25,9 @@ public class ExportConversationDetailsRequest extends TeaModel {
     @NameInMap("CallingNumber")
     public String callingNumber;
 
+    @NameInMap("DebugConversation")
+    public Integer debugConversation;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -73,6 +76,14 @@ public class ExportConversationDetailsRequest extends TeaModel {
     }
     public String getCallingNumber() {
         return this.callingNumber;
+    }
+
+    public ExportConversationDetailsRequest setDebugConversation(Integer debugConversation) {
+        this.debugConversation = debugConversation;
+        return this;
+    }
+    public Integer getDebugConversation() {
+        return this.debugConversation;
     }
 
     public ExportConversationDetailsRequest setInstanceId(String instanceId) {
