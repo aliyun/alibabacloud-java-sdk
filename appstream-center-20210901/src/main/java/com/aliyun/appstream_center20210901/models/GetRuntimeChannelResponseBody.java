@@ -51,6 +51,9 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
     }
 
     public static class GetRuntimeChannelResponseBodyData extends TeaModel {
+        @NameInMap("AvatarUrl")
+        public String avatarUrl;
+
         /**
          * <strong>example:</strong>
          * <p>dingtalk-connector</p>
@@ -67,6 +70,15 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
          */
         @NameInMap("Config")
         public String config;
+
+        @NameInMap("ConfigMode")
+        public String configMode;
+
+        @NameInMap("QrCodeNotifyUrl")
+        public String qrCodeNotifyUrl;
+
+        @NameInMap("QrCodeStatus")
+        public String qrCodeStatus;
 
         /**
          * <strong>example:</strong>
@@ -87,6 +99,14 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetRuntimeChannelResponseBodyData setAvatarUrl(String avatarUrl) {
+            this.avatarUrl = avatarUrl;
+            return this;
+        }
+        public String getAvatarUrl() {
+            return this.avatarUrl;
+        }
+
         public GetRuntimeChannelResponseBodyData setCode(String code) {
             this.code = code;
             return this;
@@ -101,6 +121,30 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
         }
         public String getConfig() {
             return this.config;
+        }
+
+        public GetRuntimeChannelResponseBodyData setConfigMode(String configMode) {
+            this.configMode = configMode;
+            return this;
+        }
+        public String getConfigMode() {
+            return this.configMode;
+        }
+
+        public GetRuntimeChannelResponseBodyData setQrCodeNotifyUrl(String qrCodeNotifyUrl) {
+            this.qrCodeNotifyUrl = qrCodeNotifyUrl;
+            return this;
+        }
+        public String getQrCodeNotifyUrl() {
+            return this.qrCodeNotifyUrl;
+        }
+
+        public GetRuntimeChannelResponseBodyData setQrCodeStatus(String qrCodeStatus) {
+            this.qrCodeStatus = qrCodeStatus;
+            return this;
+        }
+        public String getQrCodeStatus() {
+            return this.qrCodeStatus;
         }
 
         public GetRuntimeChannelResponseBodyData setRiskType(String riskType) {

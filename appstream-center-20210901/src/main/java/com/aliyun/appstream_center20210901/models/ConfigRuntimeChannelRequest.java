@@ -41,6 +41,17 @@ public class ConfigRuntimeChannelRequest extends TeaModel {
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Simple</p>
+     */
+    @NameInMap("ConfigMode")
+    public String configMode;
+
+    /**
+     * <strong>example:</strong>
+     * <p>钉钉</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -94,6 +105,14 @@ public class ConfigRuntimeChannelRequest extends TeaModel {
     }
     public String getConfig() {
         return this.config;
+    }
+
+    public ConfigRuntimeChannelRequest setConfigMode(String configMode) {
+        this.configMode = configMode;
+        return this;
+    }
+    public String getConfigMode() {
+        return this.configMode;
     }
 
     public ConfigRuntimeChannelRequest setName(String name) {

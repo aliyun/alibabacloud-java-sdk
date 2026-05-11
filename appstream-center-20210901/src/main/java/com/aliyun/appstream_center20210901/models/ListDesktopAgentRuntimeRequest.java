@@ -115,6 +115,9 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("ResourceIds")
+    public java.util.List<String> resourceIds;
+
     public static ListDesktopAgentRuntimeRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDesktopAgentRuntimeRequest self = new ListDesktopAgentRuntimeRequest();
         return TeaModel.build(map, self);
@@ -270,6 +273,14 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public ListDesktopAgentRuntimeRequest setResourceIds(java.util.List<String> resourceIds) {
+        this.resourceIds = resourceIds;
+        return this;
+    }
+    public java.util.List<String> getResourceIds() {
+        return this.resourceIds;
     }
 
 }

@@ -373,6 +373,12 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         @NameInMap("ModelConfigure")
         public Boolean modelConfigure;
 
+        @NameInMap("OsType")
+        public String osType;
+
+        @NameInMap("QrCodeConfiguringList")
+        public java.util.List<String> qrCodeConfiguringList;
+
         /**
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -476,6 +482,22 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         }
         public Boolean getModelConfigure() {
             return this.modelConfigure;
+        }
+
+        public ListDesktopAgentRuntimeResponseBodyData setOsType(String osType) {
+            this.osType = osType;
+            return this;
+        }
+        public String getOsType() {
+            return this.osType;
+        }
+
+        public ListDesktopAgentRuntimeResponseBodyData setQrCodeConfiguringList(java.util.List<String> qrCodeConfiguringList) {
+            this.qrCodeConfiguringList = qrCodeConfiguringList;
+            return this;
+        }
+        public java.util.List<String> getQrCodeConfiguringList() {
+            return this.qrCodeConfiguringList;
         }
 
         public ListDesktopAgentRuntimeResponseBodyData setRegionId(String regionId) {
