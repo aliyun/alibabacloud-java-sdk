@@ -260,6 +260,15 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         @NameInMap("supportCompactionService")
         public Boolean supportCompactionService;
 
+        /**
+         * <p>是否支持Compaction Service白名单功能</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("supportCompactionServiceWhiteList")
+        public Boolean supportCompactionServiceWhiteList;
+
         public static GetInstanceFeatureGateResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceFeatureGateResponseBodyData self = new GetInstanceFeatureGateResponseBodyData();
             return TeaModel.build(map, self);
@@ -423,6 +432,14 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         }
         public Boolean getSupportCompactionService() {
             return this.supportCompactionService;
+        }
+
+        public GetInstanceFeatureGateResponseBodyData setSupportCompactionServiceWhiteList(Boolean supportCompactionServiceWhiteList) {
+            this.supportCompactionServiceWhiteList = supportCompactionServiceWhiteList;
+            return this;
+        }
+        public Boolean getSupportCompactionServiceWhiteList() {
+            return this.supportCompactionServiceWhiteList;
         }
 
     }

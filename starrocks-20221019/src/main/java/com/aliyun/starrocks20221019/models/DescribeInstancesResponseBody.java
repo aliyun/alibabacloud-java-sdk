@@ -209,6 +209,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("AclId")
         public String aclId;
 
+        @NameInMap("AiFunctionInstanceId")
+        public String aiFunctionInstanceId;
+
         /**
          * <strong>example:</strong>
          * <p>onECS</p>
@@ -416,6 +419,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getAclId() {
             return this.aclId;
+        }
+
+        public DescribeInstancesResponseBodyData setAiFunctionInstanceId(String aiFunctionInstanceId) {
+            this.aiFunctionInstanceId = aiFunctionInstanceId;
+            return this;
+        }
+        public String getAiFunctionInstanceId() {
+            return this.aiFunctionInstanceId;
         }
 
         public DescribeInstancesResponseBodyData setArchitecture(String architecture) {
