@@ -4,10 +4,16 @@ package com.aliyun.hcs_mgw20240626.models;
 import com.aliyun.tea.*;
 
 public class UpdateJobInfo extends TeaModel {
+    /**
+     * <p>The throttling settings of the task.</p>
+     */
     @NameInMap("ImportQos")
     public ImportQos importQos;
 
     /**
+     * <p>The task state.\
+     * Valid values: IMPORT_JOB_LAUNCHING, IMPORT_JOB_SUSPEND, and IMPORT_JOB_CLOSING.</p>
+     * 
      * <strong>example:</strong>
      * <p>IMPORT_JOB_LAUNCHING</p>
      */

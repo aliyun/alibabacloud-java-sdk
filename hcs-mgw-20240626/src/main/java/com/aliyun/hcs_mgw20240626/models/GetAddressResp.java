@@ -4,10 +4,15 @@ package com.aliyun.hcs_mgw20240626.models;
 import com.aliyun.tea.*;
 
 public class GetAddressResp extends TeaModel {
+    /**
+     * <p>The details of the data address.</p>
+     */
     @NameInMap("AddressDetail")
     public AddressDetail addressDetail;
 
     /**
+     * <p>The time when the data address was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-05-01 12:00:00</p>
      */
@@ -15,6 +20,8 @@ public class GetAddressResp extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The time when the data address was last modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-05-01 12:00:00</p>
      */
@@ -22,20 +29,26 @@ public class GetAddressResp extends TeaModel {
     public String modifyTime;
 
     /**
+     * <p>The name of the data address.</p>
+     * 
      * <strong>example:</strong>
-     * <your-address-name>
+     * <p>test_name</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The owner of the data address.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1<em><strong>90</strong>87</em>*<em>53</em></p>
+     * <p>test_owner</p>
      */
     @NameInMap("Owner")
     public String owner;
 
     /**
+     * <p>The state of the data address.</p>
+     * 
      * <strong>example:</strong>
      * <p>avaliable</p>
      */
@@ -43,16 +56,23 @@ public class GetAddressResp extends TeaModel {
     public String status;
 
     /**
+     * <p>The tags.</p>
+     * 
      * <strong>example:</strong>
      * <p>K1:V1,K2:V2</p>
      */
     @NameInMap("Tags")
     public String tags;
 
+    /**
+     * <p>The verification result of the data address.</p>
+     */
     @NameInMap("VerifyResult")
     public VerifyResp verifyResult;
 
     /**
+     * <p>The time when the data address was verified.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-05-01 12:00:00</p>
      */
@@ -60,8 +80,10 @@ public class GetAddressResp extends TeaModel {
     public String verifyTime;
 
     /**
+     * <p>The ID of the data address.</p>
+     * 
      * <strong>example:</strong>
-     * <p><strong><strong>sf-</strong></strong>-0078-<strong><strong>-drfg</strong></strong>df1334</p>
+     * <p>test_id</p>
      */
     @NameInMap("Version")
     public String version;

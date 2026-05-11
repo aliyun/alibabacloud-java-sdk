@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateReportInfo extends TeaModel {
     /**
+     * <p>The task name.</p>
+     * 
      * <strong>example:</strong>
-     * <your-job-name>
+     * <p>test_job_name</p>
      */
     @NameInMap("JobName")
     public String jobName;
 
     /**
+     * <p>The execution ID of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,8 +23,10 @@ public class CreateReportInfo extends TeaModel {
     public Integer runtimeId;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
-     * <your-job-version>
+     * <p>test_job_id</p>
      */
     @NameInMap("Version")
     public String version;

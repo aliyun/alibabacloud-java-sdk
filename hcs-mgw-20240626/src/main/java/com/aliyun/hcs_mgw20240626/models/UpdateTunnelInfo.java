@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class UpdateTunnelInfo extends TeaModel {
     /**
+     * <p>The tags.</p>
+     * 
      * <strong>example:</strong>
-     * <p>k1=v1;k2=v2</p>
+     * <p>K1:V1,K2:V2</p>
      */
     @NameInMap("Tags")
     public String tags;
 
+    /**
+     * <p>The throttling settings of the tunnel.</p>
+     */
     @NameInMap("TunnelQos")
     public TunnelQos tunnelQos;
 

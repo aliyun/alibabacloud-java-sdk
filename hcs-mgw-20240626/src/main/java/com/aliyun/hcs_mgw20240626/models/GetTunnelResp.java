@@ -5,40 +5,53 @@ import com.aliyun.tea.*;
 
 public class GetTunnelResp extends TeaModel {
     /**
+     * <p>The time when the tunnel was created.</p>
+     * 
      * <strong>example:</strong>
-     * <p>2025-08-03T07:09:25.000Z</p>
+     * <p>2024-05-01 12:00:00</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
+     * <p>The time when the tunnel was last modified.</p>
+     * 
      * <strong>example:</strong>
-     * <p>2025-08-04T07:09:26.000Z</p>
+     * <p>2024-05-01 12:00:00</p>
      */
     @NameInMap("ModifyTime")
     public String modifyTime;
 
     /**
+     * <p>The tunnel owner.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1<em>5</em>**<em><strong>7</strong>43</em></p>
+     * <p>test_owner</p>
      */
     @NameInMap("Owner")
     public String owner;
 
     /**
+     * <p>The tags.</p>
+     * 
      * <strong>example:</strong>
-     * <p>K1:V1,K2:V2</p>
+     * <p>key1:value1,key2:value2</p>
      */
     @NameInMap("Tags")
     public String tags;
 
     /**
+     * <p>The tunnel ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p><strong><strong>33f-</strong></strong>-4740-<strong><strong>-bc4f</strong></strong>332b3</p>
+     * <p>test_tunnel_id</p>
      */
     @NameInMap("TunnelId")
     public String tunnelId;
 
+    /**
+     * <p>The throttling settings of the tunnel.</p>
+     */
     @NameInMap("TunnelQos")
     public TunnelQos tunnelQos;
 

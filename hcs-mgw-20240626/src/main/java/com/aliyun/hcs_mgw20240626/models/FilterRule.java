@@ -4,12 +4,21 @@ package com.aliyun.hcs_mgw20240626.models;
 import com.aliyun.tea.*;
 
 public class FilterRule extends TeaModel {
+    /**
+     * <p>The filter based on the file type.</p>
+     */
     @NameInMap("FileTypeFilters")
     public FileTypeFilters fileTypeFilters;
 
+    /**
+     * <p>The filter based on the file name.</p>
+     */
     @NameInMap("KeyFilters")
     public KeyFilters keyFilters;
 
+    /**
+     * <p>The filter based on the file modification time.</p>
+     */
     @NameInMap("LastModifiedFilters")
     public LastModifiedFilters lastModifiedFilters;
 

@@ -4,10 +4,18 @@ package com.aliyun.hcs_mgw20240626.models;
 import com.aliyun.tea.*;
 
 public class GetAgentResp extends TeaModel {
+    /**
+     * <p>The security code of the agent.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6af62558-970d-4f44-8663-4e297170fd6a</p>
+     */
     @NameInMap("ActivationKey")
     public String activationKey;
 
     /**
+     * <p>The method that is used to access the agent.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc</p>
      */
@@ -15,13 +23,17 @@ public class GetAgentResp extends TeaModel {
     public String agentEndpoint;
 
     /**
+     * <p>The time when the agent was created.</p>
+     * 
      * <strong>example:</strong>
-     * <p>2024-05-01 12:00:00</p>
+     * <p>2024-05-01T12:00:00.000Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
+     * <p>The deployment mode of the agent.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -29,27 +41,35 @@ public class GetAgentResp extends TeaModel {
     public String deployMethod;
 
     /**
+     * <p>The time when the agent was last modified.</p>
+     * 
      * <strong>example:</strong>
-     * <p>2024-05-01 12:00:00</p>
+     * <p>2024-05-01T12:00:00.000Z</p>
      */
     @NameInMap("ModifyTime")
     public String modifyTime;
 
     /**
+     * <p>The agent name.</p>
+     * 
      * <strong>example:</strong>
-     * <your-agent-name>
+     * <p>test_name</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The agent owner.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1<em><strong>90</strong>87</em>*<em>53</em></p>
+     * <p>test_owner</p>
      */
     @NameInMap("Owner")
     public String owner;
 
     /**
+     * <p>The tags.</p>
+     * 
      * <strong>example:</strong>
      * <p>K1:V1,K2:V2</p>
      */
@@ -57,15 +77,19 @@ public class GetAgentResp extends TeaModel {
     public String tags;
 
     /**
+     * <p>The tunnel ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p><strong><strong>13f-</strong></strong>-0567-<strong><strong>-af8d</strong></strong>446665</p>
+     * <p>test_tunnel_id</p>
      */
     @NameInMap("TunnelId")
     public String tunnelId;
 
     /**
+     * <p>The agent ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p><strong><strong>33f-</strong></strong>-4740-<strong><strong>-bc4f</strong></strong>332b3</p>
+     * <p>test_agent_id</p>
      */
     @NameInMap("Version")
     public String version;

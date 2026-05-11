@@ -4,6 +4,9 @@ package com.aliyun.hcs_mgw20240626.models;
 import com.aliyun.tea.*;
 
 public class KeyFilterItem extends TeaModel {
+    /**
+     * <p>The regular expressions.</p>
+     */
     @NameInMap("Regex")
     public java.util.List<String> regex;
 

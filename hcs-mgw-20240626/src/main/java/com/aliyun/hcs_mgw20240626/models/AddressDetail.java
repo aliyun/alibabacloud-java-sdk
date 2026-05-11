@@ -5,24 +5,27 @@ import com.aliyun.tea.*;
 
 public class AddressDetail extends TeaModel {
     /**
+     * <p>The AccessKey ID that is used to access the bucket.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>test_access_id</p>
      */
     @NameInMap("AccessId")
     public String accessId;
 
     /**
+     * <p>The AccessKey secret that is used to access the bucket.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>test_secret_key</p>
      */
     @NameInMap("AccessSecret")
     public String accessSecret;
 
     /**
+     * <p>The type of the data address.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,17 +35,20 @@ public class AddressDetail extends TeaModel {
     public String addressType;
 
     /**
+     * <p>The associated agents. If you want to access data over an Express Connect circuit or a VPN gateway, you must associate agents.</p>
+     * 
      * <strong>example:</strong>
-     * <p>agnet1,agent2,agent3</p>
+     * <p>agent1,agent2</p>
      */
     @NameInMap("AgentList")
     public String agentList;
 
     /**
+     * <p>The bucket name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <your-bucket-name>
+     * <p>test_bucket</p>
      */
     @NameInMap("Bucket")
     public String bucket;
@@ -55,43 +61,55 @@ public class AddressDetail extends TeaModel {
     public String dataType;
 
     /**
+     * <p>The domain name of the bucket.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>oss-cn-hangzhou.aliyuncs.com</p>
+     * <p>test_domain</p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
+     * <p>The AccessKey ID that is used to access the bucket in which the inventory list resides.</p>
+     * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>test_inv_access_id</p>
      */
     @NameInMap("InvAccessId")
     public String invAccessId;
 
     /**
+     * <p>The AccessKey secret that is used to access the bucket in which the inventory list resides.</p>
+     * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>test_inv_secret_key</p>
      */
     @NameInMap("InvAccessSecret")
     public String invAccessSecret;
 
     /**
+     * <p>The name of the bucket in which the inventory list resides.</p>
+     * 
      * <strong>example:</strong>
-     * <your-inv-bucket-name>
+     * <p>test_inv_bucket</p>
      */
     @NameInMap("InvBucket")
     public String invBucket;
 
     /**
+     * <p>The domain name of the bucket in which the inventory list resides.</p>
+     * 
      * <strong>example:</strong>
-     * <p>oss-cn-hangzhou.aliyuncs.com</p>
+     * <p>test_inv_domain</p>
      */
     @NameInMap("InvDomain")
     public String invDomain;
 
     /**
+     * <p>The type of the bucket in which the inventory list resides.\
+     * Valid values: oss, s3, and cos.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss</p>
      */
@@ -99,43 +117,55 @@ public class AddressDetail extends TeaModel {
     public String invLocation;
 
     /**
+     * <p>The inventory list. You must specify the file name and file name extension of the inventory list.</p>
+     * 
      * <strong>example:</strong>
-     * <p>dir/manifest.json</p>
+     * <p>manifest.json</p>
      */
     @NameInMap("InvPath")
     public String invPath;
 
     /**
+     * <p>The region ID of the bucket in which the inventory list resides. If the bucket in which the inventory list resides is an OSS bucket, you must specify the ID of the region in which the inventory list resides. You do not need to specify the domain name of the inventory list.</p>
+     * 
      * <strong>example:</strong>
-     * <p>oss-cn-hangzhou</p>
+     * <p>test_inv_region_id</p>
      */
     @NameInMap("InvRegionId")
     public String invRegionId;
 
     /**
+     * <p>The role that is used to migrate data for the bucket in which the inventory list resides. If the bucket in which the inventory list resides is an OSS bucket, you must specify a role. You do not need to specify an AccessKey pair that is used to access the bucket.</p>
+     * 
      * <strong>example:</strong>
-     * <your-role-name>
+     * <p>test_inv_role</p>
      */
     @NameInMap("InvRole")
     public String invRole;
 
     /**
+     * <p>The bucket prefix.</p>
+     * 
      * <strong>example:</strong>
-     * <p>dir1/dir2/</p>
+     * <p>test_prefix</p>
      */
     @NameInMap("Prefix")
     public String prefix;
 
     /**
+     * <p>The region ID of the bucket. If the bucket is an OSS bucket, you must specify the ID of the region in which the bucket resides. You do not need to specify the domain name of the bucket.</p>
+     * 
      * <strong>example:</strong>
-     * <p>oss-cn-hangzhou</p>
+     * <p>test_region_id</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
+     * <p>The role that is used to migrate data. If the bucket is an Object Storage Service (OSS) bucket, you must specify a role. You do not need to specify an AccessKey pair that is used to access the bucket.</p>
+     * 
      * <strong>example:</strong>
-     * <your-role-name>
+     * <p>test_role</p>
      */
     @NameInMap("Role")
     public String role;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAgentInfo extends TeaModel {
     /**
+     * <p>The method that is used to access the agent.\
+     * Valid values: public and vpc.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +16,8 @@ public class CreateAgentInfo extends TeaModel {
     public String agentEndpoint;
 
     /**
+     * <p>The deployment mode of the agent.\
+     * Set the value to default, which specifies the independent process mode.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +27,8 @@ public class CreateAgentInfo extends TeaModel {
     public String deployMethod;
 
     /**
+     * <p>The name of the agent.\
+     * The name can contain lowercase letters, digits, hyphens (-), and underscores (<em>). The name must be 3 to 63 characters in length. The name is case-sensitive and encoded in UTF-8. The name cannot start with a hyphen (-) or an underscore (</em>). You must specify a name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +38,9 @@ public class CreateAgentInfo extends TeaModel {
     public String name;
 
     /**
+     * <p>The tags in the key:value format.\
+     * The value can contain letters, digits, hyphens (-), underscores (_), and commas (,). The value can be up to 1,024 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>K1:V1,K2:V2</p>
      */
@@ -39,6 +48,7 @@ public class CreateAgentInfo extends TeaModel {
     public String tags;
 
     /**
+     * <p>The tunnel ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

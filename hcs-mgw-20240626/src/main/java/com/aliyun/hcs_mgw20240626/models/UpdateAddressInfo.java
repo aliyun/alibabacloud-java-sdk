@@ -4,6 +4,12 @@ package com.aliyun.hcs_mgw20240626.models;
 import com.aliyun.tea.*;
 
 public class UpdateAddressInfo extends TeaModel {
+    /**
+     * <p>The agents.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agent1,agent2,agent3</p>
+     */
     @NameInMap("AgentList")
     public String agentList;
 

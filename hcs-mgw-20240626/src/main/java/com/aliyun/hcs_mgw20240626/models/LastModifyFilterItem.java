@@ -4,6 +4,9 @@ package com.aliyun.hcs_mgw20240626.models;
 import com.aliyun.tea.*;
 
 public class LastModifyFilterItem extends TeaModel {
+    /**
+     * <p>The time filters.</p>
+     */
     @NameInMap("TimeFilter")
     public java.util.List<TimeFilter> timeFilter;
 

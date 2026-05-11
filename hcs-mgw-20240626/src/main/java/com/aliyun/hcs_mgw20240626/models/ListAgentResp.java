@@ -4,17 +4,24 @@ package com.aliyun.hcs_mgw20240626.models;
 import com.aliyun.tea.*;
 
 public class ListAgentResp extends TeaModel {
+    /**
+     * <p>The agents.</p>
+     */
     @NameInMap("ImportAgent")
     public java.util.List<GetAgentResp> importAgent;
 
     /**
+     * <p>The position from which the next list operation starts.</p>
+     * 
      * <strong>example:</strong>
-     * <your-next-agent-name>
+     * <p>test_next_marker</p>
      */
     @NameInMap("NextMarker")
     public String nextMarker;
 
     /**
+     * <p>Indicates whether the queried results are truncated.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -19,6 +19,9 @@ public class GetAgentStatusResp extends TeaModel {
     public String agentVersion;
 
     /**
+     * <p>The agent state.\
+     * Valid values: OK, Disconnected, and NoResponse.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */

@@ -4,13 +4,27 @@ package com.aliyun.hcs_mgw20240626.models;
 import com.aliyun.tea.*;
 
 public class VerifyAddressResp extends TeaModel {
+    /**
+     * <p>Data verification error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>Data validation error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid argument.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
+     * <p>The status of the data address verification.</p>
+     * 
      * <strong>example:</strong>
      * <p>avaliable</p>
      */
@@ -18,8 +32,10 @@ public class VerifyAddressResp extends TeaModel {
     public String status;
 
     /**
+     * <p>The time when the data address is verified.</p>
+     * 
      * <strong>example:</strong>
-     * <p>2024-05-01 12:00:00</p>
+     * <p>2024-05-01T12:00:00.000Z</p>
      */
     @NameInMap("VerifyTime")
     public String verifyTime;

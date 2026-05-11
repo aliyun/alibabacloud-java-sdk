@@ -5,12 +5,18 @@ import com.aliyun.tea.*;
 
 public class CreateTunnelInfo extends TeaModel {
     /**
+     * <p>The tags in the key:value format.\
+     * The value can contain letters, digits, hyphens (-), underscores (_), and commas (,). The value can be up to 1,024 characters in length.</p>
+     * 
      * <strong>example:</strong>
-     * <p>K1:V1,K2:V2</p>
+     * <p>a:a</p>
      */
     @NameInMap("Tags")
     public String tags;
 
+    /**
+     * <p>The throttling settings of the tunnel.</p>
+     */
     @NameInMap("TunnelQos")
     public TunnelQos tunnelQos;
 

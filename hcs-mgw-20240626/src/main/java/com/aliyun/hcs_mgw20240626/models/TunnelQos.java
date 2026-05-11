@@ -5,6 +5,9 @@ import com.aliyun.tea.*;
 
 public class TunnelQos extends TeaModel {
     /**
+     * <p>The maximum bandwidth of the tunnel. Unit: byte/s.\
+     * Valid values: values greater than or equal to 10485760. Default value: 0. The default value indicates that the bandwidth of the tunnel is not limited.</p>
+     * 
      * <strong>example:</strong>
      * <p>1073741824</p>
      */
@@ -12,6 +15,9 @@ public class TunnelQos extends TeaModel {
     public Long maxBandwidth;
 
     /**
+     * <p>The maximum queries per second (QPS) of the tunnel.\
+     * Valid values: values greater than or equal to 0. Default value: 0. The default value indicates that the QPS of the tunnel is not limited.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */

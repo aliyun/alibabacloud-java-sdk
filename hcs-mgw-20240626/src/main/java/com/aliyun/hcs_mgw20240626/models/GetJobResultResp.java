@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetJobResultResp extends TeaModel {
     /**
+     * <p>The type of the data address created based on the files that failed to be migrated. This parameter is required if you create a data address.</p>
+     * 
      * <strong>example:</strong>
      * <p>ossinv</p>
      */
@@ -12,6 +14,8 @@ public class GetJobResultResp extends TeaModel {
     public String addressType;
 
     /**
+     * <p>The number of files that are migrated. The number includes the number of files that are successfully migrated and the number of files that are skipped.</p>
+     * 
      * <strong>example:</strong>
      * <p>800</p>
      */
@@ -19,6 +23,8 @@ public class GetJobResultResp extends TeaModel {
     public Long copiedObjectCount;
 
     /**
+     * <p>The data size of files that are migrated.</p>
+     * 
      * <strong>example:</strong>
      * <p>800</p>
      */
@@ -26,6 +32,8 @@ public class GetJobResultResp extends TeaModel {
     public Long copiedObjectSize;
 
     /**
+     * <p>The number of files that failed to be migrated.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,34 +41,44 @@ public class GetJobResultResp extends TeaModel {
     public Long failedObjectCount;
 
     /**
+     * <p>The AccessKey ID that is used to access the bucket in which the inventory list of files that failed to be migrated resides. This parameter is required if you create a data address.</p>
+     * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>test_access_id</p>
      */
     @NameInMap("InvAccessId")
     public String invAccessId;
 
     /**
+     * <p>The AccessKey secret that is used to access the bucket in which the inventory list of files that failed to be migrated resides. This parameter is required if you create a data address.</p>
+     * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>test_secret_key</p>
      */
     @NameInMap("InvAccessSecret")
     public String invAccessSecret;
 
     /**
+     * <p>The name of the bucket in which the inventory list of files that failed to be migrated resides. This parameter is required if you create a data address.</p>
+     * 
      * <strong>example:</strong>
-     * <your-bucket-name>
+     * <p>test_sys_bucket</p>
      */
     @NameInMap("InvBucket")
     public String invBucket;
 
     /**
+     * <p>The domain name of the bucket in which the inventory list of files that failed to be migrated resides. This parameter is required if you create a data address.</p>
+     * 
      * <strong>example:</strong>
-     * <p>oss-cn-hangzhou.aliyuncs.com</p>
+     * <p>test_domain</p>
      */
     @NameInMap("InvDomain")
     public String invDomain;
 
     /**
+     * <p>The type of the bucket in which the inventory list of files that failed to be migrated resides. This parameter is required if you create a data address.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss</p>
      */
@@ -68,20 +86,27 @@ public class GetJobResultResp extends TeaModel {
     public String invLocation;
 
     /**
+     * <p>The inventory list of files that failed to be migrated. This parameter is required if you create a data address.</p>
+     * 
      * <strong>example:</strong>
-     * <p>dir/mainfest.json</p>
+     * <p>mainfest.json</p>
      */
     @NameInMap("InvPath")
     public String invPath;
 
     /**
+     * <p>The region ID of the bucket in which the inventory list of files that failed to be migrated resides. This parameter is required if you create a data address.</p>
+     * 
      * <strong>example:</strong>
-     * <p>oss-cn-hangzhou</p>
+     * <p>test_region_id</p>
      */
     @NameInMap("InvRegionId")
     public String invRegionId;
 
     /**
+     * <p>Indicates whether the files that failed to be migrated can be migrated again.\
+     * Valid values: NoNeed, Ready, and NotReady.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ready</p>
      */
@@ -103,6 +128,8 @@ public class GetJobResultResp extends TeaModel {
     public Long skippedObjectSize;
 
     /**
+     * <p>The total number of files.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -110,6 +137,8 @@ public class GetJobResultResp extends TeaModel {
     public Long totalObjectCount;
 
     /**
+     * <p>The total data size of files.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -117,8 +146,10 @@ public class GetJobResultResp extends TeaModel {
     public Long totalObjectSize;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p><strong><strong><strong>-188f-41d9-b266-</strong></strong></strong></p>
+     * <p>test_job_id</p>
      */
     @NameInMap("Version")
     public String version;

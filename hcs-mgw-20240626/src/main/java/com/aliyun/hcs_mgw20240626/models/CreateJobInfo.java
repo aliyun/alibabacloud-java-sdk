@@ -11,10 +11,15 @@ public class CreateJobInfo extends TeaModel {
     @NameInMap("AppendableToNormal")
     public Boolean appendableToNormal;
 
+    /**
+     * <p>The audit method.</p>
+     */
     @NameInMap("Audit")
     public Audit audit;
 
     /**
+     * <p>Indicates whether the Target attribute value of the symbolic links at the source data address is converted. You can convert the Target attribute value of the symbolic links at the source data address in one of the following scenarios: The source data address is an Object Storage Service (OSS) data address and the destination data address is a local data address. The source data address is a local data address and the destination data address is an OSS data address. The source data address is a local data address and the destination data address is another local data address. This ensures that the symbolic links at the destination data address can point to their objects as expected.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -22,44 +27,59 @@ public class CreateJobInfo extends TeaModel {
     public Boolean convertSymlinkTarget;
 
     /**
+     * <p>Specifies whether to create a migration report.</p>
+     * 
      * <strong>example:</strong>
-     * <p>false</p>
+     * <p>true</p>
      */
     @NameInMap("CreateReport")
     public Boolean createReport;
 
     /**
+     * <p>The name of the destination data address.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <your-dest-address-name>
+     * <p>test_dest_address</p>
      */
     @NameInMap("DestAddress")
     public String destAddress;
 
     /**
+     * <p>Specifies whether to enable multi-version migration. Multi-version migration is not supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("EnableMultiVersioning")
     public Boolean enableMultiVersioning;
 
+    /**
+     * <p>The filtering rule.</p>
+     */
     @NameInMap("FilterRule")
     public FilterRule filterRule;
 
+    /**
+     * <p>The throttling settings of the task.</p>
+     */
     @NameInMap("ImportQos")
     public ImportQos importQos;
 
     /**
+     * <p>The task name.\
+     * The name can contain lowercase letters, digits, hyphens (-), and underscores (<em>). The name must be 3 to 63 characters in length. The name is case-sensitive and encoded in UTF-8. The name cannot start with a hyphen (-) or an underscore (</em>). You must specify a name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <your-job-name>
+     * <p>test_name</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The file overwriting mode.\
+     * Valid values: never and always.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,25 +89,34 @@ public class CreateJobInfo extends TeaModel {
     public String overwriteMode;
 
     /**
+     * <p>The ID of the parent task. When you create a subtask to migrate a file that failed to be migrated, you can specify the ID of the parent task.</p>
+     * 
      * <strong>example:</strong>
-     * <your-parent-version>
+     * <p>6af62558-970d-4f44-8663-4e297170fd6a</p>
      */
     @NameInMap("ParentVersion")
     public String parentVersion;
 
+    /**
+     * <p>The scheduling rule.</p>
+     */
     @NameInMap("ScheduleRule")
     public ScheduleRule scheduleRule;
 
     /**
+     * <p>The name of the source data address.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <your-src-address-name>
+     * <p>test_src_address</p>
      */
     @NameInMap("SrcAddress")
     public String srcAddress;
 
     /**
+     * <p>The tags in the key:value format.\
+     * The value can contain letters, digits, hyphens (-), underscores (_), and commas (,). The value can be up to 1,024 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>K1:V1,K2:V2</p>
      */
@@ -102,6 +131,14 @@ public class CreateJobInfo extends TeaModel {
     public String targetStorageClass;
 
     /**
+     * <p>The file transfer mode.\
+     * Valid values: all and lastmodified. all: transfers the full data of files. lastmodified: transfers the incremental data of files.\
+     * Valid values if OverwriteMode and TransferMode are used together:</p>
+     * <ul>
+     * <li>A combination of always and all indicates that all files are forcefully overwritten.</li>
+     * <li>A combination of always and lastmodified indicates that files are overwritten based on the last modification time.</li>
+     * <li>A combination of never and all indicates that the files with the same name are not overwritten.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

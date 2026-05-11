@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class JobHistory extends TeaModel {
     /**
+     * <p>The ID of the task status change.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -12,6 +14,8 @@ public class JobHistory extends TeaModel {
     public String commitId;
 
     /**
+     * <p>The number of files that are migrated. The number includes the number of files that are successfully migrated and the number of files that are skipped.</p>
+     * 
      * <strong>example:</strong>
      * <p>900</p>
      */
@@ -19,6 +23,8 @@ public class JobHistory extends TeaModel {
     public Long copiedCount;
 
     /**
+     * <p>The data size of files that are migrated. Unit: bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -26,13 +32,17 @@ public class JobHistory extends TeaModel {
     public Long copiedSize;
 
     /**
+     * <p>The time when the current state ended.</p>
+     * 
      * <strong>example:</strong>
-     * <p>2025-07-04T08:09:26.000Z</p>
+     * <p>2024-05-01 12:00:00</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
+     * <p>The number of files that failed to be migrated.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -40,30 +50,46 @@ public class JobHistory extends TeaModel {
     public Long failedCount;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p><em><em><strong>-188f-</strong></em>-b266-</em>***</p>
+     * <p>test_id</p>
      */
     @NameInMap("JobVersion")
     public String jobVersion;
 
     /**
+     * <p>The state of data listing.\
+     * Valid values: Listing and Finished.</p>
+     * 
      * <strong>example:</strong>
      * <p>Listing</p>
      */
     @NameInMap("ListStatus")
     public String listStatus;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test error msg.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The task name.</p>
+     * 
      * <strong>example:</strong>
-     * <your-job-name>
+     * <p>test_name</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The operator.\
+     * Valid values: user and system.</p>
+     * 
      * <strong>example:</strong>
      * <p>user</p>
      */
@@ -71,6 +97,8 @@ public class JobHistory extends TeaModel {
     public String operator;
 
     /**
+     * <p>The execution ID of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -78,6 +106,9 @@ public class JobHistory extends TeaModel {
     public String runtimeId;
 
     /**
+     * <p>The runtime state.\
+     * Valid values: Normal and Interrupt.</p>
+     * 
      * <strong>example:</strong>
      * <p>Normal</p>
      */
@@ -99,13 +130,17 @@ public class JobHistory extends TeaModel {
     public Long skippedSize;
 
     /**
+     * <p>The time when the current state started.</p>
+     * 
      * <strong>example:</strong>
-     * <p>2025-07-04T07:09:26.000Z</p>
+     * <p>2024-05-01 12:00:00</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
+     * <p>The task state.</p>
+     * 
      * <strong>example:</strong>
      * <p>IMPORT_JOB_DOING</p>
      */
@@ -113,6 +148,8 @@ public class JobHistory extends TeaModel {
     public String status;
 
     /**
+     * <p>The total number of files.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -120,6 +157,8 @@ public class JobHistory extends TeaModel {
     public Long totalCount;
 
     /**
+     * <p>The total data size of files. Unit: bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */

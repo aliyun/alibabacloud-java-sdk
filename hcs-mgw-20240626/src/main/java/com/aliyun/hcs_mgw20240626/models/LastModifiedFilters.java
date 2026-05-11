@@ -4,9 +4,15 @@ package com.aliyun.hcs_mgw20240626.models;
 import com.aliyun.tea.*;
 
 public class LastModifiedFilters extends TeaModel {
+    /**
+     * <p>The excluded file modification time.</p>
+     */
     @NameInMap("Excludes")
     public LastModifyFilterItem excludes;
 
+    /**
+     * <p>The included file modification time.</p>
+     */
     @NameInMap("Includes")
     public LastModifyFilterItem includes;
 

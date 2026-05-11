@@ -4,17 +4,24 @@ package com.aliyun.hcs_mgw20240626.models;
 import com.aliyun.tea.*;
 
 public class ListAddressResp extends TeaModel {
+    /**
+     * <p>The data addresses.</p>
+     */
     @NameInMap("ImportAddress")
     public java.util.List<GetAddressResp> importAddress;
 
     /**
+     * <p>The position from which the next list operation starts.</p>
+     * 
      * <strong>example:</strong>
-     * <your-next-address-name>
+     * <p>test_marker</p>
      */
     @NameInMap("NextMarker")
     public String nextMarker;
 
     /**
+     * <p>Indicates whether the queried results are truncated.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

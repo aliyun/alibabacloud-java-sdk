@@ -11,10 +11,15 @@ public class GetJobResp extends TeaModel {
     @NameInMap("AppendableToNormal")
     public Boolean appendableToNormal;
 
+    /**
+     * <p>The audit method.</p>
+     */
     @NameInMap("Audit")
     public Audit audit;
 
     /**
+     * <p>Indicates whether the Target attribute value of the symbolic links at the source data address is converted.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -22,6 +27,8 @@ public class GetJobResp extends TeaModel {
     public Boolean convertSymlinkTarget;
 
     /**
+     * <p>Indicates whether a migration report is created.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -29,47 +36,65 @@ public class GetJobResp extends TeaModel {
     public Boolean createReport;
 
     /**
+     * <p>The time when the task was created.</p>
+     * 
      * <strong>example:</strong>
-     * <p>2025-07-04T06:02:21.000Z</p>
+     * <p>2024-05-01 12:00:00</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
+     * <p>The name of the destination data address.</p>
+     * 
      * <strong>example:</strong>
-     * <your-dest-address-name>
+     * <p>test_dest_address</p>
      */
     @NameInMap("DestAddress")
     public String destAddress;
 
     /**
+     * <p>Indicates whether multi-version migration is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("EnableMultiVersioning")
     public Boolean enableMultiVersioning;
 
+    /**
+     * <p>The filtering rule.</p>
+     */
     @NameInMap("FilterRule")
     public FilterRule filterRule;
 
+    /**
+     * <p>The throttling settings of the task.</p>
+     */
     @NameInMap("ImportQos")
     public ImportQos importQos;
 
     /**
+     * <p>The time when the task was modified.</p>
+     * 
      * <strong>example:</strong>
-     * <p>2025-07-05T06:02:22.000Z</p>
+     * <p>2024-05-01 12:00:00</p>
      */
     @NameInMap("ModifyTime")
     public String modifyTime;
 
     /**
+     * <p>The task name.</p>
+     * 
      * <strong>example:</strong>
-     * <your-job-name>
+     * <p>test_name</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The file overwriting mode.</p>
+     * 
      * <strong>example:</strong>
      * <p>always</p>
      */
@@ -77,37 +102,59 @@ public class GetJobResp extends TeaModel {
     public String overwriteMode;
 
     /**
+     * <p>The task owner.</p>
+     * 
      * <strong>example:</strong>
-     * <p>11<strong><em>9</em>38</strong><em>34</em>*</p>
+     * <p>test_owner</p>
      */
     @NameInMap("Owner")
     public String owner;
 
     /**
+     * <p>The name of the parent task.</p>
+     * 
      * <strong>example:</strong>
-     * <your-parent-job-name>
+     * <p>test_parent_name</p>
      */
     @NameInMap("ParentName")
     public String parentName;
 
     /**
+     * <p>The ID of the parent task.</p>
+     * 
      * <strong>example:</strong>
-     * <p>3<em><strong>1a7f-18</strong>-41d9-</em><em><strong>-21591</strong></em>49**</p>
+     * <p>7db93837-a5ee-4e3a-b3c8-800e7947dabc</p>
      */
     @NameInMap("ParentVersion")
     public String parentVersion;
 
+    /**
+     * <p>The scheduling rule.</p>
+     */
     @NameInMap("ScheduleRule")
     public ScheduleRule scheduleRule;
 
     /**
+     * <p>The name of the source data address.</p>
+     * 
      * <strong>example:</strong>
-     * <your-src-address-name>
+     * <p>test_src_address</p>
      */
     @NameInMap("SrcAddress")
     public String srcAddress;
 
     /**
+     * <p>The task state. Valid values:</p>
+     * <p>IMPORT_JOB_BEGIN: The task is created.</p>
+     * <p>IMPORT_JOB_LAUNCHING: The task is being started.</p>
+     * <p>IMPORT_JOB_PREPARING: The system is preparing for the task.</p>
+     * <p>IMPORT_JOB_DOING: The task is running.</p>
+     * <p>IMPORT_JOB_SUSPEND: The task is paused.</p>
+     * <p>IMPORT_JOB_CLOSING: The task is being closed.</p>
+     * <p>IMPORT_JOB_FINISHED: The task is complete.</p>
+     * <p>IMPORT_JOB_INTERRUPTED: The task is abnormally interrupted.</p>
+     * <p>IMPORT_JOB_CONFIRMED: The task is complete and the user has confirmed the data integrity and consistency.</p>
+     * 
      * <strong>example:</strong>
      * <p>IMPORT_JOB_DOING</p>
      */
@@ -115,6 +162,8 @@ public class GetJobResp extends TeaModel {
     public String status;
 
     /**
+     * <p>The tags.</p>
+     * 
      * <strong>example:</strong>
      * <p>K1:V1,K2:V2</p>
      */
@@ -129,6 +178,8 @@ public class GetJobResp extends TeaModel {
     public String targetStorageClass;
 
     /**
+     * <p>The file transfer mode.</p>
+     * 
      * <strong>example:</strong>
      * <p>all</p>
      */
@@ -136,8 +187,10 @@ public class GetJobResp extends TeaModel {
     public String transferMode;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>31<em><strong>a7f-188f-</strong></em><em>-b266-215</em>**8e49d7</p>
+     * <p>test_id</p>
      */
     @NameInMap("Version")
     public String version;
