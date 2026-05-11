@@ -349,6 +349,9 @@ public class JobItem extends TeaModel {
     @NameInMap("RestartTimes")
     public String restartTimes;
 
+    @NameInMap("SchedulingStrategy")
+    public String schedulingStrategy;
+
     /**
      * <p>The extra parameters of the job.</p>
      */
@@ -823,6 +826,14 @@ public class JobItem extends TeaModel {
     }
     public String getRestartTimes() {
         return this.restartTimes;
+    }
+
+    public JobItem setSchedulingStrategy(String schedulingStrategy) {
+        this.schedulingStrategy = schedulingStrategy;
+        return this;
+    }
+    public String getSchedulingStrategy() {
+        return this.schedulingStrategy;
     }
 
     public JobItem setSettings(JobSettings settings) {

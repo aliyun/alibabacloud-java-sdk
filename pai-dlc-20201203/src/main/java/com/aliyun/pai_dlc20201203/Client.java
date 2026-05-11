@@ -150,6 +150,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ResourceId", request.resourceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.schedulingStrategy)) {
+            body.put("SchedulingStrategy", request.schedulingStrategy);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.settings)) {
             body.put("Settings", request.settings);
         }
@@ -222,7 +226,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建任务模板</p>
+     * <p>Create a Job Template</p>
      * 
      * @param request CreateJobTemplateRequest
      * @param headers map
@@ -276,7 +280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建任务模板</p>
+     * <p>Create a Job Template</p>
      * 
      * @param request CreateJobTemplateRequest
      * @return CreateJobTemplateResponse
@@ -453,7 +457,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除任务模板</p>
+     * <p>Delete an unused job template. If the template is already used by a job, you cannot delete it.</p>
      * 
      * @param request DeleteJobTemplateRequest
      * @param headers map
@@ -481,7 +485,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除任务模板</p>
+     * <p>Delete an unused job template. If the template is already used by a job, you cannot delete it.</p>
      * 
      * @param request DeleteJobTemplateRequest
      * @return DeleteJobTemplateResponse
@@ -818,7 +822,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取任务模板详情</p>
+     * <p>Obtains the details of a job template.</p>
      * 
      * @param request GetJobTemplateRequest
      * @param headers map
@@ -852,7 +856,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取任务模板详情</p>
+     * <p>Obtains the details of a job template.</p>
      * 
      * @param request GetJobTemplateRequest
      * @return GetJobTemplateResponse
@@ -1370,7 +1374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出任务模板</p>
+     * <p>List job templates by workspace. Support paging and sorting. Filter by creator, TemplateId, or TemplateName.</p>
      * 
      * @param request ListJobTemplatesRequest
      * @param headers map
@@ -1432,7 +1436,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出任务模板</p>
+     * <p>List job templates by workspace. Support paging and sorting. Filter by creator, TemplateId, or TemplateName.</p>
      * 
      * @param request ListJobTemplatesRequest
      * @return ListJobTemplatesResponse
@@ -1761,7 +1765,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置任务模板默认版本</p>
+     * <p>Sets the default version of the template.</p>
      * 
      * @param request SetJobTemplateDefaultVersionRequest
      * @param headers map
@@ -1795,7 +1799,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置任务模板默认版本</p>
+     * <p>Sets the default version of the template.</p>
      * 
      * @param request SetJobTemplateDefaultVersionRequest
      * @return SetJobTemplateDefaultVersionResponse
@@ -2002,7 +2006,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新任务模板</p>
+     * <p>Update a Job template</p>
      * 
      * @param request UpdateJobTemplateRequest
      * @param headers map
@@ -2060,7 +2064,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新任务模板</p>
+     * <p>Update a Job template</p>
      * 
      * @param request UpdateJobTemplateRequest
      * @return UpdateJobTemplateResponse

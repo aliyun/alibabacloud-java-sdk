@@ -7,6 +7,9 @@ public class AutoscalingMetricSpec extends TeaModel {
     @NameInMap("MetricName")
     public String metricName;
 
+    @NameInMap("StabilizationWindowSeconds")
+    public Integer stabilizationWindowSeconds;
+
     @NameInMap("TargetValue")
     public Integer targetValue;
 
@@ -21,6 +24,14 @@ public class AutoscalingMetricSpec extends TeaModel {
     }
     public String getMetricName() {
         return this.metricName;
+    }
+
+    public AutoscalingMetricSpec setStabilizationWindowSeconds(Integer stabilizationWindowSeconds) {
+        this.stabilizationWindowSeconds = stabilizationWindowSeconds;
+        return this;
+    }
+    public Integer getStabilizationWindowSeconds() {
+        return this.stabilizationWindowSeconds;
     }
 
     public AutoscalingMetricSpec setTargetValue(Integer targetValue) {

@@ -264,6 +264,13 @@ public class GetJobResponseBody extends TeaModel {
     public java.util.Map<String, java.util.Map<String, ?>> roleSystemEnvs;
 
     /**
+     * <strong>example:</strong>
+     * <p>Auto</p>
+     */
+    @NameInMap("SchedulingStrategy")
+    public String schedulingStrategy;
+
+    /**
      * <p>The additional parameter configurations of the job.</p>
      */
     @NameInMap("Settings")
@@ -649,6 +656,14 @@ public class GetJobResponseBody extends TeaModel {
     }
     public java.util.Map<String, java.util.Map<String, ?>> getRoleSystemEnvs() {
         return this.roleSystemEnvs;
+    }
+
+    public GetJobResponseBody setSchedulingStrategy(String schedulingStrategy) {
+        this.schedulingStrategy = schedulingStrategy;
+        return this;
+    }
+    public String getSchedulingStrategy() {
+        return this.schedulingStrategy;
     }
 
     public GetJobResponseBody setSettings(JobSettings settings) {

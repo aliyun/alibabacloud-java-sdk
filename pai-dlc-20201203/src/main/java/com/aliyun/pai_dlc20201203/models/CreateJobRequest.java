@@ -160,6 +160,13 @@ public class CreateJobRequest extends TeaModel {
     public String resourceId;
 
     /**
+     * <strong>example:</strong>
+     * <p>Auto</p>
+     */
+    @NameInMap("SchedulingStrategy")
+    public String schedulingStrategy;
+
+    /**
      * <p>The additional parameter configurations of the job.</p>
      */
     @NameInMap("Settings")
@@ -367,6 +374,14 @@ public class CreateJobRequest extends TeaModel {
     }
     public String getResourceId() {
         return this.resourceId;
+    }
+
+    public CreateJobRequest setSchedulingStrategy(String schedulingStrategy) {
+        this.schedulingStrategy = schedulingStrategy;
+        return this;
+    }
+    public String getSchedulingStrategy() {
+        return this.schedulingStrategy;
     }
 
     public CreateJobRequest setSettings(JobSettings settings) {
