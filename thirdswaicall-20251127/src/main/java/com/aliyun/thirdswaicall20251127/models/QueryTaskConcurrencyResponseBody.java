@@ -117,12 +117,34 @@ public class QueryTaskConcurrencyResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>5</p>
          */
+        @NameInMap("AvailableConcurrency")
+        public Long availableConcurrency;
+
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("CurrentConcurrency")
         public Long currentConcurrency;
+
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
+        @NameInMap("MaxConcurrency")
+        public Long maxConcurrency;
 
         public static QueryTaskConcurrencyResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryTaskConcurrencyResponseBodyData self = new QueryTaskConcurrencyResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public QueryTaskConcurrencyResponseBodyData setAvailableConcurrency(Long availableConcurrency) {
+            this.availableConcurrency = availableConcurrency;
+            return this;
+        }
+        public Long getAvailableConcurrency() {
+            return this.availableConcurrency;
         }
 
         public QueryTaskConcurrencyResponseBodyData setCurrentConcurrency(Long currentConcurrency) {
@@ -131,6 +153,14 @@ public class QueryTaskConcurrencyResponseBody extends TeaModel {
         }
         public Long getCurrentConcurrency() {
             return this.currentConcurrency;
+        }
+
+        public QueryTaskConcurrencyResponseBodyData setMaxConcurrency(Long maxConcurrency) {
+            this.maxConcurrency = maxConcurrency;
+            return this;
+        }
+        public Long getMaxConcurrency() {
+            return this.maxConcurrency;
         }
 
     }
