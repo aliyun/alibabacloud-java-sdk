@@ -11,6 +11,9 @@ public class RevokeTablePermissionRequest extends TeaModel {
     @NameInMap("allTable")
     public Boolean allTable;
 
+    @NameInMap("columnNames")
+    public java.util.List<String> columnNames;
+
     /**
      * <strong>example:</strong>
      * <p>test_db</p>
@@ -53,6 +56,14 @@ public class RevokeTablePermissionRequest extends TeaModel {
     }
     public Boolean getAllTable() {
         return this.allTable;
+    }
+
+    public RevokeTablePermissionRequest setColumnNames(java.util.List<String> columnNames) {
+        this.columnNames = columnNames;
+        return this;
+    }
+    public java.util.List<String> getColumnNames() {
+        return this.columnNames;
     }
 
     public RevokeTablePermissionRequest setDatabaseName(String databaseName) {

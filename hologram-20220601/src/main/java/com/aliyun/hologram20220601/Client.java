@@ -963,6 +963,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("allTable", request.allTable);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.columnNames)) {
+            body.put("columnNames", request.columnNames);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.databaseName)) {
             body.put("databaseName", request.databaseName);
         }
@@ -1706,6 +1710,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.allTable)) {
             body.put("allTable", request.allTable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.columnNames)) {
+            body.put("columnNames", request.columnNames);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.databaseName)) {
