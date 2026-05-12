@@ -308,7 +308,62 @@ public class CreateApplicationVersionRequest extends TeaModel {
 
     }
 
+    public static class CreateApplicationVersionRequestSynthesizerConfigNlsAccessProfile extends TeaModel {
+        @NameInMap("AccessProfileId")
+        public String accessProfileId;
+
+        public static CreateApplicationVersionRequestSynthesizerConfigNlsAccessProfile build(java.util.Map<String, ?> map) throws Exception {
+            CreateApplicationVersionRequestSynthesizerConfigNlsAccessProfile self = new CreateApplicationVersionRequestSynthesizerConfigNlsAccessProfile();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateApplicationVersionRequestSynthesizerConfigNlsAccessProfile setAccessProfileId(String accessProfileId) {
+            this.accessProfileId = accessProfileId;
+            return this;
+        }
+        public String getAccessProfileId() {
+            return this.accessProfileId;
+        }
+
+    }
+
+    public static class CreateApplicationVersionRequestSynthesizerConfigPronRules extends TeaModel {
+        @NameInMap("Pattern")
+        public String pattern;
+
+        @NameInMap("Replacement")
+        public String replacement;
+
+        public static CreateApplicationVersionRequestSynthesizerConfigPronRules build(java.util.Map<String, ?> map) throws Exception {
+            CreateApplicationVersionRequestSynthesizerConfigPronRules self = new CreateApplicationVersionRequestSynthesizerConfigPronRules();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateApplicationVersionRequestSynthesizerConfigPronRules setPattern(String pattern) {
+            this.pattern = pattern;
+            return this;
+        }
+        public String getPattern() {
+            return this.pattern;
+        }
+
+        public CreateApplicationVersionRequestSynthesizerConfigPronRules setReplacement(String replacement) {
+            this.replacement = replacement;
+            return this;
+        }
+        public String getReplacement() {
+            return this.replacement;
+        }
+
+    }
+
     public static class CreateApplicationVersionRequestSynthesizerConfig extends TeaModel {
+        @NameInMap("Model")
+        public String model;
+
+        @NameInMap("NlsAccessProfile")
+        public CreateApplicationVersionRequestSynthesizerConfigNlsAccessProfile nlsAccessProfile;
+
         /**
          * <strong>example:</strong>
          * <p>MANAGED</p>
@@ -329,6 +384,9 @@ public class CreateApplicationVersionRequest extends TeaModel {
          */
         @NameInMap("PitchRate")
         public Integer pitchRate;
+
+        @NameInMap("PronRules")
+        public java.util.List<CreateApplicationVersionRequestSynthesizerConfigPronRules> pronRules;
 
         /**
          * <strong>example:</strong>
@@ -356,6 +414,22 @@ public class CreateApplicationVersionRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public CreateApplicationVersionRequestSynthesizerConfig setModel(String model) {
+            this.model = model;
+            return this;
+        }
+        public String getModel() {
+            return this.model;
+        }
+
+        public CreateApplicationVersionRequestSynthesizerConfig setNlsAccessProfile(CreateApplicationVersionRequestSynthesizerConfigNlsAccessProfile nlsAccessProfile) {
+            this.nlsAccessProfile = nlsAccessProfile;
+            return this;
+        }
+        public CreateApplicationVersionRequestSynthesizerConfigNlsAccessProfile getNlsAccessProfile() {
+            return this.nlsAccessProfile;
+        }
+
         public CreateApplicationVersionRequestSynthesizerConfig setNlsAccessType(String nlsAccessType) {
             this.nlsAccessType = nlsAccessType;
             return this;
@@ -378,6 +452,14 @@ public class CreateApplicationVersionRequest extends TeaModel {
         }
         public Integer getPitchRate() {
             return this.pitchRate;
+        }
+
+        public CreateApplicationVersionRequestSynthesizerConfig setPronRules(java.util.List<CreateApplicationVersionRequestSynthesizerConfigPronRules> pronRules) {
+            this.pronRules = pronRules;
+            return this;
+        }
+        public java.util.List<CreateApplicationVersionRequestSynthesizerConfigPronRules> getPronRules() {
+            return this.pronRules;
         }
 
         public CreateApplicationVersionRequestSynthesizerConfig setSpeechRate(Integer speechRate) {

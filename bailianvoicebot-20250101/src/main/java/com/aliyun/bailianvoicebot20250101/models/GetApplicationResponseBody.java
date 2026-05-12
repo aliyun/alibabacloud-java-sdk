@@ -309,7 +309,62 @@ public class GetApplicationResponseBody extends TeaModel {
 
     }
 
+    public static class GetApplicationResponseBodyDataDraftVersionSynthesizerConfigNlsAccessProfile extends TeaModel {
+        @NameInMap("AccessProfileId")
+        public String accessProfileId;
+
+        public static GetApplicationResponseBodyDataDraftVersionSynthesizerConfigNlsAccessProfile build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationResponseBodyDataDraftVersionSynthesizerConfigNlsAccessProfile self = new GetApplicationResponseBodyDataDraftVersionSynthesizerConfigNlsAccessProfile();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionSynthesizerConfigNlsAccessProfile setAccessProfileId(String accessProfileId) {
+            this.accessProfileId = accessProfileId;
+            return this;
+        }
+        public String getAccessProfileId() {
+            return this.accessProfileId;
+        }
+
+    }
+
+    public static class GetApplicationResponseBodyDataDraftVersionSynthesizerConfigPronRules extends TeaModel {
+        @NameInMap("Pattern")
+        public String pattern;
+
+        @NameInMap("Replacement")
+        public String replacement;
+
+        public static GetApplicationResponseBodyDataDraftVersionSynthesizerConfigPronRules build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationResponseBodyDataDraftVersionSynthesizerConfigPronRules self = new GetApplicationResponseBodyDataDraftVersionSynthesizerConfigPronRules();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionSynthesizerConfigPronRules setPattern(String pattern) {
+            this.pattern = pattern;
+            return this;
+        }
+        public String getPattern() {
+            return this.pattern;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionSynthesizerConfigPronRules setReplacement(String replacement) {
+            this.replacement = replacement;
+            return this;
+        }
+        public String getReplacement() {
+            return this.replacement;
+        }
+
+    }
+
     public static class GetApplicationResponseBodyDataDraftVersionSynthesizerConfig extends TeaModel {
+        @NameInMap("Model")
+        public String model;
+
+        @NameInMap("NlsAccessProfile")
+        public GetApplicationResponseBodyDataDraftVersionSynthesizerConfigNlsAccessProfile nlsAccessProfile;
+
         /**
          * <strong>example:</strong>
          * <p>MANAGED</p>
@@ -330,6 +385,9 @@ public class GetApplicationResponseBody extends TeaModel {
          */
         @NameInMap("PitchRate")
         public Integer pitchRate;
+
+        @NameInMap("PronRules")
+        public java.util.List<GetApplicationResponseBodyDataDraftVersionSynthesizerConfigPronRules> pronRules;
 
         /**
          * <strong>example:</strong>
@@ -357,6 +415,22 @@ public class GetApplicationResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetApplicationResponseBodyDataDraftVersionSynthesizerConfig setModel(String model) {
+            this.model = model;
+            return this;
+        }
+        public String getModel() {
+            return this.model;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionSynthesizerConfig setNlsAccessProfile(GetApplicationResponseBodyDataDraftVersionSynthesizerConfigNlsAccessProfile nlsAccessProfile) {
+            this.nlsAccessProfile = nlsAccessProfile;
+            return this;
+        }
+        public GetApplicationResponseBodyDataDraftVersionSynthesizerConfigNlsAccessProfile getNlsAccessProfile() {
+            return this.nlsAccessProfile;
+        }
+
         public GetApplicationResponseBodyDataDraftVersionSynthesizerConfig setNlsAccessType(String nlsAccessType) {
             this.nlsAccessType = nlsAccessType;
             return this;
@@ -379,6 +453,14 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public Integer getPitchRate() {
             return this.pitchRate;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionSynthesizerConfig setPronRules(java.util.List<GetApplicationResponseBodyDataDraftVersionSynthesizerConfigPronRules> pronRules) {
+            this.pronRules = pronRules;
+            return this;
+        }
+        public java.util.List<GetApplicationResponseBodyDataDraftVersionSynthesizerConfigPronRules> getPronRules() {
+            return this.pronRules;
         }
 
         public GetApplicationResponseBodyDataDraftVersionSynthesizerConfig setSpeechRate(Integer speechRate) {
@@ -752,7 +834,62 @@ public class GetApplicationResponseBody extends TeaModel {
 
     }
 
+    public static class GetApplicationResponseBodyDataPublishedVersionSynthesizerConfigNlsAccessProfile extends TeaModel {
+        @NameInMap("AccessProfileId")
+        public String accessProfileId;
+
+        public static GetApplicationResponseBodyDataPublishedVersionSynthesizerConfigNlsAccessProfile build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationResponseBodyDataPublishedVersionSynthesizerConfigNlsAccessProfile self = new GetApplicationResponseBodyDataPublishedVersionSynthesizerConfigNlsAccessProfile();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionSynthesizerConfigNlsAccessProfile setAccessProfileId(String accessProfileId) {
+            this.accessProfileId = accessProfileId;
+            return this;
+        }
+        public String getAccessProfileId() {
+            return this.accessProfileId;
+        }
+
+    }
+
+    public static class GetApplicationResponseBodyDataPublishedVersionSynthesizerConfigPronRules extends TeaModel {
+        @NameInMap("Pattern")
+        public String pattern;
+
+        @NameInMap("Replacement")
+        public String replacement;
+
+        public static GetApplicationResponseBodyDataPublishedVersionSynthesizerConfigPronRules build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationResponseBodyDataPublishedVersionSynthesizerConfigPronRules self = new GetApplicationResponseBodyDataPublishedVersionSynthesizerConfigPronRules();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionSynthesizerConfigPronRules setPattern(String pattern) {
+            this.pattern = pattern;
+            return this;
+        }
+        public String getPattern() {
+            return this.pattern;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionSynthesizerConfigPronRules setReplacement(String replacement) {
+            this.replacement = replacement;
+            return this;
+        }
+        public String getReplacement() {
+            return this.replacement;
+        }
+
+    }
+
     public static class GetApplicationResponseBodyDataPublishedVersionSynthesizerConfig extends TeaModel {
+        @NameInMap("Model")
+        public String model;
+
+        @NameInMap("NlsAccessProfile")
+        public GetApplicationResponseBodyDataPublishedVersionSynthesizerConfigNlsAccessProfile nlsAccessProfile;
+
         /**
          * <strong>example:</strong>
          * <p>MANAGED</p>
@@ -773,6 +910,9 @@ public class GetApplicationResponseBody extends TeaModel {
          */
         @NameInMap("PitchRate")
         public Integer pitchRate;
+
+        @NameInMap("PronRules")
+        public java.util.List<GetApplicationResponseBodyDataPublishedVersionSynthesizerConfigPronRules> pronRules;
 
         /**
          * <strong>example:</strong>
@@ -800,6 +940,22 @@ public class GetApplicationResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetApplicationResponseBodyDataPublishedVersionSynthesizerConfig setModel(String model) {
+            this.model = model;
+            return this;
+        }
+        public String getModel() {
+            return this.model;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionSynthesizerConfig setNlsAccessProfile(GetApplicationResponseBodyDataPublishedVersionSynthesizerConfigNlsAccessProfile nlsAccessProfile) {
+            this.nlsAccessProfile = nlsAccessProfile;
+            return this;
+        }
+        public GetApplicationResponseBodyDataPublishedVersionSynthesizerConfigNlsAccessProfile getNlsAccessProfile() {
+            return this.nlsAccessProfile;
+        }
+
         public GetApplicationResponseBodyDataPublishedVersionSynthesizerConfig setNlsAccessType(String nlsAccessType) {
             this.nlsAccessType = nlsAccessType;
             return this;
@@ -822,6 +978,14 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public Integer getPitchRate() {
             return this.pitchRate;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionSynthesizerConfig setPronRules(java.util.List<GetApplicationResponseBodyDataPublishedVersionSynthesizerConfigPronRules> pronRules) {
+            this.pronRules = pronRules;
+            return this;
+        }
+        public java.util.List<GetApplicationResponseBodyDataPublishedVersionSynthesizerConfigPronRules> getPronRules() {
+            return this.pronRules;
         }
 
         public GetApplicationResponseBodyDataPublishedVersionSynthesizerConfig setSpeechRate(Integer speechRate) {
