@@ -7,6 +7,9 @@ public class ListThreadsRequest extends TeaModel {
     @NameInMap("filter")
     public java.util.List<ListThreadsRequestFilter> filter;
 
+    @NameInMap("includeMission")
+    public Boolean includeMission;
+
     /**
      * <strong>example:</strong>
      * <p>20</p>
@@ -46,6 +49,14 @@ public class ListThreadsRequest extends TeaModel {
     }
     public java.util.List<ListThreadsRequestFilter> getFilter() {
         return this.filter;
+    }
+
+    public ListThreadsRequest setIncludeMission(Boolean includeMission) {
+        this.includeMission = includeMission;
+        return this;
+    }
+    public Boolean getIncludeMission() {
+        return this.includeMission;
     }
 
     public ListThreadsRequest setMaxResults(Long maxResults) {

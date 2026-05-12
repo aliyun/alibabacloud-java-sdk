@@ -7,6 +7,9 @@ public class ListThreadsShrinkRequest extends TeaModel {
     @NameInMap("filter")
     public String filterShrink;
 
+    @NameInMap("includeMission")
+    public Boolean includeMission;
+
     /**
      * <strong>example:</strong>
      * <p>20</p>
@@ -46,6 +49,14 @@ public class ListThreadsShrinkRequest extends TeaModel {
     }
     public String getFilterShrink() {
         return this.filterShrink;
+    }
+
+    public ListThreadsShrinkRequest setIncludeMission(Boolean includeMission) {
+        this.includeMission = includeMission;
+        return this;
+    }
+    public Boolean getIncludeMission() {
+        return this.includeMission;
     }
 
     public ListThreadsShrinkRequest setMaxResults(Long maxResults) {

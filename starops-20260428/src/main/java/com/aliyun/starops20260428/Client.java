@@ -954,6 +954,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("filter", request.filterShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.includeMission)) {
+            query.put("includeMission", request.includeMission);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("maxResults", request.maxResults);
         }
