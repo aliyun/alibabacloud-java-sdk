@@ -1,3 +1,7 @@
+2026-05-12 Version: 6.6.2
+- Update API DescribeTaskInfo: add response parameters Body.outputs.
+
+
 2026-05-08 Version: 6.6.1
 - Update API DescribeClusterEvents: add request parameters max_results.
 - Update API DescribeClusterEvents: add request parameters next_token.

@@ -43,6 +43,9 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
     @NameInMap("events")
     public java.util.List<DescribeTaskInfoResponseBodyEvents> events;
 
+    @NameInMap("outputs")
+    public java.util.Map<String, ?> outputs;
+
     /**
      * <p>The task parameters.</p>
      */
@@ -151,6 +154,14 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
     }
     public java.util.List<DescribeTaskInfoResponseBodyEvents> getEvents() {
         return this.events;
+    }
+
+    public DescribeTaskInfoResponseBody setOutputs(java.util.Map<String, ?> outputs) {
+        this.outputs = outputs;
+        return this;
+    }
+    public java.util.Map<String, ?> getOutputs() {
+        return this.outputs;
     }
 
     public DescribeTaskInfoResponseBody setParameters(java.util.Map<String, ?> parameters) {
