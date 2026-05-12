@@ -4,6 +4,9 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class DescribeMOTokenUsageDetailRequest extends TeaModel {
+    @NameInMap("ApiKey")
+    public String apiKey;
+
     /**
      * <strong>example:</strong>
      * <p>16<strong><strong><strong>4_rds_copilot</strong></strong>_public_cn-4</strong>**02</p>
@@ -65,6 +68,14 @@ public class DescribeMOTokenUsageDetailRequest extends TeaModel {
     public static DescribeMOTokenUsageDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMOTokenUsageDetailRequest self = new DescribeMOTokenUsageDetailRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMOTokenUsageDetailRequest setApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
+    public String getApiKey() {
+        return this.apiKey;
     }
 
     public DescribeMOTokenUsageDetailRequest setConsumerName(String consumerName) {

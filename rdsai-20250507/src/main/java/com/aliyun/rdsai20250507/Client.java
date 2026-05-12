@@ -1441,6 +1441,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeMOTokenUsageDetailResponse describeMOTokenUsageDetailWithOptions(DescribeMOTokenUsageDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiKey)) {
+            query.put("ApiKey", request.apiKey);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.consumerName)) {
             query.put("ConsumerName", request.consumerName);
         }

@@ -92,6 +92,13 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>10000</p>
+         */
+        @NameInMap("InputTokens")
+        public Double inputTokens;
+
+        /**
+         * <strong>example:</strong>
          * <p>rds_copilot***_public_cn-*********6</p>
          */
         @NameInMap("InstanceId")
@@ -103,6 +110,13 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
          */
         @NameInMap("Model")
         public String model;
+
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
+        @NameInMap("OutputTokens")
+        public Double outputTokens;
 
         /**
          * <strong>example:</strong>
@@ -138,6 +152,14 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
             return this.consumerName;
         }
 
+        public DescribeMOTokenUsageDetailResponseBodyRecords setInputTokens(Double inputTokens) {
+            this.inputTokens = inputTokens;
+            return this;
+        }
+        public Double getInputTokens() {
+            return this.inputTokens;
+        }
+
         public DescribeMOTokenUsageDetailResponseBodyRecords setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
@@ -152,6 +174,14 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
         }
         public String getModel() {
             return this.model;
+        }
+
+        public DescribeMOTokenUsageDetailResponseBodyRecords setOutputTokens(Double outputTokens) {
+            this.outputTokens = outputTokens;
+            return this;
+        }
+        public Double getOutputTokens() {
+            return this.outputTokens;
         }
 
         public DescribeMOTokenUsageDetailResponseBodyRecords setRegion(String region) {
