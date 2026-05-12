@@ -43,6 +43,9 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     @NameInMap("DesktopIdForModify")
     public String desktopIdForModify;
 
+    @NameInMap("DesktopScenario")
+    public String desktopScenario;
+
     /**
      * <p>The specification ID.</p>
      * <blockquote>
@@ -283,6 +286,14 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     }
     public String getDesktopIdForModify() {
         return this.desktopIdForModify;
+    }
+
+    public DescribeDesktopTypesRequest setDesktopScenario(String desktopScenario) {
+        this.desktopScenario = desktopScenario;
+        return this;
+    }
+    public String getDesktopScenario() {
+        return this.desktopScenario;
     }
 
     public DescribeDesktopTypesRequest setDesktopTypeId(String desktopTypeId) {

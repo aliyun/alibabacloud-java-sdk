@@ -8915,6 +8915,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DesktopIdForModify", request.desktopIdForModify);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopScenario)) {
+            query.put("DesktopScenario", request.desktopScenario);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.desktopTypeId)) {
             query.put("DesktopTypeId", request.desktopTypeId);
         }
