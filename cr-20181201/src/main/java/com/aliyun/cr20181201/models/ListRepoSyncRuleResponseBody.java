@@ -149,6 +149,9 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
         @NameInMap("CrossUser")
         public Boolean crossUser;
 
+        @NameInMap("LinkId")
+        public String linkId;
+
         /**
          * <p>The ID of the source instance.</p>
          * 
@@ -327,6 +330,14 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
         }
         public Boolean getCrossUser() {
             return this.crossUser;
+        }
+
+        public ListRepoSyncRuleResponseBodySyncRules setLinkId(String linkId) {
+            this.linkId = linkId;
+            return this;
+        }
+        public String getLinkId() {
+            return this.linkId;
         }
 
         public ListRepoSyncRuleResponseBodySyncRules setLocalInstanceId(String localInstanceId) {

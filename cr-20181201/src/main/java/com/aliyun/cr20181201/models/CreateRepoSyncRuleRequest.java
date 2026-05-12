@@ -14,6 +14,9 @@ public class CreateRepoSyncRuleRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("LinkId")
+    public String linkId;
+
     /**
      * <p>The namespace name of the source instance.</p>
      * <p>This parameter is required.</p>
@@ -154,6 +157,14 @@ public class CreateRepoSyncRuleRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public CreateRepoSyncRuleRequest setLinkId(String linkId) {
+        this.linkId = linkId;
+        return this;
+    }
+    public String getLinkId() {
+        return this.linkId;
     }
 
     public CreateRepoSyncRuleRequest setNamespaceName(String namespaceName) {

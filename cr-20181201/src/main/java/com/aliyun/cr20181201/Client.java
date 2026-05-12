@@ -76,7 +76,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels an image building task of a repository.</p>
+     * <p>Cancels a repository building record.</p>
      * 
      * @param request CancelRepoBuildRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -116,7 +116,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels an image building task of a repository.</p>
+     * <p>Cancels a repository building record.</p>
      * 
      * @param request CancelRepoBuildRecordRequest
      * @return CancelRepoBuildRecordResponse
@@ -1151,6 +1151,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.linkId)) {
+            query.put("LinkId", request.linkId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.namespaceName)) {
             query.put("NamespaceName", request.namespaceName);
         }
@@ -1229,6 +1233,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Manually creates an image synchronization task.</p>
+     * 
      * @param request CreateRepoSyncTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateRepoSyncTaskResponse
@@ -1294,6 +1301,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Manually creates an image synchronization task.</p>
+     * 
      * @param request CreateRepoSyncTaskRequest
      * @return CreateRepoSyncTaskResponse
      */
@@ -1860,7 +1870,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a delivery pipeline.</p>
+     * <p>Deletes a delivery chain.</p>
      * 
      * @param request DeleteChainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1896,7 +1906,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a delivery pipeline.</p>
+     * <p>Deletes a delivery chain.</p>
      * 
      * @param request DeleteChainRequest
      * @return DeleteChainResponse
@@ -2669,6 +2679,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the details of an artifact building rule.</p>
+     * 
      * @param request GetArtifactBuildRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetArtifactBuildRuleResponse
@@ -2694,6 +2707,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the details of an artifact building rule.</p>
+     * 
      * @param request GetArtifactBuildRuleRequest
      * @return GetArtifactBuildRuleResponse
      */
@@ -2964,7 +2980,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取交付链</p>
+     * <p>Obtains the information of a delivery chain to understand the node execution sequence of the delivery chain.</p>
      * 
      * @param request GetChainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3000,7 +3016,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取交付链</p>
+     * <p>Obtains the information of a delivery chain to understand the node execution sequence of the delivery chain.</p>
      * 
      * @param request GetChainRequest
      * @return GetChainResponse
@@ -3158,7 +3174,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the number of instances.</p>
      * 
-     * @param request GetInstanceCountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetInstanceCountResponse
      */
@@ -3190,7 +3205,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the endpoint of an instance.</p>
+     * <p>Queries an endpoint of an instance.</p>
      * 
      * @param request GetInstanceEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3230,7 +3245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the endpoint of an instance.</p>
+     * <p>Queries an endpoint of an instance.</p>
      * 
      * @param request GetInstanceEndpointRequest
      * @return GetInstanceEndpointResponse
@@ -3588,7 +3603,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The version of the repository.</p>
+     * <p>Queries the information about an image tag.</p>
      * 
      * @param request GetRepoTagRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3616,7 +3631,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The version of the repository.</p>
+     * <p>Queries the information about an image tag.</p>
      * 
      * @param request GetRepoTagRequest
      * @return GetRepoTagResponse
@@ -3691,6 +3706,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the number of vulnerabilities for each severity level. These vulnerabilities are detected in a security scan that is created for an image version.</p>
+     * 
      * @param request GetRepoTagScanSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetRepoTagScanSummaryResponse
@@ -3736,6 +3754,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the number of vulnerabilities for each severity level. These vulnerabilities are detected in a security scan that is created for an image version.</p>
+     * 
      * @param request GetRepoTagScanSummaryRequest
      * @return GetRepoTagScanSummaryResponse
      */
@@ -3805,7 +3826,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Get scan rule.</p>
      * 
      * <b>summary</b> : 
-     * <p>Obtains a scan rule.</p>
+     * <p>Queries a scan rule.</p>
      * 
      * @param request GetScanRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3844,7 +3865,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Get scan rule.</p>
      * 
      * <b>summary</b> : 
-     * <p>Obtains a scan rule.</p>
+     * <p>Queries a scan rule.</p>
      * 
      * @param request GetScanRuleRequest
      * @return GetScanRuleResponse
@@ -4130,7 +4151,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The response code.</p>
+     * <p>Queries execution records of delivery chains.</p>
      * 
      * @param request ListChainInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4178,7 +4199,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The response code.</p>
+     * <p>Queries execution records of delivery chains.</p>
      * 
      * @param request ListChainInstanceRequest
      * @return ListChainInstanceResponse
@@ -4418,7 +4439,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the names of event notification rules.</p>
+     * <p>Queries the name of an event rule.</p>
      * 
      * @param request ListEventCenterRuleNameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4446,7 +4467,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the names of event notification rules.</p>
+     * <p>Queries the name of an event rule.</p>
      * 
      * @param request ListEventCenterRuleNameRequest
      * @return ListEventCenterRuleNameResponse
@@ -5940,7 +5961,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates an event notification rule.</p>
+     * <p>Updates an event rule.</p>
      * 
      * @param tmpReq UpdateEventCenterRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6018,7 +6039,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates an event notification rule.</p>
+     * <p>Updates an event rule.</p>
      * 
      * @param request UpdateEventCenterRuleRequest
      * @return UpdateEventCenterRuleResponse

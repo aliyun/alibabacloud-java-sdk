@@ -356,6 +356,9 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         @NameInMap("ImageTo")
         public ListRepoSyncTaskResponseBodySyncTasksImageTo imageTo;
 
+        @NameInMap("LinkId")
+        public String linkId;
+
         /**
          * <p>The time when the synchronization task was last modified.</p>
          * 
@@ -363,7 +366,11 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
          * <p>1572839133000</p>
          */
         @NameInMap("ModifedTime")
+        @Deprecated
         public Long modifedTime;
+
+        @NameInMap("ModifiedTime")
+        public Long modifiedTime;
 
         /**
          * <p>The ID of the image synchronization batch tasks, which is the same as the value of SyncRecordId in the request.</p>
@@ -493,12 +500,29 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             return this.imageTo;
         }
 
+        public ListRepoSyncTaskResponseBodySyncTasks setLinkId(String linkId) {
+            this.linkId = linkId;
+            return this;
+        }
+        public String getLinkId() {
+            return this.linkId;
+        }
+
+        @Deprecated
         public ListRepoSyncTaskResponseBodySyncTasks setModifedTime(Long modifedTime) {
             this.modifedTime = modifedTime;
             return this;
         }
         public Long getModifedTime() {
             return this.modifedTime;
+        }
+
+        public ListRepoSyncTaskResponseBodySyncTasks setModifiedTime(Long modifiedTime) {
+            this.modifiedTime = modifiedTime;
+            return this;
+        }
+        public Long getModifiedTime() {
+            return this.modifiedTime;
         }
 
         public ListRepoSyncTaskResponseBodySyncTasks setSyncBatchTaskId(String syncBatchTaskId) {
