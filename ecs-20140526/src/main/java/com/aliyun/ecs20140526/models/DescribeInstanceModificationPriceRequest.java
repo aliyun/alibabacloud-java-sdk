@@ -14,6 +14,27 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
     public java.util.List<DescribeInstanceModificationPriceRequestDataDisk> dataDisk;
 
     /**
+     * <strong>example:</strong>
+     * <p>2025-12-06T22Z</p>
+     */
+    @NameInMap("EndTime")
+    public String endTime;
+
+    /**
+     * <strong>example:</strong>
+     * <p>BGP</p>
+     */
+    @NameInMap("ISP")
+    public String ISP;
+
+    /**
+     * <strong>example:</strong>
+     * <p>aliyun_2_1903_x64_20G_alibase_20200324.vhd</p>
+     */
+    @NameInMap("ImageId")
+    public String imageId;
+
+    /**
      * <p>The ID of the instance for which you want to query pricing information for a configuration upgrade.</p>
      * <p>This parameter is required.</p>
      * 
@@ -34,6 +55,20 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
      */
     @NameInMap("InstanceType")
     public String instanceType;
+
+    /**
+     * <strong>example:</strong>
+     * <p>PayByTraffic</p>
+     */
+    @NameInMap("InternetChargeType")
+    public String internetChargeType;
+
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
+    @NameInMap("InternetMaxBandwidthOut")
+    public Integer internetMaxBandwidthOut;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -57,6 +92,13 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2025-12-05T22:40Z</p>
+     */
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static DescribeInstanceModificationPriceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceModificationPriceRequest self = new DescribeInstanceModificationPriceRequest();
         return TeaModel.build(map, self);
@@ -78,6 +120,30 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
         return this.dataDisk;
     }
 
+    public DescribeInstanceModificationPriceRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeInstanceModificationPriceRequest setISP(String ISP) {
+        this.ISP = ISP;
+        return this;
+    }
+    public String getISP() {
+        return this.ISP;
+    }
+
+    public DescribeInstanceModificationPriceRequest setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
+    }
+
     public DescribeInstanceModificationPriceRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -92,6 +158,22 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
     }
     public String getInstanceType() {
         return this.instanceType;
+    }
+
+    public DescribeInstanceModificationPriceRequest setInternetChargeType(String internetChargeType) {
+        this.internetChargeType = internetChargeType;
+        return this;
+    }
+    public String getInternetChargeType() {
+        return this.internetChargeType;
+    }
+
+    public DescribeInstanceModificationPriceRequest setInternetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
+        this.internetMaxBandwidthOut = internetMaxBandwidthOut;
+        return this;
+    }
+    public Integer getInternetMaxBandwidthOut() {
+        return this.internetMaxBandwidthOut;
     }
 
     public DescribeInstanceModificationPriceRequest setOwnerAccount(String ownerAccount) {
@@ -134,21 +216,31 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public DescribeInstanceModificationPriceRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public static class DescribeInstanceModificationPriceRequestSystemDisk extends TeaModel {
-        /**
-         * <p>The category of the system disk. You must specify this parameter only when you upgrade a non-I/O optimized instance of a retired instance type to an I/O optimized instance of an available instance type. For more information about instance types, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> and <a href="https://help.aliyun.com/document_detail/55263.html">Retired instance types</a>.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>cloud_efficiency: ultra disk</li>
-         * <li>cloud_ssd: standard SSD</li>
-         * </ul>
-         * <p>This parameter is empty by default.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cloud_ssd</p>
-         */
         @NameInMap("Category")
         public String category;
+
+        /**
+         * <strong>example:</strong>
+         * <p>PL0</p>
+         */
+        @NameInMap("PerformanceLevel")
+        public String performanceLevel;
+
+        /**
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
+        @NameInMap("Size")
+        public Integer size;
 
         public static DescribeInstanceModificationPriceRequestSystemDisk build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceModificationPriceRequestSystemDisk self = new DescribeInstanceModificationPriceRequestSystemDisk();
@@ -161,6 +253,22 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
         }
         public String getCategory() {
             return this.category;
+        }
+
+        public DescribeInstanceModificationPriceRequestSystemDisk setPerformanceLevel(String performanceLevel) {
+            this.performanceLevel = performanceLevel;
+            return this;
+        }
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        public DescribeInstanceModificationPriceRequestSystemDisk setSize(Integer size) {
+            this.size = size;
+            return this;
+        }
+        public Integer getSize() {
+            return this.size;
         }
 
     }
@@ -184,6 +292,13 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
          */
         @NameInMap("Category")
         public String category;
+
+        /**
+         * <strong>example:</strong>
+         * <p>d-bf4rupt9****</p>
+         */
+        @NameInMap("DiskId")
+        public String diskId;
 
         /**
          * <p>The performance level of data disk N that is an enhanced SSD (ESSD). The value of N must be the same as that in <code>DataDisk.N.Category</code> when DataDisk.N.Category is set to cloud_essd. Valid values:</p>
@@ -239,6 +354,14 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
         }
         public String getCategory() {
             return this.category;
+        }
+
+        public DescribeInstanceModificationPriceRequestDataDisk setDiskId(String diskId) {
+            this.diskId = diskId;
+            return this;
+        }
+        public String getDiskId() {
+            return this.diskId;
         }
 
         public DescribeInstanceModificationPriceRequestDataDisk setPerformanceLevel(String performanceLevel) {

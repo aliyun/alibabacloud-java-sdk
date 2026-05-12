@@ -262,6 +262,93 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CNY</p>
+         */
+        @NameInMap("Currency")
+        public String currency;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("DiscountPrice")
+        public Float discountPrice;
+
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("OriginalPrice")
+        public Float originalPrice;
+
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("TradePrice")
+        public Float tradePrice;
+
+        public static DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice self = new DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice setCurrency(String currency) {
+            this.currency = currency;
+            return this;
+        }
+        public String getCurrency() {
+            return this.currency;
+        }
+
+        public DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice setDiscountPrice(Float discountPrice) {
+            this.discountPrice = discountPrice;
+            return this;
+        }
+        public Float getDiscountPrice() {
+            return this.discountPrice;
+        }
+
+        public DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice setOriginalPrice(Float originalPrice) {
+            this.originalPrice = originalPrice;
+            return this;
+        }
+        public Float getOriginalPrice() {
+            return this.originalPrice;
+        }
+
+        public DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice setTradePrice(Float tradePrice) {
+            this.tradePrice = tradePrice;
+            return this;
+        }
+        public Float getTradePrice() {
+            return this.tradePrice;
+        }
+
+    }
+
+    public static class DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPrice extends TeaModel {
+        @NameInMap("MarketplaceImagePrice")
+        public DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice marketplaceImagePrice;
+
+        public static DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPrice build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPrice self = new DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPrice();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPrice setMarketplaceImagePrice(DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice marketplaceImagePrice) {
+            this.marketplaceImagePrice = marketplaceImagePrice;
+            return this;
+        }
+        public DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice getMarketplaceImagePrice() {
+            return this.marketplaceImagePrice;
+        }
+
+    }
+
     public static class DescribeInstanceModificationPriceResponseBodyPriceInfoRulesRule extends TeaModel {
         @NameInMap("Description")
         public String description;
@@ -318,6 +405,9 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
         @NameInMap("Price")
         public DescribeInstanceModificationPriceResponseBodyPriceInfoPrice price;
 
+        @NameInMap("RelatedPrice")
+        public DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPrice relatedPrice;
+
         @NameInMap("Rules")
         public DescribeInstanceModificationPriceResponseBodyPriceInfoRules rules;
 
@@ -332,6 +422,14 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
         }
         public DescribeInstanceModificationPriceResponseBodyPriceInfoPrice getPrice() {
             return this.price;
+        }
+
+        public DescribeInstanceModificationPriceResponseBodyPriceInfo setRelatedPrice(DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPrice relatedPrice) {
+            this.relatedPrice = relatedPrice;
+            return this;
+        }
+        public DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPrice getRelatedPrice() {
+            return this.relatedPrice;
         }
 
         public DescribeInstanceModificationPriceResponseBodyPriceInfo setRules(DescribeInstanceModificationPriceResponseBodyPriceInfoRules rules) {
