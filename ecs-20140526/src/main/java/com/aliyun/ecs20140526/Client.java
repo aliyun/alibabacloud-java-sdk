@@ -750,7 +750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Applies an automatic snapshot policy to one or more cloud disks. You can call this operation to replace the automatic snapshot policy of a cloud disk.</p>
+     * <p>Applies an automatic snapshot policy to one or more disks.</p>
      * 
      * @param request ApplyAutoSnapshotPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -819,7 +819,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Applies an automatic snapshot policy to one or more cloud disks. You can call this operation to replace the automatic snapshot policy of a cloud disk.</p>
+     * <p>Applies an automatic snapshot policy to one or more disks.</p>
      * 
      * @param request ApplyAutoSnapshotPolicyRequest
      * @return ApplyAutoSnapshotPolicyResponse
@@ -2215,7 +2215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables an automatic snapshot policy for one or more cloud disks.</p>
+     * <p>Disables automatic snapshot policies for one or more disks.</p>
      * 
      * @param request CancelAutoSnapshotPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2267,7 +2267,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables an automatic snapshot policy for one or more cloud disks.</p>
+     * <p>Disables automatic snapshot policies for one or more disks.</p>
      * 
      * @param request CancelAutoSnapshotPolicyRequest
      * @return CancelAutoSnapshotPolicyResponse
@@ -11473,7 +11473,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the scheduling tasks of an auto provisioning group.</p>
+     * <p>Call DescribeAutoProvisioningGroupHistory to query the schedule job info of an auto provisioning group.</p>
      * 
      * @param request DescribeAutoProvisioningGroupHistoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11541,7 +11541,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the scheduling tasks of an auto provisioning group.</p>
+     * <p>Call DescribeAutoProvisioningGroupHistory to query the schedule job info of an auto provisioning group.</p>
      * 
      * @param request DescribeAutoProvisioningGroupHistoryRequest
      * @return DescribeAutoProvisioningGroupHistoryResponse
