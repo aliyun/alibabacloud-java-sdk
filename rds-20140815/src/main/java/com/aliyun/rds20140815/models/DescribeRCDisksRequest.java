@@ -14,6 +14,13 @@ public class DescribeRCDisksRequest extends TeaModel {
     public String diskIds;
 
     /**
+     * <strong>example:</strong>
+     * <p>data</p>
+     */
+    @NameInMap("DiskType")
+    public String diskType;
+
+    /**
      * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
@@ -74,6 +81,14 @@ public class DescribeRCDisksRequest extends TeaModel {
     }
     public String getDiskIds() {
         return this.diskIds;
+    }
+
+    public DescribeRCDisksRequest setDiskType(String diskType) {
+        this.diskType = diskType;
+        return this;
+    }
+    public String getDiskType() {
+        return this.diskType;
     }
 
     public DescribeRCDisksRequest setInstanceId(String instanceId) {
