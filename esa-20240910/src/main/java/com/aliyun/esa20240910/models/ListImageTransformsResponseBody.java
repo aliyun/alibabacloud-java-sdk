@@ -110,6 +110,20 @@ public class ListImageTransformsResponseBody extends TeaModel {
 
     public static class ListImageTransformsResponseBodyConfigs extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
+        @NameInMap("AutoAvif")
+        public String autoAvif;
+
+        /**
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
+        @NameInMap("AutoWebp")
+        public String autoWebp;
+
+        /**
          * <p>Configuration ID.</p>
          * 
          * <strong>example:</strong>
@@ -200,6 +214,22 @@ public class ListImageTransformsResponseBody extends TeaModel {
         public static ListImageTransformsResponseBodyConfigs build(java.util.Map<String, ?> map) throws Exception {
             ListImageTransformsResponseBodyConfigs self = new ListImageTransformsResponseBodyConfigs();
             return TeaModel.build(map, self);
+        }
+
+        public ListImageTransformsResponseBodyConfigs setAutoAvif(String autoAvif) {
+            this.autoAvif = autoAvif;
+            return this;
+        }
+        public String getAutoAvif() {
+            return this.autoAvif;
+        }
+
+        public ListImageTransformsResponseBodyConfigs setAutoWebp(String autoWebp) {
+            this.autoWebp = autoWebp;
+            return this;
+        }
+        public String getAutoWebp() {
+            return this.autoWebp;
         }
 
         public ListImageTransformsResponseBodyConfigs setConfigId(Long configId) {

@@ -5,6 +5,20 @@ import com.aliyun.tea.*;
 
 public class CreateImageTransformRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
+    @NameInMap("AutoAvif")
+    public String autoAvif;
+
+    /**
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
+    @NameInMap("AutoWebp")
+    public String autoWebp;
+
+    /**
      * <p>Indicates whether image transformation is enabled. Possible values:</p>
      * <ul>
      * <li>on: Enabled.</li>
@@ -77,6 +91,22 @@ public class CreateImageTransformRequest extends TeaModel {
     public static CreateImageTransformRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateImageTransformRequest self = new CreateImageTransformRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateImageTransformRequest setAutoAvif(String autoAvif) {
+        this.autoAvif = autoAvif;
+        return this;
+    }
+    public String getAutoAvif() {
+        return this.autoAvif;
+    }
+
+    public CreateImageTransformRequest setAutoWebp(String autoWebp) {
+        this.autoWebp = autoWebp;
+        return this;
+    }
+    public String getAutoWebp() {
+        return this.autoWebp;
     }
 
     public CreateImageTransformRequest setEnable(String enable) {

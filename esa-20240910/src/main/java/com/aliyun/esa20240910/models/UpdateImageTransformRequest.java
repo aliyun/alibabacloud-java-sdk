@@ -5,6 +5,20 @@ import com.aliyun.tea.*;
 
 public class UpdateImageTransformRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
+    @NameInMap("AutoAvif")
+    public String autoAvif;
+
+    /**
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
+    @NameInMap("AutoWebp")
+    public String autoWebp;
+
+    /**
      * <p>Configuration ID. It can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2869056.html">ListImageTransforms</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
@@ -78,6 +92,22 @@ public class UpdateImageTransformRequest extends TeaModel {
     public static UpdateImageTransformRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateImageTransformRequest self = new UpdateImageTransformRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateImageTransformRequest setAutoAvif(String autoAvif) {
+        this.autoAvif = autoAvif;
+        return this;
+    }
+    public String getAutoAvif() {
+        return this.autoAvif;
+    }
+
+    public UpdateImageTransformRequest setAutoWebp(String autoWebp) {
+        this.autoWebp = autoWebp;
+        return this;
+    }
+    public String getAutoWebp() {
+        return this.autoWebp;
     }
 
     public UpdateImageTransformRequest setConfigId(Long configId) {

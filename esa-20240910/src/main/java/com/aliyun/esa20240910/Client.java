@@ -2703,6 +2703,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateImageTransformResponse createImageTransformWithOptions(CreateImageTransformRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoAvif)) {
+            query.put("AutoAvif", request.autoAvif);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoWebp)) {
+            query.put("AutoWebp", request.autoWebp);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
             query.put("Enable", request.enable);
         }
@@ -19704,6 +19712,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateImageTransformResponse updateImageTransformWithOptions(UpdateImageTransformRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoAvif)) {
+            query.put("AutoAvif", request.autoAvif);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoWebp)) {
+            query.put("AutoWebp", request.autoWebp);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
             query.put("ConfigId", request.configId);
         }

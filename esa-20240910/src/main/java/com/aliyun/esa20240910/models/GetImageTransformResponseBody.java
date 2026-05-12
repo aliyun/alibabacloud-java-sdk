@@ -5,6 +5,20 @@ import com.aliyun.tea.*;
 
 public class GetImageTransformResponseBody extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
+    @NameInMap("AutoAvif")
+    public String autoAvif;
+
+    /**
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
+    @NameInMap("AutoWebp")
+    public String autoWebp;
+
+    /**
      * <p>Configuration ID.</p>
      * 
      * <strong>example:</strong>
@@ -104,6 +118,22 @@ public class GetImageTransformResponseBody extends TeaModel {
     public static GetImageTransformResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetImageTransformResponseBody self = new GetImageTransformResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetImageTransformResponseBody setAutoAvif(String autoAvif) {
+        this.autoAvif = autoAvif;
+        return this;
+    }
+    public String getAutoAvif() {
+        return this.autoAvif;
+    }
+
+    public GetImageTransformResponseBody setAutoWebp(String autoWebp) {
+        this.autoWebp = autoWebp;
+        return this;
+    }
+    public String getAutoWebp() {
+        return this.autoWebp;
     }
 
     public GetImageTransformResponseBody setConfigId(Long configId) {
