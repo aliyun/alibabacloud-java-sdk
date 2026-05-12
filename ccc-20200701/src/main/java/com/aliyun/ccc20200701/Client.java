@@ -929,6 +929,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AssignUsersResponse assignUsersWithOptions(AssignUsersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.async)) {
+            query.put("Async", request.async);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -5527,6 +5531,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>导入管理员</p>
+     * 
      * @param request ImportAdminsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ImportAdminsResponse
@@ -5560,6 +5567,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>导入管理员</p>
+     * 
      * @param request ImportAdminsRequest
      * @return ImportAdminsResponse
      */
@@ -10607,6 +10617,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改实例</p>
+     * 
      * @param request ModifyInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyInstanceResponse
@@ -10640,6 +10653,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改实例</p>
+     * 
      * @param request ModifyInstanceRequest
      * @return ModifyInstanceResponse
      */

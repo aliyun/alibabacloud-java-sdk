@@ -4,6 +4,9 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class AssignUsersRequest extends TeaModel {
+    @NameInMap("Async")
+    public Boolean async;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -50,6 +53,14 @@ public class AssignUsersRequest extends TeaModel {
     public static AssignUsersRequest build(java.util.Map<String, ?> map) throws Exception {
         AssignUsersRequest self = new AssignUsersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AssignUsersRequest setAsync(Boolean async) {
+        this.async = async;
+        return this;
+    }
+    public Boolean getAsync() {
+        return this.async;
     }
 
     public AssignUsersRequest setInstanceId(String instanceId) {
