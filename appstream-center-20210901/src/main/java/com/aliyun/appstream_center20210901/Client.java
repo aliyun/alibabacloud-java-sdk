@@ -1400,6 +1400,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>配置SLS日志投递</p>
+     * 
+     * @param request DeliverToUserSlsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeliverToUserSlsResponse
+     */
+    public DeliverToUserSlsResponse deliverToUserSlsWithOptions(DeliverToUserSlsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deliveryScopes)) {
+            bodyFlat.put("DeliveryScopes", request.deliveryScopes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.existedProjectName)) {
+            body.put("ExistedProjectName", request.existedProjectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logStoreName)) {
+            body.put("LogStoreName", request.logStoreName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
+            body.put("ProjectName", request.projectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.slsRegionId)) {
+            body.put("SlsRegionId", request.slsRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ttl)) {
+            body.put("Ttl", request.ttl);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeliverToUserSls"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeliverToUserSlsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>配置SLS日志投递</p>
+     * 
+     * @param request DeliverToUserSlsRequest
+     * @return DeliverToUserSlsResponse
+     */
+    public DeliverToUserSlsResponse deliverToUserSls(DeliverToUserSlsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deliverToUserSlsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the Elastic IP Addresses (EIPs) of workstations.</p>
      * 
      * @param request DescribeWuyingServerEipInfoRequest
