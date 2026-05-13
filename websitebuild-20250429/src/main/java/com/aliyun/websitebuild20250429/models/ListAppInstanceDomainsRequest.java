@@ -13,6 +13,9 @@ public class ListAppInstanceDomainsRequest extends TeaModel {
     @NameInMap("BizId")
     public String bizId;
 
+    @NameInMap("DomainKeyword")
+    public String domainKeyword;
+
     /**
      * <p>Number of results per query.</p>
      * <p>Range: 10~100. Default value: 20.</p>
@@ -79,6 +82,14 @@ public class ListAppInstanceDomainsRequest extends TeaModel {
     }
     public String getBizId() {
         return this.bizId;
+    }
+
+    public ListAppInstanceDomainsRequest setDomainKeyword(String domainKeyword) {
+        this.domainKeyword = domainKeyword;
+        return this;
+    }
+    public String getDomainKeyword() {
+        return this.domainKeyword;
     }
 
     public ListAppInstanceDomainsRequest setMaxResults(Integer maxResults) {

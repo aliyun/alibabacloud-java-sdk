@@ -1943,6 +1943,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BizId", request.bizId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.domainKeyword)) {
+            query.put("DomainKeyword", request.domainKeyword);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("MaxResults", request.maxResults);
         }
