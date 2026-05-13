@@ -2244,6 +2244,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取工作空间发布配置</p>
+     * 
+     * @param request GetWorkspaceCodePublishSettingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetWorkspaceCodePublishSettingResponse
+     */
+    public GetWorkspaceCodePublishSettingResponse getWorkspaceCodePublishSettingWithOptions(GetWorkspaceCodePublishSettingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetWorkspaceCodePublishSetting"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetWorkspaceCodePublishSettingResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取工作空间发布配置</p>
+     * 
+     * @param request GetWorkspaceCodePublishSettingRequest
+     * @return GetWorkspaceCodePublishSettingResponse
+     */
+    public GetWorkspaceCodePublishSettingResponse getWorkspaceCodePublishSetting(GetWorkspaceCodePublishSettingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getWorkspaceCodePublishSettingWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>列出资源Airflow</p>
      * 
      * @param request ListAirflowsRequest
@@ -3822,6 +3866,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>设置工作空间代码发布配置</p>
+     * 
+     * @param request SetWorkspaceCodePublishSettingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetWorkspaceCodePublishSettingResponse
+     */
+    public SetWorkspaceCodePublishSettingResponse setWorkspaceCodePublishSettingWithOptions(SetWorkspaceCodePublishSettingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            body.put("Config", request.config);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetWorkspaceCodePublishSetting"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetWorkspaceCodePublishSettingResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>设置工作空间代码发布配置</p>
+     * 
+     * @param request SetWorkspaceCodePublishSettingRequest
+     * @return SetWorkspaceCodePublishSettingResponse
+     */
+    public SetWorkspaceCodePublishSettingResponse setWorkspaceCodePublishSetting(SetWorkspaceCodePublishSettingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setWorkspaceCodePublishSettingWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>更新UpdateAirflow</p>
      * 
      * @param request UpdateAirflowRequest
@@ -4308,5 +4402,151 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateDataLakeTableResponse updateDataLakeTable(UpdateDataLakeTableRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateDataLakeTableWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>工作空间异步操作日志查询接口</p>
+     * 
+     * @param request WorkspaceActionLogRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return WorkspaceActionLogResponse
+     */
+    public WorkspaceActionLogResponse workspaceActionLogWithOptions(WorkspaceActionLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.key)) {
+            query.put("Key", request.key);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "WorkspaceActionLog"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new WorkspaceActionLogResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>工作空间异步操作日志查询接口</p>
+     * 
+     * @param request WorkspaceActionLogRequest
+     * @return WorkspaceActionLogResponse
+     */
+    public WorkspaceActionLogResponse workspaceActionLog(WorkspaceActionLogRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.workspaceActionLogWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>工作空间异步操作状态查询接口</p>
+     * 
+     * @param request WorkspaceActionStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return WorkspaceActionStatusResponse
+     */
+    public WorkspaceActionStatusResponse workspaceActionStatusWithOptions(WorkspaceActionStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.key)) {
+            query.put("Key", request.key);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "WorkspaceActionStatus"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new WorkspaceActionStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>工作空间异步操作状态查询接口</p>
+     * 
+     * @param request WorkspaceActionStatusRequest
+     * @return WorkspaceActionStatusResponse
+     */
+    public WorkspaceActionStatusResponse workspaceActionStatus(WorkspaceActionStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.workspaceActionStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>工作空间代码发布。这是个异步接口，请求返回一个key，请根据key查询 WorkspaceActionStatus接口获取状态</p>
+     * 
+     * @param request WorkspaceCodePublishRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return WorkspaceCodePublishResponse
+     */
+    public WorkspaceCodePublishResponse workspaceCodePublishWithOptions(WorkspaceCodePublishRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            body.put("Config", request.config);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "WorkspaceCodePublish"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new WorkspaceCodePublishResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>工作空间代码发布。这是个异步接口，请求返回一个key，请根据key查询 WorkspaceActionStatus接口获取状态</p>
+     * 
+     * @param request WorkspaceCodePublishRequest
+     * @return WorkspaceCodePublishResponse
+     */
+    public WorkspaceCodePublishResponse workspaceCodePublish(WorkspaceCodePublishRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.workspaceCodePublishWithOptions(request, runtime);
     }
 }
