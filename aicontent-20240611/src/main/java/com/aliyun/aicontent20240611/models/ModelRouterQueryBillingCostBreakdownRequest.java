@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryBillingCostBreakdownRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
+    @NameInMap("clientId")
+    public Long clientId;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +35,20 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends TeaModel {
      */
     @NameInMap("maxResults")
     public Integer maxResults;
+
+    /**
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
+    @NameInMap("modelId")
+    public Long modelId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>Chat</p>
+     */
+    @NameInMap("modelTypes")
+    public String modelTypes;
 
     /**
      * <strong>example:</strong>
@@ -64,6 +85,14 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModelRouterQueryBillingCostBreakdownRequest setClientId(Long clientId) {
+        this.clientId = clientId;
+        return this;
+    }
+    public Long getClientId() {
+        return this.clientId;
+    }
+
     public ModelRouterQueryBillingCostBreakdownRequest setEndTime(Long endTime) {
         this.endTime = endTime;
         return this;
@@ -86,6 +115,22 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends TeaModel {
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public ModelRouterQueryBillingCostBreakdownRequest setModelId(Long modelId) {
+        this.modelId = modelId;
+        return this;
+    }
+    public Long getModelId() {
+        return this.modelId;
+    }
+
+    public ModelRouterQueryBillingCostBreakdownRequest setModelTypes(String modelTypes) {
+        this.modelTypes = modelTypes;
+        return this;
+    }
+    public String getModelTypes() {
+        return this.modelTypes;
     }
 
     public ModelRouterQueryBillingCostBreakdownRequest setNextToken(String nextToken) {

@@ -23,6 +23,13 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>{&quot;billing_version&quot;: &quot;v1&quot;}</p>
+     */
+    @NameInMap("dimValues")
+    public String dimValues;
+
+    /**
+     * <strong>example:</strong>
      * <p>qwen-plus</p>
      */
     @NameInMap("modelCode")
@@ -59,6 +66,20 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
     @NameInMap("summaryTime")
     public Long summaryTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[]</p>
+     */
+    @NameInMap("tiers")
+    public java.util.List<BillingBillTierDTO> tiers;
+
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;input_tokens&quot;: 512000, &quot;output_tokens&quot;: 256000}</p>
+     */
+    @NameInMap("values")
+    public String values;
+
     public static BillingCostBreakdownRowDTO build(java.util.Map<String, ?> map) throws Exception {
         BillingCostBreakdownRowDTO self = new BillingCostBreakdownRowDTO();
         return TeaModel.build(map, self);
@@ -86,6 +107,14 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
     }
     public String getClientName() {
         return this.clientName;
+    }
+
+    public BillingCostBreakdownRowDTO setDimValues(String dimValues) {
+        this.dimValues = dimValues;
+        return this;
+    }
+    public String getDimValues() {
+        return this.dimValues;
     }
 
     public BillingCostBreakdownRowDTO setModelCode(String modelCode) {
@@ -134,6 +163,22 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
     }
     public Long getSummaryTime() {
         return this.summaryTime;
+    }
+
+    public BillingCostBreakdownRowDTO setTiers(java.util.List<BillingBillTierDTO> tiers) {
+        this.tiers = tiers;
+        return this;
+    }
+    public java.util.List<BillingBillTierDTO> getTiers() {
+        return this.tiers;
+    }
+
+    public BillingCostBreakdownRowDTO setValues(String values) {
+        this.values = values;
+        return this;
+    }
+    public String getValues() {
+        return this.values;
     }
 
 }

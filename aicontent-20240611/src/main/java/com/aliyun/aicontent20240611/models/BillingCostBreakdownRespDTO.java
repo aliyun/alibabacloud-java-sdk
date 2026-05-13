@@ -6,6 +6,13 @@ import com.aliyun.tea.*;
 public class BillingCostBreakdownRespDTO extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>[]</p>
+     */
+    @NameInMap("columns")
+    public java.util.List<MetricDefRespDTO> columns;
+
+    /**
+     * <strong>example:</strong>
      * <p>hourly</p>
      */
     @NameInMap("granularity")
@@ -42,6 +49,14 @@ public class BillingCostBreakdownRespDTO extends TeaModel {
     public static BillingCostBreakdownRespDTO build(java.util.Map<String, ?> map) throws Exception {
         BillingCostBreakdownRespDTO self = new BillingCostBreakdownRespDTO();
         return TeaModel.build(map, self);
+    }
+
+    public BillingCostBreakdownRespDTO setColumns(java.util.List<MetricDefRespDTO> columns) {
+        this.columns = columns;
+        return this;
+    }
+    public java.util.List<MetricDefRespDTO> getColumns() {
+        return this.columns;
     }
 
     public BillingCostBreakdownRespDTO setGranularity(String granularity) {

@@ -3189,6 +3189,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModelRouterQueryBillingCostBreakdownResponse modelRouterQueryBillingCostBreakdownWithOptions(ModelRouterQueryBillingCostBreakdownRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
+            query.put("clientId", request.clientId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("endTime", request.endTime);
         }
@@ -3199,6 +3203,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
+            query.put("modelId", request.modelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelTypes)) {
+            query.put("modelTypes", request.modelTypes);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
