@@ -652,6 +652,15 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         @NameInMap("AdminAccess")
         public String adminAccess;
 
+        @NameInMap("AdminKeyboardOnFullScreen")
+        public String adminKeyboardOnFullScreen;
+
+        @NameInMap("AdminKeyboardOnWindows")
+        public String adminKeyboardOnWindows;
+
+        @NameInMap("AdminMonitor")
+        public Integer adminMonitor;
+
         /**
          * <p>Indicates whether anti-screenshot is enabled.</p>
          * 
@@ -684,6 +693,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
 
         @NameInMap("ClientControlMenu")
         public String clientControlMenu;
+
+        @NameInMap("ClientCreateSnapshot")
+        public String clientCreateSnapshot;
 
         @NameInMap("ClientHibernate")
         public String clientHibernate;
@@ -729,6 +741,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
          */
         @NameInMap("CpuDownGradeDuration")
         public Integer cpuDownGradeDuration;
+
+        @NameInMap("CpuOverload")
+        public String cpuOverload;
 
         /**
          * <p>The CPU processors.</p>
@@ -826,6 +841,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         @NameInMap("DisconnectKeepSessionTime")
         public Integer disconnectKeepSessionTime;
 
+        @NameInMap("DiskOverload")
+        public String diskOverload;
+
         /**
          * <p>The display mode.</p>
          * 
@@ -868,6 +886,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         @NameInMap("EndUserApplyAdminCoordinate")
         public String endUserApplyAdminCoordinate;
 
+        @NameInMap("EndUserCount")
+        public String endUserCount;
+
         /**
          * <p>Indicates whether end users in the same office network can share cloud computers.</p>
          * 
@@ -876,6 +897,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
          */
         @NameInMap("EndUserGroupCoordinate")
         public String endUserGroupCoordinate;
+
+        @NameInMap("ExternalDrive")
+        public String externalDrive;
 
         @NameInMap("FileTransferAddress")
         public String fileTransferAddress;
@@ -937,6 +961,15 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         @NameInMap("InternetPrinter")
         public String internetPrinter;
 
+        @NameInMap("KeyboardControl")
+        public String keyboardControl;
+
+        @NameInMap("KmsServer")
+        public String kmsServer;
+
+        @NameInMap("KmsServerConfig")
+        public String kmsServerConfig;
+
         /**
          * <p>The read/write permissions on the on-premises drive.</p>
          * 
@@ -963,6 +996,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
          */
         @NameInMap("MemoryDownGradeDuration")
         public Integer memoryDownGradeDuration;
+
+        @NameInMap("MemoryOverload")
+        public String memoryOverload;
 
         /**
          * <p>The memory processors.</p>
@@ -1075,6 +1111,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         @NameInMap("NetRedirectRule")
         public java.util.List<DescribeCenterPolicyListResponseBodyDescribePolicyGroupsNetRedirectRule> netRedirectRule;
 
+        @NameInMap("NetworkPrinter")
+        public String networkPrinter;
+
         /**
          * <p>Indicates whether a disconnection is enforced upon inactivity.</p>
          * <blockquote>
@@ -1098,6 +1137,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
          */
         @NameInMap("NoOperationDisconnectTime")
         public Integer noOperationDisconnectTime;
+
+        @NameInMap("OrganizationCount")
+        public String organizationCount;
 
         /**
          * <p>The policy ID.</p>
@@ -1603,6 +1645,30 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             return this.adminAccess;
         }
 
+        public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setAdminKeyboardOnFullScreen(String adminKeyboardOnFullScreen) {
+            this.adminKeyboardOnFullScreen = adminKeyboardOnFullScreen;
+            return this;
+        }
+        public String getAdminKeyboardOnFullScreen() {
+            return this.adminKeyboardOnFullScreen;
+        }
+
+        public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setAdminKeyboardOnWindows(String adminKeyboardOnWindows) {
+            this.adminKeyboardOnWindows = adminKeyboardOnWindows;
+            return this;
+        }
+        public String getAdminKeyboardOnWindows() {
+            return this.adminKeyboardOnWindows;
+        }
+
+        public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setAdminMonitor(Integer adminMonitor) {
+            this.adminMonitor = adminMonitor;
+            return this;
+        }
+        public Integer getAdminMonitor() {
+            return this.adminMonitor;
+        }
+
         public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setAppContentProtection(String appContentProtection) {
             this.appContentProtection = appContentProtection;
             return this;
@@ -1641,6 +1707,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         }
         public String getClientControlMenu() {
             return this.clientControlMenu;
+        }
+
+        public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setClientCreateSnapshot(String clientCreateSnapshot) {
+            this.clientCreateSnapshot = clientCreateSnapshot;
+            return this;
+        }
+        public String getClientCreateSnapshot() {
+            return this.clientCreateSnapshot;
         }
 
         public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setClientHibernate(String clientHibernate) {
@@ -1705,6 +1779,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         }
         public Integer getCpuDownGradeDuration() {
             return this.cpuDownGradeDuration;
+        }
+
+        public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setCpuOverload(String cpuOverload) {
+            this.cpuOverload = cpuOverload;
+            return this;
+        }
+        public String getCpuOverload() {
+            return this.cpuOverload;
         }
 
         public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setCpuProcessors(java.util.List<String> cpuProcessors) {
@@ -1795,6 +1877,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             return this.disconnectKeepSessionTime;
         }
 
+        public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setDiskOverload(String diskOverload) {
+            this.diskOverload = diskOverload;
+            return this;
+        }
+        public String getDiskOverload() {
+            return this.diskOverload;
+        }
+
         public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setDisplayMode(String displayMode) {
             this.displayMode = displayMode;
             return this;
@@ -1835,12 +1925,28 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             return this.endUserApplyAdminCoordinate;
         }
 
+        public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setEndUserCount(String endUserCount) {
+            this.endUserCount = endUserCount;
+            return this;
+        }
+        public String getEndUserCount() {
+            return this.endUserCount;
+        }
+
         public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setEndUserGroupCoordinate(String endUserGroupCoordinate) {
             this.endUserGroupCoordinate = endUserGroupCoordinate;
             return this;
         }
         public String getEndUserGroupCoordinate() {
             return this.endUserGroupCoordinate;
+        }
+
+        public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setExternalDrive(String externalDrive) {
+            this.externalDrive = externalDrive;
+            return this;
+        }
+        public String getExternalDrive() {
+            return this.externalDrive;
         }
 
         public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setFileTransferAddress(String fileTransferAddress) {
@@ -1939,6 +2045,30 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             return this.internetPrinter;
         }
 
+        public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setKeyboardControl(String keyboardControl) {
+            this.keyboardControl = keyboardControl;
+            return this;
+        }
+        public String getKeyboardControl() {
+            return this.keyboardControl;
+        }
+
+        public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setKmsServer(String kmsServer) {
+            this.kmsServer = kmsServer;
+            return this;
+        }
+        public String getKmsServer() {
+            return this.kmsServer;
+        }
+
+        public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setKmsServerConfig(String kmsServerConfig) {
+            this.kmsServerConfig = kmsServerConfig;
+            return this;
+        }
+        public String getKmsServerConfig() {
+            return this.kmsServerConfig;
+        }
+
         public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setLocalDrive(String localDrive) {
             this.localDrive = localDrive;
             return this;
@@ -1961,6 +2091,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         }
         public Integer getMemoryDownGradeDuration() {
             return this.memoryDownGradeDuration;
+        }
+
+        public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setMemoryOverload(String memoryOverload) {
+            this.memoryOverload = memoryOverload;
+            return this;
+        }
+        public String getMemoryOverload() {
+            return this.memoryOverload;
         }
 
         public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setMemoryProcessors(java.util.List<String> memoryProcessors) {
@@ -2083,6 +2221,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             return this.netRedirectRule;
         }
 
+        public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setNetworkPrinter(String networkPrinter) {
+            this.networkPrinter = networkPrinter;
+            return this;
+        }
+        public String getNetworkPrinter() {
+            return this.networkPrinter;
+        }
+
         public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setNoOperationDisconnect(String noOperationDisconnect) {
             this.noOperationDisconnect = noOperationDisconnect;
             return this;
@@ -2097,6 +2243,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         }
         public Integer getNoOperationDisconnectTime() {
             return this.noOperationDisconnectTime;
+        }
+
+        public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setOrganizationCount(String organizationCount) {
+            this.organizationCount = organizationCount;
+            return this;
+        }
+        public String getOrganizationCount() {
+            return this.organizationCount;
         }
 
         public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setPolicyGroupId(String policyGroupId) {
