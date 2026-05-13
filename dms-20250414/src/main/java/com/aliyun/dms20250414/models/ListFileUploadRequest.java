@@ -14,6 +14,9 @@ public class ListFileUploadRequest extends TeaModel {
     @NameInMap("DmsUnit")
     public String dmsUnit;
 
+    @NameInMap("DownloadLinkExpire")
+    public Integer downloadLinkExpire;
+
     /**
      * <strong>example:</strong>
      * <p>TextReport</p>
@@ -75,6 +78,14 @@ public class ListFileUploadRequest extends TeaModel {
     }
     public String getDmsUnit() {
         return this.dmsUnit;
+    }
+
+    public ListFileUploadRequest setDownloadLinkExpire(Integer downloadLinkExpire) {
+        this.downloadLinkExpire = downloadLinkExpire;
+        return this;
+    }
+    public Integer getDownloadLinkExpire() {
+        return this.downloadLinkExpire;
     }
 
     public ListFileUploadRequest setFileCategory(String fileCategory) {

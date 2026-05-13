@@ -3443,6 +3443,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DmsUnit", request.dmsUnit);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.downloadLinkExpire)) {
+            query.put("DownloadLinkExpire", request.downloadLinkExpire);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.fileCategory)) {
             query.put("FileCategory", request.fileCategory);
         }
