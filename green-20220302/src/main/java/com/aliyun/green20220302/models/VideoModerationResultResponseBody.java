@@ -979,6 +979,25 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     }
 
+    public static class VideoModerationResultResponseBodyDataFrameResultFramesResultsVlContent extends TeaModel {
+        @NameInMap("OutputText")
+        public String outputText;
+
+        public static VideoModerationResultResponseBodyDataFrameResultFramesResultsVlContent build(java.util.Map<String, ?> map) throws Exception {
+            VideoModerationResultResponseBodyDataFrameResultFramesResultsVlContent self = new VideoModerationResultResponseBodyDataFrameResultFramesResultsVlContent();
+            return TeaModel.build(map, self);
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResultFramesResultsVlContent setOutputText(String outputText) {
+            this.outputText = outputText;
+            return this;
+        }
+        public String getOutputText() {
+            return this.outputText;
+        }
+
+    }
+
     public static class VideoModerationResultResponseBodyDataFrameResultFramesResults extends TeaModel {
         /**
          * <p>If a custom image library is hit, information about the custom image library is returned.</p>
@@ -1018,6 +1037,9 @@ public class VideoModerationResultResponseBody extends TeaModel {
          */
         @NameInMap("TextInImage")
         public java.util.Map<String, ?> textInImage;
+
+        @NameInMap("VlContent")
+        public VideoModerationResultResponseBodyDataFrameResultFramesResultsVlContent vlContent;
 
         public static VideoModerationResultResponseBodyDataFrameResultFramesResults build(java.util.Map<String, ?> map) throws Exception {
             VideoModerationResultResponseBodyDataFrameResultFramesResults self = new VideoModerationResultResponseBodyDataFrameResultFramesResults();
@@ -1070,6 +1092,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
         public java.util.Map<String, ?> getTextInImage() {
             return this.textInImage;
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResultFramesResults setVlContent(VideoModerationResultResponseBodyDataFrameResultFramesResultsVlContent vlContent) {
+            this.vlContent = vlContent;
+            return this;
+        }
+        public VideoModerationResultResponseBodyDataFrameResultFramesResultsVlContent getVlContent() {
+            return this.vlContent;
         }
 
     }

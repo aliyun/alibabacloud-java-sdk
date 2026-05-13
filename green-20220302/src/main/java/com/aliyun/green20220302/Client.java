@@ -246,7 +246,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the token for uploading files.</p>
      * 
-     * @param request DescribeUploadTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUploadTokenResponse
      */
