@@ -13,6 +13,13 @@ public class SwitchInstanceHAResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>674546459</p>
+     */
+    @NameInMap("TaskId")
+    public String taskId;
+
     public static SwitchInstanceHAResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SwitchInstanceHAResponseBody self = new SwitchInstanceHAResponseBody();
         return TeaModel.build(map, self);
@@ -24,6 +31,14 @@ public class SwitchInstanceHAResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public SwitchInstanceHAResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

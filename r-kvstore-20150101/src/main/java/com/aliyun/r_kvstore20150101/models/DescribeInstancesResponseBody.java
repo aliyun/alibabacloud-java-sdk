@@ -267,6 +267,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("VpcId")
         public String vpcId;
 
+        @NameInMap("WorkspaceId")
+        public String workspaceId;
+
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -617,6 +620,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getVpcId() {
             return this.vpcId;
+        }
+
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setWorkspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
+            return this;
+        }
+        public String getWorkspaceId() {
+            return this.workspaceId;
         }
 
         public DescribeInstancesResponseBodyInstancesKVStoreInstance setZoneId(String zoneId) {
