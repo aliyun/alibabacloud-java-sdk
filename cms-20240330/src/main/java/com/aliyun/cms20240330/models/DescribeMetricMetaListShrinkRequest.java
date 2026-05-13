@@ -4,6 +4,9 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetricMetaListShrinkRequest extends TeaModel {
+    @NameInMap("keywords")
+    public String keywords;
+
     @NameInMap("labels")
     public String labelsShrink;
 
@@ -45,6 +48,14 @@ public class DescribeMetricMetaListShrinkRequest extends TeaModel {
     public static DescribeMetricMetaListShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetricMetaListShrinkRequest self = new DescribeMetricMetaListShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMetricMetaListShrinkRequest setKeywords(String keywords) {
+        this.keywords = keywords;
+        return this;
+    }
+    public String getKeywords() {
+        return this.keywords;
     }
 
     public DescribeMetricMetaListShrinkRequest setLabelsShrink(String labelsShrink) {

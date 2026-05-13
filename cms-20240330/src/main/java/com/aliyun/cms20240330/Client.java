@@ -2696,6 +2696,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keywords)) {
+            query.put("keywords", request.keywords);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.labelsShrink)) {
             query.put("labels", request.labelsShrink);
         }

@@ -114,6 +114,9 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         @NameInMap("labels")
         public java.util.Map<String, String> labels;
 
+        @NameInMap("metaFormat")
+        public String metaFormat;
+
         @NameInMap("metricName")
         public String metricName;
 
@@ -167,6 +170,14 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         }
         public java.util.Map<String, String> getLabels() {
             return this.labels;
+        }
+
+        public DescribeMetricMetaListResponseBodyResources setMetaFormat(String metaFormat) {
+            this.metaFormat = metaFormat;
+            return this;
+        }
+        public String getMetaFormat() {
+            return this.metaFormat;
         }
 
         public DescribeMetricMetaListResponseBodyResources setMetricName(String metricName) {

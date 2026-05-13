@@ -438,6 +438,9 @@ public class GetPipelineResponseBody extends TeaModel {
         @NameInMap("project")
         public String project;
 
+        @NameInMap("query")
+        public String query;
+
         public static GetPipelineResponseBodySourceLogstore build(java.util.Map<String, ?> map) throws Exception {
             GetPipelineResponseBodySourceLogstore self = new GetPipelineResponseBodySourceLogstore();
             return TeaModel.build(map, self);
@@ -457,6 +460,14 @@ public class GetPipelineResponseBody extends TeaModel {
         }
         public String getProject() {
             return this.project;
+        }
+
+        public GetPipelineResponseBodySourceLogstore setQuery(String query) {
+            this.query = query;
+            return this;
+        }
+        public String getQuery() {
+            return this.query;
         }
 
     }
