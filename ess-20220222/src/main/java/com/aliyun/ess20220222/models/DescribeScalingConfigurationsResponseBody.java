@@ -1018,12 +1018,45 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsResourcePoolOptionsPrivatePoolTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeScalingConfigurationsResponseBodyScalingConfigurationsResourcePoolOptionsPrivatePoolTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeScalingConfigurationsResponseBodyScalingConfigurationsResourcePoolOptionsPrivatePoolTags self = new DescribeScalingConfigurationsResponseBodyScalingConfigurationsResourcePoolOptionsPrivatePoolTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsResourcePoolOptionsPrivatePoolTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsResourcePoolOptionsPrivatePoolTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsResourcePoolOptions extends TeaModel {
         /**
          * <p>The IDs of private pools. The ID of a private pool is the same as the ID of the elasticity assurance or capacity reservation that is associated with the private pool.</p>
          */
         @NameInMap("PrivatePoolIds")
         public java.util.List<String> privatePoolIds;
+
+        @NameInMap("PrivatePoolTags")
+        public java.util.List<DescribeScalingConfigurationsResponseBodyScalingConfigurationsResourcePoolOptionsPrivatePoolTags> privatePoolTags;
 
         /**
          * <p>The resource pool used for instance creation, which can be the public pool or a private pool associated with any active elasticity assurance or capacity reservation. Valid values:</p>
@@ -1050,6 +1083,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         }
         public java.util.List<String> getPrivatePoolIds() {
             return this.privatePoolIds;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsResourcePoolOptions setPrivatePoolTags(java.util.List<DescribeScalingConfigurationsResponseBodyScalingConfigurationsResourcePoolOptionsPrivatePoolTags> privatePoolTags) {
+            this.privatePoolTags = privatePoolTags;
+            return this;
+        }
+        public java.util.List<DescribeScalingConfigurationsResponseBodyScalingConfigurationsResourcePoolOptionsPrivatePoolTags> getPrivatePoolTags() {
+            return this.privatePoolTags;
         }
 
         public DescribeScalingConfigurationsResponseBodyScalingConfigurationsResourcePoolOptions setStrategy(String strategy) {

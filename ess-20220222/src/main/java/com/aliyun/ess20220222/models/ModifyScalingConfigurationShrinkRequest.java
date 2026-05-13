@@ -2399,12 +2399,45 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
 
     }
 
+    public static class ModifyScalingConfigurationShrinkRequestResourcePoolOptionsPrivatePoolTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ModifyScalingConfigurationShrinkRequestResourcePoolOptionsPrivatePoolTags build(java.util.Map<String, ?> map) throws Exception {
+            ModifyScalingConfigurationShrinkRequestResourcePoolOptionsPrivatePoolTags self = new ModifyScalingConfigurationShrinkRequestResourcePoolOptionsPrivatePoolTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyScalingConfigurationShrinkRequestResourcePoolOptionsPrivatePoolTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ModifyScalingConfigurationShrinkRequestResourcePoolOptionsPrivatePoolTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ModifyScalingConfigurationShrinkRequestResourcePoolOptions extends TeaModel {
         /**
          * <p>The IDs of private pools. The ID of a private pool is the same as that of the elasticity assurance or capacity reservation for which the private pool is generated. You can specify the IDs of only targeted private pools for this parameter.</p>
          */
         @NameInMap("PrivatePoolIds")
         public java.util.List<String> privatePoolIds;
+
+        @NameInMap("PrivatePoolTags")
+        public java.util.List<ModifyScalingConfigurationShrinkRequestResourcePoolOptionsPrivatePoolTags> privatePoolTags;
 
         /**
          * <p>The resource pool used for instance creation, which can be the public pool or a private pool associated with any active elasticity assurance or capacity reservation. Valid values:</p>
@@ -2432,6 +2465,14 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
         }
         public java.util.List<String> getPrivatePoolIds() {
             return this.privatePoolIds;
+        }
+
+        public ModifyScalingConfigurationShrinkRequestResourcePoolOptions setPrivatePoolTags(java.util.List<ModifyScalingConfigurationShrinkRequestResourcePoolOptionsPrivatePoolTags> privatePoolTags) {
+            this.privatePoolTags = privatePoolTags;
+            return this;
+        }
+        public java.util.List<ModifyScalingConfigurationShrinkRequestResourcePoolOptionsPrivatePoolTags> getPrivatePoolTags() {
+            return this.privatePoolTags;
         }
 
         public ModifyScalingConfigurationShrinkRequestResourcePoolOptions setStrategy(String strategy) {
