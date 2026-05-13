@@ -10,6 +10,9 @@ public class CreateUserExclusiveCredentialRequest extends TeaModel {
     @NameInMap("credentialContent")
     public CreateUserExclusiveCredentialRequestCredentialContent credentialContent;
 
+    @NameInMap("credentialExternalId")
+    public String credentialExternalId;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -62,6 +65,14 @@ public class CreateUserExclusiveCredentialRequest extends TeaModel {
     }
     public CreateUserExclusiveCredentialRequestCredentialContent getCredentialContent() {
         return this.credentialContent;
+    }
+
+    public CreateUserExclusiveCredentialRequest setCredentialExternalId(String credentialExternalId) {
+        this.credentialExternalId = credentialExternalId;
+        return this;
+    }
+    public String getCredentialExternalId() {
+        return this.credentialExternalId;
     }
 
     public CreateUserExclusiveCredentialRequest setCredentialIdentifier(String credentialIdentifier) {

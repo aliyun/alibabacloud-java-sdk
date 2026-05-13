@@ -386,6 +386,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("credentialContent", request.credentialContent);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialExternalId)) {
+            body.put("credentialExternalId", request.credentialExternalId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.credentialIdentifier)) {
             body.put("credentialIdentifier", request.credentialIdentifier);
         }
