@@ -156,6 +156,9 @@ public class ObtainCredentialResponseBody extends TeaModel {
         @NameInMap("CredentialCreationType")
         public String credentialCreationType;
 
+        @NameInMap("CredentialExternalId")
+        public String credentialExternalId;
+
         /**
          * <p>凭据ID。</p>
          * 
@@ -288,6 +291,14 @@ public class ObtainCredentialResponseBody extends TeaModel {
         }
         public String getCredentialCreationType() {
             return this.credentialCreationType;
+        }
+
+        public ObtainCredentialResponseBodyCredential setCredentialExternalId(String credentialExternalId) {
+            this.credentialExternalId = credentialExternalId;
+            return this;
+        }
+        public String getCredentialExternalId() {
+            return this.credentialExternalId;
         }
 
         public ObtainCredentialResponseBodyCredential setCredentialId(String credentialId) {

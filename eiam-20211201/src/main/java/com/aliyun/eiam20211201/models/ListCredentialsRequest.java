@@ -4,6 +4,9 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListCredentialsRequest extends TeaModel {
+    @NameInMap("CredentialExternalIds")
+    public java.util.List<String> credentialExternalIds;
+
     @NameInMap("CredentialIds")
     public java.util.List<String> credentialIds;
 
@@ -50,6 +53,14 @@ public class ListCredentialsRequest extends TeaModel {
     public static ListCredentialsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCredentialsRequest self = new ListCredentialsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListCredentialsRequest setCredentialExternalIds(java.util.List<String> credentialExternalIds) {
+        this.credentialExternalIds = credentialExternalIds;
+        return this;
+    }
+    public java.util.List<String> getCredentialExternalIds() {
+        return this.credentialExternalIds;
     }
 
     public ListCredentialsRequest setCredentialIds(java.util.List<String> credentialIds) {

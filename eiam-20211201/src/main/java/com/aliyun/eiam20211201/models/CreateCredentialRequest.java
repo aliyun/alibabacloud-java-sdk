@@ -21,6 +21,9 @@ public class CreateCredentialRequest extends TeaModel {
     @NameInMap("CredentialContent")
     public CreateCredentialRequestCredentialContent credentialContent;
 
+    @NameInMap("CredentialExternalId")
+    public String credentialExternalId;
+
     /**
      * <p>凭据标识。</p>
      * <p>This parameter is required.</p>
@@ -122,6 +125,14 @@ public class CreateCredentialRequest extends TeaModel {
     }
     public CreateCredentialRequestCredentialContent getCredentialContent() {
         return this.credentialContent;
+    }
+
+    public CreateCredentialRequest setCredentialExternalId(String credentialExternalId) {
+        this.credentialExternalId = credentialExternalId;
+        return this;
+    }
+    public String getCredentialExternalId() {
+        return this.credentialExternalId;
     }
 
     public CreateCredentialRequest setCredentialIdentifier(String credentialIdentifier) {

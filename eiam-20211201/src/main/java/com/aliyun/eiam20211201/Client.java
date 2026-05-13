@@ -1903,6 +1903,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CredentialContent", request.credentialContent);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialExternalId)) {
+            query.put("CredentialExternalId", request.credentialExternalId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.credentialIdentifier)) {
             query.put("CredentialIdentifier", request.credentialIdentifier);
         }
@@ -11737,6 +11741,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListCredentialsResponse listCredentialsWithOptions(ListCredentialsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialExternalIds)) {
+            query.put("CredentialExternalIds", request.credentialExternalIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.credentialIds)) {
             query.put("CredentialIds", request.credentialIds);
         }
