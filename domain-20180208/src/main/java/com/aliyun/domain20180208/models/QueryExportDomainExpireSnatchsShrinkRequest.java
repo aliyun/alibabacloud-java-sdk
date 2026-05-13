@@ -3,7 +3,7 @@ package com.aliyun.domain20180208.models;
 
 import com.aliyun.tea.*;
 
-public class QueryExportDomainExpireSnatchsRequest extends TeaModel {
+public class QueryExportDomainExpireSnatchsShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      * 
@@ -14,7 +14,7 @@ public class QueryExportDomainExpireSnatchsRequest extends TeaModel {
     public Long currentId;
 
     @NameInMap("DataSources")
-    public java.util.List<String> dataSources;
+    public String dataSourcesShrink;
 
     /**
      * <strong>example:</strong>
@@ -41,12 +41,12 @@ public class QueryExportDomainExpireSnatchsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    public static QueryExportDomainExpireSnatchsRequest build(java.util.Map<String, ?> map) throws Exception {
-        QueryExportDomainExpireSnatchsRequest self = new QueryExportDomainExpireSnatchsRequest();
+    public static QueryExportDomainExpireSnatchsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        QueryExportDomainExpireSnatchsShrinkRequest self = new QueryExportDomainExpireSnatchsShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public QueryExportDomainExpireSnatchsRequest setCurrentId(Long currentId) {
+    public QueryExportDomainExpireSnatchsShrinkRequest setCurrentId(Long currentId) {
         this.currentId = currentId;
         return this;
     }
@@ -54,15 +54,15 @@ public class QueryExportDomainExpireSnatchsRequest extends TeaModel {
         return this.currentId;
     }
 
-    public QueryExportDomainExpireSnatchsRequest setDataSources(java.util.List<String> dataSources) {
-        this.dataSources = dataSources;
+    public QueryExportDomainExpireSnatchsShrinkRequest setDataSourcesShrink(String dataSourcesShrink) {
+        this.dataSourcesShrink = dataSourcesShrink;
         return this;
     }
-    public java.util.List<String> getDataSources() {
-        return this.dataSources;
+    public String getDataSourcesShrink() {
+        return this.dataSourcesShrink;
     }
 
-    public QueryExportDomainExpireSnatchsRequest setMaxResults(Integer maxResults) {
+    public QueryExportDomainExpireSnatchsShrinkRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
@@ -70,7 +70,7 @@ public class QueryExportDomainExpireSnatchsRequest extends TeaModel {
         return this.maxResults;
     }
 
-    public QueryExportDomainExpireSnatchsRequest setNextToken(String nextToken) {
+    public QueryExportDomainExpireSnatchsShrinkRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
@@ -78,7 +78,7 @@ public class QueryExportDomainExpireSnatchsRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public QueryExportDomainExpireSnatchsRequest setPageSize(Integer pageSize) {
+    public QueryExportDomainExpireSnatchsShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }

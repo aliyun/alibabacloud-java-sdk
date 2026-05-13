@@ -1344,15 +1344,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>查询导出的抢注域名</p>
      * 
-     * @param request QueryExportDomainExpireSnatchsRequest
+     * @param tmpReq QueryExportDomainExpireSnatchsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryExportDomainExpireSnatchsResponse
      */
-    public QueryExportDomainExpireSnatchsResponse queryExportDomainExpireSnatchsWithOptions(QueryExportDomainExpireSnatchsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public QueryExportDomainExpireSnatchsResponse queryExportDomainExpireSnatchsWithOptions(QueryExportDomainExpireSnatchsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        QueryExportDomainExpireSnatchsShrinkRequest request = new QueryExportDomainExpireSnatchsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dataSources)) {
+            request.dataSourcesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dataSources, "DataSources", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.currentId)) {
             query.put("CurrentId", request.currentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourcesShrink)) {
+            query.put("DataSources", request.dataSourcesShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
