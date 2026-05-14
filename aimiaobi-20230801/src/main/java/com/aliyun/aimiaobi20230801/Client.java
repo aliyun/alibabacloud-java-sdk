@@ -5056,6 +5056,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询PPT任务信息</p>
+     * 
+     * @param request GetPptInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetPptInfoResponse
+     */
+    public GetPptInfoResponse getPptInfoWithOptions(GetPptInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetPptInfo"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPptInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询PPT任务信息</p>
+     * 
+     * @param request GetPptInfoRequest
+     * @return GetPptInfoResponse
+     */
+    public GetPptInfoResponse getPptInfo(GetPptInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getPptInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询PPT模板筛选器</p>
      * 
      * @param request GetPptTemplateSelectorRequest
@@ -5589,6 +5637,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pptTemplateType)) {
             body.put("PptTemplateType", request.pptTemplateType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pptTitle)) {
+            body.put("PptTitle", request.pptTitle);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.processType)) {

@@ -37,6 +37,13 @@ public class InitiatePptCreationV2Request extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>中国传统文化艺术的魅力</p>
+     */
+    @NameInMap("PptTitle")
+    public String pptTitle;
+
+    /**
+     * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("ProcessType")
@@ -101,6 +108,14 @@ public class InitiatePptCreationV2Request extends TeaModel {
     }
     public Integer getPptTemplateType() {
         return this.pptTemplateType;
+    }
+
+    public InitiatePptCreationV2Request setPptTitle(String pptTitle) {
+        this.pptTitle = pptTitle;
+        return this;
+    }
+    public String getPptTitle() {
+        return this.pptTitle;
     }
 
     public InitiatePptCreationV2Request setProcessType(Integer processType) {

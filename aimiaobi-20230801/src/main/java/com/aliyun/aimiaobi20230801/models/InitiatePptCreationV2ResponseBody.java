@@ -100,6 +100,13 @@ public class InitiatePptCreationV2ResponseBody extends TeaModel {
     public static class InitiatePptCreationV2ResponseBodyData extends TeaModel {
         /**
          * <strong>example:</strong>
+         * <p>本月版本内的配送额度已经用尽，超额使用将走按量后付费，下个月配送额度将重新下发；请知晓</p>
+         */
+        @NameInMap("Alert")
+        public String alert;
+
+        /**
+         * <strong>example:</strong>
          * <p>S1X5ecouBztZelaQ</p>
          */
         @NameInMap("AppKey")
@@ -143,6 +150,14 @@ public class InitiatePptCreationV2ResponseBody extends TeaModel {
         public static InitiatePptCreationV2ResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             InitiatePptCreationV2ResponseBodyData self = new InitiatePptCreationV2ResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public InitiatePptCreationV2ResponseBodyData setAlert(String alert) {
+            this.alert = alert;
+            return this;
+        }
+        public String getAlert() {
+            return this.alert;
         }
 
         public InitiatePptCreationV2ResponseBodyData setAppKey(String appKey) {
