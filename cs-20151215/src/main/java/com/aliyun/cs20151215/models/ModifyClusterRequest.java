@@ -49,6 +49,9 @@ public class ModifyClusterRequest extends TeaModel {
     @NameInMap("cluster_name")
     public String clusterName;
 
+    @NameInMap("cluster_spec")
+    public String clusterSpec;
+
     /**
      * <p>The control plane configurations of an ACK dedicated cluster.</p>
      */
@@ -265,6 +268,14 @@ public class ModifyClusterRequest extends TeaModel {
     }
     public String getClusterName() {
         return this.clusterName;
+    }
+
+    public ModifyClusterRequest setClusterSpec(String clusterSpec) {
+        this.clusterSpec = clusterSpec;
+        return this;
+    }
+    public String getClusterSpec() {
+        return this.clusterSpec;
     }
 
     public ModifyClusterRequest setControlPlaneConfig(ModifyClusterRequestControlPlaneConfig controlPlaneConfig) {

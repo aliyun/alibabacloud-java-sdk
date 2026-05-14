@@ -5892,6 +5892,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("cluster_name", request.clusterName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterSpec)) {
+            body.put("cluster_spec", request.clusterSpec);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.controlPlaneConfig)) {
             body.put("control_plane_config", request.controlPlaneConfig);
         }

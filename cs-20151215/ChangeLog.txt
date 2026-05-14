@@ -1,3 +1,7 @@
+2026-05-14 Version: 6.6.3
+- Update API ModifyCluster: add request parameters body.cluster_spec.
+
+
 2026-05-12 Version: 6.6.2
 - Update API DescribeTaskInfo: add response parameters Body.outputs.
 
