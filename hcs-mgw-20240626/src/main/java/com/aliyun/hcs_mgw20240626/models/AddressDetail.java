@@ -70,6 +70,9 @@ public class AddressDetail extends TeaModel {
     @NameInMap("Domain")
     public String domain;
 
+    @NameInMap("HdfsAuthConfig")
+    public HdfsAuthConfig hdfsAuthConfig;
+
     /**
      * <p>The AccessKey ID that is used to access the bucket in which the inventory list resides.</p>
      * 
@@ -229,6 +232,14 @@ public class AddressDetail extends TeaModel {
     }
     public String getDomain() {
         return this.domain;
+    }
+
+    public AddressDetail setHdfsAuthConfig(HdfsAuthConfig hdfsAuthConfig) {
+        this.hdfsAuthConfig = hdfsAuthConfig;
+        return this;
+    }
+    public HdfsAuthConfig getHdfsAuthConfig() {
+        return this.hdfsAuthConfig;
     }
 
     public AddressDetail setInvAccessId(String invAccessId) {
