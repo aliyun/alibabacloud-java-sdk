@@ -116,6 +116,13 @@ public class GetProjectResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>35523</p>
+     */
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
+
     public static GetProjectResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetProjectResponseBody self = new GetProjectResponseBody();
         return TeaModel.build(map, self);
@@ -247,6 +254,14 @@ public class GetProjectResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetProjectResponseBody setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

@@ -163,6 +163,13 @@ public class ListProjectsResponseBody extends TeaModel {
         @NameInMap("ProjectId")
         public String projectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>35523</p>
+         */
+        @NameInMap("WorkspaceId")
+        public String workspaceId;
+
         public static ListProjectsResponseBodyProjects build(java.util.Map<String, ?> map) throws Exception {
             ListProjectsResponseBodyProjects self = new ListProjectsResponseBodyProjects();
             return TeaModel.build(map, self);
@@ -294,6 +301,14 @@ public class ListProjectsResponseBody extends TeaModel {
         }
         public String getProjectId() {
             return this.projectId;
+        }
+
+        public ListProjectsResponseBodyProjects setWorkspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
+            return this;
+        }
+        public String getWorkspaceId() {
+            return this.workspaceId;
         }
 
     }

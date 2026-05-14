@@ -1906,6 +1906,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            query.put("Config", request.config);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.joinIdsShrink)) {
             query.put("JoinIds", request.joinIdsShrink);
         }

@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListFeatureViewOnlineFeaturesRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>{&quot;dlrm_hstu&quot;: true}</p>
+     */
+    @NameInMap("Config")
+    public String config;
+
+    /**
      * <p>This parameter is required.</p>
      */
     @NameInMap("JoinIds")
@@ -13,6 +20,14 @@ public class ListFeatureViewOnlineFeaturesRequest extends TeaModel {
     public static ListFeatureViewOnlineFeaturesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListFeatureViewOnlineFeaturesRequest self = new ListFeatureViewOnlineFeaturesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListFeatureViewOnlineFeaturesRequest setConfig(String config) {
+        this.config = config;
+        return this;
+    }
+    public String getConfig() {
+        return this.config;
     }
 
     public ListFeatureViewOnlineFeaturesRequest setJoinIds(java.util.List<String> joinIds) {
