@@ -5,6 +5,13 @@
 - Update API ModifyResourceLogStatus: add request parameters TraceStatus.
 
 
+2026-05-14 Version: 6.7.1
+- Update API DescribeResourceLogStatus: add response parameters Body.Result.$.TraceConfig.
+- Update API DescribeResourceLogStatus: add response parameters Body.Result.$.TraceStatus.
+- Update API ModifyResourceLogStatus: add request parameters TraceConfig.
+- Update API ModifyResourceLogStatus: add request parameters TraceStatus.
+
+
 2026-03-31 Version: 6.7.0
 - Support API DescribeUserTraffic.
 
