@@ -418,6 +418,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         @NameInMap("SrcType")
         public String srcType;
 
+        @NameInMap("StorageClass")
+        public String storageClass;
+
         public static DescribeBackupPolicyResponseBodyAdvancedDataPoliciesAdvancedDataPolicy build(java.util.Map<String, ?> map) throws Exception {
             DescribeBackupPolicyResponseBodyAdvancedDataPoliciesAdvancedDataPolicy self = new DescribeBackupPolicyResponseBodyAdvancedDataPoliciesAdvancedDataPolicy();
             return TeaModel.build(map, self);
@@ -541,6 +544,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
         public String getSrcType() {
             return this.srcType;
+        }
+
+        public DescribeBackupPolicyResponseBodyAdvancedDataPoliciesAdvancedDataPolicy setStorageClass(String storageClass) {
+            this.storageClass = storageClass;
+            return this;
+        }
+        public String getStorageClass() {
+            return this.storageClass;
         }
 
     }

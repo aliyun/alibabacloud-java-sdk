@@ -563,6 +563,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>批准PolarClaw设备配对</p>
+     * 
+     * @param request ApprovePolarClawDevicePairRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ApprovePolarClawDevicePairResponse
+     */
+    public ApprovePolarClawDevicePairResponse approvePolarClawDevicePairWithOptions(ApprovePolarClawDevicePairRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pairRequestId)) {
+            query.put("PairRequestId", request.pairRequestId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ApprovePolarClawDevicePair"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ApprovePolarClawDevicePairResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批准PolarClaw设备配对</p>
+     * 
+     * @param request ApprovePolarClawDevicePairRequest
+     * @return ApprovePolarClawDevicePairResponse
+     */
+    public ApprovePolarClawDevicePairResponse approvePolarClawDevicePair(ApprovePolarClawDevicePairRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.approvePolarClawDevicePairWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>挂载PolarFS到PolarDB应用</p>
      * 
      * @param request AttachApplicationPolarFSRequest
@@ -9615,6 +9663,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询PolarDB AI应用性能</p>
+     * 
+     * @param request DescribeApplicationPerformanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeApplicationPerformanceResponse
+     */
+    public DescribeApplicationPerformanceResponse describeApplicationPerformanceWithOptions(DescribeApplicationPerformanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.consumer)) {
+            query.put("Consumer", request.consumer);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.consumerGroup)) {
+            query.put("ConsumerGroup", request.consumerGroup);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
+            query.put("Interval", request.interval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.key)) {
+            query.put("Key", request.key);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelService)) {
+            query.put("ModelService", request.modelService);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeApplicationPerformance"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeApplicationPerformanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询PolarDB AI应用性能</p>
+     * 
+     * @param request DescribeApplicationPerformanceRequest
+     * @return DescribeApplicationPerformanceResponse
+     */
+    public DescribeApplicationPerformanceResponse describeApplicationPerformance(DescribeApplicationPerformanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeApplicationPerformanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询当前应用下所有的应用提示词策略列表</p>
      * 
      * @param request DescribeApplicationPromptsRequest
@@ -16369,6 +16489,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询PolarClaw异步任务状态</p>
+     * 
+     * @param request DescribePolarClawTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePolarClawTaskResponse
+     */
+    public DescribePolarClawTaskResponse describePolarClawTaskWithOptions(DescribePolarClawTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePolarClawTask"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePolarClawTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询PolarClaw异步任务状态</p>
+     * 
+     * @param request DescribePolarClawTaskRequest
+     * @return DescribePolarClawTaskResponse
+     */
+    public DescribePolarClawTaskResponse describePolarClawTask(DescribePolarClawTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePolarClawTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取PolarFS实例详情</p>
      * 
      * @param request DescribePolarFsAttributeRequest
@@ -19484,6 +19652,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>列出PolarClaw设备配对</p>
+     * 
+     * @param request ListPolarClawDevicePairsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPolarClawDevicePairsResponse
+     */
+    public ListPolarClawDevicePairsResponse listPolarClawDevicePairsWithOptions(ListPolarClawDevicePairsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListPolarClawDevicePairs"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPolarClawDevicePairsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出PolarClaw设备配对</p>
+     * 
+     * @param request ListPolarClawDevicePairsRequest
+     * @return ListPolarClawDevicePairsResponse
+     */
+    public ListPolarClawDevicePairsResponse listPolarClawDevicePairs(ListPolarClawDevicePairsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listPolarClawDevicePairsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the tags that are added to one or more PolarDB clusters, or the PolarDB clusters to which one or more tags are added.</p>
      * 
      * @param request ListTagResourcesRequest
@@ -19618,6 +19830,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListTagResourcesForRegionResponse listTagResourcesForRegion(ListTagResourcesForRegionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTagResourcesForRegionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>登录PolarClaw Channel</p>
+     * 
+     * @param request LoginPolarClawChannelRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return LoginPolarClawChannelResponse
+     */
+    public LoginPolarClawChannelResponse loginPolarClawChannelWithOptions(LoginPolarClawChannelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.channelId)) {
+            query.put("ChannelId", request.channelId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "LoginPolarClawChannel"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new LoginPolarClawChannelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>登录PolarClaw Channel</p>
+     * 
+     * @param request LoginPolarClawChannelRequest
+     * @return LoginPolarClawChannelResponse
+     */
+    public LoginPolarClawChannelResponse loginPolarClawChannel(LoginPolarClawChannelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.loginPolarClawChannelWithOptions(request, runtime);
     }
 
     /**
@@ -25312,6 +25572,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>拒绝PolarClaw设备配对</p>
+     * 
+     * @param request RejectPolarClawDevicePairRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RejectPolarClawDevicePairResponse
+     */
+    public RejectPolarClawDevicePairResponse rejectPolarClawDevicePairWithOptions(RejectPolarClawDevicePairRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pairRequestId)) {
+            query.put("PairRequestId", request.pairRequestId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RejectPolarClawDevicePair"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RejectPolarClawDevicePairResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>拒绝PolarClaw设备配对</p>
+     * 
+     * @param request RejectPolarClawDevicePairRequest
+     * @return RejectPolarClawDevicePairResponse
+     */
+    public RejectPolarClawDevicePairResponse rejectPolarClawDevicePair(RejectPolarClawDevicePairRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.rejectPolarClawDevicePairWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>删除应用环境变量</p>
      * 
      * @param tmpReq RemoveApplicationEnvironmentVariablesRequest
@@ -25452,6 +25760,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RemoveDBClusterFromGDNResponse removeDBClusterFromGDN(RemoveDBClusterFromGDNRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.removeDBClusterFromGDNWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>移除PolarClaw已配对设备</p>
+     * 
+     * @param request RemovePolarClawDevicePairRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemovePolarClawDevicePairResponse
+     */
+    public RemovePolarClawDevicePairResponse removePolarClawDevicePairWithOptions(RemovePolarClawDevicePairRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceId)) {
+            query.put("DeviceId", request.deviceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RemovePolarClawDevicePair"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RemovePolarClawDevicePairResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>移除PolarClaw已配对设备</p>
+     * 
+     * @param request RemovePolarClawDevicePairRequest
+     * @return RemovePolarClawDevicePairResponse
+     */
+    public RemovePolarClawDevicePairResponse removePolarClawDevicePair(RemovePolarClawDevicePairRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.removePolarClawDevicePairWithOptions(request, runtime);
     }
 
     /**
