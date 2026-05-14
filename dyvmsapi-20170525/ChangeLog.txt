@@ -1,3 +1,37 @@
+2026-05-14 Version: 5.5.0
+- Support API ClinkAgentStatus.
+- Support API ClinkAgentStatusDetail.
+- Support API ClinkBindClientTel.
+- Support API ClinkCdrObDetails.
+- Support API ClinkCreateClient.
+- Support API ClinkCreateEnterprisePause.
+- Support API ClinkCreateExten.
+- Support API ClinkCreateQueue.
+- Support API ClinkDeleteClient.
+- Support API ClinkDeleteExten.
+- Support API ClinkDescribeCdrIb.
+- Support API ClinkDescribeCdrIbDetails.
+- Support API ClinkDescribeCdrOb.
+- Support API ClinkDescribeCdrObDetails.
+- Support API ClinkDescribeClient.
+- Support API ClinkDescribeQueue.
+- Support API ClinkDescribeRecordFileUrl.
+- Support API ClinkDetailCdrIb.
+- Support API ClinkListCdrIb.
+- Support API ClinkListCdrIbAgent.
+- Support API ClinkListCdrIbs.
+- Support API ClinkListCdrOb.
+- Support API ClinkListCdrObs.
+- Support API ClinkListClients.
+- Support API ClinkListEnterprisePauses.
+- Support API ClinkListExtens.
+- Support API ClinkListIvrNodes.
+- Support API ClinkListIvrs.
+- Support API ClinkListQueues.
+- Support API ClinkStatIb.
+- Support API ClinkUpdateClient.
+
+
 2026-04-29 Version: 5.4.0
 - Support API CloudAgentMonitorStatistics.
 - Support API CloudAgentWorkloadReport.

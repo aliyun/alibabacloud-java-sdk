@@ -488,6 +488,2768 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Agent status monitoring.</p>
+     * 
+     * @param request ClinkAgentStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClinkAgentStatusResponse
+     */
+    public ClinkAgentStatusResponse clinkAgentStatusWithOptions(ClinkAgentStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            query.put("Offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClinkAgentStatus"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClinkAgentStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Agent status monitoring.</p>
+     * 
+     * @param request ClinkAgentStatusRequest
+     * @return ClinkAgentStatusResponse
+     */
+    public ClinkAgentStatusResponse clinkAgentStatus(ClinkAgentStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clinkAgentStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the status details of an agent.</p>
+     * 
+     * @param request ClinkAgentStatusDetailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClinkAgentStatusDetailResponse
+     */
+    public ClinkAgentStatusDetailResponse clinkAgentStatusDetailWithOptions(ClinkAgentStatusDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cno)) {
+            query.put("Cno", request.cno);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClinkAgentStatusDetail"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClinkAgentStatusDetailResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the status details of an agent.</p>
+     * 
+     * @param request ClinkAgentStatusDetailRequest
+     * @return ClinkAgentStatusDetailResponse
+     */
+    public ClinkAgentStatusDetailResponse clinkAgentStatusDetail(ClinkAgentStatusDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clinkAgentStatusDetailWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Attach an agent phone.</p>
+     * 
+     * @param request ClinkBindClientTelRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClinkBindClientTelResponse
+     */
+    public ClinkBindClientTelResponse clinkBindClientTelWithOptions(ClinkBindClientTelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cno)) {
+            query.put("Cno", request.cno);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isBind)) {
+            query.put("IsBind", request.isBind);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isReserveTel)) {
+            query.put("IsReserveTel", request.isReserveTel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tel)) {
+            query.put("Tel", request.tel);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClinkBindClientTel"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClinkBindClientTelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Attach an agent phone.</p>
+     * 
+     * @param request ClinkBindClientTelRequest
+     * @return ClinkBindClientTelResponse
+     */
+    public ClinkBindClientTelResponse clinkBindClientTel(ClinkBindClientTelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clinkBindClientTelWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of an outbound call record.</p>
+     * 
+     * @param request ClinkCdrObDetailsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClinkCdrObDetailsResponse
+     */
+    public ClinkCdrObDetailsResponse clinkCdrObDetailsWithOptions(ClinkCdrObDetailsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hiddenType)) {
+            query.put("HiddenType", request.hiddenType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mainUniqueId)) {
+            query.put("MainUniqueId", request.mainUniqueId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClinkCdrObDetails"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClinkCdrObDetailsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of an outbound call record.</p>
+     * 
+     * @param request ClinkCdrObDetailsRequest
+     * @return ClinkCdrObDetailsResponse
+     */
+    public ClinkCdrObDetailsResponse clinkCdrObDetails(ClinkCdrObDetailsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clinkCdrObDetailsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Add an agent.</p>
+     * 
+     * @param tmpReq ClinkCreateClientRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClinkCreateClientResponse
+     */
+    public ClinkCreateClientResponse clinkCreateClientWithOptions(ClinkCreateClientRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ClinkCreateClientShrinkRequest request = new ClinkCreateClientShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.clid)) {
+            request.clidShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.clid, "Clid", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.clidArea)) {
+            request.clidAreaShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.clidArea, "ClidArea", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.clidDefault)) {
+            request.clidDefaultShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.clidDefault, "ClidDefault", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.cloudNumberModes)) {
+            request.cloudNumberModesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.cloudNumberModes, "CloudNumberModes", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.permission)) {
+            request.permissionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.permission, "Permission", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.qnos)) {
+            request.qnosShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.qnos, "Qnos", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.serveArea)) {
+            request.serveAreaShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.serveArea, "ServeArea", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.active)) {
+            query.put("Active", request.active);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.areaCode)) {
+            query.put("AreaCode", request.areaCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.assignType)) {
+            query.put("AssignType", request.assignType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clidShrink)) {
+            query.put("Clid", request.clidShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clidAreaShrink)) {
+            query.put("ClidArea", request.clidAreaShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clidDefaultShrink)) {
+            query.put("ClidDefault", request.clidDefaultShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clidRule)) {
+            query.put("ClidRule", request.clidRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clidType)) {
+            query.put("ClidType", request.clidType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudNumberEnabled)) {
+            query.put("CloudNumberEnabled", request.cloudNumberEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudNumberModesShrink)) {
+            query.put("CloudNumberModes", request.cloudNumberModesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cno)) {
+            query.put("Cno", request.cno);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.crmId)) {
+            query.put("CrmId", request.crmId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dynamicTelGroupIdDefault)) {
+            query.put("DynamicTelGroupIdDefault", request.dynamicTelGroupIdDefault);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dynamicTelGroupName)) {
+            query.put("DynamicTelGroupName", request.dynamicTelGroupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hiddenTel)) {
+            query.put("HiddenTel", request.hiddenTel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.obClidDefaultType)) {
+            query.put("ObClidDefaultType", request.obClidDefaultType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.obHangupSms)) {
+            query.put("ObHangupSms", request.obHangupSms);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.password)) {
+            query.put("Password", request.password);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pauseLogin)) {
+            query.put("PauseLogin", request.pauseLogin);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.permissionShrink)) {
+            query.put("Permission", request.permissionShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qnosShrink)) {
+            query.put("Qnos", request.qnosShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recurrentselectionType)) {
+            query.put("RecurrentselectionType", request.recurrentselectionType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recurrentselectionValue)) {
+            query.put("RecurrentselectionValue", request.recurrentselectionValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.role)) {
+            query.put("Role", request.role);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serveAreaShrink)) {
+            query.put("ServeArea", request.serveAreaShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wechatMiniProgramRtc)) {
+            query.put("WechatMiniProgramRtc", request.wechatMiniProgramRtc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wrapupTime)) {
+            query.put("WrapupTime", request.wrapupTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClinkCreateClient"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClinkCreateClientResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Add an agent.</p>
+     * 
+     * @param request ClinkCreateClientRequest
+     * @return ClinkCreateClientResponse
+     */
+    public ClinkCreateClientResponse clinkCreateClient(ClinkCreateClientRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clinkCreateClientWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Add a busy status.</p>
+     * 
+     * @param request ClinkCreateEnterprisePauseRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClinkCreateEnterprisePauseResponse
+     */
+    public ClinkCreateEnterprisePauseResponse clinkCreateEnterprisePauseWithOptions(ClinkCreateEnterprisePauseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isDefault)) {
+            query.put("IsDefault", request.isDefault);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isRest)) {
+            query.put("IsRest", request.isRest);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pauseStatus)) {
+            query.put("PauseStatus", request.pauseStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClinkCreateEnterprisePause"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClinkCreateEnterprisePauseResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Add a busy status.</p>
+     * 
+     * @param request ClinkCreateEnterprisePauseRequest
+     * @return ClinkCreateEnterprisePauseResponse
+     */
+    public ClinkCreateEnterprisePauseResponse clinkCreateEnterprisePause(ClinkCreateEnterprisePauseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clinkCreateEnterprisePauseWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Add a phone.</p>
+     * 
+     * @param request ClinkCreateExtenRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClinkCreateExtenResponse
+     */
+    public ClinkCreateExtenResponse clinkCreateExtenWithOptions(ClinkCreateExtenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allow)) {
+            query.put("Allow", request.allow);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.areaCode)) {
+            query.put("AreaCode", request.areaCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extenNumber)) {
+            query.put("ExtenNumber", request.extenNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isDirect)) {
+            query.put("IsDirect", request.isDirect);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jittBuffer)) {
+            query.put("JittBuffer", request.jittBuffer);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.password)) {
+            query.put("Password", request.password);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClinkCreateExten"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClinkCreateExtenResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Add a phone.</p>
+     * 
+     * @param request ClinkCreateExtenRequest
+     * @return ClinkCreateExtenResponse
+     */
+    public ClinkCreateExtenResponse clinkCreateExten(ClinkCreateExtenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clinkCreateExtenWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Add a queue.</p>
+     * 
+     * @param tmpReq ClinkCreateQueueRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClinkCreateQueueResponse
+     */
+    public ClinkCreateQueueResponse clinkCreateQueueWithOptions(ClinkCreateQueueRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ClinkCreateQueueShrinkRequest request = new ClinkCreateQueueShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.queueMembers)) {
+            request.queueMembersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.queueMembers, "QueueMembers", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.chatLocation)) {
+            query.put("ChatLocation", request.chatLocation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chatMaxWait)) {
+            query.put("ChatMaxWait", request.chatMaxWait);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chatStrategy)) {
+            query.put("ChatStrategy", request.chatStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ibAllowed)) {
+            query.put("IbAllowed", request.ibAllowed);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.joinEmpty)) {
+            query.put("JoinEmpty", request.joinEmpty);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxPauseClientFlag)) {
+            query.put("MaxPauseClientFlag", request.maxPauseClientFlag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxPauseClientType)) {
+            query.put("MaxPauseClientType", request.maxPauseClientType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxPauseClientValue)) {
+            query.put("MaxPauseClientValue", request.maxPauseClientValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxWait)) {
+            query.put("MaxWait", request.maxWait);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberTimeout)) {
+            query.put("MemberTimeout", request.memberTimeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qno)) {
+            query.put("Qno", request.qno);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queueMembersShrink)) {
+            query.put("QueueMembers", request.queueMembersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queueTimeout)) {
+            query.put("QueueTimeout", request.queueTimeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sayCno)) {
+            query.put("SayCno", request.sayCno);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceLevel)) {
+            query.put("ServiceLevel", request.serviceLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strategy)) {
+            query.put("Strategy", request.strategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vipSupport)) {
+            query.put("VipSupport", request.vipSupport);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.weight)) {
+            query.put("Weight", request.weight);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wrapupTime)) {
+            query.put("WrapupTime", request.wrapupTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClinkCreateQueue"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClinkCreateQueueResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Add a queue.</p>
+     * 
+     * @param request ClinkCreateQueueRequest
+     * @return ClinkCreateQueueResponse
+     */
+    public ClinkCreateQueueResponse clinkCreateQueue(ClinkCreateQueueRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clinkCreateQueueWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an agent.</p>
+     * 
+     * @param request ClinkDeleteClientRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClinkDeleteClientResponse
+     */
+    public ClinkDeleteClientResponse clinkDeleteClientWithOptions(ClinkDeleteClientRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cno)) {
+            query.put("Cno", request.cno);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClinkDeleteClient"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClinkDeleteClientResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an agent.</p>
+     * 
+     * @param request ClinkDeleteClientRequest
+     * @return ClinkDeleteClientResponse
+     */
+    public ClinkDeleteClientResponse clinkDeleteClient(ClinkDeleteClientRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clinkDeleteClientWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Delete the phone.</p>
+     * 
+     * @param request ClinkDeleteExtenRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClinkDeleteExtenResponse
+     */
+    public ClinkDeleteExtenResponse clinkDeleteExtenWithOptions(ClinkDeleteExtenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extenNumber)) {
+            query.put("ExtenNumber", request.extenNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClinkDeleteExten"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClinkDeleteExtenResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Delete the phone.</p>
+     * 
+     * @param request ClinkDeleteExtenRequest
+     * @return ClinkDeleteExtenResponse
+     */
+    public ClinkDeleteExtenResponse clinkDeleteExten(ClinkDeleteExtenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clinkDeleteExtenWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>View incoming call records.</p>
+     * 
+     * @param request ClinkDescribeCdrIbRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClinkDescribeCdrIbResponse
+     */
+    public ClinkDescribeCdrIbResponse clinkDescribeCdrIbWithOptions(ClinkDescribeCdrIbRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hiddenType)) {
+            query.put("HiddenType", request.hiddenType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mainUniqueId)) {
+            query.put("MainUniqueId", request.mainUniqueId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClinkDescribeCdrIb"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClinkDescribeCdrIbResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>View incoming call records.</p>
+     * 
+     * @param request ClinkDescribeCdrIbRequest
+     * @return ClinkDescribeCdrIbResponse
+     */
+    public ClinkDescribeCdrIbResponse clinkDescribeCdrIb(ClinkDescribeCdrIbRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clinkDescribeCdrIbWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>View incoming call record details.</p>
+     * 
+     * @param request ClinkDescribeCdrIbDetailsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClinkDescribeCdrIbDetailsResponse
+     */
+    public ClinkDescribeCdrIbDetailsResponse clinkDescribeCdrIbDetailsWithOptions(ClinkDescribeCdrIbDetailsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mainUniqueId)) {
+            query.put("MainUniqueId", request.mainUniqueId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClinkDescribeCdrIbDetails"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClinkDescribeCdrIbDetailsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>View incoming call record details.</p>
+     * 
+     * @param request ClinkDescribeCdrIbDetailsRequest
+     * @return ClinkDescribeCdrIbDetailsResponse
+     */
+    public ClinkDescribeCdrIbDetailsResponse clinkDescribeCdrIbDetails(ClinkDescribeCdrIbDetailsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clinkDescribeCdrIbDetailsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>View outbound call records.</p>
+     * 
+     * @param request ClinkDescribeCdrObRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClinkDescribeCdrObResponse
+     */
+    public ClinkDescribeCdrObResponse clinkDescribeCdrObWithOptions(ClinkDescribeCdrObRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hiddenType)) {
+            query.put("HiddenType", request.hiddenType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mainUniqueId)) {
+            query.put("MainUniqueId", request.mainUniqueId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClinkDescribeCdrOb"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClinkDescribeCdrObResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>View outbound call records.</p>
+     * 
+     * @param request ClinkDescribeCdrObRequest
+     * @return ClinkDescribeCdrObResponse
+     */
+    public ClinkDescribeCdrObResponse clinkDescribeCdrOb(ClinkDescribeCdrObRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clinkDescribeCdrObWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>View outbound call record details.</p>
+     * 
+     * @param request ClinkDescribeCdrObDetailsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClinkDescribeCdrObDetailsResponse
+     */
+    public ClinkDescribeCdrObDetailsResponse clinkDescribeCdrObDetailsWithOptions(ClinkDescribeCdrObDetailsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mainUniqueId)) {
+            query.put("MainUniqueId", request.mainUniqueId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClinkDescribeCdrObDetails"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClinkDescribeCdrObDetailsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>View outbound call record details.</p>
+     * 
+     * @param request ClinkDescribeCdrObDetailsRequest
+     * @return ClinkDescribeCdrObDetailsResponse
+     */
+    public ClinkDescribeCdrObDetailsResponse clinkDescribeCdrObDetails(ClinkDescribeCdrObDetailsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clinkDescribeCdrObDetailsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>View the agent details.</p>
+     * 
+     * @param request ClinkDescribeClientRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClinkDescribeClientResponse
+     */
+    public ClinkDescribeClientResponse clinkDescribeClientWithOptions(ClinkDescribeClientRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cno)) {
+            query.put("Cno", request.cno);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClinkDescribeClient"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClinkDescribeClientResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>View the agent details.</p>
+     * 
+     * @param request ClinkDescribeClientRequest
+     * @return ClinkDescribeClientResponse
+     */
+    public ClinkDescribeClientResponse clinkDescribeClient(ClinkDescribeClientRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clinkDescribeClientWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>View queue details.</p>
+     * 
+     * @param request ClinkDescribeQueueRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClinkDescribeQueueResponse
+     */
+    public ClinkDescribeQueueResponse clinkDescribeQueueWithOptions(ClinkDescribeQueueRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qno)) {
+            query.put("Qno", request.qno);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClinkDescribeQueue"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClinkDescribeQueueResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>View queue details.</p>
+     * 
+     * @param request ClinkDescribeQueueRequest
+     * @return ClinkDescribeQueueResponse
+     */
+    public ClinkDescribeQueueResponse clinkDescribeQueue(ClinkDescribeQueueRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clinkDescribeQueueWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>View call recording address.</p>
+     * 
+     * @param request ClinkDescribeRecordFileUrlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClinkDescribeRecordFileUrlResponse
+     */
+    public ClinkDescribeRecordFileUrlResponse clinkDescribeRecordFileUrlWithOptions(ClinkDescribeRecordFileUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.download)) {
+            query.put("Download", request.download);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mainUniqueId)) {
+            query.put("MainUniqueId", request.mainUniqueId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordSide)) {
+            query.put("RecordSide", request.recordSide);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordType)) {
+            query.put("RecordType", request.recordType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeout)) {
+            query.put("Timeout", request.timeout);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClinkDescribeRecordFileUrl"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClinkDescribeRecordFileUrlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>View call recording address.</p>
+     * 
+     * @param request ClinkDescribeRecordFileUrlRequest
+     * @return ClinkDescribeRecordFileUrlResponse
+     */
+    public ClinkDescribeRecordFileUrlResponse clinkDescribeRecordFileUrl(ClinkDescribeRecordFileUrlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clinkDescribeRecordFileUrlWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query the details of customer call records.</p>
+     * 
+     * @param request ClinkDetailCdrIbRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClinkDetailCdrIbResponse
+     */
+    public ClinkDetailCdrIbResponse clinkDetailCdrIbWithOptions(ClinkDetailCdrIbRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hiddenType)) {
+            query.put("HiddenType", request.hiddenType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mainUniqueId)) {
+            query.put("MainUniqueId", request.mainUniqueId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClinkDetailCdrIb"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClinkDetailCdrIbResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query the details of customer call records.</p>
+     * 
+     * @param request ClinkDetailCdrIbRequest
+     * @return ClinkDetailCdrIbResponse
+     */
+    public ClinkDetailCdrIbResponse clinkDetailCdrIb(ClinkDetailCdrIbRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clinkDetailCdrIbWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query the customer call record list.</p>
+     * 
+     * @param request ClinkListCdrIbRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClinkListCdrIbResponse
+     */
+    public ClinkListCdrIbResponse clinkListCdrIbWithOptions(ClinkListCdrIbRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bridgeDuration)) {
+            query.put("BridgeDuration", request.bridgeDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bridgeDurationEnd)) {
+            query.put("BridgeDurationEnd", request.bridgeDurationEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bridgeTime)) {
+            query.put("BridgeTime", request.bridgeTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bridgeTimeEnd)) {
+            query.put("BridgeTimeEnd", request.bridgeTimeEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientNumber)) {
+            query.put("ClientNumber", request.clientNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cnos)) {
+            query.put("Cnos", request.cnos);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customerNumber)) {
+            query.put("CustomerNumber", request.customerNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTimeEnd)) {
+            query.put("EndTimeEnd", request.endTimeEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.firstCallCno)) {
+            query.put("FirstCallCno", request.firstCallCno);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.firstCallNumber)) {
+            query.put("FirstCallNumber", request.firstCallNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.firstCallQno)) {
+            query.put("FirstCallQno", request.firstCallQno);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hiddenType)) {
+            query.put("HiddenType", request.hiddenType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mainUniqueId)) {
+            query.put("MainUniqueId", request.mainUniqueId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            query.put("Offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qnos)) {
+            query.put("Qnos", request.qnos);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scrollId)) {
+            query.put("ScrollId", request.scrollId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scrollSearch)) {
+            query.put("ScrollSearch", request.scrollSearch);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTimeEnd)) {
+            query.put("StartTimeEnd", request.startTimeEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statuses)) {
+            query.put("Statuses", request.statuses);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.totalDuration)) {
+            query.put("TotalDuration", request.totalDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.totalDurationEnd)) {
+            query.put("TotalDurationEnd", request.totalDurationEnd);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClinkListCdrIb"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClinkListCdrIbResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query the customer call record list.</p>
+     * 
+     * @param request ClinkListCdrIbRequest
+     * @return ClinkListCdrIbResponse
+     */
+    public ClinkListCdrIbResponse clinkListCdrIb(ClinkListCdrIbRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clinkListCdrIbWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of agent answering records.</p>
+     * 
+     * @param request ClinkListCdrIbAgentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClinkListCdrIbAgentResponse
+     */
+    public ClinkListCdrIbAgentResponse clinkListCdrIbAgentWithOptions(ClinkListCdrIbAgentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentAnswerInTime)) {
+            query.put("AgentAnswerInTime", request.agentAnswerInTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bridgeDuration)) {
+            query.put("BridgeDuration", request.bridgeDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bridgeDurationEnd)) {
+            query.put("BridgeDurationEnd", request.bridgeDurationEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bridgeTime)) {
+            query.put("BridgeTime", request.bridgeTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bridgeTimeEnd)) {
+            query.put("BridgeTimeEnd", request.bridgeTimeEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientNumber)) {
+            query.put("ClientNumber", request.clientNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cno)) {
+            query.put("Cno", request.cno);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customerNumber)) {
+            query.put("CustomerNumber", request.customerNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTimeEnd)) {
+            query.put("EndTimeEnd", request.endTimeEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hiddenType)) {
+            query.put("HiddenType", request.hiddenType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hotlineName)) {
+            query.put("HotlineName", request.hotlineName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mainUniqueId)) {
+            query.put("MainUniqueId", request.mainUniqueId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            query.put("Offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qno)) {
+            query.put("Qno", request.qno);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scrollId)) {
+            query.put("ScrollId", request.scrollId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTimeEnd)) {
+            query.put("StartTimeEnd", request.startTimeEnd);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClinkListCdrIbAgent"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClinkListCdrIbAgentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of agent answering records.</p>
+     * 
+     * @param request ClinkListCdrIbAgentRequest
+     * @return ClinkListCdrIbAgentResponse
+     */
+    public ClinkListCdrIbAgentResponse clinkListCdrIbAgent(ClinkListCdrIbAgentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clinkListCdrIbAgentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query the list of inbound call records.</p>
+     * 
+     * @param request ClinkListCdrIbsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClinkListCdrIbsResponse
+     */
+    public ClinkListCdrIbsResponse clinkListCdrIbsWithOptions(ClinkListCdrIbsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientNumber)) {
+            query.put("ClientNumber", request.clientNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cno)) {
+            query.put("Cno", request.cno);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customerNumber)) {
+            query.put("CustomerNumber", request.customerNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hiddenType)) {
+            query.put("HiddenType", request.hiddenType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mainUniqueId)) {
+            query.put("MainUniqueId", request.mainUniqueId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            query.put("Offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qno)) {
+            query.put("Qno", request.qno);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queueAnswerInTime)) {
+            query.put("QueueAnswerInTime", request.queueAnswerInTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClinkListCdrIbs"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClinkListCdrIbsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query the list of inbound call records.</p>
+     * 
+     * @param request ClinkListCdrIbsRequest
+     * @return ClinkListCdrIbsResponse
+     */
+    public ClinkListCdrIbsResponse clinkListCdrIbs(ClinkListCdrIbsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clinkListCdrIbsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of outbound call records.</p>
+     * 
+     * @param request ClinkListCdrObRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClinkListCdrObResponse
+     */
+    public ClinkListCdrObResponse clinkListCdrObWithOptions(ClinkListCdrObRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bridgeDuration)) {
+            query.put("BridgeDuration", request.bridgeDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bridgeDurationEnd)) {
+            query.put("BridgeDurationEnd", request.bridgeDurationEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bridgeTime)) {
+            query.put("BridgeTime", request.bridgeTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bridgeTimeEnd)) {
+            query.put("BridgeTimeEnd", request.bridgeTimeEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callType)) {
+            query.put("CallType", request.callType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientNumber)) {
+            query.put("ClientNumber", request.clientNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cnos)) {
+            query.put("Cnos", request.cnos);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customerNumber)) {
+            query.put("CustomerNumber", request.customerNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTimeEnd)) {
+            query.put("EndTimeEnd", request.endTimeEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hiddenType)) {
+            query.put("HiddenType", request.hiddenType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.leftClid)) {
+            query.put("LeftClid", request.leftClid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mainUniqueId)) {
+            query.put("MainUniqueId", request.mainUniqueId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            query.put("Offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qnos)) {
+            query.put("Qnos", request.qnos);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scrollId)) {
+            query.put("ScrollId", request.scrollId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scrollSearch)) {
+            query.put("ScrollSearch", request.scrollSearch);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTimeEnd)) {
+            query.put("StartTimeEnd", request.startTimeEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskName)) {
+            query.put("TaskName", request.taskName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.totalDuration)) {
+            query.put("TotalDuration", request.totalDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.totalDurationEnd)) {
+            query.put("TotalDurationEnd", request.totalDurationEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.xnumber)) {
+            query.put("Xnumber", request.xnumber);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClinkListCdrOb"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClinkListCdrObResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of outbound call records.</p>
+     * 
+     * @param request ClinkListCdrObRequest
+     * @return ClinkListCdrObResponse
+     */
+    public ClinkListCdrObResponse clinkListCdrOb(ClinkListCdrObRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clinkListCdrObWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the outbound call record list.</p>
+     * 
+     * @param request ClinkListCdrObsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClinkListCdrObsResponse
+     */
+    public ClinkListCdrObsResponse clinkListCdrObsWithOptions(ClinkListCdrObsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.associatedId)) {
+            query.put("AssociatedId", request.associatedId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.city)) {
+            query.put("City", request.city);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientNumber)) {
+            query.put("ClientNumber", request.clientNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cno)) {
+            query.put("Cno", request.cno);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customerNumber)) {
+            query.put("CustomerNumber", request.customerNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.evaluation)) {
+            query.put("Evaluation", request.evaluation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hiddenType)) {
+            query.put("HiddenType", request.hiddenType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hotline)) {
+            query.put("Hotline", request.hotline);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idType)) {
+            query.put("IdType", request.idType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mainUniqueId)) {
+            query.put("MainUniqueId", request.mainUniqueId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mark)) {
+            query.put("Mark", request.mark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            query.put("Offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.province)) {
+            query.put("Province", request.province);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queueAnswerInTime)) {
+            query.put("QueueAnswerInTime", request.queueAnswerInTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestUniqueId)) {
+            query.put("RequestUniqueId", request.requestUniqueId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClinkListCdrObs"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClinkListCdrObsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the outbound call record list.</p>
+     * 
+     * @param request ClinkListCdrObsRequest
+     * @return ClinkListCdrObsResponse
+     */
+    public ClinkListCdrObsResponse clinkListCdrObs(ClinkListCdrObsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clinkListCdrObsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of agents.</p>
+     * 
+     * @param request ClinkListClientsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClinkListClientsResponse
+     */
+    public ClinkListClientsResponse clinkListClientsWithOptions(ClinkListClientsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.active)) {
+            query.put("Active", request.active);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bindTel)) {
+            query.put("BindTel", request.bindTel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clid)) {
+            query.put("Clid", request.clid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            query.put("Offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qno)) {
+            query.put("Qno", request.qno);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.updateEndTime)) {
+            query.put("UpdateEndTime", request.updateEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.updateStartTime)) {
+            query.put("UpdateStartTime", request.updateStartTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClinkListClients"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClinkListClientsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of agents.</p>
+     * 
+     * @param request ClinkListClientsRequest
+     * @return ClinkListClientsResponse
+     */
+    public ClinkListClientsResponse clinkListClients(ClinkListClientsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clinkListClientsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the busy status list.</p>
+     * 
+     * @param request ClinkListEnterprisePausesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClinkListEnterprisePausesResponse
+     */
+    public ClinkListEnterprisePausesResponse clinkListEnterprisePausesWithOptions(ClinkListEnterprisePausesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClinkListEnterprisePauses"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClinkListEnterprisePausesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the busy status list.</p>
+     * 
+     * @param request ClinkListEnterprisePausesRequest
+     * @return ClinkListEnterprisePausesResponse
+     */
+    public ClinkListEnterprisePausesResponse clinkListEnterprisePauses(ClinkListEnterprisePausesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clinkListEnterprisePausesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query the phone list.</p>
+     * 
+     * @param request ClinkListExtensRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClinkListExtensResponse
+     */
+    public ClinkListExtensResponse clinkListExtensWithOptions(ClinkListExtensRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.areaCode)) {
+            query.put("AreaCode", request.areaCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            query.put("Offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClinkListExtens"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClinkListExtensResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query the phone list.</p>
+     * 
+     * @param request ClinkListExtensRequest
+     * @return ClinkListExtensResponse
+     */
+    public ClinkListExtensResponse clinkListExtens(ClinkListExtensRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clinkListExtensWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the voice navigation edge zone list.</p>
+     * 
+     * @param request ClinkListIvrNodesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClinkListIvrNodesResponse
+     */
+    public ClinkListIvrNodesResponse clinkListIvrNodesWithOptions(ClinkListIvrNodesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ivrName)) {
+            query.put("IvrName", request.ivrName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClinkListIvrNodes"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClinkListIvrNodesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the voice navigation edge zone list.</p>
+     * 
+     * @param request ClinkListIvrNodesRequest
+     * @return ClinkListIvrNodesResponse
+     */
+    public ClinkListIvrNodesResponse clinkListIvrNodes(ClinkListIvrNodesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clinkListIvrNodesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the voice navigation list.</p>
+     * 
+     * @param request ClinkListIvrsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClinkListIvrsResponse
+     */
+    public ClinkListIvrsResponse clinkListIvrsWithOptions(ClinkListIvrsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClinkListIvrs"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClinkListIvrsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the voice navigation list.</p>
+     * 
+     * @param request ClinkListIvrsRequest
+     * @return ClinkListIvrsResponse
+     */
+    public ClinkListIvrsResponse clinkListIvrs(ClinkListIvrsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clinkListIvrsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the queue list.</p>
+     * 
+     * @param request ClinkListQueuesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClinkListQueuesResponse
+     */
+    public ClinkListQueuesResponse clinkListQueuesWithOptions(ClinkListQueuesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            query.put("Offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClinkListQueues"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClinkListQueuesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the queue list.</p>
+     * 
+     * @param request ClinkListQueuesRequest
+     * @return ClinkListQueuesResponse
+     */
+    public ClinkListQueuesResponse clinkListQueues(ClinkListQueuesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clinkListQueuesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Inbound report - call statistics.</p>
+     * 
+     * @param request ClinkStatIbRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClinkStatIbResponse
+     */
+    public ClinkStatIbResponse clinkStatIbWithOptions(ClinkStatIbRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.date)) {
+            query.put("Date", request.date);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dateEnd)) {
+            query.put("DateEnd", request.dateEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endHour)) {
+            query.put("EndHour", request.endHour);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endMinute)) {
+            query.put("EndMinute", request.endMinute);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fields)) {
+            query.put("Fields", request.fields);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hotlines)) {
+            query.put("Hotlines", request.hotlines);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startHour)) {
+            query.put("StartHour", request.startHour);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startMinute)) {
+            query.put("StartMinute", request.startMinute);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statisticMethod)) {
+            query.put("StatisticMethod", request.statisticMethod);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClinkStatIb"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClinkStatIbResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Inbound report - call statistics.</p>
+     * 
+     * @param request ClinkStatIbRequest
+     * @return ClinkStatIbResponse
+     */
+    public ClinkStatIbResponse clinkStatIb(ClinkStatIbRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clinkStatIbWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Update an agent.</p>
+     * 
+     * @param tmpReq ClinkUpdateClientRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClinkUpdateClientResponse
+     */
+    public ClinkUpdateClientResponse clinkUpdateClientWithOptions(ClinkUpdateClientRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ClinkUpdateClientShrinkRequest request = new ClinkUpdateClientShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.clid)) {
+            request.clidShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.clid, "Clid", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.clidArea)) {
+            request.clidAreaShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.clidArea, "ClidArea", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.clidDefault)) {
+            request.clidDefaultShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.clidDefault, "ClidDefault", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.cloudNumberModes)) {
+            request.cloudNumberModesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.cloudNumberModes, "CloudNumberModes", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.permission)) {
+            request.permissionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.permission, "Permission", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.qnos)) {
+            request.qnosShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.qnos, "Qnos", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.serveArea)) {
+            request.serveAreaShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.serveArea, "ServeArea", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.active)) {
+            query.put("Active", request.active);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.areaCode)) {
+            query.put("AreaCode", request.areaCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.assignType)) {
+            query.put("AssignType", request.assignType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clidShrink)) {
+            query.put("Clid", request.clidShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clidAreaShrink)) {
+            query.put("ClidArea", request.clidAreaShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clidDefaultShrink)) {
+            query.put("ClidDefault", request.clidDefaultShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clidRule)) {
+            query.put("ClidRule", request.clidRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clidType)) {
+            query.put("ClidType", request.clidType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudNumberEnabled)) {
+            query.put("CloudNumberEnabled", request.cloudNumberEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudNumberModesShrink)) {
+            query.put("CloudNumberModes", request.cloudNumberModesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cno)) {
+            query.put("Cno", request.cno);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.crmId)) {
+            query.put("CrmId", request.crmId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dynamicTelGroupIdDefault)) {
+            query.put("DynamicTelGroupIdDefault", request.dynamicTelGroupIdDefault);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dynamicTelGroupName)) {
+            query.put("DynamicTelGroupName", request.dynamicTelGroupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("EnterpriseId", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hiddenTel)) {
+            query.put("HiddenTel", request.hiddenTel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ibWrapupTime)) {
+            query.put("IbWrapupTime", request.ibWrapupTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ibWrapupType)) {
+            query.put("IbWrapupType", request.ibWrapupType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.obClidDefaultType)) {
+            query.put("ObClidDefaultType", request.obClidDefaultType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.obHangupSms)) {
+            query.put("ObHangupSms", request.obHangupSms);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.password)) {
+            query.put("Password", request.password);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pauseLogin)) {
+            query.put("PauseLogin", request.pauseLogin);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.permissionShrink)) {
+            query.put("Permission", request.permissionShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qnosShrink)) {
+            query.put("Qnos", request.qnosShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recurrentselectionType)) {
+            query.put("RecurrentselectionType", request.recurrentselectionType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recurrentselectionValue)) {
+            query.put("RecurrentselectionValue", request.recurrentselectionValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.role)) {
+            query.put("Role", request.role);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serveAreaShrink)) {
+            query.put("ServeArea", request.serveAreaShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wechatMiniProgramRtc)) {
+            query.put("WechatMiniProgramRtc", request.wechatMiniProgramRtc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wrapupTime)) {
+            query.put("WrapupTime", request.wrapupTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClinkUpdateClient"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClinkUpdateClientResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Update an agent.</p>
+     * 
+     * @param request ClinkUpdateClientRequest
+     * @return ClinkUpdateClientResponse
+     */
+    public ClinkUpdateClientResponse clinkUpdateClient(ClinkUpdateClientRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clinkUpdateClientWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Publish the agent online through this interface.</p>
      * 
      * @param request CloudAgentLoginRequest
@@ -612,7 +3374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>座席实时统计</p>
+     * <p>Real-time statistics on agent call data.</p>
      * 
      * @param request CloudAgentMonitorStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -680,7 +3442,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>座席实时统计</p>
+     * <p>Real-time statistics on agent call data.</p>
      * 
      * @param request CloudAgentMonitorStatisticsRequest
      * @return CloudAgentMonitorStatisticsResponse
@@ -808,7 +3570,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取座席工作量报表数据</p>
+     * <p>Gets agent workload report data.</p>
      * 
      * @param request CloudAgentWorkloadReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -884,7 +3646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取座席工作量报表数据</p>
+     * <p>Gets agent workload report data.</p>
      * 
      * @param request CloudAgentWorkloadReportRequest
      * @return CloudAgentWorkloadReportResponse
@@ -960,7 +3722,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量新增座席,单次批量创建不能超过100个</p>
+     * <p>Batch add agents. You can create up to 100 agents in a single batch.</p>
      * 
      * @param request CloudBatchCreateAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1084,7 +3846,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量新增座席,单次批量创建不能超过100个</p>
+     * <p>Batch add agents. You can create up to 100 agents in a single batch.</p>
      * 
      * @param request CloudBatchCreateAgentRequest
      * @return CloudBatchCreateAgentResponse
@@ -1156,7 +3918,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量更新座席基本信息，不包含座席绑定的技能信息的更新</p>
+     * <p>Batch update the basic info of agents, excluding the update of skill info attached to agents.</p>
      * 
      * @param request CloudBatchUpdateAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1284,7 +4046,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量更新座席基本信息，不包含座席绑定的技能信息的更新</p>
+     * <p>Batch update the basic info of agents, excluding the update of skill info attached to agents.</p>
      * 
      * @param request CloudBatchUpdateAgentRequest
      * @return CloudBatchUpdateAgentResponse
@@ -1296,7 +4058,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>座席新增</p>
+     * <p>Creates an agent.</p>
      * 
      * @param request CloudCreateAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1424,7 +4186,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>座席新增</p>
+     * <p>Creates an agent.</p>
      * 
      * @param request CloudCreateAgentRequest
      * @return CloudCreateAgentResponse
@@ -1576,7 +4338,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增时间条件设置</p>
+     * <p>Adds a time condition configuration.</p>
      * 
      * @param request CloudCreateEnterpriseTimeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1656,7 +4418,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增时间条件设置</p>
+     * <p>Adds a time condition configuration.</p>
      * 
      * @param request CloudCreateEnterpriseTimeRequest
      * @return CloudCreateEnterpriseTimeResponse
@@ -1668,7 +4430,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增分机</p>
+     * <p>Add an extension through this interface.</p>
      * 
      * @param request CloudCreateExtenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1768,7 +4530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增分机</p>
+     * <p>Add an extension through this interface.</p>
      * 
      * @param request CloudCreateExtenRequest
      * @return CloudCreateExtenResponse
@@ -1780,7 +4542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增队列</p>
+     * <p>Add a queue through this interface.</p>
      * 
      * @param tmpReq CloudCreateQueueRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1842,7 +4604,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增队列</p>
+     * <p>Add a queue through this interface.</p>
      * 
      * @param request CloudCreateQueueRequest
      * @return CloudCreateQueueResponse
@@ -1986,7 +4748,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增任务</p>
+     * <p>Creates an outbound call job.</p>
      * 
      * @param request CloudCreateTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2230,7 +4992,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增任务</p>
+     * <p>Creates an outbound call job.</p>
      * 
      * @param request CloudCreateTaskRequest
      * @return CloudCreateTaskResponse
@@ -2874,7 +5636,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>座席详细信息获取</p>
+     * <p>Queries the details of an agent.</p>
      * 
      * @param request CloudGetAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2922,7 +5684,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>座席详细信息获取</p>
+     * <p>Queries the details of an agent.</p>
      * 
      * @param request CloudGetAgentRequest
      * @return CloudGetAgentResponse
@@ -3042,7 +5804,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ASR数据获取</p>
+     * <p>Query ASR job task results and obtain data.</p>
      * 
      * @param request CloudGetAsrRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3086,7 +5848,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ASR数据获取</p>
+     * <p>Query ASR job task results and obtain data.</p>
      * 
      * @param request CloudGetAsrRequest
      * @return CloudGetAsrResponse
@@ -3158,7 +5920,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取座席外呼通话记录详情</p>
+     * <p>Queries the details of outbound call records of a specified agent based on the unique phone identity.</p>
      * 
      * @param request CloudGetObCdrRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3194,7 +5956,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取座席外呼通话记录详情</p>
+     * <p>Queries the details of outbound call records of a specified agent based on the unique phone identity.</p>
      * 
      * @param request CloudGetObCdrRequest
      * @return CloudGetObCdrResponse
@@ -3206,7 +5968,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取队列信息</p>
+     * <p>Query queue info.</p>
      * 
      * @param request CloudGetQueueRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3254,7 +6016,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取队列信息</p>
+     * <p>Query queue info.</p>
      * 
      * @param request CloudGetQueueRequest
      * @return CloudGetQueueResponse
@@ -3266,7 +6028,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取通话录音地址</p>
+     * <p>Obtains the audition or download URL of a recording based on the recording file name.</p>
      * 
      * @param request CloudGetRecordUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3322,7 +6084,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取通话录音地址</p>
+     * <p>Obtains the audition or download URL of a recording based on the recording file name.</p>
      * 
      * @param request CloudGetRecordUrlRequest
      * @return CloudGetRecordUrlResponse
@@ -3334,7 +6096,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取任务信息</p>
+     * <p>Obtains the configuration info of a single job based on the job ID.</p>
      * 
      * @param request CloudGetTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3382,7 +6144,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取任务信息</p>
+     * <p>Obtains the configuration info of a single job based on the job ID.</p>
      * 
      * @param request CloudGetTaskRequest
      * @return CloudGetTaskResponse
@@ -3394,7 +6156,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>任务号码导入</p>
+     * <p>Imports phone numbers for the outbound call task.</p>
      * 
      * @param tmpReq CloudImportTaskTelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3480,7 +6242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>任务号码导入</p>
+     * <p>Imports phone numbers for the outbound call task.</p>
      * 
      * @param request CloudImportTaskTelRequest
      * @return CloudImportTaskTelResponse
@@ -3756,7 +6518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>推送日志查询</p>
+     * <p>Queries user push logs.</p>
      * 
      * @param request CloudListCurlLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3820,7 +6582,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>推送日志查询</p>
+     * <p>Queries user push logs.</p>
      * 
      * @param request CloudListCurlLogRequest
      * @return CloudListCurlLogResponse
@@ -3832,7 +6594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取时间条件设置列表</p>
+     * <p>Queries the list of time condition settings.</p>
      * 
      * @param request CloudListEnterpriseTimeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3888,7 +6650,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取时间条件设置列表</p>
+     * <p>Queries the list of time condition settings.</p>
      * 
      * @param request CloudListEnterpriseTimeRequest
      * @return CloudListEnterpriseTimeResponse
@@ -3900,7 +6662,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取分机列表</p>
+     * <p>Queries the extension info list.</p>
      * 
      * @param request CloudListExtenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3988,7 +6750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取分机列表</p>
+     * <p>Queries the extension info list.</p>
      * 
      * @param request CloudListExtenRequest
      * @return CloudListExtenResponse
@@ -4056,7 +6818,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>在线座席信息</p>
+     * <p>Queries the list of online agent info.</p>
      * 
      * @param request CloudListOnlineAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4120,7 +6882,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>在线座席信息</p>
+     * <p>Queries the list of online agent info.</p>
      * 
      * @param request CloudListOnlineAgentRequest
      * @return CloudListOnlineAgentResponse
@@ -4132,7 +6894,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取队列列表</p>
+     * <p>Queries the queue info list.</p>
      * 
      * @param request CloudListQueueRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4204,7 +6966,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取队列列表</p>
+     * <p>Queries the queue info list.</p>
      * 
      * @param request CloudListQueueRequest
      * @return CloudListQueueResponse
@@ -4432,7 +7194,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>任务监控</p>
+     * <p>Call job monitoring.</p>
      * 
      * @param request CloudMonitorTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4480,7 +7242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>任务监控</p>
+     * <p>Call job monitoring.</p>
      * 
      * @param request CloudMonitorTaskRequest
      * @return CloudMonitorTaskResponse
@@ -4492,7 +7254,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取预览外呼主叫号码报表</p>
+     * <p>Obtains preview outbound caller report data.</p>
      * 
      * @param request CloudOutboundObClidReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4560,7 +7322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取预览外呼主叫号码报表</p>
+     * <p>Obtains preview outbound caller report data.</p>
      * 
      * @param request CloudOutboundObClidReportRequest
      * @return CloudOutboundObClidReportResponse
@@ -4572,7 +7334,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取预览外呼报表</p>
+     * <p>Obtains a preview outbound report.</p>
      * 
      * @param request CloudOutboundPreviewObReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4640,7 +7402,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取预览外呼报表</p>
+     * <p>Obtains a preview outbound report.</p>
      * 
      * @param request CloudOutboundPreviewObReportRequest
      * @return CloudOutboundPreviewObReportResponse
@@ -4716,7 +7478,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>座席外呼</p>
+     * <p>When the agent is online, make a call through this interface.</p>
      * 
      * @param request CloudPreviewoutcallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4804,7 +7566,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>座席外呼</p>
+     * <p>When the agent is online, make a call through this interface.</p>
      * 
      * @param request CloudPreviewoutcallRequest
      * @return CloudPreviewoutcallResponse
@@ -4816,7 +7578,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>座席详细信息列表获取</p>
+     * <p>Queries the list of agent details.</p>
      * 
      * @param request CloudQueryAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4912,7 +7674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>座席详细信息列表获取</p>
+     * <p>Queries the list of agent details.</p>
      * 
      * @param request CloudQueryAgentRequest
      * @return CloudQueryAgentResponse
@@ -5104,7 +7866,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>来电通话记录</p>
+     * <p>Query incoming call records based on specified conditions.</p>
      * 
      * @param request CloudQueryIbCdrRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5208,7 +7970,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>来电通话记录</p>
+     * <p>Query incoming call records based on specified conditions.</p>
      * 
      * @param request CloudQueryIbCdrRequest
      * @return CloudQueryIbCdrResponse
@@ -5220,7 +7982,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取座席外呼通话记录</p>
+     * <p>Query agent outbound call records based on conditions.</p>
      * 
      * @param request CloudQueryObCdrRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5348,7 +8110,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取座席外呼通话记录</p>
+     * <p>Query agent outbound call records based on conditions.</p>
      * 
      * @param request CloudQueryObCdrRequest
      * @return CloudQueryObCdrResponse
@@ -5360,7 +8122,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>预测式外呼通话记录</p>
+     * <p>Query the call record info of predictive outbound calls.</p>
      * 
      * @param request CloudQueryPredictiveCallCdrRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5480,7 +8242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>预测式外呼通话记录</p>
+     * <p>Query the call record info of predictive outbound calls.</p>
      * 
      * @param request CloudQueryPredictiveCallCdrRequest
      * @return CloudQueryPredictiveCallCdrResponse
@@ -5540,7 +8302,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取任务列表</p>
+     * <p>Queries call jobs. Supports conditional query.</p>
      * 
      * @param request CloudQueryTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5624,7 +8386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取任务列表</p>
+     * <p>Queries call jobs. Supports conditional query.</p>
      * 
      * @param request CloudQueryTaskRequest
      * @return CloudQueryTaskResponse
@@ -5636,7 +8398,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>webcall通话记录</p>
+     * <p>Query webCall call record info through this interface.</p>
      * 
      * @param request CloudQueryWebcallCdrRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5756,7 +8518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>webcall通话记录</p>
+     * <p>Query webCall call record info through this interface.</p>
      * 
      * @param request CloudQueryWebcallCdrRequest
      * @return CloudQueryWebcallCdrResponse
@@ -5768,7 +8530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>任务启动</p>
+     * <p>Starts an outbound call task.</p>
      * 
      * @param request CloudStartTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5816,7 +8578,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>任务启动</p>
+     * <p>Starts an outbound call task.</p>
      * 
      * @param request CloudStartTaskRequest
      * @return CloudStartTaskResponse
@@ -5892,7 +8654,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>座席更新</p>
+     * <p>Update agent basic info.</p>
      * 
      * @param request CloudUpdateAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6028,7 +8790,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>座席更新</p>
+     * <p>Update agent basic info.</p>
      * 
      * @param request CloudUpdateAgentRequest
      * @return CloudUpdateAgentResponse
@@ -6040,7 +8802,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新任务</p>
+     * <p>Modifies the basic information of an outbound call job.</p>
      * 
      * @param request CloudUpdateTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6272,7 +9034,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新任务</p>
+     * <p>Modifies the basic information of an outbound call job.</p>
      * 
      * @param request CloudUpdateTaskRequest
      * @return CloudUpdateTaskResponse
@@ -6284,7 +9046,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>webcall</p>
+     * <p>Through this interface, a third-party platform can send a call request to a hosted call center. The system calls the customer first and then the agent, and connects both parties.</p>
      * 
      * @param request CloudWebcallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6388,7 +9150,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>webcall</p>
+     * <p>Through this interface, a third-party platform can send a call request to a hosted call center. The system calls the customer first and then the agent, and connects both parties.</p>
      * 
      * @param request CloudWebcallRequest
      * @return CloudWebcallResponse
