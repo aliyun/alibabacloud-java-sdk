@@ -40,6 +40,59 @@ public class GetProjectRoleResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class GetProjectRoleResponseBodyProjectRoleModulePermissions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("ModuleId")
+        public Long moduleId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>HoloStudio</p>
+         */
+        @NameInMap("ModuleName")
+        public String moduleName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Read</p>
+         */
+        @NameInMap("PermissionType")
+        public String permissionType;
+
+        public static GetProjectRoleResponseBodyProjectRoleModulePermissions build(java.util.Map<String, ?> map) throws Exception {
+            GetProjectRoleResponseBodyProjectRoleModulePermissions self = new GetProjectRoleResponseBodyProjectRoleModulePermissions();
+            return TeaModel.build(map, self);
+        }
+
+        public GetProjectRoleResponseBodyProjectRoleModulePermissions setModuleId(Long moduleId) {
+            this.moduleId = moduleId;
+            return this;
+        }
+        public Long getModuleId() {
+            return this.moduleId;
+        }
+
+        public GetProjectRoleResponseBodyProjectRoleModulePermissions setModuleName(String moduleName) {
+            this.moduleName = moduleName;
+            return this;
+        }
+        public String getModuleName() {
+            return this.moduleName;
+        }
+
+        public GetProjectRoleResponseBodyProjectRoleModulePermissions setPermissionType(String permissionType) {
+            this.permissionType = permissionType;
+            return this;
+        }
+        public String getPermissionType() {
+            return this.permissionType;
+        }
+
+    }
+
     public static class GetProjectRoleResponseBodyProjectRole extends TeaModel {
         /**
          * <p>The code of the role in the DataWorks workspace.</p>
@@ -49,6 +102,9 @@ public class GetProjectRoleResponseBody extends TeaModel {
          */
         @NameInMap("Code")
         public String code;
+
+        @NameInMap("ModulePermissions")
+        public java.util.List<GetProjectRoleResponseBodyProjectRoleModulePermissions> modulePermissions;
 
         /**
          * <p>The name of the role in the DataWorks workspace.</p>
@@ -92,6 +148,14 @@ public class GetProjectRoleResponseBody extends TeaModel {
         }
         public String getCode() {
             return this.code;
+        }
+
+        public GetProjectRoleResponseBodyProjectRole setModulePermissions(java.util.List<GetProjectRoleResponseBodyProjectRoleModulePermissions> modulePermissions) {
+            this.modulePermissions = modulePermissions;
+            return this;
+        }
+        public java.util.List<GetProjectRoleResponseBodyProjectRoleModulePermissions> getModulePermissions() {
+            return this.modulePermissions;
         }
 
         public GetProjectRoleResponseBodyProjectRole setName(String name) {

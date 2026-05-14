@@ -40,6 +40,59 @@ public class ListProjectRolesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListProjectRolesResponseBodyPagingInfoProjectRolesModulePermissions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("ModuleId")
+        public Long moduleId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>HoloStudio</p>
+         */
+        @NameInMap("ModuleName")
+        public String moduleName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Read</p>
+         */
+        @NameInMap("PermissionType")
+        public String permissionType;
+
+        public static ListProjectRolesResponseBodyPagingInfoProjectRolesModulePermissions build(java.util.Map<String, ?> map) throws Exception {
+            ListProjectRolesResponseBodyPagingInfoProjectRolesModulePermissions self = new ListProjectRolesResponseBodyPagingInfoProjectRolesModulePermissions();
+            return TeaModel.build(map, self);
+        }
+
+        public ListProjectRolesResponseBodyPagingInfoProjectRolesModulePermissions setModuleId(Long moduleId) {
+            this.moduleId = moduleId;
+            return this;
+        }
+        public Long getModuleId() {
+            return this.moduleId;
+        }
+
+        public ListProjectRolesResponseBodyPagingInfoProjectRolesModulePermissions setModuleName(String moduleName) {
+            this.moduleName = moduleName;
+            return this;
+        }
+        public String getModuleName() {
+            return this.moduleName;
+        }
+
+        public ListProjectRolesResponseBodyPagingInfoProjectRolesModulePermissions setPermissionType(String permissionType) {
+            this.permissionType = permissionType;
+            return this;
+        }
+        public String getPermissionType() {
+            return this.permissionType;
+        }
+
+    }
+
     public static class ListProjectRolesResponseBodyPagingInfoProjectRoles extends TeaModel {
         /**
          * <p>The code of the role in the DataWorks workspace.</p>
@@ -49,6 +102,9 @@ public class ListProjectRolesResponseBody extends TeaModel {
          */
         @NameInMap("Code")
         public String code;
+
+        @NameInMap("ModulePermissions")
+        public java.util.List<ListProjectRolesResponseBodyPagingInfoProjectRolesModulePermissions> modulePermissions;
 
         /**
          * <p>The name of the role.</p>
@@ -88,6 +144,14 @@ public class ListProjectRolesResponseBody extends TeaModel {
         }
         public String getCode() {
             return this.code;
+        }
+
+        public ListProjectRolesResponseBodyPagingInfoProjectRoles setModulePermissions(java.util.List<ListProjectRolesResponseBodyPagingInfoProjectRolesModulePermissions> modulePermissions) {
+            this.modulePermissions = modulePermissions;
+            return this;
+        }
+        public java.util.List<ListProjectRolesResponseBodyPagingInfoProjectRolesModulePermissions> getModulePermissions() {
+            return this.modulePermissions;
         }
 
         public ListProjectRolesResponseBodyPagingInfoProjectRoles setName(String name) {
