@@ -25,6 +25,9 @@ public class IdpDingtalkSubConfig extends TeaModel {
     @NameInMap("Exclusive")
     public Boolean exclusive;
 
+    @NameInMap("Oauth")
+    public Boolean oauth;
+
     @NameInMap("RedirectUri")
     public String redirectUri;
 
@@ -87,6 +90,14 @@ public class IdpDingtalkSubConfig extends TeaModel {
     }
     public Boolean getExclusive() {
         return this.exclusive;
+    }
+
+    public IdpDingtalkSubConfig setOauth(Boolean oauth) {
+        this.oauth = oauth;
+        return this;
+    }
+    public Boolean getOauth() {
+        return this.oauth;
     }
 
     public IdpDingtalkSubConfig setRedirectUri(String redirectUri) {

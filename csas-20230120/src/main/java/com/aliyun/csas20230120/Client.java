@@ -3633,7 +3633,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询转发策略</p>
+     * <p>Batch query forwarding rules</p>
      * 
      * @param request ListForwardStrategiesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3661,7 +3661,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询转发策略</p>
+     * <p>Batch query forwarding rules</p>
      * 
      * @param request ListForwardStrategiesRequest
      * @return ListForwardStrategiesResponse
@@ -3673,7 +3673,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询转发策略绑定项目</p>
+     * <p>Batch Query Forwarding Rules Attached to Projects</p>
      * 
      * @param request ListForwardStrategyBindingItemsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3701,7 +3701,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询转发策略绑定项目</p>
+     * <p>Batch Query Forwarding Rules Attached to Projects</p>
      * 
      * @param request ListForwardStrategyBindingItemsRequest
      * @return ListForwardStrategyBindingItemsResponse
@@ -4909,7 +4909,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>吊销用户设备会话</p>
+     * <p>Revoke a user device session.</p>
      * 
      * @param request RevokeUserDeviceSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4945,7 +4945,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>吊销用户设备会话</p>
+     * <p>Revoke a user device session.</p>
      * 
      * @param request RevokeUserDeviceSessionRequest
      * @return RevokeUserDeviceSessionResponse

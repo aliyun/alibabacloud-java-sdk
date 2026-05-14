@@ -108,11 +108,53 @@ public class ListUserDevicesResponseBody extends TeaModel {
         @NameInMap("City")
         public String city;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Beijing City</p>
+         */
+        @NameInMap("CityEn")
+        public String cityEn;
+
+        /**
+         * <strong>example:</strong>
+         * <p>北京市</p>
+         */
+        @NameInMap("CityZh")
+        public String cityZh;
+
         @NameInMap("Continent")
         public String continent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Asia</p>
+         */
+        @NameInMap("ContinentEn")
+        public String continentEn;
+
+        /**
+         * <strong>example:</strong>
+         * <p>亚洲</p>
+         */
+        @NameInMap("ContinentZh")
+        public String continentZh;
+
         @NameInMap("Country")
         public String country;
+
+        /**
+         * <strong>example:</strong>
+         * <p>China</p>
+         */
+        @NameInMap("CountryEn")
+        public String countryEn;
+
+        /**
+         * <strong>example:</strong>
+         * <p>中国</p>
+         */
+        @NameInMap("CountryZh")
+        public String countryZh;
 
         /**
          * <strong>example:</strong>
@@ -249,6 +291,20 @@ public class ListUserDevicesResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>Beijing</p>
+         */
+        @NameInMap("ProvinceEn")
+        public String provinceEn;
+
+        /**
+         * <strong>example:</strong>
+         * <p>北京市</p>
+         */
+        @NameInMap("ProvinceZh")
+        public String provinceZh;
+
+        /**
+         * <strong>example:</strong>
          * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
          */
         @NameInMap("SaseUserId")
@@ -341,6 +397,22 @@ public class ListUserDevicesResponseBody extends TeaModel {
             return this.city;
         }
 
+        public ListUserDevicesResponseBodyDevices setCityEn(String cityEn) {
+            this.cityEn = cityEn;
+            return this;
+        }
+        public String getCityEn() {
+            return this.cityEn;
+        }
+
+        public ListUserDevicesResponseBodyDevices setCityZh(String cityZh) {
+            this.cityZh = cityZh;
+            return this;
+        }
+        public String getCityZh() {
+            return this.cityZh;
+        }
+
         public ListUserDevicesResponseBodyDevices setContinent(String continent) {
             this.continent = continent;
             return this;
@@ -349,12 +421,44 @@ public class ListUserDevicesResponseBody extends TeaModel {
             return this.continent;
         }
 
+        public ListUserDevicesResponseBodyDevices setContinentEn(String continentEn) {
+            this.continentEn = continentEn;
+            return this;
+        }
+        public String getContinentEn() {
+            return this.continentEn;
+        }
+
+        public ListUserDevicesResponseBodyDevices setContinentZh(String continentZh) {
+            this.continentZh = continentZh;
+            return this;
+        }
+        public String getContinentZh() {
+            return this.continentZh;
+        }
+
         public ListUserDevicesResponseBodyDevices setCountry(String country) {
             this.country = country;
             return this;
         }
         public String getCountry() {
             return this.country;
+        }
+
+        public ListUserDevicesResponseBodyDevices setCountryEn(String countryEn) {
+            this.countryEn = countryEn;
+            return this;
+        }
+        public String getCountryEn() {
+            return this.countryEn;
+        }
+
+        public ListUserDevicesResponseBodyDevices setCountryZh(String countryZh) {
+            this.countryZh = countryZh;
+            return this;
+        }
+        public String getCountryZh() {
+            return this.countryZh;
         }
 
         public ListUserDevicesResponseBodyDevices setCreateTime(String createTime) {
@@ -539,6 +643,22 @@ public class ListUserDevicesResponseBody extends TeaModel {
         }
         public String getProvince() {
             return this.province;
+        }
+
+        public ListUserDevicesResponseBodyDevices setProvinceEn(String provinceEn) {
+            this.provinceEn = provinceEn;
+            return this;
+        }
+        public String getProvinceEn() {
+            return this.provinceEn;
+        }
+
+        public ListUserDevicesResponseBodyDevices setProvinceZh(String provinceZh) {
+            this.provinceZh = provinceZh;
+            return this;
+        }
+        public String getProvinceZh() {
+            return this.provinceZh;
         }
 
         public ListUserDevicesResponseBodyDevices setSaseUserId(String saseUserId) {
