@@ -1,3 +1,10 @@
+2026-05-14 Version: 3.0.2
+- Update API CreateLoadBalancer: add request parameters AdaptiveRouting.OriginLevelRetry.
+- Update API GetLoadBalancer: add response parameters Body.AdaptiveRouting.OriginLevelRetry.
+- Update API ListLoadBalancers: add response parameters Body.LoadBalancers.$.AdaptiveRouting.OriginLevelRetry.
+- Update API UpdateLoadBalancer: add request parameters AdaptiveRouting.OriginLevelRetry.
+
+
 2026-05-12 Version: 3.0.1
 - Update API CreateImageTransform: add request parameters AutoAvif.
 - Update API CreateImageTransform: add request parameters AutoWebp.

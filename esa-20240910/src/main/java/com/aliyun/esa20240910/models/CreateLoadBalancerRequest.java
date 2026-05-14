@@ -314,6 +314,9 @@ public class CreateLoadBalancerRequest extends TeaModel {
         @NameInMap("FailoverAcrossPools")
         public Boolean failoverAcrossPools;
 
+        @NameInMap("OriginLevelRetry")
+        public Boolean originLevelRetry;
+
         public static CreateLoadBalancerRequestAdaptiveRouting build(java.util.Map<String, ?> map) throws Exception {
             CreateLoadBalancerRequestAdaptiveRouting self = new CreateLoadBalancerRequestAdaptiveRouting();
             return TeaModel.build(map, self);
@@ -325,6 +328,14 @@ public class CreateLoadBalancerRequest extends TeaModel {
         }
         public Boolean getFailoverAcrossPools() {
             return this.failoverAcrossPools;
+        }
+
+        public CreateLoadBalancerRequestAdaptiveRouting setOriginLevelRetry(Boolean originLevelRetry) {
+            this.originLevelRetry = originLevelRetry;
+            return this;
+        }
+        public Boolean getOriginLevelRetry() {
+            return this.originLevelRetry;
         }
 
     }
