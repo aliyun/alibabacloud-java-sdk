@@ -16095,6 +16095,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Status", request.status);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.storageType)) {
+            query.put("StorageType", request.storageType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.streamName)) {
             query.put("StreamName", request.streamName);
         }

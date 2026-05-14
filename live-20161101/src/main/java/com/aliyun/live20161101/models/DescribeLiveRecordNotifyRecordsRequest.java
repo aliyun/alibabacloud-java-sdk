@@ -85,6 +85,9 @@ public class DescribeLiveRecordNotifyRecordsRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("StorageType")
+    public String storageType;
+
     /**
      * <p>The name of the live stream.</p>
      * 
@@ -169,6 +172,14 @@ public class DescribeLiveRecordNotifyRecordsRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public DescribeLiveRecordNotifyRecordsRequest setStorageType(String storageType) {
+        this.storageType = storageType;
+        return this;
+    }
+    public String getStorageType() {
+        return this.storageType;
     }
 
     public DescribeLiveRecordNotifyRecordsRequest setStreamName(String streamName) {

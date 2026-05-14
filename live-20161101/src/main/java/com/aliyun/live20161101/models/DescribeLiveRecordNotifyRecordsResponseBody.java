@@ -234,6 +234,9 @@ public class DescribeLiveRecordNotifyRecordsResponseBody extends TeaModel {
         @NameInMap("NotifyUrl")
         public String notifyUrl;
 
+        @NameInMap("StorageType")
+        public String storageType;
+
         /**
          * <p>The name of the live stream.</p>
          * 
@@ -326,6 +329,14 @@ public class DescribeLiveRecordNotifyRecordsResponseBody extends TeaModel {
         }
         public String getNotifyUrl() {
             return this.notifyUrl;
+        }
+
+        public DescribeLiveRecordNotifyRecordsResponseBodyCallbackList setStorageType(String storageType) {
+            this.storageType = storageType;
+            return this;
+        }
+        public String getStorageType() {
+            return this.storageType;
         }
 
         public DescribeLiveRecordNotifyRecordsResponseBodyCallbackList setStreamName(String streamName) {

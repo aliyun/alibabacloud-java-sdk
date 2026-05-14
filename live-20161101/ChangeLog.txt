@@ -1,3 +1,8 @@
+2026-05-14 Version: 2.7.3
+- Update API DescribeLiveRecordNotifyRecords: add request parameters StorageType.
+- Update API DescribeLiveRecordNotifyRecords: add response parameters Body.CallbackList.$.StorageType.
+
+
 2026-05-08 Version: 2.7.2
 - Update API AddLiveStreamMerge: add request parameters SelectAppName.
 - Update API AddLiveStreamMerge: add request parameters SelectStreamName.
