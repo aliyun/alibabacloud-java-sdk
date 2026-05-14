@@ -29,6 +29,9 @@ public class DescribeSDGShrinkRequest extends TeaModel {
     @NameInMap("SDGIds")
     public String SDGIdsShrink;
 
+    @NameInMap("SameDiskId")
+    public Boolean sameDiskId;
+
     public static DescribeSDGShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSDGShrinkRequest self = new DescribeSDGShrinkRequest();
         return TeaModel.build(map, self);
@@ -56,6 +59,14 @@ public class DescribeSDGShrinkRequest extends TeaModel {
     }
     public String getSDGIdsShrink() {
         return this.SDGIdsShrink;
+    }
+
+    public DescribeSDGShrinkRequest setSameDiskId(Boolean sameDiskId) {
+        this.sameDiskId = sameDiskId;
+        return this;
+    }
+    public Boolean getSameDiskId() {
+        return this.sameDiskId;
     }
 
 }

@@ -29,6 +29,9 @@ public class DescribeSDGRequest extends TeaModel {
     @NameInMap("SDGIds")
     public java.util.List<String> SDGIds;
 
+    @NameInMap("SameDiskId")
+    public Boolean sameDiskId;
+
     public static DescribeSDGRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSDGRequest self = new DescribeSDGRequest();
         return TeaModel.build(map, self);
@@ -56,6 +59,14 @@ public class DescribeSDGRequest extends TeaModel {
     }
     public java.util.List<String> getSDGIds() {
         return this.SDGIds;
+    }
+
+    public DescribeSDGRequest setSameDiskId(Boolean sameDiskId) {
+        this.sameDiskId = sameDiskId;
+        return this;
+    }
+    public Boolean getSameDiskId() {
+        return this.sameDiskId;
     }
 
 }
