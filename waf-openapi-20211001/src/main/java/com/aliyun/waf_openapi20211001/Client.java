@@ -15200,12 +15200,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Enables or disables the log collection feature for a protected object.</p>
      * 
-     * @param request ModifyResourceLogStatusRequest
+     * @param tmpReq ModifyResourceLogStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyResourceLogStatusResponse
      */
-    public ModifyResourceLogStatusResponse modifyResourceLogStatusWithOptions(ModifyResourceLogStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ModifyResourceLogStatusResponse modifyResourceLogStatusWithOptions(ModifyResourceLogStatusRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyResourceLogStatusShrinkRequest request = new ModifyResourceLogStatusShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.traceConfig)) {
+            request.traceConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.traceConfig, "TraceConfig", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
@@ -15225,6 +15231,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.traceConfigShrink)) {
+            query.put("TraceConfig", request.traceConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.traceStatus)) {
+            query.put("TraceStatus", request.traceStatus);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

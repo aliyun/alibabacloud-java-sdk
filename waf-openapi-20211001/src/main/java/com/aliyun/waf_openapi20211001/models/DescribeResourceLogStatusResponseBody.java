@@ -40,6 +40,36 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
         return this.result;
     }
 
+    public static class DescribeResourceLogStatusResponseBodyResultTraceConfig extends TeaModel {
+        @NameInMap("RatePerMille")
+        public Integer ratePerMille;
+
+        @NameInMap("Workspace")
+        public String workspace;
+
+        public static DescribeResourceLogStatusResponseBodyResultTraceConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeResourceLogStatusResponseBodyResultTraceConfig self = new DescribeResourceLogStatusResponseBodyResultTraceConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeResourceLogStatusResponseBodyResultTraceConfig setRatePerMille(Integer ratePerMille) {
+            this.ratePerMille = ratePerMille;
+            return this;
+        }
+        public Integer getRatePerMille() {
+            return this.ratePerMille;
+        }
+
+        public DescribeResourceLogStatusResponseBodyResultTraceConfig setWorkspace(String workspace) {
+            this.workspace = workspace;
+            return this;
+        }
+        public String getWorkspace() {
+            return this.workspace;
+        }
+
+    }
+
     public static class DescribeResourceLogStatusResponseBodyResult extends TeaModel {
         /**
          * <p>The protected object.</p>
@@ -63,6 +93,12 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
         @NameInMap("Status")
         public Boolean status;
 
+        @NameInMap("TraceConfig")
+        public DescribeResourceLogStatusResponseBodyResultTraceConfig traceConfig;
+
+        @NameInMap("TraceStatus")
+        public Boolean traceStatus;
+
         public static DescribeResourceLogStatusResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeResourceLogStatusResponseBodyResult self = new DescribeResourceLogStatusResponseBodyResult();
             return TeaModel.build(map, self);
@@ -82,6 +118,22 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
         }
         public Boolean getStatus() {
             return this.status;
+        }
+
+        public DescribeResourceLogStatusResponseBodyResult setTraceConfig(DescribeResourceLogStatusResponseBodyResultTraceConfig traceConfig) {
+            this.traceConfig = traceConfig;
+            return this;
+        }
+        public DescribeResourceLogStatusResponseBodyResultTraceConfig getTraceConfig() {
+            return this.traceConfig;
+        }
+
+        public DescribeResourceLogStatusResponseBodyResult setTraceStatus(Boolean traceStatus) {
+            this.traceStatus = traceStatus;
+            return this;
+        }
+        public Boolean getTraceStatus() {
+            return this.traceStatus;
         }
 
     }

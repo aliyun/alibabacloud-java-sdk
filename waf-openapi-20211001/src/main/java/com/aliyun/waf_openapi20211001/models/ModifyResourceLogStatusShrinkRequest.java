@@ -3,7 +3,7 @@ package com.aliyun.waf_openapi20211001.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyResourceLogStatusRequest extends TeaModel {
+public class ModifyResourceLogStatusShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <blockquote>
@@ -64,17 +64,17 @@ public class ModifyResourceLogStatusRequest extends TeaModel {
     public Boolean status;
 
     @NameInMap("TraceConfig")
-    public ModifyResourceLogStatusRequestTraceConfig traceConfig;
+    public String traceConfigShrink;
 
     @NameInMap("TraceStatus")
     public Boolean traceStatus;
 
-    public static ModifyResourceLogStatusRequest build(java.util.Map<String, ?> map) throws Exception {
-        ModifyResourceLogStatusRequest self = new ModifyResourceLogStatusRequest();
+    public static ModifyResourceLogStatusShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ModifyResourceLogStatusShrinkRequest self = new ModifyResourceLogStatusShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyResourceLogStatusRequest setInstanceId(String instanceId) {
+    public ModifyResourceLogStatusShrinkRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -82,7 +82,7 @@ public class ModifyResourceLogStatusRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ModifyResourceLogStatusRequest setRegionId(String regionId) {
+    public ModifyResourceLogStatusShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -90,7 +90,7 @@ public class ModifyResourceLogStatusRequest extends TeaModel {
         return this.regionId;
     }
 
-    public ModifyResourceLogStatusRequest setResource(String resource) {
+    public ModifyResourceLogStatusShrinkRequest setResource(String resource) {
         this.resource = resource;
         return this;
     }
@@ -98,7 +98,7 @@ public class ModifyResourceLogStatusRequest extends TeaModel {
         return this.resource;
     }
 
-    public ModifyResourceLogStatusRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+    public ModifyResourceLogStatusShrinkRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
         this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
         return this;
     }
@@ -106,7 +106,7 @@ public class ModifyResourceLogStatusRequest extends TeaModel {
         return this.resourceManagerResourceGroupId;
     }
 
-    public ModifyResourceLogStatusRequest setStatus(Boolean status) {
+    public ModifyResourceLogStatusShrinkRequest setStatus(Boolean status) {
         this.status = status;
         return this;
     }
@@ -114,58 +114,20 @@ public class ModifyResourceLogStatusRequest extends TeaModel {
         return this.status;
     }
 
-    public ModifyResourceLogStatusRequest setTraceConfig(ModifyResourceLogStatusRequestTraceConfig traceConfig) {
-        this.traceConfig = traceConfig;
+    public ModifyResourceLogStatusShrinkRequest setTraceConfigShrink(String traceConfigShrink) {
+        this.traceConfigShrink = traceConfigShrink;
         return this;
     }
-    public ModifyResourceLogStatusRequestTraceConfig getTraceConfig() {
-        return this.traceConfig;
+    public String getTraceConfigShrink() {
+        return this.traceConfigShrink;
     }
 
-    public ModifyResourceLogStatusRequest setTraceStatus(Boolean traceStatus) {
+    public ModifyResourceLogStatusShrinkRequest setTraceStatus(Boolean traceStatus) {
         this.traceStatus = traceStatus;
         return this;
     }
     public Boolean getTraceStatus() {
         return this.traceStatus;
-    }
-
-    public static class ModifyResourceLogStatusRequestTraceConfig extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
-        @NameInMap("RatePerMille")
-        public Integer ratePerMille;
-
-        /**
-         * <strong>example:</strong>
-         * <p>cms-test</p>
-         */
-        @NameInMap("Workspace")
-        public String workspace;
-
-        public static ModifyResourceLogStatusRequestTraceConfig build(java.util.Map<String, ?> map) throws Exception {
-            ModifyResourceLogStatusRequestTraceConfig self = new ModifyResourceLogStatusRequestTraceConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public ModifyResourceLogStatusRequestTraceConfig setRatePerMille(Integer ratePerMille) {
-            this.ratePerMille = ratePerMille;
-            return this;
-        }
-        public Integer getRatePerMille() {
-            return this.ratePerMille;
-        }
-
-        public ModifyResourceLogStatusRequestTraceConfig setWorkspace(String workspace) {
-            this.workspace = workspace;
-            return this;
-        }
-        public String getWorkspace() {
-            return this.workspace;
-        }
-
     }
 
 }
