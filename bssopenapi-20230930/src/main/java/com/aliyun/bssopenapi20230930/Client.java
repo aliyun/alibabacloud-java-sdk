@@ -324,6 +324,172 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>检测budgetName是否存在</p>
+     * 
+     * @param request CheckBudgetNameExistsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckBudgetNameExistsResponse
+     */
+    public CheckBudgetNameExistsResponse checkBudgetNameExistsWithOptions(CheckBudgetNameExistsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.budgetName)) {
+            body.put("BudgetName", request.budgetName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckBudgetNameExists"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckBudgetNameExistsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>检测budgetName是否存在</p>
+     * 
+     * @param request CheckBudgetNameExistsRequest
+     * @return CheckBudgetNameExistsResponse
+     */
+    public CheckBudgetNameExistsResponse checkBudgetNameExists(CheckBudgetNameExistsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.checkBudgetNameExistsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建预算</p>
+     * 
+     * @param tmpReq CreateBudgetRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateBudgetResponse
+     */
+    public CreateBudgetResponse createBudgetWithOptions(CreateBudgetRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateBudgetShrinkRequest request = new CreateBudgetShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.cycleQuota)) {
+            request.cycleQuotaShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.cycleQuota, "CycleQuota", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ecIdAccountIds)) {
+            request.ecIdAccountIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ecIdAccountIds, "EcIdAccountIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.queryFilter)) {
+            request.queryFilterShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.queryFilter, "QueryFilter", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.warnConfs)) {
+            request.warnConfsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.warnConfs, "WarnConfs", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ecIdAccountIdsShrink)) {
+            query.put("EcIdAccountIds", request.ecIdAccountIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.budgetName)) {
+            body.put("BudgetName", request.budgetName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.budgetType)) {
+            body.put("BudgetType", request.budgetType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.comment)) {
+            body.put("Comment", request.comment);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cycleEndPeriod)) {
+            body.put("CycleEndPeriod", request.cycleEndPeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cycleQuotaShrink)) {
+            body.put("CycleQuota", request.cycleQuotaShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cycleStartPeriod)) {
+            body.put("CycleStartPeriod", request.cycleStartPeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cycleType)) {
+            body.put("CycleType", request.cycleType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metric)) {
+            body.put("Metric", request.metric);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryFilterShrink)) {
+            body.put("QueryFilter", request.queryFilterShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quota)) {
+            body.put("Quota", request.quota);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quotaType)) {
+            body.put("QuotaType", request.quotaType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.warnConfsShrink)) {
+            body.put("WarnConfs", request.warnConfsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateBudget"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateBudgetResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建预算</p>
+     * 
+     * @param request CreateBudgetRequest
+     * @return CreateBudgetResponse
+     */
+    public CreateBudgetResponse createBudget(CreateBudgetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createBudgetWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建财务单元</p>
      * 
      * @param tmpReq CreateCostCenterRequest
@@ -972,6 +1138,122 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteReportDefinitionResponse deleteReportDefinition(DeleteReportDefinitionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteReportDefinitionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询单个Budget</p>
+     * 
+     * @param request DescribeBudgetRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeBudgetResponse
+     */
+    public DescribeBudgetResponse describeBudgetWithOptions(DescribeBudgetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.budgetName)) {
+            body.put("BudgetName", request.budgetName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeBudget"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeBudgetResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询单个Budget</p>
+     * 
+     * @param request DescribeBudgetRequest
+     * @return DescribeBudgetResponse
+     */
+    public DescribeBudgetResponse describeBudget(DescribeBudgetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeBudgetWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询预算列表</p>
+     * 
+     * @param request DescribeBudgetsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeBudgetsResponse
+     */
+    public DescribeBudgetsResponse describeBudgetsWithOptions(DescribeBudgetsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.budgetName)) {
+            body.put("BudgetName", request.budgetName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.budgetType)) {
+            body.put("BudgetType", request.budgetType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expireStatus)) {
+            body.put("ExpireStatus", request.expireStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            body.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeBudgets"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeBudgetsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询预算列表</p>
+     * 
+     * @param request DescribeBudgetsRequest
+     * @return DescribeBudgetsResponse
+     */
+    public DescribeBudgetsResponse describeBudgets(DescribeBudgetsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeBudgetsWithOptions(request, runtime);
     }
 
     /**
@@ -2947,5 +3229,125 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SetSavingPlanUserDeductRuleResponse setSavingPlanUserDeductRule(SetSavingPlanUserDeductRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setSavingPlanUserDeductRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新预算</p>
+     * 
+     * @param tmpReq UpdateBudgetRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateBudgetResponse
+     */
+    public UpdateBudgetResponse updateBudgetWithOptions(UpdateBudgetRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateBudgetShrinkRequest request = new UpdateBudgetShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.cycleQuota)) {
+            request.cycleQuotaShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.cycleQuota, "CycleQuota", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ecIdAccountIds)) {
+            request.ecIdAccountIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ecIdAccountIds, "EcIdAccountIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.queryFilter)) {
+            request.queryFilterShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.queryFilter, "QueryFilter", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.warnConfs)) {
+            request.warnConfsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.warnConfs, "WarnConfs", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ecIdAccountIdsShrink)) {
+            query.put("EcIdAccountIds", request.ecIdAccountIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.budgetName)) {
+            body.put("BudgetName", request.budgetName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.budgetType)) {
+            body.put("BudgetType", request.budgetType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.comment)) {
+            body.put("Comment", request.comment);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cycleEndPeriod)) {
+            body.put("CycleEndPeriod", request.cycleEndPeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cycleQuotaShrink)) {
+            body.put("CycleQuota", request.cycleQuotaShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cycleStartPeriod)) {
+            body.put("CycleStartPeriod", request.cycleStartPeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cycleType)) {
+            body.put("CycleType", request.cycleType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metric)) {
+            body.put("Metric", request.metric);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originalBudgetName)) {
+            body.put("OriginalBudgetName", request.originalBudgetName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryFilterShrink)) {
+            body.put("QueryFilter", request.queryFilterShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quota)) {
+            body.put("Quota", request.quota);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quotaType)) {
+            body.put("QuotaType", request.quotaType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.warnConfsShrink)) {
+            body.put("WarnConfs", request.warnConfsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateBudget"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateBudgetResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新预算</p>
+     * 
+     * @param request UpdateBudgetRequest
+     * @return UpdateBudgetResponse
+     */
+    public UpdateBudgetResponse updateBudget(UpdateBudgetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateBudgetWithOptions(request, runtime);
     }
 }
