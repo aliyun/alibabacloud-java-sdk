@@ -1045,6 +1045,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("type", request.type);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.uploadType)) {
+            body.put("upload_type", request.uploadType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.userTags)) {
             body.put("user_tags", request.userTags);
         }

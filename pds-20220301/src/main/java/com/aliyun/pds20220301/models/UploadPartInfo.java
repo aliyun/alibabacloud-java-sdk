@@ -53,6 +53,9 @@ public class UploadPartInfo extends TeaModel {
     @NameInMap("part_size")
     public Long partSize;
 
+    @NameInMap("upload_form_info")
+    public UploadFormInfo uploadFormInfo;
+
     /**
      * <p>The upload URL. By default, the validity period of the URL is 15 minutes. If the URL expires, you must call the GetUploadUrl operation to obtain another URL. If the intelligent domain name feature is enabled, the internal_upload_url value is returned within the parameter based on the request.</p>
      * <p>This parameter is required.</p>
@@ -114,6 +117,14 @@ public class UploadPartInfo extends TeaModel {
     }
     public Long getPartSize() {
         return this.partSize;
+    }
+
+    public UploadPartInfo setUploadFormInfo(UploadFormInfo uploadFormInfo) {
+        this.uploadFormInfo = uploadFormInfo;
+        return this;
+    }
+    public UploadFormInfo getUploadFormInfo() {
+        return this.uploadFormInfo;
     }
 
     public UploadPartInfo setUploadUrl(String uploadUrl) {

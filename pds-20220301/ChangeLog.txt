@@ -1,3 +1,7 @@
+2026-05-14 Version: 5.1.2
+- Update API CreateFile: add request parameters body.upload_type.
+
+
 2026-04-29 Version: 5.1.0
 - Support API ArchiveFiles.
 

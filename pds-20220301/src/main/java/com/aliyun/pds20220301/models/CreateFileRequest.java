@@ -214,6 +214,13 @@ public class CreateFileRequest extends TeaModel {
     public String type;
 
     /**
+     * <strong>example:</strong>
+     * <p>multipart</p>
+     */
+    @NameInMap("upload_type")
+    public String uploadType;
+
+    /**
      * <p>The custom tags. You can specify up to 1,000 tags.</p>
      */
     @NameInMap("user_tags")
@@ -366,6 +373,14 @@ public class CreateFileRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public CreateFileRequest setUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    public String getUploadType() {
+        return this.uploadType;
     }
 
     public CreateFileRequest setUserTags(java.util.List<UserTag> userTags) {
