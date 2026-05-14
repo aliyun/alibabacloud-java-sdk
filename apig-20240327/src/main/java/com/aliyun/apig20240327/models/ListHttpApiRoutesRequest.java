@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListHttpApiRoutesRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>test-svc</p>
+     */
+    @NameInMap("backendServiceName")
+    public String backendServiceName;
+
+    /**
      * <p>The string that is used to filter routes based on consumer authentication rules. Only authorized APIs are returned.</p>
      * 
      * <strong>example:</strong>
@@ -143,6 +150,14 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public static ListHttpApiRoutesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListHttpApiRoutesRequest self = new ListHttpApiRoutesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListHttpApiRoutesRequest setBackendServiceName(String backendServiceName) {
+        this.backendServiceName = backendServiceName;
+        return this;
+    }
+    public String getBackendServiceName() {
+        return this.backendServiceName;
     }
 
     public ListHttpApiRoutesRequest setConsumerAuthorizationRuleId(String consumerAuthorizationRuleId) {
