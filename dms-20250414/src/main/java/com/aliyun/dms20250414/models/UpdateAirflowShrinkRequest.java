@@ -3,7 +3,7 @@ package com.aliyun.dms20250414.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateAirflowRequest extends TeaModel {
+public class UpdateAirflowShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      * 
@@ -42,7 +42,7 @@ public class UpdateAirflowRequest extends TeaModel {
     public String dagsDir;
 
     @NameInMap("DataMountInfoList")
-    public java.util.List<DataMountInfo> dataMountInfoList;
+    public String dataMountInfoListShrink;
 
     /**
      * <strong>example:</strong>
@@ -98,12 +98,12 @@ public class UpdateAirflowRequest extends TeaModel {
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
-    public static UpdateAirflowRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpdateAirflowRequest self = new UpdateAirflowRequest();
+    public static UpdateAirflowShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateAirflowShrinkRequest self = new UpdateAirflowShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateAirflowRequest setAirflowId(String airflowId) {
+    public UpdateAirflowShrinkRequest setAirflowId(String airflowId) {
         this.airflowId = airflowId;
         return this;
     }
@@ -111,7 +111,7 @@ public class UpdateAirflowRequest extends TeaModel {
         return this.airflowId;
     }
 
-    public UpdateAirflowRequest setAirflowName(String airflowName) {
+    public UpdateAirflowShrinkRequest setAirflowName(String airflowName) {
         this.airflowName = airflowName;
         return this;
     }
@@ -119,7 +119,7 @@ public class UpdateAirflowRequest extends TeaModel {
         return this.airflowName;
     }
 
-    public UpdateAirflowRequest setAppSpec(String appSpec) {
+    public UpdateAirflowShrinkRequest setAppSpec(String appSpec) {
         this.appSpec = appSpec;
         return this;
     }
@@ -127,7 +127,7 @@ public class UpdateAirflowRequest extends TeaModel {
         return this.appSpec;
     }
 
-    public UpdateAirflowRequest setClientToken(String clientToken) {
+    public UpdateAirflowShrinkRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -135,7 +135,7 @@ public class UpdateAirflowRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public UpdateAirflowRequest setDagsDir(String dagsDir) {
+    public UpdateAirflowShrinkRequest setDagsDir(String dagsDir) {
         this.dagsDir = dagsDir;
         return this;
     }
@@ -143,15 +143,15 @@ public class UpdateAirflowRequest extends TeaModel {
         return this.dagsDir;
     }
 
-    public UpdateAirflowRequest setDataMountInfoList(java.util.List<DataMountInfo> dataMountInfoList) {
-        this.dataMountInfoList = dataMountInfoList;
+    public UpdateAirflowShrinkRequest setDataMountInfoListShrink(String dataMountInfoListShrink) {
+        this.dataMountInfoListShrink = dataMountInfoListShrink;
         return this;
     }
-    public java.util.List<DataMountInfo> getDataMountInfoList() {
-        return this.dataMountInfoList;
+    public String getDataMountInfoListShrink() {
+        return this.dataMountInfoListShrink;
     }
 
-    public UpdateAirflowRequest setDescription(String description) {
+    public UpdateAirflowShrinkRequest setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -159,7 +159,7 @@ public class UpdateAirflowRequest extends TeaModel {
         return this.description;
     }
 
-    public UpdateAirflowRequest setEnableServerless(Boolean enableServerless) {
+    public UpdateAirflowShrinkRequest setEnableServerless(Boolean enableServerless) {
         this.enableServerless = enableServerless;
         return this;
     }
@@ -167,7 +167,7 @@ public class UpdateAirflowRequest extends TeaModel {
         return this.enableServerless;
     }
 
-    public UpdateAirflowRequest setGracefulShutdownTimeout(Integer gracefulShutdownTimeout) {
+    public UpdateAirflowShrinkRequest setGracefulShutdownTimeout(Integer gracefulShutdownTimeout) {
         this.gracefulShutdownTimeout = gracefulShutdownTimeout;
         return this;
     }
@@ -175,7 +175,7 @@ public class UpdateAirflowRequest extends TeaModel {
         return this.gracefulShutdownTimeout;
     }
 
-    public UpdateAirflowRequest setPluginsDir(String pluginsDir) {
+    public UpdateAirflowShrinkRequest setPluginsDir(String pluginsDir) {
         this.pluginsDir = pluginsDir;
         return this;
     }
@@ -183,7 +183,7 @@ public class UpdateAirflowRequest extends TeaModel {
         return this.pluginsDir;
     }
 
-    public UpdateAirflowRequest setRequirementFile(String requirementFile) {
+    public UpdateAirflowShrinkRequest setRequirementFile(String requirementFile) {
         this.requirementFile = requirementFile;
         return this;
     }
@@ -191,7 +191,7 @@ public class UpdateAirflowRequest extends TeaModel {
         return this.requirementFile;
     }
 
-    public UpdateAirflowRequest setStartupFile(String startupFile) {
+    public UpdateAirflowShrinkRequest setStartupFile(String startupFile) {
         this.startupFile = startupFile;
         return this;
     }
@@ -199,7 +199,7 @@ public class UpdateAirflowRequest extends TeaModel {
         return this.startupFile;
     }
 
-    public UpdateAirflowRequest setWorkerServerlessReplicas(Integer workerServerlessReplicas) {
+    public UpdateAirflowShrinkRequest setWorkerServerlessReplicas(Integer workerServerlessReplicas) {
         this.workerServerlessReplicas = workerServerlessReplicas;
         return this;
     }
@@ -207,7 +207,7 @@ public class UpdateAirflowRequest extends TeaModel {
         return this.workerServerlessReplicas;
     }
 
-    public UpdateAirflowRequest setWorkspaceId(String workspaceId) {
+    public UpdateAirflowShrinkRequest setWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }

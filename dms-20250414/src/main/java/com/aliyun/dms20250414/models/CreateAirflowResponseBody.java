@@ -127,6 +127,13 @@ public class CreateAirflowResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>3.1</p>
+         */
+        @NameInMap("AirflowVersion")
+        public String airflowVersion;
+
+        /**
+         * <strong>example:</strong>
          * <p>SMALL</p>
          */
         @NameInMap("AppSpec")
@@ -139,12 +146,18 @@ public class CreateAirflowResponseBody extends TeaModel {
         @NameInMap("AppType")
         public String appType;
 
+        @NameInMap("CustomAirflowCfg")
+        public java.util.List<String> customAirflowCfg;
+
         /**
          * <strong>example:</strong>
          * <p>default/dags</p>
          */
         @NameInMap("DagsDir")
         public String dagsDir;
+
+        @NameInMap("DataMountInfoList")
+        public java.util.List<DataMountInfo> dataMountInfoList;
 
         /**
          * <strong>example:</strong>
@@ -160,12 +173,22 @@ public class CreateAirflowResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("EnableServerless")
+        public Boolean enableServerless;
+
         /**
          * <strong>example:</strong>
          * <p>2025-08-12T05:46:01.000+0000</p>
          */
         @NameInMap("GmtCreated")
         public String gmtCreated;
+
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
+        @NameInMap("GracefulShutdownTimeout")
+        public Integer gracefulShutdownTimeout;
 
         /**
          * <strong>example:</strong>
@@ -274,6 +297,14 @@ public class CreateAirflowResponseBody extends TeaModel {
             return this.airflowName;
         }
 
+        public CreateAirflowResponseBodyRoot setAirflowVersion(String airflowVersion) {
+            this.airflowVersion = airflowVersion;
+            return this;
+        }
+        public String getAirflowVersion() {
+            return this.airflowVersion;
+        }
+
         public CreateAirflowResponseBodyRoot setAppSpec(String appSpec) {
             this.appSpec = appSpec;
             return this;
@@ -290,12 +321,28 @@ public class CreateAirflowResponseBody extends TeaModel {
             return this.appType;
         }
 
+        public CreateAirflowResponseBodyRoot setCustomAirflowCfg(java.util.List<String> customAirflowCfg) {
+            this.customAirflowCfg = customAirflowCfg;
+            return this;
+        }
+        public java.util.List<String> getCustomAirflowCfg() {
+            return this.customAirflowCfg;
+        }
+
         public CreateAirflowResponseBodyRoot setDagsDir(String dagsDir) {
             this.dagsDir = dagsDir;
             return this;
         }
         public String getDagsDir() {
             return this.dagsDir;
+        }
+
+        public CreateAirflowResponseBodyRoot setDataMountInfoList(java.util.List<DataMountInfo> dataMountInfoList) {
+            this.dataMountInfoList = dataMountInfoList;
+            return this;
+        }
+        public java.util.List<DataMountInfo> getDataMountInfoList() {
+            return this.dataMountInfoList;
         }
 
         public CreateAirflowResponseBodyRoot setDeployErrorMsg(String deployErrorMsg) {
@@ -314,12 +361,28 @@ public class CreateAirflowResponseBody extends TeaModel {
             return this.description;
         }
 
+        public CreateAirflowResponseBodyRoot setEnableServerless(Boolean enableServerless) {
+            this.enableServerless = enableServerless;
+            return this;
+        }
+        public Boolean getEnableServerless() {
+            return this.enableServerless;
+        }
+
         public CreateAirflowResponseBodyRoot setGmtCreated(String gmtCreated) {
             this.gmtCreated = gmtCreated;
             return this;
         }
         public String getGmtCreated() {
             return this.gmtCreated;
+        }
+
+        public CreateAirflowResponseBodyRoot setGracefulShutdownTimeout(Integer gracefulShutdownTimeout) {
+            this.gracefulShutdownTimeout = gracefulShutdownTimeout;
+            return this;
+        }
+        public Integer getGracefulShutdownTimeout() {
+            return this.gracefulShutdownTimeout;
         }
 
         public CreateAirflowResponseBodyRoot setOssBucketName(String ossBucketName) {

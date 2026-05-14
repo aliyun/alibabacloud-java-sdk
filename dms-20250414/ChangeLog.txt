@@ -1,3 +1,22 @@
+2026-05-14 Version: 1.11.1
+- Update API CreateAirflow: add request parameters AirflowVersion.
+- Update API CreateAirflow: add request parameters DataMountInfoList.
+- Update API CreateAirflow: add request parameters EnableServerless.
+- Update API CreateAirflow: add request parameters GracefulShutdownTimeout.
+- Update API CreateAirflow: add response parameters Body.Root.AirflowVersion.
+- Update API CreateAirflow: add response parameters Body.Root.CustomAirflowCfg.
+- Update API CreateAirflow: add response parameters Body.Root.DataMountInfoList.
+- Update API CreateAirflow: add response parameters Body.Root.EnableServerless.
+- Update API CreateAirflow: add response parameters Body.Root.GracefulShutdownTimeout.
+- Update API UpdateAirflow: add request parameters DataMountInfoList.
+- Update API UpdateAirflow: add request parameters EnableServerless.
+- Update API UpdateAirflow: add request parameters GracefulShutdownTimeout.
+- Update API UpdateAirflow: add response parameters Body.Root.AirflowVersion.
+- Update API UpdateAirflow: add response parameters Body.Root.DataMountInfoList.
+- Update API UpdateAirflow: add response parameters Body.Root.EnableServerless.
+- Update API UpdateAirflow: add response parameters Body.Root.GracefulShutdownTimeout.
+
+
 2026-05-13 Version: 1.11.0
 - Support API GetWorkspaceCodePublishSetting.
 - Support API SetWorkspaceCodePublishSetting.

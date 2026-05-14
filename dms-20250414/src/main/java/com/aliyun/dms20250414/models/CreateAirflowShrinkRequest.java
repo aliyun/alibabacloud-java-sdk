@@ -3,7 +3,7 @@ package com.aliyun.dms20250414.models;
 
 import com.aliyun.tea.*;
 
-public class CreateAirflowRequest extends TeaModel {
+public class CreateAirflowShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      * 
@@ -44,7 +44,7 @@ public class CreateAirflowRequest extends TeaModel {
     public String dagsDir;
 
     @NameInMap("DataMountInfoList")
-    public java.util.List<DataMountInfo> dataMountInfoList;
+    public String dataMountInfoListShrink;
 
     /**
      * <strong>example:</strong>
@@ -155,12 +155,12 @@ public class CreateAirflowRequest extends TeaModel {
     @NameInMap("ZoneId")
     public String zoneId;
 
-    public static CreateAirflowRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateAirflowRequest self = new CreateAirflowRequest();
+    public static CreateAirflowShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateAirflowShrinkRequest self = new CreateAirflowShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateAirflowRequest setAirflowName(String airflowName) {
+    public CreateAirflowShrinkRequest setAirflowName(String airflowName) {
         this.airflowName = airflowName;
         return this;
     }
@@ -168,7 +168,7 @@ public class CreateAirflowRequest extends TeaModel {
         return this.airflowName;
     }
 
-    public CreateAirflowRequest setAirflowVersion(String airflowVersion) {
+    public CreateAirflowShrinkRequest setAirflowVersion(String airflowVersion) {
         this.airflowVersion = airflowVersion;
         return this;
     }
@@ -176,7 +176,7 @@ public class CreateAirflowRequest extends TeaModel {
         return this.airflowVersion;
     }
 
-    public CreateAirflowRequest setAppSpec(String appSpec) {
+    public CreateAirflowShrinkRequest setAppSpec(String appSpec) {
         this.appSpec = appSpec;
         return this;
     }
@@ -184,7 +184,7 @@ public class CreateAirflowRequest extends TeaModel {
         return this.appSpec;
     }
 
-    public CreateAirflowRequest setClientToken(String clientToken) {
+    public CreateAirflowShrinkRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -192,7 +192,7 @@ public class CreateAirflowRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateAirflowRequest setDagsDir(String dagsDir) {
+    public CreateAirflowShrinkRequest setDagsDir(String dagsDir) {
         this.dagsDir = dagsDir;
         return this;
     }
@@ -200,15 +200,15 @@ public class CreateAirflowRequest extends TeaModel {
         return this.dagsDir;
     }
 
-    public CreateAirflowRequest setDataMountInfoList(java.util.List<DataMountInfo> dataMountInfoList) {
-        this.dataMountInfoList = dataMountInfoList;
+    public CreateAirflowShrinkRequest setDataMountInfoListShrink(String dataMountInfoListShrink) {
+        this.dataMountInfoListShrink = dataMountInfoListShrink;
         return this;
     }
-    public java.util.List<DataMountInfo> getDataMountInfoList() {
-        return this.dataMountInfoList;
+    public String getDataMountInfoListShrink() {
+        return this.dataMountInfoListShrink;
     }
 
-    public CreateAirflowRequest setDescription(String description) {
+    public CreateAirflowShrinkRequest setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -216,7 +216,7 @@ public class CreateAirflowRequest extends TeaModel {
         return this.description;
     }
 
-    public CreateAirflowRequest setEnableServerless(Boolean enableServerless) {
+    public CreateAirflowShrinkRequest setEnableServerless(Boolean enableServerless) {
         this.enableServerless = enableServerless;
         return this;
     }
@@ -224,7 +224,7 @@ public class CreateAirflowRequest extends TeaModel {
         return this.enableServerless;
     }
 
-    public CreateAirflowRequest setGracefulShutdownTimeout(Integer gracefulShutdownTimeout) {
+    public CreateAirflowShrinkRequest setGracefulShutdownTimeout(Integer gracefulShutdownTimeout) {
         this.gracefulShutdownTimeout = gracefulShutdownTimeout;
         return this;
     }
@@ -232,7 +232,7 @@ public class CreateAirflowRequest extends TeaModel {
         return this.gracefulShutdownTimeout;
     }
 
-    public CreateAirflowRequest setOssBucketName(String ossBucketName) {
+    public CreateAirflowShrinkRequest setOssBucketName(String ossBucketName) {
         this.ossBucketName = ossBucketName;
         return this;
     }
@@ -240,7 +240,7 @@ public class CreateAirflowRequest extends TeaModel {
         return this.ossBucketName;
     }
 
-    public CreateAirflowRequest setOssPath(String ossPath) {
+    public CreateAirflowShrinkRequest setOssPath(String ossPath) {
         this.ossPath = ossPath;
         return this;
     }
@@ -248,7 +248,7 @@ public class CreateAirflowRequest extends TeaModel {
         return this.ossPath;
     }
 
-    public CreateAirflowRequest setPluginsDir(String pluginsDir) {
+    public CreateAirflowShrinkRequest setPluginsDir(String pluginsDir) {
         this.pluginsDir = pluginsDir;
         return this;
     }
@@ -256,7 +256,7 @@ public class CreateAirflowRequest extends TeaModel {
         return this.pluginsDir;
     }
 
-    public CreateAirflowRequest setRequirementFile(String requirementFile) {
+    public CreateAirflowShrinkRequest setRequirementFile(String requirementFile) {
         this.requirementFile = requirementFile;
         return this;
     }
@@ -264,7 +264,7 @@ public class CreateAirflowRequest extends TeaModel {
         return this.requirementFile;
     }
 
-    public CreateAirflowRequest setSecurityGroupId(String securityGroupId) {
+    public CreateAirflowShrinkRequest setSecurityGroupId(String securityGroupId) {
         this.securityGroupId = securityGroupId;
         return this;
     }
@@ -272,7 +272,7 @@ public class CreateAirflowRequest extends TeaModel {
         return this.securityGroupId;
     }
 
-    public CreateAirflowRequest setStartupFile(String startupFile) {
+    public CreateAirflowShrinkRequest setStartupFile(String startupFile) {
         this.startupFile = startupFile;
         return this;
     }
@@ -280,7 +280,7 @@ public class CreateAirflowRequest extends TeaModel {
         return this.startupFile;
     }
 
-    public CreateAirflowRequest setVSwitchId(String vSwitchId) {
+    public CreateAirflowShrinkRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
     }
@@ -288,7 +288,7 @@ public class CreateAirflowRequest extends TeaModel {
         return this.vSwitchId;
     }
 
-    public CreateAirflowRequest setVpcId(String vpcId) {
+    public CreateAirflowShrinkRequest setVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
@@ -296,7 +296,7 @@ public class CreateAirflowRequest extends TeaModel {
         return this.vpcId;
     }
 
-    public CreateAirflowRequest setWorkerServerlessReplicas(Integer workerServerlessReplicas) {
+    public CreateAirflowShrinkRequest setWorkerServerlessReplicas(Integer workerServerlessReplicas) {
         this.workerServerlessReplicas = workerServerlessReplicas;
         return this;
     }
@@ -304,7 +304,7 @@ public class CreateAirflowRequest extends TeaModel {
         return this.workerServerlessReplicas;
     }
 
-    public CreateAirflowRequest setWorkspaceId(String workspaceId) {
+    public CreateAirflowShrinkRequest setWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
@@ -312,7 +312,7 @@ public class CreateAirflowRequest extends TeaModel {
         return this.workspaceId;
     }
 
-    public CreateAirflowRequest setZoneId(String zoneId) {
+    public CreateAirflowShrinkRequest setZoneId(String zoneId) {
         this.zoneId = zoneId;
         return this;
     }

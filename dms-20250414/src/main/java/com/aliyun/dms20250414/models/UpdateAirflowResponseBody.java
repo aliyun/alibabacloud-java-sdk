@@ -119,6 +119,13 @@ public class UpdateAirflowResponseBody extends TeaModel {
         public String airflowName;
 
         /**
+         * <strong>example:</strong>
+         * <p>3.1</p>
+         */
+        @NameInMap("AirflowVersion")
+        public String airflowVersion;
+
+        /**
          * <p>SMALL。</p>
          * 
          * <strong>example:</strong>
@@ -144,6 +151,9 @@ public class UpdateAirflowResponseBody extends TeaModel {
         @NameInMap("DagsDir")
         public String dagsDir;
 
+        @NameInMap("DataMountInfoList")
+        public java.util.List<DataMountInfo> dataMountInfoList;
+
         /**
          * <strong>example:</strong>
          * <p>quota exists</p>
@@ -158,6 +168,9 @@ public class UpdateAirflowResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("EnableServerless")
+        public Boolean enableServerless;
+
         /**
          * <strong>example:</strong>
          * <p>k=v</p>
@@ -171,6 +184,13 @@ public class UpdateAirflowResponseBody extends TeaModel {
          */
         @NameInMap("GmtCreated")
         public String gmtCreated;
+
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
+        @NameInMap("GracefulShutdownTimeout")
+        public Integer gracefulShutdownTimeout;
 
         /**
          * <strong>example:</strong>
@@ -285,6 +305,14 @@ public class UpdateAirflowResponseBody extends TeaModel {
             return this.airflowName;
         }
 
+        public UpdateAirflowResponseBodyRoot setAirflowVersion(String airflowVersion) {
+            this.airflowVersion = airflowVersion;
+            return this;
+        }
+        public String getAirflowVersion() {
+            return this.airflowVersion;
+        }
+
         public UpdateAirflowResponseBodyRoot setAppSpec(String appSpec) {
             this.appSpec = appSpec;
             return this;
@@ -317,6 +345,14 @@ public class UpdateAirflowResponseBody extends TeaModel {
             return this.dagsDir;
         }
 
+        public UpdateAirflowResponseBodyRoot setDataMountInfoList(java.util.List<DataMountInfo> dataMountInfoList) {
+            this.dataMountInfoList = dataMountInfoList;
+            return this;
+        }
+        public java.util.List<DataMountInfo> getDataMountInfoList() {
+            return this.dataMountInfoList;
+        }
+
         public UpdateAirflowResponseBodyRoot setDeployErrorMsg(String deployErrorMsg) {
             this.deployErrorMsg = deployErrorMsg;
             return this;
@@ -333,6 +369,14 @@ public class UpdateAirflowResponseBody extends TeaModel {
             return this.description;
         }
 
+        public UpdateAirflowResponseBodyRoot setEnableServerless(Boolean enableServerless) {
+            this.enableServerless = enableServerless;
+            return this;
+        }
+        public Boolean getEnableServerless() {
+            return this.enableServerless;
+        }
+
         public UpdateAirflowResponseBodyRoot setEnvironments(String environments) {
             this.environments = environments;
             return this;
@@ -347,6 +391,14 @@ public class UpdateAirflowResponseBody extends TeaModel {
         }
         public String getGmtCreated() {
             return this.gmtCreated;
+        }
+
+        public UpdateAirflowResponseBodyRoot setGracefulShutdownTimeout(Integer gracefulShutdownTimeout) {
+            this.gracefulShutdownTimeout = gracefulShutdownTimeout;
+            return this;
+        }
+        public Integer getGracefulShutdownTimeout() {
+            return this.gracefulShutdownTimeout;
         }
 
         public UpdateAirflowResponseBodyRoot setOssBucketName(String ossBucketName) {

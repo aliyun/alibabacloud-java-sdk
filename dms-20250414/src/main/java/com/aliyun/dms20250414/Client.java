@@ -306,15 +306,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>创建Airflow</p>
      * 
-     * @param request CreateAirflowRequest
+     * @param tmpReq CreateAirflowRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAirflowResponse
      */
-    public CreateAirflowResponse createAirflowWithOptions(CreateAirflowRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateAirflowResponse createAirflowWithOptions(CreateAirflowRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateAirflowShrinkRequest request = new CreateAirflowShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dataMountInfoList)) {
+            request.dataMountInfoListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dataMountInfoList, "DataMountInfoList", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.airflowName)) {
             query.put("AirflowName", request.airflowName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.airflowVersion)) {
+            query.put("AirflowVersion", request.airflowVersion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.appSpec)) {
@@ -329,8 +339,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DagsDir", request.dagsDir);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dataMountInfoListShrink)) {
+            query.put("DataMountInfoList", request.dataMountInfoListShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableServerless)) {
+            query.put("EnableServerless", request.enableServerless);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gracefulShutdownTimeout)) {
+            query.put("GracefulShutdownTimeout", request.gracefulShutdownTimeout);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ossBucketName)) {
@@ -3918,12 +3940,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>更新UpdateAirflow</p>
      * 
-     * @param request UpdateAirflowRequest
+     * @param tmpReq UpdateAirflowRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateAirflowResponse
      */
-    public UpdateAirflowResponse updateAirflowWithOptions(UpdateAirflowRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public UpdateAirflowResponse updateAirflowWithOptions(UpdateAirflowRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateAirflowShrinkRequest request = new UpdateAirflowShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dataMountInfoList)) {
+            request.dataMountInfoListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dataMountInfoList, "DataMountInfoList", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.airflowId)) {
             query.put("AirflowId", request.airflowId);
@@ -3945,8 +3973,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DagsDir", request.dagsDir);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dataMountInfoListShrink)) {
+            query.put("DataMountInfoList", request.dataMountInfoListShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableServerless)) {
+            query.put("EnableServerless", request.enableServerless);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gracefulShutdownTimeout)) {
+            query.put("GracefulShutdownTimeout", request.gracefulShutdownTimeout);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pluginsDir)) {
