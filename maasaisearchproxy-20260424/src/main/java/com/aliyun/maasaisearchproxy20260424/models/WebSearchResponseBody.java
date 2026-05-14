@@ -21,15 +21,6 @@ public class WebSearchResponseBody extends TeaModel {
     @NameInMap("message")
     public String message;
 
-    /**
-     * <p>requestId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>3b5215d417623961959166934d009a</p>
-     */
-    @NameInMap("traceId")
-    public String traceId;
-
     public static WebSearchResponseBody build(java.util.Map<String, ?> map) throws Exception {
         WebSearchResponseBody self = new WebSearchResponseBody();
         return TeaModel.build(map, self);
@@ -59,17 +50,76 @@ public class WebSearchResponseBody extends TeaModel {
         return this.message;
     }
 
-    public WebSearchResponseBody setTraceId(String traceId) {
-        this.traceId = traceId;
-        return this;
-    }
-    public String getTraceId() {
-        return this.traceId;
+    public static class WebSearchResponseBodyDataResultSource extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>domain</p>
+         */
+        @NameInMap("domain")
+        public String domain;
+
+        /**
+         * <strong>example:</strong>
+         * <p>favicon</p>
+         */
+        @NameInMap("favicon")
+        public String favicon;
+
+        /**
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        public static WebSearchResponseBodyDataResultSource build(java.util.Map<String, ?> map) throws Exception {
+            WebSearchResponseBodyDataResultSource self = new WebSearchResponseBodyDataResultSource();
+            return TeaModel.build(map, self);
+        }
+
+        public WebSearchResponseBodyDataResultSource setDomain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+        public String getDomain() {
+            return this.domain;
+        }
+
+        public WebSearchResponseBodyDataResultSource setFavicon(String favicon) {
+            this.favicon = favicon;
+            return this;
+        }
+        public String getFavicon() {
+            return this.favicon;
+        }
+
+        public WebSearchResponseBodyDataResultSource setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
     }
 
     public static class WebSearchResponseBodyDataResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1990-01-01 12:00:00</p>
+         */
+        @NameInMap("date")
+        public String date;
+
+        /**
+         * <strong>example:</strong>
+         * <p>snippet</p>
+         */
         @NameInMap("snippet")
         public String snippet;
+
+        @NameInMap("source")
+        public WebSearchResponseBodyDataResultSource source;
 
         /**
          * <strong>example:</strong>
@@ -90,12 +140,28 @@ public class WebSearchResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public WebSearchResponseBodyDataResult setDate(String date) {
+            this.date = date;
+            return this;
+        }
+        public String getDate() {
+            return this.date;
+        }
+
         public WebSearchResponseBodyDataResult setSnippet(String snippet) {
             this.snippet = snippet;
             return this;
         }
         public String getSnippet() {
             return this.snippet;
+        }
+
+        public WebSearchResponseBodyDataResult setSource(WebSearchResponseBodyDataResultSource source) {
+            this.source = source;
+            return this;
+        }
+        public WebSearchResponseBodyDataResultSource getSource() {
+            return this.source;
         }
 
         public WebSearchResponseBodyDataResult setTitle(String title) {
