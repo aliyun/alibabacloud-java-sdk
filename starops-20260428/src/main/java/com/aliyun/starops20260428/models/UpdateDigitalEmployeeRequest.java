@@ -4,6 +4,9 @@ package com.aliyun.starops20260428.models;
 import com.aliyun.tea.*;
 
 public class UpdateDigitalEmployeeRequest extends TeaModel {
+    @NameInMap("attributes")
+    public java.util.Map<String, String> attributes;
+
     /**
      * <strong>example:</strong>
      * <p>test</p>
@@ -38,6 +41,14 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
     public static UpdateDigitalEmployeeRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDigitalEmployeeRequest self = new UpdateDigitalEmployeeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateDigitalEmployeeRequest setAttributes(java.util.Map<String, String> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+    public java.util.Map<String, String> getAttributes() {
+        return this.attributes;
     }
 
     public UpdateDigitalEmployeeRequest setDefaultRule(String defaultRule) {

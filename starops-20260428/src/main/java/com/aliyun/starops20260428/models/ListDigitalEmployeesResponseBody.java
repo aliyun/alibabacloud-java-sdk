@@ -179,6 +179,9 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
     }
 
     public static class ListDigitalEmployeesResponseBodyDigitalEmployees extends TeaModel {
+        @NameInMap("attributes")
+        public java.util.Map<String, String> attributes;
+
         /**
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
@@ -255,6 +258,14 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         public static ListDigitalEmployeesResponseBodyDigitalEmployees build(java.util.Map<String, ?> map) throws Exception {
             ListDigitalEmployeesResponseBodyDigitalEmployees self = new ListDigitalEmployeesResponseBodyDigitalEmployees();
             return TeaModel.build(map, self);
+        }
+
+        public ListDigitalEmployeesResponseBodyDigitalEmployees setAttributes(java.util.Map<String, String> attributes) {
+            this.attributes = attributes;
+            return this;
+        }
+        public java.util.Map<String, String> getAttributes() {
+            return this.attributes;
         }
 
         public ListDigitalEmployeesResponseBodyDigitalEmployees setCreateTime(String createTime) {

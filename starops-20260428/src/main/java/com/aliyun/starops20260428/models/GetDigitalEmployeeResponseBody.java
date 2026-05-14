@@ -4,6 +4,9 @@ package com.aliyun.starops20260428.models;
 import com.aliyun.tea.*;
 
 public class GetDigitalEmployeeResponseBody extends TeaModel {
+    @NameInMap("attributes")
+    public java.util.Map<String, String> attributes;
+
     /**
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
@@ -94,6 +97,14 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
     public static GetDigitalEmployeeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetDigitalEmployeeResponseBody self = new GetDigitalEmployeeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetDigitalEmployeeResponseBody setAttributes(java.util.Map<String, String> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+    public java.util.Map<String, String> getAttributes() {
+        return this.attributes;
     }
 
     public GetDigitalEmployeeResponseBody setCreateTime(String createTime) {

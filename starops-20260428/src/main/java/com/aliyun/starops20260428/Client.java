@@ -101,6 +101,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateDigitalEmployeeResponse createDigitalEmployeeWithOptions(CreateDigitalEmployeeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.attributes)) {
+            body.put("attributes", request.attributes);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.defaultRule)) {
             body.put("defaultRule", request.defaultRule);
         }
@@ -1017,6 +1021,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateDigitalEmployeeResponse updateDigitalEmployeeWithOptions(String name, UpdateDigitalEmployeeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.attributes)) {
+            body.put("attributes", request.attributes);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.defaultRule)) {
             body.put("defaultRule", request.defaultRule);
         }

@@ -1,3 +1,10 @@
+2026-05-14 Version: 1.1.2
+- Update API CreateDigitalEmployee: add request parameters body.attributes.
+- Update API GetDigitalEmployee: add response parameters Body.attributes.
+- Update API ListDigitalEmployees: add response parameters Body.digitalEmployees.$.attributes.
+- Update API UpdateDigitalEmployee: add request parameters body.attributes.
+
+
 2026-05-12 Version: 1.1.1
 - Update API ListThreads: add request parameters includeMission.
 
