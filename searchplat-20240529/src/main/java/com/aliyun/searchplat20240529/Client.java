@@ -884,6 +884,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取JinaAiReader解析结果</p>
+     * 
+     * @param request GetJinaAiReaderRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetJinaAiReaderResponse
+     */
+    public GetJinaAiReaderResponse getJinaAiReaderWithOptions(String workspaceName, String serviceId, GetJinaAiReaderRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            body.put("url", request.url);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetJinaAiReader"),
+            new TeaPair("version", "2024-05-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v3/openapi/workspaces/" + workspaceName + "/jina-ai-reader/" + serviceId + ""),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetJinaAiReaderResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取JinaAiReader解析结果</p>
+     * 
+     * @param request GetJinaAiReaderRequest
+     * @return GetJinaAiReaderResponse
+     */
+    public GetJinaAiReaderResponse getJinaAiReader(String workspaceName, String serviceId, GetJinaAiReaderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getJinaAiReaderWithOptions(workspaceName, serviceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查看memory详情</p>
      * 
      * @param request GetMemoryRequest
