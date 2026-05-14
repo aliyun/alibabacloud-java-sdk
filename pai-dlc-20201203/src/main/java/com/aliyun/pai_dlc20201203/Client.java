@@ -226,7 +226,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a Job Template</p>
+     * <p>Create a job template.</p>
      * 
      * @param request CreateJobTemplateRequest
      * @param headers map
@@ -280,7 +280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a Job Template</p>
+     * <p>Create a job template.</p>
      * 
      * @param request CreateJobTemplateRequest
      * @return CreateJobTemplateResponse
@@ -457,7 +457,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete an unused job template. If the template is already used by a job, you cannot delete it.</p>
+     * <p>Deletes an unused job template. Templates that are used by jobs cannot be deleted.</p>
      * 
      * @param request DeleteJobTemplateRequest
      * @param headers map
@@ -485,7 +485,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete an unused job template. If the template is already used by a job, you cannot delete it.</p>
+     * <p>Deletes an unused job template. Templates that are used by jobs cannot be deleted.</p>
      * 
      * @param request DeleteJobTemplateRequest
      * @return DeleteJobTemplateResponse
@@ -2006,7 +2006,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update a Job template</p>
+     * <p>Updates a job template.</p>
      * 
      * @param request UpdateJobTemplateRequest
      * @param headers map
@@ -2064,7 +2064,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update a Job template</p>
+     * <p>Updates a job template.</p>
      * 
      * @param request UpdateJobTemplateRequest
      * @return UpdateJobTemplateResponse

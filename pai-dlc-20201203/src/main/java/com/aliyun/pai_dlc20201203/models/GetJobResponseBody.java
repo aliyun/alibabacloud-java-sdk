@@ -1518,6 +1518,9 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("RestartFailReason")
         public String restartFailReason;
 
+        @NameInMap("RestartLevelType")
+        public String restartLevelType;
+
         @NameInMap("RestartStatus")
         public String restartStatus;
 
@@ -1583,6 +1586,14 @@ public class GetJobResponseBody extends TeaModel {
         }
         public String getRestartFailReason() {
             return this.restartFailReason;
+        }
+
+        public GetJobResponseBodyRestartRecord setRestartLevelType(String restartLevelType) {
+            this.restartLevelType = restartLevelType;
+            return this;
+        }
+        public String getRestartLevelType() {
+            return this.restartLevelType;
         }
 
         public GetJobResponseBodyRestartRecord setRestartStatus(String restartStatus) {

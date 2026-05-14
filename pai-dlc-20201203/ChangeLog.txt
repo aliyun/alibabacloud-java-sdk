@@ -1,3 +1,7 @@
+2026-05-14 Version: 1.7.2
+- Update API GetJob: add response parameters Body.RestartRecord.$.RestartLevelType.
+
+
 2026-05-11 Version: 1.7.1
 - Update API CreateJob: add request parameters body.SchedulingStrategy.
 - Update API GetJob: add response parameters Body.SchedulingStrategy.
