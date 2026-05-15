@@ -938,6 +938,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>关闭OpenAPI执行SQL功能</p>
+     * 
+     * @param request DisableExecuteStatementRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableExecuteStatementResponse
+     */
+    public DisableExecuteStatementResponse disableExecuteStatementWithOptions(String instanceId, DisableExecuteStatementRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisableExecuteStatement"),
+            new TeaPair("version", "2022-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/disableExecuteStatement"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableExecuteStatementResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>关闭OpenAPI执行SQL功能</p>
+     * 
+     * @param request DisableExecuteStatementRequest
+     * @return DisableExecuteStatementResponse
+     */
+    public DisableExecuteStatementResponse disableExecuteStatement(String instanceId, DisableExecuteStatementRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.disableExecuteStatementWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Disables data lake acceleration.</p>
      * 
      * @param request DisableHiveAccessRequest
@@ -1120,6 +1161,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>开启或关闭OpenAPI执行SQL功能</p>
+     * 
+     * @param request EnableExecuteStatementRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableExecuteStatementResponse
+     */
+    public EnableExecuteStatementResponse enableExecuteStatementWithOptions(String instanceId, EnableExecuteStatementRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableExecuteStatement"),
+            new TeaPair("version", "2022-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/enableExecuteStatement"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableExecuteStatementResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>开启或关闭OpenAPI执行SQL功能</p>
+     * 
+     * @param request EnableExecuteStatementRequest
+     * @return EnableExecuteStatementResponse
+     */
+    public EnableExecuteStatementResponse enableExecuteStatement(String instanceId, EnableExecuteStatementRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.enableExecuteStatementWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Enables data lake acceleration.</p>
      * 
      * @param request EnableHiveAccessRequest
@@ -1255,6 +1337,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>SQL执行</p>
+     * 
+     * @param request ExecuteStatementRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExecuteStatementResponse
+     */
+    public ExecuteStatementResponse executeStatementWithOptions(String instanceId, ExecuteStatementRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
+            body.put("dbName", request.dbName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxBytes)) {
+            body.put("maxBytes", request.maxBytes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxRows)) {
+            body.put("maxRows", request.maxRows);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parameters)) {
+            body.put("parameters", request.parameters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryTimeout)) {
+            body.put("queryTimeout", request.queryTimeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sql)) {
+            body.put("sql", request.sql);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExecuteStatement"),
+            new TeaPair("version", "2022-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/executeStatement"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteStatementResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>SQL执行</p>
+     * 
+     * @param request ExecuteStatementRequest
+     * @return ExecuteStatementResponse
+     */
+    public ExecuteStatementResponse executeStatement(String instanceId, ExecuteStatementRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.executeStatementWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获得证书信息</p>
      * 
      * @param headers map
@@ -1288,6 +1437,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getCertificateAttributeWithOptions(instanceId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询实例是否已开启OpenAPI执行SQL功能</p>
+     * 
+     * @param request GetExecuteStatementEnabledRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetExecuteStatementEnabledResponse
+     */
+    public GetExecuteStatementEnabledResponse getExecuteStatementEnabledWithOptions(String instanceId, GetExecuteStatementEnabledRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetExecuteStatementEnabled"),
+            new TeaPair("version", "2022-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/executeStatementEnabled"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetExecuteStatementEnabledResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询实例是否已开启OpenAPI执行SQL功能</p>
+     * 
+     * @param request GetExecuteStatementEnabledRequest
+     * @return GetExecuteStatementEnabledResponse
+     */
+    public GetExecuteStatementEnabledResponse getExecuteStatementEnabled(String instanceId, GetExecuteStatementEnabledRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getExecuteStatementEnabledWithOptions(instanceId, request, headers, runtime);
     }
 
     /**
