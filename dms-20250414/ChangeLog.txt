@@ -1,3 +1,14 @@
+2026-05-15 Version: 1.12.0
+- Support API ConfigAirflow.
+- Support API CreateDataAgentKnowledgeBase.
+- Support API DeleteDataAgentKnowledgeBase.
+- Support API DescribeKnowledgeBaseStats.
+- Support API GetWorkspaceQuota.
+- Support API ListAirflowVersions.
+- Support API RedeployAirflow.
+- Support API SetWorkspaceQuota.
+
+
 2026-05-14 Version: 1.11.1
 - Update API CreateAirflow: add request parameters AirflowVersion.
 - Update API CreateAirflow: add request parameters DataMountInfoList.
