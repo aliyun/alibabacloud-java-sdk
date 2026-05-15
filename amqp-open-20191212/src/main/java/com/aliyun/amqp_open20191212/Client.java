@@ -258,6 +258,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authModel)) {
+            query.put("AuthModel", request.authModel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
             query.put("AutoRenew", request.autoRenew);
         }
@@ -344,6 +348,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.serverlessChargeType)) {
             query.put("ServerlessChargeType", request.serverlessChargeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serverlessSwitch)) {
+            query.put("ServerlessSwitch", request.serverlessSwitch);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.storageSize)) {

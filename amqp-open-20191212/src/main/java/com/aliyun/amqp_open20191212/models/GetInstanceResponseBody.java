@@ -200,6 +200,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        @NameInMap("ServerlessSwitch")
+        public Boolean serverlessSwitch;
+
         /**
          * <strong>example:</strong>
          * <p>SERVING</p>
@@ -427,6 +430,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getSecurityGroupId() {
             return this.securityGroupId;
+        }
+
+        public GetInstanceResponseBodyData setServerlessSwitch(Boolean serverlessSwitch) {
+            this.serverlessSwitch = serverlessSwitch;
+            return this;
+        }
+        public Boolean getServerlessSwitch() {
+            return this.serverlessSwitch;
         }
 
         public GetInstanceResponseBodyData setStatus(String status) {

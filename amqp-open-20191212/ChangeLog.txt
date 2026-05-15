@@ -1,3 +1,10 @@
+2026-05-15 Version: 1.4.8
+- Update API CreateInstance: add request parameters AuthModel.
+- Update API CreateInstance: add request parameters ServerlessSwitch.
+- Update API GetInstance: add response parameters Body.Data.ServerlessSwitch.
+- Update API ListInstances: add response parameters Body.Data.Instances.$.ServerlessSwitch.
+
+
 2026-04-02 Version: 1.4.7
 - Update API CreateInstance: add request parameters ListenerMode.
 - Update API CreateInstance: add request parameters SecurityGroupId.

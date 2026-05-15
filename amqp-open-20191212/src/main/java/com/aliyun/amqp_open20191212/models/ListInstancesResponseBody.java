@@ -265,6 +265,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        @NameInMap("ServerlessSwitch")
+        public Boolean serverlessSwitch;
+
         /**
          * <p>The instance status. Valid values:</p>
          * <ul>
@@ -488,6 +491,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getSecurityGroupId() {
             return this.securityGroupId;
+        }
+
+        public ListInstancesResponseBodyDataInstances setServerlessSwitch(Boolean serverlessSwitch) {
+            this.serverlessSwitch = serverlessSwitch;
+            return this;
+        }
+        public Boolean getServerlessSwitch() {
+            return this.serverlessSwitch;
         }
 
         public ListInstancesResponseBodyDataInstances setStatus(String status) {

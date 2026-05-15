@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceShrinkRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>ram openSource</p>
+     */
+    @NameInMap("AuthModel")
+    public String authModel;
+
+    /**
      * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
      * <li>true: enables auto-renewal.</li>
@@ -238,6 +245,9 @@ public class CreateInstanceShrinkRequest extends TeaModel {
     @NameInMap("ServerlessChargeType")
     public String serverlessChargeType;
 
+    @NameInMap("ServerlessSwitch")
+    public Boolean serverlessSwitch;
+
     /**
      * <p>The storage capacity. Unit: GB. Valid values:</p>
      * <ul>
@@ -326,6 +336,14 @@ public class CreateInstanceShrinkRequest extends TeaModel {
     public static CreateInstanceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceShrinkRequest self = new CreateInstanceShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateInstanceShrinkRequest setAuthModel(String authModel) {
+        this.authModel = authModel;
+        return this;
+    }
+    public String getAuthModel() {
+        return this.authModel;
     }
 
     public CreateInstanceShrinkRequest setAutoRenew(Boolean autoRenew) {
@@ -502,6 +520,14 @@ public class CreateInstanceShrinkRequest extends TeaModel {
     }
     public String getServerlessChargeType() {
         return this.serverlessChargeType;
+    }
+
+    public CreateInstanceShrinkRequest setServerlessSwitch(Boolean serverlessSwitch) {
+        this.serverlessSwitch = serverlessSwitch;
+        return this;
+    }
+    public Boolean getServerlessSwitch() {
+        return this.serverlessSwitch;
     }
 
     public CreateInstanceShrinkRequest setStorageSize(Integer storageSize) {
