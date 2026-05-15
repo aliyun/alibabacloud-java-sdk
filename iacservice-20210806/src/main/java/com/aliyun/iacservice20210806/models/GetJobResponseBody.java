@@ -35,6 +35,59 @@ public class GetJobResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class GetJobResponseBodyJobAllParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>regionId</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("secret")
+        public Boolean secret;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou</p>
+         */
+        @NameInMap("value")
+        public String value;
+
+        public static GetJobResponseBodyJobAllParameters build(java.util.Map<String, ?> map) throws Exception {
+            GetJobResponseBodyJobAllParameters self = new GetJobResponseBodyJobAllParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public GetJobResponseBodyJobAllParameters setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetJobResponseBodyJobAllParameters setSecret(Boolean secret) {
+            this.secret = secret;
+            return this;
+        }
+        public Boolean getSecret() {
+            return this.secret;
+        }
+
+        public GetJobResponseBodyJobAllParameters setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class GetJobResponseBodyJobAssertCheckDetail extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -190,6 +243,9 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     public static class GetJobResponseBodyJob extends TeaModel {
+        @NameInMap("allParameters")
+        public java.util.List<GetJobResponseBodyJobAllParameters> allParameters;
+
         @NameInMap("assertCheckDetail")
         public java.util.List<GetJobResponseBodyJobAssertCheckDetail> assertCheckDetail;
 
@@ -282,6 +338,14 @@ public class GetJobResponseBody extends TeaModel {
         public static GetJobResponseBodyJob build(java.util.Map<String, ?> map) throws Exception {
             GetJobResponseBodyJob self = new GetJobResponseBodyJob();
             return TeaModel.build(map, self);
+        }
+
+        public GetJobResponseBodyJob setAllParameters(java.util.List<GetJobResponseBodyJobAllParameters> allParameters) {
+            this.allParameters = allParameters;
+            return this;
+        }
+        public java.util.List<GetJobResponseBodyJobAllParameters> getAllParameters() {
+            return this.allParameters;
         }
 
         public GetJobResponseBodyJob setAssertCheckDetail(java.util.List<GetJobResponseBodyJobAssertCheckDetail> assertCheckDetail) {

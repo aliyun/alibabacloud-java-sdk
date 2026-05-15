@@ -13,6 +13,13 @@ public class ListStacksRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>21a90f5d-a469-4ac4-a8ea-f6e1e7470e6f</p>
+     */
+    @NameInMap("kmsKeyId")
+    public String kmsKeyId;
+
+    /**
+     * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("maxResults")
@@ -57,6 +64,14 @@ public class ListStacksRequest extends TeaModel {
     }
     public String getKeyword() {
         return this.keyword;
+    }
+
+    public ListStacksRequest setKmsKeyId(String kmsKeyId) {
+        this.kmsKeyId = kmsKeyId;
+        return this;
+    }
+    public String getKmsKeyId() {
+        return this.kmsKeyId;
     }
 
     public ListStacksRequest setMaxResults(Integer maxResults) {

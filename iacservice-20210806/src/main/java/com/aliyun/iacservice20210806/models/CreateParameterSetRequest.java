@@ -77,6 +77,13 @@ public class CreateParameterSetRequest extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        @NameInMap("secret")
+        public Boolean secret;
+
+        /**
+         * <strong>example:</strong>
+         * <p>HAS_VALUE</p>
+         */
         @NameInMap("status")
         public String status;
 
@@ -105,6 +112,14 @@ public class CreateParameterSetRequest extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public CreateParameterSetRequestParameters setSecret(Boolean secret) {
+            this.secret = secret;
+            return this;
+        }
+        public Boolean getSecret() {
+            return this.secret;
         }
 
         public CreateParameterSetRequestParameters setStatus(String status) {

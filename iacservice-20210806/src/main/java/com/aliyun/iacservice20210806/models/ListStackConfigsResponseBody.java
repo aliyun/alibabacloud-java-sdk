@@ -195,6 +195,9 @@ public class ListStackConfigsResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        @NameInMap("sensitive")
+        public Boolean sensitive;
+
         /**
          * <strong>example:</strong>
          * <p>string</p>
@@ -229,6 +232,14 @@ public class ListStackConfigsResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListStackConfigsResponseBodyConfigsComponentConfigVariable setSensitive(Boolean sensitive) {
+            this.sensitive = sensitive;
+            return this;
+        }
+        public Boolean getSensitive() {
+            return this.sensitive;
         }
 
         public ListStackConfigsResponseBodyConfigsComponentConfigVariable setType(String type) {

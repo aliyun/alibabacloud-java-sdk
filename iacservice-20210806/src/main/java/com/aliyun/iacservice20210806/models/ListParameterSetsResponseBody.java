@@ -81,9 +81,20 @@ public class ListParameterSetsResponseBody extends TeaModel {
     }
 
     public static class ListParameterSetsResponseBodyParameterSetsParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>region</p>
+         */
         @NameInMap("name")
         public String name;
 
+        @NameInMap("secret")
+        public Boolean secret;
+
+        /**
+         * <strong>example:</strong>
+         * <p>HAS_VALUE</p>
+         */
         @NameInMap("status")
         public String status;
 
@@ -112,6 +123,14 @@ public class ListParameterSetsResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListParameterSetsResponseBodyParameterSetsParameters setSecret(Boolean secret) {
+            this.secret = secret;
+            return this;
+        }
+        public Boolean getSecret() {
+            return this.secret;
         }
 
         public ListParameterSetsResponseBodyParameterSetsParameters setStatus(String status) {
@@ -201,6 +220,10 @@ public class ListParameterSetsResponseBody extends TeaModel {
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("deletionProtection")
         public Boolean deletionProtection;
 

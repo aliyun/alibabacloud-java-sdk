@@ -60,6 +60,13 @@ public class UpdateParameterSetAttributeRequest extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        @NameInMap("secret")
+        public Boolean secret;
+
+        /**
+         * <strong>example:</strong>
+         * <p>HAS_VALUE</p>
+         */
         @NameInMap("status")
         public String status;
 
@@ -88,6 +95,14 @@ public class UpdateParameterSetAttributeRequest extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public UpdateParameterSetAttributeRequestParameters setSecret(Boolean secret) {
+            this.secret = secret;
+            return this;
+        }
+        public Boolean getSecret() {
+            return this.secret;
         }
 
         public UpdateParameterSetAttributeRequestParameters setStatus(String status) {

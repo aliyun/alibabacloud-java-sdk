@@ -67,6 +67,9 @@ public class CreateTaskRequest extends TeaModel {
     @NameInMap("name")
     public String name;
 
+    @NameInMap("parameterSetIds")
+    public java.util.List<String> parameterSetIds;
+
     @NameInMap("protectionStrategy")
     public java.util.List<String> protectionStrategy;
 
@@ -175,6 +178,14 @@ public class CreateTaskRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateTaskRequest setParameterSetIds(java.util.List<String> parameterSetIds) {
+        this.parameterSetIds = parameterSetIds;
+        return this;
+    }
+    public java.util.List<String> getParameterSetIds() {
+        return this.parameterSetIds;
     }
 
     public CreateTaskRequest setProtectionStrategy(java.util.List<String> protectionStrategy) {

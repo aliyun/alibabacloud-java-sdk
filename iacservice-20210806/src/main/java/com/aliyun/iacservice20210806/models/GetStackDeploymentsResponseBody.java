@@ -195,6 +195,9 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        @NameInMap("sensitive")
+        public Boolean sensitive;
+
         /**
          * <strong>example:</strong>
          * <p>string</p>
@@ -236,6 +239,14 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetStackDeploymentsResponseBodyDeploymentsParameters setSensitive(Boolean sensitive) {
+            this.sensitive = sensitive;
+            return this;
+        }
+        public Boolean getSensitive() {
+            return this.sensitive;
         }
 
         public GetStackDeploymentsResponseBodyDeploymentsParameters setType(String type) {

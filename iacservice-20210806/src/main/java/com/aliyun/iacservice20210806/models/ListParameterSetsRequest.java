@@ -13,6 +13,13 @@ public class ListParameterSetsRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>21a90f5d-a469-4ac4-a8ea-f6e1e7470e6f</p>
+     */
+    @NameInMap("kmsKeyId")
+    public String kmsKeyId;
+
+    /**
+     * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("pageNumber")
@@ -36,6 +43,14 @@ public class ListParameterSetsRequest extends TeaModel {
     }
     public String getKeyword() {
         return this.keyword;
+    }
+
+    public ListParameterSetsRequest setKmsKeyId(String kmsKeyId) {
+        this.kmsKeyId = kmsKeyId;
+        return this;
+    }
+    public String getKmsKeyId() {
+        return this.kmsKeyId;
     }
 
     public ListParameterSetsRequest setPageNumber(Integer pageNumber) {

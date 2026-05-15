@@ -20,6 +20,13 @@ public class ListTasksRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>21a90f5d-a469-4ac4-a8ea-f6e1e7470e6f</p>
+     */
+    @NameInMap("kmsKeyId")
+    public String kmsKeyId;
+
+    /**
+     * <strong>example:</strong>
      * <p>mod-1525e992f1b62139d1c437d64ae</p>
      */
     @NameInMap("moduleId")
@@ -78,6 +85,14 @@ public class ListTasksRequest extends TeaModel {
     }
     public String getKeyword() {
         return this.keyword;
+    }
+
+    public ListTasksRequest setKmsKeyId(String kmsKeyId) {
+        this.kmsKeyId = kmsKeyId;
+        return this;
+    }
+    public String getKmsKeyId() {
+        return this.kmsKeyId;
     }
 
     public ListTasksRequest setModuleId(String moduleId) {
