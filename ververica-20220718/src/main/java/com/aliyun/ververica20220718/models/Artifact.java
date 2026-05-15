@@ -4,6 +4,9 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class Artifact extends TeaModel {
+    @NameInMap("cdcYamlArtifact")
+    public CdcYamlArtifact cdcYamlArtifact;
+
     /**
      * <p>The information required for the SQL deployment.</p>
      */
@@ -39,6 +42,14 @@ public class Artifact extends TeaModel {
     public static Artifact build(java.util.Map<String, ?> map) throws Exception {
         Artifact self = new Artifact();
         return TeaModel.build(map, self);
+    }
+
+    public Artifact setCdcYamlArtifact(CdcYamlArtifact cdcYamlArtifact) {
+        this.cdcYamlArtifact = cdcYamlArtifact;
+        return this;
+    }
+    public CdcYamlArtifact getCdcYamlArtifact() {
+        return this.cdcYamlArtifact;
     }
 
     public Artifact setJarArtifact(JarArtifact jarArtifact) {
