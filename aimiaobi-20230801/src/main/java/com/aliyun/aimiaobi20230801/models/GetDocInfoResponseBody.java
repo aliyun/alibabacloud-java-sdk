@@ -95,6 +95,44 @@ public class GetDocInfoResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetDocInfoResponseBodyDataPageInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
+        @NameInMap("Height")
+        public Integer height;
+
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("Width")
+        public Integer width;
+
+        public static GetDocInfoResponseBodyDataPageInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetDocInfoResponseBodyDataPageInfo self = new GetDocInfoResponseBodyDataPageInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDocInfoResponseBodyDataPageInfo setHeight(Integer height) {
+            this.height = height;
+            return this;
+        }
+        public Integer getHeight() {
+            return this.height;
+        }
+
+        public GetDocInfoResponseBodyDataPageInfo setWidth(Integer width) {
+            this.width = width;
+            return this;
+        }
+        public Integer getWidth() {
+            return this.width;
+        }
+
+    }
+
     public static class GetDocInfoResponseBodyData extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -103,6 +141,10 @@ public class GetDocInfoResponseBody extends TeaModel {
         @NameInMap("CategoryId")
         public String categoryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>電視廣播2020年報</p>
+         */
         @NameInMap("DocName")
         public String docName;
 
@@ -120,6 +162,9 @@ public class GetDocInfoResponseBody extends TeaModel {
         @NameInMap("FileUrl")
         public String fileUrl;
 
+        @NameInMap("PageInfo")
+        public GetDocInfoResponseBodyDataPageInfo pageInfo;
+
         /**
          * <strong>example:</strong>
          * <p>0</p>
@@ -127,6 +172,10 @@ public class GetDocInfoResponseBody extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>导入成功</p>
+         */
         @NameInMap("StatusMessage")
         public String statusMessage;
 
@@ -168,6 +217,14 @@ public class GetDocInfoResponseBody extends TeaModel {
         }
         public String getFileUrl() {
             return this.fileUrl;
+        }
+
+        public GetDocInfoResponseBodyData setPageInfo(GetDocInfoResponseBodyDataPageInfo pageInfo) {
+            this.pageInfo = pageInfo;
+            return this;
+        }
+        public GetDocInfoResponseBodyDataPageInfo getPageInfo() {
+            return this.pageInfo;
         }
 
         public GetDocInfoResponseBodyData setStatus(Integer status) {
