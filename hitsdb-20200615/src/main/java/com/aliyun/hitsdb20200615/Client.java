@@ -275,6 +275,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateAdditionalVpcLinkResponse createAdditionalVpcLinkWithOptions(CreateAdditionalVpcLinkRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.additionalAliBid)) {
+            query.put("AdditionalAliBid", request.additionalAliBid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.additionalAliUid)) {
+            query.put("AdditionalAliUid", request.additionalAliUid);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.additionalVpcId)) {
             query.put("AdditionalVpcId", request.additionalVpcId);
         }

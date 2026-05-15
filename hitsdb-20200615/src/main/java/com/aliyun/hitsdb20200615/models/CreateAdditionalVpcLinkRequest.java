@@ -4,6 +4,12 @@ package com.aliyun.hitsdb20200615.models;
 import com.aliyun.tea.*;
 
 public class CreateAdditionalVpcLinkRequest extends TeaModel {
+    @NameInMap("AdditionalAliBid")
+    public String additionalAliBid;
+
+    @NameInMap("AdditionalAliUid")
+    public String additionalAliUid;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -31,6 +37,22 @@ public class CreateAdditionalVpcLinkRequest extends TeaModel {
     public static CreateAdditionalVpcLinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAdditionalVpcLinkRequest self = new CreateAdditionalVpcLinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateAdditionalVpcLinkRequest setAdditionalAliBid(String additionalAliBid) {
+        this.additionalAliBid = additionalAliBid;
+        return this;
+    }
+    public String getAdditionalAliBid() {
+        return this.additionalAliBid;
+    }
+
+    public CreateAdditionalVpcLinkRequest setAdditionalAliUid(String additionalAliUid) {
+        this.additionalAliUid = additionalAliUid;
+        return this;
+    }
+    public String getAdditionalAliUid() {
+        return this.additionalAliUid;
     }
 
     public CreateAdditionalVpcLinkRequest setAdditionalVpcId(String additionalVpcId) {
