@@ -924,10 +924,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ApplicationCode", request.applicationCode);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.applicationName)) {
-            query.put("ApplicationName", request.applicationName);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.callDayShrink)) {
             query.put("CallDay", request.callDayShrink);
         }
@@ -6898,6 +6894,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>分页查询智能体列表（代运营模式V2）</p>
+     * 
+     * @param request PageQueryAgentListNewRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PageQueryAgentListNewResponse
+     */
+    public PageQueryAgentListNewResponse pageQueryAgentListNewWithOptions(PageQueryAgentListNewRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            query.put("AgentId", request.agentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentName)) {
+            query.put("AgentName", request.agentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isAvailable)) {
+            query.put("IsAvailable", request.isAvailable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageIndex)) {
+            query.put("PageIndex", request.pageIndex);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PageQueryAgentListNew"),
+            new TeaPair("version", "2019-10-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PageQueryAgentListNewResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询智能体列表（代运营模式V2）</p>
+     * 
+     * @param request PageQueryAgentListNewRequest
+     * @return PageQueryAgentListNewResponse
+     */
+    public PageQueryAgentListNewResponse pageQueryAgentListNew(PageQueryAgentListNewRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.pageQueryAgentListNewWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询明细记录</p>
      * 
      * @param tmpReq QueryAiCallDetailPageRequest
@@ -7216,6 +7276,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryAiVoiceAgentDetailResponse queryAiVoiceAgentDetail(QueryAiVoiceAgentDetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryAiVoiceAgentDetailWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询智能体详情（代运营模式V2）</p>
+     * 
+     * @param request QueryAiVoiceAgentDetailNewRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryAiVoiceAgentDetailNewResponse
+     */
+    public QueryAiVoiceAgentDetailNewResponse queryAiVoiceAgentDetailNewWithOptions(QueryAiVoiceAgentDetailNewRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            query.put("AgentId", request.agentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.branchId)) {
+            query.put("BranchId", request.branchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
+            query.put("VersionId", request.versionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryAiVoiceAgentDetailNew"),
+            new TeaPair("version", "2019-10-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryAiVoiceAgentDetailNewResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询智能体详情（代运营模式V2）</p>
+     * 
+     * @param request QueryAiVoiceAgentDetailNewRequest
+     * @return QueryAiVoiceAgentDetailNewResponse
+     */
+    public QueryAiVoiceAgentDetailNewResponse queryAiVoiceAgentDetailNew(QueryAiVoiceAgentDetailNewRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryAiVoiceAgentDetailNewWithOptions(request, runtime);
     }
 
     /**

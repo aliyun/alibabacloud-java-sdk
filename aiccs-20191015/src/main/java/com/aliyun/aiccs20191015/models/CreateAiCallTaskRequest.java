@@ -19,13 +19,6 @@ public class CreateAiCallTaskRequest extends TeaModel {
     public String applicationCode;
 
     /**
-     * <strong>example:</strong>
-     * <p>示例值示例值</p>
-     */
-    @NameInMap("ApplicationName")
-    public String applicationName;
-
-    /**
      * <p>This parameter is required.</p>
      */
     @NameInMap("CallDay")
@@ -156,14 +149,6 @@ public class CreateAiCallTaskRequest extends TeaModel {
     }
     public String getApplicationCode() {
         return this.applicationCode;
-    }
-
-    public CreateAiCallTaskRequest setApplicationName(String applicationName) {
-        this.applicationName = applicationName;
-        return this;
-    }
-    public String getApplicationName() {
-        return this.applicationName;
     }
 
     public CreateAiCallTaskRequest setCallDay(java.util.List<String> callDay) {

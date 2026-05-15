@@ -112,6 +112,13 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>示例值</p>
+         */
+        @NameInMap("BranchName")
+        public String branchName;
+
+        /**
+         * <strong>example:</strong>
          * <p>9</p>
          */
         @NameInMap("BranchVersionId")
@@ -229,6 +236,20 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
+         */
+        @NameInMap("VersionName")
+        public String versionName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>55</p>
+         */
+        @NameInMap("VersionNo")
+        public Long versionNo;
+
         public static QueryAiCallDetailPageResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             QueryAiCallDetailPageResponseBodyDataList self = new QueryAiCallDetailPageResponseBodyDataList();
             return TeaModel.build(map, self);
@@ -248,6 +269,14 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         }
         public Long getBranchId() {
             return this.branchId;
+        }
+
+        public QueryAiCallDetailPageResponseBodyDataList setBranchName(String branchName) {
+            this.branchName = branchName;
+            return this;
+        }
+        public String getBranchName() {
+            return this.branchName;
         }
 
         public QueryAiCallDetailPageResponseBodyDataList setBranchVersionId(Long branchVersionId) {
@@ -384,6 +413,22 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         }
         public String getTaskId() {
             return this.taskId;
+        }
+
+        public QueryAiCallDetailPageResponseBodyDataList setVersionName(String versionName) {
+            this.versionName = versionName;
+            return this;
+        }
+        public String getVersionName() {
+            return this.versionName;
+        }
+
+        public QueryAiCallDetailPageResponseBodyDataList setVersionNo(Long versionNo) {
+            this.versionNo = versionNo;
+            return this;
+        }
+        public Long getVersionNo() {
+            return this.versionNo;
         }
 
     }
