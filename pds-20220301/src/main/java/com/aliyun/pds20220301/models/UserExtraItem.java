@@ -82,6 +82,9 @@ public class UserExtraItem extends TeaModel {
     @NameInMap("last_login_time")
     public Long lastLoginTime;
 
+    @NameInMap("last_refresh_token_time")
+    public Long lastRefreshTokenTime;
+
     @NameInMap("need_change_password_next_login")
     public Boolean needChangePasswordNextLogin;
 
@@ -264,6 +267,14 @@ public class UserExtraItem extends TeaModel {
     }
     public Long getLastLoginTime() {
         return this.lastLoginTime;
+    }
+
+    public UserExtraItem setLastRefreshTokenTime(Long lastRefreshTokenTime) {
+        this.lastRefreshTokenTime = lastRefreshTokenTime;
+        return this;
+    }
+    public Long getLastRefreshTokenTime() {
+        return this.lastRefreshTokenTime;
     }
 
     public UserExtraItem setNeedChangePasswordNextLogin(Boolean needChangePasswordNextLogin) {

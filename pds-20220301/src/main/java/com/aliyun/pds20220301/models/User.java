@@ -67,6 +67,12 @@ public class User extends TeaModel {
     @NameInMap("email")
     public String email;
 
+    @NameInMap("last_login_time")
+    public Long lastLoginTime;
+
+    @NameInMap("last_refresh_token_time")
+    public Long lastRefreshTokenTime;
+
     /**
      * <p>The nickname of the user.</p>
      * 
@@ -204,6 +210,22 @@ public class User extends TeaModel {
     }
     public String getEmail() {
         return this.email;
+    }
+
+    public User setLastLoginTime(Long lastLoginTime) {
+        this.lastLoginTime = lastLoginTime;
+        return this;
+    }
+    public Long getLastLoginTime() {
+        return this.lastLoginTime;
+    }
+
+    public User setLastRefreshTokenTime(Long lastRefreshTokenTime) {
+        this.lastRefreshTokenTime = lastRefreshTokenTime;
+        return this;
+    }
+    public Long getLastRefreshTokenTime() {
+        return this.lastRefreshTokenTime;
     }
 
     public User setNickName(String nickName) {
