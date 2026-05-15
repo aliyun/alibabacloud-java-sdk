@@ -26,6 +26,9 @@ public class CreateConsumerGroupRequest extends TeaModel {
     @NameInMap("deliveryOrderType")
     public String deliveryOrderType;
 
+    @NameInMap("exclusive")
+    public Boolean exclusive;
+
     /**
      * <p>The maximum number of messages that can be processed by consumers per second.</p>
      * 
@@ -77,6 +80,14 @@ public class CreateConsumerGroupRequest extends TeaModel {
     }
     public String getDeliveryOrderType() {
         return this.deliveryOrderType;
+    }
+
+    public CreateConsumerGroupRequest setExclusive(Boolean exclusive) {
+        this.exclusive = exclusive;
+        return this;
+    }
+    public Boolean getExclusive() {
+        return this.exclusive;
     }
 
     public CreateConsumerGroupRequest setMaxReceiveTps(Long maxReceiveTps) {

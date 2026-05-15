@@ -161,6 +161,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("deliveryOrderType", request.deliveryOrderType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.exclusive)) {
+            body.put("exclusive", request.exclusive);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxReceiveTps)) {
             body.put("maxReceiveTps", request.maxReceiveTps);
         }

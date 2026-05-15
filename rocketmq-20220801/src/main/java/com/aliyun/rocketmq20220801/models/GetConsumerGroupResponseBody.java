@@ -267,6 +267,9 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         @NameInMap("deliveryOrderType")
         public String deliveryOrderType;
 
+        @NameInMap("exclusive")
+        public Boolean exclusive;
+
         /**
          * <p>The ID of the instance.</p>
          * 
@@ -375,6 +378,14 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         }
         public String getDeliveryOrderType() {
             return this.deliveryOrderType;
+        }
+
+        public GetConsumerGroupResponseBodyData setExclusive(Boolean exclusive) {
+            this.exclusive = exclusive;
+            return this;
+        }
+        public Boolean getExclusive() {
+            return this.exclusive;
         }
 
         public GetConsumerGroupResponseBodyData setInstanceId(String instanceId) {
