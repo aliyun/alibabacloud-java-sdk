@@ -37,6 +37,13 @@ public class ExportRecallManagementTableRequest extends TeaModel {
     @NameInMap("Partitions")
     public java.util.Map<String, String> partitions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20250213000000</p>
+     */
+    @NameInMap("RecallManagementTableVersionId")
+    public String recallManagementTableVersionId;
+
     public static ExportRecallManagementTableRequest build(java.util.Map<String, ?> map) throws Exception {
         ExportRecallManagementTableRequest self = new ExportRecallManagementTableRequest();
         return TeaModel.build(map, self);
@@ -80,6 +87,14 @@ public class ExportRecallManagementTableRequest extends TeaModel {
     }
     public java.util.Map<String, String> getPartitions() {
         return this.partitions;
+    }
+
+    public ExportRecallManagementTableRequest setRecallManagementTableVersionId(String recallManagementTableVersionId) {
+        this.recallManagementTableVersionId = recallManagementTableVersionId;
+        return this;
+    }
+    public String getRecallManagementTableVersionId() {
+        return this.recallManagementTableVersionId;
     }
 
 }

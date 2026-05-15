@@ -4189,6 +4189,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Partitions", request.partitions);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.recallManagementTableVersionId)) {
+            body.put("RecallManagementTableVersionId", request.recallManagementTableVersionId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
