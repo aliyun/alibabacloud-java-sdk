@@ -88,6 +88,110 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
         return this.total;
     }
 
+    public static class DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfigRecordFormatListRecordFormat extends TeaModel {
+        @NameInMap("AutoCompose")
+        public String autoCompose;
+
+        @NameInMap("Format")
+        public String format;
+
+        @NameInMap("ProcessMethod")
+        public String processMethod;
+
+        @NameInMap("ProcessTemplateId")
+        public String processTemplateId;
+
+        @NameInMap("SliceDuration")
+        public Integer sliceDuration;
+
+        @NameInMap("Tags")
+        public String tags;
+
+        @NameInMap("VideoProcess")
+        public String videoProcess;
+
+        public static DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfigRecordFormatListRecordFormat build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfigRecordFormatListRecordFormat self = new DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfigRecordFormatListRecordFormat();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfigRecordFormatListRecordFormat setAutoCompose(String autoCompose) {
+            this.autoCompose = autoCompose;
+            return this;
+        }
+        public String getAutoCompose() {
+            return this.autoCompose;
+        }
+
+        public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfigRecordFormatListRecordFormat setFormat(String format) {
+            this.format = format;
+            return this;
+        }
+        public String getFormat() {
+            return this.format;
+        }
+
+        public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfigRecordFormatListRecordFormat setProcessMethod(String processMethod) {
+            this.processMethod = processMethod;
+            return this;
+        }
+        public String getProcessMethod() {
+            return this.processMethod;
+        }
+
+        public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfigRecordFormatListRecordFormat setProcessTemplateId(String processTemplateId) {
+            this.processTemplateId = processTemplateId;
+            return this;
+        }
+        public String getProcessTemplateId() {
+            return this.processTemplateId;
+        }
+
+        public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfigRecordFormatListRecordFormat setSliceDuration(Integer sliceDuration) {
+            this.sliceDuration = sliceDuration;
+            return this;
+        }
+        public Integer getSliceDuration() {
+            return this.sliceDuration;
+        }
+
+        public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfigRecordFormatListRecordFormat setTags(String tags) {
+            this.tags = tags;
+            return this;
+        }
+        public String getTags() {
+            return this.tags;
+        }
+
+        public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfigRecordFormatListRecordFormat setVideoProcess(String videoProcess) {
+            this.videoProcess = videoProcess;
+            return this;
+        }
+        public String getVideoProcess() {
+            return this.videoProcess;
+        }
+
+    }
+
+    public static class DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfigRecordFormatList extends TeaModel {
+        @NameInMap("RecordFormat")
+        public java.util.List<DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfigRecordFormatListRecordFormat> recordFormat;
+
+        public static DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfigRecordFormatList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfigRecordFormatList self = new DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfigRecordFormatList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfigRecordFormatList setRecordFormat(java.util.List<DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfigRecordFormatListRecordFormat> recordFormat) {
+            this.recordFormat = recordFormat;
+            return this;
+        }
+        public java.util.List<DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfigRecordFormatListRecordFormat> getRecordFormat() {
+            return this.recordFormat;
+        }
+
+    }
+
     public static class DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfig extends TeaModel {
         @NameInMap("AppName")
         public String appName;
@@ -104,17 +208,35 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
         @NameInMap("CycleDuration")
         public Integer cycleDuration;
 
+        @NameInMap("DelayTime")
+        public Integer delayTime;
+
         @NameInMap("DomainName")
         public String domainName;
 
+        @NameInMap("FormatConfig")
+        public Boolean formatConfig;
+
         @NameInMap("OnDemand")
         public Integer onDemand;
+
+        @NameInMap("RecordContent")
+        public String recordContent;
+
+        @NameInMap("RecordFormatList")
+        public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfigRecordFormatList recordFormatList;
+
+        @NameInMap("SpaceId")
+        public String spaceId;
 
         @NameInMap("StorageLocation")
         public String storageLocation;
 
         @NameInMap("StreamName")
         public String streamName;
+
+        @NameInMap("TranscodeTemplates")
+        public String transcodeTemplates;
 
         @NameInMap("VodTranscodeGroupId")
         public String vodTranscodeGroupId;
@@ -164,6 +286,14 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
             return this.cycleDuration;
         }
 
+        public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfig setDelayTime(Integer delayTime) {
+            this.delayTime = delayTime;
+            return this;
+        }
+        public Integer getDelayTime() {
+            return this.delayTime;
+        }
+
         public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfig setDomainName(String domainName) {
             this.domainName = domainName;
             return this;
@@ -172,12 +302,44 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
             return this.domainName;
         }
 
+        public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfig setFormatConfig(Boolean formatConfig) {
+            this.formatConfig = formatConfig;
+            return this;
+        }
+        public Boolean getFormatConfig() {
+            return this.formatConfig;
+        }
+
         public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfig setOnDemand(Integer onDemand) {
             this.onDemand = onDemand;
             return this;
         }
         public Integer getOnDemand() {
             return this.onDemand;
+        }
+
+        public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfig setRecordContent(String recordContent) {
+            this.recordContent = recordContent;
+            return this;
+        }
+        public String getRecordContent() {
+            return this.recordContent;
+        }
+
+        public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfig setRecordFormatList(DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfigRecordFormatList recordFormatList) {
+            this.recordFormatList = recordFormatList;
+            return this;
+        }
+        public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfigRecordFormatList getRecordFormatList() {
+            return this.recordFormatList;
+        }
+
+        public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfig setSpaceId(String spaceId) {
+            this.spaceId = spaceId;
+            return this;
+        }
+        public String getSpaceId() {
+            return this.spaceId;
         }
 
         public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfig setStorageLocation(String storageLocation) {
@@ -194,6 +356,14 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
         }
         public String getStreamName() {
             return this.streamName;
+        }
+
+        public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfig setTranscodeTemplates(String transcodeTemplates) {
+            this.transcodeTemplates = transcodeTemplates;
+            return this;
+        }
+        public String getTranscodeTemplates() {
+            return this.transcodeTemplates;
         }
 
         public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfig setVodTranscodeGroupId(String vodTranscodeGroupId) {

@@ -2288,8 +2288,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CycleDuration", request.cycleDuration);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.delayTime)) {
+            query.put("DelayTime", request.delayTime);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
             query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.formatConfig)) {
+            query.put("FormatConfig", request.formatConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.onDemand)) {
@@ -2300,8 +2308,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.recordContent)) {
+            query.put("RecordContent", request.recordContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordFormat)) {
+            query.put("RecordFormat", request.recordFormat);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.spaceId)) {
+            query.put("SpaceId", request.spaceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.storageLocation)) {
@@ -2310,6 +2330,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.streamName)) {
             query.put("StreamName", request.streamName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transcodeTemplates)) {
+            query.put("TranscodeTemplates", request.transcodeTemplates);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vodTranscodeGroupId)) {
@@ -31945,8 +31969,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CycleDuration", request.cycleDuration);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.delayTime)) {
+            query.put("DelayTime", request.delayTime);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
             query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.formatConfig)) {
+            query.put("FormatConfig", request.formatConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.onDemand)) {
@@ -31957,12 +31989,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.recordFormat)) {
+            query.put("RecordFormat", request.recordFormat);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.streamName)) {
             query.put("StreamName", request.streamName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transcodeTemplates)) {
+            query.put("TranscodeTemplates", request.transcodeTemplates);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vodTranscodeGroupId)) {

@@ -48,6 +48,9 @@ public class UpdateLiveRecordVodConfigRequest extends TeaModel {
     @NameInMap("CycleDuration")
     public Integer cycleDuration;
 
+    @NameInMap("DelayTime")
+    public Integer delayTime;
+
     /**
      * <p>The main streaming domain.</p>
      * <p>This parameter is required.</p>
@@ -57,6 +60,9 @@ public class UpdateLiveRecordVodConfigRequest extends TeaModel {
      */
     @NameInMap("DomainName")
     public String domainName;
+
+    @NameInMap("FormatConfig")
+    public Boolean formatConfig;
 
     /**
      * <p>Specifies whether to enable on-demand recording. Valid values:</p>
@@ -74,6 +80,9 @@ public class UpdateLiveRecordVodConfigRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RecordFormat")
+    public java.util.List<UpdateLiveRecordVodConfigRequestRecordFormat> recordFormat;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -86,9 +95,11 @@ public class UpdateLiveRecordVodConfigRequest extends TeaModel {
     @NameInMap("StreamName")
     public String streamName;
 
+    @NameInMap("TranscodeTemplates")
+    public java.util.List<String> transcodeTemplates;
+
     /**
      * <p>The ID of the transcoding template group in ApsaraVideo VOD.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>e2d796d3bb5fd8049d32bff62f94****</p>
@@ -133,12 +144,28 @@ public class UpdateLiveRecordVodConfigRequest extends TeaModel {
         return this.cycleDuration;
     }
 
+    public UpdateLiveRecordVodConfigRequest setDelayTime(Integer delayTime) {
+        this.delayTime = delayTime;
+        return this;
+    }
+    public Integer getDelayTime() {
+        return this.delayTime;
+    }
+
     public UpdateLiveRecordVodConfigRequest setDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     public String getDomainName() {
         return this.domainName;
+    }
+
+    public UpdateLiveRecordVodConfigRequest setFormatConfig(Boolean formatConfig) {
+        this.formatConfig = formatConfig;
+        return this;
+    }
+    public Boolean getFormatConfig() {
+        return this.formatConfig;
     }
 
     public UpdateLiveRecordVodConfigRequest setOnDemand(Integer onDemand) {
@@ -157,6 +184,14 @@ public class UpdateLiveRecordVodConfigRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public UpdateLiveRecordVodConfigRequest setRecordFormat(java.util.List<UpdateLiveRecordVodConfigRequestRecordFormat> recordFormat) {
+        this.recordFormat = recordFormat;
+        return this;
+    }
+    public java.util.List<UpdateLiveRecordVodConfigRequestRecordFormat> getRecordFormat() {
+        return this.recordFormat;
+    }
+
     public UpdateLiveRecordVodConfigRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -173,12 +208,105 @@ public class UpdateLiveRecordVodConfigRequest extends TeaModel {
         return this.streamName;
     }
 
+    public UpdateLiveRecordVodConfigRequest setTranscodeTemplates(java.util.List<String> transcodeTemplates) {
+        this.transcodeTemplates = transcodeTemplates;
+        return this;
+    }
+    public java.util.List<String> getTranscodeTemplates() {
+        return this.transcodeTemplates;
+    }
+
     public UpdateLiveRecordVodConfigRequest setVodTranscodeGroupId(String vodTranscodeGroupId) {
         this.vodTranscodeGroupId = vodTranscodeGroupId;
         return this;
     }
     public String getVodTranscodeGroupId() {
         return this.vodTranscodeGroupId;
+    }
+
+    public static class UpdateLiveRecordVodConfigRequestRecordFormat extends TeaModel {
+        @NameInMap("AutoCompose")
+        public String autoCompose;
+
+        @NameInMap("Format")
+        public String format;
+
+        @NameInMap("ProcessMethod")
+        public String processMethod;
+
+        @NameInMap("ProcessTemplateId")
+        public String processTemplateId;
+
+        @NameInMap("SliceDuration")
+        public Integer sliceDuration;
+
+        @NameInMap("Tags")
+        public String tags;
+
+        @NameInMap("VideoProcess")
+        public String videoProcess;
+
+        public static UpdateLiveRecordVodConfigRequestRecordFormat build(java.util.Map<String, ?> map) throws Exception {
+            UpdateLiveRecordVodConfigRequestRecordFormat self = new UpdateLiveRecordVodConfigRequestRecordFormat();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateLiveRecordVodConfigRequestRecordFormat setAutoCompose(String autoCompose) {
+            this.autoCompose = autoCompose;
+            return this;
+        }
+        public String getAutoCompose() {
+            return this.autoCompose;
+        }
+
+        public UpdateLiveRecordVodConfigRequestRecordFormat setFormat(String format) {
+            this.format = format;
+            return this;
+        }
+        public String getFormat() {
+            return this.format;
+        }
+
+        public UpdateLiveRecordVodConfigRequestRecordFormat setProcessMethod(String processMethod) {
+            this.processMethod = processMethod;
+            return this;
+        }
+        public String getProcessMethod() {
+            return this.processMethod;
+        }
+
+        public UpdateLiveRecordVodConfigRequestRecordFormat setProcessTemplateId(String processTemplateId) {
+            this.processTemplateId = processTemplateId;
+            return this;
+        }
+        public String getProcessTemplateId() {
+            return this.processTemplateId;
+        }
+
+        public UpdateLiveRecordVodConfigRequestRecordFormat setSliceDuration(Integer sliceDuration) {
+            this.sliceDuration = sliceDuration;
+            return this;
+        }
+        public Integer getSliceDuration() {
+            return this.sliceDuration;
+        }
+
+        public UpdateLiveRecordVodConfigRequestRecordFormat setTags(String tags) {
+            this.tags = tags;
+            return this;
+        }
+        public String getTags() {
+            return this.tags;
+        }
+
+        public UpdateLiveRecordVodConfigRequestRecordFormat setVideoProcess(String videoProcess) {
+            this.videoProcess = videoProcess;
+            return this;
+        }
+        public String getVideoProcess() {
+            return this.videoProcess;
+        }
+
     }
 
 }
