@@ -15852,6 +15852,242 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>按会议 conferenceId 聚合查询实时听记</p>
+     * 
+     * @param tmpReq MeetingFlashMinutesRequest
+     * @param tmpHeader MeetingFlashMinutesHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return MeetingFlashMinutesResponse
+     */
+    public MeetingFlashMinutesResponse meetingFlashMinutesWithOptions(MeetingFlashMinutesRequest tmpReq, MeetingFlashMinutesHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        MeetingFlashMinutesShrinkRequest request = new MeetingFlashMinutesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        MeetingFlashMinutesShrinkHeaders headers = new MeetingFlashMinutesShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantContext)) {
+            request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
+            body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.conferenceId)) {
+            body.put("conferenceId", request.conferenceId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "MeetingFlashMinutes"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dingtalk/v1/minutes/meetingFlashMinutes"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new MeetingFlashMinutesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>按会议 conferenceId 聚合查询实时听记</p>
+     * 
+     * @param request MeetingFlashMinutesRequest
+     * @return MeetingFlashMinutesResponse
+     */
+    public MeetingFlashMinutesResponse meetingFlashMinutes(MeetingFlashMinutesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        MeetingFlashMinutesHeaders headers = new MeetingFlashMinutesHeaders();
+        return this.meetingFlashMinutesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>全员静音或全员取消静音</p>
+     * 
+     * @param tmpReq MuteAllRequest
+     * @param tmpHeader MuteAllHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return MuteAllResponse
+     */
+    public MuteAllResponse muteAllWithOptions(MuteAllRequest tmpReq, MuteAllHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        MuteAllShrinkRequest request = new MuteAllShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        MuteAllShrinkHeaders headers = new MuteAllShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantContext)) {
+            request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.forceMute)) {
+            body.put("ForceMute", request.forceMute);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
+            body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.conferenceId)) {
+            body.put("conferenceId", request.conferenceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.muteAction)) {
+            body.put("muteAction", request.muteAction);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "MuteAll"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dingtalk/v1/ysp/muteAll"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new MuteAllResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>全员静音或全员取消静音</p>
+     * 
+     * @param request MuteAllRequest
+     * @return MuteAllResponse
+     */
+    public MuteAllResponse muteAll(MuteAllRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        MuteAllHeaders headers = new MuteAllHeaders();
+        return this.muteAllWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>指定人员静音或取消静音</p>
+     * 
+     * @param tmpReq MuteMembersRequest
+     * @param tmpHeader MuteMembersHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return MuteMembersResponse
+     */
+    public MuteMembersResponse muteMembersWithOptions(MuteMembersRequest tmpReq, MuteMembersHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        MuteMembersShrinkRequest request = new MuteMembersShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        MuteMembersShrinkHeaders headers = new MuteMembersShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantContext)) {
+            request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userIds)) {
+            request.userIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userIds, "UserIds", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
+            body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userIdsShrink)) {
+            body.put("UserIds", request.userIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.conferenceId)) {
+            body.put("conferenceId", request.conferenceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.muteAction)) {
+            body.put("muteAction", request.muteAction);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "MuteMembers"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dingtalk/v1/ysp/muteMembers"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new MuteMembersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>指定人员静音或取消静音</p>
+     * 
+     * @param request MuteMembersRequest
+     * @return MuteMembersResponse
+     */
+    public MuteMembersResponse muteMembers(MuteMembersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        MuteMembersHeaders headers = new MuteMembersHeaders();
+        return this.muteMembersWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>修改日程</p>
      * 
      * @param tmpReq PatchEventRequest

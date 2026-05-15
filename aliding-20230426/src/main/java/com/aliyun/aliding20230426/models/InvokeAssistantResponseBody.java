@@ -80,6 +80,99 @@ public class InvokeAssistantResponseBody extends TeaModel {
         return this.streamEnd;
     }
 
+    public static class InvokeAssistantResponseBodyMessagesContentAguiContentAguiEventList extends TeaModel {
+        @NameInMap("activityType")
+        public String activityType;
+
+        @NameInMap("content")
+        public Object content;
+
+        @NameInMap("messageId")
+        public String messageId;
+
+        @NameInMap("replace")
+        public Boolean replace;
+
+        @NameInMap("timestamp")
+        public Long timestamp;
+
+        @NameInMap("type")
+        public String type;
+
+        public static InvokeAssistantResponseBodyMessagesContentAguiContentAguiEventList build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantResponseBodyMessagesContentAguiContentAguiEventList self = new InvokeAssistantResponseBodyMessagesContentAguiContentAguiEventList();
+            return TeaModel.build(map, self);
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentAguiContentAguiEventList setActivityType(String activityType) {
+            this.activityType = activityType;
+            return this;
+        }
+        public String getActivityType() {
+            return this.activityType;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentAguiContentAguiEventList setContent(Object content) {
+            this.content = content;
+            return this;
+        }
+        public Object getContent() {
+            return this.content;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentAguiContentAguiEventList setMessageId(String messageId) {
+            this.messageId = messageId;
+            return this;
+        }
+        public String getMessageId() {
+            return this.messageId;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentAguiContentAguiEventList setReplace(Boolean replace) {
+            this.replace = replace;
+            return this;
+        }
+        public Boolean getReplace() {
+            return this.replace;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentAguiContentAguiEventList setTimestamp(Long timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+        public Long getTimestamp() {
+            return this.timestamp;
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentAguiContentAguiEventList setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class InvokeAssistantResponseBodyMessagesContentAguiContent extends TeaModel {
+        @NameInMap("aguiEventList")
+        public java.util.List<InvokeAssistantResponseBodyMessagesContentAguiContentAguiEventList> aguiEventList;
+
+        public static InvokeAssistantResponseBodyMessagesContentAguiContent build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantResponseBodyMessagesContentAguiContent self = new InvokeAssistantResponseBodyMessagesContentAguiContent();
+            return TeaModel.build(map, self);
+        }
+
+        public InvokeAssistantResponseBodyMessagesContentAguiContent setAguiEventList(java.util.List<InvokeAssistantResponseBodyMessagesContentAguiContentAguiEventList> aguiEventList) {
+            this.aguiEventList = aguiEventList;
+            return this;
+        }
+        public java.util.List<InvokeAssistantResponseBodyMessagesContentAguiContentAguiEventList> getAguiEventList() {
+            return this.aguiEventList;
+        }
+
+    }
+
     public static class InvokeAssistantResponseBodyMessagesContentCardCallback extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -908,6 +1001,9 @@ public class InvokeAssistantResponseBody extends TeaModel {
     }
 
     public static class InvokeAssistantResponseBodyMessagesContent extends TeaModel {
+        @NameInMap("aguiContent")
+        public InvokeAssistantResponseBodyMessagesContentAguiContent aguiContent;
+
         @NameInMap("cardCallback")
         public InvokeAssistantResponseBodyMessagesContentCardCallback cardCallback;
 
@@ -942,6 +1038,14 @@ public class InvokeAssistantResponseBody extends TeaModel {
         public static InvokeAssistantResponseBodyMessagesContent build(java.util.Map<String, ?> map) throws Exception {
             InvokeAssistantResponseBodyMessagesContent self = new InvokeAssistantResponseBodyMessagesContent();
             return TeaModel.build(map, self);
+        }
+
+        public InvokeAssistantResponseBodyMessagesContent setAguiContent(InvokeAssistantResponseBodyMessagesContentAguiContent aguiContent) {
+            this.aguiContent = aguiContent;
+            return this;
+        }
+        public InvokeAssistantResponseBodyMessagesContentAguiContent getAguiContent() {
+            return this.aguiContent;
         }
 
         public InvokeAssistantResponseBodyMessagesContent setCardCallback(InvokeAssistantResponseBodyMessagesContentCardCallback cardCallback) {
