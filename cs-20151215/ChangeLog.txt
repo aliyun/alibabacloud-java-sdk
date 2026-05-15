@@ -1,3 +1,8 @@
+2026-05-15 Version: 6.6.4
+- Update API DescribeClusterNodePoolDetail: add response parameters Body.eflo_node_group.
+- Update API DescribeClusterNodePools: add response parameters Body.nodepools.$.eflo_node_group.
+
+
 2026-05-14 Version: 6.6.3
 - Update API ModifyCluster: add request parameters body.cluster_spec.
 

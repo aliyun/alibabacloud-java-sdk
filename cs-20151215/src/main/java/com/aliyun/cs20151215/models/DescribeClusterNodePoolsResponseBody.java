@@ -189,6 +189,44 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeClusterNodePoolsResponseBodyNodepoolsEfloNodeGroup extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>i113790071760688002461</p>
+         */
+        @NameInMap("cluster_id")
+        public String clusterId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>i128147721760688002463</p>
+         */
+        @NameInMap("group_id")
+        public String groupId;
+
+        public static DescribeClusterNodePoolsResponseBodyNodepoolsEfloNodeGroup build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterNodePoolsResponseBodyNodepoolsEfloNodeGroup self = new DescribeClusterNodePoolsResponseBodyNodepoolsEfloNodeGroup();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsEfloNodeGroup setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsEfloNodeGroup setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+    }
+
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsInterconnectConfig extends TeaModel {
         /**
          * <p>This parameter is discontinued.</p>
@@ -2384,6 +2422,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("auto_scaling")
         public DescribeClusterNodePoolsResponseBodyNodepoolsAutoScaling autoScaling;
 
+        @NameInMap("eflo_node_group")
+        public DescribeClusterNodePoolsResponseBodyNodepoolsEfloNodeGroup efloNodeGroup;
+
         /**
          * <p>This parameter is discontinued.</p>
          * <p>The network configurations of the edge node pool. This parameter takes effect only on edge node pools.</p>
@@ -2477,6 +2518,14 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         }
         public DescribeClusterNodePoolsResponseBodyNodepoolsAutoScaling getAutoScaling() {
             return this.autoScaling;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepools setEfloNodeGroup(DescribeClusterNodePoolsResponseBodyNodepoolsEfloNodeGroup efloNodeGroup) {
+            this.efloNodeGroup = efloNodeGroup;
+            return this;
+        }
+        public DescribeClusterNodePoolsResponseBodyNodepoolsEfloNodeGroup getEfloNodeGroup() {
+            return this.efloNodeGroup;
         }
 
         public DescribeClusterNodePoolsResponseBodyNodepools setInterconnectConfig(DescribeClusterNodePoolsResponseBodyNodepoolsInterconnectConfig interconnectConfig) {

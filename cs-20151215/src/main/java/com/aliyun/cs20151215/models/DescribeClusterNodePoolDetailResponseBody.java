@@ -13,6 +13,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     @NameInMap("auto_scaling")
     public DescribeClusterNodePoolDetailResponseBodyAutoScaling autoScaling;
 
+    @NameInMap("eflo_node_group")
+    public DescribeClusterNodePoolDetailResponseBodyEfloNodeGroup efloNodeGroup;
+
     /**
      * <p>Indicates whether the pods in the edge node pool can use the host network.</p>
      * <p><code>true</code>: sets to host network.</p>
@@ -126,6 +129,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     }
     public DescribeClusterNodePoolDetailResponseBodyAutoScaling getAutoScaling() {
         return this.autoScaling;
+    }
+
+    public DescribeClusterNodePoolDetailResponseBody setEfloNodeGroup(DescribeClusterNodePoolDetailResponseBodyEfloNodeGroup efloNodeGroup) {
+        this.efloNodeGroup = efloNodeGroup;
+        return this;
+    }
+    public DescribeClusterNodePoolDetailResponseBodyEfloNodeGroup getEfloNodeGroup() {
+        return this.efloNodeGroup;
     }
 
     public DescribeClusterNodePoolDetailResponseBody setHostNetwork(Boolean hostNetwork) {
@@ -396,6 +407,44 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+    }
+
+    public static class DescribeClusterNodePoolDetailResponseBodyEfloNodeGroup extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>i113790071760688002461</p>
+         */
+        @NameInMap("cluster_id")
+        public String clusterId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>i128147721760688002463</p>
+         */
+        @NameInMap("group_id")
+        public String groupId;
+
+        public static DescribeClusterNodePoolDetailResponseBodyEfloNodeGroup build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterNodePoolDetailResponseBodyEfloNodeGroup self = new DescribeClusterNodePoolDetailResponseBodyEfloNodeGroup();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyEfloNodeGroup setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyEfloNodeGroup setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
         }
 
     }
