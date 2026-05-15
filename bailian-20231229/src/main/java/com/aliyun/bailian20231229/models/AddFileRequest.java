@@ -57,6 +57,9 @@ public class AddFileRequest extends TeaModel {
     @NameInMap("Parser")
     public String parser;
 
+    @NameInMap("ParserConfig")
+    public AddFileRequestParserConfig parserConfig;
+
     /**
      * <p>A list of tags associated with the document. The default value is null, which means no tags. You can specify up to 10 tags.</p>
      */
@@ -108,12 +111,58 @@ public class AddFileRequest extends TeaModel {
         return this.parser;
     }
 
+    public AddFileRequest setParserConfig(AddFileRequestParserConfig parserConfig) {
+        this.parserConfig = parserConfig;
+        return this;
+    }
+    public AddFileRequestParserConfig getParserConfig() {
+        return this.parserConfig;
+    }
+
     public AddFileRequest setTags(java.util.List<String> tags) {
         this.tags = tags;
         return this;
     }
     public java.util.List<String> getTags() {
         return this.tags;
+    }
+
+    public static class AddFileRequestParserConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>qwen-vl-max</p>
+         */
+        @NameInMap("ModelName")
+        public String modelName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>#角色 你是一个专业的图片内容标注人员，擅长识别并描述出图片中的内容。 # 任务目标 请结合输入图片，详细描述图片中的内容。</p>
+         */
+        @NameInMap("ModelPrompt")
+        public String modelPrompt;
+
+        public static AddFileRequestParserConfig build(java.util.Map<String, ?> map) throws Exception {
+            AddFileRequestParserConfig self = new AddFileRequestParserConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public AddFileRequestParserConfig setModelName(String modelName) {
+            this.modelName = modelName;
+            return this;
+        }
+        public String getModelName() {
+            return this.modelName;
+        }
+
+        public AddFileRequestParserConfig setModelPrompt(String modelPrompt) {
+            this.modelPrompt = modelPrompt;
+            return this;
+        }
+        public String getModelPrompt() {
+            return this.modelPrompt;
+        }
+
     }
 
 }

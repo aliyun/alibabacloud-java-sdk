@@ -57,6 +57,9 @@ public class AddFileShrinkRequest extends TeaModel {
     @NameInMap("Parser")
     public String parser;
 
+    @NameInMap("ParserConfig")
+    public String parserConfigShrink;
+
     /**
      * <p>A list of tags associated with the document. The default value is null, which means no tags. You can specify up to 10 tags.</p>
      */
@@ -106,6 +109,14 @@ public class AddFileShrinkRequest extends TeaModel {
     }
     public String getParser() {
         return this.parser;
+    }
+
+    public AddFileShrinkRequest setParserConfigShrink(String parserConfigShrink) {
+        this.parserConfigShrink = parserConfigShrink;
+        return this;
+    }
+    public String getParserConfigShrink() {
+        return this.parserConfigShrink;
     }
 
     public AddFileShrinkRequest setTagsShrink(String tagsShrink) {
