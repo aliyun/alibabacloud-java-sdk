@@ -498,6 +498,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>POST /2025-09-10/agents/im-bots；成功 HTTP 201；请求体无 status（创建后恒为 running）；Body 标准包装，data 为 IMBotInfo</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建 IM Bot</p>
+     * 
+     * @param request CreateIMBotRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateIMBotResponse
+     */
+    public CreateIMBotResponse createIMBotWithOptions(CreateIMBotRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateIMBot"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/agents/im-bots"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateIMBotResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>POST /2025-09-10/agents/im-bots；成功 HTTP 201；请求体无 status（创建后恒为 running）；Body 标准包装，data 为 IMBotInfo</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建 IM Bot</p>
+     * 
+     * @param request CreateIMBotRequest
+     * @return CreateIMBotResponse
+     */
+    public CreateIMBotResponse createIMBot(CreateIMBotRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createIMBotWithOptions(request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>创建知识库</p>
      * 
@@ -1236,6 +1284,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteFlowVersionWithOptions(flowName, flowVersion, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>DELETE /2025-09-10/agents/im-bots/{imBotId}；成功为 HTTP 204 No Content，无 JSON 响应体</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除 IM Bot</p>
+     * 
+     * @param request DeleteIMBotRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteIMBotResponse
+     */
+    public DeleteIMBotResponse deleteIMBotWithOptions(String imBotId, DeleteIMBotRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteIMBot"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/agents/im-bots/" + com.aliyun.openapiutil.Client.getEncodeParam(imBotId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteIMBotResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>DELETE /2025-09-10/agents/im-bots/{imBotId}；成功为 HTTP 204 No Content，无 JSON 响应体</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除 IM Bot</p>
+     * 
+     * @param request DeleteIMBotRequest
+     * @return DeleteIMBotResponse
+     */
+    public DeleteIMBotResponse deleteIMBot(String imBotId, DeleteIMBotRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteIMBotWithOptions(imBotId, request, headers, runtime);
     }
 
     /**
@@ -2043,6 +2138,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getFlowVersionWithOptions(flowName, flowVersion, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>GET /2025-09-10/agents/im-bots/{imBotId}；200 OK，Body 标准包装，data 为 IMBotInfo</p>
+     * 
+     * <b>summary</b> : 
+     * <p>获取 IM Bot</p>
+     * 
+     * @param request GetIMBotRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetIMBotResponse
+     */
+    public GetIMBotResponse getIMBotWithOptions(String imBotId, GetIMBotRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetIMBot"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/agents/im-bots/" + com.aliyun.openapiutil.Client.getEncodeParam(imBotId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetIMBotResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>GET /2025-09-10/agents/im-bots/{imBotId}；200 OK，Body 标准包装，data 为 IMBotInfo</p>
+     * 
+     * <b>summary</b> : 
+     * <p>获取 IM Bot</p>
+     * 
+     * @param request GetIMBotRequest
+     * @return GetIMBotResponse
+     */
+    public GetIMBotResponse getIMBot(String imBotId, GetIMBotRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getIMBotWithOptions(imBotId, request, headers, runtime);
     }
 
     /**
@@ -3060,6 +3202,79 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listFlowsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>GET /2025-09-10/agents/im-bots；200 OK；data 含 items、pageNumber、pageSize、total；pageNumber 默认 1、pageSize 默认 20、上限 100；可按 botName（子串忽略大小写）、agentRuntimeId、botBizType、status 筛选</p>
+     * 
+     * <b>summary</b> : 
+     * <p>分页列举 IM Bots</p>
+     * 
+     * @param request ListIMBotsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListIMBotsResponse
+     */
+    public ListIMBotsResponse listIMBotsWithOptions(ListIMBotsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentRuntimeId)) {
+            query.put("agentRuntimeId", request.agentRuntimeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.botBizType)) {
+            query.put("botBizType", request.botBizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.botName)) {
+            query.put("botName", request.botName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListIMBots"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/agents/im-bots"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListIMBotsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>GET /2025-09-10/agents/im-bots；200 OK；data 含 items、pageNumber、pageSize、total；pageNumber 默认 1、pageSize 默认 20、上限 100；可按 botName（子串忽略大小写）、agentRuntimeId、botBizType、status 筛选</p>
+     * 
+     * <b>summary</b> : 
+     * <p>分页列举 IM Bots</p>
+     * 
+     * @param request ListIMBotsRequest
+     * @return ListIMBotsResponse
+     */
+    public ListIMBotsResponse listIMBots(ListIMBotsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listIMBotsWithOptions(request, headers, runtime);
     }
 
     /**
@@ -4257,6 +4472,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateFlowEndpointWithOptions(flowName, flowEndpointName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>PUT /2025-09-10/agents/im-bots/{imBotId}；成功建议 HTTP 202，Body 标准包装，data 为更新后 IMBotInfo</p>
+     * 
+     * <b>summary</b> : 
+     * <p>更新 IM Bot</p>
+     * 
+     * @param request UpdateIMBotRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateIMBotResponse
+     */
+    public UpdateIMBotResponse updateIMBotWithOptions(String imBotId, UpdateIMBotRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateIMBot"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/agents/im-bots/" + com.aliyun.openapiutil.Client.getEncodeParam(imBotId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateIMBotResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>PUT /2025-09-10/agents/im-bots/{imBotId}；成功建议 HTTP 202，Body 标准包装，data 为更新后 IMBotInfo</p>
+     * 
+     * <b>summary</b> : 
+     * <p>更新 IM Bot</p>
+     * 
+     * @param request UpdateIMBotRequest
+     * @return UpdateIMBotResponse
+     */
+    public UpdateIMBotResponse updateIMBot(String imBotId, UpdateIMBotRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateIMBotWithOptions(imBotId, request, headers, runtime);
     }
 
     /**

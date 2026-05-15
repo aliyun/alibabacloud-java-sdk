@@ -71,7 +71,6 @@ public class Template extends TeaModel {
     public String sandboxIdleTimeoutInSeconds;
 
     @NameInMap("sandboxTTLInSeconds")
-    @Deprecated
     public String sandboxTTLInSeconds;
 
     @NameInMap("scalingStatus")
@@ -275,7 +274,6 @@ public class Template extends TeaModel {
         return this.sandboxIdleTimeoutInSeconds;
     }
 
-    @Deprecated
     public Template setSandboxTTLInSeconds(String sandboxTTLInSeconds) {
         this.sandboxTTLInSeconds = sandboxTTLInSeconds;
         return this;

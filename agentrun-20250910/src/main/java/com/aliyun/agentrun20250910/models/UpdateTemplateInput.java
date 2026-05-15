@@ -96,7 +96,6 @@ public class UpdateTemplateInput extends TeaModel {
      * <p>86400</p>
      */
     @NameInMap("sandboxTTLInSeconds")
-    @Deprecated
     public Integer sandboxTTLInSeconds;
 
     @NameInMap("scalingConfig")
@@ -240,7 +239,6 @@ public class UpdateTemplateInput extends TeaModel {
         return this.sandboxIdleTimeoutInSeconds;
     }
 
-    @Deprecated
     public UpdateTemplateInput setSandboxTTLInSeconds(Integer sandboxTTLInSeconds) {
         this.sandboxTTLInSeconds = sandboxTTLInSeconds;
         return this;
