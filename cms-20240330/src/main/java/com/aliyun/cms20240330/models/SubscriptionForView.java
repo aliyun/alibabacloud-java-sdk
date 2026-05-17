@@ -4,6 +4,9 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class SubscriptionForView extends TeaModel {
+    @NameInMap("agentConfig")
+    public SubscriptionForViewAgentConfig agentConfig;
+
     /**
      * <p>Create Time.</p>
      * 
@@ -71,6 +74,13 @@ public class SubscriptionForView extends TeaModel {
     @NameInMap("subscriptionName")
     public String subscriptionName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
+     */
+    @NameInMap("subscriptionType")
+    public String subscriptionType;
+
     @NameInMap("syncFromType")
     public String syncFromType;
 
@@ -107,6 +117,14 @@ public class SubscriptionForView extends TeaModel {
     public static SubscriptionForView build(java.util.Map<String, ?> map) throws Exception {
         SubscriptionForView self = new SubscriptionForView();
         return TeaModel.build(map, self);
+    }
+
+    public SubscriptionForView setAgentConfig(SubscriptionForViewAgentConfig agentConfig) {
+        this.agentConfig = agentConfig;
+        return this;
+    }
+    public SubscriptionForViewAgentConfig getAgentConfig() {
+        return this.agentConfig;
     }
 
     public SubscriptionForView setCreateTime(String createTime) {
@@ -173,6 +191,14 @@ public class SubscriptionForView extends TeaModel {
         return this.subscriptionName;
     }
 
+    public SubscriptionForView setSubscriptionType(String subscriptionType) {
+        this.subscriptionType = subscriptionType;
+        return this;
+    }
+    public String getSubscriptionType() {
+        return this.subscriptionType;
+    }
+
     public SubscriptionForView setSyncFromType(String syncFromType) {
         this.syncFromType = syncFromType;
         return this;
@@ -211,6 +237,36 @@ public class SubscriptionForView extends TeaModel {
     }
     public WorkspaceFilterSetting getWorkspaceFilterSetting() {
         return this.workspaceFilterSetting;
+    }
+
+    public static class SubscriptionForViewAgentConfig extends TeaModel {
+        @NameInMap("agentUuid")
+        public String agentUuid;
+
+        @NameInMap("routes")
+        public java.util.List<NotifyRouteForSubscription> routes;
+
+        public static SubscriptionForViewAgentConfig build(java.util.Map<String, ?> map) throws Exception {
+            SubscriptionForViewAgentConfig self = new SubscriptionForViewAgentConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public SubscriptionForViewAgentConfig setAgentUuid(String agentUuid) {
+            this.agentUuid = agentUuid;
+            return this;
+        }
+        public String getAgentUuid() {
+            return this.agentUuid;
+        }
+
+        public SubscriptionForViewAgentConfig setRoutes(java.util.List<NotifyRouteForSubscription> routes) {
+            this.routes = routes;
+            return this;
+        }
+        public java.util.List<NotifyRouteForSubscription> getRoutes() {
+            return this.routes;
+        }
+
     }
 
     public static class SubscriptionForViewPushingSetting extends TeaModel {

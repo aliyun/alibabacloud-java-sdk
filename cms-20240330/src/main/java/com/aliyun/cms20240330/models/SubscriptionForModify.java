@@ -4,6 +4,9 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class SubscriptionForModify extends TeaModel {
+    @NameInMap("agentConfig")
+    public SubscriptionForModifyAgentConfig agentConfig;
+
     /**
      * <p>Description.</p>
      * 
@@ -52,6 +55,14 @@ public class SubscriptionForModify extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SubscriptionForModify setAgentConfig(SubscriptionForModifyAgentConfig agentConfig) {
+        this.agentConfig = agentConfig;
+        return this;
+    }
+    public SubscriptionForModifyAgentConfig getAgentConfig() {
+        return this.agentConfig;
+    }
+
     public SubscriptionForModify setDescription(String description) {
         this.description = description;
         return this;
@@ -98,6 +109,36 @@ public class SubscriptionForModify extends TeaModel {
     }
     public WorkspaceFilterSetting getWorkspaceFilterSetting() {
         return this.workspaceFilterSetting;
+    }
+
+    public static class SubscriptionForModifyAgentConfig extends TeaModel {
+        @NameInMap("agentUuid")
+        public String agentUuid;
+
+        @NameInMap("routes")
+        public java.util.List<NotifyRouteForSubscription> routes;
+
+        public static SubscriptionForModifyAgentConfig build(java.util.Map<String, ?> map) throws Exception {
+            SubscriptionForModifyAgentConfig self = new SubscriptionForModifyAgentConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public SubscriptionForModifyAgentConfig setAgentUuid(String agentUuid) {
+            this.agentUuid = agentUuid;
+            return this;
+        }
+        public String getAgentUuid() {
+            return this.agentUuid;
+        }
+
+        public SubscriptionForModifyAgentConfig setRoutes(java.util.List<NotifyRouteForSubscription> routes) {
+            this.routes = routes;
+            return this;
+        }
+        public java.util.List<NotifyRouteForSubscription> getRoutes() {
+            return this.routes;
+        }
+
     }
 
     public static class SubscriptionForModifyPushingSetting extends TeaModel {
