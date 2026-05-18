@@ -68,6 +68,9 @@ public class CreateBroadcastVideoFromTemplateRequest extends TeaModel {
         @NameInMap("languageHints")
         public java.util.List<String> languageHints;
 
+        @NameInMap("mode")
+        public String mode;
+
         /**
          * <strong>example:</strong>
          * <p>720p</p>
@@ -101,6 +104,14 @@ public class CreateBroadcastVideoFromTemplateRequest extends TeaModel {
         }
         public java.util.List<String> getLanguageHints() {
             return this.languageHints;
+        }
+
+        public CreateBroadcastVideoFromTemplateRequestVideoOptions setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
         }
 
         public CreateBroadcastVideoFromTemplateRequestVideoOptions setResolution(String resolution) {
