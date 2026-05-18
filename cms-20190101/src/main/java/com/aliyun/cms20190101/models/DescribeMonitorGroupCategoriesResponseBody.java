@@ -99,24 +99,9 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
     }
 
     public static class DescribeMonitorGroupCategoriesResponseBodyMonitorGroupCategoriesMonitorGroupCategoryCategoryItem extends TeaModel {
-        /**
-         * <p>The abbreviation of the cloud service name.</p>
-         * <blockquote>
-         * <p> For more information about how to obtain the abbreviation of a cloud service name, see <code>metricCategory</code> in the response parameter <code>Labels</code> of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>ECS</p>
-         */
         @NameInMap("Category")
         public String category;
 
-        /**
-         * <p>The number of resources that belong to the cloud service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Count")
         public Integer count;
 
@@ -172,9 +157,6 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
         @NameInMap("GroupId")
         public Long groupId;
 
-        /**
-         * <p>The cloud services to which the resources in the application group belong and the number of resources that belong to the cloud service.</p>
-         */
         @NameInMap("MonitorGroupCategory")
         public DescribeMonitorGroupCategoriesResponseBodyMonitorGroupCategoriesMonitorGroupCategory monitorGroupCategory;
 

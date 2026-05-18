@@ -16,9 +16,6 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The alert contacts that receive alert notifications.</p>
-     */
     @NameInMap("Contacts")
     public DescribeContactListByContactGroupResponseBodyContacts contacts;
 
@@ -99,45 +96,15 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeContactListByContactGroupResponseBodyContactsContactChannels extends TeaModel {
-        /**
-         * <p>The TradeManager ID of the alert contact.</p>
-         * <blockquote>
-         * <p> This parameter can be returned only on the China site (aliyun.com).</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>Alice</p>
-         */
         @NameInMap("AliIM")
         public String aliIM;
 
-        /**
-         * <p>The webhook URL of the DingTalk chatbot.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=9bf44f8189597d07dfdd7a123455ffc112">https://oapi.dingtalk.com/robot/send?access_token=9bf44f8189597d07dfdd7a123455ffc112</a>****</p>
-         */
         @NameInMap("DingWebHook")
         public String dingWebHook;
 
-        /**
-         * <p>The email address of the alert contact.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:alice@example.com">alice@example.com</a></p>
-         */
         @NameInMap("Mail")
         public String mail;
 
-        /**
-         * <p>The mobile number of the alert contact.</p>
-         * <blockquote>
-         * <p> This parameter can be returned only on the China site (aliyun.com).</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>1333333****</p>
-         */
         @NameInMap("SMS")
         public String SMS;
 
@@ -181,47 +148,18 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeContactListByContactGroupResponseBodyContactsContact extends TeaModel {
-        /**
-         * <p>The alert notification methods.</p>
-         */
         @NameInMap("Channels")
         public DescribeContactListByContactGroupResponseBodyContactsContactChannels channels;
 
-        /**
-         * <p>The time when the alert contact was created.</p>
-         * <p>Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1552314252000</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        /**
-         * <p>The description of the alert contact.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ECS</p>
-         */
         @NameInMap("Desc")
         public String desc;
 
-        /**
-         * <p>The name of the alert contact.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Alice</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The time when the alert contact was modified.</p>
-         * <p>Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1552314252000</p>
-         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 

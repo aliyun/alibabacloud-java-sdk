@@ -4989,6 +4989,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries blacklist policies.</p>
+     * 
      * @param request DescribeMetricRuleBlackListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeMetricRuleBlackListResponse
@@ -5054,6 +5057,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries blacklist policies.</p>
+     * 
      * @param request DescribeMetricRuleBlackListRequest
      * @return DescribeMetricRuleBlackListResponse
      */
@@ -6074,7 +6080,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>查询指定资源的进程数列表</p>
+     * <p>Invokes the DescribeMonitoringAgentProcesses interface to query the process list of a specified resource.</p>
      * 
      * @param request DescribeMonitoringAgentProcessesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6112,7 +6118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>查询指定资源的进程数列表</p>
+     * <p>Invokes the DescribeMonitoringAgentProcesses interface to query the process list of a specified resource.</p>
      * 
      * @param request DescribeMonitoringAgentProcessesRequest
      * @return DescribeMonitoringAgentProcessesResponse
@@ -6825,7 +6831,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询拨测探测节点列表</p>
+     * <p>Queries detection points.</p>
      * 
      * @param request DescribeSyntheticProbeListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6885,7 +6891,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询拨测探测节点列表</p>
+     * <p>Queries detection points.</p>
      * 
      * @param request DescribeSyntheticProbeListRequest
      * @return DescribeSyntheticProbeListResponse
@@ -9789,6 +9795,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
             query.put("RuleName", request.ruleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sendOK)) {
+            query.put("SendOK", request.sendOK);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.silenceTime)) {

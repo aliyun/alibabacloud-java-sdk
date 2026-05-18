@@ -16,9 +16,6 @@ public class DescribeContactListResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The alert contacts.</p>
-     */
     @NameInMap("Contacts")
     public DescribeContactListResponseBodyContacts contacts;
 
@@ -116,39 +113,15 @@ public class DescribeContactListResponseBody extends TeaModel {
     }
 
     public static class DescribeContactListResponseBodyContactsContactChannels extends TeaModel {
-        /**
-         * <p>The TradeManager ID of the alert contact.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Alice</p>
-         */
         @NameInMap("AliIM")
         public String aliIM;
 
-        /**
-         * <p>The webhook URL of the DingTalk chatbot.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=9bf44f8189597d07dfdd7a123455ffc112">https://oapi.dingtalk.com/robot/send?access_token=9bf44f8189597d07dfdd7a123455ffc112</a>****</p>
-         */
         @NameInMap("DingWebHook")
         public String dingWebHook;
 
-        /**
-         * <p>The email address of the alert contact.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:Alice@example.com">Alice@example.com</a></p>
-         */
         @NameInMap("Mail")
         public String mail;
 
-        /**
-         * <p>The phone number of the alert contac.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1333333****</p>
-         */
         @NameInMap("SMS")
         public String SMS;
 
@@ -192,55 +165,15 @@ public class DescribeContactListResponseBody extends TeaModel {
     }
 
     public static class DescribeContactListResponseBodyContactsContactChannelsState extends TeaModel {
-        /**
-         * <p>The status of the TradeManager ID.</p>
-         * <p>Valid value: OK. The value OK indicates that the TradeManager ID is valid and can receive alert notifications.</p>
-         * <blockquote>
-         * <p> This parameter applies only to the Alibaba Cloud China site (aliyun.com).</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>OK</p>
-         */
         @NameInMap("AliIM")
         public String aliIM;
 
-        /**
-         * <p>The status of the DingTalk chatbot.</p>
-         * <p>Valid value: OK. The value OK indicates that the DingTalk chatbot is normal and alert notifications can be received in a DingTalk group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>OK</p>
-         */
         @NameInMap("DingWebHook")
         public String dingWebHook;
 
-        /**
-         * <p>The status of the email address. Valid values:</p>
-         * <ul>
-         * <li>PENDING: The phone number is not activated. Alert notifications can be sent to the phone number by using text messages only after the phone number is activated.</li>
-         * <li>OK: The phone number is activated and can receive alert notifications.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>PENDING</p>
-         */
         @NameInMap("Mail")
         public String mail;
 
-        /**
-         * <p>The status of the phone number. Valid values:</p>
-         * <ul>
-         * <li>PENDING: The phone number is not activated. Alert notifications can be sent to the phone number by using text messages only after the phone number is activated.</li>
-         * <li>OK: The phone number is activated and can receive alert notifications.</li>
-         * </ul>
-         * <blockquote>
-         * <p> This parameter applies only to the Alibaba Cloud China site (aliyun.com).</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>OK</p>
-         */
         @NameInMap("SMS")
         public String SMS;
 
@@ -303,70 +236,27 @@ public class DescribeContactListResponseBody extends TeaModel {
     }
 
     public static class DescribeContactListResponseBodyContactsContact extends TeaModel {
-        /**
-         * <p>The alert notification method.</p>
-         */
         @NameInMap("Channels")
         public DescribeContactListResponseBodyContactsContactChannels channels;
 
-        /**
-         * <p>The status of the alert notification method. Valid values: PENDING and OK.</p>
-         * <p>The email address must be activated after it is added as the value specified for the alert notification method. The value PENDING indicates that the email address is not activated. The value OK indicates that the email address is activated.</p>
-         */
         @NameInMap("ChannelsState")
         public DescribeContactListResponseBodyContactsContactChannelsState channelsState;
 
-        /**
-         * <p>None.</p>
-         */
         @NameInMap("ContactGroups")
         public DescribeContactListResponseBodyContactsContactContactGroups contactGroups;
 
-        /**
-         * <p>The timestamp when the alert contact was created.</p>
-         * <p>Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1552356159000</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        /**
-         * <p>The description.</p>
-         */
         @NameInMap("Desc")
         public String desc;
 
-        /**
-         * <p>The language in which the alert information is displayed. Valid values:</p>
-         * <ul>
-         * <li>zh-cn: simplified Chinese</li>
-         * <li>en: English</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>zh-cn</p>
-         */
         @NameInMap("Lang")
         public String lang;
 
-        /**
-         * <p>The name of the alert contact.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Alice</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The timestamp when the alert contact was updated.</p>
-         * <p>Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1552356159000</p>
-         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 

@@ -16,9 +16,6 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <p>The queried meta information.</p>
-     */
     @NameInMap("Data")
     public DescribeSystemEventMetaListResponseBodyData data;
 
@@ -99,79 +96,27 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
     }
 
     public static class DescribeSystemEventMetaListResponseBodyDataResource extends TeaModel {
-        /**
-         * <p>The type of the system event. Valid values:</p>
-         * <ul>
-         * <li>StatusNotification: fault notifications</li>
-         * <li>Exception: exceptions</li>
-         * <li>Maintenance: O\&amp;M</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Exception</p>
-         */
         @NameInMap("EventType")
         public String eventType;
 
-        /**
-         * <p>The alert level. Valid values:</p>
-         * <ul>
-         * <li>CRITICAL</li>
-         * <li>WARN</li>
-         * <li>INFO</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>INFO</p>
-         */
         @NameInMap("Level")
         public String level;
 
-        /**
-         * <p>The name of the system event.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>SelectFailureRate</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The description of the event name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>High query failure rate</p>
-         */
         @NameInMap("NameDesc")
         public String nameDesc;
 
         @NameInMap("NameDesc.En")
         public String nameDesc_en;
 
-        /**
-         * <p>The abbreviation of the service name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ADS</p>
-         */
         @NameInMap("Product")
         public String product;
 
-        /**
-         * <p>The status of the system event.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>failed</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The description of the event status.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Operation Failed</p>
-         */
         @NameInMap("StatusDesc")
         public String statusDesc;
 

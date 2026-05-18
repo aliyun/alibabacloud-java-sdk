@@ -16,9 +16,6 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The queried detection points.</p>
-     */
     @NameInMap("IspCityList")
     public DescribeSiteMonitorISPCityListResponseBodyIspCityList ispCityList;
 
@@ -124,12 +121,6 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
         @NameInMap("Area.zh_CN")
         public String area_zh_cN;
 
-        /**
-         * <p>The city ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4</p>
-         */
         @NameInMap("City")
         public String city;
 
@@ -139,15 +130,6 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
         @NameInMap("CityName.zh_CN")
         public String cityName_zh_cN;
 
-        /**
-         * <p>The country name.</p>
-         * <blockquote>
-         * <p>This parameter is valid only on the China site (aliyun.com).</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>629</p>
-         */
         @NameInMap("Country")
         public String country;
 
@@ -157,36 +139,15 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
         @NameInMap("Country.zh_CN")
         public String country_zh_cN;
 
-        /**
-         * <p>The IP address pool.</p>
-         */
         @NameInMap("IPPool")
         public DescribeSiteMonitorISPCityListResponseBodyIspCityListIspCityIPPool IPPool;
 
-        /**
-         * <p>The number of IPv4 probes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4</p>
-         */
         @NameInMap("IPV4ProbeCount")
         public String IPV4ProbeCount;
 
-        /**
-         * <p>The number of IPv6 probes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("IPV6ProbeCount")
         public String IPV6ProbeCount;
 
-        /**
-         * <p>The carrier ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>232</p>
-         */
         @NameInMap("Isp")
         public String isp;
 
@@ -196,12 +157,6 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
         @NameInMap("IspName.zh_CN")
         public String ispName_zh_cN;
 
-        /**
-         * <p>The province name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>264</p>
-         */
         @NameInMap("Region")
         public String region;
 

@@ -117,9 +117,6 @@ public class DeleteMetricRuleTargetsResponseBody extends TeaModel {
     }
 
     public static class DeleteMetricRuleTargetsResponseBodyFailIds extends TeaModel {
-        /**
-         * <p>The IDs of the resources that failed to be deleted.</p>
-         */
         @NameInMap("TargetIds")
         public DeleteMetricRuleTargetsResponseBodyFailIdsTargetIds targetIds;
 

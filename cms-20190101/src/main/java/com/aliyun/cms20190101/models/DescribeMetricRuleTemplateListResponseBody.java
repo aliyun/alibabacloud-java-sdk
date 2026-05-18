@@ -47,9 +47,6 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    /**
-     * <p>The queried alert templates.</p>
-     */
     @NameInMap("Templates")
     public DescribeMetricRuleTemplateListResponseBodyTemplates templates;
 
@@ -116,31 +113,12 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
     }
 
     public static class DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistoriesApplyHistory extends TeaModel {
-        /**
-         * <p>The timestamp when the alert template was applied to the application group.</p>
-         * <p>Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1646055898000</p>
-         */
         @NameInMap("ApplyTime")
         public Long applyTime;
 
-        /**
-         * <p>The ID of the application group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3607****</p>
-         */
         @NameInMap("GroupId")
         public Long groupId;
 
-        /**
-         * <p>The name of the application group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ECS_Group</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 
@@ -195,63 +173,24 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
     }
 
     public static class DescribeMetricRuleTemplateListResponseBodyTemplatesTemplate extends TeaModel {
-        /**
-         * <p>The history of applying the alert templates to application groups.</p>
-         */
         @NameInMap("ApplyHistories")
         public DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistories applyHistories;
 
-        /**
-         * <p>The description of the alert template.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The timestamp when the alert template was created.</p>
-         * <p>Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1646018798000</p>
-         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
-        /**
-         * <p>The timestamp when the alert template was modified.</p>
-         * <p>Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1646054798000</p>
-         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
-        /**
-         * <p>The name of the alert template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ECS_Template1</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The version of the alert template.</p>
-         * <p>Default value: 0.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("RestVersion")
         public Long restVersion;
 
-        /**
-         * <p>The ID of the alert template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>70****</p>
-         */
         @NameInMap("TemplateId")
         public Long templateId;
 

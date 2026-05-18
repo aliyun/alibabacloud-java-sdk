@@ -16,9 +16,6 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The configuration sets for exporting monitoring data.</p>
-     */
     @NameInMap("Datapoints")
     public DescribeExporterOutputListResponseBodyDatapoints datapoints;
 
@@ -133,39 +130,15 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
     }
 
     public static class DescribeExporterOutputListResponseBodyDatapointsDatapointConfigJson extends TeaModel {
-        /**
-         * <p>The AccessKey ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>LTAIpY33********</p>
-         */
         @NameInMap("ak")
         public String ak;
 
-        /**
-         * <p>The Log Service endpoint to which the monitoring data is exported.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://cn-qingdao-share.log.aliyuncs.com">http://cn-qingdao-share.log.aliyuncs.com</a></p>
-         */
         @NameInMap("endpoint")
         public String endpoint;
 
-        /**
-         * <p>The Logstore.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>monitorlogstore</p>
-         */
         @NameInMap("logstore")
         public String logstore;
 
-        /**
-         * <p>The Log Service project to which the monitoring data is exported.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>exporter</p>
-         */
         @NameInMap("project")
         public String project;
 
@@ -209,39 +182,15 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
     }
 
     public static class DescribeExporterOutputListResponseBodyDatapointsDatapoint extends TeaModel {
-        /**
-         * <p>The JSON object that contains the details about the destination to which the monitoring data is exported.</p>
-         */
         @NameInMap("ConfigJson")
         public DescribeExporterOutputListResponseBodyDatapointsDatapointConfigJson configJson;
 
-        /**
-         * <p>The time when the configuration set was created. The value is a UNIX timestamp.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1584016495498</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        /**
-         * <p>The name of the configuration set.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>exporterOut</p>
-         */
         @NameInMap("DestName")
         public String destName;
 
-        /**
-         * <p>The service to which the monitoring data is exported.</p>
-         * <blockquote>
-         * <p>Only Log Service is supported. More services will be supported in the future.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>SLS</p>
-         */
         @NameInMap("DestType")
         public String destType;
 

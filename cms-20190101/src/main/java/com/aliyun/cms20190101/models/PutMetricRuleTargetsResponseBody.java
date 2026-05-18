@@ -99,55 +99,12 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
     }
 
     public static class PutMetricRuleTargetsResponseBodyFailDataTargetsTarget extends TeaModel {
-        /**
-         * <p>The ARN of the resource. Format: <code>acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message</code>. SMQ, Auto Scaling, Simple Log Service, and Function Compute are supported. Example: <code>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</code>. The following part describes the ARN of SMQ and the parameters in the ARN:</p>
-         * <ul>
-         * <li><p>{Service name abbreviation}: mns.</p>
-         * </li>
-         * <li><p>{userId}: the ID of the Alibaba Cloud account.</p>
-         * </li>
-         * <li><p>{regionId}: the region ID of the SMQ queue or topic.</p>
-         * </li>
-         * <li><p>{Resource type}: the type of the resource for which alerts are triggered. Valid values:</p>
-         * <ul>
-         * <li><strong>queues</strong></li>
-         * <li><strong>topics</strong></li>
-         * </ul>
-         * </li>
-         * <li><p>{Resource name}: the resource name.</p>
-         * <ul>
-         * <li>If the resource type is <strong>queues</strong>, the resource name is the queue name.</li>
-         * <li>If the resource type is <strong>topics</strong>, the resource name is the topic name.</li>
-         * </ul>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>acs:mns:cn-hangzhou:111:/queues/test/message</p>
-         */
         @NameInMap("Arn")
         public String arn;
 
-        /**
-         * <p>The ID of the resource for which alerts are triggered.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Id")
         public String id;
 
-        /**
-         * <p>The alert level. Valid values:</p>
-         * <ul>
-         * <li>INFO</li>
-         * <li>WARN</li>
-         * <li>CRITICAL</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>[&quot;INFO&quot;, &quot;WARN&quot;, &quot;CRITICAL&quot;]</p>
-         */
         @NameInMap("Level")
         public String level;
 
@@ -202,9 +159,6 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
     }
 
     public static class PutMetricRuleTargetsResponseBodyFailData extends TeaModel {
-        /**
-         * <p>The information about the resources for which alerts are triggered.</p>
-         */
         @NameInMap("Targets")
         public PutMetricRuleTargetsResponseBodyFailDataTargets targets;
 

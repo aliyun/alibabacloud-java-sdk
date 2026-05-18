@@ -137,9 +137,6 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObj extends TeaModel {
-        /**
-         * <p>The keywords that are used to match events.</p>
-         */
         @NameInMap("Keywords")
         public DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObjKeywords keywords;
 
@@ -237,9 +234,6 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeEventRuleAttributeResponseBodyResultEventPattern extends TeaModel {
-        /**
-         * <p>The types of the event-triggered alert rules.</p>
-         */
         @NameInMap("EventTypeList")
         public DescribeEventRuleAttributeResponseBodyResultEventPatternEventTypeList eventTypeList;
 

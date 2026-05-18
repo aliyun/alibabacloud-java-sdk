@@ -25,9 +25,6 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The alert rules that are configured for the site monitoring task.</p>
-     */
     @NameInMap("MetricRules")
     public DescribeSiteMonitorAttributeResponseBodyMetricRules metricRules;
 
@@ -113,185 +110,51 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeSiteMonitorAttributeResponseBodyMetricRulesMetricRule extends TeaModel {
-        /**
-         * <p>Indicates whether the alert rule is enabled. Valid values:</p>
-         * <ul>
-         * <li>true: The alert rule is enabled.</li>
-         * <li>false: The alert rule is disabled.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("ActionEnable")
         public String actionEnable;
 
-        /**
-         * <p>The alert contact group to which alert notifications are sent.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CloudMonitor</p>
-         */
         @NameInMap("AlarmActions")
         public String alarmActions;
 
-        /**
-         * <p>The operator that is used to compare the metric value with the threshold in the alert rule. Valid values:</p>
-         * <ul>
-         * <li><code>&gt;=</code></li>
-         * <li><code>&gt;</code></li>
-         * <li><code>&lt;=</code></li>
-         * <li><code>&lt;</code></li>
-         * <li><code>=</code></li>
-         * <li><code>!=</code></li>
-         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
-         * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
-         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
-         * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
-         * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
-         * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>GreaterThanYesterday</p>
-         */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
-        /**
-         * <p>The dimension of the alert rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[{&quot;taskId&quot;: &quot;cc641dff-c19d-45f3-ad0a-818a0c4f****&quot; }]</p>
-         */
         @NameInMap("Dimensions")
         public String dimensions;
 
-        /**
-         * <p>The consecutive number of times for which the metric value meets the alert condition before an alert is triggered.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("EvaluationCount")
         public String evaluationCount;
 
-        /**
-         * <p>The expression that is used to trigger alerts.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>$Availability=30</p>
-         */
         @NameInMap("Expression")
         public String expression;
 
-        /**
-         * <p>The alert severity. Valid values:</p>
-         * <ul>
-         * <li>1: critical</li>
-         * <li>2: warning</li>
-         * <li>3: information</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("Level")
         public String level;
 
-        /**
-         * <p>The metric name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Availability</p>
-         */
         @NameInMap("MetricName")
         public String metricName;
 
-        /**
-         * <p>The namespace of the cloud service.</p>
-         * <p>The value is in the following format: acs_service name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>acs_networkmonitor</p>
-         */
         @NameInMap("Namespace")
         public String namespace;
 
-        /**
-         * <p>The alert contact group that receives alert notifications.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[ &quot;CloudMonitor&quot;]</p>
-         */
         @NameInMap("OkActions")
         public String okActions;
 
-        /**
-         * <p>The time interval. The value is the same as the interval at which metric data is reported. Unit: seconds.</p>
-         * <blockquote>
-         * <p> If you specify a statistical period for the alert rule, data is queried based on the statistical period.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>15s</p>
-         */
         @NameInMap("Period")
         public String period;
 
-        /**
-         * <p>The ID of the alert rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>bf071ae_7b7aec3817b0fdf****</p>
-         */
         @NameInMap("RuleId")
         public String ruleId;
 
-        /**
-         * <p>The name of the alert rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rule1</p>
-         */
         @NameInMap("RuleName")
         public String ruleName;
 
-        /**
-         * <p>The alert status. Valid values:</p>
-         * <ul>
-         * <li>OK: The alert rule has no active alerts.</li>
-         * <li>ALARM: The alert rule has active alerts.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>OK</p>
-         */
         @NameInMap("StateValue")
         public String stateValue;
 
-        /**
-         * <p>The statistical method of the alert rule. Valid values:</p>
-         * <ul>
-         * <li>Availability: the percentage of available detection points</li>
-         * <li>AvailableNumber: the number of available detection points</li>
-         * <li>ErrorCodeMaximum: a status code for an alert</li>
-         * <li>ErrorCodeMinimum: all status codes for a set of alerts</li>
-         * <li>Average: response time</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Availability</p>
-         */
         @NameInMap("Statistics")
         public String statistics;
 
-        /**
-         * <p>The alert threshold.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>30</p>
-         */
         @NameInMap("Threshold")
         public String threshold;
 
@@ -469,9 +332,6 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomSchedule extends TeaModel {
-        /**
-         * <p>The days in a week.</p>
-         */
         @NameInMap("days")
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomScheduleDays days;
 
@@ -542,42 +402,18 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeSiteMonitorAttributeResponseBodySiteMonitorsIspCitiesIspCity extends TeaModel {
-        /**
-         * <p>The city ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>738</p>
-         */
         @NameInMap("City")
         public String city;
 
-        /**
-         * <p>The city name.</p>
-         */
         @NameInMap("CityName")
         public String cityName;
 
-        /**
-         * <p>The carrier ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>465</p>
-         */
         @NameInMap("Isp")
         public String isp;
 
-        /**
-         * <p>The carrier name.</p>
-         */
         @NameInMap("IspName")
         public String ispName;
 
-        /**
-         * <p>The network type of the detection point. Valid values: IDC, LASTMILE, and MOBILE.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>IDC</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -648,61 +484,15 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonAssertionsAssertions extends TeaModel {
-        /**
-         * <p>The operator. Valid values:</p>
-         * <ul>
-         * <li>contains: contains</li>
-         * <li>doesNotContain: does not contain</li>
-         * <li>matches: matches a regular expression</li>
-         * <li>doesNotMatch: does not match a regular expression</li>
-         * <li>is: equal to</li>
-         * <li>isNot: not equal to</li>
-         * <li>lessThan: less than</li>
-         * <li>moreThan: greater than</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>lessThan</p>
-         */
         @NameInMap("operator")
         public String operator;
 
-        /**
-         * <p>The path to the assertion.</p>
-         * <ul>
-         * <li>If the assertion type is body_json, the path is json path.</li>
-         * <li>If the assertion type is body_xml, the path is xml path.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>json path</p>
-         */
         @NameInMap("property")
         public String property;
 
-        /**
-         * <p>The value or character to which the condition of the assertion is compared.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("target")
         public String target;
 
-        /**
-         * <p>The assertion type. Valid values:</p>
-         * <ul>
-         * <li>response_time: checks whether the response time meets expectations.</li>
-         * <li>status_code: checks whether the HTTP status code meets expectations.</li>
-         * <li>header: checks whether the fields in the response header meet expectations.</li>
-         * <li>body_text: check whether the content in the response body meets expectations by using text matching.</li>
-         * <li>body_json: check whether the content in the response body meets expectations by using JSON parsing (JSONPath).</li>
-         * <li>body_xml: check whether the content in the response body meets expectations by using XML parsing (XPath).</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>response_time</p>
-         */
         @NameInMap("type")
         public String type;
 
@@ -1047,21 +837,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserInfoBrowserInfo extends TeaModel {
-        /**
-         * <p>The browser type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Chrome</p>
-         */
         @NameInMap("browser")
         public String browser;
 
-        /**
-         * <p>The device type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>laptop</p>
-         */
         @NameInMap("device")
         public String device;
 
@@ -1514,9 +1292,6 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson extends TeaModel {
-        /**
-         * <p>The assertions.</p>
-         */
         @NameInMap("assertions")
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonAssertions assertions;
 
@@ -1532,27 +1307,15 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("auth_info")
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonAuthInfo authInfo;
 
-        /**
-         * <p>The blocked URLs. Wildcards are supported in paths.</p>
-         */
         @NameInMap("blocked_url_list")
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBlockedUrlList blockedUrlList;
 
-        /**
-         * <p>The custom headers. Format: {&quot;key&quot;: &quot;somekey&quot;, &quot;value&quot;:&quot;somevalue&quot;}.</p>
-         */
         @NameInMap("browser_headers")
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserHeaders browserHeaders;
 
-        /**
-         * <p>The custom hosts. Format: {&quot;key&quot;: &quot;somekey&quot;, &quot;value&quot;:&quot;somevalue&quot;}.</p>
-         */
         @NameInMap("browser_hosts")
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserHosts browserHosts;
 
-        /**
-         * <p>The browser information.</p>
-         */
         @NameInMap("browser_info")
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserInfo browserInfo;
 
@@ -1684,15 +1447,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("enable_packet_capture")
         public Boolean enablePacketCapture;
 
-        /**
-         * <p>The string that is expected to exist on the page.</p>
-         */
         @NameInMap("expect_exist_string")
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonExpectExistString expectExistString;
 
-        /**
-         * <p>The string that is not expected to exist on the page.</p>
-         */
         @NameInMap("expect_non_exist_string")
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonExpectNonExistString expectNonExistString;
 
@@ -1897,9 +1654,6 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("quic_enabled")
         public Boolean quicEnabled;
 
-        /**
-         * <p>The sites for which the QUIC protocol is forcibly used.</p>
-         */
         @NameInMap("quic_target")
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonQuicTarget quicTarget;
 
@@ -2010,9 +1764,6 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("trace_type")
         public String traceType;
 
-        /**
-         * <p>The traffic hijacking blacklist. When redirection occurs, if the URL of the resource loaded by the browser matches the expression in the blacklist, traffic hijacking is considered to have occurred.</p>
-         */
         @NameInMap("traffic_hijack_element_blacklist")
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonTrafficHijackElementBlacklist trafficHijackElementBlacklist;
 
@@ -2025,9 +1776,6 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("traffic_hijack_element_count")
         public Integer trafficHijackElementCount;
 
-        /**
-         * <p>The traffic hijacking whitelist. When redirection occurs, if the URL of the resource loaded by the browser does not match any expression in the whitelist, traffic hijacking is considered to have occurred.</p>
-         */
         @NameInMap("traffic_hijack_element_whitelist")
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonTrafficHijackElementWhitelist trafficHijackElementWhitelist;
 
@@ -2696,9 +2444,6 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("Interval")
         public String interval;
 
-        /**
-         * <p>The information of detection points. The information includes the carriers that provide the detection points and the cities where the detection points reside.</p>
-         */
         @NameInMap("IspCities")
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsIspCities ispCities;
 

@@ -16,9 +16,6 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The event-triggered alert rule.</p>
-     */
     @NameInMap("EventRules")
     public DescribeEventRuleListResponseBodyEventRules eventRules;
 
@@ -154,22 +151,9 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternKeywordFilter extends TeaModel {
-        /**
-         * <p>The keywords that are used to match events.</p>
-         */
         @NameInMap("Keywords")
         public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternKeywordFilterKeywords keywords;
 
-        /**
-         * <p>The relationship between multiple keywords in a condition. Valid values:</p>
-         * <ul>
-         * <li>OR: The relationship between keywords is OR.</li>
-         * <li>NOT: The keyword is excluded. The value NOT indicates that all events that do not contain the keywords are matched.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>OR</p>
-         */
         @NameInMap("Relation")
         public String relation;
 
@@ -235,54 +219,24 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPattern extends TeaModel {
-        /**
-         * <p>The custom filter conditions.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ECS123</p>
-         */
         @NameInMap("CustomFilters")
         public String customFilters;
 
-        /**
-         * <p>The types of the event-triggered alert rules.</p>
-         */
         @NameInMap("EventTypeList")
         public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternEventTypeList eventTypeList;
 
-        /**
-         * <p>The keyword for filtering.</p>
-         */
         @NameInMap("KeywordFilter")
         public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternKeywordFilter keywordFilter;
 
-        /**
-         * <p>The levels of the event-triggered alerts.</p>
-         */
         @NameInMap("LevelList")
         public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternLevelList levelList;
 
-        /**
-         * <p>The event names.</p>
-         */
         @NameInMap("NameList")
         public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternNameList nameList;
 
-        /**
-         * <p>The abbreviation of the Alibaba Cloud service name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CloudMonitor</p>
-         */
         @NameInMap("Product")
         public String product;
 
-        /**
-         * <p>Indicates that logs are filtered based on the specified SQL statement. If the specified conditions are met, an alert is triggered.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ycccluster1 and (i-23ij0o82612 or Executed1) or Asimulated not 222</p>
-         */
         @NameInMap("SQLFilter")
         public String SQLFilter;
 
@@ -369,71 +323,24 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventRuleListResponseBodyEventRulesEventRule extends TeaModel {
-        /**
-         * <p>The description of the event-triggered alert rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Default group event rule.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The mode of the event-triggered alert rule.</p>
-         */
         @NameInMap("EventPattern")
         public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPattern eventPattern;
 
-        /**
-         * <p>The type of the event-triggered alert rule. Valid values:</p>
-         * <ul>
-         * <li>SYSTEM: system event-triggered alert rule</li>
-         * <li>CUSTOM: custom event-triggered alert rule</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>SYSTEM</p>
-         */
         @NameInMap("EventType")
         public String eventType;
 
-        /**
-         * <p>The ID of the application group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>7378****</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The name of the event-triggered alert rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test_DefaultEventRule_7378****</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The mute period during which new alert notifications are not sent even if the trigger conditions are met.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>86400</p>
-         */
         @NameInMap("SilenceTime")
         public Long silenceTime;
 
-        /**
-         * <p>The status of the event-triggered alert rule. Valid values:</p>
-         * <ul>
-         * <li>ENABLED</li>
-         * <li>DISABLED</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ENABLED</p>
-         */
         @NameInMap("State")
         public String state;
 

@@ -16,9 +16,6 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The details of the custom event.</p>
-     */
     @NameInMap("CustomEventCounts")
     public DescribeCustomEventCountResponseBodyCustomEventCounts customEventCounts;
 
@@ -95,31 +92,12 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
     }
 
     public static class DescribeCustomEventCountResponseBodyCustomEventCountsCustomEventCount extends TeaModel {
-        /**
-         * <p>The event name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>BABEL_BUY</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The number of times that the custom event occurred.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("Num")
         public Integer num;
 
-        /**
-         * <p>The time when the event occurred.</p>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1552267615000</p>
-         */
         @NameInMap("Time")
         public Long time;
 

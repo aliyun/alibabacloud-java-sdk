@@ -95,12 +95,6 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
     }
 
     public static class DeleteMonitorGroupResponseBodyGroupContactGroupsContactGroup extends TeaModel {
-        /**
-         * <p>The name of the alert group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ECS_Group</p>
-         */
         @NameInMap("Name")
         public String name;
 
@@ -139,9 +133,6 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
     }
 
     public static class DeleteMonitorGroupResponseBodyGroup extends TeaModel {
-        /**
-         * <p>The alert groups that receive alert notifications for the application group.</p>
-         */
         @NameInMap("ContactGroups")
         public DeleteMonitorGroupResponseBodyGroupContactGroups contactGroups;
 

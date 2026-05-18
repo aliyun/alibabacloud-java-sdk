@@ -4,9 +4,21 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class Dimension extends TeaModel {
+    /**
+     * <p>The name of the metric dimension.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instanceId</p>
+     */
     @NameInMap("Label")
     public String label;
 
+    /**
+     * <p>The value of the metric dimension.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-dferwret*****</p>
+     */
     @NameInMap("Value")
     public String value;
 

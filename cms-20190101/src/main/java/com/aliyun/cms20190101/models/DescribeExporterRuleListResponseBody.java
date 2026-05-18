@@ -16,9 +16,6 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The details of the data export rules.</p>
-     */
     @NameInMap("Datapoints")
     public DescribeExporterRuleListResponseBodyDatapoints datapoints;
 
@@ -152,88 +149,30 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
     }
 
     public static class DescribeExporterRuleListResponseBodyDatapointsDatapoint extends TeaModel {
-        /**
-         * <p>The time when the rule was created. The value is a UNIX timestamp.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1584024616228</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        /**
-         * <p>The description of the rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Export monitoring data</p>
-         */
         @NameInMap("Describe")
         public String describe;
 
-        /**
-         * <p>The associated dimensions.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{&quot;instanceId&quot;:&quot;xxxxx&quot;}</p>
-         */
         @NameInMap("Dimension")
         public String dimension;
 
         @NameInMap("DstName")
         public DescribeExporterRuleListResponseBodyDatapointsDatapointDstName dstName;
 
-        /**
-         * <p>Indicates whether the rule is enabled.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
-        /**
-         * <p>The name of the metric.</p>
-         * <blockquote>
-         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/28619.html">Appendix 1: Metrics</a>.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>cpu_total</p>
-         */
         @NameInMap("MetricName")
         public String metricName;
 
-        /**
-         * <p>The namespace of the service.</p>
-         * <blockquote>
-         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/28619.html">Appendix 1: Metrics</a>.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>acs_ecs_dashboard</p>
-         */
         @NameInMap("Namespace")
         public String namespace;
 
-        /**
-         * <p>The name of the data export rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>myRuleName</p>
-         */
         @NameInMap("RuleName")
         public String ruleName;
 
-        /**
-         * <p>The time window of the exported data.\
-         * Multiple windows are separated with commas (,).</p>
-         * <blockquote>
-         * <p>Data in a time window of less than 60 seconds cannot be exported.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>60,300</p>
-         */
         @NameInMap("TargetWindows")
         public String targetWindows;
 

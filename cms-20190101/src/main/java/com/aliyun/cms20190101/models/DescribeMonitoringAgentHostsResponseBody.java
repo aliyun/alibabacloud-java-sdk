@@ -16,9 +16,6 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The information about the hosts.</p>
-     */
     @NameInMap("Hosts")
     public DescribeMonitoringAgentHostsResponseBodyHosts hosts;
 
@@ -167,139 +164,45 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
     }
 
     public static class DescribeMonitoringAgentHostsResponseBodyHostsHost extends TeaModel {
-        /**
-         * <p>The version of the CloudMonitor agent.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3.4.6</p>
-         */
         @NameInMap("AgentVersion")
         public String agentVersion;
 
-        /**
-         * <p>The ID of the Alibaba Cloud account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>103201326074****</p>
-         */
         @NameInMap("AliUid")
         public Long aliUid;
 
-        /**
-         * <p>The elastic IP address (EIP) of the host.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>192.168.XX.XX</p>
-         */
         @NameInMap("EipAddress")
         public String eipAddress;
 
-        /**
-         * <p>The ID of the EIP.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>eip-bp16i16k9gcezyfrp****</p>
-         */
         @NameInMap("EipId")
         public String eipId;
 
-        /**
-         * <p>The name of the host.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>hostIP</p>
-         */
         @NameInMap("HostName")
         public String hostName;
 
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-a2d5q7pm3f9yr212****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The type of the ECS instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ecs.n4</p>
-         */
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
 
-        /**
-         * <p>The IP address of the host.</p>
-         * <blockquote>
-         * <p>Multiple IP addresses are separated with commas (,).</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>192.168.XX.XX</p>
-         */
         @NameInMap("IpGroup")
         public String ipGroup;
 
-        /**
-         * <p>The IP address of the Network Address Translation (NAT) gateway.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>192.168.XX.XX</p>
-         */
         @NameInMap("NatIp")
         public String natIp;
 
-        /**
-         * <p>The network type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc</p>
-         */
         @NameInMap("NetworkType")
         public String networkType;
 
-        /**
-         * <p>The operating system.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Linux</p>
-         */
         @NameInMap("OperatingSystem")
         public String operatingSystem;
 
-        /**
-         * <p>The ID of the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("Region")
         public String region;
 
-        /**
-         * <p>The serial number of the host. A host that is not provided by Alibaba Cloud has a serial number instead of an instance ID.</p>
-         * <blockquote>
-         * <p>This parameter can be used to accurately search for a monitored host.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>x12335-6cc8-4a22-9f21-1a00a719****</p>
-         */
         @NameInMap("SerialNumber")
         public String serialNumber;
 
-        /**
-         * <p>Indicates whether the host is provided by Alibaba Cloud. Valid values:</p>
-         * <ul>
-         * <li>true: The host is provided by Alibaba Cloud.</li>
-         * <li>false: The host is not provided by Alibaba Cloud.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("isAliyunHost")
         public Boolean isAliyunHost;
 

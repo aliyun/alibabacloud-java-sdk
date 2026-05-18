@@ -173,6 +173,9 @@ public class PutResourceMetricRuleRequest extends TeaModel {
     @NameInMap("RuleName")
     public String ruleName;
 
+    @NameInMap("SendOK")
+    public Boolean sendOK;
+
     /**
      * <p>The mute period during which new alert notifications are not sent even if the trigger conditions are met. Unit: seconds. Default value: 86400.</p>
      * <blockquote>
@@ -325,6 +328,14 @@ public class PutResourceMetricRuleRequest extends TeaModel {
     }
     public String getRuleName() {
         return this.ruleName;
+    }
+
+    public PutResourceMetricRuleRequest setSendOK(Boolean sendOK) {
+        this.sendOK = sendOK;
+        return this;
+    }
+    public Boolean getSendOK() {
+        return this.sendOK;
     }
 
     public PutResourceMetricRuleRequest setSilenceTime(Integer silenceTime) {

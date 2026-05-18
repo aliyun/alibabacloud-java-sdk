@@ -34,9 +34,6 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The resources that are associated with the application group.</p>
-     */
     @NameInMap("Resource")
     public DescribeMonitorGroupDynamicRulesResponseBodyResource resource;
 
@@ -99,35 +96,12 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeMonitorGroupDynamicRulesResponseBodyResourceResourceFiltersFilter extends TeaModel {
-        /**
-         * <p>The method that is used to filter the instances. Valid values:</p>
-         * <ul>
-         * <li>contains: contains</li>
-         * <li>startWith: starts with a prefix</li>
-         * <li>endWith: ends with a suffix</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>contains</p>
-         */
         @NameInMap("Function")
         public String function;
 
-        /**
-         * <p>The instance name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>hostName</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The value of the dynamic rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -182,36 +156,12 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeMonitorGroupDynamicRulesResponseBodyResourceResource extends TeaModel {
-        /**
-         * <p>The type of the cloud service to which the dynamic rule belongs. Valid values:</p>
-         * <ul>
-         * <li>ecs: Elastic Compute Service (ECS)</li>
-         * <li>rds: ApsaraDB RDS</li>
-         * <li>slb: Server Load Balancer (SLB)</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ecs</p>
-         */
         @NameInMap("Category")
         public String category;
 
-        /**
-         * <p>The filter condition. Valid values:</p>
-         * <ul>
-         * <li>and: queries the instances that meet all alert rules.</li>
-         * <li>or: queries the instances that meet any alert rule.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>and</p>
-         */
         @NameInMap("FilterRelation")
         public String filterRelation;
 
-        /**
-         * <p>The dynamic rules of the application group.</p>
-         */
         @NameInMap("Filters")
         public DescribeMonitorGroupDynamicRulesResponseBodyResourceResourceFilters filters;
 

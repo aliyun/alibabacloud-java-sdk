@@ -65,9 +65,6 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    /**
-     * <p>The tag rules of application groups.</p>
-     */
     @NameInMap("TagGroupList")
     public DescribeDynamicTagRuleListResponseBodyTagGroupList tagGroupList;
 
@@ -169,41 +166,12 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
     }
 
     public static class DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupMatchExpressMatchExpress extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>azone-version</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag value.</p>
-         * <p>The <code>TagValue</code> and <code>TagValueMatchFunction</code> parameters must be used in pairs.</p>
-         * 
-         * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 
-        /**
-         * <p>The method that is used to match tag values. Valid values:</p>
-         * <ul>
-         * <li>all: includes all</li>
-         * <li>startWith: starts with a prefix</li>
-         * <li>endWith: ends with a suffix</li>
-         * <li>contains: contains</li>
-         * <li>notContains: does not contain</li>
-         * <li>equals: equals</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>all</p>
-         */
         @NameInMap("TagValueMatchFunction")
         public String tagValueMatchFunction;
 
@@ -296,80 +264,30 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
     }
 
     public static class DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroup extends TeaModel {
-        /**
-         * <p>The alert contact group.</p>
-         */
         @NameInMap("ContactGroupList")
         public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupContactGroupList contactGroupList;
 
-        /**
-         * <p>The ID of the tag rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1536df65-a719-429d-8813-73cc40d7****</p>
-         */
         @NameInMap("DynamicTagRuleId")
         public String dynamicTagRuleId;
 
-        /**
-         * <p>The conditional expressions used to create an application group based on the tag.</p>
-         */
         @NameInMap("MatchExpress")
         public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupMatchExpress matchExpress;
 
-        /**
-         * <p>The logical operator that is used between conditional expressions. Valid values:</p>
-         * <ul>
-         * <li><code>and</code></li>
-         * <li><code>or</code></li>
-         * </ul>
-         * <blockquote>
-         * <p> Only one logical operator can be used in a request.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>or</p>
-         */
         @NameInMap("MatchExpressFilterRelation")
         public String matchExpressFilterRelation;
 
-        /**
-         * <p>The ID of the region to which the tags belong.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The status of adding instances that meet the tag rule to the application group. Valid values:</p>
-         * <ul>
-         * <li><code>RUNNING</code></li>
-         * <li><code>FINISH</code></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>FINISH</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>tagkey1</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
         @NameInMap("TagValueBlacklist")
         public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupTagValueBlacklist tagValueBlacklist;
 
-        /**
-         * <p>The IDs of the alert templates.</p>
-         */
         @NameInMap("TemplateIdList")
         public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupTemplateIdList templateIdList;
 

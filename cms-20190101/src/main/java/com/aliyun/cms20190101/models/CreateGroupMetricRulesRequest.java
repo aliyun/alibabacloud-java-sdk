@@ -51,6 +51,25 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
     }
 
     public static class CreateGroupMetricRulesRequestGroupMetricRulesEscalationsCritical extends TeaModel {
+        /**
+         * <p>The comparison operator that is used to compare the metric value with the threshold. Valid values of N: 1 to 200. Valid value: </p>
+         * <ul>
+         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
+         * <li>GreaterThanThreshold: greater than the threshold</li>
+         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
+         * <li>LessThanThreshold: less than the threshold</li>
+         * <li>NotEqualToThreshold: not equal to the threshold</li>
+         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
+         * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
+         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
+         * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
+         * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
+         * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GreaterThanOrEqualToThreshold</p>
+         */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
@@ -60,12 +79,35 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         @NameInMap("PreCondition")
         public String preCondition;
 
+        /**
+         * <p>The statistical methods for Critical-level alerts. Separate multiple statistical methods with commas (,). Valid values of N: 1 to 200. Valid value: </p>
+         * <ul>
+         * <li>Average: the average value</li>
+         * <li>Minimum: the minimum value</li>
+         * <li>Maximum: the maximum value</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Average</p>
+         */
         @NameInMap("Statistics")
         public String statistics;
 
+        /**
+         * <p>The threshold for Critical-level alerts. Valid values of N: 1 to 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
+         */
         @NameInMap("Threshold")
         public String threshold;
 
+        /**
+         * <p>The consecutive number of times for which the metric value meets the alert condition before a Critical-level alert is triggered. Valid values of N: 1 to 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Times")
         public Integer times;
 
@@ -125,6 +167,25 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
     }
 
     public static class CreateGroupMetricRulesRequestGroupMetricRulesEscalationsInfo extends TeaModel {
+        /**
+         * <p>The comparison operator that is used to compare the metric value with the threshold. Valid values of N: 1 to 200. Valid value: </p>
+         * <ul>
+         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
+         * <li>GreaterThanThreshold: greater than the threshold</li>
+         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
+         * <li>LessThanThreshold: less than the threshold</li>
+         * <li>NotEqualToThreshold: not equal to the threshold</li>
+         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
+         * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
+         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
+         * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
+         * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
+         * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GreaterThanOrEqualToThreshold</p>
+         */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
@@ -134,12 +195,35 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         @NameInMap("PreCondition")
         public String preCondition;
 
+        /**
+         * <p>The statistical methods for Info-level alerts. Separate multiple statistical methods with commas (,). Valid values of N: 1 to 200. Valid value: </p>
+         * <ul>
+         * <li>Average: the average value</li>
+         * <li>Minimum: the minimum value</li>
+         * <li>Maximum: the maximum value</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Average</p>
+         */
         @NameInMap("Statistics")
         public String statistics;
 
+        /**
+         * <p>The threshold for Info-level alerts. Valid values of N: 1 to 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Threshold")
         public String threshold;
 
+        /**
+         * <p>The consecutive number of times for which the metric value meets the alert condition before an Info-level alert is triggered. Valid values of N: 1 to 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Times")
         public Integer times;
 
@@ -199,6 +283,25 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
     }
 
     public static class CreateGroupMetricRulesRequestGroupMetricRulesEscalationsWarn extends TeaModel {
+        /**
+         * <p>The comparison operator that is used to compare the metric value with the threshold. Valid values of N: 1 to 200. Valid value: </p>
+         * <ul>
+         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
+         * <li>GreaterThanThreshold: greater than the threshold</li>
+         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
+         * <li>LessThanThreshold: less than the threshold</li>
+         * <li>NotEqualToThreshold: not equal to the threshold</li>
+         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
+         * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
+         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
+         * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
+         * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
+         * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GreaterThanOrEqualToThreshold</p>
+         */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
@@ -208,12 +311,35 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         @NameInMap("PreCondition")
         public String preCondition;
 
+        /**
+         * <p>The statistical methods for Warn-level alerts. Separate multiple statistical methods with commas (,). Valid values of N: 1 to 200. Valid value: </p>
+         * <ul>
+         * <li>Average: the average value</li>
+         * <li>Minimum: the minimum value</li>
+         * <li>Maximum: the maximum value</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Average</p>
+         */
         @NameInMap("Statistics")
         public String statistics;
 
+        /**
+         * <p>The threshold for Warn-level alerts. Valid values of N: 1 to 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Threshold")
         public String threshold;
 
+        /**
+         * <p>The consecutive number of times for which the metric value meets the alert condition before a Warn-level alert is triggered. Valid values of N: 1 to 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Times")
         public Integer times;
 

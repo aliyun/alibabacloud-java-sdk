@@ -25,9 +25,6 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The returned policies.</p>
-     */
     @NameInMap("NotifyPolicyList")
     public DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyList notifyPolicyList;
 
@@ -116,50 +113,18 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
     }
 
     public static class DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyListNotifyPolicy extends TeaModel {
-        /**
-         * <p>The end of the time range to query.</p>
-         * <p>Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1551761781273</p>
-         */
         @NameInMap("EndTime")
         public Long endTime;
 
-        /**
-         * <p>The ID of the application group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6780****</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The policy ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123****</p>
-         */
         @NameInMap("Id")
         public String id;
 
-        /**
-         * <p>The beginning of the time range to query.</p>
-         * <p>Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1551761781273</p>
-         */
         @NameInMap("StartTime")
         public Long startTime;
 
-        /**
-         * <p>The policy type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PauseNotify</p>
-         */
         @NameInMap("Type")
         public String type;
 

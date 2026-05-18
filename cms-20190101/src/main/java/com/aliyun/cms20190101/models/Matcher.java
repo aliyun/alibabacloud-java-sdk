@@ -4,12 +4,30 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class Matcher extends TeaModel {
+    /**
+     * <p>The name of the metric dimension.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-fewrewr*****</p>
+     */
     @NameInMap("Label")
     public String label;
 
+    /**
+     * <p>The matching mode of the metric dimension. Only EQUALS is supported. Default value: EQUALS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EQUALS</p>
+     */
     @NameInMap("Operator")
     public String operator;
 
+    /**
+     * <p>The value of the metric dimension.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instanceId</p>
+     */
     @NameInMap("Value")
     public String value;
 

@@ -43,9 +43,6 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
     @NameInMap("Success")
     public String success;
 
-    /**
-     * <p>The information about the number of times the system event occurred during each interval of a time period.</p>
-     */
     @NameInMap("SystemEventHistograms")
     public DescribeSystemEventHistogramResponseBodySystemEventHistograms systemEventHistograms;
 
@@ -95,32 +92,12 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
     }
 
     public static class DescribeSystemEventHistogramResponseBodySystemEventHistogramsSystemEventHistogram extends TeaModel {
-        /**
-         * <p>The number of times the system event occurred.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("Count")
         public Long count;
 
-        /**
-         * <p>The end time.</p>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1552225753000</p>
-         */
         @NameInMap("EndTime")
         public Long endTime;
 
-        /**
-         * <p>The start time.</p>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1552225770000</p>
-         */
         @NameInMap("StartTime")
         public Long startTime;
 

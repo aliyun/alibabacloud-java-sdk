@@ -25,9 +25,6 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The information about the processes.</p>
-     */
     @NameInMap("NodeProcesses")
     public DescribeMonitoringAgentProcessesResponseBodyNodeProcesses nodeProcesses;
 
@@ -99,60 +96,21 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
     }
 
     public static class DescribeMonitoringAgentProcessesResponseBodyNodeProcessesNodeProcess extends TeaModel {
-        /**
-         * <p>The command used to obtain the number of processes. Valid value: <code>number</code>.</p>
-         * <blockquote>
-         * <p> The <code>number</code> command obtains the number of processes that match the condition.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>number</p>
-         */
         @NameInMap("Command")
         public String command;
 
-        /**
-         * <p>The ID of the application group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3619****</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-hp3hl3cx1pbahzy8****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The ID of the process.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>234567</p>
-         */
         @NameInMap("ProcessId")
         public Long processId;
 
-        /**
-         * <p>The name of the process.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Nginx</p>
-         */
         @NameInMap("ProcessName")
         public String processName;
 
-        /**
-         * <p>The user who launched the process.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>alice</p>
-         */
         @NameInMap("ProcessUser")
         public String processUser;
 

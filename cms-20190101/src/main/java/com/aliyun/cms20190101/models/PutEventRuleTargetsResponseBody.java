@@ -16,21 +16,12 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>This parameter is returned if the specified alert contact groups in the request failed to be created or modified.</p>
-     */
     @NameInMap("FailedContactParameters")
     public PutEventRuleTargetsResponseBodyFailedContactParameters failedContactParameters;
 
-    /**
-     * <p>This parameter is returned if the specified functions in the request failed to be created or modified in Function Compute.</p>
-     */
     @NameInMap("FailedFcParameters")
     public PutEventRuleTargetsResponseBodyFailedFcParameters failedFcParameters;
 
-    /**
-     * <p>This parameter is returned if the specified queues in the request failed to be created or modified in SMQ.</p>
-     */
     @NameInMap("FailedMnsParameters")
     public PutEventRuleTargetsResponseBodyFailedMnsParameters failedMnsParameters;
 
@@ -140,28 +131,12 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
     }
 
     public static class PutEventRuleTargetsResponseBodyFailedContactParametersContactParameter extends TeaModel {
-        /**
-         * <p>The name of the alert contact group.</p>
-         */
         @NameInMap("ContactGroupName")
         public String contactGroupName;
 
-        /**
-         * <p>The ID of the recipient.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("Id")
         public Integer id;
 
-        /**
-         * <p>The alert notification methods. Valid values:</p>
-         * <p>4: Alert notifications are sent by using DingTalk and emails.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("Level")
         public String level;
 
@@ -216,39 +191,15 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
     }
 
     public static class PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter extends TeaModel {
-        /**
-         * <p>The name of the function.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>functionTest1</p>
-         */
         @NameInMap("FunctionName")
         public String functionName;
 
-        /**
-         * <p>The ID of the recipient.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Id")
         public Integer id;
 
-        /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("Region")
         public String region;
 
-        /**
-         * <p>The name of the Function Compute service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>serviceTest1</p>
-         */
         @NameInMap("ServiceName")
         public String serviceName;
 
@@ -311,30 +262,12 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
     }
 
     public static class PutEventRuleTargetsResponseBodyFailedMnsParametersMnsParameter extends TeaModel {
-        /**
-         * <p>The ID of the recipient.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("Id")
         public Integer id;
 
-        /**
-         * <p>The name of the MNS queue.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testQueue</p>
-         */
         @NameInMap("Queue")
         public String queue;
 
-        /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("Region")
         public String region;
 

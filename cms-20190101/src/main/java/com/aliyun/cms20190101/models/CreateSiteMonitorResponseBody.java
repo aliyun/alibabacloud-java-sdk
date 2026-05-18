@@ -16,10 +16,6 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The returned result.</p>
-     * <p>If a site monitoring task is created, the result is returned. If a site monitoring task fails to be created, no result is returned.</p>
-     */
     @NameInMap("CreateResultList")
     public CreateSiteMonitorResponseBodyCreateResultList createResultList;
 
@@ -114,21 +110,9 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
     }
 
     public static class CreateSiteMonitorResponseBodyCreateResultListCreateResultList extends TeaModel {
-        /**
-         * <p>The ID of the site monitoring task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2c8dbdf9-a3ab-46a1-85a4-f094965e****</p>
-         */
         @NameInMap("TaskId")
         public String taskId;
 
-        /**
-         * <p>The name of the site monitoring task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>HanZhou_ECS1</p>
-         */
         @NameInMap("TaskName")
         public String taskName;
 
@@ -175,55 +159,18 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
     }
 
     public static class CreateSiteMonitorResponseBodyDataAttachAlertResultContact extends TeaModel {
-        /**
-         * <p>The status code that is returned after you associate the existing alert rule with the site monitoring task.</p>
-         * <blockquote>
-         * <p> The status code 200 indicates that the request was successful.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <p>The message that is returned after you associate the existing alert rule with the site monitoring task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>successful</p>
-         */
         @NameInMap("Message")
         public String message;
 
-        /**
-         * <p>The ID of the request that was sent to associate the existing alert rule with the site monitoring task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5dd33455-4f65-4b0c-9200-33d66f3f340b</p>
-         */
         @NameInMap("RequestId")
         public String requestId;
 
-        /**
-         * <p>The ID of the alert rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>SystemDefault_acs_ecs_dashboard_InternetOutRate_Percent</p>
-         */
         @NameInMap("RuleId")
         public String ruleId;
 
-        /**
-         * <p>Indicates whether the existing alert rule was associated with the site monitoring task. Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Success")
         public String success;
 
@@ -294,9 +241,6 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
     }
 
     public static class CreateSiteMonitorResponseBodyData extends TeaModel {
-        /**
-         * <p>The result that is returned after you associate the existing alert rule with the site monitoring task.</p>
-         */
         @NameInMap("AttachAlertResult")
         public CreateSiteMonitorResponseBodyDataAttachAlertResult attachAlertResult;
 

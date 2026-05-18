@@ -47,9 +47,6 @@ public class RemoveTagsResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    /**
-     * <p>The deleted tags.</p>
-     */
     @NameInMap("Tag")
     public RemoveTagsResponseBodyTag tag;
 

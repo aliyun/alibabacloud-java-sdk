@@ -47,9 +47,6 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    /**
-     * <p>The information about the resource for which alerts are triggered.</p>
-     */
     @NameInMap("Targets")
     public DescribeMetricRuleTargetsResponseBodyTargets targets;
 
@@ -99,50 +96,15 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
     }
 
     public static class DescribeMetricRuleTargetsResponseBodyTargetsTarget extends TeaModel {
-        /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the resource. Format: <code>acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message</code>. Example: <code>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</code>. Fields:</p>
-         * <ul>
-         * <li>{Service name abbreviation}: the abbreviation of the service name. Valid value: mns.</li>
-         * <li>{userId}: the ID of the Alibaba Cloud account.</li>
-         * <li>{regionId}: the region ID of the message queue or topic.</li>
-         * <li>{Resource type}<code>: the type of the resource for which alerts are triggered. Valid values: - **queues** - **topics** {Resource name}: the name of the resource. - If the resource type is set to **queues**, the resource name is the name of the message queue. - If the resource type is set to **topics**, the resource name is the name of the topic.</code></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>acs:mns:cn-hangzhou:120886317861****:/queues/test/message</p>
-         */
         @NameInMap("Arn")
         public String arn;
 
-        /**
-         * <p>The ID of the resource for which alerts are triggered.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Id")
         public String id;
 
-        /**
-         * <p>The parameters of the alert callback. The parameters are in the JSON format.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{&quot;customField1&quot;:&quot;value1&quot;,&quot;customField2&quot;:&quot;$.name&quot;}</p>
-         */
         @NameInMap("JsonParams")
         public String jsonParams;
 
-        /**
-         * <p>The level of the alert. Valid values:</p>
-         * <ul>
-         * <li>INFO: information</li>
-         * <li>WARN: warning</li>
-         * <li>CRITICAL: critical</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>[&quot;INFO&quot;, &quot;WARN&quot;, &quot;CRITICAL&quot;]</p>
-         */
         @NameInMap("Level")
         public String level;
 

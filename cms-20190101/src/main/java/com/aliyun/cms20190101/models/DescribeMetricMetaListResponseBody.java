@@ -34,9 +34,6 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The configuration of the metrics in the resources.</p>
-     */
     @NameInMap("Resources")
     public DescribeMetricMetaListResponseBodyResources resources;
 
@@ -116,85 +113,27 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
     }
 
     public static class DescribeMetricMetaListResponseBodyResourcesResource extends TeaModel {
-        /**
-         * <p>The metric description.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CPUUtilization</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The monitoring dimensions of the resource. Multiple monitoring dimensions are separated with commas (,).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>instanceId</p>
-         */
         @NameInMap("Dimensions")
         public String dimensions;
 
-        /**
-         * <p>The tags of the metric, including one or more JSON strings.</p>
-         * <p>Format: <code>[{&quot;name&quot;:&quot;tag key&quot;,&quot;value&quot;:&quot;tag value&quot;}]</code>. The <code>name</code> can be repeated. The following tags are available:</p>
-         * <ul>
-         * <li>metricCategory: the category of the metric.</li>
-         * <li>alertEnable: indicates whether to report alerts for the metric.</li>
-         * <li>alertUnit: the unit of the metric in the alerts.</li>
-         * <li>unitFactor: the factor for metric unit conversion.</li>
-         * <li>minAlertPeriod: the minimum interval at which the alert is reported.</li>
-         * <li>productCategory: the category of the service.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>[{\&quot;name\&quot;:\&quot;alertUnit\&quot;,\&quot;value\&quot;:\&quot;Bytes\&quot;},{\&quot;name\&quot;:\&quot;minAlertPeriod\&quot;,\&quot;value\&quot;:\&quot;60\&quot;},{\&quot;name\&quot;:\&quot;metricCategory\&quot;,\&quot;value\&quot;:\&quot;instanceId\&quot;},{\&quot;name\&quot;:\&quot;instanceType\&quot;,\&quot;value\&quot;:\&quot;disaster\&quot;},{\&quot;name\&quot;:\&quot;is_alarm\&quot;,\&quot;value\&quot;:\&quot;true\&quot;},{\&quot;name\&quot;:\&quot;productCategory\&quot;,\&quot;value\&quot;:\&quot;kvstore_old\&quot;}]</p>
-         */
         @NameInMap("Labels")
         public String labels;
 
-        /**
-         * <p>The metric name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CPUUtilization</p>
-         */
         @NameInMap("MetricName")
         public String metricName;
 
-        /**
-         * <p>The namespace of the cloud service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>acs_kvstore</p>
-         */
         @NameInMap("Namespace")
         public String namespace;
 
-        /**
-         * <p>The statistical periods of the metric. Multiple statistical periods are separated with commas (,).</p>
-         * <p>Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>60,300</p>
-         */
         @NameInMap("Periods")
         public String periods;
 
-        /**
-         * <p>The statistical method. Multiple statistical methods are separated with commas (,).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Average,Minimum,Maximum</p>
-         */
         @NameInMap("Statistics")
         public String statistics;
 
-        /**
-         * <p>The unit of the metric.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>%</p>
-         */
         @NameInMap("Unit")
         public String unit;
 

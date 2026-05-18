@@ -47,9 +47,6 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    /**
-     * <p>The unhealthy instances that are detected by the specified availability monitoring tasks.</p>
-     */
     @NameInMap("UnhealthyList")
     public DescribeUnhealthyHostAvailabilityResponseBodyUnhealthyList unhealthyList;
 
@@ -118,12 +115,6 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
     }
 
     public static class DescribeUnhealthyHostAvailabilityResponseBodyUnhealthyListNodeTaskInstance extends TeaModel {
-        /**
-         * <p>The ID of the availability monitoring task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123456</p>
-         */
         @NameInMap("Id")
         public Long id;
 

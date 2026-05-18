@@ -13,15 +13,9 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>List of alarm contact groups.</p>
-     */
     @NameInMap("ContactGroupList")
     public DescribeContactGroupListResponseBodyContactGroupList contactGroupList;
 
-    /**
-     * <p>List of alarm contact groups.</p>
-     */
     @NameInMap("ContactGroups")
     public DescribeContactGroupListResponseBodyContactGroups contactGroups;
 
@@ -148,69 +142,24 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
     }
 
     public static class DescribeContactGroupListResponseBodyContactGroupListContactGroup extends TeaModel {
-        /**
-         * <p>List of contacts.</p>
-         */
         @NameInMap("Contacts")
         public DescribeContactGroupListResponseBodyContactGroupListContactGroupContacts contacts;
 
-        /**
-         * <p>Creation time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2023-06-07T03:52:30Z</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        /**
-         * <p>Description information of the alarm contact group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Devops-运维组</p>
-         */
         @NameInMap("Describe")
         public String describe;
 
-        /**
-         * <p>Indicates whether the weekly report subscription function is enabled. Values:</p>
-         * <ul>
-         * <li><p>true: Yes.</p>
-         * </li>
-         * <li><p>false: No.</p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("EnableSubscribed")
         public Boolean enableSubscribed;
 
-        /**
-         * <p>Indicates whether the weekly report function is enabled.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("EnabledWeeklyReport")
         public Boolean enabledWeeklyReport;
 
-        /**
-         * <p>Name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>name</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>Update time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2025-03-04T02:12:06Z</p>
-         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 

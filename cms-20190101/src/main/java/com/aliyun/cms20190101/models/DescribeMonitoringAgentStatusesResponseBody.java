@@ -25,9 +25,6 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The host status information.</p>
-     */
     @NameInMap("NodeStatusList")
     public DescribeMonitoringAgentStatusesResponseBodyNodeStatusList nodeStatusList;
 
@@ -99,39 +96,12 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
     }
 
     public static class DescribeMonitoringAgentStatusesResponseBodyNodeStatusListNodeStatus extends TeaModel {
-        /**
-         * <p>The error code returned when the CloudMonitor agent is installed. Valid values:</p>
-         * <ul>
-         * <li>Common.Timeout: The installation timed out.</li>
-         * <li>Common.SLR: The service-linked role for CloudMonitor is unauthorized.</li>
-         * <li>Common.OS: The operating system is not supported.</li>
-         * <li>Assist.Invalid: Cloud Assistant is not running.</li>
-         * <li>Assist.Invoke: An error occurred when the installation program is started.</li>
-         * <li>Assist.Execute: An error occurred when the installation program is running.</li>
-         * </ul>
-         */
         @NameInMap("AgentInstallErrorCode")
         public String agentInstallErrorCode;
 
-        /**
-         * <p>Indicates whether the CloudMonitor agent is automatically installed. Valid values:</p>
-         * <ul>
-         * <li>true: The CloudMonitor agent is automatically installed.</li>
-         * <li>false: The CloudMonitor agent is not automatically installed.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("AutoInstall")
         public Boolean autoInstall;
 
-        /**
-         * <p>The instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-hp3dunahluwajv6f****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -141,90 +111,21 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         @NameInMap("LoongCollectorVersion")
         public String loongCollectorVersion;
 
-        /**
-         * <p>Indicates whether the SysAK monitoring feature is enabled.`` Valid values:</p>
-         * <ul>
-         * <li><code>true</code>: The SysAK monitoring feature is enabled.</li>
-         * <li><code>false</code>: the SysAK monitoring feature is disabled.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>{&quot;sysak&quot;:true}</p>
-         */
         @NameInMap("OsMonitorConfig")
         public String osMonitorConfig;
 
-        /**
-         * <p>The error status of SysOM. Valid values:</p>
-         * <ul>
-         * <li><code>install_fail</code>: SysOM fails to be installed or an unknown error occurs.</li>
-         * <li><code>install_assist_invalid</code>: SysOM fails to be installed because the status of Cloud Assistant is invalid.</li>
-         * <li><code>install_assist_command_fail</code>: SysOM fails to be installed because the installation command fails to run.</li>
-         * <li><code>uninstall_fail</code>: SysOM fails to be uninstalled or an unknown error occurs.</li>
-         * <li><code>uninstall_assist_invalid</code>: SysOM fails to be uninstalled because the status of Cloud Assistant is invalid.</li>
-         * <li><code>uninstall_assist_command_fail</code>: SysOM fails to be uninstalled because the uninstallation command fails to run.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>install_fail</p>
-         */
         @NameInMap("OsMonitorErrorCode")
         public String osMonitorErrorCode;
 
-        /**
-         * <p>The details of the execution error. Valid values:</p>
-         * <ul>
-         * <li><code>Command.ErrorCode.Fail.Downlaod.REGIN_ID</code>: Failed to obtain the region ID.</li>
-         * <li><code>Command.ErrorCode.Fail.Downlaod.SYSAK</code>: Failed to download the .rpm package of System Analyse Kit (SysAK).</li>
-         * <li><code>Command.ErrorCode.Fail.Downlaod.CMON_FILE</code>: Failed to download the CMON file.</li>
-         * <li><code>Command.ErrorCode.Fail.Downlaod.BTF</code>: Failed to start SysAK because the BTF file is not found.</li>
-         * <li><code>Command.ErrorCode.Fail.Start.SYSAK</code>: Failed to start SysAK due to an unknown error.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Command.ErrorCode.Fail.Downlaod.REGIN_ID</p>
-         */
         @NameInMap("OsMonitorErrorDetail")
         public String osMonitorErrorDetail;
 
-        /**
-         * <p>The status of SysOM. Valid values:</p>
-         * <ul>
-         * <li>installing: SysOM is being installed.</li>
-         * <li>running: SysOM is running.</li>
-         * <li>stopped: SysOM is stopped.</li>
-         * <li>uninstalling: SysOM is being uninstalled.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>running</p>
-         */
         @NameInMap("OsMonitorStatus")
         public String osMonitorStatus;
 
-        /**
-         * <p>The SysOM version.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1.3.0-12</p>
-         */
         @NameInMap("OsMonitorVersion")
         public String osMonitorVersion;
 
-        /**
-         * <p>The status of the CloudMonitor agent. Valid values:</p>
-         * <ul>
-         * <li>running: The CloudMonitor agent is running.</li>
-         * <li>stopped: The CloudMonitor agent is stopped.</li>
-         * <li>installing: The CloudMonitor agent is being installed.</li>
-         * <li>install_faild: The CloudMonitor agent fails to be installed.</li>
-         * <li>abnormal: The CloudMonitor agent is not properly installed.</li>
-         * <li>not_installed: The CloudMonitor agent is not installed.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>running</p>
-         */
         @NameInMap("Status")
         public String status;
 

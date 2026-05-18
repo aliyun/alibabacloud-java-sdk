@@ -16,9 +16,6 @@ public class DescribeCustomEventHistogramResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The information about the number of times that the custom event occurred during each interval of the specified time period.</p>
-     */
     @NameInMap("EventHistograms")
     public DescribeCustomEventHistogramResponseBodyEventHistograms eventHistograms;
 
@@ -95,32 +92,12 @@ public class DescribeCustomEventHistogramResponseBody extends TeaModel {
     }
 
     public static class DescribeCustomEventHistogramResponseBodyEventHistogramsEventHistogram extends TeaModel {
-        /**
-         * <p>The information about the number of times that the custom event occurred during an interval of the specified time period.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("Count")
         public Long count;
 
-        /**
-         * <p>The end time.</p>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1552226750000</p>
-         */
         @NameInMap("EndTime")
         public Long endTime;
 
-        /**
-         * <p>The start time.</p>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1552226740000</p>
-         */
         @NameInMap("StartTime")
         public Long startTime;
 

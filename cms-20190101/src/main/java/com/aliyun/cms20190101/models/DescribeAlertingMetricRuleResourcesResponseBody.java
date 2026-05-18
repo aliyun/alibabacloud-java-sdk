@@ -34,9 +34,6 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The resources that are associated with the alert rule.</p>
-     */
     @NameInMap("Resources")
     public DescribeAlertingMetricRuleResourcesResponseBodyResources resources;
 
@@ -116,66 +113,18 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResourceExpressionListExpressionList extends TeaModel {
-        /**
-         * <p>The operator that is used to compare the metric value with the threshold. Valid values:</p>
-         * <ul>
-         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
-         * <li>GreaterThanThreshold: greater than the threshold</li>
-         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
-         * <li>LessThanThreshold: less than the threshold</li>
-         * <li>NotEqualToThreshold: not equal to the threshold</li>
-         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
-         * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
-         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
-         * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
-         * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
-         * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>GreaterThanOrEqualToThreshold</p>
-         */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
-        /**
-         * <p>The metric name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cpu_total</p>
-         */
         @NameInMap("MetricName")
         public String metricName;
 
-        /**
-         * <p>The statistical period of the metric. Unit: seconds. The default value is the interval at which the monitoring data of the metric is collected.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>60</p>
-         */
         @NameInMap("Period")
         public String period;
 
-        /**
-         * <p>The statistical method of the alert level. Valid values:</p>
-         * <ul>
-         * <li>Maximum</li>
-         * <li>Minimum</li>
-         * <li>Average</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Average</p>
-         */
         @NameInMap("Statistics")
         public String statistics;
 
-        /**
-         * <p>The alert threshold.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>90</p>
-         */
         @NameInMap("Threshold")
         public String threshold;
 
@@ -246,129 +195,33 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResource extends TeaModel {
-        /**
-         * <p>The operator that is used to compare the metric value with the threshold. Valid values:</p>
-         * <ul>
-         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
-         * <li>GreaterThanThreshold: greater than the threshold</li>
-         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
-         * <li>LessThanThreshold: less than the threshold</li>
-         * <li>NotEqualToThreshold: not equal to the threshold</li>
-         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
-         * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
-         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
-         * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
-         * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
-         * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>GreaterThanOrEqualToThreshold</p>
-         */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
-        /**
-         * <p>The description of the alert rule.</p>
-         * <blockquote>
-         * <p> This parameter indicates the content of the alert rule. If the metric value meets the alert condition, an alert is triggered.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>$Average&gt;=10</p>
-         */
         @NameInMap("Expression")
         public String expression;
 
-        /**
-         * <p>The description of the multi-metric alert rule.</p>
-         */
         @NameInMap("ExpressionList")
         public DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalationResourceExpressionList expressionList;
 
-        /**
-         * <p>The relationship between multiple metrics. Valid values:</p>
-         * <ul>
-         * <li>&amp;&amp;: If all metrics meet the alert conditions, CloudMonitor sends alert notifications.</li>
-         * <li>||: If one of the metrics meets the alert conditions, CloudMonitor sends alert notifications.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>&amp;&amp;</p>
-         */
         @NameInMap("ExpressionListJoin")
         public String expressionListJoin;
 
-        /**
-         * <p>The trigger conditions that are created by using expressions. You can use expressions to create trigger conditions in the following scenarios:</p>
-         * <ul>
-         * <li>Set an alert blacklist for specific resources. For example, if you specify <code>$instanceId != \\&quot;i-io8kfvcpp7x5****\\&quot; ``&amp;&amp;`` $Average &gt; 50</code>, no alert is triggered when the <code>average metric value</code> of the <code>i-io8kfvcpp7x5****</code> instance exceeds 50.</li>
-         * <li>Set a special alert threshold for a specified instance in the rule. For example, if you specify <code>$Average &gt; ($instanceId == \\&quot;i-io8kfvcpp7x5****\\&quot;? 80: 50)</code>, an alert is triggered when the <code>average metric value</code> of the <code>i-io8kfvcpp7x5****</code> instance exceeds 80 or the <code>average metric value</code> of other instances exceeds 50.</li>
-         * <li>Limit the number of instances whose metric values exceed the threshold. For example, if you specify <code>count($Average &gt; 20) &gt; 3</code>, an alert is triggered only when the <code>average metric value</code> of more than three instances exceeds 20.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>$Average &gt; ($instanceId == \&quot;i-io8kfvcpp7x5****\&quot;? 80: 50)</p>
-         */
         @NameInMap("ExpressionRaw")
         public String expressionRaw;
 
-        /**
-         * <p>The severity level and notification methods of the alert. Valid values:</p>
-         * <ul>
-         * <li>4: Alert notifications are sent by using emails and DingTalk chatbots.</li>
-         * <li>OK: No alert is generated.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("Level")
         public Integer level;
 
-        /**
-         * <p>The operator that is used to compare the metric value with the threshold. Valid values:</p>
-         * <ul>
-         * <li><code>&gt;=</code></li>
-         * <li><code>=</code></li>
-         * <li><code>&lt;=</code></li>
-         * <li><code>&gt;</code></li>
-         * <li><code>&lt;</code></li>
-         * <li><code>!=</code></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <blockquote>
-         * <p>=</p>
-         * </blockquote>
-         */
         @NameInMap("PreCondition")
         public String preCondition;
 
-        /**
-         * <p>This parameter is deprecated.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>mns</p>
-         */
         @NameInMap("Tag")
         public String tag;
 
-        /**
-         * <p>The alert threshold.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("Threshold")
         public String threshold;
 
-        /**
-         * <p>The consecutive number of times for which the metric value meets the alert condition before an alert is triggered.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Times")
         public Integer times;
 
@@ -479,176 +332,57 @@ public class DescribeAlertingMetricRuleResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeAlertingMetricRuleResourcesResponseBodyResourcesResource extends TeaModel {
-        /**
-         * <p>The dimensions based on which the resources are queried.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{\&quot;region\&quot;:\&quot;cn-huhehaote\&quot;,\&quot;queue\&quot;:\&quot;test-0128\&quot;,\&quot;userId\&quot;:\&quot;120886317861****\&quot;}</p>
-         */
         @NameInMap("Dimensions")
         public String dimensions;
 
-        /**
-         * <p>Indicates whether the alert rule is enabled. Valid values:</p>
-         * <ul>
-         * <li>true: The alert rule is enabled.</li>
-         * <li>false: The alert rule is disabled.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Enable")
         public String enable;
 
-        /**
-         * <p>The alert rule based on which the alert is triggered.</p>
-         */
         @NameInMap("Escalation")
         public DescribeAlertingMetricRuleResourcesResponseBodyResourcesResourceEscalation escalation;
 
-        /**
-         * <p>The ID of the application group.</p>
-         * <blockquote>
-         * <p> If the alert rule is associated with an application group, the ID of the application group is returned in this parameter.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>7671****</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The time when the last alert was triggered for the resource based on the alert rule. The value is a timestamp.</p>
-         * <p>Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1622427900000</p>
-         */
         @NameInMap("LastAlertTime")
         public String lastAlertTime;
 
-        /**
-         * <p>The time when the alert rule was last modified. The value is a timestamp.</p>
-         * <p>Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1622827900000</p>
-         */
         @NameInMap("LastModifyTime")
         public String lastModifyTime;
 
-        /**
-         * <p>The severity level and notification methods of the alert. Valid values:</p>
-         * <ul>
-         * <li>4: Alert notifications are sent by using emails and DingTalk chatbots.</li>
-         * <li>OK: No alert is generated.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("Level")
         public Integer level;
 
-        /**
-         * <p>The metric name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ActiveMessages</p>
-         */
         @NameInMap("MetricName")
         public String metricName;
 
-        /**
-         * <p>The metric value that triggered the alert based on the alert rule. The value is a JSON string.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{\&quot;timestamp\&quot;:1623727500000,\&quot;Sum\&quot;:926,\&quot;value\&quot;:463,\&quot;Maximum\&quot;:463,\&quot;Minimum\&quot;:463,\&quot;Average\&quot;:463,\&quot;SampleCount\&quot;:2,\&quot;userId\&quot;:\&quot;120886317861****\&quot;,\&quot;region\&quot;:\&quot;cn-huhehaote\&quot;,\&quot;queue\&quot;:\&quot;test-0128\&quot;}</p>
-         */
         @NameInMap("MetricValues")
         public String metricValues;
 
-        /**
-         * <p>The namespace of the cloud service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>acs_mns_new</p>
-         */
         @NameInMap("Namespace")
         public String namespace;
 
-        /**
-         * <p>The type of the cloud service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>mns</p>
-         */
         @NameInMap("ProductCategory")
         public String productCategory;
 
-        /**
-         * <p>The resources that are monitored.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>userId=120886317861****,region=cn-huhehaote,queue=test-0128</p>
-         */
         @NameInMap("Resource")
         public String resource;
 
-        /**
-         * <p>The consecutive number of times for which the metric value meets the alert condition before an alert is triggered.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("RetryTimes")
         public String retryTimes;
 
-        /**
-         * <p>The ID of the alert rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>putNewAlarm_user_7e78d765-0e3e-4671-ba6d-7ce39108****</p>
-         */
         @NameInMap("RuleId")
         public String ruleId;
 
-        /**
-         * <p>The name of the alert rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test123456789</p>
-         */
         @NameInMap("RuleName")
         public String ruleName;
 
-        /**
-         * <p>The time when the resource was associated with the alert rule. The value is a timestamp.</p>
-         * <p>Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1622427900000</p>
-         */
         @NameInMap("StartTime")
         public String startTime;
 
-        /**
-         * <p>The method used to calculate the metric values that trigger alerts.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Average</p>
-         */
         @NameInMap("Statistics")
         public String statistics;
 
-        /**
-         * <p>The alert threshold.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("Threshold")
         public String threshold;
 

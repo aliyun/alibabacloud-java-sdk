@@ -16,9 +16,6 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The alert rules that failed to be created for the resource.</p>
-     */
     @NameInMap("FailedListResult")
     public PutResourceMetricRulesResponseBodyFailedListResult failedListResult;
 
@@ -99,34 +96,12 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
     }
 
     public static class PutResourceMetricRulesResponseBodyFailedListResultTargetResult extends TeaModel {
-        /**
-         * <p>The response code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>404</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <p>The error message returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>The request processing has failed due to some unknown error.</p>
-         */
         @NameInMap("Message")
         public String message;
 
-        /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("Success")
         public Boolean success;
 
@@ -162,18 +137,9 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
     }
 
     public static class PutResourceMetricRulesResponseBodyFailedListResultTarget extends TeaModel {
-        /**
-         * <p>The alert rule that failed to be created.</p>
-         */
         @NameInMap("Result")
         public PutResourceMetricRulesResponseBodyFailedListResultTargetResult result;
 
-        /**
-         * <p>The ID of the alert rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>a151cd6023eacee2f0978e03863cc1697c89508****</p>
-         */
         @NameInMap("RuleId")
         public String ruleId;
 

@@ -52,9 +52,6 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information about the resources in the application group.</p>
-     */
     @NameInMap("Resources")
     public DescribeMonitorGroupInstancesResponseBodyResources resources;
 
@@ -146,48 +143,18 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeMonitorGroupInstancesResponseBodyResourcesResource extends TeaModel {
-        /**
-         * <p>The abbreviation of the service name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ecs</p>
-         */
         @NameInMap("Category")
         public String category;
 
-        /**
-         * <p>The resource ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>12345</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>The instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-2ze3w55tr2r****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The instance name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>hostIP</p>
-         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        /**
-         * <p>The ID of the region where the instance resides.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 

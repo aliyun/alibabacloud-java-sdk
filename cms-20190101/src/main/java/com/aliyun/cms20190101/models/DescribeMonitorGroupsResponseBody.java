@@ -52,9 +52,6 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The resources that are associated with the application group.</p>
-     */
     @NameInMap("Resources")
     public DescribeMonitorGroupsResponseBodyResources resources;
 
@@ -150,12 +147,6 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeMonitorGroupsResponseBodyResourcesResourceContactGroupsContactGroup extends TeaModel {
-        /**
-         * <p>The name of the alert contact group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CloudMonitor</p>
-         */
         @NameInMap("Name")
         public String name;
 
@@ -194,21 +185,9 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeMonitorGroupsResponseBodyResourcesResourceTagsTag extends TeaModel {
-        /**
-         * <p>The tag key of the application group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>tagKey1</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value of the application group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>tagValue1</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -334,128 +313,48 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeMonitorGroupsResponseBodyResourcesResource extends TeaModel {
-        /**
-         * <p>The URL of the ACK cluster from which the application group is synchronized.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="https://aliyun.com">https://aliyun.com</a></p>
-         */
         @NameInMap("BindUrl")
         public String bindUrl;
 
-        /**
-         * <p>The alert contact groups.</p>
-         */
         @NameInMap("ContactGroups")
         public DescribeMonitorGroupsResponseBodyResourcesResourceContactGroups contactGroups;
 
-        /**
-         * <p>The ID of the tag rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6b882d9a-5117-42e2-9d0c-4749a0c6****</p>
-         */
         @NameInMap("DynamicTagRuleId")
         public String dynamicTagRuleId;
 
-        /**
-         * <p>The timestamp when the application group was created. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1603181891000</p>
-         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
-        /**
-         * <p>The timestamp when the application group was modified. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1603181891000</p>
-         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
-        /**
-         * <p>The tag key that is created for the application group by using the tag rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>GroupKey1</p>
-         */
         @NameInMap("GroupFounderTagKey")
         public String groupFounderTagKey;
 
-        /**
-         * <p>The tag value that is created for the application group by using the tag rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>GroupValue1</p>
-         */
         @NameInMap("GroupFounderTagValue")
         public String groupFounderTagValue;
 
-        /**
-         * <p>The ID of the application group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>12345</p>
-         */
         @NameInMap("GroupId")
         public Long groupId;
 
-        /**
-         * <p>The name of the application group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test123</p>
-         */
         @NameInMap("GroupName")
         public String groupName;
 
-        /**
-         * <p>The resource ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-aek2hopjh*******</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        /**
-         * <p>The ID of the Alibaba Cloud service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>49****</p>
-         */
         @NameInMap("ServiceId")
         public String serviceId;
 
-        /**
-         * <p>The tags that are attached to the application group.</p>
-         */
         @NameInMap("Tags")
         public DescribeMonitorGroupsResponseBodyResourcesResourceTags tags;
 
-        /**
-         * <p>The ID of the template.</p>
-         */
         @NameInMap("TemplateIds")
         public DescribeMonitorGroupsResponseBodyResourcesResourceTemplateIds templateIds;
 
         @NameInMap("TemplateInfos")
         public DescribeMonitorGroupsResponseBodyResourcesResourceTemplateInfos templateInfos;
 
-        /**
-         * <p>The type of the application group. Valid values:</p>
-         * <ul>
-         * <li>custom: a self-managed application group</li>
-         * <li>ehpc_cluster: an application group that is synchronized from an E-HPC cluster</li>
-         * <li>kubernetes: an application group that is synchronized from an ACK cluster</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>custom</p>
-         */
         @NameInMap("Type")
         public String type;
 
