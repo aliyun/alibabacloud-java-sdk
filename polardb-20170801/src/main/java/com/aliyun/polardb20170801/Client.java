@@ -16715,6 +16715,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询配额列表</p>
+     * 
+     * @param request DescribePolarFsQuotaListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePolarFsQuotaListResponse
+     */
+    public DescribePolarFsQuotaListResponse describePolarFsQuotaListWithOptions(DescribePolarFsQuotaListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.polarFsInstanceId)) {
+            query.put("PolarFsInstanceId", request.polarFsInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quotaMode)) {
+            query.put("QuotaMode", request.quotaMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePolarFsQuotaList"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePolarFsQuotaListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询配额列表</p>
+     * 
+     * @param request DescribePolarFsQuotaListRequest
+     * @return DescribePolarFsQuotaListResponse
+     */
+    public DescribePolarFsQuotaListResponse describePolarFsQuotaList(DescribePolarFsQuotaListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePolarFsQuotaListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries whether the SQL Explorer feature is enabled for the cluster.</p>
      * 
      * @param request DescribePolarSQLCollectorPolicyRequest
