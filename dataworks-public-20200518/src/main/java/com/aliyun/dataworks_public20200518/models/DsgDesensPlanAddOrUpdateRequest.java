@@ -219,8 +219,8 @@ public class DsgDesensPlanAddOrUpdateRequest extends TeaModel {
         @NameInMap("columns")
         public java.util.List<DsgDesensPlanAddOrUpdateRequestDesensRulesColumns> columns;
 
-        @NameInMap("emptyNotDesesn")
-        public Boolean emptyNotDesesn;
+        @NameInMap("emptyNotDesens")
+        public Boolean emptyNotDesens;
 
         public static DsgDesensPlanAddOrUpdateRequestDesensRules build(java.util.Map<String, ?> map) throws Exception {
             DsgDesensPlanAddOrUpdateRequestDesensRules self = new DsgDesensPlanAddOrUpdateRequestDesensRules();
@@ -299,12 +299,12 @@ public class DsgDesensPlanAddOrUpdateRequest extends TeaModel {
             return this.columns;
         }
 
-        public DsgDesensPlanAddOrUpdateRequestDesensRules setEmptyNotDesesn(Boolean emptyNotDesesn) {
-            this.emptyNotDesesn = emptyNotDesesn;
+        public DsgDesensPlanAddOrUpdateRequestDesensRules setEmptyNotDesens(Boolean emptyNotDesens) {
+            this.emptyNotDesens = emptyNotDesens;
             return this;
         }
-        public Boolean getEmptyNotDesesn() {
-            return this.emptyNotDesesn;
+        public Boolean getEmptyNotDesens() {
+            return this.emptyNotDesens;
         }
 
     }
