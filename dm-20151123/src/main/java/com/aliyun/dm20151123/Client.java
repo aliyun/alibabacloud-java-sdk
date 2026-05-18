@@ -1181,6 +1181,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建模板</p>
+     * 
+     * @param request CreateTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateTemplateResponse
+     */
+    public CreateTemplateResponse createTemplateWithOptions(CreateTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fromType)) {
+            query.put("FromType", request.fromType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.smsContent)) {
+            query.put("SmsContent", request.smsContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.smsType)) {
+            query.put("SmsType", request.smsType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
+            query.put("TemplateName", request.templateName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateNickName)) {
+            query.put("TemplateNickName", request.templateNickName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateSubject)) {
+            query.put("TemplateSubject", request.templateSubject);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateText)) {
+            query.put("TemplateText", request.templateText);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateType)) {
+            query.put("TemplateType", request.templateType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateTemplate"),
+            new TeaPair("version", "2015-11-23"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建模板</p>
+     * 
+     * @param request CreateTemplateRequest
+     * @return CreateTemplateResponse
+     */
+    public CreateTemplateResponse createTemplate(CreateTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Create User\&quot;s Invalid Address</p>
      * 
      * @param request CreateUserSuppressionRequest
