@@ -5,52 +5,54 @@ import com.aliyun.tea.*;
 
 public class QueryAiVoiceAgentDetailNewRequest extends TeaModel {
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>12345678</p>
      */
     @NameInMap("AgentId")
-    public Long agentId;
+    public String agentId;
 
     /**
      * <strong>example:</strong>
      * <p>12</p>
      */
     @NameInMap("BranchId")
-    public Long branchId;
+    public String branchId;
 
     /**
      * <strong>example:</strong>
      * <p>21</p>
      */
     @NameInMap("VersionId")
-    public Long versionId;
+    public String versionId;
 
     public static QueryAiVoiceAgentDetailNewRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryAiVoiceAgentDetailNewRequest self = new QueryAiVoiceAgentDetailNewRequest();
         return TeaModel.build(map, self);
     }
 
-    public QueryAiVoiceAgentDetailNewRequest setAgentId(Long agentId) {
+    public QueryAiVoiceAgentDetailNewRequest setAgentId(String agentId) {
         this.agentId = agentId;
         return this;
     }
-    public Long getAgentId() {
+    public String getAgentId() {
         return this.agentId;
     }
 
-    public QueryAiVoiceAgentDetailNewRequest setBranchId(Long branchId) {
+    public QueryAiVoiceAgentDetailNewRequest setBranchId(String branchId) {
         this.branchId = branchId;
         return this;
     }
-    public Long getBranchId() {
+    public String getBranchId() {
         return this.branchId;
     }
 
-    public QueryAiVoiceAgentDetailNewRequest setVersionId(Long versionId) {
+    public QueryAiVoiceAgentDetailNewRequest setVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
-    public Long getVersionId() {
+    public String getVersionId() {
         return this.versionId;
     }
 

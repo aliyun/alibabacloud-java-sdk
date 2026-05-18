@@ -1104,50 +1104,12 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
 
     }
 
-    public static class QueryAiVoiceAgentDetailNewResponseBodyDataSummaryConfigCallResultTagConfigMappingTag extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>示例值示例值</p>
-         */
-        @NameInMap("Desc")
-        public String desc;
-
-        /**
-         * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
-         */
-        @NameInMap("Tag")
-        public String tag;
-
-        public static QueryAiVoiceAgentDetailNewResponseBodyDataSummaryConfigCallResultTagConfigMappingTag build(java.util.Map<String, ?> map) throws Exception {
-            QueryAiVoiceAgentDetailNewResponseBodyDataSummaryConfigCallResultTagConfigMappingTag self = new QueryAiVoiceAgentDetailNewResponseBodyDataSummaryConfigCallResultTagConfigMappingTag();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryAiVoiceAgentDetailNewResponseBodyDataSummaryConfigCallResultTagConfigMappingTag setDesc(String desc) {
-            this.desc = desc;
-            return this;
-        }
-        public String getDesc() {
-            return this.desc;
-        }
-
-        public QueryAiVoiceAgentDetailNewResponseBodyDataSummaryConfigCallResultTagConfigMappingTag setTag(String tag) {
-            this.tag = tag;
-            return this;
-        }
-        public String getTag() {
-            return this.tag;
-        }
-
-    }
-
     public static class QueryAiVoiceAgentDetailNewResponseBodyDataSummaryConfigCallResultTagConfig extends TeaModel {
         @NameInMap("DefaultTag")
         public QueryAiVoiceAgentDetailNewResponseBodyDataSummaryConfigCallResultTagConfigDefaultTag defaultTag;
 
         @NameInMap("MappingTag")
-        public QueryAiVoiceAgentDetailNewResponseBodyDataSummaryConfigCallResultTagConfigMappingTag mappingTag;
+        public java.util.Map<String, String> mappingTag;
 
         public static QueryAiVoiceAgentDetailNewResponseBodyDataSummaryConfigCallResultTagConfig build(java.util.Map<String, ?> map) throws Exception {
             QueryAiVoiceAgentDetailNewResponseBodyDataSummaryConfigCallResultTagConfig self = new QueryAiVoiceAgentDetailNewResponseBodyDataSummaryConfigCallResultTagConfig();
@@ -1162,11 +1124,11 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             return this.defaultTag;
         }
 
-        public QueryAiVoiceAgentDetailNewResponseBodyDataSummaryConfigCallResultTagConfig setMappingTag(QueryAiVoiceAgentDetailNewResponseBodyDataSummaryConfigCallResultTagConfigMappingTag mappingTag) {
+        public QueryAiVoiceAgentDetailNewResponseBodyDataSummaryConfigCallResultTagConfig setMappingTag(java.util.Map<String, String> mappingTag) {
             this.mappingTag = mappingTag;
             return this;
         }
-        public QueryAiVoiceAgentDetailNewResponseBodyDataSummaryConfigCallResultTagConfigMappingTag getMappingTag() {
+        public java.util.Map<String, String> getMappingTag() {
             return this.mappingTag;
         }
 

@@ -11,7 +11,7 @@ public class PageQueryAgentListNewRequest extends TeaModel {
      * <p>12345</p>
      */
     @NameInMap("AgentId")
-    public Long agentId;
+    public String agentId;
 
     /**
      * <strong>example:</strong>
@@ -53,11 +53,11 @@ public class PageQueryAgentListNewRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public PageQueryAgentListNewRequest setAgentId(Long agentId) {
+    public PageQueryAgentListNewRequest setAgentId(String agentId) {
         this.agentId = agentId;
         return this;
     }
-    public Long getAgentId() {
+    public String getAgentId() {
         return this.agentId;
     }
 
