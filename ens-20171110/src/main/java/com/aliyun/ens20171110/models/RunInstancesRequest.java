@@ -88,6 +88,9 @@ public class RunInstancesRequest extends TeaModel {
     @NameInMap("DeletionProtection")
     public Boolean deletionProtection;
 
+    @NameInMap("DeploymentSetId")
+    public String deploymentSetId;
+
     /**
      * <p>The ID of the node.</p>
      * <blockquote>
@@ -534,6 +537,14 @@ public class RunInstancesRequest extends TeaModel {
     }
     public Boolean getDeletionProtection() {
         return this.deletionProtection;
+    }
+
+    public RunInstancesRequest setDeploymentSetId(String deploymentSetId) {
+        this.deploymentSetId = deploymentSetId;
+        return this;
+    }
+    public String getDeploymentSetId() {
+        return this.deploymentSetId;
     }
 
     public RunInstancesRequest setEnsRegionId(String ensRegionId) {

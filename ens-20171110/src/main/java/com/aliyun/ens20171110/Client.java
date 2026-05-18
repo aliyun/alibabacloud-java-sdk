@@ -17534,6 +17534,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DeletionProtection", request.deletionProtection);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.deploymentSetId)) {
+            query.put("DeploymentSetId", request.deploymentSetId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ensRegionId)) {
             query.put("EnsRegionId", request.ensRegionId);
         }
