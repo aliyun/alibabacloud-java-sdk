@@ -4,18 +4,38 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class OneMetaKnowledgeBaseChunk extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2026-04-20 15:51:27</p>
+     */
     @NameInMap("ChunkMtime")
     public String chunkMtime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>titile1</p>
+     */
     @NameInMap("ChunkTitle")
     public String chunkTitle;
 
+    /**
+     * <strong>example:</strong>
+     * <p>abc</p>
+     */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test.md</p>
+     */
     @NameInMap("DocName")
     public String docName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2e12aeb5-52cd-4834-bcd8-****</p>
+     */
     @NameInMap("Id")
     public String id;
 

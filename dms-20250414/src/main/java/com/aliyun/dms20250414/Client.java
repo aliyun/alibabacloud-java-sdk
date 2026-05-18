@@ -1564,6 +1564,112 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除文档</p>
+     * 
+     * @param request DeleteDocumentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDocumentResponse
+     */
+    public DeleteDocumentResponse deleteDocumentWithOptions(DeleteDocumentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.documentName)) {
+            body.put("DocumentName", request.documentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kbUuid)) {
+            body.put("KbUuid", request.kbUuid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDocument"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDocumentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除文档</p>
+     * 
+     * @param request DeleteDocumentRequest
+     * @return DeleteDocumentResponse
+     */
+    public DeleteDocumentResponse deleteDocument(DeleteDocumentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDocumentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除onemeta3.0的知识库chunks</p>
+     * 
+     * @param tmpReq DeleteDocumentChunksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDocumentChunksResponse
+     */
+    public DeleteDocumentChunksResponse deleteDocumentChunksWithOptions(DeleteDocumentChunksRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DeleteDocumentChunksShrinkRequest request = new DeleteDocumentChunksShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.chunkIds)) {
+            request.chunkIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.chunkIds, "ChunkIds", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.chunkIdsShrink)) {
+            body.put("ChunkIds", request.chunkIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.documentName)) {
+            body.put("DocumentName", request.documentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kbUuid)) {
+            body.put("KbUuid", request.kbUuid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDocumentChunks"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDocumentChunksResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除onemeta3.0的知识库chunks</p>
+     * 
+     * @param request DeleteDocumentChunksRequest
+     * @return DeleteDocumentChunksResponse
+     */
+    public DeleteDocumentChunksResponse deleteDocumentChunks(DeleteDocumentChunksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDocumentChunksWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>DeleteFileUpload</p>
      * 
      * @param request DeleteFileUploadRequest
@@ -1716,6 +1822,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取文档详情</p>
+     * 
+     * @param request DescribeDocumentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDocumentResponse
+     */
+    public DescribeDocumentResponse describeDocumentWithOptions(DescribeDocumentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.documentName)) {
+            body.put("DocumentName", request.documentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kbUuid)) {
+            body.put("KbUuid", request.kbUuid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDocument"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDocumentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文档详情</p>
+     * 
+     * @param request DescribeDocumentRequest
+     * @return DescribeDocumentResponse
+     */
+    public DescribeDocumentResponse describeDocument(DescribeDocumentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDocumentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>DescribeFileUploadSignature</p>
      * 
      * @param request DescribeFileUploadSignatureRequest
@@ -1804,6 +1958,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeKnowledgeBaseStatsResponse describeKnowledgeBaseStats(DescribeKnowledgeBaseStatsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeKnowledgeBaseStatsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取知识库中的上传签名</p>
+     * 
+     * @param request DescribeKnowledgeBaseUploadSignatureRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeKnowledgeBaseUploadSignatureResponse
+     */
+    public DescribeKnowledgeBaseUploadSignatureResponse describeKnowledgeBaseUploadSignatureWithOptions(DescribeKnowledgeBaseUploadSignatureRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.kbUuid)) {
+            query.put("KbUuid", request.kbUuid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeKnowledgeBaseUploadSignature"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeKnowledgeBaseUploadSignatureResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取知识库中的上传签名</p>
+     * 
+     * @param request DescribeKnowledgeBaseUploadSignatureRequest
+     * @return DescribeKnowledgeBaseUploadSignatureResponse
+     */
+    public DescribeKnowledgeBaseUploadSignatureResponse describeKnowledgeBaseUploadSignature(DescribeKnowledgeBaseUploadSignatureRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeKnowledgeBaseUploadSignatureWithOptions(request, runtime);
     }
 
     /**
@@ -3794,6 +3992,142 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>分页查询onemeta3.0的知识库chunks</p>
+     * 
+     * @param request ListDocumentChunksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDocumentChunksResponse
+     */
+    public ListDocumentChunksResponse listDocumentChunksWithOptions(ListDocumentChunksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.chunkTitlePattern)) {
+            body.put("ChunkTitlePattern", request.chunkTitlePattern);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.documentName)) {
+            body.put("DocumentName", request.documentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kbUuid)) {
+            body.put("KbUuid", request.kbUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortFieldName)) {
+            body.put("SortFieldName", request.sortFieldName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortOrder)) {
+            body.put("SortOrder", request.sortOrder);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDocumentChunks"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDocumentChunksResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询onemeta3.0的知识库chunks</p>
+     * 
+     * @param request ListDocumentChunksRequest
+     * @return ListDocumentChunksResponse
+     */
+    public ListDocumentChunksResponse listDocumentChunks(ListDocumentChunksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDocumentChunksWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文档列表</p>
+     * 
+     * @param request ListDocumentsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDocumentsResponse
+     */
+    public ListDocumentsResponse listDocumentsWithOptions(ListDocumentsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filters)) {
+            body.put("Filters", request.filters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kbUuid)) {
+            body.put("KbUuid", request.kbUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namePattern)) {
+            body.put("NamePattern", request.namePattern);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortFieldName)) {
+            body.put("SortFieldName", request.sortFieldName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortOrder)) {
+            body.put("SortOrder", request.sortOrder);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDocuments"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDocumentsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文档列表</p>
+     * 
+     * @param request ListDocumentsRequest
+     * @return ListDocumentsResponse
+     */
+    public ListDocumentsResponse listDocuments(ListDocumentsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDocumentsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>ListFileUpload</p>
      * 
      * @param request ListFileUploadRequest
@@ -3866,6 +4200,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListFileUploadResponse listFileUpload(ListFileUploadRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listFileUploadWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询onemeta3.0的知识库</p>
+     * 
+     * @param request ListKnowledgeBasesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListKnowledgeBasesResponse
+     */
+    public ListKnowledgeBasesResponse listKnowledgeBasesWithOptions(ListKnowledgeBasesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filters)) {
+            body.put("Filters", request.filters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namePattern)) {
+            body.put("NamePattern", request.namePattern);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortFieldName)) {
+            body.put("SortFieldName", request.sortFieldName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortOrder)) {
+            body.put("SortOrder", request.sortOrder);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            body.put("Tag", request.tag);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListKnowledgeBases"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListKnowledgeBasesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询onemeta3.0的知识库</p>
+     * 
+     * @param request ListKnowledgeBasesRequest
+     * @return ListKnowledgeBasesResponse
+     */
+    public ListKnowledgeBasesResponse listKnowledgeBases(ListKnowledgeBasesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listKnowledgeBasesWithOptions(request, runtime);
     }
 
     /**
@@ -4852,6 +5254,256 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateDataLakeTableResponse updateDataLakeTable(UpdateDataLakeTableRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateDataLakeTableWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新文档</p>
+     * 
+     * @param request UpdateDocumentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateDocumentResponse
+     */
+    public UpdateDocumentResponse updateDocumentWithOptions(UpdateDocumentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.documentName)) {
+            body.put("DocumentName", request.documentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kbUuid)) {
+            body.put("KbUuid", request.kbUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.newDescription)) {
+            body.put("NewDescription", request.newDescription);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateDocument"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDocumentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新文档</p>
+     * 
+     * @param request UpdateDocumentRequest
+     * @return UpdateDocumentResponse
+     */
+    public UpdateDocumentResponse updateDocument(UpdateDocumentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateDocumentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新onemeta3.0的知识库</p>
+     * 
+     * @param request UpdateKnowledgeBaseRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateKnowledgeBaseResponse
+     */
+    public UpdateKnowledgeBaseResponse updateKnowledgeBaseWithOptions(UpdateKnowledgeBaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kbUuid)) {
+            query.put("KbUuid", request.kbUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateKnowledgeBase"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateKnowledgeBaseResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新onemeta3.0的知识库</p>
+     * 
+     * @param request UpdateKnowledgeBaseRequest
+     * @return UpdateKnowledgeBaseResponse
+     */
+    public UpdateKnowledgeBaseResponse updateKnowledgeBase(UpdateKnowledgeBaseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateKnowledgeBaseWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>上传文档</p>
+     * 
+     * @param tmpReq UploadDocumentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UploadDocumentResponse
+     */
+    public UploadDocumentResponse uploadDocumentWithOptions(UploadDocumentRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UploadDocumentShrinkRequest request = new UploadDocumentShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.separators)) {
+            request.separatorsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.separators, "Separators", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.chunkOverlap)) {
+            body.put("ChunkOverlap", request.chunkOverlap);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chunkSize)) {
+            body.put("ChunkSize", request.chunkSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.documentLoaderName)) {
+            body.put("DocumentLoaderName", request.documentLoaderName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
+            body.put("FileName", request.fileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kbUuid)) {
+            body.put("KbUuid", request.kbUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.location)) {
+            body.put("Location", request.location);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.separatorsShrink)) {
+            body.put("Separators", request.separatorsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.splitterModel)) {
+            body.put("SplitterModel", request.splitterModel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.textSplitterName)) {
+            body.put("TextSplitterName", request.textSplitterName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vlEnhance)) {
+            body.put("VlEnhance", request.vlEnhance);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zhTitleEnhance)) {
+            body.put("ZhTitleEnhance", request.zhTitleEnhance);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UploadDocument"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UploadDocumentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>上传文档</p>
+     * 
+     * @param request UploadDocumentRequest
+     * @return UploadDocumentResponse
+     */
+    public UploadDocumentResponse uploadDocument(UploadDocumentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.uploadDocumentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新或插入onemeta3.0的知识库chunks</p>
+     * 
+     * @param request UpsertDocumentChunksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpsertDocumentChunksResponse
+     */
+    public UpsertDocumentChunksResponse upsertDocumentChunksWithOptions(UpsertDocumentChunksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.chunks)) {
+            body.put("Chunks", request.chunks);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.documentName)) {
+            body.put("DocumentName", request.documentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kbUuid)) {
+            body.put("KbUuid", request.kbUuid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpsertDocumentChunks"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpsertDocumentChunksResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新或插入onemeta3.0的知识库chunks</p>
+     * 
+     * @param request UpsertDocumentChunksRequest
+     * @return UpsertDocumentChunksResponse
+     */
+    public UpsertDocumentChunksResponse upsertDocumentChunks(UpsertDocumentChunksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.upsertDocumentChunksWithOptions(request, runtime);
     }
 
     /**

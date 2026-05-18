@@ -4,42 +4,94 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class OneMetaKnowledgeBaseDocument extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>abc</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("DocsCount")
     public Integer docsCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ADBPGLoader</p>
+     */
     @NameInMap("DocumentLoaderName")
     public String documentLoaderName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>md</p>
+     */
     @NameInMap("FileExt")
     public String fileExt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20307</p>
+     */
     @NameInMap("FileSize")
     public Long fileSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2026-04-22 22:59:35</p>
+     */
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2026-04-24 21:22:53</p>
+     */
     @NameInMap("GmtModified")
     public String gmtModified;
 
+    /**
+     * <strong>example:</strong>
+     * <p>kb-***</p>
+     */
     @NameInMap("KbUuid")
     public String kbUuid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;test&quot;,&quot;abc&quot;]</p>
+     */
     @NameInMap("Keywords")
     public String keywords;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test.md</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("State")
     public Integer state;
 
+    /**
+     * <strong>example:</strong>
+     * <p>This is a test document.</p>
+     */
     @NameInMap("Summary")
     public String summary;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ChineseRecursiveTextSplitter</p>
+     */
     @NameInMap("TextSplitterName")
     public String textSplitterName;
 
