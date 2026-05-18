@@ -1,0 +1,119 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.cloudauth_intl20220809.models;
+
+import com.aliyun.tea.*;
+
+public class FaceLivenessV2AdvanceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Base64</p>
+     */
+    @NameInMap("FacePictureBase64")
+    public String facePictureBase64;
+
+    /**
+     * <strong>example:</strong>
+     * <p>InputStream</p>
+     */
+    @NameInMap("FacePictureFile")
+    public java.io.InputStream facePictureFileObject;
+
+    /**
+     * <strong>example:</strong>
+     * <p>https://***</p>
+     */
+    @NameInMap("FacePictureUrl")
+    public String facePictureUrl;
+
+    /**
+     * <strong>example:</strong>
+     * <p>Y</p>
+     */
+    @NameInMap("FaceQualityCheck")
+    public String faceQualityCheck;
+
+    /**
+     * <strong>example:</strong>
+     * <p>e0c34a***353888</p>
+     */
+    @NameInMap("MerchantBizId")
+    public String merchantBizId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>123456789</p>
+     */
+    @NameInMap("MerchantUserId")
+    public String merchantUserId;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FACE_LIVENESS_MIN_PRO</p>
+     */
+    @NameInMap("ProductCode")
+    public String productCode;
+
+    public static FaceLivenessV2AdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
+        FaceLivenessV2AdvanceRequest self = new FaceLivenessV2AdvanceRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public FaceLivenessV2AdvanceRequest setFacePictureBase64(String facePictureBase64) {
+        this.facePictureBase64 = facePictureBase64;
+        return this;
+    }
+    public String getFacePictureBase64() {
+        return this.facePictureBase64;
+    }
+
+    public FaceLivenessV2AdvanceRequest setFacePictureFileObject(java.io.InputStream facePictureFileObject) {
+        this.facePictureFileObject = facePictureFileObject;
+        return this;
+    }
+    public java.io.InputStream getFacePictureFileObject() {
+        return this.facePictureFileObject;
+    }
+
+    public FaceLivenessV2AdvanceRequest setFacePictureUrl(String facePictureUrl) {
+        this.facePictureUrl = facePictureUrl;
+        return this;
+    }
+    public String getFacePictureUrl() {
+        return this.facePictureUrl;
+    }
+
+    public FaceLivenessV2AdvanceRequest setFaceQualityCheck(String faceQualityCheck) {
+        this.faceQualityCheck = faceQualityCheck;
+        return this;
+    }
+    public String getFaceQualityCheck() {
+        return this.faceQualityCheck;
+    }
+
+    public FaceLivenessV2AdvanceRequest setMerchantBizId(String merchantBizId) {
+        this.merchantBizId = merchantBizId;
+        return this;
+    }
+    public String getMerchantBizId() {
+        return this.merchantBizId;
+    }
+
+    public FaceLivenessV2AdvanceRequest setMerchantUserId(String merchantUserId) {
+        this.merchantUserId = merchantUserId;
+        return this;
+    }
+    public String getMerchantUserId() {
+        return this.merchantUserId;
+    }
+
+    public FaceLivenessV2AdvanceRequest setProductCode(String productCode) {
+        this.productCode = productCode;
+        return this;
+    }
+    public String getProductCode() {
+        return this.productCode;
+    }
+
+}
