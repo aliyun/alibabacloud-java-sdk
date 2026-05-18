@@ -205,6 +205,9 @@ public class GetGameReviewByStatusResponseBody extends TeaModel {
         @NameInMap("PublishStatus")
         public Integer publishStatus;
 
+        @NameInMap("PublishStatusDesc")
+        public String publishStatusDesc;
+
         @NameInMap("QrCodeUrl")
         public String qrCodeUrl;
 
@@ -311,6 +314,14 @@ public class GetGameReviewByStatusResponseBody extends TeaModel {
         }
         public Integer getPublishStatus() {
             return this.publishStatus;
+        }
+
+        public GetGameReviewByStatusResponseBodyResultContentContentTargetDetail setPublishStatusDesc(String publishStatusDesc) {
+            this.publishStatusDesc = publishStatusDesc;
+            return this;
+        }
+        public String getPublishStatusDesc() {
+            return this.publishStatusDesc;
         }
 
         public GetGameReviewByStatusResponseBodyResultContentContentTargetDetail setQrCodeUrl(String qrCodeUrl) {
