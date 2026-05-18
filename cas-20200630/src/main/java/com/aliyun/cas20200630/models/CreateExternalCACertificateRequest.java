@@ -7,6 +7,9 @@ public class CreateExternalCACertificateRequest extends TeaModel {
     @NameInMap("ApiPassthrough")
     public CreateExternalCACertificateRequestApiPassthrough apiPassthrough;
 
+    @NameInMap("CertMaxTime")
+    public Integer certMaxTime;
+
     /**
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE REQUEST-----
@@ -49,6 +52,14 @@ public class CreateExternalCACertificateRequest extends TeaModel {
     }
     public CreateExternalCACertificateRequestApiPassthrough getApiPassthrough() {
         return this.apiPassthrough;
+    }
+
+    public CreateExternalCACertificateRequest setCertMaxTime(Integer certMaxTime) {
+        this.certMaxTime = certMaxTime;
+        return this;
+    }
+    public Integer getCertMaxTime() {
+        return this.certMaxTime;
     }
 
     public CreateExternalCACertificateRequest setCsr(String csr) {

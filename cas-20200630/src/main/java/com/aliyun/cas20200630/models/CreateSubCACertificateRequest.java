@@ -25,6 +25,9 @@ public class CreateSubCACertificateRequest extends TeaModel {
     @NameInMap("Algorithm")
     public String algorithm;
 
+    @NameInMap("CertMaxTime")
+    public Integer certMaxTime;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -168,6 +171,14 @@ public class CreateSubCACertificateRequest extends TeaModel {
     }
     public String getAlgorithm() {
         return this.algorithm;
+    }
+
+    public CreateSubCACertificateRequest setCertMaxTime(Integer certMaxTime) {
+        this.certMaxTime = certMaxTime;
+        return this;
+    }
+    public Integer getCertMaxTime() {
+        return this.certMaxTime;
     }
 
     public CreateSubCACertificateRequest setClientToken(String clientToken) {

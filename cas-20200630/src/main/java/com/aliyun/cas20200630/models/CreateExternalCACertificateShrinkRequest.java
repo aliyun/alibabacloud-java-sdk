@@ -7,6 +7,9 @@ public class CreateExternalCACertificateShrinkRequest extends TeaModel {
     @NameInMap("ApiPassthrough")
     public String apiPassthroughShrink;
 
+    @NameInMap("CertMaxTime")
+    public Integer certMaxTime;
+
     /**
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE REQUEST-----
@@ -49,6 +52,14 @@ public class CreateExternalCACertificateShrinkRequest extends TeaModel {
     }
     public String getApiPassthroughShrink() {
         return this.apiPassthroughShrink;
+    }
+
+    public CreateExternalCACertificateShrinkRequest setCertMaxTime(Integer certMaxTime) {
+        this.certMaxTime = certMaxTime;
+        return this;
+    }
+    public Integer getCertMaxTime() {
+        return this.certMaxTime;
     }
 
     public CreateExternalCACertificateShrinkRequest setCsr(String csr) {

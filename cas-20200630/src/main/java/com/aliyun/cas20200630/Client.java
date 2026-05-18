@@ -536,6 +536,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ApiPassthrough", request.apiPassthroughShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.certMaxTime)) {
+            query.put("CertMaxTime", request.certMaxTime);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.csr)) {
             query.put("Csr", request.csr);
         }
@@ -1012,6 +1016,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Algorithm", request.algorithm);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.certMaxTime)) {
+            query.put("CertMaxTime", request.certMaxTime);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.commonName)) {
             query.put("CommonName", request.commonName);
         }
@@ -1228,7 +1236,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the number of certificate authority (CA) certificates that you create.</p>
      * 
-     * @param request DescribeCACertificateCountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCACertificateCountResponse
      */
