@@ -138,6 +138,9 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     @NameInMap("orderAckFlag")
     public Boolean orderAckFlag;
 
+    @NameInMap("pointCoveredFlag")
+    public Boolean pointCoveredFlag;
+
     @NameInMap("pointDeductionRuleList")
     public java.util.List<GetAICoachScriptResponseBodyPointDeductionRuleList> pointDeductionRuleList;
 
@@ -418,6 +421,14 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     }
     public Boolean getOrderAckFlag() {
         return this.orderAckFlag;
+    }
+
+    public GetAICoachScriptResponseBody setPointCoveredFlag(Boolean pointCoveredFlag) {
+        this.pointCoveredFlag = pointCoveredFlag;
+        return this;
+    }
+    public Boolean getPointCoveredFlag() {
+        return this.pointCoveredFlag;
     }
 
     public GetAICoachScriptResponseBody setPointDeductionRuleList(java.util.List<GetAICoachScriptResponseBodyPointDeductionRuleList> pointDeductionRuleList) {
@@ -1282,6 +1293,9 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         @NameInMap("questionDescription")
         public String questionDescription;
 
+        @NameInMap("scriptPointId")
+        public String scriptPointId;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -1339,6 +1353,14 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         }
         public String getQuestionDescription() {
             return this.questionDescription;
+        }
+
+        public GetAICoachScriptResponseBodyPoints setScriptPointId(String scriptPointId) {
+            this.scriptPointId = scriptPointId;
+            return this;
+        }
+        public String getScriptPointId() {
+            return this.scriptPointId;
         }
 
         public GetAICoachScriptResponseBodyPoints setSortNo(Integer sortNo) {
