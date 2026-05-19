@@ -76,6 +76,9 @@ public class DescribeBaseSystemRulesRequest extends TeaModel {
     @NameInMap("RuleId")
     public Long ruleId;
 
+    @NameInMap("RuleIds")
+    public java.util.List<Long> ruleIds;
+
     /**
      * <strong>example:</strong>
      * <p>systemRuleTest</p>
@@ -180,6 +183,14 @@ public class DescribeBaseSystemRulesRequest extends TeaModel {
     }
     public Long getRuleId() {
         return this.ruleId;
+    }
+
+    public DescribeBaseSystemRulesRequest setRuleIds(java.util.List<Long> ruleIds) {
+        this.ruleIds = ruleIds;
+        return this;
+    }
+    public java.util.List<Long> getRuleIds() {
+        return this.ruleIds;
     }
 
     public DescribeBaseSystemRulesRequest setRuleName(String ruleName) {
