@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCreditInfoResponseBody extends TeaModel {
     /**
-     * <p>Result Code:</p>
-     * <ul>
-     * <li>200 OK</li>
-     * <li>1109 System Error</li>
-     * </ul>
+     * <p>success</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -18,23 +14,21 @@ public class GetCreditInfoResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The Credit Line of Sub Account</p>
      */
     @NameInMap("Data")
     public GetCreditInfoResponseBodyData data;
 
     /**
-     * <p>Message Information</p>
+     * <p>Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.</p>
      * 
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Request ID, Alibaba Cloud will track errors with this.</p>
-     * 
      * <strong>example:</strong>
      * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
      */
@@ -42,7 +36,7 @@ public class GetCreditInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.</p>
+     * <p>The Credit have been consumed by Sub Account, and haven\&quot;t be paid.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -97,12 +91,7 @@ public class GetCreditInfoResponseBody extends TeaModel {
 
     public static class GetCreditInfoResponseBodyData extends TeaModel {
         /**
-         * <p>The Credit Control status, Value Range:</br></p>
-         * <ol>
-         * <li>normal - Sub Account status is running as usual.</li>
-         * <li>arrearsNotShutdown - Sub Account status is running as usual, but have outstanding bill(s).</li>
-         * <li>shutdown -  Sub Account status is down.</li>
-         * </ol>
+         * <p>Percentage value, when the available credit limit is lower than this credit limit percentage, a notification E-mail will be sent to the main account.</p>
          * 
          * <strong>example:</strong>
          * <p>normal</p>
@@ -111,52 +100,17 @@ public class GetCreditInfoResponseBody extends TeaModel {
         public String accountStatus;
 
         /**
-         * <p>Percentage value, when the available credit limit is lower than this credit limit percentage, a notification E-mail will be sent to the main account.</p>
+         * <p>Manage order operation.</p>
+         * <ul>
+         * <li>ban：Ban the new purchase action.</li>
+         * <li>normal：The account could raise new purchase order as usual.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>20</p>
          */
         @NameInMap("AlarmThreshold")
         public String alarmThreshold;
-
-        /**
-         * <p>The Credit available to consume.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>800</p>
-         */
-        @NameInMap("AvailableCredit")
-        public String availableCredit;
-
-        /**
-         * <p>Obtain total unpaid amount on demo bill before simulated deduction.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0.000000</p>
-         */
-        @NameInMap("ConsumedUndeductedValue")
-        public String consumedUndeductedValue;
-
-        /**
-         * <p>The Credit Line of Sub Account</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1000</p>
-         */
-        @NameInMap("CreditLine")
-        public String creditLine;
-
-        /**
-         * <p>The Credit have been consumed by Sub Account, and haven\&quot;t be paid.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
-         */
-        @NameInMap("OutstandingBalance")
-        public String outstandingBalance;
-
-        @NameInMap("PAYGFreezeStatus")
-        public String PAYGFreezeStatus;
 
         /**
          * <p>The systematic controlling policy for resource management, specifically when the available Credit of Sub Account falls to 0 or less.</br></p>
@@ -167,17 +121,65 @@ public class GetCreditInfoResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
+         * <p>800</p>
+         */
+        @NameInMap("AvailableCredit")
+        public String availableCredit;
+
+        /**
+         * <p>Consumed &amp; Undeducted Value（Amount consumption at the current point in time and for which the quota has not been deducted）</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.000000</p>
+         */
+        @NameInMap("ConsumedUndeductedValue")
+        public String consumedUndeductedValue;
+
+        /**
+         * <p>The Credit available to consume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
+        @NameInMap("CreditLine")
+        public String creditLine;
+
+        /**
+         * <p>The Credit Control status, Value Range:</br></p>
+         * <ol>
+         * <li>normal - Sub Account status is running as usual.</li>
+         * <li>arrearsNotShutdown - Sub Account status is running as usual, but have outstanding bill(s).</li>
+         * <li>shutdown -  Sub Account status is down.</li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
+        @NameInMap("OutstandingBalance")
+        public String outstandingBalance;
+
+        /**
+         * <p>PAYG Freeze Status</p>
+         * <p>freeze：freeze</p>
+         * <p>normal：normal</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
+         */
+        @NameInMap("PAYGFreezeStatus")
+        public String PAYGFreezeStatus;
+
+        /**
+         * <p>Obtain total unpaid amount on demo bill before simulated deduction.</p>
+         * 
+         * <strong>example:</strong>
          * <p>delayStop</p>
          */
         @NameInMap("ZeroCreditShutdownPolicy")
         public String zeroCreditShutdownPolicy;
 
         /**
-         * <p>Manage order operation.</p>
-         * <ul>
-         * <li>ban：Ban the new purchase action.</li>
-         * <li>normal：The account could raise new purchase order as usual.</li>
-         * </ul>
+         * <p>Request ID, Alibaba Cloud will track errors with this.</p>
          * 
          * <strong>example:</strong>
          * <p>ban</p>

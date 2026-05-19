@@ -1,3 +1,7 @@
+2026-05-19 Version: 1.12.0
+- Support API InviteSubReseller.
+
+
 2026-02-11 Version: 1.11.2
 - Update API GetCreditInfo: add response parameters Body.Data.PAYGFreezeStatus.
 

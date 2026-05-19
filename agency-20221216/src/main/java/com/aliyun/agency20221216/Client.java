@@ -1372,7 +1372,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询T2优惠券审批详情</p>
+     * <p>View Tier 2 coupon approval details</p>
      * 
      * @param request GetTier2CouponApprovalDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1404,7 +1404,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询T2优惠券审批详情</p>
+     * <p>View Tier 2 coupon approval details</p>
      * 
      * @param request GetTier2CouponApprovalDetailRequest
      * @return GetTier2CouponApprovalDetailResponse
@@ -1505,6 +1505,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>The API caller must be a channel general distributor partner of Alibaba Cloud International.</li>
+     * <li>The system automatically determines if the invitation is cross-regional based on whether the <code>registerNation</code> parameter is within the T1 contract coverage area (the contract coverage area can be queried using the ListCountries API).</li>
+     * </ol>
+     * <ul>
+     * <li>If it\&quot;s a cross-regional invitation, a cross-regional approval process will be initiated. After approval by Alibaba Cloud, an invitation registration email will be sent to the invited email address.</li>
+     * <li>If it\&quot;s not a cross-regional invitation, an invitation registration email will be sent directly.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>T2 Sub-distributor Invitation (Supports Cross-Regional Validation)</p>
+     * 
+     * @param request InviteSubResellerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InviteSubResellerResponse
+     */
+    public InviteSubResellerResponse inviteSubResellerWithOptions(InviteSubResellerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountInfoList)) {
+            query.put("AccountInfoList", request.accountInfoList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InviteSubReseller"),
+            new TeaPair("version", "2022-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InviteSubResellerResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>The API caller must be a channel general distributor partner of Alibaba Cloud International.</li>
+     * <li>The system automatically determines if the invitation is cross-regional based on whether the <code>registerNation</code> parameter is within the T1 contract coverage area (the contract coverage area can be queried using the ListCountries API).</li>
+     * </ol>
+     * <ul>
+     * <li>If it\&quot;s a cross-regional invitation, a cross-regional approval process will be initiated. After approval by Alibaba Cloud, an invitation registration email will be sent to the invited email address.</li>
+     * <li>If it\&quot;s not a cross-regional invitation, an invitation registration email will be sent directly.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>T2 Sub-distributor Invitation (Supports Cross-Regional Validation)</p>
+     * 
+     * @param request InviteSubResellerRequest
+     * @return InviteSubResellerResponse
+     */
+    public InviteSubResellerResponse inviteSubReseller(InviteSubResellerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.inviteSubResellerWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>发放优惠券</p>
      * 
@@ -1571,7 +1635,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>This function is available for all Distributors. It displays the corresponding region code information based on the operable countries as agreed in the Distributor\&quot;s contract.</p>
      * 
-     * @param request ListCountriesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListCountriesResponse
      */
