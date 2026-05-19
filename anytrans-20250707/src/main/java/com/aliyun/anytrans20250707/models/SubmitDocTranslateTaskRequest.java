@@ -119,12 +119,23 @@ public class SubmitDocTranslateTaskRequest extends TeaModel {
     }
 
     public static class SubmitDocTranslateTaskRequestExtConfig extends TeaModel {
+        @NameInMap("isBilingual")
+        public Boolean isBilingual;
+
         @NameInMap("skipImgTrans")
         public Boolean skipImgTrans;
 
         public static SubmitDocTranslateTaskRequestExtConfig build(java.util.Map<String, ?> map) throws Exception {
             SubmitDocTranslateTaskRequestExtConfig self = new SubmitDocTranslateTaskRequestExtConfig();
             return TeaModel.build(map, self);
+        }
+
+        public SubmitDocTranslateTaskRequestExtConfig setIsBilingual(Boolean isBilingual) {
+            this.isBilingual = isBilingual;
+            return this;
+        }
+        public Boolean getIsBilingual() {
+            return this.isBilingual;
         }
 
         public SubmitDocTranslateTaskRequestExtConfig setSkipImgTrans(Boolean skipImgTrans) {
