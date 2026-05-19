@@ -324,7 +324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>检测budgetName是否存在</p>
+     * <p>Check whether budgetName exists</p>
      * 
      * @param request CheckBudgetNameExistsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -362,7 +362,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>检测budgetName是否存在</p>
+     * <p>Check whether budgetName exists</p>
      * 
      * @param request CheckBudgetNameExistsRequest
      * @return CheckBudgetNameExistsResponse
@@ -374,7 +374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建预算</p>
+     * <p>Create Budget</p>
      * 
      * @param tmpReq CreateBudgetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -478,7 +478,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建预算</p>
+     * <p>Create Budget</p>
      * 
      * @param request CreateBudgetRequest
      * @return CreateBudgetResponse
@@ -1142,7 +1142,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询单个Budget</p>
+     * <p>Query a Single Budget</p>
      * 
      * @param request DescribeBudgetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1180,7 +1180,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询单个Budget</p>
+     * <p>Query a Single Budget</p>
      * 
      * @param request DescribeBudgetRequest
      * @return DescribeBudgetResponse
@@ -1192,7 +1192,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询预算列表</p>
+     * <p>Query budget list</p>
      * 
      * @param request DescribeBudgetsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1246,7 +1246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询预算列表</p>
+     * <p>Query budget list</p>
      * 
      * @param request DescribeBudgetsRequest
      * @return DescribeBudgetsResponse
@@ -2741,6 +2741,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Query Cost Overview of a Cost Center</p>
+     * 
+     * @param request QueryCostByCostCenterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryCostByCostCenterResponse
+     */
+    public QueryCostByCostCenterResponse queryCostByCostCenterWithOptions(QueryCostByCostCenterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.billingMonth)) {
+            query.put("BillingMonth", request.billingMonth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayZeroAmountBills)) {
+            query.put("DisplayZeroAmountBills", request.displayZeroAmountBills);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupByCostCenterLevel)) {
+            query.put("GroupByCostCenterLevel", request.groupByCostCenterLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metrics)) {
+            query.put("Metrics", request.metrics);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccountId)) {
+            query.put("OwnerAccountId", request.ownerAccountId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryCostByCostCenter"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryCostByCostCenterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query Cost Overview of a Cost Center</p>
+     * 
+     * @param request QueryCostByCostCenterRequest
+     * @return QueryCostByCostCenterResponse
+     */
+    public QueryCostByCostCenterResponse queryCostByCostCenter(QueryCostByCostCenterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryCostByCostCenterWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询财务单元</p>
      * 
      * @param tmpReq QueryCostCenterRequest
@@ -2991,7 +3051,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改财务单元分摊规则</p>
+     * <p>Modify cost center allocation rules, including creating, modifying, and deleting allocation rules</p>
      * 
      * @param tmpReq SaveCostCenterShareRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3053,7 +3113,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改财务单元分摊规则</p>
+     * <p>Modify cost center allocation rules, including creating, modifying, and deleting allocation rules</p>
      * 
      * @param request SaveCostCenterShareRuleRequest
      * @return SaveCostCenterShareRuleResponse
