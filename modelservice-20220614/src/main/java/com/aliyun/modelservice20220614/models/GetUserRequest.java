@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class GetUserRequest extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>image_label</p>
+     * <p>sales_pick</p>
      */
-    @NameInMap("SceneType")
+    @NameInMap("scene_type")
     public String sceneType;
 
     public static GetUserRequest build(java.util.Map<String, ?> map) throws Exception {
