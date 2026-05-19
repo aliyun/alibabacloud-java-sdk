@@ -4915,6 +4915,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>暂停云手机实例上正在运行的 Agent 任务。</p>
+     * 
+     * @param request PauseAgentTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PauseAgentTaskResponse
+     */
+    public PauseAgentTaskResponse pauseAgentTaskWithOptions(PauseAgentTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskIds)) {
+            query.put("TaskIds", request.taskIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PauseAgentTask"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PauseAgentTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>暂停云手机实例上正在运行的 Agent 任务。</p>
+     * 
+     * @param request PauseAgentTaskRequest
+     * @return PauseAgentTaskResponse
+     */
+    public PauseAgentTaskResponse pauseAgentTask(PauseAgentTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.pauseAgentTaskWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Before you restart a cloud phone instance, make sure it is in one of the following states: <strong>Available, Abnormal, Backup failure, and Restoration failure</strong>.</p>
      * 
@@ -5360,6 +5404,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ResetAndroidInstancesInGroupResponse resetAndroidInstancesInGroup(ResetAndroidInstancesInGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.resetAndroidInstancesInGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>继续云手机实例上正在运行的 Agent 任务。</p>
+     * 
+     * @param request ResumeAgentTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ResumeAgentTaskResponse
+     */
+    public ResumeAgentTaskResponse resumeAgentTaskWithOptions(ResumeAgentTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.additionalPrompt)) {
+            query.put("AdditionalPrompt", request.additionalPrompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskIds)) {
+            query.put("TaskIds", request.taskIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ResumeAgentTask"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ResumeAgentTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>继续云手机实例上正在运行的 Agent 任务。</p>
+     * 
+     * @param request ResumeAgentTaskRequest
+     * @return ResumeAgentTaskResponse
+     */
+    public ResumeAgentTaskResponse resumeAgentTask(ResumeAgentTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.resumeAgentTaskWithOptions(request, runtime);
     }
 
     /**
