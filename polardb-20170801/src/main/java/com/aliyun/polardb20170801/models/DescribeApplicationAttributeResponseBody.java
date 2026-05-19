@@ -25,6 +25,9 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     @NameInMap("Architecture")
     public String architecture;
 
+    @NameInMap("CanDisableSnat")
+    public Boolean canDisableSnat;
+
     @NameInMap("Components")
     public java.util.List<DescribeApplicationAttributeResponseBodyComponents> components;
 
@@ -101,6 +104,13 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>pc-xxx</p>
+     */
+    @NameInMap("NatGatewayId")
+    public String natGatewayId;
+
+    /**
+     * <strong>example:</strong>
      * <p>Postpaid</p>
      */
     @NameInMap("PayType")
@@ -138,6 +148,13 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
 
     @NameInMap("ServerlessType")
     public String serverlessType;
+
+    /**
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
+    @NameInMap("SnatStatus")
+    public String snatStatus;
 
     /**
      * <strong>example:</strong>
@@ -215,6 +232,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     }
     public String getArchitecture() {
         return this.architecture;
+    }
+
+    public DescribeApplicationAttributeResponseBody setCanDisableSnat(Boolean canDisableSnat) {
+        this.canDisableSnat = canDisableSnat;
+        return this;
+    }
+    public Boolean getCanDisableSnat() {
+        return this.canDisableSnat;
     }
 
     public DescribeApplicationAttributeResponseBody setComponents(java.util.List<DescribeApplicationAttributeResponseBodyComponents> components) {
@@ -329,6 +354,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         return this.minorVersion;
     }
 
+    public DescribeApplicationAttributeResponseBody setNatGatewayId(String natGatewayId) {
+        this.natGatewayId = natGatewayId;
+        return this;
+    }
+    public String getNatGatewayId() {
+        return this.natGatewayId;
+    }
+
     public DescribeApplicationAttributeResponseBody setPayType(String payType) {
         this.payType = payType;
         return this;
@@ -391,6 +424,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     }
     public String getServerlessType() {
         return this.serverlessType;
+    }
+
+    public DescribeApplicationAttributeResponseBody setSnatStatus(String snatStatus) {
+        this.snatStatus = snatStatus;
+        return this;
+    }
+    public String getSnatStatus() {
+        return this.snatStatus;
     }
 
     public DescribeApplicationAttributeResponseBody setStatus(String status) {

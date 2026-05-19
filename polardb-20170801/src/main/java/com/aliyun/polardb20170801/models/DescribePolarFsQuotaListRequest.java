@@ -11,6 +11,12 @@ public class DescribePolarFsQuotaListRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -45,6 +51,22 @@ public class DescribePolarFsQuotaListRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public DescribePolarFsQuotaListRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribePolarFsQuotaListRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribePolarFsQuotaListRequest setPolarFsInstanceId(String polarFsInstanceId) {

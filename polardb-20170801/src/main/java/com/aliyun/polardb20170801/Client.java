@@ -12964,6 +12964,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询实例性能数据</p>
+     * 
      * @param request DescribeDBInstancePerformanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBInstancePerformanceResponse
@@ -13021,6 +13024,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询实例性能数据</p>
+     * 
      * @param request DescribeDBInstancePerformanceRequest
      * @return DescribeDBInstancePerformanceResponse
      */
@@ -16726,6 +16732,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
             query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.polarFsInstanceId)) {
