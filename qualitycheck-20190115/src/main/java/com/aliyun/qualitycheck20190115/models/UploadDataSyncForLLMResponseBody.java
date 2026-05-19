@@ -366,9 +366,6 @@ public class UploadDataSyncForLLMResponseBody extends TeaModel {
         @NameInMap("Hit")
         public UploadDataSyncForLLMResponseBodyDataResultInfoRulesRuleHitInfoHit hit;
 
-        @NameInMap("LlmResponse")
-        public String llmResponse;
-
         @NameInMap("Rid")
         public String rid;
 
@@ -394,14 +391,6 @@ public class UploadDataSyncForLLMResponseBody extends TeaModel {
         }
         public UploadDataSyncForLLMResponseBodyDataResultInfoRulesRuleHitInfoHit getHit() {
             return this.hit;
-        }
-
-        public UploadDataSyncForLLMResponseBodyDataResultInfoRulesRuleHitInfo setLlmResponse(String llmResponse) {
-            this.llmResponse = llmResponse;
-            return this;
-        }
-        public String getLlmResponse() {
-            return this.llmResponse;
         }
 
         public UploadDataSyncForLLMResponseBodyDataResultInfoRulesRuleHitInfo setRid(String rid) {
