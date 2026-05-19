@@ -4,12 +4,18 @@ package com.aliyun.yike20260319.models;
 import com.aliyun.tea.*;
 
 public class GetYikePromptExpansionVoiceFixJobResponseBody extends TeaModel {
+    @NameInMap("EndTime")
+    public String endTime;
+
     /**
      * <strong>example:</strong>
      * <p>Forbidden</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
 
     /**
      * <strong>example:</strong>
@@ -40,6 +46,9 @@ public class GetYikePromptExpansionVoiceFixJobResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     /**
      * <strong>example:</strong>
      * <p>{&quot;testKey&quot;:&quot;testValue&quot;}</p>
@@ -52,12 +61,28 @@ public class GetYikePromptExpansionVoiceFixJobResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetYikePromptExpansionVoiceFixJobResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
     public GetYikePromptExpansionVoiceFixJobResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
     public String getErrorCode() {
         return this.errorCode;
+    }
+
+    public GetYikePromptExpansionVoiceFixJobResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public GetYikePromptExpansionVoiceFixJobResponseBody setJobId(String jobId) {
@@ -98,6 +123,14 @@ public class GetYikePromptExpansionVoiceFixJobResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetYikePromptExpansionVoiceFixJobResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public GetYikePromptExpansionVoiceFixJobResponseBody setUserData(String userData) {
