@@ -702,6 +702,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建文件防护规则</p>
+     * 
+     * @param request AddFileProtectBindMachineRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddFileProtectBindMachineResponse
+     */
+    public AddFileProtectBindMachineResponse addFileProtectBindMachineWithOptions(AddFileProtectBindMachineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.alertUuids)) {
+            query.put("AlertUuids", request.alertUuids);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.blockUuids)) {
+            query.put("BlockUuids", request.blockUuids);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.noneUuids)) {
+            query.put("NoneUuids", request.noneUuids);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddFileProtectBindMachine"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddFileProtectBindMachineResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建文件防护规则</p>
+     * 
+     * @param request AddFileProtectBindMachineRequest
+     * @return AddFileProtectBindMachineResponse
+     */
+    public AddFileProtectBindMachineResponse addFileProtectBindMachine(AddFileProtectBindMachineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addFileProtectBindMachineWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Security Center allows you to create an IDC probe only on servers on which the Security Center agent is installed.</p>
      * 
@@ -3708,6 +3760,96 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateFileDetectUploadUrlResponse createFileDetectUploadUrl(CreateFileDetectUploadUrlRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createFileDetectUploadUrlWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建文件防护规则</p>
+     * 
+     * @param request CreateFileProtectClientRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateFileProtectClientRuleResponse
+     */
+    public CreateFileProtectClientRuleResponse createFileProtectClientRuleWithOptions(CreateFileProtectClientRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.alertLevel)) {
+            query.put("AlertLevel", request.alertLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeUsers)) {
+            query.put("ExcludeUsers", request.excludeUsers);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileOps)) {
+            query.put("FileOps", request.fileOps);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filePaths)) {
+            query.put("FilePaths", request.filePaths);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileTypes)) {
+            query.put("FileTypes", request.fileTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.platform)) {
+            query.put("Platform", request.platform);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.procPaths)) {
+            query.put("ProcPaths", request.procPaths);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleAction)) {
+            query.put("RuleAction", request.ruleAction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.switchId)) {
+            query.put("SwitchId", request.switchId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateFileProtectClientRule"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFileProtectClientRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建文件防护规则</p>
+     * 
+     * @param request CreateFileProtectClientRuleRequest
+     * @return CreateFileProtectClientRuleResponse
+     */
+    public CreateFileProtectClientRuleResponse createFileProtectClientRule(CreateFileProtectClientRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createFileProtectClientRuleWithOptions(request, runtime);
     }
 
     /**
@@ -7070,6 +7212,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteDingTalkResponse deleteDingTalk(DeleteDingTalkRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDingTalkWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除文件防护规则</p>
+     * 
+     * @param request DeleteFileProtectClientRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteFileProtectClientRuleResponse
+     */
+    public DeleteFileProtectClientRuleResponse deleteFileProtectClientRuleWithOptions(DeleteFileProtectClientRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.alertLevel)) {
+            query.put("AlertLevel", request.alertLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeIdList)) {
+            query.put("ExcludeIdList", request.excludeIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idList)) {
+            query.put("IdList", request.idList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.platform)) {
+            query.put("Platform", request.platform);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleAction)) {
+            query.put("RuleAction", request.ruleAction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.selectAll)) {
+            query.put("SelectAll", request.selectAll);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteFileProtectClientRule"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFileProtectClientRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除文件防护规则</p>
+     * 
+     * @param request DeleteFileProtectClientRuleRequest
+     * @return DeleteFileProtectClientRuleResponse
+     */
+    public DeleteFileProtectClientRuleResponse deleteFileProtectClientRule(DeleteFileProtectClientRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteFileProtectClientRuleWithOptions(request, runtime);
     }
 
     /**
@@ -30651,6 +30861,183 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取文件防护事件</p>
+     * 
+     * @param request GetFileProtectClientEventRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetFileProtectClientEventResponse
+     */
+    public GetFileProtectClientEventResponse getFileProtectClientEventWithOptions(GetFileProtectClientEventRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFileProtectClientEvent"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFileProtectClientEventResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文件防护事件</p>
+     * 
+     * @param request GetFileProtectClientEventRequest
+     * @return GetFileProtectClientEventResponse
+     */
+    public GetFileProtectClientEventResponse getFileProtectClientEvent(GetFileProtectClientEventRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getFileProtectClientEventWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文件防护事件大盘</p>
+     * 
+     * @param request GetFileProtectClientEventDashboardRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetFileProtectClientEventDashboardResponse
+     */
+    public GetFileProtectClientEventDashboardResponse getFileProtectClientEventDashboardWithOptions(GetFileProtectClientEventDashboardRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFileProtectClientEventDashboard"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFileProtectClientEventDashboardResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文件防护事件大盘</p>
+     * 
+     * @param request GetFileProtectClientEventDashboardRequest
+     * @return GetFileProtectClientEventDashboardResponse
+     */
+    public GetFileProtectClientEventDashboardResponse getFileProtectClientEventDashboard(GetFileProtectClientEventDashboardRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getFileProtectClientEventDashboardWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文件保护规则</p>
+     * 
+     * @param request GetFileProtectClientRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetFileProtectClientRuleResponse
+     */
+    public GetFileProtectClientRuleResponse getFileProtectClientRuleWithOptions(GetFileProtectClientRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFileProtectClientRule"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFileProtectClientRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文件保护规则</p>
+     * 
+     * @param request GetFileProtectClientRuleRequest
+     * @return GetFileProtectClientRuleResponse
+     */
+    public GetFileProtectClientRuleResponse getFileProtectClientRule(GetFileProtectClientRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getFileProtectClientRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文件防护规则大盘</p>
+     * 
+     * @param request GetFileProtectClientRuleDashboardRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetFileProtectClientRuleDashboardResponse
+     */
+    public GetFileProtectClientRuleDashboardResponse getFileProtectClientRuleDashboardWithOptions(GetFileProtectClientRuleDashboardRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFileProtectClientRuleDashboard"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFileProtectClientRuleDashboardResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文件防护规则大盘</p>
+     * 
+     * @param request GetFileProtectClientRuleDashboardRequest
+     * @return GetFileProtectClientRuleDashboardResponse
+     */
+    public GetFileProtectClientRuleDashboardResponse getFileProtectClientRuleDashboard(GetFileProtectClientRuleDashboardRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getFileProtectClientRuleDashboardWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries information about the core file monitoring feature, including the number of effective rules and the installation status of the Security Center agent on servers.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
@@ -37525,6 +37912,187 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListDockerhubImageResponse listDockerhubImage(ListDockerhubImageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDockerhubImageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取绑定防篡改机器列表</p>
+     * 
+     * @param request ListFileProtectBindMachineRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListFileProtectBindMachineResponse
+     */
+    public ListFileProtectBindMachineResponse listFileProtectBindMachineWithOptions(ListFileProtectBindMachineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListFileProtectBindMachine"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListFileProtectBindMachineResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取绑定防篡改机器列表</p>
+     * 
+     * @param request ListFileProtectBindMachineRequest
+     * @return ListFileProtectBindMachineResponse
+     */
+    public ListFileProtectBindMachineResponse listFileProtectBindMachine(ListFileProtectBindMachineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listFileProtectBindMachineWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文件防护事件列表</p>
+     * 
+     * @param request ListFileProtectClientEventRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListFileProtectClientEventResponse
+     */
+    public ListFileProtectClientEventResponse listFileProtectClientEventWithOptions(ListFileProtectClientEventRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListFileProtectClientEvent"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListFileProtectClientEventResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文件防护事件列表</p>
+     * 
+     * @param request ListFileProtectClientEventRequest
+     * @return ListFileProtectClientEventResponse
+     */
+    public ListFileProtectClientEventResponse listFileProtectClientEvent(ListFileProtectClientEventRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listFileProtectClientEventWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文件防护规则列表</p>
+     * 
+     * @param request ListFileProtectClientRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListFileProtectClientRuleResponse
+     */
+    public ListFileProtectClientRuleResponse listFileProtectClientRuleWithOptions(ListFileProtectClientRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.alertLevel)) {
+            query.put("AlertLevel", request.alertLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.platform)) {
+            query.put("Platform", request.platform);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleAction)) {
+            query.put("RuleAction", request.ruleAction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListFileProtectClientRule"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListFileProtectClientRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文件防护规则列表</p>
+     * 
+     * @param request ListFileProtectClientRuleRequest
+     * @return ListFileProtectClientRuleResponse
+     */
+    public ListFileProtectClientRuleResponse listFileProtectClientRule(ListFileProtectClientRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listFileProtectClientRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文件防护规则所有文件类型</p>
+     * 
+     * @param request ListFileProtectClientRuleFileTypeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListFileProtectClientRuleFileTypeResponse
+     */
+    public ListFileProtectClientRuleFileTypeResponse listFileProtectClientRuleFileTypeWithOptions(ListFileProtectClientRuleFileTypeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListFileProtectClientRuleFileType"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListFileProtectClientRuleFileTypeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文件防护规则所有文件类型</p>
+     * 
+     * @param request ListFileProtectClientRuleFileTypeRequest
+     * @return ListFileProtectClientRuleFileTypeResponse
+     */
+    public ListFileProtectClientRuleFileTypeResponse listFileProtectClientRuleFileType(ListFileProtectClientRuleFileTypeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listFileProtectClientRuleFileTypeWithOptions(request, runtime);
     }
 
     /**
@@ -50748,6 +51316,270 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateCustomizeReportStatusResponse updateCustomizeReportStatus(UpdateCustomizeReportStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateCustomizeReportStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新文件防护事件状态</p>
+     * 
+     * @param request UpdateFileProtectClientEventRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateFileProtectClientEventResponse
+     */
+    public UpdateFileProtectClientEventResponse updateFileProtectClientEventWithOptions(UpdateFileProtectClientEventRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.alertLevels)) {
+            query.put("AlertLevels", request.alertLevels);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeIdList)) {
+            query.put("ExcludeIdList", request.excludeIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filePath)) {
+            query.put("FilePath", request.filePath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idList)) {
+            query.put("IdList", request.idList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
+            query.put("InstanceName", request.instanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.internetIp)) {
+            query.put("InternetIp", request.internetIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.intranetIp)) {
+            query.put("IntranetIp", request.intranetIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.newStatus)) {
+            query.put("NewStatus", request.newStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operation)) {
+            query.put("Operation", request.operation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.procPath)) {
+            query.put("ProcPath", request.procPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.selectAll)) {
+            query.put("SelectAll", request.selectAll);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uuid)) {
+            query.put("Uuid", request.uuid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateFileProtectClientEvent"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateFileProtectClientEventResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新文件防护事件状态</p>
+     * 
+     * @param request UpdateFileProtectClientEventRequest
+     * @return UpdateFileProtectClientEventResponse
+     */
+    public UpdateFileProtectClientEventResponse updateFileProtectClientEvent(UpdateFileProtectClientEventRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateFileProtectClientEventWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新文件防护规则</p>
+     * 
+     * @param request UpdateFileProtectClientRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateFileProtectClientRuleResponse
+     */
+    public UpdateFileProtectClientRuleResponse updateFileProtectClientRuleWithOptions(UpdateFileProtectClientRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.alertLevel)) {
+            query.put("AlertLevel", request.alertLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeUsers)) {
+            query.put("ExcludeUsers", request.excludeUsers);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileOps)) {
+            query.put("FileOps", request.fileOps);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filePaths)) {
+            query.put("FilePaths", request.filePaths);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileTypes)) {
+            query.put("FileTypes", request.fileTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.procPaths)) {
+            query.put("ProcPaths", request.procPaths);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleAction)) {
+            query.put("RuleAction", request.ruleAction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateFileProtectClientRule"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateFileProtectClientRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新文件防护规则</p>
+     * 
+     * @param request UpdateFileProtectClientRuleRequest
+     * @return UpdateFileProtectClientRuleResponse
+     */
+    public UpdateFileProtectClientRuleResponse updateFileProtectClientRule(UpdateFileProtectClientRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateFileProtectClientRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新文件防护规则状态</p>
+     * 
+     * @param request UpdateFileProtectClientRuleStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateFileProtectClientRuleStatusResponse
+     */
+    public UpdateFileProtectClientRuleStatusResponse updateFileProtectClientRuleStatusWithOptions(UpdateFileProtectClientRuleStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.alertLevel)) {
+            query.put("AlertLevel", request.alertLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeIdList)) {
+            query.put("ExcludeIdList", request.excludeIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idList)) {
+            query.put("IdList", request.idList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.platform)) {
+            query.put("Platform", request.platform);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleAction)) {
+            query.put("RuleAction", request.ruleAction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.selectAll)) {
+            query.put("SelectAll", request.selectAll);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateFileProtectClientRuleStatus"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateFileProtectClientRuleStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新文件防护规则状态</p>
+     * 
+     * @param request UpdateFileProtectClientRuleStatusRequest
+     * @return UpdateFileProtectClientRuleStatusResponse
+     */
+    public UpdateFileProtectClientRuleStatusResponse updateFileProtectClientRuleStatus(UpdateFileProtectClientRuleStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateFileProtectClientRuleStatusWithOptions(request, runtime);
     }
 
     /**
