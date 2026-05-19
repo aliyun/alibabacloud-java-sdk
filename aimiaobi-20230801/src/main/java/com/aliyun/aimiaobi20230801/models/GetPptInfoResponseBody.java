@@ -110,6 +110,13 @@ public class GetPptInfoResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p><a href="http://a.com/xxx.jpeg">http://a.com/xxx.jpeg</a></p>
+         */
+        @NameInMap("PptArtifactCover")
+        public String pptArtifactCover;
+
+        /**
+         * <strong>example:</strong>
          * <p>5423431</p>
          */
         @NameInMap("PptArtifactId")
@@ -155,6 +162,14 @@ public class GetPptInfoResponseBody extends TeaModel {
         }
         public String getExportTaskId() {
             return this.exportTaskId;
+        }
+
+        public GetPptInfoResponseBodyData setPptArtifactCover(String pptArtifactCover) {
+            this.pptArtifactCover = pptArtifactCover;
+            return this;
+        }
+        public String getPptArtifactCover() {
+            return this.pptArtifactCover;
         }
 
         public GetPptInfoResponseBodyData setPptArtifactId(String pptArtifactId) {
