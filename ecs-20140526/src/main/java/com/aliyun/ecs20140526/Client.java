@@ -8285,7 +8285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建Vsc</p>
+     * <p>Create a virtual storage channel for an ECS instance</p>
      * 
      * @param request CreateVscRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8365,7 +8365,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建Vsc</p>
+     * <p>Create a virtual storage channel for an ECS instance</p>
      * 
      * @param request CreateVscRequest
      * @return CreateVscResponse
@@ -11229,7 +11229,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除虚拟存储通道</p>
+     * <p>Delete a Virtual Storage Channel (VSC)</p>
      * 
      * @param request DeleteVscRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11289,7 +11289,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除虚拟存储通道</p>
+     * <p>Delete a Virtual Storage Channel (VSC)</p>
      * 
      * @param request DeleteVscRequest
      * @return DeleteVscResponse
@@ -16204,7 +16204,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the pricing information about newly attached subscription data disks or about the new instance types when you upgrade the configurations of unexpired subscription Elastic Compute Service (ECS) instances.</p>
+     * <p>Queries the pricing info about the target instance types and newly added subscription data disks when you upgrade unexpired subscription ECS instances.</p>
      * 
      * @param request DescribeInstanceModificationPriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16299,7 +16299,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the pricing information about newly attached subscription data disks or about the new instance types when you upgrade the configurations of unexpired subscription Elastic Compute Service (ECS) instances.</p>
+     * <p>Queries the pricing info about the target instance types and newly added subscription data disks when you upgrade unexpired subscription ECS instances.</p>
      * 
      * @param request DescribeInstanceModificationPriceRequest
      * @return DescribeInstanceModificationPriceResponse
@@ -23019,7 +23019,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询虚拟存储通道</p>
+     * <p>Query virtual storage channels (VSC). Support filtering by VscId, instance, Status, and label.</p>
      * 
      * @param request DescribeVscsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23095,7 +23095,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询虚拟存储通道</p>
+     * <p>Query virtual storage channels (VSC). Support filtering by VscId, instance, Status, and label.</p>
      * 
      * @param request DescribeVscsRequest
      * @return DescribeVscsResponse

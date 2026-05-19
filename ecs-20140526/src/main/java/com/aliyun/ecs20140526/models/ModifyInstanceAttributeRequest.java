@@ -413,6 +413,13 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
         @NameInMap("TopologyType")
         public String topologyType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>enabled</p>
+         */
+        @NameInMap("NestedVirtualization")
+        public String nestedVirtualization;
+
         public static ModifyInstanceAttributeRequestCpuOptions build(java.util.Map<String, ?> map) throws Exception {
             ModifyInstanceAttributeRequestCpuOptions self = new ModifyInstanceAttributeRequestCpuOptions();
             return TeaModel.build(map, self);
@@ -440,6 +447,14 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
         }
         public String getTopologyType() {
             return this.topologyType;
+        }
+
+        public ModifyInstanceAttributeRequestCpuOptions setNestedVirtualization(String nestedVirtualization) {
+            this.nestedVirtualization = nestedVirtualization;
+            return this;
+        }
+        public String getNestedVirtualization() {
+            return this.nestedVirtualization;
         }
 
     }

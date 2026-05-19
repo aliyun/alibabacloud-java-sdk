@@ -1582,6 +1582,13 @@ public class RunInstancesRequest extends TeaModel {
         @NameInMap("TopologyType")
         public String topologyType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>enabled</p>
+         */
+        @NameInMap("NestedVirtualization")
+        public String nestedVirtualization;
+
         public static RunInstancesRequestCpuOptions build(java.util.Map<String, ?> map) throws Exception {
             RunInstancesRequestCpuOptions self = new RunInstancesRequestCpuOptions();
             return TeaModel.build(map, self);
@@ -1617,6 +1624,14 @@ public class RunInstancesRequest extends TeaModel {
         }
         public String getTopologyType() {
             return this.topologyType;
+        }
+
+        public RunInstancesRequestCpuOptions setNestedVirtualization(String nestedVirtualization) {
+            this.nestedVirtualization = nestedVirtualization;
+            return this;
+        }
+        public String getNestedVirtualization() {
+            return this.nestedVirtualization;
         }
 
     }
