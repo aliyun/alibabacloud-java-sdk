@@ -28,6 +28,9 @@ public class ModifyEmbodiedAIPlatformShrinkRequest extends TeaModel {
     @NameInMap("RayConfig")
     public String rayConfigShrink;
 
+    @NameInMap("RayTrainConfig")
+    public String rayTrainConfigShrink;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -79,6 +82,14 @@ public class ModifyEmbodiedAIPlatformShrinkRequest extends TeaModel {
     }
     public String getRayConfigShrink() {
         return this.rayConfigShrink;
+    }
+
+    public ModifyEmbodiedAIPlatformShrinkRequest setRayTrainConfigShrink(String rayTrainConfigShrink) {
+        this.rayTrainConfigShrink = rayTrainConfigShrink;
+        return this;
+    }
+    public String getRayTrainConfigShrink() {
+        return this.rayTrainConfigShrink;
     }
 
     public ModifyEmbodiedAIPlatformShrinkRequest setRegionId(String regionId) {

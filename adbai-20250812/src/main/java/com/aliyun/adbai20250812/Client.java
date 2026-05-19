@@ -104,6 +104,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.rayConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.rayConfig, "RayConfig", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.rayTrainConfig)) {
+            request.rayTrainConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.rayTrainConfig, "RayTrainConfig", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
             query.put("DBClusterId", request.DBClusterId);
@@ -119,6 +123,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.rayConfigShrink)) {
             query.put("RayConfig", request.rayConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rayTrainConfigShrink)) {
+            query.put("RayTrainConfig", request.rayTrainConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -640,6 +648,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.rayConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.rayConfig, "RayConfig", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.rayTrainConfig)) {
+            request.rayTrainConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.rayTrainConfig, "RayTrainConfig", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
             query.put("DBClusterId", request.DBClusterId);
@@ -655,6 +667,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.rayConfigShrink)) {
             query.put("RayConfig", request.rayConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rayTrainConfigShrink)) {
+            query.put("RayTrainConfig", request.rayTrainConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {

@@ -13,6 +13,10 @@ public class CreateEmbodiedAIPlatformRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("DeviceCount")
     public Integer deviceCount;
 
@@ -27,6 +31,9 @@ public class CreateEmbodiedAIPlatformRequest extends TeaModel {
 
     @NameInMap("RayConfig")
     public CreateEmbodiedAIPlatformRequestRayConfig rayConfig;
+
+    @NameInMap("RayTrainConfig")
+    public CreateEmbodiedAIPlatformRequestRayTrainConfig rayTrainConfig;
 
     /**
      * <p>This parameter is required.</p>
@@ -79,6 +86,14 @@ public class CreateEmbodiedAIPlatformRequest extends TeaModel {
     }
     public CreateEmbodiedAIPlatformRequestRayConfig getRayConfig() {
         return this.rayConfig;
+    }
+
+    public CreateEmbodiedAIPlatformRequest setRayTrainConfig(CreateEmbodiedAIPlatformRequestRayTrainConfig rayTrainConfig) {
+        this.rayTrainConfig = rayTrainConfig;
+        return this;
+    }
+    public CreateEmbodiedAIPlatformRequestRayTrainConfig getRayTrainConfig() {
+        return this.rayTrainConfig;
     }
 
     public CreateEmbodiedAIPlatformRequest setRegionId(String regionId) {
@@ -255,6 +270,168 @@ public class CreateEmbodiedAIPlatformRequest extends TeaModel {
         }
         public java.util.List<CreateEmbodiedAIPlatformRequestRayConfigWorkerGroups> getWorkerGroups() {
             return this.workerGroups;
+        }
+
+    }
+
+    public static class CreateEmbodiedAIPlatformRequestRayTrainConfigGpuSpecs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;1&quot;</p>
+         */
+        @NameInMap("AllocateUnit")
+        public String allocateUnit;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("Count")
+        public Long count;
+
+        /**
+         * <strong>example:</strong>
+         * <p>ADB.MLGrand.4</p>
+         */
+        @NameInMap("SpecName")
+        public String specName;
+
+        public static CreateEmbodiedAIPlatformRequestRayTrainConfigGpuSpecs build(java.util.Map<String, ?> map) throws Exception {
+            CreateEmbodiedAIPlatformRequestRayTrainConfigGpuSpecs self = new CreateEmbodiedAIPlatformRequestRayTrainConfigGpuSpecs();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEmbodiedAIPlatformRequestRayTrainConfigGpuSpecs setAllocateUnit(String allocateUnit) {
+            this.allocateUnit = allocateUnit;
+            return this;
+        }
+        public String getAllocateUnit() {
+            return this.allocateUnit;
+        }
+
+        public CreateEmbodiedAIPlatformRequestRayTrainConfigGpuSpecs setCount(Long count) {
+            this.count = count;
+            return this;
+        }
+        public Long getCount() {
+            return this.count;
+        }
+
+        public CreateEmbodiedAIPlatformRequestRayTrainConfigGpuSpecs setSpecName(String specName) {
+            this.specName = specName;
+            return this;
+        }
+        public String getSpecName() {
+            return this.specName;
+        }
+
+    }
+
+    public static class CreateEmbodiedAIPlatformRequestRayTrainConfigTerminalConfigAcrConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cri-***</p>
+         */
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("Namespaces")
+        public java.util.List<String> namespaces;
+
+        /**
+         * <strong>example:</strong>
+         * <p>example-vpc.example-region.cr.aliyuncs.com</p>
+         */
+        @NameInMap("Registry")
+        public String registry;
+
+        public static CreateEmbodiedAIPlatformRequestRayTrainConfigTerminalConfigAcrConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateEmbodiedAIPlatformRequestRayTrainConfigTerminalConfigAcrConfig self = new CreateEmbodiedAIPlatformRequestRayTrainConfigTerminalConfigAcrConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEmbodiedAIPlatformRequestRayTrainConfigTerminalConfigAcrConfig setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public CreateEmbodiedAIPlatformRequestRayTrainConfigTerminalConfigAcrConfig setNamespaces(java.util.List<String> namespaces) {
+            this.namespaces = namespaces;
+            return this;
+        }
+        public java.util.List<String> getNamespaces() {
+            return this.namespaces;
+        }
+
+        public CreateEmbodiedAIPlatformRequestRayTrainConfigTerminalConfigAcrConfig setRegistry(String registry) {
+            this.registry = registry;
+            return this;
+        }
+        public String getRegistry() {
+            return this.registry;
+        }
+
+    }
+
+    public static class CreateEmbodiedAIPlatformRequestRayTrainConfigTerminalConfig extends TeaModel {
+        @NameInMap("AcrConfig")
+        public CreateEmbodiedAIPlatformRequestRayTrainConfigTerminalConfigAcrConfig acrConfig;
+
+        public static CreateEmbodiedAIPlatformRequestRayTrainConfigTerminalConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateEmbodiedAIPlatformRequestRayTrainConfigTerminalConfig self = new CreateEmbodiedAIPlatformRequestRayTrainConfigTerminalConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEmbodiedAIPlatformRequestRayTrainConfigTerminalConfig setAcrConfig(CreateEmbodiedAIPlatformRequestRayTrainConfigTerminalConfigAcrConfig acrConfig) {
+            this.acrConfig = acrConfig;
+            return this;
+        }
+        public CreateEmbodiedAIPlatformRequestRayTrainConfigTerminalConfigAcrConfig getAcrConfig() {
+            return this.acrConfig;
+        }
+
+    }
+
+    public static class CreateEmbodiedAIPlatformRequestRayTrainConfig extends TeaModel {
+        @NameInMap("CpuAcu")
+        public Long cpuAcu;
+
+        @NameInMap("GpuSpecs")
+        public java.util.List<CreateEmbodiedAIPlatformRequestRayTrainConfigGpuSpecs> gpuSpecs;
+
+        @NameInMap("TerminalConfig")
+        public CreateEmbodiedAIPlatformRequestRayTrainConfigTerminalConfig terminalConfig;
+
+        public static CreateEmbodiedAIPlatformRequestRayTrainConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateEmbodiedAIPlatformRequestRayTrainConfig self = new CreateEmbodiedAIPlatformRequestRayTrainConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEmbodiedAIPlatformRequestRayTrainConfig setCpuAcu(Long cpuAcu) {
+            this.cpuAcu = cpuAcu;
+            return this;
+        }
+        public Long getCpuAcu() {
+            return this.cpuAcu;
+        }
+
+        public CreateEmbodiedAIPlatformRequestRayTrainConfig setGpuSpecs(java.util.List<CreateEmbodiedAIPlatformRequestRayTrainConfigGpuSpecs> gpuSpecs) {
+            this.gpuSpecs = gpuSpecs;
+            return this;
+        }
+        public java.util.List<CreateEmbodiedAIPlatformRequestRayTrainConfigGpuSpecs> getGpuSpecs() {
+            return this.gpuSpecs;
+        }
+
+        public CreateEmbodiedAIPlatformRequestRayTrainConfig setTerminalConfig(CreateEmbodiedAIPlatformRequestRayTrainConfigTerminalConfig terminalConfig) {
+            this.terminalConfig = terminalConfig;
+            return this;
+        }
+        public CreateEmbodiedAIPlatformRequestRayTrainConfigTerminalConfig getTerminalConfig() {
+            return this.terminalConfig;
         }
 
     }
