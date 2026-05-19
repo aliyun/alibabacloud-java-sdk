@@ -3507,6 +3507,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>使用原生Prompt调用通义晓蜜</p>
+     * 
+     * @param tmpReq RunCompletionMessageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RunCompletionMessageResponse
+     */
+    public RunCompletionMessageResponse runCompletionMessageWithOptions(RunCompletionMessageRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        RunCompletionMessageShrinkRequest request = new RunCompletionMessageShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.messages)) {
+            request.messagesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.messages, "Messages", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.messagesShrink)) {
+            body.put("Messages", request.messagesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelCode)) {
+            body.put("ModelCode", request.modelCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stream)) {
+            body.put("Stream", request.stream);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RunCompletionMessage"),
+            new TeaPair("version", "2019-01-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RunCompletionMessageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>使用原生Prompt调用通义晓蜜</p>
+     * 
+     * @param request RunCompletionMessageRequest
+     * @return RunCompletionMessageResponse
+     */
+    public RunCompletionMessageResponse runCompletionMessage(RunCompletionMessageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.runCompletionMessageWithOptions(request, runtime);
+    }
+
+    /**
      * @deprecated OpenAPI SaveConfigDataSet is deprecated
      * 
      * @param request SaveConfigDataSetRequest
