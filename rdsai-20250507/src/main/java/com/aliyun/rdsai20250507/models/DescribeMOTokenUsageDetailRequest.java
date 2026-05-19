@@ -16,6 +16,13 @@ public class DescribeMOTokenUsageDetailRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>eyJpZCI6MTIzNDUsInRzIjoiMjAyNi0wNC0wOFQwMDowMDowMFoifQ==</p>
+     */
+    @NameInMap("Cursor")
+    public String cursor;
+
+    /**
+     * <strong>example:</strong>
      * <p>2025-12-13T16:00:00Z</p>
      */
     @NameInMap("EndTime")
@@ -84,6 +91,14 @@ public class DescribeMOTokenUsageDetailRequest extends TeaModel {
     }
     public String getConsumerName() {
         return this.consumerName;
+    }
+
+    public DescribeMOTokenUsageDetailRequest setCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    public String getCursor() {
+        return this.cursor;
     }
 
     public DescribeMOTokenUsageDetailRequest setEndTime(String endTime) {

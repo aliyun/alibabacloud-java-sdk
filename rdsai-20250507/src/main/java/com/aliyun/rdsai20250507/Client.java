@@ -1449,6 +1449,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ConsumerName", request.consumerName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.cursor)) {
+            query.put("Cursor", request.cursor);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
         }

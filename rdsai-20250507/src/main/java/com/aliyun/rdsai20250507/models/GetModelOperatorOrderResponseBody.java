@@ -76,6 +76,13 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
 
     public static class GetModelOperatorOrderResponseBodyDataInstanceList extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>PREPAY</p>
+         */
+        @NameInMap("ChargeType")
+        public String chargeType;
+
+        /**
          * <p>The instance end time (format: Timestamp).</p>
          * 
          * <strong>example:</strong>
@@ -123,6 +130,14 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
         public static GetModelOperatorOrderResponseBodyDataInstanceList build(java.util.Map<String, ?> map) throws Exception {
             GetModelOperatorOrderResponseBodyDataInstanceList self = new GetModelOperatorOrderResponseBodyDataInstanceList();
             return TeaModel.build(map, self);
+        }
+
+        public GetModelOperatorOrderResponseBodyDataInstanceList setChargeType(String chargeType) {
+            this.chargeType = chargeType;
+            return this;
+        }
+        public String getChargeType() {
+            return this.chargeType;
         }
 
         public GetModelOperatorOrderResponseBodyDataInstanceList setEndTime(Long endTime) {

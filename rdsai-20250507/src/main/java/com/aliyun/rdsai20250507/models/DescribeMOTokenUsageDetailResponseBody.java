@@ -6,6 +6,13 @@ import com.aliyun.tea.*;
 public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>eyJpZCI6MTIzNDUsInRzIjoiMjAyNi0wNC0wOFQwMDowMDowMFoifQ==</p>
+     */
+    @NameInMap("NextCursor")
+    public String nextCursor;
+
+    /**
+     * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("Page")
@@ -40,6 +47,14 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
     public static DescribeMOTokenUsageDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMOTokenUsageDetailResponseBody self = new DescribeMOTokenUsageDetailResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMOTokenUsageDetailResponseBody setNextCursor(String nextCursor) {
+        this.nextCursor = nextCursor;
+        return this;
+    }
+    public String getNextCursor() {
+        return this.nextCursor;
     }
 
     public DescribeMOTokenUsageDetailResponseBody setPage(Integer page) {
