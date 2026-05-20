@@ -13,6 +13,13 @@ public class GetPptArtifactExportResultRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>abc</p>
+     */
+    @NameInMap("ExternalUserId")
+    public String externalUserId;
+
+    /**
+     * <strong>example:</strong>
      * <p>llm-xxxx</p>
      */
     @NameInMap("WorkspaceId")
@@ -29,6 +36,14 @@ public class GetPptArtifactExportResultRequest extends TeaModel {
     }
     public String getExportTaskId() {
         return this.exportTaskId;
+    }
+
+    public GetPptArtifactExportResultRequest setExternalUserId(String externalUserId) {
+        this.externalUserId = externalUserId;
+        return this;
+    }
+    public String getExternalUserId() {
+        return this.externalUserId;
     }
 
     public GetPptArtifactExportResultRequest setWorkspaceId(String workspaceId) {

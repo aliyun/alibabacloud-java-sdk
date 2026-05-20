@@ -2745,6 +2745,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ExportFileType", request.exportFileType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.externalUserId)) {
+            body.put("ExternalUserId", request.externalUserId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pptArtifactId)) {
             body.put("PptArtifactId", request.pptArtifactId);
         }
@@ -4973,6 +4977,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ExportTaskId", request.exportTaskId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.externalUserId)) {
+            body.put("ExternalUserId", request.externalUserId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
             body.put("WorkspaceId", request.workspaceId);
         }
@@ -5065,6 +5073,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetPptInfoResponse getPptInfoWithOptions(GetPptInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.externalUserId)) {
+            body.put("ExternalUserId", request.externalUserId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
             body.put("TaskId", request.taskId);
         }

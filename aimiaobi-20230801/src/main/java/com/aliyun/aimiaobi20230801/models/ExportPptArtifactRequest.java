@@ -19,6 +19,13 @@ public class ExportPptArtifactRequest extends TeaModel {
     public String exportFileType;
 
     /**
+     * <strong>example:</strong>
+     * <p>abc</p>
+     */
+    @NameInMap("ExternalUserId")
+    public String externalUserId;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,6 +67,14 @@ public class ExportPptArtifactRequest extends TeaModel {
     }
     public String getExportFileType() {
         return this.exportFileType;
+    }
+
+    public ExportPptArtifactRequest setExternalUserId(String externalUserId) {
+        this.externalUserId = externalUserId;
+        return this;
+    }
+    public String getExternalUserId() {
+        return this.externalUserId;
     }
 
     public ExportPptArtifactRequest setPptArtifactId(Long pptArtifactId) {

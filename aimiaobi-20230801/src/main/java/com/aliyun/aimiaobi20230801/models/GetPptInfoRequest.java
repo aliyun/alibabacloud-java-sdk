@@ -6,6 +6,13 @@ import com.aliyun.tea.*;
 public class GetPptInfoRequest extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>abc</p>
+     */
+    @NameInMap("ExternalUserId")
+    public String externalUserId;
+
+    /**
+     * <strong>example:</strong>
      * <p>1f178f22-ec52-467d-8489-eef4468x0240</p>
      */
     @NameInMap("TaskId")
@@ -21,6 +28,14 @@ public class GetPptInfoRequest extends TeaModel {
     public static GetPptInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         GetPptInfoRequest self = new GetPptInfoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetPptInfoRequest setExternalUserId(String externalUserId) {
+        this.externalUserId = externalUserId;
+        return this;
+    }
+    public String getExternalUserId() {
+        return this.externalUserId;
     }
 
     public GetPptInfoRequest setTaskId(String taskId) {
