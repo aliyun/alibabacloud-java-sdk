@@ -13,6 +13,9 @@ public class ListServiceConfigsRequest extends TeaModel {
     @NameInMap("Classify")
     public String classify;
 
+    @NameInMap("ProtectionType")
+    public String protectionType;
+
     /**
      * <p>Region ID.</p>
      * 
@@ -51,6 +54,14 @@ public class ListServiceConfigsRequest extends TeaModel {
     }
     public String getClassify() {
         return this.classify;
+    }
+
+    public ListServiceConfigsRequest setProtectionType(String protectionType) {
+        this.protectionType = protectionType;
+        return this;
+    }
+    public String getProtectionType() {
+        return this.protectionType;
     }
 
     public ListServiceConfigsRequest setRegionId(String regionId) {
