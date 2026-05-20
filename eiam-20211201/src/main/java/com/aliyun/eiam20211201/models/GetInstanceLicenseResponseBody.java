@@ -50,8 +50,14 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         @NameInMap("M2mApplicationQuota")
         public Long m2mApplicationQuota;
 
+        @NameInMap("MimApplicationLicenseStatus")
+        public String mimApplicationLicenseStatus;
+
         @NameInMap("NetworkAccessEndpointQuota")
         public Long networkAccessEndpointQuota;
+
+        @NameInMap("PrepaidActiveUserNumber")
+        public Long prepaidActiveUserNumber;
 
         @NameInMap("UserQuota")
         public Long userQuota;
@@ -85,12 +91,28 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
             return this.m2mApplicationQuota;
         }
 
+        public GetInstanceLicenseResponseBodyLicenseInstanceLicenseDetail setMimApplicationLicenseStatus(String mimApplicationLicenseStatus) {
+            this.mimApplicationLicenseStatus = mimApplicationLicenseStatus;
+            return this;
+        }
+        public String getMimApplicationLicenseStatus() {
+            return this.mimApplicationLicenseStatus;
+        }
+
         public GetInstanceLicenseResponseBodyLicenseInstanceLicenseDetail setNetworkAccessEndpointQuota(Long networkAccessEndpointQuota) {
             this.networkAccessEndpointQuota = networkAccessEndpointQuota;
             return this;
         }
         public Long getNetworkAccessEndpointQuota() {
             return this.networkAccessEndpointQuota;
+        }
+
+        public GetInstanceLicenseResponseBodyLicenseInstanceLicenseDetail setPrepaidActiveUserNumber(Long prepaidActiveUserNumber) {
+            this.prepaidActiveUserNumber = prepaidActiveUserNumber;
+            return this;
+        }
+        public Long getPrepaidActiveUserNumber() {
+            return this.prepaidActiveUserNumber;
         }
 
         public GetInstanceLicenseResponseBodyLicenseInstanceLicenseDetail setUserQuota(Long userQuota) {
