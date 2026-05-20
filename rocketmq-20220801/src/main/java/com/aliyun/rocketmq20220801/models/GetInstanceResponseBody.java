@@ -1185,6 +1185,12 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("aclInfo")
         public GetInstanceResponseBodyDataAclInfo aclInfo;
 
+        @NameInMap("autoRenew")
+        public Boolean autoRenew;
+
+        @NameInMap("autoRenewPeriod")
+        public Integer autoRenewPeriod;
+
         /**
          * <p>The business ID (BID) of the commodity.</p>
          * 
@@ -1445,6 +1451,22 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public GetInstanceResponseBodyDataAclInfo getAclInfo() {
             return this.aclInfo;
+        }
+
+        public GetInstanceResponseBodyData setAutoRenew(Boolean autoRenew) {
+            this.autoRenew = autoRenew;
+            return this;
+        }
+        public Boolean getAutoRenew() {
+            return this.autoRenew;
+        }
+
+        public GetInstanceResponseBodyData setAutoRenewPeriod(Integer autoRenewPeriod) {
+            this.autoRenewPeriod = autoRenewPeriod;
+            return this;
+        }
+        public Integer getAutoRenewPeriod() {
+            return this.autoRenewPeriod;
         }
 
         public GetInstanceResponseBodyData setBid(String bid) {

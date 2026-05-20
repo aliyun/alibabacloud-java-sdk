@@ -46,6 +46,7 @@ public class CreateInstanceRequest extends TeaModel {
      * <p>ons_ rmqpost_public_cn</p>
      */
     @NameInMap("commodityCode")
+    @Deprecated
     public String commodityCode;
 
     /**
@@ -232,6 +233,7 @@ public class CreateInstanceRequest extends TeaModel {
         return this.autoRenewPeriod;
     }
 
+    @Deprecated
     public CreateInstanceRequest setCommodityCode(String commodityCode) {
         this.commodityCode = commodityCode;
         return this;
