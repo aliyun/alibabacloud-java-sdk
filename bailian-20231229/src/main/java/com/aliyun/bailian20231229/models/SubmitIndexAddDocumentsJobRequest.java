@@ -25,6 +25,9 @@ public class SubmitIndexAddDocumentsJobRequest extends TeaModel {
     @NameInMap("EnableHeaders")
     public Boolean enableHeaders;
 
+    @NameInMap("Extra")
+    public SubmitIndexAddDocumentsJobRequestExtra extra;
+
     /**
      * <p>The primary key ID of the knowledge base, which is the <code>Data.Id</code> parameter returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</p>
      * <p>This parameter is required.</p>
@@ -103,6 +106,14 @@ public class SubmitIndexAddDocumentsJobRequest extends TeaModel {
         return this.enableHeaders;
     }
 
+    public SubmitIndexAddDocumentsJobRequest setExtra(SubmitIndexAddDocumentsJobRequestExtra extra) {
+        this.extra = extra;
+        return this;
+    }
+    public SubmitIndexAddDocumentsJobRequestExtra getExtra() {
+        return this.extra;
+    }
+
     public SubmitIndexAddDocumentsJobRequest setIndexId(String indexId) {
         this.indexId = indexId;
         return this;
@@ -133,6 +144,25 @@ public class SubmitIndexAddDocumentsJobRequest extends TeaModel {
     }
     public String getSourceType() {
         return this.sourceType;
+    }
+
+    public static class SubmitIndexAddDocumentsJobRequestExtra extends TeaModel {
+        @NameInMap("uniqueId")
+        public String uniqueId;
+
+        public static SubmitIndexAddDocumentsJobRequestExtra build(java.util.Map<String, ?> map) throws Exception {
+            SubmitIndexAddDocumentsJobRequestExtra self = new SubmitIndexAddDocumentsJobRequestExtra();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitIndexAddDocumentsJobRequestExtra setUniqueId(String uniqueId) {
+            this.uniqueId = uniqueId;
+            return this;
+        }
+        public String getUniqueId() {
+            return this.uniqueId;
+        }
+
     }
 
 }

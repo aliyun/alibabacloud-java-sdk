@@ -2792,6 +2792,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         RetrieveShrinkRequest request = new RetrieveShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extra)) {
+            request.extraShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extra, "Extra", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.images)) {
             request.imagesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.images, "Images", "simple");
         }
@@ -2823,6 +2827,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableRewrite)) {
             query.put("EnableRewrite", request.enableRewrite);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extraShrink)) {
+            query.put("Extra", request.extraShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.imagesShrink)) {
@@ -2936,6 +2944,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.documentIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.documentIds, "DocumentIds", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extra)) {
+            request.extraShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extra, "Extra", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.categoryIdsShrink)) {
             query.put("CategoryIds", request.categoryIdsShrink);
@@ -2955,6 +2967,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableHeaders)) {
             query.put("EnableHeaders", request.enableHeaders);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extraShrink)) {
+            query.put("Extra", request.extraShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.indexId)) {

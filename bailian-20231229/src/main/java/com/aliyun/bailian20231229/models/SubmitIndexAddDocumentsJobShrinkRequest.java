@@ -25,6 +25,9 @@ public class SubmitIndexAddDocumentsJobShrinkRequest extends TeaModel {
     @NameInMap("EnableHeaders")
     public Boolean enableHeaders;
 
+    @NameInMap("Extra")
+    public String extraShrink;
+
     /**
      * <p>The primary key ID of the knowledge base, which is the <code>Data.Id</code> parameter returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</p>
      * <p>This parameter is required.</p>
@@ -101,6 +104,14 @@ public class SubmitIndexAddDocumentsJobShrinkRequest extends TeaModel {
     }
     public Boolean getEnableHeaders() {
         return this.enableHeaders;
+    }
+
+    public SubmitIndexAddDocumentsJobShrinkRequest setExtraShrink(String extraShrink) {
+        this.extraShrink = extraShrink;
+        return this;
+    }
+    public String getExtraShrink() {
+        return this.extraShrink;
     }
 
     public SubmitIndexAddDocumentsJobShrinkRequest setIndexId(String indexId) {

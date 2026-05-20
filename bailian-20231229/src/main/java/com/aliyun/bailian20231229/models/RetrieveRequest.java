@@ -42,6 +42,9 @@ public class RetrieveRequest extends TeaModel {
     @NameInMap("EnableRewrite")
     public Boolean enableRewrite;
 
+    @NameInMap("Extra")
+    public RetrieveRequestExtra extra;
+
     @NameInMap("Images")
     public java.util.List<String> images;
 
@@ -154,6 +157,14 @@ public class RetrieveRequest extends TeaModel {
         return this.enableRewrite;
     }
 
+    public RetrieveRequest setExtra(RetrieveRequestExtra extra) {
+        this.extra = extra;
+        return this;
+    }
+    public RetrieveRequestExtra getExtra() {
+        return this.extra;
+    }
+
     public RetrieveRequest setImages(java.util.List<String> images) {
         this.images = images;
         return this;
@@ -240,6 +251,25 @@ public class RetrieveRequest extends TeaModel {
     }
     public Integer getSparseSimilarityTopK() {
         return this.sparseSimilarityTopK;
+    }
+
+    public static class RetrieveRequestExtra extends TeaModel {
+        @NameInMap("uniqueId")
+        public String uniqueId;
+
+        public static RetrieveRequestExtra build(java.util.Map<String, ?> map) throws Exception {
+            RetrieveRequestExtra self = new RetrieveRequestExtra();
+            return TeaModel.build(map, self);
+        }
+
+        public RetrieveRequestExtra setUniqueId(String uniqueId) {
+            this.uniqueId = uniqueId;
+            return this;
+        }
+        public String getUniqueId() {
+            return this.uniqueId;
+        }
+
     }
 
     public static class RetrieveRequestQueryHistory extends TeaModel {
