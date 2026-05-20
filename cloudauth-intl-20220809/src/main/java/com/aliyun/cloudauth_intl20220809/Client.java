@@ -3568,6 +3568,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Ocr", request.ocr);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ocrValueStandard)) {
+            query.put("OcrValueStandard", request.ocrValueStandard);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pages)) {
             query.put("Pages", request.pages);
         }

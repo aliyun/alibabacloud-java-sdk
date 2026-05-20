@@ -396,6 +396,13 @@ public class InitializeRequest extends TeaModel {
     public String ocr;
 
     /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("OcrValueStandard")
+    public String ocrValueStandard;
+
+    /**
      * <p>Page configuration for collection, multiple pages are connected using commas. Value range:</p>
      * <ul>
      * <li><p><strong>01</strong>: Front side of the document</p>
@@ -898,6 +905,14 @@ public class InitializeRequest extends TeaModel {
     }
     public String getOcr() {
         return this.ocr;
+    }
+
+    public InitializeRequest setOcrValueStandard(String ocrValueStandard) {
+        this.ocrValueStandard = ocrValueStandard;
+        return this;
+    }
+    public String getOcrValueStandard() {
+        return this.ocrValueStandard;
     }
 
     public InitializeRequest setPages(String pages) {
