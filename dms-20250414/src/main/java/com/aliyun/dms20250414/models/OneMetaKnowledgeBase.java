@@ -4,33 +4,73 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class OneMetaKnowledgeBase extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>20464374909***</p>
+     */
     @NameInMap("Creator")
     public String creator;
 
+    /**
+     * <strong>example:</strong>
+     * <p>order knowledgebase</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vehicle</p>
+     */
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;keywords&quot;:&quot;sales,vehicle brand&quot;}</p>
+     */
     @NameInMap("ExtraInfo")
     public String extraInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2026-05-14 11:30:00</p>
+     */
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2026-05-14 11:30:39</p>
+     */
     @NameInMap("GmtModified")
     public String gmtModified;
 
+    /**
+     * <strong>example:</strong>
+     * <p>kb-***</p>
+     */
     @NameInMap("KbUuid")
     public String kbUuid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>order_kb</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("State")
     public Integer state;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4phsj52f81ymlm***</p>
+     */
     @NameInMap("Tag")
     public String tag;
 

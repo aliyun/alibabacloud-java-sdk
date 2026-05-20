@@ -2031,6 +2031,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Filename", request.filename);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ossBucket)) {
+            query.put("OssBucket", request.ossBucket);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.uploadLocation)) {
             query.put("UploadLocation", request.uploadLocation);
         }

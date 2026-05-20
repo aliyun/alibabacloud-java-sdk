@@ -34,6 +34,9 @@ public class FileUploadCallbackRequest extends TeaModel {
     @NameInMap("Filename")
     public String filename;
 
+    @NameInMap("OssBucket")
+    public String ossBucket;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -75,6 +78,14 @@ public class FileUploadCallbackRequest extends TeaModel {
     }
     public String getFilename() {
         return this.filename;
+    }
+
+    public FileUploadCallbackRequest setOssBucket(String ossBucket) {
+        this.ossBucket = ossBucket;
+        return this;
+    }
+    public String getOssBucket() {
+        return this.ossBucket;
     }
 
     public FileUploadCallbackRequest setUploadLocation(String uploadLocation) {
