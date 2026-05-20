@@ -11,6 +11,24 @@ public class PathConfig extends TeaModel {
     public String agentRuntimeEndpointName;
 
     /**
+     * <p>兼容协议，指定后端响应格式转换。仅当 resourceType 为 flow 时必填：native 表示 FnF 原生调用；openai、dify-workflow、dify-chatflow 为对应兼容 API。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>native</p>
+     */
+    @NameInMap("compatibleProtocol")
+    public String compatibleProtocol;
+
+    /**
+     * <p>Flow 版本/别名（仅当 resourceType 为 flow 时有效，默认 Default）</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Default</p>
+     */
+    @NameInMap("flowEndpointName")
+    public String flowEndpointName;
+
+    /**
      * <p>支持的方法有：HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS</p>
      * 
      * <strong>example:</strong>
@@ -57,6 +75,22 @@ public class PathConfig extends TeaModel {
     }
     public String getAgentRuntimeEndpointName() {
         return this.agentRuntimeEndpointName;
+    }
+
+    public PathConfig setCompatibleProtocol(String compatibleProtocol) {
+        this.compatibleProtocol = compatibleProtocol;
+        return this;
+    }
+    public String getCompatibleProtocol() {
+        return this.compatibleProtocol;
+    }
+
+    public PathConfig setFlowEndpointName(String flowEndpointName) {
+        this.flowEndpointName = flowEndpointName;
+        return this;
+    }
+    public String getFlowEndpointName() {
+        return this.flowEndpointName;
     }
 
     public PathConfig setMethods(java.util.List<String> methods) {

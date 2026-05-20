@@ -73,6 +73,9 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     @NameInMap("diskSize")
     public Integer diskSize;
 
+    @NameInMap("edition")
+    public String edition;
+
     /**
      * <p>是否启用会话隔离，启用后每个会话将在独立的环境中运行</p>
      * 
@@ -282,6 +285,14 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     }
     public Integer getDiskSize() {
         return this.diskSize;
+    }
+
+    public UpdateAgentRuntimeInput setEdition(String edition) {
+        this.edition = edition;
+        return this;
+    }
+    public String getEdition() {
+        return this.edition;
     }
 
     public UpdateAgentRuntimeInput setEnableSessionIsolation(Boolean enableSessionIsolation) {

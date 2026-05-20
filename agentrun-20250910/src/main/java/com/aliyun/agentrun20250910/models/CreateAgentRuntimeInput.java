@@ -86,6 +86,9 @@ public class CreateAgentRuntimeInput extends TeaModel {
     @NameInMap("diskSize")
     public Integer diskSize;
 
+    @NameInMap("edition")
+    public String edition;
+
     /**
      * <p>是否启用会话隔离，启用后每个会话将在独立的环境中运行</p>
      * 
@@ -321,6 +324,14 @@ public class CreateAgentRuntimeInput extends TeaModel {
     }
     public Integer getDiskSize() {
         return this.diskSize;
+    }
+
+    public CreateAgentRuntimeInput setEdition(String edition) {
+        this.edition = edition;
+        return this;
+    }
+    public String getEdition() {
+        return this.edition;
     }
 
     public CreateAgentRuntimeInput setEnableSessionIsolation(Boolean enableSessionIsolation) {

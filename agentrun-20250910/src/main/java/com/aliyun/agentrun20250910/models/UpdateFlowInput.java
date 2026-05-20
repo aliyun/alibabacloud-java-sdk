@@ -23,6 +23,12 @@ public class UpdateFlowInput extends TeaModel {
     public String description;
 
     /**
+     * <p>是否禁用该工作流的公网访问，作为工作流级别的默认策略。当 FlowEndpoint 未指定时，将继承此值</p>
+     */
+    @NameInMap("disablePublicNetworkAccess")
+    public Boolean disablePublicNetworkAccess;
+
+    /**
      * <p>工作流的环境变量配置，包含一组命名变量列表</p>
      */
     @NameInMap("environmentConfiguration")
@@ -104,6 +110,14 @@ public class UpdateFlowInput extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdateFlowInput setDisablePublicNetworkAccess(Boolean disablePublicNetworkAccess) {
+        this.disablePublicNetworkAccess = disablePublicNetworkAccess;
+        return this;
+    }
+    public Boolean getDisablePublicNetworkAccess() {
+        return this.disablePublicNetworkAccess;
     }
 
     public UpdateFlowInput setEnvironmentConfiguration(EnvironmentConfiguration environmentConfiguration) {

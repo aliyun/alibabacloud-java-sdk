@@ -14,6 +14,12 @@ public class CreateFlowEndpointInput extends TeaModel {
     public String description;
 
     /**
+     * <p>是否禁用该端点的公网访问。创建时未指定则从父工作流继承</p>
+     */
+    @NameInMap("disablePublicNetworkAccess")
+    public Boolean disablePublicNetworkAccess;
+
+    /**
      * <p>工作流端点的唯一标识名称</p>
      * <p>This parameter is required.</p>
      * 
@@ -52,6 +58,14 @@ public class CreateFlowEndpointInput extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateFlowEndpointInput setDisablePublicNetworkAccess(Boolean disablePublicNetworkAccess) {
+        this.disablePublicNetworkAccess = disablePublicNetworkAccess;
+        return this;
+    }
+    public Boolean getDisablePublicNetworkAccess() {
+        return this.disablePublicNetworkAccess;
     }
 
     public CreateFlowEndpointInput setFlowEndpointName(String flowEndpointName) {

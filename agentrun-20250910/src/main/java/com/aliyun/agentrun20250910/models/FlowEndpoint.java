@@ -23,6 +23,12 @@ public class FlowEndpoint extends TeaModel {
     public String description;
 
     /**
+     * <p>是否禁用该端点的公网访问</p>
+     */
+    @NameInMap("disablePublicNetworkAccess")
+    public Boolean disablePublicNetworkAccess;
+
+    /**
      * <p>工作流端点的全局唯一资源名称</p>
      * 
      * <strong>example:</strong>
@@ -104,6 +110,14 @@ public class FlowEndpoint extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public FlowEndpoint setDisablePublicNetworkAccess(Boolean disablePublicNetworkAccess) {
+        this.disablePublicNetworkAccess = disablePublicNetworkAccess;
+        return this;
+    }
+    public Boolean getDisablePublicNetworkAccess() {
+        return this.disablePublicNetworkAccess;
     }
 
     public FlowEndpoint setFlowEndpointArn(String flowEndpointArn) {
