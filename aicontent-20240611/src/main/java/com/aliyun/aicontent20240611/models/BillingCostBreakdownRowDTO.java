@@ -6,6 +6,20 @@ import com.aliyun.tea.*;
 public class BillingCostBreakdownRowDTO extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("apiKeyId")
+    public Long apiKeyId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>默认密钥</p>
+     */
+    @NameInMap("apiKeyName")
+    public String apiKeyName;
+
+    /**
+     * <strong>example:</strong>
      * <p>total_amount</p>
      */
     @NameInMap("billingType")
@@ -83,6 +97,22 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
     public static BillingCostBreakdownRowDTO build(java.util.Map<String, ?> map) throws Exception {
         BillingCostBreakdownRowDTO self = new BillingCostBreakdownRowDTO();
         return TeaModel.build(map, self);
+    }
+
+    public BillingCostBreakdownRowDTO setApiKeyId(Long apiKeyId) {
+        this.apiKeyId = apiKeyId;
+        return this;
+    }
+    public Long getApiKeyId() {
+        return this.apiKeyId;
+    }
+
+    public BillingCostBreakdownRowDTO setApiKeyName(String apiKeyName) {
+        this.apiKeyName = apiKeyName;
+        return this;
+    }
+    public String getApiKeyName() {
+        return this.apiKeyName;
     }
 
     public BillingCostBreakdownRowDTO setBillingType(String billingType) {

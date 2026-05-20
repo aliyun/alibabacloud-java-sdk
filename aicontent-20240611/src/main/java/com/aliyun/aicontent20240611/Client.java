@@ -3189,6 +3189,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModelRouterQueryBillingCostBreakdownResponse modelRouterQueryBillingCostBreakdownWithOptions(ModelRouterQueryBillingCostBreakdownRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiKeyId)) {
+            query.put("apiKeyId", request.apiKeyId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
             query.put("clientId", request.clientId);
         }
@@ -3656,6 +3660,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModelRouterQueryCostModelDetailResponse modelRouterQueryCostModelDetailWithOptions(ModelRouterQueryCostModelDetailRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiKeyId)) {
+            query.put("apiKeyId", request.apiKeyId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
             query.put("clientId", request.clientId);
         }
@@ -3735,6 +3743,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModelRouterQueryCostModelListResponse modelRouterQueryCostModelListWithOptions(ModelRouterQueryCostModelListRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiKeyId)) {
+            query.put("apiKeyId", request.apiKeyId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
             query.put("clientId", request.clientId);
         }
@@ -3810,6 +3822,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModelRouterQueryCostOverviewMetricsResponse modelRouterQueryCostOverviewMetricsWithOptions(ModelRouterQueryCostOverviewMetricsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiKeyId)) {
+            query.put("apiKeyId", request.apiKeyId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
             query.put("clientId", request.clientId);
         }
@@ -3881,6 +3897,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModelRouterQueryCostTrendMetricsResponse modelRouterQueryCostTrendMetricsWithOptions(ModelRouterQueryCostTrendMetricsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiKeyId)) {
+            query.put("apiKeyId", request.apiKeyId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
             query.put("clientId", request.clientId);
         }
@@ -4495,6 +4515,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModelRouterQueryUsageBreakdownResponse modelRouterQueryUsageBreakdownWithOptions(ModelRouterQueryUsageBreakdownRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiKeyId)) {
+            query.put("apiKeyId", request.apiKeyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
+            query.put("clientId", request.clientId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("endTime", request.endTime);
         }

@@ -8,6 +8,20 @@ public class UsageBreakdownRowDTO extends TeaModel {
      * <strong>example:</strong>
      * <p>0</p>
      */
+    @NameInMap("apiKeyId")
+    public Long apiKeyId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>默认密钥</p>
+     */
+    @NameInMap("apiKeyName")
+    public String apiKeyName;
+
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("clientId")
     public Long clientId;
 
@@ -55,6 +69,22 @@ public class UsageBreakdownRowDTO extends TeaModel {
     public static UsageBreakdownRowDTO build(java.util.Map<String, ?> map) throws Exception {
         UsageBreakdownRowDTO self = new UsageBreakdownRowDTO();
         return TeaModel.build(map, self);
+    }
+
+    public UsageBreakdownRowDTO setApiKeyId(Long apiKeyId) {
+        this.apiKeyId = apiKeyId;
+        return this;
+    }
+    public Long getApiKeyId() {
+        return this.apiKeyId;
+    }
+
+    public UsageBreakdownRowDTO setApiKeyName(String apiKeyName) {
+        this.apiKeyName = apiKeyName;
+        return this;
+    }
+    public String getApiKeyName() {
+        return this.apiKeyName;
     }
 
     public UsageBreakdownRowDTO setClientId(Long clientId) {

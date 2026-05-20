@@ -6,6 +6,13 @@ import com.aliyun.tea.*;
 public class ModelRouterQueryCostModelDetailRequest extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>100</p>
+     */
+    @NameInMap("apiKeyId")
+    public Long apiKeyId;
+
+    /**
+     * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("clientId")
@@ -80,6 +87,14 @@ public class ModelRouterQueryCostModelDetailRequest extends TeaModel {
     public static ModelRouterQueryCostModelDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         ModelRouterQueryCostModelDetailRequest self = new ModelRouterQueryCostModelDetailRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModelRouterQueryCostModelDetailRequest setApiKeyId(Long apiKeyId) {
+        this.apiKeyId = apiKeyId;
+        return this;
+    }
+    public Long getApiKeyId() {
+        return this.apiKeyId;
     }
 
     public ModelRouterQueryCostModelDetailRequest setClientId(Long clientId) {

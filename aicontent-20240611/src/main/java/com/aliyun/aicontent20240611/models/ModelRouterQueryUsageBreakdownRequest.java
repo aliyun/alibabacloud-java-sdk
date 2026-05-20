@@ -5,6 +5,20 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryUsageBreakdownRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
+    @NameInMap("apiKeyId")
+    public Long apiKeyId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("clientId")
+    public Long clientId;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,6 +76,22 @@ public class ModelRouterQueryUsageBreakdownRequest extends TeaModel {
     public static ModelRouterQueryUsageBreakdownRequest build(java.util.Map<String, ?> map) throws Exception {
         ModelRouterQueryUsageBreakdownRequest self = new ModelRouterQueryUsageBreakdownRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModelRouterQueryUsageBreakdownRequest setApiKeyId(Long apiKeyId) {
+        this.apiKeyId = apiKeyId;
+        return this;
+    }
+    public Long getApiKeyId() {
+        return this.apiKeyId;
+    }
+
+    public ModelRouterQueryUsageBreakdownRequest setClientId(Long clientId) {
+        this.clientId = clientId;
+        return this;
+    }
+    public Long getClientId() {
+        return this.clientId;
     }
 
     public ModelRouterQueryUsageBreakdownRequest setEndTime(Long endTime) {

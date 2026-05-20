@@ -6,6 +6,13 @@ import com.aliyun.tea.*;
 public class ModelRouterQueryBillingCostBreakdownRequest extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>100</p>
+     */
+    @NameInMap("apiKeyId")
+    public Long apiKeyId;
+
+    /**
+     * <strong>example:</strong>
      * <p>5</p>
      */
     @NameInMap("clientId")
@@ -83,6 +90,14 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends TeaModel {
     public static ModelRouterQueryBillingCostBreakdownRequest build(java.util.Map<String, ?> map) throws Exception {
         ModelRouterQueryBillingCostBreakdownRequest self = new ModelRouterQueryBillingCostBreakdownRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModelRouterQueryBillingCostBreakdownRequest setApiKeyId(Long apiKeyId) {
+        this.apiKeyId = apiKeyId;
+        return this;
+    }
+    public Long getApiKeyId() {
+        return this.apiKeyId;
     }
 
     public ModelRouterQueryBillingCostBreakdownRequest setClientId(Long clientId) {
