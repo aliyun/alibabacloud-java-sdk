@@ -501,7 +501,71 @@ public class UpdateApplicationVersionRequest extends TeaModel {
 
     }
 
+    public static class UpdateApplicationVersionRequestTranscriberConfigCorrectionRules extends TeaModel {
+        @NameInMap("Pattern")
+        public String pattern;
+
+        @NameInMap("Replacement")
+        public String replacement;
+
+        public static UpdateApplicationVersionRequestTranscriberConfigCorrectionRules build(java.util.Map<String, ?> map) throws Exception {
+            UpdateApplicationVersionRequestTranscriberConfigCorrectionRules self = new UpdateApplicationVersionRequestTranscriberConfigCorrectionRules();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateApplicationVersionRequestTranscriberConfigCorrectionRules setPattern(String pattern) {
+            this.pattern = pattern;
+            return this;
+        }
+        public String getPattern() {
+            return this.pattern;
+        }
+
+        public UpdateApplicationVersionRequestTranscriberConfigCorrectionRules setReplacement(String replacement) {
+            this.replacement = replacement;
+            return this;
+        }
+        public String getReplacement() {
+            return this.replacement;
+        }
+
+    }
+
+    public static class UpdateApplicationVersionRequestTranscriberConfigNlsAccessProfile extends TeaModel {
+        @NameInMap("AccessProfileId")
+        public String accessProfileId;
+
+        public static UpdateApplicationVersionRequestTranscriberConfigNlsAccessProfile build(java.util.Map<String, ?> map) throws Exception {
+            UpdateApplicationVersionRequestTranscriberConfigNlsAccessProfile self = new UpdateApplicationVersionRequestTranscriberConfigNlsAccessProfile();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateApplicationVersionRequestTranscriberConfigNlsAccessProfile setAccessProfileId(String accessProfileId) {
+            this.accessProfileId = accessProfileId;
+            return this;
+        }
+        public String getAccessProfileId() {
+            return this.accessProfileId;
+        }
+
+    }
+
     public static class UpdateApplicationVersionRequestTranscriberConfig extends TeaModel {
+        @NameInMap("CorrectionRules")
+        public java.util.List<UpdateApplicationVersionRequestTranscriberConfigCorrectionRules> correctionRules;
+
+        @NameInMap("CustomizationId")
+        public String customizationId;
+
+        @NameInMap("EndSilenceTimeout")
+        public Integer endSilenceTimeout;
+
+        @NameInMap("Model")
+        public String model;
+
+        @NameInMap("NlsAccessProfile")
+        public UpdateApplicationVersionRequestTranscriberConfigNlsAccessProfile nlsAccessProfile;
+
         /**
          * <strong>example:</strong>
          * <p>MANAGED</p>
@@ -516,9 +580,55 @@ public class UpdateApplicationVersionRequest extends TeaModel {
         @NameInMap("NlsEngine")
         public String nlsEngine;
 
+        @NameInMap("SpeechNoiseThreshold")
+        public Integer speechNoiseThreshold;
+
+        @NameInMap("VocabularyId")
+        public String vocabularyId;
+
         public static UpdateApplicationVersionRequestTranscriberConfig build(java.util.Map<String, ?> map) throws Exception {
             UpdateApplicationVersionRequestTranscriberConfig self = new UpdateApplicationVersionRequestTranscriberConfig();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateApplicationVersionRequestTranscriberConfig setCorrectionRules(java.util.List<UpdateApplicationVersionRequestTranscriberConfigCorrectionRules> correctionRules) {
+            this.correctionRules = correctionRules;
+            return this;
+        }
+        public java.util.List<UpdateApplicationVersionRequestTranscriberConfigCorrectionRules> getCorrectionRules() {
+            return this.correctionRules;
+        }
+
+        public UpdateApplicationVersionRequestTranscriberConfig setCustomizationId(String customizationId) {
+            this.customizationId = customizationId;
+            return this;
+        }
+        public String getCustomizationId() {
+            return this.customizationId;
+        }
+
+        public UpdateApplicationVersionRequestTranscriberConfig setEndSilenceTimeout(Integer endSilenceTimeout) {
+            this.endSilenceTimeout = endSilenceTimeout;
+            return this;
+        }
+        public Integer getEndSilenceTimeout() {
+            return this.endSilenceTimeout;
+        }
+
+        public UpdateApplicationVersionRequestTranscriberConfig setModel(String model) {
+            this.model = model;
+            return this;
+        }
+        public String getModel() {
+            return this.model;
+        }
+
+        public UpdateApplicationVersionRequestTranscriberConfig setNlsAccessProfile(UpdateApplicationVersionRequestTranscriberConfigNlsAccessProfile nlsAccessProfile) {
+            this.nlsAccessProfile = nlsAccessProfile;
+            return this;
+        }
+        public UpdateApplicationVersionRequestTranscriberConfigNlsAccessProfile getNlsAccessProfile() {
+            return this.nlsAccessProfile;
         }
 
         public UpdateApplicationVersionRequestTranscriberConfig setNlsAccessType(String nlsAccessType) {
@@ -535,6 +645,22 @@ public class UpdateApplicationVersionRequest extends TeaModel {
         }
         public String getNlsEngine() {
             return this.nlsEngine;
+        }
+
+        public UpdateApplicationVersionRequestTranscriberConfig setSpeechNoiseThreshold(Integer speechNoiseThreshold) {
+            this.speechNoiseThreshold = speechNoiseThreshold;
+            return this;
+        }
+        public Integer getSpeechNoiseThreshold() {
+            return this.speechNoiseThreshold;
+        }
+
+        public UpdateApplicationVersionRequestTranscriberConfig setVocabularyId(String vocabularyId) {
+            this.vocabularyId = vocabularyId;
+            return this;
+        }
+        public String getVocabularyId() {
+            return this.vocabularyId;
         }
 
     }

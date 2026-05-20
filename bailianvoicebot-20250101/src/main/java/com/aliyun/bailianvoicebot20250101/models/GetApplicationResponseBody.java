@@ -489,7 +489,71 @@ public class GetApplicationResponseBody extends TeaModel {
 
     }
 
+    public static class GetApplicationResponseBodyDataDraftVersionTranscriberConfigCorrectionRules extends TeaModel {
+        @NameInMap("Pattern")
+        public String pattern;
+
+        @NameInMap("Replacement")
+        public String replacement;
+
+        public static GetApplicationResponseBodyDataDraftVersionTranscriberConfigCorrectionRules build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationResponseBodyDataDraftVersionTranscriberConfigCorrectionRules self = new GetApplicationResponseBodyDataDraftVersionTranscriberConfigCorrectionRules();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionTranscriberConfigCorrectionRules setPattern(String pattern) {
+            this.pattern = pattern;
+            return this;
+        }
+        public String getPattern() {
+            return this.pattern;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionTranscriberConfigCorrectionRules setReplacement(String replacement) {
+            this.replacement = replacement;
+            return this;
+        }
+        public String getReplacement() {
+            return this.replacement;
+        }
+
+    }
+
+    public static class GetApplicationResponseBodyDataDraftVersionTranscriberConfigNlsAccessProfile extends TeaModel {
+        @NameInMap("AccessProfileId")
+        public String accessProfileId;
+
+        public static GetApplicationResponseBodyDataDraftVersionTranscriberConfigNlsAccessProfile build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationResponseBodyDataDraftVersionTranscriberConfigNlsAccessProfile self = new GetApplicationResponseBodyDataDraftVersionTranscriberConfigNlsAccessProfile();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionTranscriberConfigNlsAccessProfile setAccessProfileId(String accessProfileId) {
+            this.accessProfileId = accessProfileId;
+            return this;
+        }
+        public String getAccessProfileId() {
+            return this.accessProfileId;
+        }
+
+    }
+
     public static class GetApplicationResponseBodyDataDraftVersionTranscriberConfig extends TeaModel {
+        @NameInMap("CorrectionRules")
+        public java.util.List<GetApplicationResponseBodyDataDraftVersionTranscriberConfigCorrectionRules> correctionRules;
+
+        @NameInMap("CustomizationId")
+        public String customizationId;
+
+        @NameInMap("EndSilenceTimeout")
+        public Integer endSilenceTimeout;
+
+        @NameInMap("Model")
+        public String model;
+
+        @NameInMap("NlsAccessProfile")
+        public GetApplicationResponseBodyDataDraftVersionTranscriberConfigNlsAccessProfile nlsAccessProfile;
+
         /**
          * <strong>example:</strong>
          * <p>MANAGED</p>
@@ -504,9 +568,55 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("NlsEngine")
         public String nlsEngine;
 
+        @NameInMap("SpeechNoiseThreshold")
+        public Integer speechNoiseThreshold;
+
+        @NameInMap("VocabularyId")
+        public String vocabularyId;
+
         public static GetApplicationResponseBodyDataDraftVersionTranscriberConfig build(java.util.Map<String, ?> map) throws Exception {
             GetApplicationResponseBodyDataDraftVersionTranscriberConfig self = new GetApplicationResponseBodyDataDraftVersionTranscriberConfig();
             return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionTranscriberConfig setCorrectionRules(java.util.List<GetApplicationResponseBodyDataDraftVersionTranscriberConfigCorrectionRules> correctionRules) {
+            this.correctionRules = correctionRules;
+            return this;
+        }
+        public java.util.List<GetApplicationResponseBodyDataDraftVersionTranscriberConfigCorrectionRules> getCorrectionRules() {
+            return this.correctionRules;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionTranscriberConfig setCustomizationId(String customizationId) {
+            this.customizationId = customizationId;
+            return this;
+        }
+        public String getCustomizationId() {
+            return this.customizationId;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionTranscriberConfig setEndSilenceTimeout(Integer endSilenceTimeout) {
+            this.endSilenceTimeout = endSilenceTimeout;
+            return this;
+        }
+        public Integer getEndSilenceTimeout() {
+            return this.endSilenceTimeout;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionTranscriberConfig setModel(String model) {
+            this.model = model;
+            return this;
+        }
+        public String getModel() {
+            return this.model;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionTranscriberConfig setNlsAccessProfile(GetApplicationResponseBodyDataDraftVersionTranscriberConfigNlsAccessProfile nlsAccessProfile) {
+            this.nlsAccessProfile = nlsAccessProfile;
+            return this;
+        }
+        public GetApplicationResponseBodyDataDraftVersionTranscriberConfigNlsAccessProfile getNlsAccessProfile() {
+            return this.nlsAccessProfile;
         }
 
         public GetApplicationResponseBodyDataDraftVersionTranscriberConfig setNlsAccessType(String nlsAccessType) {
@@ -523,6 +633,22 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public String getNlsEngine() {
             return this.nlsEngine;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionTranscriberConfig setSpeechNoiseThreshold(Integer speechNoiseThreshold) {
+            this.speechNoiseThreshold = speechNoiseThreshold;
+            return this;
+        }
+        public Integer getSpeechNoiseThreshold() {
+            return this.speechNoiseThreshold;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionTranscriberConfig setVocabularyId(String vocabularyId) {
+            this.vocabularyId = vocabularyId;
+            return this;
+        }
+        public String getVocabularyId() {
+            return this.vocabularyId;
         }
 
     }
@@ -1014,7 +1140,71 @@ public class GetApplicationResponseBody extends TeaModel {
 
     }
 
+    public static class GetApplicationResponseBodyDataPublishedVersionTranscriberConfigCorrectionRules extends TeaModel {
+        @NameInMap("Pattern")
+        public String pattern;
+
+        @NameInMap("Replacement")
+        public String replacement;
+
+        public static GetApplicationResponseBodyDataPublishedVersionTranscriberConfigCorrectionRules build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationResponseBodyDataPublishedVersionTranscriberConfigCorrectionRules self = new GetApplicationResponseBodyDataPublishedVersionTranscriberConfigCorrectionRules();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionTranscriberConfigCorrectionRules setPattern(String pattern) {
+            this.pattern = pattern;
+            return this;
+        }
+        public String getPattern() {
+            return this.pattern;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionTranscriberConfigCorrectionRules setReplacement(String replacement) {
+            this.replacement = replacement;
+            return this;
+        }
+        public String getReplacement() {
+            return this.replacement;
+        }
+
+    }
+
+    public static class GetApplicationResponseBodyDataPublishedVersionTranscriberConfigNlsAccessProfile extends TeaModel {
+        @NameInMap("AccessProfileId")
+        public String accessProfileId;
+
+        public static GetApplicationResponseBodyDataPublishedVersionTranscriberConfigNlsAccessProfile build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationResponseBodyDataPublishedVersionTranscriberConfigNlsAccessProfile self = new GetApplicationResponseBodyDataPublishedVersionTranscriberConfigNlsAccessProfile();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionTranscriberConfigNlsAccessProfile setAccessProfileId(String accessProfileId) {
+            this.accessProfileId = accessProfileId;
+            return this;
+        }
+        public String getAccessProfileId() {
+            return this.accessProfileId;
+        }
+
+    }
+
     public static class GetApplicationResponseBodyDataPublishedVersionTranscriberConfig extends TeaModel {
+        @NameInMap("CorrectionRules")
+        public java.util.List<GetApplicationResponseBodyDataPublishedVersionTranscriberConfigCorrectionRules> correctionRules;
+
+        @NameInMap("CustomizationId")
+        public String customizationId;
+
+        @NameInMap("EndSilenceTimeout")
+        public Integer endSilenceTimeout;
+
+        @NameInMap("Model")
+        public String model;
+
+        @NameInMap("NlsAccessProfile")
+        public GetApplicationResponseBodyDataPublishedVersionTranscriberConfigNlsAccessProfile nlsAccessProfile;
+
         /**
          * <strong>example:</strong>
          * <p>MANAGED</p>
@@ -1029,9 +1219,55 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("NlsEngine")
         public String nlsEngine;
 
+        @NameInMap("SpeechNoiseThreshold")
+        public Integer speechNoiseThreshold;
+
+        @NameInMap("VocabularyId")
+        public String vocabularyId;
+
         public static GetApplicationResponseBodyDataPublishedVersionTranscriberConfig build(java.util.Map<String, ?> map) throws Exception {
             GetApplicationResponseBodyDataPublishedVersionTranscriberConfig self = new GetApplicationResponseBodyDataPublishedVersionTranscriberConfig();
             return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionTranscriberConfig setCorrectionRules(java.util.List<GetApplicationResponseBodyDataPublishedVersionTranscriberConfigCorrectionRules> correctionRules) {
+            this.correctionRules = correctionRules;
+            return this;
+        }
+        public java.util.List<GetApplicationResponseBodyDataPublishedVersionTranscriberConfigCorrectionRules> getCorrectionRules() {
+            return this.correctionRules;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionTranscriberConfig setCustomizationId(String customizationId) {
+            this.customizationId = customizationId;
+            return this;
+        }
+        public String getCustomizationId() {
+            return this.customizationId;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionTranscriberConfig setEndSilenceTimeout(Integer endSilenceTimeout) {
+            this.endSilenceTimeout = endSilenceTimeout;
+            return this;
+        }
+        public Integer getEndSilenceTimeout() {
+            return this.endSilenceTimeout;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionTranscriberConfig setModel(String model) {
+            this.model = model;
+            return this;
+        }
+        public String getModel() {
+            return this.model;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionTranscriberConfig setNlsAccessProfile(GetApplicationResponseBodyDataPublishedVersionTranscriberConfigNlsAccessProfile nlsAccessProfile) {
+            this.nlsAccessProfile = nlsAccessProfile;
+            return this;
+        }
+        public GetApplicationResponseBodyDataPublishedVersionTranscriberConfigNlsAccessProfile getNlsAccessProfile() {
+            return this.nlsAccessProfile;
         }
 
         public GetApplicationResponseBodyDataPublishedVersionTranscriberConfig setNlsAccessType(String nlsAccessType) {
@@ -1048,6 +1284,22 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public String getNlsEngine() {
             return this.nlsEngine;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionTranscriberConfig setSpeechNoiseThreshold(Integer speechNoiseThreshold) {
+            this.speechNoiseThreshold = speechNoiseThreshold;
+            return this;
+        }
+        public Integer getSpeechNoiseThreshold() {
+            return this.speechNoiseThreshold;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionTranscriberConfig setVocabularyId(String vocabularyId) {
+            this.vocabularyId = vocabularyId;
+            return this;
+        }
+        public String getVocabularyId() {
+            return this.vocabularyId;
         }
 
     }
