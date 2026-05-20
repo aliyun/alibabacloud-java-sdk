@@ -1,3 +1,9 @@
+2026-05-20 Version: 3.1.0
+- Support API DescribeTraceDiagnoseReport.
+- Support API GenerateTraceDiagnose.
+- Support API ListTraceTasks.
+
+
 2026-05-14 Version: 3.0.2
 - Update API CreateLoadBalancer: add request parameters AdaptiveRouting.OriginLevelRetry.
 - Update API GetLoadBalancer: add response parameters Body.AdaptiveRouting.OriginLevelRetry.

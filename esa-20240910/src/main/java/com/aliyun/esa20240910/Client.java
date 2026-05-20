@@ -8905,6 +8905,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>边缘容器的监控</p>
+     * 
+     * @param request DescribeTraceDiagnoseReportRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeTraceDiagnoseReportResponse
+     */
+    public DescribeTraceDiagnoseReportResponse describeTraceDiagnoseReportWithOptions(DescribeTraceDiagnoseReportRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.traceId)) {
+            query.put("TraceId", request.traceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeTraceDiagnoseReport"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeTraceDiagnoseReportResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>边缘容器的监控</p>
+     * 
+     * @param request DescribeTraceDiagnoseReportRequest
+     * @return DescribeTraceDiagnoseReportResponse
+     */
+    public DescribeTraceDiagnoseReportResponse describeTraceDiagnoseReport(DescribeTraceDiagnoseReportRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeTraceDiagnoseReportWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>If you do not specify the StartTime or EndTime parameter, this operation returns the data collected within the last 24 hours. If you specify both parameters, this operation returns the data collected within the specified time range.</p>
      * 
@@ -9160,6 +9208,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ExportRecordsResponse exportRecords(ExportRecordsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.exportRecordsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>边缘容器的监控</p>
+     * 
+     * @param request GenerateTraceDiagnoseRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GenerateTraceDiagnoseResponse
+     */
+    public GenerateTraceDiagnoseResponse generateTraceDiagnoseWithOptions(GenerateTraceDiagnoseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            query.put("Url", request.url);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GenerateTraceDiagnose"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateTraceDiagnoseResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>边缘容器的监控</p>
+     * 
+     * @param request GenerateTraceDiagnoseRequest
+     * @return GenerateTraceDiagnoseResponse
+     */
+    public GenerateTraceDiagnoseResponse generateTraceDiagnose(GenerateTraceDiagnoseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.generateTraceDiagnoseWithOptions(request, runtime);
     }
 
     /**
@@ -15521,6 +15613,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListTagResourcesResponse listTagResources(ListTagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTagResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>边缘容器的监控</p>
+     * 
+     * @param request ListTraceTasksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTraceTasksResponse
+     */
+    public ListTraceTasksResponse listTraceTasksWithOptions(ListTraceTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientIp)) {
+            query.put("ClientIp", request.clientIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.diagnoseId)) {
+            query.put("DiagnoseId", request.diagnoseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.traceId)) {
+            query.put("TraceId", request.traceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTraceTasks"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTraceTasksResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>边缘容器的监控</p>
+     * 
+     * @param request ListTraceTasksRequest
+     * @return ListTraceTasksResponse
+     */
+    public ListTraceTasksResponse listTraceTasks(ListTraceTasksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listTraceTasksWithOptions(request, runtime);
     }
 
     /**
