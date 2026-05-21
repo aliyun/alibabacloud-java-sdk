@@ -359,7 +359,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Associates a resource group with a workspace.</p>
+     * <p>Bind a resource group to a workspace.</p>
      * 
      * @param request AssociateProjectToResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -404,7 +404,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Associates a resource group with a workspace.</p>
+     * <p>Bind a resource group to a workspace.</p>
      * 
      * @param request AssociateProjectToResourceGroupRequest
      * @return AssociateProjectToResourceGroupResponse
@@ -13283,6 +13283,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.bizDate)) {
             body.put("BizDate", request.bizDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.envType)) {
+            body.put("EnvType", request.envType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.filter)) {

@@ -16,6 +16,13 @@ public class ListWorkflowInstancesShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>Prod</p>
+     */
+    @NameInMap("EnvType")
+    public String envType;
+
+    /**
+     * <strong>example:</strong>
      * <p>{<br>    &quot;status&quot;: &quot;Success&quot;,
      *     &quot;executionDate&quot;: &quot;1763481600000&quot;
      * }</p>
@@ -139,6 +146,14 @@ public class ListWorkflowInstancesShrinkRequest extends TeaModel {
     }
     public Long getBizDate() {
         return this.bizDate;
+    }
+
+    public ListWorkflowInstancesShrinkRequest setEnvType(String envType) {
+        this.envType = envType;
+        return this;
+    }
+    public String getEnvType() {
+        return this.envType;
     }
 
     public ListWorkflowInstancesShrinkRequest setFilter(String filter) {
