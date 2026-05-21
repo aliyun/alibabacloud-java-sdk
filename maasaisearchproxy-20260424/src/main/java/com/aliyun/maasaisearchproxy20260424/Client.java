@@ -28,6 +28,108 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>提交单条记录导入任务（通过AccessKey认证）</p>
+     * 
+     * @param request OpenDatasetImportDataRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return OpenDatasetImportDataResponse
+     */
+    public OpenDatasetImportDataResponse openDatasetImportDataWithOptions(OpenDatasetImportDataRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetId)) {
+            body.put("datasetId", request.datasetId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.records)) {
+            body.put("records", request.records);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "OpenDatasetImportData"),
+            new TeaPair("version", "2026-04-24"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/dataset/open/upsert"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new OpenDatasetImportDataResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交单条记录导入任务（通过AccessKey认证）</p>
+     * 
+     * @param request OpenDatasetImportDataRequest
+     * @return OpenDatasetImportDataResponse
+     */
+    public OpenDatasetImportDataResponse openDatasetImportData(OpenDatasetImportDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.openDatasetImportDataWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取数据集资源 OSS 访问地址（通过AccessKey认证）</p>
+     * 
+     * @param request OpenDatasetResourceUrlRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return OpenDatasetResourceUrlResponse
+     */
+    public OpenDatasetResourceUrlResponse openDatasetResourceUrlWithOptions(OpenDatasetResourceUrlRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetId)) {
+            body.put("datasetId", request.datasetId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.primaryKey)) {
+            body.put("primaryKey", request.primaryKey);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "OpenDatasetResourceUrl"),
+            new TeaPair("version", "2026-04-24"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/dataset/open/resources"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new OpenDatasetResourceUrlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取数据集资源 OSS 访问地址（通过AccessKey认证）</p>
+     * 
+     * @param request OpenDatasetResourceUrlRequest
+     * @return OpenDatasetResourceUrlResponse
+     */
+    public OpenDatasetResourceUrlResponse openDatasetResourceUrl(OpenDatasetResourceUrlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.openDatasetResourceUrlWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>联网搜API</p>
      * 
      * @param request WebSearchRequest
@@ -60,6 +162,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.region)) {
             body.put("region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchType)) {
+            body.put("searchType", request.searchType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {

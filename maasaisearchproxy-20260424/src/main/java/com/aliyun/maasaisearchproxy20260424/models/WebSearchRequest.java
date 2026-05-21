@@ -38,6 +38,9 @@ public class WebSearchRequest extends TeaModel {
     @NameInMap("region")
     public String region;
 
+    @NameInMap("searchType")
+    public String searchType;
+
     /**
      * <strong>example:</strong>
      * <p>2026-03-06 10:04:45</p>
@@ -96,6 +99,14 @@ public class WebSearchRequest extends TeaModel {
     }
     public String getRegion() {
         return this.region;
+    }
+
+    public WebSearchRequest setSearchType(String searchType) {
+        this.searchType = searchType;
+        return this;
+    }
+    public String getSearchType() {
+        return this.searchType;
     }
 
     public WebSearchRequest setStartTime(String startTime) {
