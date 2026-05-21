@@ -37,6 +37,12 @@ public class HttpApiDeployConfig extends TeaModel {
     @NameInMap("customDomainInfos")
     public java.util.List<HttpApiDeployConfigCustomDomainInfos> customDomainInfos;
 
+    @NameInMap("envDomainIds")
+    public java.util.List<String> envDomainIds;
+
+    @NameInMap("envDomainInfos")
+    public java.util.List<HttpApiDeployConfigEnvDomainInfos> envDomainInfos;
+
     /**
      * <p>The environment ID.</p>
      * 
@@ -152,6 +158,22 @@ public class HttpApiDeployConfig extends TeaModel {
     }
     public java.util.List<HttpApiDeployConfigCustomDomainInfos> getCustomDomainInfos() {
         return this.customDomainInfos;
+    }
+
+    public HttpApiDeployConfig setEnvDomainIds(java.util.List<String> envDomainIds) {
+        this.envDomainIds = envDomainIds;
+        return this;
+    }
+    public java.util.List<String> getEnvDomainIds() {
+        return this.envDomainIds;
+    }
+
+    public HttpApiDeployConfig setEnvDomainInfos(java.util.List<HttpApiDeployConfigEnvDomainInfos> envDomainInfos) {
+        this.envDomainInfos = envDomainInfos;
+        return this;
+    }
+    public java.util.List<HttpApiDeployConfigEnvDomainInfos> getEnvDomainInfos() {
+        return this.envDomainInfos;
     }
 
     public HttpApiDeployConfig setEnvironmentId(String environmentId) {
@@ -276,6 +298,47 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         public HttpApiDeployConfigCustomDomainInfos setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+    }
+
+    public static class HttpApiDeployConfigEnvDomainInfos extends TeaModel {
+        @NameInMap("domainId")
+        public String domainId;
+
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("protocol")
+        public String protocol;
+
+        public static HttpApiDeployConfigEnvDomainInfos build(java.util.Map<String, ?> map) throws Exception {
+            HttpApiDeployConfigEnvDomainInfos self = new HttpApiDeployConfigEnvDomainInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public HttpApiDeployConfigEnvDomainInfos setDomainId(String domainId) {
+            this.domainId = domainId;
+            return this;
+        }
+        public String getDomainId() {
+            return this.domainId;
+        }
+
+        public HttpApiDeployConfigEnvDomainInfos setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public HttpApiDeployConfigEnvDomainInfos setProtocol(String protocol) {
             this.protocol = protocol;
             return this;
         }

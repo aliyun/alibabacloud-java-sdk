@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AiPluginStatus extends TeaModel {
     @NameInMap("errorLogs")
-    public java.util.Map<String, String> errorLogs;
+    public java.util.List<java.util.Map<String, ?>> errorLogs;
 
     @NameInMap("pluginId")
     public String pluginId;
@@ -18,11 +18,11 @@ public class AiPluginStatus extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public AiPluginStatus setErrorLogs(java.util.Map<String, String> errorLogs) {
+    public AiPluginStatus setErrorLogs(java.util.List<java.util.Map<String, ?>> errorLogs) {
         this.errorLogs = errorLogs;
         return this;
     }
-    public java.util.Map<String, String> getErrorLogs() {
+    public java.util.List<java.util.Map<String, ?>> getErrorLogs() {
         return this.errorLogs;
     }
 
