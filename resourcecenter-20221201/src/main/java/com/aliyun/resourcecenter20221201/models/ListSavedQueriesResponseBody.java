@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSavedQueriesResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries returned on each page.</p>
+     * <p>The maximum number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,7 +14,7 @@ public class ListSavedQueriesResponseBody extends TeaModel {
     public String maxResults;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAARfZmVDe9NvRXloR5+8CK9nNJufMdRA7W1miLC1P****</p>
@@ -88,31 +88,31 @@ public class ListSavedQueriesResponseBody extends TeaModel {
          * <p>The description of the template.</p>
          * 
          * <strong>example:</strong>
-         * <p>查询我的所有资源，返回所有的列。</p>
+         * <p>Queries all resources on which you have permissions and sorts the resources by resource type and resource ID.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The name of the template.</p>
+         * <p>The template name.</p>
          * 
          * <strong>example:</strong>
-         * <p>查询我的所有资源。</p>
+         * <p>Query of All Alibaba Cloud Resources</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The ID of the template.</p>
+         * <p>The template ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>cq-GeAck****</p>
+         * <p>sq-GeAck****</p>
          */
         @NameInMap("QueryId")
         public String queryId;
 
         /**
-         * <p>The time when the template was last updated. The time is displayed in UTC.</p>
+         * <p>The time when the template was updated. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-14 10:27:07</p>

@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetResourceCenterServiceStatusResponseBody extends TeaModel {
     /**
-     * <p>The initialization status. Valid values:</p>
+     * <p>The initialization status of the service. Valid values:</p>
      * <ul>
-     * <li><p>Pending</p>
-     * </li>
-     * <li><p>Finished</p>
-     * </li>
+     * <li>Pending: The service is being initialized.</li>
+     * <li>Finished: The service is initialized.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class GetResourceCenterServiceStatusResponseBody extends TeaModel {
     public String initialStatus;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>AD5F848D-CCDC-5464-93E1-4BA50A4826DD</p>
@@ -29,12 +27,10 @@ public class GetResourceCenterServiceStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The service status. Valid values:</p>
+     * <p>The status of the service. Valid values:</p>
      * <ul>
-     * <li><p>Enabled</p>
-     * </li>
-     * <li><p>Disabled</p>
-     * </li>
+     * <li>Enabled: The service is activated.</li>
+     * <li>Disabled: The service is deactivated.</li>
      * </ul>
      * 
      * <strong>example:</strong>

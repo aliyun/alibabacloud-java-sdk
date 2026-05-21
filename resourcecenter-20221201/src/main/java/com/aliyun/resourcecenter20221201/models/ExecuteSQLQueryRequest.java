@@ -19,10 +19,8 @@ public class ExecuteSQLQueryRequest extends TeaModel {
     /**
      * <p>The number of entries per page.</p>
      * <ul>
-     * <li><p>Valid values: 1 to 1000.</p>
-     * </li>
-     * <li><p>Default value: 1000.</p>
-     * </li>
+     * <li>Valid values: 1 to 1000.</li>
+     * <li>Default value: 1000.</li>
      * </ul>
      * 
      * <strong>example:</strong>

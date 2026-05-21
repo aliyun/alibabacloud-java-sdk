@@ -29,7 +29,7 @@ public class SearchResourcesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>D696E6EF-3A6D-5770-801E-4982081FE4D0</p>
@@ -99,7 +99,7 @@ public class SearchResourcesResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The matching method.</p>
+         * <p>The matching mode.</p>
          * 
          * <strong>example:</strong>
          * <p>Equals</p>
@@ -157,10 +157,8 @@ public class SearchResourcesResponseBody extends TeaModel {
         /**
          * <p>The network type. Valid values:</p>
          * <ul>
-         * <li><p><strong>Public</strong>: Internet</p>
-         * </li>
-         * <li><p><strong>Private</strong>: Private network</p>
-         * </li>
+         * <li><strong>Public</strong>: the Internet</li>
+         * <li><strong>Private</strong>: internal network</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -170,7 +168,7 @@ public class SearchResourcesResponseBody extends TeaModel {
         public String networkType;
 
         /**
-         * <p>The IP address version.</p>
+         * <p>The version.</p>
          * 
          * <strong>example:</strong>
          * <p>Ipv4</p>
@@ -211,7 +209,7 @@ public class SearchResourcesResponseBody extends TeaModel {
 
     public static class SearchResourcesResponseBodyResourcesTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of tag N.</p>
          * 
          * <strong>example:</strong>
          * <p>test_key</p>
@@ -220,7 +218,7 @@ public class SearchResourcesResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of tag N.</p>
          * 
          * <strong>example:</strong>
          * <p>test_value</p>
@@ -264,7 +262,7 @@ public class SearchResourcesResponseBody extends TeaModel {
         /**
          * <p>The time when the resource was created.</p>
          * <blockquote>
-         * <p>Whether this parameter is returned depends on the Alibaba Cloud service to which the resource belongs.</p>
+         * <p> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -273,18 +271,6 @@ public class SearchResourcesResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>Indicates whether the resource is deleted. Valid values:</p>
-         * <ul>
-         * <li><p>true</p>
-         * </li>
-         * <li><p>false</p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Deleted")
         public Boolean deleted;
 
@@ -298,7 +284,7 @@ public class SearchResourcesResponseBody extends TeaModel {
         public String expireTime;
 
         /**
-         * <p>The attributes of the IP addresses.</p>
+         * <p>The attributes of the IP address.</p>
          */
         @NameInMap("IpAddressAttributes")
         public java.util.List<SearchResourcesResponseBodyResourcesIpAddressAttributes> ipAddressAttributes;
@@ -306,7 +292,7 @@ public class SearchResourcesResponseBody extends TeaModel {
         /**
          * <p>The IP addresses.</p>
          * <blockquote>
-         * <p>Whether this parameter is returned depends on the Alibaba Cloud service to which the resource belongs.</p>
+         * <p> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
          * </blockquote>
          */
         @NameInMap("IpAddresses")
@@ -366,7 +352,7 @@ public class SearchResourcesResponseBody extends TeaModel {
         /**
          * <p>The zone ID.</p>
          * <blockquote>
-         * <p>Whether this parameter is returned depends on the Alibaba Cloud service to which the resource belongs.</p>
+         * <p> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

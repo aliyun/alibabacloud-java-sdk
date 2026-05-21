@@ -20,16 +20,16 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
      * 
      * <strong>example:</strong>
-     * <p>查询返回结果下一页的令牌。</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>EFA806B9-7F36-55AB-8B7A-D680C2C5EE57</p>
@@ -44,16 +44,12 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
     public java.util.List<SearchMultiAccountResourcesResponseBodyResources> resources;
 
     /**
-     * <p>The scope of accounts in which the resources were searched. Valid values:</p>
+     * <p>The search scope.</p>
      * <ul>
-     * <li><p>The ID of the resource directory. This indicates that resources were searched in the management account and all member accounts of the resource directory.</p>
-     * </li>
-     * <li><p>The ID of the Root folder. This indicates that resources were searched in all member accounts under the Root folder and its subfolders.</p>
-     * </li>
-     * <li><p>The ID of a folder. This indicates that resources were searched in all member accounts under the folder.</p>
-     * </li>
-     * <li><p>The ID of a member account. This indicates that resources were searched in the member account.</p>
-     * </li>
+     * <li>ID of a resource directory: Resources within the management account and all members of the resource directory are searched.</li>
+     * <li>ID of the Root folder: Resources within all members in the Root folder and the subfolders of the Root folder are searched.</li>
+     * <li>ID of a folder: Resources within all members in the folder are searched.</li>
+     * <li>ID of a member: Resources within the member are searched.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -126,7 +122,7 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The matching method.</p>
+         * <p>The matching mode.</p>
          * 
          * <strong>example:</strong>
          * <p>Equals</p>
@@ -184,10 +180,8 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
         /**
          * <p>The network type. Valid values:</p>
          * <ul>
-         * <li><p><strong>Public</strong>: Internet.</p>
-         * </li>
-         * <li><p><strong>Private</strong>: Private network.</p>
-         * </li>
+         * <li><strong>Public</strong>: the Internet</li>
+         * <li><strong>Private</strong>: internal network</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -197,7 +191,7 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
         public String networkType;
 
         /**
-         * <p>The IP address version.</p>
+         * <p>The version.</p>
          * 
          * <strong>example:</strong>
          * <p>Ipv4</p>
@@ -238,7 +232,7 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
 
     public static class SearchMultiAccountResourcesResponseBodyResourcesTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of tag N.</p>
          * 
          * <strong>example:</strong>
          * <p>test_key</p>
@@ -247,7 +241,7 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of tag N.</p>
          * 
          * <strong>example:</strong>
          * <p>test_value</p>
@@ -280,7 +274,7 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
 
     public static class SearchMultiAccountResourcesResponseBodyResources extends TeaModel {
         /**
-         * <p>The ID of the management account or a member account of the resource directory.</p>
+         * <p>The ID of the management account or member of the resource directory.</p>
          * 
          * <strong>example:</strong>
          * <p>151266687691****</p>
@@ -291,7 +285,7 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
         /**
          * <p>The time when the resource was created.</p>
          * <blockquote>
-         * <p>Whether this parameter is returned depends on the Alibaba Cloud service that manages the resource.</p>
+         * <p> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -310,7 +304,7 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
         public String expireTime;
 
         /**
-         * <p>The attributes of the IP addresses.</p>
+         * <p>The attributes of the IP address.</p>
          */
         @NameInMap("IpAddressAttributes")
         public java.util.List<SearchMultiAccountResourcesResponseBodyResourcesIpAddressAttributes> ipAddressAttributes;
@@ -318,7 +312,7 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
         /**
          * <p>The IP addresses.</p>
          * <blockquote>
-         * <p>Whether this parameter is returned depends on the Alibaba Cloud service that manages the resource.</p>
+         * <p> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
          * </blockquote>
          */
         @NameInMap("IpAddresses")
@@ -378,7 +372,7 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
         /**
          * <p>The zone ID.</p>
          * <blockquote>
-         * <p>Whether this parameter is returned depends on the Alibaba Cloud service that manages the resource.</p>
+         * <p> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -5,17 +5,12 @@ import com.aliyun.tea.*;
 
 public class BatchGetResourceConfigurationsResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>F1CE0D52-32DA-531A-87A4-B9A5B68*****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The list of resources.</p>
-     */
     @NameInMap("Resources")
     public java.util.List<BatchGetResourceConfigurationsResponseBodyResources> resources;
 
@@ -42,8 +37,6 @@ public class BatchGetResourceConfigurationsResponseBody extends TeaModel {
 
     public static class BatchGetResourceConfigurationsResponseBodyResourcesIpAddressAttributes extends TeaModel {
         /**
-         * <p>The IP address.</p>
-         * 
          * <strong>example:</strong>
          * <p>192.168.1.2</p>
          */
@@ -51,14 +44,6 @@ public class BatchGetResourceConfigurationsResponseBody extends TeaModel {
         public String ipAddress;
 
         /**
-         * <p>The network type. Valid values:</p>
-         * <ul>
-         * <li><p><strong>Public</strong>: Internet.</p>
-         * </li>
-         * <li><p><strong>Private</strong>: Private network.</p>
-         * </li>
-         * </ul>
-         * 
          * <strong>example:</strong>
          * <p>Public</p>
          */
@@ -66,8 +51,6 @@ public class BatchGetResourceConfigurationsResponseBody extends TeaModel {
         public String networkType;
 
         /**
-         * <p>The version of the IP address.</p>
-         * 
          * <strong>example:</strong>
          * <p>Ipv4</p>
          */
@@ -107,8 +90,6 @@ public class BatchGetResourceConfigurationsResponseBody extends TeaModel {
 
     public static class BatchGetResourceConfigurationsResponseBodyResourcesTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
-         * 
          * <strong>example:</strong>
          * <p>test_key</p>
          */
@@ -116,8 +97,6 @@ public class BatchGetResourceConfigurationsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
-         * 
          * <strong>example:</strong>
          * <p>test_value</p>
          */
@@ -149,23 +128,16 @@ public class BatchGetResourceConfigurationsResponseBody extends TeaModel {
 
     public static class BatchGetResourceConfigurationsResponseBodyResources extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
-         * 
          * <strong>example:</strong>
          * <p>151266687691****</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
-        /**
-         * <p>The details of the resource configuration.</p>
-         */
         @NameInMap("Configuration")
         public java.util.Map<String, ?> configuration;
 
         /**
-         * <p>The time when the resource was created.</p>
-         * 
          * <strong>example:</strong>
          * <p>2021-06-30T09:20:08Z</p>
          */
@@ -173,32 +145,19 @@ public class BatchGetResourceConfigurationsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The expiration time of the resource.</p>
-         * 
          * <strong>example:</strong>
          * <p>2021-07-30T09:20:08Z</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
 
-        /**
-         * <p>The properties of the IP addresses.</p>
-         */
         @NameInMap("IpAddressAttributes")
         public java.util.List<BatchGetResourceConfigurationsResponseBodyResourcesIpAddressAttributes> ipAddressAttributes;
 
-        /**
-         * <p>The IP addresses.</p>
-         * <blockquote>
-         * <p>Whether this parameter is returned depends on the Alibaba Cloud service to which the resource belongs.</p>
-         * </blockquote>
-         */
         @NameInMap("IpAddresses")
         public java.util.List<String> ipAddresses;
 
         /**
-         * <p>The region ID of the resource.</p>
-         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -206,8 +165,6 @@ public class BatchGetResourceConfigurationsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The resource group ID.</p>
-         * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>
          */
@@ -215,8 +172,6 @@ public class BatchGetResourceConfigurationsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The resource ID.</p>
-         * 
          * <strong>example:</strong>
          * <p>eip-wz9gdtce0q6h48h*****</p>
          */
@@ -224,8 +179,6 @@ public class BatchGetResourceConfigurationsResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The resource name.</p>
-         * 
          * <strong>example:</strong>
          * <p>group1</p>
          */
@@ -233,23 +186,16 @@ public class BatchGetResourceConfigurationsResponseBody extends TeaModel {
         public String resourceName;
 
         /**
-         * <p>The resource type.</p>
-         * 
          * <strong>example:</strong>
          * <p>ACS::ECS::Instance</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        /**
-         * <p>The tags.</p>
-         */
         @NameInMap("Tags")
         public java.util.List<BatchGetResourceConfigurationsResponseBodyResourcesTags> tags;
 
         /**
-         * <p>The zone ID.</p>
-         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-k</p>
          */

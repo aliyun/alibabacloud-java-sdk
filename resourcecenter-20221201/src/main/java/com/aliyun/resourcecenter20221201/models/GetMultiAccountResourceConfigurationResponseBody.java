@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMultiAccountResourceConfigurationResponseBody extends TeaModel {
     /**
-     * <p>The ID of the management account or member.</p>
+     * <p>The ID of the management account or member of the resource directory.</p>
      * 
      * <strong>example:</strong>
      * <p>1619302****</p>
@@ -38,7 +38,7 @@ public class GetMultiAccountResourceConfigurationResponseBody extends TeaModel {
     public String expireTime;
 
     /**
-     * <p>The properties of the IP addresses.</p>
+     * <p>The attributes of the IP address.</p>
      */
     @NameInMap("IpAddressAttributes")
     public java.util.List<GetMultiAccountResourceConfigurationResponseBodyIpAddressAttributes> ipAddressAttributes;
@@ -53,7 +53,7 @@ public class GetMultiAccountResourceConfigurationResponseBody extends TeaModel {
     public java.util.List<String> ipAddresses;
 
     /**
-     * <p>The ID of the region where the resource resides.</p>
+     * <p>The region ID of the resource.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -62,7 +62,7 @@ public class GetMultiAccountResourceConfigurationResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>B2DCC08B-C12A-5705-879C-5A1450016156</p>
@@ -71,7 +71,7 @@ public class GetMultiAccountResourceConfigurationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of your Alibaba Cloud resource group.</p>
+     * <p>The ID of the resource group to which the resource belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzy6d****</p>
@@ -80,7 +80,7 @@ public class GetMultiAccountResourceConfigurationResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The resource ID.</p>
+     * <p>The ID of the resource.</p>
      * 
      * <strong>example:</strong>
      * <p>m-eb3hji****</p>
@@ -89,7 +89,7 @@ public class GetMultiAccountResourceConfigurationResponseBody extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The resource name.</p>
+     * <p>The name of the resource.</p>
      * 
      * <strong>example:</strong>
      * <p>test_resource</p>
@@ -98,7 +98,7 @@ public class GetMultiAccountResourceConfigurationResponseBody extends TeaModel {
     public String resourceName;
 
     /**
-     * <p>The resource type.</p>
+     * <p>The type of the resource.</p>
      * 
      * <strong>example:</strong>
      * <p>ACS::VPC::RouteTable</p>
@@ -107,13 +107,13 @@ public class GetMultiAccountResourceConfigurationResponseBody extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags of the resource.</p>
      */
     @NameInMap("Tags")
     public java.util.List<GetMultiAccountResourceConfigurationResponseBodyTags> tags;
 
     /**
-     * <p>The zone ID.</p>
+     * <p>The zone ID of the resource.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai-a</p>
@@ -251,10 +251,8 @@ public class GetMultiAccountResourceConfigurationResponseBody extends TeaModel {
         /**
          * <p>The network type. Valid values:</p>
          * <ul>
-         * <li><p><strong>Public</strong>: Internet</p>
-         * </li>
-         * <li><p><strong>Private</strong>: internal network</p>
-         * </li>
+         * <li><strong>Public</strong>: the Internet</li>
+         * <li><strong>Private</strong>: internal network</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -264,7 +262,7 @@ public class GetMultiAccountResourceConfigurationResponseBody extends TeaModel {
         public String networkType;
 
         /**
-         * <p>The version of the IP address.</p>
+         * <p>The version.</p>
          * 
          * <strong>example:</strong>
          * <p>Ipv4</p>
@@ -305,7 +303,7 @@ public class GetMultiAccountResourceConfigurationResponseBody extends TeaModel {
 
     public static class GetMultiAccountResourceConfigurationResponseBodyTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of tag N.</p>
          * 
          * <strong>example:</strong>
          * <p>tag-key</p>
@@ -314,7 +312,7 @@ public class GetMultiAccountResourceConfigurationResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of tag N.</p>
          * 
          * <strong>example:</strong>
          * <p>tag-value</p>

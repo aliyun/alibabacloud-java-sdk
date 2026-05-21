@@ -72,7 +72,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configurations of multiple resources in your account.</p>
+     * <p>批量获取资源配置</p>
      * 
      * @param request BatchGetResourceConfigurationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -104,7 +104,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configurations of multiple resources in your account.</p>
+     * <p>批量获取资源配置</p>
      * 
      * @param request BatchGetResourceConfigurationsRequest
      * @return BatchGetResourceConfigurationsResponse
@@ -116,15 +116,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Resource delivery supports the scheduled delivery of resource snapshots and the delivery of resource configuration changes.
-     * Scheduled delivery of resource snapshots supports two scenarios:</p>
+     * <p>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
+     * Scheduled resource snapshots support the following delivery scenarios:</p>
      * <ul>
-     * <li>Standard delivery: Leave the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter empty.</li>
-     * <li>Custom delivery: Set the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter to an appropriate value.</li>
+     * <li>Standard delivery: Leave the ResourceSnapshotDelivery.CustomExpression parameter empty.</li>
+     * <li>Custom delivery: Set the ResourceSnapshotDelivery.CustomExpression parameter to an appropriate value.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a resource delivery channel for the current account.</p>
+     * <p>Creates a single-account delivery channel.</p>
      * 
      * @param request CreateDeliveryChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -172,15 +172,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Resource delivery supports the scheduled delivery of resource snapshots and the delivery of resource configuration changes.
-     * Scheduled delivery of resource snapshots supports two scenarios:</p>
+     * <p>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
+     * Scheduled resource snapshots support the following delivery scenarios:</p>
      * <ul>
-     * <li>Standard delivery: Leave the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter empty.</li>
-     * <li>Custom delivery: Set the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter to an appropriate value.</li>
+     * <li>Standard delivery: Leave the ResourceSnapshotDelivery.CustomExpression parameter empty.</li>
+     * <li>Custom delivery: Set the ResourceSnapshotDelivery.CustomExpression parameter to an appropriate value.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a resource delivery channel for the current account.</p>
+     * <p>Creates a single-account delivery channel.</p>
      * 
      * @param request CreateDeliveryChannelRequest
      * @return CreateDeliveryChannelResponse
@@ -240,7 +240,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In Resource Center, you can create multi-account delivery channels by using the management account of your resource directory or the delegated administrator account of Resource Center to deliver resource configuration change events and scheduled resource snapshots within the members in your resource directory to Object Storage Service (OSS) or Simple Log Service (SLS). Then, other Alibaba Cloud services consume standardized resource information from OSS or Simple Log Service.
+     * <p>In Resource Center, you can create multi-account delivery channels by using the management account of your resource directory or the delegated administrator account of Resource Center to deliver resource configuration change events and scheduled resource snapshots within the members in your resource directory to Object Storage Service (OSS) or Simple Log Service. Then, other Alibaba Cloud services consume standardized resource information from OSS or Simple Log Service.
      * Scheduled resource snapshots support the following delivery scenarios:</p>
      * <ul>
      * <li>Standard delivery: Leave the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter empty.</li>
@@ -296,7 +296,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In Resource Center, you can create multi-account delivery channels by using the management account of your resource directory or the delegated administrator account of Resource Center to deliver resource configuration change events and scheduled resource snapshots within the members in your resource directory to Object Storage Service (OSS) or Simple Log Service (SLS). Then, other Alibaba Cloud services consume standardized resource information from OSS or Simple Log Service.
+     * <p>In Resource Center, you can create multi-account delivery channels by using the management account of your resource directory or the delegated administrator account of Resource Center to deliver resource configuration change events and scheduled resource snapshots within the members in your resource directory to Object Storage Service (OSS) or Simple Log Service. Then, other Alibaba Cloud services consume standardized resource information from OSS or Simple Log Service.
      * Scheduled resource snapshots support the following delivery scenarios:</p>
      * <ul>
      * <li>Standard delivery: Leave the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter empty.</li>
@@ -544,9 +544,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关闭跨账号搜索功能</p>
+     * <p>Disables the cross-account resource search feature by using the management account of a resource directory or a delegated administrator account of Resource Center.</p>
      * 
-     * @param request DisableMultiAccountResourceCenterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DisableMultiAccountResourceCenterResponse
      */
@@ -568,7 +567,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关闭跨账号搜索功能</p>
+     * <p>Disables the cross-account resource search feature by using the management account of a resource directory or a delegated administrator account of Resource Center.</p>
      * @return DisableMultiAccountResourceCenterResponse
      */
     public DisableMultiAccountResourceCenterResponse disableMultiAccountResourceCenter() throws Exception {
@@ -578,9 +577,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>禁用资源中心</p>
+     * <p>Deactivates the Resource Center service.</p>
      * 
-     * @param request DisableResourceCenterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DisableResourceCenterResponse
      */
@@ -602,7 +600,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>禁用资源中心</p>
+     * <p>Deactivates the Resource Center service.</p>
      * @return DisableResourceCenterResponse
      */
     public DisableResourceCenterResponse disableResourceCenter() throws Exception {
@@ -614,7 +612,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Cancels the default filter.</p>
      * 
-     * @param request DisassociateDefaultFilterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DisassociateDefaultFilterResponse
      */
@@ -645,10 +642,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>开通跨账号搜索功能</p>
+     * <b>description</b> :
+     * <p>If you have created a resource directory for your enterprise, you can enable the cross-account resource search feature by using the management account of the resource directory or a delegated administrator account of Resource Center to view the resources of members in the resource directory. For more information about a resource directory, see <a href="https://help.aliyun.com/document_detail/200506.html">Resource Directory overview</a>.</p>
      * 
-     * @param request EnableMultiAccountResourceCenterRequest
+     * <b>summary</b> : 
+     * <p>Enables the cross-account resource search feature by using the management account of a resource directory or a delegated administrator account of Resource Center.</p>
+     * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableMultiAccountResourceCenterResponse
      */
@@ -669,8 +668,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If you have created a resource directory for your enterprise, you can enable the cross-account resource search feature by using the management account of the resource directory or a delegated administrator account of Resource Center to view the resources of members in the resource directory. For more information about a resource directory, see <a href="https://help.aliyun.com/document_detail/200506.html">Resource Directory overview</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>开通跨账号搜索功能</p>
+     * <p>Enables the cross-account resource search feature by using the management account of a resource directory or a delegated administrator account of Resource Center.</p>
      * @return EnableMultiAccountResourceCenterResponse
      */
     public EnableMultiAccountResourceCenterResponse enableMultiAccountResourceCenter() throws Exception {
@@ -682,7 +684,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Activates the Resource Center service.</p>
      * 
-     * @param request EnableResourceCenterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableResourceCenterResponse
      */
@@ -714,7 +715,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>执行多账号查询</p>
+     * <p>Executes an SQL statement to query resources across accounts.</p>
      * 
      * @param request ExecuteMultiAccountSQLQueryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -758,7 +759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>执行多账号查询</p>
+     * <p>Executes an SQL statement to query resources across accounts.</p>
      * 
      * @param request ExecuteMultiAccountSQLQueryRequest
      * @return ExecuteMultiAccountSQLQueryResponse
@@ -826,7 +827,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a delivery channel within the current account.</p>
+     * <p>Queries the information about a single-account delivery channel.</p>
      * 
      * @param request GetDeliveryChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -858,7 +859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a delivery channel within the current account.</p>
+     * <p>Queries the information about a single-account delivery channel.</p>
      * 
      * @param request GetDeliveryChannelRequest
      * @return GetDeliveryChannelResponse
@@ -870,7 +871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the statistics of a resource delivery channel in the current account.</p>
+     * <p>Queries the statistics on a single-account delivery channel.</p>
      * 
      * @param request GetDeliveryChannelStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -902,7 +903,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the statistics of a resource delivery channel in the current account.</p>
+     * <p>Queries the statistics on a single-account delivery channel.</p>
      * 
      * @param request GetDeliveryChannelStatisticsRequest
      * @return GetDeliveryChannelStatisticsResponse
@@ -958,7 +959,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a cross-account resource delivery channel.</p>
+     * <p>Queries the information about a multi-account delivery channel.</p>
      * 
      * @param request GetMultiAccountDeliveryChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -990,7 +991,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a cross-account resource delivery channel.</p>
+     * <p>Queries the information about a multi-account delivery channel.</p>
      * 
      * @param request GetMultiAccountDeliveryChannelRequest
      * @return GetMultiAccountDeliveryChannelResponse
@@ -1046,9 +1047,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取跨账号资源中心服务状态</p>
+     * <p>Queries the status of the cross-account resource search feature by using the management account of a resource directory or a delegated administrator account of Resource Center.</p>
      * 
-     * @param request GetMultiAccountResourceCenterServiceStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetMultiAccountResourceCenterServiceStatusResponse
      */
@@ -1070,7 +1070,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取跨账号资源中心服务状态</p>
+     * <p>Queries the status of the cross-account resource search feature by using the management account of a resource directory or a delegated administrator account of Resource Center.</p>
      * @return GetMultiAccountResourceCenterServiceStatusResponse
      */
     public GetMultiAccountResourceCenterServiceStatusResponse getMultiAccountResourceCenterServiceStatus() throws Exception {
@@ -1135,11 +1135,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can query only resources supported by Resource Center. For more information, see <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Queries the number of resources within the management account and multiple members of a resource directory.</p>
+     * <p>获取多账号资源数量</p>
      * 
      * @param request GetMultiAccountResourceCountsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1178,11 +1175,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can query only resources supported by Resource Center. For more information, see <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Queries the number of resources within the management account and multiple members of a resource directory.</p>
+     * <p>获取多账号资源数量</p>
      * 
      * @param request GetMultiAccountResourceCountsRequest
      * @return GetMultiAccountResourceCountsResponse
@@ -1196,7 +1190,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the status of the Resource Center service.</p>
      * 
-     * @param request GetResourceCenterServiceStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetResourceCenterServiceStatusResponse
      */
@@ -1228,7 +1221,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取资源配置</p>
+     * <p>Queries the configurations of a resource within the current account.</p>
      * 
      * @param request GetResourceConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1268,7 +1261,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取资源配置</p>
+     * <p>Queries the configurations of a resource within the current account.</p>
      * 
      * @param request GetResourceConfigurationRequest
      * @return GetResourceConfigurationResponse
@@ -1279,14 +1272,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <ul>
-     * <li>You can query the number of resources in your account that you have permission to access.</li>
-     * <li>You can query only the <a href="https://help.aliyun.com/document_detail/477798.html">Alibaba Cloud services and resource types that are supported by Resource Center</a>.</li>
-     * </ul>
-     * 
      * <b>summary</b> : 
-     * <p>Queries the number of resources in your account that you have permission to access.</p>
+     * <p>Queries the numbers of resources on which the current account has access permissions.</p>
      * 
      * @param request GetResourceCountsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1329,14 +1316,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <ul>
-     * <li>You can query the number of resources in your account that you have permission to access.</li>
-     * <li>You can query only the <a href="https://help.aliyun.com/document_detail/477798.html">Alibaba Cloud services and resource types that are supported by Resource Center</a>.</li>
-     * </ul>
-     * 
      * <b>summary</b> : 
-     * <p>Queries the number of resources in your account that you have permission to access.</p>
+     * <p>Queries the numbers of resources on which the current account has access permissions.</p>
      * 
      * @param request GetResourceCountsRequest
      * @return GetResourceCountsResponse
@@ -1392,7 +1373,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of delivery channels within the current account.</p>
+     * <p>Queries a list of single-account delivery channels.</p>
      * 
      * @param request ListDeliveryChannelsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1428,7 +1409,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of delivery channels within the current account.</p>
+     * <p>Queries a list of single-account delivery channels.</p>
      * 
      * @param request ListDeliveryChannelsRequest
      * @return ListDeliveryChannelsResponse
@@ -1488,9 +1469,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取过滤器列表</p>
+     * <p>Queries a list of filters.</p>
      * 
-     * @param request ListFiltersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListFiltersResponse
      */
@@ -1512,7 +1492,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取过滤器列表</p>
+     * <p>Queries a list of filters.</p>
      * @return ListFiltersResponse
      */
     public ListFiltersResponse listFilters() throws Exception {
@@ -1522,7 +1502,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of delivery channels in resource directory mode.</p>
+     * <p>Queries a list of multi-account delivery channels.</p>
      * 
      * @param request ListMultiAccountDeliveryChannelsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1558,7 +1538,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of delivery channels in resource directory mode.</p>
+     * <p>Queries a list of multi-account delivery channels.</p>
      * 
      * @param request ListMultiAccountDeliveryChannelsRequest
      * @return ListMultiAccountDeliveryChannelsResponse
@@ -1570,7 +1550,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the resource groups within the management account or a member in a resource directory.</p>
+     * <p>Queries the resource groups within the management account or a member of a resource directory by using the management account of the resource directory or a delegated administrator account of Resource Center.</p>
      * 
      * @param request ListMultiAccountResourceGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1614,7 +1594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the resource groups within the management account or a member in a resource directory.</p>
+     * <p>Queries the resource groups within the management account or a member of a resource directory by using the management account of the resource directory or a delegated administrator account of Resource Center.</p>
      * 
      * @param request ListMultiAccountResourceGroupsRequest
      * @return ListMultiAccountResourceGroupsResponse
@@ -1625,8 +1605,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you use a RAM user or a RAM role to call the operation, you must make sure that the RAM user or RAM role is granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/600556.html">Grant a RAM user the permissions to use Resource Center</a>.</p>
+     * <ul>
+     * <li>By default, the operation returns up to 20 entries. You can configure the <code>MaxResults</code> parameter to specify the maximum number of entries to return.</li>
+     * <li>If the response does not contain the <code>NextToken</code> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <code>NextToken</code> parameter to the value of <code>NextToken</code> in the last response of the operation. If you do not configure the <code>NextToken</code> parameter, entries on the first page are returned by default.</li>
+     * <li>You can specify one or more filter conditions to narrow the search. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <code>AND</code> relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical <code>OR</code> relations. Resources that meet any value of the filter condition are returned.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>跨账号列出资源关系</p>
+     * <p>Queries the relationships between resources within the management account or members of your resource directory.</p>
      * 
      * @param request ListMultiAccountResourceRelationshipsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1681,8 +1669,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you use a RAM user or a RAM role to call the operation, you must make sure that the RAM user or RAM role is granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/600556.html">Grant a RAM user the permissions to use Resource Center</a>.</p>
+     * <ul>
+     * <li>By default, the operation returns up to 20 entries. You can configure the <code>MaxResults</code> parameter to specify the maximum number of entries to return.</li>
+     * <li>If the response does not contain the <code>NextToken</code> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <code>NextToken</code> parameter to the value of <code>NextToken</code> in the last response of the operation. If you do not configure the <code>NextToken</code> parameter, entries on the first page are returned by default.</li>
+     * <li>You can specify one or more filter conditions to narrow the search. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <code>AND</code> relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical <code>OR</code> relations. Resources that meet any value of the filter condition are returned.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>跨账号列出资源关系</p>
+     * <p>Queries the relationships between resources within the management account or members of your resource directory.</p>
      * 
      * @param request ListMultiAccountResourceRelationshipsRequest
      * @return ListMultiAccountResourceRelationshipsResponse
@@ -1694,7 +1690,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询多账号标签键</p>
+     * <p>Queries the tag keys of resources within the management account or a member of your resource directory.</p>
      * 
      * @param request ListMultiAccountTagKeysRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1742,7 +1738,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询多账号标签键</p>
+     * <p>Queries the tag keys of resources within the management account or a member of your resource directory.</p>
      * 
      * @param request ListMultiAccountTagKeysRequest
      * @return ListMultiAccountTagKeysResponse
@@ -1754,7 +1750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询多账号标签值</p>
+     * <p>Queries the tag values of resources within the management account or a member of a resource directory by using the management account of the resource directory or a delegated administrator account of Resource Center.</p>
      * 
      * @param request ListMultiAccountTagValuesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1806,7 +1802,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询多账号标签值</p>
+     * <p>Queries the tag values of resources within the management account or a member of a resource directory by using the management account of the resource directory or a delegated administrator account of Resource Center.</p>
      * 
      * @param request ListMultiAccountTagValuesRequest
      * @return ListMultiAccountTagValuesResponse
@@ -1817,8 +1813,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can call this operation to query only the resource relationships on which the current account has access permissions.</p>
+     * <ul>
+     * <li>By default, this operation returns up to 20 entries. You can configure the <code>MaxResults</code> parameter to specify the maximum number of entries to return.</li>
+     * <li>If the response does not contain the <code>NextToken</code> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <code>NextToken</code> parameter to the value of <code>NextToken</code> in the last response of the operation. If you do not configure the <code>NextToken</code> parameter, entries on the first page are returned by default.</li>
+     * <li>You can specify one or more filter conditions to narrow the query scope. For information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <code>AND</code> relations. Only entries that meet all filter conditions are returned. The values of a filter condition have logical <code>OR</code> relations. Entries that meet any value of the filter condition are returned.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>列出资源关系</p>
+     * <p>Queries a list of resource relationships on which the current account has access permissions.</p>
      * 
      * @param request ListResourceRelationshipsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1869,8 +1873,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can call this operation to query only the resource relationships on which the current account has access permissions.</p>
+     * <ul>
+     * <li>By default, this operation returns up to 20 entries. You can configure the <code>MaxResults</code> parameter to specify the maximum number of entries to return.</li>
+     * <li>If the response does not contain the <code>NextToken</code> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <code>NextToken</code> parameter to the value of <code>NextToken</code> in the last response of the operation. If you do not configure the <code>NextToken</code> parameter, entries on the first page are returned by default.</li>
+     * <li>You can specify one or more filter conditions to narrow the query scope. For information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <code>AND</code> relations. Only entries that meet all filter conditions are returned. The values of a filter condition have logical <code>OR</code> relations. Entries that meet any value of the filter condition are returned.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>列出资源关系</p>
+     * <p>Queries a list of resource relationships on which the current account has access permissions.</p>
      * 
      * @param request ListResourceRelationshipsRequest
      * @return ListResourceRelationshipsResponse
@@ -2038,7 +2050,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询标签值</p>
+     * <p>Queries the tag values of resources within the current account.</p>
      * 
      * @param request ListTagValuesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2086,7 +2098,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询标签值</p>
+     * <p>Queries the tag values of resources within the current account.</p>
      * 
      * @param request ListTagValuesRequest
      * @return ListTagValuesResponse
@@ -2098,17 +2110,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  You can use this operation to search for only resources whose types are supported by Resource Center in services that work with Resource Center. For more information about the services and the resource types that are supported by Resource Center, see <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</p>
      * <ul>
-     * <li>You can search only for <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</li>
-     * <li>To search for resources across accounts as a RAM user or RAM role, you must have been attached the <code>resourcecenter:SearchMultiAccountResources</code> policy. For more information, see <a href="https://help.aliyun.com/document_detail/600556.html">Grant a RAM user the permissions to use Resource Center</a>.</li>
-     * <li>By default, this operation returns a maximum of 20 entries. To change the maximum number of entries that can be returned, specify the <code>MaxResults</code> parameter.</li>
-     * <li>If the response does not include <code>NextToken</code>, no more data is available. To query the next page of results, set the <code>NextToken</code> parameter to the value that was returned from the previous call. If you do not specify the <code>NextToken</code> parameter, the first page of data is returned by default.</li>
-     * <li>You can set one or more filter conditions to narrow the search scope. For information about supported filter parameters and matching methods, see the information below. Multiple filter conditions are joined by a logical <code>AND</code>. Only resources that meet all filter conditions are returned. The values within a single filter condition are joined by a logical <code>OR</code>. Resources that meet any value for a filter condition are returned.</li>
-     * <li>For more query examples, visit &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/demo/ResourceCenter">示例中心</a> &lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/demo/ResourceCenter">OpenAPI Portal</a>.</li>
+     * <li>Before you use a RAM user or a RAM role to call the operation, you must make sure that the RAM user or RAM role is granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/600556.html">Grant a RAM user the permissions to use Resource Center</a>.</li>
+     * <li>By default, the operation returns a maximum of 20 entries. You can configure the <code>MaxResults</code> parameter to specify the maximum number of entries to return.</li>
+     * <li>If the response does not contain the <code>NextToken</code> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <code>NextToken</code> parameter to the value of <code>NextToken</code> in the last response of the operation. If you do not configure the <code>NextToken</code> parameter, entries on the first page are returned by default.</li>
+     * <li>You can specify one or more filter conditions to narrow the search scope. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <code>AND</code> relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical <code>OR</code> relations. Resources that meet any value of the filter condition are returned.</li>
+     * <li>You can visit <a href="https://api.alibabacloud.com/api-tools/demo/ResourceCenter">Sample Code Center</a> to view more sample queries.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Searches for resources in the management account and multiple member accounts of a resource directory.</p>
+     * <p>Searches for resources within the management account or members of a resource directory.</p>
      * 
      * @param request SearchMultiAccountResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2156,17 +2168,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  You can use this operation to search for only resources whose types are supported by Resource Center in services that work with Resource Center. For more information about the services and the resource types that are supported by Resource Center, see <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</p>
      * <ul>
-     * <li>You can search only for <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</li>
-     * <li>To search for resources across accounts as a RAM user or RAM role, you must have been attached the <code>resourcecenter:SearchMultiAccountResources</code> policy. For more information, see <a href="https://help.aliyun.com/document_detail/600556.html">Grant a RAM user the permissions to use Resource Center</a>.</li>
-     * <li>By default, this operation returns a maximum of 20 entries. To change the maximum number of entries that can be returned, specify the <code>MaxResults</code> parameter.</li>
-     * <li>If the response does not include <code>NextToken</code>, no more data is available. To query the next page of results, set the <code>NextToken</code> parameter to the value that was returned from the previous call. If you do not specify the <code>NextToken</code> parameter, the first page of data is returned by default.</li>
-     * <li>You can set one or more filter conditions to narrow the search scope. For information about supported filter parameters and matching methods, see the information below. Multiple filter conditions are joined by a logical <code>AND</code>. Only resources that meet all filter conditions are returned. The values within a single filter condition are joined by a logical <code>OR</code>. Resources that meet any value for a filter condition are returned.</li>
-     * <li>For more query examples, visit &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/demo/ResourceCenter">示例中心</a> &lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/demo/ResourceCenter">OpenAPI Portal</a>.</li>
+     * <li>Before you use a RAM user or a RAM role to call the operation, you must make sure that the RAM user or RAM role is granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/600556.html">Grant a RAM user the permissions to use Resource Center</a>.</li>
+     * <li>By default, the operation returns a maximum of 20 entries. You can configure the <code>MaxResults</code> parameter to specify the maximum number of entries to return.</li>
+     * <li>If the response does not contain the <code>NextToken</code> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <code>NextToken</code> parameter to the value of <code>NextToken</code> in the last response of the operation. If you do not configure the <code>NextToken</code> parameter, entries on the first page are returned by default.</li>
+     * <li>You can specify one or more filter conditions to narrow the search scope. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <code>AND</code> relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical <code>OR</code> relations. Resources that meet any value of the filter condition are returned.</li>
+     * <li>You can visit <a href="https://api.alibabacloud.com/api-tools/demo/ResourceCenter">Sample Code Center</a> to view more sample queries.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Searches for resources in the management account and multiple member accounts of a resource directory.</p>
+     * <p>Searches for resources within the management account or members of a resource directory.</p>
      * 
      * @param request SearchMultiAccountResourcesRequest
      * @return SearchMultiAccountResourcesResponse
@@ -2178,17 +2190,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  You can use this operation to search for only resources whose types are supported by Resource Center in services that work with Resource Center. For more information about the services and the resource types that are supported by Resource Center, see <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</p>
      * <ul>
-     * <li>You can search only for resources in your current account that you are permitted to access.</li>
-     * <li>You can search only for the <a href="https://help.aliyun.com/document_detail/477798.html">Alibaba Cloud services and resource types that are supported by Resource Center</a>.</li>
-     * <li>By default, the SearchResources operation returns a maximum of 20 entries. You can specify the <code>MaxResults</code> parameter to change the maximum number of entries that are returned.</li>
-     * <li>If the response does not include a <code>NextToken</code> value, no more results are available. To retrieve the next page of results, include the <code>NextToken</code> value from the previous response in your next request. If you do not specify the <code>NextToken</code> parameter, the first page of results is returned.</li>
-     * <li>You can set one or more filter conditions to narrow the search scope. For information about the supported filter parameters and matching methods, see the following sections. Multiple filter conditions are combined by a logical <code>AND</code>. Only resources that meet all filter conditions are returned. The values within a filter condition are combined by a logical <code>OR</code>. Resources that meet any value of the filter condition are returned.</li>
-     * <li>For more query examples, see <a href="https://api.aliyun.com/api-tools/demo/ResourceCenter">API Explorer</a>.</li>
+     * <li>By default, the operation returns a maximum of 20 entries. You can configure the <code>MaxResults</code> parameter to specify the maximum number of entries to return.</li>
+     * <li>If the response does not contain the <code>NextToken</code> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <code>NextToken</code> parameter to the value of <code>NextToken</code> in the last response of the operation. If you do not configure the <code>NextToken</code> parameter, entries on the first page are returned by default.</li>
+     * <li>You can specify one or more filter conditions to narrow the search scope. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <code>AND</code> relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical <code>OR</code> relations. Resources that meet any value of the filter condition are returned.</li>
+     * <li>You can visit <a href="https://api.aliyun.com/api-tools/demo/ResourceCenter">Sample Code Center</a> to view more sample queries.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Searches for resources in your current account that you are permitted to access.</p>
+     * <p>Search for resources that you can access within the current account.</p>
      * 
      * @param request SearchResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2244,17 +2255,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  You can use this operation to search for only resources whose types are supported by Resource Center in services that work with Resource Center. For more information about the services and the resource types that are supported by Resource Center, see <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</p>
      * <ul>
-     * <li>You can search only for resources in your current account that you are permitted to access.</li>
-     * <li>You can search only for the <a href="https://help.aliyun.com/document_detail/477798.html">Alibaba Cloud services and resource types that are supported by Resource Center</a>.</li>
-     * <li>By default, the SearchResources operation returns a maximum of 20 entries. You can specify the <code>MaxResults</code> parameter to change the maximum number of entries that are returned.</li>
-     * <li>If the response does not include a <code>NextToken</code> value, no more results are available. To retrieve the next page of results, include the <code>NextToken</code> value from the previous response in your next request. If you do not specify the <code>NextToken</code> parameter, the first page of results is returned.</li>
-     * <li>You can set one or more filter conditions to narrow the search scope. For information about the supported filter parameters and matching methods, see the following sections. Multiple filter conditions are combined by a logical <code>AND</code>. Only resources that meet all filter conditions are returned. The values within a filter condition are combined by a logical <code>OR</code>. Resources that meet any value of the filter condition are returned.</li>
-     * <li>For more query examples, see <a href="https://api.aliyun.com/api-tools/demo/ResourceCenter">API Explorer</a>.</li>
+     * <li>By default, the operation returns a maximum of 20 entries. You can configure the <code>MaxResults</code> parameter to specify the maximum number of entries to return.</li>
+     * <li>If the response does not contain the <code>NextToken</code> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <code>NextToken</code> parameter to the value of <code>NextToken</code> in the last response of the operation. If you do not configure the <code>NextToken</code> parameter, entries on the first page are returned by default.</li>
+     * <li>You can specify one or more filter conditions to narrow the search scope. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <code>AND</code> relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical <code>OR</code> relations. Resources that meet any value of the filter condition are returned.</li>
+     * <li>You can visit <a href="https://api.aliyun.com/api-tools/demo/ResourceCenter">Sample Code Center</a> to view more sample queries.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Searches for resources in your current account that you are permitted to access.</p>
+     * <p>Search for resources that you can access within the current account.</p>
      * 
      * @param request SearchResourcesRequest
      * @return SearchResourcesResponse
@@ -2265,8 +2275,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
+     * Scheduled resource snapshots support the following delivery scenarios:</p>
+     * <ul>
+     * <li>Standard delivery: Leave the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter empty.</li>
+     * <li>Custom delivery: Set the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter to an appropriate value.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新投递渠道</p>
+     * <p>Updates a single-account delivery channel.</p>
      * 
      * @param request UpdateDeliveryChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2317,8 +2335,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
+     * Scheduled resource snapshots support the following delivery scenarios:</p>
+     * <ul>
+     * <li>Standard delivery: Leave the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter empty.</li>
+     * <li>Custom delivery: Set the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter to an appropriate value.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新投递渠道</p>
+     * <p>Updates a single-account delivery channel.</p>
      * 
      * @param request UpdateDeliveryChannelRequest
      * @return UpdateDeliveryChannelResponse

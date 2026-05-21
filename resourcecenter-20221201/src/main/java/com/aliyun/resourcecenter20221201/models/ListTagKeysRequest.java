@@ -7,10 +7,8 @@ public class ListTagKeysRequest extends TeaModel {
     /**
      * <p>The matching mode. Valid values:</p>
      * <ul>
-     * <li><p>Equals: equal match</p>
-     * </li>
-     * <li><p>Prefix: match by prefix</p>
-     * </li>
+     * <li>Equals: equal match</li>
+     * <li>Prefix: match by prefix</li>
      * </ul>
      * 
      * <strong>example:</strong>

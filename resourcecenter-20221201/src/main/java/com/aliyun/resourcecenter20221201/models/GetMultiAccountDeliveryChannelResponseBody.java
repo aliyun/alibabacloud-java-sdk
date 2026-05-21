@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
     /**
      * <p>The description of the delivery channel.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>投递描述</p>
      */
     @NameInMap("DeliveryChannelDescription")
     public String deliveryChannelDescription;
@@ -47,13 +44,13 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The delivery of resource configuration changes.</p>
+     * <p>The configurations for delivery of resource configuration change events.</p>
      */
     @NameInMap("ResourceChangeDelivery")
     public GetMultiAccountDeliveryChannelResponseBodyResourceChangeDelivery resourceChangeDelivery;
 
     /**
-     * <p>The configurations of scheduled delivery of resource snapshots.</p>
+     * <p>The configurations for delivery of scheduled resource snapshots.</p>
      */
     @NameInMap("ResourceSnapshotDelivery")
     public GetMultiAccountDeliveryChannelResponseBodyResourceSnapshotDelivery resourceSnapshotDelivery;
@@ -121,13 +118,13 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
 
     public static class GetMultiAccountDeliveryChannelResponseBodyDeliveryChannelFilter extends TeaModel {
         /**
-         * <p>The accounts within the delivery scope.</p>
+         * <p>The effective account scopes of the delivery channel.</p>
          */
         @NameInMap("AccountScopes")
         public java.util.List<String> accountScopes;
 
         /**
-         * <p>The types of delivered resources.</p>
+         * <p>The effective resource types of the delivery channel.</p>
          */
         @NameInMap("ResourceTypes")
         public java.util.List<String> resourceTypes;
@@ -157,7 +154,7 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
 
     public static class GetMultiAccountDeliveryChannelResponseBodyResourceChangeDeliverySlsProperties extends TeaModel {
         /**
-         * <p>The ARN of the Object Storage Service (OSS) bucket to which oversized data is delivered.</p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the destination to which large files are delivered.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:oss:cn-hangzhou:1911422487776***:resourcecenter-oss</p>
@@ -181,23 +178,11 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
     }
 
     public static class GetMultiAccountDeliveryChannelResponseBodyResourceChangeDelivery extends TeaModel {
-        /**
-         * <p>Indicates whether to deliver resource configuration changes. Valid values:</p>
-         * <ul>
-         * <li><p>true</p>
-         * </li>
-         * <li><p>false</p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Enabled")
         public String enabled;
 
         /**
-         * <p>The Simple Log Service (SLS) configuration.</p>
+         * <p>The Simple Log Service configurations.</p>
          */
         @NameInMap("SlsProperties")
         public GetMultiAccountDeliveryChannelResponseBodyResourceChangeDeliverySlsProperties slsProperties;
@@ -212,7 +197,7 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
         public String targetArn;
 
         /**
-         * <p>The type of the delivery destination.</p>
+         * <p>The type of the destination.</p>
          * 
          * <strong>example:</strong>
          * <p>SLS</p>
@@ -261,7 +246,7 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
 
     public static class GetMultiAccountDeliveryChannelResponseBodyResourceSnapshotDeliverySlsProperties extends TeaModel {
         /**
-         * <p>The ARN of the OSS bucket to which oversized data is delivered.</p>
+         * <p>The ARN of the destination to which large files are delivered.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:oss:cn-hangzhou:1911422487776***:resourcecenter-oss</p>
@@ -303,23 +288,11 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
         @NameInMap("DeliveryTime")
         public String deliveryTime;
 
-        /**
-         * <p>Indicates whether to enable the scheduled delivery of resource snapshots. Valid values:</p>
-         * <ul>
-         * <li><p>true</p>
-         * </li>
-         * <li><p>false</p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Enabled")
         public String enabled;
 
         /**
-         * <p>The SLS configuration.</p>
+         * <p>The Simple Log Service configurations.</p>
          */
         @NameInMap("SlsProperties")
         public GetMultiAccountDeliveryChannelResponseBodyResourceSnapshotDeliverySlsProperties slsProperties;
@@ -334,7 +307,7 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
         public String targetArn;
 
         /**
-         * <p>The type of the delivery destination.</p>
+         * <p>The type of the destination.</p>
          * 
          * <strong>example:</strong>
          * <p>OSS</p>

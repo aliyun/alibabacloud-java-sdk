@@ -28,7 +28,7 @@ public class UpdateFilterRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>我的筛选条件。</p>
+     * <p>ECS</p>
      */
     @NameInMap("FilterName")
     public String filterName;

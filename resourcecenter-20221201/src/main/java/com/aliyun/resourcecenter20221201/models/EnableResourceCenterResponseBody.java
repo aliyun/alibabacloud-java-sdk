@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableResourceCenterResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>45357BEF-AB50-5E4D-B05D-5A882A4BE924</p>
@@ -16,10 +16,8 @@ public class EnableResourceCenterResponseBody extends TeaModel {
     /**
      * <p>The activation status of the service. Valid values:</p>
      * <ul>
-     * <li><p>Pending: The service is being activated.</p>
-     * </li>
-     * <li><p>Enabled: The service is activated.</p>
-     * </li>
+     * <li>Pending: The service is being activated.</li>
+     * <li>Enabled: The service is activated.</li>
      * </ul>
      * 
      * <strong>example:</strong>

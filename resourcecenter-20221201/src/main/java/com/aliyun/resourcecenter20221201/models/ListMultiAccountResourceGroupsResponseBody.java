@@ -14,7 +14,7 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0FF0A66E-781F-51EE-9531-928F197558F2</p>
@@ -23,7 +23,7 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resource groups.</p>
+     * <p>The information about the resource groups.</p>
      */
     @NameInMap("ResourceGroups")
     public java.util.List<ListMultiAccountResourceGroupsResponseBodyResourceGroups> resourceGroups;
@@ -57,9 +57,39 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
         return this.resourceGroups;
     }
 
+    public static class ListMultiAccountResourceGroupsResponseBodyResourceGroupsTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListMultiAccountResourceGroupsResponseBodyResourceGroupsTags build(java.util.Map<String, ?> map) throws Exception {
+            ListMultiAccountResourceGroupsResponseBodyResourceGroupsTags self = new ListMultiAccountResourceGroupsResponseBodyResourceGroupsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListMultiAccountResourceGroupsResponseBodyResourceGroupsTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListMultiAccountResourceGroupsResponseBodyResourceGroupsTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListMultiAccountResourceGroupsResponseBodyResourceGroups extends TeaModel {
         /**
-         * <p>The ID of the management account or a member in the resource directory.</p>
+         * <p>The ID of the management account or member of the resource directory.</p>
          * 
          * <strong>example:</strong>
          * <p>1394339739****</p>
@@ -86,7 +116,7 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>
@@ -104,14 +134,11 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The status of the resource group.</p>
+         * <p>The status of the resource group. Valid values:</p>
          * <ul>
-         * <li><p>Creating: The resource group is being created.</p>
-         * </li>
-         * <li><p>OK: The resource group is created.</p>
-         * </li>
-         * <li><p>PendingDelete: The resource group is pending deletion.</p>
-         * </li>
+         * <li>Creating: The resource group is being created.</li>
+         * <li>OK: The resource group is created.</li>
+         * <li>PendingDelete: The resource group is waiting to be deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -119,6 +146,9 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public java.util.List<ListMultiAccountResourceGroupsResponseBodyResourceGroupsTags> tags;
 
         public static ListMultiAccountResourceGroupsResponseBodyResourceGroups build(java.util.Map<String, ?> map) throws Exception {
             ListMultiAccountResourceGroupsResponseBodyResourceGroups self = new ListMultiAccountResourceGroupsResponseBodyResourceGroups();
@@ -171,6 +201,14 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListMultiAccountResourceGroupsResponseBodyResourceGroups setTags(java.util.List<ListMultiAccountResourceGroupsResponseBodyResourceGroupsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListMultiAccountResourceGroupsResponseBodyResourceGroupsTags> getTags() {
+            return this.tags;
         }
 
     }

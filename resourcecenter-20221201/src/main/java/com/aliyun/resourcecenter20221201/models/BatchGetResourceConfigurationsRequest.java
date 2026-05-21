@@ -4,9 +4,6 @@ package com.aliyun.resourcecenter20221201.models;
 import com.aliyun.tea.*;
 
 public class BatchGetResourceConfigurationsRequest extends TeaModel {
-    /**
-     * <p>The list of resources.</p>
-     */
     @NameInMap("Resources")
     public java.util.List<BatchGetResourceConfigurationsRequestResources> resources;
 
@@ -25,8 +22,6 @@ public class BatchGetResourceConfigurationsRequest extends TeaModel {
 
     public static class BatchGetResourceConfigurationsRequestResources extends TeaModel {
         /**
-         * <p>The region ID of the resource.</p>
-         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */
@@ -34,8 +29,6 @@ public class BatchGetResourceConfigurationsRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The resource ID.</p>
-         * 
          * <strong>example:</strong>
          * <p>eip-bp1kyg72m****</p>
          */
@@ -43,9 +36,6 @@ public class BatchGetResourceConfigurationsRequest extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The resource type.</p>
-         * <p>For a list of resource types supported by Resource Center, see <a href="https://help.aliyun.com/document_detail/477798.html">Alibaba Cloud services and resource types that are supported by Resource Center</a>.</p>
-         * 
          * <strong>example:</strong>
          * <p>ACS::VPC::RouteTable</p>
          */

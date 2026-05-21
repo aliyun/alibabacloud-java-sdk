@@ -20,7 +20,7 @@ public class ListDeliveryChannelsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>A pagination token.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -87,9 +87,6 @@ public class ListDeliveryChannelsResponseBody extends TeaModel {
 
         /**
          * <p>The description of the delivery channel.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>This is a description.</p>
          */
         @NameInMap("DeliveryChannelDescription")
         public String deliveryChannelDescription;
