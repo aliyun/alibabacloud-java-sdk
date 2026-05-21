@@ -3101,6 +3101,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询SLA优惠券</p>
+     * 
+     * @param request QueryMonthlySlaListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryMonthlySlaListResponse
+     */
+    public QueryMonthlySlaListResponse queryMonthlySlaListWithOptions(QueryMonthlySlaListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ecIdAccountIds)) {
+            query.put("EcIdAccountIds", request.ecIdAccountIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            body.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.months)) {
+            body.put("Months", request.months);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.payStatuses)) {
+            body.put("PayStatuses", request.payStatuses);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCodes)) {
+            body.put("ProductCodes", request.productCodes);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryMonthlySlaList"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryMonthlySlaListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询SLA优惠券</p>
+     * 
+     * @param request QueryMonthlySlaListRequest
+     * @return QueryMonthlySlaListResponse
+     */
+    public QueryMonthlySlaListResponse queryMonthlySlaList(QueryMonthlySlaListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryMonthlySlaListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Modify cost center allocation rules, including creating, modifying, and deleting allocation rules</p>
      * 
      * @param tmpReq SaveCostCenterShareRuleRequest
@@ -3339,6 +3413,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SetSavingPlanUserDeductRuleResponse setSavingPlanUserDeductRule(SetSavingPlanUserDeductRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setSavingPlanUserDeductRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>SLA优惠券申领</p>
+     * 
+     * @param request SubmitSlaCouponApplyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitSlaCouponApplyResponse
+     */
+    public SubmitSlaCouponApplyResponse submitSlaCouponApplyWithOptions(SubmitSlaCouponApplyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ecIdAccountIds)) {
+            query.put("EcIdAccountIds", request.ecIdAccountIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.damagedIds)) {
+            body.put("DamagedIds", request.damagedIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.month)) {
+            body.put("Month", request.month);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitSlaCouponApply"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitSlaCouponApplyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>SLA优惠券申领</p>
+     * 
+     * @param request SubmitSlaCouponApplyRequest
+     * @return SubmitSlaCouponApplyResponse
+     */
+    public SubmitSlaCouponApplyResponse submitSlaCouponApply(SubmitSlaCouponApplyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitSlaCouponApplyWithOptions(request, runtime);
     }
 
     /**
