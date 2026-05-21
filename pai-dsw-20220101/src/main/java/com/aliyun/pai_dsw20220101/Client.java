@@ -1045,6 +1045,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("MaxEventsNum", request.maxEventsNum);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            query.put("Offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reverse)) {
+            query.put("Reverse", request.reverse);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
             query.put("StartTime", request.startTime);
         }

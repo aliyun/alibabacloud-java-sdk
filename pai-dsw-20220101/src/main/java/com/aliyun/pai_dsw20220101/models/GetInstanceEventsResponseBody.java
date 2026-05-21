@@ -77,6 +77,9 @@ public class GetInstanceEventsResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static GetInstanceEventsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceEventsResponseBody self = new GetInstanceEventsResponseBody();
         return TeaModel.build(map, self);
@@ -136,6 +139,14 @@ public class GetInstanceEventsResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public GetInstanceEventsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
 }

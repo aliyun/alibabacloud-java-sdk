@@ -25,6 +25,12 @@ public class GetInstanceEventsRequest extends TeaModel {
     @NameInMap("MaxEventsNum")
     public Integer maxEventsNum;
 
+    @NameInMap("Offset")
+    public Integer offset;
+
+    @NameInMap("Reverse")
+    public Boolean reverse;
+
     /**
      * <p>The beginning of the time range to query.</p>
      * 
@@ -67,6 +73,22 @@ public class GetInstanceEventsRequest extends TeaModel {
     }
     public Integer getMaxEventsNum() {
         return this.maxEventsNum;
+    }
+
+    public GetInstanceEventsRequest setOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    public Integer getOffset() {
+        return this.offset;
+    }
+
+    public GetInstanceEventsRequest setReverse(Boolean reverse) {
+        this.reverse = reverse;
+        return this;
+    }
+    public Boolean getReverse() {
+        return this.reverse;
     }
 
     public GetInstanceEventsRequest setStartTime(String startTime) {

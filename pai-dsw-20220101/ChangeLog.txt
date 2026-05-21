@@ -1,3 +1,9 @@
+2026-05-21 Version: 2.4.2
+- Update API GetInstanceEvents: add request parameters Offset.
+- Update API GetInstanceEvents: add request parameters Reverse.
+- Update API GetInstanceEvents: add response parameters Body.TotalCount.
+
+
 2026-04-27 Version: 2.4.1
 - Update API GetInstance: add response parameters Body.TenantId.
 - Update API ListInstances: add response parameters Body.Instances.$.TenantId.
