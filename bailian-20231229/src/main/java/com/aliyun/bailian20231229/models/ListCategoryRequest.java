@@ -18,6 +18,13 @@ public class ListCategoryRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>file_conn_xxxxx</p>
+     */
+    @NameInMap("ConnectorId")
+    public String connectorId;
+
+    /**
+     * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("MaxResults")
@@ -56,6 +63,14 @@ public class ListCategoryRequest extends TeaModel {
     }
     public String getCategoryType() {
         return this.categoryType;
+    }
+
+    public ListCategoryRequest setConnectorId(String connectorId) {
+        this.connectorId = connectorId;
+        return this;
+    }
+    public String getConnectorId() {
+        return this.connectorId;
     }
 
     public ListCategoryRequest setMaxResults(Integer maxResults) {

@@ -3,7 +3,7 @@ package com.aliyun.bailian20231229.models;
 
 import com.aliyun.tea.*;
 
-public class ListFileRequest extends TeaModel {
+public class ListFileShrinkRequest extends TeaModel {
     /**
      * <p>The category ID, which is the <code>CategoryId</code> returned by the <a href="~~AddCategory~~">AddCategory</a> operation. To view the category ID, click the ID icon next to the category name on the Unstructured Data tab of the <a href="https://bailian.console.alibabacloud.com/#/data-center">Data Management</a> page.</p>
      * <p>This parameter is required.</p>
@@ -15,7 +15,7 @@ public class ListFileRequest extends TeaModel {
     public String categoryId;
 
     @NameInMap("FileIds")
-    public java.util.List<String> fileIds;
+    public String fileIdsShrink;
 
     @NameInMap("FileName")
     public String fileName;
@@ -34,12 +34,12 @@ public class ListFileRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    public static ListFileRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListFileRequest self = new ListFileRequest();
+    public static ListFileShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListFileShrinkRequest self = new ListFileShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListFileRequest setCategoryId(String categoryId) {
+    public ListFileShrinkRequest setCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
     }
@@ -47,15 +47,15 @@ public class ListFileRequest extends TeaModel {
         return this.categoryId;
     }
 
-    public ListFileRequest setFileIds(java.util.List<String> fileIds) {
-        this.fileIds = fileIds;
+    public ListFileShrinkRequest setFileIdsShrink(String fileIdsShrink) {
+        this.fileIdsShrink = fileIdsShrink;
         return this;
     }
-    public java.util.List<String> getFileIds() {
-        return this.fileIds;
+    public String getFileIdsShrink() {
+        return this.fileIdsShrink;
     }
 
-    public ListFileRequest setFileName(String fileName) {
+    public ListFileShrinkRequest setFileName(String fileName) {
         this.fileName = fileName;
         return this;
     }
@@ -63,7 +63,7 @@ public class ListFileRequest extends TeaModel {
         return this.fileName;
     }
 
-    public ListFileRequest setMaxResults(Integer maxResults) {
+    public ListFileShrinkRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
@@ -71,7 +71,7 @@ public class ListFileRequest extends TeaModel {
         return this.maxResults;
     }
 
-    public ListFileRequest setNextToken(String nextToken) {
+    public ListFileShrinkRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }

@@ -104,6 +104,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建连接器</p>
+     * 
+     * @param tmpReq AddConnectorRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddConnectorResponse
+     */
+    public AddConnectorResponse addConnectorWithOptions(String WorkspaceId, AddConnectorRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AddConnectorShrinkRequest request = new AddConnectorShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.fileConnectorConfig)) {
+            request.fileConnectorConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.fileConnectorConfig, "FileConnectorConfig", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.connectorName)) {
+            body.put("ConnectorName", request.connectorName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connectorType)) {
+            body.put("ConnectorType", request.connectorType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileConnectorConfigShrink)) {
+            body.put("FileConnectorConfig", request.fileConnectorConfigShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddConnector"),
+            new TeaPair("version", "2023-12-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(WorkspaceId) + "/datacenter/connector"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddConnectorResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建连接器</p>
+     * 
+     * @param request AddConnectorRequest
+     * @return AddConnectorResponse
+     */
+    public AddConnectorResponse addConnector(String WorkspaceId, AddConnectorRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.addConnectorWithOptions(WorkspaceId, request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>  Before you call this operation, make sure that you have obtained the lease and uploaded the document to the temporary storage space by using the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-applyfileuploadlease">ApplyFileUploadLease</a> operation. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/upload-files-by-calling-api">Upload files by calling API</a>.</p>
      * <blockquote>
@@ -1731,6 +1796,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetConnector</p>
+     * 
+     * @param request GetConnectorRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetConnectorResponse
+     */
+    public GetConnectorResponse getConnectorWithOptions(String WorkspaceId, GetConnectorRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.connectorId)) {
+            query.put("ConnectorId", request.connectorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connectorName)) {
+            query.put("ConnectorName", request.connectorName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetConnector"),
+            new TeaPair("version", "2023-12-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(WorkspaceId) + "/datacenter/connector"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetConnectorResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>GetConnector</p>
+     * 
+     * @param request GetConnectorRequest
+     * @return GetConnectorResponse
+     */
+    public GetConnectorResponse getConnector(String WorkspaceId, GetConnectorRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getConnectorWithOptions(WorkspaceId, request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <ol>
      * <li>A knowledge base job is running. You can call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> operation to create a creation job or the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexadddocumentsjob">SubmitIndexAddDocumentsJob</a> operation to create a add document job. Then, obtain the <code>JobId</code> returned by the operations.</li>
@@ -2156,6 +2272,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("CategoryType", request.categoryType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.connectorId)) {
+            body.put("ConnectorId", request.connectorId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             body.put("MaxResults", request.maxResults);
         }
@@ -2290,16 +2410,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the details of one or more documents in a specified category.</p>
      * 
-     * @param request ListFileRequest
+     * @param tmpReq ListFileRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListFileResponse
      */
-    public ListFileResponse listFileWithOptions(String WorkspaceId, ListFileRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListFileResponse listFileWithOptions(String WorkspaceId, ListFileRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListFileShrinkRequest request = new ListFileShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.fileIds)) {
+            request.fileIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.fileIds, "FileIds", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.categoryId)) {
             query.put("CategoryId", request.categoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileIdsShrink)) {
+            query.put("FileIds", request.fileIdsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
