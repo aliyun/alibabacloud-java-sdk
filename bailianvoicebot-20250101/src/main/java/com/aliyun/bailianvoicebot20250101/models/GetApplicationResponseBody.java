@@ -489,6 +489,66 @@ public class GetApplicationResponseBody extends TeaModel {
 
     }
 
+    public static class GetApplicationResponseBodyDataDraftVersionToolConfigMcpServers extends TeaModel {
+        @NameInMap("BaseUrl")
+        public String baseUrl;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("SseEndpoint")
+        public String sseEndpoint;
+
+        public static GetApplicationResponseBodyDataDraftVersionToolConfigMcpServers build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationResponseBodyDataDraftVersionToolConfigMcpServers self = new GetApplicationResponseBodyDataDraftVersionToolConfigMcpServers();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionToolConfigMcpServers setBaseUrl(String baseUrl) {
+            this.baseUrl = baseUrl;
+            return this;
+        }
+        public String getBaseUrl() {
+            return this.baseUrl;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionToolConfigMcpServers setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionToolConfigMcpServers setSseEndpoint(String sseEndpoint) {
+            this.sseEndpoint = sseEndpoint;
+            return this;
+        }
+        public String getSseEndpoint() {
+            return this.sseEndpoint;
+        }
+
+    }
+
+    public static class GetApplicationResponseBodyDataDraftVersionToolConfig extends TeaModel {
+        @NameInMap("McpServers")
+        public java.util.List<GetApplicationResponseBodyDataDraftVersionToolConfigMcpServers> mcpServers;
+
+        public static GetApplicationResponseBodyDataDraftVersionToolConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationResponseBodyDataDraftVersionToolConfig self = new GetApplicationResponseBodyDataDraftVersionToolConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyDataDraftVersionToolConfig setMcpServers(java.util.List<GetApplicationResponseBodyDataDraftVersionToolConfigMcpServers> mcpServers) {
+            this.mcpServers = mcpServers;
+            return this;
+        }
+        public java.util.List<GetApplicationResponseBodyDataDraftVersionToolConfigMcpServers> getMcpServers() {
+            return this.mcpServers;
+        }
+
+    }
+
     public static class GetApplicationResponseBodyDataDraftVersionTranscriberConfigCorrectionRules extends TeaModel {
         @NameInMap("Pattern")
         public String pattern;
@@ -666,6 +726,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("SynthesizerConfig")
         public GetApplicationResponseBodyDataDraftVersionSynthesizerConfig synthesizerConfig;
 
+        @NameInMap("ToolConfig")
+        public GetApplicationResponseBodyDataDraftVersionToolConfig toolConfig;
+
         @NameInMap("TranscriberConfig")
         public GetApplicationResponseBodyDataDraftVersionTranscriberConfig transcriberConfig;
 
@@ -711,6 +774,14 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public GetApplicationResponseBodyDataDraftVersionSynthesizerConfig getSynthesizerConfig() {
             return this.synthesizerConfig;
+        }
+
+        public GetApplicationResponseBodyDataDraftVersion setToolConfig(GetApplicationResponseBodyDataDraftVersionToolConfig toolConfig) {
+            this.toolConfig = toolConfig;
+            return this;
+        }
+        public GetApplicationResponseBodyDataDraftVersionToolConfig getToolConfig() {
+            return this.toolConfig;
         }
 
         public GetApplicationResponseBodyDataDraftVersion setTranscriberConfig(GetApplicationResponseBodyDataDraftVersionTranscriberConfig transcriberConfig) {
@@ -1140,6 +1211,66 @@ public class GetApplicationResponseBody extends TeaModel {
 
     }
 
+    public static class GetApplicationResponseBodyDataPublishedVersionToolConfigMcpServers extends TeaModel {
+        @NameInMap("BaseUrl")
+        public String baseUrl;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("SseEndpoint")
+        public String sseEndpoint;
+
+        public static GetApplicationResponseBodyDataPublishedVersionToolConfigMcpServers build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationResponseBodyDataPublishedVersionToolConfigMcpServers self = new GetApplicationResponseBodyDataPublishedVersionToolConfigMcpServers();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionToolConfigMcpServers setBaseUrl(String baseUrl) {
+            this.baseUrl = baseUrl;
+            return this;
+        }
+        public String getBaseUrl() {
+            return this.baseUrl;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionToolConfigMcpServers setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionToolConfigMcpServers setSseEndpoint(String sseEndpoint) {
+            this.sseEndpoint = sseEndpoint;
+            return this;
+        }
+        public String getSseEndpoint() {
+            return this.sseEndpoint;
+        }
+
+    }
+
+    public static class GetApplicationResponseBodyDataPublishedVersionToolConfig extends TeaModel {
+        @NameInMap("McpServers")
+        public java.util.List<GetApplicationResponseBodyDataPublishedVersionToolConfigMcpServers> mcpServers;
+
+        public static GetApplicationResponseBodyDataPublishedVersionToolConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationResponseBodyDataPublishedVersionToolConfig self = new GetApplicationResponseBodyDataPublishedVersionToolConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersionToolConfig setMcpServers(java.util.List<GetApplicationResponseBodyDataPublishedVersionToolConfigMcpServers> mcpServers) {
+            this.mcpServers = mcpServers;
+            return this;
+        }
+        public java.util.List<GetApplicationResponseBodyDataPublishedVersionToolConfigMcpServers> getMcpServers() {
+            return this.mcpServers;
+        }
+
+    }
+
     public static class GetApplicationResponseBodyDataPublishedVersionTranscriberConfigCorrectionRules extends TeaModel {
         @NameInMap("Pattern")
         public String pattern;
@@ -1317,6 +1448,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("SynthesizerConfig")
         public GetApplicationResponseBodyDataPublishedVersionSynthesizerConfig synthesizerConfig;
 
+        @NameInMap("ToolConfig")
+        public GetApplicationResponseBodyDataPublishedVersionToolConfig toolConfig;
+
         @NameInMap("TranscriberConfig")
         public GetApplicationResponseBodyDataPublishedVersionTranscriberConfig transcriberConfig;
 
@@ -1362,6 +1496,14 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public GetApplicationResponseBodyDataPublishedVersionSynthesizerConfig getSynthesizerConfig() {
             return this.synthesizerConfig;
+        }
+
+        public GetApplicationResponseBodyDataPublishedVersion setToolConfig(GetApplicationResponseBodyDataPublishedVersionToolConfig toolConfig) {
+            this.toolConfig = toolConfig;
+            return this;
+        }
+        public GetApplicationResponseBodyDataPublishedVersionToolConfig getToolConfig() {
+            return this.toolConfig;
         }
 
         public GetApplicationResponseBodyDataPublishedVersion setTranscriberConfig(GetApplicationResponseBodyDataPublishedVersionTranscriberConfig transcriberConfig) {

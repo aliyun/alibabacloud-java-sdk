@@ -41,6 +41,9 @@ public class CreateApplicationVersionShrinkRequest extends TeaModel {
     @NameInMap("SynthesizerConfig")
     public String synthesizerConfigShrink;
 
+    @NameInMap("ToolConfig")
+    public String toolConfigShrink;
+
     @NameInMap("TranscriberConfig")
     public String transcriberConfigShrink;
 
@@ -103,6 +106,14 @@ public class CreateApplicationVersionShrinkRequest extends TeaModel {
     }
     public String getSynthesizerConfigShrink() {
         return this.synthesizerConfigShrink;
+    }
+
+    public CreateApplicationVersionShrinkRequest setToolConfigShrink(String toolConfigShrink) {
+        this.toolConfigShrink = toolConfigShrink;
+        return this;
+    }
+    public String getToolConfigShrink() {
+        return this.toolConfigShrink;
     }
 
     public CreateApplicationVersionShrinkRequest setTranscriberConfigShrink(String transcriberConfigShrink) {

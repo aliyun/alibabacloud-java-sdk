@@ -190,6 +190,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.synthesizerConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.synthesizerConfig, "SynthesizerConfig", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.toolConfig)) {
+            request.toolConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.toolConfig, "ToolConfig", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.transcriberConfig)) {
             request.transcriberConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.transcriberConfig, "TranscriberConfig", "json");
         }
@@ -221,6 +225,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.synthesizerConfigShrink)) {
             query.put("SynthesizerConfig", request.synthesizerConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.toolConfigShrink)) {
+            query.put("ToolConfig", request.toolConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.transcriberConfigShrink)) {
@@ -1852,6 +1860,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.synthesizerConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.synthesizerConfig, "SynthesizerConfig", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.toolConfig)) {
+            request.toolConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.toolConfig, "ToolConfig", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.transcriberConfig)) {
             request.transcriberConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.transcriberConfig, "TranscriberConfig", "json");
         }
@@ -1879,6 +1891,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.synthesizerConfigShrink)) {
             query.put("SynthesizerConfig", request.synthesizerConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.toolConfigShrink)) {
+            query.put("ToolConfig", request.toolConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.transcriberConfigShrink)) {

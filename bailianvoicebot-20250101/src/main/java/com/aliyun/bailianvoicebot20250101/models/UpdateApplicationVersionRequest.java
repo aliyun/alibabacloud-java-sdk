@@ -41,6 +41,9 @@ public class UpdateApplicationVersionRequest extends TeaModel {
     @NameInMap("SynthesizerConfig")
     public UpdateApplicationVersionRequestSynthesizerConfig synthesizerConfig;
 
+    @NameInMap("ToolConfig")
+    public UpdateApplicationVersionRequestToolConfig toolConfig;
+
     /**
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -108,6 +111,14 @@ public class UpdateApplicationVersionRequest extends TeaModel {
     }
     public UpdateApplicationVersionRequestSynthesizerConfig getSynthesizerConfig() {
         return this.synthesizerConfig;
+    }
+
+    public UpdateApplicationVersionRequest setToolConfig(UpdateApplicationVersionRequestToolConfig toolConfig) {
+        this.toolConfig = toolConfig;
+        return this;
+    }
+    public UpdateApplicationVersionRequestToolConfig getToolConfig() {
+        return this.toolConfig;
     }
 
     public UpdateApplicationVersionRequest setTranscriberConfig(UpdateApplicationVersionRequestTranscriberConfig transcriberConfig) {
@@ -497,6 +508,66 @@ public class UpdateApplicationVersionRequest extends TeaModel {
         }
         public Integer getVolume() {
             return this.volume;
+        }
+
+    }
+
+    public static class UpdateApplicationVersionRequestToolConfigMcpServers extends TeaModel {
+        @NameInMap("BaseUrl")
+        public String baseUrl;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("SseEndpoint")
+        public String sseEndpoint;
+
+        public static UpdateApplicationVersionRequestToolConfigMcpServers build(java.util.Map<String, ?> map) throws Exception {
+            UpdateApplicationVersionRequestToolConfigMcpServers self = new UpdateApplicationVersionRequestToolConfigMcpServers();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateApplicationVersionRequestToolConfigMcpServers setBaseUrl(String baseUrl) {
+            this.baseUrl = baseUrl;
+            return this;
+        }
+        public String getBaseUrl() {
+            return this.baseUrl;
+        }
+
+        public UpdateApplicationVersionRequestToolConfigMcpServers setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public UpdateApplicationVersionRequestToolConfigMcpServers setSseEndpoint(String sseEndpoint) {
+            this.sseEndpoint = sseEndpoint;
+            return this;
+        }
+        public String getSseEndpoint() {
+            return this.sseEndpoint;
+        }
+
+    }
+
+    public static class UpdateApplicationVersionRequestToolConfig extends TeaModel {
+        @NameInMap("McpServers")
+        public java.util.List<UpdateApplicationVersionRequestToolConfigMcpServers> mcpServers;
+
+        public static UpdateApplicationVersionRequestToolConfig build(java.util.Map<String, ?> map) throws Exception {
+            UpdateApplicationVersionRequestToolConfig self = new UpdateApplicationVersionRequestToolConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateApplicationVersionRequestToolConfig setMcpServers(java.util.List<UpdateApplicationVersionRequestToolConfigMcpServers> mcpServers) {
+            this.mcpServers = mcpServers;
+            return this;
+        }
+        public java.util.List<UpdateApplicationVersionRequestToolConfigMcpServers> getMcpServers() {
+            return this.mcpServers;
         }
 
     }
