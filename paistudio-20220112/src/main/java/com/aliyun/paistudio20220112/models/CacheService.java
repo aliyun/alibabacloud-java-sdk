@@ -10,6 +10,9 @@ public class CacheService extends TeaModel {
     @NameInMap("CacheServiceId")
     public String cacheServiceId;
 
+    @NameInMap("ClusterId")
+    public String clusterId;
+
     @NameInMap("CreatedBy")
     public String createdBy;
 
@@ -59,6 +62,14 @@ public class CacheService extends TeaModel {
     }
     public String getCacheServiceId() {
         return this.cacheServiceId;
+    }
+
+    public CacheService setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     public CacheService setCreatedBy(String createdBy) {
