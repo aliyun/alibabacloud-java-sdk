@@ -70,6 +70,15 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>是否禁用会话亲和性。默认为 false（即默认启用会话亲和），设置为 true 时关闭会话亲和</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("disableSessionAffinity")
+    public Boolean disableSessionAffinity;
+
     @NameInMap("diskSize")
     public Integer diskSize;
 
@@ -277,6 +286,14 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdateAgentRuntimeInput setDisableSessionAffinity(Boolean disableSessionAffinity) {
+        this.disableSessionAffinity = disableSessionAffinity;
+        return this;
+    }
+    public Boolean getDisableSessionAffinity() {
+        return this.disableSessionAffinity;
     }
 
     public UpdateAgentRuntimeInput setDiskSize(Integer diskSize) {
