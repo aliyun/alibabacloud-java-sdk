@@ -97,6 +97,40 @@ public class GetApiKeyResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetApiKeyResponseBodyApiKeyAuth extends TeaModel {
+        @NameInMap("accessIps")
+        public java.util.List<String> accessIps;
+
+        /**
+         * <strong>example:</strong>
+         * <p>All</p>
+         */
+        @NameInMap("type")
+        public String type;
+
+        public static GetApiKeyResponseBodyApiKeyAuth build(java.util.Map<String, ?> map) throws Exception {
+            GetApiKeyResponseBodyApiKeyAuth self = new GetApiKeyResponseBodyApiKeyAuth();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApiKeyResponseBodyApiKeyAuth setAccessIps(java.util.List<String> accessIps) {
+            this.accessIps = accessIps;
+            return this;
+        }
+        public java.util.List<String> getAccessIps() {
+            return this.accessIps;
+        }
+
+        public GetApiKeyResponseBodyApiKeyAuth setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class GetApiKeyResponseBodyApiKey extends TeaModel {
         /**
          * <p>API Key ID。</p>
@@ -113,6 +147,9 @@ public class GetApiKeyResponseBody extends TeaModel {
          */
         @NameInMap("apiKeyValue")
         public String apiKeyValue;
+
+        @NameInMap("auth")
+        public GetApiKeyResponseBodyApiKeyAuth auth;
 
         /**
          * <strong>example:</strong>
@@ -168,6 +205,14 @@ public class GetApiKeyResponseBody extends TeaModel {
         }
         public String getApiKeyValue() {
             return this.apiKeyValue;
+        }
+
+        public GetApiKeyResponseBodyApiKey setAuth(GetApiKeyResponseBodyApiKeyAuth auth) {
+            this.auth = auth;
+            return this;
+        }
+        public GetApiKeyResponseBodyApiKeyAuth getAuth() {
+            return this.auth;
         }
 
         public GetApiKeyResponseBodyApiKey setCreatedBy(String createdBy) {

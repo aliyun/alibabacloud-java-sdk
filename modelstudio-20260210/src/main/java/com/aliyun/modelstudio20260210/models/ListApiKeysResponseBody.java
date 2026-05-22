@@ -142,6 +142,40 @@ public class ListApiKeysResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListApiKeysResponseBodyApiKeysAuth extends TeaModel {
+        @NameInMap("accessIps")
+        public java.util.List<String> accessIps;
+
+        /**
+         * <strong>example:</strong>
+         * <p>All</p>
+         */
+        @NameInMap("type")
+        public String type;
+
+        public static ListApiKeysResponseBodyApiKeysAuth build(java.util.Map<String, ?> map) throws Exception {
+            ListApiKeysResponseBodyApiKeysAuth self = new ListApiKeysResponseBodyApiKeysAuth();
+            return TeaModel.build(map, self);
+        }
+
+        public ListApiKeysResponseBodyApiKeysAuth setAccessIps(java.util.List<String> accessIps) {
+            this.accessIps = accessIps;
+            return this;
+        }
+        public java.util.List<String> getAccessIps() {
+            return this.accessIps;
+        }
+
+        public ListApiKeysResponseBodyApiKeysAuth setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class ListApiKeysResponseBodyApiKeys extends TeaModel {
         /**
          * <p>API Key ID。</p>
@@ -158,6 +192,9 @@ public class ListApiKeysResponseBody extends TeaModel {
          */
         @NameInMap("apiKeyValue")
         public String apiKeyValue;
+
+        @NameInMap("auth")
+        public ListApiKeysResponseBodyApiKeysAuth auth;
 
         /**
          * <strong>example:</strong>
@@ -213,6 +250,14 @@ public class ListApiKeysResponseBody extends TeaModel {
         }
         public String getApiKeyValue() {
             return this.apiKeyValue;
+        }
+
+        public ListApiKeysResponseBodyApiKeys setAuth(ListApiKeysResponseBodyApiKeysAuth auth) {
+            this.auth = auth;
+            return this;
+        }
+        public ListApiKeysResponseBodyApiKeysAuth getAuth() {
+            return this.auth;
         }
 
         public ListApiKeysResponseBodyApiKeys setCreatedBy(String createdBy) {

@@ -46,9 +46,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("workspaceId", request.workspaceId);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.auth)) {
+            body.put("auth", request.auth);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateApiKey"),
@@ -58,7 +64,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateApiKeyResponse());
@@ -163,6 +169,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteApiKeyWithOptions(apiKeyId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>禁用API Key</p>
+     * 
+     * @param request DisableApiKeyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableApiKeyResponse
+     */
+    public DisableApiKeyResponse disableApiKeyWithOptions(String apiKeyId, DisableApiKeyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisableApiKey"),
+            new TeaPair("version", "2026-02-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/modelstudio/apikeys/" + com.aliyun.openapiutil.Client.getEncodeParam(apiKeyId) + "/disable"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableApiKeyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>禁用API Key</p>
+     * 
+     * @param request DisableApiKeyRequest
+     * @return DisableApiKeyResponse
+     */
+    public DisableApiKeyResponse disableApiKey(String apiKeyId, DisableApiKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.disableApiKeyWithOptions(apiKeyId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启用API Key</p>
+     * 
+     * @param request EnableApiKeyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableApiKeyResponse
+     */
+    public EnableApiKeyResponse enableApiKeyWithOptions(String apiKeyId, EnableApiKeyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableApiKey"),
+            new TeaPair("version", "2026-02-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/modelstudio/apikeys/" + com.aliyun.openapiutil.Client.getEncodeParam(apiKeyId) + "/enable"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableApiKeyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启用API Key</p>
+     * 
+     * @param request EnableApiKeyRequest
+     * @return EnableApiKeyResponse
+     */
+    public EnableApiKeyResponse enableApiKey(String apiKeyId, EnableApiKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.enableApiKeyWithOptions(apiKeyId, request, headers, runtime);
     }
 
     /**
@@ -326,6 +414,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>重置API Key</p>
+     * 
+     * @param request ResetApiKeyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ResetApiKeyResponse
+     */
+    public ResetApiKeyResponse resetApiKeyWithOptions(String apiKeyId, ResetApiKeyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ResetApiKey"),
+            new TeaPair("version", "2026-02-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/modelstudio/apikeys/" + com.aliyun.openapiutil.Client.getEncodeParam(apiKeyId) + "/reset"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ResetApiKeyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>重置API Key</p>
+     * 
+     * @param request ResetApiKeyRequest
+     * @return ResetApiKeyResponse
+     */
+    public ResetApiKeyResponse resetApiKey(String apiKeyId, ResetApiKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.resetApiKeyWithOptions(apiKeyId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>编辑apiKey的描述</p>
      * 
      * @param request UpdateApiKeyRequest
@@ -340,9 +469,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("description", request.description);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.auth)) {
+            body.put("auth", request.auth);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpdateApiKey"),
@@ -352,7 +487,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateApiKeyResponse());
