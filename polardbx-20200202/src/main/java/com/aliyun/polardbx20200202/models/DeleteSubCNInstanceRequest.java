@@ -13,6 +13,9 @@ public class DeleteSubCNInstanceRequest extends TeaModel {
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    @NameInMap("InstanceClusterName")
+    public String instanceClusterName;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -33,6 +36,14 @@ public class DeleteSubCNInstanceRequest extends TeaModel {
     }
     public String getDBInstanceName() {
         return this.DBInstanceName;
+    }
+
+    public DeleteSubCNInstanceRequest setInstanceClusterName(String instanceClusterName) {
+        this.instanceClusterName = instanceClusterName;
+        return this;
+    }
+    public String getInstanceClusterName() {
+        return this.instanceClusterName;
     }
 
     public DeleteSubCNInstanceRequest setRegionId(String regionId) {

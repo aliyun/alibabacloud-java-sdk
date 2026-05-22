@@ -1636,7 +1636,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>开通CN子实例</p>
+     * <p>创建自定义地址</p>
      * 
      * @param request CreateSubCNInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1683,7 +1683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>开通CN子实例</p>
+     * <p>创建自定义地址</p>
      * 
      * @param request CreateSubCNInstanceRequest
      * @return CreateSubCNInstanceResponse
@@ -2148,7 +2148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>删除CN子实例</p>
+     * <p>删除自定义地址</p>
      * 
      * @param request DeleteSubCNInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2159,6 +2159,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
             query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceClusterName)) {
+            query.put("InstanceClusterName", request.instanceClusterName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -2187,7 +2191,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>删除CN子实例</p>
+     * <p>删除自定义地址</p>
      * 
      * @param request DeleteSubCNInstanceRequest
      * @return DeleteSubCNInstanceResponse
