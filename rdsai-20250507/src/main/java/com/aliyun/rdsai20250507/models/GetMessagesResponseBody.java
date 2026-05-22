@@ -141,6 +141,15 @@ public class GetMessagesResponseBody extends TeaModel {
         @NameInMap("Feedback")
         public String feedback;
 
+        @NameInMap("GenerationFinishedAt")
+        public String generationFinishedAt;
+
+        @NameInMap("GenerationStartedAt")
+        public String generationStartedAt;
+
+        @NameInMap("GenerationStatus")
+        public String generationStatus;
+
         /**
          * <p>The message ID.</p>
          * 
@@ -149,6 +158,9 @@ public class GetMessagesResponseBody extends TeaModel {
          */
         @NameInMap("Id")
         public String id;
+
+        @NameInMap("LastSentEntryId")
+        public String lastSentEntryId;
 
         /**
          * <p>The query statement.</p>
@@ -161,6 +173,9 @@ public class GetMessagesResponseBody extends TeaModel {
          */
         @NameInMap("RetrieverResources")
         public java.util.List<?> retrieverResources;
+
+        @NameInMap("StreamKey")
+        public String streamKey;
 
         public static GetMessagesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetMessagesResponseBodyData self = new GetMessagesResponseBodyData();
@@ -207,12 +222,44 @@ public class GetMessagesResponseBody extends TeaModel {
             return this.feedback;
         }
 
+        public GetMessagesResponseBodyData setGenerationFinishedAt(String generationFinishedAt) {
+            this.generationFinishedAt = generationFinishedAt;
+            return this;
+        }
+        public String getGenerationFinishedAt() {
+            return this.generationFinishedAt;
+        }
+
+        public GetMessagesResponseBodyData setGenerationStartedAt(String generationStartedAt) {
+            this.generationStartedAt = generationStartedAt;
+            return this;
+        }
+        public String getGenerationStartedAt() {
+            return this.generationStartedAt;
+        }
+
+        public GetMessagesResponseBodyData setGenerationStatus(String generationStatus) {
+            this.generationStatus = generationStatus;
+            return this;
+        }
+        public String getGenerationStatus() {
+            return this.generationStatus;
+        }
+
         public GetMessagesResponseBodyData setId(String id) {
             this.id = id;
             return this;
         }
         public String getId() {
             return this.id;
+        }
+
+        public GetMessagesResponseBodyData setLastSentEntryId(String lastSentEntryId) {
+            this.lastSentEntryId = lastSentEntryId;
+            return this;
+        }
+        public String getLastSentEntryId() {
+            return this.lastSentEntryId;
         }
 
         public GetMessagesResponseBodyData setQuery(String query) {
@@ -229,6 +276,14 @@ public class GetMessagesResponseBody extends TeaModel {
         }
         public java.util.List<?> getRetrieverResources() {
             return this.retrieverResources;
+        }
+
+        public GetMessagesResponseBodyData setStreamKey(String streamKey) {
+            this.streamKey = streamKey;
+            return this;
+        }
+        public String getStreamKey() {
+            return this.streamKey;
         }
 
     }
