@@ -833,6 +833,102 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>视频检测任务提交</p>
+     * 
+     * @param request MultiModalGuardAsyncRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return MultiModalGuardAsyncResponse
+     */
+    public MultiModalGuardAsyncResponse multiModalGuardAsyncWithOptions(MultiModalGuardAsyncRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.service)) {
+            body.put("Service", request.service);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceParameters)) {
+            body.put("ServiceParameters", request.serviceParameters);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "MultiModalGuardAsync"),
+            new TeaPair("version", "2022-03-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new MultiModalGuardAsyncResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>视频检测任务提交</p>
+     * 
+     * @param request MultiModalGuardAsyncRequest
+     * @return MultiModalGuardAsyncResponse
+     */
+    public MultiModalGuardAsyncResponse multiModalGuardAsync(MultiModalGuardAsyncRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.multiModalGuardAsyncWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取视频检测结果</p>
+     * 
+     * @param request MultiModalGuardAsyncResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return MultiModalGuardAsyncResultResponse
+     */
+    public MultiModalGuardAsyncResultResponse multiModalGuardAsyncResultWithOptions(MultiModalGuardAsyncResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.service)) {
+            body.put("Service", request.service);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceParameters)) {
+            body.put("ServiceParameters", request.serviceParameters);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "MultiModalGuardAsyncResult"),
+            new TeaPair("version", "2022-03-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new MultiModalGuardAsyncResultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取视频检测结果</p>
+     * 
+     * @param request MultiModalGuardAsyncResultRequest
+     * @return MultiModalGuardAsyncResultResponse
+     */
+    public MultiModalGuardAsyncResultResponse multiModalGuardAsyncResult(MultiModalGuardAsyncResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.multiModalGuardAsyncResultWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>多模态同步检测接口，支持图片base64字符串</p>
      * 
      * @param request MultiModalGuardForBase64Request
