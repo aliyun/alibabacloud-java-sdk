@@ -189,10 +189,6 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyCouponsCoupon extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>100.00</p>
-         */
         @NameInMap("CanPromFee")
         public Float canPromFee;
 
@@ -202,24 +198,12 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("CouponName")
         public String couponName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ActiveCoupon</p>
-         */
         @NameInMap("CouponOptionCode")
         public String couponOptionCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>3874923111</p>
-         */
         @NameInMap("CouponOptionNo")
         public String couponOptionNo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("IsSelected")
         public Boolean isSelected;
 
@@ -301,10 +285,6 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>102112</p>
-         */
         @NameInMap("RuleId")
         public String ruleId;
 

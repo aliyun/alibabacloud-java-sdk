@@ -36,21 +36,9 @@ public class DescribeLicenseResponseBody extends TeaModel {
     }
 
     public static class DescribeLicenseResponseBodyLicenseExtendArrayLicenseAttribute extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
-         */
         @NameInMap("Value")
         public String value;
 

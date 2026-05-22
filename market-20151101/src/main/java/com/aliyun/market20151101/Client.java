@@ -100,6 +100,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>设置自动续费</p>
+     * 
      * @param request AutoRenewInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AutoRenewInstanceResponse
@@ -145,6 +148,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>设置自动续费</p>
+     * 
      * @param request AutoRenewInstanceRequest
      * @return AutoRenewInstanceResponse
      */
@@ -198,6 +204,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建订单</p>
+     * 
      * @param request CreateOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateOrderResponse
@@ -247,6 +256,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建订单</p>
+     * 
      * @param request CreateOrderRequest
      * @return CreateOrderResponse
      */
@@ -256,6 +268,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>跨账号角色授权，根据token获取用户信息</p>
+     * 
      * @param request CrossAccountVerifyTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CrossAccountVerifyTokenResponse
@@ -285,6 +300,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>跨账号角色授权，根据token获取用户信息</p>
+     * 
      * @param request CrossAccountVerifyTokenRequest
      * @return CrossAccountVerifyTokenResponse
      */
@@ -334,6 +352,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>工作流当前节点信息</p>
+     * 
      * @param request DescribeCurrentNodeInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCurrentNodeInfoResponse
@@ -363,6 +384,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>工作流当前节点信息</p>
+     * 
      * @param request DescribeCurrentNodeInfoRequest
      * @return DescribeCurrentNodeInfoResponse
      */
@@ -558,6 +582,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询实例</p>
+     * 
      * @param request DescribeInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstanceResponse
@@ -595,6 +622,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询实例</p>
+     * 
      * @param request DescribeInstanceRequest
      * @return DescribeInstanceResponse
      */
@@ -648,6 +678,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询实例列表</p>
+     * 
      * @param request DescribeInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstancesResponse
@@ -693,6 +726,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询实例列表</p>
+     * 
      * @param request DescribeInstancesRequest
      * @return DescribeInstancesResponse
      */
@@ -826,6 +862,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询订单</p>
+     * 
      * @param request DescribeOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeOrderResponse
@@ -855,6 +894,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询订单</p>
+     * 
      * @param request DescribeOrderRequest
      * @return DescribeOrderResponse
      */
@@ -908,6 +950,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询价格</p>
+     * 
      * @param request DescribePriceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePriceResponse
@@ -941,6 +986,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询价格</p>
+     * 
      * @param request DescribePriceRequest
      * @return DescribePriceResponse
      */
@@ -1046,6 +1094,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>附件信息</p>
+     * 
      * @param request DescribeProjectAttachmentsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeProjectAttachmentsResponse
@@ -1075,6 +1126,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>附件信息</p>
+     * 
      * @param request DescribeProjectAttachmentsRequest
      * @return DescribeProjectAttachmentsResponse
      */
@@ -1084,6 +1138,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>项目信息</p>
+     * 
      * @param request DescribeProjectInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeProjectInfoResponse
@@ -1113,6 +1170,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>项目信息</p>
+     * 
      * @param request DescribeProjectInfoRequest
      * @return DescribeProjectInfoResponse
      */
@@ -1122,6 +1182,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询项目留言信息</p>
+     * 
      * @param request DescribeProjectMessagesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeProjectMessagesResponse
@@ -1155,6 +1218,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询项目留言信息</p>
+     * 
      * @param request DescribeProjectMessagesRequest
      * @return DescribeProjectMessagesResponse
      */
@@ -1168,6 +1234,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>**</li>
      * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>查询项目流程节点list</p>
      * 
      * @param request DescribeProjectNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1203,6 +1272,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>**</li>
      * </ul>
      * 
+     * <b>summary</b> : 
+     * <p>查询项目流程节点list</p>
+     * 
      * @param request DescribeProjectNodesRequest
      * @return DescribeProjectNodesResponse
      */
@@ -1212,6 +1284,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询项目操作记录列表</p>
+     * 
      * @param request DescribeProjectOperateLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeProjectOperateLogsResponse
@@ -1241,6 +1316,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询项目操作记录列表</p>
+     * 
      * @param request DescribeProjectOperateLogsRequest
      * @return DescribeProjectOperateLogsResponse
      */
@@ -1250,6 +1328,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>完成当前流程节点</p>
+     * 
      * @param request FinishCurrentProjectNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return FinishCurrentProjectNodeResponse
@@ -1291,6 +1372,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>完成当前流程节点</p>
+     * 
      * @param request FinishCurrentProjectNodeRequest
      * @return FinishCurrentProjectNodeResponse
      */
@@ -1364,6 +1448,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>暂停项目</p>
+     * 
      * @param request PauseProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PauseProjectResponse
@@ -1401,6 +1488,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>暂停项目</p>
+     * 
      * @param request PauseProjectRequest
      * @return PauseProjectResponse
      */
@@ -1410,6 +1500,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>云市场计量推送接口</p>
+     * 
      * @param request PushMeteringDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PushMeteringDataResponse
@@ -1439,6 +1532,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>云市场计量推送接口</p>
+     * 
      * @param request PushMeteringDataRequest
      * @return PushMeteringDataResponse
      */
@@ -1448,6 +1544,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>按次售卖按量计费</p>
+     * 
+     * @param request PushTimesUsageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PushTimesUsageResponse
+     */
+    public PushTimesUsageResponse pushTimesUsageWithOptions(PushTimesUsageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.times)) {
+            query.put("Times", request.times);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PushTimesUsage"),
+            new TeaPair("version", "2015-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PushTimesUsageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>按次售卖按量计费</p>
+     * 
+     * @param request PushTimesUsageRequest
+     * @return PushTimesUsageResponse
+     */
+    public PushTimesUsageResponse pushTimesUsage(PushTimesUsageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.pushTimesUsageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>恢复已暂停的项目</p>
+     * 
      * @param request ResumeProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ResumeProjectResponse
@@ -1485,6 +1636,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>恢复已暂停的项目</p>
+     * 
      * @param request ResumeProjectRequest
      * @return ResumeProjectResponse
      */
@@ -1494,6 +1648,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>当前流程节点回滚到上一步</p>
+     * 
      * @param request RollbackCurrentProjectNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RollbackCurrentProjectNodeResponse
@@ -1531,6 +1688,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>当前流程节点回滚到上一步</p>
+     * 
      * @param request RollbackCurrentProjectNodeRequest
      * @return RollbackCurrentProjectNodeResponse
      */

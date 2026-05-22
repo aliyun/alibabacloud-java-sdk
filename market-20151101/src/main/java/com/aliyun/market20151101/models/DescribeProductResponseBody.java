@@ -282,27 +282,15 @@ public class DescribeProductResponseBody extends TeaModel {
     }
 
     public static class DescribeProductResponseBodyProductExtrasProductExtra extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>product_advantage</p>
-         */
         @NameInMap("Key")
         public String key;
 
         @NameInMap("Label")
         public String label;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Order")
         public Integer order;
 
-        /**
-         * <strong>example:</strong>
-         * <p>HTML</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -379,45 +367,21 @@ public class DescribeProductResponseBody extends TeaModel {
         @NameInMap("DisplayName")
         public String displayName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("Max")
         public String max;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11</p>
-         */
         @NameInMap("Min")
         public String min;
 
-        /**
-         * <strong>example:</strong>
-         * <p>abc</p>
-         */
         @NameInMap("Remark")
         public String remark;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Step")
         public String step;
 
-        /**
-         * <strong>example:</strong>
-         * <p>single_string</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <strong>example:</strong>
-         * <p>m-28e213e7t</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -504,17 +468,9 @@ public class DescribeProductResponseBody extends TeaModel {
     }
 
     public static class DescribeProductResponseBodyProductSkusProductSkuModulesModulePropertiesProperty extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("DisplayUnit")
         public String displayUnit;
 
-        /**
-         * <strong>example:</strong>
-         * <p>img_id</p>
-         */
         @NameInMap("Key")
         public String key;
 
@@ -524,10 +480,6 @@ public class DescribeProductResponseBody extends TeaModel {
         @NameInMap("PropertyValues")
         public DescribeProductResponseBodyProductSkusProductSkuModulesModulePropertiesPropertyPropertyValues propertyValues;
 
-        /**
-         * <strong>example:</strong>
-         * <p>number</p>
-         */
         @NameInMap("ShowType")
         public String showType;
 
@@ -598,17 +550,9 @@ public class DescribeProductResponseBody extends TeaModel {
     }
 
     public static class DescribeProductResponseBodyProductSkusProductSkuModulesModule extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>img_id</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <strong>example:</strong>
-         * <p>248220</p>
-         */
         @NameInMap("Id")
         public String id;
 
@@ -680,10 +624,6 @@ public class DescribeProductResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>HOUR</p>
-         */
         @NameInMap("PeriodType")
         public String periodType;
 
@@ -730,41 +670,21 @@ public class DescribeProductResponseBody extends TeaModel {
     }
 
     public static class DescribeProductResponseBodyProductSkusProductSku extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>PREPAY</p>
-         */
         @NameInMap("ChargeType")
         public String chargeType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cmjj01****-Package</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <strong>example:</strong>
-         * <p>{\&quot;img_id\&quot;:{\&quot;img_version|img_region\&quot;:{\&quot;V1.7|cn-shenzhen-st3-a01\&quot;:[\&quot;m-wz9ho4hmos0lpxcldqoq\&quot;]}}</p>
-         */
         @NameInMap("Constraints")
         public String constraints;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Hidden")
         public Boolean hidden;
 
         @NameInMap("Modules")
         public DescribeProductResponseBodyProductSkusProductSkuModules modules;
 
-        /**
-         * <strong>example:</strong>
-         * <p>21</p>
-         */
         @NameInMap("Name")
         public String name;
 
@@ -873,17 +793,9 @@ public class DescribeProductResponseBody extends TeaModel {
     }
 
     public static class DescribeProductResponseBodyShopInfoWangWangsWangWang extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("Remark")
         public String remark;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ABC</p>
-         */
         @NameInMap("UserName")
         public String userName;
 

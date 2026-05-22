@@ -35,10 +35,6 @@ public class CreateOrderRequest extends TeaModel {
     @NameInMap("OrderType")
     public String orderType;
 
-    /**
-     * <strong>example:</strong>
-     * <p>111********11</p>
-     */
     @NameInMap("OwnerId")
     public String ownerId;
 

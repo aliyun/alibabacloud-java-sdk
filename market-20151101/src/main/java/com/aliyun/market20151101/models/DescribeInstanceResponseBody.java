@@ -308,52 +308,24 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyModulesModulePropertiesPropertyPropertyValuesPropertyValue extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>12</p>
-         */
         @NameInMap("DisplayName")
         public String displayName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12</p>
-         */
         @NameInMap("Max")
         public String max;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12</p>
-         */
         @NameInMap("Min")
         public String min;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12</p>
-         */
         @NameInMap("Remark")
         public String remark;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12</p>
-         */
         @NameInMap("Step")
         public String step;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -440,34 +412,18 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyModulesModulePropertiesProperty extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>12</p>
-         */
         @NameInMap("DisplayUnit")
         public String displayUnit;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12</p>
-         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("PropertyValues")
         public DescribeInstanceResponseBodyModulesModulePropertiesPropertyPropertyValues propertyValues;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12</p>
-         */
         @NameInMap("ShowType")
         public String showType;
 
@@ -538,17 +494,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyModulesModule extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>package_config</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <strong>example:</strong>
-         * <p>101*********026</p>
-         */
         @NameInMap("Id")
         public String id;
 
