@@ -113,6 +113,9 @@ public class DescribeRequestHitResponseBody extends TeaModel {
         @NameInMap("ruleStatus")
         public String ruleStatus;
 
+        @NameInMap("ruleType")
+        public String ruleType;
+
         public static DescribeRequestHitResponseBodyResultObjectRuleHitRecords build(java.util.Map<String, ?> map) throws Exception {
             DescribeRequestHitResponseBodyResultObjectRuleHitRecords self = new DescribeRequestHitResponseBodyResultObjectRuleHitRecords();
             return TeaModel.build(map, self);
@@ -180,6 +183,14 @@ public class DescribeRequestHitResponseBody extends TeaModel {
         }
         public String getRuleStatus() {
             return this.ruleStatus;
+        }
+
+        public DescribeRequestHitResponseBodyResultObjectRuleHitRecords setRuleType(String ruleType) {
+            this.ruleType = ruleType;
+            return this;
+        }
+        public String getRuleType() {
+            return this.ruleType;
         }
 
     }
