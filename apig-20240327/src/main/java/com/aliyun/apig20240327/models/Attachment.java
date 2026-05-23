@@ -4,11 +4,17 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class Attachment extends TeaModel {
+    @NameInMap("attachResourceId")
+    public String attachResourceId;
+
     /**
      * <p>The resource IDs.</p>
      */
     @NameInMap("attachResourceIds")
     public java.util.List<String> attachResourceIds;
+
+    @NameInMap("attachResourceParentIds")
+    public java.util.List<String> attachResourceParentIds;
 
     /**
      * <p>The supported mount point type. Valid values:</p>
@@ -60,12 +66,28 @@ public class Attachment extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public Attachment setAttachResourceId(String attachResourceId) {
+        this.attachResourceId = attachResourceId;
+        return this;
+    }
+    public String getAttachResourceId() {
+        return this.attachResourceId;
+    }
+
     public Attachment setAttachResourceIds(java.util.List<String> attachResourceIds) {
         this.attachResourceIds = attachResourceIds;
         return this;
     }
     public java.util.List<String> getAttachResourceIds() {
         return this.attachResourceIds;
+    }
+
+    public Attachment setAttachResourceParentIds(java.util.List<String> attachResourceParentIds) {
+        this.attachResourceParentIds = attachResourceParentIds;
+        return this;
+    }
+    public java.util.List<String> getAttachResourceParentIds() {
+        return this.attachResourceParentIds;
     }
 
     public Attachment setAttachResourceType(String attachResourceType) {
