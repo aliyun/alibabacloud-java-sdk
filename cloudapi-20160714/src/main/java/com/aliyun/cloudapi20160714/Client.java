@@ -2151,6 +2151,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建环境模型</p>
+     * 
+     * @param request CreateStageModelRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateStageModelResponse
+     */
+    public CreateStageModelResponse createStageModelWithOptions(CreateStageModelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stageAlias)) {
+            query.put("StageAlias", request.stageAlias);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stageName)) {
+            query.put("StageName", request.stageName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateStageModel"),
+            new TeaPair("version", "2016-07-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateStageModelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建环境模型</p>
+     * 
+     * @param request CreateStageModelRequest
+     * @return CreateStageModelResponse
+     */
+    public CreateStageModelResponse createStageModel(CreateStageModelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createStageModelWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>  This API is intended for API providers.</p>
      * <ul>
@@ -3508,6 +3564,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteSignatureResponse deleteSignature(DeleteSignatureRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteSignatureWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除环境</p>
+     * 
+     * @param request DeleteStageModelRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteStageModelResponse
+     */
+    public DeleteStageModelResponse deleteStageModelWithOptions(DeleteStageModelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stageModelId)) {
+            query.put("StageModelId", request.stageModelId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteStageModel"),
+            new TeaPair("version", "2016-07-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteStageModelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除环境</p>
+     * 
+     * @param request DeleteStageModelRequest
+     * @return DeleteStageModelResponse
+     */
+    public DeleteStageModelResponse deleteStageModel(DeleteStageModelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteStageModelWithOptions(request, runtime);
     }
 
     /**
@@ -8848,6 +8952,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询环境列表</p>
+     * 
+     * @param request DescribeStageModelsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeStageModelsResponse
+     */
+    public DescribeStageModelsResponse describeStageModelsWithOptions(DescribeStageModelsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stageAlias)) {
+            query.put("StageAlias", request.stageAlias);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stageName)) {
+            query.put("StageName", request.stageName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeStageModels"),
+            new TeaPair("version", "2016-07-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeStageModelsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询环境列表</p>
+     * 
+     * @param request DescribeStageModelsRequest
+     * @return DescribeStageModelsResponse
+     */
+    public DescribeStageModelsResponse describeStageModels(DescribeStageModelsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeStageModelsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the number of API Gateway resources in a region.</p>
      * 
      * @param request DescribeSummaryDataRequest
@@ -11792,6 +11956,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifySignatureResponse modifySignature(ModifySignatureRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifySignatureWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改环境模型</p>
+     * 
+     * @param request ModifyStageModelRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyStageModelResponse
+     */
+    public ModifyStageModelResponse modifyStageModelWithOptions(ModifyStageModelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stageAlias)) {
+            query.put("StageAlias", request.stageAlias);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stageModelId)) {
+            query.put("StageModelId", request.stageModelId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyStageModel"),
+            new TeaPair("version", "2016-07-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyStageModelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改环境模型</p>
+     * 
+     * @param request ModifyStageModelRequest
+     * @return ModifyStageModelResponse
+     */
+    public ModifyStageModelResponse modifyStageModel(ModifyStageModelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyStageModelWithOptions(request, runtime);
     }
 
     /**
