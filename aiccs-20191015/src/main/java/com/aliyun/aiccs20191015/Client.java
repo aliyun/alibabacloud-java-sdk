@@ -6508,6 +6508,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>高德全双工</p>
+     * 
+     * @param request LlmFullDuplexCallOperateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return LlmFullDuplexCallOperateResponse
+     */
+    public LlmFullDuplexCallOperateResponse llmFullDuplexCallOperateWithOptions(LlmFullDuplexCallOperateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callId)) {
+            query.put("CallId", request.callId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.command)) {
+            query.put("Command", request.command);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.param)) {
+            query.put("Param", request.param);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "LlmFullDuplexCallOperate"),
+            new TeaPair("version", "2019-10-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new LlmFullDuplexCallOperateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>高德全双工</p>
+     * 
+     * @param request LlmFullDuplexCallOperateRequest
+     * @return LlmFullDuplexCallOperateResponse
+     */
+    public LlmFullDuplexCallOperateResponse llmFullDuplexCallOperate(LlmFullDuplexCallOperateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.llmFullDuplexCallOperateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>基于大模型的智能外呼</p>
      * 
      * @param tmpReq LlmSmartCallRequest
@@ -6696,6 +6748,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public LlmSmartCallEncryptResponse llmSmartCallEncrypt(LlmSmartCallEncryptRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.llmSmartCallEncryptWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>基于大模型的智能外呼</p>
+     * 
+     * @param tmpReq LlmSmartCallFullDuplexRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return LlmSmartCallFullDuplexResponse
+     */
+    public LlmSmartCallFullDuplexResponse llmSmartCallFullDuplexWithOptions(LlmSmartCallFullDuplexRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        LlmSmartCallFullDuplexShrinkRequest request = new LlmSmartCallFullDuplexShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.startWordParam)) {
+            request.startWordParamShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.startWordParam, "StartWordParam", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationCode)) {
+            query.put("ApplicationCode", request.applicationCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.calledNumber)) {
+            query.put("CalledNumber", request.calledNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callerNumber)) {
+            query.put("CallerNumber", request.callerNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outId)) {
+            query.put("OutId", request.outId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionTimeout)) {
+            query.put("SessionTimeout", request.sessionTimeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startWordParamShrink)) {
+            query.put("StartWordParam", request.startWordParamShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ttsSpeed)) {
+            query.put("TtsSpeed", request.ttsSpeed);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ttsVoiceCode)) {
+            query.put("TtsVoiceCode", request.ttsVoiceCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ttsVolume)) {
+            query.put("TtsVolume", request.ttsVolume);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "LlmSmartCallFullDuplex"),
+            new TeaPair("version", "2019-10-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new LlmSmartCallFullDuplexResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>基于大模型的智能外呼</p>
+     * 
+     * @param request LlmSmartCallFullDuplexRequest
+     * @return LlmSmartCallFullDuplexResponse
+     */
+    public LlmSmartCallFullDuplexResponse llmSmartCallFullDuplex(LlmSmartCallFullDuplexRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.llmSmartCallFullDuplexWithOptions(request, runtime);
     }
 
     /**
