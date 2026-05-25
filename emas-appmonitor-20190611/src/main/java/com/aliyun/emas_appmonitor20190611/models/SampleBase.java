@@ -10,9 +10,17 @@ public class SampleBase extends TeaModel {
     @NameInMap("FullSampleUsers")
     public java.util.List<FullSampleItem> fullSampleUsers;
 
+    /**
+     * <strong>example:</strong>
+     * <p>event</p>
+     */
     @NameInMap("SampleMethod")
     public String sampleMethod;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SampleRate")
     public Float sampleRate;
 

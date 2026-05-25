@@ -301,6 +301,9 @@ public class GetErrorResponseBody extends TeaModel {
         @NameInMap("ColNo")
         public String colNo;
 
+        @NameInMap("Controllers")
+        public String controllers;
+
         /**
          * <strong>example:</strong>
          * <p>CN</p>
@@ -594,6 +597,9 @@ public class GetErrorResponseBody extends TeaModel {
         @NameInMap("FeatureScene")
         public String featureScene;
 
+        @NameInMap("FileDescriptor")
+        public String fileDescriptor;
+
         /**
          * <strong>example:</strong>
          * <p>baselineCspm_20241005</p>
@@ -751,12 +757,18 @@ public class GetErrorResponseBody extends TeaModel {
         @NameInMap("JsBacktrace")
         public String jsBacktrace;
 
+        @NameInMap("LagCost")
+        public Integer lagCost;
+
         /**
          * <strong>example:</strong>
          * <p>cn</p>
          */
         @NameInMap("Language")
         public String language;
+
+        @NameInMap("LaunchedCrashStage")
+        public Integer launchedCrashStage;
 
         /**
          * <strong>example:</strong>
@@ -789,6 +801,9 @@ public class GetErrorResponseBody extends TeaModel {
          */
         @NameInMap("MainLog")
         public String mainLog;
+
+        @NameInMap("MemInfo")
+        public String memInfo;
 
         /**
          * <strong>example:</strong>
@@ -1450,6 +1465,14 @@ public class GetErrorResponseBody extends TeaModel {
             return this.colNo;
         }
 
+        public GetErrorResponseBodyModel setControllers(String controllers) {
+            this.controllers = controllers;
+            return this;
+        }
+        public String getControllers() {
+            return this.controllers;
+        }
+
         public GetErrorResponseBodyModel setCountry(String country) {
             this.country = country;
             return this;
@@ -1730,6 +1753,14 @@ public class GetErrorResponseBody extends TeaModel {
             return this.featureScene;
         }
 
+        public GetErrorResponseBodyModel setFileDescriptor(String fileDescriptor) {
+            this.fileDescriptor = fileDescriptor;
+            return this;
+        }
+        public String getFileDescriptor() {
+            return this.fileDescriptor;
+        }
+
         public GetErrorResponseBodyModel setFileName(String fileName) {
             this.fileName = fileName;
             return this;
@@ -1898,12 +1929,28 @@ public class GetErrorResponseBody extends TeaModel {
             return this.jsBacktrace;
         }
 
+        public GetErrorResponseBodyModel setLagCost(Integer lagCost) {
+            this.lagCost = lagCost;
+            return this;
+        }
+        public Integer getLagCost() {
+            return this.lagCost;
+        }
+
         public GetErrorResponseBodyModel setLanguage(String language) {
             this.language = language;
             return this;
         }
         public String getLanguage() {
             return this.language;
+        }
+
+        public GetErrorResponseBodyModel setLaunchedCrashStage(Integer launchedCrashStage) {
+            this.launchedCrashStage = launchedCrashStage;
+            return this;
+        }
+        public Integer getLaunchedCrashStage() {
+            return this.launchedCrashStage;
         }
 
         public GetErrorResponseBodyModel setLaunchedTime(String launchedTime) {
@@ -1936,6 +1983,14 @@ public class GetErrorResponseBody extends TeaModel {
         }
         public String getMainLog() {
             return this.mainLog;
+        }
+
+        public GetErrorResponseBodyModel setMemInfo(String memInfo) {
+            this.memInfo = memInfo;
+            return this;
+        }
+        public String getMemInfo() {
+            return this.memInfo;
         }
 
         public GetErrorResponseBodyModel setMemoryMap(String memoryMap) {

@@ -4,12 +4,24 @@ package com.aliyun.emas_appmonitor20190611.models;
 import com.aliyun.tea.*;
 
 public class FullSampleItem extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>id</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1740489688615</p>
+     */
     @NameInMap("ModifyTime")
     public String modifyTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testUser</p>
+     */
     @NameInMap("Operator")
     public String operator;
 

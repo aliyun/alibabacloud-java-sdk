@@ -4,15 +4,40 @@ package com.aliyun.emas_appmonitor20190611.models;
 import com.aliyun.tea.*;
 
 public class Filter extends TeaModel {
+    /**
+     * <p>key</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
+     */
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <p>operator</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
+     */
     @NameInMap("Operator")
     public String operator;
 
+    /**
+     * <p>subFillter</p>
+     */
     @NameInMap("SubFilters")
     public java.util.List<Filter> subFilters;
 
+    /**
+     * <p>values</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1,2,3</p>
+     */
     @NameInMap("Values")
     public Object values;
 

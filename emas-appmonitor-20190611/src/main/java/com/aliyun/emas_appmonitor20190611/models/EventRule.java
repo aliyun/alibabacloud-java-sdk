@@ -7,18 +7,38 @@ public class EventRule extends TeaModel {
     @NameInMap("Conditional")
     public java.util.List<ConditionalRule> conditional;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Enable")
     public Boolean enable;
 
+    /**
+     * <strong>example:</strong>
+     * <p>crash</p>
+     */
     @NameInMap("EventId")
     public String eventId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-02-15 12:00:00</p>
+     */
     @NameInMap("ModifyTime")
     public String modifyTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user</p>
+     */
     @NameInMap("Operator")
     public String operator;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SampleRate")
     public Float sampleRate;
 

@@ -4,18 +4,35 @@ package com.aliyun.emas_appmonitor20190611.models;
 import com.aliyun.tea.*;
 
 public class EventFilter extends TeaModel {
+    /**
+     * <p>key</p>
+     * 
+     * <strong>example:</strong>
+     * <p>startTime</p>
+     */
     @NameInMap("Key")
     public String key;
 
     /**
+     * <p>op</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <blockquote>
+     * </blockquote>
      */
     @NameInMap("Op")
     public String op;
 
+    /**
+     * <p>filters</p>
+     */
     @NameInMap("SubFilters")
     public java.util.List<EventFilter> subFilters;
 
+    /**
+     * <p>values</p>
+     */
     @NameInMap("Values")
     public java.util.List<String> values;
 

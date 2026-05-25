@@ -7,15 +7,31 @@ public class ConditionalRule extends TeaModel {
     @NameInMap("Filter")
     public EventFilter filter;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1205-02-01 12:00:00</p>
+     */
     @NameInMap("ModifyTime")
     public String modifyTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user</p>
+     */
     @NameInMap("Operator")
     public String operator;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SampleRate")
     public Float sampleRate;
 

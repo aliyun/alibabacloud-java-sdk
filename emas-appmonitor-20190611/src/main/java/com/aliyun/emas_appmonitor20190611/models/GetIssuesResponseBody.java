@@ -205,12 +205,18 @@ public class GetIssuesResponseBody extends TeaModel {
         @NameInMap("FirstVersion")
         public String firstVersion;
 
+        @NameInMap("LagCost")
+        public Long lagCost;
+
         /**
          * <strong>example:</strong>
          * <p>ServiceType</p>
          */
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Reason")
+        public String reason;
 
         /**
          * <strong>example:</strong>
@@ -228,6 +234,12 @@ public class GetIssuesResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public Integer status;
+
+        @NameInMap("Tags")
+        public java.util.List<String> tags;
+
+        @NameInMap("Type")
+        public String type;
 
         public static GetIssuesResponseBodyModelItems build(java.util.Map<String, ?> map) throws Exception {
             GetIssuesResponseBodyModelItems self = new GetIssuesResponseBodyModelItems();
@@ -378,12 +390,28 @@ public class GetIssuesResponseBody extends TeaModel {
             return this.firstVersion;
         }
 
+        public GetIssuesResponseBodyModelItems setLagCost(Long lagCost) {
+            this.lagCost = lagCost;
+            return this;
+        }
+        public Long getLagCost() {
+            return this.lagCost;
+        }
+
         public GetIssuesResponseBodyModelItems setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetIssuesResponseBodyModelItems setReason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+        public String getReason() {
+            return this.reason;
         }
 
         public GetIssuesResponseBodyModelItems setStack(String stack) {
@@ -400,6 +428,22 @@ public class GetIssuesResponseBody extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
+        }
+
+        public GetIssuesResponseBodyModelItems setTags(java.util.List<String> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<String> getTags() {
+            return this.tags;
+        }
+
+        public GetIssuesResponseBodyModelItems setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

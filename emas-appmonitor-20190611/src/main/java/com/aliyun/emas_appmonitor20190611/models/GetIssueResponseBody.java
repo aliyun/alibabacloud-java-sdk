@@ -252,6 +252,9 @@ public class GetIssueResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("Reason")
+        public String reason;
+
         /**
          * <strong>example:</strong>
          * <p>java.lang.NullPointerException</p>
@@ -282,6 +285,9 @@ public class GetIssueResponseBody extends TeaModel {
 
         @NameInMap("Tags")
         public java.util.List<String> tags;
+
+        @NameInMap("Type")
+        public String type;
 
         public static GetIssueResponseBodyModel build(java.util.Map<String, ?> map) throws Exception {
             GetIssueResponseBodyModel self = new GetIssueResponseBodyModel();
@@ -496,6 +502,14 @@ public class GetIssueResponseBody extends TeaModel {
             return this.name;
         }
 
+        public GetIssueResponseBodyModel setReason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+        public String getReason() {
+            return this.reason;
+        }
+
         public GetIssueResponseBodyModel setStack(String stack) {
             this.stack = stack;
             return this;
@@ -534,6 +548,14 @@ public class GetIssueResponseBody extends TeaModel {
         }
         public java.util.List<String> getTags() {
             return this.tags;
+        }
+
+        public GetIssueResponseBodyModel setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }
