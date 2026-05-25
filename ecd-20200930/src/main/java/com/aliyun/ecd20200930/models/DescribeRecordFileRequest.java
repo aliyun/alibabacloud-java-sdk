@@ -76,6 +76,9 @@ public class DescribeRecordFileRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceType")
+    public String resourceType;
+
     /**
      * <strong>example:</strong>
      * <p>20251218175715</p>
@@ -173,6 +176,14 @@ public class DescribeRecordFileRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeRecordFileRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
     public DescribeRecordFileRequest setStartTime(String startTime) {
