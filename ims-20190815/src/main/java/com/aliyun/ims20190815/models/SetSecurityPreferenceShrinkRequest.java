@@ -69,6 +69,9 @@ public class SetSecurityPreferenceShrinkRequest extends TeaModel {
     @NameInMap("AllowUserToManagePersonalDingTalk")
     public Boolean allowUserToManagePersonalDingTalk;
 
+    @NameInMap("AllowUserToManageServiceCredentials")
+    public Boolean allowUserToManageServiceCredentials;
+
     /**
      * <p>Specifies whether RAM users can remember the MFA devices for seven days. Valid values:</p>
      * <ul>
@@ -191,6 +194,14 @@ public class SetSecurityPreferenceShrinkRequest extends TeaModel {
     }
     public Boolean getAllowUserToManagePersonalDingTalk() {
         return this.allowUserToManagePersonalDingTalk;
+    }
+
+    public SetSecurityPreferenceShrinkRequest setAllowUserToManageServiceCredentials(Boolean allowUserToManageServiceCredentials) {
+        this.allowUserToManageServiceCredentials = allowUserToManageServiceCredentials;
+        return this;
+    }
+    public Boolean getAllowUserToManageServiceCredentials() {
+        return this.allowUserToManageServiceCredentials;
     }
 
     public SetSecurityPreferenceShrinkRequest setEnableSaveMFATicket(Boolean enableSaveMFATicket) {

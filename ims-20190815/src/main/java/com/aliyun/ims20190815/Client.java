@@ -1544,7 +1544,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Generates the user credential report of an Alibaba Cloud account.</p>
      * 
-     * @param request GenerateCredentialReportRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GenerateCredentialReportResponse
      */
@@ -1578,7 +1577,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Generates a check report for Cloud Governance.</p>
      * 
-     * @param request GenerateGovernanceReportRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GenerateGovernanceReportResponse
      */
@@ -1704,7 +1702,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries information about the multi-factor authentication (MFA) devices of an Alibaba Cloud account.</p>
      * 
-     * @param request GetAccountMFAInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAccountMFAInfoResponse
      */
@@ -1738,7 +1735,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the security report of an Alibaba Cloud account.</p>
      * 
-     * @param request GetAccountSecurityPracticeReportRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAccountSecurityPracticeReportResponse
      */
@@ -1772,7 +1768,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the overview information about an Alibaba Cloud account.</p>
      * 
-     * @param request GetAccountSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAccountSummaryResponse
      */
@@ -1996,7 +1991,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the default domain name of an Alibaba Cloud account.</p>
      * 
-     * @param request GetDefaultDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDefaultDomainResponse
      */
@@ -2126,7 +2120,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>查询成熟度报告状态</p>
      * 
-     * @param request GetGovernanceReportStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetGovernanceReportStatusResponse
      */
@@ -2300,7 +2293,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the details of the password policy for RAM users.</p>
      * 
-     * @param request GetPasswordPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetPasswordPolicyResponse
      */
@@ -2378,7 +2370,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the security preferences for RAM users.</p>
      * 
-     * @param request GetSecurityPreferenceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetSecurityPreferenceResponse
      */
@@ -2556,7 +2547,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the configurations of user-based single sign-on (SSO).</p>
      * 
-     * @param request GetUserSsoSettingsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetUserSsoSettingsResponse
      */
@@ -2813,7 +2803,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Lists the created applications.</p>
      * 
-     * @param request ListApplicationsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListApplicationsResponse
      */
@@ -2850,7 +2839,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries information about all installed external applications.</p>
      * 
-     * @param request ListExternalApplicationsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListExternalApplicationsResponse
      */
@@ -3120,7 +3108,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries all metric values in the most recent governance check.</p>
      * 
-     * @param request ListRecentGovernanceMetricsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListRecentGovernanceMetricsResponse
      */
@@ -4097,6 +4084,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.allowUserToManagePersonalDingTalk)) {
             query.put("AllowUserToManagePersonalDingTalk", request.allowUserToManagePersonalDingTalk);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.allowUserToManageServiceCredentials)) {
+            query.put("AllowUserToManageServiceCredentials", request.allowUserToManageServiceCredentials);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableSaveMFATicket)) {

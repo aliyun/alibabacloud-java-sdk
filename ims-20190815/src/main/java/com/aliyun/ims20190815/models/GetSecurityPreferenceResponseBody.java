@@ -54,6 +54,9 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         @NameInMap("AllowUserToManageAccessKeys")
         public Boolean allowUserToManageAccessKeys;
 
+        @NameInMap("AllowUserToManageServiceCredentials")
+        public Boolean allowUserToManageServiceCredentials;
+
         public static GetSecurityPreferenceResponseBodySecurityPreferenceAccessKeyPreference build(java.util.Map<String, ?> map) throws Exception {
             GetSecurityPreferenceResponseBodySecurityPreferenceAccessKeyPreference self = new GetSecurityPreferenceResponseBodySecurityPreferenceAccessKeyPreference();
             return TeaModel.build(map, self);
@@ -65,6 +68,14 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         }
         public Boolean getAllowUserToManageAccessKeys() {
             return this.allowUserToManageAccessKeys;
+        }
+
+        public GetSecurityPreferenceResponseBodySecurityPreferenceAccessKeyPreference setAllowUserToManageServiceCredentials(Boolean allowUserToManageServiceCredentials) {
+            this.allowUserToManageServiceCredentials = allowUserToManageServiceCredentials;
+            return this;
+        }
+        public Boolean getAllowUserToManageServiceCredentials() {
+            return this.allowUserToManageServiceCredentials;
         }
 
     }

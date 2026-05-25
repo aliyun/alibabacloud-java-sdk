@@ -218,6 +218,9 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         @NameInMap("RolesQuota")
         public Integer rolesQuota;
 
+        @NameInMap("ServiceCredentialsPerUserPerServiceQuota")
+        public Integer serviceCredentialsPerUserPerServiceQuota;
+
         /**
          * <p>The number of RAM users.</p>
          * 
@@ -425,6 +428,14 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         }
         public Integer getRolesQuota() {
             return this.rolesQuota;
+        }
+
+        public GetAccountSummaryResponseBodySummaryMap setServiceCredentialsPerUserPerServiceQuota(Integer serviceCredentialsPerUserPerServiceQuota) {
+            this.serviceCredentialsPerUserPerServiceQuota = serviceCredentialsPerUserPerServiceQuota;
+            return this;
+        }
+        public Integer getServiceCredentialsPerUserPerServiceQuota() {
+            return this.serviceCredentialsPerUserPerServiceQuota;
         }
 
         public GetAccountSummaryResponseBodySummaryMap setUsers(Integer users) {
