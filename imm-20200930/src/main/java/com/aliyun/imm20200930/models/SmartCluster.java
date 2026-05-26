@@ -4,6 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class SmartCluster extends TeaModel {
+    @NameInMap("ClusterType")
+    public String clusterType;
+
     /**
      * <p>The time when the cluster was created.</p>
      * 
@@ -82,11 +85,17 @@ public class SmartCluster extends TeaModel {
     @NameInMap("ProjectName")
     public String projectName;
 
+    @NameInMap("Reason")
+    public String reason;
+
     /**
      * <p>The clustering rule.</p>
      */
     @NameInMap("Rule")
     public SmartClusterRule rule;
+
+    @NameInMap("Rules")
+    public java.util.List<SmartClusterRule> rules;
 
     /**
      * <p>The time when the cluster was updated.</p>
@@ -100,6 +109,14 @@ public class SmartCluster extends TeaModel {
     public static SmartCluster build(java.util.Map<String, ?> map) throws Exception {
         SmartCluster self = new SmartCluster();
         return TeaModel.build(map, self);
+    }
+
+    public SmartCluster setClusterType(String clusterType) {
+        this.clusterType = clusterType;
+        return this;
+    }
+    public String getClusterType() {
+        return this.clusterType;
     }
 
     public SmartCluster setCreateTime(String createTime) {
@@ -174,12 +191,28 @@ public class SmartCluster extends TeaModel {
         return this.projectName;
     }
 
+    public SmartCluster setReason(String reason) {
+        this.reason = reason;
+        return this;
+    }
+    public String getReason() {
+        return this.reason;
+    }
+
     public SmartCluster setRule(SmartClusterRule rule) {
         this.rule = rule;
         return this;
     }
     public SmartClusterRule getRule() {
         return this.rule;
+    }
+
+    public SmartCluster setRules(java.util.List<SmartClusterRule> rules) {
+        this.rules = rules;
+        return this;
+    }
+    public java.util.List<SmartClusterRule> getRules() {
+        return this.rules;
     }
 
     public SmartCluster setUpdateTime(String updateTime) {

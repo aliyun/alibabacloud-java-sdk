@@ -32,6 +32,9 @@ public class DetectImageCroppingRequest extends TeaModel {
     @NameInMap("CredentialConfig")
     public CredentialConfig credentialConfig;
 
+    @NameInMap("InclusionHints")
+    public java.util.List<String> inclusionHints;
+
     /**
      * <p>The name of the project.</p>
      * <p>This parameter is required.</p>
@@ -71,6 +74,14 @@ public class DetectImageCroppingRequest extends TeaModel {
     }
     public CredentialConfig getCredentialConfig() {
         return this.credentialConfig;
+    }
+
+    public DetectImageCroppingRequest setInclusionHints(java.util.List<String> inclusionHints) {
+        this.inclusionHints = inclusionHints;
+        return this;
+    }
+    public java.util.List<String> getInclusionHints() {
+        return this.inclusionHints;
     }
 
     public DetectImageCroppingRequest setProjectName(String projectName) {

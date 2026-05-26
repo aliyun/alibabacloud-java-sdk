@@ -32,6 +32,9 @@ public class DetectImageCroppingShrinkRequest extends TeaModel {
     @NameInMap("CredentialConfig")
     public String credentialConfigShrink;
 
+    @NameInMap("InclusionHints")
+    public String inclusionHintsShrink;
+
     /**
      * <p>The name of the project.</p>
      * <p>This parameter is required.</p>
@@ -71,6 +74,14 @@ public class DetectImageCroppingShrinkRequest extends TeaModel {
     }
     public String getCredentialConfigShrink() {
         return this.credentialConfigShrink;
+    }
+
+    public DetectImageCroppingShrinkRequest setInclusionHintsShrink(String inclusionHintsShrink) {
+        this.inclusionHintsShrink = inclusionHintsShrink;
+        return this;
+    }
+    public String getInclusionHintsShrink() {
+        return this.inclusionHintsShrink;
     }
 
     public DetectImageCroppingShrinkRequest setProjectName(String projectName) {

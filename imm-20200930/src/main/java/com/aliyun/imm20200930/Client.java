@@ -4549,6 +4549,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.credentialConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.credentialConfig, "CredentialConfig", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.inclusionHints)) {
+            request.inclusionHintsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.inclusionHints, "InclusionHints", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.aspectRatios)) {
             query.put("AspectRatios", request.aspectRatios);
@@ -4556,6 +4560,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.credentialConfigShrink)) {
             query.put("CredentialConfig", request.credentialConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inclusionHintsShrink)) {
+            query.put("InclusionHints", request.inclusionHintsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {

@@ -10,6 +10,9 @@ public class DetectImageCroppingResponseBody extends TeaModel {
     @NameInMap("Croppings")
     public java.util.List<CroppingSuggestion> croppings;
 
+    @NameInMap("MatchedInclusionHints")
+    public java.util.List<String> matchedInclusionHints;
+
     /**
      * <p>The request ID.</p>
      * 
@@ -30,6 +33,14 @@ public class DetectImageCroppingResponseBody extends TeaModel {
     }
     public java.util.List<CroppingSuggestion> getCroppings() {
         return this.croppings;
+    }
+
+    public DetectImageCroppingResponseBody setMatchedInclusionHints(java.util.List<String> matchedInclusionHints) {
+        this.matchedInclusionHints = matchedInclusionHints;
+        return this;
+    }
+    public java.util.List<String> getMatchedInclusionHints() {
+        return this.matchedInclusionHints;
     }
 
     public DetectImageCroppingResponseBody setRequestId(String requestId) {

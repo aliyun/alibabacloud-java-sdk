@@ -7,6 +7,9 @@ public class DatasetConfig extends TeaModel {
     @NameInMap("Insights")
     public InsightsConfig insights;
 
+    @NameInMap("SmartCluster")
+    public SmartClusterConfig smartCluster;
+
     public static DatasetConfig build(java.util.Map<String, ?> map) throws Exception {
         DatasetConfig self = new DatasetConfig();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class DatasetConfig extends TeaModel {
     }
     public InsightsConfig getInsights() {
         return this.insights;
+    }
+
+    public DatasetConfig setSmartCluster(SmartClusterConfig smartCluster) {
+        this.smartCluster = smartCluster;
+        return this;
+    }
+    public SmartClusterConfig getSmartCluster() {
+        return this.smartCluster;
     }
 
 }
