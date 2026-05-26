@@ -36,6 +36,9 @@ public class SaveSingleTaskForCreatingOrderRenewRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("PermitPremiumRenew")
+    public Boolean permitPremiumRenew;
+
     /**
      * <strong>example:</strong>
      * <p>123132</p>
@@ -108,6 +111,14 @@ public class SaveSingleTaskForCreatingOrderRenewRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public SaveSingleTaskForCreatingOrderRenewRequest setPermitPremiumRenew(Boolean permitPremiumRenew) {
+        this.permitPremiumRenew = permitPremiumRenew;
+        return this;
+    }
+    public Boolean getPermitPremiumRenew() {
+        return this.permitPremiumRenew;
     }
 
     public SaveSingleTaskForCreatingOrderRenewRequest setPromotionNo(String promotionNo) {

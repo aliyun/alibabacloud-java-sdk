@@ -2060,7 +2060,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据实例id查询域名信息</p>
+     * <p>Queries the basic information about a domain name based on the instance ID.</p>
      * 
      * @param request QueryDomainByInstanceIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2100,7 +2100,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据实例id查询域名信息</p>
+     * <p>Queries the basic information about a domain name based on the instance ID.</p>
      * 
      * @param request QueryDomainByInstanceIdRequest
      * @return QueryDomainByInstanceIdResponse
@@ -5739,6 +5739,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.permitPremiumRenew)) {
+            query.put("PermitPremiumRenew", request.permitPremiumRenew);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.promotionNo)) {

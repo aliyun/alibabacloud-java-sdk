@@ -128,6 +128,9 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends TeaModel {
         @NameInMap("DomainName")
         public String domainName;
 
+        @NameInMap("PermitPremiumRenew")
+        public Boolean permitPremiumRenew;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -154,6 +157,14 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends TeaModel {
         }
         public String getDomainName() {
             return this.domainName;
+        }
+
+        public SaveBatchTaskForCreatingOrderRenewRequestOrderRenewParam setPermitPremiumRenew(Boolean permitPremiumRenew) {
+            this.permitPremiumRenew = permitPremiumRenew;
+            return this;
+        }
+        public Boolean getPermitPremiumRenew() {
+            return this.permitPremiumRenew;
         }
 
         public SaveBatchTaskForCreatingOrderRenewRequestOrderRenewParam setSubscriptionDuration(Integer subscriptionDuration) {
