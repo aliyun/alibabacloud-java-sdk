@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class QaChatRequest extends TeaModel {
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>2047140750220754946</p>
      */
     @NameInMap("appId")
     public String appId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("message")
     public QaChatRequestMessage message;
 
