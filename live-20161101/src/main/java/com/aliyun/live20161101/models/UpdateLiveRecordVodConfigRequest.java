@@ -61,9 +61,6 @@ public class UpdateLiveRecordVodConfigRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("FormatConfig")
-    public Boolean formatConfig;
-
     /**
      * <p>Specifies whether to enable on-demand recording. Valid values:</p>
      * <ul>
@@ -158,14 +155,6 @@ public class UpdateLiveRecordVodConfigRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public UpdateLiveRecordVodConfigRequest setFormatConfig(Boolean formatConfig) {
-        this.formatConfig = formatConfig;
-        return this;
-    }
-    public Boolean getFormatConfig() {
-        return this.formatConfig;
     }
 
     public UpdateLiveRecordVodConfigRequest setOnDemand(Integer onDemand) {

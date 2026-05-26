@@ -2296,10 +2296,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DomainName", request.domainName);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.formatConfig)) {
-            query.put("FormatConfig", request.formatConfig);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.onDemand)) {
             query.put("OnDemand", request.onDemand);
         }
@@ -31975,10 +31971,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
             query.put("DomainName", request.domainName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.formatConfig)) {
-            query.put("FormatConfig", request.formatConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.onDemand)) {
