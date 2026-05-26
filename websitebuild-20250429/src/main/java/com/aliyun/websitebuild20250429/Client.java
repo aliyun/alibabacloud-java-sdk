@@ -41,6 +41,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BizId", request.bizId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.env)) {
+            query.put("Env", request.env);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.orderColumn)) {
             query.put("OrderColumn", request.orderColumn);
         }
@@ -2830,6 +2834,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BizId", request.bizId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.env)) {
+            query.put("Env", request.env);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.executeSql)) {
             query.put("ExecuteSql", request.executeSql);
         }
@@ -3585,6 +3593,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BizId", request.bizId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.env)) {
+            query.put("Env", request.env);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.orderColumn)) {
             query.put("OrderColumn", request.orderColumn);
         }
@@ -3647,6 +3659,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
             query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.env)) {
+            query.put("Env", request.env);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.orderColumn)) {

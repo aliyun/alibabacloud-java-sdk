@@ -22,6 +22,9 @@ public class QuerySupabaseAuthConfigsForAdminRequest extends TeaModel {
     @NameInMap("BizId")
     public String bizId;
 
+    @NameInMap("Env")
+    public String env;
+
     /**
      * <strong>example:</strong>
      * <p>gmtCreated</p>
@@ -76,6 +79,14 @@ public class QuerySupabaseAuthConfigsForAdminRequest extends TeaModel {
     }
     public String getBizId() {
         return this.bizId;
+    }
+
+    public QuerySupabaseAuthConfigsForAdminRequest setEnv(String env) {
+        this.env = env;
+        return this;
+    }
+    public String getEnv() {
+        return this.env;
     }
 
     public QuerySupabaseAuthConfigsForAdminRequest setOrderColumn(String orderColumn) {

@@ -13,6 +13,9 @@ public class OperateSupabaseForAdminRequest extends TeaModel {
     @NameInMap("BizId")
     public String bizId;
 
+    @NameInMap("Env")
+    public String env;
+
     /**
      * <strong>example:</strong>
      * <p>select * from profiles</p>
@@ -94,6 +97,14 @@ public class OperateSupabaseForAdminRequest extends TeaModel {
     }
     public String getBizId() {
         return this.bizId;
+    }
+
+    public OperateSupabaseForAdminRequest setEnv(String env) {
+        this.env = env;
+        return this;
+    }
+    public String getEnv() {
+        return this.env;
     }
 
     public OperateSupabaseForAdminRequest setExecuteSql(String executeSql) {
