@@ -24,16 +24,6 @@ public class CreateWorkspaceRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The region to which the workspace belongs.</p>
-     * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
-     */
-    @NameInMap("RegionId")
-    public String regionId;
-
-    /**
      * <p>The VPC ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -52,6 +42,15 @@ public class CreateWorkspaceRequest extends TeaModel {
      */
     @NameInMap("WorkspaceName")
     public String workspaceName;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
+    @NameInMap("WorkspaceRegion")
+    public String workspaceRegion;
 
     public static CreateWorkspaceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateWorkspaceRequest self = new CreateWorkspaceRequest();
@@ -74,14 +73,6 @@ public class CreateWorkspaceRequest extends TeaModel {
         return this.description;
     }
 
-    public CreateWorkspaceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public CreateWorkspaceRequest setVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -96,6 +87,14 @@ public class CreateWorkspaceRequest extends TeaModel {
     }
     public String getWorkspaceName() {
         return this.workspaceName;
+    }
+
+    public CreateWorkspaceRequest setWorkspaceRegion(String workspaceRegion) {
+        this.workspaceRegion = workspaceRegion;
+        return this;
+    }
+    public String getWorkspaceRegion() {
+        return this.workspaceRegion;
     }
 
 }

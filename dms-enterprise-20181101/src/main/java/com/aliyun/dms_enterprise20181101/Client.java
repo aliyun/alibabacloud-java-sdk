@@ -4603,16 +4603,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Description", request.description);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
             query.put("VpcId", request.vpcId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceName)) {
             query.put("WorkspaceName", request.workspaceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceRegion)) {
+            query.put("WorkspaceRegion", request.workspaceRegion);
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -6835,7 +6835,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>数据库知识库补数据接口</p>
+     * <p>Database knowledge base data supplementation interface</p>
      * 
      * @param request GenMetaKnowledgeAssetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6867,7 +6867,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>数据库知识库补数据接口</p>
+     * <p>Database knowledge base data supplementation interface</p>
      * 
      * @param request GenMetaKnowledgeAssetRequest
      * @return GenMetaKnowledgeAssetResponse
@@ -8299,7 +8299,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries basic information about tables in the data lake.</p>
+     * <p>Invokes this API to obtain table info in the data lake.</p>
      * 
      * @param request GetDataLakeTableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8351,7 +8351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries basic information about tables in the data lake.</p>
+     * <p>Invokes this API to obtain table info in the data lake.</p>
      * 
      * @param request GetDataLakeTableRequest
      * @return GetDataLakeTableResponse
@@ -13275,6 +13275,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>对应控制台 /knowledge/job/inventory/list，分页查询当前租户下的资产盘点任务历史，支持按任务 ID、创建人关键词及状态筛选</p>
+     * 
+     * <b>summary</b> : 
+     * <p>分页查询资产盘点任务历史列表</p>
+     * 
+     * @param request ListInventoryJobsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListInventoryJobsResponse
+     */
+    public ListInventoryJobsResponse listInventoryJobsWithOptions(ListInventoryJobsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            query.put("Offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            query.put("Query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("Size", request.size);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortOrder)) {
+            query.put("SortOrder", request.sortOrder);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListInventoryJobs"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListInventoryJobsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>对应控制台 /knowledge/job/inventory/list，分页查询当前租户下的资产盘点任务历史，支持按任务 ID、创建人关键词及状态筛选</p>
+     * 
+     * <b>summary</b> : 
+     * <p>分页查询资产盘点任务历史列表</p>
+     * 
+     * @param request ListInventoryJobsRequest
+     * @return ListInventoryJobsResponse
+     */
+    public ListInventoryJobsResponse listInventoryJobs(ListInventoryJobsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listInventoryJobsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>  Before you call this operation, make sure that you have the access permissions on the workspace. If you do not have the access permissions on the workspace, you can contact a DMS administrator, database administrator (DBA), or workspace administrator to add you as a member of the workspace. The <a href="https://help.aliyun.com/document_detail/424759.html">AddLhMembers</a> operation can be called to add a workspace member.</p>
      * <ul>
      * <li>If you are a DMS administrator or a workspace administrator, you can query the business scenarios and task flows related to a user in a workspace based on the user ID.</li>
@@ -17515,6 +17585,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SearchDatabaseResponse searchDatabase(SearchDatabaseRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.searchDatabaseWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>对应控制台 /knowledge/job/inventory/asset，分页查询指定盘点任务产出的表级资产信息，支持关键词筛选与排序</p>
+     * 
+     * <b>summary</b> : 
+     * <p>分页查询盘点任务下的表资产列表</p>
+     * 
+     * @param request SearchInventoryAssetRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SearchInventoryAssetResponse
+     */
+    public SearchInventoryAssetResponse searchInventoryAssetWithOptions(SearchInventoryAssetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            query.put("Offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            query.put("Query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("Size", request.size);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortOrder)) {
+            query.put("SortOrder", request.sortOrder);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SearchInventoryAsset"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchInventoryAssetResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>对应控制台 /knowledge/job/inventory/asset，分页查询指定盘点任务产出的表级资产信息，支持关键词筛选与排序</p>
+     * 
+     * <b>summary</b> : 
+     * <p>分页查询盘点任务下的表资产列表</p>
+     * 
+     * @param request SearchInventoryAssetRequest
+     * @return SearchInventoryAssetResponse
+     */
+    public SearchInventoryAssetResponse searchInventoryAsset(SearchInventoryAssetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.searchInventoryAssetWithOptions(request, runtime);
     }
 
     /**
