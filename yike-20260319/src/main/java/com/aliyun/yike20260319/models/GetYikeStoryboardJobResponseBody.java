@@ -4,6 +4,9 @@ package com.aliyun.yike20260319.models;
 import com.aliyun.tea.*;
 
 public class GetYikeStoryboardJobResponseBody extends TeaModel {
+    @NameInMap("JobCredit")
+    public GetYikeStoryboardJobResponseBodyJobCredit jobCredit;
+
     /**
      * <strong>example:</strong>
      * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
@@ -34,6 +37,14 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
     public static GetYikeStoryboardJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetYikeStoryboardJobResponseBody self = new GetYikeStoryboardJobResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetYikeStoryboardJobResponseBody setJobCredit(GetYikeStoryboardJobResponseBodyJobCredit jobCredit) {
+        this.jobCredit = jobCredit;
+        return this;
+    }
+    public GetYikeStoryboardJobResponseBodyJobCredit getJobCredit() {
+        return this.jobCredit;
     }
 
     public GetYikeStoryboardJobResponseBody setJobId(String jobId) {
@@ -74,6 +85,74 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class GetYikeStoryboardJobResponseBodyJobCredit extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10.0</p>
+         */
+        @NameInMap("ElementImageGeneration")
+        public String elementImageGeneration;
+
+        /**
+         * <strong>example:</strong>
+         * <p>200.2</p>
+         */
+        @NameInMap("TotalCreditCost")
+        public String totalCreditCost;
+
+        /**
+         * <strong>example:</strong>
+         * <p>10.2</p>
+         */
+        @NameInMap("VideoComposition")
+        public String videoComposition;
+
+        /**
+         * <strong>example:</strong>
+         * <p>180.0</p>
+         */
+        @NameInMap("VideoGeneration")
+        public String videoGeneration;
+
+        public static GetYikeStoryboardJobResponseBodyJobCredit build(java.util.Map<String, ?> map) throws Exception {
+            GetYikeStoryboardJobResponseBodyJobCredit self = new GetYikeStoryboardJobResponseBodyJobCredit();
+            return TeaModel.build(map, self);
+        }
+
+        public GetYikeStoryboardJobResponseBodyJobCredit setElementImageGeneration(String elementImageGeneration) {
+            this.elementImageGeneration = elementImageGeneration;
+            return this;
+        }
+        public String getElementImageGeneration() {
+            return this.elementImageGeneration;
+        }
+
+        public GetYikeStoryboardJobResponseBodyJobCredit setTotalCreditCost(String totalCreditCost) {
+            this.totalCreditCost = totalCreditCost;
+            return this;
+        }
+        public String getTotalCreditCost() {
+            return this.totalCreditCost;
+        }
+
+        public GetYikeStoryboardJobResponseBodyJobCredit setVideoComposition(String videoComposition) {
+            this.videoComposition = videoComposition;
+            return this;
+        }
+        public String getVideoComposition() {
+            return this.videoComposition;
+        }
+
+        public GetYikeStoryboardJobResponseBodyJobCredit setVideoGeneration(String videoGeneration) {
+            this.videoGeneration = videoGeneration;
+            return this;
+        }
+        public String getVideoGeneration() {
+            return this.videoGeneration;
+        }
+
     }
 
     public static class GetYikeStoryboardJobResponseBodyJobParams extends TeaModel {
