@@ -80,7 +80,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a network path in the cloud for reachability analysis.</p>
+     * <p>Creates a network path for reachability analysis.</p>
      * 
      * @param request CreateNetworkPathRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -170,7 +170,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a network path in the cloud for reachability analysis.</p>
+     * <p>Creates a network path for reachability analysis.</p>
      * 
      * @param request CreateNetworkPathRequest
      * @return CreateNetworkPathResponse
@@ -1484,7 +1484,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>巡检资源类型列表</p>
      * 
-     * @param request ListNisInspectionResourceTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListNisInspectionResourceTypeResponse
      */

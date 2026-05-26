@@ -132,12 +132,21 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         @NameInMap("Bytes")
         public Double bytes;
 
+        @NameInMap("BytesIncrease")
+        public Double bytesIncrease;
+
+        @NameInMap("BytesIncreaseRatio")
+        public Double bytesIncreaseRatio;
+
         /**
          * <strong>example:</strong>
          * <p>0.2</p>
          */
         @NameInMap("BytesRate")
         public Double bytesRate;
+
+        @NameInMap("CenId")
+        public String cenId;
 
         /**
          * <strong>example:</strong>
@@ -432,12 +441,36 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
             return this.bytes;
         }
 
+        public DescribeNisTrafficRankingResponseBodyFlowRankingList setBytesIncrease(Double bytesIncrease) {
+            this.bytesIncrease = bytesIncrease;
+            return this;
+        }
+        public Double getBytesIncrease() {
+            return this.bytesIncrease;
+        }
+
+        public DescribeNisTrafficRankingResponseBodyFlowRankingList setBytesIncreaseRatio(Double bytesIncreaseRatio) {
+            this.bytesIncreaseRatio = bytesIncreaseRatio;
+            return this;
+        }
+        public Double getBytesIncreaseRatio() {
+            return this.bytesIncreaseRatio;
+        }
+
         public DescribeNisTrafficRankingResponseBodyFlowRankingList setBytesRate(Double bytesRate) {
             this.bytesRate = bytesRate;
             return this;
         }
         public Double getBytesRate() {
             return this.bytesRate;
+        }
+
+        public DescribeNisTrafficRankingResponseBodyFlowRankingList setCenId(String cenId) {
+            this.cenId = cenId;
+            return this;
+        }
+        public String getCenId() {
+            return this.cenId;
         }
 
         public DescribeNisTrafficRankingResponseBodyFlowRankingList setClientAsn(String clientAsn) {
