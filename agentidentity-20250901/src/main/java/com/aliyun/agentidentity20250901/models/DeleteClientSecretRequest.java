@@ -1,0 +1,72 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.agentidentity20250901.models;
+
+import com.aliyun.tea.*;
+
+public class DeleteClientSecretRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>client-xxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("ClientId")
+    public String clientId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>my-web-app</p>
+     */
+    @NameInMap("ClientName")
+    public String clientName;
+
+    /**
+     * <strong>example:</strong>
+     * <p>secret-xxxxxxxxxxxxxxxxxxxx</p>
+     */
+    @NameInMap("ClientSecretId")
+    public String clientSecretId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>my-agent-userpool</p>
+     */
+    @NameInMap("UserPoolName")
+    public String userPoolName;
+
+    public static DeleteClientSecretRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeleteClientSecretRequest self = new DeleteClientSecretRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public DeleteClientSecretRequest setClientId(String clientId) {
+        this.clientId = clientId;
+        return this;
+    }
+    public String getClientId() {
+        return this.clientId;
+    }
+
+    public DeleteClientSecretRequest setClientName(String clientName) {
+        this.clientName = clientName;
+        return this;
+    }
+    public String getClientName() {
+        return this.clientName;
+    }
+
+    public DeleteClientSecretRequest setClientSecretId(String clientSecretId) {
+        this.clientSecretId = clientSecretId;
+        return this;
+    }
+    public String getClientSecretId() {
+        return this.clientSecretId;
+    }
+
+    public DeleteClientSecretRequest setUserPoolName(String userPoolName) {
+        this.userPoolName = userPoolName;
+        return this;
+    }
+    public String getUserPoolName() {
+        return this.userPoolName;
+    }
+
+}

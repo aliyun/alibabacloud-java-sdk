@@ -11,6 +11,9 @@ public class GetAPIKeyCredentialProviderRequest extends TeaModel {
     @NameInMap("APIKeyCredentialProviderName")
     public String APIKeyCredentialProviderName;
 
+    @NameInMap("TokenVaultName")
+    public String tokenVaultName;
+
     public static GetAPIKeyCredentialProviderRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAPIKeyCredentialProviderRequest self = new GetAPIKeyCredentialProviderRequest();
         return TeaModel.build(map, self);
@@ -22,6 +25,14 @@ public class GetAPIKeyCredentialProviderRequest extends TeaModel {
     }
     public String getAPIKeyCredentialProviderName() {
         return this.APIKeyCredentialProviderName;
+    }
+
+    public GetAPIKeyCredentialProviderRequest setTokenVaultName(String tokenVaultName) {
+        this.tokenVaultName = tokenVaultName;
+        return this;
+    }
+    public String getTokenVaultName() {
+        return this.tokenVaultName;
     }
 
 }

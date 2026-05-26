@@ -108,6 +108,15 @@ public class ListWorkloadIdentitiesResponseBody extends TeaModel {
         @NameInMap("RoleArn")
         public String roleArn;
 
+        @NameInMap("SessionBindingEnabled")
+        public Boolean sessionBindingEnabled;
+
+        @NameInMap("SourceAgentArn")
+        public String sourceAgentArn;
+
+        @NameInMap("SourcePlatform")
+        public String sourcePlatform;
+
         /**
          * <strong>example:</strong>
          * <p>2025-12-18T06:19:17Z</p>
@@ -172,6 +181,30 @@ public class ListWorkloadIdentitiesResponseBody extends TeaModel {
         }
         public String getRoleArn() {
             return this.roleArn;
+        }
+
+        public ListWorkloadIdentitiesResponseBodyWorkloadIdentities setSessionBindingEnabled(Boolean sessionBindingEnabled) {
+            this.sessionBindingEnabled = sessionBindingEnabled;
+            return this;
+        }
+        public Boolean getSessionBindingEnabled() {
+            return this.sessionBindingEnabled;
+        }
+
+        public ListWorkloadIdentitiesResponseBodyWorkloadIdentities setSourceAgentArn(String sourceAgentArn) {
+            this.sourceAgentArn = sourceAgentArn;
+            return this;
+        }
+        public String getSourceAgentArn() {
+            return this.sourceAgentArn;
+        }
+
+        public ListWorkloadIdentitiesResponseBodyWorkloadIdentities setSourcePlatform(String sourcePlatform) {
+            this.sourcePlatform = sourcePlatform;
+            return this;
+        }
+        public String getSourcePlatform() {
+            return this.sourcePlatform;
         }
 
         public ListWorkloadIdentitiesResponseBodyWorkloadIdentities setUpdateTime(String updateTime) {

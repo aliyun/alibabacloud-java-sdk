@@ -32,6 +32,9 @@ public class UpdateWorkloadIdentityShrinkRequest extends TeaModel {
     @NameInMap("RoleArn")
     public String roleArn;
 
+    @NameInMap("SessionBindingEnabled")
+    public String sessionBindingEnabled;
+
     /**
      * <strong>example:</strong>
      * <p>agent-101</p>
@@ -74,6 +77,14 @@ public class UpdateWorkloadIdentityShrinkRequest extends TeaModel {
     }
     public String getRoleArn() {
         return this.roleArn;
+    }
+
+    public UpdateWorkloadIdentityShrinkRequest setSessionBindingEnabled(String sessionBindingEnabled) {
+        this.sessionBindingEnabled = sessionBindingEnabled;
+        return this;
+    }
+    public String getSessionBindingEnabled() {
+        return this.sessionBindingEnabled;
     }
 
     public UpdateWorkloadIdentityShrinkRequest setWorkloadIdentityName(String workloadIdentityName) {

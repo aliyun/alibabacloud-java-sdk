@@ -81,6 +81,9 @@ public class GetOAuth2CredentialProviderResponseBody extends TeaModel {
         @NameInMap("OAuth2ProviderConfig")
         public OAuth2ProviderConfig OAuth2ProviderConfig;
 
+        @NameInMap("TokenVaultName")
+        public String tokenVaultName;
+
         /**
          * <strong>example:</strong>
          * <p>2025-12-18T06:19:17Z</p>
@@ -147,6 +150,14 @@ public class GetOAuth2CredentialProviderResponseBody extends TeaModel {
         }
         public OAuth2ProviderConfig getOAuth2ProviderConfig() {
             return this.OAuth2ProviderConfig;
+        }
+
+        public GetOAuth2CredentialProviderResponseBodyOAuth2CredentialProvider setTokenVaultName(String tokenVaultName) {
+            this.tokenVaultName = tokenVaultName;
+            return this;
+        }
+        public String getTokenVaultName() {
+            return this.tokenVaultName;
         }
 
         public GetOAuth2CredentialProviderResponseBodyOAuth2CredentialProvider setUpdateTime(String updateTime) {

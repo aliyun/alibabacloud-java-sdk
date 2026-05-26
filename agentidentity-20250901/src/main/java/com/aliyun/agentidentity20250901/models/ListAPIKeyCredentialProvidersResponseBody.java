@@ -109,6 +109,9 @@ public class ListAPIKeyCredentialProvidersResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("TokenVaultName")
+        public String tokenVaultName;
+
         /**
          * <strong>example:</strong>
          * <p>2025-12-18T06:19:17Z</p>
@@ -151,6 +154,14 @@ public class ListAPIKeyCredentialProvidersResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListAPIKeyCredentialProvidersResponseBodyAPIKeyCredentialProviders setTokenVaultName(String tokenVaultName) {
+            this.tokenVaultName = tokenVaultName;
+            return this;
+        }
+        public String getTokenVaultName() {
+            return this.tokenVaultName;
         }
 
         public ListAPIKeyCredentialProvidersResponseBodyAPIKeyCredentialProviders setUpdateTime(String updateTime) {

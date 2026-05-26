@@ -7,6 +7,9 @@ public class CreateWorkloadIdentityShrinkRequest extends TeaModel {
     @NameInMap("AllowedResourceOAuth2ReturnURLs")
     public String allowedResourceOAuth2ReturnURLsShrink;
 
+    @NameInMap("CreateRAMRole")
+    public Boolean createRAMRole;
+
     /**
      * <strong>example:</strong>
      * <p>example agent</p>
@@ -28,6 +31,15 @@ public class CreateWorkloadIdentityShrinkRequest extends TeaModel {
     @NameInMap("RoleArn")
     public String roleArn;
 
+    @NameInMap("SessionBindingEnabled")
+    public Boolean sessionBindingEnabled;
+
+    @NameInMap("SourceAgentArn")
+    public String sourceAgentArn;
+
+    @NameInMap("SourcePlatform")
+    public String sourcePlatform;
+
     /**
      * <strong>example:</strong>
      * <p>agent-101</p>
@@ -46,6 +58,14 @@ public class CreateWorkloadIdentityShrinkRequest extends TeaModel {
     }
     public String getAllowedResourceOAuth2ReturnURLsShrink() {
         return this.allowedResourceOAuth2ReturnURLsShrink;
+    }
+
+    public CreateWorkloadIdentityShrinkRequest setCreateRAMRole(Boolean createRAMRole) {
+        this.createRAMRole = createRAMRole;
+        return this;
+    }
+    public Boolean getCreateRAMRole() {
+        return this.createRAMRole;
     }
 
     public CreateWorkloadIdentityShrinkRequest setDescription(String description) {
@@ -70,6 +90,30 @@ public class CreateWorkloadIdentityShrinkRequest extends TeaModel {
     }
     public String getRoleArn() {
         return this.roleArn;
+    }
+
+    public CreateWorkloadIdentityShrinkRequest setSessionBindingEnabled(Boolean sessionBindingEnabled) {
+        this.sessionBindingEnabled = sessionBindingEnabled;
+        return this;
+    }
+    public Boolean getSessionBindingEnabled() {
+        return this.sessionBindingEnabled;
+    }
+
+    public CreateWorkloadIdentityShrinkRequest setSourceAgentArn(String sourceAgentArn) {
+        this.sourceAgentArn = sourceAgentArn;
+        return this;
+    }
+    public String getSourceAgentArn() {
+        return this.sourceAgentArn;
+    }
+
+    public CreateWorkloadIdentityShrinkRequest setSourcePlatform(String sourcePlatform) {
+        this.sourcePlatform = sourcePlatform;
+        return this;
+    }
+    public String getSourcePlatform() {
+        return this.sourcePlatform;
     }
 
     public CreateWorkloadIdentityShrinkRequest setWorkloadIdentityName(String workloadIdentityName) {

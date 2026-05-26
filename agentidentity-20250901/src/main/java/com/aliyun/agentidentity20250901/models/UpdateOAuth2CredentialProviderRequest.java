@@ -37,6 +37,9 @@ public class UpdateOAuth2CredentialProviderRequest extends TeaModel {
     @NameInMap("OAuth2ProviderConfig")
     public OAuth2ProviderConfig OAuth2ProviderConfig;
 
+    @NameInMap("TokenVaultName")
+    public String tokenVaultName;
+
     public static UpdateOAuth2CredentialProviderRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateOAuth2CredentialProviderRequest self = new UpdateOAuth2CredentialProviderRequest();
         return TeaModel.build(map, self);
@@ -80,6 +83,14 @@ public class UpdateOAuth2CredentialProviderRequest extends TeaModel {
     }
     public OAuth2ProviderConfig getOAuth2ProviderConfig() {
         return this.OAuth2ProviderConfig;
+    }
+
+    public UpdateOAuth2CredentialProviderRequest setTokenVaultName(String tokenVaultName) {
+        this.tokenVaultName = tokenVaultName;
+        return this;
+    }
+    public String getTokenVaultName() {
+        return this.tokenVaultName;
     }
 
 }

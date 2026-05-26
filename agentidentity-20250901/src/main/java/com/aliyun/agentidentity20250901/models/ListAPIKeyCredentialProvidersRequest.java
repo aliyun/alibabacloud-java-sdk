@@ -18,6 +18,9 @@ public class ListAPIKeyCredentialProvidersRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("TokenVaultName")
+    public String tokenVaultName;
+
     public static ListAPIKeyCredentialProvidersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAPIKeyCredentialProvidersRequest self = new ListAPIKeyCredentialProvidersRequest();
         return TeaModel.build(map, self);
@@ -37,6 +40,14 @@ public class ListAPIKeyCredentialProvidersRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListAPIKeyCredentialProvidersRequest setTokenVaultName(String tokenVaultName) {
+        this.tokenVaultName = tokenVaultName;
+        return this;
+    }
+    public String getTokenVaultName() {
+        return this.tokenVaultName;
     }
 
 }
