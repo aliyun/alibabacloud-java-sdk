@@ -4,6 +4,10 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class GetSupabaseProjectResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoScale")
     public String autoScale;
 
@@ -16,6 +20,10 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1,100.64.XX.XX/10</p>
+     */
     @NameInMap("DBSecurityIpList")
     public String DBSecurityIpList;
 
@@ -68,12 +76,24 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eni-xxxxxx</p>
+     */
     @NameInMap("Eni")
     public String eni;
 
+    /**
+     * <strong>example:</strong>
+     * <p>v1.0.3</p>
+     */
     @NameInMap("InstanceVersion")
     public String instanceVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>POSTPAY</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
@@ -85,6 +105,13 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
      */
     @NameInMap("PrivateConnectUrl")
     public String privateConnectUrl;
+
+    /**
+     * <strong>example:</strong>
+     * <p>for-test-project</p>
+     */
+    @NameInMap("ProjectDescription")
+    public String projectDescription;
 
     /**
      * <p>The Supabase instance ID.</p>
@@ -170,6 +197,10 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
     @NameInMap("StorageSize")
     public Long storageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cloud_essd_pl0</p>
+     */
     @NameInMap("StorageType")
     public String storageType;
 
@@ -310,6 +341,14 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
     }
     public String getPrivateConnectUrl() {
         return this.privateConnectUrl;
+    }
+
+    public GetSupabaseProjectResponseBody setProjectDescription(String projectDescription) {
+        this.projectDescription = projectDescription;
+        return this;
+    }
+    public String getProjectDescription() {
+        return this.projectDescription;
     }
 
     public GetSupabaseProjectResponseBody setProjectId(String projectId) {

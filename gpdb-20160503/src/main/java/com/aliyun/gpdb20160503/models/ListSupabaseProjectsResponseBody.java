@@ -126,6 +126,10 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
     }
 
     public static class ListSupabaseProjectsResponseBodyItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("AutoScale")
         public String autoScale;
 
@@ -183,6 +187,10 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         @NameInMap("EngineVersion")
         public String engineVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2026-04-27T16:00:00Z</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
@@ -208,6 +216,9 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
          */
         @NameInMap("PrivateConnectUrl")
         public String privateConnectUrl;
+
+        @NameInMap("ProjectDescription")
+        public String projectDescription;
 
         /**
          * <p>The Supabase project ID.</p>
@@ -396,6 +407,14 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         }
         public String getPrivateConnectUrl() {
             return this.privateConnectUrl;
+        }
+
+        public ListSupabaseProjectsResponseBodyItems setProjectDescription(String projectDescription) {
+            this.projectDescription = projectDescription;
+            return this;
+        }
+        public String getProjectDescription() {
+            return this.projectDescription;
         }
 
         public ListSupabaseProjectsResponseBodyItems setProjectId(String projectId) {

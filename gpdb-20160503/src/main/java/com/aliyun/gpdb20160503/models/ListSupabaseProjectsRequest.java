@@ -22,9 +22,17 @@ public class ListSupabaseProjectsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -40,15 +48,31 @@ public class ListSupabaseProjectsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ProjectId</p>
+     */
     @NameInMap("SearchField")
     public String searchField;
 
+    /**
+     * <strong>example:</strong>
+     * <p>gp-bp***************</p>
+     */
     @NameInMap("SearchValue")
     public String searchValue;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UpdatedDate</p>
+     */
     @NameInMap("SortField")
     public String sortField;
 
+    /**
+     * <strong>example:</strong>
+     * <p>desc</p>
+     */
     @NameInMap("SortOrder")
     public String sortOrder;
 
