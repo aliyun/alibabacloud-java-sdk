@@ -21,6 +21,13 @@ public class SaveBatchTaskForDomainNameProxyServiceRequest extends TeaModel {
     public String lang;
 
     /**
+     * <strong>example:</strong>
+     * <p>cnnicRegistryService</p>
+     */
+    @NameInMap("ServiceType")
+    public String serviceType;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +62,14 @@ public class SaveBatchTaskForDomainNameProxyServiceRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public SaveBatchTaskForDomainNameProxyServiceRequest setServiceType(String serviceType) {
+        this.serviceType = serviceType;
+        return this;
+    }
+    public String getServiceType() {
+        return this.serviceType;
     }
 
     public SaveBatchTaskForDomainNameProxyServiceRequest setStatus(Boolean status) {

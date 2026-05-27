@@ -4,6 +4,13 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryDomainByDomainNameResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>UN_SUPPORT</p>
+     */
+    @NameInMap("CnnicPrivacyServiceStatus")
+    public String cnnicPrivacyServiceStatus;
+
     @NameInMap("DnsList")
     public QueryDomainByDomainNameResponseBodyDnsList dnsList;
 
@@ -171,6 +178,13 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
      */
     @NameInMap("Premium")
     public Boolean premium;
+
+    /**
+     * <strong>example:</strong>
+     * <p>UN_SUPPORT</p>
+     */
+    @NameInMap("PrivacyServiceStatus")
+    public String privacyServiceStatus;
 
     /**
      * <p>The status of real-name verification for the domain name. Valid values:</p>
@@ -346,6 +360,14 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public QueryDomainByDomainNameResponseBody setCnnicPrivacyServiceStatus(String cnnicPrivacyServiceStatus) {
+        this.cnnicPrivacyServiceStatus = cnnicPrivacyServiceStatus;
+        return this;
+    }
+    public String getCnnicPrivacyServiceStatus() {
+        return this.cnnicPrivacyServiceStatus;
+    }
+
     public QueryDomainByDomainNameResponseBody setDnsList(QueryDomainByDomainNameResponseBodyDnsList dnsList) {
         this.dnsList = dnsList;
         return this;
@@ -480,6 +502,14 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
     }
     public Boolean getPremium() {
         return this.premium;
+    }
+
+    public QueryDomainByDomainNameResponseBody setPrivacyServiceStatus(String privacyServiceStatus) {
+        this.privacyServiceStatus = privacyServiceStatus;
+        return this;
+    }
+    public String getPrivacyServiceStatus() {
+        return this.privacyServiceStatus;
     }
 
     public QueryDomainByDomainNameResponseBody setRealNameStatus(String realNameStatus) {

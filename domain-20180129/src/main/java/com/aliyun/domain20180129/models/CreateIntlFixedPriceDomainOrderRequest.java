@@ -32,6 +32,9 @@ public class CreateIntlFixedPriceDomainOrderRequest extends TeaModel {
     @NameInMap("ExpectedPrice")
     public Long expectedPrice;
 
+    @NameInMap("ProductType")
+    public Integer productType;
+
     public static CreateIntlFixedPriceDomainOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateIntlFixedPriceDomainOrderRequest self = new CreateIntlFixedPriceDomainOrderRequest();
         return TeaModel.build(map, self);
@@ -67,6 +70,14 @@ public class CreateIntlFixedPriceDomainOrderRequest extends TeaModel {
     }
     public Long getExpectedPrice() {
         return this.expectedPrice;
+    }
+
+    public CreateIntlFixedPriceDomainOrderRequest setProductType(Integer productType) {
+        this.productType = productType;
+        return this;
+    }
+    public Integer getProductType() {
+        return this.productType;
     }
 
 }

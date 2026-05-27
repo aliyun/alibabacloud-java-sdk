@@ -4,6 +4,13 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryDomainByInstanceIdResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>UN_SUPPORT</p>
+     */
+    @NameInMap("CnnicPrivacyServiceStatus")
+    public String cnnicPrivacyServiceStatus;
+
     @NameInMap("DnsList")
     public QueryDomainByInstanceIdResponseBodyDnsList dnsList;
 
@@ -118,6 +125,10 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     @NameInMap("Premium")
     public Boolean premium;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UN_SUPPORT</p>
+     */
     @NameInMap("PrivacyServiceStatus")
     public String privacyServiceStatus;
 
@@ -227,6 +238,14 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     public static QueryDomainByInstanceIdResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryDomainByInstanceIdResponseBody self = new QueryDomainByInstanceIdResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryDomainByInstanceIdResponseBody setCnnicPrivacyServiceStatus(String cnnicPrivacyServiceStatus) {
+        this.cnnicPrivacyServiceStatus = cnnicPrivacyServiceStatus;
+        return this;
+    }
+    public String getCnnicPrivacyServiceStatus() {
+        return this.cnnicPrivacyServiceStatus;
     }
 
     public QueryDomainByInstanceIdResponseBody setDnsList(QueryDomainByInstanceIdResponseBodyDnsList dnsList) {
