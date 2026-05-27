@@ -237,6 +237,77 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建 MCP 服务</p>
+     * 
+     * @param request CreateMcpServiceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateMcpServiceResponse
+     */
+    public CreateMcpServiceResponse createMcpServiceWithOptions(String name, CreateMcpServiceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.connection)) {
+            body.put("connection", request.connection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("displayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
+            body.put("enable", request.enable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mcpServiceName)) {
+            body.put("mcpServiceName", request.mcpServiceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.network)) {
+            body.put("network", request.network);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tools)) {
+            body.put("tools", request.tools);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMcpService"),
+            new TeaPair("version", "2026-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/digitalEmployee/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/mcpService"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMcpServiceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建 MCP 服务</p>
+     * 
+     * @param request CreateMcpServiceRequest
+     * @return CreateMcpServiceResponse
+     */
+    public CreateMcpServiceResponse createMcpService(String name, CreateMcpServiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createMcpServiceWithOptions(name, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建会话</p>
      * 
      * @param request CreateThreadRequest
@@ -425,6 +496,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除 MCP 服务</p>
+     * 
+     * @param request DeleteMcpServiceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteMcpServiceResponse
+     */
+    public DeleteMcpServiceResponse deleteMcpServiceWithOptions(String name, String mcpServiceName, DeleteMcpServiceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteMcpService"),
+            new TeaPair("version", "2026-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/digitalEmployee/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/mcpService/" + com.aliyun.openapiutil.Client.getEncodeParam(mcpServiceName) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteMcpServiceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除 MCP 服务</p>
+     * 
+     * @param request DeleteMcpServiceRequest
+     * @return DeleteMcpServiceResponse
+     */
+    public DeleteMcpServiceResponse deleteMcpService(String name, String mcpServiceName, DeleteMcpServiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteMcpServiceWithOptions(name, mcpServiceName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>删除会话</p>
      * 
      * @param request DeleteThreadRequest
@@ -466,7 +578,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>下载产物文件</p>
+     * <p>预览远端 MCP 工具列表</p>
+     * 
+     * @param request FetchRemoteMcpToolsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return FetchRemoteMcpToolsResponse
+     */
+    public FetchRemoteMcpToolsResponse fetchRemoteMcpToolsWithOptions(FetchRemoteMcpToolsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.connection)) {
+            body.put("connection", request.connection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.network)) {
+            body.put("network", request.network);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "FetchRemoteMcpTools"),
+            new TeaPair("version", "2026-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/mcptools"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new FetchRemoteMcpToolsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>预览远端 MCP 工具列表</p>
+     * 
+     * @param request FetchRemoteMcpToolsRequest
+     * @return FetchRemoteMcpToolsResponse
+     */
+    public FetchRemoteMcpToolsResponse fetchRemoteMcpTools(FetchRemoteMcpToolsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.fetchRemoteMcpToolsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>下载小型产物文件</p>
      * 
      * @param request GetArtifactRequest
      * @param headers map
@@ -517,7 +680,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>下载产物文件</p>
+     * <p>下载小型产物文件</p>
      * 
      * @param request GetArtifactRequest
      * @return GetArtifactResponse
@@ -614,6 +777,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getDigitalEmployeeSkillWithOptions(name, skillName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询 MCP 服务</p>
+     * 
+     * @param request GetMcpServiceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMcpServiceResponse
+     */
+    public GetMcpServiceResponse getMcpServiceWithOptions(String name, String mcpServiceName, GetMcpServiceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMcpService"),
+            new TeaPair("version", "2026-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/digitalEmployee/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/mcpService/" + com.aliyun.openapiutil.Client.getEncodeParam(mcpServiceName) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMcpServiceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询 MCP 服务</p>
+     * 
+     * @param request GetMcpServiceRequest
+     * @return GetMcpServiceResponse
+     */
+    public GetMcpServiceResponse getMcpService(String name, String mcpServiceName, GetMcpServiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getMcpServiceWithOptions(name, mcpServiceName, request, headers, runtime);
     }
 
     /**
@@ -938,6 +1142,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询数字员工下的 MCP 服务列表</p>
+     * 
+     * @param request ListMcpServicesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMcpServicesResponse
+     */
+    public ListMcpServicesResponse listMcpServicesWithOptions(String name, ListMcpServicesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMcpServices"),
+            new TeaPair("version", "2026-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/digitalEmployee/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/mcpServices"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMcpServicesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询数字员工下的 MCP 服务列表</p>
+     * 
+     * @param request ListMcpServicesRequest
+     * @return ListMcpServicesResponse
+     */
+    public ListMcpServicesResponse listMcpServices(String name, ListMcpServicesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMcpServicesWithOptions(name, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>列出会话</p>
      * 
      * @param tmpReq ListThreadsRequest
@@ -1137,6 +1392,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateDigitalEmployeeSkillWithOptions(name, skillName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新 MCP 服务</p>
+     * 
+     * @param request UpdateMcpServiceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateMcpServiceResponse
+     */
+    public UpdateMcpServiceResponse updateMcpServiceWithOptions(String name, String mcpServiceName, UpdateMcpServiceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.connection)) {
+            body.put("connection", request.connection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("displayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
+            body.put("enable", request.enable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.network)) {
+            body.put("network", request.network);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tools)) {
+            body.put("tools", request.tools);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateMcpService"),
+            new TeaPair("version", "2026-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/digitalEmployee/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/mcpService/" + com.aliyun.openapiutil.Client.getEncodeParam(mcpServiceName) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateMcpServiceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新 MCP 服务</p>
+     * 
+     * @param request UpdateMcpServiceRequest
+     * @return UpdateMcpServiceResponse
+     */
+    public UpdateMcpServiceResponse updateMcpService(String name, String mcpServiceName, UpdateMcpServiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateMcpServiceWithOptions(name, mcpServiceName, request, headers, runtime);
     }
 
     /**

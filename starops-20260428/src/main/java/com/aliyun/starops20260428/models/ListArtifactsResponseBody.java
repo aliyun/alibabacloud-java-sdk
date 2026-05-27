@@ -4,6 +4,10 @@ package com.aliyun.starops20260428.models;
 import com.aliyun.tea.*;
 
 public class ListArtifactsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>[{&quot;path&quot;:&quot;reports/summary.pdf&quot;,&quot;size&quot;:1024,&quot;lastModified&quot;:&quot;2026-05-25T08:00:00Z&quot;,&quot;isDirectory&quot;:false}]</p>
+     */
     @NameInMap("artifacts")
     public java.util.List<ListArtifactsResponseBodyArtifacts> artifacts;
 
