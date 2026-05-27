@@ -5,13 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetDatasetResourceUrlRequest extends TeaModel {
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>730</p>
      */
     @NameInMap("datasetId")
-    public Long datasetId;
+    public String datasetId;
 
     /**
      * <p>This parameter is required.</p>
@@ -27,11 +25,11 @@ public class GetDatasetResourceUrlRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetDatasetResourceUrlRequest setDatasetId(Long datasetId) {
+    public GetDatasetResourceUrlRequest setDatasetId(String datasetId) {
         this.datasetId = datasetId;
         return this;
     }
-    public Long getDatasetId() {
+    public String getDatasetId() {
         return this.datasetId;
     }
 

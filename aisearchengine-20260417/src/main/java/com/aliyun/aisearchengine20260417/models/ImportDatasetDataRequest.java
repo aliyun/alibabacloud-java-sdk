@@ -5,13 +5,11 @@ import com.aliyun.tea.*;
 
 public class ImportDatasetDataRequest extends TeaModel {
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>730</p>
      */
     @NameInMap("datasetId")
-    public Long datasetId;
+    public String datasetId;
 
     /**
      * <p>This parameter is required.</p>
@@ -24,11 +22,11 @@ public class ImportDatasetDataRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ImportDatasetDataRequest setDatasetId(Long datasetId) {
+    public ImportDatasetDataRequest setDatasetId(String datasetId) {
         this.datasetId = datasetId;
         return this;
     }
-    public Long getDatasetId() {
+    public String getDatasetId() {
         return this.datasetId;
     }
 
