@@ -101,9 +101,17 @@ public class ListWuyingServerResponseBody extends TeaModel {
         @NameInMap("DataDiskCategory")
         public String dataDiskCategory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>d-bp1234567890abcde</p>
+         */
         @NameInMap("DataDiskId")
         public String dataDiskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("DataDiskNo")
         public String dataDiskNo;
 
@@ -214,6 +222,44 @@ public class ListWuyingServerResponseBody extends TeaModel {
 
     }
 
+    public static class ListWuyingServerResponseBodyWuyingServerListPrivateIpSets extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("Primary")
+        public Boolean primary;
+
+        /**
+         * <strong>example:</strong>
+         * <p>10.0.0.1</p>
+         */
+        @NameInMap("PrivateIpAddress")
+        public String privateIpAddress;
+
+        public static ListWuyingServerResponseBodyWuyingServerListPrivateIpSets build(java.util.Map<String, ?> map) throws Exception {
+            ListWuyingServerResponseBodyWuyingServerListPrivateIpSets self = new ListWuyingServerResponseBodyWuyingServerListPrivateIpSets();
+            return TeaModel.build(map, self);
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerListPrivateIpSets setPrimary(Boolean primary) {
+            this.primary = primary;
+            return this;
+        }
+        public Boolean getPrimary() {
+            return this.primary;
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerListPrivateIpSets setPrivateIpAddress(String privateIpAddress) {
+            this.privateIpAddress = privateIpAddress;
+            return this;
+        }
+        public String getPrivateIpAddress() {
+            return this.privateIpAddress;
+        }
+
+    }
+
     public static class ListWuyingServerResponseBodyWuyingServerListServerInstanceTypeInfo extends TeaModel {
         /**
          * <p>The number of vCPUs.</p>
@@ -242,6 +288,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
         @NameInMap("GpuMemory")
         public Integer gpuMemory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NVIDIA T4</p>
+         */
         @NameInMap("GpuSpec")
         public String gpuSpec;
 
@@ -319,9 +369,17 @@ public class ListWuyingServerResponseBody extends TeaModel {
     }
 
     public static class ListWuyingServerResponseBodyWuyingServerListSessions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2026-01-01T08:00:00Z</p>
+         */
         @NameInMap("ResourceSessionStartTime")
         public String resourceSessionStartTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user1</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -349,12 +407,24 @@ public class ListWuyingServerResponseBody extends TeaModel {
     }
 
     public static class ListWuyingServerResponseBodyWuyingServerList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Added</p>
+         */
         @NameInMap("AddVirtualNodePoolStatus")
         public String addVirtualNodePoolStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234567890123456</p>
+         */
         @NameInMap("AliUid")
         public Long aliUid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
@@ -392,6 +462,13 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public java.util.List<ListWuyingServerResponseBodyWuyingServerListDataDisk> dataDisk;
 
         /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("EniPrivateIpAddressQuantity")
+        public Integer eniPrivateIpAddressQuantity;
+
+        /**
          * <p>The time when the subscription instance expires.</p>
          * 
          * <strong>example:</strong>
@@ -400,6 +477,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2.0.0</p>
+         */
         @NameInMap("FotaVersion")
         public String fotaVersion;
 
@@ -414,6 +495,9 @@ public class ListWuyingServerResponseBody extends TeaModel {
 
         /**
          * <p>The image name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ubuntu 22.04</p>
          */
         @NameInMap("ImageName")
         public String imageName;
@@ -424,6 +508,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
         @NameInMap("InstanceInfoList")
         public java.util.List<ListWuyingServerResponseBodyWuyingServerListInstanceInfoList> instanceInfoList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.5</p>
+         */
         @NameInMap("MaxPrice")
         public Float maxPrice;
 
@@ -475,6 +563,13 @@ public class ListWuyingServerResponseBody extends TeaModel {
         @NameInMap("PolicyGroupIdList")
         public java.util.List<String> policyGroupIdList;
 
+        @NameInMap("PrivateIpSets")
+        public java.util.List<ListWuyingServerResponseBodyWuyingServerListPrivateIpSets> privateIpSets;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Connected</p>
+         */
         @NameInMap("ResourceSessionStatus")
         public String resourceSessionStatus;
 
@@ -499,6 +594,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>spot</p>
+         */
         @NameInMap("SubPayType")
         public String subPayType;
 
@@ -511,6 +610,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
         @NameInMap("SystemDiskCategory")
         public String systemDiskCategory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>d-bp1234567890abcde</p>
+         */
         @NameInMap("SystemDiskId")
         public String systemDiskId;
 
@@ -532,17 +635,39 @@ public class ListWuyingServerResponseBody extends TeaModel {
         @NameInMap("SystemDiskSize")
         public Integer systemDiskSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tg-bp1234567890abcde</p>
+         */
         @NameInMap("TimerGroupId")
         public String timerGroupId;
 
         @NameInMap("Users")
         public java.util.List<String> users;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10.0.0.100</p>
+         */
         @NameInMap("VirtualKubeletIp")
         public String virtualKubeletIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vnp-bp1234567890abcde</p>
+         */
         @NameInMap("VirtualNodePoolId")
         public String virtualNodePoolId;
+
+        @NameInMap("VkUpgradeNeeded")
+        public Boolean vkUpgradeNeeded;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
+        @NameInMap("VkVersion")
+        public String vkVersion;
 
         /**
          * <p>The ID of the workstation.</p>
@@ -621,6 +746,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
         }
         public java.util.List<ListWuyingServerResponseBodyWuyingServerListDataDisk> getDataDisk() {
             return this.dataDisk;
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerList setEniPrivateIpAddressQuantity(Integer eniPrivateIpAddressQuantity) {
+            this.eniPrivateIpAddressQuantity = eniPrivateIpAddressQuantity;
+            return this;
+        }
+        public Integer getEniPrivateIpAddressQuantity() {
+            return this.eniPrivateIpAddressQuantity;
         }
 
         public ListWuyingServerResponseBodyWuyingServerList setExpiredTime(String expiredTime) {
@@ -717,6 +850,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
         }
         public java.util.List<String> getPolicyGroupIdList() {
             return this.policyGroupIdList;
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerList setPrivateIpSets(java.util.List<ListWuyingServerResponseBodyWuyingServerListPrivateIpSets> privateIpSets) {
+            this.privateIpSets = privateIpSets;
+            return this;
+        }
+        public java.util.List<ListWuyingServerResponseBodyWuyingServerListPrivateIpSets> getPrivateIpSets() {
+            return this.privateIpSets;
         }
 
         public ListWuyingServerResponseBodyWuyingServerList setResourceSessionStatus(String resourceSessionStatus) {
@@ -829,6 +970,22 @@ public class ListWuyingServerResponseBody extends TeaModel {
         }
         public String getVirtualNodePoolId() {
             return this.virtualNodePoolId;
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerList setVkUpgradeNeeded(Boolean vkUpgradeNeeded) {
+            this.vkUpgradeNeeded = vkUpgradeNeeded;
+            return this;
+        }
+        public Boolean getVkUpgradeNeeded() {
+            return this.vkUpgradeNeeded;
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerList setVkVersion(String vkVersion) {
+            this.vkVersion = vkVersion;
+            return this;
+        }
+        public String getVkVersion() {
+            return this.vkVersion;
         }
 
         public ListWuyingServerResponseBodyWuyingServerList setWuyingServerId(String wuyingServerId) {

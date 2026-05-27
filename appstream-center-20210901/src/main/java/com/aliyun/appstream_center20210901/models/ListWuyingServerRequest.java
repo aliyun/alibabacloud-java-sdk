@@ -4,6 +4,10 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class ListWuyingServerRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Added</p>
+     */
     @NameInMap("AddVirtualNodePoolStatusList")
     public java.util.List<String> addVirtualNodePoolStatusList;
 
@@ -16,6 +20,10 @@ public class ListWuyingServerRequest extends TeaModel {
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("BizType")
     public Integer bizType;
 
@@ -64,6 +72,10 @@ public class ListWuyingServerRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>wuying_server</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
@@ -85,14 +97,25 @@ public class ListWuyingServerRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user1</p>
+     */
     @NameInMap("Users")
     public java.util.List<String> users;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vnp-bp1234567890abcde</p>
+     */
     @NameInMap("VirtualNodePoolId")
     public String virtualNodePoolId;
 
     /**
      * <p>The list of workstation IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aig-bp1234567890abcde</p>
      */
     @NameInMap("WuyingServerIdList")
     public java.util.List<String> wuyingServerIdList;

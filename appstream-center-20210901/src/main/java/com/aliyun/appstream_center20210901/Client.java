@@ -88,6 +88,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>为研发主机分配辅助私有IP</p>
+     * 
+     * @param request AssignWuyingServerPrivateAddressesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AssignWuyingServerPrivateAddressesResponse
+     */
+    public AssignWuyingServerPrivateAddressesResponse assignWuyingServerPrivateAddressesWithOptions(AssignWuyingServerPrivateAddressesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.secondaryPrivateIpAddressCount)) {
+            body.put("SecondaryPrivateIpAddressCount", request.secondaryPrivateIpAddressCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wuyingServerId)) {
+            body.put("WuyingServerId", request.wuyingServerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AssignWuyingServerPrivateAddresses"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AssignWuyingServerPrivateAddressesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>为研发主机分配辅助私有IP</p>
+     * 
+     * @param request AssignWuyingServerPrivateAddressesRequest
+     * @return AssignWuyingServerPrivateAddressesResponse
+     */
+    public AssignWuyingServerPrivateAddressesResponse assignWuyingServerPrivateAddresses(AssignWuyingServerPrivateAddressesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.assignWuyingServerPrivateAddressesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Adds assigned users to or removes assigned users from a delivery group. Only users added to the assigned user list can access App Streaming.</p>
      * 
      * @param tmpReq AuthorizeInstanceGroupRequest
@@ -4614,6 +4662,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public TagCloudResourcesResponse tagCloudResources(TagCloudResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.tagCloudResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>解绑研发主机的辅助私有IP</p>
+     * 
+     * @param request UnassignWuyingServerPrivateAddressesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UnassignWuyingServerPrivateAddressesResponse
+     */
+    public UnassignWuyingServerPrivateAddressesResponse unassignWuyingServerPrivateAddressesWithOptions(UnassignWuyingServerPrivateAddressesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.privateIpAddresses)) {
+            body.put("PrivateIpAddresses", request.privateIpAddresses);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wuyingServerId)) {
+            body.put("WuyingServerId", request.wuyingServerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UnassignWuyingServerPrivateAddresses"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UnassignWuyingServerPrivateAddressesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>解绑研发主机的辅助私有IP</p>
+     * 
+     * @param request UnassignWuyingServerPrivateAddressesRequest
+     * @return UnassignWuyingServerPrivateAddressesResponse
+     */
+    public UnassignWuyingServerPrivateAddressesResponse unassignWuyingServerPrivateAddresses(UnassignWuyingServerPrivateAddressesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.unassignWuyingServerPrivateAddressesWithOptions(request, runtime);
     }
 
     /**
