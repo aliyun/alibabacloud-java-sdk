@@ -12443,6 +12443,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Query the label List of Supabase instances</p>
+     * 
+     * @param request ListSupabaseProjectTagsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSupabaseProjectTagsResponse
+     */
+    public ListSupabaseProjectTagsResponse listSupabaseProjectTagsWithOptions(ListSupabaseProjectTagsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSupabaseProjectTags"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSupabaseProjectTagsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query the label List of Supabase instances</p>
+     * 
+     * @param request ListSupabaseProjectTagsRequest
+     * @return ListSupabaseProjectTagsResponse
+     */
+    public ListSupabaseProjectTagsResponse listSupabaseProjectTags(ListSupabaseProjectTagsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listSupabaseProjectTagsWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>  You can call this operation to query Supabase instances.</p>
      * 
@@ -14454,6 +14514,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Modify the Supabase project description</p>
+     * 
+     * @param request ModifySupabaseProjectDescriptionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifySupabaseProjectDescriptionResponse
+     */
+    public ModifySupabaseProjectDescriptionResponse modifySupabaseProjectDescriptionWithOptions(ModifySupabaseProjectDescriptionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.projectDescription)) {
+            query.put("ProjectDescription", request.projectDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifySupabaseProjectDescription"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifySupabaseProjectDescriptionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modify the Supabase project description</p>
+     * 
+     * @param request ModifySupabaseProjectDescriptionRequest
+     * @return ModifySupabaseProjectDescriptionResponse
+     */
+    public ModifySupabaseProjectDescriptionResponse modifySupabaseProjectDescription(ModifySupabaseProjectDescriptionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifySupabaseProjectDescriptionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Modify the resources of a Supabase instance. You can upgrade or decrease the quota of compute resources and scale out storage resources (disk size).</p>
      * 
      * @param request ModifySupabaseProjectResourceRequest
@@ -16118,6 +16230,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Supabase project labeling</p>
+     * 
+     * @param request TagSupabaseProjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TagSupabaseProjectResponse
+     */
+    public TagSupabaseProjectResponse tagSupabaseProjectWithOptions(TagSupabaseProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TagSupabaseProject"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TagSupabaseProjectResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Supabase project labeling</p>
+     * 
+     * @param request TagSupabaseProjectRequest
+     * @return TagSupabaseProjectResponse
+     */
+    public TagSupabaseProjectResponse tagSupabaseProject(TagSupabaseProjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.tagSupabaseProjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Generates text embeddings using an embedding model.</p>
      * 
      * @param tmpReq TextEmbeddingRequest
@@ -16382,6 +16550,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UntagResourcesResponse untagResources(UntagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.untagResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Detach labels from a Supabase instance</p>
+     * 
+     * @param request UntagSupabaseProjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UntagSupabaseProjectResponse
+     */
+    public UntagSupabaseProjectResponse untagSupabaseProjectWithOptions(UntagSupabaseProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.all)) {
+            query.put("All", request.all);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagKey)) {
+            query.put("TagKey", request.tagKey);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UntagSupabaseProject"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UntagSupabaseProjectResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Detach labels from a Supabase instance</p>
+     * 
+     * @param request UntagSupabaseProjectRequest
+     * @return UntagSupabaseProjectResponse
+     */
+    public UntagSupabaseProjectResponse untagSupabaseProject(UntagSupabaseProjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.untagSupabaseProjectWithOptions(request, runtime);
     }
 
     /**
