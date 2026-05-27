@@ -113,6 +113,12 @@ public class DescribeRequestHitResponseBody extends TeaModel {
         @NameInMap("ruleStatus")
         public String ruleStatus;
 
+        /**
+         * <p>Rule Type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT</p>
+         */
         @NameInMap("ruleType")
         public String ruleType;
 
