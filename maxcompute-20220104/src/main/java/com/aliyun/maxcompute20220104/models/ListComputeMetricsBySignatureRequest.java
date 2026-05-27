@@ -3,10 +3,8 @@ package com.aliyun.maxcompute20220104.models;
 
 import com.aliyun.tea.*;
 
-public class ListComputeMetricsByInstanceRequest extends TeaModel {
+public class ListComputeMetricsBySignatureRequest extends TeaModel {
     /**
-     * <p>The end time for the period.</p>
-     * 
      * <strong>example:</strong>
      * <p>1718590596556</p>
      */
@@ -14,8 +12,6 @@ public class ListComputeMetricsByInstanceRequest extends TeaModel {
     public Long endDate;
 
     /**
-     * <p>The job(instance) ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>20240730****ddlr</p>
      */
@@ -23,8 +19,6 @@ public class ListComputeMetricsByInstanceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The Alibaba Cloud account that is used to run the MaxCompute job.</p>
-     * 
      * <strong>example:</strong>
      * <p>ALIYUN$7632***@aliyun.com</p>
      */
@@ -32,8 +26,6 @@ public class ListComputeMetricsByInstanceRequest extends TeaModel {
     public String jobOwner;
 
     /**
-     * <p>The page number.</p>
-     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -41,23 +33,16 @@ public class ListComputeMetricsByInstanceRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
-     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("pageSize")
     public Long pageSize;
 
-    /**
-     * <p>The name of MaxCompute project.</p>
-     */
     @NameInMap("projectNames")
     public java.util.List<String> projectNames;
 
     /**
-     * <p>The signature of the SQL job.</p>
-     * 
      * <strong>example:</strong>
      * <p>ghijkl789012</p>
      */
@@ -65,32 +50,21 @@ public class ListComputeMetricsByInstanceRequest extends TeaModel {
     public String signature;
 
     /**
-     * <p>Specification types.</p>
-     */
-    @NameInMap("specCodes")
-    public java.util.List<String> specCodes;
-
-    /**
-     * <p>The start time for the period.</p>
-     * 
      * <strong>example:</strong>
      * <p>1715393576201</p>
      */
     @NameInMap("startDate")
     public Long startDate;
 
-    /**
-     * <p>Metering types.</p>
-     */
     @NameInMap("types")
     public java.util.List<String> types;
 
-    public static ListComputeMetricsByInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListComputeMetricsByInstanceRequest self = new ListComputeMetricsByInstanceRequest();
+    public static ListComputeMetricsBySignatureRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListComputeMetricsBySignatureRequest self = new ListComputeMetricsBySignatureRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListComputeMetricsByInstanceRequest setEndDate(Long endDate) {
+    public ListComputeMetricsBySignatureRequest setEndDate(Long endDate) {
         this.endDate = endDate;
         return this;
     }
@@ -98,7 +72,7 @@ public class ListComputeMetricsByInstanceRequest extends TeaModel {
         return this.endDate;
     }
 
-    public ListComputeMetricsByInstanceRequest setInstanceId(String instanceId) {
+    public ListComputeMetricsBySignatureRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -106,7 +80,7 @@ public class ListComputeMetricsByInstanceRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ListComputeMetricsByInstanceRequest setJobOwner(String jobOwner) {
+    public ListComputeMetricsBySignatureRequest setJobOwner(String jobOwner) {
         this.jobOwner = jobOwner;
         return this;
     }
@@ -114,7 +88,7 @@ public class ListComputeMetricsByInstanceRequest extends TeaModel {
         return this.jobOwner;
     }
 
-    public ListComputeMetricsByInstanceRequest setPageNumber(Long pageNumber) {
+    public ListComputeMetricsBySignatureRequest setPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -122,7 +96,7 @@ public class ListComputeMetricsByInstanceRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListComputeMetricsByInstanceRequest setPageSize(Long pageSize) {
+    public ListComputeMetricsBySignatureRequest setPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -130,7 +104,7 @@ public class ListComputeMetricsByInstanceRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListComputeMetricsByInstanceRequest setProjectNames(java.util.List<String> projectNames) {
+    public ListComputeMetricsBySignatureRequest setProjectNames(java.util.List<String> projectNames) {
         this.projectNames = projectNames;
         return this;
     }
@@ -138,7 +112,7 @@ public class ListComputeMetricsByInstanceRequest extends TeaModel {
         return this.projectNames;
     }
 
-    public ListComputeMetricsByInstanceRequest setSignature(String signature) {
+    public ListComputeMetricsBySignatureRequest setSignature(String signature) {
         this.signature = signature;
         return this;
     }
@@ -146,15 +120,7 @@ public class ListComputeMetricsByInstanceRequest extends TeaModel {
         return this.signature;
     }
 
-    public ListComputeMetricsByInstanceRequest setSpecCodes(java.util.List<String> specCodes) {
-        this.specCodes = specCodes;
-        return this;
-    }
-    public java.util.List<String> getSpecCodes() {
-        return this.specCodes;
-    }
-
-    public ListComputeMetricsByInstanceRequest setStartDate(Long startDate) {
+    public ListComputeMetricsBySignatureRequest setStartDate(Long startDate) {
         this.startDate = startDate;
         return this;
     }
@@ -162,7 +128,7 @@ public class ListComputeMetricsByInstanceRequest extends TeaModel {
         return this.startDate;
     }
 
-    public ListComputeMetricsByInstanceRequest setTypes(java.util.List<String> types) {
+    public ListComputeMetricsBySignatureRequest setTypes(java.util.List<String> types) {
         this.types = types;
         return this;
     }

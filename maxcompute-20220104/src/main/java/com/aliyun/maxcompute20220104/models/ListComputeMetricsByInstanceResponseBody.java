@@ -11,24 +11,6 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
     public ListComputeMetricsByInstanceResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>OBJECT_NOT_EXIST</p>
-     */
-    @NameInMap("errorCode")
-    public String errorCode;
-
-    /**
-     * <p>The error message.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>This object does not exist.</p>
-     */
-    @NameInMap("errorMsg")
-    public String errorMsg;
-
-    /**
      * <p>The HTTP status code.</p>
      * <ul>
      * <li>1xx: informational response. The request is received and is being processed.</li>
@@ -64,22 +46,6 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
     }
     public ListComputeMetricsByInstanceResponseBodyData getData() {
         return this.data;
-    }
-
-    public ListComputeMetricsByInstanceResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public ListComputeMetricsByInstanceResponseBody setErrorMsg(String errorMsg) {
-        this.errorMsg = errorMsg;
-        return this;
-    }
-    public String getErrorMsg() {
-        return this.errorMsg;
     }
 
     public ListComputeMetricsByInstanceResponseBody setHttpCode(Integer httpCode) {

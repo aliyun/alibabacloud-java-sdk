@@ -2496,10 +2496,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("projectNames", request.projectNames);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
-            body.put("region", request.region);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.signature)) {
             body.put("signature", request.signature);
         }
@@ -2545,6 +2541,85 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listComputeMetricsByInstanceWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>按Signature查看作业计算使用量明细</p>
+     * 
+     * @param request ListComputeMetricsBySignatureRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListComputeMetricsBySignatureResponse
+     */
+    public ListComputeMetricsBySignatureResponse listComputeMetricsBySignatureWithOptions(ListComputeMetricsBySignatureRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            body.put("endDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("instanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobOwner)) {
+            body.put("jobOwner", request.jobOwner);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectNames)) {
+            body.put("projectNames", request.projectNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signature)) {
+            body.put("signature", request.signature);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            body.put("startDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.types)) {
+            body.put("types", request.types);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListComputeMetricsBySignature"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/computeMetrics/listBySignature"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListComputeMetricsBySignatureResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>按Signature查看作业计算使用量明细</p>
+     * 
+     * @param request ListComputeMetricsBySignatureRequest
+     * @return ListComputeMetricsBySignatureResponse
+     */
+    public ListComputeMetricsBySignatureResponse listComputeMetricsBySignature(ListComputeMetricsBySignatureRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listComputeMetricsBySignatureWithOptions(request, headers, runtime);
     }
 
     /**
@@ -2641,6 +2716,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listFunctionsWithOptions(projectName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取需要进行成本分析的项目或者实例</p>
+     * 
+     * @param request ListInstancesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListInstancesResponse
+     */
+    public ListInstancesResponse listInstancesWithOptions(ListInstancesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            query.put("endDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            query.put("startDate", request.startDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListInstances"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/bills/instances"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstancesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取需要进行成本分析的项目或者实例</p>
+     * 
+     * @param request ListInstancesRequest
+     * @return ListInstancesResponse
+     */
+    public ListInstancesResponse listInstances(ListInstancesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listInstancesWithOptions(request, headers, runtime);
     }
 
     /**
@@ -3627,6 +3753,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>ListMmsTimers</p>
+     * 
+     * @param request ListMmsTimersRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMmsTimersResponse
+     */
+    public ListMmsTimersResponse listMmsTimersWithOptions(String sourceId, ListMmsTimersRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("pageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcDbName)) {
+            query.put("srcDbName", request.srcDbName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcTableName)) {
+            query.put("srcTableName", request.srcTableName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stopped)) {
+            query.put("stopped", request.stopped);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMmsTimers"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + "/timers"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMmsTimersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>ListMmsTimers</p>
+     * 
+     * @param request ListMmsTimersRequest
+     * @return ListMmsTimersResponse
+     */
+    public ListMmsTimersResponse listMmsTimers(String sourceId, ListMmsTimersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMmsTimersWithOptions(sourceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the packages in a MaxCompute project.</p>
      * 
      * @param headers map
@@ -4014,7 +4207,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ListStoragePartitionsInfoShrinkRequest request = new ListStoragePartitionsInfoShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.types)) {
-            request.typesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.types, "types", "json");
+            request.typesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.types, "types", "simple");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4746,6 +4939,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ascOrder", request.ascOrder);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.codeList)) {
+            body.put("codeList", request.codeList);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.groupList)) {
             body.put("groupList", request.groupList);
         }
@@ -4845,6 +5042,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>RetryMmsTask</p>
+     * 
+     * @param request RetryMmsTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RetryMmsTaskResponse
+     */
+    public RetryMmsTaskResponse retryMmsTaskWithOptions(String sourceId, String taskId, RetryMmsTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RetryMmsTask"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + "/tasks/" + com.aliyun.openapiutil.Client.getEncodeParam(taskId) + "/retry"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RetryMmsTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>RetryMmsTask</p>
+     * 
+     * @param request RetryMmsTaskRequest
+     * @return RetryMmsTaskResponse
+     */
+    public RetryMmsTaskResponse retryMmsTask(String sourceId, String taskId, RetryMmsTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.retryMmsTaskWithOptions(sourceId, taskId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Starts a migration job.</p>
      * 
      * @param headers map
@@ -4918,6 +5156,320 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>按实例统计或者按计费项统计费用信息</p>
+     * 
+     * @param request SumBillsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SumBillsResponse
+     */
+    public SumBillsResponse sumBillsWithOptions(SumBillsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            body.put("endDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectNames)) {
+            body.put("projectNames", request.projectNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            body.put("startDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statsType)) {
+            body.put("statsType", request.statsType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topN)) {
+            body.put("topN", request.topN);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SumBills"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/bills/sum"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SumBillsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>按实例统计或者按计费项统计费用信息</p>
+     * 
+     * @param request SumBillsRequest
+     * @return SumBillsResponse
+     */
+    public SumBillsResponse sumBills(SumBillsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.sumBillsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>按实例统计或者按计费项逐日进行费用统计</p>
+     * 
+     * @param request SumBillsByDateRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SumBillsByDateResponse
+     */
+    public SumBillsByDateResponse sumBillsByDateWithOptions(SumBillsByDateRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            body.put("endDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectNames)) {
+            body.put("projectNames", request.projectNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            body.put("startDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statsType)) {
+            body.put("statsType", request.statsType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topN)) {
+            body.put("topN", request.topN);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SumBillsByDate"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/bills/sumByDate"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SumBillsByDateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>按实例统计或者按计费项逐日进行费用统计</p>
+     * 
+     * @param request SumBillsByDateRequest
+     * @return SumBillsByDateResponse
+     */
+    public SumBillsByDateResponse sumBillsByDate(SumBillsByDateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.sumBillsByDateWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>按项目或者实例统计计算用量</p>
+     * 
+     * @param request SumComputeMetricsByRecordRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SumComputeMetricsByRecordResponse
+     */
+    public SumComputeMetricsByRecordResponse sumComputeMetricsByRecordWithOptions(SumComputeMetricsByRecordRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            body.put("endDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectNames)) {
+            body.put("projectNames", request.projectNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            body.put("startDate", request.startDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SumComputeMetricsByRecord"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/computeMetrics/sumByRecord"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SumComputeMetricsByRecordResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>按项目或者实例统计计算用量</p>
+     * 
+     * @param request SumComputeMetricsByRecordRequest
+     * @return SumComputeMetricsByRecordResponse
+     */
+    public SumComputeMetricsByRecordResponse sumComputeMetricsByRecord(SumComputeMetricsByRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.sumComputeMetricsByRecordWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>统计扫描量计算类的使用量或者CU时计算类使用量</p>
+     * 
+     * @param request SumComputeMetricsByUsageRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SumComputeMetricsByUsageResponse
+     */
+    public SumComputeMetricsByUsageResponse sumComputeMetricsByUsageWithOptions(SumComputeMetricsByUsageRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            body.put("endDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectNames)) {
+            body.put("projectNames", request.projectNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            body.put("startDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usageType)) {
+            body.put("usageType", request.usageType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SumComputeMetricsByUsage"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/computeMetrics/sumByUsage"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SumComputeMetricsByUsageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>统计扫描量计算类的使用量或者CU时计算类使用量</p>
+     * 
+     * @param request SumComputeMetricsByUsageRequest
+     * @return SumComputeMetricsByUsageResponse
+     */
+    public SumComputeMetricsByUsageResponse sumComputeMetricsByUsage(SumComputeMetricsByUsageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.sumComputeMetricsByUsageWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>按实例统或者按计费项统计的明细信息</p>
+     * 
+     * @param request SumDailyBillsByItemRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SumDailyBillsByItemResponse
+     */
+    public SumDailyBillsByItemResponse sumDailyBillsByItemWithOptions(SumDailyBillsByItemRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            body.put("endDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectNames)) {
+            body.put("projectNames", request.projectNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            body.put("startDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statsType)) {
+            body.put("statsType", request.statsType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.types)) {
+            body.put("types", request.types);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SumDailyBillsByItem"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/dailyBills/sumByItem"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SumDailyBillsByItemResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>按实例统或者按计费项统计的明细信息</p>
+     * 
+     * @param request SumDailyBillsByItemRequest
+     * @return SumDailyBillsByItemResponse
+     */
+    public SumDailyBillsByItemResponse sumDailyBillsByItem(SumDailyBillsByItemRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.sumDailyBillsByItemWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>按照project或者存储类型按天统计存储用量</p>
+     * 
      * @param request SumStorageMetricsByDateRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4934,20 +5486,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("projectNames", request.projectNames);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
-            body.put("region", request.region);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
             body.put("startDate", request.startDate);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.statsType)) {
             body.put("statsType", request.statsType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
-            body.put("userId", request.userId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -4969,6 +5513,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>按照project或者存储类型按天统计存储用量</p>
+     * 
      * @param request SumStorageMetricsByDateRequest
      * @return SumStorageMetricsByDateResponse
      */
@@ -4976,6 +5523,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.sumStorageMetricsByDateWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>按项目统计各种类型存储使用量统计</p>
+     * 
+     * @param request SumStorageMetricsByTypeRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SumStorageMetricsByTypeResponse
+     */
+    public SumStorageMetricsByTypeResponse sumStorageMetricsByTypeWithOptions(SumStorageMetricsByTypeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            body.put("endDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectNames)) {
+            body.put("projectNames", request.projectNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            body.put("startDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statsType)) {
+            body.put("statsType", request.statsType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SumStorageMetricsByType"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/storageMetrics/sumByType"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SumStorageMetricsByTypeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>按项目统计各种类型存储使用量统计</p>
+     * 
+     * @param request SumStorageMetricsByTypeRequest
+     * @return SumStorageMetricsByTypeResponse
+     */
+    public SumStorageMetricsByTypeResponse sumStorageMetricsByType(SumStorageMetricsByTypeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.sumStorageMetricsByTypeWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>TriggerMmsTimer</p>
+     * 
+     * @param request TriggerMmsTimerRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TriggerMmsTimerResponse
+     */
+    public TriggerMmsTimerResponse triggerMmsTimerWithOptions(String sourceId, String timerId, TriggerMmsTimerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TriggerMmsTimer"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + "/timers/" + com.aliyun.openapiutil.Client.getEncodeParam(timerId) + "/trigger"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TriggerMmsTimerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>TriggerMmsTimer</p>
+     * 
+     * @param request TriggerMmsTimerRequest
+     * @return TriggerMmsTimerResponse
+     */
+    public TriggerMmsTimerResponse triggerMmsTimer(String sourceId, String timerId, TriggerMmsTimerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.triggerMmsTimerWithOptions(sourceId, timerId, request, headers, runtime);
     }
 
     /**
@@ -5197,6 +5844,242 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateMmsDataSourceWithOptions(sourceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>功能：</p>
+     * 
+     * @param request UpdateMmsDbRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateMmsDbResponse
+     */
+    public UpdateMmsDbResponse updateMmsDbWithOptions(String sourceId, String dbId, UpdateMmsDbRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dstName)) {
+            body.put("dstName", request.dstName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dstProjectName)) {
+            body.put("dstProjectName", request.dstProjectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateMmsDb"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + "/dbs/" + com.aliyun.openapiutil.Client.getEncodeParam(dbId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateMmsDbResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>功能：</p>
+     * 
+     * @param request UpdateMmsDbRequest
+     * @return UpdateMmsDbResponse
+     */
+    public UpdateMmsDbResponse updateMmsDb(String sourceId, String dbId, UpdateMmsDbRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateMmsDbWithOptions(sourceId, dbId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新表元数据</p>
+     * 
+     * @param request UpdateMmsTableRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateMmsTableResponse
+     */
+    public UpdateMmsTableResponse updateMmsTableWithOptions(String sourceId, String tableId, UpdateMmsTableRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dstName)) {
+            body.put("dstName", request.dstName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dstProjectName)) {
+            body.put("dstProjectName", request.dstProjectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dstSchemaName)) {
+            body.put("dstSchemaName", request.dstSchemaName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateMmsTable"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + "/tables/" + com.aliyun.openapiutil.Client.getEncodeParam(tableId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateMmsTableResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新表元数据</p>
+     * 
+     * @param request UpdateMmsTableRequest
+     * @return UpdateMmsTableResponse
+     */
+    public UpdateMmsTableResponse updateMmsTable(String sourceId, String tableId, UpdateMmsTableRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateMmsTableWithOptions(sourceId, tableId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新表元数据</p>
+     * 
+     * @param request UpdateMmsTablesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateMmsTablesResponse
+     */
+    public UpdateMmsTablesResponse updateMmsTablesWithOptions(String sourceId, UpdateMmsTablesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
+            body.put("dbName", request.dbName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dstProjectName)) {
+            body.put("dstProjectName", request.dstProjectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dstSchemaName)) {
+            body.put("dstSchemaName", request.dstSchemaName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableNames)) {
+            body.put("tableNames", request.tableNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tables)) {
+            body.put("tables", request.tables);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateMmsTables"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + "/tables"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateMmsTablesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新表元数据</p>
+     * 
+     * @param request UpdateMmsTablesRequest
+     * @return UpdateMmsTablesResponse
+     */
+    public UpdateMmsTablesResponse updateMmsTables(String sourceId, UpdateMmsTablesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateMmsTablesWithOptions(sourceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>UpdateMmsTimer</p>
+     * 
+     * @param request UpdateMmsTimerRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateMmsTimerResponse
+     */
+    public UpdateMmsTimerResponse updateMmsTimerWithOptions(String sourceId, String timerId, UpdateMmsTimerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleType)) {
+            body.put("scheduleType", request.scheduleType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stopped)) {
+            body.put("stopped", request.stopped);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.value)) {
+            body.put("value", request.value);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateMmsTimer"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/mms/datasources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceId) + "/timers/" + com.aliyun.openapiutil.Client.getEncodeParam(timerId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateMmsTimerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>UpdateMmsTimer</p>
+     * 
+     * @param request UpdateMmsTimerRequest
+     * @return UpdateMmsTimerResponse
+     */
+    public UpdateMmsTimerResponse updateMmsTimer(String sourceId, String timerId, UpdateMmsTimerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateMmsTimerWithOptions(sourceId, timerId, request, headers, runtime);
     }
 
     /**

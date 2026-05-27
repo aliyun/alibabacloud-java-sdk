@@ -3,7 +3,7 @@ package com.aliyun.maxcompute20220104.models;
 
 import com.aliyun.tea.*;
 
-public class SumStorageMetricsByDateRequest extends TeaModel {
+public class SumStorageMetricsByTypeRequest extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>1718590596556</p>
@@ -28,12 +28,12 @@ public class SumStorageMetricsByDateRequest extends TeaModel {
     @NameInMap("statsType")
     public String statsType;
 
-    public static SumStorageMetricsByDateRequest build(java.util.Map<String, ?> map) throws Exception {
-        SumStorageMetricsByDateRequest self = new SumStorageMetricsByDateRequest();
+    public static SumStorageMetricsByTypeRequest build(java.util.Map<String, ?> map) throws Exception {
+        SumStorageMetricsByTypeRequest self = new SumStorageMetricsByTypeRequest();
         return TeaModel.build(map, self);
     }
 
-    public SumStorageMetricsByDateRequest setEndDate(Long endDate) {
+    public SumStorageMetricsByTypeRequest setEndDate(Long endDate) {
         this.endDate = endDate;
         return this;
     }
@@ -41,7 +41,7 @@ public class SumStorageMetricsByDateRequest extends TeaModel {
         return this.endDate;
     }
 
-    public SumStorageMetricsByDateRequest setProjectNames(java.util.List<String> projectNames) {
+    public SumStorageMetricsByTypeRequest setProjectNames(java.util.List<String> projectNames) {
         this.projectNames = projectNames;
         return this;
     }
@@ -49,7 +49,7 @@ public class SumStorageMetricsByDateRequest extends TeaModel {
         return this.projectNames;
     }
 
-    public SumStorageMetricsByDateRequest setStartDate(Long startDate) {
+    public SumStorageMetricsByTypeRequest setStartDate(Long startDate) {
         this.startDate = startDate;
         return this;
     }
@@ -57,7 +57,7 @@ public class SumStorageMetricsByDateRequest extends TeaModel {
         return this.startDate;
     }
 
-    public SumStorageMetricsByDateRequest setStatsType(String statsType) {
+    public SumStorageMetricsByTypeRequest setStatsType(String statsType) {
         this.statsType = statsType;
         return this;
     }

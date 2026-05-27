@@ -3,7 +3,7 @@ package com.aliyun.maxcompute20220104.models;
 
 import com.aliyun.tea.*;
 
-public class SumStorageMetricsByDateRequest extends TeaModel {
+public class SumComputeMetricsByUsageRequest extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>1718590596556</p>
@@ -23,17 +23,17 @@ public class SumStorageMetricsByDateRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>PROJECT</p>
+     * <p>SCAN</p>
      */
-    @NameInMap("statsType")
-    public String statsType;
+    @NameInMap("usageType")
+    public String usageType;
 
-    public static SumStorageMetricsByDateRequest build(java.util.Map<String, ?> map) throws Exception {
-        SumStorageMetricsByDateRequest self = new SumStorageMetricsByDateRequest();
+    public static SumComputeMetricsByUsageRequest build(java.util.Map<String, ?> map) throws Exception {
+        SumComputeMetricsByUsageRequest self = new SumComputeMetricsByUsageRequest();
         return TeaModel.build(map, self);
     }
 
-    public SumStorageMetricsByDateRequest setEndDate(Long endDate) {
+    public SumComputeMetricsByUsageRequest setEndDate(Long endDate) {
         this.endDate = endDate;
         return this;
     }
@@ -41,7 +41,7 @@ public class SumStorageMetricsByDateRequest extends TeaModel {
         return this.endDate;
     }
 
-    public SumStorageMetricsByDateRequest setProjectNames(java.util.List<String> projectNames) {
+    public SumComputeMetricsByUsageRequest setProjectNames(java.util.List<String> projectNames) {
         this.projectNames = projectNames;
         return this;
     }
@@ -49,7 +49,7 @@ public class SumStorageMetricsByDateRequest extends TeaModel {
         return this.projectNames;
     }
 
-    public SumStorageMetricsByDateRequest setStartDate(Long startDate) {
+    public SumComputeMetricsByUsageRequest setStartDate(Long startDate) {
         this.startDate = startDate;
         return this;
     }
@@ -57,12 +57,12 @@ public class SumStorageMetricsByDateRequest extends TeaModel {
         return this.startDate;
     }
 
-    public SumStorageMetricsByDateRequest setStatsType(String statsType) {
-        this.statsType = statsType;
+    public SumComputeMetricsByUsageRequest setUsageType(String usageType) {
+        this.usageType = usageType;
         return this;
     }
-    public String getStatsType() {
-        return this.statsType;
+    public String getUsageType() {
+        return this.usageType;
     }
 
 }

@@ -9,20 +9,6 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>success</p>
-     */
-    @NameInMap("errorCode")
-    public String errorCode;
-
-    /**
-     * <strong>example:</strong>
-     * <p>this quota is not exist.</p>
-     */
-    @NameInMap("errorMsg")
-    public String errorMsg;
-
-    /**
-     * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("httpCode")
@@ -46,22 +32,6 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
     }
     public java.util.List<SumStorageMetricsByDateResponseBodyData> getData() {
         return this.data;
-    }
-
-    public SumStorageMetricsByDateResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public SumStorageMetricsByDateResponseBody setErrorMsg(String errorMsg) {
-        this.errorMsg = errorMsg;
-        return this;
-    }
-    public String getErrorMsg() {
-        return this.errorMsg;
     }
 
     public SumStorageMetricsByDateResponseBody setHttpCode(Integer httpCode) {

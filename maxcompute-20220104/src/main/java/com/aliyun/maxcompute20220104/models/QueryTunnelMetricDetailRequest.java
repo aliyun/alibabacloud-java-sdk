@@ -11,6 +11,9 @@ public class QueryTunnelMetricDetailRequest extends TeaModel {
     @NameInMap("ascOrder")
     public Boolean ascOrder;
 
+    @NameInMap("codeList")
+    public java.util.List<Long> codeList;
+
     @NameInMap("groupList")
     public java.util.List<String> groupList;
 
@@ -77,6 +80,14 @@ public class QueryTunnelMetricDetailRequest extends TeaModel {
     }
     public Boolean getAscOrder() {
         return this.ascOrder;
+    }
+
+    public QueryTunnelMetricDetailRequest setCodeList(java.util.List<Long> codeList) {
+        this.codeList = codeList;
+        return this;
+    }
+    public java.util.List<Long> getCodeList() {
+        return this.codeList;
     }
 
     public QueryTunnelMetricDetailRequest setGroupList(java.util.List<String> groupList) {
