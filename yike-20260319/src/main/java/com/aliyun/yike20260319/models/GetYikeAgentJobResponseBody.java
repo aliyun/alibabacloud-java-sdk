@@ -4,12 +4,18 @@ package com.aliyun.yike20260319.models;
 import com.aliyun.tea.*;
 
 public class GetYikeAgentJobResponseBody extends TeaModel {
+    @NameInMap("CreateTime")
+    public String createTime;
+
     /**
      * <strong>example:</strong>
      * <p>WorkflowTaskFailed</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
+
+    @NameInMap("FinishTime")
+    public String finishTime;
 
     /**
      * <strong>example:</strong>
@@ -61,12 +67,28 @@ public class GetYikeAgentJobResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetYikeAgentJobResponseBody setCreateTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    public String getCreateTime() {
+        return this.createTime;
+    }
+
     public GetYikeAgentJobResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
     public String getErrorCode() {
         return this.errorCode;
+    }
+
+    public GetYikeAgentJobResponseBody setFinishTime(String finishTime) {
+        this.finishTime = finishTime;
+        return this;
+    }
+    public String getFinishTime() {
+        return this.finishTime;
     }
 
     public GetYikeAgentJobResponseBody setJobId(String jobId) {
