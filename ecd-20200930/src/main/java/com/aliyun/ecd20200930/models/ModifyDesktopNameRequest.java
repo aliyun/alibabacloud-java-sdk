@@ -6,13 +6,15 @@ import com.aliyun.tea.*;
 public class ModifyDesktopNameRequest extends TeaModel {
     /**
      * <p>The ID of the cloud computer.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>ecd-gx2x1dhsmucyy****</p>
      */
     @NameInMap("DesktopId")
     public String desktopId;
+
+    @NameInMap("DesktopIds")
+    public java.util.List<String> desktopIds;
 
     /**
      * <p>The new name of the cloud computer. The name of the cloud computer must meet the following requirements:</p>
@@ -21,7 +23,6 @@ public class ModifyDesktopNameRequest extends TeaModel {
      * <li>The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</li>
      * <li>The name can only contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -39,6 +40,9 @@ public class ModifyDesktopNameRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("UserAssignMode")
+    public String userAssignMode;
+
     public static ModifyDesktopNameRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDesktopNameRequest self = new ModifyDesktopNameRequest();
         return TeaModel.build(map, self);
@@ -50,6 +54,14 @@ public class ModifyDesktopNameRequest extends TeaModel {
     }
     public String getDesktopId() {
         return this.desktopId;
+    }
+
+    public ModifyDesktopNameRequest setDesktopIds(java.util.List<String> desktopIds) {
+        this.desktopIds = desktopIds;
+        return this;
+    }
+    public java.util.List<String> getDesktopIds() {
+        return this.desktopIds;
     }
 
     public ModifyDesktopNameRequest setNewDesktopName(String newDesktopName) {
@@ -66,6 +78,14 @@ public class ModifyDesktopNameRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ModifyDesktopNameRequest setUserAssignMode(String userAssignMode) {
+        this.userAssignMode = userAssignMode;
+        return this;
+    }
+    public String getUserAssignMode() {
+        return this.userAssignMode;
     }
 
 }

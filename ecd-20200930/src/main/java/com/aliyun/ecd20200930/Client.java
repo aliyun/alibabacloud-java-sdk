@@ -9916,6 +9916,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeGlobalDesktopRecordsResponse describeGlobalDesktopRecordsWithOptions(DescribeGlobalDesktopRecordsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.desktopId)) {
             query.put("DesktopId", request.desktopId);
         }
@@ -16547,6 +16551,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DesktopId", request.desktopId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopIds)) {
+            query.put("DesktopIds", request.desktopIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.newHostName)) {
             query.put("NewHostName", request.newHostName);
         }
@@ -16602,12 +16610,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DesktopId", request.desktopId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopIds)) {
+            query.put("DesktopIds", request.desktopIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.newDesktopName)) {
             query.put("NewDesktopName", request.newDesktopName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userAssignMode)) {
+            query.put("UserAssignMode", request.userAssignMode);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -19010,7 +19026,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询桌面历史使用时长排行榜</p>
+     * <p>Query and sort historical usage duration by user or desktop dimension.</p>
      * 
      * @param request QueryHistoryUsageDurationRankRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19058,7 +19074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询桌面历史使用时长排行榜</p>
+     * <p>Query and sort historical usage duration by user or desktop dimension.</p>
      * 
      * @param request QueryHistoryUsageDurationRankRequest
      * @return QueryHistoryUsageDurationRankResponse

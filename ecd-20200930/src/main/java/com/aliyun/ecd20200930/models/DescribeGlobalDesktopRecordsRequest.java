@@ -4,6 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
     /**
      * <p>The cloud computer IDs. You can specify 1 to 100 office network IDs.</p>
      */
@@ -172,6 +175,14 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     public static DescribeGlobalDesktopRecordsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeGlobalDesktopRecordsRequest self = new DescribeGlobalDesktopRecordsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeGlobalDesktopRecordsRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public DescribeGlobalDesktopRecordsRequest setDesktopId(java.util.List<String> desktopId) {

@@ -6,13 +6,15 @@ import com.aliyun.tea.*;
 public class ModifyDesktopHostNameRequest extends TeaModel {
     /**
      * <p>The ID of the cloud computer.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>ecd-gx2x1dhsmucyy****</p>
      */
     @NameInMap("DesktopId")
     public String desktopId;
+
+    @NameInMap("DesktopIds")
+    public java.util.List<String> desktopIds;
 
     /**
      * <p>The new hostname of the cloud computer. The hostname must meet the following requirements:</p>
@@ -49,6 +51,14 @@ public class ModifyDesktopHostNameRequest extends TeaModel {
     }
     public String getDesktopId() {
         return this.desktopId;
+    }
+
+    public ModifyDesktopHostNameRequest setDesktopIds(java.util.List<String> desktopIds) {
+        this.desktopIds = desktopIds;
+        return this;
+    }
+    public java.util.List<String> getDesktopIds() {
+        return this.desktopIds;
     }
 
     public ModifyDesktopHostNameRequest setNewHostName(String newHostName) {
