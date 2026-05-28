@@ -277,6 +277,144 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>新增模型应用</p>
+     * 
+     * @param tmpReq AddModelApplicationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddModelApplicationResponse
+     */
+    public AddModelApplicationResponse addModelApplicationWithOptions(AddModelApplicationRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AddModelApplicationShrinkRequest request = new AddModelApplicationShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ttsConfig)) {
+            request.ttsConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ttsConfig, "TtsConfig", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationCps)) {
+            query.put("ApplicationCps", request.applicationCps);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationName)) {
+            query.put("ApplicationName", request.applicationName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callConnectedTriggerModel)) {
+            query.put("CallConnectedTriggerModel", request.callConnectedTriggerModel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dyvmsSceneName)) {
+            query.put("DyvmsSceneName", request.dyvmsSceneName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelCode)) {
+            query.put("ModelCode", request.modelCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelVersion)) {
+            query.put("ModelVersion", request.modelVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.muteActive)) {
+            query.put("MuteActive", request.muteActive);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.muteDuration)) {
+            query.put("MuteDuration", request.muteDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.muteHangupNum)) {
+            query.put("MuteHangupNum", request.muteHangupNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
+            query.put("Prompt", request.prompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qualificationId)) {
+            query.put("QualificationId", request.qualificationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qualificationName)) {
+            query.put("QualificationName", request.qualificationName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordingFile)) {
+            query.put("RecordingFile", request.recordingFile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.speechContent)) {
+            query.put("SpeechContent", request.speechContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.speechId)) {
+            query.put("SpeechId", request.speechId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startWord)) {
+            query.put("StartWord", request.startWord);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startWordType)) {
+            query.put("StartWordType", request.startWordType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ttsConfigShrink)) {
+            query.put("TtsConfig", request.ttsConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usageDesc)) {
+            query.put("UsageDesc", request.usageDesc);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddModelApplication"),
+            new TeaPair("version", "2019-10-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddModelApplicationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新增模型应用</p>
+     * 
+     * @param request AddModelApplicationRequest
+     * @return AddModelApplicationResponse
+     */
+    public AddModelApplicationResponse addModelApplication(AddModelApplicationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addModelApplicationWithOptions(request, runtime);
+    }
+
+    /**
      * @param request AddOuterAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddOuterAccountResponse
@@ -10242,6 +10380,204 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateLargeModelResponse updateLargeModel(UpdateLargeModelRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateLargeModelWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改模型应用</p>
+     * 
+     * @param tmpReq UpdateModelApplicationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateModelApplicationResponse
+     */
+    public UpdateModelApplicationResponse updateModelApplicationWithOptions(UpdateModelApplicationRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateModelApplicationShrinkRequest request = new UpdateModelApplicationShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.interruptConfig)) {
+            request.interruptConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.interruptConfig, "InterruptConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ttsConfig)) {
+            request.ttsConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ttsConfig, "TtsConfig", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationCode)) {
+            query.put("ApplicationCode", request.applicationCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationCps)) {
+            query.put("ApplicationCps", request.applicationCps);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationName)) {
+            query.put("ApplicationName", request.applicationName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callAssistantHangup)) {
+            query.put("CallAssistantHangup", request.callAssistantHangup);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callAssistantRecognize)) {
+            query.put("CallAssistantRecognize", request.callAssistantRecognize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callConnectedTriggerModel)) {
+            query.put("CallConnectedTriggerModel", request.callConnectedTriggerModel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dtmfAllowedDigits)) {
+            query.put("DtmfAllowedDigits", request.dtmfAllowedDigits);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dtmfAutoValidateEnable)) {
+            query.put("DtmfAutoValidateEnable", request.dtmfAutoValidateEnable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dtmfDigitCount)) {
+            query.put("DtmfDigitCount", request.dtmfDigitCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dtmfInputTimeout)) {
+            query.put("DtmfInputTimeout", request.dtmfInputTimeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dtmfOutOfRangeAction)) {
+            query.put("DtmfOutOfRangeAction", request.dtmfOutOfRangeAction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dtmfRetryPlayTimes)) {
+            query.put("DtmfRetryPlayTimes", request.dtmfRetryPlayTimes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dtmfRetryPromptText)) {
+            query.put("DtmfRetryPromptText", request.dtmfRetryPromptText);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dyvmsSceneName)) {
+            query.put("DyvmsSceneName", request.dyvmsSceneName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableDtmfReceive)) {
+            query.put("EnableDtmfReceive", request.enableDtmfReceive);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableMorse)) {
+            query.put("EnableMorse", request.enableMorse);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interruptConfigShrink)) {
+            query.put("InterruptConfig", request.interruptConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelCode)) {
+            query.put("ModelCode", request.modelCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelVersion)) {
+            query.put("ModelVersion", request.modelVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.muteActive)) {
+            query.put("MuteActive", request.muteActive);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.muteDuration)) {
+            query.put("MuteDuration", request.muteDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.muteHangupNum)) {
+            query.put("MuteHangupNum", request.muteHangupNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
+            query.put("Prompt", request.prompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qualificationId)) {
+            query.put("QualificationId", request.qualificationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qualificationName)) {
+            query.put("QualificationName", request.qualificationName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordingFile)) {
+            query.put("RecordingFile", request.recordingFile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionTimeout)) {
+            query.put("SessionTimeout", request.sessionTimeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.speechContent)) {
+            query.put("SpeechContent", request.speechContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.speechId)) {
+            query.put("SpeechId", request.speechId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startWord)) {
+            query.put("StartWord", request.startWord);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startWordType)) {
+            query.put("StartWordType", request.startWordType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ttsConfigShrink)) {
+            query.put("TtsConfig", request.ttsConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usageDesc)) {
+            query.put("UsageDesc", request.usageDesc);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateModelApplication"),
+            new TeaPair("version", "2019-10-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateModelApplicationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改模型应用</p>
+     * 
+     * @param request UpdateModelApplicationRequest
+     * @return UpdateModelApplicationResponse
+     */
+    public UpdateModelApplicationResponse updateModelApplication(UpdateModelApplicationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateModelApplicationWithOptions(request, runtime);
     }
 
     /**
