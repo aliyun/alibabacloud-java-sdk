@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OSSIngestionConfiguration extends TeaModel {
     /**
-     * <p>logstore</p>
+     * <p>The Logstore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class OSSIngestionConfiguration extends TeaModel {
     public String logstore;
 
     /**
-     * <p>OSS导入配置</p>
+     * <p>The source that you specify for the configurations of the OSS data import job.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("source")

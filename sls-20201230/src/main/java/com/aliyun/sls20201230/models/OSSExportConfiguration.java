@@ -5,43 +5,46 @@ import com.aliyun.tea.*;
 
 public class OSSExportConfiguration extends TeaModel {
     /**
-     * <p>时间范围开始，值设为1则表示将从日志库中第一条数据开始</p>
+     * <p>The beginning of the time range to ship data. The value 1 specifies that the data shipping job ships data from the first log in the Logstore.</p>
      * 
      * <strong>example:</strong>
-     * <p>1718380800</p>
+     * <p>123456789</p>
      */
     @NameInMap("fromTime")
     public Long fromTime;
 
     /**
-     * <p>Logstore名称</p>
+     * <p>The name of the Logstore.</p>
      * 
      * <strong>example:</strong>
-     * <p>my-logstore</p>
+     * <p>logstore-demo</p>
      */
     @NameInMap("logstore")
     public String logstore;
 
     /**
-     * <p>读SLS RAM角色roleArn，请填写您自己的角色roleArn</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role that is used to read data from Simple Log Service.</p>
      * 
      * <strong>example:</strong>
-     * <p>acs:ram::1234567890:role/aliyunlogdefaultrole</p>
+     * <p>acs:ram::123456789:role/aliyunlogdefaultrole</p>
      */
     @NameInMap("roleArn")
     public String roleArn;
 
     /**
-     * <p>投递OSS配置</p>
+     * <p>The configurations of the OSS data shipping job.</p>
      */
     @NameInMap("sink")
     public OSSExportConfigurationSink sink;
 
+    @NameInMap("sourceSecureTransport")
+    public Boolean sourceSecureTransport;
+
     /**
-     * <p>时间范围结束，值设为0则表示任务会一直运行，除非任务被手动停止。</p>
+     * <p>The end of the time range to ship data. The value 0 specifies that the data shipping job continuously ships data until the job is manually stopped.</p>
      * 
      * <strong>example:</strong>
-     * <p>1718380800</p>
+     * <p>123456789</p>
      */
     @NameInMap("toTime")
     public Long toTime;
@@ -83,6 +86,14 @@ public class OSSExportConfiguration extends TeaModel {
         return this.sink;
     }
 
+    public OSSExportConfiguration setSourceSecureTransport(Boolean sourceSecureTransport) {
+        this.sourceSecureTransport = sourceSecureTransport;
+        return this;
+    }
+    public Boolean getSourceSecureTransport() {
+        return this.sourceSecureTransport;
+    }
+
     public OSSExportConfiguration setToTime(Long toTime) {
         this.toTime = toTime;
         return this;
@@ -93,17 +104,17 @@ public class OSSExportConfiguration extends TeaModel {
 
     public static class OSSExportConfigurationSink extends TeaModel {
         /**
-         * <p>OSS Bucket</p>
+         * <p>The OSS bucket.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>my-bucket</p>
+         * <p>test-bucket</p>
          */
         @NameInMap("bucket")
         public String bucket;
 
         /**
-         * <p>投递时间，取值范围为300~900，单位为秒。</p>
+         * <p>The interval between two data shipping operations. Valid values: 300 to 900. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -112,7 +123,7 @@ public class OSSExportConfiguration extends TeaModel {
         public Long bufferInterval;
 
         /**
-         * <p>投递的文件大小，取值范围为5~256，单位为MB。</p>
+         * <p>The size of the OSS object to which data is shipped. Valid values: 5 to 256. Unit: MB.</p>
          * 
          * <strong>example:</strong>
          * <p>256</p>
@@ -121,36 +132,36 @@ public class OSSExportConfiguration extends TeaModel {
         public Long bufferSize;
 
         /**
-         * <p>支持4种压缩类型，如：snappy、gzip、zstd、none</p>
+         * <p>The compression type. Valid values: snappy, gizp, zstd, and none.</p>
          * 
          * <strong>example:</strong>
-         * <p>snappy</p>
+         * <p>snappy/gizp/zstd/none</p>
          */
         @NameInMap("compressionType")
         public String compressionType;
 
         /**
-         * <p>OSS文件内容详情，注意：该参数值为JSON格式并且应受contentType参数值的不同进行更新。</p>
+         * <p>The details of the OSS object. Note: The value of this parameter is in the JSON format and varies based on the value of contentType.</p>
          */
         @NameInMap("contentDetail")
         public java.util.Map<String, ?> contentDetail;
 
         /**
-         * <p>OSS文件存储支持4种格式，如：json、parquet、csv、orc</p>
+         * <p>The storage format of the OSS object. Valid values: json, parquet, csv, and orc.</p>
          * 
          * <strong>example:</strong>
-         * <p>csv</p>
+         * <p>json/parquet/csv/orc</p>
          */
         @NameInMap("contentType")
         public String contentType;
 
         /**
-         * <p>延迟投递时间</p>
+         * <p>The latency of data shipping.</p>
          * <blockquote>
-         * <ul>
-         * <li>该字段废弃使用。</li>
-         * </ul>
          * </blockquote>
+         * <ul>
+         * <li>This parameter is deprecated.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -160,7 +171,7 @@ public class OSSExportConfiguration extends TeaModel {
         public Long delaySec;
 
         /**
-         * <p>延迟投递时间，设置的时间不能超过目标Logstore的数据保存时间。</p>
+         * <p>The latency of data shipping. The value of this parameter cannot exceed the data retention period of the source Logstore.</p>
          * 
          * <strong>example:</strong>
          * <p>900</p>
@@ -170,58 +181,58 @@ public class OSSExportConfiguration extends TeaModel {
 
         /**
          * <ul>
-         * <li>OSS Endpoint，只能是OSS内网Endpoint，仅支持同地域。详情请参见<a href="https://help.aliyun.com/document_detail/31837.html">OSS访问域名和数据中心</a>，值为<code>http://+OSS Endpoint</code>。</li>
-         * <li>OSS-HDFS Endpoint，只能是OSS-HDFS内网Endpoint，仅支持同地域。</li>
+         * <li>The endpoint that is used to access OSS. You can specify only an internal OSS endpoint for the region where the Simple Log Service project resides. The value is in the <code>http://+OSS endpoint</code> format. For more information, see <a href="https://help.aliyun.com/document_detail/31837.html">OSS regions and endpoints</a>.</li>
+         * <li>The endpoint that is used to access OSS-HDFS. You can specify only an internal OSS-HDFS endpoint for the region where the Simple Log Service project resides.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="https://oss-cn-hangzhou-internal.aliyuncs.com">https://oss-cn-hangzhou-internal.aliyuncs.com</a></p>
+         * <p><a href="http://xxxxxxxx">http://xxxxxxxx</a></p>
          */
         @NameInMap("endpoint")
         public String endpoint;
 
         /**
-         * <p>分区格式，详情参见<a href="https://help.aliyun.com/document_detail/371934.html">分区格式</a>。</p>
+         * <p>The partition format. For more information, see <a href="https://help.aliyun.com/document_detail/371934.html">Partition formats</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>%Y/%m/%d/%H/%M</p>
+         * <p>%Y_%m_%d/good/bad</p>
          */
         @NameInMap("pathFormat")
         public String pathFormat;
 
         /**
-         * <p>分区格式类型</p>
+         * <p>The partition format type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>time</p>
+         * <p>only support time</p>
          */
         @NameInMap("pathFormatType")
         public String pathFormatType;
 
         /**
-         * <p>OSS文件前缀</p>
+         * <p>The prefix of the OSS object.</p>
          * 
          * <strong>example:</strong>
-         * <p>prefix-demo/</p>
+         * <p>prefixxxx/</p>
          */
         @NameInMap("prefix")
         public String prefix;
 
         /**
-         * <p>写OSS RAM角色roleArn，请填写您自己的角色roleArn</p>
+         * <p>The ARN of the RAM role that is used to write data to OSS.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>acs:ram::1234567890:role/aliyunlogdefaultrole</p>
+         * <p>acs:ram::xxxxxxx</p>
          */
         @NameInMap("roleArn")
         public String roleArn;
 
         /**
-         * <p>OSS文件后缀</p>
+         * <p>The suffix of the OSS object.</p>
          * 
          * <strong>example:</strong>
          * <p>.json</p>
@@ -230,7 +241,7 @@ public class OSSExportConfiguration extends TeaModel {
         public String suffix;
 
         /**
-         * <p>时区，详情参见<a href="https://help.aliyun.com/document_detail/375323.html">时区列表</a>。</p>
+         * <p>The time zone. For more information, see <a href="https://help.aliyun.com/document_detail/375323.html">Time zones</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>+0800</p>

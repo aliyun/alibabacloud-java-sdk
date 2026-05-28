@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MLDataParamPredictionsValue extends TeaModel {
     /**
-     * <p>标注</p>
+     * <p>The annotator.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -14,7 +14,7 @@ public class MLDataParamPredictionsValue extends TeaModel {
     public String annotatedBy;
 
     /**
-     * <p>更新时间</p>
+     * <p>The update time.</p>
      * 
      * <strong>example:</strong>
      * <p>1694761550</p>
@@ -23,7 +23,7 @@ public class MLDataParamPredictionsValue extends TeaModel {
     public Long updateTime;
 
     /**
-     * <p>结果</p>
+     * <p>The results.</p>
      */
     @NameInMap("results")
     public java.util.List<java.util.Map<String, String>> results;

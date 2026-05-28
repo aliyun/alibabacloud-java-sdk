@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateETLRequest extends TeaModel {
     /**
-     * <p>The detailed configuration of the data transformation task.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
     public ETLConfiguration configuration;
 
     /**
-     * <p>The description of the data transformation task.</p>
-     * 
      * <strong>example:</strong>
      * <p>this is description</p>
      */
@@ -21,7 +18,6 @@ public class UpdateETLRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The display name of the data transformation task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

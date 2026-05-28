@@ -15,7 +15,12 @@ public class UpdateProjectRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to enable the recycle bin.</p>
+     * <p>Specifies whether to enable the recycle bin feature.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -12,9 +12,6 @@ public class UpdateOSSExportRequest extends TeaModel {
 
     /**
      * <p>The description of the job.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>更新OSS投递任务</p>
      */
     @NameInMap("description")
     public String description;
@@ -23,7 +20,7 @@ public class UpdateOSSExportRequest extends TeaModel {
      * <p>The display name of the job.</p>
      * 
      * <strong>example:</strong>
-     * <p>my-oss-job</p>
+     * <p>ali-test-oss-job</p>
      */
     @NameInMap("displayName")
     public String displayName;

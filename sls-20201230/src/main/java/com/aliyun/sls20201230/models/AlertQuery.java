@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AlertQuery extends TeaModel {
     /**
-     * <p>图表名称</p>
+     * <p>The name of the chart.</p>
      * 
      * <strong>example:</strong>
      * <p>chartExmaple</p>
@@ -14,7 +14,7 @@ public class AlertQuery extends TeaModel {
     public String chartTitle;
 
     /**
-     * <p>仪表盘ID</p>
+     * <p>The ID of the dashboard.</p>
      * 
      * <strong>example:</strong>
      * <p>dashboardExample</p>
@@ -23,7 +23,7 @@ public class AlertQuery extends TeaModel {
     public String dashboardId;
 
     /**
-     * <p>结束时间</p>
+     * <p>The end of the time range to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class AlertQuery extends TeaModel {
     public String end;
 
     /**
-     * <p>是否开启独享SQL</p>
+     * <p>Specifies whether to enable Dedicated SQL.</p>
      * 
      * <strong>example:</strong>
      * <p>auto</p>
@@ -42,7 +42,7 @@ public class AlertQuery extends TeaModel {
     public String powerSqlMode;
 
     /**
-     * <p>项目名称</p>
+     * <p>The name of the project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class AlertQuery extends TeaModel {
     public String project;
 
     /**
-     * <p>查询分析语句</p>
+     * <p>The query statement.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,7 +64,7 @@ public class AlertQuery extends TeaModel {
     public String query;
 
     /**
-     * <p>区域</p>
+     * <p>The region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,13 +74,13 @@ public class AlertQuery extends TeaModel {
     public String region;
 
     /**
-     * <p>角色ARN</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the role.</p>
      */
     @NameInMap("roleArn")
     public String roleArn;
 
     /**
-     * <p>开始时间</p>
+     * <p>The beginning of the time range to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -90,7 +90,7 @@ public class AlertQuery extends TeaModel {
     public String start;
 
     /**
-     * <p>store名称</p>
+     * <p>The name of the storage.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -100,7 +100,7 @@ public class AlertQuery extends TeaModel {
     public String store;
 
     /**
-     * <p>store类型</p>
+     * <p>The storage type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -110,7 +110,7 @@ public class AlertQuery extends TeaModel {
     public String storeType;
 
     /**
-     * <p>时间片类型</p>
+     * <p>The type of the time span.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class AlertQuery extends TeaModel {
     public String timeSpanType;
 
     /**
-     * <p>特定场景告警前端使用</p>
+     * <p>The page on which you can record frontend configurations in specified scenarios.</p>
      */
     @NameInMap("ui")
     public String ui;

@@ -4,9 +4,6 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class GetAgentInstanceConfigShrinkRequest extends TeaModel {
-    /**
-     * <p>The owner of the process-level configuration.</p>
-     */
     @NameInMap("attributes")
     public String attributesShrink;
 

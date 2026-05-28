@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MLDataParam extends TeaModel {
     /**
-     * <p>数据的唯一标识</p>
+     * <p>The unique identifier of the data.</p>
      * 
      * <strong>example:</strong>
      * <p>dc74b0f569126bb310e1ba6454c351ac</p>
@@ -14,19 +14,19 @@ public class MLDataParam extends TeaModel {
     public String annotationdataId;
 
     /**
-     * <p>标注信息</p>
+     * <p>The annotations of the data.</p>
      */
     @NameInMap("annotations")
     public java.util.Map<String, MLDataParamAnnotationsValue> annotations;
 
     /**
-     * <p>数据的配置信息</p>
+     * <p>The configurations of the data.</p>
      */
     @NameInMap("config")
     public java.util.Map<String, String> config;
 
     /**
-     * <p>创建的时间</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>1695094335</p>
@@ -35,7 +35,7 @@ public class MLDataParam extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>数据内容的hash值</p>
+     * <p>The hash value of the data.</p>
      * 
      * <strong>example:</strong>
      * <p>59db060bd89468245d76416a68a510ac</p>
@@ -44,7 +44,7 @@ public class MLDataParam extends TeaModel {
     public String dataHash;
 
     /**
-     * <p>关联的数据集的id</p>
+     * <p>The ID of the associated dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>cb8cc4eb51a85e823471cdb368fae9be</p>
@@ -53,7 +53,7 @@ public class MLDataParam extends TeaModel {
     public String datasetId;
 
     /**
-     * <p>最后一次修改的时间</p>
+     * <p>The last modification time.</p>
      * 
      * <strong>example:</strong>
      * <p>1695094335</p>
@@ -62,13 +62,13 @@ public class MLDataParam extends TeaModel {
     public Long lastModifyTime;
 
     /**
-     * <p>模型预览结果信息</p>
+     * <p>The model preview results.</p>
      */
     @NameInMap("predictions")
     public java.util.Map<String, MLDataParamPredictionsValue> predictions;
 
     /**
-     * <p>数据来源</p>
+     * <p>The data source.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx/xxx/xxx/</p>
@@ -77,7 +77,7 @@ public class MLDataParam extends TeaModel {
     public String value;
 
     /**
-     * <p>数据来源格式</p>
+     * <p>The type of the data source.</p>
      * 
      * <strong>example:</strong>
      * <p>oss</p>

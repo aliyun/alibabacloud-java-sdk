@@ -4,14 +4,10 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class CreateAgentInstanceConfigRequest extends TeaModel {
-    /**
-     * <p>The process that the configuration applies to.</p>
-     */
     @NameInMap("attributes")
     public java.util.Map<String, String> attributes;
 
     /**
-     * <p>The default configurations.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +17,6 @@ public class CreateAgentInstanceConfigRequest extends TeaModel {
     public String config;
 
     /**
-     * <p>The type of the process-level configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,9 +25,6 @@ public class CreateAgentInstanceConfigRequest extends TeaModel {
     @NameInMap("configType")
     public String configType;
 
-    /**
-     * <p>The canary release environment.</p>
-     */
     @NameInMap("grayConfigs")
     public java.util.List<AgentInstanceConfigGrayConfigs> grayConfigs;
 

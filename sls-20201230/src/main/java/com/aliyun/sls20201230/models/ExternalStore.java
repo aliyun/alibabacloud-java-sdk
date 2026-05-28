@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExternalStore extends TeaModel {
     /**
-     * <p>外部存储名称，在同一Project中名称不能重复，且和Logstore名称不能重复。</p>
+     * <p>The name of the external store. The name must be unique in a project and must be different from Logstore names.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ExternalStore extends TeaModel {
     public String externalStoreName;
 
     /**
-     * <p>外部存储的配置参数。</p>
+     * <p>The parameters that are configured for the external store.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ExternalStore extends TeaModel {
     public java.util.Map<String, ?> parameter;
 
     /**
-     * <p>存储类型。固定取值为rds-vpc，表示VPC下的RDS MySQL数据库。</p>
+     * <p>The storage type. Set the value to rds-vpc, which indicates a database on an ApsaraDB RDS for MySQL instance in a virtual private cloud (VPC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

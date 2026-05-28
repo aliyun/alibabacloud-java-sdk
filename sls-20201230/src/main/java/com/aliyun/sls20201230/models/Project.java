@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Project extends TeaModel {
     /**
-     * <p>创建Project的时间。</p>
+     * <p>The time at which the project was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-07-07 14:08:09</p>
@@ -14,7 +14,7 @@ public class Project extends TeaModel {
     public String createTime;
 
     /**
-     * <p>数据冗余类型</p>
+     * <p>The data redundancy type.</p>
      * 
      * <strong>example:</strong>
      * <p>LRS</p>
@@ -23,7 +23,7 @@ public class Project extends TeaModel {
     public String dataRedundancyType;
 
     /**
-     * <p>Project描述信息。</p>
+     * <p>The description of the project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class Project extends TeaModel {
     public String description;
 
     /**
-     * <p>最后一次更新Project时间。</p>
+     * <p>The time at which the project was last modified.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-04-18 13:30:19</p>
@@ -42,7 +42,7 @@ public class Project extends TeaModel {
     public String lastModifyTime;
 
     /**
-     * <p>Project所属得阿里云账号。</p>
+     * <p>The ID of the Alibaba Cloud account that is used to create the project.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -51,7 +51,7 @@ public class Project extends TeaModel {
     public String owner;
 
     /**
-     * <p>Project名称，作为Host的一部分。Project名称在阿里云地域内全局唯一，创建后不可修改。</p>
+     * <p>The name of the project. The name is included in the value of the Host header. The name must be unique in a region. You cannot change the name after the project is created.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,8 +67,6 @@ public class Project extends TeaModel {
     public java.util.Map<String, ?> quota;
 
     /**
-     * <p>是否打开回收站</p>
-     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -76,7 +74,7 @@ public class Project extends TeaModel {
     public Boolean recycleBinEnabled;
 
     /**
-     * <p>Project所属地域。</p>
+     * <p>The region to which the project belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -85,7 +83,7 @@ public class Project extends TeaModel {
     public String region;
 
     /**
-     * <p>Project所属的资源组ID。</p>
+     * <p>The ID of the resource group to which the project belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acf******sq</p>
@@ -94,10 +92,10 @@ public class Project extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Project状态。</p>
+     * <p>The status of the project. Valid values:</p>
      * <ul>
-     * <li>Normal：正常</li>
-     * <li>Disable：禁用</li>
+     * <li>Normal</li>
+     * <li>Disable</li>
      * </ul>
      * 
      * <strong>example:</strong>

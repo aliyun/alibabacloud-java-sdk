@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Schedule extends TeaModel {
     /**
+     * <p>The cron expression.</p>
+     * 
      * <strong>example:</strong>
      * <p>0/5 * * * *</p>
      */
@@ -12,6 +14,8 @@ public class Schedule extends TeaModel {
     public String cronExpression;
 
     /**
+     * <p>The number of seconds for which the scheduled job is delayed.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -19,13 +23,17 @@ public class Schedule extends TeaModel {
     public Integer delay;
 
     /**
+     * <p>The fixed interval.</p>
+     * 
      * <strong>example:</strong>
-     * <p>60s</p>
+     * <p>1m/1h</p>
      */
     @NameInMap("interval")
     public String interval;
 
     /**
+     * <p>Specifies whether to run the scheduled job immediately.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -33,17 +41,20 @@ public class Schedule extends TeaModel {
     public Boolean runImmediately;
 
     /**
+     * <p>The time zone for the cron expression. This parameter is empty by default, which indicates that the time zone is UTC+8.</p>
+     * 
      * <strong>example:</strong>
-     * <p>+0800</p>
+     * <p>&quot;+0800&quot;</p>
      */
     @NameInMap("timeZone")
     public String timeZone;
 
     /**
+     * <p>The scheduling type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>FixedRate</p>
+     * <p>Cron</p>
      */
     @NameInMap("type")
     public String type;

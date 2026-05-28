@@ -15,6 +15,8 @@ public class S3Ingestion extends TeaModel {
     public Long createTime;
 
     /**
+     * <p>job description</p>
+     * 
      * <strong>example:</strong>
      * <p>s3 ingestion</p>
      */
@@ -22,6 +24,7 @@ public class S3Ingestion extends TeaModel {
     public String description;
 
     /**
+     * <p>job displayName</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

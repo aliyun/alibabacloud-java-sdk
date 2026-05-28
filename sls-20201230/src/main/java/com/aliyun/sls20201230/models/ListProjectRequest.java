@@ -7,17 +7,11 @@ public class ListProjectRequest extends TeaModel {
     @NameInMap("description")
     public String description;
 
-    /**
-     * <p>Specifies whether to retrieve the quota information for the project.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("fetchQuota")
     public Boolean fetchQuota;
 
     /**
-     * <p>The line from which the query starts. The default value is 0.</p>
+     * <p>The line from which the query starts. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -26,7 +20,7 @@ public class ListProjectRequest extends TeaModel {
     public Integer offset;
 
     /**
-     * <p>The name of the project. Fuzzy queries are supported.</p>
+     * <p>The name of the project.</p>
      * 
      * <strong>example:</strong>
      * <p>ali-test-project</p>
@@ -44,7 +38,7 @@ public class ListProjectRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The number of rows to return on each page for a paged query. The default value is 100. A maximum of 500 projects can be returned.</p>
+     * <p>The number of entries per page. Default value: 100. This operation can return up to 500 projects.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class LogItem extends TeaModel {
     /**
-     * <p>日志字段列表。</p>
+     * <p>The log fields.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Contents")
     public java.util.List<LogContent> contents;
 
     /**
-     * <p>日志时间。Unix时间戳格式，表示从1970-1-1 00:00:00 UTC计算起的秒数。</p>
+     * <p>The log time. The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

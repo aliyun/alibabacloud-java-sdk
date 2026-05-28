@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAnnotationLabelRequest extends TeaModel {
     /**
-     * <p>The struct of the annotation label table.</p>
+     * <p>The data structure of the request.</p>
      */
     @NameInMap("body")
     public MLLabelParam body;

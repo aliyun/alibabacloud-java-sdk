@@ -4,8 +4,11 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class OSSIngestionConfigurationSource extends TeaModel {
+    @NameInMap("advancedParameters")
+    public java.util.Map<String, ?> advancedParameters;
+
     /**
-     * <p>oss bucket</p>
+     * <p>The OSS bucket.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,17 +18,17 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public String bucket;
 
     /**
-     * <p>压缩类型</p>
+     * <p>The compression type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>none</p>
+     * <p>none,snappy,gzip</p>
      */
     @NameInMap("compressionCodec")
     public String compressionCodec;
 
     /**
-     * <p>编码类型</p>
+     * <p>The encoding type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +38,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public String encoding;
 
     /**
-     * <p>某个时间点前修改过的文件</p>
+     * <p>The point in time before which modified OSS objects are imported.</p>
      * 
      * <strong>example:</strong>
      * <p>1714360481</p>
@@ -44,7 +47,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>oss endpoint</p>
+     * <p>The OSS endpoint.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,14 +57,14 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public String endpoint;
 
     /**
-     * <p>格式</p>
+     * <p>The format.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("format")
     public java.util.Map<String, ?> format;
 
     /**
-     * <p>检查新文件周期</p>
+     * <p>The interval at which the system checks for new files.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,7 +74,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public String interval;
 
     /**
-     * <p>文件路径正则过滤</p>
+     * <p>The regular expression that is used to filter OSS objects by directory.</p>
      * 
      * <strong>example:</strong>
      * <p>.*</p>
@@ -80,7 +83,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public String pattern;
 
     /**
-     * <p>文件路径前缀过滤</p>
+     * <p>The directory of the OSS objects.</p>
      * 
      * <strong>example:</strong>
      * <p>prefix</p>
@@ -89,8 +92,6 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public String prefix;
 
     /**
-     * <p>写入处理器id</p>
-     * 
      * <strong>example:</strong>
      * <p>ingest-processor-1756802123-953901</p>
      */
@@ -98,7 +99,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public String processorId;
 
     /**
-     * <p>导入归档文件</p>
+     * <p>Specifies whether to import OSS objects of the Archive class.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -107,7 +108,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public Boolean restoreObjectEnabled;
 
     /**
-     * <p>roleArn</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the role.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::12345:role/aliyunlogdefaultrole</p>
@@ -116,7 +117,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public String roleARN;
 
     /**
-     * <p>某个时间点后修改过的文件</p>
+     * <p>The point in time after which modified OSS objects are imported.</p>
      * 
      * <strong>example:</strong>
      * <p>1714274081</p>
@@ -125,8 +126,6 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>启动上下文检索</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -134,7 +133,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public Boolean tagPackId;
 
     /**
-     * <p>提取时间字段</p>
+     * <p>The time field to extract.</p>
      * 
      * <strong>example:</strong>
      * <p><strong>time</strong></p>
@@ -143,7 +142,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public String timeField;
 
     /**
-     * <p>时间字段格式</p>
+     * <p>The format of the time field.</p>
      * 
      * <strong>example:</strong>
      * <p>yyyy-MM-dd HH:mm:ss</p>
@@ -152,7 +151,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public String timeFormat;
 
     /**
-     * <p>提取时间正则</p>
+     * <p>The regular expression that is used to extract time.</p>
      * 
      * <strong>example:</strong>
      * <p>[0-9]{0,2}\/[0-9a-zA-Z]+\/[0-9:,]+</p>
@@ -161,7 +160,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public String timePattern;
 
     /**
-     * <p>时间字段分区</p>
+     * <p>The time zone of the time field.</p>
      * 
      * <strong>example:</strong>
      * <p>GMT+08:00</p>
@@ -170,7 +169,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public String timeZone;
 
     /**
-     * <p>使用OSS元数据索引</p>
+     * <p>Specifies whether to enable OSS metadata indexing.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -182,6 +181,14 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public static OSSIngestionConfigurationSource build(java.util.Map<String, ?> map) throws Exception {
         OSSIngestionConfigurationSource self = new OSSIngestionConfigurationSource();
         return TeaModel.build(map, self);
+    }
+
+    public OSSIngestionConfigurationSource setAdvancedParameters(java.util.Map<String, ?> advancedParameters) {
+        this.advancedParameters = advancedParameters;
+        return this;
+    }
+    public java.util.Map<String, ?> getAdvancedParameters() {
+        return this.advancedParameters;
     }
 
     public OSSIngestionConfigurationSource setBucket(String bucket) {

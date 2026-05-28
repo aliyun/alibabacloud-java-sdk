@@ -4,15 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class CallAiToolsRequest extends TeaModel {
-    /**
-     * <p>Tool parameters.</p>
-     */
     @NameInMap("params")
     public java.util.Map<String, String> params;
 
-    /**
-     * <p>The target region.</p>
-     */
     @NameInMap("regionId")
     public String regionId;
 

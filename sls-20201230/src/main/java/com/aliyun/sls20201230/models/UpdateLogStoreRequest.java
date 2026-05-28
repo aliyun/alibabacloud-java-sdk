@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateLogStoreRequest extends TeaModel {
     /**
-     * <p>Specifies whether to record public IP addresses. Default value: false.</p>
+     * <p>Specifies whether to record public IP addresses. Default value: false. Valid values:</p>
      * <ul>
-     * <li><p>true: records public IP addresses.</p>
-     * </li>
-     * <li><p>false: does not record public IP addresses.</p>
-     * </li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,12 +18,10 @@ public class UpdateLogStoreRequest extends TeaModel {
     public Boolean appendMeta;
 
     /**
-     * <p>Specifies whether to automatically split a shard.</p>
+     * <p>Specifies whether to enable automatic sharding. Valid values:</p>
      * <ul>
-     * <li><p>true: automatically splits a shard.</p>
-     * </li>
-     * <li><p>false: does not automatically split a shard.</p>
-     * </li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,12 +31,10 @@ public class UpdateLogStoreRequest extends TeaModel {
     public Boolean autoSplit;
 
     /**
-     * <p>Specifies whether to enable web tracking. Default value: false.</p>
+     * <p>Specifies whether to enable the web tracking feature. Default value: false. Valid values:</p>
      * <ul>
-     * <li><p>true: enables web tracking.</p>
-     * </li>
-     * <li><p>false: does not enable web tracking.</p>
-     * </li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,14 +44,13 @@ public class UpdateLogStoreRequest extends TeaModel {
     public Boolean enableTracking;
 
     /**
-     * <p>The encryption configuration.</p>
+     * <p>The data structure of the encryption configuration.</p>
      */
     @NameInMap("encrypt_conf")
     public EncryptConf encryptConf;
 
     /**
-     * <p>The retention period of data in the hot tier of the Logstore. Minimum value: 7. Unit: days. Valid values: 7 to 3000.
-     * After the retention period of the hot tier ends, the data is moved to the Infrequent Access (IA) storage class. For more information, see <a href="https://help.aliyun.com/document_detail/308645.html">Automatic Storage Tiering</a>.</p>
+     * <p>The retention period of data in the hot storage tier of the Logstore. Valid values: 7 to 3000. Unit: days. After the retention period that is specified for the hot storage tier elapses, the data is moved to the Infrequent Access (IA) storage tier. For more information, see <a href="https://help.aliyun.com/document_detail/308645.html">Enable hot and cold-tiered storage for a Logstore</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -66,7 +59,7 @@ public class UpdateLogStoreRequest extends TeaModel {
     public Integer hotTtl;
 
     /**
-     * <p>The retention period for data in the IA storage class. Data in this storage class has no minimum retention period. Data must be stored for at least 30 days before it is moved to Archive storage.</p>
+     * <p>The retention period of data in the IA storage tier of the Logstore. You must set this parameter to at least 30 days. After the data retention period that you specify for the IA storage tier elapses, the data is moved to the Archive storage tier.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -85,9 +78,9 @@ public class UpdateLogStoreRequest extends TeaModel {
     public String logstoreName;
 
     /**
-     * <p>The maximum number of shards to which a shard can be split. The value must be an integer from 1 to 256.</p>
+     * <p>The maximum number of shards into which existing shards can be automatically split. Valid values: 1 to 256.</p>
      * <blockquote>
-     * <p>This parameter is required if autoSplit is set to true.</p>
+     * <p> If you set autoSplit to true, you must specify maxSplitShard.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -97,12 +90,10 @@ public class UpdateLogStoreRequest extends TeaModel {
     public Integer maxSplitShard;
 
     /**
-     * <p>SLS provides two types of Logstores: Standard and Query.</p>
+     * <p>The type of the Logstore. Simple Log Service provides two types of Logstores: Standard Logstores and Query Logstores. Valid values:</p>
      * <ul>
-     * <li><p><strong>standard</strong>: supports one-stop data analytics. This type of Logstore is suitable for scenarios such as real-time monitoring, interactive analysis, and building a complete observability system.</p>
-     * </li>
-     * <li><p><strong>query</strong>: supports high-performance queries. The index traffic cost of a Query Logstore is about half that of a Standard Logstore. However, a Query Logstore does not support SQL analysis. This type of Logstore is suitable for scenarios that involve large data volumes, long retention periods of weeks or months, and no log analysis.</p>
-     * </li>
+     * <li><strong>standard</strong>: Standard Logstore. This type of Logstore supports the log analysis feature and is suitable for scenarios such as real-time monitoring and interactive analysis. You can also use this type of Logstore to build a comprehensive observability system.</li>
+     * <li><strong>query</strong>: Query Logstore. This type of Logstore supports high-performance queries. The index traffic fee of a Query Logstore is approximately half that of a Standard Logstore. Query Logstores do not support SQL analysis. Query Logstores are suitable for scenarios in which the amount of data is large, the log retention period is long, or log analysis is not required. If logs are stored for weeks or months, the log retention period is considered long.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,7 +105,7 @@ public class UpdateLogStoreRequest extends TeaModel {
     /**
      * <p>The number of shards.</p>
      * <blockquote>
-     * <p>You cannot update the number of shards with this operation. To change the number of shards, call the SplitShard or MergeShards operation.</p>
+     * <p> You cannot call the UpdateLogStore operation to change the number of shards. You can call the SplitShard or MergeShards operation to change the number of shards.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -124,19 +115,14 @@ public class UpdateLogStoreRequest extends TeaModel {
     @Deprecated
     public Integer shardCount;
 
-    /**
-     * <p>The hash-based write configuration.</p>
-     */
     @NameInMap("shardingPolicy")
     public ShardingPolicy shardingPolicy;
 
     /**
-     * <p>The type of observable data. Valid values:</p>
+     * <p>The type of the observable data. Valid values:</p>
      * <ul>
-     * <li><p>None: logs. This is the default value.</p>
-     * </li>
-     * <li><p>Metrics: metrics.</p>
-     * </li>
+     * <li>None (default): log data.</li>
+     * <li>Metrics: metric data.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -147,7 +133,7 @@ public class UpdateLogStoreRequest extends TeaModel {
     public String telemetryType;
 
     /**
-     * <p>The data retention period. Unit: days. Valid values: 1 to 3650. If you set this parameter to 3650, the data is permanently retained.</p>
+     * <p>The retention period of data. Unit: days. Valid values: 1 to 3650. If you set this parameter to 3650, logs are permanently stored.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

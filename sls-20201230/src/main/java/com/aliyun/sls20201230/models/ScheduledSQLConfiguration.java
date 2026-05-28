@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ScheduledSQLConfiguration extends TeaModel {
     /**
-     * <p>支持三种配置：log2log、log2metric、metric2metric。</p>
+     * <p>The data format. Valid values: log2log, log2metric, and metric2metric.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public String dataFormat;
 
     /**
-     * <p>目标Endpoint</p>
+     * <p>The endpoint.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public String destEndpoint;
 
     /**
-     * <p>目标库</p>
+     * <p>The destination Logstore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public String destLogstore;
 
     /**
-     * <p>目标Project</p>
+     * <p>The destination project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public String destProject;
 
     /**
-     * <p>写目标授权角色ARN</p>
+     * <p>The ARN of the RAM role that is assumed to write data to the destination Logstore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,8 +62,7 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public Boolean forceComplete;
 
     /**
-     * <p>开始时间。更多信息请参见<a href="https://help.aliyun.com/document_detail/286459.html">从Logstore到MetricStore
-     * </a>。</p>
+     * <p>The start time. For more information, see <a href="https://help.aliyun.com/document_detail/286459.html">Process and store data from a Logstore to a Metricstore</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,7 +72,7 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public Long fromTime;
 
     /**
-     * <p>SQL时间窗口开始</p>
+     * <p>The start time of the SQL time window.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -90,7 +89,7 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public Long maxConcurrency;
 
     /**
-     * <p>SQL超时最大次数，取值范围1～100。</p>
+     * <p>The maximum number of SQL timeouts allowed. Valid values: 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -100,7 +99,7 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public Long maxRetries;
 
     /**
-     * <p>SQL超时最长时间，单位：秒，取值范围60~1800。</p>
+     * <p>The maximum timeout period of SQL analysis. Unit: seconds. Valid values: 60 to 1800.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -110,8 +109,7 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public Long maxRunTimeInSeconds;
 
     /**
-     * <p>SQL配置。更多信息请参见<a href="https://help.aliyun.com/document_detail/286459.html">从Logstore到MetricStore
-     * </a>。</p>
+     * <p>The SQL configurations. For more information, see <a href="https://help.aliyun.com/document_detail/286459.html">Process and store data from a Logstore to a Metricstore</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -128,7 +126,7 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public java.util.Map<String, ?> parameters;
 
     /**
-     * <p>资源池类型（enhanced表示增强型）</p>
+     * <p>The type of the resource pool. The value enhanced specifies an enhanced resource pool.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -138,7 +136,7 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public String resourcePool;
 
     /**
-     * <p>执行SQL授权角色ARN</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role that is assigned to the Scheduled SQL job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -148,7 +146,7 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public String roleArn;
 
     /**
-     * <p>定时SQL分析语句</p>
+     * <p>The query statement of the Scheduled SQL job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -160,7 +158,7 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public String script;
 
     /**
-     * <p>源库</p>
+     * <p>The source Logstore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -170,7 +168,7 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public String sourceLogstore;
 
     /**
-     * <p>SQL类型</p>
+     * <p>The type of the query statement.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -180,8 +178,7 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public String sqlType;
 
     /**
-     * <p>结束时间。更多信息请参见<a href="https://help.aliyun.com/document_detail/286459.html">从Logstore到MetricStore
-     * </a>。</p>
+     * <p>The end time. For more information, see <a href="https://help.aliyun.com/document_detail/286459.html">Process and store data from a Logstore to a Metricstore</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -191,7 +188,7 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public Long toTime;
 
     /**
-     * <p>SQL时间窗口结束</p>
+     * <p>The end time of the SQL time window.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

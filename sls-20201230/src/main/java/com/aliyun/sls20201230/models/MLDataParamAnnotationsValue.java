@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MLDataParamAnnotationsValue extends TeaModel {
     /**
-     * <p>标注人的aliuid</p>
+     * <p>The Alibaba Cloud account ID of the annotator.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx</p>
@@ -14,7 +14,7 @@ public class MLDataParamAnnotationsValue extends TeaModel {
     public String annotatedBy;
 
     /**
-     * <p>更新的时间戳</p>
+     * <p>The update time. The value is a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1694761550</p>
@@ -23,7 +23,7 @@ public class MLDataParamAnnotationsValue extends TeaModel {
     public Long updateTime;
 
     /**
-     * <p>标注结果</p>
+     * <p>The annotation results.</p>
      */
     @NameInMap("results")
     public java.util.List<java.util.Map<String, String>> results;

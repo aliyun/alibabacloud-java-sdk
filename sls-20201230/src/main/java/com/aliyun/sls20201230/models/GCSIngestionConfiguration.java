@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GCSIngestionConfiguration extends TeaModel {
     /**
+     * <p>logstore</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

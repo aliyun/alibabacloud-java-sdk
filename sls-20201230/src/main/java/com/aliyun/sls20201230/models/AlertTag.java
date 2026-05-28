@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AlertTag extends TeaModel {
     /**
-     * <p>键名</p>
+     * <p>The key name.</p>
      * 
      * <strong>example:</strong>
      * <p>title</p>
@@ -14,7 +14,7 @@ public class AlertTag extends TeaModel {
     public String key;
 
     /**
-     * <p>值</p>
+     * <p>The key value.</p>
      * 
      * <strong>example:</strong>
      * <p>example value</p>

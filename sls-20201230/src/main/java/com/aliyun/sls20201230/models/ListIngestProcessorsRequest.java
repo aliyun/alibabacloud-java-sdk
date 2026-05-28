@@ -6,15 +6,12 @@ import com.aliyun.tea.*;
 public class ListIngestProcessorsRequest extends TeaModel {
     /**
      * <p>The display name of the ingest processor.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>解析Nginx日志</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
     /**
-     * <p>The offset value. The default value is 0.</p>
+     * <p>The offset. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -32,7 +29,7 @@ public class ListIngestProcessorsRequest extends TeaModel {
     public String processorName;
 
     /**
-     * <p>The number of entries to return. The default value is 200.</p>
+     * <p>The number of entries. Default value: 200.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>

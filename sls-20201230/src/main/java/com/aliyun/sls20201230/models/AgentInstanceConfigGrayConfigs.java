@@ -4,9 +4,17 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class AgentInstanceConfigGrayConfigs extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>appVersion=&quot;1.0.0&quot;</p>
+     */
     @NameInMap("condition")
     public String condition;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;enable&quot;:true}</p>
+     */
     @NameInMap("content")
     public String content;
 

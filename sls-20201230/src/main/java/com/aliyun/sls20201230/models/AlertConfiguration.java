@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AlertConfiguration extends TeaModel {
     /**
-     * <p>告警标注</p>
+     * <p>The annotations of the alert rule.</p>
      */
     @NameInMap("annotations")
     public java.util.List<AlertTag> annotations;
 
     /**
-     * <p>是否开启自动标注</p>
+     * <p>Specifies whether to allow the system to automatically add annotations to the alert rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,13 +21,13 @@ public class AlertConfiguration extends TeaModel {
     public Boolean autoAnnotation;
 
     /**
-     * <p>告警触发条件</p>
+     * <p>The alert trigger conditions.</p>
      */
     @NameInMap("conditionConfiguration")
     public ConditionConfiguration conditionConfiguration;
 
     /**
-     * <p>告警绑定的dashboardId</p>
+     * <p>The ID of the dashboard associated with the alert rule.</p>
      * 
      * <strong>example:</strong>
      * <p>dasnboardExample</p>
@@ -36,26 +36,26 @@ public class AlertConfiguration extends TeaModel {
     public String dashboard;
 
     /**
-     * <p>分组评估配置</p>
+     * <p>The configurations of group evaluation.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("groupConfiguration")
     public GroupConfiguration groupConfiguration;
 
     /**
-     * <p>告警查询分析语句集合操作配置</p>
+     * <p>The set operation configurations for the query statements of the alert rule.</p>
      */
     @NameInMap("joinConfigurations")
     public java.util.List<JoinConfiguration> joinConfigurations;
 
     /**
-     * <p>告警标签</p>
+     * <p>The labels of the alert rule.</p>
      */
     @NameInMap("labels")
     public java.util.List<AlertTag> labels;
 
     /**
-     * <p>临时关闭时间</p>
+     * <p>The time when a paused alert rule is resumed.</p>
      * 
      * <strong>example:</strong>
      * <p>1698907508</p>
@@ -64,7 +64,7 @@ public class AlertConfiguration extends TeaModel {
     public Long muteUntil;
 
     /**
-     * <p>是否开启无数据告警</p>
+     * <p>Specifies whether to enable the no-data alert feature.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,7 +74,7 @@ public class AlertConfiguration extends TeaModel {
     public Boolean noDataFire;
 
     /**
-     * <p>无数据告警严重度</p>
+     * <p>The severity of the no-data alert.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -83,20 +83,20 @@ public class AlertConfiguration extends TeaModel {
     public Integer noDataSeverity;
 
     /**
-     * <p>SLS告警通知服务配置</p>
+     * <p>The notification configurations of Simple Log Service.</p>
      */
     @NameInMap("policyConfiguration")
     public PolicyConfiguration policyConfiguration;
 
     /**
-     * <p>查询语句列表</p>
+     * <p>The query statements.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("queryList")
     public java.util.List<AlertQuery> queryList;
 
     /**
-     * <p>是否发送恢复告警</p>
+     * <p>Specifies whether to send a recovery notification after an alert is cleared.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -106,44 +106,44 @@ public class AlertConfiguration extends TeaModel {
     public Boolean sendResolved;
 
     /**
-     * <p>告警严重度配置</p>
+     * <p>The alert severity configurations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("severityConfigurations")
     public java.util.List<SeverityConfiguration> severityConfigurations;
 
     /**
-     * <p>发送给SLS告警管理服务配置</p>
+     * <p>The configurations that allow alerts to be sent to the notification system of Simple Log Service.</p>
      */
     @NameInMap("sinkAlerthub")
     public SinkAlerthubConfiguration sinkAlerthub;
 
     /**
-     * <p>发送给云监控配置</p>
+     * <p>The configurations that allow alerts to be sent to CloudMonitor Event Center.</p>
      */
     @NameInMap("sinkCms")
     public SinkCmsConfiguration sinkCms;
 
     /**
-     * <p>发送给EventStore配置</p>
+     * <p>The configurations that allow alerts to be sent to an Eventstore.</p>
      */
     @NameInMap("sinkEventStore")
     public SinkEventStoreConfiguration sinkEventStore;
 
     /**
-     * <p>告警自定义标签</p>
+     * <p>The custom tags of the alert rule.</p>
      */
     @NameInMap("tags")
     public java.util.List<String> tags;
 
     /**
-     * <p>告警模板配置</p>
+     * <p>The alert template configurations.</p>
      */
     @NameInMap("templateConfiguration")
     public TemplateConfiguration templateConfiguration;
 
     /**
-     * <p>连续触发阈值</p>
+     * <p>The maximum number of consecutive times that the trigger condition is met.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -153,7 +153,7 @@ public class AlertConfiguration extends TeaModel {
     public Integer threshold;
 
     /**
-     * <p>告警规则类型</p>
+     * <p>The type of the alert rule.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -162,7 +162,7 @@ public class AlertConfiguration extends TeaModel {
     public String type;
 
     /**
-     * <p>版本</p>
+     * <p>The version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

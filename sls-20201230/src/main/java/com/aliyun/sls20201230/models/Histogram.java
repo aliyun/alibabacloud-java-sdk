@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Histogram extends TeaModel {
     /**
-     * <p>该子时间区间内查询到的日志条数。</p>
+     * <p>The number of logs that are generated during the subinterval.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -14,7 +14,7 @@ public class Histogram extends TeaModel {
     public Long count;
 
     /**
-     * <p>子时间区间的开始时间点。UNIX时间戳格式，表示从1970-1-1 00:00:00 UTC计算起的秒数。</p>
+     * <p>The start time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>1409529600</p>
@@ -23,10 +23,10 @@ public class Histogram extends TeaModel {
     public Integer from;
 
     /**
-     * <p>当前查询结果在该子时间区间内的结果是否完整。</p>
+     * <p>Indicates whether the query result in the subinterval is complete. Valid values:</p>
      * <ul>
-     * <li>Complete：查询已经完成，返回结果为完整结果。</li>
-     * <li>Incomplete：查询已经完成，返回结果为不完整结果，需要重复请求以获得完整结果。</li>
+     * <li>Complete: The query is successful, and the complete result is returned.</li>
+     * <li>Incomplete: The query is successful, but the query result is incomplete. To obtain the complete result, you must repeat the request.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class Histogram extends TeaModel {
     public String progress;
 
     /**
-     * <p>子时间区间的结束时间点。UNIX时间戳格式，表示从1970-1-1 00:00:00 UTC计算起的秒数。</p>
+     * <p>The end time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>1409569200</p>

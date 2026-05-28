@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class S3IngestionConfiguration extends TeaModel {
     /**
+     * <p>logstore</p>
+     * 
      * <strong>example:</strong>
      * <p>myLogstore</p>
      */

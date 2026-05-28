@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Shard extends TeaModel {
     /**
-     * <p>分区的创建时间。UNIX时间戳格式，表示从1970-1-1 00:00:00 UTC计算起的秒数。</p>
+     * <p>The time at which the shard was created. The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>1524222931</p>
@@ -14,7 +14,7 @@ public class Shard extends TeaModel {
     public Integer createTime;
 
     /**
-     * <p>分区结束的Key值。</p>
+     * <p>The end of the MD5 hash range.</p>
      * 
      * <strong>example:</strong>
      * <p>8000000000000000000000000000000</p>
@@ -23,7 +23,7 @@ public class Shard extends TeaModel {
     public String exclusiveEndKey;
 
     /**
-     * <p>Shard起始的Key值，在Shard MD5范围中包含该值。</p>
+     * <p>The start of the MD5 hash range. The value is included in the MD5 hash range of the shard.</p>
      * 
      * <strong>example:</strong>
      * <p>00000000000000000000000000000000</p>
@@ -41,10 +41,10 @@ public class Shard extends TeaModel {
     public Integer shardID;
 
     /**
-     * <p>Shard状态。创建Shard时，所有Shard状态均为readwrite状态。执行分裂或合并操作后，Shard状态变更为readonly，并生成新的readwrite状态的Shard。Shard状态不影响其数据读取的性能。readwrite状态的Shard可保证数据写入性能，readonly状态的Shard不提供数据写入服务。取值包括：</p>
+     * <p>The status of the shard. After you create a shard, the shard enters the readwrite state. If you split a shard or merge shards, the shard status changes to readonly. The newly generated shards are in the readwrite state. The status of a shard does not affect the performance of read operations that are performed on the shard. Data can be written to the shards that are in the readwrite state, but data cannot be written to the shards that are in the readonly state. Valid values:</p>
      * <ul>
-     * <li>readwrite（读写）</li>
-     * <li>readonly（只读）</li>
+     * <li>readwrite</li>
+     * <li>readonly</li>
      * </ul>
      * 
      * <strong>example:</strong>

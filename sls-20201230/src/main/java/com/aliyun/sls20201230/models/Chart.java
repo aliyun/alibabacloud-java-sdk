@@ -5,21 +5,21 @@ import com.aliyun.tea.*;
 
 public class Chart extends TeaModel {
     /**
-     * <p>action</p>
+     * <p>The action.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("action")
     public java.util.Map<String, ?> action;
 
     /**
-     * <p>图表的显示配置。</p>
+     * <p>The display configuration of the chart.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("display")
     public java.util.Map<String, ?> display;
 
     /**
-     * <p>查询配置。</p>
+     * <p>The query statement.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class Chart extends TeaModel {
     public java.util.Map<String, ?> search;
 
     /**
-     * <p>图表标题。</p>
+     * <p>The title of the chart.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class Chart extends TeaModel {
     public String title;
 
     /**
-     * <p>图表类型。</p>
+     * <p>The type of the chart.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

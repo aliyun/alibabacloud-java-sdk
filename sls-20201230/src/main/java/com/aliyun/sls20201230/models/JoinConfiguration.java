@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class JoinConfiguration extends TeaModel {
     /**
-     * <p>集合操作条件</p>
+     * <p>The condition of the set operation.</p>
      * 
      * <strong>example:</strong>
      * <p>$0.id == $1.id</p>
@@ -14,7 +14,7 @@ public class JoinConfiguration extends TeaModel {
     public String condition;
 
     /**
-     * <p>集合操作类型</p>
+     * <p>The type of the set operation.</p>
      * 
      * <strong>example:</strong>
      * <p>left_join</p>

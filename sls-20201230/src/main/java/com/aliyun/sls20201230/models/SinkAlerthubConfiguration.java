@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SinkAlerthubConfiguration extends TeaModel {
     /**
-     * <p>是否开启</p>
+     * <p>Specifies whether to send alerts.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

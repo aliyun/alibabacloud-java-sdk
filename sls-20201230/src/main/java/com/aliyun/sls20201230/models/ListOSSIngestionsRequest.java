@@ -8,8 +8,6 @@ public class ListOSSIngestionsRequest extends TeaModel {
     public String logstore;
 
     /**
-     * <p>The line from which the query starts. The default value is 0.</p>
-     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -17,8 +15,6 @@ public class ListOSSIngestionsRequest extends TeaModel {
     public Integer offset;
 
     /**
-     * <p>The number of OSS import tasks to return.</p>
-     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

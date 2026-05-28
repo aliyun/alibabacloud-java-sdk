@@ -42,7 +42,7 @@ public class ConsumerGroupUpdateCheckPointRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>False</p>
      */
     @NameInMap("forceSuccess")
     public Boolean forceSuccess;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class SeverityConfiguration extends TeaModel {
     /**
-     * <p>触发条件配置</p>
+     * <p>The trigger condition configurations.</p>
      */
     @NameInMap("evalCondition")
     public ConditionConfiguration evalCondition;
 
     /**
-     * <p>告警严重度数值</p>
+     * <p>The value of the alert severity.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>

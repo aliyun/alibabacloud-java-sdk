@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PolicyConfiguration extends TeaModel {
     /**
-     * <p>行动策略</p>
+     * <p>The action policy.</p>
      * 
      * <strong>example:</strong>
      * <p>example_action_policy</p>
@@ -14,7 +14,7 @@ public class PolicyConfiguration extends TeaModel {
     public String actionPolicyId;
 
     /**
-     * <p>告警策略</p>
+     * <p>The alert policy.</p>
      * 
      * <strong>example:</strong>
      * <p>sls.builtin.dynamic</p>
@@ -23,7 +23,7 @@ public class PolicyConfiguration extends TeaModel {
     public String alertPolicyId;
 
     /**
-     * <p>重复等待时间</p>
+     * <p>The repeat interval.</p>
      * 
      * <strong>example:</strong>
      * <p>10m</p>

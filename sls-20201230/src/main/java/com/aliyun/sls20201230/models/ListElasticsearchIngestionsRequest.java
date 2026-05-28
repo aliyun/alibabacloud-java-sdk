@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class ListElasticsearchIngestionsRequest extends TeaModel {
     /**
-     * <p>The name of the Logstore.</p>
-     * 
      * <strong>example:</strong>
      * <p>ali-test-logstore</p>
      */
@@ -14,8 +12,6 @@ public class ListElasticsearchIngestionsRequest extends TeaModel {
     public String logstore;
 
     /**
-     * <p>The line from which to start the query. The default value is 0.</p>
-     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -23,8 +19,6 @@ public class ListElasticsearchIngestionsRequest extends TeaModel {
     public Integer offset;
 
     /**
-     * <p>The number of entries to return. The default value is 10.</p>
-     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

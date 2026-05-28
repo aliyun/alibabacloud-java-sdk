@@ -4,7 +4,11 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class S3IngestionConfigurationSource extends TeaModel {
+    @NameInMap("advancedParameters")
+    public java.util.Map<String, ?> advancedParameters;
+
     /**
+     * <p>aws access key</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,7 @@ public class S3IngestionConfigurationSource extends TeaModel {
     public String awsAccessKey;
 
     /**
+     * <p>aws access key secret</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +28,7 @@ public class S3IngestionConfigurationSource extends TeaModel {
     public String awsAccessKeySecret;
 
     /**
+     * <p>s3 region</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +38,8 @@ public class S3IngestionConfigurationSource extends TeaModel {
     public String awsRegion;
 
     /**
+     * <p>sqs queue url</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://sqs.ap-northeast-1.amazonaws.com/123456788/chifan">https://sqs.ap-northeast-1.amazonaws.com/123456788/chifan</a></p>
      */
@@ -46,6 +54,7 @@ public class S3IngestionConfigurationSource extends TeaModel {
     public Boolean awsUseSQS;
 
     /**
+     * <p>s3 bucket</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -86,6 +95,8 @@ public class S3IngestionConfigurationSource extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>s3 endpoint</p>
+     * 
      * <strong>example:</strong>
      * <p>s3.us-east-1.amazonaws.com</p>
      */
@@ -183,6 +194,14 @@ public class S3IngestionConfigurationSource extends TeaModel {
     public static S3IngestionConfigurationSource build(java.util.Map<String, ?> map) throws Exception {
         S3IngestionConfigurationSource self = new S3IngestionConfigurationSource();
         return TeaModel.build(map, self);
+    }
+
+    public S3IngestionConfigurationSource setAdvancedParameters(java.util.Map<String, ?> advancedParameters) {
+        this.advancedParameters = advancedParameters;
+        return this;
+    }
+    public java.util.Map<String, ?> getAdvancedParameters() {
+        return this.advancedParameters;
     }
 
     public S3IngestionConfigurationSource setAwsAccessKey(String awsAccessKey) {

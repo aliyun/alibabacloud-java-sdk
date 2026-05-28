@@ -28,25 +28,25 @@ public class DescribeRegionsResponseBody extends TeaModel {
         public String internalEndpoint;
 
         /**
-         * <p>The public endpoint of SLS.</p>
+         * <p>The public endpoint of Simple Log Service.</p>
          */
         @NameInMap("internetEndpoint")
         public String internetEndpoint;
 
         /**
-         * <p>The internal endpoint of SLS.</p>
+         * <p>The internal endpoint of Simple Log Service.</p>
          */
         @NameInMap("intranetEndpoint")
         public String intranetEndpoint;
 
         /**
-         * <p>The name of the SLS region.</p>
+         * <p>The name of the Simple Log Service region.</p>
          */
         @NameInMap("localName")
         public String localName;
 
         /**
-         * <p>The SLS region.</p>
+         * <p>SLS region</p>
          */
         @NameInMap("region")
         public String region;

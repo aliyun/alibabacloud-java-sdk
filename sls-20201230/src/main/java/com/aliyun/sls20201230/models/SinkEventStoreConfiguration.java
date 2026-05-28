@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SinkEventStoreConfiguration extends TeaModel {
     /**
-     * <p>是否开启</p>
+     * <p>Specifies whether to send alerts.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class SinkEventStoreConfiguration extends TeaModel {
     public String endpoint;
 
     /**
-     * <p>事件库名称</p>
+     * <p>The name of the Eventstore.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleStore</p>
@@ -32,7 +32,7 @@ public class SinkEventStoreConfiguration extends TeaModel {
     public String eventStore;
 
     /**
-     * <p>项目名称</p>
+     * <p>The name of the project.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleProject</p>
@@ -41,7 +41,7 @@ public class SinkEventStoreConfiguration extends TeaModel {
     public String project;
 
     /**
-     * <p>角色</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::123456789:role/aliyunlogetlrole</p>

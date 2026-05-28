@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class Logging extends TeaModel {
     /**
-     * <p>服务日志配置列表。</p>
+     * <p>The settings of the service log feature.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("loggingDetails")
     public java.util.List<LoggingLoggingDetails> loggingDetails;
 
     /**
-     * <p>服务日志要保存到的Project名称。</p>
+     * <p>The name of the project to which service logs are stored.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class Logging extends TeaModel {
 
     public static class LoggingLoggingDetails extends TeaModel {
         /**
-         * <p>Logstore名称。</p>
+         * <p>The logstore name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -54,16 +54,16 @@ public class Logging extends TeaModel {
         public String logstore;
 
         /**
-         * <p>服务日志的种类。取值包括：</p>
+         * <p>The type of the service logs. Valid values:</p>
          * <ul>
-         * <li>consumergroup_log：消费组延迟日志</li>
-         * <li>logtail_alarm：Logtail告警日志</li>
-         * <li>operation_log：操作日志（此项服务收费）</li>
-         * <li>logtail_profile：Logtail采集日志</li>
-         * <li>metering：计量日志</li>
-         * <li>logtail_status：Logtail状态日志</li>
-         * <li>scheduledsqlalert：定时SQL任务运行日志</li>
-         * <li>etl_alert：数据加工任务的运行日志</li>
+         * <li>consumergroup_log: the consumption delay logs of consumer groups.</li>
+         * <li>logtail_alarm: the alert logs of Logtail.</li>
+         * <li>operation_log: the operation logs. You are charged for operation logs.</li>
+         * <li>logtail_profile: the collection logs of Logtail.</li>
+         * <li>metering: the metering logs.</li>
+         * <li>logtail_status: the status logs of Logtail.</li>
+         * <li>scheduledsqlalert: the operational logs of scheduled SQL jobs.</li>
+         * <li>etl_alert: the operational logs of data transformation jobs.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

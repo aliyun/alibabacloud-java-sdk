@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ProjectSummary extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1714360481</p>
      */
     @NameInMap("createTime")
     public Long createTime;
@@ -18,24 +21,36 @@ public class ProjectSummary extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ali-test-project</p>
      */
     @NameInMap("projectName")
     public String projectName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("region")
     public String region;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acf******sq</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1710230272</p>
      */
     @NameInMap("updateTime")
     public Long updateTime;

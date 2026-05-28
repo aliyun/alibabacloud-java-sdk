@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class OSSIngestion extends TeaModel {
     /**
+     * <p>The configurations of the OSS data import job.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
     public OSSIngestionConfiguration configuration;
 
     /**
+     * <p>The time when the data import job was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>1714360481</p>
      */
@@ -18,6 +21,8 @@ public class OSSIngestion extends TeaModel {
     public Long createTime;
 
     /**
+     * <p>The description of the data import job.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss ingestion</p>
      */
@@ -25,6 +30,7 @@ public class OSSIngestion extends TeaModel {
     public String description;
 
     /**
+     * <p>The display name of the data import job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +40,8 @@ public class OSSIngestion extends TeaModel {
     public String displayName;
 
     /**
+     * <p>The time when the data import job was last modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>1714360481</p>
      */
@@ -41,6 +49,7 @@ public class OSSIngestion extends TeaModel {
     public Long lastModifiedTime;
 
     /**
+     * <p>The name of the data import job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,12 +59,15 @@ public class OSSIngestion extends TeaModel {
     public String name;
 
     /**
+     * <p>The scheduling settings.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("schedule")
     public Schedule schedule;
 
     /**
+     * <p>The ID of the data import job.</p>
+     * 
      * <strong>example:</strong>
      * <p>c7f01719d9feb105fc9d8df92af62010</p>
      */
@@ -63,6 +75,8 @@ public class OSSIngestion extends TeaModel {
     public String scheduleId;
 
     /**
+     * <p>The status of the data import job.</p>
+     * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
      */

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class MLServiceAnalysisParam extends TeaModel {
     /**
-     * <p>input</p>
+     * <p>The input data.</p>
      */
     @NameInMap("input")
     public java.util.List<java.util.Map<String, String>> input;
 
     /**
-     * <p>parameter</p>
+     * <p>The parameter.</p>
      */
     @NameInMap("parameter")
     public java.util.Map<String, String> parameter;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StoreViewStore extends TeaModel {
     /**
-     * <p>Project 名称</p>
+     * <p>The name of the project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,13 +15,13 @@ public class StoreViewStore extends TeaModel {
     public String project;
 
     /**
-     * <p>查询过滤语句</p>
+     * <p>The query statement that contains filter conditions.</p>
      */
     @NameInMap("query")
     public String query;
 
     /**
-     * <p>LogStore 或 MetricStore 名称</p>
+     * <p>The name of the Logstore or Metricstore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

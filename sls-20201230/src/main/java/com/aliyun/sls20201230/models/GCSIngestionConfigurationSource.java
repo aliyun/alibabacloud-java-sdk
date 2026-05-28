@@ -16,6 +16,9 @@ public class GCSIngestionConfigurationSource extends TeaModel {
     @NameInMap("accessKeySecret")
     public String accessKeySecret;
 
+    @NameInMap("advancedParameters")
+    public java.util.Map<String, ?> advancedParameters;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -122,7 +125,7 @@ public class GCSIngestionConfigurationSource extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>[0-9]{0,2}\/[0-9a-zA-Z]+\/[0-9:,]+</p>
+     * <p>[0-9]{0,2}/[0-9a-zA-Z]+/[0-9:,]+</p>
      */
     @NameInMap("timePattern")
     public String timePattern;
@@ -153,6 +156,14 @@ public class GCSIngestionConfigurationSource extends TeaModel {
     }
     public String getAccessKeySecret() {
         return this.accessKeySecret;
+    }
+
+    public GCSIngestionConfigurationSource setAdvancedParameters(java.util.Map<String, ?> advancedParameters) {
+        this.advancedParameters = advancedParameters;
+        return this;
+    }
+    public java.util.Map<String, ?> getAdvancedParameters() {
+        return this.advancedParameters;
     }
 
     public GCSIngestionConfigurationSource setBucket(String bucket) {

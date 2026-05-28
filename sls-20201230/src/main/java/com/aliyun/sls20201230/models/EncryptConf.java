@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class EncryptConf extends TeaModel {
     /**
-     * <p>是否启用数据加密。</p>
+     * <p>Specifies whether to enable data encryption. Valid values:</p>
      * <ul>
-     * <li>true：是</li>
-     * <li>false：否</li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,7 +19,7 @@ public class EncryptConf extends TeaModel {
     public Boolean enable;
 
     /**
-     * <p>加密算法类型，支持 default、m4、sm4_ecb、sm4_cbc、sm4_gcm、aes_ecb、aes_cbc、aes_cfb、aes_ofb、aes_gcm。当enable为true时，此项必选。</p>
+     * <p>The encryption algorithm. Valid values: default and sm4. If enable is set to true, you must configure this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -28,7 +28,7 @@ public class EncryptConf extends TeaModel {
     public String encryptType;
 
     /**
-     * <p>可选字段。如果设置该字段，则表示使用自带密钥（BYOK），否则使用日志服务的服务密钥。</p>
+     * <p>Optional. If you configure this parameter, the bring-your-own-key (BYOK) key is used. If you do not configure this parameter, the service key of Simple Log Service is used.</p>
      * 
      * <strong>example:</strong>
      * <p>{    &quot;cmk_key_id&quot; : &quot;f5136b95-2420-ab31-xxxxxxxxx&quot;    &quot;arn&quot; :  &quot;acs:ram::13234:role/logsource&quot;    &quot;region_id&quot; : &quot;cn-hangzhou&quot;  }</p>

@@ -5,60 +5,60 @@ import com.aliyun.tea.*;
 
 public class OSSExport extends TeaModel {
     /**
-     * <p>Oss Export Configuration</p>
+     * <p>The OSS export configuration.</p>
      */
     @NameInMap("configuration")
     public OSSExportConfiguration configuration;
 
     /**
-     * <p>创建时间</p>
+     * <p>The time when the OSS data shipping job was created.</p>
      * 
      * <strong>example:</strong>
-     * <p>1718787534</p>
+     * <p>123456789</p>
      */
     @NameInMap("createTime")
     public Long createTime;
 
     /**
-     * <p>OSS投递描述</p>
+     * <p>The description of the OSS data shipping job.</p>
      * 
      * <strong>example:</strong>
-     * <p>my-oss-job</p>
+     * <p>This is a oss export</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>OSS投递任务显示名称</p>
+     * <p>The display name of the OSS data shipping job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>my-oss-job</p>
+     * <p>This is a oss export</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
     /**
-     * <p>最后一次修改的时间</p>
+     * <p>The time when the OSS data shipping job was last modified.</p>
      * 
      * <strong>example:</strong>
-     * <p>1718787681</p>
+     * <p>123456789</p>
      */
     @NameInMap("lastModifiedTime")
     public Long lastModifiedTime;
 
     /**
-     * <p>OSS投递名称</p>
+     * <p>The name of the OSS data shipping job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>export-oss-1234567890-123456</p>
+     * <p>myossexportjob</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>任务ID</p>
+     * <p>The ID of the OSS data shipping job.</p>
      * 
      * <strong>example:</strong>
      * <p>c7f01719d9feb105fc9d8df92af62010</p>
@@ -67,7 +67,7 @@ public class OSSExport extends TeaModel {
     public String scheduleId;
 
     /**
-     * <p>投递任务的状态</p>
+     * <p>The status of the OSS data shipping job.</p>
      * 
      * <strong>example:</strong>
      * <p>RUNNING</p>

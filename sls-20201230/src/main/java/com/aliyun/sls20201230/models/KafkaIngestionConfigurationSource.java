@@ -41,6 +41,9 @@ public class KafkaIngestionConfigurationSource extends TeaModel {
     @NameInMap("enableSlsContext")
     public Boolean enableSlsContext;
 
+    @NameInMap("enableVpcNat")
+    public Boolean enableVpcNat;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -49,6 +52,9 @@ public class KafkaIngestionConfigurationSource extends TeaModel {
      */
     @NameInMap("encoding")
     public String encoding;
+
+    @NameInMap("format")
+    public java.util.Map<String, ?> format;
 
     /**
      * <p>This parameter is required.</p>
@@ -81,6 +87,9 @@ public class KafkaIngestionConfigurationSource extends TeaModel {
      */
     @NameInMap("processorId")
     public String processorId;
+
+    @NameInMap("securityGroups")
+    public String securityGroups;
 
     /**
      * <strong>example:</strong>
@@ -131,6 +140,9 @@ public class KafkaIngestionConfigurationSource extends TeaModel {
     @NameInMap("vpcId")
     public String vpcId;
 
+    @NameInMap("vswitchId")
+    public String vswitchId;
+
     public static KafkaIngestionConfigurationSource build(java.util.Map<String, ?> map) throws Exception {
         KafkaIngestionConfigurationSource self = new KafkaIngestionConfigurationSource();
         return TeaModel.build(map, self);
@@ -176,12 +188,28 @@ public class KafkaIngestionConfigurationSource extends TeaModel {
         return this.enableSlsContext;
     }
 
+    public KafkaIngestionConfigurationSource setEnableVpcNat(Boolean enableVpcNat) {
+        this.enableVpcNat = enableVpcNat;
+        return this;
+    }
+    public Boolean getEnableVpcNat() {
+        return this.enableVpcNat;
+    }
+
     public KafkaIngestionConfigurationSource setEncoding(String encoding) {
         this.encoding = encoding;
         return this;
     }
     public String getEncoding() {
         return this.encoding;
+    }
+
+    public KafkaIngestionConfigurationSource setFormat(java.util.Map<String, ?> format) {
+        this.format = format;
+        return this;
+    }
+    public java.util.Map<String, ?> getFormat() {
+        return this.format;
     }
 
     public KafkaIngestionConfigurationSource setFromPosition(String fromPosition) {
@@ -214,6 +242,14 @@ public class KafkaIngestionConfigurationSource extends TeaModel {
     }
     public String getProcessorId() {
         return this.processorId;
+    }
+
+    public KafkaIngestionConfigurationSource setSecurityGroups(String securityGroups) {
+        this.securityGroups = securityGroups;
+        return this;
+    }
+    public String getSecurityGroups() {
+        return this.securityGroups;
     }
 
     public KafkaIngestionConfigurationSource setTimeField(String timeField) {
@@ -270,6 +306,14 @@ public class KafkaIngestionConfigurationSource extends TeaModel {
     }
     public String getVpcId() {
         return this.vpcId;
+    }
+
+    public KafkaIngestionConfigurationSource setVswitchId(String vswitchId) {
+        this.vswitchId = vswitchId;
+        return this;
+    }
+    public String getVswitchId() {
+        return this.vswitchId;
     }
 
 }

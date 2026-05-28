@@ -8,7 +8,7 @@ public class ListMachineGroupResponseBody extends TeaModel {
      * <p>The number of machine groups that are returned on the current page.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>2</p>
      */
     @NameInMap("count")
     public Integer count;
@@ -26,7 +26,7 @@ public class ListMachineGroupResponseBody extends TeaModel {
      * <p>The total number of machine groups that meet the query conditions.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>2</p>
      */
     @NameInMap("total")
     public Integer total;

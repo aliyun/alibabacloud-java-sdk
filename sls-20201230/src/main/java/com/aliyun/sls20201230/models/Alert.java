@@ -5,20 +5,20 @@ import com.aliyun.tea.*;
 
 public class Alert extends TeaModel {
     /**
-     * <p>告警规则配置</p>
+     * <p>The configurations of the alert rule.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
     public AlertConfiguration configuration;
 
     /**
-     * <p>创建时间</p>
+     * <p>The time when the alert rule was created.</p>
      */
     @NameInMap("createTime")
     public Long createTime;
 
     /**
-     * <p>告警规则描述</p>
+     * <p>The description of the alert rule.</p>
      * 
      * <strong>example:</strong>
      * <p>Alert Desc</p>
@@ -27,7 +27,7 @@ public class Alert extends TeaModel {
     public String description;
 
     /**
-     * <p>告警规则名称</p>
+     * <p>The alert rule name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,13 +37,13 @@ public class Alert extends TeaModel {
     public String displayName;
 
     /**
-     * <p>最近一次修改时间</p>
+     * <p>The time when the alert rule was last modified.</p>
      */
     @NameInMap("lastModifiedTime")
     public Long lastModifiedTime;
 
     /**
-     * <p>告警规则ID</p>
+     * <p>The ID of the alert rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,14 +53,14 @@ public class Alert extends TeaModel {
     public String name;
 
     /**
-     * <p>调度配置</p>
+     * <p>The scheduling settings.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("schedule")
     public Schedule schedule;
 
     /**
-     * <p>告警状态</p>
+     * <p>The alert status.</p>
      * 
      * <strong>example:</strong>
      * <p>ENABLED/DISABLED</p>

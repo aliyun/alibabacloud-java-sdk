@@ -5,17 +5,14 @@ import com.aliyun.tea.*;
 
 public class SavedSearch extends TeaModel {
     /**
-     * <p>快速查询显示名称。</p>
+     * <p>The display name of the saved search.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Method统计</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
     /**
-     * <p>Logstore名称。</p>
+     * <p>The name of the Logstore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +22,7 @@ public class SavedSearch extends TeaModel {
     public String logstore;
 
     /**
-     * <p>快速查询名称。</p>
+     * <p>The name of the saved search.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +32,7 @@ public class SavedSearch extends TeaModel {
     public String savedsearchName;
 
     /**
-     * <p>查询语句或者分析语句。</p>
+     * <p>The search statement or the analytic statement.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +42,7 @@ public class SavedSearch extends TeaModel {
     public String searchQuery;
 
     /**
-     * <p>日志主题。默认值为空字符串（&quot;&quot;）。</p>
+     * <p>The topic of the log. Default value: empty string (&quot;&quot;).</p>
      * 
      * <strong>example:</strong>
      * <p>topic</p>

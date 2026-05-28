@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConsumeProcessorConfiguration extends TeaModel {
     /**
-     * <p>SPL语句</p>
+     * <p>SPL statement</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

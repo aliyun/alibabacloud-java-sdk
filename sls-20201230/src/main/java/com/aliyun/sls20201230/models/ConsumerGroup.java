@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConsumerGroup extends TeaModel {
     /**
-     * <p>消费组名称。</p>
+     * <p>The name of the consumer group.</p>
      * 
      * <strong>example:</strong>
      * <p>test-consumer-group</p>
@@ -14,10 +14,10 @@ public class ConsumerGroup extends TeaModel {
     public String name;
 
     /**
-     * <p>是否按顺序消费。</p>
+     * <p>Specifies whether to consume data in sequence. Valid values:</p>
      * <ul>
-     * <li>true：在Shard中按顺序消费。Shard分裂后，先消费原Shard中数据，然后同时消费由该Shard分裂的Shard中数据。Shard合并后，先消费原Shard中数据，然后消费由原Shard合并后的新Shard中数据。</li>
-     * <li>false：不按顺序消费。即所有同时开始消费，Shard分裂或者合并后产生的新Shard，也会立即消费。</li>
+     * <li>true: If a shard is split, the data in the original shard is consumed first. Then, the data in the new shards is consumed at the same time. If shards are merged, the data in the original shards is consumed first. Then, the data in the new shard is consumed.</li>
+     * <li>false: The data in all shards is consumed at the same time. If a new shard is generated after a shard is split or shards are merged, the data in the new shard is immediately consumed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class ConsumerGroup extends TeaModel {
     public Boolean order;
 
     /**
-     * <p>超时时间。在超时时间段内没有收到心跳，消费者将被删除。单位：秒。</p>
+     * <p>The timeout period. If Simple Log Service does not receive heartbeats from a consumer within the timeout period, Simple Log Service deletes the consumer. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>

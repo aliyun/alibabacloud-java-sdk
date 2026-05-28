@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MLDataSetParam extends TeaModel {
     /**
-     * <p>创建的对象</p>
+     * <p>The creator.</p>
      * 
      * <strong>example:</strong>
      * <p>sls-console</p>
@@ -14,7 +14,7 @@ public class MLDataSetParam extends TeaModel {
     public String createBy;
 
     /**
-     * <p>创建时间</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>1695090077</p>
@@ -23,7 +23,7 @@ public class MLDataSetParam extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>数据类型</p>
+     * <p>The type of the data.</p>
      * 
      * <strong>example:</strong>
      * <p>Metric</p>
@@ -32,7 +32,7 @@ public class MLDataSetParam extends TeaModel {
     public String dataType;
 
     /**
-     * <p>数据集的唯一标识</p>
+     * <p>The unique identifier of the dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>d9bd488f6dd42d294495fb780858e83d</p>
@@ -41,16 +41,13 @@ public class MLDataSetParam extends TeaModel {
     public String datasetId;
 
     /**
-     * <p>数据集的描述</p>
-     * 
-     * <strong>example:</strong>
-     * <p>数据集A</p>
+     * <p>The description of the dataset.</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>数据集对应的标签系统id</p>
+     * <p>The ID of the tag system that corresponds to the dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>a191ae4ca615b0ccb93c211fc8a998af</p>
@@ -59,7 +56,7 @@ public class MLDataSetParam extends TeaModel {
     public String labelId;
 
     /**
-     * <p>最终修改时间</p>
+     * <p>The last modification time.</p>
      * 
      * <strong>example:</strong>
      * <p>1695090077</p>
@@ -68,7 +65,7 @@ public class MLDataSetParam extends TeaModel {
     public Long lastModifyTime;
 
     /**
-     * <p>数据集的名称</p>
+     * <p>The name of the dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>sls_builtin_dataset_metric.shapeclassification.anomalydetection</p>
@@ -77,7 +74,7 @@ public class MLDataSetParam extends TeaModel {
     public String name;
 
     /**
-     * <p>label表配置类型</p>
+     * <p>The configuration type of the tag table.</p>
      * 
      * <strong>example:</strong>
      * <p>Metric.ShapeClassification.AnomalyDetection</p>

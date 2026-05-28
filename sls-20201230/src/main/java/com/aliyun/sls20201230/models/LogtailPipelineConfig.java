@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class LogtailPipelineConfig extends TeaModel {
     /**
-     * <p>聚合插件</p>
+     * <p>The aggregation plug-ins.</p>
      */
     @NameInMap("aggregators")
     public java.util.List<java.util.Map<String, ?>> aggregators;
 
     /**
-     * <p>配置名称</p>
+     * <p>The name of the configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class LogtailPipelineConfig extends TeaModel {
     public String configName;
 
     /**
-     * <p>创建时间，UNIX时间戳</p>
+     * <p>The creation time. The value is a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1655176807</p>
@@ -30,27 +30,30 @@ public class LogtailPipelineConfig extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>输出插件</p>
+     * <p>The data output plug-ins.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("flushers")
     public java.util.List<java.util.Map<String, ?>> flushers;
 
     /**
-     * <p>全局信息</p>
+     * <p>The global configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{     &quot;TopicType&quot;: &quot;custom&quot;,     &quot;TopicFormat&quot;: &quot;aaa&quot;,     &quot;EnableAlwaysOnline&quot;: true,     &quot;EnableTimestampNanosecond&quot;: true,     &quot;UsingOldContentTag&quot;: true }</p>
      */
     @NameInMap("global")
     public java.util.Map<String, ?> global;
 
     /**
-     * <p>输入插件</p>
+     * <p>The data source plug-ins.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("inputs")
     public java.util.List<java.util.Map<String, ?>> inputs;
 
     /**
-     * <p>最后修改时间，UNIX时间戳</p>
+     * <p>The last modification time. The value is a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1655176807</p>
@@ -59,7 +62,7 @@ public class LogtailPipelineConfig extends TeaModel {
     public Long lastModifyTime;
 
     /**
-     * <p>日志样例</p>
+     * <p>The sample log.</p>
      * 
      * <strong>example:</strong>
      * <p>127.0.0.1 - - [10/Jun/2022:12:36:49 +0800] &quot;GET /index.html HTTP/1.1&quot; 200</p>
@@ -68,14 +71,12 @@ public class LogtailPipelineConfig extends TeaModel {
     public String logSample;
 
     /**
-     * <p>处理插件</p>
+     * <p>The processing plug-ins.</p>
      */
     @NameInMap("processors")
     public java.util.List<java.util.Map<String, ?>> processors;
 
     /**
-     * <p>任务配置</p>
-     * 
      * <strong>example:</strong>
      * <p>{&quot;Type&quot;: &quot;task_example&quot;}</p>
      */

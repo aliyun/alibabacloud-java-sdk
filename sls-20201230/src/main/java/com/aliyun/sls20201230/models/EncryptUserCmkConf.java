@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EncryptUserCmkConf extends TeaModel {
     /**
-     * <p>RAM角色的ARN。</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class EncryptUserCmkConf extends TeaModel {
     public String arn;
 
     /**
-     * <p>BYOK的主密钥ID。</p>
+     * <p>The ID of the customer master key (CMK) if you use the bring-your-own-key (BYOK) key.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class EncryptUserCmkConf extends TeaModel {
     public String cmkKeyId;
 
     /**
-     * <p>主密钥所在的地域ID。</p>
+     * <p>The ID of the region where the CMK resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

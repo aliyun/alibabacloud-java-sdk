@@ -5,23 +5,20 @@ import com.aliyun.tea.*;
 
 public class CreateDownloadJobRequest extends TeaModel {
     /**
-     * <p>The download configuration.</p>
+     * <p>下载配置</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
     public CreateDownloadJobRequestConfiguration configuration;
 
     /**
-     * <p>The description of the log download task.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Log download task</p>
+     * <p>任务描述</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The display name.</p>
+     * <p>任务显示名称</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,16 +28,7 @@ public class CreateDownloadJobRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The name of the job. The name must meet the following requirements:</p>
-     * <p>The job name must be unique within a project.</p>
-     * <ul>
-     * <li><p>It can contain only lowercase letters, digits, hyphens (-), and underscores (_).</p>
-     * </li>
-     * <li><p>It must start and end with a lowercase letter or a digit.</p>
-     * </li>
-     * <li><p>The name must be 2 to 64 characters in length.</p>
-     * </li>
-     * </ul>
+     * <p>代表资源名称的资源属性字段</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -88,7 +76,7 @@ public class CreateDownloadJobRequest extends TeaModel {
 
     public static class CreateDownloadJobRequestConfigurationSink extends TeaModel {
         /**
-         * <p>The destination Object Storage Service (OSS) bucket.</p>
+         * <p>对象存储桶</p>
          * 
          * <strong>example:</strong>
          * <p>oss-test-bucket</p>
@@ -97,7 +85,7 @@ public class CreateDownloadJobRequest extends TeaModel {
         public String bucket;
 
         /**
-         * <p>The compression format of the file. Valid values: \<code>zstd\\</code>, \<code>lz4\\</code>, \<code>gzip\\</code>, and \<code>none\\</code>.</p>
+         * <p>压缩格式</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -107,7 +95,7 @@ public class CreateDownloadJobRequest extends TeaModel {
         public String compressionType;
 
         /**
-         * <p>The format of the downloaded file. Valid values: \<code>csv\\</code> and \<code>json\\</code>.</p>
+         * <p>下载文件格式</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,8 +105,6 @@ public class CreateDownloadJobRequest extends TeaModel {
         public String contentType;
 
         /**
-         * <p>The prefix of the path in the destination OSS bucket.</p>
-         * 
          * <strong>example:</strong>
          * <p>download/</p>
          */
@@ -126,7 +112,7 @@ public class CreateDownloadJobRequest extends TeaModel {
         public String prefix;
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role to use for the download.</p>
+         * <p>下载使用roleArn</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::0123456789:role/aliyunlogdefaultrole</p>
@@ -135,7 +121,6 @@ public class CreateDownloadJobRequest extends TeaModel {
         public String roleArn;
 
         /**
-         * <p>The type of the destination. Set the value to \<code>AliyunOSS\\</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +186,6 @@ public class CreateDownloadJobRequest extends TeaModel {
 
     public static class CreateDownloadJobRequestConfiguration extends TeaModel {
         /**
-         * <p>Specifies whether to allow the download of incomplete results. Valid values: \<code>true\\</code> and \<code>false\\</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +195,7 @@ public class CreateDownloadJobRequest extends TeaModel {
         public Boolean allowInComplete;
 
         /**
-         * <p>The start time. This is a UNIX timestamp that is accurate to the second.</p>
+         * <p>起点时间戳（精确到秒）</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,7 +205,7 @@ public class CreateDownloadJobRequest extends TeaModel {
         public Long fromTime;
 
         /**
-         * <p>The source Logstore.</p>
+         * <p>源logstore</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -231,7 +215,7 @@ public class CreateDownloadJobRequest extends TeaModel {
         public String logstore;
 
         /**
-         * <p>Specifies whether to enable PowerSQL. Valid values: \<code>true\\</code> and \<code>false\\</code>.</p>
+         * <p>是否启用powerSql</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -240,7 +224,7 @@ public class CreateDownloadJobRequest extends TeaModel {
         public Boolean powerSql;
 
         /**
-         * <p>The search statement.</p>
+         * <p>查询语句</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -252,14 +236,14 @@ public class CreateDownloadJobRequest extends TeaModel {
         public String query;
 
         /**
-         * <p>The export configuration.</p>
+         * <p>导出配置</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("sink")
         public CreateDownloadJobRequestConfigurationSink sink;
 
         /**
-         * <p>The end time. This is a UNIX timestamp that is accurate to the second.</p>
+         * <p>结束时间戳（精确到秒）</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAnnotationDataRequest extends TeaModel {
     /**
-     * <p>The starting position of the paged query.</p>
+     * <p>The line from which the query starts.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,7 +14,7 @@ public class ListAnnotationDataRequest extends TeaModel {
     public Integer offset;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

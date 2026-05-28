@@ -18,6 +18,8 @@ public class GCSIngestion extends TeaModel {
     public Long createTime;
 
     /**
+     * <p>job description</p>
+     * 
      * <strong>example:</strong>
      * <p>gcs ingestion</p>
      */
@@ -25,6 +27,7 @@ public class GCSIngestion extends TeaModel {
     public String description;
 
     /**
+     * <p>job displayName</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +36,10 @@ public class GCSIngestion extends TeaModel {
     @NameInMap("displayName")
     public String displayName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1714360581</p>
+     */
     @NameInMap("lastModifiedTime")
     public Long lastModifiedTime;
 

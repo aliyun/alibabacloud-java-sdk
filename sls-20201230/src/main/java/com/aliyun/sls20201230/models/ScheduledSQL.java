@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class ScheduledSQL extends TeaModel {
     /**
-     * <p>定时sql配置</p>
+     * <p>The configuration of the Scheduled SQL job.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
     public ScheduledSQLConfiguration configuration;
 
     /**
-     * <p>创建时间</p>
+     * <p>The time when the Scheduled SQL job was created.</p>
      * 
      * <strong>example:</strong>
      * <p>1714123644</p>
@@ -21,7 +21,7 @@ public class ScheduledSQL extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>Job Description</p>
+     * <p>The description of the scheduled SQL job.</p>
      * 
      * <strong>example:</strong>
      * <p>This is a scheduled sql job</p>
@@ -30,7 +30,7 @@ public class ScheduledSQL extends TeaModel {
     public String description;
 
     /**
-     * <p>Job DisplayName</p>
+     * <p>The display name of the scheduled SQL job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class ScheduledSQL extends TeaModel {
     public String displayName;
 
     /**
-     * <p>最近修改时间</p>
+     * <p>The time when the Scheduled SQL job was last modified.</p>
      * 
      * <strong>example:</strong>
      * <p>1714123644</p>
@@ -49,7 +49,7 @@ public class ScheduledSQL extends TeaModel {
     public Long lastModifiedTime;
 
     /**
-     * <p>Scheduled SQL name</p>
+     * <p>The name of the scheduled SQL job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,14 +59,14 @@ public class ScheduledSQL extends TeaModel {
     public String name;
 
     /**
-     * <p>调度配置</p>
+     * <p>The scheduling settings of the Scheduled SQL job.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("schedule")
     public Schedule schedule;
 
     /**
-     * <p>调度ID</p>
+     * <p>The ID of the scheduler.</p>
      * 
      * <strong>example:</strong>
      * <p>e73f43732852064ad5d091914e39342f</p>
@@ -75,7 +75,7 @@ public class ScheduledSQL extends TeaModel {
     public String scheduleId;
 
     /**
-     * <p>定时SQL状态</p>
+     * <p>The status of the Scheduled SQL job.</p>
      * 
      * <strong>example:</strong>
      * <p>ENABLED</p>

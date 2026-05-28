@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class MaxComputeExportConfigurationSink extends TeaModel {
     /**
-     * <p>计算投递时间分区时的最小时间粒度（单位：秒）</p>
+     * <p>Specifies the minimum time granularity between two data shipping jobs. Unit: seconds. Valid values:</p>
      * <ul>
-     * <li>1800（默认值）</li>
+     * <li>1800 (default)</li>
      * <li>3600</li>
      * </ul>
      * 
@@ -18,16 +18,16 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
     public String bufferInterval;
 
     /**
-     * <p>需要投递的字段</p>
+     * <p>The fields that you want to ship.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("fields")
     public java.util.List<String> fields;
 
     /**
-     * <p>是否过滤无效内容</p>
+     * <p>Specifies whether to filter the invalid content.</p>
      * <ul>
-     * <li>true（默认值）</li>
+     * <li>true (default)</li>
      * <li>false</li>
      * </ul>
      * 
@@ -38,7 +38,7 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
     public Boolean filterInvalid;
 
     /**
-     * <p>写数据ak id</p>
+     * <p>The AccessKey ID used to write data to MaxCompute.</p>
      * 
      * <strong>example:</strong>
      * <p>axxxxxxxxxxxb</p>
@@ -48,7 +48,7 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
     public String odpsAccessKeyId;
 
     /**
-     * <p>写数据ak secret</p>
+     * <p>The AccessKey secret used to write data to MaxCompute.</p>
      * 
      * <strong>example:</strong>
      * <p>aaxxxxxxxxxxxxxxxxxxxxxbb</p>
@@ -58,9 +58,9 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
     public String odpsAccessSecret;
 
     /**
-     * <p>MaxCompute Endpoint</p>
+     * <p>The endpoint of MaxCompute.</p>
      * <ul>
-     * <li>⚠️注意：仅支持同地域的Endpoint</li>
+     * <li>⚠️Note: The endpoint of MaxCompute must be the same as that of the Simple Log Service project.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -71,7 +71,7 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
     public String odpsEndpoint;
 
     /**
-     * <p>MaxCompute项目名称</p>
+     * <p>The name of the MaxCompute project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,7 +81,7 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
     public String odpsProject;
 
     /**
-     * <p>写MaxCompute ram角色</p>
+     * <p>The Resource Access Management (RAM) role the data shipping job assumes to write data to MaxCompute.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -91,7 +91,7 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
     public String odpsRolearn;
 
     /**
-     * <p>MaxCompute表名称</p>
+     * <p>The name of the MaxCompute table.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -101,9 +101,9 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
     public String odpsTable;
 
     /**
-     * <p>MaxCompute Tunnel Endpoint</p>
+     * <p>The Tunnel endpoint of MaxCompute.</p>
      * <ul>
-     * <li>⚠️注意：仅支持同地域的Tunnel Endpoint</li>
+     * <li>⚠️Note: The Tunnel endpoint of MaxCompute must be the same as that of the Simple Log Service project.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -113,14 +113,14 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
     public String odpsTunnelEndpoint;
 
     /**
-     * <p>需要投递的分区字段</p>
+     * <p>The partition key columns that you want to ship.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("partitionColumn")
     public java.util.List<String> partitionColumn;
 
     /**
-     * <p>时间分区格式</p>
+     * <p>The time partition format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -130,9 +130,9 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
     public String partitionTimeFormat;
 
     /**
-     * <p>分区时间类型，支持如下两种：</p>
+     * <p>The time partition type. Valid values:</p>
      * <ul>
-     * <li>StrfTimeFormat（默认值）</li>
+     * <li>StrfTimeFormat (default)</li>
      * <li>JavaSimpleDateFormat</li>
      * </ul>
      * 
@@ -143,7 +143,7 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
     public String timeFormatType;
 
     /**
-     * <p>时间分区</p>
+     * <p>The time zone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

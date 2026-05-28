@@ -22,6 +22,9 @@ public class AzureBlobIngestionConfigurationSource extends TeaModel {
     @NameInMap("accountName")
     public String accountName;
 
+    @NameInMap("advancedParameters")
+    public java.util.Map<String, ?> advancedParameters;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -56,6 +59,10 @@ public class AzureBlobIngestionConfigurationSource extends TeaModel {
     @NameInMap("endTime")
     public Long endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://your-storage.blob.core.windows.net">https://your-storage.blob.core.windows.net</a></p>
+     */
     @NameInMap("endpoint")
     public String endpoint;
 
@@ -156,6 +163,14 @@ public class AzureBlobIngestionConfigurationSource extends TeaModel {
     }
     public String getAccountName() {
         return this.accountName;
+    }
+
+    public AzureBlobIngestionConfigurationSource setAdvancedParameters(java.util.Map<String, ?> advancedParameters) {
+        this.advancedParameters = advancedParameters;
+        return this;
+    }
+    public java.util.Map<String, ?> getAdvancedParameters() {
+        return this.advancedParameters;
     }
 
     public AzureBlobIngestionConfigurationSource setCompressionCodec(String compressionCodec) {

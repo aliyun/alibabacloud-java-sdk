@@ -5,27 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpdateGCSIngestionRequest extends TeaModel {
     /**
-     * <p>The configuration of the GCS import task.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
     public GCSIngestionConfiguration configuration;
 
-    /**
-     * <p>The description of the GCS import task.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>gcs导入</p>
-     */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The display name of the GCS import task.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>gcs导入</p>
      */
     @NameInMap("displayName")
     public String displayName;

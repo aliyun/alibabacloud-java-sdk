@@ -5,21 +5,21 @@ import com.aliyun.tea.*;
 
 public class ETLConfiguration extends TeaModel {
     /**
-     * <p>授权读取源Logstore的AccessKey ID，必填。使用角色授权时，填入空字符串</p>
+     * <p>The AccessKey ID used to grant the permissions to read data from the source logstore. This parameter is required. If you use a role to grant the required permissions, specify an empty string.</p>
      */
     @NameInMap("accessKeyId")
     @Deprecated
     public String accessKeyId;
 
     /**
-     * <p>授权读取源Logstore的AccessKey Secret，必填。使用角色授权时，填入空字符串。</p>
+     * <p>The AccessKey secret used to grant the permissions to read data from the source logstore. This parameter is required. If you use a role to grant the required permissions, specify an empty string.</p>
      */
     @NameInMap("accessKeySecret")
     @Deprecated
     public String accessKeySecret;
 
     /**
-     * <p>加工时间起点时间戳（精确到秒），必填。从源Logstore中最早接收到的第一条日志开始消费时，填入0</p>
+     * <p>The beginning of the time range for transformation. Specify a Unix timestamp that is accurate to the second. This parameter is required. If you want to transform data from the first log in the source logstore, enter 0.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class ETLConfiguration extends TeaModel {
     public Long fromTime;
 
     /**
-     * <p>数据加工语法类型</p>
+     * <p>The type of the data transformation syntax.</p>
      * 
      * <strong>example:</strong>
      * <p>SPL</p>
@@ -38,7 +38,7 @@ public class ETLConfiguration extends TeaModel {
     public String lang;
 
     /**
-     * <p>源Logstore名称</p>
+     * <p>The name of the source logstore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,16 +48,16 @@ public class ETLConfiguration extends TeaModel {
     public String logstore;
 
     /**
-     * <p>高级参数配置</p>
+     * <p>The advanced parameter settings.</p>
      * 
      * <strong>example:</strong>
-     * <p>config.vpc.vpc_id.test1：vpc-uf6mskb0b****n9yj</p>
+     * <p>config.vpc.vpc_id.test1:vpc-uf6mskb0b****n9yj</p>
      */
     @NameInMap("parameters")
     public java.util.Map<String, ?> parameters;
 
     /**
-     * <p>授权读取源Logstore的角色ARN</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the role that is used to grant the permissions to read data from the source logstore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,26 +67,24 @@ public class ETLConfiguration extends TeaModel {
     public String roleArn;
 
     /**
-     * <p>加工脚本</p>
+     * <p>The transformation script.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li>| extend key=\&quot;value\&quot;</li>
-     * </ul>
+     * <p>e_set(&quot;key&quot;,&quot;value&quot;)</p>
      */
     @NameInMap("script")
     public String script;
 
     /**
-     * <p>加工结果输出目标列表</p>
+     * <p>The storage destinations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("sinks")
     public java.util.List<ETLConfigurationSink> sinks;
 
     /**
-     * <p>加工时间结束时间戳（精确到秒），必填。持续消费至手动停止时，填入0</p>
+     * <p>The end of the time range for transformation. Specify a Unix timestamp that is accurate to the second. This parameter is required. If you want to transform data until the data transformation job is manually stopped, enter 0.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

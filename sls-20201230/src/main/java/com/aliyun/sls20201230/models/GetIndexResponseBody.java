@@ -172,10 +172,8 @@ public class GetIndexResponseBody extends TeaModel {
         /**
          * <p>Indicates whether case sensitivity is enabled. Valid values:</p>
          * <ul>
-         * <li><p>true</p>
-         * </li>
-         * <li><p>false</p>
-         * </li>
+         * <li>true</li>
+         * <li>false</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -187,10 +185,8 @@ public class GetIndexResponseBody extends TeaModel {
         /**
          * <p>Indicates whether Chinese characters are included. Valid values:</p>
          * <ul>
-         * <li><p>true</p>
-         * </li>
-         * <li><p>false</p>
-         * </li>
+         * <li>true</li>
+         * <li>false</li>
          * </ul>
          * 
          * <strong>example:</strong>

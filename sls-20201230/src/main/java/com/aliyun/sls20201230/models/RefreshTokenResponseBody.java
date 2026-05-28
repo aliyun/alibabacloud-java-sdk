@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class RefreshTokenResponseBody extends TeaModel {
     /**
-     * <p>The access token.</p>
-     * 
      * <strong>example:</strong>
      * <p>eyJ***************.eyJ******************.KUT****************</p>
      */

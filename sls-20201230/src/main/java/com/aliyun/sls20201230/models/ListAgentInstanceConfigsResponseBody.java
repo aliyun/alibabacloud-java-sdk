@@ -4,15 +4,10 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListAgentInstanceConfigsResponseBody extends TeaModel {
-    /**
-     * <p>The process-level configurations.</p>
-     */
     @NameInMap("configs")
     public java.util.List<ListAgentInstanceConfigsResponseBodyConfigs> configs;
 
     /**
-     * <p>The number of data entries.</p>
-     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -20,8 +15,6 @@ public class ListAgentInstanceConfigsResponseBody extends TeaModel {
     public Long size;
 
     /**
-     * <p>The total number of data entries that meet the query conditions.</p>
-     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -58,9 +51,17 @@ public class ListAgentInstanceConfigsResponseBody extends TeaModel {
     }
 
     public static class ListAgentInstanceConfigsResponseBodyConfigs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;workspace&quot;: &quot;test-workspace&quot;,&quot;service&quot;: &quot;test-service&quot;}</p>
+         */
         @NameInMap("attributes")
         public java.util.Map<String, String> attributes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>apm_biz_trace</p>
+         */
         @NameInMap("configType")
         public String configType;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class IndexKey extends TeaModel {
     /**
+     * <p>Alias.</p>
+     * 
      * <strong>example:</strong>
      * <p>myAlias</p>
      */
@@ -12,6 +14,8 @@ public class IndexKey extends TeaModel {
     public String alias;
 
     /**
+     * <p>Case sensitivity.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class IndexKey extends TeaModel {
     public Boolean caseSensitive;
 
     /**
+     * <p>Whether the field contains Chinese characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -26,6 +32,8 @@ public class IndexKey extends TeaModel {
     public Boolean chn;
 
     /**
+     * <p>Whether to enable statistics.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -36,22 +44,34 @@ public class IndexKey extends TeaModel {
     public String embedding;
 
     /**
+     * <p>Whether to enable auto indexing for all text fields in JSON.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("index_all")
     public Boolean indexAll;
 
+    /**
+     * <p>json key</p>
+     */
     @NameInMap("json_keys")
     public java.util.Map<String, IndexJsonKey> jsonKeys;
 
+    /**
+     * <p>Maximum depth.</p>
+     */
     @NameInMap("max_depth")
     public Long maxDepth;
 
+    /**
+     * <p>Delimiter.</p>
+     */
     @NameInMap("token")
     public java.util.List<String> token;
 
     /**
+     * <p>The data type of the field.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

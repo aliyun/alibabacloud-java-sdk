@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class MaxComputeExport extends TeaModel {
     /**
-     * <p>MC投递配置</p>
+     * <p>The setting of the MaxCompute data shipping job.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
     public MaxComputeExportConfiguration configuration;
 
     /**
-     * <p>创建时间</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>1718787534</p>
@@ -40,7 +40,7 @@ public class MaxComputeExport extends TeaModel {
     public String displayName;
 
     /**
-     * <p>最近一次修改时间</p>
+     * <p>The last modification time.</p>
      * 
      * <strong>example:</strong>
      * <p>1718787681</p>
@@ -59,7 +59,7 @@ public class MaxComputeExport extends TeaModel {
     public String name;
 
     /**
-     * <p>任务ID</p>
+     * <p>The ID of the MaxCompute data shipping job.</p>
      * 
      * <strong>example:</strong>
      * <p>c7f01719d9feb105fc9d8df92af62010</p>
@@ -68,7 +68,7 @@ public class MaxComputeExport extends TeaModel {
     public String scheduleId;
 
     /**
-     * <p>投递任务状态</p>
+     * <p>The status of the MaxCompute data shipping job.</p>
      * 
      * <strong>example:</strong>
      * <p>RUNNING</p>

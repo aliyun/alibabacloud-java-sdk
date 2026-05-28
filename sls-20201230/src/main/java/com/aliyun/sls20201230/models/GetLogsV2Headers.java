@@ -8,14 +8,11 @@ public class GetLogsV2Headers extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>The compression method.</p>
+     * <p>The compression format.</p>
      * <ul>
-     * <li><p>Java, Python, and Go support lz4 and gzip decompression.</p>
-     * </li>
-     * <li><p>PHP, JavaScript, and C# support gzip decompression only.</p>
-     * </li>
+     * <li>For Java, Python, and Go, only the lz4 and gzip algorithms are supported for decompression.</li>
+     * <li>For PHP, JavaScript, and C#, only the gzip algorithm is supported for decompression.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>lz4</p>

@@ -17,18 +17,11 @@ public class IngestProcessor extends TeaModel {
     @NameInMap("createTime")
     public Long createTime;
 
-    /**
-     * <strong>example:</strong>
-     * <p>过滤content字段</p>
-     */
     @NameInMap("description")
     public String description;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>字段过滤处理</p>
      */
     @NameInMap("displayName")
     public String displayName;

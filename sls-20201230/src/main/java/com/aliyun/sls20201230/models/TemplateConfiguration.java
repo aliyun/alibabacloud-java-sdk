@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class TemplateConfiguration extends TeaModel {
     /**
-     * <p>模板标注</p>
+     * <p>The annotations of the template.</p>
      */
     @NameInMap("aonotations")
     public java.util.Map<String, ?> aonotations;
 
     /**
-     * <p>模板ID</p>
+     * <p>The ID of the template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class TemplateConfiguration extends TeaModel {
     public String id;
 
     /**
-     * <p>模板语言</p>
+     * <p>The language of the template.</p>
      * 
      * <strong>example:</strong>
      * <p>cn</p>
@@ -30,13 +30,13 @@ public class TemplateConfiguration extends TeaModel {
     public String lang;
 
     /**
-     * <p>模板携带的token</p>
+     * <p>The tokens that are carried by the template.</p>
      */
     @NameInMap("tokens")
     public java.util.Map<String, ?> tokens;
 
     /**
-     * <p>模板类型</p>
+     * <p>The type of the template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class TemplateConfiguration extends TeaModel {
     public String type;
 
     /**
-     * <p>模板版本</p>
+     * <p>The version of the template.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

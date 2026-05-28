@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MaxComputeExportConfiguration extends TeaModel {
     /**
-     * <p>时间范围开始，值设为1则表示将从日志库中第一条数据开始</p>
+     * <p>The beginning of the time range to ship data. The value 1 specifies that the data shipping job ships data from the first log in the Logstore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class MaxComputeExportConfiguration extends TeaModel {
     public Long fromTime;
 
     /**
-     * <p>Logstore名称</p>
+     * <p>The name of the Logstore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class MaxComputeExportConfiguration extends TeaModel {
     public String logstore;
 
     /**
-     * <p>读SLS RAM角色roleArn，请填写您自己的角色roleArn</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role that is used to read data from Simple Log Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,14 +35,14 @@ public class MaxComputeExportConfiguration extends TeaModel {
     public String roleArn;
 
     /**
-     * <p>投递MaxCompute配置</p>
+     * <p>The configuration of the MaxCompute data shipping job.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("sink")
     public MaxComputeExportConfigurationSink sink;
 
     /**
-     * <p>时间范围结束，值设为0则表示任务会一直运行，除非任务被手动停止。</p>
+     * <p>The end of the time range to ship data. The value 0 specifies that the data shipping job continuously ships data until the job is manually stopped.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
