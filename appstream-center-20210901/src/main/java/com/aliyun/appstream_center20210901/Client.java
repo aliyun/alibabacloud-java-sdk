@@ -2576,6 +2576,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListImageResponse listImageWithOptions(ListImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.distro)) {
+            query.put("Distro", request.distro);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tagList)) {
             query.put("TagList", request.tagList);
         }

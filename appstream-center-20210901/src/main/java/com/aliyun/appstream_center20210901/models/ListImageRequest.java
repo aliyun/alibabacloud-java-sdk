@@ -29,6 +29,9 @@ public class ListImageRequest extends TeaModel {
     @NameInMap("BizTypeList")
     public java.util.List<Integer> bizTypeList;
 
+    @NameInMap("Distro")
+    public String distro;
+
     /**
      * <p>The features supported by the image.</p>
      */
@@ -260,6 +263,14 @@ public class ListImageRequest extends TeaModel {
     }
     public java.util.List<Integer> getBizTypeList() {
         return this.bizTypeList;
+    }
+
+    public ListImageRequest setDistro(String distro) {
+        this.distro = distro;
+        return this;
+    }
+    public String getDistro() {
+        return this.distro;
     }
 
     public ListImageRequest setFeatureList(java.util.List<String> featureList) {
