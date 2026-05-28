@@ -18,6 +18,9 @@ public class CreateExecutorGroupRequest extends TeaModel {
     @NameInMap("AuthType")
     public String authType;
 
+    @NameInMap("AutoScale")
+    public Boolean autoScale;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -27,12 +30,18 @@ public class CreateExecutorGroupRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    @NameInMap("CmsWorkspaceId")
+    public String cmsWorkspaceId;
+
     /**
      * <strong>example:</strong>
      * <p>group1</p>
      */
     @NameInMap("Description")
     public String description;
+
+    @NameInMap("IntegrationType")
+    public String integrationType;
 
     /**
      * <p>This parameter is required.</p>
@@ -75,6 +84,9 @@ public class CreateExecutorGroupRequest extends TeaModel {
     @NameInMap("Workers")
     public String workers;
 
+    @NameInMap("XAttrs")
+    public String XAttrs;
+
     public static CreateExecutorGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateExecutorGroupRequest self = new CreateExecutorGroupRequest();
         return TeaModel.build(map, self);
@@ -96,6 +108,14 @@ public class CreateExecutorGroupRequest extends TeaModel {
         return this.authType;
     }
 
+    public CreateExecutorGroupRequest setAutoScale(Boolean autoScale) {
+        this.autoScale = autoScale;
+        return this;
+    }
+    public Boolean getAutoScale() {
+        return this.autoScale;
+    }
+
     public CreateExecutorGroupRequest setClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -104,12 +124,28 @@ public class CreateExecutorGroupRequest extends TeaModel {
         return this.clusterId;
     }
 
+    public CreateExecutorGroupRequest setCmsWorkspaceId(String cmsWorkspaceId) {
+        this.cmsWorkspaceId = cmsWorkspaceId;
+        return this;
+    }
+    public String getCmsWorkspaceId() {
+        return this.cmsWorkspaceId;
+    }
+
     public CreateExecutorGroupRequest setDescription(String description) {
         this.description = description;
         return this;
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateExecutorGroupRequest setIntegrationType(String integrationType) {
+        this.integrationType = integrationType;
+        return this;
+    }
+    public String getIntegrationType() {
+        return this.integrationType;
     }
 
     public CreateExecutorGroupRequest setName(String name) {
@@ -150,6 +186,14 @@ public class CreateExecutorGroupRequest extends TeaModel {
     }
     public String getWorkers() {
         return this.workers;
+    }
+
+    public CreateExecutorGroupRequest setXAttrs(String XAttrs) {
+        this.XAttrs = XAttrs;
+        return this;
+    }
+    public String getXAttrs() {
+        return this.XAttrs;
     }
 
 }

@@ -18,6 +18,9 @@ public class UpdateExecutorGroupRequest extends TeaModel {
     @NameInMap("AuthType")
     public String authType;
 
+    @NameInMap("AutoScale")
+    public Boolean autoScale;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -26,6 +29,9 @@ public class UpdateExecutorGroupRequest extends TeaModel {
      */
     @NameInMap("ClusterId")
     public String clusterId;
+
+    @NameInMap("CmsWorkspaceId")
+    public String cmsWorkspaceId;
 
     /**
      * <strong>example:</strong>
@@ -42,7 +48,11 @@ public class UpdateExecutorGroupRequest extends TeaModel {
      * <p>110176</p>
      */
     @NameInMap("Id")
+    @Deprecated
     public String id;
+
+    @NameInMap("Name")
+    public String name;
 
     /**
      * <strong>example:</strong>
@@ -72,6 +82,9 @@ public class UpdateExecutorGroupRequest extends TeaModel {
     @NameInMap("Workers")
     public String workers;
 
+    @NameInMap("XAttrs")
+    public String XAttrs;
+
     public static UpdateExecutorGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateExecutorGroupRequest self = new UpdateExecutorGroupRequest();
         return TeaModel.build(map, self);
@@ -93,12 +106,28 @@ public class UpdateExecutorGroupRequest extends TeaModel {
         return this.authType;
     }
 
+    public UpdateExecutorGroupRequest setAutoScale(Boolean autoScale) {
+        this.autoScale = autoScale;
+        return this;
+    }
+    public Boolean getAutoScale() {
+        return this.autoScale;
+    }
+
     public UpdateExecutorGroupRequest setClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public UpdateExecutorGroupRequest setCmsWorkspaceId(String cmsWorkspaceId) {
+        this.cmsWorkspaceId = cmsWorkspaceId;
+        return this;
+    }
+    public String getCmsWorkspaceId() {
+        return this.cmsWorkspaceId;
     }
 
     public UpdateExecutorGroupRequest setDescription(String description) {
@@ -109,12 +138,21 @@ public class UpdateExecutorGroupRequest extends TeaModel {
         return this.description;
     }
 
+    @Deprecated
     public UpdateExecutorGroupRequest setId(String id) {
         this.id = id;
         return this;
     }
     public String getId() {
         return this.id;
+    }
+
+    public UpdateExecutorGroupRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public UpdateExecutorGroupRequest setNetwork(String network) {
@@ -147,6 +185,14 @@ public class UpdateExecutorGroupRequest extends TeaModel {
     }
     public String getWorkers() {
         return this.workers;
+    }
+
+    public UpdateExecutorGroupRequest setXAttrs(String XAttrs) {
+        this.XAttrs = XAttrs;
+        return this;
+    }
+    public String getXAttrs() {
+        return this.XAttrs;
     }
 
 }

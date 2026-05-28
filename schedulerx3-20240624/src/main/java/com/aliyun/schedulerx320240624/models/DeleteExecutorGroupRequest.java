@@ -23,6 +23,9 @@ public class DeleteExecutorGroupRequest extends TeaModel {
     @NameInMap("Id")
     public Integer id;
 
+    @NameInMap("Name")
+    public String name;
+
     public static DeleteExecutorGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteExecutorGroupRequest self = new DeleteExecutorGroupRequest();
         return TeaModel.build(map, self);
@@ -42,6 +45,14 @@ public class DeleteExecutorGroupRequest extends TeaModel {
     }
     public Integer getId() {
         return this.id;
+    }
+
+    public DeleteExecutorGroupRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
 }

@@ -167,8 +167,14 @@ public class ListExecutorGroupResponseBody extends TeaModel {
         @NameInMap("AuthType")
         public String authType;
 
+        @NameInMap("AutoScale")
+        public Boolean autoScale;
+
         @NameInMap("CiteList")
         public java.util.List<ListExecutorGroupResponseBodyDataRecordsCiteList> citeList;
+
+        @NameInMap("CmsWorkspaceId")
+        public String cmsWorkspaceId;
 
         /**
          * <strong>example:</strong>
@@ -176,6 +182,9 @@ public class ListExecutorGroupResponseBody extends TeaModel {
          */
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("IntegrationType")
+        public String integrationType;
 
         /**
          * <strong>example:</strong>
@@ -198,6 +207,9 @@ public class ListExecutorGroupResponseBody extends TeaModel {
         @NameInMap("Protocol")
         public String protocol;
 
+        @NameInMap("ResolvedWorkers")
+        public String resolvedWorkers;
+
         /**
          * <strong>example:</strong>
          * <p>12</p>
@@ -218,6 +230,9 @@ public class ListExecutorGroupResponseBody extends TeaModel {
          */
         @NameInMap("Workers")
         public String workers;
+
+        @NameInMap("XAttrs")
+        public String XAttrs;
 
         public static ListExecutorGroupResponseBodyDataRecords build(java.util.Map<String, ?> map) throws Exception {
             ListExecutorGroupResponseBodyDataRecords self = new ListExecutorGroupResponseBodyDataRecords();
@@ -240,6 +255,14 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             return this.authType;
         }
 
+        public ListExecutorGroupResponseBodyDataRecords setAutoScale(Boolean autoScale) {
+            this.autoScale = autoScale;
+            return this;
+        }
+        public Boolean getAutoScale() {
+            return this.autoScale;
+        }
+
         public ListExecutorGroupResponseBodyDataRecords setCiteList(java.util.List<ListExecutorGroupResponseBodyDataRecordsCiteList> citeList) {
             this.citeList = citeList;
             return this;
@@ -248,12 +271,28 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             return this.citeList;
         }
 
+        public ListExecutorGroupResponseBodyDataRecords setCmsWorkspaceId(String cmsWorkspaceId) {
+            this.cmsWorkspaceId = cmsWorkspaceId;
+            return this;
+        }
+        public String getCmsWorkspaceId() {
+            return this.cmsWorkspaceId;
+        }
+
         public ListExecutorGroupResponseBodyDataRecords setDescription(String description) {
             this.description = description;
             return this;
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListExecutorGroupResponseBodyDataRecords setIntegrationType(String integrationType) {
+            this.integrationType = integrationType;
+            return this;
+        }
+        public String getIntegrationType() {
+            return this.integrationType;
         }
 
         public ListExecutorGroupResponseBodyDataRecords setName(String name) {
@@ -280,6 +319,14 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             return this.protocol;
         }
 
+        public ListExecutorGroupResponseBodyDataRecords setResolvedWorkers(String resolvedWorkers) {
+            this.resolvedWorkers = resolvedWorkers;
+            return this;
+        }
+        public String getResolvedWorkers() {
+            return this.resolvedWorkers;
+        }
+
         public ListExecutorGroupResponseBodyDataRecords setWorkerId(Long workerId) {
             this.workerId = workerId;
             return this;
@@ -302,6 +349,14 @@ public class ListExecutorGroupResponseBody extends TeaModel {
         }
         public String getWorkers() {
             return this.workers;
+        }
+
+        public ListExecutorGroupResponseBodyDataRecords setXAttrs(String XAttrs) {
+            this.XAttrs = XAttrs;
+            return this;
+        }
+        public String getXAttrs() {
+            return this.XAttrs;
         }
 
     }

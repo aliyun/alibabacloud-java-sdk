@@ -128,6 +128,9 @@ public class ListExecutorsResponseBody extends TeaModel {
         @NameInMap("Port")
         public Integer port;
 
+        @NameInMap("Status")
+        public String status;
+
         /**
          * <strong>example:</strong>
          * <p>2.0.2</p>
@@ -193,6 +196,14 @@ public class ListExecutorsResponseBody extends TeaModel {
         }
         public Integer getPort() {
             return this.port;
+        }
+
+        public ListExecutorsResponseBodyData setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public ListExecutorsResponseBodyData setVersion(String version) {
