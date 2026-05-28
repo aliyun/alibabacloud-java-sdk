@@ -23,7 +23,7 @@ public class ScanFileInfo extends TeaModel {
      * <p>erwre</p>
      */
     @NameInMap("imageBase64")
-    public byte[] imageBase64;
+    public String imageBase64;
 
     /**
      * <strong>example:</strong>
@@ -53,11 +53,11 @@ public class ScanFileInfo extends TeaModel {
         return this.height;
     }
 
-    public ScanFileInfo setImageBase64(byte[] imageBase64) {
+    public ScanFileInfo setImageBase64(String imageBase64) {
         this.imageBase64 = imageBase64;
         return this;
     }
-    public byte[] getImageBase64() {
+    public String getImageBase64() {
         return this.imageBase64;
     }
 
