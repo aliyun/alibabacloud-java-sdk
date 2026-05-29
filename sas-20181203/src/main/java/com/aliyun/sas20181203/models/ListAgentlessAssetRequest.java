@@ -37,6 +37,9 @@ public class ListAgentlessAssetRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("InstanceIds")
+    public java.util.List<String> instanceIds;
+
     /**
      * <p>The name of the asset instance.</p>
      * 
@@ -115,6 +118,14 @@ public class ListAgentlessAssetRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ListAgentlessAssetRequest setInstanceIds(java.util.List<String> instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+    public java.util.List<String> getInstanceIds() {
+        return this.instanceIds;
     }
 
     public ListAgentlessAssetRequest setInstanceName(String instanceName) {
