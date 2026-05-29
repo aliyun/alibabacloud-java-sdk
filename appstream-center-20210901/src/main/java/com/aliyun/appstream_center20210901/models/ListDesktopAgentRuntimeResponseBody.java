@@ -373,6 +373,12 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         @NameInMap("ModelConfigure")
         public Boolean modelConfigure;
 
+        @NameInMap("ModelTemplateId")
+        public String modelTemplateId;
+
+        @NameInMap("ModelTemplateName")
+        public String modelTemplateName;
+
         @NameInMap("OsType")
         public String osType;
 
@@ -385,6 +391,9 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
          */
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("RegionLocation")
+        public String regionLocation;
 
         @NameInMap("ResourceGroup")
         public ListDesktopAgentRuntimeResponseBodyDataResourceGroup resourceGroup;
@@ -484,6 +493,22 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             return this.modelConfigure;
         }
 
+        public ListDesktopAgentRuntimeResponseBodyData setModelTemplateId(String modelTemplateId) {
+            this.modelTemplateId = modelTemplateId;
+            return this;
+        }
+        public String getModelTemplateId() {
+            return this.modelTemplateId;
+        }
+
+        public ListDesktopAgentRuntimeResponseBodyData setModelTemplateName(String modelTemplateName) {
+            this.modelTemplateName = modelTemplateName;
+            return this;
+        }
+        public String getModelTemplateName() {
+            return this.modelTemplateName;
+        }
+
         public ListDesktopAgentRuntimeResponseBodyData setOsType(String osType) {
             this.osType = osType;
             return this;
@@ -506,6 +531,14 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ListDesktopAgentRuntimeResponseBodyData setRegionLocation(String regionLocation) {
+            this.regionLocation = regionLocation;
+            return this;
+        }
+        public String getRegionLocation() {
+            return this.regionLocation;
         }
 
         public ListDesktopAgentRuntimeResponseBodyData setResourceGroup(ListDesktopAgentRuntimeResponseBodyDataResourceGroup resourceGroup) {

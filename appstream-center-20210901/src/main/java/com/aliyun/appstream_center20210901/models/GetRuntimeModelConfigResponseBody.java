@@ -251,6 +251,12 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
         @NameInMap("ModelTemplateName")
         public String modelTemplateName;
 
+        @NameInMap("ModelTemplateRefType")
+        public String modelTemplateRefType;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         public static GetRuntimeModelConfigResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetRuntimeModelConfigResponseBodyData self = new GetRuntimeModelConfigResponseBodyData();
             return TeaModel.build(map, self);
@@ -286,6 +292,22 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
         }
         public String getModelTemplateName() {
             return this.modelTemplateName;
+        }
+
+        public GetRuntimeModelConfigResponseBodyData setModelTemplateRefType(String modelTemplateRefType) {
+            this.modelTemplateRefType = modelTemplateRefType;
+            return this;
+        }
+        public String getModelTemplateRefType() {
+            return this.modelTemplateRefType;
+        }
+
+        public GetRuntimeModelConfigResponseBodyData setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
     }

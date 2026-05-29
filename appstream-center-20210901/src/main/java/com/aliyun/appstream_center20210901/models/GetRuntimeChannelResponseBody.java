@@ -54,6 +54,9 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
         @NameInMap("AvatarUrl")
         public String avatarUrl;
 
+        @NameInMap("ChannelType")
+        public String channelType;
+
         /**
          * <strong>example:</strong>
          * <p>dingtalk-connector</p>
@@ -105,6 +108,14 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
         }
         public String getAvatarUrl() {
             return this.avatarUrl;
+        }
+
+        public GetRuntimeChannelResponseBodyData setChannelType(String channelType) {
+            this.channelType = channelType;
+            return this;
+        }
+        public String getChannelType() {
+            return this.channelType;
         }
 
         public GetRuntimeChannelResponseBodyData setCode(String code) {
