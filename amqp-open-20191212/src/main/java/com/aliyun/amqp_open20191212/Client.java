@@ -28,6 +28,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>增加实例白名单</p>
+     * 
+     * @param tmpReq AddInstanceWhiteListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddInstanceWhiteListResponse
+     */
+    public AddInstanceWhiteListResponse addInstanceWhiteListWithOptions(AddInstanceWhiteListRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AddInstanceWhiteListShrinkRequest request = new AddInstanceWhiteListShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.whiteListItem)) {
+            request.whiteListItemShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.whiteListItem, "WhiteListItem", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.whiteListItemShrink)) {
+            query.put("WhiteListItem", request.whiteListItemShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.whiteListType)) {
+            query.put("WhiteListType", request.whiteListType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddInstanceWhiteList"),
+            new TeaPair("version", "2019-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddInstanceWhiteListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>增加实例白名单</p>
+     * 
+     * @param request AddInstanceWhiteListRequest
+     * @return AddInstanceWhiteListResponse
+     */
+    public AddInstanceWhiteListResponse addInstanceWhiteList(AddInstanceWhiteListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addInstanceWhiteListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a pair of static username and password. If you access an ApsaraMQ for RabbitMQ broker from an open source RabbitMQ client, you must use a pair of username and password for authentication. You can access the ApsaraMQ for RabbitMQ broker only after the authentication is passed. ApsaraMQ for RabbitMQ allows you to generate usernames and passwords by using AccessKey pairs provided by Alibaba Cloud Resource Access Management (RAM).</p>
      * 
      * @param request CreateAccountRequest
@@ -1116,6 +1174,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询实例ip/vpc白名单</p>
+     * 
+     * @param request ListInstanceWhiteListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListInstanceWhiteListResponse
+     */
+    public ListInstanceWhiteListResponse listInstanceWhiteListWithOptions(ListInstanceWhiteListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.whiteListType)) {
+            query.put("whiteListType", request.whiteListType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListInstanceWhiteList"),
+            new TeaPair("version", "2019-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstanceWhiteListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询实例ip/vpc白名单</p>
+     * 
+     * @param request ListInstanceWhiteListRequest
+     * @return ListInstanceWhiteListResponse
+     */
+    public ListInstanceWhiteListResponse listInstanceWhiteList(ListInstanceWhiteListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listInstanceWhiteListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries all AparaMQ for RabbitMQ instances in a region. The returned data includes the basic information, endpoint, and specification limits of each instance.</p>
      * 
      * @param request ListInstancesRequest
@@ -1318,6 +1424,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListVirtualHostsResponse listVirtualHosts(ListVirtualHostsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listVirtualHostsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除实例ip/vpc白名单</p>
+     * 
+     * @param request RemoveInstanceWhiteListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveInstanceWhiteListResponse
+     */
+    public RemoveInstanceWhiteListResponse removeInstanceWhiteListWithOptions(RemoveInstanceWhiteListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.whiteListItemId)) {
+            query.put("whiteListItemId", request.whiteListItemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.whiteListType)) {
+            query.put("whiteListType", request.whiteListType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RemoveInstanceWhiteList"),
+            new TeaPair("version", "2019-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveInstanceWhiteListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除实例ip/vpc白名单</p>
+     * 
+     * @param request RemoveInstanceWhiteListRequest
+     * @return RemoveInstanceWhiteListResponse
+     */
+    public RemoveInstanceWhiteListResponse removeInstanceWhiteList(RemoveInstanceWhiteListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.removeInstanceWhiteListWithOptions(request, runtime);
     }
 
     /**
