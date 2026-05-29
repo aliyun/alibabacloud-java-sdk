@@ -205,6 +205,9 @@ public class CreateCloudResourceRequest extends TeaModel {
         @NameInMap("CustomCiphers")
         public java.util.List<String> customCiphers;
 
+        @NameInMap("Domain")
+        public String domain;
+
         /**
          * <p>Specifies whether to support TLS 1.3. This parameter is available only if you specify <strong>HttpsPorts</strong>. Valid values:</p>
          * <ul>
@@ -236,7 +239,6 @@ public class CreateCloudResourceRequest extends TeaModel {
 
         /**
          * <p>The port of the cloud service.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -250,7 +252,6 @@ public class CreateCloudResourceRequest extends TeaModel {
          * <li><strong>http</strong></li>
          * <li><strong>https</strong></li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>http</p>
@@ -260,7 +261,6 @@ public class CreateCloudResourceRequest extends TeaModel {
 
         /**
          * <p>The instance ID of the cloud service.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>lb-bp1*****</p>
@@ -328,6 +328,14 @@ public class CreateCloudResourceRequest extends TeaModel {
         }
         public java.util.List<String> getCustomCiphers() {
             return this.customCiphers;
+        }
+
+        public CreateCloudResourceRequestListen setDomain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+        public String getDomain() {
+            return this.domain;
         }
 
         public CreateCloudResourceRequestListen setEnableTLSv3(Boolean enableTLSv3) {

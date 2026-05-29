@@ -102,6 +102,9 @@ public class DescribeCloudResourceListResponseBody extends TeaModel {
         @NameInMap("Protocol")
         public String protocol;
 
+        @NameInMap("ResourceDomain")
+        public String resourceDomain;
+
         /**
          * <strong>example:</strong>
          * <p>i-8vbdlsd********81e22</p>
@@ -157,6 +160,14 @@ public class DescribeCloudResourceListResponseBody extends TeaModel {
         }
         public String getProtocol() {
             return this.protocol;
+        }
+
+        public DescribeCloudResourceListResponseBodyCloudResourceList setResourceDomain(String resourceDomain) {
+            this.resourceDomain = resourceDomain;
+            return this;
+        }
+        public String getResourceDomain() {
+            return this.resourceDomain;
         }
 
         public DescribeCloudResourceListResponseBodyCloudResourceList setResourceInstanceId(String resourceInstanceId) {

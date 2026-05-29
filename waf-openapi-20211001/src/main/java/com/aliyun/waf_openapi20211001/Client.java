@@ -5121,6 +5121,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDomain)) {
+            query.put("ResourceDomain", request.resourceDomain);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceInstanceId)) {
             query.put("ResourceInstanceId", request.resourceInstanceId);
         }
@@ -9213,6 +9217,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDomain)) {
+            query.put("ResourceDomain", request.resourceDomain);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceInstanceAccessStatus)) {

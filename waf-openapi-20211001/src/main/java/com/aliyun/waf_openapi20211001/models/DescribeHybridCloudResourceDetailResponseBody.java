@@ -237,6 +237,47 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeHybridCloudResourceDetailResponseBodyDomainRedirectBackendPorts extends TeaModel {
+        @NameInMap("BackendPort")
+        public Integer backendPort;
+
+        @NameInMap("ListenPort")
+        public Integer listenPort;
+
+        @NameInMap("Protocol")
+        public String protocol;
+
+        public static DescribeHybridCloudResourceDetailResponseBodyDomainRedirectBackendPorts build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHybridCloudResourceDetailResponseBodyDomainRedirectBackendPorts self = new DescribeHybridCloudResourceDetailResponseBodyDomainRedirectBackendPorts();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHybridCloudResourceDetailResponseBodyDomainRedirectBackendPorts setBackendPort(Integer backendPort) {
+            this.backendPort = backendPort;
+            return this;
+        }
+        public Integer getBackendPort() {
+            return this.backendPort;
+        }
+
+        public DescribeHybridCloudResourceDetailResponseBodyDomainRedirectBackendPorts setListenPort(Integer listenPort) {
+            this.listenPort = listenPort;
+            return this;
+        }
+        public Integer getListenPort() {
+            return this.listenPort;
+        }
+
+        public DescribeHybridCloudResourceDetailResponseBodyDomainRedirectBackendPorts setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+    }
+
     public static class DescribeHybridCloudResourceDetailResponseBodyDomainRedirectRequestHeaders extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -276,6 +317,9 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeHybridCloudResourceDetailResponseBodyDomainRedirect extends TeaModel {
+        @NameInMap("BackendPorts")
+        public java.util.List<DescribeHybridCloudResourceDetailResponseBodyDomainRedirectBackendPorts> backendPorts;
+
         @NameInMap("Backends")
         public java.util.List<String> backends;
 
@@ -328,6 +372,9 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
         @NameInMap("Loadbalance")
         public String loadbalance;
 
+        @NameInMap("ProxyProtocol")
+        public Boolean proxyProtocol;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -376,6 +423,14 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
         public static DescribeHybridCloudResourceDetailResponseBodyDomainRedirect build(java.util.Map<String, ?> map) throws Exception {
             DescribeHybridCloudResourceDetailResponseBodyDomainRedirect self = new DescribeHybridCloudResourceDetailResponseBodyDomainRedirect();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeHybridCloudResourceDetailResponseBodyDomainRedirect setBackendPorts(java.util.List<DescribeHybridCloudResourceDetailResponseBodyDomainRedirectBackendPorts> backendPorts) {
+            this.backendPorts = backendPorts;
+            return this;
+        }
+        public java.util.List<DescribeHybridCloudResourceDetailResponseBodyDomainRedirectBackendPorts> getBackendPorts() {
+            return this.backendPorts;
         }
 
         public DescribeHybridCloudResourceDetailResponseBodyDomainRedirect setBackends(java.util.List<String> backends) {
@@ -440,6 +495,14 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
         }
         public String getLoadbalance() {
             return this.loadbalance;
+        }
+
+        public DescribeHybridCloudResourceDetailResponseBodyDomainRedirect setProxyProtocol(Boolean proxyProtocol) {
+            this.proxyProtocol = proxyProtocol;
+            return this;
+        }
+        public Boolean getProxyProtocol() {
+            return this.proxyProtocol;
         }
 
         public DescribeHybridCloudResourceDetailResponseBodyDomainRedirect setReadTimeout(Long readTimeout) {

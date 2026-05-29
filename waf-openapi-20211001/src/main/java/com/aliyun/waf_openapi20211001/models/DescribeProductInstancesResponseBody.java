@@ -241,6 +241,9 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         @NameInMap("OwnerUserId")
         public String ownerUserId;
 
+        @NameInMap("ResourceDomain")
+        public String resourceDomain;
+
         @NameInMap("ResourceInstanceAccessStatus")
         public String resourceInstanceAccessStatus;
 
@@ -370,6 +373,14 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         }
         public String getOwnerUserId() {
             return this.ownerUserId;
+        }
+
+        public DescribeProductInstancesResponseBodyProductInstances setResourceDomain(String resourceDomain) {
+            this.resourceDomain = resourceDomain;
+            return this;
+        }
+        public String getResourceDomain() {
+            return this.resourceDomain;
         }
 
         public DescribeProductInstancesResponseBodyProductInstances setResourceInstanceAccessStatus(String resourceInstanceAccessStatus) {

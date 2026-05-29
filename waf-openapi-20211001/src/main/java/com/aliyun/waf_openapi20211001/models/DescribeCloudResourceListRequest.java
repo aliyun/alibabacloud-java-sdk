@@ -55,6 +55,9 @@ public class DescribeCloudResourceListRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceDomain")
+    public String resourceDomain;
+
     /**
      * <strong>example:</strong>
      * <p>i-8vbdlsd********81e22</p>
@@ -135,6 +138,14 @@ public class DescribeCloudResourceListRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeCloudResourceListRequest setResourceDomain(String resourceDomain) {
+        this.resourceDomain = resourceDomain;
+        return this;
+    }
+    public String getResourceDomain() {
+        return this.resourceDomain;
     }
 
     public DescribeCloudResourceListRequest setResourceInstanceId(String resourceInstanceId) {
