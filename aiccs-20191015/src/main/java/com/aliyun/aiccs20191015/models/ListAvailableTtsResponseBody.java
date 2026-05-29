@@ -141,6 +141,13 @@ public class ListAvailableTtsResponseBody extends TeaModel {
         @NameInMap("TtsVoiceName")
         public String ttsVoiceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
+         */
+        @NameInMap("VoiceType")
+        public String voiceType;
+
         public static ListAvailableTtsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListAvailableTtsResponseBodyData self = new ListAvailableTtsResponseBodyData();
             return TeaModel.build(map, self);
@@ -184,6 +191,14 @@ public class ListAvailableTtsResponseBody extends TeaModel {
         }
         public String getTtsVoiceName() {
             return this.ttsVoiceName;
+        }
+
+        public ListAvailableTtsResponseBodyData setVoiceType(String voiceType) {
+            this.voiceType = voiceType;
+            return this;
+        }
+        public String getVoiceType() {
+            return this.voiceType;
         }
 
     }

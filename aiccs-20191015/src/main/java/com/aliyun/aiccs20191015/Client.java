@@ -6165,6 +6165,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TtsVoiceCode", request.ttsVoiceCode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.voiceType)) {
+            query.put("VoiceType", request.voiceType);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));

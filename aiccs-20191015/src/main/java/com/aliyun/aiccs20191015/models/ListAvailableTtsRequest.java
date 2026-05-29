@@ -22,6 +22,13 @@ public class ListAvailableTtsRequest extends TeaModel {
     @NameInMap("TtsVoiceCode")
     public String ttsVoiceCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
+    @NameInMap("VoiceType")
+    public String voiceType;
+
     public static ListAvailableTtsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAvailableTtsRequest self = new ListAvailableTtsRequest();
         return TeaModel.build(map, self);
@@ -57,6 +64,14 @@ public class ListAvailableTtsRequest extends TeaModel {
     }
     public String getTtsVoiceCode() {
         return this.ttsVoiceCode;
+    }
+
+    public ListAvailableTtsRequest setVoiceType(String voiceType) {
+        this.voiceType = voiceType;
+        return this;
+    }
+    public String getVoiceType() {
+        return this.voiceType;
     }
 
 }
