@@ -31,6 +31,7 @@ public class UpdateRulesAttributeRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
+     * <p>The forwarding rules.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Rules")
@@ -66,21 +67,45 @@ public class UpdateRulesAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRulesAttributeRequestRulesRuleActionsCorsConfig extends TeaModel {
+        /**
+         * <p>Specifies whether to allow credentials to be carried in CORS requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
         @NameInMap("AllowCredentials")
         public String allowCredentials;
 
+        /**
+         * <p>The trusted headers of CORS requests.</p>
+         */
         @NameInMap("AllowHeaders")
         public java.util.List<String> allowHeaders;
 
+        /**
+         * <p>The trusted HTTP methods of CORS requests.</p>
+         */
         @NameInMap("AllowMethods")
         public java.util.List<String> allowMethods;
 
+        /**
+         * <p>The trusted origins.</p>
+         */
         @NameInMap("AllowOrigin")
         public java.util.List<String> allowOrigin;
 
+        /**
+         * <p>The headers that can be exposed.</p>
+         */
         @NameInMap("ExposeHeaders")
         public java.util.List<String> exposeHeaders;
 
+        /**
+         * <p>The maximum cache time for dry runs in the browser.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("MaxAge")
         public Long maxAge;
 
@@ -140,12 +165,30 @@ public class UpdateRulesAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRulesAttributeRequestRulesRuleActionsFixedResponseConfig extends TeaModel {
+        /**
+         * <p>The content of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dssacav</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The content type of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text/plain</p>
+         */
         @NameInMap("ContentType")
         public String contentType;
 
+        /**
+         * <p>The HTTP status code in the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("HttpCode")
         public String httpCode;
 
@@ -181,9 +224,21 @@ public class UpdateRulesAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRulesAttributeRequestRulesRuleActionsForwardGroupConfigServerGroupStickySession extends TeaModel {
+        /**
+         * <p>Specifies whether to enable session persistence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <p>The timeout period for sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Timeout")
         public Integer timeout;
 
@@ -211,9 +266,21 @@ public class UpdateRulesAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRulesAttributeRequestRulesRuleActionsForwardGroupConfigServerGroupTuples extends TeaModel {
+        /**
+         * <p>The ID of the server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-atstuj3rtoptyui****</p>
+         */
         @NameInMap("ServerGroupId")
         public String serverGroupId;
 
+        /**
+         * <p>The weight of the server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("Weight")
         public Integer weight;
 
@@ -241,9 +308,15 @@ public class UpdateRulesAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRulesAttributeRequestRulesRuleActionsForwardGroupConfig extends TeaModel {
+        /**
+         * <p>The configuration of session persistence for server groups.</p>
+         */
         @NameInMap("ServerGroupStickySession")
         public UpdateRulesAttributeRequestRulesRuleActionsForwardGroupConfigServerGroupStickySession serverGroupStickySession;
 
+        /**
+         * <p>The server groups to which requests are forwarded.</p>
+         */
         @NameInMap("ServerGroupTuples")
         public java.util.List<UpdateRulesAttributeRequestRulesRuleActionsForwardGroupConfigServerGroupTuples> serverGroupTuples;
 
@@ -271,15 +344,39 @@ public class UpdateRulesAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRulesAttributeRequestRulesRuleActionsInsertHeaderConfig extends TeaModel {
+        /**
+         * <p>Specifies whether to overwrite the header in the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("CoverEnabled")
         public Boolean coverEnabled;
 
+        /**
+         * <p>The key of the HTTP header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the HTTP header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UserDefined</p>
+         */
         @NameInMap("Value")
         public String value;
 
+        /**
+         * <p>The type of the header value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UserDefined</p>
+         */
         @NameInMap("ValueType")
         public String valueType;
 
@@ -323,21 +420,57 @@ public class UpdateRulesAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRulesAttributeRequestRulesRuleActionsRedirectConfig extends TeaModel {
+        /**
+         * <p>The hostname to which requests are redirected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
+         */
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <p>The HTTP status code that indicates the redirect type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>301</p>
+         */
         @NameInMap("HttpCode")
         public String httpCode;
 
+        /**
+         * <p>The path of the destination to which requests are forwarded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <p>The port to which requests are forwarded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>The protocol of the destination to which requests are forwarded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>The query string to which requests are redirected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quert</p>
+         */
         @NameInMap("Query")
         public String query;
 
@@ -397,6 +530,12 @@ public class UpdateRulesAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRulesAttributeRequestRulesRuleActionsRemoveHeaderConfig extends TeaModel {
+        /**
+         * <p>The key of the header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Port</p>
+         */
         @NameInMap("Key")
         public String key;
 
@@ -416,12 +555,30 @@ public class UpdateRulesAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRulesAttributeRequestRulesRuleActionsRewriteConfig extends TeaModel {
+        /**
+         * <p>The hostname of the destination to which requests are forwarded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
+         */
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <p>The path to which requests are forwarded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/tsdf</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <p>The query string of the URL to which requests are forwarded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quedsa</p>
+         */
         @NameInMap("Query")
         public String query;
 
@@ -457,9 +614,21 @@ public class UpdateRulesAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRulesAttributeRequestRulesRuleActionsTrafficLimitConfig extends TeaModel {
+        /**
+         * <p>The number of requests per IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("PerIpQps")
         public Integer perIpQps;
 
+        /**
+         * <p>The number of queries per second (QPS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("QPS")
         public Integer QPS;
 
@@ -487,6 +656,12 @@ public class UpdateRulesAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRulesAttributeRequestRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples extends TeaModel {
+        /**
+         * <p>The server group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>srg-00mkgijak0w4qgz9****</p>
+         */
         @NameInMap("ServerGroupId")
         public String serverGroupId;
 
@@ -506,6 +681,9 @@ public class UpdateRulesAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRulesAttributeRequestRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig extends TeaModel {
+        /**
+         * <p>The server group to which traffic is mirrored.</p>
+         */
         @NameInMap("ServerGroupTuples")
         public java.util.List<UpdateRulesAttributeRequestRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples> serverGroupTuples;
 
@@ -525,9 +703,18 @@ public class UpdateRulesAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRulesAttributeRequestRulesRuleActionsTrafficMirrorConfig extends TeaModel {
+        /**
+         * <p>The configuration of the server group to which traffic is mirrored.</p>
+         */
         @NameInMap("MirrorGroupConfig")
         public UpdateRulesAttributeRequestRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig mirrorGroupConfig;
 
+        /**
+         * <p>The type of the target to which network traffic is mirrored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ForwardGroupMirror</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 
@@ -555,41 +742,76 @@ public class UpdateRulesAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRulesAttributeRequestRulesRuleActions extends TeaModel {
+        /**
+         * <p>The cross-origin resource sharing (CORS) configuration.</p>
+         */
         @NameInMap("CorsConfig")
         public UpdateRulesAttributeRequestRulesRuleActionsCorsConfig corsConfig;
 
+        /**
+         * <p>The configuration of the action to return a custom response.</p>
+         */
         @NameInMap("FixedResponseConfig")
         public UpdateRulesAttributeRequestRulesRuleActionsFixedResponseConfig fixedResponseConfig;
 
+        /**
+         * <p>The configuration of the action to forward requests to server groups.</p>
+         */
         @NameInMap("ForwardGroupConfig")
         public UpdateRulesAttributeRequestRulesRuleActionsForwardGroupConfig forwardGroupConfig;
 
+        /**
+         * <p>The configuration of the action to insert a header.</p>
+         */
         @NameInMap("InsertHeaderConfig")
         public UpdateRulesAttributeRequestRulesRuleActionsInsertHeaderConfig insertHeaderConfig;
 
         /**
+         * <p>The priority of the action.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Order")
         public Integer order;
 
+        /**
+         * <p>The configuration of the redirect action.</p>
+         */
         @NameInMap("RedirectConfig")
         public UpdateRulesAttributeRequestRulesRuleActionsRedirectConfig redirectConfig;
 
+        /**
+         * <p>The configuration of the HTTP header to be removed.</p>
+         */
         @NameInMap("RemoveHeaderConfig")
         public UpdateRulesAttributeRequestRulesRuleActionsRemoveHeaderConfig removeHeaderConfig;
 
+        /**
+         * <p>The configuration of the rewrite action.</p>
+         */
         @NameInMap("RewriteConfig")
         public UpdateRulesAttributeRequestRulesRuleActionsRewriteConfig rewriteConfig;
 
+        /**
+         * <p>The configuration of traffic throttling.</p>
+         */
         @NameInMap("TrafficLimitConfig")
         public UpdateRulesAttributeRequestRulesRuleActionsTrafficLimitConfig trafficLimitConfig;
 
+        /**
+         * <p>The configuration of traffic mirroring.</p>
+         */
         @NameInMap("TrafficMirrorConfig")
         public UpdateRulesAttributeRequestRulesRuleActionsTrafficMirrorConfig trafficMirrorConfig;
 
         /**
+         * <p>The type of action.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Host</p>
          */
         @NameInMap("Type")
         public String type;
@@ -690,9 +912,21 @@ public class UpdateRulesAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRulesAttributeRequestRulesRuleConditionsCookieConfigValues extends TeaModel {
+        /**
+         * <p>The cookie key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The cookie value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -720,6 +954,9 @@ public class UpdateRulesAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRulesAttributeRequestRulesRuleConditionsCookieConfig extends TeaModel {
+        /**
+         * <p>The key-value pairs of cookies.</p>
+         */
         @NameInMap("Values")
         public java.util.List<UpdateRulesAttributeRequestRulesRuleConditionsCookieConfigValues> values;
 
@@ -739,9 +976,18 @@ public class UpdateRulesAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRulesAttributeRequestRulesRuleConditionsHeaderConfig extends TeaModel {
+        /**
+         * <p>The key of the header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Port</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The values of the HTTP header.</p>
+         */
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -769,6 +1015,9 @@ public class UpdateRulesAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRulesAttributeRequestRulesRuleConditionsHostConfig extends TeaModel {
+        /**
+         * <p>The hostnames.</p>
+         */
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -788,6 +1037,9 @@ public class UpdateRulesAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRulesAttributeRequestRulesRuleConditionsMethodConfig extends TeaModel {
+        /**
+         * <p>The HTTP request methods.</p>
+         */
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -807,6 +1059,9 @@ public class UpdateRulesAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRulesAttributeRequestRulesRuleConditionsPathConfig extends TeaModel {
+        /**
+         * <p>The paths to which requests are forwarded.</p>
+         */
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -826,9 +1081,21 @@ public class UpdateRulesAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRulesAttributeRequestRulesRuleConditionsQueryStringConfigValues extends TeaModel {
+        /**
+         * <p>The key of the query string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the query string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -856,6 +1123,9 @@ public class UpdateRulesAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRulesAttributeRequestRulesRuleConditionsQueryStringConfig extends TeaModel {
+        /**
+         * <p>The key-value pairs of query strings.</p>
+         */
         @NameInMap("Values")
         public java.util.List<UpdateRulesAttributeRequestRulesRuleConditionsQueryStringConfigValues> values;
 
@@ -875,9 +1145,18 @@ public class UpdateRulesAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRulesAttributeRequestRulesRuleConditionsResponseHeaderConfig extends TeaModel {
+        /**
+         * <p>The key of the response header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The values of the response header.</p>
+         */
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -905,6 +1184,9 @@ public class UpdateRulesAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRulesAttributeRequestRulesRuleConditionsResponseStatusCodeConfig extends TeaModel {
+        /**
+         * <p>The match conditions.</p>
+         */
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -924,6 +1206,9 @@ public class UpdateRulesAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRulesAttributeRequestRulesRuleConditionsSourceIpConfig extends TeaModel {
+        /**
+         * <p>You can add one or more IP addresses, including CIDR blocks.</p>
+         */
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -943,33 +1228,66 @@ public class UpdateRulesAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRulesAttributeRequestRulesRuleConditions extends TeaModel {
+        /**
+         * <p>The configuration of the cookie.</p>
+         */
         @NameInMap("CookieConfig")
         public UpdateRulesAttributeRequestRulesRuleConditionsCookieConfig cookieConfig;
 
+        /**
+         * <p>The configuration of the HTTP header.</p>
+         */
         @NameInMap("HeaderConfig")
         public UpdateRulesAttributeRequestRulesRuleConditionsHeaderConfig headerConfig;
 
+        /**
+         * <p>The match conditions for hostnames.</p>
+         */
         @NameInMap("HostConfig")
         public UpdateRulesAttributeRequestRulesRuleConditionsHostConfig hostConfig;
 
+        /**
+         * <p>The configuration of the HTTP request method.</p>
+         */
         @NameInMap("MethodConfig")
         public UpdateRulesAttributeRequestRulesRuleConditionsMethodConfig methodConfig;
 
+        /**
+         * <p>The match conditions for query strings.</p>
+         */
         @NameInMap("PathConfig")
         public UpdateRulesAttributeRequestRulesRuleConditionsPathConfig pathConfig;
 
+        /**
+         * <p>The match conditions for query strings.</p>
+         */
         @NameInMap("QueryStringConfig")
         public UpdateRulesAttributeRequestRulesRuleConditionsQueryStringConfig queryStringConfig;
 
+        /**
+         * <p>The HTTP response headers.</p>
+         */
         @NameInMap("ResponseHeaderConfig")
         public UpdateRulesAttributeRequestRulesRuleConditionsResponseHeaderConfig responseHeaderConfig;
 
+        /**
+         * <p>The match conditions for response status codes.</p>
+         */
         @NameInMap("ResponseStatusCodeConfig")
         public UpdateRulesAttributeRequestRulesRuleConditionsResponseStatusCodeConfig responseStatusCodeConfig;
 
+        /**
+         * <p>Traffic matching based on source IP addresses.</p>
+         */
         @NameInMap("SourceIpConfig")
         public UpdateRulesAttributeRequestRulesRuleConditionsSourceIpConfig sourceIpConfig;
 
+        /**
+         * <p>The condition type of the forwarding rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ForwardGroup</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -1061,21 +1379,43 @@ public class UpdateRulesAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRulesAttributeRequestRules extends TeaModel {
+        /**
+         * <p>The priority of the forwarding rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <p>The forwarding rules.</p>
+         */
         @NameInMap("RuleActions")
         public java.util.List<UpdateRulesAttributeRequestRulesRuleActions> ruleActions;
 
+        /**
+         * <p>The match conditions of the forwarding rule.</p>
+         */
         @NameInMap("RuleConditions")
         public java.util.List<UpdateRulesAttributeRequestRulesRuleConditions> ruleConditions;
 
         /**
+         * <p>The ID of the forwarding rule.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule-cxjh7vazn2jpnl****</p>
          */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <p>The name of the forwarding rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule-instance-test</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 

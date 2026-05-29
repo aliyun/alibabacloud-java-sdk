@@ -71,6 +71,13 @@ public class CreateServerGroupRequest extends TeaModel {
     public CreateServerGroupRequestHealthCheckConfig healthCheckConfig;
 
     /**
+     * <strong>example:</strong>
+     * <p>Affinity</p>
+     */
+    @NameInMap("IpVersionAffinityMode")
+    public String ipVersionAffinityMode;
+
+    /**
      * <p>Specifies whether to enable Ipv6.</p>
      * 
      * <strong>example:</strong>
@@ -256,6 +263,14 @@ public class CreateServerGroupRequest extends TeaModel {
     }
     public CreateServerGroupRequestHealthCheckConfig getHealthCheckConfig() {
         return this.healthCheckConfig;
+    }
+
+    public CreateServerGroupRequest setIpVersionAffinityMode(String ipVersionAffinityMode) {
+        this.ipVersionAffinityMode = ipVersionAffinityMode;
+        return this;
+    }
+    public String getIpVersionAffinityMode() {
+        return this.ipVersionAffinityMode;
     }
 
     public CreateServerGroupRequest setIpv6Enabled(Boolean ipv6Enabled) {

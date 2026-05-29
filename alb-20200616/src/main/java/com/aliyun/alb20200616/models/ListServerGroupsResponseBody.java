@@ -665,6 +665,13 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public ListServerGroupsResponseBodyServerGroupsHealthCheckConfig healthCheckConfig;
 
         /**
+         * <strong>example:</strong>
+         * <p>Affinity</p>
+         */
+        @NameInMap("IpVersionAffinityMode")
+        public String ipVersionAffinityMode;
+
+        /**
          * <p>Indicates whether IPv6 is supported. Valid values:</p>
          * <ul>
          * <li><strong>true</strong></li>
@@ -881,6 +888,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
         }
         public ListServerGroupsResponseBodyServerGroupsHealthCheckConfig getHealthCheckConfig() {
             return this.healthCheckConfig;
+        }
+
+        public ListServerGroupsResponseBodyServerGroups setIpVersionAffinityMode(String ipVersionAffinityMode) {
+            this.ipVersionAffinityMode = ipVersionAffinityMode;
+            return this;
+        }
+        public String getIpVersionAffinityMode() {
+            return this.ipVersionAffinityMode;
         }
 
         public ListServerGroupsResponseBodyServerGroups setIpv6Enabled(Boolean ipv6Enabled) {

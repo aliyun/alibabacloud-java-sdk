@@ -70,6 +70,13 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
     public UpdateServerGroupAttributeRequestHealthCheckConfig healthCheckConfig;
 
     /**
+     * <strong>example:</strong>
+     * <p>Affinity</p>
+     */
+    @NameInMap("IpVersionAffinityMode")
+    public String ipVersionAffinityMode;
+
+    /**
      * <p>The scheduling algorithm. Valid values:</p>
      * <ul>
      * <li><strong>Wrr</strong>: the weighted round robin algorithm. Backend servers that have higher weights receive more requests than those that have lower weights.</li>
@@ -190,6 +197,14 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
     }
     public UpdateServerGroupAttributeRequestHealthCheckConfig getHealthCheckConfig() {
         return this.healthCheckConfig;
+    }
+
+    public UpdateServerGroupAttributeRequest setIpVersionAffinityMode(String ipVersionAffinityMode) {
+        this.ipVersionAffinityMode = ipVersionAffinityMode;
+        return this;
+    }
+    public String getIpVersionAffinityMode() {
+        return this.ipVersionAffinityMode;
     }
 
     public UpdateServerGroupAttributeRequest setScheduler(String scheduler) {

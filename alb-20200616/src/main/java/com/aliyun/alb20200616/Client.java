@@ -412,7 +412,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Associates an EIP bandwidth plan with an Application Load Balancer (ALB) instance.</p>
+     * <p>Associates an Internet Shared Bandwidth instance with an Application Load Balancer (ALB) instance.</p>
      * 
      * @param request AttachCommonBandwidthPackageToLoadBalancerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -467,7 +467,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Associates an EIP bandwidth plan with an Application Load Balancer (ALB) instance.</p>
+     * <p>Associates an Internet Shared Bandwidth instance with an Application Load Balancer (ALB) instance.</p>
      * 
      * @param request AttachCommonBandwidthPackageToLoadBalancerRequest
      * @return AttachCommonBandwidthPackageToLoadBalancerResponse
@@ -989,6 +989,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceGroupId", request.resourceGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.securityGroupIds)) {
+            query.put("SecurityGroupIds", request.securityGroupIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
             query.put("Tag", request.tag);
         }
@@ -1348,6 +1352,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.healthCheckConfig)) {
             query.put("HealthCheckConfig", request.healthCheckConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipVersionAffinityMode)) {
+            query.put("IpVersionAffinityMode", request.ipVersionAffinityMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ipv6Enabled)) {
@@ -1716,6 +1724,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.loadBalancerId)) {
             query.put("LoadBalancerId", request.loadBalancerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.retainResourceType)) {
+            query.put("RetainResourceType", request.retainResourceType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2145,7 +2157,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Disassociates an elastic IP address (EIP) bandwidth plan from an Application Load Balancer (ALB) instance.</p>
+     * <p>Disassociates an Internet Shared Bandwidth instance from an Application Load Balancer (ALB) instance.</p>
      * 
      * @param request DetachCommonBandwidthPackageFromLoadBalancerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2200,7 +2212,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Disassociates an elastic IP address (EIP) bandwidth plan from an Application Load Balancer (ALB) instance.</p>
+     * <p>Disassociates an Internet Shared Bandwidth instance from an Application Load Balancer (ALB) instance.</p>
      * 
      * @param request DetachCommonBandwidthPackageFromLoadBalancerRequest
      * @return DetachCommonBandwidthPackageFromLoadBalancerResponse
@@ -2264,7 +2276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables the access log feature for a Server Load Balancer (SLB) instance.</p>
+     * <p>Disables the access log feature for a Application Load Balancer (ALB) instance.</p>
      * 
      * @param request DisableLoadBalancerAccessLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2304,7 +2316,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables the access log feature for a Server Load Balancer (SLB) instance.</p>
+     * <p>Disables the access log feature for a Application Load Balancer (ALB) instance.</p>
      * 
      * @param request DisableLoadBalancerAccessLogRequest
      * @return DisableLoadBalancerAccessLogResponse
@@ -3822,7 +3834,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries system security policies in a region.</p>
      * 
-     * @param request ListSystemSecurityPoliciesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListSystemSecurityPoliciesResponse
      */
@@ -5307,6 +5318,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("LoadBalancerId", request.loadBalancerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.retainResourceType)) {
+            query.put("RetainResourceType", request.retainResourceType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.zoneMappings)) {
             query.put("ZoneMappings", request.zoneMappings);
         }
@@ -5534,6 +5549,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.loadBalancerId)) {
             query.put("LoadBalancerId", request.loadBalancerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.retainResourceType)) {
+            query.put("RetainResourceType", request.retainResourceType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.zoneMappings)) {
@@ -5844,7 +5863,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a server group, such as health checks, session persistence, server group names, routing algorithms, and protocols.</p>
+     * <p>Modifies the configurations of a server group, such as health checks, session persistence, the server group name, the routing algorithm, and the protocol.</p>
      * 
      * @param request UpdateServerGroupAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5871,6 +5890,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.healthCheckConfig)) {
             query.put("HealthCheckConfig", request.healthCheckConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipVersionAffinityMode)) {
+            query.put("IpVersionAffinityMode", request.ipVersionAffinityMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.scheduler)) {
@@ -5932,7 +5955,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a server group, such as health checks, session persistence, server group names, routing algorithms, and protocols.</p>
+     * <p>Modifies the configurations of a server group, such as health checks, session persistence, the server group name, the routing algorithm, and the protocol.</p>
      * 
      * @param request UpdateServerGroupAttributeRequest
      * @return UpdateServerGroupAttributeResponse

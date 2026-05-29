@@ -37,6 +37,9 @@ public class DeleteLoadBalancerRequest extends TeaModel {
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
+    @NameInMap("RetainResourceType")
+    public java.util.List<String> retainResourceType;
+
     public static DeleteLoadBalancerRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteLoadBalancerRequest self = new DeleteLoadBalancerRequest();
         return TeaModel.build(map, self);
@@ -64,6 +67,14 @@ public class DeleteLoadBalancerRequest extends TeaModel {
     }
     public String getLoadBalancerId() {
         return this.loadBalancerId;
+    }
+
+    public DeleteLoadBalancerRequest setRetainResourceType(java.util.List<String> retainResourceType) {
+        this.retainResourceType = retainResourceType;
+        return this;
+    }
+    public java.util.List<String> getRetainResourceType() {
+        return this.retainResourceType;
     }
 
 }

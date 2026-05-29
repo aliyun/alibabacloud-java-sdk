@@ -133,6 +133,9 @@ public class CreateLoadBalancerRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("SecurityGroupIds")
+    public java.util.List<CreateLoadBalancerRequestSecurityGroupIds> securityGroupIds;
+
     /**
      * <p>The tags.</p>
      */
@@ -247,6 +250,14 @@ public class CreateLoadBalancerRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public CreateLoadBalancerRequest setSecurityGroupIds(java.util.List<CreateLoadBalancerRequestSecurityGroupIds> securityGroupIds) {
+        this.securityGroupIds = securityGroupIds;
+        return this;
+    }
+    public java.util.List<CreateLoadBalancerRequestSecurityGroupIds> getSecurityGroupIds() {
+        return this.securityGroupIds;
     }
 
     public CreateLoadBalancerRequest setTag(java.util.List<CreateLoadBalancerRequestTag> tag) {
@@ -366,6 +377,29 @@ public class CreateLoadBalancerRequest extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+    }
+
+    public static class CreateLoadBalancerRequestSecurityGroupIds extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>sg-gw82chzr7ru23iwbn9mu</p>
+         */
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
+        public static CreateLoadBalancerRequestSecurityGroupIds build(java.util.Map<String, ?> map) throws Exception {
+            CreateLoadBalancerRequestSecurityGroupIds self = new CreateLoadBalancerRequestSecurityGroupIds();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateLoadBalancerRequestSecurityGroupIds setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
         }
 
     }

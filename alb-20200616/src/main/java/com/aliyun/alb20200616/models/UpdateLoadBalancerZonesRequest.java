@@ -40,6 +40,9 @@ public class UpdateLoadBalancerZonesRequest extends TeaModel {
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
+    @NameInMap("RetainResourceType")
+    public java.util.List<String> retainResourceType;
+
     /**
      * <p>The zones and the vSwitches in the zones. You can specify a maximum of 10 zones. If the selected region supports two or more zones, select at least two zones to ensure the high availability of your service. The specified zones and vSwitches overwrite the existing configurations.</p>
      * <p>This parameter is required.</p>
@@ -74,6 +77,14 @@ public class UpdateLoadBalancerZonesRequest extends TeaModel {
     }
     public String getLoadBalancerId() {
         return this.loadBalancerId;
+    }
+
+    public UpdateLoadBalancerZonesRequest setRetainResourceType(java.util.List<String> retainResourceType) {
+        this.retainResourceType = retainResourceType;
+        return this;
+    }
+    public java.util.List<String> getRetainResourceType() {
+        return this.retainResourceType;
     }
 
     public UpdateLoadBalancerZonesRequest setZoneMappings(java.util.List<UpdateLoadBalancerZonesRequestZoneMappings> zoneMappings) {
