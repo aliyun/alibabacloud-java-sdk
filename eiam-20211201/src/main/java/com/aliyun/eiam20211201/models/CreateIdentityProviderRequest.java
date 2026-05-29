@@ -1429,6 +1429,12 @@ public class CreateIdentityProviderRequest extends TeaModel {
         @NameInMap("RequireRequestSigned")
         public Boolean requireRequestSigned;
 
+        @NameInMap("WantAssertionsSigned")
+        public Boolean wantAssertionsSigned;
+
+        @NameInMap("WantResponseSigned")
+        public Boolean wantResponseSigned;
+
         public static CreateIdentityProviderRequestSamlConfig build(java.util.Map<String, ?> map) throws Exception {
             CreateIdentityProviderRequestSamlConfig self = new CreateIdentityProviderRequestSamlConfig();
             return TeaModel.build(map, self);
@@ -1480,6 +1486,22 @@ public class CreateIdentityProviderRequest extends TeaModel {
         }
         public Boolean getRequireRequestSigned() {
             return this.requireRequestSigned;
+        }
+
+        public CreateIdentityProviderRequestSamlConfig setWantAssertionsSigned(Boolean wantAssertionsSigned) {
+            this.wantAssertionsSigned = wantAssertionsSigned;
+            return this;
+        }
+        public Boolean getWantAssertionsSigned() {
+            return this.wantAssertionsSigned;
+        }
+
+        public CreateIdentityProviderRequestSamlConfig setWantResponseSigned(Boolean wantResponseSigned) {
+            this.wantResponseSigned = wantResponseSigned;
+            return this;
+        }
+        public Boolean getWantResponseSigned() {
+            return this.wantResponseSigned;
         }
 
     }
