@@ -49,6 +49,12 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
     }
 
     public static class ListUnknownThreatDetectEventResponseBodyData extends TeaModel {
+        @NameInMap("AnalyzeDesc")
+        public String analyzeDesc;
+
+        @NameInMap("AnalyzeResult")
+        public String analyzeResult;
+
         /**
          * <strong>example:</strong>
          * <p>[{&quot;5133&quot;:&quot;pickup -l -t unix -u&quot;},{&quot;1077&quot;:&quot;/usr/libexec/postfix/master -w&quot;},{&quot;1&quot;:&quot;/usr/lib/systemd/systemd --switched-root --system --deserialize 22&quot;}]</p>
@@ -185,6 +191,22 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         public static ListUnknownThreatDetectEventResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListUnknownThreatDetectEventResponseBodyData self = new ListUnknownThreatDetectEventResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListUnknownThreatDetectEventResponseBodyData setAnalyzeDesc(String analyzeDesc) {
+            this.analyzeDesc = analyzeDesc;
+            return this;
+        }
+        public String getAnalyzeDesc() {
+            return this.analyzeDesc;
+        }
+
+        public ListUnknownThreatDetectEventResponseBodyData setAnalyzeResult(String analyzeResult) {
+            this.analyzeResult = analyzeResult;
+            return this;
+        }
+        public String getAnalyzeResult() {
+            return this.analyzeResult;
         }
 
         public ListUnknownThreatDetectEventResponseBodyData setCmdChain(String cmdChain) {

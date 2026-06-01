@@ -49,6 +49,9 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
     }
 
     public static class ListUnknownThreatDetectMachineResponseBodyData extends TeaModel {
+        @NameInMap("EffectDays")
+        public Long effectDays;
+
         /**
          * <strong>example:</strong>
          * <p>12</p>
@@ -69,6 +72,9 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
+
+        @NameInMap("PluginStatus")
+        public String pluginStatus;
 
         /**
          * <strong>example:</strong>
@@ -91,6 +97,9 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         @NameInMap("StudyMode")
         public String studyMode;
 
+        @NameInMap("StudyRemainDays")
+        public Long studyRemainDays;
+
         /**
          * <strong>example:</strong>
          * <p>1766988192</p>
@@ -108,6 +117,14 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         public static ListUnknownThreatDetectMachineResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListUnknownThreatDetectMachineResponseBodyData self = new ListUnknownThreatDetectMachineResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListUnknownThreatDetectMachineResponseBodyData setEffectDays(Long effectDays) {
+            this.effectDays = effectDays;
+            return this;
+        }
+        public Long getEffectDays() {
+            return this.effectDays;
         }
 
         public ListUnknownThreatDetectMachineResponseBodyData setInstanceName(String instanceName) {
@@ -134,6 +151,14 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
             return this.intranetIp;
         }
 
+        public ListUnknownThreatDetectMachineResponseBodyData setPluginStatus(String pluginStatus) {
+            this.pluginStatus = pluginStatus;
+            return this;
+        }
+        public String getPluginStatus() {
+            return this.pluginStatus;
+        }
+
         public ListUnknownThreatDetectMachineResponseBodyData setProcessCount(Integer processCount) {
             this.processCount = processCount;
             return this;
@@ -156,6 +181,14 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         }
         public String getStudyMode() {
             return this.studyMode;
+        }
+
+        public ListUnknownThreatDetectMachineResponseBodyData setStudyRemainDays(Long studyRemainDays) {
+            this.studyRemainDays = studyRemainDays;
+            return this;
+        }
+        public Long getStudyRemainDays() {
+            return this.studyRemainDays;
         }
 
         public ListUnknownThreatDetectMachineResponseBodyData setStudyStartTime(Long studyStartTime) {

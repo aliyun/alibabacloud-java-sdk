@@ -38,6 +38,9 @@ public class GetUnknownThreatDetectStatisticResponseBody extends TeaModel {
     }
 
     public static class GetUnknownThreatDetectStatisticResponseBodyData extends TeaModel {
+        @NameInMap("BlockEventMachineCount")
+        public Integer blockEventMachineCount;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -76,6 +79,14 @@ public class GetUnknownThreatDetectStatisticResponseBody extends TeaModel {
         public static GetUnknownThreatDetectStatisticResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetUnknownThreatDetectStatisticResponseBodyData self = new GetUnknownThreatDetectStatisticResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetUnknownThreatDetectStatisticResponseBodyData setBlockEventMachineCount(Integer blockEventMachineCount) {
+            this.blockEventMachineCount = blockEventMachineCount;
+            return this;
+        }
+        public Integer getBlockEventMachineCount() {
+            return this.blockEventMachineCount;
         }
 
         public GetUnknownThreatDetectStatisticResponseBodyData setBlockMachineCount(Integer blockMachineCount) {

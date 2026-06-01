@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListUnknownThreatDetectEventRequest extends TeaModel {
+    @NameInMap("AnalyzeResult")
+    public String analyzeResult;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,6 +20,9 @@ public class ListUnknownThreatDetectEventRequest extends TeaModel {
      */
     @NameInMap("HashKey")
     public String hashKey;
+
+    @NameInMap("Lang")
+    public String lang;
 
     /**
      * <strong>example:</strong>
@@ -65,6 +71,14 @@ public class ListUnknownThreatDetectEventRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListUnknownThreatDetectEventRequest setAnalyzeResult(String analyzeResult) {
+        this.analyzeResult = analyzeResult;
+        return this;
+    }
+    public String getAnalyzeResult() {
+        return this.analyzeResult;
+    }
+
     public ListUnknownThreatDetectEventRequest setCurrentPage(Integer currentPage) {
         this.currentPage = currentPage;
         return this;
@@ -79,6 +93,14 @@ public class ListUnknownThreatDetectEventRequest extends TeaModel {
     }
     public String getHashKey() {
         return this.hashKey;
+    }
+
+    public ListUnknownThreatDetectEventRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public ListUnknownThreatDetectEventRequest setPageSize(Integer pageSize) {

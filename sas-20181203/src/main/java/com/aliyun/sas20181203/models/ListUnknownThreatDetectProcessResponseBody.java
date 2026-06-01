@@ -56,6 +56,12 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
         @NameInMap("AnalyzeResult")
         public String analyzeResult;
 
+        @NameInMap("ExplanationEn")
+        public String explanationEn;
+
+        @NameInMap("ExplanationZh")
+        public String explanationZh;
+
         /**
          * <strong>example:</strong>
          * <p>1694576692000</p>
@@ -109,6 +115,22 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
         }
         public String getAnalyzeResult() {
             return this.analyzeResult;
+        }
+
+        public ListUnknownThreatDetectProcessResponseBodyData setExplanationEn(String explanationEn) {
+            this.explanationEn = explanationEn;
+            return this;
+        }
+        public String getExplanationEn() {
+            return this.explanationEn;
+        }
+
+        public ListUnknownThreatDetectProcessResponseBodyData setExplanationZh(String explanationZh) {
+            this.explanationZh = explanationZh;
+            return this;
+        }
+        public String getExplanationZh() {
+            return this.explanationZh;
         }
 
         public ListUnknownThreatDetectProcessResponseBodyData setFirstTime(Long firstTime) {

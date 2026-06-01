@@ -159,6 +159,9 @@ public class AddClientUserDefineRuleRequest extends TeaModel {
     @NameInMap("RegistryKey")
     public String registryKey;
 
+    @NameInMap("TargetDefault")
+    public String targetDefault;
+
     /**
      * <p>The type of the custom defense rule. Valid values:</p>
      * <ul>
@@ -312,6 +315,14 @@ public class AddClientUserDefineRuleRequest extends TeaModel {
     }
     public String getRegistryKey() {
         return this.registryKey;
+    }
+
+    public AddClientUserDefineRuleRequest setTargetDefault(String targetDefault) {
+        this.targetDefault = targetDefault;
+        return this;
+    }
+    public String getTargetDefault() {
+        return this.targetDefault;
     }
 
     public AddClientUserDefineRuleRequest setType(Integer type) {
