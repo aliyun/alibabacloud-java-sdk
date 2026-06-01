@@ -59,6 +59,15 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
     @NameInMap("tags")
     public java.util.List<Tag> tags;
 
+    /**
+     * <p>数字员工工具调用安全策略配置。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;aliyun&quot;:{&quot;enable&quot;:true,&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}}</p>
+     */
+    @NameInMap("toolPolicy")
+    public CreateDigitalEmployeeRequestToolPolicy toolPolicy;
+
     public static CreateDigitalEmployeeRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDigitalEmployeeRequest self = new CreateDigitalEmployeeRequest();
         return TeaModel.build(map, self);
@@ -134,6 +143,14 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
     }
     public java.util.List<Tag> getTags() {
         return this.tags;
+    }
+
+    public CreateDigitalEmployeeRequest setToolPolicy(CreateDigitalEmployeeRequestToolPolicy toolPolicy) {
+        this.toolPolicy = toolPolicy;
+        return this;
+    }
+    public CreateDigitalEmployeeRequestToolPolicy getToolPolicy() {
+        return this.toolPolicy;
     }
 
     public static class CreateDigitalEmployeeRequestKnowledgesBailian extends TeaModel {
@@ -230,6 +247,149 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
         }
         public java.util.List<java.util.Map<String, ?>> getSop() {
             return this.sop;
+        }
+
+    }
+
+    public static class CreateDigitalEmployeeRequestToolPolicyAliyunStatements extends TeaModel {
+        /**
+         * <p>Aliyun OpenAPI Action 列表，格式为 product:ApiName、product:Prefix* 或 product:*。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]</p>
+         */
+        @NameInMap("actions")
+        public java.util.List<String> actions;
+
+        /**
+         * <p>本条语句对应的 Aliyun OpenAPI API 版本。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-30</p>
+         */
+        @NameInMap("apiVersion")
+        public String apiVersion;
+
+        /**
+         * <p>命中该 API 后的执行策略。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_ack</p>
+         */
+        @NameInMap("decision")
+        public String decision;
+
+        /**
+         * <p>本条语句对应的 Aliyun OpenAPI 产品名。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sls</p>
+         */
+        @NameInMap("product")
+        public String product;
+
+        public static CreateDigitalEmployeeRequestToolPolicyAliyunStatements build(java.util.Map<String, ?> map) throws Exception {
+            CreateDigitalEmployeeRequestToolPolicyAliyunStatements self = new CreateDigitalEmployeeRequestToolPolicyAliyunStatements();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDigitalEmployeeRequestToolPolicyAliyunStatements setActions(java.util.List<String> actions) {
+            this.actions = actions;
+            return this;
+        }
+        public java.util.List<String> getActions() {
+            return this.actions;
+        }
+
+        public CreateDigitalEmployeeRequestToolPolicyAliyunStatements setApiVersion(String apiVersion) {
+            this.apiVersion = apiVersion;
+            return this;
+        }
+        public String getApiVersion() {
+            return this.apiVersion;
+        }
+
+        public CreateDigitalEmployeeRequestToolPolicyAliyunStatements setDecision(String decision) {
+            this.decision = decision;
+            return this;
+        }
+        public String getDecision() {
+            return this.decision;
+        }
+
+        public CreateDigitalEmployeeRequestToolPolicyAliyunStatements setProduct(String product) {
+            this.product = product;
+            return this;
+        }
+        public String getProduct() {
+            return this.product;
+        }
+
+    }
+
+    public static class CreateDigitalEmployeeRequestToolPolicyAliyun extends TeaModel {
+        /**
+         * <p>是否启用 Aliyun MCP 工具策略。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("enable")
+        public Boolean enable;
+
+        /**
+         * <p>Aliyun OpenAPI 工具策略语句列表。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]</p>
+         */
+        @NameInMap("statements")
+        public java.util.List<CreateDigitalEmployeeRequestToolPolicyAliyunStatements> statements;
+
+        public static CreateDigitalEmployeeRequestToolPolicyAliyun build(java.util.Map<String, ?> map) throws Exception {
+            CreateDigitalEmployeeRequestToolPolicyAliyun self = new CreateDigitalEmployeeRequestToolPolicyAliyun();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDigitalEmployeeRequestToolPolicyAliyun setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public CreateDigitalEmployeeRequestToolPolicyAliyun setStatements(java.util.List<CreateDigitalEmployeeRequestToolPolicyAliyunStatements> statements) {
+            this.statements = statements;
+            return this;
+        }
+        public java.util.List<CreateDigitalEmployeeRequestToolPolicyAliyunStatements> getStatements() {
+            return this.statements;
+        }
+
+    }
+
+    public static class CreateDigitalEmployeeRequestToolPolicy extends TeaModel {
+        /**
+         * <p>Aliyun MCP 工具调用安全策略配置。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;enable&quot;:true,&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}</p>
+         */
+        @NameInMap("aliyun")
+        public CreateDigitalEmployeeRequestToolPolicyAliyun aliyun;
+
+        public static CreateDigitalEmployeeRequestToolPolicy build(java.util.Map<String, ?> map) throws Exception {
+            CreateDigitalEmployeeRequestToolPolicy self = new CreateDigitalEmployeeRequestToolPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDigitalEmployeeRequestToolPolicy setAliyun(CreateDigitalEmployeeRequestToolPolicyAliyun aliyun) {
+            this.aliyun = aliyun;
+            return this;
+        }
+        public CreateDigitalEmployeeRequestToolPolicyAliyun getAliyun() {
+            return this.aliyun;
         }
 
     }
