@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateDeploymentSetRequest extends TeaModel {
+    @NameInMap("Affinity")
+    public Long affinity;
+
     /**
      * <p>The description of the deployment set. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
@@ -124,6 +127,14 @@ public class CreateDeploymentSetRequest extends TeaModel {
     public static CreateDeploymentSetRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDeploymentSetRequest self = new CreateDeploymentSetRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDeploymentSetRequest setAffinity(Long affinity) {
+        this.affinity = affinity;
+        return this;
+    }
+    public Long getAffinity() {
+        return this.affinity;
     }
 
     public CreateDeploymentSetRequest setClientToken(String clientToken) {

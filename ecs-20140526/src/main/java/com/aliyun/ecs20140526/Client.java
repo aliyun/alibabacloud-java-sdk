@@ -4012,6 +4012,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateDeploymentSetResponse createDeploymentSetWithOptions(CreateDeploymentSetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.affinity)) {
+            query.put("Affinity", request.affinity);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
         }
@@ -26898,6 +26902,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyDeploymentSetAttributeResponse modifyDeploymentSetAttributeWithOptions(ModifyDeploymentSetAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.affinity)) {
+            query.put("Affinity", request.affinity);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.deploymentSetId)) {
             query.put("DeploymentSetId", request.deploymentSetId);
         }

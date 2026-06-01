@@ -188,6 +188,9 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         @NameInMap("AccountId")
         public Long accountId;
 
+        @NameInMap("Affinity")
+        public Long affinity;
+
         @NameInMap("Capacities")
         public DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetCapacities capacities;
 
@@ -238,6 +241,14 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         }
         public Long getAccountId() {
             return this.accountId;
+        }
+
+        public DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSet setAffinity(Long affinity) {
+            this.affinity = affinity;
+            return this;
+        }
+        public Long getAffinity() {
+            return this.affinity;
         }
 
         public DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSet setCapacities(DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetCapacities capacities) {

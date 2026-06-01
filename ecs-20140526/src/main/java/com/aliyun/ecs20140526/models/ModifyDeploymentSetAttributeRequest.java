@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyDeploymentSetAttributeRequest extends TeaModel {
+    @NameInMap("Affinity")
+    public Long affinity;
+
     /**
      * <p>The ID of the deployment set.</p>
      * <p>This parameter is required.</p>
@@ -57,6 +60,14 @@ public class ModifyDeploymentSetAttributeRequest extends TeaModel {
     public static ModifyDeploymentSetAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDeploymentSetAttributeRequest self = new ModifyDeploymentSetAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDeploymentSetAttributeRequest setAffinity(Long affinity) {
+        this.affinity = affinity;
+        return this;
+    }
+    public Long getAffinity() {
+        return this.affinity;
     }
 
     public ModifyDeploymentSetAttributeRequest setDeploymentSetId(String deploymentSetId) {
