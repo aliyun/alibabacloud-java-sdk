@@ -1206,6 +1206,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建套餐包</p>
+     * 
+     * @param request CreateMobileAgentPackageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateMobileAgentPackageResponse
+     */
+    public CreateMobileAgentPackageResponse createMobileAgentPackageWithOptions(CreateMobileAgentPackageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.amount)) {
+            query.put("Amount", request.amount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
+            query.put("AutoPay", request.autoPay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
+            query.put("AutoRenew", request.autoRenew);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            query.put("BizRegionId", request.bizRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.creditAmount)) {
+            query.put("CreditAmount", request.creditAmount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.creditConfig)) {
+            query.put("CreditConfig", request.creditConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
+            query.put("InstanceName", request.instanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mobileAgentPackageSpec)) {
+            query.put("MobileAgentPackageSpec", request.mobileAgentPackageSpec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paidCallbackUrl)) {
+            query.put("PaidCallbackUrl", request.paidCallbackUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.periodUnit)) {
+            query.put("PeriodUnit", request.periodUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionId)) {
+            query.put("PromotionId", request.promotionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMobileAgentPackage"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMobileAgentPackageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建套餐包</p>
+     * 
+     * @param request CreateMobileAgentPackageRequest
+     * @return CreateMobileAgentPackageResponse
+     */
+    public CreateMobileAgentPackageResponse createMobileAgentPackage(CreateMobileAgentPackageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createMobileAgentPackageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a policy.</p>
      * 
      * @param tmpReq CreatePolicyGroupRequest
@@ -2884,6 +2972,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeMetricTopResponse describeMetricTop(DescribeMetricTopRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeMetricTopWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询节点套餐详细信息</p>
+     * 
+     * @param request DescribeMobileAgentPackageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeMobileAgentPackageResponse
+     */
+    public DescribeMobileAgentPackageResponse describeMobileAgentPackageWithOptions(DescribeMobileAgentPackageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.packageIds)) {
+            query.put("PackageIds", request.packageIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.packageSpec)) {
+            query.put("PackageSpec", request.packageSpec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.packageStatus)) {
+            query.put("PackageStatus", request.packageStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("PageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMobileAgentPackage"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMobileAgentPackageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询节点套餐详细信息</p>
+     * 
+     * @param request DescribeMobileAgentPackageRequest
+     * @return DescribeMobileAgentPackageResponse
+     */
+    public DescribeMobileAgentPackageResponse describeMobileAgentPackage(DescribeMobileAgentPackageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeMobileAgentPackageWithOptions(request, runtime);
     }
 
     /**
@@ -5342,6 +5494,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RenewCloudPhoneNodesResponse renewCloudPhoneNodes(RenewCloudPhoneNodesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.renewCloudPhoneNodesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>续费MobileAgent套餐包</p>
+     * 
+     * @param request RenewMobileAgentPackageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RenewMobileAgentPackageResponse
+     */
+    public RenewMobileAgentPackageResponse renewMobileAgentPackageWithOptions(RenewMobileAgentPackageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
+            query.put("AutoPay", request.autoPay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
+            query.put("AutoRenew", request.autoRenew);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mobileAgentPackageIds)) {
+            query.put("MobileAgentPackageIds", request.mobileAgentPackageIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paidCallbackUrl)) {
+            query.put("PaidCallbackUrl", request.paidCallbackUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.periodUnit)) {
+            query.put("PeriodUnit", request.periodUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionId)) {
+            query.put("PromotionId", request.promotionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RenewMobileAgentPackage"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RenewMobileAgentPackageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>续费MobileAgent套餐包</p>
+     * 
+     * @param request RenewMobileAgentPackageRequest
+     * @return RenewMobileAgentPackageResponse
+     */
+    public RenewMobileAgentPackageResponse renewMobileAgentPackage(RenewMobileAgentPackageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.renewMobileAgentPackageWithOptions(request, runtime);
     }
 
     /**
