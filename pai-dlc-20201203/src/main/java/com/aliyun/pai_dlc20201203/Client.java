@@ -293,6 +293,77 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建 RayHistoryServer</p>
+     * 
+     * @param request CreateRayHistoryServerRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRayHistoryServerResponse
+     */
+    public CreateRayHistoryServerResponse createRayHistoryServerWithOptions(CreateRayHistoryServerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessibility)) {
+            body.put("Accessibility", request.accessibility);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("DisplayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ecsSpec)) {
+            body.put("EcsSpec", request.ecsSpec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxRuntimeMinutes)) {
+            body.put("MaxRuntimeMinutes", request.maxRuntimeMinutes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            body.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storagePath)) {
+            body.put("StoragePath", request.storagePath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateRayHistoryServer"),
+            new TeaPair("version", "2020-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/rayhistoryservers"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRayHistoryServerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建 RayHistoryServer</p>
+     * 
+     * @param request CreateRayHistoryServerRequest
+     * @return CreateRayHistoryServerResponse
+     */
+    public CreateRayHistoryServerResponse createRayHistoryServer(CreateRayHistoryServerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createRayHistoryServerWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a TensorBoard by using a job or specifying a data source configuration.</p>
      * 
      * @param request CreateTensorboardRequest
@@ -490,6 +561,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteJobTemplateWithOptions(TemplateId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除RayHistoryServer</p>
+     * 
+     * @param request DeleteRayHistoryServerRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteRayHistoryServerResponse
+     */
+    public DeleteRayHistoryServerResponse deleteRayHistoryServerWithOptions(String RayHistoryServerId, DeleteRayHistoryServerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteRayHistoryServer"),
+            new TeaPair("version", "2020-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/rayhistoryservers/" + com.aliyun.openapiutil.Client.getEncodeParam(RayHistoryServerId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRayHistoryServerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除RayHistoryServer</p>
+     * 
+     * @param request DeleteRayHistoryServerRequest
+     * @return DeleteRayHistoryServerResponse
+     */
+    public DeleteRayHistoryServerResponse deleteRayHistoryServer(String RayHistoryServerId, DeleteRayHistoryServerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteRayHistoryServerWithOptions(RayHistoryServerId, request, headers, runtime);
     }
 
     /**
@@ -1040,6 +1152,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getRayDashboardWithOptions(jobId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询 RayHistoryServer</p>
+     * 
+     * @param request GetRayHistoryServerRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRayHistoryServerResponse
+     */
+    public GetRayHistoryServerResponse getRayHistoryServerWithOptions(String RayHistoryServerId, GetRayHistoryServerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRayHistoryServer"),
+            new TeaPair("version", "2020-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/rayhistoryservers/" + com.aliyun.openapiutil.Client.getEncodeParam(RayHistoryServerId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRayHistoryServerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询 RayHistoryServer</p>
+     * 
+     * @param request GetRayHistoryServerRequest
+     * @return GetRayHistoryServerResponse
+     */
+    public GetRayHistoryServerResponse getRayHistoryServer(String RayHistoryServerId, GetRayHistoryServerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getRayHistoryServerWithOptions(RayHistoryServerId, request, headers, runtime);
     }
 
     /**
@@ -1638,6 +1791,113 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>列出资源RayHistoryServer</p>
+     * 
+     * @param request ListRayHistoryServersRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRayHistoryServersResponse
+     */
+    public ListRayHistoryServersResponse listRayHistoryServersWithOptions(ListRayHistoryServersRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            query.put("DisplayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idPrefix)) {
+            query.put("IdPrefix", request.idPrefix);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modifiedAfter)) {
+            query.put("ModifiedAfter", request.modifiedAfter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            query.put("Order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paymentType)) {
+            query.put("PaymentType", request.paymentType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.showOwn)) {
+            query.put("ShowOwn", request.showOwn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userIdForFilter)) {
+            query.put("UserIdForFilter", request.userIdForFilter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.username)) {
+            query.put("Username", request.username);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListRayHistoryServers"),
+            new TeaPair("version", "2020-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/rayhistoryservers"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRayHistoryServersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出资源RayHistoryServer</p>
+     * 
+     * @param request ListRayHistoryServersRequest
+     * @return ListRayHistoryServersResponse
+     */
+    public ListRayHistoryServersResponse listRayHistoryServers(ListRayHistoryServersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listRayHistoryServersWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries a list of TensorBoard instances.</p>
      * 
      * @param request ListTensorboardsRequest
@@ -1808,6 +2068,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>启动 Ray History Server</p>
+     * 
+     * @param request StartRayHistoryServerRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartRayHistoryServerResponse
+     */
+    public StartRayHistoryServerResponse startRayHistoryServerWithOptions(String RayHistoryServerId, StartRayHistoryServerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartRayHistoryServer"),
+            new TeaPair("version", "2020-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/rayhistoryservers/" + com.aliyun.openapiutil.Client.getEncodeParam(RayHistoryServerId) + "/start"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartRayHistoryServerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启动 Ray History Server</p>
+     * 
+     * @param request StartRayHistoryServerRequest
+     * @return StartRayHistoryServerResponse
+     */
+    public StartRayHistoryServerResponse startRayHistoryServer(String RayHistoryServerId, StartRayHistoryServerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.startRayHistoryServerWithOptions(RayHistoryServerId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Starts a TensorBoard instance.</p>
      * 
      * @param request StartTensorboardRequest
@@ -1888,6 +2189,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.stopJobWithOptions(JobId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停止 Ray History Server</p>
+     * 
+     * @param request StopRayHistoryServerRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopRayHistoryServerResponse
+     */
+    public StopRayHistoryServerResponse stopRayHistoryServerWithOptions(String RayHistoryServerId, StopRayHistoryServerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopRayHistoryServer"),
+            new TeaPair("version", "2020-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/rayhistoryservers/" + com.aliyun.openapiutil.Client.getEncodeParam(RayHistoryServerId) + "/stop"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopRayHistoryServerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停止 Ray History Server</p>
+     * 
+     * @param request StopRayHistoryServerRequest
+     * @return StopRayHistoryServerResponse
+     */
+    public StopRayHistoryServerResponse stopRayHistoryServer(String RayHistoryServerId, StopRayHistoryServerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.stopRayHistoryServerWithOptions(RayHistoryServerId, request, headers, runtime);
     }
 
     /**
