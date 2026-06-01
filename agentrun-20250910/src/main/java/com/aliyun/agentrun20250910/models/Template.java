@@ -31,6 +31,9 @@ public class Template extends TeaModel {
     @NameInMap("enableAgent")
     public Boolean enableAgent;
 
+    @NameInMap("enablePreStop")
+    public Boolean enablePreStop;
+
     @NameInMap("environmentVariables")
     public java.util.Map<String, String> environmentVariables;
 
@@ -63,6 +66,9 @@ public class Template extends TeaModel {
 
     @NameInMap("ossConfiguration")
     public java.util.List<OssConfiguration> ossConfiguration;
+
+    @NameInMap("preStopTimeoutInSeconds")
+    public Integer preStopTimeoutInSeconds;
 
     @NameInMap("resourceName")
     public String resourceName;
@@ -178,6 +184,14 @@ public class Template extends TeaModel {
         return this.enableAgent;
     }
 
+    public Template setEnablePreStop(Boolean enablePreStop) {
+        this.enablePreStop = enablePreStop;
+        return this;
+    }
+    public Boolean getEnablePreStop() {
+        return this.enablePreStop;
+    }
+
     public Template setEnvironmentVariables(java.util.Map<String, String> environmentVariables) {
         this.environmentVariables = environmentVariables;
         return this;
@@ -256,6 +270,14 @@ public class Template extends TeaModel {
     }
     public java.util.List<OssConfiguration> getOssConfiguration() {
         return this.ossConfiguration;
+    }
+
+    public Template setPreStopTimeoutInSeconds(Integer preStopTimeoutInSeconds) {
+        this.preStopTimeoutInSeconds = preStopTimeoutInSeconds;
+        return this;
+    }
+    public Integer getPreStopTimeoutInSeconds() {
+        return this.preStopTimeoutInSeconds;
     }
 
     public Template setResourceName(String resourceName) {

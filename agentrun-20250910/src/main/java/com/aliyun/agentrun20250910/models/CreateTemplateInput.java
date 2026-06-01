@@ -49,6 +49,9 @@ public class CreateTemplateInput extends TeaModel {
     @NameInMap("enableAgent")
     public Boolean enableAgent;
 
+    @NameInMap("enablePreStop")
+    public Boolean enablePreStop;
+
     @NameInMap("environmentVariables")
     public java.util.Map<String, String> environmentVariables;
 
@@ -83,6 +86,9 @@ public class CreateTemplateInput extends TeaModel {
 
     @NameInMap("ossConfiguration")
     public java.util.List<OssConfiguration> ossConfiguration;
+
+    @NameInMap("preStopTimeoutInSeconds")
+    public Integer preStopTimeoutInSeconds;
 
     /**
      * <p>沙箱空闲超时时间（秒）</p>
@@ -202,6 +208,14 @@ public class CreateTemplateInput extends TeaModel {
         return this.enableAgent;
     }
 
+    public CreateTemplateInput setEnablePreStop(Boolean enablePreStop) {
+        this.enablePreStop = enablePreStop;
+        return this;
+    }
+    public Boolean getEnablePreStop() {
+        return this.enablePreStop;
+    }
+
     public CreateTemplateInput setEnvironmentVariables(java.util.Map<String, String> environmentVariables) {
         this.environmentVariables = environmentVariables;
         return this;
@@ -256,6 +270,14 @@ public class CreateTemplateInput extends TeaModel {
     }
     public java.util.List<OssConfiguration> getOssConfiguration() {
         return this.ossConfiguration;
+    }
+
+    public CreateTemplateInput setPreStopTimeoutInSeconds(Integer preStopTimeoutInSeconds) {
+        this.preStopTimeoutInSeconds = preStopTimeoutInSeconds;
+        return this;
+    }
+    public Integer getPreStopTimeoutInSeconds() {
+        return this.preStopTimeoutInSeconds;
     }
 
     public CreateTemplateInput setSandboxIdleTimeoutInSeconds(Integer sandboxIdleTimeoutInSeconds) {
