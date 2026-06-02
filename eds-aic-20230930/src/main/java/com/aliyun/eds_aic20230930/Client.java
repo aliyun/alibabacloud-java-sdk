@@ -1098,6 +1098,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建积分包</p>
+     * 
+     * @param request CreateCreditPackageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCreditPackageResponse
+     */
+    public CreateCreditPackageResponse createCreditPackageWithOptions(CreateCreditPackageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
+            query.put("AutoPay", request.autoPay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.creditAmount)) {
+            query.put("CreditAmount", request.creditAmount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.periodUnit)) {
+            query.put("PeriodUnit", request.periodUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionId)) {
+            query.put("PromotionId", request.promotionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCreditPackage"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCreditPackageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建积分包</p>
+     * 
+     * @param request CreateCreditPackageRequest
+     * @return CreateCreditPackageResponse
+     */
+    public CreateCreditPackageResponse createCreditPackage(CreateCreditPackageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createCreditPackageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a custom image from a cloud phone instance.</p>
      * 
      * @param request CreateCustomImageRequest
@@ -2468,6 +2528,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeCloudPhoneNodesResponse describeCloudPhoneNodes(DescribeCloudPhoneNodesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeCloudPhoneNodesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询积分包</p>
+     * 
+     * @param request DescribeCreditPackageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCreditPackageResponse
+     */
+    public DescribeCreditPackageResponse describeCreditPackageWithOptions(DescribeCreditPackageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.creditPackageId)) {
+            query.put("CreditPackageId", request.creditPackageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.creditPackageStatus)) {
+            query.put("CreditPackageStatus", request.creditPackageStatus);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCreditPackage"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCreditPackageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询积分包</p>
+     * 
+     * @param request DescribeCreditPackageRequest
+     * @return DescribeCreditPackageResponse
+     */
+    public DescribeCreditPackageResponse describeCreditPackage(DescribeCreditPackageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCreditPackageWithOptions(request, runtime);
     }
 
     /**
