@@ -3,7 +3,7 @@ package com.aliyun.wyota20210420.models;
 
 import com.aliyun.tea.*;
 
-public class UnbindDeviceSeatsResponse extends TeaModel {
+public class GetOrCreateInvitationCodeResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class UnbindDeviceSeatsResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public UnbindDeviceSeatsResponseBody body;
+    public GetOrCreateInvitationCodeResponseBody body;
 
-    public static UnbindDeviceSeatsResponse build(java.util.Map<String, ?> map) throws Exception {
-        UnbindDeviceSeatsResponse self = new UnbindDeviceSeatsResponse();
+    public static GetOrCreateInvitationCodeResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetOrCreateInvitationCodeResponse self = new GetOrCreateInvitationCodeResponse();
         return TeaModel.build(map, self);
     }
 
-    public UnbindDeviceSeatsResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetOrCreateInvitationCodeResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class UnbindDeviceSeatsResponse extends TeaModel {
         return this.headers;
     }
 
-    public UnbindDeviceSeatsResponse setStatusCode(Integer statusCode) {
+    public GetOrCreateInvitationCodeResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class UnbindDeviceSeatsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public UnbindDeviceSeatsResponse setBody(UnbindDeviceSeatsResponseBody body) {
+    public GetOrCreateInvitationCodeResponse setBody(GetOrCreateInvitationCodeResponseBody body) {
         this.body = body;
         return this;
     }
-    public UnbindDeviceSeatsResponseBody getBody() {
+    public GetOrCreateInvitationCodeResponseBody getBody() {
         return this.body;
     }
 

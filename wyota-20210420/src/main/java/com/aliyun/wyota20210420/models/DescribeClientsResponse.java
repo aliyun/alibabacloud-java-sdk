@@ -3,7 +3,7 @@ package com.aliyun.wyota20210420.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeDeviceSeatsResponse extends TeaModel {
+public class DescribeClientsResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DescribeDeviceSeatsResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DescribeDeviceSeatsResponseBody body;
+    public DescribeClientsResponseBody body;
 
-    public static DescribeDeviceSeatsResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeDeviceSeatsResponse self = new DescribeDeviceSeatsResponse();
+    public static DescribeClientsResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeClientsResponse self = new DescribeClientsResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDeviceSeatsResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeClientsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DescribeDeviceSeatsResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeDeviceSeatsResponse setStatusCode(Integer statusCode) {
+    public DescribeClientsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DescribeDeviceSeatsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeDeviceSeatsResponse setBody(DescribeDeviceSeatsResponseBody body) {
+    public DescribeClientsResponse setBody(DescribeClientsResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeDeviceSeatsResponseBody getBody() {
+    public DescribeClientsResponseBody getBody() {
         return this.body;
     }
 
