@@ -28,6 +28,334 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建连接流</p>
+     * 
+     * @param request CreateFlowRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateFlowResponse
+     */
+    public CreateFlowResponse createFlowWithOptions(CreateFlowRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.flowDesc)) {
+            query.put("FlowDesc", request.flowDesc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flowId)) {
+            query.put("FlowId", request.flowId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flowName)) {
+            query.put("FlowName", request.flowName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flowTemplate)) {
+            query.put("FlowTemplate", request.flowTemplate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.launchStatus)) {
+            query.put("LaunchStatus", request.launchStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parameters)) {
+            query.put("Parameters", request.parameters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateFlow"),
+            new TeaPair("version", "2023-09-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFlowResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建连接流</p>
+     * 
+     * @param request CreateFlowRequest
+     * @return CreateFlowResponse
+     */
+    public CreateFlowResponse createFlow(CreateFlowRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createFlowWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建用户鉴权凭证</p>
+     * 
+     * @param request CreateUserAuthConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateUserAuthConfigResponse
+     */
+    public CreateUserAuthConfigResponse createUserAuthConfigWithOptions(CreateUserAuthConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authConfig)) {
+            query.put("AuthConfig", request.authConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authConfigName)) {
+            query.put("AuthConfigName", request.authConfigName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            query.put("AuthType", request.authType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connectorId)) {
+            query.put("ConnectorId", request.connectorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connectorVersion)) {
+            query.put("ConnectorVersion", request.connectorVersion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateUserAuthConfig"),
+            new TeaPair("version", "2023-09-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateUserAuthConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建用户鉴权凭证</p>
+     * 
+     * @param request CreateUserAuthConfigRequest
+     * @return CreateUserAuthConfigResponse
+     */
+    public CreateUserAuthConfigResponse createUserAuthConfig(CreateUserAuthConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createUserAuthConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除连接流</p>
+     * 
+     * @param request DeleteFlowRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteFlowResponse
+     */
+    public DeleteFlowResponse deleteFlowWithOptions(DeleteFlowRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.flowId)) {
+            query.put("FlowId", request.flowId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flowVersion)) {
+            query.put("FlowVersion", request.flowVersion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteFlow"),
+            new TeaPair("version", "2023-09-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFlowResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除连接流</p>
+     * 
+     * @param request DeleteFlowRequest
+     * @return DeleteFlowResponse
+     */
+    public DeleteFlowResponse deleteFlow(DeleteFlowRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteFlowWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除用户鉴权凭证</p>
+     * 
+     * @param request DeleteUserAuthConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteUserAuthConfigResponse
+     */
+    public DeleteUserAuthConfigResponse deleteUserAuthConfigWithOptions(DeleteUserAuthConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authConfigId)) {
+            query.put("AuthConfigId", request.authConfigId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connectorId)) {
+            query.put("ConnectorId", request.connectorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connectorVersion)) {
+            query.put("ConnectorVersion", request.connectorVersion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteUserAuthConfig"),
+            new TeaPair("version", "2023-09-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteUserAuthConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除用户鉴权凭证</p>
+     * 
+     * @param request DeleteUserAuthConfigRequest
+     * @return DeleteUserAuthConfigResponse
+     */
+    public DeleteUserAuthConfigResponse deleteUserAuthConfig(DeleteUserAuthConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteUserAuthConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>禁用连接流</p>
+     * 
+     * @param request DisableFlowRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableFlowResponse
+     */
+    public DisableFlowResponse disableFlowWithOptions(DisableFlowRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.flowId)) {
+            query.put("FlowId", request.flowId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flowVersion)) {
+            query.put("FlowVersion", request.flowVersion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisableFlow"),
+            new TeaPair("version", "2023-09-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableFlowResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>禁用连接流</p>
+     * 
+     * @param request DisableFlowRequest
+     * @return DisableFlowResponse
+     */
+    public DisableFlowResponse disableFlow(DisableFlowRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.disableFlowWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启用连接流</p>
+     * 
+     * @param request EnableFlowRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableFlowResponse
+     */
+    public EnableFlowResponse enableFlowWithOptions(EnableFlowRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.flowId)) {
+            query.put("FlowId", request.flowId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flowVersion)) {
+            query.put("FlowVersion", request.flowVersion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableFlow"),
+            new TeaPair("version", "2023-09-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableFlowResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启用连接流</p>
+     * 
+     * @param request EnableFlowRequest
+     * @return EnableFlowResponse
+     */
+    public EnableFlowResponse enableFlow(EnableFlowRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enableFlowWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Generate Login Session Token</p>
      * 
      * @param request GenerateUserSessionTokenRequest
@@ -92,6 +420,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GenerateUserSessionTokenResponse generateUserSessionToken(GenerateUserSessionTokenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.generateUserSessionTokenWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取连接流详情</p>
+     * 
+     * @param request GetFlowRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetFlowResponse
+     */
+    public GetFlowResponse getFlowWithOptions(GetFlowRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.flowId)) {
+            query.put("FlowId", request.flowId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flowVersion)) {
+            query.put("FlowVersion", request.flowVersion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFlow"),
+            new TeaPair("version", "2023-09-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFlowResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取连接流详情</p>
+     * 
+     * @param request GetFlowRequest
+     * @return GetFlowResponse
+     */
+    public GetFlowResponse getFlow(GetFlowRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getFlowWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取用户鉴权凭证详情</p>
+     * 
+     * @param request GetUserAuthConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetUserAuthConfigResponse
+     */
+    public GetUserAuthConfigResponse getUserAuthConfigWithOptions(GetUserAuthConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authConfigId)) {
+            query.put("AuthConfigId", request.authConfigId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connectorId)) {
+            query.put("ConnectorId", request.connectorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connectorVersion)) {
+            query.put("ConnectorVersion", request.connectorVersion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUserAuthConfig"),
+            new TeaPair("version", "2023-09-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserAuthConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取用户鉴权凭证详情</p>
+     * 
+     * @param request GetUserAuthConfigRequest
+     * @return GetUserAuthConfigResponse
+     */
+    public GetUserAuthConfigResponse getUserAuthConfig(GetUserAuthConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getUserAuthConfigWithOptions(request, runtime);
     }
 
     /**
@@ -194,5 +622,301 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public InvokeActionResponse invokeAction(InvokeActionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.invokeActionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>发布连接流</p>
+     * 
+     * @param request LaunchFlowRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return LaunchFlowResponse
+     */
+    public LaunchFlowResponse launchFlowWithOptions(LaunchFlowRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.flowDesc)) {
+            query.put("FlowDesc", request.flowDesc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flowId)) {
+            query.put("FlowId", request.flowId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flowName)) {
+            query.put("FlowName", request.flowName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flowTemplate)) {
+            query.put("FlowTemplate", request.flowTemplate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flowVersion)) {
+            query.put("FlowVersion", request.flowVersion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "LaunchFlow"),
+            new TeaPair("version", "2023-09-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new LaunchFlowResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>发布连接流</p>
+     * 
+     * @param request LaunchFlowRequest
+     * @return LaunchFlowResponse
+     */
+    public LaunchFlowResponse launchFlow(LaunchFlowRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.launchFlowWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取用户鉴权凭证列表</p>
+     * 
+     * @param request ListUserAuthConfigsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListUserAuthConfigsResponse
+     */
+    public ListUserAuthConfigsResponse listUserAuthConfigsWithOptions(ListUserAuthConfigsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            query.put("AuthType", request.authType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connectorId)) {
+            query.put("ConnectorId", request.connectorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connectorVersion)) {
+            query.put("ConnectorVersion", request.connectorVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            query.put("Filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListUserAuthConfigs"),
+            new TeaPair("version", "2023-09-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListUserAuthConfigsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取用户鉴权凭证列表</p>
+     * 
+     * @param request ListUserAuthConfigsRequest
+     * @return ListUserAuthConfigsResponse
+     */
+    public ListUserAuthConfigsResponse listUserAuthConfigs(ListUserAuthConfigsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listUserAuthConfigsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新连接流</p>
+     * 
+     * @param request UpdateFlowRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateFlowResponse
+     */
+    public UpdateFlowResponse updateFlowWithOptions(UpdateFlowRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enabled)) {
+            query.put("Enabled", request.enabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flowDesc)) {
+            query.put("FlowDesc", request.flowDesc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flowId)) {
+            query.put("FlowId", request.flowId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flowName)) {
+            query.put("FlowName", request.flowName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flowTemplate)) {
+            query.put("FlowTemplate", request.flowTemplate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flowVersion)) {
+            query.put("FlowVersion", request.flowVersion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateFlow"),
+            new TeaPair("version", "2023-09-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateFlowResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新连接流</p>
+     * 
+     * @param request UpdateFlowRequest
+     * @return UpdateFlowResponse
+     */
+    public UpdateFlowResponse updateFlow(UpdateFlowRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateFlowWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>编辑用户鉴权凭证</p>
+     * 
+     * @param request UpdateUserAuthConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateUserAuthConfigResponse
+     */
+    public UpdateUserAuthConfigResponse updateUserAuthConfigWithOptions(UpdateUserAuthConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authConfig)) {
+            query.put("AuthConfig", request.authConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authConfigId)) {
+            query.put("AuthConfigId", request.authConfigId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authConfigName)) {
+            query.put("AuthConfigName", request.authConfigName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connectorId)) {
+            query.put("ConnectorId", request.connectorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connectorVersion)) {
+            query.put("ConnectorVersion", request.connectorVersion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateUserAuthConfig"),
+            new TeaPair("version", "2023-09-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateUserAuthConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>编辑用户鉴权凭证</p>
+     * 
+     * @param request UpdateUserAuthConfigRequest
+     * @return UpdateUserAuthConfigResponse
+     */
+    public UpdateUserAuthConfigResponse updateUserAuthConfig(UpdateUserAuthConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateUserAuthConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>下线连接流</p>
+     * 
+     * @param request WithdrawFlowRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return WithdrawFlowResponse
+     */
+    public WithdrawFlowResponse withdrawFlowWithOptions(WithdrawFlowRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.flowId)) {
+            query.put("FlowId", request.flowId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flowVersion)) {
+            query.put("FlowVersion", request.flowVersion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "WithdrawFlow"),
+            new TeaPair("version", "2023-09-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new WithdrawFlowResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>下线连接流</p>
+     * 
+     * @param request WithdrawFlowRequest
+     * @return WithdrawFlowResponse
+     */
+    public WithdrawFlowResponse withdrawFlow(WithdrawFlowRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.withdrawFlowWithOptions(request, runtime);
     }
 }
