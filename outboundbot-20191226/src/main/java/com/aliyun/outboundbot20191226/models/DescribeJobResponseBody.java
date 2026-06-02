@@ -938,6 +938,13 @@ public class DescribeJobResponseBody extends TeaModel {
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("TotalDuration")
+        public Long totalDuration;
+
         public static DescribeJobResponseBodyJobTasks build(java.util.Map<String, ?> map) throws Exception {
             DescribeJobResponseBodyJobTasks self = new DescribeJobResponseBodyJobTasks();
             return TeaModel.build(map, self);
@@ -1109,6 +1116,14 @@ public class DescribeJobResponseBody extends TeaModel {
         }
         public String getTaskId() {
             return this.taskId;
+        }
+
+        public DescribeJobResponseBodyJobTasks setTotalDuration(Long totalDuration) {
+            this.totalDuration = totalDuration;
+            return this;
+        }
+        public Long getTotalDuration() {
+            return this.totalDuration;
         }
 
     }

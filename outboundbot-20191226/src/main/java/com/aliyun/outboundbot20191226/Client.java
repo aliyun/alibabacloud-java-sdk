@@ -1630,7 +1630,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>清空归属地号码库</p>
      * 
-     * @param request DeleteAllNumberDistrictInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAllNumberDistrictInfoResponse
      */
@@ -3849,7 +3848,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @param request GetConcurrentConversationQuotaRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetConcurrentConversationQuotaResponse
      */
@@ -4187,7 +4185,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>获取号码库模板下载链接</p>
      * 
-     * @param request GetNumberDistrictInfoTemplateDownloadUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetNumberDistrictInfoTemplateDownloadUrlResponse
      */
@@ -4345,7 +4342,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>GetVersion</p>
      * 
-     * @param request GetVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetVersionResponse
      */
@@ -4523,7 +4519,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>租户绑定号码列表</p>
      * 
-     * @param request ListAllTenantBindNumberBindingRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAllTenantBindNumberBindingResponse
      */

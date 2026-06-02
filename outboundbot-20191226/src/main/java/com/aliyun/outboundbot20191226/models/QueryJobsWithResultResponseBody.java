@@ -398,6 +398,13 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>被叫用户</p>
+         */
+        @NameInMap("HangUpDirection")
+        public String hangUpDirection;
+
+        /**
+         * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("HasAnswered")
@@ -495,6 +502,14 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
         }
         public java.util.List<QueryJobsWithResultResponseBodyJobsListLatestTaskExtras> getExtras() {
             return this.extras;
+        }
+
+        public QueryJobsWithResultResponseBodyJobsListLatestTask setHangUpDirection(String hangUpDirection) {
+            this.hangUpDirection = hangUpDirection;
+            return this;
+        }
+        public String getHangUpDirection() {
+            return this.hangUpDirection;
         }
 
         public QueryJobsWithResultResponseBodyJobsListLatestTask setHasAnswered(Boolean hasAnswered) {
