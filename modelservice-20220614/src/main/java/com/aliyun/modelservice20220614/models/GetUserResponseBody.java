@@ -25,6 +25,9 @@ public class GetUserResponseBody extends TeaModel {
     @NameInMap("Host")
     public String host;
 
+    @NameInMap("InnerToken")
+    public String innerToken;
+
     /**
      * <strong>example:</strong>
      * <p>success</p>
@@ -73,6 +76,14 @@ public class GetUserResponseBody extends TeaModel {
     }
     public String getHost() {
         return this.host;
+    }
+
+    public GetUserResponseBody setInnerToken(String innerToken) {
+        this.innerToken = innerToken;
+        return this;
+    }
+    public String getInnerToken() {
+        return this.innerToken;
     }
 
     public GetUserResponseBody setMessage(String message) {
