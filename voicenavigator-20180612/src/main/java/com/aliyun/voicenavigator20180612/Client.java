@@ -381,6 +381,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>测试窗开启文本对话</p>
+     * 
      * @param request DebugBeginDialogueRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DebugBeginDialogueResponse
@@ -408,6 +411,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.shouldUseSandBox)) {
+            query.put("ShouldUseSandBox", request.shouldUseSandBox);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -426,6 +433,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>测试窗开启文本对话</p>
+     * 
      * @param request DebugBeginDialogueRequest
      * @return DebugBeginDialogueResponse
      */

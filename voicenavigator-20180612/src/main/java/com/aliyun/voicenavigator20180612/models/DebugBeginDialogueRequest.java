@@ -45,6 +45,9 @@ public class DebugBeginDialogueRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("ShouldUseSandBox")
+    public Boolean shouldUseSandBox;
+
     public static DebugBeginDialogueRequest build(java.util.Map<String, ?> map) throws Exception {
         DebugBeginDialogueRequest self = new DebugBeginDialogueRequest();
         return TeaModel.build(map, self);
@@ -88,6 +91,14 @@ public class DebugBeginDialogueRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DebugBeginDialogueRequest setShouldUseSandBox(Boolean shouldUseSandBox) {
+        this.shouldUseSandBox = shouldUseSandBox;
+        return this;
+    }
+    public Boolean getShouldUseSandBox() {
+        return this.shouldUseSandBox;
     }
 
 }
