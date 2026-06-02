@@ -128,7 +128,7 @@ public class RuleInfo extends TeaModel {
     public String scoreName;
 
     @NameInMap("ScoreNum")
-    public Integer scoreNum;
+    public Float scoreNum;
 
     @NameInMap("ScoreNumType")
     public Integer scoreNumType;
@@ -505,11 +505,11 @@ public class RuleInfo extends TeaModel {
         return this.scoreName;
     }
 
-    public RuleInfo setScoreNum(Integer scoreNum) {
+    public RuleInfo setScoreNum(Float scoreNum) {
         this.scoreNum = scoreNum;
         return this;
     }
-    public Integer getScoreNum() {
+    public Float getScoreNum() {
         return this.scoreNum;
     }
 
