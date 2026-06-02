@@ -44,6 +44,9 @@ public class ModifyCustomAgentRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("RelatedSessionId")
+    public String relatedSessionId;
+
     @NameInMap("ScheduleTaskConfig")
     public ModifyCustomAgentRequestScheduleTaskConfig scheduleTaskConfig;
 
@@ -143,6 +146,14 @@ public class ModifyCustomAgentRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public ModifyCustomAgentRequest setRelatedSessionId(String relatedSessionId) {
+        this.relatedSessionId = relatedSessionId;
+        return this;
+    }
+    public String getRelatedSessionId() {
+        return this.relatedSessionId;
     }
 
     public ModifyCustomAgentRequest setScheduleTaskConfig(ModifyCustomAgentRequestScheduleTaskConfig scheduleTaskConfig) {

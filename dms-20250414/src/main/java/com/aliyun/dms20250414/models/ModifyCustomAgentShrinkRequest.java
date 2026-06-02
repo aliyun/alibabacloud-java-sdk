@@ -44,6 +44,9 @@ public class ModifyCustomAgentShrinkRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("RelatedSessionId")
+    public String relatedSessionId;
+
     @NameInMap("ScheduleTaskConfig")
     public String scheduleTaskConfigShrink;
 
@@ -143,6 +146,14 @@ public class ModifyCustomAgentShrinkRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public ModifyCustomAgentShrinkRequest setRelatedSessionId(String relatedSessionId) {
+        this.relatedSessionId = relatedSessionId;
+        return this;
+    }
+    public String getRelatedSessionId() {
+        return this.relatedSessionId;
     }
 
     public ModifyCustomAgentShrinkRequest setScheduleTaskConfigShrink(String scheduleTaskConfigShrink) {

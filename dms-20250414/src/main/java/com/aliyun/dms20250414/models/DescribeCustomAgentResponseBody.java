@@ -403,6 +403,13 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>5xyz...</p>
+         */
+        @NameInMap("RelatedSessionId")
+        public String relatedSessionId;
+
+        /**
+         * <strong>example:</strong>
          * <p>2025-12-11T14:04:32.000+00:00</p>
          */
         @NameInMap("ReleaseTime")
@@ -618,6 +625,14 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         }
         public String getRegion() {
             return this.region;
+        }
+
+        public DescribeCustomAgentResponseBodyData setRelatedSessionId(String relatedSessionId) {
+            this.relatedSessionId = relatedSessionId;
+            return this;
+        }
+        public String getRelatedSessionId() {
+            return this.relatedSessionId;
         }
 
         public DescribeCustomAgentResponseBodyData setReleaseTime(String releaseTime) {

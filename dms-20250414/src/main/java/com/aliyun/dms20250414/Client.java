@@ -595,6 +595,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Name", request.name);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.relatedSessionId)) {
+            query.put("RelatedSessionId", request.relatedSessionId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.scheduleTaskConfigShrink)) {
             query.put("ScheduleTaskConfig", request.scheduleTaskConfigShrink);
         }
@@ -1722,6 +1726,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除工作空间代码以及目录</p>
+     * 
+     * @param request DeleteWorkspaceCodeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteWorkspaceCodeResponse
+     */
+    public DeleteWorkspaceCodeResponse deleteWorkspaceCodeWithOptions(DeleteWorkspaceCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.path)) {
+            query.put("Path", request.path);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repo)) {
+            query.put("Repo", request.repo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.symlink)) {
+            query.put("Symlink", request.symlink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteWorkspaceCode"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteWorkspaceCodeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除工作空间代码以及目录</p>
+     * 
+     * @param request DeleteWorkspaceCodeRequest
+     * @return DeleteWorkspaceCodeResponse
+     */
+    public DeleteWorkspaceCodeResponse deleteWorkspaceCode(DeleteWorkspaceCodeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteWorkspaceCodeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>DescribeCustomAgent</p>
      * 
      * @param request DescribeCustomAgentRequest
@@ -2678,6 +2738,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetNotebookTaskStatusResponse getNotebookTaskStatus(GetNotebookTaskStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getNotebookTaskStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>读取工作空间的代码文件内容</p>
+     * 
+     * @param request GetWorkspaceCodeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetWorkspaceCodeResponse
+     */
+    public GetWorkspaceCodeResponse getWorkspaceCodeWithOptions(GetWorkspaceCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.iac)) {
+            query.put("Iac", request.iac);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.path)) {
+            query.put("Path", request.path);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetWorkspaceCode"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetWorkspaceCodeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>读取工作空间的代码文件内容</p>
+     * 
+     * @param request GetWorkspaceCodeRequest
+     * @return GetWorkspaceCodeResponse
+     */
+    public GetWorkspaceCodeResponse getWorkspaceCode(GetWorkspaceCodeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getWorkspaceCodeWithOptions(request, runtime);
     }
 
     /**
@@ -4276,6 +4388,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>列出工作空间目录下的code文件</p>
+     * 
+     * @param request ListWorkspaceCodeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListWorkspaceCodeResponse
+     */
+    public ListWorkspaceCodeResponse listWorkspaceCodeWithOptions(ListWorkspaceCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.path)) {
+            query.put("Path", request.path);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListWorkspaceCode"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListWorkspaceCodeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出工作空间目录下的code文件</p>
+     * 
+     * @param request ListWorkspaceCodeRequest
+     * @return ListWorkspaceCodeResponse
+     */
+    public ListWorkspaceCodeResponse listWorkspaceCode(ListWorkspaceCodeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listWorkspaceCodeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>ModifyCustomAgent</p>
      * 
      * @param tmpReq ModifyCustomAgentRequest
@@ -4341,6 +4501,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.relatedSessionId)) {
+            query.put("RelatedSessionId", request.relatedSessionId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.scheduleTaskConfigShrink)) {
@@ -4538,6 +4702,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RemoveUserToDataAgentWorkspaceResponse removeUserToDataAgentWorkspace(RemoveUserToDataAgentWorkspaceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.removeUserToDataAgentWorkspaceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>保存工作空间代码，如果文件不存在则自动新建</p>
+     * 
+     * @param request SaveWorkspaceCodeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SaveWorkspaceCodeResponse
+     */
+    public SaveWorkspaceCodeResponse saveWorkspaceCodeWithOptions(SaveWorkspaceCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
+            query.put("Content", request.content);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.force)) {
+            query.put("Force", request.force);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iac)) {
+            query.put("Iac", request.iac);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mtime)) {
+            query.put("Mtime", request.mtime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repo)) {
+            query.put("Repo", request.repo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.path)) {
+            body.put("Path", request.path);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SaveWorkspaceCode"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SaveWorkspaceCodeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>保存工作空间代码，如果文件不存在则自动新建</p>
+     * 
+     * @param request SaveWorkspaceCodeRequest
+     * @return SaveWorkspaceCodeResponse
+     */
+    public SaveWorkspaceCodeResponse saveWorkspaceCode(SaveWorkspaceCodeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.saveWorkspaceCodeWithOptions(request, runtime);
     }
 
     /**
