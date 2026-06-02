@@ -714,6 +714,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除播报贴图</p>
+     * 
+     * @param request DeleteBroadcastStickerRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteBroadcastStickerResponse
+     */
+    public DeleteBroadcastStickerResponse deleteBroadcastStickerWithOptions(String stickerId, DeleteBroadcastStickerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteBroadcastSticker"),
+            new TeaPair("version", "2025-05-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/broadcast/materials/stickers/" + com.aliyun.openapiutil.Client.getEncodeParam(stickerId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteBroadcastStickerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除播报贴图</p>
+     * 
+     * @param request DeleteBroadcastStickerRequest
+     * @return DeleteBroadcastStickerResponse
+     */
+    public DeleteBroadcastStickerResponse deleteBroadcastSticker(String stickerId, DeleteBroadcastStickerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteBroadcastStickerWithOptions(stickerId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询播报模板详情</p>
      * 
      * @param request GetBroadcastTemplateRequest
