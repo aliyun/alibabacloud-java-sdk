@@ -1123,6 +1123,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of domain names.</p>
+     * 
      * @param request QueryDomainListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDomainListResponse
@@ -1204,6 +1207,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of domain names.</p>
+     * 
      * @param request QueryDomainListRequest
      * @return QueryDomainListResponse
      */
@@ -3868,6 +3874,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SaveSingleTaskForQueryingTransferAuthorizationCodeResponse saveSingleTaskForQueryingTransferAuthorizationCode(SaveSingleTaskForQueryingTransferAuthorizationCodeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.saveSingleTaskForQueryingTransferAuthorizationCodeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>单笔抢注批量接口</p>
+     * 
+     * @param request SaveSingleTaskForReserveDropListDomainRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SaveSingleTaskForReserveDropListDomainResponse
+     */
+    public SaveSingleTaskForReserveDropListDomainResponse saveSingleTaskForReserveDropListDomainWithOptions(SaveSingleTaskForReserveDropListDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.contactTemplateId)) {
+            query.put("ContactTemplateId", request.contactTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dns1)) {
+            query.put("Dns1", request.dns1);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dns2)) {
+            query.put("Dns2", request.dns2);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SaveSingleTaskForReserveDropListDomain"),
+            new TeaPair("version", "2017-12-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SaveSingleTaskForReserveDropListDomainResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>单笔抢注批量接口</p>
+     * 
+     * @param request SaveSingleTaskForReserveDropListDomainRequest
+     * @return SaveSingleTaskForReserveDropListDomainResponse
+     */
+    public SaveSingleTaskForReserveDropListDomainResponse saveSingleTaskForReserveDropListDomain(SaveSingleTaskForReserveDropListDomainRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.saveSingleTaskForReserveDropListDomainWithOptions(request, runtime);
     }
 
     /**

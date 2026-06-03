@@ -107,6 +107,9 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
+        @NameInMap("FailReason")
+        public String failReason;
+
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -164,6 +167,14 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
         }
         public String getErrorMsg() {
             return this.errorMsg;
+        }
+
+        public QueryTaskDetailListResponseBodyDataTaskDetail setFailReason(String failReason) {
+            this.failReason = failReason;
+            return this;
+        }
+        public String getFailReason() {
+            return this.failReason;
         }
 
         public QueryTaskDetailListResponseBodyDataTaskDetail setInstanceId(String instanceId) {
