@@ -14,6 +14,9 @@ public class DescribeDesktopMetadataRequest extends TeaModel {
     @NameInMap("DesktopIds")
     public java.util.List<String> desktopIds;
 
+    @NameInMap("EndUserId")
+    public String endUserId;
+
     /**
      * <strong>example:</strong>
      * <p>dg-i1ruuudp92qpj****</p>
@@ -110,6 +113,14 @@ public class DescribeDesktopMetadataRequest extends TeaModel {
     }
     public java.util.List<String> getDesktopIds() {
         return this.desktopIds;
+    }
+
+    public DescribeDesktopMetadataRequest setEndUserId(String endUserId) {
+        this.endUserId = endUserId;
+        return this;
+    }
+    public String getEndUserId() {
+        return this.endUserId;
     }
 
     public DescribeDesktopMetadataRequest setGroupId(String groupId) {

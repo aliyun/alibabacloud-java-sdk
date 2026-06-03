@@ -8522,6 +8522,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DesktopIds", request.desktopIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.endUserId)) {
+            query.put("EndUserId", request.endUserId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
             query.put("GroupId", request.groupId);
         }
