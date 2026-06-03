@@ -34,6 +34,9 @@ public class AppInstanceProfile extends TeaModel {
     @NameInMap("PayTime")
     public String payTime;
 
+    @NameInMap("PreviewUrl")
+    public String previewUrl;
+
     @NameInMap("SeoSite")
     public String seoSite;
 
@@ -135,6 +138,14 @@ public class AppInstanceProfile extends TeaModel {
     }
     public String getPayTime() {
         return this.payTime;
+    }
+
+    public AppInstanceProfile setPreviewUrl(String previewUrl) {
+        this.previewUrl = previewUrl;
+        return this;
+    }
+    public String getPreviewUrl() {
+        return this.previewUrl;
     }
 
     public AppInstanceProfile setSeoSite(String seoSite) {

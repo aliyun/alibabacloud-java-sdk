@@ -32,6 +32,13 @@ public class CreateAppInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <strong>example:</strong>
+     * <p>OPEN_SUBSCRIPTION</p>
+     */
+    @NameInMap("CreateAction")
+    public String createAction;
+
+    /**
      * <p>Deployment area</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +46,13 @@ public class CreateAppInstanceRequest extends TeaModel {
      */
     @NameInMap("DeployArea")
     public String deployArea;
+
+    /**
+     * <strong>example:</strong>
+     * <p>go-to-the-docks-for-french-fries</p>
+     */
+    @NameInMap("Description")
+    public String description;
 
     /**
      * <p>Required. The number of subscription periods</p>
@@ -57,6 +71,13 @@ public class CreateAppInstanceRequest extends TeaModel {
      */
     @NameInMap("Extend")
     public String extend;
+
+    /**
+     * <strong>example:</strong>
+     * <p>docs</p>
+     */
+    @NameInMap("Name")
+    public String name;
 
     /**
      * <p>Payment type</p>
@@ -85,6 +106,10 @@ public class CreateAppInstanceRequest extends TeaModel {
     @NameInMap("Quantity")
     public Integer quantity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-aek2smovqqpvuly</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -99,6 +124,13 @@ public class CreateAppInstanceRequest extends TeaModel {
 
     @NameInMap("Tags")
     public java.util.List<CreateAppInstanceRequestTags> tags;
+
+    /**
+     * <strong>example:</strong>
+     * <p>2023-09-01</p>
+     */
+    @NameInMap("Version")
+    public String version;
 
     public static CreateAppInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAppInstanceRequest self = new CreateAppInstanceRequest();
@@ -129,12 +161,28 @@ public class CreateAppInstanceRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public CreateAppInstanceRequest setCreateAction(String createAction) {
+        this.createAction = createAction;
+        return this;
+    }
+    public String getCreateAction() {
+        return this.createAction;
+    }
+
     public CreateAppInstanceRequest setDeployArea(String deployArea) {
         this.deployArea = deployArea;
         return this;
     }
     public String getDeployArea() {
         return this.deployArea;
+    }
+
+    public CreateAppInstanceRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public CreateAppInstanceRequest setDuration(Integer duration) {
@@ -151,6 +199,14 @@ public class CreateAppInstanceRequest extends TeaModel {
     }
     public String getExtend() {
         return this.extend;
+    }
+
+    public CreateAppInstanceRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public CreateAppInstanceRequest setPaymentType(String paymentType) {
@@ -201,10 +257,26 @@ public class CreateAppInstanceRequest extends TeaModel {
         return this.tags;
     }
 
+    public CreateAppInstanceRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
+    }
+
     public static class CreateAppInstanceRequestTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Group</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ufo</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

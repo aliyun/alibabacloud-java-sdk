@@ -127,6 +127,9 @@ public class ListAppInstancesResponseBody extends TeaModel {
 
     /**
      * <p>For the current query, apart from pagination limits, the server processes up to the most recent 1000 records. If the result exceeds 1000 records, <strong>ResultLimit</strong> is <strong>true</strong>, please narrow down the time range and search again; otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>False</p>
      */
     @NameInMap("ResultLimit")
     public Boolean resultLimit;
@@ -148,6 +151,13 @@ public class ListAppInstancesResponseBody extends TeaModel {
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("StartPosition")
+    public String startPosition;
 
     /**
      * <p>Reserved parameter.</p>
@@ -306,6 +316,14 @@ public class ListAppInstancesResponseBody extends TeaModel {
     }
     public String getRootErrorMsg() {
         return this.rootErrorMsg;
+    }
+
+    public ListAppInstancesResponseBody setStartPosition(String startPosition) {
+        this.startPosition = startPosition;
+        return this;
+    }
+    public String getStartPosition() {
+        return this.startPosition;
     }
 
     public ListAppInstancesResponseBody setSynchro(Boolean synchro) {

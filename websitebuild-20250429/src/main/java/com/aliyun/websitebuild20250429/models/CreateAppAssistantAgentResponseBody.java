@@ -61,6 +61,10 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
@@ -236,6 +240,10 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
         @NameInMap("AgentId")
         public String agentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试业务空间</p>
+         */
         @NameInMap("AgentName")
         public String agentName;
 

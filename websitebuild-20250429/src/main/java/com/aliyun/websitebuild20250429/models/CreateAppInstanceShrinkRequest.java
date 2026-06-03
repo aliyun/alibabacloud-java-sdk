@@ -32,6 +32,13 @@ public class CreateAppInstanceShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <strong>example:</strong>
+     * <p>OPEN_SUBSCRIPTION</p>
+     */
+    @NameInMap("CreateAction")
+    public String createAction;
+
+    /**
      * <p>Deployment area</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +46,13 @@ public class CreateAppInstanceShrinkRequest extends TeaModel {
      */
     @NameInMap("DeployArea")
     public String deployArea;
+
+    /**
+     * <strong>example:</strong>
+     * <p>go-to-the-docks-for-french-fries</p>
+     */
+    @NameInMap("Description")
+    public String description;
 
     /**
      * <p>Required. The number of subscription periods</p>
@@ -57,6 +71,13 @@ public class CreateAppInstanceShrinkRequest extends TeaModel {
      */
     @NameInMap("Extend")
     public String extend;
+
+    /**
+     * <strong>example:</strong>
+     * <p>docs</p>
+     */
+    @NameInMap("Name")
+    public String name;
 
     /**
      * <p>Payment type</p>
@@ -85,6 +106,10 @@ public class CreateAppInstanceShrinkRequest extends TeaModel {
     @NameInMap("Quantity")
     public Integer quantity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-aek2smovqqpvuly</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -99,6 +124,13 @@ public class CreateAppInstanceShrinkRequest extends TeaModel {
 
     @NameInMap("Tags")
     public String tagsShrink;
+
+    /**
+     * <strong>example:</strong>
+     * <p>2023-09-01</p>
+     */
+    @NameInMap("Version")
+    public String version;
 
     public static CreateAppInstanceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAppInstanceShrinkRequest self = new CreateAppInstanceShrinkRequest();
@@ -129,12 +161,28 @@ public class CreateAppInstanceShrinkRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public CreateAppInstanceShrinkRequest setCreateAction(String createAction) {
+        this.createAction = createAction;
+        return this;
+    }
+    public String getCreateAction() {
+        return this.createAction;
+    }
+
     public CreateAppInstanceShrinkRequest setDeployArea(String deployArea) {
         this.deployArea = deployArea;
         return this;
     }
     public String getDeployArea() {
         return this.deployArea;
+    }
+
+    public CreateAppInstanceShrinkRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public CreateAppInstanceShrinkRequest setDuration(Integer duration) {
@@ -151,6 +199,14 @@ public class CreateAppInstanceShrinkRequest extends TeaModel {
     }
     public String getExtend() {
         return this.extend;
+    }
+
+    public CreateAppInstanceShrinkRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public CreateAppInstanceShrinkRequest setPaymentType(String paymentType) {
@@ -199,6 +255,14 @@ public class CreateAppInstanceShrinkRequest extends TeaModel {
     }
     public String getTagsShrink() {
         return this.tagsShrink;
+    }
+
+    public CreateAppInstanceShrinkRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

@@ -4,6 +4,10 @@ package com.aliyun.websitebuild20250429.models;
 import com.aliyun.tea.*;
 
 public class CreateAppAssistantAgentRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>测试业务空间</p>
+     */
     @NameInMap("AgentName")
     public String agentName;
 
