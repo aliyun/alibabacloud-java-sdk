@@ -1579,6 +1579,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建密钥</p>
+     * 
+     * @param request CreateTenantKeyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateTenantKeyResponse
+     */
+    public CreateTenantKeyResponse createTenantKeyWithOptions(CreateTenantKeyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateTenantKey"),
+            new TeaPair("version", "2019-12-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTenantKeyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建密钥</p>
+     * 
+     * @param request CreateTenantKeyRequest
+     * @return CreateTenantKeyResponse
+     */
+    public CreateTenantKeyResponse createTenantKey(CreateTenantKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createTenantKeyWithOptions(request, runtime);
+    }
+
+    /**
      * @param tmpReq DeleteAgentProfilesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAgentProfilesResponse
@@ -4216,6 +4253,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取非对称加密算法公钥</p>
+     * 
+     * @param request GetPublicKeyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetPublicKeyResponse
+     */
+    public GetPublicKeyResponse getPublicKeyWithOptions(GetPublicKeyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetPublicKey"),
+            new TeaPair("version", "2019-12-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPublicKeyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取非对称加密算法公钥</p>
+     * 
+     * @param request GetPublicKeyRequest
+     * @return GetPublicKeyResponse
+     */
+    public GetPublicKeyResponse getPublicKey(GetPublicKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getPublicKeyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>GetRealtimeConcurrencyReport</p>
      * 
      * @param request GetRealtimeConcurrencyReportRequest
@@ -5732,6 +5806,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListScriptRecordingResponse listScriptRecording(ListScriptRecordingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listScriptRecordingWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取场景中当前使用的变量</p>
+     * 
+     * @param request ListScriptVariablesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListScriptVariablesResponse
+     */
+    public ListScriptVariablesResponse listScriptVariablesWithOptions(ListScriptVariablesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sandbox)) {
+            query.put("Sandbox", request.sandbox);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scriptId)) {
+            query.put("ScriptId", request.scriptId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListScriptVariables"),
+            new TeaPair("version", "2019-12-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListScriptVariablesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取场景中当前使用的变量</p>
+     * 
+     * @param request ListScriptVariablesRequest
+     * @return ListScriptVariablesResponse
+     */
+    public ListScriptVariablesResponse listScriptVariables(ListScriptVariablesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listScriptVariablesWithOptions(request, runtime);
     }
 
     /**
