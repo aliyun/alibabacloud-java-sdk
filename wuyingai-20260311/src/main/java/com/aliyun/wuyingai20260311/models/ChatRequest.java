@@ -132,6 +132,13 @@ public class ChatRequest extends TeaModel {
     public static class ChatRequestInputContent extends TeaModel {
         /**
          * <strong>example:</strong>
+         * <p>report.pdf</p>
+         */
+        @NameInMap("FileName")
+        public String fileName;
+
+        /**
+         * <strong>example:</strong>
          * <p>/workspace/report.pdf</p>
          */
         @NameInMap("FileUrl")
@@ -161,6 +168,14 @@ public class ChatRequest extends TeaModel {
         public static ChatRequestInputContent build(java.util.Map<String, ?> map) throws Exception {
             ChatRequestInputContent self = new ChatRequestInputContent();
             return TeaModel.build(map, self);
+        }
+
+        public ChatRequestInputContent setFileName(String fileName) {
+            this.fileName = fileName;
+            return this;
+        }
+        public String getFileName() {
+            return this.fileName;
         }
 
         public ChatRequestInputContent setFileUrl(String fileUrl) {
