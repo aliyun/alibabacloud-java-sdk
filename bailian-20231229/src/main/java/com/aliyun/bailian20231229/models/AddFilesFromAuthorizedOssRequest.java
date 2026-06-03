@@ -113,6 +113,44 @@ public class AddFilesFromAuthorizedOssRequest extends TeaModel {
         return this.tags;
     }
 
+    public static class AddFilesFromAuthorizedOssRequestFileDetailsParserConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>qwen-vl-max</p>
+         */
+        @NameInMap("ModelName")
+        public String modelName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>#角色 你是一个专业的图片内容标注人员，擅长识别并描述出图片中的内容。 # 任务目标 请结合输入图片，详细描述图片中的内容。</p>
+         */
+        @NameInMap("ModelPrompt")
+        public String modelPrompt;
+
+        public static AddFilesFromAuthorizedOssRequestFileDetailsParserConfig build(java.util.Map<String, ?> map) throws Exception {
+            AddFilesFromAuthorizedOssRequestFileDetailsParserConfig self = new AddFilesFromAuthorizedOssRequestFileDetailsParserConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public AddFilesFromAuthorizedOssRequestFileDetailsParserConfig setModelName(String modelName) {
+            this.modelName = modelName;
+            return this;
+        }
+        public String getModelName() {
+            return this.modelName;
+        }
+
+        public AddFilesFromAuthorizedOssRequestFileDetailsParserConfig setModelPrompt(String modelPrompt) {
+            this.modelPrompt = modelPrompt;
+            return this;
+        }
+        public String getModelPrompt() {
+            return this.modelPrompt;
+        }
+
+    }
+
     public static class AddFilesFromAuthorizedOssRequestFileDetails extends TeaModel {
         /**
          * <p>This parameter is required.</p>
@@ -131,6 +169,16 @@ public class AddFilesFromAuthorizedOssRequest extends TeaModel {
          */
         @NameInMap("OssKey")
         public String ossKey;
+
+        /**
+         * <strong>example:</strong>
+         * <p>AUTO_SELECT</p>
+         */
+        @NameInMap("Parser")
+        public String parser;
+
+        @NameInMap("ParserConfig")
+        public AddFilesFromAuthorizedOssRequestFileDetailsParserConfig parserConfig;
 
         public static AddFilesFromAuthorizedOssRequestFileDetails build(java.util.Map<String, ?> map) throws Exception {
             AddFilesFromAuthorizedOssRequestFileDetails self = new AddFilesFromAuthorizedOssRequestFileDetails();
@@ -151,6 +199,22 @@ public class AddFilesFromAuthorizedOssRequest extends TeaModel {
         }
         public String getOssKey() {
             return this.ossKey;
+        }
+
+        public AddFilesFromAuthorizedOssRequestFileDetails setParser(String parser) {
+            this.parser = parser;
+            return this;
+        }
+        public String getParser() {
+            return this.parser;
+        }
+
+        public AddFilesFromAuthorizedOssRequestFileDetails setParserConfig(AddFilesFromAuthorizedOssRequestFileDetailsParserConfig parserConfig) {
+            this.parserConfig = parserConfig;
+            return this;
+        }
+        public AddFilesFromAuthorizedOssRequestFileDetailsParserConfig getParserConfig() {
+            return this.parserConfig;
         }
 
     }

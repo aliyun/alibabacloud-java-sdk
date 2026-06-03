@@ -1287,6 +1287,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除连接器</p>
+     * 
+     * @param request DeleteConnectorRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteConnectorResponse
+     */
+    public DeleteConnectorResponse deleteConnectorWithOptions(String ConnectorId, String WorkspaceId, DeleteConnectorRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteConnector"),
+            new TeaPair("version", "2023-12-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(WorkspaceId) + "/datacenter/connector/" + com.aliyun.openapiutil.Client.getEncodeParam(ConnectorId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteConnectorResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除连接器</p>
+     * 
+     * @param request DeleteConnectorRequest
+     * @return DeleteConnectorResponse
+     */
+    public DeleteConnectorResponse deleteConnector(String ConnectorId, String WorkspaceId, DeleteConnectorRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteConnectorWithOptions(ConnectorId, WorkspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes a specified unstructured document permanently. You cannot use the API to delete structured documents, see the Usage notes section of this topic.</p>
      * 
      * @param request DeleteFileRequest
@@ -3460,6 +3501,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateChunkWithOptions(WorkspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>编辑连接器</p>
+     * 
+     * @param request UpdateConnectorRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateConnectorResponse
+     */
+    public UpdateConnectorResponse updateConnectorWithOptions(String WorkspaceId, String ConnectorId, UpdateConnectorRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.connectorName)) {
+            body.put("ConnectorName", request.connectorName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateConnector"),
+            new TeaPair("version", "2023-12-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(WorkspaceId) + "/datacenter/connector/" + com.aliyun.openapiutil.Client.getEncodeParam(ConnectorId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateConnectorResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>编辑连接器</p>
+     * 
+     * @param request UpdateConnectorRequest
+     * @return UpdateConnectorResponse
+     */
+    public UpdateConnectorResponse updateConnector(String WorkspaceId, String ConnectorId, UpdateConnectorRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateConnectorWithOptions(WorkspaceId, ConnectorId, request, headers, runtime);
     }
 
     /**
