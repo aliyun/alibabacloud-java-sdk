@@ -55,6 +55,9 @@ public class CustomDomain extends TeaModel {
     @NameInMap("domainName")
     public String domainName;
 
+    @NameInMap("isE2B")
+    public Boolean isE2B;
+
     /**
      * <p>The time when the custom domain name was last updated.</p>
      * 
@@ -159,6 +162,14 @@ public class CustomDomain extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
+    }
+
+    public CustomDomain setIsE2B(Boolean isE2B) {
+        this.isE2B = isE2B;
+        return this;
+    }
+    public Boolean getIsE2B() {
+        return this.isE2B;
     }
 
     public CustomDomain setLastModifiedTime(String lastModifiedTime) {

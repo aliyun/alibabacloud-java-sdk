@@ -29,6 +29,9 @@ public class CreateCustomDomainInput extends TeaModel {
     @NameInMap("domainName")
     public String domainName;
 
+    @NameInMap("isE2B")
+    public Boolean isE2B;
+
     /**
      * <p>The protocol type that is supported by the custom domain name. Valid values: HTTP HTTPS HTTP,HTTPS</p>
      * 
@@ -91,6 +94,14 @@ public class CreateCustomDomainInput extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
+    }
+
+    public CreateCustomDomainInput setIsE2B(Boolean isE2B) {
+        this.isE2B = isE2B;
+        return this;
+    }
+    public Boolean getIsE2B() {
+        return this.isE2B;
     }
 
     public CreateCustomDomainInput setProtocol(String protocol) {
