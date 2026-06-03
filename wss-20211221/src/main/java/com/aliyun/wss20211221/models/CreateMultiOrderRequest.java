@@ -4,6 +4,9 @@ package com.aliyun.wss20211221.models;
 import com.aliyun.tea.*;
 
 public class CreateMultiOrderRequest extends TeaModel {
+    @NameInMap("ChannelCookie")
+    public String channelCookie;
+
     @NameInMap("OrderItems")
     public java.util.List<CreateMultiOrderRequestOrderItems> orderItems;
 
@@ -23,6 +26,14 @@ public class CreateMultiOrderRequest extends TeaModel {
     public static CreateMultiOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMultiOrderRequest self = new CreateMultiOrderRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateMultiOrderRequest setChannelCookie(String channelCookie) {
+        this.channelCookie = channelCookie;
+        return this;
+    }
+    public String getChannelCookie() {
+        return this.channelCookie;
     }
 
     public CreateMultiOrderRequest setOrderItems(java.util.List<CreateMultiOrderRequestOrderItems> orderItems) {
