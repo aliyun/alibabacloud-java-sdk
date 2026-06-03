@@ -58,6 +58,9 @@ public class CreateCapacityReservationRequest extends TeaModel {
     @NameInMap("InstanceAmount")
     public Integer instanceAmount;
 
+    @NameInMap("InstanceChargeType")
+    public String instanceChargeType;
+
     /**
      * <p>The instance type. You can create a capacity reservation to reserve the capacity of only one instance type. You can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the instance types provided by ECS.</p>
      * <p>This parameter is required.</p>
@@ -195,6 +198,14 @@ public class CreateCapacityReservationRequest extends TeaModel {
     }
     public Integer getInstanceAmount() {
         return this.instanceAmount;
+    }
+
+    public CreateCapacityReservationRequest setInstanceChargeType(String instanceChargeType) {
+        this.instanceChargeType = instanceChargeType;
+        return this;
+    }
+    public String getInstanceChargeType() {
+        return this.instanceChargeType;
     }
 
     public CreateCapacityReservationRequest setInstanceType(String instanceType) {

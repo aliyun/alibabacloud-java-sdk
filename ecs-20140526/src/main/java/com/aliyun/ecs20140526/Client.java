@@ -3666,6 +3666,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceAmount", request.instanceAmount);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceChargeType)) {
+            query.put("InstanceChargeType", request.instanceChargeType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
             query.put("InstanceType", request.instanceType);
         }

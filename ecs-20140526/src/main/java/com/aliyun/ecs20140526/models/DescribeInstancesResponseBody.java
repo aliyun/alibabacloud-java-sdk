@@ -499,6 +499,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("HttpTokens")
         public String httpTokens;
 
+        @NameInMap("InstanceMetadataTags")
+        public String instanceMetadataTags;
+
         public static DescribeInstancesResponseBodyInstancesInstanceMetadataOptions build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstancesResponseBodyInstancesInstanceMetadataOptions self = new DescribeInstancesResponseBodyInstancesInstanceMetadataOptions();
             return TeaModel.build(map, self);
@@ -526,6 +529,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getHttpTokens() {
             return this.httpTokens;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceMetadataOptions setInstanceMetadataTags(String instanceMetadataTags) {
+            this.instanceMetadataTags = instanceMetadataTags;
+            return this;
+        }
+        public String getInstanceMetadataTags() {
+            return this.instanceMetadataTags;
         }
 
     }

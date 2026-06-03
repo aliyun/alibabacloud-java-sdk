@@ -327,6 +327,9 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         @NameInMap("CapacityReservationOwnerId")
         public String capacityReservationOwnerId;
 
+        @NameInMap("DeliveryTime")
+        public String deliveryTime;
+
         @NameInMap("Description")
         public String description;
 
@@ -378,6 +381,9 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         @NameInMap("TimeSlot")
         public String timeSlot;
 
+        @NameInMap("UnlockedTime")
+        public String unlockedTime;
+
         public static DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem self = new DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem();
             return TeaModel.build(map, self);
@@ -397,6 +403,14 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         }
         public String getCapacityReservationOwnerId() {
             return this.capacityReservationOwnerId;
+        }
+
+        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setDeliveryTime(String deliveryTime) {
+            this.deliveryTime = deliveryTime;
+            return this;
+        }
+        public String getDeliveryTime() {
+            return this.deliveryTime;
         }
 
         public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setDescription(String description) {
@@ -533,6 +547,14 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         }
         public String getTimeSlot() {
             return this.timeSlot;
+        }
+
+        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setUnlockedTime(String unlockedTime) {
+            this.unlockedTime = unlockedTime;
+            return this;
+        }
+        public String getUnlockedTime() {
+            return this.unlockedTime;
         }
 
     }
