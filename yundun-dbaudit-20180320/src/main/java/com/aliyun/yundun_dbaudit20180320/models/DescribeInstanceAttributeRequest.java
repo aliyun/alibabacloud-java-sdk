@@ -4,6 +4,9 @@ package com.aliyun.yundun_dbaudit20180320.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceAttributeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

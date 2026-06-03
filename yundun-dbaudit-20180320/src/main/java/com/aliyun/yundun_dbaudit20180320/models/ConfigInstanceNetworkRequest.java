@@ -4,12 +4,18 @@ package com.aliyun.yundun_dbaudit20180320.models;
 import com.aliyun.tea.*;
 
 public class ConfigInstanceNetworkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("PrivateWhiteList")
     public java.util.List<String> privateWhiteList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PublicAccessControl")
     public Integer publicAccessControl;
 
@@ -19,6 +25,9 @@ public class ConfigInstanceNetworkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SecurityGroupIds")
     public java.util.List<String> securityGroupIds;
 

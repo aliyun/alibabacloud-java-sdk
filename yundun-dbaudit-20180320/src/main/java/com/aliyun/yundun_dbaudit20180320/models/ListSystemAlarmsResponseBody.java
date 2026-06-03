@@ -7,6 +7,10 @@ public class ListSystemAlarmsResponseBody extends TeaModel {
     @NameInMap("Alarms")
     public java.util.List<ListSystemAlarmsResponseBodyAlarms> alarms;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1B217656-2267-4FBF-B26C-CDD201BDC3B8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,15 +39,31 @@ public class ListSystemAlarmsResponseBody extends TeaModel {
         @NameInMap("AlarmDetail")
         public String alarmDetail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1****</p>
+         */
         @NameInMap("AlarmId")
         public Integer alarmId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>17</p>
+         */
         @NameInMap("AlarmType")
         public String alarmType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-06-06 05:03:17</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ReadMark")
         public Integer readMark;
 

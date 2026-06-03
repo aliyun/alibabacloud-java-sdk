@@ -4,42 +4,103 @@ package com.aliyun.yundun_dbaudit20180320.models;
 import com.aliyun.tea.*;
 
 public class GetSessionListRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("ActionList")
     public java.util.List<String> actionList;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-06-06 00:00:00</p>
+     */
     @NameInMap("BeginDate")
     public String beginDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>192.168.XX.XX</p>
+     */
     @NameInMap("ClientIpList")
     public java.util.List<String> clientIpList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>navicat</p>
+     */
     @NameInMap("ClientProgramList")
     public java.util.List<String> clientProgramList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>192.168.XX.XX</p>
+     */
     @NameInMap("DbHostList")
     public java.util.List<String> dbHostList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("DbId")
     public Integer dbId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>root</p>
+     */
     @NameInMap("DbUserList")
     public java.util.List<String> dbUserList;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-06-06 23:59:59</p>
+     */
     @NameInMap("EndDate")
     public String endDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dbaudit-cn-78v1gc****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("Lang")
+    public String lang;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3011610850021000000</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 
@@ -118,6 +179,14 @@ public class GetSessionListRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public GetSessionListRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public GetSessionListRequest setPageNumber(Integer pageNumber) {

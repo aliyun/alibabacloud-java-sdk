@@ -4,27 +4,55 @@ package com.aliyun.yundun_dbaudit20180320.models;
 import com.aliyun.tea.*;
 
 public class GetLogListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2019-06-06 00:00:00</p>
+     */
     @NameInMap("BeginDate")
     public String beginDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2019-06-06 23:59:59</p>
+     */
     @NameInMap("EndDate")
     public String endDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Incomplete")
     public String incomplete;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1B217656-2267-4FBF-B26C-CDD201BDC3B8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Results")
     public java.util.List<GetLogListResponseBodyResults> results;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10000</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -98,96 +126,219 @@ public class GetLogListResponseBody extends TeaModel {
     }
 
     public static class GetLogListResponseBodyResults extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("AffectRows")
         public Integer affectRows;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8.8.XX.XX</p>
+         */
         @NameInMap("AppClientIp")
         public String appClientIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zhangsan</p>
+         */
         @NameInMap("AppUsername")
         public String appUsername;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-06-06 00:00:00</p>
+         */
         @NameInMap("CaptureTime")
         public String captureTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
+         */
         @NameInMap("ClientIp")
         public String clientIp;
 
+        @NameInMap("ClientIpAlias")
+        public String clientIpAlias;
+
+        /**
+         * <strong>example:</strong>
+         * <p>00163E06****</p>
+         */
         @NameInMap("ClientMac")
         public String clientMac;
 
+        /**
+         * <strong>example:</strong>
+         * <p>administrator</p>
+         */
         @NameInMap("ClientOsUser")
         public String clientOsUser;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15629</p>
+         */
         @NameInMap("ClientPort")
         public Integer clientPort;
 
+        /**
+         * <strong>example:</strong>
+         * <p>navicat</p>
+         */
         @NameInMap("ClientProgram")
         public String clientProgram;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("DbId")
         public Integer dbId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX:3306</p>
+         */
         @NameInMap("DbServer")
         public String dbServer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>root</p>
+         */
         @NameInMap("DbUser")
         public String dbUser;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("ExecCostUS")
         public Integer execCostUS;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("FetchCostUS")
         public Integer fetchCostUS;
 
+        /**
+         * <strong>example:</strong>
+         * <p>orcl</p>
+         */
         @NameInMap("InstName")
         public String instName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ResponseCode")
         public String responseCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Table \&quot;your_table\&quot; doesn\&quot;t exist</p>
+         */
         @NameInMap("ResponseText")
         public String responseText;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50****</p>
+         */
         @NameInMap("RuleId")
         public Integer ruleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50****</p>
+         */
         @NameInMap("RuleKeyId")
         public Integer ruleKeyId;
 
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("RuleType")
         public Integer ruleType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>db_test</p>
+         */
         @NameInMap("Schema")
         public String schema;
 
+        /**
+         * <strong>example:</strong>
+         * <p>00163E06****</p>
+         */
         @NameInMap("ServerMac")
         public String serverMac;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3011610850021000000</p>
+         */
         @NameInMap("SessionId")
         public String sessionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-06-06 00:00:00</p>
+         */
         @NameInMap("SessionLoginTime")
         public String sessionLoginTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-06-06 00:00:00</p>
+         */
         @NameInMap("SessionLogoutTime")
         public String sessionLogoutTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>select * from ****</p>
+         */
         @NameInMap("SqlContent")
         public String sqlContent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1907181552270011186</p>
+         */
         @NameInMap("SqlId")
         public String sqlId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("SqlType")
         public String sqlType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000****</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
@@ -234,6 +385,14 @@ public class GetLogListResponseBody extends TeaModel {
         }
         public String getClientIp() {
             return this.clientIp;
+        }
+
+        public GetLogListResponseBodyResults setClientIpAlias(String clientIpAlias) {
+            this.clientIpAlias = clientIpAlias;
+            return this;
+        }
+        public String getClientIpAlias() {
+            return this.clientIpAlias;
         }
 
         public GetLogListResponseBodyResults setClientMac(String clientMac) {

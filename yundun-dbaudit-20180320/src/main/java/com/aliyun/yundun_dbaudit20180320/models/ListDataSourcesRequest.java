@@ -4,12 +4,29 @@ package com.aliyun.yundun_dbaudit20180320.models;
 import com.aliyun.tea.*;
 
 public class ListDataSourcesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("DbId")
     public Integer dbId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dbaudit-cn-78v1gc****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("Lang")
+    public String lang;
+
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -32,6 +49,14 @@ public class ListDataSourcesRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ListDataSourcesRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public ListDataSourcesRequest setRegionId(String regionId) {

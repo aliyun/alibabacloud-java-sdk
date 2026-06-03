@@ -3,17 +3,8 @@ package com.aliyun.yundun_dbaudit20180320.models;
 
 import com.aliyun.tea.*;
 
-public class ListSystemAlarmsRequest extends TeaModel {
+public class GetAuditCountRequest extends TeaModel {
     /**
-     * <strong>example:</strong>
-     * <p>17</p>
-     */
-    @NameInMap("AlarmType")
-    public Integer alarmType;
-
-    /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>2019-06-06 00:00:00</p>
      */
@@ -21,8 +12,13 @@ public class ListSystemAlarmsRequest extends TeaModel {
     public String beginDate;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("DbId")
+    public Integer dbId;
+
+    /**
      * <strong>example:</strong>
      * <p>2019-06-06 23:59:59</p>
      */
@@ -38,6 +34,10 @@ public class ListSystemAlarmsRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
@@ -48,20 +48,12 @@ public class ListSystemAlarmsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    public static ListSystemAlarmsRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListSystemAlarmsRequest self = new ListSystemAlarmsRequest();
+    public static GetAuditCountRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetAuditCountRequest self = new GetAuditCountRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListSystemAlarmsRequest setAlarmType(Integer alarmType) {
-        this.alarmType = alarmType;
-        return this;
-    }
-    public Integer getAlarmType() {
-        return this.alarmType;
-    }
-
-    public ListSystemAlarmsRequest setBeginDate(String beginDate) {
+    public GetAuditCountRequest setBeginDate(String beginDate) {
         this.beginDate = beginDate;
         return this;
     }
@@ -69,7 +61,15 @@ public class ListSystemAlarmsRequest extends TeaModel {
         return this.beginDate;
     }
 
-    public ListSystemAlarmsRequest setEndDate(String endDate) {
+    public GetAuditCountRequest setDbId(Integer dbId) {
+        this.dbId = dbId;
+        return this;
+    }
+    public Integer getDbId() {
+        return this.dbId;
+    }
+
+    public GetAuditCountRequest setEndDate(String endDate) {
         this.endDate = endDate;
         return this;
     }
@@ -77,7 +77,7 @@ public class ListSystemAlarmsRequest extends TeaModel {
         return this.endDate;
     }
 
-    public ListSystemAlarmsRequest setInstanceId(String instanceId) {
+    public GetAuditCountRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -85,7 +85,7 @@ public class ListSystemAlarmsRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ListSystemAlarmsRequest setLang(String lang) {
+    public GetAuditCountRequest setLang(String lang) {
         this.lang = lang;
         return this;
     }
@@ -93,7 +93,7 @@ public class ListSystemAlarmsRequest extends TeaModel {
         return this.lang;
     }
 
-    public ListSystemAlarmsRequest setRegionId(String regionId) {
+    public GetAuditCountRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }

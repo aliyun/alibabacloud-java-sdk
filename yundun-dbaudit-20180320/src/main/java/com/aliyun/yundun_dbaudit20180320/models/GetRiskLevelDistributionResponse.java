@@ -3,7 +3,7 @@ package com.aliyun.yundun_dbaudit20180320.models;
 
 import com.aliyun.tea.*;
 
-public class StartInstanceResponse extends TeaModel {
+public class GetRiskLevelDistributionResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class StartInstanceResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public StartInstanceResponseBody body;
+    public GetRiskLevelDistributionResponseBody body;
 
-    public static StartInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
-        StartInstanceResponse self = new StartInstanceResponse();
+    public static GetRiskLevelDistributionResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetRiskLevelDistributionResponse self = new GetRiskLevelDistributionResponse();
         return TeaModel.build(map, self);
     }
 
-    public StartInstanceResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetRiskLevelDistributionResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class StartInstanceResponse extends TeaModel {
         return this.headers;
     }
 
-    public StartInstanceResponse setStatusCode(Integer statusCode) {
+    public GetRiskLevelDistributionResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class StartInstanceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public StartInstanceResponse setBody(StartInstanceResponseBody body) {
+    public GetRiskLevelDistributionResponse setBody(GetRiskLevelDistributionResponseBody body) {
         this.body = body;
         return this;
     }
-    public StartInstanceResponseBody getBody() {
+    public GetRiskLevelDistributionResponseBody getBody() {
         return this.body;
     }
 

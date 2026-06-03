@@ -4,75 +4,176 @@ package com.aliyun.yundun_dbaudit20180320.models;
 import com.aliyun.tea.*;
 
 public class GetLogListRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-06-06 00:00:00</p>
+     */
     @NameInMap("BeginDate")
     public String beginDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>111.164.XX.XX</p>
+     */
     @NameInMap("ClientIpList")
     public java.util.List<String> clientIpList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>navicat</p>
+     */
     @NameInMap("ClientProgramList")
     public java.util.List<String> clientProgramList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>192.168.XX.XX</p>
+     */
     @NameInMap("DbHostList")
     public java.util.List<String> dbHostList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("DbId")
     public Integer dbId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>root</p>
+     */
     @NameInMap("DbUserList")
     public java.util.List<String> dbUserList;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-06-06 23:59:59</p>
+     */
     @NameInMap("EndDate")
     public String endDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dbaudit-cn-78v1gc****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsSuccess")
     public String isSuccess;
 
+    @NameInMap("Lang")
+    public String lang;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("MaxAffectRows")
     public Integer maxAffectRows;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20000</p>
+     */
     @NameInMap("MaxExecCostUS")
     public Integer maxExecCostUS;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MinAffectRows")
     public Integer minAffectRows;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("MinExecCostUS")
     public Integer minExecCostUS;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RiskLevelList")
     public java.util.List<String> riskLevelList;
 
     @NameInMap("RuleName")
     public String ruleName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("RuleTypeList")
     public java.util.List<String> ruleTypeList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3011610850021000000</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1907181552270011186</p>
+     */
     @NameInMap("SqlId")
     public String sqlId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>select</p>
+     */
     @NameInMap("SqlKey")
     public String sqlKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("SqlTypeList")
     public java.util.List<String> sqlTypeList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000****</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
@@ -151,6 +252,14 @@ public class GetLogListRequest extends TeaModel {
     }
     public String getIsSuccess() {
         return this.isSuccess;
+    }
+
+    public GetLogListRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public GetLogListRequest setMaxAffectRows(Integer maxAffectRows) {

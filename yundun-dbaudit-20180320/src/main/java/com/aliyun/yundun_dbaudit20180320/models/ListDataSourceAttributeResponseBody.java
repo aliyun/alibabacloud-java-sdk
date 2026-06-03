@@ -7,6 +7,10 @@ public class ListDataSourceAttributeResponseBody extends TeaModel {
     @NameInMap("DbList")
     public java.util.List<ListDataSourceAttributeResponseBodyDbList> dbList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1B217656-2267-4FBF-B26C-CDD201BDC3B8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,41 @@ public class ListDataSourceAttributeResponseBody extends TeaModel {
     }
 
     public static class ListDataSourceAttributeResponseBodyDbList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>All</p>
+         */
         @NameInMap("AuditMode")
         public String auditMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("DbId")
         public Integer dbId;
 
+        @NameInMap("FreqAuditMode")
+        public String freqAuditMode;
+
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("ResultAuditMaxLine")
         public Integer resultAuditMaxLine;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("ResultAuditMaxSize")
         public Integer resultAuditMaxSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Close</p>
+         */
         @NameInMap("ResultAuditMode")
         public String resultAuditMode;
 
@@ -66,6 +93,14 @@ public class ListDataSourceAttributeResponseBody extends TeaModel {
         }
         public Integer getDbId() {
             return this.dbId;
+        }
+
+        public ListDataSourceAttributeResponseBodyDbList setFreqAuditMode(String freqAuditMode) {
+            this.freqAuditMode = freqAuditMode;
+            return this;
+        }
+        public String getFreqAuditMode() {
+            return this.freqAuditMode;
         }
 
         public ListDataSourceAttributeResponseBodyDbList setResultAuditMaxLine(Integer resultAuditMaxLine) {

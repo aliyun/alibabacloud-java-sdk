@@ -4,27 +4,55 @@ package com.aliyun.yundun_dbaudit20180320.models;
 import com.aliyun.tea.*;
 
 public class GetSessionListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2019-06-06 00:00:00</p>
+     */
     @NameInMap("BeginDate")
     public String beginDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2019-06-06 23:59:59</p>
+     */
     @NameInMap("EndDate")
     public String endDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Incomplete")
     public String incomplete;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1B217656-2267-4FBF-B26C-CDD201BDC3B8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Results")
     public java.util.List<GetSessionListResponseBodyResults> results;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10000</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -98,48 +126,111 @@ public class GetSessionListResponseBody extends TeaModel {
     }
 
     public static class GetSessionListResponseBodyResults extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-06-06 00:00:00</p>
+         */
         @NameInMap("CaptureTime")
         public String captureTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
+         */
         @NameInMap("ClientIp")
         public String clientIp;
 
+        @NameInMap("ClientIpAlias")
+        public String clientIpAlias;
+
+        /**
+         * <strong>example:</strong>
+         * <p>00163E06****</p>
+         */
         @NameInMap("ClientMac")
         public String clientMac;
 
+        /**
+         * <strong>example:</strong>
+         * <p>administrator</p>
+         */
         @NameInMap("ClientOsUser")
         public String clientOsUser;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15629</p>
+         */
         @NameInMap("ClientPort")
         public Integer clientPort;
 
+        /**
+         * <strong>example:</strong>
+         * <p>navicat</p>
+         */
         @NameInMap("ClientProgram")
         public String clientProgram;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("DbId")
         public Integer dbId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>root</p>
+         */
         @NameInMap("DbUser")
         public String dbUser;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("LoginCode")
         public Integer loginCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Access denied for user \&quot;root\&quot;@\&quot;192.168.XX.XX\&quot;(using password: YES)</p>
+         */
         @NameInMap("LoginMessage")
         public String loginMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
+         */
         @NameInMap("ServerIp")
         public String serverIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>00163E06****</p>
+         */
         @NameInMap("ServerMac")
         public String serverMac;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3306</p>
+         */
         @NameInMap("ServerPort")
         public Integer serverPort;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3011610850021000000</p>
+         */
         @NameInMap("SessionId")
         public String sessionId;
 
@@ -170,6 +261,14 @@ public class GetSessionListResponseBody extends TeaModel {
         }
         public String getClientIp() {
             return this.clientIp;
+        }
+
+        public GetSessionListResponseBodyResults setClientIpAlias(String clientIpAlias) {
+            this.clientIpAlias = clientIpAlias;
+            return this;
+        }
+        public String getClientIpAlias() {
+            return this.clientIpAlias;
         }
 
         public GetSessionListResponseBodyResults setClientMac(String clientMac) {

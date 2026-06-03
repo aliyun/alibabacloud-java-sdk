@@ -4,108 +4,247 @@ package com.aliyun.yundun_dbaudit20180320.models;
 import com.aliyun.tea.*;
 
 public class GetLogDetailResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("AffectRows")
     public Integer affectRows;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8.8.XX.XX</p>
+     */
     @NameInMap("AppClientIp")
     public String appClientIp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zhangsan</p>
+     */
     @NameInMap("AppUsername")
     public String appUsername;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2019-06-06 00:00:00</p>
+     */
     @NameInMap("CaptureTime")
     public String captureTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>192.168.XX.XX</p>
+     */
     @NameInMap("ClientIp")
     public String clientIp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>00163E06****</p>
+     */
     @NameInMap("ClientMac")
     public String clientMac;
 
+    /**
+     * <strong>example:</strong>
+     * <p>administrator</p>
+     */
     @NameInMap("ClientOsUser")
     public String clientOsUser;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15629</p>
+     */
     @NameInMap("ClientPort")
     public Integer clientPort;
 
+    /**
+     * <strong>example:</strong>
+     * <p>navicat</p>
+     */
     @NameInMap("ClientProgram")
     public String clientProgram;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("DbId")
     public Integer dbId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>192.168.XX.XX:3306</p>
+     */
     @NameInMap("DbServer")
     public String dbServer;
 
+    /**
+     * <strong>example:</strong>
+     * <p>root</p>
+     */
     @NameInMap("DbUser")
     public String dbUser;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("ExecCostUS")
     public Integer execCostUS;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("FetchCostUS")
     public Integer fetchCostUS;
 
+    /**
+     * <strong>example:</strong>
+     * <p>orcl</p>
+     */
     @NameInMap("InstName")
     public String instName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1B217656-2267-4FBF-B26C-CDD201BDC3B8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("ResponseCode")
     public String responseCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Table \&quot;your_table\&quot; doesn\&quot;t exist</p>
+     */
     @NameInMap("ResponseText")
     public String responseText;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("RiskLevel")
     public Integer riskLevel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50****</p>
+     */
     @NameInMap("RuleId")
     public Integer ruleId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50****</p>
+     */
     @NameInMap("RuleKeyId")
     public Integer ruleKeyId;
 
     @NameInMap("RuleName")
     public String ruleName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("RuleType")
     public Integer ruleType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>db_test</p>
+     */
     @NameInMap("Schema")
     public String schema;
 
+    @NameInMap("SecondarySqlType")
+    public String secondarySqlType;
+
+    /**
+     * <strong>example:</strong>
+     * <p>00163E06****</p>
+     */
     @NameInMap("ServerMac")
     public String serverMac;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3011610850021000000</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2019-06-06 00:00:00</p>
+     */
     @NameInMap("SessionLoginTime")
     public String sessionLoginTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2019-06-06 00:00:00</p>
+     */
     @NameInMap("SessionLogoutTime")
     public String sessionLogoutTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>select * from xxx where name=\&quot;zhangsan\&quot;</p>
+     */
     @NameInMap("SqlContent")
     public String sqlContent;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1907181552270011186</p>
+     */
     @NameInMap("SqlId")
     public String sqlId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[[&quot;id&quot;,&quot;name&quot;,&quot;age&quot;],[&quot;1&quot;,&quot;zhangsan&quot;,&quot;20&quot;]]</p>
+     */
     @NameInMap("SqlResult")
     public String sqlResult;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("SqlType")
     public String sqlType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SELECT</p>
+     */
     @NameInMap("SqlTypeName")
     public String sqlTypeName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SELECT * FROM XXX WHERE NAME=\&quot;#\&quot;</p>
+     */
     @NameInMap("TemplateContent")
     public String templateContent;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000****</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
@@ -307,6 +446,14 @@ public class GetLogDetailResponseBody extends TeaModel {
     }
     public String getSchema() {
         return this.schema;
+    }
+
+    public GetLogDetailResponseBody setSecondarySqlType(String secondarySqlType) {
+        this.secondarySqlType = secondarySqlType;
+        return this;
+    }
+    public String getSecondarySqlType() {
+        return this.secondarySqlType;
     }
 
     public GetLogDetailResponseBody setServerMac(String serverMac) {

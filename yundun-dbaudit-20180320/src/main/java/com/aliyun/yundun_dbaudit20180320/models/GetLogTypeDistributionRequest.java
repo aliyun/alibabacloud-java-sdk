@@ -3,14 +3,7 @@ package com.aliyun.yundun_dbaudit20180320.models;
 
 import com.aliyun.tea.*;
 
-public class ListSystemAlarmsRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>17</p>
-     */
-    @NameInMap("AlarmType")
-    public Integer alarmType;
-
+public class GetLogTypeDistributionRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      * 
@@ -19,6 +12,13 @@ public class ListSystemAlarmsRequest extends TeaModel {
      */
     @NameInMap("BeginDate")
     public String beginDate;
+
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("DbId")
+    public Integer dbId;
 
     /**
      * <p>This parameter is required.</p>
@@ -38,6 +38,10 @@ public class ListSystemAlarmsRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
@@ -48,20 +52,12 @@ public class ListSystemAlarmsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    public static ListSystemAlarmsRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListSystemAlarmsRequest self = new ListSystemAlarmsRequest();
+    public static GetLogTypeDistributionRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetLogTypeDistributionRequest self = new GetLogTypeDistributionRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListSystemAlarmsRequest setAlarmType(Integer alarmType) {
-        this.alarmType = alarmType;
-        return this;
-    }
-    public Integer getAlarmType() {
-        return this.alarmType;
-    }
-
-    public ListSystemAlarmsRequest setBeginDate(String beginDate) {
+    public GetLogTypeDistributionRequest setBeginDate(String beginDate) {
         this.beginDate = beginDate;
         return this;
     }
@@ -69,7 +65,15 @@ public class ListSystemAlarmsRequest extends TeaModel {
         return this.beginDate;
     }
 
-    public ListSystemAlarmsRequest setEndDate(String endDate) {
+    public GetLogTypeDistributionRequest setDbId(Integer dbId) {
+        this.dbId = dbId;
+        return this;
+    }
+    public Integer getDbId() {
+        return this.dbId;
+    }
+
+    public GetLogTypeDistributionRequest setEndDate(String endDate) {
         this.endDate = endDate;
         return this;
     }
@@ -77,7 +81,7 @@ public class ListSystemAlarmsRequest extends TeaModel {
         return this.endDate;
     }
 
-    public ListSystemAlarmsRequest setInstanceId(String instanceId) {
+    public GetLogTypeDistributionRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -85,7 +89,7 @@ public class ListSystemAlarmsRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ListSystemAlarmsRequest setLang(String lang) {
+    public GetLogTypeDistributionRequest setLang(String lang) {
         this.lang = lang;
         return this;
     }
@@ -93,7 +97,7 @@ public class ListSystemAlarmsRequest extends TeaModel {
         return this.lang;
     }
 
-    public ListSystemAlarmsRequest setRegionId(String regionId) {
+    public GetLogTypeDistributionRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }

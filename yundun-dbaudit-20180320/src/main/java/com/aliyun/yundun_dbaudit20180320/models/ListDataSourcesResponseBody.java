@@ -7,6 +7,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
     @NameInMap("DbList")
     public java.util.List<ListDataSourcesResponseBodyDbList> dbList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1B217656-2267-4FBF-B26C-CDD201BDC3B8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,42 +36,86 @@ public class ListDataSourcesResponseBody extends TeaModel {
     }
 
     public static class ListDataSourcesResponseBodyDbList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AssetType")
         public Integer assetType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AuditSwitch")
         public Integer auditSwitch;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-06-06 09:00:00</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("DbAddresses")
         public java.util.List<String> dbAddresses;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE----- ...... -----END CERTIFICATE-----</p>
+         */
         @NameInMap("DbCertificate")
         public String dbCertificate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("DbId")
         public Integer dbId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rds-a235dsdg2a****</p>
+         */
         @NameInMap("DbInstanceId")
         public String dbInstanceId;
 
         @NameInMap("DbName")
         public String dbName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("DbType")
         public Integer dbType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Mysql</p>
+         */
         @NameInMap("DbTypeName")
         public String dbTypeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>root</p>
+         */
         @NameInMap("DbUsername")
         public String dbUsername;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5700</p>
+         */
         @NameInMap("DbVersion")
         public Integer dbVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5.7</p>
+         */
         @NameInMap("DbVersionName")
         public String dbVersionName;
 
