@@ -240,6 +240,9 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
         @NameInMap("ChildInstanceId")
         public String childInstanceId;
 
+        @NameInMap("ChildInstanceName")
+        public String childInstanceName;
+
         /**
          * <p>The ID of the Alibaba Cloud account that owns the VBR.</p>
          * 
@@ -357,6 +360,14 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
         }
         public String getChildInstanceId() {
             return this.childInstanceId;
+        }
+
+        public DescribeExpressConnectRouterChildInstanceResponseBodyChildInstanceList setChildInstanceName(String childInstanceName) {
+            this.childInstanceName = childInstanceName;
+            return this;
+        }
+        public String getChildInstanceName() {
+            return this.childInstanceName;
         }
 
         public DescribeExpressConnectRouterChildInstanceResponseBodyChildInstanceList setChildInstanceOwnerId(Long childInstanceOwnerId) {

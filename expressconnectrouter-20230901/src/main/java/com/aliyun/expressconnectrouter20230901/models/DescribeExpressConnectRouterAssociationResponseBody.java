@@ -221,6 +221,36 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
         return this.totalCount;
     }
 
+    public static class DescribeExpressConnectRouterAssociationResponseBodyAssociationListTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeExpressConnectRouterAssociationResponseBodyAssociationListTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeExpressConnectRouterAssociationResponseBodyAssociationListTags self = new DescribeExpressConnectRouterAssociationResponseBodyAssociationListTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeExpressConnectRouterAssociationResponseBodyAssociationListTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeExpressConnectRouterAssociationResponseBodyAssociationListTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeExpressConnectRouterAssociationResponseBodyAssociationList extends TeaModel {
         /**
          * <p>The allowed route prefixes.</p>
@@ -344,6 +374,9 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("Tags")
+        public java.util.List<DescribeExpressConnectRouterAssociationResponseBodyAssociationListTags> tags;
+
         /**
          * <p>The TR ID.</p>
          * 
@@ -352,6 +385,9 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
          */
         @NameInMap("TransitRouterId")
         public String transitRouterId;
+
+        @NameInMap("TransitRouterName")
+        public String transitRouterName;
 
         /**
          * <p>The ID of the Alibaba Cloud account that owns the TR.</p>
@@ -370,6 +406,9 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
          */
         @NameInMap("VpcId")
         public String vpcId;
+
+        @NameInMap("VpcName")
+        public String vpcName;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>
@@ -481,12 +520,28 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
             return this.status;
         }
 
+        public DescribeExpressConnectRouterAssociationResponseBodyAssociationList setTags(java.util.List<DescribeExpressConnectRouterAssociationResponseBodyAssociationListTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeExpressConnectRouterAssociationResponseBodyAssociationListTags> getTags() {
+            return this.tags;
+        }
+
         public DescribeExpressConnectRouterAssociationResponseBodyAssociationList setTransitRouterId(String transitRouterId) {
             this.transitRouterId = transitRouterId;
             return this;
         }
         public String getTransitRouterId() {
             return this.transitRouterId;
+        }
+
+        public DescribeExpressConnectRouterAssociationResponseBodyAssociationList setTransitRouterName(String transitRouterName) {
+            this.transitRouterName = transitRouterName;
+            return this;
+        }
+        public String getTransitRouterName() {
+            return this.transitRouterName;
         }
 
         public DescribeExpressConnectRouterAssociationResponseBodyAssociationList setTransitRouterOwnerId(Long transitRouterOwnerId) {
@@ -503,6 +558,14 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
         }
         public String getVpcId() {
             return this.vpcId;
+        }
+
+        public DescribeExpressConnectRouterAssociationResponseBodyAssociationList setVpcName(String vpcName) {
+            this.vpcName = vpcName;
+            return this;
+        }
+        public String getVpcName() {
+            return this.vpcName;
         }
 
         public DescribeExpressConnectRouterAssociationResponseBodyAssociationList setVpcOwnerId(Long vpcOwnerId) {

@@ -102,6 +102,9 @@ public class CreateExpressConnectRouterAssociationRequest extends TeaModel {
     @NameInMap("EcrId")
     public String ecrId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateExpressConnectRouterAssociationRequestTag> tag;
+
     /**
      * <p>The TR ID.</p>
      * 
@@ -224,6 +227,14 @@ public class CreateExpressConnectRouterAssociationRequest extends TeaModel {
         return this.ecrId;
     }
 
+    public CreateExpressConnectRouterAssociationRequest setTag(java.util.List<CreateExpressConnectRouterAssociationRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateExpressConnectRouterAssociationRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateExpressConnectRouterAssociationRequest setTransitRouterId(String transitRouterId) {
         this.transitRouterId = transitRouterId;
         return this;
@@ -262,6 +273,36 @@ public class CreateExpressConnectRouterAssociationRequest extends TeaModel {
     }
     public Long getVpcOwnerId() {
         return this.vpcOwnerId;
+    }
+
+    public static class CreateExpressConnectRouterAssociationRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateExpressConnectRouterAssociationRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateExpressConnectRouterAssociationRequestTag self = new CreateExpressConnectRouterAssociationRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateExpressConnectRouterAssociationRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateExpressConnectRouterAssociationRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
