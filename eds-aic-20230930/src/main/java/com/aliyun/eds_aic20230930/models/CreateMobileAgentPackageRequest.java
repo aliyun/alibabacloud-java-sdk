@@ -46,6 +46,9 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
     @NameInMap("CreditConfig")
     public String creditConfig;
 
+    @NameInMap("ImageId")
+    public String imageId;
+
     /**
      * <strong>example:</strong>
      * <p>CloudPhone</p>
@@ -59,6 +62,9 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
      */
     @NameInMap("MobileAgentPackageSpec")
     public String mobileAgentPackageSpec;
+
+    @NameInMap("PackageSpecId")
+    public Long packageSpecId;
 
     /**
      * <strong>example:</strong>
@@ -141,6 +147,14 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
         return this.creditConfig;
     }
 
+    public CreateMobileAgentPackageRequest setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
+    }
+
     public CreateMobileAgentPackageRequest setInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
@@ -155,6 +169,14 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
     }
     public String getMobileAgentPackageSpec() {
         return this.mobileAgentPackageSpec;
+    }
+
+    public CreateMobileAgentPackageRequest setPackageSpecId(Long packageSpecId) {
+        this.packageSpecId = packageSpecId;
+        return this;
+    }
+    public Long getPackageSpecId() {
+        return this.packageSpecId;
     }
 
     public CreateMobileAgentPackageRequest setPaidCallbackUrl(String paidCallbackUrl) {

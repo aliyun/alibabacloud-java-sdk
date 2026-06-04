@@ -17,6 +17,9 @@ public class SendFileRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("FileMd5")
+    public String fileMd5;
+
     /**
      * <p>The path to which you want to upload the pushed file in the cloud phone instance.</p>
      * <p>This parameter is required.</p>
@@ -101,6 +104,14 @@ public class SendFileRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public SendFileRequest setFileMd5(String fileMd5) {
+        this.fileMd5 = fileMd5;
+        return this;
+    }
+    public String getFileMd5() {
+        return this.fileMd5;
     }
 
     public SendFileRequest setSourceFilePath(String sourceFilePath) {

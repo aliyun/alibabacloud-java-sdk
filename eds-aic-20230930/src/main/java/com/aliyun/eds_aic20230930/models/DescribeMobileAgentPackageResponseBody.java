@@ -112,6 +112,9 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         @NameInMap("PackageSpec")
         public String packageSpec;
 
+        @NameInMap("PackageSpecName")
+        public String packageSpecName;
+
         /**
          * <strong>example:</strong>
          * <p>ACTIVE</p>
@@ -169,6 +172,14 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         }
         public String getPackageSpec() {
             return this.packageSpec;
+        }
+
+        public DescribeMobileAgentPackageResponseBodyPackageList setPackageSpecName(String packageSpecName) {
+            this.packageSpecName = packageSpecName;
+            return this;
+        }
+        public String getPackageSpecName() {
+            return this.packageSpecName;
         }
 
         public DescribeMobileAgentPackageResponseBodyPackageList setPackageStatus(String packageStatus) {
