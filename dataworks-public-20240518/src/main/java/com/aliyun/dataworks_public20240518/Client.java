@@ -481,6 +481,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>批量创建自定义实体</p>
+     * 
+     * @param tmpReq BatchCreateMetaEntitiesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchCreateMetaEntitiesResponse
+     */
+    public BatchCreateMetaEntitiesResponse batchCreateMetaEntitiesWithOptions(BatchCreateMetaEntitiesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        BatchCreateMetaEntitiesShrinkRequest request = new BatchCreateMetaEntitiesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.entities)) {
+            request.entitiesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.entities, "Entities", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.entitiesShrink)) {
+            body.put("Entities", request.entitiesShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchCreateMetaEntities"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchCreateMetaEntitiesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量创建自定义实体</p>
+     * 
+     * @param request BatchCreateMetaEntitiesRequest
+     * @return BatchCreateMetaEntitiesResponse
+     */
+    public BatchCreateMetaEntitiesResponse batchCreateMetaEntities(BatchCreateMetaEntitiesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.batchCreateMetaEntitiesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量删除自定义实体</p>
+     * 
+     * @param tmpReq BatchDeleteMetaEntitiesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchDeleteMetaEntitiesResponse
+     */
+    public BatchDeleteMetaEntitiesResponse batchDeleteMetaEntitiesWithOptions(BatchDeleteMetaEntitiesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        BatchDeleteMetaEntitiesShrinkRequest request = new BatchDeleteMetaEntitiesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ids)) {
+            request.idsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ids, "Ids", "simple");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.idsShrink)) {
+            body.put("Ids", request.idsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchDeleteMetaEntities"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchDeleteMetaEntitiesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量删除自定义实体</p>
+     * 
+     * @param request BatchDeleteMetaEntitiesRequest
+     * @return BatchDeleteMetaEntitiesResponse
+     */
+    public BatchDeleteMetaEntitiesResponse batchDeleteMetaEntities(BatchDeleteMetaEntitiesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.batchDeleteMetaEntitiesWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>This API operation is available for all DataWorks editions.</p>
      * 
@@ -970,6 +1070,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateComputeResourceResponse createComputeResource(CreateComputeResourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createComputeResourceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建自定义属性定义</p>
+     * 
+     * @param tmpReq CreateCustomAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCustomAttributeResponse
+     */
+    public CreateCustomAttributeResponse createCustomAttributeWithOptions(CreateCustomAttributeRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateCustomAttributeShrinkRequest request = new CreateCustomAttributeShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.entityTypes)) {
+            request.entityTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.entityTypes, "EntityTypes", "simple");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.valueEnums)) {
+            request.valueEnumsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.valueEnums, "ValueEnums", "simple");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.comment)) {
+            body.put("Comment", request.comment);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayEnabled)) {
+            body.put("DisplayEnabled", request.displayEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("DisplayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityTypesShrink)) {
+            body.put("EntityTypes", request.entityTypesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchFilterEnabled)) {
+            body.put("SearchFilterEnabled", request.searchFilterEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.valueEnumsShrink)) {
+            body.put("ValueEnums", request.valueEnumsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCustomAttribute"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCustomAttributeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建自定义属性定义</p>
+     * 
+     * @param request CreateCustomAttributeRequest
+     * @return CreateCustomAttributeResponse
+     */
+    public CreateCustomAttributeResponse createCustomAttribute(CreateCustomAttributeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createCustomAttributeWithOptions(request, runtime);
     }
 
     /**
@@ -2695,6 +2877,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建自定义实体定义</p>
+     * 
+     * @param tmpReq CreateMetaEntityDefRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateMetaEntityDefResponse
+     */
+    public CreateMetaEntityDefResponse createMetaEntityDefWithOptions(CreateMetaEntityDefRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateMetaEntityDefShrinkRequest request = new CreateMetaEntityDefShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.attributeDefs)) {
+            request.attributeDefsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.attributeDefs, "AttributeDefs", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.attributeDefsShrink)) {
+            body.put("AttributeDefs", request.attributeDefsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("DisplayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extend)) {
+            body.put("Extend", request.extend);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMetaEntityDef"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMetaEntityDefResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建自定义实体定义</p>
+     * 
+     * @param request CreateMetaEntityDefRequest
+     * @return CreateMetaEntityDefResponse
+     */
+    public CreateMetaEntityDefResponse createMetaEntityDef(CreateMetaEntityDefRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createMetaEntityDefWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>This API operation is available for all DataWorks editions.</p>
      * 
@@ -4196,6 +4444,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除自定义属性定义</p>
+     * 
+     * @param request DeleteCustomAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCustomAttributeResponse
+     */
+    public DeleteCustomAttributeResponse deleteCustomAttributeWithOptions(DeleteCustomAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCustomAttribute"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCustomAttributeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除自定义属性定义</p>
+     * 
+     * @param request DeleteCustomAttributeRequest
+     * @return DeleteCustomAttributeResponse
+     */
+    public DeleteCustomAttributeResponse deleteCustomAttribute(DeleteCustomAttributeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteCustomAttributeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes an alert rule configured for a synchronization task.</p>
      * 
      * @param request DeleteDIAlarmRuleRequest
@@ -5114,6 +5406,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteMetaCollectionResponse deleteMetaCollection(DeleteMetaCollectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteMetaCollectionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除自定义实体定义</p>
+     * 
+     * @param request DeleteMetaEntityDefRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteMetaEntityDefResponse
+     */
+    public DeleteMetaEntityDefResponse deleteMetaEntityDefWithOptions(DeleteMetaEntityDefRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.entityType)) {
+            body.put("EntityType", request.entityType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.force)) {
+            body.put("Force", request.force);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteMetaEntityDef"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteMetaEntityDefResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除自定义实体定义</p>
+     * 
+     * @param request DeleteMetaEntityDefRequest
+     * @return DeleteMetaEntityDefResponse
+     */
+    public DeleteMetaEntityDefResponse deleteMetaEntityDef(DeleteMetaEntityDefRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteMetaEntityDefWithOptions(request, runtime);
     }
 
     /**
@@ -6685,6 +7025,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtain custom property definition details</p>
+     * 
+     * @param request GetCustomAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCustomAttributeResponse
+     */
+    public GetCustomAttributeResponse getCustomAttributeWithOptions(GetCustomAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCustomAttribute"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCustomAttributeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Obtain custom property definition details</p>
+     * 
+     * @param request GetCustomAttributeRequest
+     * @return GetCustomAttributeResponse
+     */
+    public GetCustomAttributeResponse getCustomAttribute(GetCustomAttributeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCustomAttributeWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>This API operation is available for all DataWorks editions.</p>
      * 
@@ -7894,6 +8278,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetMetaCollectionResponse getMetaCollection(GetMetaCollectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getMetaCollectionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取自定义实体详情</p>
+     * 
+     * @param request GetMetaEntityRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMetaEntityResponse
+     */
+    public GetMetaEntityResponse getMetaEntityWithOptions(GetMetaEntityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMetaEntity"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMetaEntityResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取自定义实体详情</p>
+     * 
+     * @param request GetMetaEntityRequest
+     * @return GetMetaEntityResponse
+     */
+    public GetMetaEntityResponse getMetaEntity(GetMetaEntityRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getMetaEntityWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取自定义实体定义详情</p>
+     * 
+     * @param request GetMetaEntityDefRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMetaEntityDefResponse
+     */
+    public GetMetaEntityDefResponse getMetaEntityDefWithOptions(GetMetaEntityDefRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.entityType)) {
+            body.put("EntityType", request.entityType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMetaEntityDef"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMetaEntityDefResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取自定义实体定义详情</p>
+     * 
+     * @param request GetMetaEntityDefRequest
+     * @return GetMetaEntityDefResponse
+     */
+    public GetMetaEntityDefResponse getMetaEntityDef(GetMetaEntityDefRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getMetaEntityDefWithOptions(request, runtime);
     }
 
     /**
@@ -9697,6 +10169,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListCrawlerTypesResponse listCrawlerTypes() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listCrawlerTypesWithOptions(runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Querying a Custom Attribute Definition List</p>
+     * 
+     * @param request ListCustomAttributesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCustomAttributesResponse
+     */
+    public ListCustomAttributesResponse listCustomAttributesWithOptions(ListCustomAttributesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.comment)) {
+            query.put("Comment", request.comment);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            query.put("DisplayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityTypes)) {
+            query.put("EntityTypes", request.entityTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            query.put("Order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCustomAttributes"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCustomAttributesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Querying a Custom Attribute Definition List</p>
+     * 
+     * @param request ListCustomAttributesRequest
+     * @return ListCustomAttributesResponse
+     */
+    public ListCustomAttributesResponse listCustomAttributes(ListCustomAttributesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCustomAttributesWithOptions(request, runtime);
     }
 
     /**
@@ -11797,6 +12337,160 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListMetaCollectionsResponse listMetaCollections(ListMetaCollectionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listMetaCollectionsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询自定义实体列表</p>
+     * 
+     * @param tmpReq ListMetaEntitiesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMetaEntitiesResponse
+     */
+    public ListMetaEntitiesResponse listMetaEntitiesWithOptions(ListMetaEntitiesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListMetaEntitiesShrinkRequest request = new ListMetaEntitiesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.attributeFilters)) {
+            request.attributeFiltersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.attributeFilters, "AttributeFilters", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.customAttributeFilters)) {
+            request.customAttributeFiltersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.customAttributeFilters, "CustomAttributeFilters", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.attributeFiltersShrink)) {
+            body.put("AttributeFilters", request.attributeFiltersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.comment)) {
+            body.put("Comment", request.comment);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customAttributeFiltersShrink)) {
+            body.put("CustomAttributeFilters", request.customAttributeFiltersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityType)) {
+            body.put("EntityType", request.entityType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            body.put("Order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            body.put("SortBy", request.sortBy);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMetaEntities"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMetaEntitiesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询自定义实体列表</p>
+     * 
+     * @param request ListMetaEntitiesRequest
+     * @return ListMetaEntitiesResponse
+     */
+    public ListMetaEntitiesResponse listMetaEntities(ListMetaEntitiesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listMetaEntitiesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询自定义实体定义列表</p>
+     * 
+     * @param request ListMetaEntityDefsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMetaEntityDefsResponse
+     */
+    public ListMetaEntityDefsResponse listMetaEntityDefsWithOptions(ListMetaEntityDefsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("DisplayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extend)) {
+            body.put("Extend", request.extend);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            body.put("Order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            body.put("SortBy", request.sortBy);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMetaEntityDefs"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMetaEntityDefsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询自定义实体定义列表</p>
+     * 
+     * @param request ListMetaEntityDefsRequest
+     * @return ListMetaEntityDefsResponse
+     */
+    public ListMetaEntityDefsResponse listMetaEntityDefs(ListMetaEntityDefsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listMetaEntityDefsWithOptions(request, runtime);
     }
 
     /**
@@ -15361,13 +16055,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Updates the business metadata of a column in a table in Data Map. Only the business description of a column can be updated.</p>
      * 
-     * @param request UpdateColumnBusinessMetadataRequest
+     * @param tmpReq UpdateColumnBusinessMetadataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateColumnBusinessMetadataResponse
      */
-    public UpdateColumnBusinessMetadataResponse updateColumnBusinessMetadataWithOptions(UpdateColumnBusinessMetadataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public UpdateColumnBusinessMetadataResponse updateColumnBusinessMetadataWithOptions(UpdateColumnBusinessMetadataRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateColumnBusinessMetadataShrinkRequest request = new UpdateColumnBusinessMetadataShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.customAttributes)) {
+            request.customAttributesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.customAttributes, "CustomAttributes", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customAttributesShrink)) {
+            body.put("CustomAttributes", request.customAttributesShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("Description", request.description);
         }
@@ -15523,6 +16227,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateComputeResourceResponse updateComputeResource(UpdateComputeResourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateComputeResourceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新自定义属性定义</p>
+     * 
+     * @param tmpReq UpdateCustomAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCustomAttributeResponse
+     */
+    public UpdateCustomAttributeResponse updateCustomAttributeWithOptions(UpdateCustomAttributeRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateCustomAttributeShrinkRequest request = new UpdateCustomAttributeShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.entityTypes)) {
+            request.entityTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.entityTypes, "EntityTypes", "simple");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.valueEnums)) {
+            request.valueEnumsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.valueEnums, "ValueEnums", "simple");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.comment)) {
+            body.put("Comment", request.comment);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayEnabled)) {
+            body.put("DisplayEnabled", request.displayEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("DisplayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityTypesShrink)) {
+            body.put("EntityTypes", request.entityTypesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchFilterEnabled)) {
+            body.put("SearchFilterEnabled", request.searchFilterEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.valueEnumsShrink)) {
+            body.put("ValueEnums", request.valueEnumsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCustomAttribute"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCustomAttributeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新自定义属性定义</p>
+     * 
+     * @param request UpdateCustomAttributeRequest
+     * @return UpdateCustomAttributeResponse
+     */
+    public UpdateCustomAttributeResponse updateCustomAttribute(UpdateCustomAttributeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCustomAttributeWithOptions(request, runtime);
     }
 
     /**
@@ -16889,6 +17671,142 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>更新自定义实体</p>
+     * 
+     * @param tmpReq UpdateMetaEntityRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateMetaEntityResponse
+     */
+    public UpdateMetaEntityResponse updateMetaEntityWithOptions(UpdateMetaEntityRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateMetaEntityShrinkRequest request = new UpdateMetaEntityShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.attributes)) {
+            request.attributesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.attributes, "Attributes", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.customAttributes)) {
+            request.customAttributesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.customAttributes, "CustomAttributes", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.attributesShrink)) {
+            body.put("Attributes", request.attributesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.comment)) {
+            body.put("Comment", request.comment);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customAttributesShrink)) {
+            body.put("CustomAttributes", request.customAttributesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateMetaEntity"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateMetaEntityResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新自定义实体</p>
+     * 
+     * @param request UpdateMetaEntityRequest
+     * @return UpdateMetaEntityResponse
+     */
+    public UpdateMetaEntityResponse updateMetaEntity(UpdateMetaEntityRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateMetaEntityWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新自定义实体定义</p>
+     * 
+     * @param tmpReq UpdateMetaEntityDefRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateMetaEntityDefResponse
+     */
+    public UpdateMetaEntityDefResponse updateMetaEntityDefWithOptions(UpdateMetaEntityDefRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateMetaEntityDefShrinkRequest request = new UpdateMetaEntityDefShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.newAttributeDefs)) {
+            request.newAttributeDefsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.newAttributeDefs, "NewAttributeDefs", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.updateAttributeDefs)) {
+            request.updateAttributeDefsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.updateAttributeDefs, "UpdateAttributeDefs", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("DisplayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityType)) {
+            body.put("EntityType", request.entityType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.newAttributeDefsShrink)) {
+            body.put("NewAttributeDefs", request.newAttributeDefsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.updateAttributeDefsShrink)) {
+            body.put("UpdateAttributeDefs", request.updateAttributeDefsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateMetaEntityDef"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateMetaEntityDefResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新自定义实体定义</p>
+     * 
+     * @param request UpdateMetaEntityDefRequest
+     * @return UpdateMetaEntityDefResponse
+     */
+    public UpdateMetaEntityDefResponse updateMetaEntityDef(UpdateMetaEntityDefRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateMetaEntityDefWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Updates the basic information about a node in DataStudio. This API operation performs an incremental update. The update information is described by using FlowSpec.</p>
      * 
      * @param request UpdateNodeRequest
@@ -17397,13 +18315,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Updates the business metadata of a table in Data Map. Currently, only the usage notes of a table can be updated.</p>
      * 
-     * @param request UpdateTableBusinessMetadataRequest
+     * @param tmpReq UpdateTableBusinessMetadataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateTableBusinessMetadataResponse
      */
-    public UpdateTableBusinessMetadataResponse updateTableBusinessMetadataWithOptions(UpdateTableBusinessMetadataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public UpdateTableBusinessMetadataResponse updateTableBusinessMetadataWithOptions(UpdateTableBusinessMetadataRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateTableBusinessMetadataShrinkRequest request = new UpdateTableBusinessMetadataShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.customAttributes)) {
+            request.customAttributesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.customAttributes, "CustomAttributes", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customAttributesShrink)) {
+            body.put("CustomAttributes", request.customAttributesShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.id)) {
             body.put("Id", request.id);
         }

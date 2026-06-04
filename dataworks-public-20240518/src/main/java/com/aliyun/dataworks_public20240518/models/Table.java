@@ -470,6 +470,9 @@ public class Table extends TeaModel {
         @NameInMap("Categories")
         public java.util.List<java.util.List<TableBusinessMetadataCategories>> categories;
 
+        @NameInMap("CustomAttributes")
+        public java.util.Map<String, java.util.List<String>> customAttributes;
+
         /**
          * <p>The extended information. Only MaxCompute tables supports this parameter.</p>
          */
@@ -505,6 +508,14 @@ public class Table extends TeaModel {
         }
         public java.util.List<java.util.List<TableBusinessMetadataCategories>> getCategories() {
             return this.categories;
+        }
+
+        public TableBusinessMetadata setCustomAttributes(java.util.Map<String, java.util.List<String>> customAttributes) {
+            this.customAttributes = customAttributes;
+            return this;
+        }
+        public java.util.Map<String, java.util.List<String>> getCustomAttributes() {
+            return this.customAttributes;
         }
 
         public TableBusinessMetadata setExtension(TableBusinessMetadataExtension extension) {

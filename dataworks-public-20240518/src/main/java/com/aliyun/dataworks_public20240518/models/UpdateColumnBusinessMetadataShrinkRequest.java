@@ -3,13 +3,13 @@ package com.aliyun.dataworks_public20240518.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateColumnBusinessMetadataRequest extends TeaModel {
+public class UpdateColumnBusinessMetadataShrinkRequest extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>{&quot;biz_owner&quot;:[&quot;张三&quot;]}</p>
      */
     @NameInMap("CustomAttributes")
-    public java.util.Map<String, java.util.List<String>> customAttributes;
+    public String customAttributesShrink;
 
     /**
      * <p>The field business description.</p>
@@ -30,20 +30,20 @@ public class UpdateColumnBusinessMetadataRequest extends TeaModel {
     @NameInMap("Id")
     public String id;
 
-    public static UpdateColumnBusinessMetadataRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpdateColumnBusinessMetadataRequest self = new UpdateColumnBusinessMetadataRequest();
+    public static UpdateColumnBusinessMetadataShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateColumnBusinessMetadataShrinkRequest self = new UpdateColumnBusinessMetadataShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateColumnBusinessMetadataRequest setCustomAttributes(java.util.Map<String, java.util.List<String>> customAttributes) {
-        this.customAttributes = customAttributes;
+    public UpdateColumnBusinessMetadataShrinkRequest setCustomAttributesShrink(String customAttributesShrink) {
+        this.customAttributesShrink = customAttributesShrink;
         return this;
     }
-    public java.util.Map<String, java.util.List<String>> getCustomAttributes() {
-        return this.customAttributes;
+    public String getCustomAttributesShrink() {
+        return this.customAttributesShrink;
     }
 
-    public UpdateColumnBusinessMetadataRequest setDescription(String description) {
+    public UpdateColumnBusinessMetadataShrinkRequest setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -51,7 +51,7 @@ public class UpdateColumnBusinessMetadataRequest extends TeaModel {
         return this.description;
     }
 
-    public UpdateColumnBusinessMetadataRequest setId(String id) {
+    public UpdateColumnBusinessMetadataShrinkRequest setId(String id) {
         this.id = id;
         return this;
     }

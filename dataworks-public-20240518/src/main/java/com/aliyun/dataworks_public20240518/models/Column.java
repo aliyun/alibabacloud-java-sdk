@@ -198,6 +198,9 @@ public class Column extends TeaModel {
     }
 
     public static class ColumnBusinessMetadata extends TeaModel {
+        @NameInMap("CustomAttributes")
+        public java.util.Map<String, java.util.List<String>> customAttributes;
+
         /**
          * <p>A business-level description of the field (supported only by MaxCompute, HMS (EMR clusters) and DLF.</p>
          */
@@ -207,6 +210,14 @@ public class Column extends TeaModel {
         public static ColumnBusinessMetadata build(java.util.Map<String, ?> map) throws Exception {
             ColumnBusinessMetadata self = new ColumnBusinessMetadata();
             return TeaModel.build(map, self);
+        }
+
+        public ColumnBusinessMetadata setCustomAttributes(java.util.Map<String, java.util.List<String>> customAttributes) {
+            this.customAttributes = customAttributes;
+            return this;
+        }
+        public java.util.Map<String, java.util.List<String>> getCustomAttributes() {
+            return this.customAttributes;
         }
 
         public ColumnBusinessMetadata setDescription(String description) {
