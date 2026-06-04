@@ -4,6 +4,9 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
+    @NameInMap("Edition")
+    public String edition;
+
     /**
      * <p>The list of instance IDs.</p>
      */
@@ -44,6 +47,14 @@ public class ListInstancesRequest extends TeaModel {
     public static ListInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstancesRequest self = new ListInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListInstancesRequest setEdition(String edition) {
+        this.edition = edition;
+        return this;
+    }
+    public String getEdition() {
+        return this.edition;
     }
 
     public ListInstancesRequest setInstanceIds(java.util.List<String> instanceIds) {
