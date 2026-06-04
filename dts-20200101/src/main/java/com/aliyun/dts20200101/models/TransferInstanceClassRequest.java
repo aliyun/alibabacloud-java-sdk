@@ -4,6 +4,9 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class TransferInstanceClassRequest extends TeaModel {
+    @NameInMap("DatabaseCount")
+    public Integer databaseCount;
+
     /**
      * <p>The ID of the data migration or data synchronization task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
      * <p>This parameter is required.</p>
@@ -62,6 +65,14 @@ public class TransferInstanceClassRequest extends TeaModel {
     public static TransferInstanceClassRequest build(java.util.Map<String, ?> map) throws Exception {
         TransferInstanceClassRequest self = new TransferInstanceClassRequest();
         return TeaModel.build(map, self);
+    }
+
+    public TransferInstanceClassRequest setDatabaseCount(Integer databaseCount) {
+        this.databaseCount = databaseCount;
+        return this;
+    }
+    public Integer getDatabaseCount() {
+        return this.databaseCount;
     }
 
     public TransferInstanceClassRequest setDtsJobId(String dtsJobId) {
