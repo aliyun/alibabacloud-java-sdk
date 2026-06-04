@@ -1616,7 +1616,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries service categories.</p>
      * 
-     * @param request ListServiceCategoriesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListServiceCategoriesResponse
      */
@@ -2268,6 +2267,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListTagValuesResponse listTagValues(ListTagValuesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTagValuesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>续费服务实例</p>
+     * 
+     * @param request RenewServiceInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RenewServiceInstanceResponse
+     */
+    public RenewServiceInstanceResponse renewServiceInstanceWithOptions(RenewServiceInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceInstanceId)) {
+            query.put("ServiceInstanceId", request.serviceInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RenewServiceInstance"),
+            new TeaPair("version", "2021-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RenewServiceInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>续费服务实例</p>
+     * 
+     * @param request RenewServiceInstanceRequest
+     * @return RenewServiceInstanceResponse
+     */
+    public RenewServiceInstanceResponse renewServiceInstance(RenewServiceInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.renewServiceInstanceWithOptions(request, runtime);
     }
 
     /**
