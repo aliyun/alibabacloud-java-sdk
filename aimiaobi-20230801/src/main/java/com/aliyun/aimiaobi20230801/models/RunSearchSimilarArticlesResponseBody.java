@@ -68,6 +68,9 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
         @NameInMap("Event")
         public String event;
 
+        @NameInMap("EventInfo")
+        public String eventInfo;
+
         /**
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
@@ -109,6 +112,14 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
         }
         public String getEvent() {
             return this.event;
+        }
+
+        public RunSearchSimilarArticlesResponseBodyHeader setEventInfo(String eventInfo) {
+            this.eventInfo = eventInfo;
+            return this;
+        }
+        public String getEventInfo() {
+            return this.eventInfo;
         }
 
         public RunSearchSimilarArticlesResponseBodyHeader setSessionId(String sessionId) {

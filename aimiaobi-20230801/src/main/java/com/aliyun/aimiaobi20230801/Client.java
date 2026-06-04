@@ -3078,6 +3078,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取排版任务结果</p>
+     * 
+     * @param request FetchParseDocumentLayoutTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return FetchParseDocumentLayoutTaskResponse
+     */
+    public FetchParseDocumentLayoutTaskResponse fetchParseDocumentLayoutTaskWithOptions(FetchParseDocumentLayoutTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "FetchParseDocumentLayoutTask"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new FetchParseDocumentLayoutTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取排版任务结果</p>
+     * 
+     * @param request FetchParseDocumentLayoutTaskRequest
+     * @return FetchParseDocumentLayoutTaskResponse
+     */
+    public FetchParseDocumentLayoutTaskResponse fetchParseDocumentLayoutTask(FetchParseDocumentLayoutTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.fetchParseDocumentLayoutTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>生成内容导出文档任务</p>
      * 
      * @param request GenerateExportWordTaskRequest
@@ -12748,6 +12796,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitImportTermsTaskResponse submitImportTermsTask(SubmitImportTermsTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitImportTermsTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交版本任务</p>
+     * 
+     * @param request SubmitParseDocumentLayoutTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitParseDocumentLayoutTaskResponse
+     */
+    public SubmitParseDocumentLayoutTaskResponse submitParseDocumentLayoutTaskWithOptions(SubmitParseDocumentLayoutTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
+            query.put("Content", request.content);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitParseDocumentLayoutTask"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitParseDocumentLayoutTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交版本任务</p>
+     * 
+     * @param request SubmitParseDocumentLayoutTaskRequest
+     * @return SubmitParseDocumentLayoutTaskResponse
+     */
+    public SubmitParseDocumentLayoutTaskResponse submitParseDocumentLayoutTask(SubmitParseDocumentLayoutTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitParseDocumentLayoutTaskWithOptions(request, runtime);
     }
 
     /**
