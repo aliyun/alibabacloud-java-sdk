@@ -16072,6 +16072,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>按会议 conferenceId 查询实时听记（闪记）全文转写，支持分页。</p>
+     * 
+     * @param tmpReq MeetingFlashMinutesTextRequest
+     * @param tmpHeader MeetingFlashMinutesTextHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return MeetingFlashMinutesTextResponse
+     */
+    public MeetingFlashMinutesTextResponse meetingFlashMinutesTextWithOptions(MeetingFlashMinutesTextRequest tmpReq, MeetingFlashMinutesTextHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        MeetingFlashMinutesTextShrinkRequest request = new MeetingFlashMinutesTextShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        MeetingFlashMinutesTextShrinkHeaders headers = new MeetingFlashMinutesTextShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantContext)) {
+            request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
+            body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.conferenceId)) {
+            body.put("conferenceId", request.conferenceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("nextToken", request.nextToken);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "MeetingFlashMinutesText"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dingtalk/v1/minutes/meetingFlashMinutesText"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new MeetingFlashMinutesTextResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>按会议 conferenceId 查询实时听记（闪记）全文转写，支持分页。</p>
+     * 
+     * @param request MeetingFlashMinutesTextRequest
+     * @return MeetingFlashMinutesTextResponse
+     */
+    public MeetingFlashMinutesTextResponse meetingFlashMinutesText(MeetingFlashMinutesTextRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        MeetingFlashMinutesTextHeaders headers = new MeetingFlashMinutesTextHeaders();
+        return this.meetingFlashMinutesTextWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>全员静音或全员取消静音</p>
      * 
      * @param tmpReq MuteAllRequest
