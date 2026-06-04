@@ -293,7 +293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建 RayHistoryServer</p>
+     * <p>Create RayHistoryServer</p>
      * 
      * @param request CreateRayHistoryServerRequest
      * @param headers map
@@ -351,7 +351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建 RayHistoryServer</p>
+     * <p>Create RayHistoryServer</p>
      * 
      * @param request CreateRayHistoryServerRequest
      * @return CreateRayHistoryServerResponse
@@ -565,7 +565,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除RayHistoryServer</p>
+     * <p>Delete RayHistoryServer</p>
      * 
      * @param request DeleteRayHistoryServerRequest
      * @param headers map
@@ -593,7 +593,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除RayHistoryServer</p>
+     * <p>Delete RayHistoryServer</p>
      * 
      * @param request DeleteRayHistoryServerRequest
      * @return DeleteRayHistoryServerResponse
@@ -977,6 +977,89 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取metrics数据</p>
+     * 
+     * @param request GetMetricsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMetricsResponse
+     */
+    public GetMetricsResponse getMetricsWithOptions(GetMetricsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dimensions)) {
+            query.put("Dimensions", request.dimensions);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.length)) {
+            query.put("Length", request.length);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metricName)) {
+            query.put("MetricName", request.metricName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.token)) {
+            query.put("Token", request.token);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMetrics"),
+            new TeaPair("version", "2020-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/cms/metrics"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMetricsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取metrics数据</p>
+     * 
+     * @param request GetMetricsRequest
+     * @return GetMetricsResponse
+     */
+    public GetMetricsResponse getMetrics(GetMetricsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getMetricsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Obtains the system events of a specific node in a job to locate and troubleshoot issues.</p>
      * 
      * @param request GetPodEventsRequest
@@ -1156,7 +1239,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 RayHistoryServer</p>
+     * <p>Query RayHistoryServer</p>
      * 
      * @param request GetRayHistoryServerRequest
      * @param headers map
@@ -1184,7 +1267,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 RayHistoryServer</p>
+     * <p>Query RayHistoryServer</p>
      * 
      * @param request GetRayHistoryServerRequest
      * @return GetRayHistoryServerResponse
@@ -1791,7 +1874,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出资源RayHistoryServer</p>
+     * <p>List resource RayHistoryServer</p>
      * 
      * @param request ListRayHistoryServersRequest
      * @param headers map
@@ -1885,7 +1968,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出资源RayHistoryServer</p>
+     * <p>List resource RayHistoryServer</p>
      * 
      * @param request ListRayHistoryServersRequest
      * @return ListRayHistoryServersResponse
@@ -2068,7 +2151,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动 Ray History Server</p>
+     * <p>Start Ray History Server</p>
      * 
      * @param request StartRayHistoryServerRequest
      * @param headers map
@@ -2096,7 +2179,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动 Ray History Server</p>
+     * <p>Start Ray History Server</p>
      * 
      * @param request StartRayHistoryServerRequest
      * @return StartRayHistoryServerResponse
@@ -2193,7 +2276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止 Ray History Server</p>
+     * <p>Stop Ray History Server</p>
      * 
      * @param request StopRayHistoryServerRequest
      * @param headers map
@@ -2221,7 +2304,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止 Ray History Server</p>
+     * <p>Stop Ray History Server</p>
      * 
      * @param request StopRayHistoryServerRequest
      * @return StopRayHistoryServerResponse

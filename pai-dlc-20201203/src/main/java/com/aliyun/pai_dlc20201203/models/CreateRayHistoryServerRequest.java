@@ -51,6 +51,8 @@ public class CreateRayHistoryServerRequest extends TeaModel {
     public String storagePath;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>12345</p>
      */
