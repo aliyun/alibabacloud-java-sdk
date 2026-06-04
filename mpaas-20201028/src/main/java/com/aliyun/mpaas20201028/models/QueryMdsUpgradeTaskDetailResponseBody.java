@@ -336,6 +336,9 @@ public class QueryMdsUpgradeTaskDetailResponseBody extends TeaModel {
         @NameInMap("ReleaseType")
         public String releaseType;
 
+        @NameInMap("ReminderPeriod")
+        public String reminderPeriod;
+
         @NameInMap("RuleJsonList")
         public java.util.List<QueryMdsUpgradeTaskDetailResponseBodyResultContentDataContentRuleJsonList> ruleJsonList;
 
@@ -697,6 +700,14 @@ public class QueryMdsUpgradeTaskDetailResponseBody extends TeaModel {
         }
         public String getReleaseType() {
             return this.releaseType;
+        }
+
+        public QueryMdsUpgradeTaskDetailResponseBodyResultContentDataContent setReminderPeriod(String reminderPeriod) {
+            this.reminderPeriod = reminderPeriod;
+            return this;
+        }
+        public String getReminderPeriod() {
+            return this.reminderPeriod;
         }
 
         public QueryMdsUpgradeTaskDetailResponseBodyResultContentDataContent setRuleJsonList(java.util.List<QueryMdsUpgradeTaskDetailResponseBodyResultContentDataContentRuleJsonList> ruleJsonList) {

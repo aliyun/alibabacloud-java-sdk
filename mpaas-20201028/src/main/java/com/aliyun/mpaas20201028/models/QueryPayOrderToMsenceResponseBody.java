@@ -83,6 +83,9 @@ public class QueryPayOrderToMsenceResponseBody extends TeaModel {
     }
 
     public static class QueryPayOrderToMsenceResponseBodyMpaasUserGamecenterPaymentQuerystatusResponse extends TeaModel {
+        @NameInMap("CpExtra")
+        public String cpExtra;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -93,6 +96,14 @@ public class QueryPayOrderToMsenceResponseBody extends TeaModel {
         public static QueryPayOrderToMsenceResponseBodyMpaasUserGamecenterPaymentQuerystatusResponse build(java.util.Map<String, ?> map) throws Exception {
             QueryPayOrderToMsenceResponseBodyMpaasUserGamecenterPaymentQuerystatusResponse self = new QueryPayOrderToMsenceResponseBodyMpaasUserGamecenterPaymentQuerystatusResponse();
             return TeaModel.build(map, self);
+        }
+
+        public QueryPayOrderToMsenceResponseBodyMpaasUserGamecenterPaymentQuerystatusResponse setCpExtra(String cpExtra) {
+            this.cpExtra = cpExtra;
+            return this;
+        }
+        public String getCpExtra() {
+            return this.cpExtra;
         }
 
         public QueryPayOrderToMsenceResponseBodyMpaasUserGamecenterPaymentQuerystatusResponse setOrderStatus(String orderStatus) {
