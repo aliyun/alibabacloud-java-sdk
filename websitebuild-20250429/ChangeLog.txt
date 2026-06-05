@@ -1,3 +1,6 @@
+2026-06-05 Version: 2.23.7
+- Generated java 2025-04-29 for WebsiteBuild.
+
 2026-06-03 Version: 2.23.1
 - Update API CreateAppInstance: add request parameters CreateAction.
 - Update API CreateAppInstance: add request parameters Description.

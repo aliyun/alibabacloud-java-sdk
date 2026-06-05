@@ -55,6 +55,12 @@ public class AppInstanceProfile extends TeaModel {
     @NameInMap("TemplateId")
     public String templateId;
 
+    @NameInMap("chatbiTaskId")
+    public String chatbiTaskId;
+
+    @NameInMap("chatbiTaskStatus")
+    public String chatbiTaskStatus;
+
     public static AppInstanceProfile build(java.util.Map<String, ?> map) throws Exception {
         AppInstanceProfile self = new AppInstanceProfile();
         return TeaModel.build(map, self);
@@ -194,6 +200,22 @@ public class AppInstanceProfile extends TeaModel {
     }
     public String getTemplateId() {
         return this.templateId;
+    }
+
+    public AppInstanceProfile setChatbiTaskId(String chatbiTaskId) {
+        this.chatbiTaskId = chatbiTaskId;
+        return this;
+    }
+    public String getChatbiTaskId() {
+        return this.chatbiTaskId;
+    }
+
+    public AppInstanceProfile setChatbiTaskStatus(String chatbiTaskStatus) {
+        this.chatbiTaskStatus = chatbiTaskStatus;
+        return this;
+    }
+    public String getChatbiTaskStatus() {
+        return this.chatbiTaskStatus;
     }
 
 }

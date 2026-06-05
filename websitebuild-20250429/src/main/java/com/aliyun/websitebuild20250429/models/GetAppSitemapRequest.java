@@ -1,0 +1,57 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.websitebuild20250429.models;
+
+import com.aliyun.tea.*;
+
+public class GetAppSitemapRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>WD20250703155602000001</p>
+     */
+    @NameInMap("BizId")
+    public String bizId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>yjdw.bpu.edu.cn-waf</p>
+     */
+    @NameInMap("Domain")
+    public String domain;
+
+    /**
+     * <strong>example:</strong>
+     * <p>type</p>
+     */
+    @NameInMap("SeType")
+    public String seType;
+
+    public static GetAppSitemapRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetAppSitemapRequest self = new GetAppSitemapRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public GetAppSitemapRequest setBizId(String bizId) {
+        this.bizId = bizId;
+        return this;
+    }
+    public String getBizId() {
+        return this.bizId;
+    }
+
+    public GetAppSitemapRequest setDomain(String domain) {
+        this.domain = domain;
+        return this;
+    }
+    public String getDomain() {
+        return this.domain;
+    }
+
+    public GetAppSitemapRequest setSeType(String seType) {
+        this.seType = seType;
+        return this;
+    }
+    public String getSeType() {
+        return this.seType;
+    }
+
+}
