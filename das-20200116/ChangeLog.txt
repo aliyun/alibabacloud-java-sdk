@@ -1,3 +1,7 @@
+2026-06-05 Version: 3.1.0
+- Support API DescribeAuditLogs.
+
+
 2026-05-08 Version: 3.0.0
 - Support API Chat.
 - Delete API GetEndpointSwitchTask.
