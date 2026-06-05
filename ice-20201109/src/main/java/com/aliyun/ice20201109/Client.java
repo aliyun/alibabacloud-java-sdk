@@ -802,7 +802,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>增加用户积分</p>
+     * <p>Allocates points to a user.</p>
      * 
      * @param request AddYikeUserCreditRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -838,7 +838,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>增加用户积分</p>
+     * <p>Allocates points to a user.</p>
      * 
      * @param request AddYikeUserCreditRequest
      * @return AddYikeUserCreditResponse
@@ -1060,7 +1060,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量获取一刻AI应用生成任务</p>
+     * <p>Retrieves information about multiple AI application jobs in WonderClip.</p>
      * 
      * @param request BatchGetYikeAIAppJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1092,7 +1092,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量获取一刻AI应用生成任务</p>
+     * <p>Retrieves information about multiple AI application jobs in WonderClip.</p>
      * 
      * @param request BatchGetYikeAIAppJobRequest
      * @return BatchGetYikeAIAppJobResponse
@@ -1104,7 +1104,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量获取媒资信息</p>
+     * <p>Retrieves information about multiple media assets.</p>
      * 
      * @param request BatchGetYikeAssetMediaInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1136,7 +1136,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量获取媒资信息</p>
+     * <p>Retrieves information about multiple media assets.</p>
      * 
      * @param request BatchGetYikeAssetMediaInfosRequest
      * @return BatchGetYikeAssetMediaInfosResponse
@@ -3752,7 +3752,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一刻媒资上传凭证</p>
+     * <p>Obtains the upload credential for a WonderClip media asset.</p>
      * 
      * @param request CreateYikeAssetUploadRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3788,7 +3788,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一刻媒资上传凭证</p>
+     * <p>Obtains the upload credential for a WonderClip media asset.</p>
      * 
      * @param request CreateYikeAssetUploadRequest
      * @return CreateYikeAssetUploadResponse
@@ -3800,7 +3800,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一刻项目</p>
+     * <p>Creates a WonderClip project.</p>
      * 
      * @param request CreateYikeProductionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3836,7 +3836,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一刻项目</p>
+     * <p>Creates a WonderClip project.</p>
      * 
      * @param request CreateYikeProductionRequest
      * @return CreateYikeProductionResponse
@@ -3848,7 +3848,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一刻子用户</p>
+     * <p>Creates a sub-account in WonderClip.</p>
      * 
      * @param request CreateYikeUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3896,7 +3896,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一刻子用户</p>
+     * <p>Creates a sub-account in WonderClip.</p>
      * 
      * @param request CreateYikeUserRequest
      * @return CreateYikeUserResponse
@@ -3908,7 +3908,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建工作室</p>
+     * <p>Creates a workspace in WonderClip.</p>
      * 
      * @param request CreateYikeWorkspaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3944,7 +3944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建工作室</p>
+     * <p>Creates a workspace in WonderClip.</p>
      * 
      * @param request CreateYikeWorkspaceRequest
      * @return CreateYikeWorkspaceResponse
@@ -6274,7 +6274,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除媒资信息</p>
+     * <p>Deletes media asset information.</p>
      * 
      * @param request DeleteYikeAssetMediaInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6310,7 +6310,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除媒资信息</p>
+     * <p>Deletes media asset information.</p>
      * 
      * @param request DeleteYikeAssetMediaInfosRequest
      * @return DeleteYikeAssetMediaInfosResponse
@@ -7018,7 +7018,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>转呼通话到目标电话</p>
+     * <p>Forwards an active call to a specified target phone number.</p>
      * 
      * @param request ForwardAIAgentCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7066,7 +7066,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>转呼通话到目标电话</p>
+     * <p>Forwards an active call to a specified target phone number.</p>
      * 
      * @param request ForwardAIAgentCallRequest
      * @return ForwardAIAgentCallResponse
@@ -7263,7 +7263,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取智能体当前通话并发数</p>
+     * <p>Gets the current active call parallelism for the specified agent. This operation is a lightweight query operation that returns the number of active instances. It does not return instance details or historical peaks.</p>
      * 
      * @param request GetAIAgentConcurrencyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7295,7 +7295,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取智能体当前通话并发数</p>
+     * <p>Gets the current active call parallelism for the specified agent. This operation is a lightweight query operation that returns the number of active instances. It does not return instance details or historical peaks.</p>
      * 
      * @param request GetAIAgentConcurrencyRequest
      * @return GetAIAgentConcurrencyResponse
@@ -9511,7 +9511,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a media editing and production job. The requested information includes the state, timeline, template, and data of the job. You can call this operation to query only media editing and production jobs created within the past year.</p>
+     * <p>Retrieves details for an editing and composition job, such as its status, timeline, template, and data.</p>
      * 
      * @param request GetMediaProducingJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9543,7 +9543,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a media editing and production job. The requested information includes the state, timeline, template, and data of the job. You can call this operation to query only media editing and production jobs created within the past year.</p>
+     * <p>Retrieves details for an editing and composition job, such as its status, timeline, template, and data.</p>
      * 
      * @param request GetMediaProducingJobRequest
      * @return GetMediaProducingJobResponse
@@ -10753,7 +10753,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一刻AI应用任务</p>
+     * <p>Retrieves information about an AI application job in WonderClip.</p>
      * 
      * @param request GetYikeAIAppJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10785,7 +10785,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一刻AI应用任务</p>
+     * <p>Retrieves information about an AI application job in WonderClip.</p>
      * 
      * @param request GetYikeAIAppJobRequest
      * @return GetYikeAIAppJobResponse
@@ -10797,7 +10797,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一刻媒资内容信息</p>
+     * <p>Retrieves information about the media asset.</p>
      * 
      * @param request GetYikeAssetMediaInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10829,7 +10829,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一刻媒资内容信息</p>
+     * <p>Retrieves information about the media asset.</p>
      * 
      * @param request GetYikeAssetMediaInfoRequest
      * @return GetYikeAssetMediaInfoResponse
@@ -10841,7 +10841,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一刻AI应用任务</p>
+     * <p>Retrieves storyboard jobs in WonderClip.</p>
      * 
      * @param request GetYikeStoryboardJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10873,7 +10873,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一刻AI应用任务</p>
+     * <p>Retrieves storyboard jobs in WonderClip.</p>
      * 
      * @param request GetYikeStoryboardJobRequest
      * @return GetYikeStoryboardJobResponse
@@ -10885,7 +10885,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一刻子用户信息</p>
+     * <p>Retrieves information about a WonderClip sub-account.</p>
      * 
      * @param request GetYikeUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10917,7 +10917,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一刻子用户信息</p>
+     * <p>Retrieves information about a WonderClip sub-account.</p>
      * 
      * @param request GetYikeUserRequest
      * @return GetYikeUserResponse
@@ -10929,7 +10929,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询一刻用户积分</p>
+     * <p>Queries the point balance of a WonderClip user.</p>
      * 
      * @param request GetYikeUserCreditRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10961,7 +10961,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询一刻用户积分</p>
+     * <p>Queries the point balance of a WonderClip user.</p>
      * 
      * @param request GetYikeUserCreditRequest
      * @return GetYikeUserCreditResponse
@@ -14967,7 +14967,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一刻文件夹列表</p>
+     * <p>Retrieves a list of WonderClip folders.</p>
      * 
      * @param request ListYikeAssetFoldersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15007,7 +15007,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一刻文件夹列表</p>
+     * <p>Retrieves a list of WonderClip folders.</p>
      * 
      * @param request ListYikeAssetFoldersRequest
      * @return ListYikeAssetFoldersResponse
@@ -15019,7 +15019,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一刻项目列表</p>
+     * <p>Retrieves a list of WonderClip projects.</p>
      * 
      * @param request ListYikeProductionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15067,7 +15067,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一刻项目列表</p>
+     * <p>Retrieves a list of WonderClip projects.</p>
      * 
      * @param request ListYikeProductionsRequest
      * @return ListYikeProductionsResponse
@@ -15135,7 +15135,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>检查应用参数是否合法</p>
+     * <p>Validates the parameters of an AI application.</p>
      * 
      * @param request PrecheckYikeAIAppJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15171,7 +15171,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>检查应用参数是否合法</p>
+     * <p>Validates the parameters of an AI application.</p>
      * 
      * @param request PrecheckYikeAIAppJobRequest
      * @return PrecheckYikeAIAppJobResponse
@@ -16285,7 +16285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>注册一刻媒资</p>
+     * <p>Registers a media asset.</p>
      * 
      * @param request RegisterYikeAssetMediaInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16329,7 +16329,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>注册一刻媒资</p>
+     * <p>Registers a media asset.</p>
      * 
      * @param request RegisterYikeAssetMediaInfoRequest
      * @return RegisterYikeAssetMediaInfoResponse
@@ -16389,7 +16389,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>故事板任务恢复继续执行任务</p>
+     * <p>Resumes a storyboard job in WonderClip.</p>
      * 
      * @param request ResumeYikeStoryboardJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16421,7 +16421,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>故事板任务恢复继续执行任务</p>
+     * <p>Resumes a storyboard job in WonderClip.</p>
      * 
      * @param request ResumeYikeStoryboardJobRequest
      * @return ResumeYikeStoryboardJobResponse
@@ -17799,7 +17799,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置用户角色</p>
+     * <p>Sets the user role.</p>
      * 
      * @param request SetYikeUserRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17835,7 +17835,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置用户角色</p>
+     * <p>Sets the user role.</p>
      * 
      * @param request SetYikeUserRoleRequest
      * @return SetYikeUserRoleResponse
@@ -17939,7 +17939,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Initiates an outbound phone call for an AI agent.</p>
+     * <p>Initiates an outbound phone call from an AI agent. The agent calls the specified phone number using the caller number and returns the instance ID of the call.</p>
      * 
      * @param tmpReq StartAIAgentOutboundCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18001,7 +18001,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Initiates an outbound phone call for an AI agent.</p>
+     * <p>Initiates an outbound phone call from an AI agent. The agent calls the specified phone number using the caller number and returns the instance ID of the call.</p>
      * 
      * @param request StartAIAgentOutboundCallRequest
      * @return StartAIAgentOutboundCallResponse
@@ -18559,7 +18559,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>扣减用户积分</p>
+     * <p>Reclaims points from a user.</p>
      * 
      * @param request SubYikeUserCreditRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18595,7 +18595,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>扣减用户积分</p>
+     * <p>Reclaims points from a user.</p>
      * 
      * @param request SubYikeUserCreditRequest
      * @return SubYikeUserCreditResponse
@@ -18759,7 +18759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Converts the provided text content into a high-quality audio file.</p>
+     * <p>Submits an audio production job that converts text into an audio file.</p>
      * 
      * @param request SubmitAudioProduceJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18815,7 +18815,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Converts the provided text content into a high-quality audio file.</p>
+     * <p>Submits an audio production job that converts text into an audio file.</p>
      * 
      * @param request SubmitAudioProduceJobRequest
      * @return SubmitAudioProduceJobResponse
@@ -19179,7 +19179,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a basic voice cloning job.</p>
+     * <p>Submits a human voice cloning job. The value of VoiceId must be the one used during audio check. The system uses this ID to find the cached audio file for training. After you call this operation, the JobId is returned. The training process is asynchronous. During training, you can call the GetCustomizedVoiceJob operation to query information such as the job state.</p>
      * 
      * @param request SubmitCustomizedVoiceJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19215,7 +19215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a basic voice cloning job.</p>
+     * <p>Submits a human voice cloning job. The value of VoiceId must be the one used during audio check. The system uses this ID to find the cached audio file for training. After you call this operation, the JobId is returned. The training process is asynchronous. During training, you can call the GetCustomizedVoiceJob operation to query information such as the job state.</p>
      * 
      * @param request SubmitCustomizedVoiceJobRequest
      * @return SubmitCustomizedVoiceJobResponse
@@ -20979,7 +20979,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a snapshot job.</p>
+     * <p>Submits a snapshot job. You can specify the ID or URL of a media file, as well as the time point and format of the snapshot. The system generates the snapshot based on these parameters and saves it to the specified position.</p>
      * 
      * @param tmpReq SubmitSnapshotJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21049,7 +21049,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a snapshot job.</p>
+     * <p>Submits a snapshot job. You can specify the ID or URL of a media file, as well as the time point and format of the snapshot. The system generates the snapshot based on these parameters and saves it to the specified position.</p>
      * 
      * @param request SubmitSnapshotJobRequest
      * @return SubmitSnapshotJobResponse
@@ -21545,7 +21545,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a transcoding job.</p>
+     * <p>Submits a transcoding job to IMS by specifying the source file, output format, and other related parameters.</p>
      * 
      * @param tmpReq SubmitTranscodeJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21611,7 +21611,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a transcoding job.</p>
+     * <p>Submits a transcoding job to IMS by specifying the source file, output format, and other related parameters.</p>
      * 
      * @param request SubmitTranscodeJobRequest
      * @return SubmitTranscodeJobResponse
@@ -21787,7 +21787,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交一刻AI应用任务</p>
+     * <p>Submits a storyboard job in WonderClip.</p>
      * 
      * @param request SubmitYikeAIAppJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21831,7 +21831,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交一刻AI应用任务</p>
+     * <p>Submits a storyboard job in WonderClip.</p>
      * 
      * @param request SubmitYikeAIAppJobRequest
      * @return SubmitYikeAIAppJobResponse
@@ -21843,7 +21843,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交一刻AI应用任务</p>
+     * <p>Submits a storyboard job in WonderClip.</p>
      * 
      * @param request SubmitYikeStoryboardJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21929,7 +21929,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交一刻AI应用任务</p>
+     * <p>Submits a storyboard job in WonderClip.</p>
      * 
      * @param request SubmitYikeStoryboardJobRequest
      * @return SubmitYikeStoryboardJobResponse
@@ -24181,7 +24181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Uploads an audio or video file based on the URL of the source file. You can upload multiple media files at a time.</p>
+     * <p>Uploads audio or video files from source URLs. Batch upload is supported. This operation is ideal for uploading files from a public URL rather than from a local server or device.</p>
      * 
      * @param request UploadMediaByURLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24247,7 +24247,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Uploads an audio or video file based on the URL of the source file. You can upload multiple media files at a time.</p>
+     * <p>Uploads audio or video files from source URLs. Batch upload is supported. This operation is ideal for uploading files from a public URL rather than from a local server or device.</p>
      * 
      * @param request UploadMediaByURLRequest
      * @return UploadMediaByURLResponse
