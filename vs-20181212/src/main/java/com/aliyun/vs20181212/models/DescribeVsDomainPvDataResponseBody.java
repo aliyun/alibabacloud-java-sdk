@@ -96,17 +96,9 @@ public class DescribeVsDomainPvDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVsDomainPvDataResponseBodyPvDataIntervalUsageData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2021-11-22T00:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("Value")
         public String value;
 

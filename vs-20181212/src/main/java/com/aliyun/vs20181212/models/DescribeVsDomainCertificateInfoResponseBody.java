@@ -36,73 +36,33 @@ public class DescribeVsDomainCertificateInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeVsDomainCertificateInfoResponseBodyCertInfosCertInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("CertDomainName")
         public String certDomainName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2018-06-03T22:03:39Z</p>
-         */
         @NameInMap("CertExpireTime")
         public String certExpireTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>months</p>
-         */
         @NameInMap("CertLife")
         public String certLife;
 
-        /**
-         * <strong>example:</strong>
-         * <p>myname</p>
-         */
         @NameInMap("CertName")
         public String certName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Let\&quot;s Encrypt</p>
-         */
         @NameInMap("CertOrg")
         public String certOrg;
 
-        /**
-         * <strong>example:</strong>
-         * <p>free</p>
-         */
         @NameInMap("CertType")
         public String certType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>asdadaxxxx</p>
-         */
         @NameInMap("SSLPub")
         public String SSLPub;
 
-        /**
-         * <strong>example:</strong>
-         * <p>on</p>
-         */
         @NameInMap("ServerCertificateStatus")
         public String serverCertificateStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>success</p>
-         */
         @NameInMap("Status")
         public String status;
 

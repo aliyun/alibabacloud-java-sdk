@@ -58,24 +58,12 @@ public class BatchForbidVsStreamResponseBody extends TeaModel {
         @NameInMap("Channels")
         public BatchForbidVsStreamResponseBodyForbidResultForbidResultInfoChannels channels;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("Count")
         public Integer count;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ok</p>
-         */
         @NameInMap("Detail")
         public String detail;
 
-        /**
-         * <strong>example:</strong>
-         * <p>success</p>
-         */
         @NameInMap("Result")
         public String result;
 

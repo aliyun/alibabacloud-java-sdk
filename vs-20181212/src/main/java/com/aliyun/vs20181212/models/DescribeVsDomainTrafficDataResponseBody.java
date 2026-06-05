@@ -96,17 +96,9 @@ public class DescribeVsDomainTrafficDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVsDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2021-09-20T07:10:42Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("TrafficValue")
         public String trafficValue;
 

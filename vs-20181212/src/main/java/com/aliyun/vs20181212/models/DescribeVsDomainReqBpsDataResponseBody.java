@@ -96,17 +96,9 @@ public class DescribeVsDomainReqBpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVsDomainReqBpsDataResponseBodyReqBpsDataPerIntervalDataModule extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1000</p>
-         */
         @NameInMap("ReqBpsValue")
         public String reqBpsValue;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2021-12-24T16:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

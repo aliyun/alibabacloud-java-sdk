@@ -96,24 +96,12 @@ public class DescribeVsDomainPvUvDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVsDomainPvUvDataResponseBodyPvUvDataInfosPvUvDataInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("PV")
         public String PV;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2021-10-14T23:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("UV")
         public String UV;
 

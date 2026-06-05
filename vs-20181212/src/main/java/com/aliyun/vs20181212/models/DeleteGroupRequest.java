@@ -13,10 +13,6 @@ public class DeleteGroupRequest extends TeaModel {
     @NameInMap("Id")
     public String id;
 
-    /**
-     * <strong>example:</strong>
-     * <p>123456</p>
-     */
     @NameInMap("OwnerId")
     public Long ownerId;
 

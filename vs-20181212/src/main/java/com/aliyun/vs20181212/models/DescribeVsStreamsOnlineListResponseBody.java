@@ -96,66 +96,30 @@ public class DescribeVsStreamsOnlineListResponseBody extends TeaModel {
     }
 
     public static class DescribeVsStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>xxxApp</p>
-         */
         @NameInMap("AppName")
         public String appName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>push.example.com</p>
-         */
         @NameInMap("PublishDomain")
         public String publishDomain;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2015-12-02T06:58:04Z</p>
-         */
         @NameInMap("PublishTime")
         public String publishTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>edge</p>
-         */
         @NameInMap("PublishType")
         public String publishType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>rtmp://example.com/xchen</p>
-         */
         @NameInMap("PublishUrl")
         public String publishUrl;
 
-        /**
-         * <strong>example:</strong>
-         * <p>testxchen_small</p>
-         */
         @NameInMap("StreamName")
         public String streamName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("TranscodeId")
         public String transcodeId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>no</p>
-         */
         @NameInMap("Transcoded")
         public String transcoded;
 

@@ -96,83 +96,39 @@ public class DescribeVsDomainRegionDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVsDomainRegionDataResponseBodyValueRegionProportionData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2888253.7875</p>
-         */
         @NameInMap("AvgObjectSize")
         public String avgObjectSize;
 
-        /**
-         * <strong>example:</strong>
-         * <p>154.3345765545624</p>
-         */
         @NameInMap("AvgResponseRate")
         public String avgResponseRate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>5183.666666666667</p>
-         */
         @NameInMap("AvgResponseTime")
         public String avgResponseTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>380.9614285714286</p>
-         */
         @NameInMap("Bps")
         public String bps;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0.003544181046236794</p>
-         */
         @NameInMap("BytesProportion")
         public String bytesProportion;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0.01155980271270037</p>
-         */
         @NameInMap("Proportion")
         public String proportion;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0.001746031746031746</p>
-         */
         @NameInMap("Qps")
         public String qps;
 
         @NameInMap("Region")
         public String region;
 
-        /**
-         * <strong>example:</strong>
-         * <p>chongqing</p>
-         */
         @NameInMap("RegionEname")
         public String regionEname;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("ReqErrRate")
         public String reqErrRate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2400057</p>
-         */
         @NameInMap("TotalBytes")
         public String totalBytes;
 
-        /**
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("TotalQuery")
         public String totalQuery;
 

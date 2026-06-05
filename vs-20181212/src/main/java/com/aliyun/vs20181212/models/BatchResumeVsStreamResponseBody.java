@@ -58,24 +58,12 @@ public class BatchResumeVsStreamResponseBody extends TeaModel {
         @NameInMap("Channels")
         public BatchResumeVsStreamResponseBodyResumeResultResumeResultInfoChannels channels;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Count")
         public Integer count;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ok</p>
-         */
         @NameInMap("Detail")
         public String detail;
 
-        /**
-         * <strong>example:</strong>
-         * <p>success</p>
-         */
         @NameInMap("Result")
         public String result;
 

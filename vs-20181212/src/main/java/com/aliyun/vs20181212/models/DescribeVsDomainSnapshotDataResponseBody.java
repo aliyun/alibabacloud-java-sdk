@@ -36,17 +36,9 @@ public class DescribeVsDomainSnapshotDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVsDomainSnapshotDataResponseBodySnapshotDataPerIntervalDataModule extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("SnapshotValue")
         public String snapshotValue;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2015-12-10T20:00:00Z</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

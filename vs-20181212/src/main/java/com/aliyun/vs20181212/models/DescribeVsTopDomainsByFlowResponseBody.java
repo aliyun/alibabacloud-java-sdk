@@ -96,52 +96,24 @@ public class DescribeVsTopDomainsByFlowResponseBody extends TeaModel {
     }
 
     public static class DescribeVsTopDomainsByFlowResponseBodyTopDomainsTopDomain extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>example.aliyundoc.com</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("MaxBps")
         public Long maxBps;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1457111400</p>
-         */
         @NameInMap("MaxBpsTime")
         public String maxBpsTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Rank")
         public Long rank;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("TotalAccess")
         public Long totalAccess;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("TotalTraffic")
         public String totalTraffic;
 
-        /**
-         * <strong>example:</strong>
-         * <p>30.64191989360235</p>
-         */
         @NameInMap("TrafficPercent")
         public String trafficPercent;
 

@@ -66,6 +66,9 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
     @NameInMap("ResourceAttributes")
     public DescribeRenderingInstanceResponseBodyResourceAttributes resourceAttributes;
 
+    @NameInMap("ResourceStatus")
+    public DescribeRenderingInstanceResponseBodyResourceStatus resourceStatus;
+
     @NameInMap("StorageSize")
     public Integer storageSize;
 
@@ -187,6 +190,14 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
     }
     public DescribeRenderingInstanceResponseBodyResourceAttributes getResourceAttributes() {
         return this.resourceAttributes;
+    }
+
+    public DescribeRenderingInstanceResponseBody setResourceStatus(DescribeRenderingInstanceResponseBodyResourceStatus resourceStatus) {
+        this.resourceStatus = resourceStatus;
+        return this;
+    }
+    public DescribeRenderingInstanceResponseBodyResourceStatus getResourceStatus() {
+        return this.resourceStatus;
     }
 
     public DescribeRenderingInstanceResponseBody setStorageSize(Integer storageSize) {
@@ -597,6 +608,29 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         }
         public String getZone() {
             return this.zone;
+        }
+
+    }
+
+    public static class DescribeRenderingInstanceResponseBodyResourceStatus extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>running</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        public static DescribeRenderingInstanceResponseBodyResourceStatus build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRenderingInstanceResponseBodyResourceStatus self = new DescribeRenderingInstanceResponseBodyResourceStatus();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRenderingInstanceResponseBodyResourceStatus setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }
