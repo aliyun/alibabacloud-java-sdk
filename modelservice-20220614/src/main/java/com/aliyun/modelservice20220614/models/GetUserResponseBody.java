@@ -4,6 +4,12 @@ package com.aliyun.modelservice20220614.models;
 import com.aliyun.tea.*;
 
 public class GetUserResponseBody extends TeaModel {
+    @NameInMap("AnthropicHost")
+    public String anthropicHost;
+
+    @NameInMap("ApiKeys")
+    public Object apiKeys;
+
     /**
      * <strong>example:</strong>
      * <p>20200425******</p>
@@ -52,6 +58,22 @@ public class GetUserResponseBody extends TeaModel {
     public static GetUserResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetUserResponseBody self = new GetUserResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetUserResponseBody setAnthropicHost(String anthropicHost) {
+        this.anthropicHost = anthropicHost;
+        return this;
+    }
+    public String getAnthropicHost() {
+        return this.anthropicHost;
+    }
+
+    public GetUserResponseBody setApiKeys(Object apiKeys) {
+        this.apiKeys = apiKeys;
+        return this;
+    }
+    public Object getApiKeys() {
+        return this.apiKeys;
     }
 
     public GetUserResponseBody setAppId(String appId) {
