@@ -434,6 +434,9 @@ public class GetMcpServerResponseBody extends TeaModel {
     }
 
     public static class GetMcpServerResponseBodyData extends TeaModel {
+        @NameInMap("apiId")
+        public String apiId;
+
         /**
          * <p>The list of assembly sources. This parameter is required when the type parameter is set to AssemblyMCP.</p>
          */
@@ -622,6 +625,14 @@ public class GetMcpServerResponseBody extends TeaModel {
         public static GetMcpServerResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetMcpServerResponseBodyData self = new GetMcpServerResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetMcpServerResponseBodyData setApiId(String apiId) {
+            this.apiId = apiId;
+            return this;
+        }
+        public String getApiId() {
+            return this.apiId;
         }
 
         public GetMcpServerResponseBodyData setAssembledSources(java.util.List<GetMcpServerResponseBodyDataAssembledSources> assembledSources) {
