@@ -15,6 +15,27 @@ public class ListHotTopicsShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>2026-06-04 23:59:59</p>
+     */
+    @NameInMap("CreateTimeEnd")
+    public String createTimeEnd;
+
+    /**
+     * <strong>example:</strong>
+     * <p>2026-06-01 00:00:00</p>
+     */
+    @NameInMap("CreateTimeStart")
+    public String createTimeStart;
+
+    /**
+     * <strong>example:</strong>
+     * <p>biz-tag-001</p>
+     */
+    @NameInMap("CustomField")
+    public String customField;
+
+    /**
+     * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("MaxResults")
@@ -72,6 +93,30 @@ public class ListHotTopicsShrinkRequest extends TeaModel {
     }
     public String getAgentKey() {
         return this.agentKey;
+    }
+
+    public ListHotTopicsShrinkRequest setCreateTimeEnd(String createTimeEnd) {
+        this.createTimeEnd = createTimeEnd;
+        return this;
+    }
+    public String getCreateTimeEnd() {
+        return this.createTimeEnd;
+    }
+
+    public ListHotTopicsShrinkRequest setCreateTimeStart(String createTimeStart) {
+        this.createTimeStart = createTimeStart;
+        return this;
+    }
+    public String getCreateTimeStart() {
+        return this.createTimeStart;
+    }
+
+    public ListHotTopicsShrinkRequest setCustomField(String customField) {
+        this.customField = customField;
+        return this;
+    }
+    public String getCustomField() {
+        return this.customField;
     }
 
     public ListHotTopicsShrinkRequest setMaxResults(Integer maxResults) {

@@ -221,6 +221,13 @@ public class SubmitCustomSourceTopicAnalysisRequest extends TeaModel {
     }
 
     public static class SubmitCustomSourceTopicAnalysisRequestTopics extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>biz-tag-001</p>
+         */
+        @NameInMap("CustomField")
+        public String customField;
+
         @NameInMap("News")
         public java.util.List<HottopicNews> news;
 
@@ -231,9 +238,24 @@ public class SubmitCustomSourceTopicAnalysisRequest extends TeaModel {
         @NameInMap("Topic")
         public String topic;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://www.example.com/topic/123">https://www.example.com/topic/123</a></p>
+         */
+        @NameInMap("TopicUrl")
+        public String topicUrl;
+
         public static SubmitCustomSourceTopicAnalysisRequestTopics build(java.util.Map<String, ?> map) throws Exception {
             SubmitCustomSourceTopicAnalysisRequestTopics self = new SubmitCustomSourceTopicAnalysisRequestTopics();
             return TeaModel.build(map, self);
+        }
+
+        public SubmitCustomSourceTopicAnalysisRequestTopics setCustomField(String customField) {
+            this.customField = customField;
+            return this;
+        }
+        public String getCustomField() {
+            return this.customField;
         }
 
         public SubmitCustomSourceTopicAnalysisRequestTopics setNews(java.util.List<HottopicNews> news) {
@@ -250,6 +272,14 @@ public class SubmitCustomSourceTopicAnalysisRequest extends TeaModel {
         }
         public String getTopic() {
             return this.topic;
+        }
+
+        public SubmitCustomSourceTopicAnalysisRequestTopics setTopicUrl(String topicUrl) {
+            this.topicUrl = topicUrl;
+            return this;
+        }
+        public String getTopicUrl() {
+            return this.topicUrl;
         }
 
     }

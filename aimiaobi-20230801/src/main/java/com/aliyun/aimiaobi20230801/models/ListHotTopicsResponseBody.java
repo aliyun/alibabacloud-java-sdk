@@ -248,10 +248,24 @@ public class ListHotTopicsResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>2026-06-04 12:34:56</p>
+         */
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        /**
+         * <strong>example:</strong>
          * <p>创建用户ID（自定义主题场景下使用）</p>
          */
         @NameInMap("CreateUser")
         public String createUser;
+
+        /**
+         * <strong>example:</strong>
+         * <p>biz-tag-001</p>
+         */
+        @NameInMap("CustomField")
+        public String customField;
 
         /**
          * <strong>example:</strong>
@@ -314,6 +328,13 @@ public class ListHotTopicsResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p><a href="https://www.example.com/topic/123">https://www.example.com/topic/123</a></p>
+         */
+        @NameInMap("TopicUrl")
+        public String topicUrl;
+
+        /**
+         * <strong>example:</strong>
          * <p>数据版本</p>
          */
         @NameInMap("Version")
@@ -332,12 +353,28 @@ public class ListHotTopicsResponseBody extends TeaModel {
             return this.asyncTaskId;
         }
 
+        public ListHotTopicsResponseBodyData setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
         public ListHotTopicsResponseBodyData setCreateUser(String createUser) {
             this.createUser = createUser;
             return this;
         }
         public String getCreateUser() {
             return this.createUser;
+        }
+
+        public ListHotTopicsResponseBodyData setCustomField(String customField) {
+            this.customField = customField;
+            return this;
+        }
+        public String getCustomField() {
+            return this.customField;
         }
 
         public ListHotTopicsResponseBodyData setHotValue(Long hotValue) {
@@ -410,6 +447,14 @@ public class ListHotTopicsResponseBody extends TeaModel {
         }
         public String getTopicSource() {
             return this.topicSource;
+        }
+
+        public ListHotTopicsResponseBodyData setTopicUrl(String topicUrl) {
+            this.topicUrl = topicUrl;
+            return this;
+        }
+        public String getTopicUrl() {
+            return this.topicUrl;
         }
 
         public ListHotTopicsResponseBodyData setVersion(String version) {
