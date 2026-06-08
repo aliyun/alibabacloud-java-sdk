@@ -13231,6 +13231,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取指定ResourceServer下Scope列表。</p>
+     * 
+     * @param request ListResourceServerScopesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListResourceServerScopesResponse
+     */
+    public ListResourceServerScopesResponse listResourceServerScopesWithOptions(ListResourceServerScopesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationType)) {
+            query.put("AuthorizationType", request.authorizationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.previousToken)) {
+            query.put("PreviousToken", request.previousToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceServerScopeIds)) {
+            query.put("ResourceServerScopeIds", request.resourceServerScopeIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceServerScopeName)) {
+            query.put("ResourceServerScopeName", request.resourceServerScopeName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceServerScopeType)) {
+            query.put("ResourceServerScopeType", request.resourceServerScopeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceServerScopeValue)) {
+            query.put("ResourceServerScopeValue", request.resourceServerScopeValue);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListResourceServerScopes"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListResourceServerScopesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取指定ResourceServer下Scope列表。</p>
+     * 
+     * @param request ListResourceServerScopesRequest
+     * @return ListResourceServerScopesResponse
+     */
+    public ListResourceServerScopesResponse listResourceServerScopes(ListResourceServerScopesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listResourceServerScopesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询用户的被授予ResourceServers和Scopes的权限</p>
      * 
      * @param request ListResourceServersForUserRequest
