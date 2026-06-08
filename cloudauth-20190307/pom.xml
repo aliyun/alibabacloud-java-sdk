@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>cloudauth20190307</artifactId>
-  <version>3.13.2</version>
+  <version>3.13.3</version>
   <packaging>jar</packaging>
   <name>cloudauth20190307</name>
   <description>Alibaba Cloud ID Verification (20190307) SDK for Java
@@ -189,7 +189,7 @@
       <plugin>
         <groupId>org.sonatype.central</groupId>
         <artifactId>central-publishing-maven-plugin</artifactId>
-        <version>0.9.0</version>
+        <version>0.10.0</version>
         <extensions>true</extensions>
         <configuration>
           <publishingServerId>central</publishingServerId>

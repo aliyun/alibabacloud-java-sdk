@@ -4993,6 +4993,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("FaceFile", request.faceFile);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.facePicture)) {
+            body.put("FacePicture", request.facePicture);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.faceUrl)) {
             body.put("FaceUrl", request.faceUrl);
         }
@@ -5538,6 +5542,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.certifyUrlType)) {
             query.put("CertifyUrlType", request.certifyUrlType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableBeauty)) {
+            query.put("EnableBeauty", request.enableBeauty);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.encryptType)) {

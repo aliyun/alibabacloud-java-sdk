@@ -178,6 +178,13 @@ public class InitFaceVerifyRequest extends TeaModel {
     public String crop;
 
     /**
+     * <strong>example:</strong>
+     * <p>Y</p>
+     */
+    @NameInMap("EnableBeauty")
+    public String enableBeauty;
+
+    /**
      * <p>Encryption algorithm to be used, currently supporting only the SM2 national encryption algorithm.</p>
      * <p>After enabling encrypted transmission, you need to pass in the encrypted CertName and CertNo. For how to encrypt, please refer to <a href="https://help.aliyun.com/zh/id-verification/financial-grade-id-verification/description-of-parameter-encryption?spm=a2c4g.11186623.0.0.1a9d566eWdqwy8#task-2229332">Parameter Encryption Instructions</a>.</p>
      * 
@@ -651,6 +658,14 @@ public class InitFaceVerifyRequest extends TeaModel {
     }
     public String getCrop() {
         return this.crop;
+    }
+
+    public InitFaceVerifyRequest setEnableBeauty(String enableBeauty) {
+        this.enableBeauty = enableBeauty;
+        return this;
+    }
+    public String getEnableBeauty() {
+        return this.enableBeauty;
     }
 
     public InitFaceVerifyRequest setEncryptType(String encryptType) {
