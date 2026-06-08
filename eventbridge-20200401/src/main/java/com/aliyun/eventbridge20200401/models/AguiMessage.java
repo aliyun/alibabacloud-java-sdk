@@ -7,15 +7,27 @@ public class AguiMessage extends TeaModel {
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <strong>example:</strong>
+     * <p>msg_123456_a1b2c3d4</p>
+     */
     @NameInMap("Id")
     public String id;
 
     @NameInMap("Metadata")
     public AguiMessageMetadata metadata;
 
+    /**
+     * <strong>example:</strong>
+     * <p>assistant</p>
+     */
     @NameInMap("Role")
     public String role;
 
+    /**
+     * <strong>example:</strong>
+     * <p>call_xxx</p>
+     */
     @NameInMap("ToolCallId")
     public String toolCallId;
 
@@ -76,9 +88,17 @@ public class AguiMessage extends TeaModel {
     }
 
     public static class AguiMessageMetadataAttachments extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>acs:eventbridge:cn-hangzhou:12345:eventhouse/system-rocketmq/namespace/rmq-cn-xxx/table/order</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>inner-resource/event-table</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -125,9 +145,17 @@ public class AguiMessage extends TeaModel {
     }
 
     public static class AguiMessageToolCallsFunction extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("Arguments")
         public String arguments;
 
+        /**
+         * <strong>example:</strong>
+         * <p>discoverMetadata</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -158,9 +186,17 @@ public class AguiMessage extends TeaModel {
         @NameInMap("Function")
         public AguiMessageToolCallsFunction function;
 
+        /**
+         * <strong>example:</strong>
+         * <p>call_xxx</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>function</p>
+         */
         @NameInMap("Type")
         public String type;
 

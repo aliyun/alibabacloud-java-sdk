@@ -28,6 +28,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>用自然语言查询事件数据。输入问题后系统自动生成SQL并执行，返回结构化结果；若问题含糊则返回澄清提示。支持通过ConversationId进行多轮追问。</p>
+     * 
+     * @param request AskLumaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AskLumaResponse
+     */
+    public AskLumaResponse askLumaWithOptions(AskLumaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentName)) {
+            body.put("AgentName", request.agentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.conversationId)) {
+            body.put("ConversationId", request.conversationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxRows)) {
+            body.put("MaxRows", request.maxRows);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.question)) {
+            body.put("Question", request.question);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AskLuma"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AskLumaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>用自然语言查询事件数据。输入问题后系统自动生成SQL并执行，返回结构化结果；若问题含糊则返回澄清提示。支持通过ConversationId进行多轮追问。</p>
+     * 
+     * @param request AskLumaRequest
+     * @return AskLumaResponse
+     */
+    public AskLumaResponse askLuma(AskLumaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.askLumaWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Checks whether a service-linked role is created for an Alibaba Cloud account.</p>
      * 
      * @param request CheckServiceLinkedRoleForProductRequest
@@ -68,6 +124,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CheckServiceLinkedRoleForProductResponse checkServiceLinkedRoleForProduct(CheckServiceLinkedRoleForProductRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.checkServiceLinkedRoleForProductWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询历史会话</p>
+     * 
+     * @param tmpReq CreateAgentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAgentResponse
+     */
+    public CreateAgentResponse createAgentWithOptions(CreateAgentRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateAgentShrinkRequest request = new CreateAgentShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.metadata)) {
+            request.metadataShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.metadata, "Metadata", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metadataShrink)) {
+            body.put("Metadata", request.metadataShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
+            body.put("Prompt", request.prompt);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAgent"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAgentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询历史会话</p>
+     * 
+     * @param request CreateAgentRequest
+     * @return CreateAgentResponse
+     */
+    public CreateAgentResponse createAgent(CreateAgentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAgentWithOptions(request, runtime);
     }
 
     /**
@@ -624,6 +742,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateServiceLinkedRoleForProductResponse createServiceLinkedRoleForProduct(CreateServiceLinkedRoleForProductRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createServiceLinkedRoleForProductWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DeleteAgent</p>
+     * 
+     * @param request DeleteAgentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAgentResponse
+     */
+    public DeleteAgentResponse deleteAgentWithOptions(DeleteAgentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAgent"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAgentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DeleteAgent</p>
+     * 
+     * @param request DeleteAgentRequest
+     * @return DeleteAgentResponse
+     */
+    public DeleteAgentResponse deleteAgent(DeleteAgentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAgentWithOptions(request, runtime);
     }
 
     /**
@@ -1221,6 +1383,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取当前Agent的基本信息，包括名称、描述和已绑定的数据目录列表。用于了解当前接入点的能力范围。</p>
+     * 
+     * @param request GetAgentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAgentResponse
+     */
+    public GetAgentResponse getAgentWithOptions(GetAgentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAgent"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取当前Agent的基本信息，包括名称、描述和已绑定的数据目录列表。用于了解当前接入点的能力范围。</p>
+     * 
+     * @param request GetAgentRequest
+     * @return GetAgentResponse
+     */
+    public GetAgentResponse getAgent(GetAgentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAgentWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can call this API operation to query the information about an API destination.</p>
      * 
@@ -1472,6 +1678,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetRuleResponse getRule(GetRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询 Agent 列表</p>
+     * 
+     * @param request ListAgentsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAgentsResponse
+     */
+    public ListAgentsResponse listAgentsWithOptions(ListAgentsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.after)) {
+            body.put("After", request.after);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            body.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            body.put("Order", request.order);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAgents"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAgentsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询 Agent 列表</p>
+     * 
+     * @param request ListAgentsRequest
+     * @return ListAgentsResponse
+     */
+    public ListAgentsResponse listAgents(ListAgentsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAgentsWithOptions(request, runtime);
     }
 
     /**
@@ -1996,6 +2254,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>轮询AskLuma的异步查询结果。传入AskLuma返回的MessageId，获取执行状态和最终结果；状态为RUNNING时应立即重试，无需退避。</p>
+     * 
+     * @param request PollAskResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PollAskResultResponse
+     */
+    public PollAskResultResponse pollAskResultWithOptions(PollAskResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentName)) {
+            body.put("AgentName", request.agentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.messageId)) {
+            body.put("MessageId", request.messageId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PollAskResult"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PollAskResultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>轮询AskLuma的异步查询结果。传入AskLuma返回的MessageId，获取执行状态和最终结果；状态为RUNNING时应立即重试，无需退避。</p>
+     * 
+     * @param request PollAskResultRequest
+     * @return PollAskResultResponse
+     */
+    public PollAskResultResponse pollAskResult(PollAskResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.pollAskResultWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can call this API operation to create or update event targets under a rule.</p>
      * 
@@ -2057,6 +2363,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public PutTargetsResponse putTargets(PutTargetsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.putTargetsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询历史会话</p>
+     * 
+     * @param request QueryAskLumaLogRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryAskLumaLogResponse
+     */
+    public QueryAskLumaLogResponse queryAskLumaLogWithOptions(QueryAskLumaLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.after)) {
+            body.put("After", request.after);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentName)) {
+            body.put("AgentName", request.agentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            body.put("Limit", request.limit);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryAskLumaLog"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryAskLumaLogResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询历史会话</p>
+     * 
+     * @param request QueryAskLumaLogRequest
+     * @return QueryAskLumaLogResponse
+     */
+    public QueryAskLumaLogResponse queryAskLumaLog(QueryAskLumaLogRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryAskLumaLogWithOptions(request, runtime);
     }
 
     /**
@@ -2469,6 +2827,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public TestEventSourceConfigResponse testEventSourceConfig(TestEventSourceConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.testEventSourceConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询历史会话</p>
+     * 
+     * @param tmpReq UpdateAgentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAgentResponse
+     */
+    public UpdateAgentResponse updateAgentWithOptions(UpdateAgentRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateAgentShrinkRequest request = new UpdateAgentShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.metadata)) {
+            request.metadataShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.metadata, "Metadata", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metadataShrink)) {
+            body.put("Metadata", request.metadataShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
+            body.put("Prompt", request.prompt);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAgent"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAgentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询历史会话</p>
+     * 
+     * @param request UpdateAgentRequest
+     * @return UpdateAgentResponse
+     */
+    public UpdateAgentResponse updateAgent(UpdateAgentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAgentWithOptions(request, runtime);
     }
 
     /**

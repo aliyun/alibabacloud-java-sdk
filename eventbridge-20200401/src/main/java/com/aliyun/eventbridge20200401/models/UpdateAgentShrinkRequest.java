@@ -1,0 +1,75 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.eventbridge20200401.models;
+
+import com.aliyun.tea.*;
+
+public class UpdateAgentShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>TF-CreateRule-1652253755-aa33f762-7e99-4aee-bd27-d3370afa5625</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("Metadata")
+    public String metadataShrink;
+
+    /**
+     * <strong>example:</strong>
+     * <p>my-agent</p>
+     */
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("Prompt")
+    public String prompt;
+
+    public static UpdateAgentShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateAgentShrinkRequest self = new UpdateAgentShrinkRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public UpdateAgentShrinkRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public UpdateAgentShrinkRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public UpdateAgentShrinkRequest setMetadataShrink(String metadataShrink) {
+        this.metadataShrink = metadataShrink;
+        return this;
+    }
+    public String getMetadataShrink() {
+        return this.metadataShrink;
+    }
+
+    public UpdateAgentShrinkRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public UpdateAgentShrinkRequest setPrompt(String prompt) {
+        this.prompt = prompt;
+        return this;
+    }
+    public String getPrompt() {
+        return this.prompt;
+    }
+
+}

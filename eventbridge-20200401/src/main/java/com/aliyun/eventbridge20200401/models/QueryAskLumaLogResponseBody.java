@@ -1,0 +1,87 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.eventbridge20200401.models;
+
+import com.aliyun.tea.*;
+
+public class QueryAskLumaLogResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
+    @NameInMap("Code")
+    public String code;
+
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("Data")
+    public QueryAskLumaLogResult data;
+
+    /**
+     * <strong>example:</strong>
+     * <p>AgentNotFound</p>
+     */
+    @NameInMap("Message")
+    public String message;
+
+    /**
+     * <strong>example:</strong>
+     * <p>6FB52207-7621-5292-BDF2-A17E2E984160</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("Success")
+    public Boolean success;
+
+    public static QueryAskLumaLogResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        QueryAskLumaLogResponseBody self = new QueryAskLumaLogResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public QueryAskLumaLogResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryAskLumaLogResponseBody setData(QueryAskLumaLogResult data) {
+        this.data = data;
+        return this;
+    }
+    public QueryAskLumaLogResult getData() {
+        return this.data;
+    }
+
+    public QueryAskLumaLogResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public QueryAskLumaLogResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public QueryAskLumaLogResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+}

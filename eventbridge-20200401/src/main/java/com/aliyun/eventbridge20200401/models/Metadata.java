@@ -21,9 +21,17 @@ public class Metadata extends TeaModel {
     }
 
     public static class MetadataAttachments extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>acs:eventbridge:cn-hangzhou:12345:eventhouse/system-rocketmq/namespace/rmq-cn-xxx/table/order</p>
+         */
         @NameInMap("Arn")
         public String arn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>inner-resource/event-table</p>
+         */
         @NameInMap("MimeType")
         public String mimeType;
 
