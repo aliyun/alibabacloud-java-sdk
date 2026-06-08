@@ -4,12 +4,34 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class PrepayOrderInfo extends TeaModel {
+    /**
+     * <p>Specifies whether to enable auto-renewal for the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("autoRenew")
     public Boolean autoRenew;
 
+    /**
+     * <p>The subscription duration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("duration")
     public Integer duration;
 
+    /**
+     * <p>The billing cycle. Valid values:</p>
+     * <ul>
+     * <li>Year</li>
+     * <li>Month</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Year</p>
+     */
     @NameInMap("pricingCycle")
     public String pricingCycle;
 

@@ -4,18 +4,34 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ABTestExperiment extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>my_test</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("online")
     public Boolean online;
 
     @NameInMap("params")
     public java.util.Map<String, String> params;
 
+    /**
+     * <strong>example:</strong>
+     * <p>85373</p>
+     */
     @NameInMap("serialNumber")
     public Integer serialNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("traffic")
     public Integer traffic;
 

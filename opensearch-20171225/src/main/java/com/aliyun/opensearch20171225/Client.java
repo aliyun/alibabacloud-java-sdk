@@ -1816,6 +1816,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the query analysis rule for a version of an OpenSearch application.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeQueryProcessorResponse
@@ -1839,6 +1842,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the query analysis rule for a version of an OpenSearch application.</p>
      * @return DescribeQueryProcessorResponse
      */
     public DescribeQueryProcessorResponse describeQueryProcessor(String appGroupIdentity, String appId, String name) throws Exception {
@@ -5646,6 +5651,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateABTestSceneWithOptions(appGroupIdentity, sceneId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>应用删除保护</p>
+     * 
+     * @param request UpdateAppGroupDeleteProtectionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAppGroupDeleteProtectionResponse
+     */
+    public UpdateAppGroupDeleteProtectionResponse updateAppGroupDeleteProtectionWithOptions(String appGroupIdentity, UpdateAppGroupDeleteProtectionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.body)) {
+            body.put("body", request.body);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAppGroupDeleteProtection"),
+            new TeaPair("version", "2017-12-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v4/openapi/app-groups/" + com.aliyun.openapiutil.Client.getEncodeParam(appGroupIdentity) + "/delete-protection"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAppGroupDeleteProtectionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>应用删除保护</p>
+     * 
+     * @param request UpdateAppGroupDeleteProtectionRequest
+     * @return UpdateAppGroupDeleteProtectionResponse
+     */
+    public UpdateAppGroupDeleteProtectionResponse updateAppGroupDeleteProtection(String appGroupIdentity, UpdateAppGroupDeleteProtectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateAppGroupDeleteProtectionWithOptions(appGroupIdentity, request, headers, runtime);
     }
 
     /**

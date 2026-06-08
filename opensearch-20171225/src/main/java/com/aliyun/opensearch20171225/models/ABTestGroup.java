@@ -4,9 +4,25 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ABTestGroup extends TeaModel {
+    /**
+     * <p>The alias of the test group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>“kevin_test”</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The status of the test group. Valid values:</p>
+     * <ul>
+     * <li>0: not in effect</li>
+     * <li>1: in effect</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("status")
     public Integer status;
 
