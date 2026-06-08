@@ -55,6 +55,13 @@ public class UpdateLabelTableRequest extends TeaModel {
 
     public static class UpdateLabelTableRequestFields extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>item</p>
+         */
+        @NameInMap("AlignedEntityName")
+        public String alignedEntityName;
+
+        /**
          * <p>This parameter is required.</p>
          */
         @NameInMap("Attributes")
@@ -81,6 +88,14 @@ public class UpdateLabelTableRequest extends TeaModel {
         public static UpdateLabelTableRequestFields build(java.util.Map<String, ?> map) throws Exception {
             UpdateLabelTableRequestFields self = new UpdateLabelTableRequestFields();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateLabelTableRequestFields setAlignedEntityName(String alignedEntityName) {
+            this.alignedEntityName = alignedEntityName;
+            return this;
+        }
+        public String getAlignedEntityName() {
+            return this.alignedEntityName;
         }
 
         public UpdateLabelTableRequestFields setAttributes(java.util.List<String> attributes) {

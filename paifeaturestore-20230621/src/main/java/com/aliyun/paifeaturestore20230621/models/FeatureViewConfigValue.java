@@ -30,6 +30,9 @@ public class FeatureViewConfigValue extends TeaModel {
     @NameInMap("SecondJoinKey")
     public String secondJoinKey;
 
+    @NameInMap("JoinWithLabel")
+    public Boolean joinWithLabel;
+
     public static FeatureViewConfigValue build(java.util.Map<String, ?> map) throws Exception {
         FeatureViewConfigValue self = new FeatureViewConfigValue();
         return TeaModel.build(map, self);
@@ -81,6 +84,14 @@ public class FeatureViewConfigValue extends TeaModel {
     }
     public String getSecondJoinKey() {
         return this.secondJoinKey;
+    }
+
+    public FeatureViewConfigValue setJoinWithLabel(Boolean joinWithLabel) {
+        this.joinWithLabel = joinWithLabel;
+        return this;
+    }
+    public Boolean getJoinWithLabel() {
+        return this.joinWithLabel;
     }
 
     public static class FeatureViewConfigValueSnapshot extends TeaModel {

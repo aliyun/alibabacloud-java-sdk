@@ -167,6 +167,13 @@ public class GetLabelTableResponseBody extends TeaModel {
     }
 
     public static class GetLabelTableResponseBodyFields extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>item</p>
+         */
+        @NameInMap("AlignedEntityName")
+        public String alignedEntityName;
+
         @NameInMap("Attributes")
         public java.util.List<String> attributes;
 
@@ -187,6 +194,14 @@ public class GetLabelTableResponseBody extends TeaModel {
         public static GetLabelTableResponseBodyFields build(java.util.Map<String, ?> map) throws Exception {
             GetLabelTableResponseBodyFields self = new GetLabelTableResponseBodyFields();
             return TeaModel.build(map, self);
+        }
+
+        public GetLabelTableResponseBodyFields setAlignedEntityName(String alignedEntityName) {
+            this.alignedEntityName = alignedEntityName;
+            return this;
+        }
+        public String getAlignedEntityName() {
+            return this.alignedEntityName;
         }
 
         public GetLabelTableResponseBodyFields setAttributes(java.util.List<String> attributes) {
