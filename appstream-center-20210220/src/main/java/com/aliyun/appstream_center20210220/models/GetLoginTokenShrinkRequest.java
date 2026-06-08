@@ -20,6 +20,12 @@ public class GetLoginTokenShrinkRequest extends TeaModel {
     @NameInMap("Channel")
     public String channel;
 
+    @NameInMap("CipherEndUserId")
+    public String cipherEndUserId;
+
+    @NameInMap("CipherPassword")
+    public String cipherPassword;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -283,6 +289,22 @@ public class GetLoginTokenShrinkRequest extends TeaModel {
     }
     public String getChannel() {
         return this.channel;
+    }
+
+    public GetLoginTokenShrinkRequest setCipherEndUserId(String cipherEndUserId) {
+        this.cipherEndUserId = cipherEndUserId;
+        return this;
+    }
+    public String getCipherEndUserId() {
+        return this.cipherEndUserId;
+    }
+
+    public GetLoginTokenShrinkRequest setCipherPassword(String cipherPassword) {
+        this.cipherPassword = cipherPassword;
+        return this;
+    }
+    public String getCipherPassword() {
+        return this.cipherPassword;
     }
 
     public GetLoginTokenShrinkRequest setClientId(String clientId) {

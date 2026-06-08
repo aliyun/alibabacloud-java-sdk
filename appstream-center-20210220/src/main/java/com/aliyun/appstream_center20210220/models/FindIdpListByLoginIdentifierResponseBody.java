@@ -319,6 +319,9 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
         @NameInMap("AccessType")
         public String accessType;
 
+        @NameInMap("IsLoginByCipherParam")
+        public String isLoginByCipherParam;
+
         @NameInMap("PreferVpcAccess")
         public Boolean preferVpcAccess;
 
@@ -343,6 +346,14 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
         }
         public String getAccessType() {
             return this.accessType;
+        }
+
+        public FindIdpListByLoginIdentifierResponseBodyTenantAliasInfo setIsLoginByCipherParam(String isLoginByCipherParam) {
+            this.isLoginByCipherParam = isLoginByCipherParam;
+            return this;
+        }
+        public String getIsLoginByCipherParam() {
+            return this.isLoginByCipherParam;
         }
 
         public FindIdpListByLoginIdentifierResponseBodyTenantAliasInfo setPreferVpcAccess(Boolean preferVpcAccess) {

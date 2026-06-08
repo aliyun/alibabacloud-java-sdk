@@ -203,6 +203,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Channel", request.channel);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.cipherEndUserId)) {
+            query.put("CipherEndUserId", request.cipherEndUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cipherPassword)) {
+            query.put("CipherPassword", request.cipherPassword);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
             query.put("ClientId", request.clientId);
         }
