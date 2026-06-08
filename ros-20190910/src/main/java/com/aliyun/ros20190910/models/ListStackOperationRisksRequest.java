@@ -87,6 +87,15 @@ public class ListStackOperationRisksRequest extends TeaModel {
     @NameInMap("StackId")
     public String stackId;
 
+    /**
+     * <p>The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.</p>
+     * <blockquote>
+     * <p> You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;ROSTemplateFormatVersion&quot;:&quot;2015-09-01&quot;}</p>
+     */
     @NameInMap("TemplateBody")
     public String templateBody;
 

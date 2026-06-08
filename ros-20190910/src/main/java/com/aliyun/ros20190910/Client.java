@@ -1708,7 +1708,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to detect drift on a stack.</p>
+     * <p>Performs drift detection on resources in a stack to check whether the resources have drifted from the expected template configurations.</p>
      * 
      * @param request DetectStackDriftRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1752,7 +1752,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to detect drift on a stack.</p>
+     * <p>Performs drift detection on resources in a stack to check whether the resources have drifted from the expected template configurations.</p>
      * 
      * @param request DetectStackDriftRequest
      * @return DetectStackDriftResponse
@@ -1764,7 +1764,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>对资源栈组进行偏差检测</p>
+     * <p>Performs drift detection on stack groups to check whether the stack groups have drifted from the expected template configurations.</p>
      * 
      * @param tmpReq DetectStackGroupDriftRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1814,7 +1814,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>对资源栈组进行偏差检测</p>
+     * <p>Performs drift detection on stack groups to check whether the stack groups have drifted from the expected template configurations.</p>
      * 
      * @param request DetectStackGroupDriftRequest
      * @return DetectStackGroupDriftResponse
@@ -1884,7 +1884,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>开启可信服务访问</p>
      * 
-     * @param request EnableServiceAccessRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableServiceAccessResponse
      */
@@ -2109,8 +2108,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GenerateTemplatePolicyResponse generateTemplatePolicyWithOptions(GenerateTemplatePolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.generateOptions)) {
+            query.put("GenerateOptions", request.generateOptions);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.operationTypes)) {
             query.put("OperationTypes", request.operationTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parameters)) {
+            query.put("Parameters", request.parameters);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateBody)) {
@@ -2379,7 +2386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>For more information about common request parameters, see <a href="https://help.aliyun.com/document_detail/131957.html">Common parameters</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>This topic provides an example on how to query the details of <code>ALIYUN::ROS::WaitConditionHandle</code>.</p>
+     * <p>This topic provides an example on how to query the details of \<code>ALIYUN::ROS::WaitConditionHandle\\</code>.</p>
      * 
      * @param request GetResourceTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2418,7 +2425,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>For more information about common request parameters, see <a href="https://help.aliyun.com/document_detail/131957.html">Common parameters</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>This topic provides an example on how to query the details of <code>ALIYUN::ROS::WaitConditionHandle</code>.</p>
+     * <p>This topic provides an example on how to query the details of \<code>ALIYUN::ROS::WaitConditionHandle\\</code>.</p>
      * 
      * @param request GetResourceTypeRequest
      * @return GetResourceTypeResponse
@@ -2478,9 +2485,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询可信服务</p>
+     * <p>Queries a trusted service.</p>
      * 
-     * @param request GetServiceAccessRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetServiceAccessResponse
      */
@@ -2502,7 +2508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询可信服务</p>
+     * <p>Queries a trusted service.</p>
      * @return GetServiceAccessResponse
      */
     public GetServiceAccessResponse getServiceAccess() throws Exception {
@@ -2723,7 +2729,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>For more information about common request parameters, see <a href="https://help.aliyun.com/document_detail/131957.html">Common parameters</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>In this example, the information about a stack group named \<code>MyStackGroup\\</code> is queried. The stack group is granted self-managed permissions and created in the China (Hangzhou) region.</p>
+     * <p>In this example, the information about a stack group named \\<code>MyStackGroup\\\\</code> is queried. The stack group is granted self-managed permissions and created in the China (Hangzhou) region.</p>
      * 
      * @param request GetStackGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2766,7 +2772,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>For more information about common request parameters, see <a href="https://help.aliyun.com/document_detail/131957.html">Common parameters</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>In this example, the information about a stack group named \<code>MyStackGroup\\</code> is queried. The stack group is granted self-managed permissions and created in the China (Hangzhou) region.</p>
+     * <p>In this example, the information about a stack group named \\<code>MyStackGroup\\\\</code> is queried. The stack group is granted self-managed permissions and created in the China (Hangzhou) region.</p>
      * 
      * @param request GetStackGroupRequest
      * @return GetStackGroupResponse
@@ -2901,7 +2907,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>In this example, the stack policy of a stack whose ID is <code>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</code> is queried. The stack is deployed in the China (Hangzhou) region.</p>
      * 
      * <b>summary</b> : 
-     * <p>You can call this operation to query information about a stack policy.</p>
+     * <p>Queries the information about a stack policy in an Alibaba Cloud region.</p>
      * 
      * @param request GetStackPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2940,7 +2946,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>In this example, the stack policy of a stack whose ID is <code>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</code> is queried. The stack is deployed in the China (Hangzhou) region.</p>
      * 
      * <b>summary</b> : 
-     * <p>You can call this operation to query information about a stack policy.</p>
+     * <p>Queries the information about a stack policy in an Alibaba Cloud region.</p>
      * 
      * @param request GetStackPolicyRequest
      * @return GetStackPolicyResponse
@@ -3436,7 +3442,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>推荐参数</p>
+     * <p>Queries recommended parameters.</p>
      * 
      * @param request GetTemplateRecommendParametersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3492,7 +3498,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>推荐参数</p>
+     * <p>Queries recommended parameters.</p>
      * 
      * @param request GetTemplateRecommendParametersRequest
      * @return GetTemplateRecommendParametersResponse
@@ -4619,7 +4625,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>For more information about common request parameters, see <a href="https://help.aliyun.com/document_detail/131957.html">Common parameters</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>This topic provides an example on how to query the resources in a specified stack. In this example, the resources in the stack whose ID is <code>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</code> in the China (Hangzhou) region are queried.</p>
+     * <p>This topic provides an example on how to query the resources in a specified stack. In this example, the resources in the stack whose ID is \<code>4a6c9851-3b0f-4f5f-b4ca-a14bf691\\*\\*\\*\\*\\</code> in the China (Hangzhou) region are queried.</p>
      * 
      * @param request ListStackResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4658,7 +4664,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>For more information about common request parameters, see <a href="https://help.aliyun.com/document_detail/131957.html">Common parameters</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>This topic provides an example on how to query the resources in a specified stack. In this example, the resources in the stack whose ID is <code>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</code> in the China (Hangzhou) region are queried.</p>
+     * <p>This topic provides an example on how to query the resources in a specified stack. In this example, the resources in the stack whose ID is \<code>4a6c9851-3b0f-4f5f-b4ca-a14bf691\\*\\*\\*\\*\\</code> in the China (Hangzhou) region are queried.</p>
      * 
      * @param request ListStackResourcesRequest
      * @return ListStackResourcesResponse
@@ -4770,7 +4776,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询总览</p>
+     * <p>Queries summaries.</p>
      * 
      * @param request ListSummariesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4802,7 +4808,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询总览</p>
+     * <p>Queries summaries.</p>
      * 
      * @param request ListSummariesRequest
      * @return ListSummariesResponse
@@ -5476,7 +5482,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改资源栈的删除保护属性</p>
+     * <p>Modifies the deletion protection setting for a stack.</p>
      * 
      * @param request SetDeletionProtectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5516,7 +5522,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改资源栈的删除保护属性</p>
+     * <p>Modifies the deletion protection setting for a stack.</p>
      * 
      * @param request SetDeletionProtectionRequest
      * @return SetDeletionProtectionResponse
@@ -5587,7 +5593,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>In this example, a stack policy is configured for a stack deployed in the <code>China (Hangzhou)</code> region whose ID is <code>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</code>. The URL to the stack policy body is <code>oss://ros/stack-policy/demo</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>You can call this operation to configure a stack policy.</p>
+     * <p>Configures a stack policy for a stack.</p>
      * 
      * @param request SetStackPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5634,7 +5640,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>In this example, a stack policy is configured for a stack deployed in the <code>China (Hangzhou)</code> region whose ID is <code>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</code>. The URL to the stack policy body is <code>oss://ros/stack-policy/demo</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>You can call this operation to configure a stack policy.</p>
+     * <p>Configures a stack policy for a stack.</p>
      * 
      * @param request SetStackPolicyRequest
      * @return SetStackPolicyResponse
@@ -5785,7 +5791,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This topic provides an example on how to stop a stack group operation whose ID is <code>6da106ca-1784-4a6f-a7e1-e723863****</code> in the China (Hangzhou) region.</p>
      * 
      * <b>summary</b> : 
-     * <p>Stops a stack group operation.</p>
+     * <p>Stops an ongoing operation in a stack group.</p>
      * 
      * @param request StopStackGroupOperationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5824,7 +5830,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This topic provides an example on how to stop a stack group operation whose ID is <code>6da106ca-1784-4a6f-a7e1-e723863****</code> in the China (Hangzhou) region.</p>
      * 
      * <b>summary</b> : 
-     * <p>Stops a stack group operation.</p>
+     * <p>Stops an ongoing operation in a stack group.</p>
      * 
      * @param request StopStackGroupOperationRequest
      * @return StopStackGroupOperationResponse
@@ -6118,7 +6124,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). The name must start with a digit or a letter.</p>
      * 
      * <b>summary</b> : 
-     * <p>The region ID of the stack group. You can call the [DescribeRegions]\(<del>131035</del>) operation to query the latest list of Alibaba Cloud regions.</p>
+     * <p>Update an already created stack group.</p>
      * 
      * @param tmpReq UpdateStackGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6254,7 +6260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). The name must start with a digit or a letter.</p>
      * 
      * <b>summary</b> : 
-     * <p>The region ID of the stack group. You can call the [DescribeRegions]\(<del>131035</del>) operation to query the latest list of Alibaba Cloud regions.</p>
+     * <p>Update an already created stack group.</p>
      * 
      * @param request UpdateStackGroupRequest
      * @return UpdateStackGroupResponse
@@ -6374,7 +6380,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * In this topic, drift is eliminated for a stack whose ID is <code>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</code>. The stack is deployed in the China (Hangzhou) region.</p>
      * 
      * <b>summary</b> : 
-     * <p>Corrects a template to eliminate stack drift.</p>
+     * <p>Eliminates stack drifts by performing drift detection.</p>
      * 
      * @param request UpdateStackTemplateByResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6430,7 +6436,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * In this topic, drift is eliminated for a stack whose ID is <code>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</code>. The stack is deployed in the China (Hangzhou) region.</p>
      * 
      * <b>summary</b> : 
-     * <p>Corrects a template to eliminate stack drift.</p>
+     * <p>Eliminates stack drifts by performing drift detection.</p>
      * 
      * @param request UpdateStackTemplateByResourcesRequest
      * @return UpdateStackTemplateByResourcesResponse

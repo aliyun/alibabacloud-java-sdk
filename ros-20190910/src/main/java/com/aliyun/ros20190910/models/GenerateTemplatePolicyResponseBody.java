@@ -10,6 +10,9 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
     @NameInMap("Policy")
     public GenerateTemplatePolicyResponseBodyPolicy policy;
 
+    @NameInMap("PolicyFunctions")
+    public java.util.List<GenerateTemplatePolicyResponseBodyPolicyFunctions> policyFunctions;
+
     /**
      * <p>The ID of the request.</p>
      * 
@@ -30,6 +33,14 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
     }
     public GenerateTemplatePolicyResponseBodyPolicy getPolicy() {
         return this.policy;
+    }
+
+    public GenerateTemplatePolicyResponseBody setPolicyFunctions(java.util.List<GenerateTemplatePolicyResponseBodyPolicyFunctions> policyFunctions) {
+        this.policyFunctions = policyFunctions;
+        return this;
+    }
+    public java.util.List<GenerateTemplatePolicyResponseBodyPolicyFunctions> getPolicyFunctions() {
+        return this.policyFunctions;
     }
 
     public GenerateTemplatePolicyResponseBody setRequestId(String requestId) {
@@ -158,6 +169,140 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
         }
         public String getVersion() {
             return this.version;
+        }
+
+    }
+
+    public static class GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctionsFunctions extends TeaModel {
+        @NameInMap("Function")
+        public String function;
+
+        @NameInMap("OperationType")
+        public String operationType;
+
+        @NameInMap("RelatedProperties")
+        public java.util.List<String> relatedProperties;
+
+        @NameInMap("RequirementLevel")
+        public String requirementLevel;
+
+        public static GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctionsFunctions build(java.util.Map<String, ?> map) throws Exception {
+            GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctionsFunctions self = new GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctionsFunctions();
+            return TeaModel.build(map, self);
+        }
+
+        public GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctionsFunctions setFunction(String function) {
+            this.function = function;
+            return this;
+        }
+        public String getFunction() {
+            return this.function;
+        }
+
+        public GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctionsFunctions setOperationType(String operationType) {
+            this.operationType = operationType;
+            return this;
+        }
+        public String getOperationType() {
+            return this.operationType;
+        }
+
+        public GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctionsFunctions setRelatedProperties(java.util.List<String> relatedProperties) {
+            this.relatedProperties = relatedProperties;
+            return this;
+        }
+        public java.util.List<String> getRelatedProperties() {
+            return this.relatedProperties;
+        }
+
+        public GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctionsFunctions setRequirementLevel(String requirementLevel) {
+            this.requirementLevel = requirementLevel;
+            return this;
+        }
+        public String getRequirementLevel() {
+            return this.requirementLevel;
+        }
+
+    }
+
+    public static class GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctions extends TeaModel {
+        @NameInMap("Functions")
+        public java.util.List<GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctionsFunctions> functions;
+
+        @NameInMap("LogicalResourceId")
+        public String logicalResourceId;
+
+        @NameInMap("ResourceType")
+        public String resourceType;
+
+        public static GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctions build(java.util.Map<String, ?> map) throws Exception {
+            GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctions self = new GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctions();
+            return TeaModel.build(map, self);
+        }
+
+        public GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctions setFunctions(java.util.List<GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctionsFunctions> functions) {
+            this.functions = functions;
+            return this;
+        }
+        public java.util.List<GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctionsFunctions> getFunctions() {
+            return this.functions;
+        }
+
+        public GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctions setLogicalResourceId(String logicalResourceId) {
+            this.logicalResourceId = logicalResourceId;
+            return this;
+        }
+        public String getLogicalResourceId() {
+            return this.logicalResourceId;
+        }
+
+        public GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctions setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+    }
+
+    public static class GenerateTemplatePolicyResponseBodyPolicyFunctions extends TeaModel {
+        @NameInMap("Action")
+        public String action;
+
+        @NameInMap("ActionPolicyFunctions")
+        public java.util.List<GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctions> actionPolicyFunctions;
+
+        @NameInMap("RequirementLevel")
+        public String requirementLevel;
+
+        public static GenerateTemplatePolicyResponseBodyPolicyFunctions build(java.util.Map<String, ?> map) throws Exception {
+            GenerateTemplatePolicyResponseBodyPolicyFunctions self = new GenerateTemplatePolicyResponseBodyPolicyFunctions();
+            return TeaModel.build(map, self);
+        }
+
+        public GenerateTemplatePolicyResponseBodyPolicyFunctions setAction(String action) {
+            this.action = action;
+            return this;
+        }
+        public String getAction() {
+            return this.action;
+        }
+
+        public GenerateTemplatePolicyResponseBodyPolicyFunctions setActionPolicyFunctions(java.util.List<GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctions> actionPolicyFunctions) {
+            this.actionPolicyFunctions = actionPolicyFunctions;
+            return this;
+        }
+        public java.util.List<GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctions> getActionPolicyFunctions() {
+            return this.actionPolicyFunctions;
+        }
+
+        public GenerateTemplatePolicyResponseBodyPolicyFunctions setRequirementLevel(String requirementLevel) {
+            this.requirementLevel = requirementLevel;
+            return this;
+        }
+        public String getRequirementLevel() {
+            return this.requirementLevel;
         }
 
     }

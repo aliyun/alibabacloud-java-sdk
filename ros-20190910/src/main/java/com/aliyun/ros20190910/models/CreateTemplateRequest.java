@@ -29,6 +29,26 @@ public class CreateTemplateRequest extends TeaModel {
     @NameInMap("Tags")
     public java.util.List<CreateTemplateRequestTags> tags;
 
+    /**
+     * <p>The structure of the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.</p>
+     * <blockquote>
+     * <p>You must specify TemplateBody or TemplateURL.</p>
+     * </blockquote>
+     * <p>You can create a Terraform template based on your business requirements. The following sample code provides an example on how to create a Terraform template:</p>
+     * <pre><code>{
+     *   &quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;,
+     *   &quot;Transform&quot;: &quot;Aliyun::Terraform-v1.0&quot;,
+     *   &quot;Workspace&quot;: {
+     *     &quot;main.tf&quot;: &quot;variable  \\&quot;name\\&quot; {  default = \\&quot;auto_provisioning_group\\&quot;}&quot;
+     *   },
+     *   &quot;Outputs&quot;: {}
+     * }
+     * </code></pre>
+     * <p>For more information about Terraform templates, see <a href="https://help.aliyun.com/document_detail/184397.html">Structure of Terraform templates</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;ROSTemplateFormatVersion&quot;:&quot;2015-09-01&quot;}</p>
+     */
     @NameInMap("TemplateBody")
     public String templateBody;
 

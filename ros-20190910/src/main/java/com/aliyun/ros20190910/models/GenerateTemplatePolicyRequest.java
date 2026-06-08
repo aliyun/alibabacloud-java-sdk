@@ -4,6 +4,9 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class GenerateTemplatePolicyRequest extends TeaModel {
+    @NameInMap("GenerateOptions")
+    public java.util.List<String> generateOptions;
+
     /**
      * <p>The type of operation N for which you want to generate the policy information.</p>
      * <p>Valid values:</p>
@@ -24,6 +27,9 @@ public class GenerateTemplatePolicyRequest extends TeaModel {
      */
     @NameInMap("OperationTypes")
     public java.util.List<String> operationTypes;
+
+    @NameInMap("Parameters")
+    public java.util.List<GenerateTemplatePolicyRequestParameters> parameters;
 
     /**
      * <p>The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.</p>
@@ -74,12 +80,28 @@ public class GenerateTemplatePolicyRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GenerateTemplatePolicyRequest setGenerateOptions(java.util.List<String> generateOptions) {
+        this.generateOptions = generateOptions;
+        return this;
+    }
+    public java.util.List<String> getGenerateOptions() {
+        return this.generateOptions;
+    }
+
     public GenerateTemplatePolicyRequest setOperationTypes(java.util.List<String> operationTypes) {
         this.operationTypes = operationTypes;
         return this;
     }
     public java.util.List<String> getOperationTypes() {
         return this.operationTypes;
+    }
+
+    public GenerateTemplatePolicyRequest setParameters(java.util.List<GenerateTemplatePolicyRequestParameters> parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    public java.util.List<GenerateTemplatePolicyRequestParameters> getParameters() {
+        return this.parameters;
     }
 
     public GenerateTemplatePolicyRequest setTemplateBody(String templateBody) {
@@ -112,6 +134,36 @@ public class GenerateTemplatePolicyRequest extends TeaModel {
     }
     public String getTemplateVersion() {
         return this.templateVersion;
+    }
+
+    public static class GenerateTemplatePolicyRequestParameters extends TeaModel {
+        @NameInMap("ParameterKey")
+        public String parameterKey;
+
+        @NameInMap("ParameterValue")
+        public String parameterValue;
+
+        public static GenerateTemplatePolicyRequestParameters build(java.util.Map<String, ?> map) throws Exception {
+            GenerateTemplatePolicyRequestParameters self = new GenerateTemplatePolicyRequestParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public GenerateTemplatePolicyRequestParameters setParameterKey(String parameterKey) {
+            this.parameterKey = parameterKey;
+            return this;
+        }
+        public String getParameterKey() {
+            return this.parameterKey;
+        }
+
+        public GenerateTemplatePolicyRequestParameters setParameterValue(String parameterValue) {
+            this.parameterValue = parameterValue;
+            return this;
+        }
+        public String getParameterValue() {
+            return this.parameterValue;
+        }
+
     }
 
 }
