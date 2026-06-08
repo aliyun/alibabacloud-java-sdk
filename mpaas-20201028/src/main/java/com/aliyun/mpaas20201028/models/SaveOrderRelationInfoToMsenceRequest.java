@@ -32,6 +32,12 @@ public class SaveOrderRelationInfoToMsenceRequest extends TeaModel {
     @NameInMap("BizOrderStatus")
     public Integer bizOrderStatus;
 
+    @NameInMap("ClientType")
+    public String clientType;
+
+    @NameInMap("CpExtra")
+    public String cpExtra;
+
     /**
      * <strong>example:</strong>
      * <p>test_custom_id</p>
@@ -109,6 +115,22 @@ public class SaveOrderRelationInfoToMsenceRequest extends TeaModel {
     }
     public Integer getBizOrderStatus() {
         return this.bizOrderStatus;
+    }
+
+    public SaveOrderRelationInfoToMsenceRequest setClientType(String clientType) {
+        this.clientType = clientType;
+        return this;
+    }
+    public String getClientType() {
+        return this.clientType;
+    }
+
+    public SaveOrderRelationInfoToMsenceRequest setCpExtra(String cpExtra) {
+        this.cpExtra = cpExtra;
+        return this;
+    }
+    public String getCpExtra() {
+        return this.cpExtra;
     }
 
     public SaveOrderRelationInfoToMsenceRequest setCustomId(String customId) {

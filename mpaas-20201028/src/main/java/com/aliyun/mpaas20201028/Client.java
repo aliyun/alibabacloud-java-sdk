@@ -7692,6 +7692,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("BizOrderStatus", request.bizOrderStatus);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clientType)) {
+            body.put("ClientType", request.clientType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cpExtra)) {
+            body.put("CpExtra", request.cpExtra);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.customId)) {
             body.put("CustomId", request.customId);
         }
