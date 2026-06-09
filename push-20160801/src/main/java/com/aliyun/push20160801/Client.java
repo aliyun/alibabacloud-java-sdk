@@ -970,6 +970,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AndroidXiaomiBigPictureUrl", request.androidXiaomiBigPictureUrl);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.androidXiaomiFocusParam)) {
+            query.put("AndroidXiaomiFocusParam", request.androidXiaomiFocusParam);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.androidXiaomiFocusPics)) {
+            query.put("AndroidXiaomiFocusPics", request.androidXiaomiFocusPics);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.androidXiaomiImageUrl)) {
             query.put("AndroidXiaomiImageUrl", request.androidXiaomiImageUrl);
         }
@@ -1842,6 +1850,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取推送历史记录</p>
+     * 
      * @param request QueryPushRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryPushRecordsResponse
@@ -1907,6 +1918,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取推送历史记录</p>
+     * 
      * @param request QueryPushRecordsRequest
      * @return QueryPushRecordsResponse
      */

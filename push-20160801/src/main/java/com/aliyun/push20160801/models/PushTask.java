@@ -516,6 +516,12 @@ public class PushTask extends TeaModel {
         @NameInMap("Channel")
         public String channel;
 
+        @NameInMap("FocusParam")
+        public String focusParam;
+
+        @NameInMap("FocusPics")
+        public String focusPics;
+
         public static PushTaskNotificationAndroidOptionsXiaomi build(java.util.Map<String, ?> map) throws Exception {
             PushTaskNotificationAndroidOptionsXiaomi self = new PushTaskNotificationAndroidOptionsXiaomi();
             return TeaModel.build(map, self);
@@ -527,6 +533,22 @@ public class PushTask extends TeaModel {
         }
         public String getChannel() {
             return this.channel;
+        }
+
+        public PushTaskNotificationAndroidOptionsXiaomi setFocusParam(String focusParam) {
+            this.focusParam = focusParam;
+            return this;
+        }
+        public String getFocusParam() {
+            return this.focusParam;
+        }
+
+        public PushTaskNotificationAndroidOptionsXiaomi setFocusPics(String focusPics) {
+            this.focusPics = focusPics;
+            return this;
+        }
+        public String getFocusPics() {
+            return this.focusPics;
         }
 
     }

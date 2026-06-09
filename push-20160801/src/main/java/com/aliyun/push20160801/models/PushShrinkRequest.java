@@ -289,6 +289,12 @@ public class PushShrinkRequest extends TeaModel {
     @Deprecated
     public String androidXiaomiBigPictureUrl;
 
+    @NameInMap("AndroidXiaomiFocusParam")
+    public String androidXiaomiFocusParam;
+
+    @NameInMap("AndroidXiaomiFocusPics")
+    public String androidXiaomiFocusPics;
+
     /**
      * <strong>example:</strong>
      * <p><a href="https://imag.example.com/image.png">https://imag.example.com/image.png</a></p>
@@ -1057,6 +1063,22 @@ public class PushShrinkRequest extends TeaModel {
     }
     public String getAndroidXiaomiBigPictureUrl() {
         return this.androidXiaomiBigPictureUrl;
+    }
+
+    public PushShrinkRequest setAndroidXiaomiFocusParam(String androidXiaomiFocusParam) {
+        this.androidXiaomiFocusParam = androidXiaomiFocusParam;
+        return this;
+    }
+    public String getAndroidXiaomiFocusParam() {
+        return this.androidXiaomiFocusParam;
+    }
+
+    public PushShrinkRequest setAndroidXiaomiFocusPics(String androidXiaomiFocusPics) {
+        this.androidXiaomiFocusPics = androidXiaomiFocusPics;
+        return this;
+    }
+    public String getAndroidXiaomiFocusPics() {
+        return this.androidXiaomiFocusPics;
     }
 
     @Deprecated
