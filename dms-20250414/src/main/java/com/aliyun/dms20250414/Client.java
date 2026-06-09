@@ -4706,6 +4706,98 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>检索知识库</p>
+     * 
+     * @param request RetrieveKnowledgeBaseRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RetrieveKnowledgeBaseResponse
+     */
+    public RetrieveKnowledgeBaseResponse retrieveKnowledgeBaseWithOptions(RetrieveKnowledgeBaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            body.put("Filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hybridSearch)) {
+            body.put("HybridSearch", request.hybridSearch);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hybridSearchArgs)) {
+            body.put("HybridSearchArgs", request.hybridSearchArgs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.includeMetadataFields)) {
+            body.put("IncludeMetadataFields", request.includeMetadataFields);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.includeVector)) {
+            body.put("IncludeVector", request.includeVector);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kbUuid)) {
+            body.put("KbUuid", request.kbUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metrics)) {
+            body.put("Metrics", request.metrics);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            body.put("Offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            body.put("OrderBy", request.orderBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            body.put("Query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recallWindow)) {
+            body.put("RecallWindow", request.recallWindow);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rerankFactor)) {
+            body.put("RerankFactor", request.rerankFactor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topK)) {
+            body.put("TopK", request.topK);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RetrieveKnowledgeBase"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RetrieveKnowledgeBaseResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>检索知识库</p>
+     * 
+     * @param request RetrieveKnowledgeBaseRequest
+     * @return RetrieveKnowledgeBaseResponse
+     */
+    public RetrieveKnowledgeBaseResponse retrieveKnowledgeBase(RetrieveKnowledgeBaseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.retrieveKnowledgeBaseWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>保存工作空间代码，如果文件不存在则自动新建</p>
      * 
      * @param request SaveWorkspaceCodeRequest
