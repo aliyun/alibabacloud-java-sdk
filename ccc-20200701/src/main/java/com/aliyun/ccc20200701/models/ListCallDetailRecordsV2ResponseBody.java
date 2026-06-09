@@ -596,6 +596,9 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         @NameInMap("OffsiteAgentReleaseReason")
         public String offsiteAgentReleaseReason;
 
+        @NameInMap("OutsideNumberDestinationNumber")
+        public String outsideNumberDestinationNumber;
+
         @NameInMap("OutsideNumberReleaseReason")
         public String outsideNumberReleaseReason;
 
@@ -1034,6 +1037,14 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         }
         public String getOffsiteAgentReleaseReason() {
             return this.offsiteAgentReleaseReason;
+        }
+
+        public ListCallDetailRecordsV2ResponseBodyDataList setOutsideNumberDestinationNumber(String outsideNumberDestinationNumber) {
+            this.outsideNumberDestinationNumber = outsideNumberDestinationNumber;
+            return this;
+        }
+        public String getOutsideNumberDestinationNumber() {
+            return this.outsideNumberDestinationNumber;
         }
 
         public ListCallDetailRecordsV2ResponseBodyDataList setOutsideNumberReleaseReason(String outsideNumberReleaseReason) {
