@@ -4,6 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class TurnOffZoneRequest extends TeaModel {
+    @NameInMap("hpAlbZoneDrained")
+    public Boolean hpAlbZoneDrained;
+
     /**
      * <strong>example:</strong>
      * <p>cn-hangzhou-i</p>
@@ -14,6 +17,14 @@ public class TurnOffZoneRequest extends TeaModel {
     public static TurnOffZoneRequest build(java.util.Map<String, ?> map) throws Exception {
         TurnOffZoneRequest self = new TurnOffZoneRequest();
         return TeaModel.build(map, self);
+    }
+
+    public TurnOffZoneRequest setHpAlbZoneDrained(Boolean hpAlbZoneDrained) {
+        this.hpAlbZoneDrained = hpAlbZoneDrained;
+        return this;
+    }
+    public Boolean getHpAlbZoneDrained() {
+        return this.hpAlbZoneDrained;
     }
 
     public TurnOffZoneRequest setZone(String zone) {

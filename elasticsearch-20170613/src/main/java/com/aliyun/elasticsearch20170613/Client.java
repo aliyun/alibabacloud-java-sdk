@@ -7873,6 +7873,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public TurnOffZoneResponse turnOffZoneWithOptions(String instanceId, TurnOffZoneRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hpAlbZoneDrained)) {
+            query.put("hpAlbZoneDrained", request.hpAlbZoneDrained);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.zone)) {
             query.put("zone", request.zone);
         }
@@ -7920,6 +7924,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public TurnOnZoneResponse turnOnZoneWithOptions(String instanceId, TurnOnZoneRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hpAlbZoneDrained)) {
+            query.put("hpAlbZoneDrained", request.hpAlbZoneDrained);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.zone)) {
             query.put("zone", request.zone);
         }
