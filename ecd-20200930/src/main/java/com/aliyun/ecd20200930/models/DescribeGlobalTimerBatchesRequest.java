@@ -32,6 +32,9 @@ public class DescribeGlobalTimerBatchesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceTypes")
+    public java.util.List<String> resourceTypes;
+
     /**
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -81,6 +84,14 @@ public class DescribeGlobalTimerBatchesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeGlobalTimerBatchesRequest setResourceTypes(java.util.List<String> resourceTypes) {
+        this.resourceTypes = resourceTypes;
+        return this;
+    }
+    public java.util.List<String> getResourceTypes() {
+        return this.resourceTypes;
     }
 
     public DescribeGlobalTimerBatchesRequest setSearchRegionId(String searchRegionId) {

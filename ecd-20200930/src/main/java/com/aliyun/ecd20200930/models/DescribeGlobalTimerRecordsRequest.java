@@ -19,6 +19,10 @@ public class DescribeGlobalTimerRecordsRequest extends TeaModel {
     @NameInMap("DesktopIds")
     public java.util.List<String> desktopIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FAILED</p>
+     */
     @NameInMap("DisplayResultName")
     public String displayResultName;
 
@@ -60,6 +64,9 @@ public class DescribeGlobalTimerRecordsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceTypes")
+    public java.util.List<String> resourceTypes;
+
     /**
      * <p>The type of the execution result. You can specify this parameter to filter the execution results.</p>
      * <p>Valid values:</p>
@@ -76,6 +83,10 @@ public class DescribeGlobalTimerRecordsRequest extends TeaModel {
     @NameInMap("ResultCategory")
     public String resultCategory;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Retryable")
     public Boolean retryable;
 
@@ -111,6 +122,9 @@ public class DescribeGlobalTimerRecordsRequest extends TeaModel {
      */
     @NameInMap("TimerTypes")
     public java.util.List<String> timerTypes;
+
+    @NameInMap("WuyingServerIds")
+    public java.util.List<String> wuyingServerIds;
 
     public static DescribeGlobalTimerRecordsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeGlobalTimerRecordsRequest self = new DescribeGlobalTimerRecordsRequest();
@@ -173,6 +187,14 @@ public class DescribeGlobalTimerRecordsRequest extends TeaModel {
         return this.regionId;
     }
 
+    public DescribeGlobalTimerRecordsRequest setResourceTypes(java.util.List<String> resourceTypes) {
+        this.resourceTypes = resourceTypes;
+        return this;
+    }
+    public java.util.List<String> getResourceTypes() {
+        return this.resourceTypes;
+    }
+
     public DescribeGlobalTimerRecordsRequest setResultCategory(String resultCategory) {
         this.resultCategory = resultCategory;
         return this;
@@ -211,6 +233,14 @@ public class DescribeGlobalTimerRecordsRequest extends TeaModel {
     }
     public java.util.List<String> getTimerTypes() {
         return this.timerTypes;
+    }
+
+    public DescribeGlobalTimerRecordsRequest setWuyingServerIds(java.util.List<String> wuyingServerIds) {
+        this.wuyingServerIds = wuyingServerIds;
+        return this;
+    }
+    public java.util.List<String> getWuyingServerIds() {
+        return this.wuyingServerIds;
     }
 
 }

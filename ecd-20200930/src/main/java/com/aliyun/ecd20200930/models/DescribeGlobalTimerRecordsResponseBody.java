@@ -75,6 +75,10 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeGlobalTimerRecordsResponseBodyResults extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>REBOOT</p>
+         */
         @NameInMap("ActionType")
         public String actionType;
 
@@ -87,6 +91,10 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
         @NameInMap("BatchId")
         public String batchId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("Context")
         public String context;
 
@@ -117,6 +125,10 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
         @NameInMap("DesktopName")
         public String desktopName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SKIPPED</p>
+         */
         @NameInMap("DisplayResultName")
         public String displayResultName;
 
@@ -138,6 +150,17 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>p-xxx</p>
+         */
+        @NameInMap("ResourceParentId")
+        public String resourceParentId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Retryable")
         public Boolean retryable;
 
@@ -150,6 +173,10 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
         @NameInMap("TimerGroupId")
         public String timerGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>t-xxx</p>
+         */
         @NameInMap("TimerRecordId")
         public String timerRecordId;
 
@@ -246,6 +273,14 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeGlobalTimerRecordsResponseBodyResults setResourceParentId(String resourceParentId) {
+            this.resourceParentId = resourceParentId;
+            return this;
+        }
+        public String getResourceParentId() {
+            return this.resourceParentId;
         }
 
         public DescribeGlobalTimerRecordsResponseBodyResults setRetryable(Boolean retryable) {
