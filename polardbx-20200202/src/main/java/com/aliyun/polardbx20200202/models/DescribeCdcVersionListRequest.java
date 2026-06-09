@@ -11,6 +11,9 @@ public class DescribeCdcVersionListRequest extends TeaModel {
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    @NameInMap("InstanceName")
+    public String instanceName;
+
     /**
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -29,6 +32,14 @@ public class DescribeCdcVersionListRequest extends TeaModel {
     }
     public String getDBInstanceName() {
         return this.DBInstanceName;
+    }
+
+    public DescribeCdcVersionListRequest setInstanceName(String instanceName) {
+        this.instanceName = instanceName;
+        return this;
+    }
+    public String getInstanceName() {
+        return this.instanceName;
     }
 
     public DescribeCdcVersionListRequest setRegionId(String regionId) {
