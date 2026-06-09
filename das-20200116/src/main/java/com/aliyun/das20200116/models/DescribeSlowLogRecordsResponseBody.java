@@ -204,6 +204,9 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         @NameInMap("DocsExamined")
         public String docsExamined;
 
+        @NameInMap("ExtText")
+        public String extText;
+
         @NameInMap("Fail")
         public String fail;
 
@@ -559,6 +562,14 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
         public String getDocsExamined() {
             return this.docsExamined;
+        }
+
+        public DescribeSlowLogRecordsResponseBodyDataLogs setExtText(String extText) {
+            this.extText = extText;
+            return this;
+        }
+        public String getExtText() {
+            return this.extText;
         }
 
         public DescribeSlowLogRecordsResponseBodyDataLogs setFail(String fail) {

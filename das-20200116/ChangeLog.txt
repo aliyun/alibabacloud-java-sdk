@@ -1,3 +1,7 @@
+2026-06-09 Version: 3.1.1
+- Update API DescribeSlowLogRecords: add response parameters Body.Data.Logs.$.ExtText.
+
+
 2026-06-05 Version: 3.1.0
 - Support API DescribeAuditLogs.
 

@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class DescribeSqlLogRecordsRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. This value is a UNIX timestamp. Unit: millisecond.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1608888296000</p>
@@ -75,6 +76,7 @@ public class DescribeSqlLogRecordsRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query. This value is a UNIX timestamp. Unit: millisecond.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1596177993000</p>
