@@ -260,6 +260,93 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeRenewalPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CNY</p>
+         */
+        @NameInMap("Currency")
+        public String currency;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("DiscountPrice")
+        public Float discountPrice;
+
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
+        @NameInMap("OriginalPrice")
+        public Float originalPrice;
+
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
+        @NameInMap("TradePrice")
+        public Float tradePrice;
+
+        public static DescribeRenewalPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRenewalPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice self = new DescribeRenewalPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRenewalPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice setCurrency(String currency) {
+            this.currency = currency;
+            return this;
+        }
+        public String getCurrency() {
+            return this.currency;
+        }
+
+        public DescribeRenewalPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice setDiscountPrice(Float discountPrice) {
+            this.discountPrice = discountPrice;
+            return this;
+        }
+        public Float getDiscountPrice() {
+            return this.discountPrice;
+        }
+
+        public DescribeRenewalPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice setOriginalPrice(Float originalPrice) {
+            this.originalPrice = originalPrice;
+            return this;
+        }
+        public Float getOriginalPrice() {
+            return this.originalPrice;
+        }
+
+        public DescribeRenewalPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice setTradePrice(Float tradePrice) {
+            this.tradePrice = tradePrice;
+            return this;
+        }
+        public Float getTradePrice() {
+            return this.tradePrice;
+        }
+
+    }
+
+    public static class DescribeRenewalPriceResponseBodyPriceInfoRelatedPrice extends TeaModel {
+        @NameInMap("MarketplaceImagePrice")
+        public DescribeRenewalPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice marketplaceImagePrice;
+
+        public static DescribeRenewalPriceResponseBodyPriceInfoRelatedPrice build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRenewalPriceResponseBodyPriceInfoRelatedPrice self = new DescribeRenewalPriceResponseBodyPriceInfoRelatedPrice();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRenewalPriceResponseBodyPriceInfoRelatedPrice setMarketplaceImagePrice(DescribeRenewalPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice marketplaceImagePrice) {
+            this.marketplaceImagePrice = marketplaceImagePrice;
+            return this;
+        }
+        public DescribeRenewalPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice getMarketplaceImagePrice() {
+            return this.marketplaceImagePrice;
+        }
+
+    }
+
     public static class DescribeRenewalPriceResponseBodyPriceInfoRulesRule extends TeaModel {
         @NameInMap("Description")
         public String description;
@@ -316,6 +403,9 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         @NameInMap("Price")
         public DescribeRenewalPriceResponseBodyPriceInfoPrice price;
 
+        @NameInMap("RelatedPrice")
+        public DescribeRenewalPriceResponseBodyPriceInfoRelatedPrice relatedPrice;
+
         @NameInMap("Rules")
         public DescribeRenewalPriceResponseBodyPriceInfoRules rules;
 
@@ -330,6 +420,14 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         }
         public DescribeRenewalPriceResponseBodyPriceInfoPrice getPrice() {
             return this.price;
+        }
+
+        public DescribeRenewalPriceResponseBodyPriceInfo setRelatedPrice(DescribeRenewalPriceResponseBodyPriceInfoRelatedPrice relatedPrice) {
+            this.relatedPrice = relatedPrice;
+            return this;
+        }
+        public DescribeRenewalPriceResponseBodyPriceInfoRelatedPrice getRelatedPrice() {
+            return this.relatedPrice;
         }
 
         public DescribeRenewalPriceResponseBodyPriceInfo setRules(DescribeRenewalPriceResponseBodyPriceInfoRules rules) {
