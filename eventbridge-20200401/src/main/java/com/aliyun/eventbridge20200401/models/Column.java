@@ -4,15 +4,31 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class Column extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsNull")
     public Boolean isNull;
 
+    /**
+     * <strong>example:</strong>
+     * <p>index</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>text</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>product_info</p>
+     */
     @NameInMap("Value")
     public String value;
 

@@ -5,17 +5,39 @@ import com.aliyun.tea.*;
 
 public class Namespace extends TeaModel {
     /**
+     * <p>命名空间所属的数据目录名称</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my_catalog</p>
      */
     @NameInMap("Catalog")
     public String catalog;
 
+    /**
+     * <p>命名空间的备注描述信息</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试命名空间</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>命名空间的唯一标识名称</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my_namespace</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>命名空间的扩展属性</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;:&quot;value&quot;}</p>
+     */
     @NameInMap("properties")
     public String properties;
 

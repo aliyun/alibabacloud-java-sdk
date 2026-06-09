@@ -36,6 +36,24 @@ public class CreateConnectionRequest extends TeaModel {
     @NameInMap("NetworkParameters")
     public CreateConnectionRequestNetworkParameters networkParameters;
 
+    /**
+     * <p>数据源连接参数（JSON 对象），Type 为数据源类型时必填，Http 类型不需要。具体字段定义请调用 GetConnectionType 接口，参考返回结果中的 ParamsSchema</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;HostName&quot;:&quot;xxx.mysql.rds.aliyuncs.com&quot;,&quot;Port&quot;:&quot;3306&quot;,&quot;User&quot;:&quot;root&quot;,&quot;Password&quot;:&quot;xxx&quot;,&quot;DatabaseName&quot;:&quot;demo_db&quot;}</p>
+     */
+    @NameInMap("Parameters")
+    public Object parameters;
+
+    /**
+     * <p>连接类型。可选值：MySQL、PostgreSQL、Elasticsearch、Http。数据源类型连接必填，不传默认为 Http。Http 类型用于 API Destination 等 HTTP 协议目标；数据源类型用于集成广场的数据连接</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Http</p>
+     */
+    @NameInMap("Type")
+    public String type;
+
     public static CreateConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateConnectionRequest self = new CreateConnectionRequest();
         return TeaModel.build(map, self);
@@ -71,6 +89,22 @@ public class CreateConnectionRequest extends TeaModel {
     }
     public CreateConnectionRequestNetworkParameters getNetworkParameters() {
         return this.networkParameters;
+    }
+
+    public CreateConnectionRequest setParameters(Object parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    public Object getParameters() {
+        return this.parameters;
+    }
+
+    public CreateConnectionRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
     public static class CreateConnectionRequestAuthParametersApiKeyAuthParameters extends TeaModel {

@@ -4,27 +4,72 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class Table extends TeaModel {
+    /**
+     * <p>表所属的数据目录名称</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my_catalog</p>
+     */
     @NameInMap("Catalog")
     public String catalog;
 
+    /**
+     * <p>表的列定义列表。每列包含 Name（列名）、Type（数据类型）、Comment（备注）</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;Name&quot;:&quot;id&quot;,&quot;Type&quot;:&quot;bigint&quot;,&quot;Comment&quot;:&quot;主键&quot;}]</p>
+     */
     @NameInMap("Columns")
     public java.util.List<TableColumns> columns;
 
+    /**
+     * <p>表的备注描述信息</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试事件表</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>表的创建时间（Unix 时间戳，毫秒）</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1717948800000</p>
+     */
     @NameInMap("CreateTime")
     public Long createTime;
 
+    /**
+     * <p>事件表的唯一标识名称</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my_table</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>表所属的命名空间名称</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my_namespace</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>数据保留策略。包含热数据和冷数据的保留天数</p>
+     */
     @NameInMap("RetentionPolicy")
     public TableRetentionPolicy retentionPolicy;
 
+    /**
+     * <p>表的最后更新时间（Unix 时间戳，毫秒）</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1717948800000</p>
+     */
     @NameInMap("UpdateTime")
     public Long updateTime;
 
@@ -98,12 +143,24 @@ public class Table extends TeaModel {
     }
 
     public static class TableColumns extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>主键ID</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <strong>example:</strong>
+         * <p>id</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>bigint</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -139,9 +196,21 @@ public class Table extends TeaModel {
     }
 
     public static class TableRetentionPolicy extends TeaModel {
+        /**
+         * <p>冷数据保留天数，低成本归档存储</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("ColdTTL")
         public Integer coldTTL;
 
+        /**
+         * <p>热数据保留天数，高性能查询存储</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
         @NameInMap("HotTTL")
         public Integer hotTTL;
 

@@ -1,0 +1,117 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.eventbridge20200401.models;
+
+import com.aliyun.tea.*;
+
+public class QueryEventHouseResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryEventHouseResponseBodyData data;
+
+    /**
+     * <strong>example:</strong>
+     * <p>Remote error. requestId: [xxxx], error code: [xxx], message: [The target in event rule is invalid! Endpoint is xxx</p>
+     */
+    @NameInMap("Message")
+    public String message;
+
+    /**
+     * <strong>example:</strong>
+     * <p>f2099962-1628-45f1-9782-2bf6daad823f</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("Success")
+    public Boolean success;
+
+    public static QueryEventHouseResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        QueryEventHouseResponseBody self = new QueryEventHouseResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public QueryEventHouseResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryEventHouseResponseBody setData(QueryEventHouseResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryEventHouseResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryEventHouseResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public QueryEventHouseResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public QueryEventHouseResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public static class QueryEventHouseResponseBodyData extends TeaModel {
+        @NameInMap("Rows")
+        public java.util.List<Row> rows;
+
+        /**
+         * <strong>example:</strong>
+         * <p>18</p>
+         */
+        @NameInMap("Total")
+        public Integer total;
+
+        public static QueryEventHouseResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            QueryEventHouseResponseBodyData self = new QueryEventHouseResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryEventHouseResponseBodyData setRows(java.util.List<Row> rows) {
+            this.rows = rows;
+            return this;
+        }
+        public java.util.List<Row> getRows() {
+            return this.rows;
+        }
+
+        public QueryEventHouseResponseBodyData setTotal(Integer total) {
+            this.total = total;
+            return this;
+        }
+        public Integer getTotal() {
+            return this.total;
+        }
+
+    }
+
+}

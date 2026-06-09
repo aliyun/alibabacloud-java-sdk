@@ -36,6 +36,24 @@ public class UpdateConnectionRequest extends TeaModel {
     @NameInMap("NetworkParameters")
     public UpdateConnectionRequestNetworkParameters networkParameters;
 
+    /**
+     * <p>数据源连接参数（JSON 对象）。具体字段定义请调用 GetConnectionType 接口，参考返回结果中的 ParamsSchema</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;HostName&quot;:&quot;xxx.mysql.rds.aliyuncs.com&quot;,&quot;Port&quot;:&quot;3306&quot;,&quot;User&quot;:&quot;root&quot;,&quot;Password&quot;:&quot;xxx&quot;,&quot;DatabaseName&quot;:&quot;demo_db&quot;}</p>
+     */
+    @NameInMap("Parameters")
+    public Object parameters;
+
+    /**
+     * <p>连接类型。可选值：MySQL、PostgreSQL、Elasticsearch、Http</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Http</p>
+     */
+    @NameInMap("Type")
+    public String type;
+
     public static UpdateConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateConnectionRequest self = new UpdateConnectionRequest();
         return TeaModel.build(map, self);
@@ -71,6 +89,22 @@ public class UpdateConnectionRequest extends TeaModel {
     }
     public UpdateConnectionRequestNetworkParameters getNetworkParameters() {
         return this.networkParameters;
+    }
+
+    public UpdateConnectionRequest setParameters(Object parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    public Object getParameters() {
+        return this.parameters;
+    }
+
+    public UpdateConnectionRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
     public static class UpdateConnectionRequestAuthParametersApiKeyAuthParameters extends TeaModel {

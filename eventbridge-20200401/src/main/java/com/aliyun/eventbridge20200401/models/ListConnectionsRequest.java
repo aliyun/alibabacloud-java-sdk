@@ -37,6 +37,15 @@ public class ListConnectionsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>按连接类型过滤查询结果。可选值：Http、MySQL、PostgreSQL、Elasticsearch。不传则返回所有类型</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Http</p>
+     */
+    @NameInMap("Type")
+    public String type;
+
     public static ListConnectionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListConnectionsRequest self = new ListConnectionsRequest();
         return TeaModel.build(map, self);
@@ -64,6 +73,14 @@ public class ListConnectionsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListConnectionsRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

@@ -702,6 +702,24 @@ public class ListConnectionsResponseBody extends TeaModel {
         @NameInMap("NetworkParameters")
         public ListConnectionsResponseBodyDataConnectionsNetworkParameters networkParameters;
 
+        /**
+         * <p>数据源连接参数（JSON 对象）。仅数据源类型连接返回，Http 类型为空。字段定义参考 GetConnectionType 返回的 ParamsSchema</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;HostName&quot;:&quot;xxx.mysql.rds.aliyuncs.com&quot;,&quot;Port&quot;:&quot;3306&quot;,&quot;User&quot;:&quot;root&quot;,&quot;Password&quot;:&quot;xxx&quot;,&quot;DatabaseName&quot;:&quot;demo_db&quot;}</p>
+         */
+        @NameInMap("Parameters")
+        public Object parameters;
+
+        /**
+         * <p>连接类型。可选值：Http、MySQL、PostgreSQL、Elasticsearch</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Http</p>
+         */
+        @NameInMap("Type")
+        public String type;
+
         public static ListConnectionsResponseBodyDataConnections build(java.util.Map<String, ?> map) throws Exception {
             ListConnectionsResponseBodyDataConnections self = new ListConnectionsResponseBodyDataConnections();
             return TeaModel.build(map, self);
@@ -753,6 +771,22 @@ public class ListConnectionsResponseBody extends TeaModel {
         }
         public ListConnectionsResponseBodyDataConnectionsNetworkParameters getNetworkParameters() {
             return this.networkParameters;
+        }
+
+        public ListConnectionsResponseBodyDataConnections setParameters(Object parameters) {
+            this.parameters = parameters;
+            return this;
+        }
+        public Object getParameters() {
+            return this.parameters;
+        }
+
+        public ListConnectionsResponseBodyDataConnections setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

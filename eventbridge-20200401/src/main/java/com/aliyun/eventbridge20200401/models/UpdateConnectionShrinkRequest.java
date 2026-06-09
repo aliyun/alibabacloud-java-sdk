@@ -36,6 +36,24 @@ public class UpdateConnectionShrinkRequest extends TeaModel {
     @NameInMap("NetworkParameters")
     public String networkParametersShrink;
 
+    /**
+     * <p>数据源连接参数（JSON 对象）。具体字段定义请调用 GetConnectionType 接口，参考返回结果中的 ParamsSchema</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;HostName&quot;:&quot;xxx.mysql.rds.aliyuncs.com&quot;,&quot;Port&quot;:&quot;3306&quot;,&quot;User&quot;:&quot;root&quot;,&quot;Password&quot;:&quot;xxx&quot;,&quot;DatabaseName&quot;:&quot;demo_db&quot;}</p>
+     */
+    @NameInMap("Parameters")
+    public String parametersShrink;
+
+    /**
+     * <p>连接类型。可选值：MySQL、PostgreSQL、Elasticsearch、Http</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Http</p>
+     */
+    @NameInMap("Type")
+    public String type;
+
     public static UpdateConnectionShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateConnectionShrinkRequest self = new UpdateConnectionShrinkRequest();
         return TeaModel.build(map, self);
@@ -71,6 +89,22 @@ public class UpdateConnectionShrinkRequest extends TeaModel {
     }
     public String getNetworkParametersShrink() {
         return this.networkParametersShrink;
+    }
+
+    public UpdateConnectionShrinkRequest setParametersShrink(String parametersShrink) {
+        this.parametersShrink = parametersShrink;
+        return this;
+    }
+    public String getParametersShrink() {
+        return this.parametersShrink;
+    }
+
+    public UpdateConnectionShrinkRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }
