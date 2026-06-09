@@ -23,6 +23,13 @@ public class UpdateAppSeoStatusRequest extends TeaModel {
     public String domain;
 
     /**
+     * <strong>example:</strong>
+     * <p>123123</p>
+     */
+    @NameInMap("SeAuthInfo")
+    public String seAuthInfo;
+
+    /**
      * <p>Search Engine Type</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +57,14 @@ public class UpdateAppSeoStatusRequest extends TeaModel {
     }
     public String getDomain() {
         return this.domain;
+    }
+
+    public UpdateAppSeoStatusRequest setSeAuthInfo(String seAuthInfo) {
+        this.seAuthInfo = seAuthInfo;
+        return this;
+    }
+    public String getSeAuthInfo() {
+        return this.seAuthInfo;
     }
 
     public UpdateAppSeoStatusRequest setSeType(String seType) {

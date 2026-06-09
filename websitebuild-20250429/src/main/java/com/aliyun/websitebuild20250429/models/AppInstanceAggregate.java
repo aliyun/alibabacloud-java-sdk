@@ -103,6 +103,9 @@ public class AppInstanceAggregate extends TeaModel {
     @NameInMap("UserId")
     public String userId;
 
+    @NameInMap("Version")
+    public String version;
+
     public static AppInstanceAggregate build(java.util.Map<String, ?> map) throws Exception {
         AppInstanceAggregate self = new AppInstanceAggregate();
         return TeaModel.build(map, self);
@@ -362,6 +365,14 @@ public class AppInstanceAggregate extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
+    }
+
+    public AppInstanceAggregate setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
     public static class AppInstanceAggregatePartnerDetailBindData extends TeaModel {

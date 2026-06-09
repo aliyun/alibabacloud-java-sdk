@@ -11,6 +11,9 @@ public class ListAppPublishHistoryRequest extends TeaModel {
     @NameInMap("BizId")
     public String bizId;
 
+    @NameInMap("DeployChannel")
+    public String deployChannel;
+
     @NameInMap("Keyword")
     public String keyword;
 
@@ -74,6 +77,14 @@ public class ListAppPublishHistoryRequest extends TeaModel {
     }
     public String getBizId() {
         return this.bizId;
+    }
+
+    public ListAppPublishHistoryRequest setDeployChannel(String deployChannel) {
+        this.deployChannel = deployChannel;
+        return this;
+    }
+    public String getDeployChannel() {
+        return this.deployChannel;
     }
 
     public ListAppPublishHistoryRequest setKeyword(String keyword) {

@@ -1,3 +1,12 @@
+2026-06-09 Version: 2.26.0
+- Support API ConfirmAppInstance.
+- Support API DeleteAppFile.
+- Support API GetOssUploadPolicy.
+- Support API GetTempDownloadUrl.
+- Update API ListAppPublishHistory: add request parameters DeployChannel.
+- Update API UpdateAppSeoStatus: add request parameters SeAuthInfo.
+
+
 2026-06-08 Version: 2.25.0
 - Support API GetMiniAppAuthUrl.
 - Support API GetMiniAppBinding.
