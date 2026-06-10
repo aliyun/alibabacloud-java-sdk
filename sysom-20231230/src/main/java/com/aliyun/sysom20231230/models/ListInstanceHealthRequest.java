@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListInstanceHealthRequest extends TeaModel {
     /**
+     * <p>cluster ID</p>
+     * 
      * <strong>example:</strong>
-     * <p>1808078950770264</p>
+     * <p>2dc6f3be-bf24-4070-8d3a-c03c26850532</p>
      */
     @NameInMap("cluster")
     public String cluster;
 
     /**
+     * <p>Current page number for paging</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,7 @@ public class ListInstanceHealthRequest extends TeaModel {
     public Integer current;
 
     /**
+     * <p>End Time</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,8 @@ public class ListInstanceHealthRequest extends TeaModel {
     public Float end;
 
     /**
+     * <p>instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>i-wz9d00ut2ska3mlyhn6j</p>
      */
@@ -35,6 +42,8 @@ public class ListInstanceHealthRequest extends TeaModel {
     public String instance;
 
     /**
+     * <p>Page size. Default value is 5. Valid range: [1,100]</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -42,6 +51,7 @@ public class ListInstanceHealthRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Start Time</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

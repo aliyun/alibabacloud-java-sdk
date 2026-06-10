@@ -5,16 +5,31 @@ import com.aliyun.tea.*;
 
 public class UpdateFuncSwitchRecordResponseBody extends TeaModel {
     /**
+     * <p>Status code  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, authorization succeeded.  </li>
+     * <li>Any other status code indicates authorization failed. When authorization fails, check the <code>message</code> field for detailed error information.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("data")
     public UpdateFuncSwitchRecordResponseBodyData data;
 
     /**
+     * <p>Error message  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, this field is empty.  </li>
+     * <li>Otherwise, this field contains the request error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>result: code=1 msg=(Request failed, status_code != 200)</p>
      */
@@ -69,6 +84,8 @@ public class UpdateFuncSwitchRecordResponseBody extends TeaModel {
 
     public static class UpdateFuncSwitchRecordResponseBodyData extends TeaModel {
         /**
+         * <p>Job ID</p>
+         * 
          * <strong>example:</strong>
          * <p>63fc5acb99e642d793f42912612e8001</p>
          */

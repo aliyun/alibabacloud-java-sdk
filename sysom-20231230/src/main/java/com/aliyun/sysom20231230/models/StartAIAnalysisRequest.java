@@ -4,13 +4,24 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class StartAIAnalysisRequest extends TeaModel {
+    /**
+     * <p>Analysis tool. This field does not need to be filled in when using OpenAPI.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp/pyki/analysis</p>
+     */
     @NameInMap("analysisTool")
     public String analysisTool;
 
+    /**
+     * <p>Data richness</p>
+     */
     @NameInMap("analysis_params")
     public java.util.List<String> analysisParams;
 
     /**
+     * <p>Channel name</p>
+     * 
      * <strong>example:</strong>
      * <p>ecs_sysom</p>
      */
@@ -18,35 +29,68 @@ public class StartAIAnalysisRequest extends TeaModel {
     public String channel;
 
     /**
+     * <p>Process name. This is an optional parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>python_test</p>
      */
     @NameInMap("comms")
     public String comms;
 
+    /**
+     * <p>Creator. You do not need to specify this parameter when using OpenAPI.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>445333</p>
+     */
     @NameInMap("created_by")
     public String createdBy;
 
     /**
+     * <p>Instance ID</p>
+     * 
      * <strong>example:</strong>
      * <p>i-wz9dej066kii4goqxxxx</p>
      */
     @NameInMap("instance")
     public String instance;
 
+    /**
+     * <p>Instance type. This field does not need to be filled in when using OpenAPI.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ip/sn/hostname</p>
+     */
     @NameInMap("instance_type")
     public String instanceType;
 
+    /**
+     * <p>Iteration entry function. Required only in iteration mode. This parameter is optional.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Class.function</p>
+     */
     @NameInMap("iteration_func")
     public String iterationFunc;
 
+    /**
+     * <p>Iteration entry module. Required only in iteration mode. This parameter is optional.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a.b.module</p>
+     */
     @NameInMap("iteration_mod")
     public String iterationMod;
 
+    /**
+     * <p>Iteration range (iteration count: the number of iterations when the data collection module is activated, independent of the AI job\&quot;s iteration count)</p>
+     */
     @NameInMap("iteration_range")
     public java.util.List<Integer> iterationRange;
 
     /**
+     * <p>Process IDs (PIDs) of the AI job. Batch input is supported, separated by commas.</p>
+     * 
      * <strong>example:</strong>
      * <p>2421,36547,10043</p>
      */
@@ -54,6 +98,8 @@ public class StartAIAnalysisRequest extends TeaModel {
     public String pids;
 
     /**
+     * <p>Region ID</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shenzhen</p>
      */
@@ -61,12 +107,20 @@ public class StartAIAnalysisRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>AI Infra analysis duration.<br>Unit: milliseconds.<br>Default value: 2000.</p>
+     * 
      * <strong>example:</strong>
      * <p>2000</p>
      */
     @NameInMap("timeout")
     public Integer timeout;
 
+    /**
+     * <p>Alibaba Cloud User ID. You do not need to specify this parameter when using OpenAPI.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123423414</p>
+     */
     @NameInMap("uid")
     public String uid;
 

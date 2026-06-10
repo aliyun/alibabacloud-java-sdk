@@ -5,16 +5,31 @@ import com.aliyun.tea.*;
 
 public class GetVmcoreDiagnosisTaskResponseBody extends TeaModel {
     /**
+     * <p>Status code  </p>
+     * <ul>
+     * <li><code>code == Success</code> indicates successful authorization;  </li>
+     * <li>Other status codes indicate authorization failure. When authorization fails, view the <code>message</code> field to obtain detailed error information.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Return Result</p>
+     */
     @NameInMap("data")
     public GetVmcoreDiagnosisTaskResponseBodyData data;
 
     /**
+     * <p>Error message  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, this field is empty.  </li>
+     * <li>Otherwise, this field contains the request error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SysomOpenAPIException: SysomOpenAPI.InvalidParameter Invalid params, should be json string or dict</p>
      */
@@ -69,6 +84,8 @@ public class GetVmcoreDiagnosisTaskResponseBody extends TeaModel {
 
     public static class GetVmcoreDiagnosisTaskResponseBodyDataUrls extends TeaModel {
         /**
+         * <p>Download link for the debuginfo-common RPM package</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo-common/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo-common/file/path</a></p>
          */
@@ -76,6 +93,8 @@ public class GetVmcoreDiagnosisTaskResponseBody extends TeaModel {
         public String debuginfoCommonUrl;
 
         /**
+         * <p>Link to download the debuginfo RPM package</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo/file/path</a></p>
          */
@@ -83,6 +102,8 @@ public class GetVmcoreDiagnosisTaskResponseBody extends TeaModel {
         public String debuginfoUrl;
 
         /**
+         * <p>Download link for the dmesg log</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/dmesg/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/dmesg/file/path</a></p>
          */
@@ -90,6 +111,8 @@ public class GetVmcoreDiagnosisTaskResponseBody extends TeaModel {
         public String dmesgUrl;
 
         /**
+         * <p>Download link for the vmcore file</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/vmcore/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/vmcore/file/path</a></p>
          */
@@ -137,6 +160,8 @@ public class GetVmcoreDiagnosisTaskResponseBody extends TeaModel {
 
     public static class GetVmcoreDiagnosisTaskResponseBodyData extends TeaModel {
         /**
+         * <p>Creation Time</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-12-02T17:36:12</p>
          */
@@ -144,6 +169,8 @@ public class GetVmcoreDiagnosisTaskResponseBody extends TeaModel {
         public String createdAt;
 
         /**
+         * <p>Diagnosis Result</p>
+         * 
          * <strong>example:</strong>
          * <p>result</p>
          */
@@ -151,6 +178,8 @@ public class GetVmcoreDiagnosisTaskResponseBody extends TeaModel {
         public String diagnoseResult;
 
         /**
+         * <p>Diagnosis error message</p>
+         * 
          * <strong>example:</strong>
          * <p>error message</p>
          */
@@ -158,6 +187,8 @@ public class GetVmcoreDiagnosisTaskResponseBody extends TeaModel {
         public String errorMsg;
 
         /**
+         * <p>Job ID</p>
+         * 
          * <strong>example:</strong>
          * <p>bbe94a98-4192-4172-b856-95777e0a55d7</p>
          */
@@ -165,6 +196,8 @@ public class GetVmcoreDiagnosisTaskResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>Task Status</p>
+         * 
          * <strong>example:</strong>
          * <p>running</p>
          */
@@ -172,12 +205,17 @@ public class GetVmcoreDiagnosisTaskResponseBody extends TeaModel {
         public String taskStatus;
 
         /**
+         * <p>Task Type</p>
+         * 
          * <strong>example:</strong>
          * <p>vmcore</p>
          */
         @NameInMap("taskType")
         public String taskType;
 
+        /**
+         * <p>Download links for files associated with the job</p>
+         */
         @NameInMap("urls")
         public GetVmcoreDiagnosisTaskResponseBodyDataUrls urls;
 

@@ -5,16 +5,31 @@ import com.aliyun.tea.*;
 
 public class CreateVmcoreDiagnosisTaskResponseBody extends TeaModel {
     /**
+     * <p>Status code  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, authorization succeeded.  </li>
+     * <li>Other status codes indicate authorization failed. When authorization fails, check the <code>message</code> field for detailed error information.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("data")
     public CreateVmcoreDiagnosisTaskResponseBodyData data;
 
     /**
+     * <p>Error message  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, this field is empty.  </li>
+     * <li>Otherwise, this field contains the request error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -22,6 +37,8 @@ public class CreateVmcoreDiagnosisTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>2D693121-C925-5154-8DF6-C09A8B369822</p>
      */
@@ -67,6 +84,8 @@ public class CreateVmcoreDiagnosisTaskResponseBody extends TeaModel {
 
     public static class CreateVmcoreDiagnosisTaskResponseBodyData extends TeaModel {
         /**
+         * <p>ID of the created diagnostic task</p>
+         * 
          * <strong>example:</strong>
          * <p>bbe94a98-4192-4172-b856-95777e0a55d7</p>
          */

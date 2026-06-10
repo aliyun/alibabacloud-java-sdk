@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UninstallAgentForClusterResponseBody extends TeaModel {
     /**
+     * <p>Request ID, which can be used for end-to-end diagnosis</p>
+     * 
      * <strong>example:</strong>
      * <p>44841312-7227-55C9-AE03-D59729BFAE38</p>
      */
@@ -12,16 +14,31 @@ public class UninstallAgentForClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Status code  </p>
+     * <ul>
+     * <li><code>code == Success</code> indicates that authorization succeeded.  </li>
+     * <li>Any other status code indicates that authorization failed. When authorization fails, view the <code>message</code> field to obtain detailed error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Returned data</p>
+     */
     @NameInMap("data")
     public UninstallAgentForClusterResponseBodyData data;
 
     /**
+     * <p>Error message  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, this field is empty.  </li>
+     * <li>Otherwise, this field contains the request error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SysomOpenAPIException: SysomOpenAPI.NotAuthorizedInstance Instance 21 is not authorized</p>
      */
@@ -67,6 +84,8 @@ public class UninstallAgentForClusterResponseBody extends TeaModel {
 
     public static class UninstallAgentForClusterResponseBodyData extends TeaModel {
         /**
+         * <p>Job ID.<br>You can use this job ID to invoke GetAgentTask to query the execution status of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>049ea0609515414b9e19c3389d7ba638</p>
          */

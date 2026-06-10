@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class GetHealthPercentageResponseBody extends TeaModel {
     /**
+     * <p>Status code  </p>
+     * <ul>
+     * <li><code>code == Success</code> indicates that authorization succeeded.  </li>
+     * <li>Other status codes indicate that authorization failed. When authorization fails, view the <code>message</code> field to obtain detailed error information.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SysomOpenAPI.ServerError</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("data")
     public java.util.List<GetHealthPercentageResponseBodyData> data;
 
     /**
+     * <p>Error Details</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -52,6 +63,8 @@ public class GetHealthPercentageResponseBody extends TeaModel {
 
     public static class GetHealthPercentageResponseBodyData extends TeaModel {
         /**
+         * <p>Health level of the edge zone/pod</p>
+         * 
          * <strong>example:</strong>
          * <p>health</p>
          */
@@ -59,6 +72,8 @@ public class GetHealthPercentageResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>Quantity</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

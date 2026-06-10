@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAlertStrategyRequest extends TeaModel {
     /**
+     * <p>Whether the alert policy is enabled</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,7 @@ public class CreateAlertStrategyRequest extends TeaModel {
     public Boolean k8sLabel;
 
     /**
+     * <p>Alert policy name</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +28,7 @@ public class CreateAlertStrategyRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>Details of the alert policy</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("strategy")
@@ -69,12 +72,18 @@ public class CreateAlertStrategyRequest extends TeaModel {
     }
 
     public static class CreateAlertStrategyRequestStrategy extends TeaModel {
+        /**
+         * <p>Set of clusters that receive alerts</p>
+         */
         @NameInMap("clusters")
         public java.util.List<String> clusters;
 
         @NameInMap("destinations")
         public java.util.List<Integer> destinations;
 
+        /**
+         * <p>Set of abnormal items that trigger alerts</p>
+         */
         @NameInMap("items")
         public java.util.List<String> items;
 

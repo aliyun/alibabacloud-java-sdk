@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetListRecordRequest extends TeaModel {
     /**
+     * <p>Current page number</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -12,12 +14,20 @@ public class GetListRecordRequest extends TeaModel {
     public Long current;
 
     /**
+     * <p>Number of data entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("pageSize")
     public Long pageSize;
 
+    /**
+     * <p>Region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("region")
     public String region;
 

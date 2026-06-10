@@ -14,6 +14,9 @@ public class CreateInstanceInspectionRequest extends TeaModel {
     @NameInMap("items")
     public java.util.List<String> items;
 
+    @NameInMap("metricSource")
+    public String metricSource;
+
     /**
      * <strong>example:</strong>
      * <p>cn-shenzhen</p>
@@ -47,6 +50,14 @@ public class CreateInstanceInspectionRequest extends TeaModel {
     }
     public java.util.List<String> getItems() {
         return this.items;
+    }
+
+    public CreateInstanceInspectionRequest setMetricSource(String metricSource) {
+        this.metricSource = metricSource;
+        return this;
+    }
+    public String getMetricSource() {
+        return this.metricSource;
     }
 
     public CreateInstanceInspectionRequest setRegion(String region) {

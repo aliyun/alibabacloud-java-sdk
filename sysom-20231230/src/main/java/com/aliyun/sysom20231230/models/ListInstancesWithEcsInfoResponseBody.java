@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("data")
     public java.util.List<ListInstancesWithEcsInfoResponseBodyData> data;
 
     /**
+     * <p>Error message. An empty value indicates that the data has been read completely.</p>
+     * 
      * <strong>example:</strong>
      * <p>result: code=1 msg=(Request failed, status_code != 200)</p>
      */
@@ -22,6 +29,8 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request RequestId</p>
+     * 
      * <strong>example:</strong>
      * <p>35F91AAB-5FDF-5A22-B211-C7C6B00817D0</p>
      */
@@ -29,6 +38,8 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of records</p>
+     * 
      * <strong>example:</strong>
      * <p>319</p>
      */
@@ -82,6 +93,8 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
 
     public static class ListInstancesWithEcsInfoResponseBodyDataInstanceTag extends TeaModel {
         /**
+         * <p>Name of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_tag_key</p>
          */
@@ -89,6 +102,8 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
         public String tagKey;
 
         /**
+         * <p>Tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_tag_value</p>
          */
@@ -120,6 +135,8 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
 
     public static class ListInstancesWithEcsInfoResponseBodyData extends TeaModel {
         /**
+         * <p>Cluster ID</p>
+         * 
          * <strong>example:</strong>
          * <p>cbf7a37bc905d4682a3338b3744810269</p>
          */
@@ -127,6 +144,8 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
         public String clusterId;
 
         /**
+         * <p>instance ID</p>
+         * 
          * <strong>example:</strong>
          * <p>i-bp118piqcio9tiwgh84b</p>
          */
@@ -134,19 +153,32 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Instance Name.</p>
+         * 
          * <strong>example:</strong>
          * <p>allowed-repos-r2tzl</p>
          */
         @NameInMap("instance_name")
         public String instanceName;
 
+        /**
+         * <p>tags of instances</p>
+         */
         @NameInMap("instance_tag")
         public java.util.List<ListInstancesWithEcsInfoResponseBodyDataInstanceTag> instanceTag;
 
+        /**
+         * <p>Milvus version</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.10.134-14.an8.x86_64</p>
+         */
         @NameInMap("kernel_version")
         public String kernelVersion;
 
         /**
+         * <p>ECS instance architecture</p>
+         * 
          * <strong>example:</strong>
          * <p>x86</p>
          */
@@ -154,6 +186,8 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
         public String osArch;
 
         /**
+         * <p>Instance health score</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -161,6 +195,8 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
         public String osHealthScore;
 
         /**
+         * <p>The operating system name of the instance</p>
+         * 
          * <strong>example:</strong>
          * <p>Alibaba Cloud Linux  3.2104 LTS 64bit</p>
          */
@@ -168,6 +204,8 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
         public String osName;
 
         /**
+         * <p>Instance private IP</p>
+         * 
          * <strong>example:</strong>
          * <p>1.1.1.1</p>
          */
@@ -175,6 +213,8 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
         public String privateIp;
 
         /**
+         * <p>Instance Internet IP</p>
+         * 
          * <strong>example:</strong>
          * <p>1.1.1.1</p>
          */
@@ -182,6 +222,8 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
         public String publicIp;
 
         /**
+         * <p>Resource group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-xxxxxx</p>
          */
@@ -189,6 +231,8 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>Resource group name</p>
+         * 
          * <strong>example:</strong>
          * <p>default resource group</p>
          */
@@ -196,6 +240,15 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
         public String resourceGroupName;
 
         /**
+         * <p>The running status of the instance. Valid values:  </p>
+         * <ul>
+         * <li><strong>Running</strong>: The instance is running.  </li>
+         * <li><strong>Offline</strong>: The instance is offline.</li>
+         * </ul>
+         * <blockquote>
+         * <p>An instance in the Offline state indicates that the heartbeat from the edge zone to the SysOM Server has been lost. This does not mean that the corresponding ECS instance is not running.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */

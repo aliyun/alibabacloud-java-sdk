@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateAlertDestinationResponseBody extends TeaModel {
     /**
+     * <p>status code  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, authorization succeeded.  </li>
+     * <li>Other status codes indicate Failed to Authorize. When authorization fails, check the <code>message</code> field for detailed error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SysomOpenAPI.InvalidParameter</p>
      */
@@ -12,6 +18,8 @@ public class UpdateAlertDestinationResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Return Result.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      * &quot;webhook&quot;:&quot;&quot;,
@@ -22,6 +30,12 @@ public class UpdateAlertDestinationResponseBody extends TeaModel {
     public Object data;
 
     /**
+     * <p>error message  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, this field is empty.  </li>
+     * <li>Otherwise, this field contains the request error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -29,6 +43,8 @@ public class UpdateAlertDestinationResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>2D693121-C925-5154-8DF6-C09A8B369822</p>
      */

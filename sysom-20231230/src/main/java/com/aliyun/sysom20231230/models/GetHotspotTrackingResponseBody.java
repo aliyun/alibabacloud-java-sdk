@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetHotspotTrackingResponseBody extends TeaModel {
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SysomOpenAPI.ServerError</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Returned data</p>
+     */
     @NameInMap("data")
     public GetHotspotTrackingResponseBodyData data;
 
     /**
+     * <p>Return message</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -22,6 +29,8 @@ public class GetHotspotTrackingResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>2D693121-C925-5154-8DF6-C09A8B369822</p>
      */
@@ -66,9 +75,15 @@ public class GetHotspotTrackingResponseBody extends TeaModel {
     }
 
     public static class GetHotspotTrackingResponseBodyDataFlame extends TeaModel {
+        /**
+         * <p>List of column names</p>
+         */
         @NameInMap("columns")
         public java.util.List<String> columns;
 
+        /**
+         * <p>List of flame graph data</p>
+         */
         @NameInMap("values")
         public java.util.List<java.util.List<String>> values;
 
@@ -96,9 +111,15 @@ public class GetHotspotTrackingResponseBody extends TeaModel {
     }
 
     public static class GetHotspotTrackingResponseBodyDataSeries extends TeaModel {
+        /**
+         * <p>List of column names</p>
+         */
         @NameInMap("columns")
         public java.util.List<String> columns;
 
+        /**
+         * <p>List of hot spot metric data</p>
+         */
         @NameInMap("values")
         public java.util.List<java.util.List<String>> values;
 
@@ -126,9 +147,15 @@ public class GetHotspotTrackingResponseBody extends TeaModel {
     }
 
     public static class GetHotspotTrackingResponseBodyData extends TeaModel {
+        /**
+         * <p>Flame graph data</p>
+         */
         @NameInMap("flame")
         public GetHotspotTrackingResponseBodyDataFlame flame;
 
+        /**
+         * <p>Data list</p>
+         */
         @NameInMap("series")
         public GetHotspotTrackingResponseBodyDataSeries series;
 

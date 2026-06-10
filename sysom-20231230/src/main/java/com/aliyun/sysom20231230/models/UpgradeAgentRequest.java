@@ -5,18 +5,27 @@ import com.aliyun.tea.*;
 
 public class UpgradeAgentRequest extends TeaModel {
     /**
+     * <p>ID of the widget to update</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>74a86327-3170-412c-8e67-da3389ec56a9</p>
      */
     @NameInMap("agent_id")
     public String agentId;
 
     /**
+     * <p>Version of the widget to update</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3.4.0-1</p>
      */
     @NameInMap("agent_version")
     public String agentVersion;
 
     /**
+     * <p>List of instances on which to update the widget</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("instances")
@@ -53,6 +62,7 @@ public class UpgradeAgentRequest extends TeaModel {
 
     public static class UpgradeAgentRequestInstances extends TeaModel {
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -62,6 +72,7 @@ public class UpgradeAgentRequest extends TeaModel {
         public String instance;
 
         /**
+         * <p>Region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

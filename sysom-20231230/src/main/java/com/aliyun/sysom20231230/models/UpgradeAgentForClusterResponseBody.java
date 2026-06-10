@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpgradeAgentForClusterResponseBody extends TeaModel {
     /**
+     * <p>Request ID, which can be used for end-to-end Diagnosis</p>
+     * 
      * <strong>example:</strong>
      * <p>B149FD9C-ED5C-5765-B3AD-05AA4A4D64D7</p>
      */
@@ -12,16 +14,31 @@ public class UpgradeAgentForClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Status code  </p>
+     * <ul>
+     * <li><code>code == Success</code> indicates successful authorization;  </li>
+     * <li>Other status codes indicate authorization failure. When authorization fails, view the <code>message</code> field to obtain detailed error message;</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Returned Data.</p>
+     */
     @NameInMap("data")
     public UpgradeAgentForClusterResponseBodyData data;
 
     /**
+     * <p>error message  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, this field is empty;  </li>
+     * <li>Otherwise, this field contains the request error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -67,6 +84,9 @@ public class UpgradeAgentForClusterResponseBody extends TeaModel {
 
     public static class UpgradeAgentForClusterResponseBodyData extends TeaModel {
         /**
+         * <p>Job ID.  </p>
+         * <p>You can use this job ID to invoke the GetAgentTask API to view the execution status of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>7523e9e0ddc74d99a5236f4f4d5056e6</p>
          */

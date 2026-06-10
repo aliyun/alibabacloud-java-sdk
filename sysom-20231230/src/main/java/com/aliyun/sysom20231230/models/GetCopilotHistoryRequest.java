@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCopilotHistoryRequest extends TeaModel {
     /**
+     * <p>Quantity of historical chat records to request, typically fewer than 100 records</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

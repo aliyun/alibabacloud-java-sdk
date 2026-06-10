@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateFuncSwitchRecordShrinkRequest extends TeaModel {
     /**
+     * <p>Diagnosis channel (currently fixed to the ecs channel)</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,14 @@ public class UpdateFuncSwitchRecordShrinkRequest extends TeaModel {
     public String channel;
 
     /**
+     * <p>Diagnosis parameters. Different diagnosis types require different diagnosis parameters. You can use this field to filter records whose parameters match specified values.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("params")
     public String paramsShrink;
 
     /**
+     * <p>Service Name</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

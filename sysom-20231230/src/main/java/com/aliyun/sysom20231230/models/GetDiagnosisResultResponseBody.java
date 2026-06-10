@@ -5,16 +5,31 @@ import com.aliyun.tea.*;
 
 public class GetDiagnosisResultResponseBody extends TeaModel {
     /**
+     * <p>Status code  </p>
+     * <ul>
+     * <li>If <code>code == &quot;Success&quot;</code>, authorization succeeded.  </li>
+     * <li>Other status codes indicate authorization failed. When authorization fails, view the <code>message</code> field to obtain detailed error information.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("data")
     public GetDiagnosisResultResponseBodyData data;
 
     /**
+     * <p>Error message  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, this field is empty.  </li>
+     * <li>Otherwise, this field contains the request error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -22,6 +37,8 @@ public class GetDiagnosisResultResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request RequestId</p>
+     * 
      * <strong>example:</strong>
      * <p>9515E5A0-8905-59B0-9BBF-5F0BE568C3A0</p>
      */
@@ -67,6 +84,8 @@ public class GetDiagnosisResultResponseBody extends TeaModel {
 
     public static class GetDiagnosisResultResponseBodyData extends TeaModel {
         /**
+         * <p>Error code (0 indicates no error)</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -74,6 +93,8 @@ public class GetDiagnosisResultResponseBody extends TeaModel {
         public Integer code;
 
         /**
+         * <p>Diagnosis command</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *     &quot;jobs&quot;:[
@@ -95,10 +116,18 @@ public class GetDiagnosisResultResponseBody extends TeaModel {
         @NameInMap("command")
         public Object command;
 
+        /**
+         * <p>Creation Time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-12-03 16:30:28</p>
+         */
         @NameInMap("created_at")
         public String createdAt;
 
         /**
+         * <p>Error message</p>
+         * 
          * <strong>example:</strong>
          * <p>Diagnosis failed</p>
          */
@@ -106,6 +135,8 @@ public class GetDiagnosisResultResponseBody extends TeaModel {
         public String errMsg;
 
         /**
+         * <p>Diagnosis parameters</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *     &quot;type&quot;:&quot;all&quot;,
@@ -119,6 +150,8 @@ public class GetDiagnosisResultResponseBody extends TeaModel {
         public Object params;
 
         /**
+         * <p>Diagnosis result</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *     &quot;summary&quot;:&quot;  memory cgroup leak&quot;,
@@ -342,6 +375,8 @@ public class GetDiagnosisResultResponseBody extends TeaModel {
         public Object result;
 
         /**
+         * <p>Diagnosis Type</p>
+         * 
          * <strong>example:</strong>
          * <p>memgraph</p>
          */
@@ -349,6 +384,14 @@ public class GetDiagnosisResultResponseBody extends TeaModel {
         public String serviceName;
 
         /**
+         * <p>The execution status of the diagnostic task.<br>Valid values:  </p>
+         * <ul>
+         * <li><strong>Ready</strong>: Ready  </li>
+         * <li><strong>Running</strong>: Running  </li>
+         * <li><strong>Success</strong>: Succeeded  </li>
+         * <li><strong>Fail</strong>: Failed</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -356,16 +399,26 @@ public class GetDiagnosisResultResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>grcuU21a</p>
          */
         @NameInMap("task_id")
         public String taskId;
 
+        /**
+         * <p>Update Time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-12-03 16:30:28</p>
+         */
         @NameInMap("updated_at")
         public String updatedAt;
 
         /**
+         * <p>Diagnosis details URL</p>
+         * 
          * <strong>example:</strong>
          * <p>/diagnose/detail/qe3Z34sa</p>
          */

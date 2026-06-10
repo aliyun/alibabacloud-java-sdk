@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class StartAIDiffAnalysisRequest extends TeaModel {
     /**
+     * <p>task1 parameters</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>task1参数</p>
      */
     @NameInMap("task1")
     public StartAIDiffAnalysisRequestTask1 task1;
 
     /**
+     * <p>task2 parameters</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>task2参数，目前只支持相同analysisId和pid的对比</p>
      */
     @NameInMap("task2")
     public StartAIDiffAnalysisRequestTask2 task2;
@@ -39,16 +47,23 @@ public class StartAIDiffAnalysisRequest extends TeaModel {
 
     public static class StartAIDiffAnalysisRequestTask1 extends TeaModel {
         /**
+         * <p>AI analysis ID</p>
+         * 
          * <strong>example:</strong>
          * <p>16896fa8-37f6-4c70-bb32-67fa9817d426</p>
          */
         @NameInMap("analysisId")
         public String analysisId;
 
+        /**
+         * <p>PIDs of AI job processes; batch input is supported, separated by commas</p>
+         */
         @NameInMap("pids")
         public java.util.List<String> pids;
 
         /**
+         * <p>Step end time, computed based on the selected step number</p>
+         * 
          * <strong>example:</strong>
          * <p>4660551334179.955</p>
          */
@@ -56,6 +71,8 @@ public class StartAIDiffAnalysisRequest extends TeaModel {
         public Float stepEnd;
 
         /**
+         * <p>Step start time, computed based on the selected step number</p>
+         * 
          * <strong>example:</strong>
          * <p>4660550379415.497</p>
          */
@@ -103,6 +120,7 @@ public class StartAIDiffAnalysisRequest extends TeaModel {
 
     public static class StartAIDiffAnalysisRequestTask2 extends TeaModel {
         /**
+         * <p>AI analysis ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -112,6 +130,7 @@ public class StartAIDiffAnalysisRequest extends TeaModel {
         public String analysisId;
 
         /**
+         * <p>Process IDs (PIDs) of AI jobs. Batch input is supported, with PIDs separated by commas.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -121,6 +140,7 @@ public class StartAIDiffAnalysisRequest extends TeaModel {
         public java.util.List<String> pids;
 
         /**
+         * <p>Step end time, computed based on the selected step number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +150,7 @@ public class StartAIDiffAnalysisRequest extends TeaModel {
         public Float stepEnd;
 
         /**
+         * <p>Step start time, computed based on the selected step number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

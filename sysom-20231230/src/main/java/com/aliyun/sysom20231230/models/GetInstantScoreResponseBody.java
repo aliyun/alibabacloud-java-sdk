@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetInstantScoreResponseBody extends TeaModel {
     /**
-     * <p>集群ID</p>
+     * <p>Status code  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, authorization succeeded.  </li>
+     * <li>Other status codes indicate authorization failed. When authorization fails, view the <code>message</code> field to obtain detailed error message.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -13,10 +17,19 @@ public class GetInstantScoreResponseBody extends TeaModel {
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("data")
     public GetInstantScoreResponseBodyData data;
 
     /**
+     * <p>Error message  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, this field is empty.  </li>
+     * <li>Otherwise, this field contains the request error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Query no data</p>
      */
@@ -71,6 +84,8 @@ public class GetInstantScoreResponseBody extends TeaModel {
 
     public static class GetInstantScoreResponseBodyData extends TeaModel {
         /**
+         * <p>Error score</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -78,6 +93,8 @@ public class GetInstantScoreResponseBody extends TeaModel {
         public Float error;
 
         /**
+         * <p>Latency score</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -85,6 +102,8 @@ public class GetInstantScoreResponseBody extends TeaModel {
         public Float latency;
 
         /**
+         * <p>Load score</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -92,12 +111,20 @@ public class GetInstantScoreResponseBody extends TeaModel {
         public Float load;
 
         /**
+         * <p>Saturation score</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
         @NameInMap("saturation")
         public Float saturation;
 
+        /**
+         * <p>Total score</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("total")
         public Float total;
 

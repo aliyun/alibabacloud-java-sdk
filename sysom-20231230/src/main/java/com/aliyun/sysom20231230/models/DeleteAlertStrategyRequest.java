@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAlertStrategyRequest extends TeaModel {
     /**
+     * <p>Alert policy ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetAbnormalEventsCountRequest extends TeaModel {
     /**
+     * <p>cluster ID</p>
+     * 
      * <strong>example:</strong>
-     * <p>1808078950770264</p>
+     * <p>2ijff4be-bf24-4070-89ca-c47c879b0g32</p>
      */
     @NameInMap("cluster")
     public String cluster;
 
     /**
+     * <p>End time</p>
+     * 
      * <strong>example:</strong>
      * <p>1725801327754</p>
      */
@@ -19,16 +23,26 @@ public class GetAbnormalEventsCountRequest extends TeaModel {
     public Float end;
 
     /**
+     * <p>instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>i-wz9d00ut2ska3mlyhn6j</p>
      */
     @NameInMap("instance")
     public String instance;
 
+    /**
+     * <p>Level of the anomalous activity</p>
+     * 
+     * <strong>example:</strong>
+     * <p>potential</p>
+     */
     @NameInMap("level")
     public String level;
 
     /**
+     * <p>Namespace where the pod is located</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -36,16 +50,26 @@ public class GetAbnormalEventsCountRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>Name of the pod</p>
+     * 
      * <strong>example:</strong>
      * <p>test-pod</p>
      */
     @NameInMap("pod")
     public String pod;
 
+    /**
+     * <p>is whether to display pod anomalous activity</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("showPod")
     public Integer showPod;
 
     /**
+     * <p>Start time</p>
+     * 
      * <strong>example:</strong>
      * <p>1725797727754</p>
      */

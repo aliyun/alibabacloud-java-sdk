@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class StartAIAnalysisResponseBody extends TeaModel {
     /**
+     * <p>Return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Returned data</p>
+     */
     @NameInMap("data")
     public StartAIAnalysisResponseBodyData data;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -69,6 +76,8 @@ public class StartAIAnalysisResponseBody extends TeaModel {
 
     public static class StartAIAnalysisResponseBodyData extends TeaModel {
         /**
+         * <p>AI analysis ID</p>
+         * 
          * <strong>example:</strong>
          * <p>16896fa8-37f6-4c70-bb32-67fa9817d426</p>
          */

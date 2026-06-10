@@ -26,8 +26,6 @@ public class GetInspectionReportResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
-     * 
      * <strong>example:</strong>
      * <p>2D693121-C925-5154-8DF6-C09A8B369822</p>
      */

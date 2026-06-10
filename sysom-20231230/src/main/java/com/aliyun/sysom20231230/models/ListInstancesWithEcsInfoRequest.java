@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListInstancesWithEcsInfoRequest extends TeaModel {
     /**
+     * <p>This field exists when using paging and indicates the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListInstancesWithEcsInfoRequest extends TeaModel {
     public Integer current;
 
     /**
+     * <p>Filter instances by health status.</p>
+     * 
      * <strong>example:</strong>
      * <p>healthy</p>
      */
@@ -19,6 +23,8 @@ public class ListInstancesWithEcsInfoRequest extends TeaModel {
     public String healthStatus;
 
     /**
+     * <p>If this field is specified, filter the Agent installation status for the specified instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>i-bp118piqcio9tiwgh84b</p>
      */
@@ -26,6 +32,8 @@ public class ListInstancesWithEcsInfoRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Filter by instance name or instance ID. Fuzzy query is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>84b</p>
      */
@@ -33,16 +41,23 @@ public class ListInstancesWithEcsInfoRequest extends TeaModel {
     public String instanceIdName;
 
     /**
+     * <p>Widget instance name.</p>
+     * 
      * <strong>example:</strong>
      * <p>block-load-balancer-hjdm9</p>
      */
     @NameInMap("instance_name")
     public String instanceName;
 
+    /**
+     * <p>Filter by tags of instances.</p>
+     */
     @NameInMap("instance_tag")
     public ListInstancesWithEcsInfoRequestInstanceTag instanceTag;
 
     /**
+     * <p>Filter instances by managed status.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -50,6 +65,8 @@ public class ListInstancesWithEcsInfoRequest extends TeaModel {
     public Integer isManaged;
 
     /**
+     * <p>Filter instances by operating system name.</p>
+     * 
      * <strong>example:</strong>
      * <p>Alibaba Cloud Linux  3.2104 LTS 64bit</p>
      */
@@ -57,6 +74,8 @@ public class ListInstancesWithEcsInfoRequest extends TeaModel {
     public String osName;
 
     /**
+     * <p>Page size. Default value is 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -64,6 +83,8 @@ public class ListInstancesWithEcsInfoRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Filter instances by private IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.1.1.1</p>
      */
@@ -71,6 +92,8 @@ public class ListInstancesWithEcsInfoRequest extends TeaModel {
     public String privateIp;
 
     /**
+     * <p>Filter instances by public IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.1.1.1</p>
      */
@@ -78,6 +101,7 @@ public class ListInstancesWithEcsInfoRequest extends TeaModel {
     public String publicIp;
 
     /**
+     * <p>Filter instances by region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -87,6 +111,8 @@ public class ListInstancesWithEcsInfoRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>Filter instances by resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-xxxxxxx</p>
      */
@@ -94,6 +120,8 @@ public class ListInstancesWithEcsInfoRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>Filter by resource group name or resource group ID. Fuzzy query is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -101,6 +129,8 @@ public class ListInstancesWithEcsInfoRequest extends TeaModel {
     public String resourceGroupIdName;
 
     /**
+     * <p>Filter instances by resource group name.</p>
+     * 
      * <strong>example:</strong>
      * <p>default resource group</p>
      */
@@ -234,6 +264,8 @@ public class ListInstancesWithEcsInfoRequest extends TeaModel {
 
     public static class ListInstancesWithEcsInfoRequestInstanceTag extends TeaModel {
         /**
+         * <p>Tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>feature_dim_radar_chart</p>
          */
@@ -241,6 +273,8 @@ public class ListInstancesWithEcsInfoRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>Tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

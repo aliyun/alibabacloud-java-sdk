@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAlertStrategiesRequest extends TeaModel {
     /**
+     * <p>Current page number (starting from 1)</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListAlertStrategiesRequest extends TeaModel {
     public Integer current;
 
     /**
+     * <p>Maximum number of records to retrieve in a single request.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +23,8 @@ public class ListAlertStrategiesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Alert policy name</p>
+     * 
      * <strong>example:</strong>
      * <p>strategy1</p>
      */
@@ -26,6 +32,8 @@ public class ListAlertStrategiesRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>Pagination token for the next request.</p>
+     * 
      * <strong>example:</strong>
      * <p>c2f78a783f49457caba6bace6f6f79e4</p>
      */
@@ -33,6 +41,8 @@ public class ListAlertStrategiesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Page size</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

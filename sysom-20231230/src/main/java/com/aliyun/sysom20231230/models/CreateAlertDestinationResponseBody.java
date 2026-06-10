@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class CreateAlertDestinationResponseBody extends TeaModel {
     /**
+     * <p>error code</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("data")
     public CreateAlertDestinationResponseBodyData data;
 
     /**
+     * <p>Error message  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, this field is empty.  </li>
+     * <li>Otherwise, this field contains the request error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SysomOpenAPIException: SysomOpenAPI.InvalidParameter Invalid params, should be json string or dict</p>
      */
@@ -22,6 +33,8 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2D693121-C925-5154-8DF6-C09A8B369822</p>
      */
@@ -67,6 +80,8 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
 
     public static class CreateAlertDestinationResponseBodyDataParams extends TeaModel {
         /**
+         * <p>mailbox</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:xxx@email.com">xxx@email.com</a></p>
          */
@@ -74,6 +89,8 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
         public String email;
 
         /**
+         * <p>Phone</p>
+         * 
          * <strong>example:</strong>
          * <p>1xxx</p>
          */
@@ -81,6 +98,8 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
         public String phone;
 
         /**
+         * <p>Robot key</p>
+         * 
          * <strong>example:</strong>
          * <p>SECxxx</p>
          */
@@ -88,6 +107,8 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
         public String sec;
 
         /**
+         * <p>Robot address</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=xxx">https://oapi.dingtalk.com/robot/send?access_token=xxx</a></p>
          */
@@ -135,6 +156,8 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
 
     public static class CreateAlertDestinationResponseBodyData extends TeaModel {
         /**
+         * <p>Creation Time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1753669116286</p>
          */
@@ -142,6 +165,8 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
         public Long createdAt;
 
         /**
+         * <p>Policy ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -149,16 +174,23 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
         public Integer id;
 
         /**
+         * <p>Policy Name</p>
+         * 
          * <strong>example:</strong>
          * <p>SysOM</p>
          */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Configuration Parameter of alert contact</p>
+         */
         @NameInMap("params")
         public CreateAlertDestinationResponseBodyDataParams params;
 
         /**
+         * <p>Configuration Source</p>
+         * 
          * <strong>example:</strong>
          * <p>console</p>
          */
@@ -166,6 +198,8 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>Push Target. Currently, only DingTalk Robot is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>dingtalk</p>
          */
@@ -173,6 +207,8 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
         public String target;
 
         /**
+         * <p>User ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1222933234714935</p>
          */
@@ -180,6 +216,8 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
         public String uid;
 
         /**
+         * <p>Update Time</p>
+         * 
          * <strong>example:</strong>
          * <p>1751254826285</p>
          */

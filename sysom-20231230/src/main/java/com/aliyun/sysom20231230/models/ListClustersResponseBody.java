@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListClustersResponseBody extends TeaModel {
     /**
+     * <p>Request ID, which can be used for end-to-end diagnosis</p>
+     * 
      * <strong>example:</strong>
      * <p>B149FD9C-ED5C-5765-B3AD-05AA4A4D64D7</p>
      */
@@ -12,16 +14,31 @@ public class ListClustersResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Status code  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, authorization succeeded.  </li>
+     * <li>Any other status code indicates authorization failed. When authorization fails, check the <code>message</code> field for detailed error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Returned data</p>
+     */
     @NameInMap("data")
     public java.util.List<ListClustersResponseBodyData> data;
 
     /**
+     * <p>Error message  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, this field is empty;  </li>
+     * <li>Otherwise, this field contains the request error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +46,8 @@ public class ListClustersResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Total number of records</p>
+     * 
      * <strong>example:</strong>
      * <p>64</p>
      */
@@ -82,6 +101,14 @@ public class ListClustersResponseBody extends TeaModel {
 
     public static class ListClustersResponseBodyData extends TeaModel {
         /**
+         * <p>Actual cluster ID.  </p>
+         * <blockquote>
+         * <ul>
+         * <li>For <code>ACK</code> type clusters, this ID is the ACK cluster ID.  </li>
+         * <li>For <code>CUSTOM</code> type clusters, this ID serves as a UUID and has no additional meaning.</li>
+         * </ul>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>c666d4774f0e2440b979bf917bf100e40</p>
          */
@@ -89,6 +116,14 @@ public class ListClustersResponseBody extends TeaModel {
         public String clusterId;
 
         /**
+         * <ul>
+         * <li><code>Running</code>: Cluster management is normal.  </li>
+         * <li><code>Installing</code>: An install job is in progress for the cluster.  </li>
+         * <li><code>Uninstalling</code>: An uninstall job is in progress for the cluster.  </li>
+         * <li><code>Upgrading</code>: An update job is in progress for the cluster.  </li>
+         * <li><code>Offline</code>: The cluster is offline and cluster management is abnormal.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -96,6 +131,11 @@ public class ListClustersResponseBody extends TeaModel {
         public String clusterStatus;
 
         /**
+         * <ul>
+         * <li><code>ACK</code>: ACK cluster  </li>
+         * <li><code>CUSTOM</code>: Custom cluster (default clusters are classified as custom clusters)</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ACK</p>
          */
@@ -103,6 +143,8 @@ public class ListClustersResponseBody extends TeaModel {
         public String clusterType;
 
         /**
+         * <p>Creation Time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-12-25T15:08:19</p>
          */
@@ -110,6 +152,8 @@ public class ListClustersResponseBody extends TeaModel {
         public String createdAt;
 
         /**
+         * <p>Cluster ID</p>
+         * 
          * <strong>example:</strong>
          * <p>5389fba5-92a1-4ff4-9b26-773b97828144</p>
          */
@@ -117,6 +161,8 @@ public class ListClustersResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Cluster Name</p>
+         * 
          * <strong>example:</strong>
          * <p>auto-name-sbvCT</p>
          */
@@ -124,6 +170,8 @@ public class ListClustersResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -131,6 +179,8 @@ public class ListClustersResponseBody extends TeaModel {
         public String region;
 
         /**
+         * <p>Update Time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-12-25T15:08:19</p>
          */

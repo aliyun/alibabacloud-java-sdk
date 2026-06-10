@@ -5,16 +5,31 @@ import com.aliyun.tea.*;
 
 public class GetProblemPercentageResponseBody extends TeaModel {
     /**
+     * <p>Status code  </p>
+     * <ul>
+     * <li><code>code == Success</code> indicates successful authorization;  </li>
+     * <li>Other status codes indicate failed authorization. When authorization fails, view the <code>message</code> field to obtain detailed error message;</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("data")
     public java.util.List<GetProblemPercentageResponseBodyData> data;
 
     /**
+     * <p>Error message  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, this field is empty;  </li>
+     * <li>Otherwise, this field contains the request error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>result: code=1 msg=(Request failed, status_code != 200)</p>
      */
@@ -22,6 +37,8 @@ public class GetProblemPercentageResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request RequestId</p>
+     * 
      * <strong>example:</strong>
      * <p>35F91AAB-5FDF-5A22-B211-C7C6B00817D0</p>
      */
@@ -29,6 +46,8 @@ public class GetProblemPercentageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total data volume.</p>
+     * 
      * <strong>example:</strong>
      * <p>19</p>
      */
@@ -82,6 +101,8 @@ public class GetProblemPercentageResponseBody extends TeaModel {
 
     public static class GetProblemPercentageResponseBodyData extends TeaModel {
         /**
+         * <p>Type of abnormal item</p>
+         * 
          * <strong>example:</strong>
          * <p>saturation</p>
          */
@@ -89,6 +110,8 @@ public class GetProblemPercentageResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>Quantity of abnormal types</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */

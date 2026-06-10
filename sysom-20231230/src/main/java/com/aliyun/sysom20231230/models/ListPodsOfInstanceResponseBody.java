@@ -14,16 +14,22 @@ public class ListPodsOfInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>error code</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Data returned</p>
+     */
     @NameInMap("data")
     public java.util.List<ListPodsOfInstanceResponseBodyData> data;
 
     /**
+     * <p>Error message; empty indicates that data reading is complete</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +39,8 @@ public class ListPodsOfInstanceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The maximum number of records returned by this request</p>
+     * 
      * <strong>example:</strong>
      * <p>42</p>
      */
@@ -86,6 +94,8 @@ public class ListPodsOfInstanceResponseBody extends TeaModel {
 
     public static class ListPodsOfInstanceResponseBodyData extends TeaModel {
         /**
+         * <p>Namespace where the pod resides</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -93,6 +103,8 @@ public class ListPodsOfInstanceResponseBody extends TeaModel {
         public String namespace;
 
         /**
+         * <p>Pod Name</p>
+         * 
          * <strong>example:</strong>
          * <p>test-pod</p>
          */

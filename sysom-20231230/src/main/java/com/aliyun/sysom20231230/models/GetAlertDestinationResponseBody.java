@@ -5,16 +5,31 @@ import com.aliyun.tea.*;
 
 public class GetAlertDestinationResponseBody extends TeaModel {
     /**
+     * <p>Status code.  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, authorization succeeded.  </li>
+     * <li>Other status codes indicate authorization failed. When authorization fails, check the <code>message</code> field for detailed error information.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success or Sysom.ServerError</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("data")
     public GetAlertDestinationResponseBodyData data;
 
     /**
+     * <p>Error message.  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, this field is empty.  </li>
+     * <li>Otherwise, this field contains the request error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SysomOpenAPIAssumeRoleException: EntityNotExist.Role The role not exists: acs:ram::xxxxx:role/aliyunserviceroleforsysom</p>
      */
@@ -22,6 +37,8 @@ public class GetAlertDestinationResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2D693121-C925-5154-8DF6-C09A8B369822</p>
      */
@@ -67,6 +84,8 @@ public class GetAlertDestinationResponseBody extends TeaModel {
 
     public static class GetAlertDestinationResponseBodyData extends TeaModel {
         /**
+         * <p>Creation Time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1751520976660</p>
          */
@@ -74,6 +93,8 @@ public class GetAlertDestinationResponseBody extends TeaModel {
         public String createdAt;
 
         /**
+         * <p>Alert contact ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -81,6 +102,8 @@ public class GetAlertDestinationResponseBody extends TeaModel {
         public Integer id;
 
         /**
+         * <p>Alert contact name</p>
+         * 
          * <strong>example:</strong>
          * <p>name1</p>
          */
@@ -88,6 +111,8 @@ public class GetAlertDestinationResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Configuration Parameter</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *     &quot;webhook&quot;:&quot;&quot;,
@@ -98,6 +123,8 @@ public class GetAlertDestinationResponseBody extends TeaModel {
         public Object params;
 
         /**
+         * <p>Configuration source</p>
+         * 
          * <strong>example:</strong>
          * <p>console</p>
          */
@@ -105,6 +132,8 @@ public class GetAlertDestinationResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>Alert push target. Currently, only DingTalk Robot is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>dingtalk</p>
          */
@@ -112,6 +141,8 @@ public class GetAlertDestinationResponseBody extends TeaModel {
         public String target;
 
         /**
+         * <p>User ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1234123412352311</p>
          */
@@ -119,6 +150,8 @@ public class GetAlertDestinationResponseBody extends TeaModel {
         public String uid;
 
         /**
+         * <p>Update Time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1751254826285</p>
          */

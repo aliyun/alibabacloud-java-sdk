@@ -5,16 +5,31 @@ import com.aliyun.tea.*;
 
 public class GetAlertStrategyResponseBody extends TeaModel {
     /**
+     * <p>Status code:  </p>
+     * <ul>
+     * <li><code>code == Success</code> indicates successful authorization;  </li>
+     * <li>Other status codes indicate failed authorization. When authorization fails, view the <code>message</code> field to obtain detailed error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("data")
     public GetAlertStrategyResponseBodyData data;
 
     /**
+     * <p>Error message  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, this field is empty;  </li>
+     * <li>Otherwise, this field contains the request error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -68,12 +83,21 @@ public class GetAlertStrategyResponseBody extends TeaModel {
     }
 
     public static class GetAlertStrategyResponseBodyDataStrategy extends TeaModel {
+        /**
+         * <p>Set of clusters that accept alerts</p>
+         */
         @NameInMap("clusters")
         public java.util.List<String> clusters;
 
         @NameInMap("destinations")
         public Object destinations;
 
+        /**
+         * <p>List of abnormal items that accept alerts</p>
+         * 
+         * <strong>example:</strong>
+         * <p>节点CPU使用率检测</p>
+         */
         @NameInMap("items")
         public Object items;
 
@@ -110,6 +134,8 @@ public class GetAlertStrategyResponseBody extends TeaModel {
 
     public static class GetAlertStrategyResponseBodyData extends TeaModel {
         /**
+         * <p>Creation Time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1751520976660</p>
          */
@@ -117,6 +143,8 @@ public class GetAlertStrategyResponseBody extends TeaModel {
         public Long createdAt;
 
         /**
+         * <p>Indicates whether the alert policy is enabled</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -124,26 +152,38 @@ public class GetAlertStrategyResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
+         * <p>Alert policy ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>k8s label</p>
+         */
         @NameInMap("k8sLabel")
         public Boolean k8sLabel;
 
         /**
+         * <p>Policy Name</p>
+         * 
          * <strong>example:</strong>
          * <p>strategy1</p>
          */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Details of the alert policy</p>
+         */
         @NameInMap("strategy")
         public GetAlertStrategyResponseBodyDataStrategy strategy;
 
         /**
+         * <p>User ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1222933234714935</p>
          */
@@ -151,6 +191,8 @@ public class GetAlertStrategyResponseBody extends TeaModel {
         public String uid;
 
         /**
+         * <p>Update Time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1751254826285</p>
          */

@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateAlertStrategyResponseBody extends TeaModel {
     /**
+     * <p>Status code  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, authorization succeeded.  </li>
+     * <li>Any other status code indicates authorization failed. When authorization fails, view the <code>message</code> field to obtain detailed error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +18,8 @@ public class CreateAlertStrategyResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *             &quot;uid&quot;: &quot;uid-1&quot;,
@@ -27,6 +35,16 @@ public class CreateAlertStrategyResponseBody extends TeaModel {
     @NameInMap("data")
     public Object data;
 
+    /**
+     * <p>Error message  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, this field is empty.  </li>
+     * <li>Otherwise, this field contains the request error message.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>创建策略失败</p>
+     */
     @NameInMap("message")
     public String message;
 

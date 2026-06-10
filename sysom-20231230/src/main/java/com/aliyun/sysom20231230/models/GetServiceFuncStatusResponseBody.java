@@ -5,15 +5,31 @@ import com.aliyun.tea.*;
 
 public class GetServiceFuncStatusResponseBody extends TeaModel {
     /**
+     * <p>Status code  </p>
+     * <ul>
+     * <li><code>code == Success</code> indicates that authorization succeeded.  </li>
+     * <li>Any other status code indicates that authorization failed. When authorization fails, view the <code>message</code> field to obtain detailed error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Return Result</p>
+     */
     @NameInMap("data")
     public GetServiceFuncStatusResponseBodyData data;
 
+    /**
+     * <p>error message  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, this field is empty;  </li>
+     * <li>Otherwise, this field contains the request error message.</li>
+     * </ul>
+     */
     @NameInMap("message")
     public String message;
 
@@ -65,6 +81,8 @@ public class GetServiceFuncStatusResponseBody extends TeaModel {
 
     public static class GetServiceFuncStatusResponseBodyDataArgs extends TeaModel {
         /**
+         * <p>Configuration process</p>
+         * 
          * <strong>example:</strong>
          * <p>java</p>
          */
@@ -72,6 +90,8 @@ public class GetServiceFuncStatusResponseBody extends TeaModel {
         public String addCmd;
 
         /**
+         * <p>ONCPU tracing Toggle</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -79,6 +99,8 @@ public class GetServiceFuncStatusResponseBody extends TeaModel {
         public String cpu;
 
         /**
+         * <p>Storage Path</p>
+         * 
          * <strong>example:</strong>
          * <p>/tmp/sysom/java-profiler</p>
          */
@@ -86,6 +108,8 @@ public class GetServiceFuncStatusResponseBody extends TeaModel {
         public String javaStorePath;
 
         /**
+         * <p>Edit Lock tracing Toggle</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -93,6 +117,8 @@ public class GetServiceFuncStatusResponseBody extends TeaModel {
         public String locks;
 
         /**
+         * <p>Tracing epoch</p>
+         * 
          * <strong>example:</strong>
          * <p>-1</p>
          */
@@ -100,6 +126,8 @@ public class GetServiceFuncStatusResponseBody extends TeaModel {
         public Integer loop;
 
         /**
+         * <p>Memory tracing Toggle</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -107,6 +135,8 @@ public class GetServiceFuncStatusResponseBody extends TeaModel {
         public String mem;
 
         /**
+         * <p>System profiling Toggle</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -177,6 +207,9 @@ public class GetServiceFuncStatusResponseBody extends TeaModel {
     }
 
     public static class GetServiceFuncStatusResponseBodyData extends TeaModel {
+        /**
+         * <p>Configuration Parameter</p>
+         */
         @NameInMap("args")
         public GetServiceFuncStatusResponseBodyDataArgs args;
 

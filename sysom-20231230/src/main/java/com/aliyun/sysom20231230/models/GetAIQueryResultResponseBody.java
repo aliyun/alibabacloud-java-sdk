@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAIQueryResultResponseBody extends TeaModel {
     /**
+     * <p>error code</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,12 +14,21 @@ public class GetAIQueryResultResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Return Result, with large Data Volume</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;task_id\&quot;: \&quot;y4ba8uRV\&quot;}</p>
      */
     @NameInMap("data")
     public String data;
 
+    /**
+     * <p>error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>分析ID: 56dae746-ef55-4f77-8373-cb3594c41457
+     * 机器i-bp164ns76pzirbwv0snt分析失败, 失败原因: Not get GPU trace data for \&quot;56dae746-ef55-4f77-8373-cb3594c41457\&quot; \&quot;[\&quot;93811\&quot;]\&quot;!</p>
+     */
     @NameInMap("message")
     public String message;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAllInstancesRequest extends TeaModel {
     /**
+     * <p>Current page</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListAllInstancesRequest extends TeaModel {
     public String current;
 
     /**
+     * <p>List of filter information.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -19,6 +23,8 @@ public class ListAllInstancesRequest extends TeaModel {
     public String filters;
 
     /**
+     * <p>Instance type.</p>
+     * 
      * <strong>example:</strong>
      * <p>ecs</p>
      */
@@ -26,6 +32,8 @@ public class ListAllInstancesRequest extends TeaModel {
     public String instanceType;
 
     /**
+     * <p>Managed type.</p>
+     * 
      * <strong>example:</strong>
      * <p>managed</p>
      */
@@ -33,6 +41,8 @@ public class ListAllInstancesRequest extends TeaModel {
     public String managedType;
 
     /**
+     * <p>Maximum number of records to retrieve in a single request.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -40,6 +50,11 @@ public class ListAllInstancesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Paging cursor.  </p>
+     * <blockquote>
+     * <p>If this parameter is not empty, it indicates that more data is available.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>U+w1wv2R4ZWR5oZLXD0+Dp4dD+2BRJj42DLT6GrZysw=</p>
      */
@@ -47,6 +62,8 @@ public class ListAllInstancesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Number of entries returned per page. Default value: pageSize=10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -54,6 +71,8 @@ public class ListAllInstancesRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>Plugin ID</p>
+     * 
      * <strong>example:</strong>
      * <p>01fc4a0b-f199-4885-9861-b4054a310fe7</p>
      */
@@ -61,6 +80,8 @@ public class ListAllInstancesRequest extends TeaModel {
     public String pluginId;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

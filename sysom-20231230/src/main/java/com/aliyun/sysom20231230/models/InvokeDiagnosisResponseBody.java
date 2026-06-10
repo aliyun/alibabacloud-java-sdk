@@ -5,22 +5,43 @@ import com.aliyun.tea.*;
 
 public class InvokeDiagnosisResponseBody extends TeaModel {
     /**
+     * <p>Status code  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, authorization succeeded.  </li>
+     * <li>Other status codes indicate authorization failure. When authorization fails, check the <code>message</code> field for detailed error information.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Return Result.</p>
+     */
     @NameInMap("data")
     public InvokeDiagnosisResponseBodyData data;
 
     /**
+     * <p>Error message  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, this field is empty.  </li>
+     * <li>Otherwise, this field contains the request error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SysomOpenAPIAssumeRoleException: EntityNotExist.Role The role not exists: acs:ram::xxxxx:role/aliyunserviceroleforsysom</p>
      */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>Request RequestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>43A910E9-A739-525E-855D-A32C257F1826</p>
+     */
     @NameInMap("request_id")
     public String requestId;
 
@@ -63,6 +84,8 @@ public class InvokeDiagnosisResponseBody extends TeaModel {
 
     public static class InvokeDiagnosisResponseBodyData extends TeaModel {
         /**
+         * <p>Diagnostic task ID. You can use this ID to invoke the <code>GetDiagnosisResult</code> API to query the diagnosis result.</p>
+         * 
          * <strong>example:</strong>
          * <p>ihqhAcrt</p>
          */

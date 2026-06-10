@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class ListInstancesEcsInfoListResponseBody extends TeaModel {
     /**
+     * <p>error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SysomOpenAPI.InvalidParameter</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Return Data.</p>
+     */
     @NameInMap("data")
     public java.util.List<ListInstancesEcsInfoListResponseBodyData> data;
 
     /**
+     * <p>error message  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, this field is empty;  </li>
+     * <li>Otherwise, this field contains the request error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -52,6 +63,8 @@ public class ListInstancesEcsInfoListResponseBody extends TeaModel {
 
     public static class ListInstancesEcsInfoListResponseBodyData extends TeaModel {
         /**
+         * <p>IP address of the machine.</p>
+         * 
          * <strong>example:</strong>
          * <p>11.193.52.91</p>
          */
@@ -59,6 +72,8 @@ public class ListInstancesEcsInfoListResponseBody extends TeaModel {
         public String ip;
 
         /**
+         * <p>Name of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>sysom</p>
          */
@@ -66,6 +81,8 @@ public class ListInstancesEcsInfoListResponseBody extends TeaModel {
         public String tagKey;
 
         /**
+         * <p>tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>diagnosis</p>
          */
@@ -73,6 +90,8 @@ public class ListInstancesEcsInfoListResponseBody extends TeaModel {
         public String tagValue;
 
         /**
+         * <p>IP type</p>
+         * 
          * <strong>example:</strong>
          * <p>public</p>
          */

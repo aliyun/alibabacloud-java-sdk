@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class InvokeAnomalyDiagnosisResponseBody extends TeaModel {
     /**
+     * <p>Status code  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, authorization succeeded.  </li>
+     * <li>Any other status code indicates a failed authorization. When authorization fails, view the <code>message</code> field to obtain the detailed error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +18,12 @@ public class InvokeAnomalyDiagnosisResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Error message  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, this field is empty.  </li>
+     * <li>Otherwise, this field contains the request error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */

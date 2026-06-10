@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetServiceFuncStatusShrinkRequest extends TeaModel {
     /**
+     * <p>channel name</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,14 @@ public class GetServiceFuncStatusShrinkRequest extends TeaModel {
     public String channel;
 
     /**
+     * <p>Diagnosis parameters. Different types of diagnosis require different diagnosis parameters. You can use this field to filter records whose parameter values match the specified values.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("params")
     public String paramsShrink;
 
     /**
+     * <p>Service Name</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

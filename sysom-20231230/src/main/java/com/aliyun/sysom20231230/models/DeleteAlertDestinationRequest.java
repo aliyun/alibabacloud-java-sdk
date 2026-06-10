@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteAlertDestinationRequest extends TeaModel {
     /**
+     * <p>Alert contact ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

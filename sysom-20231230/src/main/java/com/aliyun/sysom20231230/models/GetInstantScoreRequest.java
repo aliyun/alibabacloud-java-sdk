@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetInstantScoreRequest extends TeaModel {
     /**
+     * <p>Cluster ID</p>
+     * 
      * <strong>example:</strong>
-     * <p>1808078950770264</p>
+     * <p>2ijff4be-bf24-4070-89ca-c47c879b0g32</p>
      */
     @NameInMap("cluster")
     public String cluster;
 
     /**
+     * <p>Instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>i-wz9d00ut2ska3mlyhn6j</p>
      */

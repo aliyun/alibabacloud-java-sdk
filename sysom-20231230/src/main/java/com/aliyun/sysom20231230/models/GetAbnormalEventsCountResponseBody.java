@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetAbnormalEventsCountResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("data")
     public java.util.List<GetAbnormalEventsCountResponseBodyData> data;
 
     /**
+     * <p>When success is false, this value is Not Empty and indicates the error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>result: code=1 msg=(Request failed, status_code != 200)</p>
      */
@@ -51,10 +58,15 @@ public class GetAbnormalEventsCountResponseBody extends TeaModel {
     }
 
     public static class GetAbnormalEventsCountResponseBodyData extends TeaModel {
+        /**
+         * <p>Event List</p>
+         */
         @NameInMap("eventList")
         public java.util.List<String> eventList;
 
         /**
+         * <p>Type of anomaly</p>
+         * 
          * <strong>example:</strong>
          * <p>health</p>
          */
@@ -62,6 +74,8 @@ public class GetAbnormalEventsCountResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>Quantity of the anomaly type</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

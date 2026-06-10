@@ -4,6 +4,12 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class GetAgentRequest extends TeaModel {
+    /**
+     * <p>Widget ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>74a86327-3170-412c-8e67-da3389ec56a9</p>
+     */
     @NameInMap("agent_id")
     public String agentId;
 

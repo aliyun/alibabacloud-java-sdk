@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAIQueryResultRequest extends TeaModel {
     /**
+     * <p>AI analysis ID</p>
+     * 
      * <strong>example:</strong>
      * <p>16896fa8-37f6-4c70-bb32-67fa9817d426</p>
      */

@@ -4,20 +4,41 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class GetAgentResponseBody extends TeaModel {
+    /**
+     * <p>Request ID, which can be used for end-to-end Diagnosis</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-09-14T20:46:08</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Status code  </p>
+     * <ul>
+     * <li><code>code == Success</code> indicates that authorization succeeded.  </li>
+     * <li>Other status codes indicate that authorization failed. When authorization fails, view the <code>message</code> field to obtain detailed error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("data")
     public GetAgentResponseBodyData data;
 
     /**
+     * <p>Error message  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, this field is empty;  </li>
+     * <li>Otherwise, this field contains the Request error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SysomOpenAPIException: SysomOpenAPI.InvalidParameter Invalid params, should be json string or dict</p>
      */
@@ -62,21 +83,57 @@ public class GetAgentResponseBody extends TeaModel {
     }
 
     public static class GetAgentResponseBodyDataVersions extends TeaModel {
+        /**
+         * <p>Creation Time of the Agent version</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-09-14T20:46:08</p>
+         */
         @NameInMap("created_at")
         public String createdAt;
 
+        /**
+         * <p>Installation script for this version of the Agent</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sysom.sh install</p>
+         */
         @NameInMap("install_script")
         public String installScript;
 
+        /**
+         * <p>Uninstall script for this Agent version</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sysom.sh uninstall</p>
+         */
         @NameInMap("uninstall_script")
         public String uninstallScript;
 
+        /**
+         * <p>Update Time of the Agent version</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-09-14T20:46:08</p>
+         */
         @NameInMap("updated_at")
         public String updatedAt;
 
+        /**
+         * <p>Upgrade script for this Agent version</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sysom.sh upgrade</p>
+         */
         @NameInMap("upgrade_script")
         public String upgradeScript;
 
+        /**
+         * <p>Version number of the Agent</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.4.0-1</p>
+         */
         @NameInMap("version")
         public String version;
 
@@ -136,27 +193,72 @@ public class GetAgentResponseBody extends TeaModel {
     }
 
     public static class GetAgentResponseBodyData extends TeaModel {
+        /**
+         * <p>Creation Time of the widget</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-09-14T20:46:08</p>
+         */
         @NameInMap("created_at")
         public String createdAt;
 
+        /**
+         * <p>Description of the widget</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SysOM Agent</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Widget ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>74a86327-3170-412c-8e67-da3389ec56a9</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <p>Name of the widget</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SysOM</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Supported architecture</p>
+         * 
+         * <strong>example:</strong>
+         * <p>x86</p>
+         */
         @NameInMap("support_arch")
         public String supportArch;
 
+        /**
+         * <p>Type of the Agent</p>
+         * 
+         * <strong>example:</strong>
+         * <p>control</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>Update Time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-09-14T20:46:08</p>
+         */
         @NameInMap("updated_at")
         public String updatedAt;
 
+        /**
+         * <p>Widget version information</p>
+         */
         @NameInMap("versions")
         public java.util.List<GetAgentResponseBodyDataVersions> versions;
 

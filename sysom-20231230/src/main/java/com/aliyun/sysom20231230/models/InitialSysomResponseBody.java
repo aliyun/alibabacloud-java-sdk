@@ -4,15 +4,44 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class InitialSysomResponseBody extends TeaModel {
+    /**
+     * <p>Request ID, which can be used for end-to-end diagnosis</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3FCA2E38-2A8E-5501-93BD-5CE1BA58F2EF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Status code  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, authorization succeeded.  </li>
+     * <li>Any other status code indicates a failed authorization. In such cases, view the <code>message</code> field for detailed error information.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Return Result.</p>
+     */
     @NameInMap("data")
     public InitialSysomResponseBodyData data;
 
+    /**
+     * <p>Error message  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, this field is empty.  </li>
+     * <li>Otherwise, this field contains the error message.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SysomOpenAPIException: SysomOpenAPI.InvalidParameter Invalid params, should be json string or dict</p>
+     */
     @NameInMap("message")
     public String message;
 
@@ -54,6 +83,12 @@ public class InitialSysomResponseBody extends TeaModel {
     }
 
     public static class InitialSysomResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the service role exists</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("role_exist")
         public Boolean roleExist;
 

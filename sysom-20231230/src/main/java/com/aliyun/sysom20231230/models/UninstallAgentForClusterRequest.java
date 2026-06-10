@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UninstallAgentForClusterRequest extends TeaModel {
     /**
+     * <p>Widget ID</p>
+     * 
      * <strong>example:</strong>
      * <p>74a86327-3170-412c-8e67-da3389ec56a9</p>
      */
@@ -12,6 +14,8 @@ public class UninstallAgentForClusterRequest extends TeaModel {
     public String agentId;
 
     /**
+     * <p>Widget version</p>
+     * 
      * <strong>example:</strong>
      * <p>3.4.0-1</p>
      */
@@ -19,6 +23,11 @@ public class UninstallAgentForClusterRequest extends TeaModel {
     public String agentVersion;
 
     /**
+     * <p>Cluster ID.  </p>
+     * <blockquote>
+     * <p>This cluster ID must be the ID of an ACK cluster.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>c822f83bb45994ddbac9326b4c2f04f35</p>
      */

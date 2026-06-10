@@ -4,12 +4,21 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class AuthDiagnosisRequest extends TeaModel {
+    /**
+     * <p>Automatic creation of role</p>
+     */
     @NameInMap("autoCreateRole")
     public Boolean autoCreateRole;
 
+    /**
+     * <p>Automatic installation of agent</p>
+     */
     @NameInMap("autoInstallAgent")
     public Boolean autoInstallAgent;
 
+    /**
+     * <p>List of instances to authorize for diagnosis</p>
+     */
     @NameInMap("instances")
     public java.util.List<AuthDiagnosisRequestInstances> instances;
 
@@ -43,9 +52,21 @@ public class AuthDiagnosisRequest extends TeaModel {
     }
 
     public static class AuthDiagnosisRequestInstances extends TeaModel {
+        /**
+         * <p>Instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-wz9b9vucz1iubsz8sjqo</p>
+         */
         @NameInMap("instance")
         public String instance;
 
+        /**
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("region")
         public String region;
 

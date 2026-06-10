@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListAbnormalyEventsRequest extends TeaModel {
     /**
+     * <p>Cluster ID</p>
+     * 
      * <strong>example:</strong>
-     * <p>1808078950770264</p>
+     * <p>2d33d4be-bf54-4070-82ca-c1dc2d8b1562</p>
      */
     @NameInMap("cluster")
     public String cluster;
 
     /**
+     * <p>This field is present when paging is used and indicates the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,16 +23,26 @@ public class ListAbnormalyEventsRequest extends TeaModel {
     public Integer current;
 
     /**
+     * <p>End time</p>
+     * 
      * <strong>example:</strong>
      * <p>1725801327754</p>
      */
     @NameInMap("end")
     public Float end;
 
+    /**
+     * <p>Anomalous activity name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>节点根文件系统使用检测</p>
+     */
     @NameInMap("event")
     public String event;
 
     /**
+     * <p>Instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>i-wz9d00ut2ska3mlyhn6j</p>
      */
@@ -36,6 +50,8 @@ public class ListAbnormalyEventsRequest extends TeaModel {
     public String instance;
 
     /**
+     * <p>Level of the anomalous activity</p>
+     * 
      * <strong>example:</strong>
      * <p>potential</p>
      */
@@ -43,6 +59,8 @@ public class ListAbnormalyEventsRequest extends TeaModel {
     public String level;
 
     /**
+     * <p>Namespace where the pod is located</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -50,6 +68,8 @@ public class ListAbnormalyEventsRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>Page size. The default value is 5. Valid values are in the range [1,100].</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -57,6 +77,8 @@ public class ListAbnormalyEventsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Pod name</p>
+     * 
      * <strong>example:</strong>
      * <p>test-pod</p>
      */
@@ -64,6 +86,8 @@ public class ListAbnormalyEventsRequest extends TeaModel {
     public String pod;
 
     /**
+     * <p>Whether to display anomalous activities of the pod</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -71,6 +95,8 @@ public class ListAbnormalyEventsRequest extends TeaModel {
     public Integer showPod;
 
     /**
+     * <p>Start time</p>
+     * 
      * <strong>example:</strong>
      * <p>1725797727754</p>
      */

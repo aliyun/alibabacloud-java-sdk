@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListInstanceStatusRequest extends TeaModel {
     /**
+     * <p>This field exists when paging is used and indicates the current page (starting from 1).</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListInstanceStatusRequest extends TeaModel {
     public Long current;
 
     /**
+     * <p>Instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>i-wz9b9vucz1iubsz355rh</p>
      */
@@ -19,6 +23,8 @@ public class ListInstanceStatusRequest extends TeaModel {
     public String instance;
 
     /**
+     * <p>Number of entries returned per page. Default value: pageSize=10</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class ListInstanceStatusRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shenzhen</p>
      */
@@ -33,6 +41,8 @@ public class ListInstanceStatusRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>Filter the instance list by status. If this field is specified, only instances with the corresponding status are returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */

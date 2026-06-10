@@ -4,24 +4,66 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class ListAgentInstallRecordsRequest extends TeaModel {
+    /**
+     * <p>Current page number (starting from 1)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("current")
     public Long current;
 
+    /**
+     * <p>If this field is specified, the response filters the Agent installation status for the specified instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp118piqcio9tiwgh84b</p>
+     */
     @NameInMap("instance_id")
     public String instanceId;
 
+    /**
+     * <p>Page size</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("pageSize")
     public Long pageSize;
 
+    /**
+     * <p>If this parameter is specified, the response filters the installation list for the specified Agent. It can be used together with the plugin_version parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>74a86327-3170-412c-8e67-da3389ec56a9</p>
+     */
     @NameInMap("plugin_id")
     public String pluginId;
 
+    /**
+     * <p>This parameter cannot be used alone. It must be used together with plugin_id to filter the installation list for a specified version of the specified Agent.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3.4.0-1</p>
+     */
     @NameInMap("plugin_version")
     public String pluginVersion;
 
+    /**
+     * <p>Region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("region")
     public String region;
 
+    /**
+     * <p>Filter widget installation records by status</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Installed</p>
+     */
     @NameInMap("status")
     public String status;
 

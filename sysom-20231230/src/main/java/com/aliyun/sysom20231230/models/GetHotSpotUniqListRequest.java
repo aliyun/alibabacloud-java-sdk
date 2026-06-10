@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetHotSpotUniqListRequest extends TeaModel {
     /**
+     * <p>End time</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetHotSpotUniqListRequest extends TeaModel {
     public Long begEnd;
 
     /**
+     * <p>Start time</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GetHotSpotUniqListRequest extends TeaModel {
     public Long begStart;
 
     /**
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,8 @@ public class GetHotSpotUniqListRequest extends TeaModel {
     public String instance;
 
     /**
+     * <p>Process ID</p>
+     * 
      * <strong>example:</strong>
      * <p>12345</p>
      */
@@ -39,6 +44,8 @@ public class GetHotSpotUniqListRequest extends TeaModel {
     public Long pid;
 
     /**
+     * <p>Table name</p>
+     * 
      * <strong>example:</strong>
      * <p>prof_on</p>
      */
@@ -46,7 +53,11 @@ public class GetHotSpotUniqListRequest extends TeaModel {
     public String table;
 
     /**
+     * <p>Identity flag</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>默认需要为&quot;flag&quot;，待查询的字段</p>
      */
     @NameInMap("uniq")
     public String uniq;

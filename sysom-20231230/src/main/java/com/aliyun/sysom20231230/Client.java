@@ -27,8 +27,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: The diagnosis feature requires a service-linked role to be created under a Resource Access Management (RAM) user. When you call this API, it automatically checks whether the service-linked role exists. If the role does not exist, the API automatically creates it. This requires the RAM user invoking this API to have the ram:CreateServiceLinkedRole permission.</notice>
+     * When calling this API to authorize SysOM to diagnose ECS instances, note the following:</p>
+     * </blockquote>
+     * <ul>
+     * <li>Each authorization is valid for 7 days. After 7 days, the authorization expires, and you must call this API again to re-authorize.</li>
+     * <li>If the SysOM service-linked role (AliyunServiceRoleForSysom) does not exist when you call this API, it will be automatically created. This requires the RAM user invoking this API to have the <code>ram:CreateServiceLinkedRole</code> permission.</li>
+     * <li>When you authorize a specific instance through this API, the system automatically adds the label <code>sysom:diagnosis</code> to the target ECS instance. SysOM can only diagnose instances that have this label.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>授权 SysOM 对某个机器进行诊断</p>
+     * <p>This API is used to authorize SysOM to diagnose ECS instances under your account. You can only invoke the InvokeDiagnosis API to initiate diagnosis on a specific ECS instance after authorizing it through this API.</p>
      * 
      * @param request AuthDiagnosisRequest
      * @param headers map
@@ -69,8 +80,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: The diagnosis feature requires a service-linked role to be created under a Resource Access Management (RAM) user. When you call this API, it automatically checks whether the service-linked role exists. If the role does not exist, the API automatically creates it. This requires the RAM user invoking this API to have the ram:CreateServiceLinkedRole permission.</notice>
+     * When calling this API to authorize SysOM to diagnose ECS instances, note the following:</p>
+     * </blockquote>
+     * <ul>
+     * <li>Each authorization is valid for 7 days. After 7 days, the authorization expires, and you must call this API again to re-authorize.</li>
+     * <li>If the SysOM service-linked role (AliyunServiceRoleForSysom) does not exist when you call this API, it will be automatically created. This requires the RAM user invoking this API to have the <code>ram:CreateServiceLinkedRole</code> permission.</li>
+     * <li>When you authorize a specific instance through this API, the system automatically adds the label <code>sysom:diagnosis</code> to the target ECS instance. SysOM can only diagnose instances that have this label.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>授权 SysOM 对某个机器进行诊断</p>
+     * <p>This API is used to authorize SysOM to diagnose ECS instances under your account. You can only invoke the InvokeDiagnosis API to initiate diagnosis on a specific ECS instance after authorizing it through this API.</p>
      * 
      * @param request AuthDiagnosisRequest
      * @return AuthDiagnosisResponse
@@ -82,8 +104,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The instance list returned by this API includes only machines that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it will not appear in the list.</p>
+     * 
      * <b>summary</b> : 
-     * <p>检查目标实例是否被 SysOM 支持</p>
+     * <p>Check whether the target instance is supported by SysOM</p>
      * 
      * @param request CheckInstanceSupportRequest
      * @param headers map
@@ -120,8 +145,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The instance list returned by this API includes only machines that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it will not appear in the list.</p>
+     * 
      * <b>summary</b> : 
-     * <p>检查目标实例是否被 SysOM 支持</p>
+     * <p>Check whether the target instance is supported by SysOM</p>
      * 
      * @param request CheckInstanceSupportRequest
      * @return CheckInstanceSupportResponse
@@ -134,7 +162,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>cpu高agent流式接口</p>
+     * <p>High-CPU agent streaming API</p>
      * 
      * @param request CpuHighAgentStreamResponseRequest
      * @param headers map
@@ -168,7 +196,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>cpu高agent流式接口</p>
+     * <p>High-CPU agent streaming API</p>
      * 
      * @param request CpuHighAgentStreamResponseRequest
      * @return CpuHighAgentStreamResponseResponse
@@ -181,7 +209,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一个告警联系人</p>
+     * <p>This API is used to create an alert contact for push notifications.</p>
      * 
      * @param request CreateAlertDestinationRequest
      * @param headers map
@@ -227,7 +255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一个告警联系人</p>
+     * <p>This API is used to create an alert contact for push notifications.</p>
      * 
      * @param request CreateAlertDestinationRequest
      * @return CreateAlertDestinationResponse
@@ -240,7 +268,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增推送告警的策略</p>
+     * <p>Create an alert policy for push notifications</p>
      * 
      * @param request CreateAlertStrategyRequest
      * @param headers map
@@ -286,7 +314,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增推送告警的策略</p>
+     * <p>Create an alert policy for push notifications</p>
      * 
      * @param request CreateAlertStrategyRequest
      * @return CreateAlertStrategyResponse
@@ -298,6 +326,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>需配合aliyun-tea-openapi-inner包的call_sseapi接口使用</li>
+     * <li>需要按通用LLM服务输入参数填充参数，转为string后赋给llmParamString</li>
+     * <li>返回数据需将string转为dict后使用，参考通用LLM服务返回格式</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>创建集群Vpc端点连接</p>
      * 
@@ -340,6 +375,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>需配合aliyun-tea-openapi-inner包的call_sseapi接口使用</li>
+     * <li>需要按通用LLM服务输入参数填充参数，转为string后赋给llmParamString</li>
+     * <li>返回数据需将string转为dict后使用，参考通用LLM服务返回格式</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>创建集群Vpc端点连接</p>
      * 
@@ -370,6 +412,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.items)) {
             body.put("items", request.items);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metricSource)) {
+            body.put("metricSource", request.metricSource);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.region)) {
@@ -413,7 +459,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建宕机诊断任务</p>
+     * <p>This API creates an intelligent breakdown diagnosis task to diagnose the vmcore or dmesg log file provided in the parameters.</p>
      * 
      * @param request CreateVmcoreDiagnosisTaskRequest
      * @param headers map
@@ -463,7 +509,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建宕机诊断任务</p>
+     * <p>This API creates an intelligent breakdown diagnosis task to diagnose the vmcore or dmesg log file provided in the parameters.</p>
      * 
      * @param request CreateVmcoreDiagnosisTaskRequest
      * @return CreateVmcoreDiagnosisTaskResponse
@@ -476,7 +522,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除告警联系人</p>
+     * <p>This API is used to delete an alert contact.</p>
      * 
      * @param request DeleteAlertDestinationRequest
      * @param headers map
@@ -510,7 +556,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除告警联系人</p>
+     * <p>This API is used to delete an alert contact.</p>
      * 
      * @param request DeleteAlertDestinationRequest
      * @return DeleteAlertDestinationResponse
@@ -523,7 +569,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用户删除推送告警的策略</p>
+     * <p>User deletes the alert policy for push notifications.</p>
      * 
      * @param request DeleteAlertStrategyRequest
      * @param headers map
@@ -557,7 +603,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用户删除推送告警的策略</p>
+     * <p>User deletes the alert policy for push notifications.</p>
      * 
      * @param request DeleteAlertStrategyRequest
      * @return DeleteAlertStrategyResponse
@@ -569,8 +615,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The instance list obtained by this API includes only the machines that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it will not appear in the list.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询指标</p>
+     * <p>Query metrics</p>
      * 
      * @param request DescribeMetricListRequest
      * @param headers map
@@ -615,8 +664,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The instance list obtained by this API includes only the machines that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it will not appear in the list.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询指标</p>
+     * <p>Query metrics</p>
      * 
      * @param request DescribeMetricListRequest
      * @return DescribeMetricListResponse
@@ -628,8 +680,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>You must fill in the input parameters according to the standard LLM service input parameters, convert them into a string, and assign the result to llmParamString.  </li>
+     * <li>The returned data must be converted from a string to a dict before use. Refer to the standard LLM service return format.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取copilot服务的返回结果</p>
+     * <p>Obtain the Return Result of the copilot service</p>
      * 
      * @param request GenerateCopilotResponseRequest
      * @param headers map
@@ -662,8 +720,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>You must fill in the input parameters according to the standard LLM service input parameters, convert them into a string, and assign the result to llmParamString.  </li>
+     * <li>The returned data must be converted from a string to a dict before use. Refer to the standard LLM service return format.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取copilot服务的返回结果</p>
+     * <p>Obtain the Return Result of the copilot service</p>
      * 
      * @param request GenerateCopilotResponseRequest
      * @return GenerateCopilotResponseResponse
@@ -675,8 +739,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Must be used together with the call_sseapi API of the aliyun-tea-openapi-inner package.  </li>
+     * <li>You must populate the input parameters according to the standard LLM service input parameters, convert them into a string, and assign the result to llmParamString.  </li>
+     * <li>The returned data is a string that you must convert into a dictionary for use, following the standard LLM service response format.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>流式copilot服务接口</p>
+     * <p>Stream Copilot service API</p>
      * 
      * @param request GenerateCopilotStreamResponseRequest
      * @param headers map
@@ -709,8 +780,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Must be used together with the call_sseapi API of the aliyun-tea-openapi-inner package.  </li>
+     * <li>You must populate the input parameters according to the standard LLM service input parameters, convert them into a string, and assign the result to llmParamString.  </li>
+     * <li>The returned data is a string that you must convert into a dictionary for use, following the standard LLM service response format.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>流式copilot服务接口</p>
+     * <p>Stream Copilot service API</p>
      * 
      * @param request GenerateCopilotStreamResponseRequest
      * @return GenerateCopilotStreamResponseResponse
@@ -723,7 +801,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看AI Infra分析结果</p>
+     * <p>View AI Infra Analysis Result</p>
      * 
      * @param request GetAIQueryResultRequest
      * @param headers map
@@ -757,7 +835,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看AI Infra分析结果</p>
+     * <p>View AI Infra Analysis Result</p>
      * 
      * @param request GetAIQueryResultRequest
      * @return GetAIQueryResultResponse
@@ -770,7 +848,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取节点/Pod不同等级异常事件的数量</p>
+     * <p>Obtain the quantity of unprocessed (undiagnosed) anomalous activity at different Levels for edge zones/pods.</p>
      * 
      * @param request GetAbnormalEventsCountRequest
      * @param headers map
@@ -832,7 +910,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取节点/Pod不同等级异常事件的数量</p>
+     * <p>Obtain the quantity of unprocessed (undiagnosed) anomalous activity at different Levels for edge zones/pods.</p>
      * 
      * @param request GetAbnormalEventsCountRequest
      * @return GetAbnormalEventsCountResponse
@@ -845,7 +923,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取某个组件的详情</p>
+     * <p>Retrieve the details of a widget</p>
      * 
      * @param request GetAgentRequest
      * @param headers map
@@ -879,7 +957,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取某个组件的详情</p>
+     * <p>Retrieve the details of a widget</p>
      * 
      * @param request GetAgentRequest
      * @return GetAgentResponse
@@ -892,7 +970,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Agent安装任务执行状态</p>
+     * <p>Obtain the task execution status of Agent installation</p>
      * 
      * @param request GetAgentTaskRequest
      * @param headers map
@@ -926,7 +1004,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Agent安装任务执行状态</p>
+     * <p>Obtain the task execution status of Agent installation</p>
      * 
      * @param request GetAgentTaskRequest
      * @return GetAgentTaskResponse
@@ -939,7 +1017,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取告警联系人详情</p>
+     * <p>This API is used to obtain the specified alert contact information.</p>
      * 
      * @param request GetAlertDestinationRequest
      * @param headers map
@@ -973,7 +1051,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取告警联系人详情</p>
+     * <p>This API is used to obtain the specified alert contact information.</p>
      * 
      * @param request GetAlertDestinationRequest
      * @return GetAlertDestinationResponse
@@ -986,7 +1064,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据策略id，获取用户的一条告警</p>
+     * <p>Obtain an alert for a user by policy ID.</p>
      * 
      * @param request GetAlertStrategyRequest
      * @param headers map
@@ -1020,7 +1098,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据策略id，获取用户的一条告警</p>
+     * <p>Obtain an alert for a user by policy ID.</p>
      * 
      * @param request GetAlertStrategyRequest
      * @return GetAlertStrategyResponse
@@ -1033,7 +1111,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取copilot历史聊天记录</p>
+     * <p>Retrieve copilot chat history</p>
      * 
      * @param request GetCopilotHistoryRequest
      * @param headers map
@@ -1067,7 +1145,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取copilot历史聊天记录</p>
+     * <p>Retrieve copilot chat history</p>
      * 
      * @param request GetCopilotHistoryRequest
      * @return GetCopilotHistoryResponse
@@ -1079,8 +1157,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The diagnosis flow is asynchronous. Therefore, when you invoke this API, the diagnosis may still be executing and not yet ended. You can check the <code>data.status</code> field in the returned data to determine the status. When <code>data.status == &quot;Success&quot;</code>, it indicates that the diagnosis succeeded, and you can read the diagnosis result from <code>data.result</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取诊断结果</p>
+     * <p>Obtain the diagnosis result.</p>
      * 
      * @param request GetDiagnosisResultRequest
      * @param headers map
@@ -1113,8 +1194,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The diagnosis flow is asynchronous. Therefore, when you invoke this API, the diagnosis may still be executing and not yet ended. You can check the <code>data.status</code> field in the returned data to determine the status. When <code>data.status == &quot;Success&quot;</code>, it indicates that the diagnosis succeeded, and you can read the diagnosis result from <code>data.result</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取诊断结果</p>
+     * <p>Obtain the diagnosis result.</p>
      * 
      * @param request GetDiagnosisResultRequest
      * @return GetDiagnosisResultResponse
@@ -1127,7 +1211,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一段时间的节点/pod健康度比例</p>
+     * <p>Obtain the proportion of edge zone/pod health statuses over a period of time</p>
      * 
      * @param request GetHealthPercentageRequest
      * @param headers map
@@ -1173,7 +1257,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一段时间的节点/pod健康度比例</p>
+     * <p>Obtain the proportion of edge zone/pod health statuses over a period of time</p>
      * 
      * @param request GetHealthPercentageRequest
      * @return GetHealthPercentageResponse
@@ -1186,7 +1270,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取集群节点数量</p>
+     * <p>Obtain the number of edge zones in a cluster or the number of pods in an edge zone</p>
      * 
      * @param request GetHostCountRequest
      * @param headers map
@@ -1232,7 +1316,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取集群节点数量</p>
+     * <p>Obtain the number of edge zones in a cluster or the number of pods in an edge zone</p>
      * 
      * @param request GetHostCountRequest
      * @return GetHostCountResponse
@@ -1245,7 +1329,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例下的某个字段列表</p>
+     * <p>Obtain the list of a specific field under an instance.</p>
      * 
      * @param request GetHotSpotUniqListRequest
      * @param headers map
@@ -1299,7 +1383,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例下的某个字段列表</p>
+     * <p>Obtain the list of a specific field under an instance.</p>
      * 
      * @param request GetHotSpotUniqListRequest
      * @return GetHotSpotUniqListResponse
@@ -1312,7 +1396,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取热定分析结果</p>
+     * <p>Obtain hot spot analysis results</p>
      * 
      * @param request GetHotspotAnalysisRequest
      * @param headers map
@@ -1366,7 +1450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取热定分析结果</p>
+     * <p>Obtain hot spot analysis results</p>
      * 
      * @param request GetHotspotAnalysisRequest
      * @return GetHotspotAnalysisResponse
@@ -1379,7 +1463,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>热点对比</p>
+     * <p>Obtain hot spot comparison tracing results</p>
      * 
      * @param request GetHotspotCompareRequest
      * @param headers map
@@ -1449,7 +1533,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>热点对比</p>
+     * <p>Obtain hot spot comparison tracing results</p>
      * 
      * @param request GetHotspotCompareRequest
      * @return GetHotspotCompareResponse
@@ -1462,7 +1546,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取热点实例列表</p>
+     * <p>Obtain the hot spot instance list</p>
      * 
      * @param request GetHotspotInstanceListRequest
      * @param headers map
@@ -1504,7 +1588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取热点实例列表</p>
+     * <p>Obtain the hot spot instance list</p>
      * 
      * @param request GetHotspotInstanceListRequest
      * @return GetHotspotInstanceListResponse
@@ -1517,7 +1601,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取某个实例的pid列表</p>
+     * <p>Obtain the PID list of a specific instance</p>
      * 
      * @param request GetHotspotPidListRequest
      * @param headers map
@@ -1563,7 +1647,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取某个实例的pid列表</p>
+     * <p>Obtain the PID list of a specific instance</p>
      * 
      * @param request GetHotspotPidListRequest
      * @return GetHotspotPidListResponse
@@ -1576,7 +1660,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发起热点追踪</p>
+     * <p>Obtain hot spot tracing results</p>
      * 
      * @param request GetHotspotTrackingRequest
      * @param headers map
@@ -1630,7 +1714,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发起热点追踪</p>
+     * <p>Obtain hot spot tracing results</p>
      * 
      * @param request GetHotspotTrackingRequest
      * @return GetHotspotTrackingResponse
@@ -1690,7 +1774,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实时集群/节点健康度分数</p>
+     * <p>Obtain real-time cluster/edge zone health degree score</p>
      * 
      * @param request GetInstantScoreRequest
      * @param headers map
@@ -1728,7 +1812,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实时集群/节点健康度分数</p>
+     * <p>Obtain real-time cluster/edge zone health degree score</p>
      * 
      * @param request GetInstantScoreRequest
      * @return GetInstantScoreResponse
@@ -1741,7 +1825,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>AI Infra获取分析记录列表</p>
+     * <p>AI Infra retrieves the list of analysis records</p>
      * 
      * @param request GetListRecordRequest
      * @param headers map
@@ -1783,7 +1867,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>AI Infra获取分析记录列表</p>
+     * <p>AI Infra retrieves the list of analysis records</p>
      * 
      * @param request GetListRecordRequest
      * @return GetListRecordResponse
@@ -1796,7 +1880,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一定时间内集群中节点/节点中pod异常问题占比</p>
+     * <p>Obtain the proportion of abnormal issues in pods within edge zones or in an edge zone within a cluster over a specified period of time.</p>
      * 
      * @param request GetProblemPercentageRequest
      * @param headers map
@@ -1842,7 +1926,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一定时间内集群中节点/节点中pod异常问题占比</p>
+     * <p>Obtain the proportion of abnormal issues in pods within edge zones or in an edge zone within a cluster over a specified period of time.</p>
      * 
      * @param request GetProblemPercentageRequest
      * @return GetProblemPercentageResponse
@@ -1855,7 +1939,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取健康分趋势</p>
+     * <p>Retrieve the health score trend</p>
      * 
      * @param request GetRangeScoreRequest
      * @param headers map
@@ -1901,7 +1985,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取健康分趋势</p>
+     * <p>Retrieve the health score trend</p>
      * 
      * @param request GetRangeScoreRequest
      * @return GetRangeScoreResponse
@@ -1914,7 +1998,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取集群/节点资源实时使用情况</p>
+     * <p>Obtain real-time resource usage of clusters or edge zones</p>
      * 
      * @param request GetResourcesRequest
      * @param headers map
@@ -1956,7 +2040,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取集群/节点资源实时使用情况</p>
+     * <p>Obtain real-time resource usage of clusters or edge zones</p>
      * 
      * @param request GetResourcesRequest
      * @return GetResourcesResponse
@@ -1968,8 +2052,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API is used to retrieve the service configuration status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取功能模块配置</p>
+     * <p>Obtain Function Modules Configuration</p>
      * 
      * @param tmpReq GetServiceFuncStatusRequest
      * @param headers map
@@ -2016,8 +2103,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API is used to retrieve the service configuration status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取功能模块配置</p>
+     * <p>Obtain Function Modules Configuration</p>
      * 
      * @param request GetServiceFuncStatusRequest
      * @return GetServiceFuncStatusResponse
@@ -2030,7 +2120,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询宕机诊断任务结果</p>
+     * <p>This API queries the task execution status and diagnosis result based on the job ID.</p>
      * 
      * @param request GetVmcoreDiagnosisTaskRequest
      * @param headers map
@@ -2064,7 +2154,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询宕机诊断任务结果</p>
+     * <p>This API queries the task execution status and diagnosis result based on the job ID.</p>
      * 
      * @param request GetVmcoreDiagnosisTaskRequest
      * @return GetVmcoreDiagnosisTaskResponse
@@ -2076,8 +2166,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Some SysOM APIs require role assumption based on the <code>AliyunServiceRoleForSysom</code> service role. Therefore, before using SysOM features, you must invoke this API to perform initialization and ensure that the service role has been created.  </p>
+     * <ul>
+     * <li><code>check_only</code>: If this parameter is set to True, the API only checks whether the service role exists and does not create it. If this parameter is set to False or omitted, the API automatically creates the service role if it does not exist.<blockquote>
+     * <p>Note: When you invoke this API to initialize the role, you are deemed to have accepted the User Agreement of the operating system console by default. For more information, see <a href="https://help.aliyun.com/zh/alinux/product-overview/os-console-overview?spm=a2c4g.11186623.help-menu-2632541.d_0_7.35a829ffLjQtgg">Overview of the Operating System Console</a> and <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202001091714_51956.html">Alibaba Cloud Service Trial Terms</a>.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>初始化SysOM，确保角色存在</p>
+     * <p>Initialize SysOM and ensure that the service role exists.</p>
      * 
      * @param request InitialSysomRequest
      * @param headers map
@@ -2114,8 +2213,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Some SysOM APIs require role assumption based on the <code>AliyunServiceRoleForSysom</code> service role. Therefore, before using SysOM features, you must invoke this API to perform initialization and ensure that the service role has been created.  </p>
+     * <ul>
+     * <li><code>check_only</code>: If this parameter is set to True, the API only checks whether the service role exists and does not create it. If this parameter is set to False or omitted, the API automatically creates the service role if it does not exist.<blockquote>
+     * <p>Note: When you invoke this API to initialize the role, you are deemed to have accepted the User Agreement of the operating system console by default. For more information, see <a href="https://help.aliyun.com/zh/alinux/product-overview/os-console-overview?spm=a2c4g.11186623.help-menu-2632541.d_0_7.35a829ffLjQtgg">Overview of the Operating System Console</a> and <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202001091714_51956.html">Alibaba Cloud Service Trial Terms</a>.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>初始化SysOM，确保角色存在</p>
+     * <p>Initialize SysOM and ensure that the service role exists.</p>
      * 
      * @param request InitialSysomRequest
      * @return InitialSysomResponse
@@ -2127,8 +2235,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The API call to install an agent is asynchronous. After invoking this API, a task_id is returned. You can use this ID to invoke the GetAgentTask API to retrieve the job execution status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>在指定的实例上安装 Agent</p>
+     * <p>Install an agent on the specified instance</p>
      * 
      * @param request InstallAgentRequest
      * @param headers map
@@ -2173,8 +2284,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The API call to install an agent is asynchronous. After invoking this API, a task_id is returned. You can use this ID to invoke the GetAgentTask API to retrieve the job execution status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>在指定的实例上安装 Agent</p>
+     * <p>Install an agent on the specified instance</p>
      * 
      * @param request InstallAgentRequest
      * @return InstallAgentResponse
@@ -2186,8 +2300,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After you install widgets on the specified ACK cluster:  </p>
+     * <ol>
+     * <li>When the cluster is first enrolled, widgets are installed on all ECS instances in the cluster (if the cluster contains more than 50 nodes, widgets are installed on only 50 nodes in the first batch).  </li>
+     * <li>The operating system console periodically checks for scale-in or scale-out events in the enrolled cluster. Whenever new ECS instances are added to the cluster, the operating system console automatically installs widgets on them without requiring user intervention.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>给集群安装组件</p>
+     * <p>Install widgets on a cluster</p>
      * 
      * @param request InstallAgentForClusterRequest
      * @param headers map
@@ -2236,8 +2357,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After you install widgets on the specified ACK cluster:  </p>
+     * <ol>
+     * <li>When the cluster is first enrolled, widgets are installed on all ECS instances in the cluster (if the cluster contains more than 50 nodes, widgets are installed on only 50 nodes in the first batch).  </li>
+     * <li>The operating system console periodically checks for scale-in or scale-out events in the enrolled cluster. Whenever new ECS instances are added to the cluster, the operating system console automatically installs widgets on them without requiring user intervention.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>给集群安装组件</p>
+     * <p>Install widgets on a cluster</p>
      * 
      * @param request InstallAgentForClusterRequest
      * @return InstallAgentForClusterResponse
@@ -2250,7 +2378,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>异常项诊断跳转</p>
+     * <p>Initiate diagnosis for anomalous activity</p>
      * 
      * @param request InvokeAnomalyDiagnosisRequest
      * @param headers map
@@ -2284,7 +2412,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>异常项诊断跳转</p>
+     * <p>Initiate diagnosis for anomalous activity</p>
      * 
      * @param request InvokeAnomalyDiagnosisRequest
      * @return InvokeAnomalyDiagnosisResponse
@@ -2296,8 +2424,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Diagnosing the target ECS instance has the following requirements:  </p>
+     * <ul>
+     * <li>The instance status of the target ECS instance must be running.  </li>
+     * <li>The Cloud Assistant Agent must already be installed on the target ECS instance. If it is not installed, install it by referring to <a href="https://help.aliyun.com/zh/ecs/user-guide/install-the-cloud-assistant-agent">Install the Cloud Assistant Agent</a>.  </li>
+     * <li>You must invoke the AuthDiagnosis API to authorize SysOM to diagnose the target ECS instance. If this authorization is not granted, the API call will fail immediately.  </li>
+     * <li>This API depends on the existence of the SysOM service-linked role (AliyunServiceRoleForSysom). This API does not create the service-linked role automatically. If the service-linked role does not exist, you must first call AuthDiagnosis to perform authorization, which will create the aforementioned service-linked role.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>发起诊断</p>
+     * <p>Initiate a diagnosis.</p>
      * 
      * @param request InvokeDiagnosisRequest
      * @param headers map
@@ -2338,8 +2475,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Diagnosing the target ECS instance has the following requirements:  </p>
+     * <ul>
+     * <li>The instance status of the target ECS instance must be running.  </li>
+     * <li>The Cloud Assistant Agent must already be installed on the target ECS instance. If it is not installed, install it by referring to <a href="https://help.aliyun.com/zh/ecs/user-guide/install-the-cloud-assistant-agent">Install the Cloud Assistant Agent</a>.  </li>
+     * <li>You must invoke the AuthDiagnosis API to authorize SysOM to diagnose the target ECS instance. If this authorization is not granted, the API call will fail immediately.  </li>
+     * <li>This API depends on the existence of the SysOM service-linked role (AliyunServiceRoleForSysom). This API does not create the service-linked role automatically. If the service-linked role does not exist, you must first call AuthDiagnosis to perform authorization, which will create the aforementioned service-linked role.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>发起诊断</p>
+     * <p>Initiate a diagnosis.</p>
      * 
      * @param request InvokeDiagnosisRequest
      * @return InvokeDiagnosisResponse
@@ -2352,7 +2498,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一定时间段内的异常事件</p>
+     * <p>Obtain anomalous activity information for clusters, edge zones, or pods within a specified time period.</p>
      * 
      * @param request ListAbnormalyEventsRequest
      * @param headers map
@@ -2426,7 +2572,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一定时间段内的异常事件</p>
+     * <p>Obtain anomalous activity information for clusters, edge zones, or pods within a specified time period.</p>
      * 
      * @param request ListAbnormalyEventsRequest
      * @return ListAbnormalyEventsResponse
@@ -2439,7 +2585,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出 Agent 的安装记录</p>
+     * <p>List installation records of the agent</p>
      * 
      * @param request ListAgentInstallRecordsRequest
      * @param headers map
@@ -2497,7 +2643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出 Agent 的安装记录</p>
+     * <p>List installation records of the agent</p>
      * 
      * @param request ListAgentInstallRecordsRequest
      * @return ListAgentInstallRecordsResponse
@@ -2510,7 +2656,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取 Agent 列表</p>
+     * <p>Retrieve the Agent List</p>
      * 
      * @param request ListAgentsRequest
      * @param headers map
@@ -2556,7 +2702,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取 Agent 列表</p>
+     * <p>Retrieve the Agent List</p>
      * 
      * @param request ListAgentsRequest
      * @return ListAgentsResponse
@@ -2569,7 +2715,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看告警联系人列表</p>
+     * <p>This API is used to obtain the alert contact list.</p>
      * 
      * @param request ListAlertDestinationsRequest
      * @param headers map
@@ -2619,7 +2765,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看告警联系人列表</p>
+     * <p>This API is used to obtain the alert contact list.</p>
      * 
      * @param request ListAlertDestinationsRequest
      * @return ListAlertDestinationsResponse
@@ -2632,7 +2778,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取所有告警项</p>
+     * <p>Retrieve all alerting items</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2658,7 +2804,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取所有告警项</p>
+     * <p>Retrieve all alerting items</p>
      * @return ListAlertItemsResponse
      */
     public ListAlertItemsResponse listAlertItems() throws Exception {
@@ -2669,7 +2815,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用于获取用户所有推送告警的策略</p>
+     * <p>Used to obtain all alert policies for push notifications of a user</p>
      * 
      * @param request ListAlertStrategiesRequest
      * @param headers map
@@ -2719,7 +2865,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用于获取用户所有推送告警的策略</p>
+     * <p>Used to obtain all alert policies for push notifications of a user</p>
      * 
      * @param request ListAlertStrategiesRequest
      * @return ListAlertStrategiesResponse
@@ -2732,7 +2878,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>此接口用于获取已纳管/未纳管实例列表并带有实例信息</p>
+     * <p>This API is used to obtain a list of managed or unmanaged instances along with instance information.</p>
      * 
      * @param request ListAllInstancesRequest
      * @param headers map
@@ -2798,7 +2944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>此接口用于获取已纳管/未纳管实例列表并带有实例信息</p>
+     * <p>This API is used to obtain a list of managed or unmanaged instances along with instance information.</p>
      * 
      * @param request ListAllInstancesRequest
      * @return ListAllInstancesResponse
@@ -2811,7 +2957,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取集群组件安装记录</p>
+     * <p>Obtain cluster widget installation records</p>
      * 
      * @param request ListClusterAgentInstallRecordsRequest
      * @param headers map
@@ -2865,7 +3011,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取集群组件安装记录</p>
+     * <p>Obtain cluster widget installation records</p>
      * 
      * @param request ListClusterAgentInstallRecordsRequest
      * @return ListClusterAgentInstallRecordsResponse
@@ -2878,7 +3024,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取当前用户的所有集群</p>
+     * <p>Retrieve all clusters managed by the current user</p>
      * 
      * @param request ListClustersRequest
      * @param headers map
@@ -2936,7 +3082,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取当前用户的所有集群</p>
+     * <p>Retrieve all clusters managed by the current user</p>
      * 
      * @param request ListClustersRequest
      * @return ListClustersResponse
@@ -2949,7 +3095,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取诊断历史记录列表</p>
+     * <p>Obtain the diagnosis history list.</p>
      * 
      * @param request ListDiagnosisRequest
      * @param headers map
@@ -2999,7 +3145,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取诊断历史记录列表</p>
+     * <p>Obtain the diagnosis history list.</p>
      * 
      * @param request ListDiagnosisRequest
      * @return ListDiagnosisResponse
@@ -3012,7 +3158,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtain a list of cluster node or pod health degrees within a specified time period.</p>
+     * <p>Obtain a list of cluster node or pod health scores within a specified time period.</p>
      * 
      * @param request ListInstanceHealthRequest
      * @param headers map
@@ -3066,7 +3212,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtain a list of cluster node or pod health degrees within a specified time period.</p>
+     * <p>Obtain a list of cluster node or pod health scores within a specified time period.</p>
      * 
      * @param request ListInstanceHealthRequest
      * @return ListInstanceHealthResponse
@@ -3078,8 +3224,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API is used to obtain the list of machines managed by SysOM.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取实例状态</p>
+     * <p>Obtain instance status</p>
      * 
      * @param request ListInstanceStatusRequest
      * @param headers map
@@ -3128,8 +3277,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API is used to obtain the list of machines managed by SysOM.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取实例状态</p>
+     * <p>Obtain instance status</p>
      * 
      * @param request ListInstanceStatusRequest
      * @return ListInstanceStatusResponse
@@ -3141,8 +3293,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The instance list returned by this API includes only the machines that have been managed by SysOM. If an ECS instance exists but has not been managed by SysOM, it will not appear in the list.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取实例列表</p>
+     * <p>Obtain the instance list</p>
      * 
      * @param request ListInstancesRequest
      * @param headers map
@@ -3195,8 +3350,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The instance list returned by this API includes only the machines that have been managed by SysOM. If an ECS instance exists but has not been managed by SysOM, it will not appear in the list.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取实例列表</p>
+     * <p>Obtain the instance list</p>
      * 
      * @param request ListInstancesRequest
      * @return ListInstancesResponse
@@ -3208,8 +3366,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The instance list returned by this API includes only machines that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it will not appear in the list.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取ecs信息的列表，如标签列表，公网ip列表等</p>
+     * <p>Obtain a list of ECS information, such as the tag list, public IP address list, and so on.</p>
      * 
      * @param request ListInstancesEcsInfoListRequest
      * @param headers map
@@ -3258,8 +3419,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The instance list returned by this API includes only machines that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it will not appear in the list.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取ecs信息的列表，如标签列表，公网ip列表等</p>
+     * <p>Obtain a list of ECS information, such as the tag list, public IP address list, and so on.</p>
      * 
      * @param request ListInstancesEcsInfoListRequest
      * @return ListInstancesEcsInfoListResponse
@@ -3271,8 +3435,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The current API returns a list of instances that have already been managed by SysOM. If an ECS instance exists but has not been managed by SysOM, it will not appear in the list.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取已纳管/未纳管实例信息，信息中包含ECS信息</p>
+     * <p>Obtain information about managed or unmanaged instances, including ECS information.</p>
      * 
      * @param tmpReq ListInstancesWithEcsInfoRequest
      * @param headers map
@@ -3367,8 +3534,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The current API returns a list of instances that have already been managed by SysOM. If an ECS instance exists but has not been managed by SysOM, it will not appear in the list.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取已纳管/未纳管实例信息，信息中包含ECS信息</p>
+     * <p>Obtain information about managed or unmanaged instances, including ECS information.</p>
      * 
      * @param request ListInstancesWithEcsInfoRequest
      * @return ListInstancesWithEcsInfoResponse
@@ -3380,8 +3550,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The instance list returned by this API consists of machines that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it will not appear in the list.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取插件的安装/更新/卸载实例列表</p>
+     * <p>Obtain the list of instances for plugin installation, update, or uninstallation</p>
      * 
      * @param request ListPluginsInstancesRequest
      * @param headers map
@@ -3438,8 +3611,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The instance list returned by this API consists of machines that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it will not appear in the list.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取插件的安装/更新/卸载实例列表</p>
+     * <p>Obtain the list of instances for plugin installation, update, or uninstallation</p>
      * 
      * @param request ListPluginsInstancesRequest
      * @return ListPluginsInstancesResponse
@@ -3452,7 +3628,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例中的pod列表</p>
+     * <p>Retrieve the list of pods in a cluster or instance</p>
      * 
      * @param request ListPodsOfInstanceRequest
      * @param headers map
@@ -3498,7 +3674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例中的pod列表</p>
+     * <p>Retrieve the list of pods in a cluster or instance</p>
      * 
      * @param request ListPodsOfInstanceRequest
      * @return ListPodsOfInstanceResponse
@@ -3510,8 +3686,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API retrieves the list of areas where the current user has machines managed by SysOM. If the user has ECS instances in an area but those instances are not managed by SysOM, that area will not appear in the API response.</p>
+     * 
      * <b>summary</b> : 
-     * <p>列出所有纳管了机器的区域</p>
+     * <p>List all areas where machines are managed</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3536,8 +3715,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API retrieves the list of areas where the current user has machines managed by SysOM. If the user has ECS instances in an area but those instances are not managed by SysOM, that area will not appear in the API response.</p>
+     * 
      * <b>summary</b> : 
-     * <p>列出所有纳管了机器的区域</p>
+     * <p>List all areas where machines are managed</p>
      * @return ListRegionsResponse
      */
     public ListRegionsResponse listRegions() throws Exception {
@@ -3548,7 +3730,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询历史宕机诊断任务</p>
+     * <p>Query the history list of breakdown diagnosis jobs.</p>
      * 
      * @param request ListVmcoreDiagnosisTaskRequest
      * @param headers map
@@ -3582,7 +3764,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询历史宕机诊断任务</p>
+     * <p>Query the history list of breakdown diagnosis jobs.</p>
      * 
      * @param request ListVmcoreDiagnosisTaskRequest
      * @return ListVmcoreDiagnosisTaskResponse
@@ -3595,7 +3777,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动AI作业分析</p>
+     * <p>Start an AI job analysis.</p>
      * 
      * @param request StartAIAnalysisRequest
      * @param headers map
@@ -3681,7 +3863,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动AI作业分析</p>
+     * <p>Start an AI job analysis.</p>
      * 
      * @param request StartAIAnalysisRequest
      * @return StartAIAnalysisResponse
@@ -3693,8 +3875,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Currently, only comparative analysis between different steps under the same AI Infra analysis record and the same pid is supported.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查看AI Infra差分分析结果</p>
+     * <p>Start AI Infra differential analysis.</p>
      * 
      * @param request StartAIDiffAnalysisRequest
      * @param headers map
@@ -3731,8 +3916,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Currently, only comparative analysis between different steps under the same AI Infra analysis record and the same pid is supported.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查看AI Infra差分分析结果</p>
+     * <p>Start AI Infra differential analysis.</p>
      * 
      * @param request StartAIDiffAnalysisRequest
      * @return StartAIDiffAnalysisResponse
@@ -3744,8 +3932,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The API call to uninstall an Agent is asynchronous. After invoking this API, a task_id is returned. You can use this ID to invoke the GetAgentTask API to retrieve the execution status of the job.</p>
+     * 
      * <b>summary</b> : 
-     * <p>卸载 SysOM Agent</p>
+     * <p>Uninstall a specified version of the widget</p>
      * 
      * @param request UninstallAgentRequest
      * @param headers map
@@ -3786,8 +3977,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The API call to uninstall an Agent is asynchronous. After invoking this API, a task_id is returned. You can use this ID to invoke the GetAgentTask API to retrieve the execution status of the job.</p>
+     * 
      * <b>summary</b> : 
-     * <p>卸载 SysOM Agent</p>
+     * <p>Uninstall a specified version of the widget</p>
      * 
      * @param request UninstallAgentRequest
      * @return UninstallAgentResponse
@@ -3800,7 +3994,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>给集群卸载组件</p>
+     * <p>Uninstall a widget from a cluster</p>
      * 
      * @param request UninstallAgentForClusterRequest
      * @param headers map
@@ -3842,7 +4036,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>给集群卸载组件</p>
+     * <p>Uninstall a widget from a cluster</p>
      * 
      * @param request UninstallAgentForClusterRequest
      * @return UninstallAgentForClusterResponse
@@ -3858,7 +4052,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>、</p>
      * 
      * <b>summary</b> : 
-     * <p>更新告警联系人</p>
+     * <p>This API is used to update an alert contact.</p>
      * 
      * @param request UpdateAlertDestinationRequest
      * @param headers map
@@ -3911,7 +4105,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>、</p>
      * 
      * <b>summary</b> : 
-     * <p>更新告警联系人</p>
+     * <p>This API is used to update an alert contact.</p>
      * 
      * @param request UpdateAlertDestinationRequest
      * @return UpdateAlertDestinationResponse
@@ -3924,7 +4118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用户更新推送告警策略的状态</p>
+     * <p>User updates the status of a push alert policy</p>
      * 
      * @param request UpdateAlertEnabledRequest
      * @param headers map
@@ -3962,7 +4156,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用户更新推送告警策略的状态</p>
+     * <p>User updates the status of a push alert policy</p>
      * 
      * @param request UpdateAlertEnabledRequest
      * @return UpdateAlertEnabledResponse
@@ -3975,7 +4169,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新推送告警策略</p>
+     * <p>Update push alert policy</p>
      * 
      * @param request UpdateAlertStrategyRequest
      * @param headers map
@@ -4025,7 +4219,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新推送告警策略</p>
+     * <p>Update push alert policy</p>
      * 
      * @param request UpdateAlertStrategyRequest
      * @return UpdateAlertStrategyResponse
@@ -4038,7 +4232,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>异常项关注度更新</p>
+     * <p>Update the follow level of an anomalous activity to adjust the sensitivity of the anomaly detection algorithm by modifying the follow level.</p>
      * 
      * @param request UpdateEventsAttentionRequest
      * @param headers map
@@ -4080,7 +4274,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>异常项关注度更新</p>
+     * <p>Update the follow level of an anomalous activity to adjust the sensitivity of the anomaly detection algorithm by modifying the follow level.</p>
      * 
      * @param request UpdateEventsAttentionRequest
      * @return UpdateEventsAttentionResponse
@@ -4092,8 +4286,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>You must fill in the parameters according to the input parameters of the general LLM service, convert them to a string, and assign the result to <code>llmParamString</code>.  </li>
+     * <li>To use the returned data, convert the string back to a dictionary, following the response format of the general LLM service.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取功能模块配置</p>
+     * <p>Update the service function module configuration.</p>
      * 
      * @param tmpReq UpdateFuncSwitchRecordRequest
      * @param headers map
@@ -4140,8 +4340,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>You must fill in the parameters according to the input parameters of the general LLM service, convert them to a string, and assign the result to <code>llmParamString</code>.  </li>
+     * <li>To use the returned data, convert the string back to a dictionary, following the response format of the general LLM service.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取功能模块配置</p>
+     * <p>Update the service function module configuration.</p>
      * 
      * @param request UpdateFuncSwitchRecordRequest
      * @return UpdateFuncSwitchRecordResponse
@@ -4153,8 +4359,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The API call to update the Agent is asynchronous. After invoking this API, a task_id is returned. You can use this ID to invoke the GetAgentTask API to retrieve the execution status of the job.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新 SysOM Agent</p>
+     * <p>Update the version of the installed widget to the specified version.</p>
      * 
      * @param request UpgradeAgentRequest
      * @param headers map
@@ -4195,8 +4404,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The API call to update the Agent is asynchronous. After invoking this API, a task_id is returned. You can use this ID to invoke the GetAgentTask API to retrieve the execution status of the job.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新 SysOM Agent</p>
+     * <p>Update the version of the installed widget to the specified version.</p>
      * 
      * @param request UpgradeAgentRequest
      * @return UpgradeAgentResponse
@@ -4209,7 +4421,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>给集群更新组件</p>
+     * <p>Update widget for cluster</p>
      * 
      * @param request UpgradeAgentForClusterRequest
      * @param headers map
@@ -4251,7 +4463,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>给集群更新组件</p>
+     * <p>Update widget for cluster</p>
      * 
      * @param request UpgradeAgentForClusterRequest
      * @return UpgradeAgentForClusterResponse

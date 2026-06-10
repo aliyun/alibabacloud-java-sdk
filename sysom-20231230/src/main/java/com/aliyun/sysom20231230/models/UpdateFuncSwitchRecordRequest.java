@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateFuncSwitchRecordRequest extends TeaModel {
     /**
+     * <p>Diagnosis channel (currently fixed to the ecs channel)</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,14 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
     public String channel;
 
     /**
+     * <p>Diagnosis parameters. Different diagnosis types require different diagnosis parameters. You can use this field to filter records whose parameters match specified values.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("params")
     public UpdateFuncSwitchRecordRequestParams params;
 
     /**
+     * <p>Service Name</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +62,8 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
 
     public static class UpdateFuncSwitchRecordRequestParamsArgs extends TeaModel {
         /**
+         * <p>Configuration process</p>
+         * 
          * <strong>example:</strong>
          * <p>java</p>
          */
@@ -66,16 +71,26 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
         public String addCmd;
 
         /**
+         * <p>ONCPU tracing Toggle</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("cpu")
         public String cpu;
 
+        /**
+         * <p>Duration in seconds (s)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
+         */
         @NameInMap("duration")
         public Integer duration;
 
         /**
+         * <p>Storage Path</p>
+         * 
          * <strong>example:</strong>
          * <p>/tmp/sysom/java-profiler</p>
          */
@@ -83,6 +98,8 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
         public String javaStorePath;
 
         /**
+         * <p>Edit Lock tracing Toggle</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -90,6 +107,8 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
         public String locks;
 
         /**
+         * <p>Tracing epoch</p>
+         * 
          * <strong>example:</strong>
          * <p>-1</p>
          */
@@ -97,16 +116,26 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
         public Integer loop;
 
         /**
+         * <p>Memory tracing Toggle</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("mem")
         public String mem;
 
+        /**
+         * <p>Process PID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1243</p>
+         */
         @NameInMap("pid")
         public Integer pid;
 
         /**
+         * <p>System tracing toggle</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -193,10 +222,14 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
     }
 
     public static class UpdateFuncSwitchRecordRequestParams extends TeaModel {
+        /**
+         * <p>Configuration Parameter</p>
+         */
         @NameInMap("args")
         public UpdateFuncSwitchRecordRequestParamsArgs args;
 
         /**
+         * <p>Feature Name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,6 +239,8 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
         public String functionName;
 
         /**
+         * <p>Instance ID</p>
+         * 
          * <strong>example:</strong>
          * <p>i-2zei55fwj8nnu31h3z46</p>
          */
@@ -213,16 +248,26 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
         public String instance;
 
         /**
+         * <p>Operation Type</p>
+         * 
          * <strong>example:</strong>
          * <p>restart</p>
          */
         @NameInMap("op")
         public String op;
 
+        /**
+         * <p>Region to which the instance belongs. Ensure that all instance IDs passed in the instances field belong to the same region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("region")
         public String region;
 
         /**
+         * <p>User ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1664516888213680</p>
          */

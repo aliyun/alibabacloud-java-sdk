@@ -5,16 +5,31 @@ import com.aliyun.tea.*;
 
 public class GetHostCountResponseBody extends TeaModel {
     /**
+     * <p>Status code  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, authorization succeeded.  </li>
+     * <li>Other status codes indicate authorization failed. When authorization fails, view the <code>message</code> field to obtain detailed error information.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("data")
     public java.util.List<GetHostCountResponseBodyData> data;
 
     /**
+     * <p>Error message  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, this field is empty.  </li>
+     * <li>Otherwise, this field contains the request error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>“”</p>
      */
@@ -22,6 +37,8 @@ public class GetHostCountResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request RequestId</p>
+     * 
      * <strong>example:</strong>
      * <p>43A910E9-A739-525E-855D-A32C257F1826</p>
      */
@@ -29,6 +46,8 @@ public class GetHostCountResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -82,6 +101,8 @@ public class GetHostCountResponseBody extends TeaModel {
 
     public static class GetHostCountResponseBodyData extends TeaModel {
         /**
+         * <p>Time point</p>
+         * 
          * <strong>example:</strong>
          * <p>1725797727754</p>
          */
@@ -89,6 +110,8 @@ public class GetHostCountResponseBody extends TeaModel {
         public Long time;
 
         /**
+         * <p>Quantity</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */

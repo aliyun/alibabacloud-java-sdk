@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class InstallAgentForClusterRequest extends TeaModel {
     /**
+     * <p>Widget ID</p>
+     * 
      * <strong>example:</strong>
      * <p>74a86327-3170-412c-8e67-da3389ec56a9</p>
      */
@@ -12,6 +14,8 @@ public class InstallAgentForClusterRequest extends TeaModel {
     public String agentId;
 
     /**
+     * <p>Widget version</p>
+     * 
      * <strong>example:</strong>
      * <p>3.4.0-1</p>
      */
@@ -19,15 +23,32 @@ public class InstallAgentForClusterRequest extends TeaModel {
     public String agentVersion;
 
     /**
+     * <p>Cluster ID.  </p>
+     * <blockquote>
+     * <p>You must pass the ID of the ACK cluster here.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>c9d7f3fc3d42942afbcb65c1100ffb19d</p>
      */
     @NameInMap("cluster_id")
     public String clusterId;
 
+    /**
+     * <p>Widget configuration ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8gj86wrt7-3170-412c-8e67-da3389ecg6a9</p>
+     */
     @NameInMap("config_id")
     public String configId;
 
+    /**
+     * <p>Canary release environment</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;type&quot;:&quot;numeric&quot;,&quot;config&quot;:{&quot;value&quot;:2}}</p>
+     */
     @NameInMap("grayscale_config")
     public String grayscaleConfig;
 

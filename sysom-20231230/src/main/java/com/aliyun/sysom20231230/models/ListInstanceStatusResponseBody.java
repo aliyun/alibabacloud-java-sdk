@@ -4,20 +4,41 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceStatusResponseBody extends TeaModel {
+    /**
+     * <p>Request ID, which can be used for end-to-end diagnosis</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5BC79EF5-798B-5499-9683-4E14EBBBF712</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Status code  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, authorization succeeded.  </li>
+     * <li>Other status codes indicate authorization failed. When authorization fails, check the <code>message</code> field for detailed error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Returned data</p>
+     */
     @NameInMap("data")
     public java.util.List<ListInstanceStatusResponseBodyData> data;
 
     /**
+     * <p>Error message  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, this field is empty.  </li>
+     * <li>Otherwise, this field contains the request error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SysomOpenAPIAssumeRoleException: EntityNotExist.Role The role not exists: acs:ram::xxxxx:role/aliyunserviceroleforsysom</p>
      */
@@ -25,6 +46,8 @@ public class ListInstanceStatusResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Total number of records</p>
+     * 
      * <strong>example:</strong>
      * <p>218</p>
      */
@@ -77,13 +100,34 @@ public class ListInstanceStatusResponseBody extends TeaModel {
     }
 
     public static class ListInstanceStatusResponseBodyData extends TeaModel {
+        /**
+         * <p>Instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-wz9d00ut2ska3mlyhn6j</p>
+         */
         @NameInMap("instance")
         public String instance;
 
+        /**
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("region")
         public String region;
 
         /**
+         * <p>Instance running status. Valid values:  </p>
+         * <ul>
+         * <li><strong>Running</strong>: Running  </li>
+         * <li><strong>Offline</strong>: Offline</li>
+         * </ul>
+         * <blockquote>
+         * <p>An instance in the Offline state indicates that the heartbeat from the edge zone to the SysOM server is lost. This does not mean that the corresponding ECS instance is not running.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */

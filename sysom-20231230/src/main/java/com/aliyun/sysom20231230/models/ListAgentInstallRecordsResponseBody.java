@@ -4,20 +4,41 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class ListAgentInstallRecordsResponseBody extends TeaModel {
+    /**
+     * <p>Request ID, which can be used for end-to-end Diagnosis</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E8CDFBA1-0564-5897-B070-D3C85002AF2F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Status code  </p>
+     * <ul>
+     * <li><code>code == Success</code> indicates successful authorization;  </li>
+     * <li>Other status codes indicate failed authorization. When authorization fails, view the <code>message</code> field to obtain detailed error message;</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Return Result.</p>
+     */
     @NameInMap("data")
     public java.util.List<ListAgentInstallRecordsResponseBodyData> data;
 
     /**
+     * <p>error message  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, this field is empty;  </li>
+     * <li>Otherwise, this field contains the request error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SysomOpenAPIAssumeRoleException: EntityNotExist.Role The role not exists: acs:ram::xxxxx:role/aliyunserviceroleforsysom</p>
      */
@@ -25,6 +46,8 @@ public class ListAgentInstallRecordsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>64</p>
      */
@@ -77,21 +100,57 @@ public class ListAgentInstallRecordsResponseBody extends TeaModel {
     }
 
     public static class ListAgentInstallRecordsResponseBodyData extends TeaModel {
+        /**
+         * <p>Creation Time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-11-27T16:37:53</p>
+         */
         @NameInMap("created_at")
         public String createdAt;
 
+        /**
+         * <p>instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp118piqcio9tiwgh84b</p>
+         */
         @NameInMap("instance_id")
         public String instanceId;
 
+        /**
+         * <p>widget ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>74a86327-3170-412c-8e67-da3389ec56a9</p>
+         */
         @NameInMap("plugin_id")
         public String pluginId;
 
+        /**
+         * <p>plugin Version</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.4.0-1</p>
+         */
         @NameInMap("plugin_version")
         public String pluginVersion;
 
+        /**
+         * <p>widget status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Installed</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>Updated At</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-11-27T16:37:53</p>
+         */
         @NameInMap("updated_at")
         public String updatedAt;
 

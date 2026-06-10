@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricListRequest extends TeaModel {
     /**
+     * <p>End time, in seconds as a UNIX timestamp</p>
+     * 
      * <strong>example:</strong>
      * <p>1683618245000</p>
      */
@@ -12,6 +14,8 @@ public class DescribeMetricListRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>Instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>i-wz9d00ut2ska3mlyhn6j</p>
      */
@@ -19,6 +23,8 @@ public class DescribeMetricListRequest extends TeaModel {
     public String instance;
 
     /**
+     * <p>Metric name</p>
+     * 
      * <strong>example:</strong>
      * <p>sysom_cpu_graph</p>
      */
@@ -26,6 +32,8 @@ public class DescribeMetricListRequest extends TeaModel {
     public String metricName;
 
     /**
+     * <p>Start time, in seconds as a UNIX timestamp</p>
+     * 
      * <strong>example:</strong>
      * <p>1709740800000</p>
      */

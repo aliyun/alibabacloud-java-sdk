@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class GetCopilotHistoryResponseBody extends TeaModel {
     /**
+     * <p>error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SysomOpenAPI.InvalidParameter</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>List of chat records. The length equals the requested quantity. If the actual number of chat records is less than the requested quantity, the list contains all available records. Format: [{&quot;user&quot;: &quot;&quot;, &quot;content&quot;: &quot;&quot;, &quot;time&quot;: &quot;&quot;}, {...}]</p>
+     */
     @NameInMap("data")
     public java.util.List<GetCopilotHistoryResponseBodyData> data;
 
     /**
+     * <p>error message  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, this field is empty.  </li>
+     * <li>Otherwise, this field contains the request error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SysomOpenAPIAssumeRoleException: EntityNotExist.Role The role not exists: acs:ram::xxxxx:role/aliyunserviceroleforsysom</p>
      */
@@ -68,10 +79,18 @@ public class GetCopilotHistoryResponseBody extends TeaModel {
     }
 
     public static class GetCopilotHistoryResponseBodyData extends TeaModel {
+        /**
+         * <p>Text content of the chat</p>
+         * 
+         * <strong>example:</strong>
+         * <p>copilot回复的具体内容</p>
+         */
         @NameInMap("content")
         public String content;
 
         /**
+         * <p>Time of the chat record, string type</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-09-02 10:02:39</p>
          */
@@ -79,6 +98,8 @@ public class GetCopilotHistoryResponseBody extends TeaModel {
         public String time;
 
         /**
+         * <p>user/copilot; user indicates the User, and copilot indicates the bot</p>
+         * 
          * <strong>example:</strong>
          * <p>user
          * copilot</p>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetHotspotCompareRequest extends TeaModel {
     /**
+     * <p>End time 1</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetHotspotCompareRequest extends TeaModel {
     public Long beg1End;
 
     /**
+     * <p>Start time 1</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GetHotspotCompareRequest extends TeaModel {
     public Long beg1Start;
 
     /**
+     * <p>End time 2</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class GetHotspotCompareRequest extends TeaModel {
     public Long beg2End;
 
     /**
+     * <p>Start time 2</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,10 +44,17 @@ public class GetHotspotCompareRequest extends TeaModel {
     @NameInMap("beg2_start")
     public Long beg2Start;
 
+    /**
+     * <p>Hot spot type</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alloc</p>
+     */
     @NameInMap("hot_type")
     public String hotType;
 
     /**
+     * <p>Instance 1</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +64,7 @@ public class GetHotspotCompareRequest extends TeaModel {
     public String instance1;
 
     /**
+     * <p>Instance 2</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,6 +74,8 @@ public class GetHotspotCompareRequest extends TeaModel {
     public String instance2;
 
     /**
+     * <p>Process of instance 1</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -69,6 +83,8 @@ public class GetHotspotCompareRequest extends TeaModel {
     public Long pid1;
 
     /**
+     * <p>Process of instance 2</p>
+     * 
      * <strong>example:</strong>
      * <p>i-2zei55fwj8nnu31h3z46</p>
      */
@@ -76,6 +92,7 @@ public class GetHotspotCompareRequest extends TeaModel {
     public Long pid2;
 
     /**
+     * <p>Query table name</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

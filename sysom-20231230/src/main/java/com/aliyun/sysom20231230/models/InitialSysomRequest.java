@@ -4,9 +4,18 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class InitialSysomRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to only check if the service role exists</p>
+     */
     @NameInMap("check_only")
     public Boolean checkOnly;
 
+    /**
+     * <p>Source, which is fixed as console.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>console</p>
+     */
     @NameInMap("source")
     public String source;
 

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVmcoreDiagnosisTaskRequest extends TeaModel {
     /**
+     * <p>Indicates jobs from the past days days, up to a maximum of 30 days</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

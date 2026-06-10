@@ -4,10 +4,18 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class ListRegionsResponseBody extends TeaModel {
+    /**
+     * <p>Request ID, which can be used for end-to-end diagnosis</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B149FD9C-ED5C-5765-B3AD-05AA4A4D64D7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>error code</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -15,6 +23,8 @@ public class ListRegionsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>List of areas</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;cn-hangzhou&quot;, &quot;cn-shengzhen&quot;]</p>
      */
@@ -22,6 +32,8 @@ public class ListRegionsResponseBody extends TeaModel {
     public java.util.List<String> data;
 
     /**
+     * <p>Description of the error code; empty if no error occurred</p>
+     * 
      * <strong>example:</strong>
      * <p>SysomOpenAPIAssumeRoleException: EntityNotExist.Role The role not exists: acs:ram::xxxxx:role/aliyunserviceroleforsysom</p>
      */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListAllInstancesResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Returned data</p>
+     */
     @NameInMap("data")
     public java.util.List<ListAllInstancesResponseBodyData> data;
 
     /**
+     * <p>Maximum number of returned items</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +29,12 @@ public class ListAllInstancesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Error message:</p>
+     * <ul>
+     * <li>If <code>code == Success</code>, this field is empty.</li>
+     * <li>Otherwise, this field contains the error message of the request.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>instance not exists</p>
      */
@@ -29,6 +42,11 @@ public class ListAllInstancesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Paging cursor.</p>
+     * <blockquote>
+     * <p>If not empty, more data is available.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>c2f78a783f49457caba6bace6f6f79e4</p>
      */
@@ -45,6 +63,8 @@ public class ListAllInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of query results.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -114,6 +134,8 @@ public class ListAllInstancesResponseBody extends TeaModel {
 
     public static class ListAllInstancesResponseBodyDataAttributes extends TeaModel {
         /**
+         * <p>information key</p>
+         * 
          * <strong>example:</strong>
          * <p>sysom</p>
          */
@@ -121,6 +143,8 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String infoKey;
 
         /**
+         * <p>information type</p>
+         * 
          * <strong>example:</strong>
          * <p>instance_tag</p>
          */
@@ -128,6 +152,8 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String infoType;
 
         /**
+         * <p>information value</p>
+         * 
          * <strong>example:</strong>
          * <p>diagnosis</p>
          */
@@ -166,16 +192,33 @@ public class ListAllInstancesResponseBody extends TeaModel {
     }
 
     public static class ListAllInstancesResponseBodyData extends TeaModel {
+        /**
+         * <p>Agent configuration ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_id</p>
+         */
         @NameInMap("agentConfigId")
         public String agentConfigId;
 
+        /**
+         * <p>Agent configuration name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_name</p>
+         */
         @NameInMap("agentConfigName")
         public String agentConfigName;
 
+        /**
+         * <p>Extension information.</p>
+         */
         @NameInMap("attributes")
         public java.util.List<ListAllInstancesResponseBodyDataAttributes> attributes;
 
         /**
+         * <p>Cluster ID</p>
+         * 
          * <strong>example:</strong>
          * <p>3b24a621-acb3-11ef-8c90-00163e1029af</p>
          */
@@ -183,6 +226,8 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String clusterId;
 
         /**
+         * <p>Cluster name</p>
+         * 
          * <strong>example:</strong>
          * <p>zjk_vpc_domain_1</p>
          */
@@ -190,6 +235,8 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String clusterName;
 
         /**
+         * <p>Image ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>aliyun_3_x64_20G_alibase_20250117.vhd</p>
          */
@@ -197,6 +244,8 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String imageId;
 
         /**
+         * <p>Installation level</p>
+         * 
          * <strong>example:</strong>
          * <p>Cluster</p>
          */
@@ -204,6 +253,8 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String installLevel;
 
         /**
+         * <p>Installation type</p>
+         * 
          * <strong>example:</strong>
          * <p>console</p>
          */
@@ -211,6 +262,8 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String installType;
 
         /**
+         * <p>Instance ID</p>
+         * 
          * <strong>example:</strong>
          * <p>i-bp17uabeke9v7n30abm2</p>
          */
@@ -218,6 +271,8 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -225,6 +280,8 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String instanceName;
 
         /**
+         * <p>Instance type</p>
+         * 
          * <strong>example:</strong>
          * <p>ecs</p>
          */
@@ -232,6 +289,8 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String instanceType;
 
         /**
+         * <p>Milvus version</p>
+         * 
          * <strong>example:</strong>
          * <p>5.10.134-18.al8.x86_64</p>
          */
@@ -239,6 +298,8 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String kernelVersion;
 
         /**
+         * <p>Management level</p>
+         * 
          * <strong>example:</strong>
          * <p>cluster</p>
          */
@@ -246,6 +307,8 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String manageLevel;
 
         /**
+         * <p>Management type</p>
+         * 
          * <strong>example:</strong>
          * <p>managed</p>
          */
@@ -253,6 +316,8 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String manageType;
 
         /**
+         * <p>Operating system architecture</p>
+         * 
          * <strong>example:</strong>
          * <p>x86_64</p>
          */
@@ -260,6 +325,8 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String osArch;
 
         /**
+         * <p>Operating system health score</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -267,6 +334,8 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public Integer osHealthScore;
 
         /**
+         * <p>Operating system name</p>
+         * 
          * <strong>example:</strong>
          * <p>alios</p>
          */
@@ -274,6 +343,8 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String osName;
 
         /**
+         * <p>Private IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>172.21.172.7</p>
          */
@@ -281,6 +352,8 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String privateIp;
 
         /**
+         * <p>Public IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>47.98.215.58</p>
          */
@@ -288,6 +361,8 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String publicIp;
 
         /**
+         * <p>The resource group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3b24a621-acb3-11ef-8c90-00163e1029af</p>
          */
@@ -295,6 +370,8 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>Resource group name</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxx</p>
          */
@@ -302,6 +379,15 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String resourceGroupName;
 
         /**
+         * <p>The running status of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Running</strong>: The instance is running.</li>
+         * <li><strong>Offline</strong>: The instance is offline.</li>
+         * </ul>
+         * <blockquote>
+         * <p>An instance in the Offline state indicates that the heartbeat from the edge zone to the SysOM Server has been lost. It does not mean that the corresponding ECS instance is not running.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */

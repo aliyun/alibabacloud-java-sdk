@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class CpuHighAgentStreamResponseResponseBody extends TeaModel {
     /**
+     * <p>Status code  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, authorization succeeded.  </li>
+     * <li>Any other status code indicates authorization failed. When authorization fails, check the <code>message</code> field for detailed error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +18,8 @@ public class CpuHighAgentStreamResponseResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Returned data</p>
+     * 
      * <strong>example:</strong>
      * <SSEResponse>
      */
@@ -19,6 +27,12 @@ public class CpuHighAgentStreamResponseResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>Error message  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, this field is empty.  </li>
+     * <li>Otherwise, this field contains the request error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SysomOpenAPIAssumeRoleException: EntityNotExist.Role The role not exists: acs:ram::xxxxx:role/aliyunserviceroleforsysom</p>
      */

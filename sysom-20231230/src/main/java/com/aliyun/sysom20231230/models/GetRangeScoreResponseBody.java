@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetRangeScoreResponseBody extends TeaModel {
     /**
-     * <p>代表资源一级ID的资源属性字段</p>
+     * <p>Status code  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, authorization succeeded.  </li>
+     * <li>Other status codes indicate authorization failed. When authorization fails, view the <code>message</code> field to obtain detailed error information.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -13,10 +17,19 @@ public class GetRangeScoreResponseBody extends TeaModel {
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("data")
     public java.util.List<GetRangeScoreResponseBodyData> data;
 
     /**
+     * <p>Error message  </p>
+     * <ul>
+     * <li>If <code>code == Success</code>, this field is empty.  </li>
+     * <li>Otherwise, this field contains the request error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -24,6 +37,8 @@ public class GetRangeScoreResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request RequestId</p>
+     * 
      * <strong>example:</strong>
      * <p>35F91AAB-5FDF-5A22-B211-C7C6B00817D0</p>
      */
@@ -31,6 +46,8 @@ public class GetRangeScoreResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total data volume.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -84,6 +101,8 @@ public class GetRangeScoreResponseBody extends TeaModel {
 
     public static class GetRangeScoreResponseBodyData extends TeaModel {
         /**
+         * <p>Time point</p>
+         * 
          * <strong>example:</strong>
          * <p>1725797727754</p>
          */
@@ -91,6 +110,8 @@ public class GetRangeScoreResponseBody extends TeaModel {
         public Long time;
 
         /**
+         * <p>Metric type</p>
+         * 
          * <strong>example:</strong>
          * <p>saturation</p>
          */
@@ -98,6 +119,8 @@ public class GetRangeScoreResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>Score</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

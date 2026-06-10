@@ -5,18 +5,32 @@ import com.aliyun.tea.*;
 
 public class InstallAgentRequest extends TeaModel {
     /**
+     * <p>ID of the widget to install</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>74a86327-3170-412c-8e67-da3389ec56a9</p>
      */
     @NameInMap("agent_id")
     public String agentId;
 
     /**
+     * <p>Version of the widget to install</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3.4.0-1</p>
      */
     @NameInMap("agent_version")
     public String agentVersion;
 
     /**
+     * <p>Installation Type:  </p>
+     * <ul>
+     * <li>InstallAndUpgrade: Install if not present; update if present.  </li>
+     * <li>OnlyInstallNotHasAgent: Install if not present; do nothing if present.  </li>
+     * <li>OnlyUpgradeHasAgent: Do nothing if not present; update if present.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +40,7 @@ public class InstallAgentRequest extends TeaModel {
     public String installType;
 
     /**
+     * <p>List of instances on which to install the widget</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("instances")
@@ -70,6 +85,7 @@ public class InstallAgentRequest extends TeaModel {
 
     public static class InstallAgentRequestInstances extends TeaModel {
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -79,6 +95,7 @@ public class InstallAgentRequest extends TeaModel {
         public String instance;
 
         /**
+         * <p>Region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetHotspotCompareResponseBody extends TeaModel {
     /**
+     * <p>error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SysomOpenAPI.ServerError</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Returned data</p>
+     */
     @NameInMap("data")
     public GetHotspotCompareResponseBodyData data;
 
     /**
+     * <p>Return message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -31,6 +38,8 @@ public class GetHotspotCompareResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>true indicates that the API call succeeded; false indicates that the API call failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -83,9 +92,15 @@ public class GetHotspotCompareResponseBody extends TeaModel {
     }
 
     public static class GetHotspotCompareResponseBodyDataFlame extends TeaModel {
+        /**
+         * <p>List of column names</p>
+         */
         @NameInMap("columns")
         public java.util.List<String> columns;
 
+        /**
+         * <p>List of flame graph data</p>
+         */
         @NameInMap("values")
         public java.util.List<java.util.List<String>> values;
 
@@ -113,9 +128,15 @@ public class GetHotspotCompareResponseBody extends TeaModel {
     }
 
     public static class GetHotspotCompareResponseBodyDataSeriesInstance1 extends TeaModel {
+        /**
+         * <p>List of column names</p>
+         */
         @NameInMap("columns")
         public java.util.List<String> columns;
 
+        /**
+         * <p>List of hot spot metric data</p>
+         */
         @NameInMap("values")
         public java.util.List<java.util.List<String>> values;
 
@@ -143,9 +164,15 @@ public class GetHotspotCompareResponseBody extends TeaModel {
     }
 
     public static class GetHotspotCompareResponseBodyDataSeriesInstance2 extends TeaModel {
+        /**
+         * <p>List of column names</p>
+         */
         @NameInMap("columns")
         public java.util.List<String> columns;
 
+        /**
+         * <p>List of hot spot metric data</p>
+         */
         @NameInMap("values")
         public java.util.List<java.util.List<String>> values;
 
@@ -173,12 +200,21 @@ public class GetHotspotCompareResponseBody extends TeaModel {
     }
 
     public static class GetHotspotCompareResponseBodyData extends TeaModel {
+        /**
+         * <p>Differential flame graph data</p>
+         */
         @NameInMap("flame")
         public GetHotspotCompareResponseBodyDataFlame flame;
 
+        /**
+         * <p>Hot spot timing series 1</p>
+         */
         @NameInMap("series_instance1")
         public GetHotspotCompareResponseBodyDataSeriesInstance1 seriesInstance1;
 
+        /**
+         * <p>Hot spot metric series 2</p>
+         */
         @NameInMap("series_instance2")
         public GetHotspotCompareResponseBodyDataSeriesInstance2 seriesInstance2;
 
