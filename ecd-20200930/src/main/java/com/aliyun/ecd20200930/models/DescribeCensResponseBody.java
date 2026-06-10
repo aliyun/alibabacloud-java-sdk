@@ -189,17 +189,8 @@ public class DescribeCensResponseBody extends TeaModel {
         /**
          * <p>The IPv6 level.</p>
          * <blockquote>
-         * <p> IPv6 is not supported.</p>
+         * <p>IPv6 is not supported.</p>
          * </blockquote>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li><p>DISABLED</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>DISABLED</p>
@@ -240,25 +231,11 @@ public class DescribeCensResponseBody extends TeaModel {
          * <p>Valid values:</p>
          * <ul>
          * <li><p>Creating</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
          * </li>
          * <li><p>Active</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
          * </li>
          * <li><p>Deleting</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,19 +5,32 @@ import com.aliyun.tea.*;
 
 public class DescribeDesktopMetadataRequest extends TeaModel {
     /**
+     * <p>The creation time of the cloud computer. The time must be in the <code>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss\\&quot;Z\\&quot;</code> format and in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-01-01T12:00:00Z</p>
      */
     @NameInMap("CreationTimeStart")
     public String creationTimeStart;
 
+    /**
+     * <p>A list of cloud computer IDs.</p>
+     */
     @NameInMap("DesktopIds")
     public java.util.List<String> desktopIds;
 
+    /**
+     * <p>The ID of the end user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-user</p>
+     */
     @NameInMap("EndUserId")
     public String endUserId;
 
     /**
+     * <p>The ID of the cloud computer share.</p>
+     * 
      * <strong>example:</strong>
      * <p>dg-i1ruuudp92qpj****</p>
      */
@@ -25,6 +38,8 @@ public class DescribeDesktopMetadataRequest extends TeaModel {
     public String groupId;
 
     /**
+     * <p>The hostname.</p>
+     * 
      * <strong>example:</strong>
      * <p>ASW-2F-SRV-YXYZ-4.SHPTG</p>
      */
@@ -32,6 +47,8 @@ public class DescribeDesktopMetadataRequest extends TeaModel {
     public String hostName;
 
     /**
+     * <p>The ID of the image.</p>
+     * 
      * <strong>example:</strong>
      * <p>m-gx2x1dhsmusr2****</p>
      */
@@ -39,6 +56,8 @@ public class DescribeDesktopMetadataRequest extends TeaModel {
     public String imageId;
 
     /**
+     * <p>Specifies whether to include cloud computers in cloud computer shares in the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -46,6 +65,10 @@ public class DescribeDesktopMetadataRequest extends TeaModel {
     public Boolean includeDesktopGroup;
 
     /**
+     * <blockquote>
+     * <p>This parameter is not yet available.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>ecd</p>
      */
@@ -53,6 +76,8 @@ public class DescribeDesktopMetadataRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The maximum number of entries to return per page. Maximum: 100. Default: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -60,6 +85,8 @@ public class DescribeDesktopMetadataRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token returned from the previous call to retrieve the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
@@ -67,6 +94,8 @@ public class DescribeDesktopMetadataRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The ID of the office network.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-778418****</p>
      */
@@ -74,6 +103,8 @@ public class DescribeDesktopMetadataRequest extends TeaModel {
     public String officeSiteId;
 
     /**
+     * <p>The start of the time range to query for operations. The time must be in the <code>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss\\&quot;Z\\&quot;</code> format and in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-01-01T12:00:00Z</p>
      */
@@ -81,6 +112,8 @@ public class DescribeDesktopMetadataRequest extends TeaModel {
     public String operationTimeStart;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -88,6 +121,8 @@ public class DescribeDesktopMetadataRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the region to search.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

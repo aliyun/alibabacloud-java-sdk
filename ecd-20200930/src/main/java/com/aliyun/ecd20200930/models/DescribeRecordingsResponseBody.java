@@ -93,9 +93,6 @@ public class DescribeRecordingsResponseBody extends TeaModel {
 
         /**
          * <p>The file path.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>pg-4w5nk44zo5yl129dd/1mk78dugw344.mp4</p>
          */
         @NameInMap("FilePath")
         public String filePath;
@@ -104,7 +101,7 @@ public class DescribeRecordingsResponseBody extends TeaModel {
          * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>pg-6dn811rzrwh9ws4z6</p>
+         * <p>pg-6dn811rzrwh9w****</p>
          */
         @NameInMap("PolicyGroupId")
         public String policyGroupId;

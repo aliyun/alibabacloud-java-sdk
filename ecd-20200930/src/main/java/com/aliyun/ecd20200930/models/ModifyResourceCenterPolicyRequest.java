@@ -7,7 +7,7 @@ public class ModifyResourceCenterPolicyRequest extends TeaModel {
     /**
      * <p>The IDs of the cloud computer policies that you want to associate with cloud computers.</p>
      * <blockquote>
-     * <p> You can specify up to one cloud computer policy that takes effect globally, and up to four cloud computer policies that apply to specific IP addresses. If multiple cloud computer policies are configured for global enforcement, only the earliest-associated policy will take effect</p>
+     * <p>You can specify up to one cloud computer policy that takes effect globally, and up to four cloud computer policies that apply to specific IP addresses. If multiple cloud computer policies are configured for global enforcement, only the earliest-associated policy will take effect</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -32,10 +32,14 @@ public class ModifyResourceCenterPolicyRequest extends TeaModel {
      * <p>The service type.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>app: cloud applications.</li>
-     * <li>resourceGroup: resource groups.</li>
-     * <li>desktop: cloud computers.</li>
-     * <li>desktopGroup: cloud computer shares.</li>
+     * <li><p>app: cloud applications.</p>
+     * </li>
+     * <li><p>resourceGroup: resource groups.</p>
+     * </li>
+     * <li><p>desktop: cloud computers.</p>
+     * </li>
+     * <li><p>desktopGroup: cloud computer shares.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -66,8 +70,10 @@ public class ModifyResourceCenterPolicyRequest extends TeaModel {
      * <p>The resource type.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>app: cloud applications.</li>
-     * <li>desktop: cloud computers.</li>
+     * <li><p>app: cloud applications.</p>
+     * </li>
+     * <li><p>desktop: cloud computers.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -54,7 +54,7 @@ public class DescribeInvocationsRequest extends TeaModel {
      * <p>The user ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>test1</p>
+     * <p>alice</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;

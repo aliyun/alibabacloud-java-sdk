@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ResetDesktopsRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud computer share.</p>
+     * <p>The ID of the shared cloud desktop.</p>
      * <ul>
-     * <li>If you specify <code>DesktopId</code>, ignore <code>DesktopGroupId</code>.</li>
-     * <li>If you leave <code>DesktopId</code> empty, the system obtains the IDs of all cloud computers within the share specified by <code>DesktopGroupId</code>.``</li>
+     * <li><p>If you specify <code>DesktopId</code>, the system ignores <code>DesktopGroupId</code>.</p>
+     * </li>
+     * <li><p>If <code>DesktopId</code> is empty, the system uses <code>DesktopGroupId</code> to retrieve the <code>DesktopId</code> of all cloud desktops in the shared cloud desktop group.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,19 +20,19 @@ public class ResetDesktopsRequest extends TeaModel {
     public String desktopGroupId;
 
     /**
-     * <p>The IDs of the cloud computer shares.</p>
+     * <p>A list of shared cloud desktop group IDs.</p>
      */
     @NameInMap("DesktopGroupIds")
     public java.util.List<String> desktopGroupIds;
 
     /**
-     * <p>The IDs of the cloud computers. You can specify the IDs of 1 to 100 cloud computers.</p>
+     * <p>A list of cloud desktop IDs. You can specify 1 to 100 IDs.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
-     * <p>The ID of the image.</p>
+     * <p>The image ID.</p>
      * 
      * <strong>example:</strong>
      * <p>m-4zfb6zj728hhr****</p>
@@ -42,15 +44,10 @@ public class ResetDesktopsRequest extends TeaModel {
     public Long lastRetryTime;
 
     /**
-     * <p>The billing method of the cloud computer share.</p>
+     * <p>The billing method.</p>
      * <blockquote>
-     * <p> This parameter takes effect when you reset a cloud computer share. If you leave this parameter empty, all cloud computers in that share are reset.</p>
+     * <p>This parameter applies only when resetting shared cloud desktops. If you leave it empty, the system resets all cloud desktops in the shared cloud desktop group, regardless of their billing method.</p>
      * </blockquote>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>PostPaid: pay-as-you-go.</li>
-     * <li>PrePaid: subscription.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>PrePaid</p>
@@ -59,7 +56,7 @@ public class ResetDesktopsRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/436773.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to list regions that support WUYING Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,12 +66,7 @@ public class ResetDesktopsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The reset scope. You can configure this parameter to reset the image or cloud computer.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>ALL (default): resets the image and cloud computer.</li>
-     * <li>IMAGE: resets only the image.</li>
-     * </ul>
+     * <p>The scope of the reset operation. Set this parameter to reset either the image or the cloud desktop.</p>
      * 
      * <strong>example:</strong>
      * <p>ALL</p>
@@ -83,14 +75,7 @@ public class ResetDesktopsRequest extends TeaModel {
     public String resetScope;
 
     /**
-     * <p>The disk reset type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>0: does not reset disks.</li>
-     * <li>1: resets only the system disk.</li>
-     * <li>2: resets only the user disk.</li>
-     * <li>3: resets the system disk and the user disk.</li>
-     * </ul>
+     * <p>The reset type. This determines whether to reset and which disks to reset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

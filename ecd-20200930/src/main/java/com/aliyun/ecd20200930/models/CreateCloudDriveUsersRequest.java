@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCloudDriveUsersRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud disk.</p>
+     * <p>Enterprise cloud drive ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,14 +15,14 @@ public class CreateCloudDriveUsersRequest extends TeaModel {
     public String cdsId;
 
     /**
-     * <p>The IDs of the end users.</p>
+     * <p>List of end user IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The ID of the region. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to obtain a list of regions supported by WUYING Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,11 +32,11 @@ public class CreateCloudDriveUsersRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The maximum storage space of an end user. Unit: bytes.</p>
+     * <p>Maximum storage size for a user\&quot;s personal cloud drive. This value must not exceed the remaining available capacity in the enterprise cloud drive. Unit: byte.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1024</p>
+     * <p>209715200</p>
      */
     @NameInMap("UserMaxSize")
     public Long userMaxSize;

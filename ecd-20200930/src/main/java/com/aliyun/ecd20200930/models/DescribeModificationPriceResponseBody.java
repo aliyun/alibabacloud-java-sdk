@@ -52,6 +52,9 @@ public class DescribeModificationPriceResponseBody extends TeaModel {
 
         /**
          * <p>The promotion description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>新品上市，立享优惠</p>
          */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
@@ -67,6 +70,9 @@ public class DescribeModificationPriceResponseBody extends TeaModel {
 
         /**
          * <p>The name of the promotion activity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Featured deals</p>
          */
         @NameInMap("PromotionName")
         public String promotionName;
@@ -129,7 +135,7 @@ public class DescribeModificationPriceResponseBody extends TeaModel {
 
     public static class DescribeModificationPriceResponseBodyPriceInfoPrice extends TeaModel {
         /**
-         * <p>The unit of currency (USD).</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The unit of currency (CNY).&lt;props=&quot;intl&quot;&gt;The unit of currency (USD).</p>
          * 
          * <strong>example:</strong>
          * <p>CNY</p>
@@ -234,6 +240,9 @@ public class DescribeModificationPriceResponseBody extends TeaModel {
     public static class DescribeModificationPriceResponseBodyPriceInfoRules extends TeaModel {
         /**
          * <p>The rule description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>买满1年，立享官网价格8.5折优惠。</p>
          */
         @NameInMap("Description")
         public String description;

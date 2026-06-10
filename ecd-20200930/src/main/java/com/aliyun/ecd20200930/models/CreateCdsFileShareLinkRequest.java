@@ -16,6 +16,9 @@ public class CreateCdsFileShareLinkRequest extends TeaModel {
 
     /**
      * <p>The description of the file sharing task. The description must be 0 to 1,024 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SharedFile</p>
      */
     @NameInMap("Description")
     public String description;
@@ -135,7 +138,7 @@ public class CreateCdsFileShareLinkRequest extends TeaModel {
      * <p>The ID of the end user.</p>
      * 
      * <strong>example:</strong>
-     * <p>user01</p>
+     * <p>alice</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;
@@ -155,6 +158,12 @@ public class CreateCdsFileShareLinkRequest extends TeaModel {
     @NameInMap("FileIds")
     public java.util.List<String> fileIds;
 
+    /**
+     * <p>Team space ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cg-i1ruuudp92qpj****</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 

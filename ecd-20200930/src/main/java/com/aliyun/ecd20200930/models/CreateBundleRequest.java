@@ -25,12 +25,12 @@ public class CreateBundleRequest extends TeaModel {
     /**
      * <p>The instance type of the cloud computers. You can call the <a href="https://help.aliyun.com/document_detail/436974.html">DescribeBundles</a> operation to query cloud computer templates and obtain the instance types supported by the cloud computers from the <code>DesktopType</code> response parameter.</p>
      * <blockquote>
-     * <p> If you want the template to use a non-GPU-accelerated image, you can only select a non-GPU-accelerated instance type. If you want the template to use a GPU-accelerated image, you can only select a GPU-accelerated instance type.</p>
+     * <p>If you want the template to use a non-GPU-accelerated image, you can only select a non-GPU-accelerated instance type. If you want the template to use a GPU-accelerated image, you can only select a GPU-accelerated instance type.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ecd.basic.large</p>
+     * <p>eds.enterprise_office.2c4g</p>
      */
     @NameInMap("DesktopType")
     public String desktopType;
@@ -48,10 +48,14 @@ public class CreateBundleRequest extends TeaModel {
     /**
      * <p>The OS language. This parameter is available only for system images. Valid values:</p>
      * <ul>
-     * <li>zh-CN: Simplified Chinese</li>
-     * <li>zh-HK: Traditional Chinese (Hong Kong)</li>
-     * <li>en-US: American English</li>
-     * <li>ja-JP: Japanese</li>
+     * <li><p>zh-CN: Simplified Chinese</p>
+     * </li>
+     * <li><p>zh-HK: Traditional Chinese (Hong Kong)</p>
+     * </li>
+     * <li><p>en-US: American English</p>
+     * </li>
+     * <li><p>ja-JP: Japanese</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -276,7 +276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds authorized users for a cloud computer share. The system automatically assigns cloud computers from a share to authorized users based on administrator-configured rules.</p>
+     * <p>Adds authorized users to a shared cloud desktop group, automatically assigning cloud desktops within the group to these users based on rules defined by an administrator.</p>
      * 
      * @param request AddUserToDesktopGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -299,6 +299,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.endUserIds)) {
             query.put("EndUserIds", request.endUserIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
+            query.put("OrgId", request.orgId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -336,7 +340,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds authorized users for a cloud computer share. The system automatically assigns cloud computers from a share to authorized users based on administrator-configured rules.</p>
+     * <p>Adds authorized users to a shared cloud desktop group, automatically assigning cloud desktops within the group to these users based on rules defined by an administrator.</p>
      * 
      * @param request AddUserToDesktopGroupRequest
      * @return AddUserToDesktopGroupResponse
@@ -588,7 +592,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>(Administrator) initiates a remote assistance request to the end user. This operation is mainly used in administrator assistance scenarios and education scenarios.</p>
+     * <p>Applies for coordination monitoring. This operation is mainly used in administrator assistance scenarios and education scenarios.</p>
      * 
      * @param request ApplyCoordinationForMonitoringRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -640,7 +644,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>(Administrator) initiates a remote assistance request to the end user. This operation is mainly used in administrator assistance scenarios and education scenarios.</p>
+     * <p>Applies for coordination monitoring. This operation is mainly used in administrator assistance scenarios and education scenarios.</p>
      * 
      * @param request ApplyCoordinationForMonitoringRequest
      * @return ApplyCoordinationForMonitoringResponse
@@ -1022,10 +1026,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The cloud computers for which you want to change their policies must be in the Running state.</p>
      * <ul>
-     * <li>After you call this operation, the assignment result is immediately returned. You can call the <a href="https://help.aliyun.com/document_detail/436815.html">DescribeDesktops</a> operation to query the assignment of the cloud computer. The value of the <code>ManagementFlags</code> response parameter indicates the assignment of the cloud computer. A value of <code>ASSIGNING</code> indicates that the cloud computer is being assigned, and other values indicate that the cloud computer is assigned.</li>
-     * <li>We recommend that you check the assignment every 2 to 5 seconds and perform the checks within 50 seconds. Typically, 1 to 5 seconds are required to complete the assignment.</li>
+     * <li>The target cloud computers must be in the Running state.</li>
+     * <li>This is an asynchronous API. To check the assignment status, call <a href="t2167745.xdita#"></a>and refer to the <code>ManagementFlags</code> parameter. A value of <code>ASSIGNING</code> means it is in progress; otherwise, it is complete.</li>
+     * <li>Recommended polling interval: 2–5 seconds (max duration: 50s). The process usually takes 1–5 seconds.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1085,10 +1089,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The cloud computers for which you want to change their policies must be in the Running state.</p>
      * <ul>
-     * <li>After you call this operation, the assignment result is immediately returned. You can call the <a href="https://help.aliyun.com/document_detail/436815.html">DescribeDesktops</a> operation to query the assignment of the cloud computer. The value of the <code>ManagementFlags</code> response parameter indicates the assignment of the cloud computer. A value of <code>ASSIGNING</code> indicates that the cloud computer is being assigned, and other values indicate that the cloud computer is assigned.</li>
-     * <li>We recommend that you check the assignment every 2 to 5 seconds and perform the checks within 50 seconds. Typically, 1 to 5 seconds are required to complete the assignment.</li>
+     * <li>The target cloud computers must be in the Running state.</li>
+     * <li>This is an asynchronous API. To check the assignment status, call <a href="t2167745.xdita#"></a>and refer to the <code>ManagementFlags</code> parameter. A value of <code>ASSIGNING</code> means it is in progress; otherwise, it is complete.</li>
+     * <li>Recommended polling interval: 2–5 seconds (max duration: 50s). The process usually takes 1–5 seconds.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1591,6 +1595,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Specify an organizational unit (OU) and administrator for the Active Directory (AD) office network (formerly known as workspace).</p>
+     * 
      * @param request ConfigADConnectorUserRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ConfigADConnectorUserResponse
@@ -1636,6 +1643,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Specify an organizational unit (OU) and administrator for the Active Directory (AD) office network (formerly known as workspace).</p>
+     * 
      * @param request ConfigADConnectorUserRequest
      * @return ConfigADConnectorUserResponse
      */
@@ -1646,7 +1656,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Makes a copy of a file or folder on a drive.</p>
+     * <p>Create a copy of a file or folder in the cloud drive.</p>
      * 
      * @param request CopyCdsFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1710,7 +1720,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Makes a copy of a file or folder on a drive.</p>
+     * <p>Create a copy of a file or folder in the cloud drive.</p>
      * 
      * @param request CopyCdsFileRequest
      * @return CopyCdsFileResponse
@@ -1880,20 +1890,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you create an enterprise AD office network, the system automatically creates an AD connector to connect to an enterprise AD. You are charged for the AD connector. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">Billing overview</a>.
-     * After you call this operation to create an AD office network, you must perform the following steps to complete AD domain setting:</p>
+     * <p>When you create an AD office network, an AD Connector is automatically created to connect to your enterprise AD. You are charged for the AD Connector. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">billing overview</a>.
+     * After creating an AD office network, you must also configure the AD domain. Follow these steps:</p>
      * <ol>
-     * <li>Configure a conditional forwarder in a Domain Name System (DNS) server.</li>
-     * <li>Configure a trust relationship in an AD domain controller and call the <a href="https://help.aliyun.com/document_detail/311258.html">ConfigADConnectorTrust</a> operation to configure the trust relationship with the AD office network.</li>
-     * <li>Call the <a href="https://help.aliyun.com/document_detail/311259.html">ListUserAdOrganizationUnits</a> operation to query a list of organizational units (OUs) of the AD domain, and call the <a href="https://help.aliyun.com/document_detail/311262.html">ConfigADConnectorUser</a> operation to specify an OU and administrator for the AD office network.<blockquote>
-     * <p> When you create the AD office network, take note of the DomainUserName and DomainPassword parameters. If you specify the parameters, you need to only configure a conditional forwarder. If you do not specify the parameters, you must configure a conditional forwarder, trust relationship, and OU as prompted.
-     * For more information, see <a href="https://help.aliyun.com/document_detail/214469.html">Create and manage enterprise AD office networks</a>.</p>
+     * <li>Configure a conditional forwarder on your DNS server.</li>
+     * <li>Establish a trust relationship on your domain controller, and then call <a href="https://help.aliyun.com/document_detail/311258.html">ConfigADConnectorTrust</a> to configure this trust for the AD office network.</li>
+     * <li>Call <a href="https://help.aliyun.com/document_detail/311259.html">ListUserAdOrganizationUnits</a> to list the organizational units (OUs) in your AD domain. Then, call <a href="https://help.aliyun.com/document_detail/311262.html">ConfigADConnectorUser</a> to specify the OUs and an administrator for the AD office network.<blockquote>
+     * <p>If you provide domain administrator credentials (DomainUserName and DomainPassword) when you create the AD office network, you only need to configure a conditional forwarder. If you do not provide these credentials, you must configure a conditional forwarder, establish a trust relationship, and specify the organizational units (OUs).
+     * For more information, see <a href="https://help.aliyun.com/document_detail/214469.html">Create and manage office networks for enterprise AD accounts</a>.</p>
      * </blockquote>
      * </li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Creates an enterprise Active Directory (AD) office network (formerly workspace). Elastic Desktop Service supports the following types of accounts: convenience accounts and enterprise AD accounts.</p>
+     * <p>WUYING Workspace supports two account types: convenience accounts and Enterprise AD accounts. This operation creates an office network (formerly known as a workspace) for Enterprise AD accounts.</p>
      * 
      * @param request CreateADConnectorOfficeSiteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2017,20 +2027,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you create an enterprise AD office network, the system automatically creates an AD connector to connect to an enterprise AD. You are charged for the AD connector. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">Billing overview</a>.
-     * After you call this operation to create an AD office network, you must perform the following steps to complete AD domain setting:</p>
+     * <p>When you create an AD office network, an AD Connector is automatically created to connect to your enterprise AD. You are charged for the AD Connector. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">billing overview</a>.
+     * After creating an AD office network, you must also configure the AD domain. Follow these steps:</p>
      * <ol>
-     * <li>Configure a conditional forwarder in a Domain Name System (DNS) server.</li>
-     * <li>Configure a trust relationship in an AD domain controller and call the <a href="https://help.aliyun.com/document_detail/311258.html">ConfigADConnectorTrust</a> operation to configure the trust relationship with the AD office network.</li>
-     * <li>Call the <a href="https://help.aliyun.com/document_detail/311259.html">ListUserAdOrganizationUnits</a> operation to query a list of organizational units (OUs) of the AD domain, and call the <a href="https://help.aliyun.com/document_detail/311262.html">ConfigADConnectorUser</a> operation to specify an OU and administrator for the AD office network.<blockquote>
-     * <p> When you create the AD office network, take note of the DomainUserName and DomainPassword parameters. If you specify the parameters, you need to only configure a conditional forwarder. If you do not specify the parameters, you must configure a conditional forwarder, trust relationship, and OU as prompted.
-     * For more information, see <a href="https://help.aliyun.com/document_detail/214469.html">Create and manage enterprise AD office networks</a>.</p>
+     * <li>Configure a conditional forwarder on your DNS server.</li>
+     * <li>Establish a trust relationship on your domain controller, and then call <a href="https://help.aliyun.com/document_detail/311258.html">ConfigADConnectorTrust</a> to configure this trust for the AD office network.</li>
+     * <li>Call <a href="https://help.aliyun.com/document_detail/311259.html">ListUserAdOrganizationUnits</a> to list the organizational units (OUs) in your AD domain. Then, call <a href="https://help.aliyun.com/document_detail/311262.html">ConfigADConnectorUser</a> to specify the OUs and an administrator for the AD office network.<blockquote>
+     * <p>If you provide domain administrator credentials (DomainUserName and DomainPassword) when you create the AD office network, you only need to configure a conditional forwarder. If you do not provide these credentials, you must configure a conditional forwarder, establish a trust relationship, and specify the organizational units (OUs).
+     * For more information, see <a href="https://help.aliyun.com/document_detail/214469.html">Create and manage office networks for enterprise AD accounts</a>.</p>
      * </blockquote>
      * </li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Creates an enterprise Active Directory (AD) office network (formerly workspace). Elastic Desktop Service supports the following types of accounts: convenience accounts and enterprise AD accounts.</p>
+     * <p>WUYING Workspace supports two account types: convenience accounts and Enterprise AD accounts. This operation creates an office network (formerly known as a workspace) for Enterprise AD accounts.</p>
      * 
      * @param request CreateADConnectorOfficeSiteRequest
      * @return CreateADConnectorOfficeSiteResponse
@@ -2113,11 +2123,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can call the operation to create an automatic snapshot policy based on a CRON expression. Then, the system automatically creates snapshots of a cloud desktop based on the policy.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Creates an automatic snapshot policy. WUYING WorkSpace automatically creates snapshots based on the time specified by the cron expression in the automatic snapshot policy.</p>
+     * <p>Creates an automatic snapshot policy that schedules snapshots for WUYING Workspace based on a cron expression.</p>
      * 
      * @param request CreateAutoSnapshotPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2164,11 +2171,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can call the operation to create an automatic snapshot policy based on a CRON expression. Then, the system automatically creates snapshots of a cloud desktop based on the policy.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Creates an automatic snapshot policy. WUYING WorkSpace automatically creates snapshots based on the time specified by the cron expression in the automatic snapshot policy.</p>
+     * <p>Creates an automatic snapshot policy that schedules snapshots for WUYING Workspace based on a cron expression.</p>
      * 
      * @param request CreateAutoSnapshotPolicyRequest
      * @return CreateAutoSnapshotPolicyResponse
@@ -2334,10 +2338,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After the RAM permissions are authenticated, you can call the CreateCdsFile operation to obtain the upload URL of a file and upload the file to a cloud disk.</p>
+     * <p>Call this API to create a folder directly in the enterprise cloud disk. To upload a file, call this API to obtain an upload URL. Then use that URL with the <a href="https://help.aliyun.com/document_detail/2247620.html">CompleteCdsFile</a> API to complete the upload.</p>
      * 
      * <b>summary</b> : 
-     * <p>Uploads a file to a cloud disk.</p>
+     * <p>Create a folder or initiate a file upload task in the cloud disk.</p>
      * 
      * @param request CreateCdsFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2405,10 +2409,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After the RAM permissions are authenticated, you can call the CreateCdsFile operation to obtain the upload URL of a file and upload the file to a cloud disk.</p>
+     * <p>Call this API to create a folder directly in the enterprise cloud disk. To upload a file, call this API to obtain an upload URL. Then use that URL with the <a href="https://help.aliyun.com/document_detail/2247620.html">CompleteCdsFile</a> API to complete the upload.</p>
      * 
      * <b>summary</b> : 
-     * <p>Uploads a file to a cloud disk.</p>
+     * <p>Create a folder or initiate a file upload task in the cloud disk.</p>
      * 
      * @param request CreateCdsFileRequest
      * @return CreateCdsFileResponse
@@ -2420,7 +2424,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a file sharing task.</p>
+     * <p>Create a file share.</p>
      * 
      * @param request CreateCdsFileShareLinkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2504,7 +2508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a file sharing task.</p>
+     * <p>Create a file share.</p>
      * 
      * @param request CreateCdsFileShareLinkRequest
      * @return CreateCdsFileShareLinkResponse
@@ -2516,7 +2520,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a center policy.</p>
+     * <p>You can create a region-independent cloud desktop policy.</p>
      * 
      * @param request CreateCenterPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3076,7 +3080,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a center policy.</p>
+     * <p>You can create a region-independent cloud desktop policy.</p>
      * 
      * @param request CreateCenterPolicyRequest
      * @return CreateCenterPolicyResponse
@@ -3088,10 +3092,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The list of teams of a cloud disk in Cloud Drive Service is synchronized from the Organization tab in the Elastic Desktop Service (EDS) console. You can choose Users &gt; Manager User &gt; User &gt; Organization in the console. If you want to authorize a user to use a team space, you must move the user to the corresponding organization. After you move the user, the user can view the menu bar of the team space on a Cloud Drive Service client.</p>
+     * <p>The disk team list is synchronized from the EDS client -&gt; User Management -&gt; organization chart. If a user wants to use a team space, you can move the user to the specified organization in the User Management interface. The user can then see the team space menu bar in the disk client.</p>
      * 
      * <b>summary</b> : 
-     * <p>Authorizes a user to use a team space.</p>
+     * <p>Disk organization authorization.</p>
      * 
      * @param request CreateCloudDriveGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3139,10 +3143,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The list of teams of a cloud disk in Cloud Drive Service is synchronized from the Organization tab in the Elastic Desktop Service (EDS) console. You can choose Users &gt; Manager User &gt; User &gt; Organization in the console. If you want to authorize a user to use a team space, you must move the user to the corresponding organization. After you move the user, the user can view the menu bar of the team space on a Cloud Drive Service client.</p>
+     * <p>The disk team list is synchronized from the EDS client -&gt; User Management -&gt; organization chart. If a user wants to use a team space, you can move the user to the specified organization in the User Management interface. The user can then see the team space menu bar in the disk client.</p>
      * 
      * <b>summary</b> : 
-     * <p>Authorizes a user to use a team space.</p>
+     * <p>Disk organization authorization.</p>
      * 
      * @param request CreateCloudDriveGroupRequest
      * @return CreateCloudDriveGroupResponse
@@ -3154,10 +3158,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and pricing of Enterprise Drive Service (formerly Cloud Drive Service). For more information, see <a href="https://help.aliyun.com/document_detail/386301.html">Overview</a>.</p>
+     * <p>Before using this interface, make sure you understand the billing methods and pricing of Drive and Photo Service. For more information, see <a href="https://help.aliyun.com/document_detail/386301.html">Overview of Drive and Photo Service</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an enterprise drive.</p>
+     * <p>Create a PDS (formerly Wuying Cloud Disk)</p>
      * 
      * @param request CreateCloudDriveServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3257,10 +3261,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and pricing of Enterprise Drive Service (formerly Cloud Drive Service). For more information, see <a href="https://help.aliyun.com/document_detail/386301.html">Overview</a>.</p>
+     * <p>Before using this interface, make sure you understand the billing methods and pricing of Drive and Photo Service. For more information, see <a href="https://help.aliyun.com/document_detail/386301.html">Overview of Drive and Photo Service</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an enterprise drive.</p>
+     * <p>Create a PDS (formerly Wuying Cloud Disk)</p>
      * 
      * @param request CreateCloudDriveServiceRequest
      * @return CreateCloudDriveServiceResponse
@@ -3272,7 +3276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates the users of a cloud disk.</p>
+     * <p>Creates personal cloud drives for users within your enterprise cloud drive.</p>
      * 
      * @param request CreateCloudDriveUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3316,7 +3320,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates the users of a cloud disk.</p>
+     * <p>Creates personal cloud drives for users within your enterprise cloud drive.</p>
      * 
      * @param request CreateCloudDriveUsersRequest
      * @return CreateCloudDriveUsersResponse
@@ -3328,7 +3332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a configuration group. A configuration group stores the setup details for scheduled tasks on cloud computers.</p>
+     * <p>Create a configuration group. A configuration group contains settings for scheduled tasks on cloud desktops.</p>
      * 
      * @param request CreateConfigGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3380,7 +3384,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a configuration group. A configuration group stores the setup details for scheduled tasks on cloud computers.</p>
+     * <p>Create a configuration group. A configuration group contains settings for scheduled tasks on cloud desktops.</p>
      * 
      * @param request CreateConfigGroupRequest
      * @return CreateConfigGroupResponse
@@ -3392,13 +3396,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  To learn about the features, application scenarios, usage limits, scaling policies, and other details of shared groups, refer to <a href="https://help.aliyun.com/document_detail/290959.html">Overview</a>.</p>
      * <ul>
-     * <li>Before you call this operation, make sure that the required resources, such as the office network, cloud computer template, and policies, are created.</li>
+     * <li>To learn more about shared desktops, including their features, use cases, limitations, and scaling policies, see <a href="https://help.aliyun.com/document_detail/290959.html">Shared desktop (formerly desktop pool) overview</a>.</li>
+     * <li>Before calling this API, ensure you have created the necessary resources, such as an office network, a desktop template, and a policy.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a shared group.</p>
+     * <p>Creating a shared EDS.</p>
      * 
      * @param request CreateDesktopGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3670,13 +3674,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  To learn about the features, application scenarios, usage limits, scaling policies, and other details of shared groups, refer to <a href="https://help.aliyun.com/document_detail/290959.html">Overview</a>.</p>
      * <ul>
-     * <li>Before you call this operation, make sure that the required resources, such as the office network, cloud computer template, and policies, are created.</li>
+     * <li>To learn more about shared desktops, including their features, use cases, limitations, and scaling policies, see <a href="https://help.aliyun.com/document_detail/290959.html">Shared desktop (formerly desktop pool) overview</a>.</li>
+     * <li>Before calling this API, ensure you have created the necessary resources, such as an office network, a desktop template, and a policy.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a shared group.</p>
+     * <p>Creating a shared EDS.</p>
      * 
      * @param request CreateDesktopGroupRequest
      * @return CreateDesktopGroupResponse
@@ -3792,20 +3796,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you create cloud computers, complete the following preparations:</p>
+     * <p>Before you create a cloud desktop, meet the following requirements:</p>
      * <ul>
-     * <li>An office network (formerly called workspace) and users are created. For more information, see:<ul>
-     * <li>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</li>
-     * <li>Active Directory (AD) office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create an AD user</a>.</li>
+     * <li>Create an office site (formerly a workspace) and users:<ul>
+     * <li>Simple office site: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</li>
+     * <li>AD connector office site: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</li>
      * </ul>
      * </li>
-     * <li>Make sure a cloud computer template exists. If no cloud computer template exists, call the <a href="https://help.aliyun.com/document_detail/188883.html">CreateBundle</a> operation to create a template.</li>
-     * <li>Make sure a policy exists. If no policy exists, call the <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> operation to create a policy.
-     * If you want the cloud computers to automatically execute a custom command script, you can use the <code>UserCommands</code> field to configure a custom command.</li>
+     * <li>Call <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> to create a policy, or use an existing policy.
+     * <strong>Request examples</strong><details>
+     * <summary>
+     * Example: Create a cloud desktop from a bundle
+     * </summary></li>
      * </ul>
+     * <pre><code>{
+     *   &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
+     *   &quot;DesktopName&quot;: &quot;test-desktop-name&quot;,
+     *   &quot;Amount&quot;: &quot;1&quot;,
+     *   &quot;OfficeSiteId&quot;: &quot;cn-hangzhou+dir-xxx&quot;,// You must create an office site in advance.
+     *   &quot;PolicyGroupId&quot;: &quot;system-all-enabled-policy&quot;,
+     *   &quot;ChargeType&quot;: &quot;PostPaid&quot;,
+     *   &quot;BundleId&quot;: &quot;b-enterprise_office_8c16g_windows2022&quot;
+     * }
+     * </code></pre>
+     * </details>
+     * <details>
+     * <summary>
+     * Example: Create a cloud desktop with custom settings
+     * </summary>
+     * ```
+     * {
+     *   "RegionId": "cn-hangzhou",
+     *   "DesktopName": "test-desktop-name",
+     *   "Amount": "1",
+     *   "OfficeSiteId": "cn-hangzhou+dir-xxx",// You must create an office site in advance.
+     *   "PolicyGroupId": "system-all-enabled-policy",
+     *   "ChargeType": "PostPaid",
+     *   "DesktopAttachment": {
+     *     "ImageId": "desktopimage-windows-server-2022-64-asp",
+     *     "SystemDiskSize": "40",
+     *     "DataDiskSize": "0",
+     *     "DefaultLanguage": "zh-CN",
+     *     "DesktopType": "eds.enterprise_office.4c8g"
+     *   }
+     * }
+     * ```
+     * </details>
+     * <details>
+     * <summary>
+     * Example: Create a cloud desktop with a monthly usage package
+     * </summary>
+     * ```
+     * {
+     *   "RegionId": "cn-hangzhou",
+     *   "DesktopName": "test-desktop-name",
+     *   "Amount": "1",
+     *   "OfficeSiteId": "cn-hangzhou+dir-xxx",// You must create an office site in advance.
+     *   "PolicyGroupId": "system-all-enabled-policy",
+     *   "ChargeType": "PostPaid",
+     *   "DesktopAttachment": {
+     *     "ImageId": "desktopimage-windows-server-2022-64-asp",
+     *     "SystemDiskSize": "40",
+     *     "DataDiskSize": "0",
+     *     "DefaultLanguage": "zh-CN",
+     *     "DesktopType": "eds.enterprise_office.4c8g"
+     *   },
+     *   "MonthDesktopSetting": {
+     *     "UseDuration": "120"
+     *   },
+     *   "Period": "1",
+     *   "PeriodUnit": "Month"
+     * }
+     * ```
+     * </details>
+     * <details>
+     * <summary>
+     * Example: Create an agent resource
+     * </summary>
+     * ```
+     * {
+     *   "RegionId": "cn-hangzhou",
+     *   "BundleId": "b-openclaw-linux",
+     *   "DesktopName": "test-desktop-name",
+     *   "Amount": "1",
+     *   "OfficeSiteId": "cn-hangzhou+dir-xxx",// You must create an office site in advance.
+     *   "ChargeType": "PostPaid",
+     *   "DesktopAttachment": {
+     *     "DesktopType": "cloud.space.4c.8g"
+     *   },
+     *   "PurchaseOptions": {
+     *     "MonthlyCredits": "120"
+     *   },
+     *   "Period": "1",
+     *   "PeriodUnit": "Month"
+     * }
+     * ```
+     * </details>
+     * To automatically run user commands on a cloud desktop, configure the `UserCommands` parameter.
      * 
      * <b>summary</b> : 
-     * <p>Creates cloud computers. If you specify end users when you create cloud computers, the cloud computers are assigned to the end users after the cloud computers are created.</p>
+     * <p>Creates one or more Elastic Desktop Service (EDS) desktops. If you provide user information, the desktops are automatically assigned to the specified users.</p>
      * 
      * @param tmpReq CreateDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4003,20 +4093,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you create cloud computers, complete the following preparations:</p>
+     * <p>Before you create a cloud desktop, meet the following requirements:</p>
      * <ul>
-     * <li>An office network (formerly called workspace) and users are created. For more information, see:<ul>
-     * <li>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</li>
-     * <li>Active Directory (AD) office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create an AD user</a>.</li>
+     * <li>Create an office site (formerly a workspace) and users:<ul>
+     * <li>Simple office site: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</li>
+     * <li>AD connector office site: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</li>
      * </ul>
      * </li>
-     * <li>Make sure a cloud computer template exists. If no cloud computer template exists, call the <a href="https://help.aliyun.com/document_detail/188883.html">CreateBundle</a> operation to create a template.</li>
-     * <li>Make sure a policy exists. If no policy exists, call the <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> operation to create a policy.
-     * If you want the cloud computers to automatically execute a custom command script, you can use the <code>UserCommands</code> field to configure a custom command.</li>
+     * <li>Call <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> to create a policy, or use an existing policy.
+     * <strong>Request examples</strong><details>
+     * <summary>
+     * Example: Create a cloud desktop from a bundle
+     * </summary></li>
      * </ul>
+     * <pre><code>{
+     *   &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
+     *   &quot;DesktopName&quot;: &quot;test-desktop-name&quot;,
+     *   &quot;Amount&quot;: &quot;1&quot;,
+     *   &quot;OfficeSiteId&quot;: &quot;cn-hangzhou+dir-xxx&quot;,// You must create an office site in advance.
+     *   &quot;PolicyGroupId&quot;: &quot;system-all-enabled-policy&quot;,
+     *   &quot;ChargeType&quot;: &quot;PostPaid&quot;,
+     *   &quot;BundleId&quot;: &quot;b-enterprise_office_8c16g_windows2022&quot;
+     * }
+     * </code></pre>
+     * </details>
+     * <details>
+     * <summary>
+     * Example: Create a cloud desktop with custom settings
+     * </summary>
+     * ```
+     * {
+     *   "RegionId": "cn-hangzhou",
+     *   "DesktopName": "test-desktop-name",
+     *   "Amount": "1",
+     *   "OfficeSiteId": "cn-hangzhou+dir-xxx",// You must create an office site in advance.
+     *   "PolicyGroupId": "system-all-enabled-policy",
+     *   "ChargeType": "PostPaid",
+     *   "DesktopAttachment": {
+     *     "ImageId": "desktopimage-windows-server-2022-64-asp",
+     *     "SystemDiskSize": "40",
+     *     "DataDiskSize": "0",
+     *     "DefaultLanguage": "zh-CN",
+     *     "DesktopType": "eds.enterprise_office.4c8g"
+     *   }
+     * }
+     * ```
+     * </details>
+     * <details>
+     * <summary>
+     * Example: Create a cloud desktop with a monthly usage package
+     * </summary>
+     * ```
+     * {
+     *   "RegionId": "cn-hangzhou",
+     *   "DesktopName": "test-desktop-name",
+     *   "Amount": "1",
+     *   "OfficeSiteId": "cn-hangzhou+dir-xxx",// You must create an office site in advance.
+     *   "PolicyGroupId": "system-all-enabled-policy",
+     *   "ChargeType": "PostPaid",
+     *   "DesktopAttachment": {
+     *     "ImageId": "desktopimage-windows-server-2022-64-asp",
+     *     "SystemDiskSize": "40",
+     *     "DataDiskSize": "0",
+     *     "DefaultLanguage": "zh-CN",
+     *     "DesktopType": "eds.enterprise_office.4c8g"
+     *   },
+     *   "MonthDesktopSetting": {
+     *     "UseDuration": "120"
+     *   },
+     *   "Period": "1",
+     *   "PeriodUnit": "Month"
+     * }
+     * ```
+     * </details>
+     * <details>
+     * <summary>
+     * Example: Create an agent resource
+     * </summary>
+     * ```
+     * {
+     *   "RegionId": "cn-hangzhou",
+     *   "BundleId": "b-openclaw-linux",
+     *   "DesktopName": "test-desktop-name",
+     *   "Amount": "1",
+     *   "OfficeSiteId": "cn-hangzhou+dir-xxx",// You must create an office site in advance.
+     *   "ChargeType": "PostPaid",
+     *   "DesktopAttachment": {
+     *     "DesktopType": "cloud.space.4c.8g"
+     *   },
+     *   "PurchaseOptions": {
+     *     "MonthlyCredits": "120"
+     *   },
+     *   "Period": "1",
+     *   "PeriodUnit": "Month"
+     * }
+     * ```
+     * </details>
+     * To automatically run user commands on a cloud desktop, configure the `UserCommands` parameter.
      * 
      * <b>summary</b> : 
-     * <p>Creates cloud computers. If you specify end users when you create cloud computers, the cloud computers are assigned to the end users after the cloud computers are created.</p>
+     * <p>Creates one or more Elastic Desktop Service (EDS) desktops. If you provide user information, the desktops are automatically assigned to the specified users.</p>
      * 
      * @param request CreateDesktopsRequest
      * @return CreateDesktopsResponse
@@ -4288,7 +4464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a custom image based on a deployed cloud computer. Then, you can use the custom image to create cloud computers that have the same configurations. This prevents the repeated settings when you create cloud computers.</p>
+     * <p>Create a custom image from an existing WUYING Workspace. Use this image to quickly deploy more workspaces with identical configurations. Avoid repeating configuration steps each time you create a new workspace.</p>
      * 
      * @param request CreateImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4356,7 +4532,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a custom image based on a deployed cloud computer. Then, you can use the custom image to create cloud computers that have the same configurations. This prevents the repeated settings when you create cloud computers.</p>
+     * <p>Create a custom image from an existing WUYING Workspace. Use this image to quickly deploy more workspaces with identical configurations. Avoid repeating configuration steps each time you create a new workspace.</p>
      * 
      * @param request CreateImageRequest
      * @return CreateImageResponse
@@ -4512,7 +4688,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a premium bandwidth plan for an office network.</p>
+     * <p>Creates a network package for an office network.</p>
      * 
      * @param request CreateNetworkPackageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4588,7 +4764,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a premium bandwidth plan for an office network.</p>
+     * <p>Creates a network package for an office network.</p>
      * 
      * @param request CreateNetworkPackageRequest
      * @return CreateNetworkPackageResponse
@@ -4600,10 +4776,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/425831.html">pricing</a> of Global Accelerator (GA).</p>
+     * <p>Before you call this operation, ensure you fully understand the billing methods and <a href="t2208086.xdita#">pricing</a> of the GA service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables global acceleration for office networks.</p>
+     * <p>Enables the Global Accelerator (GA) service for an office network.</p>
      * 
      * @param request CreateOfficeSiteAcceleratorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4651,10 +4827,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/425831.html">pricing</a> of Global Accelerator (GA).</p>
+     * <p>Before you call this operation, ensure you fully understand the billing methods and <a href="t2208086.xdita#">pricing</a> of the GA service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables global acceleration for office networks.</p>
+     * <p>Enables the Global Accelerator (GA) service for an office network.</p>
      * 
      * @param request CreateOfficeSiteAcceleratorRequest
      * @return CreateOfficeSiteAcceleratorResponse
@@ -4666,7 +4842,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A cloud computer policy is a collection of rules to manage cloud computers in performance and security. For example, you can create a basic policy that involves the disk mapping, USB redirection, watermarking features and rules such as DNS rules. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</p>
+     * <p>A cloud computer policy is a set of rules for performance and security. These rules configure features such as local disk mapping, USB redirection, watermarks, and DNS control. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a cloud computer policy.</p>
@@ -4925,7 +5101,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A cloud computer policy is a collection of rules to manage cloud computers in performance and security. For example, you can create a basic policy that involves the disk mapping, USB redirection, watermarking features and rules such as DNS rules. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</p>
+     * <p>A cloud computer policy is a set of rules for performance and security. These rules configure features such as local disk mapping, USB redirection, watermarks, and DNS control. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a cloud computer policy.</p>
@@ -4939,8 +5115,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a QoS rule to manage network bandwidth for resources such as cloud desktops and cloud phones.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates a Quality of Service (QoS) rule.</p>
+     * <p>Creates a QoS rule.</p>
      * 
      * @param request CreateQosRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4995,8 +5174,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a QoS rule to manage network bandwidth for resources such as cloud desktops and cloud phones.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates a Quality of Service (QoS) rule.</p>
+     * <p>Creates a QoS rule.</p>
      * 
      * @param request CreateQosRuleRequest
      * @return CreateQosRuleResponse
@@ -5214,7 +5396,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an office network of the convenience account type. Elastic Desktop Service supports the following types of accounts: convenience accounts and enterprise AD accounts.</p>
+     * <p>Elastic Desktop Service (EDS) supports two types of accounts: convenience accounts and enterprise AD accounts. Use this API to create an office network (formerly a workspace) that uses convenience accounts.</p>
      * 
      * @param request CreateSimpleOfficeSiteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5330,7 +5512,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an office network of the convenience account type. Elastic Desktop Service supports the following types of accounts: convenience accounts and enterprise AD accounts.</p>
+     * <p>Elastic Desktop Service (EDS) supports two types of accounts: convenience accounts and enterprise AD accounts. Use this API to create an office network (formerly a workspace) that uses convenience accounts.</p>
      * 
      * @param request CreateSimpleOfficeSiteRequest
      * @return CreateSimpleOfficeSiteResponse
@@ -5535,7 +5717,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>When you call this operation, take note of the following item:</p>
      * <ul>
      * <li>Most parameters in templates are optional. When you create a template, Elastic Desktop Service (EDS) does not validate the existence or correctness of the parameter values you specify. The parameter values in the template are only verified when you use the template to create cloud computers.</li>
-     * <li>For parameters that include the region attribute in the template, it\&quot;s important to note that if the specified region doesn’t match the region where the template is used to create a cloud computer, those parameters will not take effect.</li>
+     * <li>For parameters that include the region attribute in the template, it\&quot;s important to note that if the specified region doesn\&quot;t match the region where the template is used to create a cloud computer, those parameters will not take effect.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5663,7 +5845,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>When you call this operation, take note of the following item:</p>
      * <ul>
      * <li>Most parameters in templates are optional. When you create a template, Elastic Desktop Service (EDS) does not validate the existence or correctness of the parameter values you specify. The parameter values in the template are only verified when you use the template to create cloud computers.</li>
-     * <li>For parameters that include the region attribute in the template, it\&quot;s important to note that if the specified region doesn’t match the region where the template is used to create a cloud computer, those parameters will not take effect.</li>
+     * <li>For parameters that include the region attribute in the template, it\&quot;s important to note that if the specified region doesn\&quot;t match the region where the template is used to create a cloud computer, those parameters will not take effect.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5943,7 +6125,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes users from a cloud disk in Cloud Drive Service.</p>
+     * <p>Delete the personal drive of a user in WUYING Workspace.</p>
      * 
      * @param request DeleteCloudDriveUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5983,7 +6165,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes users from a cloud disk in Cloud Drive Service.</p>
+     * <p>Delete the personal drive of a user in WUYING Workspace.</p>
      * 
      * @param request DeleteCloudDriveUsersRequest
      * @return DeleteCloudDriveUsersResponse
@@ -6043,14 +6225,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before releasing a cloud computer share, ensure that no cloud computers within it are in the Connected state and that no end users have access permissions to it.</p>
      * <ul>
-     * <li>You cannot delete a cloud computer share with an active subscription if it contains cloud computers that have not yet expired.</li>
-     * <li>Deleting a pay-as-you-go cloud computer share will release all pay-as-you-go cloud computers within it.</li>
+     * <li>Before you call this operation, make sure that the shared desktop group contains no connected desktops or authorized users.</li>
+     * <li>You cannot delete a subscription desktop group if the subscription desktops in the group have not expired.</li>
+     * <li>If you delete a pay-as-you-go desktop group, the pay-as-you-go desktops in the group are also released.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Releases a cloud computer share.</p>
+     * <p>Release a shared cloud computer.</p>
      * 
      * @param request DeleteDesktopGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6090,14 +6272,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before releasing a cloud computer share, ensure that no cloud computers within it are in the Connected state and that no end users have access permissions to it.</p>
      * <ul>
-     * <li>You cannot delete a cloud computer share with an active subscription if it contains cloud computers that have not yet expired.</li>
-     * <li>Deleting a pay-as-you-go cloud computer share will release all pay-as-you-go cloud computers within it.</li>
+     * <li>Before you call this operation, make sure that the shared desktop group contains no connected desktops or authorized users.</li>
+     * <li>You cannot delete a subscription desktop group if the subscription desktops in the group have not expired.</li>
+     * <li>If you delete a pay-as-you-go desktop group, the pay-as-you-go desktops in the group are also released.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Releases a cloud computer share.</p>
+     * <p>Release a shared cloud computer.</p>
      * 
      * @param request DeleteDesktopGroupRequest
      * @return DeleteDesktopGroupResponse
@@ -6109,7 +6291,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases pay-as-you-go cloud computers or expired subscription cloud computers.</p>
+     * <p>Releases one or more pay-as-you-go or expired subscription cloud computers.</p>
      * 
      * @param request DeleteDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6149,7 +6331,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases pay-as-you-go cloud computers or expired subscription cloud computers.</p>
+     * <p>Releases one or more pay-as-you-go or expired subscription cloud computers.</p>
      * 
      * @param request DeleteDesktopsRequest
      * @return DeleteDesktopsResponse
@@ -6419,8 +6601,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Images include system images and custom images. System images cannot be deleted.</p>
      * <ul>
+     * <li>Images include system images and custom images. System images cannot be deleted.</li>
      * <li>If an image that you want to delete is referenced by a cloud computer template, call the <a href="https://help.aliyun.com/document_detail/436972.html">DeleteBundles</a> operation to delete the cloud computer template before you delete the image.</li>
      * </ul>
      * 
@@ -6465,8 +6647,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Images include system images and custom images. System images cannot be deleted.</p>
      * <ul>
+     * <li>Images include system images and custom images. System images cannot be deleted.</li>
      * <li>If an image that you want to delete is referenced by a cloud computer template, call the <a href="https://help.aliyun.com/document_detail/436972.html">DeleteBundles</a> operation to delete the cloud computer template before you delete the image.</li>
      * </ul>
      * 
@@ -6485,7 +6667,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Before you delete a File Storage NAS (NAS) file system, make sure that the data you want to retain is backed up.</p>
      * <blockquote>
-     * <p>Warning: If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.</p>
+     * <p>Warning: 
+     * If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -6527,7 +6710,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Before you delete a File Storage NAS (NAS) file system, make sure that the data you want to retain is backed up.</p>
      * <blockquote>
-     * <p>Warning: If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.</p>
+     * <p>Warning: 
+     * If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -6591,7 +6775,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes one or more premium bandwidth plans.</p>
+     * <p>You can delete one or more public network premium bandwidth allocations.</p>
      * 
      * @param request DeleteNetworkPackagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6631,7 +6815,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes one or more premium bandwidth plans.</p>
+     * <p>You can delete one or more public network premium bandwidth allocations.</p>
      * 
      * @param request DeleteNetworkPackagesRequest
      * @return DeleteNetworkPackagesResponse
@@ -6643,7 +6827,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes Global Accelerator (GA) configuration.</p>
+     * <p>Deletes a Global Accelerator (GA) configuration.</p>
      * 
      * @param request DeleteOfficeSiteAcceleratorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6679,7 +6863,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes Global Accelerator (GA) configuration.</p>
+     * <p>Deletes a Global Accelerator (GA) configuration.</p>
      * 
      * @param request DeleteOfficeSiteAcceleratorRequest
      * @return DeleteOfficeSiteAcceleratorResponse
@@ -6695,7 +6879,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>All cloud computers in the office network are released.</li>
      * <li>The data that you want to retain is backed up.<blockquote>
-     * <p> Resources and data on cloud computers in an office network cannot be restored after you delete it. Proceed with caution.</p>
+     * <p>Resources and data on cloud computers in an office network cannot be restored after you delete it. Proceed with caution.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -6741,7 +6925,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>All cloud computers in the office network are released.</li>
      * <li>The data that you want to retain is backed up.<blockquote>
-     * <p> Resources and data on cloud computers in an office network cannot be restored after you delete it. Proceed with caution.</p>
+     * <p>Resources and data on cloud computers in an office network cannot be restored after you delete it. Proceed with caution.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -6759,8 +6943,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You cannot delete the cloud computer policy created by the Elastic Desktop Service (EDS) system.</p>
      * <ul>
+     * <li>You cannot delete the cloud computer policy created by the Elastic Desktop Service (EDS) system.</li>
      * <li>You cannot delete the cloud computer policies that are associated with cloud computers.</li>
      * </ul>
      * 
@@ -6801,8 +6985,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You cannot delete the cloud computer policy created by the Elastic Desktop Service (EDS) system.</p>
      * <ul>
+     * <li>You cannot delete the cloud computer policy created by the Elastic Desktop Service (EDS) system.</li>
      * <li>You cannot delete the cloud computer policies that are associated with cloud computers.</li>
      * </ul>
      * 
@@ -6819,7 +7003,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a traffic throttling rule from a QoS policy.</p>
+     * <p>Delete a rate-limiting rule.</p>
      * 
      * @param request DeleteQosRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6851,7 +7035,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a traffic throttling rule from a QoS policy.</p>
+     * <p>Delete a rate-limiting rule.</p>
      * 
      * @param request DeleteQosRulesRequest
      * @return DeleteQosRulesResponse
@@ -7296,11 +7480,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can view an automatic snapshot policy that is associated with a cloud desktop in the Elastic Desktop Service (EDS) console. To view the automatic snapshot policy, you can go to the EDS console, choose Deployment &gt; Snapshots in the left-side navigation pane, and then view an automatic snapshot policy on the Snapshots page.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Queries the automatic snapshot policy.</p>
+     * <p>Queries the details of automatic snapshot policies.</p>
      * 
      * @param request DescribeAutoSnapshotPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7347,11 +7528,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can view an automatic snapshot policy that is associated with a cloud desktop in the Elastic Desktop Service (EDS) console. To view the automatic snapshot policy, you can go to the EDS console, choose Deployment &gt; Snapshots in the left-side navigation pane, and then view an automatic snapshot policy on the Snapshots page.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Queries the automatic snapshot policy.</p>
+     * <p>Queries the details of automatic snapshot policies.</p>
      * 
      * @param request DescribeAutoSnapshotPolicyRequest
      * @return DescribeAutoSnapshotPolicyResponse
@@ -7607,7 +7785,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries center policies.</p>
+     * <p>Query details of policies that are not region-specific.</p>
      * 
      * @param request DescribeCenterPolicyListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7671,7 +7849,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries center policies.</p>
+     * <p>Query details of policies that are not region-specific.</p>
      * 
      * @param request DescribeCenterPolicyListRequest
      * @return DescribeCenterPolicyListResponse
@@ -7682,11 +7860,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can audit the operation logs of regular users to improve security. The operation logs record events such as desktop startup, shutdown, and session disconnection.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Queries the operation logs of end users. For example, the logs record the events that end users start and stop cloud desktops, and disconnect desktop sessions.</p>
+     * <p>Query end-user operation logs for events such as starting and stopping a WUYING Workspace, and disconnecting from sessions.</p>
      * 
      * @param request DescribeClientEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7777,11 +7952,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can audit the operation logs of regular users to improve security. The operation logs record events such as desktop startup, shutdown, and session disconnection.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Queries the operation logs of end users. For example, the logs record the events that end users start and stop cloud desktops, and disconnect desktop sessions.</p>
+     * <p>Query end-user operation logs for events such as starting and stopping a WUYING Workspace, and disconnecting from sessions.</p>
      * 
      * @param request DescribeClientEventsRequest
      * @return DescribeClientEventsResponse
@@ -7792,8 +7964,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Cloud disk team drives are synced from the Alibaba Cloud Workspace client to User Management &gt; organization chart. To use a team drive, you can move users to the target organization in the User Management interface. Users then see the team drive menu bar in the cloud disk client.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries team spaces in a cloud disk.</p>
+     * <p>Lists cloud disk group drives.</p>
      * 
      * @param request DescribeCloudDiskGroupDrivesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7840,8 +8015,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Cloud disk team drives are synced from the Alibaba Cloud Workspace client to User Management &gt; organization chart. To use a team drive, you can move users to the target organization in the User Management interface. Users then see the team drive menu bar in the cloud disk client.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries team spaces in a cloud disk.</p>
+     * <p>Lists cloud disk group drives.</p>
      * 
      * @param request DescribeCloudDiskGroupDrivesRequest
      * @return DescribeCloudDiskGroupDrivesResponse
@@ -7852,8 +8030,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After you enable security protection, the system automatically scans Cloud Desktop for system vulnerabilities once a day.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries team spaces from the drive.</p>
+     * <p>Lists cloud disk groups.</p>
      * 
      * @param request DescribeCloudDiskGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7900,8 +8081,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After you enable security protection, the system automatically scans Cloud Desktop for system vulnerabilities once a day.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries team spaces from the drive.</p>
+     * <p>Lists cloud disk groups.</p>
      * 
      * @param request DescribeCloudDiskGroupsRequest
      * @return DescribeCloudDiskGroupsResponse
@@ -7913,7 +8097,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list and basic information of all team shared disks in an enterprise drive.</p>
+     * <p>Query the list and basic information of all team shared drives in the enterprise cloud drive.</p>
      * 
      * @param request DescribeCloudDriveGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7989,7 +8173,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list and basic information of all team shared disks in an enterprise drive.</p>
+     * <p>Query the list and basic information of all team shared drives in the enterprise cloud drive.</p>
      * 
      * @param request DescribeCloudDriveGroupsRequest
      * @return DescribeCloudDriveGroupsResponse
@@ -8001,7 +8185,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the permission settings on the enterprise drive.</p>
+     * <p>Query the permission settings details of the enterprise cloud drive.</p>
      * 
      * @param request DescribeCloudDrivePermissionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8037,7 +8221,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the permission settings on the enterprise drive.</p>
+     * <p>Query the permission settings details of the enterprise cloud drive.</p>
      * 
      * @param request DescribeCloudDrivePermissionsRequest
      * @return DescribeCloudDrivePermissionsResponse
@@ -8049,7 +8233,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries users of cloud disks in Cloud Drive Service.</p>
+     * <p>Retrieves a list of personal drives and their basic information for all users in an enterprise network drive.</p>
      * 
      * @param request DescribeCloudDriveUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8097,7 +8281,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries users of cloud disks in Cloud Drive Service.</p>
+     * <p>Retrieves a list of personal drives and their basic information for all users in an enterprise network drive.</p>
      * 
      * @param request DescribeCloudDriveUsersRequest
      * @return DescribeCloudDriveUsersResponse
@@ -8109,7 +8293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries configuration groups.</p>
+     * <p>Query the configuration group list information.</p>
      * 
      * @param request DescribeConfigGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8173,7 +8357,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries configuration groups.</p>
+     * <p>Query the configuration group list information.</p>
      * 
      * @param request DescribeConfigGroupRequest
      * @return DescribeConfigGroupResponse
@@ -8185,7 +8369,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the header information of the cloud computer list.</p>
+     * <p>Obtain the table header information of the WUYING Workspace list page.</p>
      * 
      * @param request DescribeCustomizedListHeadersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8225,7 +8409,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the header information of the cloud computer list.</p>
+     * <p>Obtain the table header information of the WUYING Workspace list page.</p>
      * 
      * @param request DescribeCustomizedListHeadersRequest
      * @return DescribeCustomizedListHeadersResponse
@@ -8325,7 +8509,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries cloud computer shares.</p>
+     * <p>Returns a detailed list of shared cloud desktops.</p>
      * 
      * @param request DescribeDesktopGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8437,7 +8621,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries cloud computer shares.</p>
+     * <p>Returns a detailed list of shared cloud desktops.</p>
      * 
      * @param request DescribeDesktopGroupsRequest
      * @return DescribeDesktopGroupsResponse
@@ -8449,7 +8633,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the basic information about cloud computers.</p>
+     * <p>Describes basic information about cloud desktops.</p>
      * 
      * @param request DescribeDesktopInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8493,7 +8677,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the basic information about cloud computers.</p>
+     * <p>Describes basic information about cloud desktops.</p>
      * 
      * @param request DescribeDesktopInfoRequest
      * @return DescribeDesktopInfoResponse
@@ -8504,8 +8688,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is centralized, available only in the China (Shanghai) and Singapore regions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the list and metadata of cloud computers in a specific region.</p>
+     * <p>Lists cloud computers and their metadata from all regions.</p>
      * 
      * @param request DescribeDesktopMetadataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8588,8 +8775,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is centralized, available only in the China (Shanghai) and Singapore regions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the list and metadata of cloud computers in a specific region.</p>
+     * <p>Lists cloud computers and their metadata from all regions.</p>
      * 
      * @param request DescribeDesktopMetadataRequest
      * @return DescribeDesktopMetadataResponse
@@ -8777,10 +8967,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can only query data within the last 30 days.</p>
+     * <p>You can retrieve data only from the last 30 days.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the detailed session information of a cloud computer.</p>
+     * <p>Queries the detailed session information for cloud computers.</p>
      * 
      * @param request DescribeDesktopSessionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8872,10 +9062,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can only query data within the last 30 days.</p>
+     * <p>You can retrieve data only from the last 30 days.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the detailed session information of a cloud computer.</p>
+     * <p>Queries the detailed session information for cloud computers.</p>
      * 
      * @param request DescribeDesktopSessionsRequest
      * @return DescribeDesktopSessionsResponse
@@ -8886,11 +9076,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>When no values are specified for the <code>InstanceTypeFamily</code> and <code>DesktopTypeId</code> parameters for a cloud desktop, all types of cloud desktops are queried.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Queries the instance types of cloud computers.</p>
+     * <p>Retrieves cloud computer specifications.</p>
      * 
      * @param request DescribeDesktopTypesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9005,11 +9192,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>When no values are specified for the <code>InstanceTypeFamily</code> and <code>DesktopTypeId</code> parameters for a cloud desktop, all types of cloud desktops are queried.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Queries the instance types of cloud computers.</p>
+     * <p>Retrieves cloud computer specifications.</p>
      * 
      * @param request DescribeDesktopTypesRequest
      * @return DescribeDesktopTypesResponse
@@ -9021,7 +9205,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of cloud computers.</p>
+     * <p>Query the details of your cloud computers.</p>
      * 
      * @param request DescribeDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9201,7 +9385,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of cloud computers.</p>
+     * <p>Query the details of your cloud computers.</p>
      * 
      * @param request DescribeDesktopsRequest
      * @return DescribeDesktopsResponse
@@ -9213,7 +9397,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the cloud computers in a share by billing method.</p>
+     * <p>Find cloud computers in a shared cloud computer by billing method.</p>
      * 
      * @param request DescribeDesktopsInGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9273,7 +9457,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the cloud computers in a share by billing method.</p>
+     * <p>Find cloud computers in a shared cloud computer by billing method.</p>
      * 
      * @param request DescribeDesktopsInGroupRequest
      * @return DescribeDesktopsInGroupResponse
@@ -9561,7 +9745,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the monitoring data of the desktop inbound bandwidth and the desktop outbound bandwidth, or the monitoring data of the workspace bandwidth originated from or destined for the Internet.</p>
+     * <p>Query the inbound bandwidth and outbound bandwidth of a cloud computer, or the inbound bandwidth and outbound bandwidth for public network access of premium public bandwidth, along with their monitoring data.</p>
      * 
      * @param request DescribeFlowMetricRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9617,7 +9801,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the monitoring data of the desktop inbound bandwidth and the desktop outbound bandwidth, or the monitoring data of the workspace bandwidth originated from or destined for the Internet.</p>
+     * <p>Query the inbound bandwidth and outbound bandwidth of a cloud computer, or the inbound bandwidth and outbound bandwidth for public network access of premium public bandwidth, along with their monitoring data.</p>
      * 
      * @param request DescribeFlowMetricRequest
      * @return DescribeFlowMetricResponse
@@ -9903,15 +10087,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Domestic site users query site selection Shanghai, international site users choose Singapore.</p>
      * <ul>
-     * <li>By default, you can query all cloud computers that are deleted or not deleted.</li>
-     * <li>Deleted cloud computers can be queried only if the deletion time is less than three months.</li>
-     * <li>Sort criteria cannot be shared with other criteria.</li>
+     * <li>Select China (Shanghai) for the Alibaba Cloud China site and Singapore for the Alibaba Cloud International site.</li>
+     * <li>By default, this operation returns both active and deleted Cloud Desktops.</li>
+     * <li>You can query only Cloud Desktops deleted within the last three months.</li>
+     * <li>You cannot use the sort condition with other query conditions.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the basic information of all cloud computers and the corresponding usage duration records.</p>
+     * <p>Queries basic information and usage duration for all recent Cloud Desktops.</p>
      * 
      * @param request DescribeGlobalDesktopRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10011,15 +10195,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Domestic site users query site selection Shanghai, international site users choose Singapore.</p>
      * <ul>
-     * <li>By default, you can query all cloud computers that are deleted or not deleted.</li>
-     * <li>Deleted cloud computers can be queried only if the deletion time is less than three months.</li>
-     * <li>Sort criteria cannot be shared with other criteria.</li>
+     * <li>Select China (Shanghai) for the Alibaba Cloud China site and Singapore for the Alibaba Cloud International site.</li>
+     * <li>By default, this operation returns both active and deleted Cloud Desktops.</li>
+     * <li>You can query only Cloud Desktops deleted within the last three months.</li>
+     * <li>You cannot use the sort condition with other query conditions.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the basic information of all cloud computers and the corresponding usage duration records.</p>
+     * <p>Queries basic information and usage duration for all recent Cloud Desktops.</p>
      * 
      * @param request DescribeGlobalDesktopRecordsRequest
      * @return DescribeGlobalDesktopRecordsResponse
@@ -10030,8 +10214,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This API uses a centralized endpoint. You can call this API only from the China (Shanghai) or Singapore (Singapore) regions.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the batch information in the execution history of scheduled tasks and returns the summary task execution results.</p>
+     * <p>Queries for batch information from the execution history of scheduled tasks and returns aggregated results.</p>
      * 
      * @param request DescribeGlobalTimerBatchesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10086,8 +10275,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This API uses a centralized endpoint. You can call this API only from the China (Shanghai) or Singapore (Singapore) regions.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the batch information in the execution history of scheduled tasks and returns the summary task execution results.</p>
+     * <p>Queries for batch information from the execution history of scheduled tasks and returns aggregated results.</p>
      * 
      * @param request DescribeGlobalTimerBatchesRequest
      * @return DescribeGlobalTimerBatchesResponse
@@ -10099,7 +10293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the execution records of scheduled tasks on cloud computers.</p>
+     * <p>This operation queries the scheduled task execution records for EDS across all regions.</p>
      * 
      * @param request DescribeGlobalTimerRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10183,7 +10377,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the execution records of scheduled tasks on cloud computers.</p>
+     * <p>This operation queries the scheduled task execution records for EDS across all regions.</p>
      * 
      * @param request DescribeGlobalTimerRecordsRequest
      * @return DescribeGlobalTimerRecordsResponse
@@ -10247,7 +10441,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the image modification records of cloud computers.</p>
+     * <p>Queries the image change records of a cloud computer.</p>
      * 
      * @param request DescribeImageModifiedRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10291,7 +10485,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the image modification records of cloud computers.</p>
+     * <p>Queries the image change records of a cloud computer.</p>
      * 
      * @param request DescribeImageModifiedRecordsRequest
      * @return DescribeImageModifiedRecordsResponse
@@ -10457,10 +10651,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  After you run a command, it may not succeed. You can call this operation to query the execution result.</p>
      * <ul>
-     * <li>You can query the information about execution in the last two weeks. A maximum of 100,000 lines of execution information can be retained.</li>
+     * <li>After you execute a command, it does not necessarily mean that the command was successfully executed or produced the expected effect. You must check the actual execution result based on the return value from the API, and the actual output result prevails.  </li>
+     * <li>You can query execution information from the past two weeks, with a maximum retention limit of 100,000 records.</li>
      * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Used to query the execution list and status of Cloud Assistant scripts.</p>
      * 
      * @param request DescribeInvocationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10536,10 +10733,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  After you run a command, it may not succeed. You can call this operation to query the execution result.</p>
      * <ul>
-     * <li>You can query the information about execution in the last two weeks. A maximum of 100,000 lines of execution information can be retained.</li>
+     * <li>After you execute a command, it does not necessarily mean that the command was successfully executed or produced the expected effect. You must check the actual execution result based on the return value from the API, and the actual output result prevails.  </li>
+     * <li>You can query execution information from the past two weeks, with a maximum retention limit of 100,000 records.</li>
      * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Used to query the execution list and status of Cloud Assistant scripts.</p>
      * 
      * @param request DescribeInvocationsRequest
      * @return DescribeInvocationsResponse
@@ -10655,7 +10855,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the price for changing the specifications of a monthly subscription cloud computer with unlimited hours or a premium bandwidth plan.</p>
+     * <p>Query the Upgrade/Downgrade price for monthly subscription cloud desktops with unlimited duration or Internet premium bandwidth.</p>
      * 
      * @param request DescribeModificationPriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10731,7 +10931,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the price for changing the specifications of a monthly subscription cloud computer with unlimited hours or a premium bandwidth plan.</p>
+     * <p>Query the Upgrade/Downgrade price for monthly subscription cloud desktops with unlimited duration or Internet premium bandwidth.</p>
      * 
      * @param request DescribeModificationPriceRequest
      * @return DescribeModificationPriceResponse
@@ -10743,7 +10943,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about File Storage NAS (NAS) file systems.</p>
+     * <p>Queries NAS file systems.</p>
      * 
      * @param request DescribeNASFileSystemsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10795,7 +10995,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about File Storage NAS (NAS) file systems.</p>
+     * <p>Queries NAS file systems.</p>
      * 
      * @param request DescribeNASFileSystemsRequest
      * @return DescribeNASFileSystemsResponse
@@ -10931,7 +11131,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries office network properties, including office network ID, name, status, and creation time.</p>
+     * <p>Gets all properties of an office network, including its ID, name, status, and creation time.</p>
      * 
      * @param request DescribeOfficeSitesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10995,7 +11195,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries office network properties, including office network ID, name, status, and creation time.</p>
+     * <p>Gets all properties of an office network, including its ID, name, status, and creation time.</p>
      * 
      * @param request DescribeOfficeSitesRequest
      * @return DescribeOfficeSitesResponse
@@ -11006,6 +11206,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you are familiar with the resource types and product types of Elastic Desktop Service.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries metrics such as the online user count and the assigned user count.</p>
+     * 
      * @param request DescribeOnlineUserCountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeOnlineUserCountResponse
@@ -11047,6 +11253,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you are familiar with the resource types and product types of Elastic Desktop Service.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries metrics such as the online user count and the assigned user count.</p>
+     * 
      * @param request DescribeOnlineUserCountRequest
      * @return DescribeOnlineUserCountResponse
      */
@@ -11057,7 +11269,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a cloud computer policy.</p>
+     * <p>Retrieves the details of a cloud computer policy.</p>
      * 
      * @param request DescribePolicyGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11121,7 +11333,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a cloud computer policy.</p>
+     * <p>Retrieves the details of a cloud computer policy.</p>
      * 
      * @param request DescribePolicyGroupsRequest
      * @return DescribePolicyGroupsResponse
@@ -11132,20 +11344,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>The request parameters vary based on the type of desktop resources whose price you want to query. Take note of the following items:</p>
-     * <ul>
-     * <li>If you set ResourceType to OfficeSite, you must specify InstanceType.</li>
-     * <li>If you set ResourceType to Bandwidth, the pay-by-data-transfer metering method is used for network billing.</li>
-     * <li>If you set ResourceType to Desktop, you must specify InstanceType, RootDiskSizeGib, and UserDiskSizeGib. You can specify OsType, PeriodUnit, Period, and Amount based on your business requirements.<blockquote>
-     * <p>Before you call this operation to query the prices of cloud desktops by setting ResourceType to Desktop, you must know the desktop types and disk sizes that EDS provides. The disk sizes vary based on the desktop types. For more information, see <a href="https://help.aliyun.com/document_detail/188609.html">Cloud desktop types</a>.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * <b>summary</b> : 
-     * <p>Queries the prices of Elastic Desktop Service (EDS) resources.</p>
+     * <p>Query the new purchase price of Elastic Desktop Service (EDS) products.</p>
      * 
      * @param request DescribePriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11248,20 +11448,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>The request parameters vary based on the type of desktop resources whose price you want to query. Take note of the following items:</p>
-     * <ul>
-     * <li>If you set ResourceType to OfficeSite, you must specify InstanceType.</li>
-     * <li>If you set ResourceType to Bandwidth, the pay-by-data-transfer metering method is used for network billing.</li>
-     * <li>If you set ResourceType to Desktop, you must specify InstanceType, RootDiskSizeGib, and UserDiskSizeGib. You can specify OsType, PeriodUnit, Period, and Amount based on your business requirements.<blockquote>
-     * <p>Before you call this operation to query the prices of cloud desktops by setting ResourceType to Desktop, you must know the desktop types and disk sizes that EDS provides. The disk sizes vary based on the desktop types. For more information, see <a href="https://help.aliyun.com/document_detail/188609.html">Cloud desktop types</a>.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * <b>summary</b> : 
-     * <p>Queries the prices of Elastic Desktop Service (EDS) resources.</p>
+     * <p>Query the new purchase price of Elastic Desktop Service (EDS) products.</p>
      * 
      * @param request DescribePriceRequest
      * @return DescribePriceResponse
@@ -11445,7 +11633,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries Quality of Service (QoS) rules.</p>
+     * <p>Queries QoS rules.</p>
      * 
      * @param request DescribeQosRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11481,7 +11669,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries Quality of Service (QoS) rules.</p>
+     * <p>Queries QoS rules.</p>
      * 
      * @param request DescribeQosRulesRequest
      * @return DescribeQosRulesResponse
@@ -11493,7 +11681,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the screen recording files in all regions.</p>
+     * <p>Retrieve screen recording files from all regions.</p>
      * 
      * @param request DescribeRecordFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11573,7 +11761,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the screen recording files in all regions.</p>
+     * <p>Retrieve screen recording files from all regions.</p>
      * 
      * @param request DescribeRecordFileRequest
      * @return DescribeRecordFileResponse
@@ -11669,7 +11857,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the refund amount for unsubscribing from a cloud computer.</p>
+     * <p>Query the refund amount for monthly subscription WUYING Workspaces.</p>
      * 
      * @param request DescribeRefundPriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11713,7 +11901,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the refund amount for unsubscribing from a cloud computer.</p>
+     * <p>Query the refund amount for monthly subscription WUYING Workspaces.</p>
      * 
      * @param request DescribeRefundPriceRequest
      * @return DescribeRefundPriceResponse
@@ -11773,7 +11961,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the renewal price of an Alibaba Cloud Workspace service.</p>
+     * <p>Retrieves the renewal price for an Elastic Desktop Service product.</p>
      * 
      * @param request DescribeRenewalPriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11833,7 +12021,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the renewal price of an Alibaba Cloud Workspace service.</p>
+     * <p>Retrieves the renewal price for an Elastic Desktop Service product.</p>
      * 
      * @param request DescribeRenewalPriceRequest
      * @return DescribeRenewalPriceResponse
@@ -12073,8 +12261,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This is a central operation and can be called only by using services in the China (Shanghai) region.</p>
      * <ul>
+     * <li>This is a central operation and can be called only by using services in the China (Shanghai) region.</li>
      * <li>You can query session statistics for the past hour.</li>
      * </ul>
      * 
@@ -12131,8 +12319,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This is a central operation and can be called only by using services in the China (Shanghai) region.</p>
      * <ul>
+     * <li>This is a central operation and can be called only by using services in the China (Shanghai) region.</li>
      * <li>You can query session statistics for the past hour.</li>
      * </ul>
      * 
@@ -12149,7 +12337,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the snapshots that are created based on a cloud computer and the details of the snapshots.</p>
+     * <p>Queries the snapshots and their details for a cloud desktop.</p>
      * 
      * @param request DescribeSnapshotsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12229,7 +12417,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the snapshots that are created based on a cloud computer and the details of the snapshots.</p>
+     * <p>Queries the snapshots and their details for a cloud desktop.</p>
      * 
      * @param request DescribeSnapshotsRequest
      * @return DescribeSnapshotsResponse
@@ -12373,7 +12561,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of cloud computer templates.</p>
+     * <p>Query the details of Cloud Desktop templates.</p>
      * 
      * @param request DescribeTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12441,7 +12629,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of cloud computer templates.</p>
+     * <p>Query the details of Cloud Desktop templates.</p>
      * 
      * @param request DescribeTemplatesRequest
      * @return DescribeTemplatesResponse
@@ -12453,7 +12641,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a scheduled task configuration group.</p>
+     * <p>Retrieves details for a specified configuration group.</p>
      * 
      * @param request DescribeTimerGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12489,7 +12677,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a scheduled task configuration group.</p>
+     * <p>Retrieves details for a specified configuration group.</p>
      * 
      * @param request DescribeTimerGroupRequest
      * @return DescribeTimerGroupResponse
@@ -12664,9 +12852,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Queries the configurations of the user profile management (UPM) directory blacklist and whitelist.</p>
-     * 
      * @param request DescribeUserProfilePathRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUserProfilePathRulesResponse
@@ -12704,9 +12889,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Queries the configurations of the user profile management (UPM) directory blacklist and whitelist.</p>
-     * 
      * @param request DescribeUserProfilePathRulesRequest
      * @return DescribeUserProfilePathRulesResponse
      */
@@ -12717,7 +12899,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about authorized users of a cloud computer share, including the usernames, email addresses, mobile numbers, and cloud computer IDs.</p>
+     * <p>This operation queries the details of all authorized users in a cloud desktop group, including their usernames, email addresses, phone numbers, and the IDs of their authorized cloud desktops.</p>
      * 
      * @param request DescribeUsersInGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12785,7 +12967,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about authorized users of a cloud computer share, including the usernames, email addresses, mobile numbers, and cloud computer IDs.</p>
+     * <p>This operation queries the details of all authorized users in a cloud desktop group, including their usernames, email addresses, phone numbers, and the IDs of their authorized cloud desktops.</p>
      * 
      * @param request DescribeUsersInGroupRequest
      * @return DescribeUsersInGroupResponse
@@ -12845,7 +13027,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the virtual multi-factor authentication (MFA) devices that are associated with Active Directory (AD) accounts.</p>
+     * <p>Retrieves the virtual multi-factor authentication (MFA) device associated with an Active Directory (AD) account.</p>
      * 
      * @param request DescribeVirtualMFADevicesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12897,7 +13079,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the virtual multi-factor authentication (MFA) devices that are associated with Active Directory (AD) accounts.</p>
+     * <p>Retrieves the virtual multi-factor authentication (MFA) device associated with an Active Directory (AD) account.</p>
      * 
      * @param request DescribeVirtualMFADevicesRequest
      * @return DescribeVirtualMFADevicesResponse
@@ -12909,7 +13091,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the zones in a region in which Elastic Desktop Service is supported.</p>
+     * <p>Queries the zones supported by Elastic Desktop Service (EDS) in a region.</p>
      * 
      * @param request DescribeZonesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12949,7 +13131,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the zones in a region in which Elastic Desktop Service is supported.</p>
+     * <p>Queries the zones supported by Elastic Desktop Service (EDS) in a region.</p>
      * 
      * @param request DescribeZonesRequest
      * @return DescribeZonesResponse
@@ -13843,7 +14025,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a cloud computer share.</p>
+     * <p>Queries the details of a cloud computer share.</p>
      * 
      * @param request GetDesktopGroupDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13879,7 +14061,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a cloud computer share.</p>
+     * <p>Queries the details of a cloud computer share.</p>
      * 
      * @param request GetDesktopGroupDetailRequest
      * @return GetDesktopGroupDetailResponse
@@ -13938,9 +14120,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.</p>
-     * 
      * <b>summary</b> : 
      * <p>Obtains the metadata of a Security Assertion Markup Language (SAML) 2.0-based service provider (SP).</p>
      * 
@@ -13981,9 +14160,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.</p>
-     * 
      * <b>summary</b> : 
      * <p>Obtains the metadata of a Security Assertion Markup Language (SAML) 2.0-based service provider (SP).</p>
      * 
@@ -13996,9 +14172,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Hibernating a cloud desktop is in private preview. If you want to try this feature, submit a ticket.</p>
-     * 
      * <b>summary</b> : 
      * <p>Hibernates cloud desktops.</p>
      * 
@@ -14035,9 +14208,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Hibernating a cloud desktop is in private preview. If you want to try this feature, submit a ticket.</p>
-     * 
      * <b>summary</b> : 
      * <p>Hibernates cloud desktops.</p>
      * 
@@ -14136,11 +14306,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>If you use an AD directory to connect to an AD system, you can call this operation to obtain the user information in the AD system.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Obtains the user information in the AD system if you use an AD directory to connect to an AD system.</p>
+     * <p>If you use an Active Directory (AD) directory to connect to your enterprise AD, call this operation to retrieve user information from your enterprise AD.</p>
      * 
      * @param request ListDirectoryUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14203,11 +14370,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>If you use an AD directory to connect to an AD system, you can call this operation to obtain the user information in the AD system.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Obtains the user information in the AD system if you use an AD directory to connect to an AD system.</p>
+     * <p>If you use an Active Directory (AD) directory to connect to your enterprise AD, call this operation to retrieve user information from your enterprise AD.</p>
      * 
      * @param request ListDirectoryUsersRequest
      * @return ListDirectoryUsersResponse
@@ -14395,7 +14559,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about Active Directory (AD) accounts after an enterprise AD office network (formerly workspace) interconnects to an AD domain.</p>
+     * <p>Queries information about Active Directory (AD) accounts in an AD office network (formerly known as a workspace) that is connected to an AD domain.</p>
      * 
      * @param request ListOfficeSiteUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14459,7 +14623,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about Active Directory (AD) accounts after an enterprise AD office network (formerly workspace) interconnects to an AD domain.</p>
+     * <p>Queries information about Active Directory (AD) accounts in an AD office network (formerly known as a workspace) that is connected to an AD domain.</p>
      * 
      * @param request ListOfficeSiteUsersRequest
      * @return ListOfficeSiteUsersResponse
@@ -14541,7 +14705,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the download URL of the transferred file.</p>
+     * <p>Retrieves the download URLs for transferred files.</p>
      * 
      * @param request ListTransferFileDownloadUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14577,7 +14741,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the download URL of the transferred file.</p>
+     * <p>Retrieves the download URLs for transferred files.</p>
      * 
      * @param request ListTransferFileDownloadUrlRequest
      * @return ListTransferFileDownloadUrlResponse
@@ -14755,7 +14919,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Migrates cloud computers from the current office network (formerly called workspace) to the new office network.</p>
+     * <p>Migrates one or more cloud computers to a new office network.</p>
      * 
      * @param request MigrateDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14803,7 +14967,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Migrates cloud computers from the current office network (formerly called workspace) to the new office network.</p>
+     * <p>Migrates one or more cloud computers to a new office network.</p>
      * 
      * @param request MigrateDesktopsRequest
      * @return MigrateDesktopsResponse
@@ -15125,7 +15289,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the parameters of an automatic snapshot policy, such as the policy name and snapshot retention period.</p>
+     * <p>Modifies the name and snapshot retention period of an automatic snapshot policy.</p>
      * 
      * @param request ModifyAutoSnapshotPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15177,7 +15341,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the parameters of an automatic snapshot policy, such as the policy name and snapshot retention period.</p>
+     * <p>Modifies the name and snapshot retention period of an automatic snapshot policy.</p>
      * 
      * @param request ModifyAutoSnapshotPolicyRequest
      * @return ModifyAutoSnapshotPolicyResponse
@@ -15327,7 +15491,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify the file sharing settings.</p>
+     * <p>Modifies the link for file sharing.</p>
      * 
      * @param request ModifyCdsFileShareLinkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15427,7 +15591,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify the file sharing settings.</p>
+     * <p>Modifies the link for file sharing.</p>
      * 
      * @param request ModifyCdsFileShareLinkRequest
      * @return ModifyCdsFileShareLinkResponse
@@ -15439,7 +15603,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a center policy.</p>
+     * <p>Modifies a configuration that does not have a region-specific policy.</p>
      * 
      * @param request ModifyCenterPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16007,7 +16171,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a center policy.</p>
+     * <p>Modifies a configuration that does not have a region-specific policy.</p>
      * 
      * @param request ModifyCenterPolicyRequest
      * @return ModifyCenterPolicyResponse
@@ -16078,8 +16242,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When accessing the file storage within WUYING Workspace, file uploads and downloads between them are always allowed because both reside in a secure environment. However, if the visibility of the file storage on WUYING Terminal has been enabled, end users can directly access the file storage through the WUYING Terminal interface.
+     * To prevent end users from transferring sensitive data from WUYING Workspace to on-premises devices via the file storage, the default policy allows users to upload files from on-premises devices to the enterprise file storage but prohibits downloading files from the enterprise file storage to on-premises devices. This default policy applies to all users of the file storage, and you do not need to configure its scope.
+     * If needed, you can invoke this API to control user permissions for file transfer between the enterprise file storage and on-premises devices. Users added here will be exempt from the default policy.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies the user permissions on Cloud Drive Service, and configures users who have the download permissions and upload and download permissions. By default, the users that are not configured the preceding permissions only have the upload permissions.</p>
+     * <p>The default policy for the enterprise file storage is that all users can upload files from on-premises devices to the enterprise file storage, but cannot download files from the enterprise file storage to on-premises devices. You can invoke this API to add users with exception permissions.</p>
      * 
      * @param request ModifyCloudDrivePermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16126,8 +16295,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When accessing the file storage within WUYING Workspace, file uploads and downloads between them are always allowed because both reside in a secure environment. However, if the visibility of the file storage on WUYING Terminal has been enabled, end users can directly access the file storage through the WUYING Terminal interface.
+     * To prevent end users from transferring sensitive data from WUYING Workspace to on-premises devices via the file storage, the default policy allows users to upload files from on-premises devices to the enterprise file storage but prohibits downloading files from the enterprise file storage to on-premises devices. This default policy applies to all users of the file storage, and you do not need to configure its scope.
+     * If needed, you can invoke this API to control user permissions for file transfer between the enterprise file storage and on-premises devices. Users added here will be exempt from the default policy.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies the user permissions on Cloud Drive Service, and configures users who have the download permissions and upload and download permissions. By default, the users that are not configured the preceding permissions only have the upload permissions.</p>
+     * <p>The default policy for the enterprise file storage is that all users can upload files from on-premises devices to the enterprise file storage, but cannot download files from the enterprise file storage to on-premises devices. You can invoke this API to add users with exception permissions.</p>
      * 
      * @param request ModifyCloudDrivePermissionRequest
      * @return ModifyCloudDrivePermissionResponse
@@ -16139,7 +16313,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies users of a cloud disk in Cloud Drive Service.</p>
+     * <p>Modify basic properties of a user\&quot;s personal disk, such as the status and storage capacity limit.</p>
      * 
      * @param request ModifyCloudDriveUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16187,7 +16361,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies users of a cloud disk in Cloud Drive Service.</p>
+     * <p>Modify basic properties of a user\&quot;s personal disk, such as the status and storage capacity limit.</p>
      * 
      * @param request ModifyCloudDriveUsersRequest
      * @return ModifyCloudDriveUsersResponse
@@ -16307,14 +16481,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that you fully understand the billing methods of cloud computers. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">Billing overview</a>.</p>
      * <ul>
-     * <li>Before you call this operation, make sure that the cloud computers whose billing method you want to change are in the Running or Stopped state and you have no overdue payments in your Alibaba Cloud account.</li>
-     * <li>After the order payment is completed, the system starts to change the billing method of the cloud computers. During the change, you cannot perform operations, such as starting or stopping the cloud computers, and changing configurations of the cloud computers.</li>
+     * <li>Before calling this operation, ensure you understand the billing methods for cloud desktops. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">billing overview</a>.</li>
+     * <li>Ensure the cloud desktop is in the running or stopped state and has no overdue payments.</li>
+     * <li>After you pay for the order, the system begins to convert the billing method. While the desktop is in the updating state, you cannot perform other operations, such as starting, stopping, or changing its configuration.
+     * &lt;props=&quot;china&quot;&gt;
+     * When you convert from subscription to pay-as-you-go, refund limits apply. For more information, see <a href="https://help.aliyun.com/document_detail/439964.html">Convert Subscription to Pay-As-You-Go</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Changes the billing method of cloud computers to subscription or pay-as-you-go.</p>
+     * <p>Changes the billing method of a cloud desktop to subscription or pay-as-you-go.</p>
      * 
      * @param request ModifyDesktopChargeTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16378,14 +16554,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that you fully understand the billing methods of cloud computers. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">Billing overview</a>.</p>
      * <ul>
-     * <li>Before you call this operation, make sure that the cloud computers whose billing method you want to change are in the Running or Stopped state and you have no overdue payments in your Alibaba Cloud account.</li>
-     * <li>After the order payment is completed, the system starts to change the billing method of the cloud computers. During the change, you cannot perform operations, such as starting or stopping the cloud computers, and changing configurations of the cloud computers.</li>
+     * <li>Before calling this operation, ensure you understand the billing methods for cloud desktops. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">billing overview</a>.</li>
+     * <li>Ensure the cloud desktop is in the running or stopped state and has no overdue payments.</li>
+     * <li>After you pay for the order, the system begins to convert the billing method. While the desktop is in the updating state, you cannot perform other operations, such as starting, stopping, or changing its configuration.
+     * &lt;props=&quot;china&quot;&gt;
+     * When you convert from subscription to pay-as-you-go, refund limits apply. For more information, see <a href="https://help.aliyun.com/document_detail/439964.html">Convert Subscription to Pay-As-You-Go</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Changes the billing method of cloud computers to subscription or pay-as-you-go.</p>
+     * <p>Changes the billing method of a cloud desktop to subscription or pay-as-you-go.</p>
      * 
      * @param request ModifyDesktopChargeTypeRequest
      * @return ModifyDesktopChargeTypeResponse
@@ -16397,10 +16575,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Once a cloud computer share is created, the system automatically provisions cloud computers according to the auto-scaling policy and user connections, all based on the same template and security policy. You can adjust the cloud computer share\&quot;s configurations, including the share name, template, and policy, for different business scenarios.</p>
+     * <p>After you create a shared cloud computer group, the system automatically provisions cloud computers in the group based on its auto scaling policy and end-user connections. All cloud computers in the group use the same cloud computer template and security policy. You can modify the group’s configuration as needed, such as the group name, cloud computer template, and associated policies.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies a cloud computer share.</p>
+     * <p>Modifies a shared cloud computer group.</p>
      * 
      * @param request ModifyDesktopGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16536,10 +16714,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Once a cloud computer share is created, the system automatically provisions cloud computers according to the auto-scaling policy and user connections, all based on the same template and security policy. You can adjust the cloud computer share\&quot;s configurations, including the share name, template, and policy, for different business scenarios.</p>
+     * <p>After you create a shared cloud computer group, the system automatically provisions cloud computers in the group based on its auto scaling policy and end-user connections. All cloud computers in the group use the same cloud computer template and security policy. You can modify the group’s configuration as needed, such as the group name, cloud computer template, and associated policies.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies a cloud computer share.</p>
+     * <p>Modifies a shared cloud computer group.</p>
      * 
      * @param request ModifyDesktopGroupRequest
      * @return ModifyDesktopGroupResponse
@@ -16551,10 +16729,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The Windows cloud computer whose hostname you want to modify must be in an AD office network. After the hostname is modified, the cloud computer is re-created.</p>
+     * <p>You can only modify the hostname of Windows cloud desktops in an AD workspace. Modifying the hostname rebuilds the cloud desktop.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the hostname of a Windows cloud computer in the Active Directory (AD) office network.</p>
+     * <p>Modifies the hostname of a Windows cloud desktop in an AD workspace.</p>
      * 
      * @param request ModifyDesktopHostNameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16598,10 +16776,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The Windows cloud computer whose hostname you want to modify must be in an AD office network. After the hostname is modified, the cloud computer is re-created.</p>
+     * <p>You can only modify the hostname of Windows cloud desktops in an AD workspace. Modifying the hostname rebuilds the cloud desktop.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the hostname of a Windows cloud computer in the Active Directory (AD) office network.</p>
+     * <p>Modifies the hostname of a Windows cloud desktop in an AD workspace.</p>
      * 
      * @param request ModifyDesktopHostNameRequest
      * @return ModifyDesktopHostNameResponse
@@ -16613,7 +16791,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the name of a cloud computer to a new name.</p>
+     * <p>Modifies the name of a specified cloud desktop.</p>
      * 
      * @param request ModifyDesktopNameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16661,7 +16839,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the name of a cloud computer to a new name.</p>
+     * <p>Modifies the name of a specified cloud desktop.</p>
      * 
      * @param request ModifyDesktopNameRequest
      * @return ModifyDesktopNameResponse
@@ -16869,23 +17047,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Changing the configurations of a cloud computer includes changing the instance type of the cloud computer and scaling up the disks of the cloud computer.</p>
+     * <p>This operation modifies the configuration of a cloud desktop, including its desktop type and disk sizes.</p>
      * <ul>
-     * <li>Before you change the configurations of a cloud computer, you must understand the instance types and disk sizes supported by cloud computers. For more information, see <a href="https://help.aliyun.com/document_detail/188609.html">Cloud computer types</a>. You can call the <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> operation to query the instance types supported by cloud computers.</li>
-     * <li>You must change at least one of the following configurations: instance type, system disk size, and data disk size of the cloud computer. You must specify at least one of the following parameters: <code>DesktopType</code>, <code>RootDiskSizeGib</code>, and <code>UserDiskSizeGib</code>. Take note of the following items:<ul>
-     * <li>The instance type of a cloud computer includes the configurations of vCPUs, memory, and GPUs. You can only change an instance type to another. You cannot change only one of the configurations.</li>
-     * <li>You cannot change a cloud computer between the General Office type and the non-General Office type. You cannot yet change a cloud computer between the Graphics type and the non-Graphics type.</li>
-     * <li>The system disk and data disks of a cloud computer can only be scaled up and cannot be scaled down.</li>
-     * <li>If the billing method of the cloud computer is subscription, the system calculates the price difference based on the configuration difference between the original cloud computer and the new cloud computer. You must make up for the price difference or receive a refund for the price difference.</li>
-     * <li>We recommend that you do not change the configurations of a cloud computer twice within 5 minutes.</li>
-     * <li>When you change the configurations of a cloud computer, the cloud computer must be in the Stopped state.</li>
+     * <li>Before you modify the configuration, ensure you understand the supported desktop types and disk sizes. For more information, see <a href="https://help.aliyun.com/document_detail/188609.html">Cloud desktop specifications</a>. You can call the <a href="~~DescribeDesktopTypes~~">DescribeDesktopTypes</a> operation to query the supported desktop types.</li>
+     * <li>When you call this operation, you must modify the desktop type, the system disk size, or the data disk size. This requires specifying at least one of the corresponding parameters: <code>DesktopType</code>, <code>RootDiskSizeGib</code>, or <code>UserDiskSizeGib</code>. Note the following:<ul>
+     * <li>A desktop type includes vCPU, memory, and GPU configurations. You can change the desktop type but cannot modify these resources individually.</li>
+     * <li>You cannot change a desktop type between general-purpose and non-general-purpose, or between graphics-accelerated and non-graphics-accelerated.</li>
+     * <li>Both the system disk and the data disk support expansion, but not shrinking.</li>
+     * <li>If the cloud desktop uses the subscription billing method, the system calculates the price difference based on the configuration change. You must pay the price difference, or you will receive a refund.</li>
+     * <li>For the same cloud desktop, wait at least five minutes between configuration change operations.</li>
+     * <li>The cloud desktop must be in the Stopped state.</li>
      * </ul>
      * </li>
-     * <li>After you change the configurations of a cloud computer, the personal data on the cloud computer is not affected.</li>
+     * <li>This operation does not affect the personal data stored on the cloud desktop.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Changes the instance type of a cloud computer and scales up the disks of the cloud computer.</p>
+     * <p>Modifies the desktop type and expands the disks of a cloud desktop.</p>
      * 
      * @param request ModifyDesktopSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16957,23 +17135,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Changing the configurations of a cloud computer includes changing the instance type of the cloud computer and scaling up the disks of the cloud computer.</p>
+     * <p>This operation modifies the configuration of a cloud desktop, including its desktop type and disk sizes.</p>
      * <ul>
-     * <li>Before you change the configurations of a cloud computer, you must understand the instance types and disk sizes supported by cloud computers. For more information, see <a href="https://help.aliyun.com/document_detail/188609.html">Cloud computer types</a>. You can call the <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> operation to query the instance types supported by cloud computers.</li>
-     * <li>You must change at least one of the following configurations: instance type, system disk size, and data disk size of the cloud computer. You must specify at least one of the following parameters: <code>DesktopType</code>, <code>RootDiskSizeGib</code>, and <code>UserDiskSizeGib</code>. Take note of the following items:<ul>
-     * <li>The instance type of a cloud computer includes the configurations of vCPUs, memory, and GPUs. You can only change an instance type to another. You cannot change only one of the configurations.</li>
-     * <li>You cannot change a cloud computer between the General Office type and the non-General Office type. You cannot yet change a cloud computer between the Graphics type and the non-Graphics type.</li>
-     * <li>The system disk and data disks of a cloud computer can only be scaled up and cannot be scaled down.</li>
-     * <li>If the billing method of the cloud computer is subscription, the system calculates the price difference based on the configuration difference between the original cloud computer and the new cloud computer. You must make up for the price difference or receive a refund for the price difference.</li>
-     * <li>We recommend that you do not change the configurations of a cloud computer twice within 5 minutes.</li>
-     * <li>When you change the configurations of a cloud computer, the cloud computer must be in the Stopped state.</li>
+     * <li>Before you modify the configuration, ensure you understand the supported desktop types and disk sizes. For more information, see <a href="https://help.aliyun.com/document_detail/188609.html">Cloud desktop specifications</a>. You can call the <a href="~~DescribeDesktopTypes~~">DescribeDesktopTypes</a> operation to query the supported desktop types.</li>
+     * <li>When you call this operation, you must modify the desktop type, the system disk size, or the data disk size. This requires specifying at least one of the corresponding parameters: <code>DesktopType</code>, <code>RootDiskSizeGib</code>, or <code>UserDiskSizeGib</code>. Note the following:<ul>
+     * <li>A desktop type includes vCPU, memory, and GPU configurations. You can change the desktop type but cannot modify these resources individually.</li>
+     * <li>You cannot change a desktop type between general-purpose and non-general-purpose, or between graphics-accelerated and non-graphics-accelerated.</li>
+     * <li>Both the system disk and the data disk support expansion, but not shrinking.</li>
+     * <li>If the cloud desktop uses the subscription billing method, the system calculates the price difference based on the configuration change. You must pay the price difference, or you will receive a refund.</li>
+     * <li>For the same cloud desktop, wait at least five minutes between configuration change operations.</li>
+     * <li>The cloud desktop must be in the Stopped state.</li>
      * </ul>
      * </li>
-     * <li>After you change the configurations of a cloud computer, the personal data on the cloud computer is not affected.</li>
+     * <li>This operation does not affect the personal data stored on the cloud desktop.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Changes the instance type of a cloud computer and scales up the disks of the cloud computer.</p>
+     * <p>Modifies the desktop type and expands the disks of a cloud desktop.</p>
      * 
      * @param request ModifyDesktopSpecRequest
      * @return ModifyDesktopSpecResponse
@@ -17103,13 +17281,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When creating a cloud computer in Elastic Desktop Service (EDS) Enterprise, you can use a template to define specifications that align with your business needs. By default, Enterprise Graphics or High Frequency cloud computers utilize Enterprise SSDs (ESSDs). You can customize the disk capacity and performance level (PL) of these ESSDs, and adjust the PL for both system and data disks as needed.</p>
+     * <p>When you create a WUYING Workspace, you can define its specifications using a custom template. Graphics and High-frequency workspaces use Enhanced SSDs (ESSDs) by default, which lets you set the disk capacity and performance level. You can modify the performance level of the system disk or data disk as needed.</p>
      * <blockquote>
-     * <p> Only Enterprise Graphics or High Frequency cloud computers support disk PL adjustments.</p>
+     * <p>Only Graphics and High-frequency WUYING Workspaces support modifying the disk performance level.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Changes the performance level (PL) of a system disk or data disk.</p>
+     * <p>Modify the performance level of a cloud desktop\&quot;s system disk or data disk.</p>
      * 
      * @param request ModifyDiskSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17165,13 +17343,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When creating a cloud computer in Elastic Desktop Service (EDS) Enterprise, you can use a template to define specifications that align with your business needs. By default, Enterprise Graphics or High Frequency cloud computers utilize Enterprise SSDs (ESSDs). You can customize the disk capacity and performance level (PL) of these ESSDs, and adjust the PL for both system and data disks as needed.</p>
+     * <p>When you create a WUYING Workspace, you can define its specifications using a custom template. Graphics and High-frequency workspaces use Enhanced SSDs (ESSDs) by default, which lets you set the disk capacity and performance level. You can modify the performance level of the system disk or data disk as needed.</p>
      * <blockquote>
-     * <p> Only Enterprise Graphics or High Frequency cloud computers support disk PL adjustments.</p>
+     * <p>Only Graphics and High-frequency WUYING Workspaces support modifying the disk performance level.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Changes the performance level (PL) of a system disk or data disk.</p>
+     * <p>Modify the performance level of a cloud desktop\&quot;s system disk or data disk.</p>
      * 
      * @param request ModifyDiskSpecRequest
      * @return ModifyDiskSpecResponse
@@ -17589,7 +17767,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies Global Accelerator (GA) configuration.</p>
+     * <p>Modifies the Global Accelerator (GA) configuration.</p>
      * 
      * @param request ModifyOfficeSiteAcceleratorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17629,7 +17807,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies Global Accelerator (GA) configuration.</p>
+     * <p>Modifies the Global Accelerator (GA) configuration.</p>
      * 
      * @param request ModifyOfficeSiteAcceleratorRequest
      * @return ModifyOfficeSiteAcceleratorResponse
@@ -17641,7 +17819,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the basic properties of an office network, including the name and local administrator permission settings.</p>
+     * <p>Modifies basic attributes of an office site (formerly a workspace), such as its name and whether to grant users local administrative permissions on their cloud computers.</p>
      * 
      * @param request ModifyOfficeSiteAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17721,7 +17899,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the basic properties of an office network, including the name and local administrator permission settings.</p>
+     * <p>Modifies basic attributes of an office site (formerly a workspace), such as its name and whether to grant users local administrative permissions on their cloud computers.</p>
      * 
      * @param request ModifyOfficeSiteAttributeRequest
      * @return ModifyOfficeSiteAttributeResponse
@@ -17889,7 +18067,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the cloud computer policy.</p>
+     * <p>Modifies cloud computer policies.</p>
      * 
      * @param request ModifyPolicyGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18157,7 +18335,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the cloud computer policy.</p>
+     * <p>Modifies cloud computer policies.</p>
      * 
      * @param request ModifyPolicyGroupRequest
      * @return ModifyPolicyGroupResponse
@@ -18169,7 +18347,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the resources that a Quality of Service (QoS) rule applies to.</p>
+     * <p>Modifies the resource bindings of a QoS rule.</p>
      * 
      * @param request ModifyQosEntriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18225,7 +18403,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the resources that a Quality of Service (QoS) rule applies to.</p>
+     * <p>Modifies the resource bindings of a QoS rule.</p>
      * 
      * @param request ModifyQosEntriesRequest
      * @return ModifyQosEntriesResponse
@@ -18237,7 +18415,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a Quality of Service (QoS) rule.</p>
+     * <p>You can modify a rate limiting rule.</p>
      * 
      * @param request ModifyQosRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18281,7 +18459,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a Quality of Service (QoS) rule.</p>
+     * <p>You can modify a rate limiting rule.</p>
      * 
      * @param request ModifyQosRuleRequest
      * @return ModifyQosRuleResponse
@@ -18421,12 +18599,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><strong>Warning</strong> This operation employs the full parameter update logic to maintain compatibility between the no-configuration logic and the default update logic. In other words, any unspecified parameters are treated as empty.</li>
-     * </ul>
+     * <blockquote>
+     * <p>Warning: 
+     * This operation updates all parameters. To ensure compatibility with the default upgrade logic, any parameter that you do not specify is set to empty.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies a custom cloud computer template.</p>
+     * <p>Modifies all parameters of a custom WUYING Workspace template.</p>
      * 
      * @param request ModifyTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18543,12 +18722,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><strong>Warning</strong> This operation employs the full parameter update logic to maintain compatibility between the no-configuration logic and the default update logic. In other words, any unspecified parameters are treated as empty.</li>
-     * </ul>
+     * <blockquote>
+     * <p>Warning: 
+     * This operation updates all parameters. To ensure compatibility with the default upgrade logic, any parameter that you do not specify is set to empty.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies a custom cloud computer template.</p>
+     * <p>Modifies all parameters of a custom WUYING Workspace template.</p>
      * 
      * @param request ModifyTemplateRequest
      * @return ModifyTemplateResponse
@@ -18618,7 +18798,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a scheduled task configuration group.</p>
+     * <p>Modify configuration group settings, such as those for scheduled tasks.</p>
      * 
      * @param request ModifyTimerGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18666,7 +18846,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a scheduled task configuration group.</p>
+     * <p>Modify configuration group settings, such as those for scheduled tasks.</p>
      * 
      * @param request ModifyTimerGroupRequest
      * @return ModifyTimerGroupResponse
@@ -18796,7 +18976,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Moves a file or folder on the drive to a new location.</p>
+     * <p>Move files or folders.</p>
      * 
      * @param request MoveCdsFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18852,7 +19032,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Moves a file or folder on the drive to a new location.</p>
+     * <p>Move files or folders.</p>
      * 
      * @param request MoveCdsFileRequest
      * @return MoveCdsFileResponse
@@ -18863,8 +19043,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li>The <code>AliUid</code> parameter is automatically resolved from your AccessKey pair and does not need to be specified in the request.</li>
+     * <li>The <code>BusinessChannel</code> parameter defaults to Enterprise Edition, but you can select other business channels.</li>
+     * <li>By default, the query returns data for the previous day (T-1). To query for a different day, use the <code>DataDate</code> parameter in YYYY-MM-DD format.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询历史活跃用户数量</p>
+     * <p>Queries the historical daily and monthly active user counts for a specified date.</p>
      * 
      * @param request QueryHistoryActiveUserCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18895,8 +19083,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li>The <code>AliUid</code> parameter is automatically resolved from your AccessKey pair and does not need to be specified in the request.</li>
+     * <li>The <code>BusinessChannel</code> parameter defaults to Enterprise Edition, but you can select other business channels.</li>
+     * <li>By default, the query returns data for the previous day (T-1). To query for a different day, use the <code>DataDate</code> parameter in YYYY-MM-DD format.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询历史活跃用户数量</p>
+     * <p>Queries the historical daily and monthly active user counts for a specified date.</p>
      * 
      * @param request QueryHistoryActiveUserCountRequest
      * @return QueryHistoryActiveUserCountResponse
@@ -18907,8 +19103,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This API retrieves historical average monitoring metrics for desktop resources that meet specified criteria within a time range.</li>
+     * <li>The <code>DataDate</code> and <code>EndDate</code> parameters specify the time range. If omitted, the query defaults to the previous day.</li>
+     * <li>You can filter results by criteria such as desktop ID, name, and custom numeric ranges.</li>
+     * <li>The response contains the details of each matching desktop resource and its corresponding average values.</li>
+     * <li>Use the <code>PageNum</code> and <code>PageSize</code> pagination parameters to control the number of results returned.</li>
+     * <li>Note: When using the <code>Ranges</code> parameter, ensure that you provide reasonable intervals. Unreasonable intervals can degrade query performance or lead to invalid results.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询桌面平均指标列表</p>
+     * <p>Retrieves historical average monitoring metrics for a desktop resource over a specified date range.</p>
      * 
      * @param tmpReq QueryHistoryAvgMetricListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18973,8 +19180,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This API retrieves historical average monitoring metrics for desktop resources that meet specified criteria within a time range.</li>
+     * <li>The <code>DataDate</code> and <code>EndDate</code> parameters specify the time range. If omitted, the query defaults to the previous day.</li>
+     * <li>You can filter results by criteria such as desktop ID, name, and custom numeric ranges.</li>
+     * <li>The response contains the details of each matching desktop resource and its corresponding average values.</li>
+     * <li>Use the <code>PageNum</code> and <code>PageSize</code> pagination parameters to control the number of results returned.</li>
+     * <li>Note: When using the <code>Ranges</code> parameter, ensure that you provide reasonable intervals. Unreasonable intervals can degrade query performance or lead to invalid results.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询桌面平均指标列表</p>
+     * <p>Retrieves historical average monitoring metrics for a desktop resource over a specified date range.</p>
      * 
      * @param request QueryHistoryAvgMetricListRequest
      * @return QueryHistoryAvgMetricListResponse
@@ -18985,8 +19203,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This API queries the value distribution for specific metrics, such as CPU usage and memory usage, within a given date range. You can define custom value ranges for more detailed statistics. The API supports both the enterprise edition and commercial edition. By default, it returns statistics for the previous day (T-1).</p>
+     * <ul>
+     * <li><strong>BusinessChannel</strong>: Defaults to the enterprise edition. The commercial edition is also available.</li>
+     * <li><strong>StartDate &amp; EndDate</strong>: Both default to T-1 (the previous day). The date must be in the <code>YYYY-MM-DD</code> format.</li>
+     * <li><strong>MetricName</strong>: The metric to query. For a list of valid metrics, see the parameter description in this topic.</li>
+     * <li><strong>Ranges</strong>: Defines multiple value ranges for a more detailed analysis. For each range, you can set a minimum value, a maximum value, and whether to include these boundary values.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询桌面历史指标分布</p>
+     * <p>Queries the historical distribution of a specific metric over a specified time period.</p>
      * 
      * @param request QueryHistoryMetricDistributionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19029,8 +19257,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This API queries the value distribution for specific metrics, such as CPU usage and memory usage, within a given date range. You can define custom value ranges for more detailed statistics. The API supports both the enterprise edition and commercial edition. By default, it returns statistics for the previous day (T-1).</p>
+     * <ul>
+     * <li><strong>BusinessChannel</strong>: Defaults to the enterprise edition. The commercial edition is also available.</li>
+     * <li><strong>StartDate &amp; EndDate</strong>: Both default to T-1 (the previous day). The date must be in the <code>YYYY-MM-DD</code> format.</li>
+     * <li><strong>MetricName</strong>: The metric to query. For a list of valid metrics, see the parameter description in this topic.</li>
+     * <li><strong>Ranges</strong>: Defines multiple value ranges for a more detailed analysis. For each range, you can set a minimum value, a maximum value, and whether to include these boundary values.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询桌面历史指标分布</p>
+     * <p>Queries the historical distribution of a specific metric over a specified time period.</p>
      * 
      * @param request QueryHistoryMetricDistributionRequest
      * @return QueryHistoryMetricDistributionResponse
@@ -19041,8 +19279,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li><strong>Date range</strong>: You can query data within the last 90 days.</li>
+     * <li><strong>Pagination</strong>: This operation uses the<code>NextToken</code> parameter for pagination. To retrieve the next page of results, use the <code>NextToken</code> value from the previous response.</li>
+     * <li><strong>Default and maximum limits</strong>: This operation returns 5 records by default, with a maximum of 200 records per page.</li>
+     * <li><strong>Authentication</strong>: This operation uses an AccessKey for authentication.</li>
+     * <li><strong>Caller account information</strong>: You do not need to specify an Alibaba Cloud account ID (AliUid). The system automatically resolves it.</li>
+     * <li><strong>Billing</strong>: This API operation is free of charge.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Query and sort historical usage duration by user or desktop dimension.</p>
+     * <p>Queries and ranks historical usage duration by end user or desktop.</p>
      * 
      * @param request QueryHistoryUsageDurationRankRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19089,8 +19338,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li><strong>Date range</strong>: You can query data within the last 90 days.</li>
+     * <li><strong>Pagination</strong>: This operation uses the<code>NextToken</code> parameter for pagination. To retrieve the next page of results, use the <code>NextToken</code> value from the previous response.</li>
+     * <li><strong>Default and maximum limits</strong>: This operation returns 5 records by default, with a maximum of 200 records per page.</li>
+     * <li><strong>Authentication</strong>: This operation uses an AccessKey for authentication.</li>
+     * <li><strong>Caller account information</strong>: You do not need to specify an Alibaba Cloud account ID (AliUid). The system automatically resolves it.</li>
+     * <li><strong>Billing</strong>: This API operation is free of charge.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Query and sort historical usage duration by user or desktop dimension.</p>
+     * <p>Queries and ranks historical usage duration by end user or desktop.</p>
      * 
      * @param request QueryHistoryUsageDurationRankRequest
      * @return QueryHistoryUsageDurationRankResponse
@@ -19102,10 +19362,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The cloud computers that you want to restart must be in the Running state.</p>
+     * <p>The desktops must be in the Running state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Restart cloud computers.</p>
+     * <p>Reboots one or more desktops.</p>
      * 
      * @param request RebootDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19153,10 +19413,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The cloud computers that you want to restart must be in the Running state.</p>
+     * <p>The desktops must be in the Running state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Restart cloud computers.</p>
+     * <p>Reboots one or more desktops.</p>
      * 
      * @param request RebootDesktopsRequest
      * @return RebootDesktopsResponse
@@ -19168,17 +19428,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you proceed, take note of the following limits:</p>
+     * <p>This operation is subject to the following limitations:</p>
      * <ul>
-     * <li>You cannot convert a cloud computer\&quot;s operating system image from one type to another (e.g., Windows to Linux or vice versa) in China (Hong Kong) or overseas regions.</li>
-     * <li>GPU and non-GPU images are not interchangeable, as graphic-based cloud computers can only use GPU-accelerated images, while other cloud computers are limited to non-GPU-accelerated images.
-     * When a cloud computer’s image is updated, the system initializes its system disk by using the new image, resulting in the following effects:</li>
-     * <li>All data on the original system disk is erased. Snapshots created from the original system disk become unavailable and are automatically deleted.</li>
-     * <li>If the OS changes, data on the original data disk is cleared, and snapshots created from the original data disk become unavailable and are automatically deleted. If the OS remains the same, data on the original data disk is retained, and snapshots from the original data disk remain available.</li>
+     * <li>For cloud computers in the China (Hong Kong) region and regions outside the Chinese mainland, you cannot switch to an image with a different operating system. For example, you cannot switch from a Windows image to a Linux image.</li>
+     * <li>You cannot switch between GPU images and non-GPU images. Graphics-optimized cloud computers must use GPU images, and non-graphics cloud computers can only use non-GPU images.
+     * Changing the image re-initializes the cloud computer\&quot;s system disk with the new image. This action has the following effects:</li>
+     * <li>All data on the original system disk is erased. Any snapshots created from the original system disk become invalid, and the system automatically deletes them.</li>
+     * <li>If the new image has a different operating system, all data on the data disk is erased. Snapshots created from the data disk become invalid, and the system automatically deletes them. If the new image has the same operating system, data on the data disk is retained and its snapshots remain usable.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Rebuilds images for one or more cloud computers.</p>
+     * <p>Replaces the image of one or more cloud computers.</p>
      * 
      * @param request RebuildDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19230,17 +19490,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you proceed, take note of the following limits:</p>
+     * <p>This operation is subject to the following limitations:</p>
      * <ul>
-     * <li>You cannot convert a cloud computer\&quot;s operating system image from one type to another (e.g., Windows to Linux or vice versa) in China (Hong Kong) or overseas regions.</li>
-     * <li>GPU and non-GPU images are not interchangeable, as graphic-based cloud computers can only use GPU-accelerated images, while other cloud computers are limited to non-GPU-accelerated images.
-     * When a cloud computer’s image is updated, the system initializes its system disk by using the new image, resulting in the following effects:</li>
-     * <li>All data on the original system disk is erased. Snapshots created from the original system disk become unavailable and are automatically deleted.</li>
-     * <li>If the OS changes, data on the original data disk is cleared, and snapshots created from the original data disk become unavailable and are automatically deleted. If the OS remains the same, data on the original data disk is retained, and snapshots from the original data disk remain available.</li>
+     * <li>For cloud computers in the China (Hong Kong) region and regions outside the Chinese mainland, you cannot switch to an image with a different operating system. For example, you cannot switch from a Windows image to a Linux image.</li>
+     * <li>You cannot switch between GPU images and non-GPU images. Graphics-optimized cloud computers must use GPU images, and non-graphics cloud computers can only use non-GPU images.
+     * Changing the image re-initializes the cloud computer\&quot;s system disk with the new image. This action has the following effects:</li>
+     * <li>All data on the original system disk is erased. Any snapshots created from the original system disk become invalid, and the system automatically deletes them.</li>
+     * <li>If the new image has a different operating system, all data on the data disk is erased. Snapshots created from the data disk become invalid, and the system automatically deletes them. If the new image has the same operating system, data on the data disk is retained and its snapshots remain usable.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Rebuilds images for one or more cloud computers.</p>
+     * <p>Replaces the image of one or more cloud computers.</p>
      * 
      * @param request RebuildDesktopsRequest
      * @return RebuildDesktopsResponse
@@ -19370,7 +19630,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes user access permissions for a cloud computer share. Once access permissions for a cloud computer share are revoked from a user, the user can no longer access any cloud computers within that share.</p>
+     * <p>Removes specified authorized users from a shared desktop group. After an authorized user is removed, that user can no longer connect to the cloud desktops in the group.</p>
      * 
      * @param request RemoveUserFromDesktopGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19389,6 +19649,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.endUserIds)) {
             query.put("EndUserIds", request.endUserIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
+            query.put("OrgId", request.orgId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -19426,7 +19690,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes user access permissions for a cloud computer share. Once access permissions for a cloud computer share are revoked from a user, the user can no longer access any cloud computers within that share.</p>
+     * <p>Removes specified authorized users from a shared desktop group. After an authorized user is removed, that user can no longer connect to the cloud desktops in the group.</p>
      * 
      * @param request RemoveUserFromDesktopGroupRequest
      * @return RemoveUserFromDesktopGroupResponse
@@ -19494,7 +19758,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renews a shared cloud computer.</p>
+     * <p>Renews the subscription for a cloud computer pool.</p>
      * 
      * @param request RenewDesktopGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19550,7 +19814,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renews a shared cloud computer.</p>
+     * <p>Renews the subscription for a cloud computer pool.</p>
      * 
      * @param request RenewDesktopGroupRequest
      * @return RenewDesktopGroupResponse
@@ -19614,7 +19878,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renews monthly subscription cloud computers.</p>
+     * <p>Renews one or more subscription-based WUYING Workspace instances.</p>
      * 
      * @param request RenewDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19678,7 +19942,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renews monthly subscription cloud computers.</p>
+     * <p>Renews one or more subscription-based WUYING Workspace instances.</p>
      * 
      * @param request RenewDesktopsRequest
      * @return RenewDesktopsResponse
@@ -19690,7 +19954,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renews premium bandwidth plans.</p>
+     * <p>Renews subscription-based premium public bandwidth.</p>
      * 
      * @param request RenewNetworkPackagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19750,7 +20014,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renews premium bandwidth plans.</p>
+     * <p>Renews subscription-based premium public bandwidth.</p>
      * 
      * @param request RenewNetworkPackagesRequest
      * @return RenewNetworkPackagesResponse
@@ -19763,11 +20027,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call this operation to reset only cloud computers from a cloud computer share.</p>
+     * <p>This operation applies only to shared cloud desktops. It does not support resetting standard cloud desktops.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Resets cloud computers of a cloud computer share.</p>
+     * <p>Resets cloud desktops in a shared cloud desktop group.</p>
      * 
      * @param request ResetDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19832,11 +20096,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call this operation to reset only cloud computers from a cloud computer share.</p>
+     * <p>This operation applies only to shared cloud desktops. It does not support resetting standard cloud desktops.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Resets cloud computers of a cloud computer share.</p>
+     * <p>Resets cloud desktops in a shared cloud desktop group.</p>
      * 
      * @param request ResetDesktopsRequest
      * @return ResetDesktopsResponse
@@ -19902,17 +20166,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that the following operations are performed:</p>
+     * <p>When calling this interface, ensure the following:</p>
      * <ul>
-     * <li>The data that you want to retain is backed up.<blockquote>
-     * <p>The disk restoration operation is irreversible. After you call this operation, the disk is restored to the status at the point in time when the snapshot was created. Data that is generated between the snapshot creation time and the current time is lost. Before you restore the disk based on the snapshot, make sure that you back up data.</p>
+     * <li>You must back up any data on the disk that you want to save.<blockquote>
+     * <p>Data recovery is an irreversible operation. After you call this interface, the disk will revert to its state at the time the snapshot was created. Any data created between the snapshot creation time and the current time will be lost. Therefore, back up important data.</p>
      * </blockquote>
      * </li>
-     * <li>The cloud computer to which the disk belongs is stopped.</li>
+     * <li>You must shut down the cloud computer to which the disk belongs.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Restores the data of a disk from a snapshot.</p>
+     * <p>Recovers disk data from a snapshot.</p>
      * 
      * @param request ResetSnapshotRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19952,17 +20216,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that the following operations are performed:</p>
+     * <p>When calling this interface, ensure the following:</p>
      * <ul>
-     * <li>The data that you want to retain is backed up.<blockquote>
-     * <p>The disk restoration operation is irreversible. After you call this operation, the disk is restored to the status at the point in time when the snapshot was created. Data that is generated between the snapshot creation time and the current time is lost. Before you restore the disk based on the snapshot, make sure that you back up data.</p>
+     * <li>You must back up any data on the disk that you want to save.<blockquote>
+     * <p>Data recovery is an irreversible operation. After you call this interface, the disk will revert to its state at the time the snapshot was created. Any data created between the snapshot creation time and the current time will be lost. Therefore, back up important data.</p>
      * </blockquote>
      * </li>
-     * <li>The cloud computer to which the disk belongs is stopped.</li>
+     * <li>You must shut down the cloud computer to which the disk belongs.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Restores the data of a disk from a snapshot.</p>
+     * <p>Recovers disk data from a snapshot.</p>
      * 
      * @param request ResetSnapshotRequest
      * @return ResetSnapshotResponse
@@ -20033,11 +20297,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can use the RunCommand operation to run scripts only on Windows cloud desktops.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Runs a PowerShell or batch (.bat) script on Windows cloud desktops.</p>
+     * <p>Runs a PowerShell or Bat script on one or more cloud computers that run Windows.</p>
      * 
      * @param request RunCommandRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20096,11 +20357,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can use the RunCommand operation to run scripts only on Windows cloud desktops.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Runs a PowerShell or batch (.bat) script on Windows cloud desktops.</p>
+     * <p>Runs a PowerShell or Bat script on one or more cloud computers that run Windows.</p>
      * 
      * @param request RunCommandRequest
      * @return RunCommandResponse
@@ -20572,7 +20830,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures directories in the blacklist and whitelist based on the user profile management (UPM) feature.</p>
+     * <p>设置UPM用户目录黑白名单规则</p>
      * 
      * @param tmpReq SetUserProfilePathRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20622,7 +20880,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures directories in the blacklist and whitelist based on the user profile management (UPM) feature.</p>
+     * <p>设置UPM用户目录黑白名单规则</p>
      * 
      * @param request SetUserProfilePathRulesRequest
      * @return SetUserProfilePathRulesResponse
@@ -20688,10 +20946,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The cloud computers that you want to stop must be in the Running state.</p>
+     * <p>The cloud desktops must be in the Running state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Stop cloud computers that are in the Running state. After the operation is successfully called, the cloud computers enter the Stopped state.</p>
+     * <p>Stops one or more running cloud desktops. After a successful call, the specified cloud desktops enter the Stopped state.</p>
      * 
      * @param request StopDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20743,10 +21001,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The cloud computers that you want to stop must be in the Running state.</p>
+     * <p>The cloud desktops must be in the Running state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Stop cloud computers that are in the Running state. After the operation is successfully called, the cloud computers enter the Stopped state.</p>
+     * <p>Stops one or more running cloud desktops. After a successful call, the specified cloud desktops enter the Stopped state.</p>
      * 
      * @param request StopDesktopsRequest
      * @return StopDesktopsResponse

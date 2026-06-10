@@ -14,12 +14,7 @@ public class CreateNASFileSystemRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Whether the file system is encrypted. Uses KMS service-managed keys to encrypt the file system\&quot;s on-disk data. No decryption is required when reading and writing encrypted data. Possible values and their meanings:</p>
-     * <ul>
-     * <li>0: Not encrypted.</li>
-     * <li>1: Encrypted using NAS-managed keys.</li>
-     * </ul>
-     * <p>Default value: 0</p>
+     * <p>Whether the file system is encrypted. Uses KMS service-managed keys to encrypt the file system\&quot;s on-disk data. No decryption is required when reading and writing encrypted data.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -31,9 +26,12 @@ public class CreateNASFileSystemRequest extends TeaModel {
      * <p>Name of the NAS file system.
      * The file name must follow these rules:</p>
      * <ul>
-     * <li>Length: 2 to 128 English or Chinese characters.</li>
-     * <li>Must start with an uppercase or lowercase letter or a Chinese character, cannot start with http:// or https://.</li>
-     * <li>Can include numbers, underscores (_), or hyphens (-).</li>
+     * <li><p>Length: 2 to 128 English or Chinese characters.</p>
+     * </li>
+     * <li><p>Must start with an uppercase or lowercase letter or a Chinese character, cannot start with http\:// or https\://.</p>
+     * </li>
+     * <li><p>Can include numbers, underscores (_), or hyphens (-).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,12 +61,7 @@ public class CreateNASFileSystemRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Storage specification type of the NAS file system. Allowed values:</p>
-     * <ul>
-     * <li>Capacity: Capacity type.</li>
-     * <li>Performance: Performance type.</li>
-     * </ul>
-     * <p>Default value: Capacity</p>
+     * <p>Storage specification type of the NAS file system.</p>
      * 
      * <strong>example:</strong>
      * <p>Capacity</p>

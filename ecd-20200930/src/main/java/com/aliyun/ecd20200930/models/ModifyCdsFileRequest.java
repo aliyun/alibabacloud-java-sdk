@@ -9,7 +9,7 @@ public class ModifyCdsFileRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou+cds-64326*****</p>
+     * <p>cn-hangzhou+cds-643267****</p>
      */
     @NameInMap("CdsId")
     public String cdsId;
@@ -54,7 +54,7 @@ public class ModifyCdsFileRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test.txt</p>
+     * <p>NewFileName.txt</p>
      */
     @NameInMap("FileName")
     public String fileName;

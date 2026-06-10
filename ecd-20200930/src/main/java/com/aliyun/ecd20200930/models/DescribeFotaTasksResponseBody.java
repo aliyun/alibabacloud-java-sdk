@@ -23,7 +23,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
      * <p>The returned error message. This parameter is not returned if the Code value is a <code>success</code> message.</p>
      * 
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>The parameter is not specified.</p>
      */
     @NameInMap("Message")
     public String message;

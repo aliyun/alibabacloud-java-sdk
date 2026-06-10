@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeFlowMetricRequest extends TeaModel {
     /**
+     * <p>End Time. Supported formats:</p>
+     * <ul>
+     * <li><p>UNIX timestamp: the number of milliseconds elapsed since January 1, 1970.</p>
+     * </li>
+     * <li><p>Format: YYYY-MM-DDThh:mm:ssZ.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +21,17 @@ public class DescribeFlowMetricRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The instance ID, which can be either a cloud computr ID or a premium public bandwidth plan ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ecd-fwq23f13<strong><strong>ornp-6inxqsvcyv6z8</strong></strong></p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
+     * <p>The instance type. You can select either cloud computer type or premium public bandwidth type. If you select cloud computer type, the <code>InstanceId</code> and <code>MetricType</code> must be filled in with a cloud computer ID and its corresponding traffic type. The same applies to premium public bandwidth.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +41,7 @@ public class DescribeFlowMetricRequest extends TeaModel {
     public String instanceType;
 
     /**
+     * <p>The type of monitoring metric. Supports monitoring data for inbound and outbound bandwidth of cloud computers, as well as inbound and outbound bandwidth for public network access of premium public bandwidth.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +51,7 @@ public class DescribeFlowMetricRequest extends TeaModel {
     public String metricType;
 
     /**
+     * <p>The statistic period of monitoring data. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +61,7 @@ public class DescribeFlowMetricRequest extends TeaModel {
     public Integer period;
 
     /**
+     * <p>The Region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to obtain the list of Regions supported by Elastic Desktop Service (EDS).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,6 +71,13 @@ public class DescribeFlowMetricRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Start Time. Supported formats:</p>
+     * <ul>
+     * <li><p>UNIX timestamp: the number of milliseconds elapsed since January 1, 1970.</p>
+     * </li>
+     * <li><p>Format: YYYY-MM-DDThh:mm:ssZ.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

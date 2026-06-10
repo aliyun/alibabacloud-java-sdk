@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomizedListHeadersRequest extends TeaModel {
     /**
+     * <p>The language type for exporting the WUYING Workspace list.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
      */
@@ -12,6 +14,8 @@ public class DescribeCustomizedListHeadersRequest extends TeaModel {
     public String langType;
 
     /**
+     * <p>The list type.</p>
+     * 
      * <strong>example:</strong>
      * <p>desktop</p>
      */
@@ -19,6 +23,7 @@ public class DescribeCustomizedListHeadersRequest extends TeaModel {
     public String listType;
 
     /**
+     * <p>The region ID. You can invoke <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to obtain the list of regions supported by WUYING Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

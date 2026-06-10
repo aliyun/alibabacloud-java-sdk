@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDesktopGroupsRequest extends TeaModel {
     /**
-     * <p>The IDs of the cloud computer templates.</p>
+     * <p>The cloud computer template IDs.</p>
      */
     @NameInMap("BundleId")
     public java.util.List<String> bundleId;
 
     /**
-     * <p>The ID of the cloud computer share.</p>
+     * <p>The ID of the cloud computer pool.</p>
      * 
      * <strong>example:</strong>
      * <p>dg-2i8qxpv6t1a03****</p>
@@ -20,16 +20,16 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     public String desktopGroupId;
 
     /**
-     * <p>The IDs of the cloud computer shares.</p>
+     * <p>The IDs of cloud computer pools.</p>
      */
     @NameInMap("DesktopGroupIds")
     public java.util.List<String> desktopGroupIds;
 
     /**
-     * <p>The name of the cloud computer share that you want to query. Fuzzy search is supported.</p>
+     * <p>The name of the cloud computer pool. Fuzzy search is supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>testName</p>
+     * <p>CloudComputerPool01</p>
      */
     @NameInMap("DesktopGroupName")
     public String desktopGroupName;
@@ -38,19 +38,19 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     public String desktopType;
 
     /**
-     * <p>The IDs of the users who can access the cloud computer share.</p>
+     * <p>The IDs of the authorized users of the cloud computer pool.</p>
      */
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
 
     /**
-     * <p>The authorized users that you want to exclude.</p>
+     * <p>The IDs of the users that you want to exclude from the authorized user list.</p>
      */
     @NameInMap("ExcludedEndUserIds")
     public java.util.List<String> excludedEndUserIds;
 
     /**
-     * <p>The IDs of the images.</p>
+     * <p>The image IDs.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>false</p>
@@ -59,7 +59,7 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     public java.util.List<String> imageId;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 100. Default value: 10.</p>
+     * <p>The number of entries to return on each page.<br>Maximum value: 100.<br>Default value: 10.<br><br></p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -68,12 +68,7 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Specifies whether the cloud computer share is a many-to-many share.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true: The cloud computer share is a many-to-many share.</li>
-     * <li>false: The cloud computer share is a one-to-many share.</li>
-     * </ul>
+     * <p>Specifies whether to query multi-desktop cloud computer pools.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -82,7 +77,7 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     public Boolean multiResource;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no next page exists.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. If NextToken is empty, no next page exists.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -91,7 +86,7 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the office network in which the cloud computer share resides.</p>
+     * <p>The office network ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-467671****</p>
@@ -100,15 +95,10 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The type of the cloud computer share.</p>
+     * <p>The type of the cloud computer pool.</p>
      * <blockquote>
-     * <p> This parameter is not publicly available.</p>
+     * <p>This parameter is not publicly available.</p>
      * </blockquote>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>0: a single-session many-to-many share.</li>
-     * <li>1: a multi-session many-to-many share.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -117,23 +107,32 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     public Long ownType;
 
     /**
-     * <p>The subscription duration of the cloud computer share. The unit is specified by <code>PeriodUnit</code>.</p>
+     * <p>The subscription duration of the subscription cloud computer pool. The unit is specified by the <code>PeriodUnit</code> parameter.</p>
      * <ul>
-     * <li><p>Valid values if you set <code>PeriodUnit</code> to <code>Month</code>:</p>
+     * <li><p>Valid values when <code>PeriodUnit</code> is set to <code>Month</code>:</p>
      * <ul>
-     * <li>1</li>
-     * <li>2</li>
-     * <li>3</li>
-     * <li>6</li>
+     * <li><p>1</p>
+     * </li>
+     * <li><p>2</p>
+     * </li>
+     * <li><p>3</p>
+     * </li>
+     * <li><p>6</p>
+     * </li>
      * </ul>
      * </li>
-     * <li><p>Valid values if you set <code>PeriodUnit</code> to <code>Year</code>:</p>
+     * <li><p>Valid values when <code>PeriodUnit</code> is set to <code>Year</code>:</p>
      * <ul>
-     * <li>1</li>
-     * <li>2</li>
-     * <li>3</li>
-     * <li>4</li>
-     * <li>5</li>
+     * <li><p>1</p>
+     * </li>
+     * <li><p>2</p>
+     * </li>
+     * <li><p>3</p>
+     * </li>
+     * <li><p>4</p>
+     * </li>
+     * <li><p>5</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
@@ -154,7 +153,7 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The ID of the applied policy.</p>
+     * <p>The ID of the policy that is associated with the cloud computer pool.</p>
      * 
      * <strong>example:</strong>
      * <p>pg-53iyi2aar0nd6****</p>
@@ -164,22 +163,6 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
 
     /**
      * <p>The protocol type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>High-definition Experience (HDX)</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Adaptive Streaming Protocol (ASP)</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>ASP</p>
@@ -191,7 +174,7 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     public String qosRuleId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by WUYING Workspace.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -201,13 +184,7 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The status of the cloud computer share.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>0: The cloud computer share is unpaid.</li>
-     * <li>1: The cloud computer share is normal.</li>
-     * <li>2: The cloud computer share expired, or your account has an overdue payment.</li>
-     * </ul>
+     * <p>The status of the cloud computer pool.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -216,7 +193,7 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>The tags that you want to add to the cloud computer share. You can specify 1 to 20 tags.</p>
+     * <p>The tags. You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeDesktopGroupsRequestTag> tag;
@@ -396,7 +373,7 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
 
     public static class DescribeDesktopGroupsRequestTag extends TeaModel {
         /**
-         * <p>The tag key. You cannot specify an empty string as a tag key. A tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The key of the tag. The key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -405,7 +382,7 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. You can specify an empty string as a tag key. A tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The value of the tag. The value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

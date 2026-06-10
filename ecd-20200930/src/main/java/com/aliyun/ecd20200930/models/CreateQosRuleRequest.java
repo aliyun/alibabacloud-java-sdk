@@ -4,16 +4,23 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateQosRuleRequest extends TeaModel {
+    /**
+     * <p>The IDs of the cloud phones to include in this rule.</p>
+     */
     @NameInMap("AuthAndroidId")
     public java.util.List<String> authAndroidId;
 
     @NameInMap("AuthDesktopGroupId")
     public java.util.List<String> authDesktopGroupId;
 
+    /**
+     * <p>The IDs of the cloud desktops to include in this rule.</p>
+     */
     @NameInMap("AuthDesktopId")
     public java.util.List<String> authDesktopId;
 
     /**
+     * <p>The maximum downstream bandwidth. Unit: Mbps.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +30,7 @@ public class CreateQosRuleRequest extends TeaModel {
     public Integer download;
 
     /**
+     * <p>The ID of the premium bandwidth plan.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,12 +40,17 @@ public class CreateQosRuleRequest extends TeaModel {
     public String networkPackageId;
 
     /**
+     * <p>The name of the QoS rule.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test</p>
      */
     @NameInMap("QosRuleName")
     public String qosRuleName;
 
     /**
+     * <p>The maximum upstream bandwidth. Unit: Mbps.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

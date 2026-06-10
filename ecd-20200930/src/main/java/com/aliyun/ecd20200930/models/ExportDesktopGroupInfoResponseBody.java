@@ -16,16 +16,26 @@ public class ExportDesktopGroupInfoResponseBody extends TeaModel {
     /**
      * <p>The download URL of the XLSX file that contains cloud computer shares. The XLSX file provides the following information:</p>
      * <ul>
-     * <li>Cloud computer share ID/name</li>
-     * <li>Office network ID/name</li>
-     * <li>Cloud computer share template</li>
-     * <li>vCPUs/Memory size</li>
-     * <li>System disk/Data disk</li>
-     * <li>Security policy name</li>
-     * <li>Number of authorized users</li>
-     * <li>Billing method</li>
-     * <li>Creation time</li>
-     * <li>Expiration time</li>
+     * <li><p>Cloud computer share ID/name</p>
+     * </li>
+     * <li><p>Office network ID/name</p>
+     * </li>
+     * <li><p>Cloud computer share template</p>
+     * </li>
+     * <li><p>vCPUs/Memory size</p>
+     * </li>
+     * <li><p>System disk/Data disk</p>
+     * </li>
+     * <li><p>Security policy name</p>
+     * </li>
+     * <li><p>Number of authorized users</p>
+     * </li>
+     * <li><p>Billing method</p>
+     * </li>
+     * <li><p>Creation time</p>
+     * </li>
+     * <li><p>Expiration time</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

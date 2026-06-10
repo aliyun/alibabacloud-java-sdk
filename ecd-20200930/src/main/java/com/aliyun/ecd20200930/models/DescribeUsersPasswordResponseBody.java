@@ -45,7 +45,7 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
          * <p>The display name of the end user.</p>
          * 
          * <strong>example:</strong>
-         * <p>alice_1365*****</p>
+         * <p>demo_user01_1488****</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
@@ -54,7 +54,7 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
          * <p>The ID of the end user.</p>
          * 
          * <strong>example:</strong>
-         * <p>alice</p>
+         * <p>demo_user01</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
@@ -63,7 +63,7 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
          * <p>The password of the end user.</p>
          * 
          * <strong>example:</strong>
-         * <p>tes123</p>
+         * <p>3q8p-NDey-2Nac-TWcQ-****</p>
          */
         @NameInMap("Password")
         public String password;

@@ -23,7 +23,7 @@ public class DescribeDevicesRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2</p>
+     * <p>1</p>
      */
     @NameInMap("ClientType")
     public String clientType;
@@ -50,7 +50,7 @@ public class DescribeDevicesRequest extends TeaModel {
      * <p>The ID of the bound user.</p>
      * 
      * <strong>example:</strong>
-     * <p>moli</p>
+     * <p>alice</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;
@@ -59,7 +59,7 @@ public class DescribeDevicesRequest extends TeaModel {
      * <p>The page number.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -68,7 +68,7 @@ public class DescribeDevicesRequest extends TeaModel {
      * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

@@ -5,25 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNetworkPackageRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the automatic payment feature.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>true (default): enables the auto-payment feature.</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <p>Make sure that your account has sufficient balance. Otherwise, no order is generated.</p>
-     * <!-- -->
-     * </li>
-     * <li><p>false: disables the auto-payment feature. In this case, an order is generated but you need to make the payment manually.</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <p>To make the payment, log on to the Elastic Desktop Service console, go to the Orders page, and find the order based on the order ID.</p>
-     * <!-- --></li>
-     * </ul>
+     * <p>Specifies whether to enable auto-payment.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -32,23 +14,7 @@ public class CreateNetworkPackageRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for the premium bandwidth plan.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>true</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>false</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <p>Specifies whether to enable auto-renewal.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -57,16 +23,19 @@ public class CreateNetworkPackageRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The bandwidth provided by the premium bandwidth plan. Unit: Mbit/s.</p>
+     * <p>The bandwidth of the network package, in Mbps.</p>
      * <ul>
-     * <li>Valid values if the premium bandwidth plan is a subscription plan: 2 to 1000.</li>
-     * <li>Valid values if the premium bandwidth plan is a pay-as-you-go plan that charges by data transfer (PayByTraffic): 2 to 200.</li>
-     * <li>Valid values if the premium bandwidth plan is a pay-as-you-go plan that charges by fixed bandwidth (PayByBandwidth): 2 to 1000.</li>
+     * <li><p>For subscription network packages, the value range is 2 to 1,000.</p>
+     * </li>
+     * <li><p>For pay-as-you-go network packages that are billed by traffic, the value range is 2 to 200.</p>
+     * </li>
+     * <li><p>For pay-as-you-go network packages that are billed by bandwidth, the value range is 2 to 1,000.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>2</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
@@ -75,17 +44,19 @@ public class CreateNetworkPackageRequest extends TeaModel {
     public String channelCookie;
 
     /**
-     * <p>The charge type of the premium bandwidth plan.</p>
+     * <p>The billing method for the network package.</p>
      * <ul>
-     * <li><p>Valid value when the <code>PayType</code> parameter is set to <code>PrePaid</code>:</p>
+     * <li><p>When <code>PayType</code> is set to <code>PrePaid</code>, the only valid value is:</p>
      * <ul>
-     * <li>PayByBandwidth: charges by fixed bandwidth.</li>
+     * <li><code>PayByBandwidth</code>: pay-by-bandwidth.</li>
      * </ul>
      * </li>
-     * <li><p>Valid values when the <code>PayType</code> parameter is set to <code>PostPaid</code>:</p>
+     * <li><p>When <code>PayType</code> is set to <code>PostPaid</code>, valid values are:</p>
      * <ul>
-     * <li>PayByTraffic: charges by data transfer.</li>
-     * <li>PayByBandwidth: charges by fixed bandwidth.</li>
+     * <li><p><code>PayByTraffic</code>: pay-by-traffic.</p>
+     * </li>
+     * <li><p><code>PayByBandwidth</code>: pay-by-bandwidth.</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
@@ -106,12 +77,7 @@ public class CreateNetworkPackageRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The billing method of the premium bandwidth plan.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>PostPaid: pay-as-you-go</li>
-     * <li>PrePaid: subscription</li>
-     * </ul>
+     * <p>The billing method.</p>
      * 
      * <strong>example:</strong>
      * <p>PrePaid</p>
@@ -120,11 +86,14 @@ public class CreateNetworkPackageRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The subscription duration of the premium bandwidth plan. This parameter takes effect and is required only when the <code>PayType</code> parameter is set to <code>PrePaid</code>. The valid values of this parameter vary based on the <code>PeriodUnit</code> value.</p>
+     * <p>The subscription duration of the network package. This parameter is required and applies only when <code>PayType</code> is set to <code>PrePaid</code>. The valid values for this parameter depend on the value of <code>PeriodUnit</code>.</p>
      * <ul>
-     * <li>Valid value when the <code>PeriodUnit</code> parameter is set to <code>Week</code>: 1</li>
-     * <li>Valid values when the <code>PeriodUnit</code> parameter is set to <code>Month</code>: 1, 2, 3, and 6</li>
-     * <li>Valid values when the <code>PeriodUnit</code> parameter is set to <code>Year</code>: 1, 2, and 3</li>
+     * <li><p>If <code>PeriodUnit</code> is set to <code>Week</code>, the only valid value is 1.</p>
+     * </li>
+     * <li><p>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values are 1, 2, 3, and 6.</p>
+     * </li>
+     * <li><p>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values are 1, 2, and 3.</p>
+     * </li>
      * </ul>
      * <p>Default value: 1.</p>
      * 
@@ -135,39 +104,16 @@ public class CreateNetworkPackageRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the subscription duration of the premium bandwidth plan. This parameter takes effect and is required only when the <code>PayType</code> parameter is set to <code>PrePaid</code>.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>Month</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Year</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Week</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <p>The unit of the subscription duration for the network package. This parameter is required and applies only when <code>PayType</code> is set to <code>PrePaid</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>Month</p>
+     * <p>Week</p>
      */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
     /**
-     * <p>The ID of the sales promotion.</p>
+     * <p>The promotion ID.</p>
      * 
      * <strong>example:</strong>
      * <p>23141</p>
@@ -176,7 +122,7 @@ public class CreateNetworkPackageRequest extends TeaModel {
     public String promotionId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to get the list of regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

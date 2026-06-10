@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     /**
-     * <p>The CRON expression for periodic scheduling.</p>
+     * <p>The cron expression for the recurring schedule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public String diskType;
 
     /**
-     * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-). This parameter is empty by default.</p>
+     * <p>The name of the automatic snapshot policy. It can contain 2 to 128 English or Chinese characters. It must start with a letter or a Chinese character, and cannot start with <code>http://</code> or <code>https://</code>. It can contain digits, colons (:), underscores (_), or hyphens (-). Default value: empty.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public String policyName;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. For more information, see <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to get a list of regions supported by WUYING Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,11 +38,11 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The retention period of the automatic snapshots. Unit: days. Valid values: 1 to 180.</p>
+     * <p>The retention period of the automatic snapshot, in days. Valid values: 1 to 180.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>30</p>
+     * <p>2</p>
      */
     @NameInMap("RetentionDays")
     public Integer retentionDays;

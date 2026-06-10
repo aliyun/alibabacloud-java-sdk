@@ -23,7 +23,7 @@ public class DescribeConfigGroupRequest extends TeaModel {
      * <p>The name of the configuration group.</p>
      * 
      * <strong>example:</strong>
-     * <p>ScheduledTask</p>
+     * <p>Scheduled task configuration</p>
      */
     @NameInMap("Name")
     public String name;
@@ -63,7 +63,7 @@ public class DescribeConfigGroupRequest extends TeaModel {
      * <p>The ID of the region. Set the value to <code>cn-shanghai</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;

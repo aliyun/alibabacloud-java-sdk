@@ -25,8 +25,10 @@ public class DescribeSessionStatisticRequest extends TeaModel {
     /**
      * <p>The query interval. Unit: seconds. Valid values:</p>
      * <ul>
-     * <li>60</li>
-     * <li>120</li>
+     * <li><p>60</p>
+     * </li>
+     * <li><p>120</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

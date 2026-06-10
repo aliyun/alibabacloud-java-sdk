@@ -99,7 +99,7 @@ public class ModifyADConnectorOfficeSiteRequest extends TeaModel {
      * <p>The name of the organizational unit (OU) in the AD domain. You can call the <a href="https://help.aliyun.com/document_detail/311259.html">ListUserAdOrganizationUnits</a> operation to obtain OUs.</p>
      * 
      * <strong>example:</strong>
-     * <p>oldad.com/Domain Controllers</p>
+     * <p>example.com/Domain Controllers</p>
      */
     @NameInMap("OUName")
     public String OUName;
@@ -146,7 +146,7 @@ public class ModifyADConnectorOfficeSiteRequest extends TeaModel {
      * <p>The name of the subdomain in the enterprise AD domain.</p>
      * 
      * <strong>example:</strong>
-     * <p>childexample.com</p>
+     * <p>child.example.com</p>
      */
     @NameInMap("SubDomainName")
     public String subDomainName;

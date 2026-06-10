@@ -84,7 +84,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
          * <p>The tag keys.</p>
          * 
          * <strong>example:</strong>
-         * <p>TestKey</p>
+         * <p>department</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
@@ -93,7 +93,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
          * <p>The tag values.</p>
          * 
          * <strong>example:</strong>
-         * <p>TestValue</p>
+         * <p>design</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

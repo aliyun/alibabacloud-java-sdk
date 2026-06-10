@@ -60,7 +60,7 @@ public class DescribeCdsFileShareLinksRequest extends TeaModel {
      * <p>The file sharing status. Valid values: ● disabled: canceled ● enabled: valid</p>
      * 
      * <strong>example:</strong>
-     * <p>disabled</p>
+     * <p>enabled</p>
      */
     @NameInMap("Status")
     public String status;

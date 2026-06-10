@@ -242,6 +242,9 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
 
         /**
          * <p>The resource name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>O&amp;M</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;

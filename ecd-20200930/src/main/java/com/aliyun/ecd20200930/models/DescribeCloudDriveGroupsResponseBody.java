@@ -92,24 +92,66 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudDriveGroupsResponseBodyCloudDriveGroupsAdminUserInfos extends TeaModel {
+        /**
+         * <p>Mailbox.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:123@aliyun.com">123@aliyun.com</a></p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <p>Administrator username (may be unreadable when imported from a third party).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user01</p>
+         */
         @NameInMap("EndUserId")
         public String endUserId;
 
+        /**
+         * <p>Job number (DingTalk)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
         @NameInMap("JobNumber")
         public String jobNumber;
 
+        /**
+         * <p>Administrator nickname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>John Doe</p>
+         */
         @NameInMap("NickName")
         public String nickName;
 
+        /**
+         * <p>Phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678</p>
+         */
         @NameInMap("Phone")
         public String phone;
 
+        /**
+         * <p>Administrator nickname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>John Doe</p>
+         */
         @NameInMap("RealNickName")
         public String realNickName;
 
+        /**
+         * <p>Remark.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>John Doe</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
@@ -177,9 +219,18 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudDriveGroupsResponseBodyCloudDriveGroups extends TeaModel {
+        /**
+         * <p>List of group administrators.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;user01&quot;]</p>
+         */
         @NameInMap("AdminUserIds")
         public String adminUserIds;
 
+        /**
+         * <p>Administrator information for the group space.</p>
+         */
         @NameInMap("AdminUserInfos")
         public java.util.List<DescribeCloudDriveGroupsResponseBodyCloudDriveGroupsAdminUserInfos> adminUserInfos;
 
@@ -223,22 +274,36 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
          * <p>The name of the team space.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test Team 1</p>
+         * <p>Test team 1</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>Organization ID of the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>org-aliyun-wy-org-id</p>
+         */
         @NameInMap("OrgId")
         public String orgId;
 
+        /**
+         * <p>Size of the recycle bin for the team space. Unit: Byte.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024000</p>
+         */
         @NameInMap("RecycleBinSize")
         public String recycleBinSize;
 
         /**
          * <p>The team space status. Valid values:</p>
          * <ul>
-         * <li>enabled</li>
-         * <li>disabled</li>
+         * <li><p>enabled</p>
+         * </li>
+         * <li><p>disabled</p>
+         * </li>
          * </ul>
          * <p>Default value: enabled.</p>
          * 

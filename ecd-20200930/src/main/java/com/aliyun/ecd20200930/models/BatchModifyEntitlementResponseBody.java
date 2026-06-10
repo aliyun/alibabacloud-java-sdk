@@ -60,11 +60,16 @@ public class BatchModifyEntitlementResponseBody extends TeaModel {
          * <p>The assign result for each cloud computer.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>FAILED</li>
-         * <li>NOT_STARTED</li>
-         * <li>STARTED</li>
-         * <li>PROCESSING</li>
-         * <li>FINISHED</li>
+         * <li><p>FAILED</p>
+         * </li>
+         * <li><p>NOT_STARTED</p>
+         * </li>
+         * <li><p>STARTED</p>
+         * </li>
+         * <li><p>PROCESSING</p>
+         * </li>
+         * <li><p>FINISHED</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,11 +120,16 @@ public class BatchModifyEntitlementResponseBody extends TeaModel {
          * <p>The result.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>FAILED</li>
-         * <li>NOT_STARTED</li>
-         * <li>STARTED</li>
-         * <li>PROCESSING</li>
-         * <li>FINISHED</li>
+         * <li><p>FAILED</p>
+         * </li>
+         * <li><p>NOT_STARTED</p>
+         * </li>
+         * <li><p>STARTED</p>
+         * </li>
+         * <li><p>PROCESSING</p>
+         * </li>
+         * <li><p>FINISHED</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -17,7 +17,7 @@ public class DescribeFotaPendingDesktopsRequest extends TeaModel {
      * <p>The name of the cloud computer.</p>
      * 
      * <strong>example:</strong>
-     * <p>testName</p>
+     * <p>demo-computer</p>
      */
     @NameInMap("DesktopName")
     public String desktopName;
@@ -48,7 +48,7 @@ public class DescribeFotaPendingDesktopsRequest extends TeaModel {
      * <p>The ID of the office network. You can call the <a href="https://help.aliyun.com/document_detail/216071.html">DescribeOfficeSites</a> operation to obtain the value of this parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou+dir-363353****</p>
+     * <p>cn-shanghai+dir-428216****</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;

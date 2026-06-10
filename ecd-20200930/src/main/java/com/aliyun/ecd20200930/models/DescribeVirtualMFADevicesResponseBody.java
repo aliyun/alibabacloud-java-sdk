@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.If NextToken is empty, no next page exists.</p>
+     * <p>The token to retrieve the next page of results. If this parameter is empty, no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL23as</p>
@@ -23,7 +23,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Details of the virtual MFA devices.</p>
+     * <p>A list of virtual MFA devices.</p>
      */
     @NameInMap("VirtualMFADevices")
     public java.util.List<DescribeVirtualMFADevicesResponseBodyVirtualMFADevices> virtualMFADevices;
@@ -114,7 +114,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
         public DescribeVirtualMFADevicesResponseBodyVirtualMFADevicesAdUser adUser;
 
         /**
-         * <p>The number of consecutive failures to bind the virtual MFA device, or the number of failures on the verification of the virtual MFA device.</p>
+         * <p>The number of consecutive failed attempts to bind or authenticate the virtual MFA device.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -124,7 +124,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is in private preview.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -134,7 +134,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
         public String directoryId;
 
         /**
-         * <p>The name of the AD user who uses the virtual MFA device.</p>
+         * <p>The AD username of the bound user.</p>
          * 
          * <strong>example:</strong>
          * <p>usertest</p>
@@ -143,7 +143,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
         public String endUserId;
 
         /**
-         * <p>The time when the virtual MFA device was started. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the virtual MFA device was enabled. The time is in the <code>YYYY-MM-DDThh:mm:ssZ</code> format and in UTC, as specified by the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-20T14:52:28Z</p>
@@ -152,7 +152,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
         public String gmtEnabled;
 
         /**
-         * <p>The time when a locked virtual MFA device was automatically unlocked. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the locked virtual MFA device is automatically unlocked. The time is in the <code>YYYY-MM-DDThh:mm:ssZ</code> format and in UTC, as specified by the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-21T15:21:28Z</p>
@@ -161,7 +161,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
         public String gmtUnlock;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-269345****</p>
@@ -170,7 +170,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
         public String officeSiteId;
 
         /**
-         * <p>The serial number of the virtual MFA device, which is a unique identifier.</p>
+         * <p>The serial number of the virtual MFA device.</p>
          * 
          * <strong>example:</strong>
          * <p>a25f297f-f2e1-4a44-bbf1-5f48a6e5****</p>
@@ -180,29 +180,6 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
 
         /**
          * <p>The status of the virtual MFA device.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>LOCKED</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>UNBOUND</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>NORMAL</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>

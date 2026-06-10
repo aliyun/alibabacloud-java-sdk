@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCdsFileRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud disk.</p>
+     * <p>Enterprise cloud disk ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,54 +15,7 @@ public class CreateCdsFileRequest extends TeaModel {
     public String cdsId;
 
     /**
-     * <p>The policy that is used when the file that you want to upload has the same name as an existing file in the cloud disk.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>refuse</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>denies creating the file</p>
-     * <!-- -->
-     * 
-     * <p>.</p>
-     * </li>
-     * <li><p>auto_rename</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>automatically renames the file</p>
-     * <!-- -->
-     * 
-     * <p>.</p>
-     * </li>
-     * <li><p>ignore</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>allows the file to use the same name as the existing file in the cloud disk</p>
-     * <!-- -->
-     * 
-     * <p>.</p>
-     * </li>
-     * <li><p>over_write</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>overwrites the existing file in the cloud disk</p>
-     * <!-- -->
-     * 
-     * <p>.</p>
-     * </li>
-     * </ul>
+     * <p>How to handle files with the same name.</p>
      * 
      * <strong>example:</strong>
      * <p>ignore</p>
@@ -71,7 +24,7 @@ public class CreateCdsFileRequest extends TeaModel {
     public String conflictPolicy;
 
     /**
-     * <p>The user ID.</p>
+     * <p>User ID.</p>
      * 
      * <strong>example:</strong>
      * <p>test1</p>
@@ -80,7 +33,7 @@ public class CreateCdsFileRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>The hash value of the SHA1 algorithm that is used by the file.</p>
+     * <p>SHA-1 hash value of the file.</p>
      * 
      * <strong>example:</strong>
      * <p>7C4A8D09CA3762AF61E59520943DC26494F8****</p>
@@ -89,17 +42,17 @@ public class CreateCdsFileRequest extends TeaModel {
     public String fileHash;
 
     /**
-     * <p>The file size. Unit: bytes.</p>
+     * <p>File size. Unit: Byte.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2048</p>
+     * <p>1048576</p>
      */
     @NameInMap("FileLength")
     public Long fileLength;
 
     /**
-     * <p>The file name.</p>
+     * <p>File name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -109,23 +62,7 @@ public class CreateCdsFileRequest extends TeaModel {
     public String fileName;
 
     /**
-     * <p>The file type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>file</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>folder</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <p>File type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -134,11 +71,17 @@ public class CreateCdsFileRequest extends TeaModel {
     @NameInMap("FileType")
     public String fileType;
 
+    /**
+     * <p>Team space ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cg-i1ruuudp92qpj****</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The ID of the parent folder.</p>
+     * <p>Parent file ID. Get this from the <code>FileId</code> parameter returned by the <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> API.</p>
      * 
      * <strong>example:</strong>
      * <p>637c9163b453b1a384874264ba79f3f9eab9****</p>
@@ -147,7 +90,7 @@ public class CreateCdsFileRequest extends TeaModel {
     public String parentFileId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>Region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to list regions supported by WUYING Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

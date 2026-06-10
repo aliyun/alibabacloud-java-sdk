@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateOfficeSiteAcceleratorRequest extends TeaModel {
     /**
-     * <p>The regions to include in global acceleration.</p>
+     * <p>A list of regions where access points provide acceleration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AccelerateRegion")
@@ -96,7 +96,7 @@ public class CreateOfficeSiteAcceleratorRequest extends TeaModel {
 
     public static class CreateOfficeSiteAcceleratorRequestAccelerateRegion extends TeaModel {
         /**
-         * <p>The ID of the region to include in global acceleration.</p>
+         * <p>The ID of the acceleration region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -106,7 +106,7 @@ public class CreateOfficeSiteAcceleratorRequest extends TeaModel {
         public String accelerateRegionId;
 
         /**
-         * <p>The bandwidth that you want to allocate to the acceleration region. Unit: Mbit/s.</p>
+         * <p>The bandwidth allocated to the acceleration region. Unit: Mbps.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,16 +116,10 @@ public class CreateOfficeSiteAcceleratorRequest extends TeaModel {
         public Integer bandwidth;
 
         /**
-         * <p>The IP version used to connect to the GA instance.</p>
+         * <p>The IP protocol version used to access the GA instance.</p>
          * <blockquote>
-         * <p> Only pay-as-you-go standard GA instances support <code>DUAL_STACK</code>.</p>
+         * <p>Only standard pay-as-you-go GA instances support <code>DUAL_STACK</code>.</p>
          * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>DUAL_STACK: IPv4 and IPv6.</li>
-         * <li>IPv6: IPv6.</li>
-         * <li>IPv4 (default): IPv4.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>IPv4</p>
@@ -134,20 +128,15 @@ public class CreateOfficeSiteAcceleratorRequest extends TeaModel {
         public String ipVersion;
 
         /**
-         * <p>The line type of the elastic IP address (EIP) in the acceleration region.</p>
+         * <p>The line type.</p>
          * <blockquote>
+         * <ul>
+         * <li><p>This parameter is required for pay-by-data-transfer GA instances.</p>
+         * </li>
+         * <li><p>The supported line types vary by acceleration region.</p>
+         * </li>
+         * </ul>
          * </blockquote>
-         * <ul>
-         * <li><p>This parameter is required only if the bandwidth metering method of the GA instance is <strong>pay-by-data transfer</strong>.</p>
-         * </li>
-         * <li><p>Different acceleration regions support different line types of EIPs.</p>
-         * </li>
-         * </ul>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>BGP: BGP (Multi-ISP) lines.</li>
-         * <li>BGP_PRO: BGP (Multi-ISP) Pro.</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

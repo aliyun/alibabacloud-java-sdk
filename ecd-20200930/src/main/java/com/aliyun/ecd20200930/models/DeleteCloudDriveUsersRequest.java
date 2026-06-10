@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCloudDriveUsersRequest extends TeaModel {
     /**
+     * <p>WUYING Workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,14 @@ public class DeleteCloudDriveUsersRequest extends TeaModel {
     @NameInMap("CdsId")
     public String cdsId;
 
+    /**
+     * <p>List of end user IDs.</p>
+     */
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
     /**
+     * <p>Region ID. You can invoke <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to obtain the list of regions supported by WUYING Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

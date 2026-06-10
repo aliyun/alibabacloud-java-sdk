@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCensRequest extends TeaModel {
     /**
-     * <p>The page number.\
-     * Default value: 1.</p>
+     * <p>The page number.<br>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -15,8 +14,7 @@ public class DescribeCensRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.\
-     * Default value: 50.</p>
+     * <p>The number of entries per page.<br>Default value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>

@@ -5,25 +5,7 @@ import com.aliyun.tea.*;
 
 public class RenewNetworkPackagesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the automatic payment feature.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>true (default): enables the auto-payment feature.</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <p>Make sure that your account has sufficient balance. Otherwise, no order is generated.</p>
-     * <!-- -->
-     * </li>
-     * <li><p>false: disables the auto-payment feature. In this case, an order is generated but you need to make the payment manually.</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <p>To make the payment, log on to the Elastic Desktop Service console, go to the Orders page, and find the order based on the order ID.</p>
-     * <!-- --></li>
-     * </ul>
+     * <p>Whether to enable automatic payment.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -35,19 +17,23 @@ public class RenewNetworkPackagesRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The IDs of premium bandwidth plans. You can specify up to 100 IDs.</p>
+     * <p>A list of premium public bandwidth IDs. You can specify 1 to 100 IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkPackageId")
     public java.util.List<String> networkPackageId;
 
     /**
-     * <p>The subscription duration if you specify subscription as the new billing method for the cloud desktop. The unit of the value is specified by the <code>PeriodUnit</code> parameter. This parameter takes effect only when the <code>ChargeType</code> parameter is set to <code>PrePaid</code>.</p>
+     * <p>The renewal duration. Valid values depend on the value of <code>PeriodUnit</code>.</p>
      * <ul>
-     * <li>If the <code>PeriodUnit</code> parameter is set to <code>Week</code>, the valid value of the Period parameter is 1.</li>
-     * <li>If the <code>PeriodUnit</code> parameter is set to <code>Month</code>, the valid values of the Period parameter are 1, 2, 3, and 6.</li>
-     * <li>If the <code>PeriodUnit</code> parameter is set to <code>Year</code>, the valid values of the Period parameter are 1, 2, 3, 4, and 5.</li>
+     * <li><p>If <code>PeriodUnit</code> is <code>Week</code>, valid values are: 1.</p>
+     * </li>
+     * <li><p>If <code>PeriodUnit</code> is <code>Month</code>, valid values are: 1, 2, 3, or 6.</p>
+     * </li>
+     * <li><p>If <code>PeriodUnit</code> is <code>Year</code>, valid values are: 1, 2, or 3.</p>
+     * </li>
      * </ul>
+     * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -56,12 +42,7 @@ public class RenewNetworkPackagesRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the renewal duration specified by the Period parameter. Valid values:</p>
-     * <ul>
-     * <li>Month</li>
-     * <li>Year</li>
-     * </ul>
-     * <p>Default value: Month.</p>
+     * <p>The unit for the renewal duration.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -79,7 +60,7 @@ public class RenewNetworkPackagesRequest extends TeaModel {
     public String promotionId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to list regions that support WUYING Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

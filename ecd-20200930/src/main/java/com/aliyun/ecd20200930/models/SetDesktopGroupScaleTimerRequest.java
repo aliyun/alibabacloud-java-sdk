@@ -83,7 +83,7 @@ public class SetDesktopGroupScaleTimerRequest extends TeaModel {
          * <p>If a session is disconnected by the end user or accidentally due to a factor and the end user does not re-establish a connection with the session within the keep-alive duration, the session expires and unsaved data is deleted. If the end user successfully re-establishes a connection with the session within the keep-alive duration, the end user returns to the session and can still access the original data.</p>
          * 
          * <strong>example:</strong>
-         * <p>1000</p>
+         * <p>180000</p>
          */
         @NameInMap("KeepDuration")
         public Long keepDuration;
@@ -92,8 +92,10 @@ public class SetDesktopGroupScaleTimerRequest extends TeaModel {
          * <p>The load balancing policy for the multi-session cloud computer pool.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>0: depth-first</li>
-         * <li>1: breadth first.</li>
+         * <li><p>0: depth-first</p>
+         * </li>
+         * <li><p>1: breadth first.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -126,7 +128,7 @@ public class SetDesktopGroupScaleTimerRequest extends TeaModel {
          * <p>When the specified threshold is reached, new cloud computers are automatically created. When the specified threshold is not reached, idle cloud computers are released.</p>
          * 
          * <strong>example:</strong>
-         * <p>0.9</p>
+         * <p>0.85</p>
          */
         @NameInMap("RatioThreshold")
         public Float ratioThreshold;

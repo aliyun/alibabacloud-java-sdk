@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
     /**
-     * <p>The image change records.</p>
+     * <p>Collection of image modification records.</p>
      */
     @NameInMap("ImageModifiedRecords")
     public java.util.List<DescribeImageModifiedRecordsResponseBodyImageModifiedRecords> imageModifiedRecords;
 
     /**
-     * <p>If the NextToken parameter is empty, no next page exists.</p>
+     * <p>Token for the next page of results. An empty NextToken means no more results.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6koN7RqHg3d2z8LKmSoe821</p>
@@ -20,7 +20,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DC40EE61-7E83-59ED-AEA6-7EE9C437F352</p>
@@ -29,7 +29,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of image modification records.</p>
+     * <p>Total number of image modification records.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -76,37 +76,37 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
 
     public static class DescribeImageModifiedRecordsResponseBodyImageModifiedRecords extends TeaModel {
         /**
-         * <p>The ID of the original image.</p>
+         * <p>ID of the original image before modification.</p>
          * 
          * <strong>example:</strong>
-         * <p>m-8rnz2imrpcfuh****</p>
+         * <p>desktopimage-windows-server-2019-64-ch-asp</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
-         * <p>The name of the original image.</p>
+         * <p>Name of the original image before modification.</p>
          * 
          * <strong>example:</strong>
-         * <p>win10-0307</p>
+         * <p>Windows server 2019 Mainland</p>
          */
         @NameInMap("ImageName")
         public String imageName;
 
         /**
-         * <p>The ID of the new image after the image was modified.</p>
+         * <p>ID of the new image after modification.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxNewImageID</p>
+         * <p>desktopimage-windows-server-2022-64-ch-asp</p>
          */
         @NameInMap("NewImageId")
         public String newImageId;
 
         /**
-         * <p>The name of the new image after the image was modified.</p>
+         * <p>Name of the new image after modification.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxImageID</p>
+         * <p>Windows server 2022 Mainland asp</p>
          */
         @NameInMap("NewImageName")
         public String newImageName;
@@ -115,16 +115,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
         public String reason;
 
         /**
-         * <p>The status of the image modification.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>0: The image is being modified.</p>
-         * </li>
-         * <li><p>1: The image is successfully modified.</p>
-         * </li>
-         * <li><p>2: The image fails to be modified.</p>
-         * </li>
-         * </ul>
+         * <p>Status of the image modification.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -133,7 +124,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The time when the image was last modified.</p>
+         * <p>Time when the image was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-03-03T02:43:44.851Z</p>

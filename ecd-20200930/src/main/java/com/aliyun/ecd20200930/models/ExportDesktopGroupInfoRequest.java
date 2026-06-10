@@ -8,8 +8,10 @@ public class ExportDesktopGroupInfoRequest extends TeaModel {
      * <p>The billing method of the cloud computer share.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>PostPaid: pay-as-you-go.</li>
-     * <li>PrePaid: subscription.</li>
+     * <li><p>PostPaid: pay-as-you-go.</p>
+     * </li>
+     * <li><p>PrePaid: subscription.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +30,7 @@ public class ExportDesktopGroupInfoRequest extends TeaModel {
      * <p>The name of the cloud computer share.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>CloudComputerPool01</p>
      */
     @NameInMap("DesktopGroupName")
     public String desktopGroupName;

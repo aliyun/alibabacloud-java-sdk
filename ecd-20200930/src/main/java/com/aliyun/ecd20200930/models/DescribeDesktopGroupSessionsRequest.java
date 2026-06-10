@@ -32,7 +32,7 @@ public class DescribeDesktopGroupSessionsRequest extends TeaModel {
      * <p>The user ID of the terminal that connects to the session.</p>
      * 
      * <strong>example:</strong>
-     * <p>xianqiu</p>
+     * <p>alice</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;
@@ -65,18 +65,13 @@ public class DescribeDesktopGroupSessionsRequest extends TeaModel {
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
      * 
      * <strong>example:</strong>
-     * <p>&quot;asdfdfsdfsdfds&quot;</p>
+     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6ljnKKgSRjo8yXAIT5QSvkU</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The type of the session.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>0: single-session</li>
-     * <li>1: multi-session</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -85,7 +80,7 @@ public class DescribeDesktopGroupSessionsRequest extends TeaModel {
     public Integer ownType;
 
     /**
-     * <p>The ID of the region. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+     * <p>The ID of the region. You can call the <a href="t2167755.xdita#"></a>operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -95,22 +90,6 @@ public class DescribeDesktopGroupSessionsRequest extends TeaModel {
 
     /**
      * <p>The status of the session.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>Connected</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Disconnected</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Connected</p>

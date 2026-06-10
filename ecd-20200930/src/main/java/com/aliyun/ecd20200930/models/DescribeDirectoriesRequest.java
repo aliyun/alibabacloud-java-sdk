@@ -31,7 +31,7 @@ public class DescribeDirectoriesRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>RAM</p>
+     * <p>SIMPLE</p>
      */
     @NameInMap("DirectoryType")
     public String directoryType;

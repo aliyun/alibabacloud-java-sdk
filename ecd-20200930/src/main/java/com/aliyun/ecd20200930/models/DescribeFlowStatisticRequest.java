@@ -24,7 +24,7 @@ public class DescribeFlowStatisticRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The number of the page to return.\
+     * <p>The number of the page to return.<br>
      * Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -46,9 +46,12 @@ public class DescribeFlowStatisticRequest extends TeaModel {
      * <p>The statistic collection interval. Unit: seconds.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>3600: 1 hour</li>
-     * <li>10800: 3 hours</li>
-     * <li>86400: 24 hours</li>
+     * <li><p>3600: 1 hour</p>
+     * </li>
+     * <li><p>10800: 3 hours</p>
+     * </li>
+     * <li><p>86400: 24 hours</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

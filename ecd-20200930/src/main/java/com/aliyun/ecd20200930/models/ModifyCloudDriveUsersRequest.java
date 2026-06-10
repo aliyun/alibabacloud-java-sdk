@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCloudDriveUsersRequest extends TeaModel {
     /**
+     * <p>The enterprise cloud disk ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,14 @@ public class ModifyCloudDriveUsersRequest extends TeaModel {
     public String cdsId;
 
     /**
+     * <p>A list of end user IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
     /**
+     * <p>The region ID. You can invoke <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to obtain the list of regions supported by WUYING Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

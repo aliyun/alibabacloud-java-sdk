@@ -5,12 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDesktopGroupRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable auto-creation of cloud computers for the subscription cloud computer share. You must specify this parameter when <code>ChargeType</code> is set to <code>PrePaid</code>.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>0: disable auto-creation of cloud computers.</li>
-     * <li>1: enables auto-creation of cloud computers.</li>
-     * </ul>
+     * <p>Specifies whether to enable automatic creation of cloud computers in a subscription shared cloud computer group. This parameter is required and takes effect only when <code>ChargeType</code> is set to <code>PrePaid</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -19,13 +14,15 @@ public class ModifyDesktopGroupRequest extends TeaModel {
     public Integer allowAutoSetup;
 
     /**
-     * <p>The maximum number of standby cloud computers that can be reserved within the pay-as-you-go cloud computer share. You must specify this property only when <code>ChargeType</code> is set to <code>PostPaid</code>. Valid values:</p>
+     * <p>The number of cloud computers to reserve in a pay-as-you-go shared cloud computer group. This parameter is required and takes effect only when <code>ChargeType</code> is set to <code>PostPaid</code>. Valid values:</p>
      * <ul>
-     * <li>0: does not reserve any cloud computer.</li>
-     * <li>N: reserves N cloud computers (1≤ N ≤ 100).</li>
+     * <li><p>0: No cloud computers are reserved.</p>
+     * </li>
+     * <li><p>N: N cloud computers are reserved (1 ≤ N ≤ 100).</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> Setting this parameter to 0 means no cloud computers will be reserved within the cloud computer share. In this case, the system must create, start, and assign cloud computers to end users upon request, which can be time-consuming. To improve user experience, we recommend that you reserve a specific number of cloud computers.</p>
+     * <p>If you do not reserve any cloud computers, the system must create and start one when an end user requests a connection. This process takes longer. Reserve a specific number of cloud computers to ensure a good user experience.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,21 +32,23 @@ public class ModifyDesktopGroupRequest extends TeaModel {
     public Integer allowBufferCount;
 
     /**
-     * <p>The number of concurrent sessions allowed for each cloud computer within the multi-session many-to-many share.</p>
+     * <p>The number of concurrent sessions that each cloud computer in a multi-session shared cloud computer group can support.</p>
      * <blockquote>
-     * <p> This parameter is not publicly available.</p>
+     * <p>This parameter is not yet available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>2</p>
      */
     @NameInMap("BindAmount")
     public Long bindAmount;
 
     /**
      * <ul>
-     * <li>For subscription cloud computer shares, this parameter specifies the number of purchased cloud computers. Valid values: 0 to 200.</li>
-     * <li>For pay-as-you-go cloud computer shares, this parameter specifies the minimum number of cloud computers created in the initial batch. Default value: 1. Valid values: 0 to <code>MaxDesktopsCount</code>.</li>
+     * <li><p>For a subscription shared cloud computer group: the number of cloud computers to purchase. Valid values: 0 to 200.</p>
+     * </li>
+     * <li><p>For a pay-as-you-go shared cloud computer group: the minimum number of cloud computers to create in the pool. Default value: 1. Valid values: 0 to the value of <code>MaxDesktopsCount</code>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,15 +58,10 @@ public class ModifyDesktopGroupRequest extends TeaModel {
     public Integer buyDesktopsCount;
 
     /**
-     * <p>The type of the cloud computer share.</p>
+     * <p>The type of the shared cloud computer group.</p>
      * <blockquote>
-     * <p> This parameter is not publicly available.</p>
+     * <p>This parameter is not yet available.</p>
      * </blockquote>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>teacher: teacher-oriented.</li>
-     * <li>student: student-oriented.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>teacher</p>
@@ -79,16 +73,16 @@ public class ModifyDesktopGroupRequest extends TeaModel {
      * <p>The remarks.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>comment</p>
      */
     @NameInMap("Comments")
     public String comments;
 
     /**
-     * <p>The maximum period of time during which the session is connected. When the specified maximum period of time is reached, the session is automatically disconnected. Unit: milliseconds. Valid values: 900000 to 345600000. That is, the session can be connected for 15 to 5,760 minutes (4 days).</p>
+     * <p>The maximum duration of a session. When the session duration reaches this value, the session is automatically disconnected. Unit: milliseconds. Valid values: 900000 (15 minutes) to 345600000 (4 days).</p>
      * 
      * <strong>example:</strong>
-     * <p>600000</p>
+     * <p>900000</p>
      */
     @NameInMap("ConnectDuration")
     public Long connectDuration;
@@ -97,7 +91,7 @@ public class ModifyDesktopGroupRequest extends TeaModel {
     public Long deleteDuration;
 
     /**
-     * <p>The ID of the cloud computer share.</p>
+     * <p>The ID of the shared cloud computer group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -107,7 +101,7 @@ public class ModifyDesktopGroupRequest extends TeaModel {
     public String desktopGroupId;
 
     /**
-     * <p>The name of the cloud computer share.</p>
+     * <p>Shared cloud desktop name.</p>
      * 
      * <strong>example:</strong>
      * <p>desktopGroupName1</p>
@@ -125,9 +119,9 @@ public class ModifyDesktopGroupRequest extends TeaModel {
     public Boolean disableSessionConfig;
 
     /**
-     * <p>The ID of the File Storage NAS (NAS) file system for the user data roaming feature.</p>
+     * <p>The ID of the NAS file system used for user data roaming.</p>
      * <blockquote>
-     * <p> This parameter is unavailable.</p>
+     * <p>This parameter is not yet available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -137,20 +131,20 @@ public class ModifyDesktopGroupRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>After an end user connects to a cloud computer, the session is established. If the system does not detect inputs from the keyboard or mouse within the specified period of time, the session is closed. Unit: milliseconds. Valid values: 360000 to 3600000 (6 minutes to 60 minutes)</p>
-     * <p>End users can receive a prompt to save data before sessions are disconnected. The system sends the prompt 30 seconds before the specified period of time is reached. To prevent data loss, end users must save the data of the sessions.</p>
+     * <p>The maximum idle time for a session. If there is no keyboard or mouse input within this time, the session disconnects. Unit: milliseconds. Valid values: 360000 (6 minutes) to 3600000 (60 minutes).</p>
+     * <p>Thirty seconds before the session disconnects, the end user receives a message to save their data. The end user must save their data to prevent data loss.</p>
      * <blockquote>
-     * <p> This parameter is suitable only for cloud computers whose image version is v1.0.2 or later.</p>
+     * <p>This parameter is applicable only to cloud computers with an image version of 1.0.2 or later.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>120000</p>
+     * <p>360000</p>
      */
     @NameInMap("IdleDisconnectDuration")
     public Long idleDisconnectDuration;
 
     /**
-     * <p>The IDs of the images.</p>
+     * <p>The image ID.</p>
      * 
      * <strong>example:</strong>
      * <p>desktopimage-windows-server-2016-64-ch</p>
@@ -159,25 +153,20 @@ public class ModifyDesktopGroupRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The retention period of a session after it is disconnected. Unit: milliseconds. Valid values: 180000 to 345600000. That is, the session can be retained for 3 to 5,760 minutes (4 days) after it is disconnected. If you set this parameter to 0, the session is permanently retained after it is disconnected.</p>
-     * <p>When a session is disconnected, take note of the following situations: If an end user does not resume the session within the specified duration, the session is closed and all unsaved data is cleared. If the end user resumes the session within the specified duration, the end user can continue to access data of the session.</p>
+     * <p>The duration to keep a session active after it disconnects. Unit: milliseconds. Valid values range from 180000 (3 minutes) to 345600000 (4 days). A value of 0 means the session is always kept active.</p>
+     * <p>When a session disconnects, either intentionally or unexpectedly, a timer begins. If the user fails to reconnect within this duration, the session is logged off, and any unsaved data is destroyed. If the user reconnects within this duration, they can resume the original session and access the data from before the disconnection.</p>
      * 
      * <strong>example:</strong>
-     * <p>1000</p>
+     * <p>180000</p>
      */
     @NameInMap("KeepDuration")
     public Long keepDuration;
 
     /**
-     * <p>The load balancing policy for the multi-session many-to-many share.</p>
+     * <p>The load balancing policy for a multi-session shared cloud computer group that contains multiple cloud computers.</p>
      * <blockquote>
-     * <p> This parameter is not publicly available.</p>
+     * <p>This parameter is not yet available.</p>
      * </blockquote>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>0: depth first.</li>
-     * <li>1: breadth first.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -186,7 +175,7 @@ public class ModifyDesktopGroupRequest extends TeaModel {
     public Long loadPolicy;
 
     /**
-     * <p>The maximum number of cloud computers allowed in the pay-as-you-go cloud computer share. Valid values: 0 to 500.</p>
+     * <p>The maximum number of cloud computers that a pay-as-you-go shared cloud computer group can contain. Valid values: 0 to 500.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -195,7 +184,7 @@ public class ModifyDesktopGroupRequest extends TeaModel {
     public Integer maxDesktopsCount;
 
     /**
-     * <p>The maximum number of auto-created cloud computers allowed in the subscription cloud computer share. You must specify this parameter when <code>ChargeType</code> is set to <code>PrePaid</code>. Default value: 1. Valid values: 0 to <code>MaxDesktopsCount</code>.</p>
+     * <p>The maximum number of cloud computers that are automatically created in a subscription shared cloud computer group. This parameter is required and takes effect only when <code>ChargeType</code> is set to <code>PrePaid</code>. Default value: 1. Valid values: 0 to the value of <code>MaxDesktopsCount</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -204,7 +193,7 @@ public class ModifyDesktopGroupRequest extends TeaModel {
     public Integer minDesktopsCount;
 
     /**
-     * <p>The ID of the cloud computer template.</p>
+     * <p>The cloud computer template ID.</p>
      * 
      * <strong>example:</strong>
      * <p>b-7t275tpgjueeu****</p>
@@ -213,7 +202,7 @@ public class ModifyDesktopGroupRequest extends TeaModel {
     public String ownBundleId;
 
     /**
-     * <p>The ID of the security policy.</p>
+     * <p>The policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pg-53iyi2aar0nd6****</p>
@@ -222,7 +211,7 @@ public class ModifyDesktopGroupRequest extends TeaModel {
     public String policyGroupId;
 
     /**
-     * <p>The IDs of policy groups.</p>
+     * <p>The list of policy group IDs.</p>
      */
     @NameInMap("PolicyGroupIds")
     public java.util.List<String> policyGroupIds;
@@ -230,7 +219,7 @@ public class ModifyDesktopGroupRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable user data roaming.</p>
      * <blockquote>
-     * <p> This parameter is unavailable.</p>
+     * <p>This parameter is not yet available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -240,21 +229,21 @@ public class ModifyDesktopGroupRequest extends TeaModel {
     public Boolean profileFollowSwitch;
 
     /**
-     * <p>The threshold for the ratio of connected sessions, which triggers automatic scaling of cloud computers within the multi-session many-to-many share. To calculate the ratio of connected sessions, use the following formula:</p>
-     * <p><code>Ratio of connected sessions = Number of connected sessions/(Total number of cloud computers × Maximum number of sessions allowed for each cloud computer) × 100%</code></p>
-     * <p>If the session ratio exceeds the threshold, new cloud computers are provisioned. If it falls below the threshold, additional cloud computers are removed.</p>
+     * <p>The session usage threshold. This threshold is a condition for triggering auto scaling in a multi-session shared cloud computer group. The session usage is calculated using the following formula:</p>
+     * <p><code>Session usage = Number of active sessions / (Total number of cloud computers × Maximum number of sessions per cloud computer) × 100%</code></p>
+     * <p>When the session usage reaches this threshold, new cloud computers are created. If the session usage is below this threshold, idle cloud computers are deleted.</p>
      * <blockquote>
-     * <p> This parameter is not publicly available.</p>
+     * <p>This parameter is not yet available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>0.5</p>
+     * <p>0.85</p>
      */
     @NameInMap("RatioThreshold")
     public Float ratioThreshold;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</p>
+     * <p>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to get a list of regions that WUYING Workspace supports.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -264,18 +253,7 @@ public class ModifyDesktopGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The disk reset type of cloud computers.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>0: does not reset disks.</p>
-     * </li>
-     * <li><p>1: resets only the system disks.</p>
-     * </li>
-     * <li><p>2: resets only the user disks.</p>
-     * </li>
-     * <li><p>3: resets the system disks and user disks.</p>
-     * </li>
-     * </ul>
+     * <p>The reset type for the cloud computers.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -284,9 +262,9 @@ public class ModifyDesktopGroupRequest extends TeaModel {
     public Long resetType;
 
     /**
-     * <p>The ID of the scaling policy group.</p>
+     * <p>The ID of the auto scaling policy group.</p>
      * <blockquote>
-     * <p> This parameter is unavailable.</p>
+     * <p>This parameter is not yet available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -296,10 +274,10 @@ public class ModifyDesktopGroupRequest extends TeaModel {
     public String scaleStrategyId;
 
     /**
-     * <p>The period of time before the idle cloud computer enters the Stopped state. When the specified period of time is reached, the cloud computer is automatically stopped. If an end user connects to the stopped cloud computer, the cloud computer automatically starts. Unit: milliseconds.</p>
+     * <p>The idle shutdown time. The cloud computer automatically shuts down when it is idle for this amount of time. If a user connects to a shutdown cloud computer, it automatically starts. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
-     * <p>180000</p>
+     * <p>300000</p>
      */
     @NameInMap("StopDuration")
     public Long stopDuration;

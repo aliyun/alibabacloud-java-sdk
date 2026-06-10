@@ -6,24 +6,6 @@ import com.aliyun.tea.*;
 public class ModifyNetworkPackageBandwidthRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the automatic payment feature.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>true (default): enables the auto-payment feature.</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <p>Make sure that your account has sufficient balance. Otherwise, no order is generated.</p>
-     * <!-- -->
-     * </li>
-     * <li><p>false: disables the auto-payment feature. In this case, an order is generated but you need to make the payment manually.</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <p>To make the payment, log on to the Elastic Desktop Service console, go to the Orders page, and find the order based on the order ID.</p>
-     * <!-- --></li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -32,11 +14,14 @@ public class ModifyNetworkPackageBandwidthRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The maximum bandwidth of the premium bandwidth plan, in Mbit/s. Valid range: The allowed range depends on the billing method:</p>
+     * <p>The maximum bandwidth of the premium bandwidth plan, in Mbit/s.</p>
      * <ul>
-     * <li>Subscription: 2 to 1000</li>
-     * <li>Pay-as-you-go, by data transfer (PayByTraffic): 2 to 200</li>
-     * <li>Pay-as-you-go, by fixed bandwidth (PayByBandwidth): 2 to 1000</li>
+     * <li><p>For subscription premium bandwidth, the valid range is 2 to 1000.</p>
+     * </li>
+     * <li><p>For pay-as-you-go premium bandwidth with pay-by-traffic billing, the valid range is 2 to 200.</p>
+     * </li>
+     * <li><p>For pay-as-you-go premium bandwidth with pay-by-bandwidth billing, the valid range is 2 to 1000.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -66,7 +51,7 @@ public class ModifyNetworkPackageBandwidthRequest extends TeaModel {
     public String promotionId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="t2167755.xdita#"></a>operation to query the list of regions supported by Elastic Desktop Service (EDS).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

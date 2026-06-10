@@ -5,12 +5,7 @@ import com.aliyun.tea.*;
 
 public class RenewDesktopGroupRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the auto-payment feature.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true (default): enables the auto-payment feature. Make sure that your account balance is sufficient. Otherwise, an abnormal order is generated.</li>
-     * <li>false: disables the auto-payment feature. In this case, an order is generated but you need to make the payment manually. You can log on to the EDS console and complete the payment based on the order ID on the Orders page.</li>
-     * </ul>
+     * <p>Specifies whether to enable automatic payment.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -20,11 +15,6 @@ public class RenewDesktopGroupRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable auto-renewal.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true</li>
-     * <li>false</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -33,7 +23,7 @@ public class RenewDesktopGroupRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The ID of the shared group.</p>
+     * <p>The ID of the cloud computer pool.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,12 +33,14 @@ public class RenewDesktopGroupRequest extends TeaModel {
     public String desktopGroupId;
 
     /**
-     * <p>The renewal duration. Valid values of this parameter are determined by the value of the <code>PeriodUnit</code> parameter.</p>
+     * <p>The renewal duration. The valid values of this parameter vary based on the <code>PeriodUnit</code> value.</p>
      * <ul>
-     * <li>Valid values if you set the <code>PeriodUnit</code> parameter to <code>Month</code>: 1, 2, 3, and 6</li>
-     * <li>Valid values if you set the <code>PeriodUnit</code> parameter to <code>Year</code>: 1, 2, 3, 4, and 5</li>
+     * <li><p>If you set <code>PeriodUnit</code> to <code>Month</code>, the valid values are 1, 2, 3, and 6.</p>
+     * </li>
+     * <li><p>If you set <code>PeriodUnit</code> to <code>Year</code>, the valid values are 1, 2, 3, 4, and 5.</p>
+     * </li>
      * </ul>
-     * <p>Default value: 1</p>
+     * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -58,11 +50,6 @@ public class RenewDesktopGroupRequest extends TeaModel {
 
     /**
      * <p>The unit of the renewal duration specified by the <code>Period</code> parameter.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Month (default)</li>
-     * <li>Year</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -71,7 +58,7 @@ public class RenewDesktopGroupRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</p>
+     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions that are supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

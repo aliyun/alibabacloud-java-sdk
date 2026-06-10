@@ -79,7 +79,7 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
          * <p>The connection address.</p>
          * 
          * <strong>example:</strong>
-         * <p><code>127.0.**.**</code></p>
+         * <p>127.0.XX.XX</p>
          */
         @NameInMap("Address")
         public String address;

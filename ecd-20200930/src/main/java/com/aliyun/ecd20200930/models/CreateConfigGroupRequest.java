@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateConfigGroupRequest extends TeaModel {
     /**
-     * <p>The scheduled task groups.</p>
+     * <p>An array of scheduled task configurations.</p>
      */
     @NameInMap("ConfigTimers")
     public java.util.List<CreateConfigGroupRequestConfigTimers> configTimers;
@@ -14,7 +14,7 @@ public class CreateConfigGroupRequest extends TeaModel {
      * <p>The description of the configuration group.</p>
      * 
      * <strong>example:</strong>
-     * <p>ScheduledTask</p>
+     * <p>Scheduled task description content</p>
      */
     @NameInMap("Description")
     public String description;
@@ -24,17 +24,13 @@ public class CreateConfigGroupRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ScheduledTask</p>
+     * <p>Scheduled task group</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The service type of the configuration group.</p>
-     * <p>Valid value:</p>
-     * <ul>
-     * <li>CLOUD_DESKTOP: the cloud computer service.</li>
-     * </ul>
+     * <p>The product to which the configuration group applies.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,20 +40,16 @@ public class CreateConfigGroupRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The ID of the region. Set the value to <code>cn-shanghai</code>.</p>
+     * <p>The region ID. This feature is not region-specific. You must set this parameter to cn-shanghai.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The group type.</p>
-     * <p>Valid value:</p>
-     * <ul>
-     * <li>Timer: a scheduled task group.</li>
-     * </ul>
+     * <p>The type of the configuration group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -121,6 +113,8 @@ public class CreateConfigGroupRequest extends TeaModel {
 
     public static class CreateConfigGroupRequestConfigTimersSegmentTimers extends TeaModel {
         /**
+         * <p>The execution time for a one-time scheduled task, specified as a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1764660600967</p>
          */
@@ -137,6 +131,8 @@ public class CreateConfigGroupRequest extends TeaModel {
         public Boolean enforce;
 
         /**
+         * <p>The image ID for a scheduled task that changes the image of a cloud desktop.</p>
+         * 
          * <strong>example:</strong>
          * <p>m-5b0vjqbiqu010XXXXXX</p>
          */
@@ -146,7 +142,12 @@ public class CreateConfigGroupRequest extends TeaModel {
         @NameInMap("Interval")
         public Integer interval;
 
+        @NameInMap("IpSegments")
+        public java.util.List<String> ipSegments;
+
         /**
+         * <p>The amount of inactive time, in seconds, before the screen automatically locks. This parameter applies only to Active Directory desktops.</p>
+         * 
          * <strong>example:</strong>
          * <p>1800</p>
          */
@@ -241,6 +242,14 @@ public class CreateConfigGroupRequest extends TeaModel {
         }
         public Integer getInterval() {
             return this.interval;
+        }
+
+        public CreateConfigGroupRequestConfigTimersSegmentTimers setIpSegments(java.util.List<String> ipSegments) {
+            this.ipSegments = ipSegments;
+            return this;
+        }
+        public java.util.List<String> getIpSegments() {
+            return this.ipSegments;
         }
 
         public CreateConfigGroupRequestConfigTimersSegmentTimers setLockScreenTime(Integer lockScreenTime) {
@@ -343,7 +352,7 @@ public class CreateConfigGroupRequest extends TeaModel {
 
     public static class CreateConfigGroupRequestConfigTimers extends TeaModel {
         /**
-         * <p>Specifies whether to allow end users to configure the scheduled task.</p>
+         * <p>Whether to allow end users to configure the scheduled task.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -352,10 +361,11 @@ public class CreateConfigGroupRequest extends TeaModel {
         public Boolean allowClientSetting;
 
         /**
-         * <p>The cron expression specified in the scheduled task.</p>
+         * <p>The cron expression for the scheduled task.</p>
          * <blockquote>
-         * <p> The time must be in UTC. For example, for 24:00 (UTC+8), you must set the value to 0 0 16 ? \* 1,2,3,4,5,6,7</p>
+         * <p>Notice: </p>
          * </blockquote>
+         * <p>The cron expression is based on UTC. For example, to run a task at 00:00 China Standard Time (UTC+8) every day, set this parameter to <code>0 0 16 ? * 1,2,3,4,5,6,7</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 16 ? * 1,2,3,4,5,6,7</p>
@@ -364,7 +374,7 @@ public class CreateConfigGroupRequest extends TeaModel {
         public String cronExpression;
 
         /**
-         * <p>Specifies whether to forcefully execute the scheduled task.</p>
+         * <p>Whether to forcefully execute the scheduled task.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -373,7 +383,7 @@ public class CreateConfigGroupRequest extends TeaModel {
         public Boolean enforce;
 
         /**
-         * <p>The interval at which the scheduled task is executed. Unit: minutes.</p>
+         * <p>The time interval, in minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -385,12 +395,7 @@ public class CreateConfigGroupRequest extends TeaModel {
         public Integer notificationTime;
 
         /**
-         * <p>The type of the scheduled operation. If you set TimerType to NoConnect, you can specify this parameter.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Hibernate: scheduled hibernation.</li>
-         * <li>Shutdown: scheduled shutdown.</li>
-         * </ul>
+         * <p>The operation to perform for the scheduled task. This parameter is valid only when <code>TimerType</code> is set to <code>NoConnect</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>Shutdown</p>
@@ -399,19 +404,13 @@ public class CreateConfigGroupRequest extends TeaModel {
         public String operationType;
 
         /**
-         * <p>The process whitelist. If whitelisted processes are running, the scheduled task does not take effect.</p>
+         * <p>The process whitelist for smart detection. If a process from this whitelist is running, the inactivity-based scheduled task does not run.</p>
          */
         @NameInMap("ProcessWhitelist")
         public java.util.List<String> processWhitelist;
 
         /**
-         * <p>The reset option.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>RESET_TYPE_SYSTEM: resets only the system disk.</li>
-         * <li>RESET_TYPE_USER_DISK: resets only the data disk.</li>
-         * <li>RESET_TYPE_BOTH: resets the system and data disks.</li>
-         * </ul>
+         * <p>The reset type for the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>RESET_TYPE_SYSTEM</p>
@@ -423,19 +422,7 @@ public class CreateConfigGroupRequest extends TeaModel {
         public java.util.List<CreateConfigGroupRequestConfigTimersSegmentTimers> segmentTimers;
 
         /**
-         * <p>The scheduled task type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>NoOperationDisconnect: scheduled disconnection upon inactivity.</li>
-         * <li>NoConnect: scheduled disconnection upon specified operation (OperationType).</li>
-         * <li>TimerBoot: scheduled start.</li>
-         * <li>TimerReset: scheduled reset.</li>
-         * <li>NoOperationShutdown: scheduled shutdown upon inactivity.</li>
-         * <li>NoOperationHibernate: scheduled hibernation upon inactivity.</li>
-         * <li>TimerShutdown: scheduled shutdown.</li>
-         * <li>NoOperationReboot: scheduled restart upon inactivity.</li>
-         * <li>TimerReboot: scheduled restart.</li>
-         * </ul>
+         * <p>The type of the scheduled task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -445,12 +432,7 @@ public class CreateConfigGroupRequest extends TeaModel {
         public String timerType;
 
         /**
-         * <p>The method to trigger the scheduled task upon inactivity.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Advanced: intelligent detection.</li>
-         * <li>Standard: standard detection.</li>
-         * </ul>
+         * <p>The trigger condition for inactivity-based scheduled tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>Standard</p>

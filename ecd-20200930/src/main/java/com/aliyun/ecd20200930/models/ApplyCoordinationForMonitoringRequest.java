@@ -72,7 +72,7 @@ public class ApplyCoordinationForMonitoringRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>62f2f1f252f04e0e9d8bc****</p>
+     * <p>3E14A18BD4D088504B9F8A8751AB****</p>
      */
     @NameInMap("Uuid")
     public String uuid;
@@ -165,7 +165,7 @@ public class ApplyCoordinationForMonitoringRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>TestDesktop</p>
+         * <p>DemoComputer</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;

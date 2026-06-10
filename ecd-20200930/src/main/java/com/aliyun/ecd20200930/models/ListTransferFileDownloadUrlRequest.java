@@ -4,10 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ListTransferFileDownloadUrlRequest extends TeaModel {
+    /**
+     * <p>The list of file IDs to query.</p>
+     */
     @NameInMap("FileIds")
     public java.util.List<String> fileIds;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>trt-hffhi4nmqoi4****</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudDiskGroupsResponseBody extends TeaModel {
+    /**
+     * <p>A list of cloud drive team spaces.</p>
+     */
     @NameInMap("CloudDriveGroups")
     public java.util.List<DescribeCloudDiskGroupsResponseBodyCloudDriveGroups> cloudDriveGroups;
 
     /**
+     * <p>The total number of items.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeCloudDiskGroupsResponseBody extends TeaModel {
     public Long count;
 
     /**
+     * <p>The token used to start the next query. If NextToken is empty, no more results are available.</p>
+     * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
@@ -22,6 +29,8 @@ public class DescribeCloudDiskGroupsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D648DBF7-9476-53D6-98AB-674836021DFB</p>
      */
@@ -29,6 +38,8 @@ public class DescribeCloudDiskGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded. Valid values: true and false.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -82,6 +93,8 @@ public class DescribeCloudDiskGroupsResponseBody extends TeaModel {
 
     public static class DescribeCloudDiskGroupsResponseBodyCloudDriveGroups extends TeaModel {
         /**
+         * <p>The time when the resource was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-04-11T07:44:21Z</p>
          */
@@ -89,6 +102,8 @@ public class DescribeCloudDiskGroupsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The office network ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-959593****</p>
          */
@@ -96,6 +111,8 @@ public class DescribeCloudDiskGroupsResponseBody extends TeaModel {
         public String directoryId;
 
         /**
+         * <p>The space ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
@@ -103,16 +120,26 @@ public class DescribeCloudDiskGroupsResponseBody extends TeaModel {
         public String driveId;
 
         /**
+         * <p>The team space ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cg-e70ga4ixp30ur****</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The team space name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test team 1</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
+         * <p>The organization ID of the team.</p>
+         * 
          * <strong>example:</strong>
          * <p>org-aliyun-wy-org-id</p>
          */
@@ -120,6 +147,8 @@ public class DescribeCloudDiskGroupsResponseBody extends TeaModel {
         public String orgId;
 
         /**
+         * <p>The status of the team space.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -127,6 +156,8 @@ public class DescribeCloudDiskGroupsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The total capacity of the cloud drive team space, in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>5368709120</p>
          */
@@ -134,6 +165,8 @@ public class DescribeCloudDiskGroupsResponseBody extends TeaModel {
         public Long totalSize;
 
         /**
+         * <p>The amount of space used, in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1024000000</p>
          */

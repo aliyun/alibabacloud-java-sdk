@@ -22,7 +22,7 @@ public class AttachEndUserRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2</p>
+     * <p>1</p>
      */
     @NameInMap("ClientType")
     public Integer clientType;
@@ -32,7 +32,7 @@ public class AttachEndUserRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>111810122200F0C24CF7F1BF-<em>05AY</em>***</p>
+     * <p>12OERSLDO7M3****</p>
      */
     @NameInMap("DeviceId")
     public String deviceId;
@@ -51,7 +51,7 @@ public class AttachEndUserRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>moli</p>
+     * <p>alice</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;

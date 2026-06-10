@@ -119,7 +119,7 @@ public class ApplyCoordinationForMonitoringResponseBody extends TeaModel {
          * <p>The name of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
-         * <p>TestDesktop</p>
+         * <p>DemoComputer</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;

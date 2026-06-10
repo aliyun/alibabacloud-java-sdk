@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeOnlineUserCountResponseBody extends TeaModel {
     /**
+     * <p>The number of AD users who have been assigned a cloud desktop.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -12,6 +14,8 @@ public class DescribeOnlineUserCountResponseBody extends TeaModel {
     public Long adAssignedUserCount;
 
     /**
+     * <p>The number of users who have been assigned a cloud desktop.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class DescribeOnlineUserCountResponseBody extends TeaModel {
     public Long assignedUserCount;
 
     /**
+     * <p>The number of online users. Online users include convenience users and AD users.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class DescribeOnlineUserCountResponseBody extends TeaModel {
     public Long onlineUserCount;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>269BDB16-2CD8-4865-84BD-11C40BC21DB0</p>
      */
@@ -33,6 +41,8 @@ public class DescribeOnlineUserCountResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of convenience users who have been assigned a cloud desktop.</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */

@@ -53,8 +53,10 @@ public class DeleteTemplatesResponseBody extends TeaModel {
      * <p>Indicates whether the request was successful.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true: The request is successful.</li>
-     * <li>false: The request failed.</li>
+     * <li><p>true: The request is successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

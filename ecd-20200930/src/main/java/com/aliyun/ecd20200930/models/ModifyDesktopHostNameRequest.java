@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDesktopHostNameRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud computer.</p>
+     * <p>The ID of the cloud desktop.</p>
      * 
      * <strong>example:</strong>
      * <p>ecd-gx2x1dhsmucyy****</p>
@@ -17,10 +17,12 @@ public class ModifyDesktopHostNameRequest extends TeaModel {
     public java.util.List<String> desktopIds;
 
     /**
-     * <p>The new hostname of the cloud computer. The hostname must meet the following requirements:</p>
+     * <p>The new hostname of the cloud desktop. The hostname must meet the following requirements:</p>
      * <ul>
-     * <li>The hostname must be 2 to 15 characters in length.</li>
-     * <li>The hostname can contain only letters, digits, and hyphens (-). The hostname cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.</li>
+     * <li><p>The hostname must be 2 to 15 characters in length.</p>
+     * </li>
+     * <li><p>The hostname can contain letters, digits, and hyphens (-). It cannot start or end with a hyphen, contain consecutive hyphens, or consist of only digits.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -31,7 +33,7 @@ public class ModifyDesktopHostNameRequest extends TeaModel {
     public String newHostName;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the available regions for Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

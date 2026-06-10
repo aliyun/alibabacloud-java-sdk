@@ -35,8 +35,10 @@ public class DescribeCloudDriveGroupsRequest extends TeaModel {
     /**
      * <p>The team space status. Valid values:</p>
      * <ul>
-     * <li>enabled</li>
-     * <li>disabled</li>
+     * <li><p>enabled</p>
+     * </li>
+     * <li><p>disabled</p>
+     * </li>
      * </ul>
      * <p>Default value: enabled.</p>
      * 
@@ -49,8 +51,10 @@ public class DescribeCloudDriveGroupsRequest extends TeaModel {
     /**
      * <p>Specifies whether the space is increased.</p>
      * <ul>
-     * <li>binding: increased</li>
-     * <li>unbound: not increased</li>
+     * <li><p>binding: increased</p>
+     * </li>
+     * <li><p>unbound: not increased</p>
+     * </li>
      * </ul>
      * <p>Default value: null. The default value indicates that all spaces are queried.</p>
      * 
@@ -73,7 +77,7 @@ public class DescribeCloudDriveGroupsRequest extends TeaModel {
      * <p>The team name for fuzzy search.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test Team 1</p>
+     * <p>Test team 1</p>
      */
     @NameInMap("GroupName")
     public String groupName;
@@ -81,8 +85,10 @@ public class DescribeCloudDriveGroupsRequest extends TeaModel {
     /**
      * <p>The team type.</p>
      * <ul>
-     * <li>org: organizational structure</li>
-     * <li>directory: workspace</li>
+     * <li><p>org: organizational structure</p>
+     * </li>
+     * <li><p>directory: workspace</p>
+     * </li>
      * </ul>
      * <p>Default value: null. The default value indicates that all types of teams are queried.</p>
      * 
@@ -95,8 +101,10 @@ public class DescribeCloudDriveGroupsRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page.</p>
      * <ul>
-     * <li>Valid values: 1 to 100</li>
-     * <li>Default value: 20</li>
+     * <li><p>Valid values: 1 to 100</p>
+     * </li>
+     * <li><p>Default value: 20</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

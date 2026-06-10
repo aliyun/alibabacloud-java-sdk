@@ -111,7 +111,7 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
          * <p>The description of the configuration group.</p>
          * 
          * <strong>example:</strong>
-         * <p>ScheduledTask</p>
+         * <p>Scheduled task information</p>
          */
         @NameInMap("Description")
         public String description;
@@ -126,6 +126,8 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
         public String groupId;
 
         /**
+         * <p>Used for frontend display. The system scheduled task description uses a code.</p>
+         * 
          * <strong>example:</strong>
          * <p>INNER_TIMER_10_MINUTES_HIBERNATE_NO_UPDATE_DESC</p>
          */
@@ -133,15 +135,23 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
         public String innerTimerDesc;
 
         /**
+         * <p>Used for frontend display; maps the system scheduled task name to a code.</p>
+         * 
          * <strong>example:</strong>
          * <p>INNER_TIMER_10_MINUTES_HIBERNATE_NO_UPDATE</p>
          */
         @NameInMap("InnerTimerName")
         public String innerTimerName;
 
+        /**
+         * <p>Used for system scheduled task checks. The current scheduled task does not support detach or attach operations.</p>
+         */
         @NameInMap("IsBind")
         public Boolean isBind;
 
+        /**
+         * <p>Used for system scheduled task checks. The current scheduled task does not support modification.</p>
+         */
         @NameInMap("IsUpdate")
         public Boolean isUpdate;
 
@@ -149,7 +159,7 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
          * <p>The name of the configuration group.</p>
          * 
          * <strong>example:</strong>
-         * <p>ScheduledTask</p>
+         * <p>Scheduled task</p>
          */
         @NameInMap("Name")
         public String name;

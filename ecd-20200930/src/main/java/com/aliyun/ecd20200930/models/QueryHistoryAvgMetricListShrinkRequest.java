@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class QueryHistoryAvgMetricListShrinkRequest extends TeaModel {
     /**
+     * <p>The start date of the statistics. The format is <code>YYYY-MM-DD</code>. The default value is T-1.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-04-01</p>
      */
     @NameInMap("DataDate")
     public String dataDate;
 
+    /**
+     * <p>The desktop ID list. A maximum of 100 IDs are supported.</p>
+     */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
+     * <p>The metric to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>LOAD_SCORE</p>
      */
@@ -22,6 +29,8 @@ public class QueryHistoryAvgMetricListShrinkRequest extends TeaModel {
     public String metricName;
 
     /**
+     * <p>The page number, which must be greater than 0. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,16 +38,23 @@ public class QueryHistoryAvgMetricListShrinkRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The page size. Valid values: 1 to 200. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The list of custom numeric ranges.</p>
+     */
     @NameInMap("Range")
     public String rangeShrink;
 
     /**
+     * <p>The desktop region.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -46,6 +62,8 @@ public class QueryHistoryAvgMetricListShrinkRequest extends TeaModel {
     public String resourceRegionId;
 
     /**
+     * <p>The sorting method.</p>
+     * 
      * <strong>example:</strong>
      * <p>ASC</p>
      */

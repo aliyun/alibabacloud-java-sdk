@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryHistoryMetricDistributionRequest extends TeaModel {
     /**
+     * <p>The end date of the query period. The date must be in the <code>YYYY-MM-DD</code> format. The default value is T-1.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-04-01</p>
      */
@@ -12,16 +14,23 @@ public class QueryHistoryMetricDistributionRequest extends TeaModel {
     public String endDate;
 
     /**
+     * <p>The name of the metric to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>LOAD_SCORE</p>
      */
     @NameInMap("MetricName")
     public String metricName;
 
+    /**
+     * <p>An array of custom value ranges.</p>
+     */
     @NameInMap("Ranges")
     public java.util.List<QueryHistoryMetricDistributionRequestRanges> ranges;
 
     /**
+     * <p>The start date of the query period. The date must be in the <code>YYYY-MM-DD</code> format. The default value is T-1.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-04-01</p>
      */
@@ -67,6 +76,8 @@ public class QueryHistoryMetricDistributionRequest extends TeaModel {
 
     public static class QueryHistoryMetricDistributionRequestRanges extends TeaModel {
         /**
+         * <p>Specifies whether to include the maximum value in the range. The default value is <code>false</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -74,6 +85,8 @@ public class QueryHistoryMetricDistributionRequest extends TeaModel {
         public Boolean includeMax;
 
         /**
+         * <p>Specifies whether to include the minimum value in the range. The default value is <code>true</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -81,6 +94,8 @@ public class QueryHistoryMetricDistributionRequest extends TeaModel {
         public Boolean includeMin;
 
         /**
+         * <p>The label for the value range. This label is returned in the response.</p>
+         * 
          * <strong>example:</strong>
          * <p>label-02\&quot;</p>
          */
@@ -88,6 +103,8 @@ public class QueryHistoryMetricDistributionRequest extends TeaModel {
         public String label;
 
         /**
+         * <p>The maximum value of the value range.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -95,6 +112,8 @@ public class QueryHistoryMetricDistributionRequest extends TeaModel {
         public Float max;
 
         /**
+         * <p>The minimum value of the value range.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

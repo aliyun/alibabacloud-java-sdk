@@ -4,10 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
+    /**
+     * <p>The list of average metric data.</p>
+     */
     @NameInMap("AvgMetricList")
     public java.util.List<QueryHistoryAvgMetricListResponseBodyAvgMetricList> avgMetricList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>269BDB16-2CD8-4865-84BD-11C40BC2****</p>
      */
@@ -15,6 +20,8 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -52,6 +59,8 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
 
     public static class QueryHistoryAvgMetricListResponseBodyAvgMetricListSessions extends TeaModel {
         /**
+         * <p>The ID of the end user.</p>
+         * 
          * <strong>example:</strong>
          * <p>testUser</p>
          */
@@ -59,6 +68,8 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
         public String endUserId;
 
         /**
+         * <p>The time when the session was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-04-17T14:51:53Z</p>
          */
@@ -66,6 +77,8 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
         public String establishmentTime;
 
         /**
+         * <p>The external username of the end user.</p>
+         * 
          * <strong>example:</strong>
          * <p>testUserName</p>
          */
@@ -73,6 +86,8 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
         public String externalUserName;
 
         /**
+         * <p>The nickname of the end user.</p>
+         * 
          * <strong>example:</strong>
          * <p>sz-sygc-07-03</p>
          */
@@ -120,6 +135,8 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
 
     public static class QueryHistoryAvgMetricListResponseBodyAvgMetricList extends TeaModel {
         /**
+         * <p>The aggregated metric value.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -127,6 +144,15 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
         public Float avgValue;
 
         /**
+         * <p>The billing method of the desktop. Valid values:</p>
+         * <ul>
+         * <li><p><code>PostPaid</code>: pay-as-you-go</p>
+         * </li>
+         * <li><p><code>PrePaid</code>: subscription</p>
+         * </li>
+         * </ul>
+         * <p>Default value: <code>PostPaid</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>PrePaid</p>
          */
@@ -134,6 +160,8 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
         public String chargeType;
 
         /**
+         * <p>The number of vCPUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -141,6 +169,8 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
         public Integer cpu;
 
         /**
+         * <p>The desktop group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>dg-bogo95eob5avnis9k</p>
          */
@@ -148,6 +178,8 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
         public String desktopGroupId;
 
         /**
+         * <p><strong>The desktop ID.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>ecd-bx9i0nsjd3zmibnzq</p>
          */
@@ -155,6 +187,8 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
         public String desktopId;
 
         /**
+         * <p><strong>The desktop name.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>C-051</p>
          */
@@ -162,6 +196,26 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
         public String desktopName;
 
         /**
+         * <p>The status of the desktop. Valid values:</p>
+         * <ul>
+         * <li><p><code>Stopped</code>: The desktop is stopped.</p>
+         * </li>
+         * <li><p><code>Starting</code>: The desktop is being started.</p>
+         * </li>
+         * <li><p><code>Rebuilding</code>: The desktop is being rebuilt.</p>
+         * </li>
+         * <li><p><code>Running</code>: The desktop is running.</p>
+         * </li>
+         * <li><p><code>Stopping</code>: The desktop is being stopped.</p>
+         * </li>
+         * <li><p><code>Expired</code>: The desktop has expired.</p>
+         * </li>
+         * <li><p><code>Deleted</code>: The desktop has been deleted.</p>
+         * </li>
+         * <li><p><code>Pending</code>: The desktop is in a pending state.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -169,16 +223,23 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
         public String desktopStatus;
 
         /**
+         * <p>The desktop type.</p>
+         * 
          * <strong>example:</strong>
          * <p>eds.enterprise_office.8c16g</p>
          */
         @NameInMap("DesktopType")
         public String desktopType;
 
+        /**
+         * <p>The IDs of the authorized end users.</p>
+         */
         @NameInMap("EndUserIds")
         public java.util.List<String> endUserIds;
 
         /**
+         * <p>The GPU memory size.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -186,6 +247,8 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
         public String gpuSpec;
 
         /**
+         * <p>The management flag.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -193,6 +256,8 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
         public String managementFlag;
 
         /**
+         * <p>The memory size, in MB.</p>
+         * 
          * <strong>example:</strong>
          * <p>2048</p>
          */
@@ -200,6 +265,8 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
         public Long memory;
 
         /**
+         * <p>Whether the desktop is a multi-user shared desktop.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -207,6 +274,8 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
         public Boolean multiResource;
 
         /**
+         * <p>The type of the system image.</p>
+         * 
          * <strong>example:</strong>
          * <p>Winserver2025</p>
          */
@@ -214,16 +283,23 @@ public class QueryHistoryAvgMetricListResponseBody extends TeaModel {
         public String platform;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>A list of session details.</p>
+         */
         @NameInMap("Sessions")
         public java.util.List<QueryHistoryAvgMetricListResponseBodyAvgMetricListSessions> sessions;
 
         /**
+         * <p>The payment type.</p>
+         * 
          * <strong>example:</strong>
          * <p>monthPackage</p>
          */

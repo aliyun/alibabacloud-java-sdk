@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDesktopGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the shared group.</p>
+     * <p>The ID of the desktop group.</p>
      * 
      * <strong>example:</strong>
      * <p>dg-2i8qxpv6t1a03****</p>
@@ -14,19 +14,19 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
     public String desktopGroupId;
 
     /**
-     * <p>The IDs of the shared groups.</p>
+     * <p>The desktop group IDs.</p>
      */
     @NameInMap("DesktopGroupIds")
     public java.util.List<String> desktopGroupIds;
 
     /**
-     * <p>The IDs of the orders.</p>
+     * <p>The order IDs.</p>
      */
     @NameInMap("OrderIds")
     public java.util.List<String> orderIds;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3EB7FCEE-D731-4948-85A3-4B2C341CA983</p>

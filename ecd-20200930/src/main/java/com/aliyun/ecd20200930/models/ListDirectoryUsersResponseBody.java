@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDirectoryUsersResponseBody extends TeaModel {
     /**
-     * <p>The token used to start the next query. If the value of this parameter is empty, all results are returned.</p>
+     * <p>The token that is used to start the next query. If this parameter is empty, all results have been returned.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -14,7 +14,7 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -23,7 +23,7 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The usernames corresponding to the AD directory. If the AD directory contains only the Administrator and Guest accounts, the Users array will be empty.</p>
+     * <p>An array that consists of the users in the AD directory. If the AD directory contains only the Administrator and Guest users, an empty \<code>Users\\</code> array is returned.</p>
      */
     @NameInMap("Users")
     public java.util.List<ListDirectoryUsersResponseBodyUsers> users;
@@ -59,7 +59,7 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
 
     public static class ListDirectoryUsersResponseBodyUsers extends TeaModel {
         /**
-         * <p>The number of assigned cloud computers.</p>
+         * <p>The number of assigned cloud desktops.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -68,7 +68,7 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         public Integer assignedDesktopNumber;
 
         /**
-         * <p>The display name of the user.</p>
+         * <p>The display name.</p>
          * 
          * <strong>example:</strong>
          * <p>Alice</p>
@@ -89,7 +89,7 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         public String email;
 
         /**
-         * <p>The name of the user.</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
          * <p>Alice</p>
@@ -98,7 +98,7 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         public String endUser;
 
         /**
-         * <p>The mobile number.</p>
+         * <p>The mobile phone number.</p>
          * 
          * <strong>example:</strong>
          * <p>130********</p>

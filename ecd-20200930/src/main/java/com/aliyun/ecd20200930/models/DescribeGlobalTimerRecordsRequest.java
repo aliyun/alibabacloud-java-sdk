@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGlobalTimerRecordsRequest extends TeaModel {
     /**
-     * <p>The ID of the batch in which the scheduled task is executed.</p>
+     * <p>The batch ID for a scheduled task execution.</p>
      * 
      * <strong>example:</strong>
      * <p>ccg-****</p>
@@ -14,7 +14,7 @@ public class DescribeGlobalTimerRecordsRequest extends TeaModel {
     public String batchId;
 
     /**
-     * <p>The cloud computer IDs.</p>
+     * <p>A list of cloud desktop IDs.</p>
      */
     @NameInMap("DesktopIds")
     public java.util.List<String> desktopIds;
@@ -27,7 +27,7 @@ public class DescribeGlobalTimerRecordsRequest extends TeaModel {
     public String displayResultName;
 
     /**
-     * <p>The ID of the scheduled task group.</p>
+     * <p>The scheduled task group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ccg-0cvfvf6u1enx1****</p>
@@ -47,7 +47,7 @@ public class DescribeGlobalTimerRecordsRequest extends TeaModel {
     public String maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>The token used to start the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
@@ -56,7 +56,7 @@ public class DescribeGlobalTimerRecordsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to list the regions available in Elastic Desktop Service.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -68,14 +68,7 @@ public class DescribeGlobalTimerRecordsRequest extends TeaModel {
     public java.util.List<String> resourceTypes;
 
     /**
-     * <p>The type of the execution result. You can specify this parameter to filter the execution results.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>FAILED: The execution is successful.</li>
-     * <li>FAILED: The execution failed.</li>
-     * <li>RUNNING: The execution is in progress.</li>
-     * <li>SKIPPED: The execution is skipped.</li>
-     * </ul>
+     * <p>Filters the results by execution status. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCEED</p>
@@ -91,7 +84,7 @@ public class DescribeGlobalTimerRecordsRequest extends TeaModel {
     public Boolean retryable;
 
     /**
-     * <p>The ID of the searched region. You can specify this parameter to filter cloud computers in specific regions.</p>
+     * <p>The ID of the region to filter by. Only records for cloud desktops in this region are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -100,16 +93,7 @@ public class DescribeGlobalTimerRecordsRequest extends TeaModel {
     public String searchRegionId;
 
     /**
-     * <p>The execution result of the scheduled task.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>CONNECTED_NOT_RUN: The cloud computer is connected, but the scheduled task is not executed.</li>
-     * <li>PAUSED: The scheduled task is suspended.</li>
-     * <li>COMPLETED: The scheduled task is executed.</li>
-     * <li>FAILED: The scheduled task failed to be executed.</li>
-     * <li>RUNNING: The scheduled task is being executed.</li>
-     * <li>TERMINATED: The scheduled task is stopped.</li>
-     * </ul>
+     * <p>The execution result of the scheduled task. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
@@ -118,7 +102,7 @@ public class DescribeGlobalTimerRecordsRequest extends TeaModel {
     public String timerResult;
 
     /**
-     * <p>The scheduled tasks.</p>
+     * <p>The types of scheduled tasks.</p>
      */
     @NameInMap("TimerTypes")
     public java.util.List<String> timerTypes;

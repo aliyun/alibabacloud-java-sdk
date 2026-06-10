@@ -15,11 +15,6 @@ public class CreateEcdReportTaskRequest extends TeaModel {
 
     /**
      * <p>The language of the report. An enumerated type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>zh-CN (default): Chinese</li>
-     * <li>en-GB: English</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
@@ -29,16 +24,15 @@ public class CreateEcdReportTaskRequest extends TeaModel {
 
     /**
      * <p>The name of the report file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test report name</p>
      */
     @NameInMap("ReportFileName")
     public String reportFileName;
 
     /**
      * <p>The sub-type of the report export task.</p>
-     * <p>Valid value:</p>
-     * <ul>
-     * <li>DESKTOP: cloud computer</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -121,22 +115,38 @@ public class CreateEcdReportTaskRequest extends TeaModel {
          * <li>DESKTOP (indicating a cloud computer report), the following filter conditions are available:</li>
          * </ol>
          * <ul>
-         * <li>KeyWord: cloud computer keyword (supports automatic recognition)</li>
-         * <li>RegionId: region ID</li>
-         * <li>DesktopId: cloud computer ID</li>
-         * <li>DesktopName: cloud computer name (supports fuzzy matching)</li>
-         * <li>OfficeSiteId: office network ID</li>
-         * <li>OfficeSiteName: office network name (supports fuzzy matching)</li>
-         * <li>Status: cloud computer status</li>
-         * <li>DesktopType: desktop type</li>
-         * <li>DesktopIP: cloud computer IP address</li>
-         * <li>SubPayType: billing method</li>
-         * <li>EndUserId: user name (supports fuzzy matching)</li>
-         * <li>ExpireTime: expiration date and time, in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot; format</li>
-         * <li>IncludeAssignedUser: indicates whether the cloud computer is assigned to users or not</li>
-         * <li>ResourceGroupId: resource group ID</li>
-         * <li>PolicyId: policy ID</li>
-         * <li>Tag:{Tag Key value}: cloud computer tag (To filter data using multiple tags, specify multiple filter condition objects.)</li>
+         * <li><p>KeyWord: cloud computer keyword (supports automatic recognition)</p>
+         * </li>
+         * <li><p>RegionId: region ID</p>
+         * </li>
+         * <li><p>DesktopId: cloud computer ID</p>
+         * </li>
+         * <li><p>DesktopName: cloud computer name (supports fuzzy matching)</p>
+         * </li>
+         * <li><p>OfficeSiteId: office network ID</p>
+         * </li>
+         * <li><p>OfficeSiteName: office network name (supports fuzzy matching)</p>
+         * </li>
+         * <li><p>Status: cloud computer status</p>
+         * </li>
+         * <li><p>DesktopType: desktop type</p>
+         * </li>
+         * <li><p>DesktopIP: cloud computer IP address</p>
+         * </li>
+         * <li><p>SubPayType: billing method</p>
+         * </li>
+         * <li><p>EndUserId: user name (supports fuzzy matching)</p>
+         * </li>
+         * <li><p>ExpireTime: expiration date and time, in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot; format</p>
+         * </li>
+         * <li><p>IncludeAssignedUser: indicates whether the cloud computer is assigned to users or not</p>
+         * </li>
+         * <li><p>ResourceGroupId: resource group ID</p>
+         * </li>
+         * <li><p>PolicyId: policy ID</p>
+         * </li>
+         * <li><p>Tag:{Tag Key value}: cloud computer tag (To filter data using multiple tags, specify multiple filter condition objects.)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -148,14 +158,24 @@ public class CreateEcdReportTaskRequest extends TeaModel {
         /**
          * <p>The value of the filter condition. Only the first value of the FilterValues parameter is used, if FilterKey is set to one of the following values:</p>
          * <ul>
-         * <li>KeyWord</li>
-         * <li>DesktopName</li>
-         * <li>OfficeSiteName</li>
-         * <li>DesktopIP</li>
-         * <li>EndUserId</li>
-         * <li>ExpireTime</li>
-         * <li>IncludeAssignedUser</li>
+         * <li><p>KeyWord</p>
+         * </li>
+         * <li><p>DesktopName</p>
+         * </li>
+         * <li><p>OfficeSiteName</p>
+         * </li>
+         * <li><p>DesktopIP</p>
+         * </li>
+         * <li><p>EndUserId</p>
+         * </li>
+         * <li><p>ExpireTime</p>
+         * </li>
+         * <li><p>IncludeAssignedUser</p>
+         * </li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Test cloud desktop name</p>
          */
         @NameInMap("FilterValues")
         public java.util.List<String> filterValues;

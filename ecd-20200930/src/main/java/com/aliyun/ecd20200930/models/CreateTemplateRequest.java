@@ -12,12 +12,8 @@ public class CreateTemplateRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter is not publicly available.</p>
+     * <p>This parameter is not publicly available.</p>
      * </blockquote>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>1: the Enterprise edition.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -46,9 +42,14 @@ public class CreateTemplateRequest extends TeaModel {
     /**
      * <p>The template description. It must meet the following criteria:</p>
      * <ul>
-     * <li>It can be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</li>
-     * <li>It can contain letters, digits, and special characters, including spaces. Note: You can use carriage returns to break lines.</li>
+     * <li><p>It can be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * </li>
+     * <li><p>It can contain letters, digits, and special characters, including spaces. Note: You can use carriage returns to break lines.</p>
+     * </li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Design department template</p>
      */
     @NameInMap("Description")
     public String description;
@@ -82,9 +83,6 @@ public class CreateTemplateRequest extends TeaModel {
 
     /**
      * <p>The service type. Set the value to <code>CloudDesktop</code>.</p>
-     * <ul>
-     * <li></li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>CloudDesktop</p>
@@ -95,7 +93,7 @@ public class CreateTemplateRequest extends TeaModel {
     /**
      * <p>The regions of the template. You can create cloud computers by using a template only within the same region as the template itself.</p>
      * <blockquote>
-     * <p> You can specify up to 20 regions.</p>
+     * <p>You can specify up to 20 regions.</p>
      * </blockquote>
      */
     @NameInMap("RegionConfigList")
@@ -117,7 +115,7 @@ public class CreateTemplateRequest extends TeaModel {
     public java.util.List<CreateTemplateRequestResourceTagList> resourceTagList;
 
     /**
-     * <p>区域配置管理</p>
+     * <p>The site configurations.</p>
      */
     @NameInMap("SiteConfigList")
     public java.util.List<CreateTemplateRequestSiteConfigList> siteConfigList;
@@ -125,14 +123,8 @@ public class CreateTemplateRequest extends TeaModel {
     /**
      * <p>The performance level (PL) of the system disk.</p>
      * <blockquote>
-     * <p> Only cloud computers of the Graphics or High Frequency type support Enterprise SSDs (ESSDs).</p>
+     * <p>Only cloud computers of the Graphics or High Frequency type support Enterprise SSDs (ESSDs).</p>
      * </blockquote>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>PL1: a PL1 ESSD.</li>
-     * <li>PL0: a PL0 ESSD.</li>
-     * <li>AutoPL: an AutoPL ESSD.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>AutoPL</p>
@@ -143,7 +135,7 @@ public class CreateTemplateRequest extends TeaModel {
     /**
      * <p>The size of the system disk. Unit: GiB. Valid values: 40 to 500. Increments: 10 GiB.</p>
      * <blockquote>
-     * <p> The system disk size must be at least as large as the configured image size.</p>
+     * <p>The system disk size must be at least as large as the configured image size.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -155,11 +147,17 @@ public class CreateTemplateRequest extends TeaModel {
     /**
      * <p>The template name. It must meet the following criteria:</p>
      * <ul>
-     * <li>It can be 2 to 126 characters in length.</li>
-     * <li>It must begin with a letter and cannot start with <code>http://</code> or <code>https://</code>.</li>
-     * <li>It can contain letters, digits, colons (:), underscores (_), and hyphens (-). Note: Periods (.) are not supported in the name.</li>
+     * <li><p>It can be 2 to 126 characters in length.</p>
+     * </li>
+     * <li><p>It must begin with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * </li>
+     * <li><p>It can contain letters, digits, colons (:), underscores (_), and hyphens (-). Note: Periods (.) are not supported in the name.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>My cloud desktop template 001</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
@@ -369,8 +367,10 @@ public class CreateTemplateRequest extends TeaModel {
 
         /**
          * <p>The size of the data disk. Unit: GiB. Valid values: 40 to 2040. Increments: 10 GiB.</p>
-         * <p>**</p>
-         * <p><strong>Keep in mind</strong> that the larger the ESSD disk capacity, the higher the available PL (for example, PL2 is available for disks larger than 460 GiB). A higher PL comes with a higher cost. Select an ESSD based on your specific needs.</p>
+         * <blockquote>
+         * <p>Notice: </p>
+         * </blockquote>
+         * <p>The larger the ESSD disk capacity, the higher the available PL (for example, PL2 is available for disks larger than 460 GiB). A higher PL comes with a higher cost. Select an ESSD based on your specific needs.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -412,7 +412,7 @@ public class CreateTemplateRequest extends TeaModel {
         public String officeSiteId;
 
         /**
-         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+         * <p>The region ID. You can call the <a href="t2167755.xdita#"></a>operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -449,11 +449,6 @@ public class CreateTemplateRequest extends TeaModel {
 
         /**
          * <p>Specifies whether to enable disk encryption.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>false (default): disables disk encryption.</li>
-         * <li>true: enables disk encryption.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -462,7 +457,7 @@ public class CreateTemplateRequest extends TeaModel {
         public Boolean volumeEncryptionEnable;
 
         /**
-         * <p>The ID of the Key Management Service (KMS) key that you want to use to encrypt disks. You can call the <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> operation to query KMS keys.</p>
+         * <p>The ID of the Key Management Service (KMS) key that you want to use to encrypt disks. You can call the <a href="t22712.xdita#"></a>operation to query KMS keys.</p>
          * 
          * <strong>example:</strong>
          * <p>a7b3c0c8-b3a2-4876-b1cc-*********</p>
@@ -577,7 +572,7 @@ public class CreateTemplateRequest extends TeaModel {
 
     public static class CreateTemplateRequestSiteConfigList extends TeaModel {
         /**
-         * <p>应用管控策略ID</p>
+         * <p>The application control policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>bwr-5a5371e0db954d********</p>
@@ -586,7 +581,7 @@ public class CreateTemplateRequest extends TeaModel {
         public String appRuleId;
 
         /**
-         * <p>站点ID。</p>
+         * <p>The site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mainland</p>

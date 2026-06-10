@@ -106,7 +106,7 @@ public class GetAsyncTaskResponseBody extends TeaModel {
          * <p>The error message of the asynchronous task.</p>
          * 
          * <strong>example:</strong>
-         * <p>The request has been failed due to some unknown error. Please try again later.</p>
+         * <p>The request failed due to some unknown errors. Please try again later.</p>
          */
         @NameInMap("Message")
         public String message;

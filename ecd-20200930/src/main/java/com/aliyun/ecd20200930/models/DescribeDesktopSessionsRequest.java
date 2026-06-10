@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDesktopSessionsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to turn on the switch to check session status of cloud computers.</p>
+     * <p>Specifies whether to check the session status within the cloud computer.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     public Boolean checkOsSession;
 
     /**
-     * <p>The IDs of the cloud computers. You can specify the IDs of 1 to 100 cloud computers.</p>
+     * <p>The ID of the cloud computer. You can specify 1 to 100 IDs.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
@@ -29,7 +29,7 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     public String desktopName;
 
     /**
-     * <p>The end of the time range to query.</p>
+     * <p>The end time of the query.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-02-13T02:51:43Z</p>
@@ -41,13 +41,13 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
      * <p>The ID of the end user.</p>
      * 
      * <strong>example:</strong>
-     * <p>testUser</p>
+     * <p>alice</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;
 
     /**
-     * <p>The user ID. This parameter functions the same as the <code>EndUserId</code> parameter. You only need to include one of them in your request.</p>
+     * <p>The ID of the end user. This parameter is the same as the <code>EndUserId</code> parameter. Specify only one of them.</p>
      * 
      * <strong>example:</strong>
      * <p>alice</p>
@@ -55,10 +55,15 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     @NameInMap("EndUserIdFilter")
     public String endUserIdFilter;
 
+    /**
+     * <p>Specifies whether to return information about the terminal.</p>
+     */
     @NameInMap("FillHardwareInfo")
     public Boolean fillHardwareInfo;
 
     /**
+     * <p>The language of the returned information.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
      */
@@ -66,7 +71,7 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The office network ID.</p>
+     * <p>The ID of the cloud computer.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-363353****</p>
@@ -75,7 +80,7 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -84,7 +89,7 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The maximum number of entries to return on each page for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -93,7 +98,7 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</p>
+     * <p>The ID of the region. Call <a href="t2167755.xdita#"></a>to obtain a list of regions that Elastic Desktop Service (EDS) supports.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -106,12 +111,7 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The state of the session.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Connected</li>
-     * <li>Disconnected</li>
-     * </ul>
+     * <p>The connection status of the session.</p>
      * 
      * <strong>example:</strong>
      * <p>Connected</p>
@@ -120,7 +120,7 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     public String sessionStatus;
 
     /**
-     * <p>The start of the time range to query.</p>
+     * <p>The start time of the query.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-01-28T02:31:43Z</p>
@@ -129,14 +129,7 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The billing method of cloud computers.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>duration: hourly plan (available for users in the whitelist)</li>
-     * <li>postPaid: pay-as-you-go</li>
-     * <li>monthPackage: monthly subscription (the 120-hour/250-hour computing plan)</li>
-     * <li>prePaid: monthly subscription (the Unlimited computing plan)</li>
-     * </ul>
+     * <p>The billing method of the cloud computer.</p>
      * 
      * <strong>example:</strong>
      * <p>monthPackage</p>

@@ -18,7 +18,7 @@ public class AddFilePermissionRequest extends TeaModel {
      * <p>The ID of the user who uses the network disk.</p>
      * 
      * <strong>example:</strong>
-     * <p>user01</p>
+     * <p>alice</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;
@@ -118,7 +118,7 @@ public class AddFilePermissionRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>user01</p>
+         * <p>alice</p>
          */
         @NameInMap("Id")
         public String id;

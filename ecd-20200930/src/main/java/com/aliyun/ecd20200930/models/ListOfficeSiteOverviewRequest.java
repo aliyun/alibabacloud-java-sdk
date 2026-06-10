@@ -16,8 +16,10 @@ public class ListOfficeSiteOverviewRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page.</p>
      * <ul>
-     * <li>Valid values: 1 to 100</li>
-     * <li>Default value: 10</li>
+     * <li><p>Valid values: 1 to 100</p>
+     * </li>
+     * <li><p>Default value: 10</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,9 +50,12 @@ public class ListOfficeSiteOverviewRequest extends TeaModel {
      * <p>The query scope. Cloud computers in a cloud computer pool are pooled cloud computers.</p>
      * <p>Default values:</p>
      * <ul>
-     * <li>1 (default): queries non-pooled cloud computers in the office network.</li>
-     * <li>2: queries pooled cloud computers in the office network.</li>
-     * <li>3: queries all cloud computers in the office network.</li>
+     * <li><p>1 (default): queries non-pooled cloud computers in the office network.</p>
+     * </li>
+     * <li><p>2: queries pooled cloud computers in the office network.</p>
+     * </li>
+     * <li><p>3: queries all cloud computers in the office network.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

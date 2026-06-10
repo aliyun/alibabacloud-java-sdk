@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateCloudDriveGroupRequest extends TeaModel {
     /**
+     * <p>List of user IDs to be set as team space administrators.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */

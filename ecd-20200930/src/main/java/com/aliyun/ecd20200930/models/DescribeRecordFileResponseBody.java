@@ -4,11 +4,14 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeRecordFileResponseBody extends TeaModel {
+    /**
+     * <p>Details of the screen recording files.</p>
+     */
     @NameInMap("RecordFiles")
     public java.util.List<DescribeRecordFileResponseBodyRecordFiles> recordFiles;
 
     /**
-     * <p>RequestId</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>05C2791F-41A7-5E7C-B5E4-1401FD0E****</p>
@@ -17,6 +20,8 @@ public class DescribeRecordFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -54,6 +59,8 @@ public class DescribeRecordFileResponseBody extends TeaModel {
 
     public static class DescribeRecordFileResponseBodyRecordFilesEventDetails extends TeaModel {
         /**
+         * <p>The event details.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\n\t\&quot;messageInfo\&quot; : \&quot;mouse_move\&quot;,\n\t\&quot;messageType\&quot; : \&quot;UserInput\&quot;\n}\n&quot;</p>
          */
@@ -61,6 +68,8 @@ public class DescribeRecordFileResponseBody extends TeaModel {
         public String eventName;
 
         /**
+         * <p>The time when the event occurred.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -68,6 +77,8 @@ public class DescribeRecordFileResponseBody extends TeaModel {
         public Integer eventTime;
 
         /**
+         * <p>The event type.</p>
+         * 
          * <strong>example:</strong>
          * <p>UserInput</p>
          */
@@ -107,6 +118,8 @@ public class DescribeRecordFileResponseBody extends TeaModel {
 
     public static class DescribeRecordFileResponseBodyRecordFiles extends TeaModel {
         /**
+         * <p>The ID of the cloud desktop.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecd-7yulhw1g1attet7d2</p>
          */
@@ -114,6 +127,8 @@ public class DescribeRecordFileResponseBody extends TeaModel {
         public String desktopId;
 
         /**
+         * <p>The name of the cloud desktop.</p>
+         * 
          * <strong>example:</strong>
          * <p>fvt-ecd</p>
          */
@@ -121,16 +136,23 @@ public class DescribeRecordFileResponseBody extends TeaModel {
         public String desktopName;
 
         /**
+         * <p>The name of the end user.</p>
+         * 
          * <strong>example:</strong>
          * <p>Alice</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
 
+        /**
+         * <p>The event details.</p>
+         */
         @NameInMap("EventDetails")
         public java.util.List<DescribeRecordFileResponseBodyRecordFilesEventDetails> eventDetails;
 
         /**
+         * <p>The name of the screen recording file.</p>
+         * 
          * <strong>example:</strong>
          * <p>Task3</p>
          */
@@ -138,6 +160,8 @@ public class DescribeRecordFileResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The file size. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>139</p>
          */
@@ -145,6 +169,8 @@ public class DescribeRecordFileResponseBody extends TeaModel {
         public Long fileSize;
 
         /**
+         * <p>The ID of the policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>pg-**</p>
          */
@@ -152,6 +178,8 @@ public class DescribeRecordFileResponseBody extends TeaModel {
         public String policyId;
 
         /**
+         * <p>The time when the screen recording ended. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format and is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-12-18T06:02:25Z</p>
          */
@@ -159,6 +187,8 @@ public class DescribeRecordFileResponseBody extends TeaModel {
         public String recordEndTime;
 
         /**
+         * <p>The expiration time of the screen recording file.</p>
+         * 
          * <strong>example:</strong>
          * <p>1774656000000</p>
          */
@@ -166,6 +196,8 @@ public class DescribeRecordFileResponseBody extends TeaModel {
         public Long recordExpire;
 
         /**
+         * <p>The time when the screen recording started. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format and is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-12-18T06:02:25Z</p>
          */
@@ -173,6 +205,18 @@ public class DescribeRecordFileResponseBody extends TeaModel {
         public String recordStartTime;
 
         /**
+         * <p>The recording type. Valid values:</p>
+         * <ul>
+         * <li><p><code>alltime</code>: continuous screen recording.</p>
+         * </li>
+         * <li><p><code>period</code>: interval screen recording.</p>
+         * </li>
+         * <li><p><code>event</code>: event-triggered screen recording.</p>
+         * </li>
+         * <li><p><code>session</code>: session-based screen recording.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>period</p>
          */
@@ -180,6 +224,8 @@ public class DescribeRecordFileResponseBody extends TeaModel {
         public Integer recordType;
 
         /**
+         * <p>The ID of the region where the cloud desktop resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -187,6 +233,8 @@ public class DescribeRecordFileResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The ID of the resource group.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-f3s3dgt8dtb0vlqc8</p>
          */
@@ -194,6 +242,8 @@ public class DescribeRecordFileResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The name of the resource group.</p>
+         * 
          * <strong>example:</strong>
          * <p>resource</p>
          */
@@ -201,6 +251,14 @@ public class DescribeRecordFileResponseBody extends TeaModel {
         public String resourceGroupName;
 
         /**
+         * <p>The upload status of the screen recording file. Valid values:</p>
+         * <ul>
+         * <li><p><code>0</code>: uploaded.</p>
+         * </li>
+         * <li><p><code>1</code>: uploading.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

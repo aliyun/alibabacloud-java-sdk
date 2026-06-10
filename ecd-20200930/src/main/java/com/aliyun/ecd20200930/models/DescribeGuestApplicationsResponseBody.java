@@ -63,7 +63,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
          * <p>The CPU utilization (%).</p>
          * 
          * <strong>example:</strong>
-         * <p>89</p>
+         * <p>0</p>
          */
         @NameInMap("CpuPercent")
         public Double cpuPercent;
@@ -72,7 +72,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
          * <p>The GPU usage (%).</p>
          * 
          * <strong>example:</strong>
-         * <p>15</p>
+         * <p>0</p>
          */
         @NameInMap("GpuPercent")
         public Double gpuPercent;
@@ -81,7 +81,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
          * <p>The I/O read and write performance. Unit: byte/s.</p>
          * 
          * <strong>example:</strong>
-         * <p>124906.0</p>
+         * <p>8919266</p>
          */
         @NameInMap("Iospeed")
         public Double iospeed;
@@ -90,7 +90,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
          * <p>The memory usage (%).</p>
          * 
          * <strong>example:</strong>
-         * <p>34</p>
+         * <p>1.8368155</p>
          */
         @NameInMap("MemPercent")
         public Double memPercent;
@@ -108,7 +108,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
          * <p>The path to the process.</p>
          * 
          * <strong>example:</strong>
-         * <p>C:\\Program Files\\Google\\Chrome\\Application\\ch****.exe</p>
+         * <p>C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe</p>
          */
         @NameInMap("ProcessPath")
         public String processPath;
@@ -207,7 +207,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
          * <p>The CPU utilization (%).</p>
          * 
          * <strong>example:</strong>
-         * <p>89</p>
+         * <p>0</p>
          */
         @NameInMap("CpuPercent")
         public Double cpuPercent;
@@ -216,7 +216,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
          * <p>The GPU utilization (%).</p>
          * 
          * <strong>example:</strong>
-         * <p>15</p>
+         * <p>0</p>
          */
         @NameInMap("GpuPercent")
         public Double gpuPercent;
@@ -234,7 +234,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
          * <p>The I/O read and write performance. Unit: byte/s.</p>
          * 
          * <strong>example:</strong>
-         * <p>124906.0</p>
+         * <p>8919266</p>
          */
         @NameInMap("IoSpeed")
         public Double ioSpeed;
@@ -243,7 +243,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
          * <p>The memory utilization (%).</p>
          * 
          * <strong>example:</strong>
-         * <p>34</p>
+         * <p>1.8368155</p>
          */
         @NameInMap("MemPercent")
         public Double memPercent;
@@ -267,7 +267,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
          * <p>The path to the process.</p>
          * 
          * <strong>example:</strong>
-         * <p>C:\\Program Files\\Google\\Chrome\\Application\\ch****.exe</p>
+         * <p>C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe</p>
          */
         @NameInMap("ProcessPath")
         public String processPath;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyCloudDriveUsersResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D2E005C4-8CA3-5F1D-9917-E75BE3BF****</p>
      */

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeNASFileSystemsResponseBody extends TeaModel {
     /**
-     * <p>The NAS file systems.</p>
+     * <p>The details of the NAS file systems.</p>
      */
     @NameInMap("FileSystems")
     public java.util.List<DescribeNASFileSystemsResponseBodyFileSystems> fileSystems;
 
     /**
-     * <p>The token that determines the start point of the next query. This parameter is empty if no additional results exist.</p>
+     * <p>The token for the next page of results. If this parameter is empty, no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -20,7 +20,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>269BDB16-2CD8-4865-84BD-11C40BC21DB0</p>
@@ -59,7 +59,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
 
     public static class DescribeNASFileSystemsResponseBodyFileSystemsAppInstanceGroups extends TeaModel {
         /**
-         * <p>The ID of the delivery group.</p>
+         * <p>The ID of the application delivery group.</p>
          * 
          * <strong>example:</strong>
          * <p>aig-0bz55ibznu9p7****</p>
@@ -68,7 +68,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public String appInstanceGroupId;
 
         /**
-         * <p>The name of the delivery group.</p>
+         * <p>The name of the application delivery group.</p>
          * 
          * <strong>example:</strong>
          * <p>DemoDeliveryGroup</p>
@@ -101,7 +101,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
 
     public static class DescribeNASFileSystemsResponseBodyFileSystemsDesktopGroups extends TeaModel {
         /**
-         * <p>The ID of the cloud computer share.</p>
+         * <p>The ID of the desktop group.</p>
          * 
          * <strong>example:</strong>
          * <p>dg-9eeyf15b25nyl****</p>
@@ -110,7 +110,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public String desktopGroupId;
 
         /**
-         * <p>The name of the cloud computer share.</p>
+         * <p>The name of the desktop group.</p>
          * 
          * <strong>example:</strong>
          * <p>test_dg</p>
@@ -186,23 +186,25 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
     public static class DescribeNASFileSystemsResponseBodyFileSystems extends TeaModel {
         /**
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          */
         @NameInMap("AllowOperateUserDrive")
         public Boolean allowOperateUserDrive;
 
         /**
-         * <p>The application delivery groups that are associated with the UPM-supported NAS file systems.</p>
+         * <p>The application delivery groups associated with the UPM-supported NAS file system.</p>
          */
         @NameInMap("AppInstanceGroups")
         public java.util.List<DescribeNASFileSystemsResponseBodyFileSystemsAppInstanceGroups> appInstanceGroups;
 
         /**
-         * <p>The total capacity of the NAS file system. Unit: GiB.</p>
+         * <p>The storage capacity of the NAS file system, in GiB.</p>
          * <ul>
-         * <li>The Capacity type has 10 PiB of storage, which is equal to 10,485,760 GiB.</li>
-         * <li>The Performance type has 1 PiB of storage, which is equal to 1,048,576 GiB.</li>
+         * <li><p>If the storage type is capacity type, the capacity is 10 PiB (10,485,760 GiB).</p>
+         * </li>
+         * <li><p>If the storage type is performance type, the capacity is 1 PiB (1,048,576 GiB).</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -212,7 +214,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public Long capacity;
 
         /**
-         * <p>The time when the NAS file system was created.</p>
+         * <p>The creation time of the NAS file system.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-05-10T11:39Z</p>
@@ -230,7 +232,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The cloud computer shares that are associated with the UPM-supported NAS file systems.</p>
+         * <p>The desktop groups associated with the UPM-supported NAS file system.</p>
          */
         @NameInMap("DesktopGroups")
         public java.util.List<DescribeNASFileSystemsResponseBodyFileSystemsDesktopGroups> desktopGroups;
@@ -263,15 +265,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public String fileSystemName;
 
         /**
-         * <p>The status of the NAS file system. The possible values include:</p>
-         * <ul>
-         * <li>Pending: The NAS file system is being created.</li>
-         * <li>Running: The NAS file system is running.</li>
-         * <li>Stopped: The NAS file system is stopped.</li>
-         * <li>Deleting: The NAS file system is being deleted.</li>
-         * <li>Deleted: The NAS file system is deleted.</li>
-         * <li>Invalid: The NAS file system is invalid.</li>
-         * </ul>
+         * <p>The status of the NAS file system.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -280,7 +274,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public String fileSystemStatus;
 
         /**
-         * <p>The type of the NAS file system. The only valid value is <code>standard</code>.</p>
+         * <p>The type of the NAS file system. Currently, only the standard type is supported. The value is always <code>standard</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>standard</p>
@@ -289,7 +283,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public String fileSystemType;
 
         /**
-         * <p>The used capacity of the NAS file system. Unit: bytes.</p>
+         * <p>The amount of storage used by the NAS file system, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -307,14 +301,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public String mountTargetDomain;
 
         /**
-         * <p>The status of the mount target. The possible values include:</p>
-         * <ul>
-         * <li>Pending: The mount target is being created.</li>
-         * <li>Active: The mount target is enabled.</li>
-         * <li>Inactive: The mount target is disabled.</li>
-         * <li>Deleting: The mount target is being deleted.</li>
-         * <li>Invalid: The mount target is invalid.</li>
-         * </ul>
+         * <p>The status of the mount target.</p>
          * 
          * <strong>example:</strong>
          * <p>Active</p>
@@ -341,7 +328,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public String officeSiteName;
 
         /**
-         * <p>The office networks.</p>
+         * <p>The office networks associated with the file system.</p>
          */
         @NameInMap("OfficeSites")
         public java.util.List<DescribeNASFileSystemsResponseBodyFileSystemsOfficeSites> officeSites;
@@ -359,7 +346,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public Boolean profileCompatible;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -368,12 +355,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The storage type of the NAS file system.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Upm: the UPM-supported NAS file system.</li>
-         * <li>ShareNas: the shared NAS file system.</li>
-         * </ul>
+         * <p>The use case of the NAS file system.</p>
          * 
          * <strong>example:</strong>
          * <p>Upm</p>
@@ -385,11 +367,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public Long sizeQuota;
 
         /**
-         * <p>The storage type of the NAS file system. Valid values:</p>
-         * <ul>
-         * <li>Capacity</li>
-         * <li>Performance</li>
-         * </ul>
+         * <p>The storage type of the NAS file system.</p>
          * 
          * <strong>example:</strong>
          * <p>Capacity</p>
@@ -398,7 +376,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public String storageType;
 
         /**
-         * <p>Indicates whether the Server Message Block (SMB) access control list (ACL) feature was enabled.</p>
+         * <p>Indicates whether the Server Message Block (SMB) access control list (ACL) feature is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -407,7 +385,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public Boolean supportAcl;
 
         /**
-         * <p>The ID of the zone where the NAS file system resides.</p>
+         * <p>The ID of the zone.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-f</p>

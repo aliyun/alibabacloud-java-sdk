@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteQosRulesRequest extends TeaModel {
     /**
+     * <p>A list of QoS rule IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("QosRuleId")

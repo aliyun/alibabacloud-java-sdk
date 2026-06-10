@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeAutoSnapshotPolicyRequest extends TeaModel {
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The maximum number of entries to return per page.</p>
      * <ul>
-     * <li>Maximum value: 50.</li>
-     * <li>Default value: 50.</li>
+     * <li><p>Maximum value: 50</p>
+     * </li>
+     * <li><p>Default value: 50</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class DescribeAutoSnapshotPolicyRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6mqIGdPhID94rjhZFGsvpJo</p>
@@ -45,7 +47,7 @@ public class DescribeAutoSnapshotPolicyRequest extends TeaModel {
     public String policyName;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. To query the regions supported by Elastic Desktop Service, call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

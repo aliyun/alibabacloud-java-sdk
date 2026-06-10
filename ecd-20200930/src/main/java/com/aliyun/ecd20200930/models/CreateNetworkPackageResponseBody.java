@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNetworkPackageResponseBody extends TeaModel {
     /**
-     * <p>The ID of the premium bandwidth plan.</p>
+     * <p>The ID of the created network package.</p>
      * 
      * <strong>example:</strong>
      * <p>np-amtp8e8q1o9e4****</p>
@@ -14,7 +14,7 @@ public class CreateNetworkPackageResponseBody extends TeaModel {
     public String networkPackageId;
 
     /**
-     * <p>The ID of the bill.</p>
+     * <p>The ID of the order.</p>
      * 
      * <strong>example:</strong>
      * <p>234526262716724</p>

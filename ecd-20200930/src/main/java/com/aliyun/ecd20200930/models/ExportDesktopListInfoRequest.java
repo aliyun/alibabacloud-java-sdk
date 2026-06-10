@@ -39,7 +39,7 @@ public class ExportDesktopListInfoRequest extends TeaModel {
      * <p>The name of the cloud computer.</p>
      * 
      * <strong>example:</strong>
-     * <p>testName</p>
+     * <p>DemoComputer01</p>
      */
     @NameInMap("DesktopName")
     public String desktopName;

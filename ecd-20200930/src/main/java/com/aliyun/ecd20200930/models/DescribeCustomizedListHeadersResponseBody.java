@@ -4,10 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomizedListHeadersResponseBody extends TeaModel {
+    /**
+     * <p>The list of table headers.</p>
+     */
     @NameInMap("Headers")
     public java.util.List<DescribeCustomizedListHeadersResponseBodyHeaders> headers;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -37,6 +42,8 @@ public class DescribeCustomizedListHeadersResponseBody extends TeaModel {
 
     public static class DescribeCustomizedListHeadersResponseBodyHeaders extends TeaModel {
         /**
+         * <p>The display type of the table header. You can invoke <a href="https://help.aliyun.com/document_detail/452324.html">ModifyCustomizedListHeaders</a> to change it.</p>
+         * 
          * <strong>example:</strong>
          * <p>display</p>
          */
@@ -44,12 +51,20 @@ public class DescribeCustomizedListHeadersResponseBody extends TeaModel {
         public String displayType;
 
         /**
+         * <p>The key of the table header.</p>
+         * 
          * <strong>example:</strong>
-         * <p>pay_type</p>
+         * <p>system_data_disk</p>
          */
         @NameInMap("HeaderKey")
         public String headerKey;
 
+        /**
+         * <p>The name of the table header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System disk/Data disk</p>
+         */
         @NameInMap("HeaderName")
         public String headerName;
 

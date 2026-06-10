@@ -5,12 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCloudDriveServiceRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the auto-payment feature.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true: enables the auto-payment feature. Ensure your Alibaba Cloud account has sufficient balance. Insufficient balance may result in abnormal orders.</li>
-     * <li>false (default): disables the auto-payment feature. The order is generated, but payment must be made manually. You can log on to the Alibaba Cloud Management Console and complete the payment based on the order ID on the Orders page.</li>
-     * </ul>
+     * <p>Specifies whether to enable automatic payment.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -19,12 +14,7 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Optional. Specifies whether to enable the auto-renewal feature. This parameter takes effect only if you set CdsChargeType to <code>Prepaid</code>.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true</li>
-     * <li>false</li>
-     * </ul>
+     * <p>Specifies whether to enable auto-renewal. This parameter applies only when <code>CdsChargeType</code> is set to <code>PrePaid</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -34,22 +24,17 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter is not publicly available.</p>
+     * <p>This parameter is not publicly available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>3</p>
+     * <p>null</p>
      */
     @NameInMap("BizType")
     public Integer bizType;
 
     /**
-     * <p>The billing method of the enterprise drive.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>PostPaid: pay-as-you-go.</li>
-     * <li>PrePaid: subscription.</li>
-     * </ul>
+     * <p>The billing method of the cloud drive.</p>
      * 
      * <strong>example:</strong>
      * <p>PostPaid</p>
@@ -58,7 +43,7 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
     public String cdsChargeType;
 
     /**
-     * <p>The ID of the Cloud Enterprise Network (CEN) instance. This parameter takes effect only if you set <code>OfficeSiteType</code> to <code>AD_CONNECTOR</code>. If you have configured <code>OfficeSiteId</code>, you can leave this parameter empty.</p>
+     * <p>The ID of the Cloud Enterprise Network (CEN) instance. This parameter is required when <code>OfficeSiteType</code> is set to <code>AD_CONNECTOR</code> and you do not specify <code>OfficeSiteId</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>cen-g4ba1mkji8nj6****</p>
@@ -67,7 +52,7 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The domain name of the enterprise AD office network. This parameter takes effect only if you set <code>OfficeSiteType</code> to <code>AD_CONNECTOR</code>. If you have configured <code>OfficeSiteId</code>, you can leave this parameter empty.</p>
+     * <p>The name of the domain controller. This parameter is required when <code>OfficeSiteType</code> is set to <code>AD_CONNECTOR</code> and you do not specify <code>OfficeSiteId</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>test.local</p>
@@ -76,16 +61,18 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The user IDs.</p>
+     * <p>A list of user IDs.</p>
      */
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
     /**
-     * <p>The maximum storage capacity of the enterprise drive.</p>
+     * <p>The total capacity of the cloud drive.</p>
      * <ul>
-     * <li>For a pay-as-you-go enterprise drive, the unit is bytes.</li>
-     * <li>For a subscription enterprise drive, the unit is GiB. For example, to create a 500 GiB subscription drive, set the value to 500 GiB. To create a 2 TiB subscription drive, set the value to 2048 GiB.</li>
+     * <li><p>For pay-as-you-go cloud drives, the unit is bytes.</p>
+     * </li>
+     * <li><p>For subscription cloud drives, the unit is GiB. For example, set the value to 500 for 500 GiB, or to 2048 for 2 TiB.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -96,16 +83,16 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
     public Long maxSize;
 
     /**
-     * <p>The name of the enterprise drive</p>
+     * <p>The name of the cloud drive.</p>
      * 
      * <strong>example:</strong>
-     * <p>wuying-pds</p>
+     * <p>wuying-cds</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The ID of the office network. This parameter takes effect only if you set OfficeSiteType to <code>AD_CONNECTOR</code>.</p>
+     * <p>The ID of the office site. This parameter applies only when <code>OfficeSiteType</code> is set to <code>AD_CONNECTOR</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-400695****</p>
@@ -114,12 +101,7 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The type of the office network.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>SIMPLE: convenience office network.</li>
-     * <li>AD_CONNECTOR: enterprise Active Directory (AD) office network.</li>
-     * </ul>
+     * <p>The type of the office site.</p>
      * 
      * <strong>example:</strong>
      * <p>SIMPLE</p>
@@ -128,13 +110,7 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
     public String officeSiteType;
 
     /**
-     * <p>The subscription duration. The unit is specified by <code>PeriodUnit</code>. This parameter takes effect only if you set <code>CdsChargeType</code> to <code>PrePaid</code>.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>1</li>
-     * <li>2</li>
-     * <li>3</li>
-     * </ul>
+     * <p>The subscription duration. The unit is specified by <code>PeriodUnit</code>. This parameter is required only when <code>CdsChargeType</code> is set to <code>PrePaid</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -143,11 +119,7 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
     public Long period;
 
     /**
-     * <p>Required. The unit of the subscription duration. This parameter takes effect only if you set <code>CdsChargeType</code> to <code>PrePaid</code>.</p>
-     * <p>Valid value:</p>
-     * <ul>
-     * <li>Year</li>
-     * </ul>
+     * <p>The unit of the subscription duration. This parameter is required only when <code>CdsChargeType</code> is set to <code>PrePaid</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>Year</p>
@@ -156,7 +128,7 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Enterprise Drive Service is available.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -170,23 +142,17 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter is not publicly available.</p>
+     * <p>This parameter is not publicly available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>co-0esnf8kb8zpfbqmvt</p>
+     * <p>null</p>
      */
     @NameInMap("SolutionId")
     public String solutionId;
 
     /**
-     * <p>Required. The maximum number of users allowed on the enterprise drive. This parameter takes effect only if you set <code>CdsChargeType</code> to <code>PrePaid</code>.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>5 when the value of MaxSize is 500 GiB.</li>
-     * <li>20 when the value of MaxSize is 2048 GiB.</li>
-     * <li>50 when the value of MaxSize is 5120 GiB.</li>
-     * </ul>
+     * <p>The maximum number of users for a subscription cloud drive. This parameter is required only when <code>CdsChargeType</code> is set to <code>PrePaid</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -195,10 +161,10 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
     public Long userCount;
 
     /**
-     * <p>The maximum storage capacity of the user\&quot;s personal disk when allocated. Unit: bytes.</p>
+     * <p>The maximum size of the personal disk for each user, in bytes.</p>
      * 
      * <strong>example:</strong>
-     * <p>1024000</p>
+     * <p>104857600</p>
      */
     @NameInMap("UserMaxSize")
     public Long userMaxSize;

@@ -23,7 +23,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
      * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>Succeeded</p>
      */
     @NameInMap("Message")
     public String message;
@@ -96,7 +96,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
          * <p>The ID of the end user that connects to the cloud computer.</p>
          * 
          * <strong>example:</strong>
-         * <p>end user id</p>
+         * <p>alice</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
@@ -139,7 +139,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
          * <p>The name of the cloud computer.</p>
          * 
          * <strong>example:</strong>
-         * <p>TestDesktop</p>
+         * <p>demo-computer</p>
          */
         @NameInMap("DesktopName")
         public String desktopName;
@@ -150,7 +150,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>To be hidden</p>
+         * <p>windows</p>
          */
         @NameInMap("FotaProject")
         public String fotaProject;
@@ -159,7 +159,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
          * <p>The ID of the office network.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou+dir-815419****</p>
+         * <p>cn-shanghai+dir-428216****</p>
          */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;

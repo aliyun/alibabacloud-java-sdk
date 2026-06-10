@@ -14,7 +14,8 @@ public class CreateSimpleOfficeSiteRequest extends TeaModel {
     public String authorityHost;
 
     /**
-     * <p>The maximum public bandwidth. Value range: 10 to 200. Unit: Mbit/s. This parameter is available if you set <code>EnableInternetAccess</code> to <code>true</code>.</p>
+     * <p>The peak public bandwidth. Valid values: 10 to 200. Unit: Mbps.
+     * This parameter is valid only when <code>EnableInternetAccess</code> is set to <code>true</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,9 +24,9 @@ public class CreateSimpleOfficeSiteRequest extends TeaModel {
     public Integer bandwidth;
 
     /**
-     * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
+     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
      * <blockquote>
-     * <p> If you want end users to connect to cloud computers from Alibaba Cloud Workspace clients over VPCs, you can attach the office network to a CEN instance. The CEN instance is the one that connects to your on-premises network over VPN Gateway or Express Connect.</p>
+     * <p>If you want to connect to cloud desktops over a VPC, attach the office site to the same CEN instance that is connected to your on-premises network by a VPN or an Express Connect circuit.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,10 +36,12 @@ public class CreateSimpleOfficeSiteRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the Cloud Enterprise Network (CEN) instance belongs.</p>
+     * <p>The ID of the Alibaba Cloud account that owns the CEN instance.</p>
      * <ul>
-     * <li>If you do not specify the CenId parameter, or the CEN instance that is specified by the CenId parameter belongs to the current Alibaba Cloud account, skip this parameter.</li>
-     * <li>If you specify the CenId parameter and the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, enter the ID of the Alibaba Cloud account.</li>
+     * <li><p>If you do not specify CenId, or if the CEN instance belongs to your Alibaba Cloud account, this parameter is not required.</p>
+     * </li>
+     * <li><p>If the CEN instance is owned by another Alibaba Cloud account, specify the ID of that account.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,11 +51,14 @@ public class CreateSimpleOfficeSiteRequest extends TeaModel {
     public Long cenOwnerId;
 
     /**
-     * <p>The IPv4 CIDR block that you want the office network to use in the virtual private cloud (VPC) of the office network. The system automatically creates a VPC for the office network based on the IPv4 CIDR block. We recommend that you set this parameter to one of the following CIDR blocks and their subnets:</p>
+     * <p>The IPv4 CIDR block for the office site\&quot;s Virtual Private Cloud (VPC). This parameter is required for standard office sites. The system automatically creates a VPC based on the specified IPv4 CIDR block. Use one of the following CIDR blocks or their subnets:</p>
      * <ul>
-     * <li><code>10.0.0.0/12</code> (subnet mask range: 12 to 14 bits)</li>
-     * <li><code>172.16.0.0/12</code> (subnet mask range: 12 to 24 bits)</li>
-     * <li><code>192.168.0.0/16</code> (subnet mask range: 16 to 24 bits)</li>
+     * <li><p><code>10.0.0.0/12</code> (The valid mask range is 12 to 24 bits.)</p>
+     * </li>
+     * <li><p><code>172.16.0.0/12</code> (The valid mask range is 12 to 24 bits.)</p>
+     * </li>
+     * <li><p><code>192.168.0.0/16</code> (The valid mask range is 16 to 24 bits.)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,23 +74,7 @@ public class CreateSimpleOfficeSiteRequest extends TeaModel {
     public String clientSecret;
 
     /**
-     * <p>Specifies whether to create a CloudBox-based office network.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>true</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>false</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <p>Specifies whether to create a Cloud Box office site.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -93,9 +83,9 @@ public class CreateSimpleOfficeSiteRequest extends TeaModel {
     public Boolean cloudBoxOfficeSite;
 
     /**
-     * <p>The method to connect to cloud computers from Alibaba Cloud Workspace clients.</p>
+     * <p>Specifies how clients can connect to cloud desktops.</p>
      * <blockquote>
-     * <p> The VPC connection depends on Alibaba Cloud PrivateLink. You can use PrivateLink for free. When you set this parameter to VPC or Any, PrivateLink is automatically activated.````</p>
+     * <p>VPC connections rely on the Alibaba Cloud PrivateLink service, which is free of charge. If you set this parameter to <code>VPC</code> or <code>Any</code>, the system automatically enables the PrivateLink service.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -111,12 +101,7 @@ public class CreateSimpleOfficeSiteRequest extends TeaModel {
     public String eid;
 
     /**
-     * <p>Specifies whether to grant the local administrator permissions to users that are authorized to use cloud computers in the office network.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true (default)</li>
-     * <li>false</li>
-     * </ul>
+     * <p>Specifies whether to grant users local administrator privileges on their cloud desktops.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -125,23 +110,7 @@ public class CreateSimpleOfficeSiteRequest extends TeaModel {
     public Boolean enableAdminAccess;
 
     /**
-     * <p>Specifies whether to enable Internet access.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>true</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>false (default)</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <p>Specifies whether to enable internet access.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -159,7 +128,7 @@ public class CreateSimpleOfficeSiteRequest extends TeaModel {
     public Boolean needVerifyZeroDevice;
 
     /**
-     * <p>The office network name. The name must be 2 to 255 characters in length. It can contain digits, colons (:), underscores (_), and hyphens (-). It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name of the office site. The name must be 2 to 255 characters in length. It must start with a letter or a Chinese character, and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, colons (:), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>TestOfficeSite_Simple</p>
@@ -168,7 +137,7 @@ public class CreateSimpleOfficeSiteRequest extends TeaModel {
     public String officeSiteName;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to get a list of regions that support Elastic Desktop Service (ECD).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -181,13 +150,13 @@ public class CreateSimpleOfficeSiteRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The IDs of the vSwitches that you want to specify in VPCs. This parameter is required only when you create CloudBox-based office networks.</p>
+     * <p>The vSwitch ID. This parameter is required when you create a Cloud Box office site.</p>
      */
     @NameInMap("VSwitchId")
     public java.util.List<String> vSwitchId;
 
     /**
-     * <p>The verification code. If the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, you must call the <a href="https://help.aliyun.com/document_detail/335132.html">SendVerifyCode</a> operation to obtain the verification code.</p>
+     * <p>The verification code. If the CEN instance is owned by another Alibaba Cloud account, you must first call <a href="https://help.aliyun.com/document_detail/335132.html">SendVerifyCode</a> to obtain a verification code.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -196,12 +165,7 @@ public class CreateSimpleOfficeSiteRequest extends TeaModel {
     public String verifyCode;
 
     /**
-     * <p>The network type of the office network.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>standard: advanced</li>
-     * <li>basic: basic</li>
-     * </ul>
+     * <p>The type of the office site.</p>
      * 
      * <strong>example:</strong>
      * <p>standard</p>

@@ -8,8 +8,10 @@ public class CloneCenterPolicyRequest extends TeaModel {
      * <p>The business type.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>1: public cloud</li>
-     * <li>8: commercial edition.</li>
+     * <li><p>1: public cloud</p>
+     * </li>
+     * <li><p>8: commercial edition.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -53,8 +55,10 @@ public class CloneCenterPolicyRequest extends TeaModel {
      * <p>The resource type.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>app: cloud applications.</li>
-     * <li>desktop: cloud computers.</li>
+     * <li><p>app: cloud applications.</p>
+     * </li>
+     * <li><p>desktop: cloud computers.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -64,7 +64,7 @@ public class DisconnectDesktopSessionsRequest extends TeaModel {
          * <p>The cloud desktop ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>ecd-90g15fkhsxxxn0unj</p>
+         * <p>ecd-90g15fkhsxxxn****</p>
          */
         @NameInMap("DesktopId")
         public String desktopId;
@@ -73,7 +73,7 @@ public class DisconnectDesktopSessionsRequest extends TeaModel {
          * <p>The end user ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>wy01</p>
+         * <p>alice</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;

@@ -10,7 +10,7 @@ public class DescribeFotaTasksRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>To be hidden.</p>
+     * <p>windows</p>
      */
     @NameInMap("FotaStatus")
     public String fotaStatus;

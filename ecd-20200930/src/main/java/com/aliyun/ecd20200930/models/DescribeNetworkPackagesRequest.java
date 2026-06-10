@@ -23,8 +23,10 @@ public class DescribeNetworkPackagesRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page.</p>
      * <ul>
-     * <li>Maximum value: 100</li>
-     * <li>Default value: 10</li>
+     * <li><p>Maximum value: 100</p>
+     * </li>
+     * <li><p>Default value: 10</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -17,8 +17,10 @@ public class SetDirectorySsoStatusRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable SSO. Valid values:</p>
      * <ul>
-     * <li>true: enables SSO.</li>
-     * <li>false: disables SSO.</li>
+     * <li><p>true: enables SSO.</p>
+     * </li>
+     * <li><p>false: disables SSO.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

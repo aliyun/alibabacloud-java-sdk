@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDesktopTypesResponseBody extends TeaModel {
     /**
-     * <p>The specifications.</p>
+     * <p>The details of the specifications.</p>
      */
     @NameInMap("DesktopTypes")
     public java.util.List<DescribeDesktopTypesResponseBodyDesktopTypes> desktopTypes;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -51,7 +51,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         public String cpuCount;
 
         /**
-         * <p>The size of the data disk. Unit: GiB.</p>
+         * <p>The size of the data disk, in GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>150</p>
@@ -63,7 +63,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the cloud desktop type.</p>
+         * <p>The specification ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd.graphics.xlarge</p>
@@ -72,7 +72,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         public String desktopTypeId;
 
         /**
-         * <p>The status of the cloud desktop type. If SUFFICIENT is returned, the number of cloud desktops of the type is sufficient.</p>
+         * <p>The availability of the specification. A value of <code>SUFFICIENT</code> indicates that the specification is in stock.</p>
          * 
          * <strong>example:</strong>
          * <p>SUFFICIENT</p>
@@ -87,7 +87,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         public String envType;
 
         /**
-         * <p>The number of GPUs.</p>
+         * <p>The number of GPU cores.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -96,7 +96,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         public Float gpuCount;
 
         /**
-         * <p>The GPU memory size. For GPU-accelerated cloud computers, this return value is significant. Unit: MB.</p>
+         * <p>The GPU memory size in MiB. This parameter is valid only for GPU-accelerated cloud desktops.</p>
          * 
          * <strong>example:</strong>
          * <p>2048</p>
@@ -105,7 +105,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         public Integer gpuMemory;
 
         /**
-         * <p>The GPU memory.</p>
+         * <p>The GPU memory size.</p>
          * 
          * <strong>example:</strong>
          * <p>16 GiB</p>
@@ -114,7 +114,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         public String gpuSpec;
 
         /**
-         * <p>The family of the cloud desktop type.</p>
+         * <p>The instance type family.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd.graphics</p>
@@ -123,7 +123,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         public String instanceTypeFamily;
 
         /**
-         * <p>The number of sessions supported by the specification.</p>
+         * <p>The maximum number of concurrent sessions that is supported by the cloud desktop specification.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -132,7 +132,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         public Integer maxSessionCount;
 
         /**
-         * <p>The memory size. Unit: MiB.</p>
+         * <p>The memory size, in MiB.</p>
          * 
          * <strong>example:</strong>
          * <p>23552</p>
@@ -141,18 +141,13 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         public String memorySize;
 
         /**
-         * <p>The sales modes of the specifications.</p>
+         * <p>The purchase options for the specification.</p>
          */
         @NameInMap("Scopes")
         public java.util.List<String> scopes;
 
         /**
-         * <p>The inventory status of the specification.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Insufficient</li>
-         * <li>Sufficient</li>
-         * </ul>
+         * <p>The inventory status.</p>
          * 
          * <strong>example:</strong>
          * <p>Sufficient</p>
@@ -161,7 +156,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         public String stockState;
 
         /**
-         * <p>The size of the system disk. Unit: GiB.</p>
+         * <p>The size of the system disk, in GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>150</p>

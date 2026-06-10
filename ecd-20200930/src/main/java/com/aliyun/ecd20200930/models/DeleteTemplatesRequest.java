@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DeleteTemplatesRequest extends TeaModel {
     /**
      * <blockquote>
-     * <p> This parameter is not publicly available.</p>
+     * <p>This parameter is not publicly available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

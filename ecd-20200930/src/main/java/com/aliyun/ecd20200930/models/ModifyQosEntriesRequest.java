@@ -4,16 +4,23 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyQosEntriesRequest extends TeaModel {
+    /**
+     * <p>The IDs of the cloud phones to bind to the QoS rule.</p>
+     */
     @NameInMap("AuthAndroidId")
     public java.util.List<String> authAndroidId;
 
     @NameInMap("AuthDesktopGroupId")
     public java.util.List<String> authDesktopGroupId;
 
+    /**
+     * <p>The IDs of the cloud desktops to bind to the QoS rule.</p>
+     */
     @NameInMap("AuthDesktopId")
     public java.util.List<String> authDesktopId;
 
     /**
+     * <p>The ID of the QoS rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,12 +29,18 @@ public class ModifyQosEntriesRequest extends TeaModel {
     @NameInMap("QosRuleId")
     public String qosRuleId;
 
+    /**
+     * <p>The IDs of the cloud phones to unbind from the QoS rule.</p>
+     */
     @NameInMap("RevokeAndroidId")
     public java.util.List<String> revokeAndroidId;
 
     @NameInMap("RevokeDesktopGroupId")
     public java.util.List<String> revokeDesktopGroupId;
 
+    /**
+     * <p>The IDs of the cloud desktops to unbind from the QoS rule.</p>
+     */
     @NameInMap("RevokeDesktopId")
     public java.util.List<String> revokeDesktopId;
 

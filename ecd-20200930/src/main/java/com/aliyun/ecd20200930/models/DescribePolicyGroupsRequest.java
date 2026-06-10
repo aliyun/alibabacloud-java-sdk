@@ -8,7 +8,7 @@ public class DescribePolicyGroupsRequest extends TeaModel {
     public String businessChannel;
 
     /**
-     * <p>The array of cloud computer policy IDs to be excluded.</p>
+     * <p>The list of cloud computer policy IDs to exclude from the query results.</p>
      */
     @NameInMap("ExternalPolicyGroupIds")
     public java.util.List<String> externalPolicyGroupIds;
@@ -16,8 +16,10 @@ public class DescribePolicyGroupsRequest extends TeaModel {
     /**
      * <p>The number of entries per page.</p>
      * <ul>
-     * <li>Valid values: 1 to 100</li>
-     * <li>Default value: 10</li>
+     * <li><p>Maximum value: 100</p>
+     * </li>
+     * <li><p>Default value: 10</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +29,7 @@ public class DescribePolicyGroupsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous response. Do not set this parameter for the first request.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -42,7 +44,7 @@ public class DescribePolicyGroupsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The IDs of the cloud computer policies.</p>
+     * <p>The list of cloud computer policy IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>system-all-enabled-policy</p>
@@ -51,7 +53,7 @@ public class DescribePolicyGroupsRequest extends TeaModel {
     public java.util.List<String> policyGroupId;
 
     /**
-     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</p>
+     * <p>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,15 +64,9 @@ public class DescribePolicyGroupsRequest extends TeaModel {
 
     /**
      * <p>The effective scope of the cloud computer policy.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>ALL</li>
-     * <li>IP</li>
-     * <li>GLOBAL</li>
-     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>ALL</p>
+     * <p>GLOBAL</p>
      */
     @NameInMap("Scope")
     public String scope;

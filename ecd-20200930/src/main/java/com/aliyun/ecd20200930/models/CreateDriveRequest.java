@@ -25,7 +25,7 @@ public class CreateDriveRequest extends TeaModel {
     /**
      * <p>The ID of the storage resource.</p>
      * <blockquote>
-     * <p> Call the DescribeDrives operation to retrieve the storage resource ID.</p>
+     * <p>Call the DescribeDrives operation to retrieve the storage resource ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class CreateDriveRequest extends TeaModel {
     /**
      * <p>The ID of the external storage resource.</p>
      * <blockquote>
-     * <p> Call the DescribeDrives operation to retrieve the external storage resource ID.</p>
+     * <p>Call the DescribeDrives operation to retrieve the external storage resource ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class CreateDriveRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter is deprecated.</p>
+     * <p>This parameter is deprecated.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -81,8 +81,10 @@ public class CreateDriveRequest extends TeaModel {
      * <p>The type of the storage resource.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>NAS: File Storage NAS</li>
-     * <li>PDS: Drive and Photo Service</li>
+     * <li><p>NAS: File Storage NAS</p>
+     * </li>
+     * <li><p>PDS: Drive and Photo Service</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -95,8 +97,10 @@ public class CreateDriveRequest extends TeaModel {
      * <p>The usage of the storage resource.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>DESKTOP: data disk space</li>
-     * <li>USER_PROFILE: space for personal data of the user</li>
+     * <li><p>DESKTOP: data disk space</p>
+     * </li>
+     * <li><p>USER_PROFILE: space for personal data of the user</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -14,16 +14,10 @@ public class ModifyOfficeSiteAttributeRequest extends TeaModel {
     public String clientSecret;
 
     /**
-     * <p>The method to connect to cloud computers from Alibaba Cloud Workspace clients.</p>
+     * <p>The method for connecting to cloud computers.</p>
      * <blockquote>
-     * <p> VPC connection relies on the Alibaba Cloud PrivateLink service. You can use PrivateLink for free. When you set this parameter to <code>VPC</code> or <code>Any</code>, the system automatically activates PrivateLink.</p>
+     * <p>VPC connections use Alibaba Cloud PrivateLink, a free service. If you set this parameter to VPC or Any, PrivateLink is automatically activated.</p>
      * </blockquote>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>INTERNET (default): allows end users to connect to cloud computers over the Internet.</li>
-     * <li>VPC: allows end users to connect to cloud computers over VPCs.</li>
-     * <li>ANY: allows end users to connect to cloud computers over the Internet and VPCs. When end users connect to cloud computers from Elastic Desktop Service, you can choose a connection method based on your business requirements.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>INTERNET</p>
@@ -35,12 +29,7 @@ public class ModifyOfficeSiteAttributeRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>Specifies whether to grant the local administrator permissions to users that are authorized to use cloud computers in the office network.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true (default)</li>
-     * <li>false</li>
-     * </ul>
+     * <p>Specifies whether to grant cloud computer users local administrative permissions.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -49,7 +38,7 @@ public class ModifyOfficeSiteAttributeRequest extends TeaModel {
     public Boolean enableAdminAccess;
 
     /**
-     * <p>Specifies whether to enable two-factor verification when an end user logs on to an Alibaba Cloud Workspace client. This parameter is required only for convenience office networks. If two-factor verification is enabled, the system checks whether security risks exist within the logon account when the end user uses a convenience user to log on to the client. If risks are detected, the system sends a verification code to the email address that is associated with the account of the convenience user. Then, the end user can log on to the client only when the verification code is correct.</p>
+     * <p>Specifies whether to enable two-factor authentication. This parameter is applicable to only office sites that use convenience accounts. If enabled, the system performs a security check during logon. If the system detects a risk, it sends a verification code to the email address that is associated with the account. The user must enter the correct verification code to log on.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -58,7 +47,7 @@ public class ModifyOfficeSiteAttributeRequest extends TeaModel {
     public Boolean needVerifyLoginRisk;
 
     /**
-     * <p>Specifies whether to enable device verification. This parameter is required only for convenience office networks. This parameter is left empty for enterprise Active Directory (AD) office networks.</p>
+     * <p>Specifies whether to enable device verification. This feature is available only for office sites that use convenience accounts.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -67,7 +56,7 @@ public class ModifyOfficeSiteAttributeRequest extends TeaModel {
     public Boolean needVerifyZeroDevice;
 
     /**
-     * <p>The office network ID.</p>
+     * <p>The ID of the office site.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -77,8 +66,8 @@ public class ModifyOfficeSiteAttributeRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The office network name. The name must be 2 to 255 characters in length. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.\
-     * This parameter is empty by default.</p>
+     * <p>The name of the office site. The name must be 2 to 255 characters long. The name must start with a letter or a Chinese character, and cannot start with http\:// or https\://. It can contain digits, colons (:), underscores (_), and hyphens (-).<br>
+     * This parameter is optional.<br></p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -87,7 +76,7 @@ public class ModifyOfficeSiteAttributeRequest extends TeaModel {
     public String officeSiteName;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions where Elastic Desktop Service is available.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

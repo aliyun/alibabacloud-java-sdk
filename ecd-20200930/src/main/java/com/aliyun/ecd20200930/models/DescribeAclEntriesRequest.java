@@ -7,8 +7,10 @@ public class DescribeAclEntriesRequest extends TeaModel {
     /**
      * <p>The number of entries per page.</p>
      * <ul>
-     * <li>Maximum value: 1600.</li>
-     * <li>Default value: 1600.</li>
+     * <li><p>Maximum value: 1600.</p>
+     * </li>
+     * <li><p>Default value: 1600.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +51,7 @@ public class DescribeAclEntriesRequest extends TeaModel {
      * <p>The ID of the instance to which the ACL applies. You can specify an office network ID or a cloud computer ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou+dir-****</p>
+     * <p>ecd-22poqua477xo4****</p>
      */
     @NameInMap("SourceId")
     public String sourceId;
@@ -58,8 +60,10 @@ public class DescribeAclEntriesRequest extends TeaModel {
      * <p>The granularity of the ACL.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>desktop: cloud computer</li>
-     * <li>vpc: office network</li>
+     * <li><p>desktop: cloud computer</p>
+     * </li>
+     * <li><p>vpc: office network</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

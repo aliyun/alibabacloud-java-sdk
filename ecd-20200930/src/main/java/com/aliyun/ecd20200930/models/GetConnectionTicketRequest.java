@@ -7,8 +7,10 @@ public class GetConnectionTicketRequest extends TeaModel {
     /**
      * <p>The command that you want to run to configure a custom application in user mode. After you obtain the credential, the application is automatically started. Parameter description in the command:</p>
      * <ul>
-     * <li>appPath: the path of the application startup file. Example: <code>&quot;C:\\\\Program Files (x86)\\\\000\\\\000.exe&quot;</code>. Use double slashes (\\\) as the delimiter. Type of the parameter value: string.</li>
-     * <li>appParameter: the startup arguments of the application. Example: <code>&quot;meetingid 000 meetingname aaa&quot;</code>. Separate multiple arguments with spaces. Type of the parameter value: string.</li>
+     * <li><p>appPath: the path of the application startup file. Example: <code>&quot;C:\\Program Files (x86)\\000\\000.exe&quot;</code>. Use double slashes (\) as the delimiter. Type of the parameter value: string.</p>
+     * </li>
+     * <li><p>appParameter: the startup arguments of the application. Example: <code>&quot;meetingid 000 meetingname aaa&quot;</code>. Separate multiple arguments with spaces. Type of the parameter value: string.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +46,7 @@ public class GetConnectionTicketRequest extends TeaModel {
      * <p>The ID of the end user of the cloud computer. The end user must be the current end user of the cloud computer.</p>
      * 
      * <strong>example:</strong>
-     * <p>Alice</p>
+     * <p>alice</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;
@@ -81,7 +83,7 @@ public class GetConnectionTicketRequest extends TeaModel {
      * <p>The ID of the cloud computer connection task.</p>
      * 
      * <strong>example:</strong>
-     * <p>2afbad19-778a-4fc5-9674-1f19c63862da</p>
+     * <p>2afbad19-778a-4fc5-9674-1f19c638****</p>
      */
     @NameInMap("TaskId")
     public String taskId;

@@ -4,10 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudDrivePermissionsResponseBody extends TeaModel {
+    /**
+     * <p>List of enterprise cloud drive permission information.</p>
+     */
     @NameInMap("CloudDrivePermissionModels")
     public java.util.List<DescribeCloudDrivePermissionsResponseBodyCloudDrivePermissionModels> cloudDrivePermissionModels;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A87DBB05-653A-5E4B-B72B-5F4A1E07E5B3</p>
      */
@@ -36,10 +41,15 @@ public class DescribeCloudDrivePermissionsResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudDrivePermissionsResponseBodyCloudDrivePermissionModels extends TeaModel {
+        /**
+         * <p>List of end user IDs.</p>
+         */
         @NameInMap("EndUsers")
         public java.util.List<String> endUsers;
 
         /**
+         * <p>File transfer permission between the enterprise cloud drive and on-premises devices for the user.</p>
+         * 
          * <strong>example:</strong>
          * <p>CDS_DOWNLOAD</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVirtualMFADevicesRequest extends TeaModel {
     /**
-     * <p>The names of the AD users.</p>
+     * <p>The list of Active Directory (AD) account usernames.</p>
      * 
      * <strong>example:</strong>
      * <p>testuser</p>
@@ -17,7 +17,7 @@ public class DescribeVirtualMFADevicesRequest extends TeaModel {
     public String filter;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 500. Default value: 100.</p>
+     * <p>The maximum number of entries to return. Valid values: 1 to 500. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -26,7 +26,7 @@ public class DescribeVirtualMFADevicesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>The pagination token. If a response is truncated, use the returned <code>NextToken</code> to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -35,7 +35,7 @@ public class DescribeVirtualMFADevicesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The office network ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-269345****</p>
@@ -44,7 +44,7 @@ public class DescribeVirtualMFADevicesRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. Call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDesktopNameRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud computer.</p>
+     * <p>The ID of the cloud desktop.</p>
      * 
      * <strong>example:</strong>
      * <p>ecd-gx2x1dhsmucyy****</p>
@@ -17,21 +17,24 @@ public class ModifyDesktopNameRequest extends TeaModel {
     public java.util.List<String> desktopIds;
 
     /**
-     * <p>The new name of the cloud computer. The name of the cloud computer must meet the following requirements:</p>
+     * <p>The new name of the cloud desktop. The name must meet the following requirements:</p>
      * <ul>
-     * <li>The name must be 1 to 64 characters in length.</li>
-     * <li>The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</li>
-     * <li>The name can only contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</li>
+     * <li><p>The name must be 1 to 64 characters in length.</p>
+     * </li>
+     * <li><p>The name must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * </li>
+     * <li><p>The name can contain digits, letters, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>DemoComputer01</p>
      */
     @NameInMap("NewDesktopName")
     public String newDesktopName;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to obtain a list of regions that are supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

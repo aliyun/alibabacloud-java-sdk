@@ -59,9 +59,9 @@ public class CopyCdsFileRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>目标复制文件所在的个人空间ID（即UserId，您可以在DescribeCloudDriveUsers接口返回的报文中获取。）或者目标复制文件所在的团队空间ID（即GroupId，您可以在DescribeCloudDriveGroups接口返回的报文中获取。）</p>
+     * <p>目标复制文件所在的个人空间 ID（即 UserId，您可以在 DescribeCloudDriveUsers 接口返回的报文中获取。）或者目标复制文件所在的团队空间 ID（即 GroupId，您可以在 DescribeCloudDriveGroups 接口返回的报文中获取。）</p>
      * <blockquote>
-     * <p>FileReceiverId和FileReceiverType都为空时，默认复制到文件所在的个人空间。</p>
+     * <p>FileReceiverId 和 FileReceiverType 都为空时，默认复制到文件所在的个人空间。</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -79,6 +79,12 @@ public class CopyCdsFileRequest extends TeaModel {
     @NameInMap("FileReceiverType")
     public String fileReceiverType;
 
+    /**
+     * <p>The team Space ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cg-hs3i1w39o68ma****</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 

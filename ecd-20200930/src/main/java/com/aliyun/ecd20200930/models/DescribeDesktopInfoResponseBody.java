@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDesktopInfoResponseBody extends TeaModel {
     /**
-     * <p>The basic information about cloud computers.</p>
+     * <p>Basic desktop information.</p>
      */
     @NameInMap("Desktops")
     public java.util.List<DescribeDesktopInfoResponseBodyDesktops> desktops;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>062B1439-709A-580E-85DF-CE97A1560565</p>
@@ -42,12 +42,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
 
     public static class DescribeDesktopInfoResponseBodyDesktops extends TeaModel {
         /**
-         * <p>The connection status of the user.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Connected</li>
-         * <li>Disconnected</li>
-         * </ul>
+         * <p>User connection status.</p>
          * 
          * <strong>example:</strong>
          * <p>Disconnected</p>
@@ -56,7 +51,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
         public String connectionStatus;
 
         /**
-         * <p>The version of the cloud computer image.</p>
+         * <p>Desktop image version number.</p>
          * 
          * <strong>example:</strong>
          * <p>1.4.0-R-***</p>
@@ -65,7 +60,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
         public String currentAppVersion;
 
         /**
-         * <p>The ID of the cloud computer pool.</p>
+         * <p>Desktop group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dg-3uiojcc0j4kh7****</p>
@@ -74,7 +69,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
         public String desktopGroupId;
 
         /**
-         * <p>The ID of the cloud computer.</p>
+         * <p>Desktop ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-gx2x1dhsmucyy****</p>
@@ -83,18 +78,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>The status of the cloud computer.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Stopped</li>
-         * <li>Failed</li>
-         * <li>Starting</li>
-         * <li>Running</li>
-         * <li>Stopping</li>
-         * <li>Expired</li>
-         * <li>Deleted</li>
-         * <li>Pending</li>
-         * </ul>
+         * <p>The status of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -103,13 +87,13 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
         public String desktopStatus;
 
         /**
-         * <p>The information about flags that are used to manage cloud computers.</p>
+         * <p>The management flag.</p>
          */
         @NameInMap("ManagementFlag")
         public java.util.List<String> managementFlag;
 
         /**
-         * <p>The size of the update package. Unit: KB.</p>
+         * <p>Upgrade package size, in KB.</p>
          * 
          * <strong>example:</strong>
          * <p>568533470</p>
@@ -118,7 +102,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
         public Long newAppSize;
 
         /**
-         * <p>The version number of the image that can be updated on the cloud computer.</p>
+         * <p>Desktop upgradable image version number.</p>
          * 
          * <strong>example:</strong>
          * <p>1.6.0-R-***</p>
@@ -127,16 +111,16 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
         public String newAppVersion;
 
         /**
-         * <p>The description of the image version that can be updated.</p>
+         * <p>Description of the upgradable image version.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test package 03-07</p>
+         * <p>Test upgrade package 03-07</p>
          */
         @NameInMap("ReleaseNote")
         public String releaseNote;
 
         /**
-         * <p>The time when the cloud computer was first started.</p>
+         * <p>Desktop first startup time.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-06T08:31Z</p>

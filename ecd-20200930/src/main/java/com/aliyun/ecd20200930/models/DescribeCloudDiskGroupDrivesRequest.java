@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudDiskGroupDrivesRequest extends TeaModel {
     /**
+     * <p>The enterprise cloud disk ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,24 @@ public class DescribeCloudDiskGroupDrivesRequest extends TeaModel {
     @NameInMap("CdsId")
     public String cdsId;
 
+    /**
+     * <p>The team drive name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Team 1</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
+     * <p>The number of entries per page for paged queries.</p>
+     * <ul>
+     * <li><p>Maximum: 100</p>
+     * </li>
+     * <li><p>Default: 20</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -24,6 +39,8 @@ public class DescribeCloudDiskGroupDrivesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that marks the start of the next query. An empty NextToken means no more results.</p>
+     * 
      * <strong>example:</strong>
      * <p>MTA0MjA=</p>
      */
@@ -31,6 +48,7 @@ public class DescribeCloudDiskGroupDrivesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

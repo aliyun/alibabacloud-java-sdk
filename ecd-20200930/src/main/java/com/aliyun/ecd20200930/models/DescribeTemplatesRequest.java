@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeTemplatesRequest extends TeaModel {
     /**
-     * <p>The region that you can use to filter templates.</p>
+     * <p>Region filter for template queries.</p>
      * <blockquote>
-     * <p> If you specify this parameter, only templates that are created in the specified region are returned.</p>
+     * <p>If you set this parameter, results exclude configurations for other regions.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeTemplatesRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter is not publicly available.</p>
+     * <p>This parameter is not available for public use.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DescribeTemplatesRequest extends TeaModel {
     public String bizType;
 
     /**
-     * <p>The ID of the cloud computer image. You can query image IDs on the Images page. System images and custom images are supported.</p>
+     * <p>Cloud Desktop image ID. You can find this ID on the Image Management page. Supported image types include OS images and custom images.</p>
      * 
      * <strong>example:</strong>
      * <p>m-dnz9xjgbm8*****</p>
@@ -37,7 +37,7 @@ public class DescribeTemplatesRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The keyword that you can use to search for the template. It can be the template ID or the template name. Fuzzy search is supported.</p>
+     * <p>Keyword for fuzzy search. Searches template IDs and template names.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -46,7 +46,7 @@ public class DescribeTemplatesRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The page number.</p>
+     * <p>Page number for paged queries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -55,7 +55,7 @@ public class DescribeTemplatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>Maximum number of entries per page for paged queries.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -64,10 +64,7 @@ public class DescribeTemplatesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The service type. Set the value to <code>CloudDesktop</code>.</p>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>Product type. Set this parameter to <code>CloudDesktop</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>CloudDesktop</p>
@@ -76,24 +73,22 @@ public class DescribeTemplatesRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The IDs of the templates that you want to query.</p>
+     * <p>List of template IDs to query.</p>
      */
     @NameInMap("TemplateIds")
     public java.util.List<String> templateIds;
 
     /**
-     * <p>The name of the template. You can search for template by name.</p>
+     * <p>Query by template name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>My cloud desktop template 001</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
 
     /**
-     * <p>The type of the template that you want to query. If you leave this parameter empty, all types of templates are queried.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>USER_TEMPLATE: custom templates.</li>
-     * <li>SYSTEM_TEMPLATE: system templates provided by Alibaba Cloud.</li>
-     * </ul>
+     * <p>Template type to query. If you omit this parameter, the system returns all template types.</p>
      * 
      * <strong>example:</strong>
      * <p>USER_TEMPLATE</p>

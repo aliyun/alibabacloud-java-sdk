@@ -26,9 +26,12 @@ public class CreateAndBindNasFileSystemRequest extends TeaModel {
     /**
      * <p>Specifies whether to encrypt data in the NAS file system. You can use keys that are hosted by Key Management Service (KMS) to encrypt data in a file system. When you read and write the encrypted data, the data is automatically decrypted. Valid values:</p>
      * <ul>
-     * <li>0: does not encrypt data in the NAS file system.</li>
-     * <li>1: encrypts data in the NAS file system by using a NAS-managed key. <code>If you set </code>FileSystemType<code> to </code>standard<code> or </code>extreme<code>, you can use a NAS-managed key to encrypt data in a NAS file system.</code></li>
-     * <li>2: encrypts data in the NAS file system by using a KMS-managed key. <code>If</code> you set FileSystemType<code> to </code>extreme<code>, you can use a KMS-managed key to encrypt data in a NAS file system.</code></li>
+     * <li><p>0: does not encrypt data in the NAS file system.</p>
+     * </li>
+     * <li><p>1: encrypts data in the NAS file system by using a NAS-managed key. <code>If you set </code>FileSystemType<code> to </code>standard<code> or </code>extreme<code>, you can use a NAS-managed key to encrypt data in a NAS file system.</code></p>
+     * </li>
+     * <li><p>2: encrypts data in the NAS file system by using a KMS-managed key. <code>If</code> you set FileSystemType<code> to </code>extreme<code>, you can use a KMS-managed key to encrypt data in a NAS file system.</code></p>
+     * </li>
      * </ul>
      * <p>Default value: 0.</p>
      * 
@@ -77,8 +80,10 @@ public class CreateAndBindNasFileSystemRequest extends TeaModel {
     /**
      * <p>The storage type of the NAS file system. Valid values:</p>
      * <ul>
-     * <li>Capacity</li>
-     * <li>Performance</li>
+     * <li><p>Capacity</p>
+     * </li>
+     * <li><p>Performance</p>
+     * </li>
      * </ul>
      * <p>Default value: Capacity.</p>
      * <p>This parameter is required.</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryHistoryActiveUserCountRequest extends TeaModel {
     /**
+     * <p>The date for which to query data, in YYYY-MM-DD format. Default: the previous day (T-1).</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-01-01</p>
      */

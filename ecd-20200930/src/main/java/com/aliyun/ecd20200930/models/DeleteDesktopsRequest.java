@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteDesktopsRequest extends TeaModel {
     /**
-     * <p>The IDs of the cloud computers. You can specify 1 to 100 IDs.</p>
+     * <p>A list of 1 to 100 cloud computer IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. Call <a href="t2167755.xdita#"></a>to get a list of regions that Elastic Desktop Service (EDS) supports.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

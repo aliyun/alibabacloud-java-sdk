@@ -18,7 +18,7 @@ public class AddFilePermissionShrinkRequest extends TeaModel {
      * <p>The ID of the user who uses the network disk.</p>
      * 
      * <strong>example:</strong>
-     * <p>user01</p>
+     * <p>alice</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;

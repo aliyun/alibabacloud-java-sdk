@@ -28,8 +28,10 @@ public class UpdateFotaTaskRequest extends TeaModel {
      * <p>Specifies whether to automatically push the image update task.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Running: automatically pushes the image update task.</li>
-     * <li>Pending: does not automatically push the image update task.</li>
+     * <li><p>Running: automatically pushes the image update task.</p>
+     * </li>
+     * <li><p>Pending: does not automatically push the image update task.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

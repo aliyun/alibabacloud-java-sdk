@@ -8,7 +8,7 @@ public class ListOfficeSiteUsersRequest extends TeaModel {
     public String assignedInfo;
 
     /**
-     * <p>The query string for fuzzy query.</p>
+     * <p>The query string for fuzzy matching.</p>
      * 
      * <strong>example:</strong>
      * <p><em>jin</em></p>
@@ -20,10 +20,12 @@ public class ListOfficeSiteUsersRequest extends TeaModel {
     public Boolean includeAssignedUser;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * <ul>
-     * <li>Valid values: 1 to 100.</li>
-     * <li>Default value: 10.</li>
+     * <li><p>Maximum value: 100.</p>
+     * </li>
+     * <li><p>Default value: 10.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +35,7 @@ public class ListOfficeSiteUsersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request or if no next query exists. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>The token for the next page of results. Leave this empty for the first query. For subsequent queries, use the NextToken value from the previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -42,7 +44,7 @@ public class ListOfficeSiteUsersRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The organizational unit (OU) of the specified AD domain.</p>
+     * <p>The path of the organizational unit (OU) in the AD domain.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com/Domain Controllers</p>
@@ -51,7 +53,7 @@ public class ListOfficeSiteUsersRequest extends TeaModel {
     public String OUPath;
 
     /**
-     * <p>The office network ID. The office network must be of the enterprise AD account type.</p>
+     * <p>The office network ID. Only office networks that use enterprise AD accounts are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +63,7 @@ public class ListOfficeSiteUsersRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+     * <p>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to get a list of regions where WUYING Workspace is available.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

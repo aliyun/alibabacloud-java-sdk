@@ -9,11 +9,6 @@ public class DescribeCenterPolicyListRequest extends TeaModel {
 
     /**
      * <p>The business type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>1: public cloud</li>
-     * <li>8: commercial edition.</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,8 +21,7 @@ public class DescribeCenterPolicyListRequest extends TeaModel {
     public String modelLibrary;
 
     /**
-     * <p>The page number.\
-     * Default value: 1.</p>
+     * <p>The page number to return in a paged query.<br>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +30,7 @@ public class DescribeCenterPolicyListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The maximum number of entries per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -45,7 +39,7 @@ public class DescribeCenterPolicyListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The IDs of the cloud computer policies.</p>
+     * <p>The list of Cloud Desktop policy IDs.</p>
      */
     @NameInMap("PolicyGroupId")
     public java.util.List<String> policyGroupId;
@@ -55,11 +49,6 @@ public class DescribeCenterPolicyListRequest extends TeaModel {
 
     /**
      * <p>The resource type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>app: cloud applications.</li>
-     * <li>desktop: cloud computers.</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,12 +58,7 @@ public class DescribeCenterPolicyListRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The effective scope of the cloud computer policy.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>IP: The policy applies to specific IP addresses.</li>
-     * <li>GLOBAL: The policy applies globally.</li>
-     * </ul>
+     * <p>The scope where the Cloud Desktop policy takes effect.</p>
      * 
      * <strong>example:</strong>
      * <p>GLOBAL</p>

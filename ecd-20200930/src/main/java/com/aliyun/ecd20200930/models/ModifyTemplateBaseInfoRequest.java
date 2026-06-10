@@ -25,6 +25,9 @@ public class ModifyTemplateBaseInfoRequest extends TeaModel {
 
     /**
      * <p>The template name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Shanghai template1</p>
      */
     @NameInMap("TemplateName")
     public String templateName;

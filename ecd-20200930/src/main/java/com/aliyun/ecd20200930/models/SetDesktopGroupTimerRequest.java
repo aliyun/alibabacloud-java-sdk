@@ -8,7 +8,7 @@ public class SetDesktopGroupTimerRequest extends TeaModel {
      * <p>The cron expression for the scheduled task. This parameter is required when <code>TimerType</code> is set to 2, 3, or 4.</p>
      * 
      * <strong>example:</strong>
-     * <p>0 0 2 ? * 1-7</p>
+     * <p>0 0 9 * * ?</p>
      */
     @NameInMap("CronExpression")
     public String cronExpression;

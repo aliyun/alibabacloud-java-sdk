@@ -54,7 +54,7 @@ public class DescribePriceResponseBody extends TeaModel {
          * <p>The description of the promotion.</p>
          * 
          * <strong>example:</strong>
-         * <p>Get started with new services with a discount.</p>
+         * <p>新品上市，立享优惠</p>
          */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
@@ -72,7 +72,7 @@ public class DescribePriceResponseBody extends TeaModel {
          * <p>The promotion name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Special Offer</p>
+         * <p>Featured deals</p>
          */
         @NameInMap("PromotionName")
         public String promotionName;
@@ -138,7 +138,7 @@ public class DescribePriceResponseBody extends TeaModel {
          * <p>The unit of currency (USD).</p>
          * 
          * <strong>example:</strong>
-         * <p>CNY</p>
+         * <p>CNY/USD</p>
          */
         @NameInMap("Currency")
         public String currency;
@@ -147,7 +147,7 @@ public class DescribePriceResponseBody extends TeaModel {
          * <p>The discounted amount.</p>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>15.8</p>
          */
         @NameInMap("DiscountPrice")
         public Float discountPrice;
@@ -162,7 +162,7 @@ public class DescribePriceResponseBody extends TeaModel {
          * <p>The original price.</p>
          * 
          * <strong>example:</strong>
-         * <p>2.796</p>
+         * <p>79.0</p>
          */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
@@ -186,7 +186,7 @@ public class DescribePriceResponseBody extends TeaModel {
          * <p>The actual price. The original price minus the discounted amount equals the actual price.</p>
          * 
          * <strong>example:</strong>
-         * <p>2.796</p>
+         * <p>63.2</p>
          */
         @NameInMap("TradePrice")
         public Float tradePrice;
@@ -259,7 +259,7 @@ public class DescribePriceResponseBody extends TeaModel {
          * <p>The description of the rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>Receive a 15% discount on a one-year subscription.</p>
+         * <p>买满1年，立享官网价格8.5折优惠。</p>
          */
         @NameInMap("Description")
         public String description;

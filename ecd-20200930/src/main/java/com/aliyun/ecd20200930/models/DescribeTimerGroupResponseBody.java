@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeTimerGroupResponseBody extends TeaModel {
     /**
-     * <p>The configuration group.</p>
+     * <p>The details of the timer group.</p>
      */
     @NameInMap("Data")
     public DescribeTimerGroupResponseBodyData data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -42,6 +42,8 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
 
     public static class DescribeTimerGroupResponseBodyDataConfigTimersSegmentTimers extends TeaModel {
         /**
+         * <p>The time to execute the scheduled task, specified as a Unix timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1764660600967</p>
          */
@@ -58,6 +60,8 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         public Boolean enforce;
 
         /**
+         * <p>The image ID for a scheduled image-change task.</p>
+         * 
          * <strong>example:</strong>
          * <p>m-5b0vjqbiqu010XXXXXX</p>
          */
@@ -67,7 +71,12 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         @NameInMap("Interval")
         public Integer interval;
 
+        @NameInMap("IpSegments")
+        public java.util.List<String> ipSegments;
+
         /**
+         * <p>The duration of user inactivity, in seconds, before the screen locks. This feature applies only to cloud computers joined to an Active Directory (AD) domain.</p>
+         * 
          * <strong>example:</strong>
          * <p>1800</p>
          */
@@ -162,6 +171,14 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         }
         public Integer getInterval() {
             return this.interval;
+        }
+
+        public DescribeTimerGroupResponseBodyDataConfigTimersSegmentTimers setIpSegments(java.util.List<String> ipSegments) {
+            this.ipSegments = ipSegments;
+            return this;
+        }
+        public java.util.List<String> getIpSegments() {
+            return this.ipSegments;
         }
 
         public DescribeTimerGroupResponseBodyDataConfigTimersSegmentTimers setLockScreenTime(Integer lockScreenTime) {
@@ -264,7 +281,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
 
     public static class DescribeTimerGroupResponseBodyDataConfigTimers extends TeaModel {
         /**
-         * <p>Indicates whether end users can configure scheduled tasks.</p>
+         * <p>Whether to allow end users to configure the scheduled task.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -273,7 +290,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         public Boolean allowClientSetting;
 
         /**
-         * <p>The CRON expression for the scheduled task.</p>
+         * <p>The cron expression for the scheduled task.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 16 ? * 1,2,3,4,5,6,7</p>
@@ -282,7 +299,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         public String cronExpression;
 
         /**
-         * <p>Specifies whether to forcibly execute the scheduled task. A value of true specifies the scheduled task will run forcefully, ignoring the cloud computer and connection status.</p>
+         * <p>Specifies whether to force the execution of the scheduled task. If set to <code>true</code>, the task runs regardless of the cloud computer\&quot;s status or connection state.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -291,7 +308,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         public Boolean enforce;
 
         /**
-         * <p>The interval at which the scheduled task is executed. Unit: minutes.</p>
+         * <p>The interval. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -303,12 +320,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         public Integer notificationTime;
 
         /**
-         * <p>The type of the scheduled disconnection task.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Hibernate: scheduled hibernation.</li>
-         * <li>Shutdown: scheduled shutdown.</li>
-         * </ul>
+         * <p>The operation to perform when <code>TimerType</code> is set to <code>NoConnect</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>Shutdown</p>
@@ -317,19 +329,13 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         public String operationType;
 
         /**
-         * <p>The process whitelist. If whitelisted processes are running, the scheduled task upon inactivity does not take effect.</p>
+         * <p>The process whitelist for smart detection. A scheduled task based on user inactivity does not run if a whitelisted process is running.</p>
          */
         @NameInMap("ProcessWhitelist")
         public java.util.List<String> processWhitelist;
 
         /**
-         * <p>The reset operation of the scheduled task.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>RESET_TYPE_SYSTEM: resets the system disk.</li>
-         * <li>RESET_TYPE_USER_DISK: resets the data disk.</li>
-         * <li>RESET_TYPE_BOTH: resets the system disk and data disk.</li>
-         * </ul>
+         * <p>The reset type for the scheduled reset task.</p>
          * 
          * <strong>example:</strong>
          * <p>RESET_TYPE_SYSTEM</p>
@@ -342,18 +348,6 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
 
         /**
          * <p>The type of the scheduled task.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>NoOperationDisconnect: scheduled disconnection upon inactivity.</li>
-         * <li>NoConnect: scheduled disconnection upon specified operation (OperationType).</li>
-         * <li>TimerBoot: scheduled start.</li>
-         * <li>TimerReset: scheduled reset.</li>
-         * <li>NoOperationShutdown: scheduled shutdown upon inactivity.</li>
-         * <li>NoOperationHibernate: scheduled hibernation upon inactivity.</li>
-         * <li>TimerShutdown: scheduled shutdown.</li>
-         * <li>NoOperationReboot: scheduled restart upon inactivity.</li>
-         * <li>TimerReboot: scheduled restart.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>TimerBoot</p>
@@ -362,12 +356,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         public String timerType;
 
         /**
-         * <p>The method to trigger the scheduled task upon inactivity.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Advanced: intelligent detection.</li>
-         * <li>Standard: standard detection.</li>
-         * </ul>
+         * <p>The detection method for user inactivity.</p>
          * 
          * <strong>example:</strong>
          * <p>Standard</p>
@@ -472,7 +461,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
 
     public static class DescribeTimerGroupResponseBodyData extends TeaModel {
         /**
-         * <p>The number of resources that are bound to the configuration group.</p>
+         * <p>The number of resources associated with the timer group.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -481,25 +470,28 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         public Integer bindCount;
 
         /**
-         * <p>The number of bound resources.</p>
+         * <p>A map of associated resource counts, categorized by resource type.</p>
          */
         @NameInMap("BindCountMap")
         public java.util.Map<String, Integer> bindCountMap;
 
         /**
-         * <p>The scheduled tasks.</p>
+         * <p>The configurations of the scheduled tasks.</p>
          */
         @NameInMap("ConfigTimers")
         public java.util.List<DescribeTimerGroupResponseBodyDataConfigTimers> configTimers;
 
         /**
-         * <p>The description of the configuration group.</p>
+         * <p>The description of the timer group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Scheduled task</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the configuration group.</p>
+         * <p>The ID of the timer group.</p>
          * 
          * <strong>example:</strong>
          * <p>cg-75aazkg2tnqb2*****</p>
@@ -508,6 +500,8 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         public String groupId;
 
         /**
+         * <p>An internal code used by the frontend to display the description of a system-scheduled task.</p>
+         * 
          * <strong>example:</strong>
          * <p>INNER_TIMER_10_MINUTES_HIBERNATE_NO_UPDATE_DESC</p>
          */
@@ -515,30 +509,37 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         public String innerTimerDesc;
 
         /**
+         * <p>An internal code used by the frontend to display the name of a system-scheduled task.</p>
+         * 
          * <strong>example:</strong>
          * <p>INNER_TIMER_10_MINUTES_HIBERNATE_NO_UPDATE</p>
          */
         @NameInMap("InnerTimerName")
         public String innerTimerName;
 
+        /**
+         * <p>Indicates that resources cannot be bound to or unbound from this timer group.</p>
+         */
         @NameInMap("IsBind")
         public Boolean isBind;
 
+        /**
+         * <p>Indicates that this timer group cannot be modified.</p>
+         */
         @NameInMap("IsUpdate")
         public Boolean isUpdate;
 
         /**
-         * <p>The name of the configuration group.</p>
+         * <p>The name of the timer group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Scheduled task</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The service type of the configuration group.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>CLOUD_DESKTOP: the cloud computer service.</li>
-         * </ul>
+         * <p>The product type that the timer group supports.</p>
          * 
          * <strong>example:</strong>
          * <p>CLOUD_DESKTOP</p>
@@ -547,14 +548,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         public String productType;
 
         /**
-         * <p>The state of the configuration group.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>AVAILABLE: The configuration group is available.</li>
-         * <li>UNAVAILABLE: The configuration group is deleted.</li>
-         * <li>DELETING: The configuration group is being deleted.</li>
-         * <li>UPDATING: The configuration group is being modified.</li>
-         * </ul>
+         * <p>The status of the timer group.</p>
          * 
          * <strong>example:</strong>
          * <p>AVAILABLE</p>
@@ -563,11 +557,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The type of the configuration group.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>Timer: the scheduled task type.</li>
-         * </ul>
+         * <p>The type of the timer group.</p>
          * 
          * <strong>example:</strong>
          * <p>Timer</p>

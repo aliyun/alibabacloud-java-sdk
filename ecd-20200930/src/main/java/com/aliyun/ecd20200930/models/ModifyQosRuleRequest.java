@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyQosRuleRequest extends TeaModel {
     /**
+     * <p>The maximum downstream bandwidth. The unit is Mbps.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,7 @@ public class ModifyQosRuleRequest extends TeaModel {
     public Integer download;
 
     /**
+     * <p>The ID of the QoS rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class ModifyQosRuleRequest extends TeaModel {
     public String qosRuleId;
 
     /**
+     * <p>The name of the QoS rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -28,6 +33,8 @@ public class ModifyQosRuleRequest extends TeaModel {
     public String qosRuleName;
 
     /**
+     * <p>The maximum upstream bandwidth. The unit is Mbps.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

@@ -8,7 +8,8 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
     public String accessAttribute;
 
     /**
-     * <p>The hostname of the domain controller. The hostname must comply with the naming conventions for Windows hosts.</p>
+     * <p>The domain controller hostname.
+     * The hostname must comply with Windows hostname naming conventions.</p>
      * 
      * <strong>example:</strong>
      * <p>beijing-ad01</p>
@@ -35,8 +36,8 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
     public String backupDns;
 
     /**
-     * <p>The maximum public bandwidth of the Internet access package. Valid values: 0 to 200.\
-     * If you do not specify this parameter or you set this parameter to 0, Internet access is disabled.</p>
+     * <p>The peak public bandwidth, specified in Mbit/s. The value can range from 0 to 200.<br>
+     * If you omit this parameter or set it to 0, internet access is disabled.<br></p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -54,10 +55,12 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The Alibaba Cloud account that creates the Cloud Enterprise Network (CEN) instance.</p>
+     * <p>The ID of the Alibaba Cloud account that owns the Cloud Enterprise Network (CEN) instance.</p>
      * <ul>
-     * <li>If you do not specify the CenId parameter, or the CEN instance that is specified by the CenId parameter belongs to the current Alibaba Cloud account, skip this parameter.</li>
-     * <li>If you specify the CenId parameter and the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, enter the ID of the Alibaba Cloud account.</li>
+     * <li><p>If you do not specify <code>CenId</code>, or the specified CEN instance belongs to your Alibaba Cloud account, you do not need to specify this parameter.</p>
+     * </li>
+     * <li><p>If the specified CEN instance belongs to another Alibaba Cloud account, you must specify that account\&quot;s ID.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,11 +70,14 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
     public Long cenOwnerId;
 
     /**
-     * <p>The IPv4 CIDR block of the virtual private cloud (VPC) that your office network uses. The system creates a VPC for your office network based on the IPv4 CIDR block. We recommend that you set this parameter to one of the following CIDR blocks and their subnets:</p>
+     * <p>The IPv4 CIDR block for the office site\&quot;s VPC. The system uses this IPv4 CIDR block to automatically create a VPC. We recommend that you use one of the following CIDR blocks or their subnets:</p>
      * <ul>
-     * <li><code>10.0.0.0/12</code> (subnet mask range: 12 to 24 bits)</li>
-     * <li><code>172.16.0.0/12</code> (subnet mask range: 12 to 24 bits)</li>
-     * <li><code>192.168.0.0/16</code> (subnet mask range: 16 to 24 bits)</li>
+     * <li><p><code>10.0.0.0/12</code> (The subnet mask length must be 12 to 24 bits.)</p>
+     * </li>
+     * <li><p><code>172.16.0.0/12</code> (The subnet mask length must be 12 to 24 bits.)</p>
+     * </li>
+     * <li><p><code>192.168.0.0/16</code> (The subnet mask length must be 16 to 24 bits.)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,16 +87,10 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
     public String cidrBlock;
 
     /**
-     * <p>The method to connect to cloud computers from Alibaba Cloud Workspace clients.</p>
+     * <p>The method for connecting to cloud desktops.</p>
      * <blockquote>
-     * <p> The VPC connection depends on Alibaba Cloud PrivateLink. You can use PrivateLink for free. When you set this parameter to <code>VPC</code> or <code>Any</code>, PrivateLink is automatically activated.</p>
+     * <p>VPC connections are established using Alibaba Cloud PrivateLink, which is a free service. If you set this parameter to <code>VPC</code> or <code>Any</code>, PrivateLink is automatically enabled.</p>
      * </blockquote>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Internet: connects clients to cloud desktops only over the Internet. [Default]</li>
-     * <li>VPC: connects clients to cloud desktops only over a VPC.</li>
-     * <li>Any: connects clients to cloud desktops over the Internet or a VPC. You can select a connection method based on your business requirements when you connect to your cloud desktop from a client.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Internet</p>
@@ -99,7 +99,7 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
     public String desktopAccessType;
 
     /**
-     * <p>The IP address of the DNS server of the enterprise AD system. You can specify only one IP address.</p>
+     * <p>An array that contains the IP address of the DNS server for the enterprise AD. You can specify only one IP address.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -109,7 +109,7 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
     public java.util.List<String> dnsAddress;
 
     /**
-     * <p>The domain name of the enterprise AD system. You can register each domain name only once.</p>
+     * <p>The domain name for the enterprise AD. Each domain name must be unique.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -119,7 +119,7 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The password of the domain administrator. The password can be up to 64 characters in length.</p>
+     * <p>The domain administrator\&quot;s password. The password cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>testPassword</p>
@@ -128,9 +128,9 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
     public String domainPassword;
 
     /**
-     * <p>The username of the domain administrator. The username can be up to 64 characters in length.</p>
+     * <p>The domain administrator\&quot;s username. The username cannot exceed 64 characters in length.</p>
      * <blockquote>
-     * <p>Specify the username by using sAMAccountName instead of userPrincipalName.</p>
+     * <p>Use the sAMAccountName, not the userPrincipalName.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -140,24 +140,7 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
     public String domainUserName;
 
     /**
-     * <p>Specifies whether to grant the local administrator permissions to users that are authorized to use cloud computers in the office network.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><!-- -->
-     * 
-     * <p>true</p>
-     * <!-- -->
-     * 
-     * <p>(default)</p>
-     * <!-- -->
-     * </li>
-     * <li><!-- -->
-     * 
-     * <p>false</p>
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <p>Specifies whether to grant local administrator permissions to cloud desktop users. Default: true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -166,7 +149,7 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
     public Boolean enableAdminAccess;
 
     /**
-     * <p>Specifies whether to enable Internet access.</p>
+     * <p>This parameter is deprecated. Use the <code>Bandwidth</code> parameter to manage internet access.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -184,8 +167,8 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
     public Boolean mfaEnabled;
 
     /**
-     * <p>The office network name. The name must be 2 to 255 characters in length. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.\
-     * This parameter is empty by default.</p>
+     * <p>The name of the office site. The name must be 2 to 255 characters in length. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, colons (:), underscores (_), and hyphens (-).<br>
+     * This parameter is empty by default.<br></p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -195,15 +178,6 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
 
     /**
      * <p>The protocol type.</p>
-     * <p>Valid value:</p>
-     * <ul>
-     * <li><p>Adaptive Streaming Protocol (ASP)</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>ASP</p>
@@ -212,7 +186,7 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
     public String protocolType;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -222,23 +196,7 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The AD connector type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>1: General</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>2: Advanced</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <p>The AD Connector type.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -247,7 +205,7 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
     public Long specification;
 
     /**
-     * <p>The DNS address of the enterprise AD subdomain. If you specify <code>SubDomainName</code> but do not specify this parameter, the DNS address of the subdomain is the same as the DNS address of the parent domain.</p>
+     * <p>The DNS address of the enterprise AD child domain. If you specify <code>SubDomainName</code> but not this parameter, the DNS address of the child domain is considered the same as that of the parent domain.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.XX.XX</p>
@@ -256,7 +214,7 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
     public java.util.List<String> subDomainDnsAddress;
 
     /**
-     * <p>The domain name of the enterprise AD subdomain.</p>
+     * <p>The domain name of the enterprise AD child domain.</p>
      * 
      * <strong>example:</strong>
      * <p>child.example.com</p>
@@ -265,13 +223,13 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
     public String subDomainName;
 
     /**
-     * <p>The array of the vSwitch IDs.</p>
+     * <p>The list of vSwitch IDs.</p>
      */
     @NameInMap("VSwitchId")
     public java.util.List<String> vSwitchId;
 
     /**
-     * <p>The verification code. If the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, you must call the <a href="https://help.aliyun.com/document_detail/436847.html">SendVerifyCode</a> operation to obtain the verification code.</p>
+     * <p>The verification code. If the <code>CenId</code> that you specify belongs to another Alibaba Cloud account, you must first call the <a href="https://help.aliyun.com/document_detail/436847.html">SendVerifyCode</a> operation to obtain the verification code.</p>
      * 
      * <strong>example:</strong>
      * <p>12****</p>

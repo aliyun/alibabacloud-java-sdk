@@ -45,7 +45,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
          * <p>The display name of the region, which varies based on the current language.</p>
          * 
          * <strong>example:</strong>
-         * <p>China (Hangzhou)</p>
+         * <p>华东1（杭州）</p>
          */
         @NameInMap("LocalName")
         public String localName;

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteOfficeSiteAcceleratorRequest extends TeaModel {
     /**
+     * <p>The office network ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteOfficeSiteAcceleratorRequest extends TeaModel {
     public String officeSiteId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

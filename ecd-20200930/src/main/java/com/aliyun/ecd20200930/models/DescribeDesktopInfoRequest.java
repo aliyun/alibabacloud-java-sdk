@@ -8,7 +8,7 @@ public class DescribeDesktopInfoRequest extends TeaModel {
     public String businessChannel;
 
     /**
-     * <p>The IDs of the cloud computers. You can specify 1 to 100 IDs.</p>
+     * <p>Desktop ID. Set 1 to 100.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
@@ -17,7 +17,7 @@ public class DescribeDesktopInfoRequest extends TeaModel {
     public Boolean needExtraInfo;
 
     /**
-     * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</p>
+     * <p>Region ID. Call <a href="t2167755.xdita#"></a>to get a list of regions supported by WUYING Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListTransferFileDownloadUrlResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F1F01499-8F3D-5657-91AD-48177EB****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of download URL information for the files.</p>
+     */
     @NameInMap("Urls")
     public java.util.List<ListTransferFileDownloadUrlResponseBodyUrls> urls;
 
@@ -37,6 +42,8 @@ public class ListTransferFileDownloadUrlResponseBody extends TeaModel {
 
     public static class ListTransferFileDownloadUrlResponseBodyUrls extends TeaModel {
         /**
+         * <p>The file ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>trf-i4pz8emx2k2fr****</p>
          */
@@ -44,6 +51,8 @@ public class ListTransferFileDownloadUrlResponseBody extends TeaModel {
         public String fileId;
 
         /**
+         * <p>The name of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>document.txt</p>
          */
@@ -51,6 +60,8 @@ public class ListTransferFileDownloadUrlResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The status of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>DELETED</p>
          */
@@ -58,6 +69,8 @@ public class ListTransferFileDownloadUrlResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The download URL of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xxsy-transfer.oss-cn-beijing.aliyuncs.com/xxxx">http://xxsy-transfer.oss-cn-beijing.aliyuncs.com/xxxx</a></p>
          */

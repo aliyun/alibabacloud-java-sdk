@@ -26,6 +26,9 @@ public class ModifyCloudDrivePermissionRequest extends TeaModel {
     @NameInMap("DownloadUploadEndUserIds")
     public java.util.List<String> downloadUploadEndUserIds;
 
+    /**
+     * <p>List of end user IDs with neither upload nor download permissions. These users cannot download files from the enterprise file storage to on-premises devices or upload files from on-premises devices to the enterprise file storage.</p>
+     */
     @NameInMap("NoDownloadNoUploadEndUserIds")
     public java.util.List<String> noDownloadNoUploadEndUserIds;
 

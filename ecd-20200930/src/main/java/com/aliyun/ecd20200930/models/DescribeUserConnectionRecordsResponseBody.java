@@ -62,7 +62,7 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
          * <p>The connection duration. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
-         * <p>3405035000</p>
+         * <p>1800000</p>
          */
         @NameInMap("ConnectDuration")
         public String connectDuration;
@@ -98,7 +98,7 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
          * <p>The ID of the cloud computer to which the end user connected.</p>
          * 
          * <strong>example:</strong>
-         * <p>ud-2hawufy3uedi1****</p>
+         * <p>ecd-gx2x1dhsmucyy****</p>
          */
         @NameInMap("DesktopId")
         public String desktopId;
@@ -107,7 +107,7 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
          * <p>The name of the cloud computer to which the end user connected.</p>
          * 
          * <strong>example:</strong>
-         * <p>testName</p>
+         * <p>demoComputer</p>
          */
         @NameInMap("DesktopName")
         public String desktopName;

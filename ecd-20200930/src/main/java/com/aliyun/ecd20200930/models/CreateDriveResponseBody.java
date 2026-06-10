@@ -131,7 +131,7 @@ public class CreateDriveResponseBody extends TeaModel {
         /**
          * <p>The ID of the external user-level storage resource.</p>
          * <blockquote>
-         * <p> A value is returned for this parameter only if ResourceType is set to PDS.</p>
+         * <p>A value is returned for this parameter only if ResourceType is set to PDS.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -187,7 +187,7 @@ public class CreateDriveResponseBody extends TeaModel {
 
         /**
          * <blockquote>
-         * <p> This parameter is deprecated.</p>
+         * <p>This parameter is deprecated.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -202,12 +202,18 @@ public class CreateDriveResponseBody extends TeaModel {
          * <p>The status of the user-level storage resource.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>INIT: initializing</li>
-         * <li>MAINTAIN: maintaining</li>
-         * <li>DELETING</li>
-         * <li>INVALID</li>
-         * <li>NORMAL</li>
-         * <li>FAIL: failed</li>
+         * <li><p>INIT: initializing</p>
+         * </li>
+         * <li><p>MAINTAIN: maintaining</p>
+         * </li>
+         * <li><p>DELETING</p>
+         * </li>
+         * <li><p>INVALID</p>
+         * </li>
+         * <li><p>NORMAL</p>
+         * </li>
+         * <li><p>FAIL: failed</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -219,7 +225,7 @@ public class CreateDriveResponseBody extends TeaModel {
         /**
          * <p>The total amount of the user-level storage resource capacity.</p>
          * <blockquote>
-         * <p> Unit: bytes.</p>
+         * <p>Unit: bytes.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -232,8 +238,10 @@ public class CreateDriveResponseBody extends TeaModel {
          * <p>The usage of the storage resource.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>DESKTOP: data disk space</li>
-         * <li>USER_PROFILE: space for personal data of the user</li>
+         * <li><p>DESKTOP: data disk space</p>
+         * </li>
+         * <li><p>USER_PROFILE: space for personal data of the user</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -245,7 +253,7 @@ public class CreateDriveResponseBody extends TeaModel {
         /**
          * <p>The amount of user-level storage resource capacity used.</p>
          * <blockquote>
-         * <p> Unit: bytes.</p>
+         * <p>Unit: bytes.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

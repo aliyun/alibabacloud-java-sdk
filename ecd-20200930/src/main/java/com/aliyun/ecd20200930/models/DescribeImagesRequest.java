@@ -104,8 +104,10 @@ public class DescribeImagesRequest extends TeaModel {
     /**
      * <p>The maximum number of entries to return on each page.</p>
      * <ul>
-     * <li>Maximum value: 100.</li>
-     * <li>Default value: 10.</li>
+     * <li><p>Maximum value: 100.</p>
+     * </li>
+     * <li><p>Default value: 10.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -152,8 +154,10 @@ public class DescribeImagesRequest extends TeaModel {
      * <p>The protocol type.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>HDX: High-definition Experience (HDX) protocol</li>
-     * <li>ASP: in-house Adaptive Streaming Protocol (ASP) (recommended)</li>
+     * <li><p>HDX: High-definition Experience (HDX) protocol</p>
+     * </li>
+     * <li><p>ASP: in-house Adaptive Streaming Protocol (ASP) (recommended)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

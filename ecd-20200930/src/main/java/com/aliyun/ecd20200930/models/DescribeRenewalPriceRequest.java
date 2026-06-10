@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeRenewalPriceRequest extends TeaModel {
     /**
-     * <p>The instance ID. The value you specify depends on the resource type (ResourceType) you\&quot;re querying the renewal price for.</p>
+     * <p>The instance ID. The value for this parameter depends on the resource type:</p>
      * <ul>
-     * <li>When <code>ResourceType</code> is set to <code>Desktop</code>, you must provide the cloud computer ID as the value of <code>InstanceId</code>.</li>
-     * <li>When <code>ResourceType</code> is set to <code>DesktopGroup</code>, you must provide the share ID as the value of <code>InstanceId</code>.</li>
-     * <li>When <code>ResourceType</code> is set to <code>Bandwidth</code>, you must provide the ID of the premium bandwidth plan as the value of <code>InstanceId</code>.</li>
+     * <li><p>If <code>ResourceType</code> is set to <code>Desktop</code>, set <code>InstanceId</code> to the cloud desktop ID.</p>
+     * </li>
+     * <li><p>If <code>ResourceType</code> is set to <code>DesktopGroup</code>, set <code>InstanceId</code> to the desktop pool ID.</p>
+     * </li>
+     * <li><p>If <code>ResourceType</code> is set to <code>Bandwidth</code>, set <code>InstanceId</code> to the premium bandwidth ID.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,16 +22,18 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The instance IDs. The value you specify depends on the resource type (ResourceType) you\&quot;re querying the renewal price for.</p>
+     * <p>The instance IDs. The values to provide depend on the resource type (<code>ResourceType</code>).</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The renewal duration. The valid values for this parameter depend on the value of <code>PeriodUnit</code>.</p>
+     * <p>The renewal duration. The valid values depend on the <code>PeriodUnit</code> parameter.</p>
      * <ul>
-     * <li>If you set <code>PeriodUnit</code> to <code>Month</code>, set the value of this parameter to 1, 2, 3, or 6.</li>
-     * <li>If you set <code>PeriodUnit</code> to <code>Year</code>, set the value of this parameter to 1, 2, or 3.</li>
+     * <li><p>If <code>PeriodUnit</code> is set to <code>Month</code>, the valid values are 1, 2, 3, and 6.</p>
+     * </li>
+     * <li><p>If <code>PeriodUnit</code> is set to <code>Year</code>, the valid values are 1, 2, and 3.</p>
+     * </li>
      * </ul>
      * <p>Default value: 1.</p>
      * 
@@ -39,12 +44,7 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the renewal duration specified by <code>Period</code>.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Month (default)</li>
-     * <li>Year</li>
-     * </ul>
+     * <p>The time unit for the <code>Period</code> parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -56,7 +56,7 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     public String promotionId;
 
     /**
-     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to get a list of regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,12 +70,6 @@ public class DescribeRenewalPriceRequest extends TeaModel {
 
     /**
      * <p>The resource type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Desktop (default): cloud computers.</li>
-     * <li>Bandwidth: premium bandwidth plans.</li>
-     * <li>DesktopGroup: cloud computer shares.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Desktop</p>

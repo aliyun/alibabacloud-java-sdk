@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ListDirectoryUsersRequest extends TeaModel {
     /**
      * <blockquote>
-     * <p>This parameter is not publicly available. The value can be 1 or left empty.</p>
+     * <p>This parameter is not publicly available. You can only set this parameter to <code>1</code> or leave it empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class ListDirectoryUsersRequest extends TeaModel {
     public String assignedInfo;
 
     /**
-     * <p>The ID of the AD directory.</p>
+     * <p>The AD directory ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class ListDirectoryUsersRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The query string for fuzzy match. If you specify this parameter, the system returns all results that contain the string.</p>
+     * <p>The string for a fuzzy search. The operation returns all results that contain this string.</p>
      * 
      * <strong>example:</strong>
      * <p>alice</p>
@@ -35,7 +35,7 @@ public class ListDirectoryUsersRequest extends TeaModel {
     public String filter;
 
     /**
-     * <p>Specifies whether to return the users with assigned cloud computers only.</p>
+     * <p>Specifies whether to return only users who are assigned cloud desktops.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -45,8 +45,12 @@ public class ListDirectoryUsersRequest extends TeaModel {
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <p>Valid values: 1 to 100.</p>
-     * <p>Default value: 10.</p>
+     * <ul>
+     * <li><p>Maximum value: 100.</p>
+     * </li>
+     * <li><p>Default value: 10.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -55,7 +59,7 @@ public class ListDirectoryUsersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used to start the next query. If the value of this parameter is empty, all results are returned.</p>
+     * <p>The token used to start the next query. If this value is empty, no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -64,7 +68,7 @@ public class ListDirectoryUsersRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The organizational unit (OU) in the specified AD domain.</p>
+     * <p>The path of the organizational unit (OU) in the AD domain. You can call <a href="https://help.aliyun.com/document_detail/311259.html">ListUserAdOrganizationUnits</a> to obtain the OU path.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com/Domain Controllers</p>
@@ -73,7 +77,7 @@ public class ListDirectoryUsersRequest extends TeaModel {
     public String OUPath;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. To get a list of regions that WUYING Workspace supports, call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,12 +87,7 @@ public class ListDirectoryUsersRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The sort type.</p>
-     * <p>Valide values:</p>
-     * <ul>
-     * <li>asc: cloud computers assigned to users on bottom</li>
-     * <li>desc: cloud computers assigned to users on top</li>
-     * </ul>
+     * <p>The sorting method.</p>
      * 
      * <strong>example:</strong>
      * <p>asc</p>

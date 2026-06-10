@@ -119,7 +119,7 @@ public class ListTagResourcesRequest extends TeaModel {
          * <p>The tag keys. You can specify 1 to 20 tag keys.</p>
          * 
          * <strong>example:</strong>
-         * <p>TestKey</p>
+         * <p>department</p>
          */
         @NameInMap("Key")
         public String key;
@@ -128,7 +128,7 @@ public class ListTagResourcesRequest extends TeaModel {
          * <p>The tag values. You can specify 1 to 20 tag values.</p>
          * 
          * <strong>example:</strong>
-         * <p>TestValue</p>
+         * <p>design</p>
          */
         @NameInMap("Value")
         public String value;

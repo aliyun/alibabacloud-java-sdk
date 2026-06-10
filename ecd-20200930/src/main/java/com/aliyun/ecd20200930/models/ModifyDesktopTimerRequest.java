@@ -28,7 +28,7 @@ public class ModifyDesktopTimerRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Specifies whether to use the <code>DesktopTimers</code>** parameter. Set the value to <code>true</code>**.</p>
+     * <p>Specifies whether to use the <code>DesktopTimers</code>\<em>\</em> parameter. Set the value to <code>true</code>\<em>\</em>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

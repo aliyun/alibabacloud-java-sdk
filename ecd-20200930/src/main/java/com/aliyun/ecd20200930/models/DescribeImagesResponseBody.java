@@ -237,8 +237,10 @@ public class DescribeImagesResponseBody extends TeaModel {
          * <p>The protocol type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>HDX: High-definition Experience (HDX) protocol</li>
-         * <li>ASP: in-house Adaptive Streaming Protocol (ASP) (recommended)</li>
+         * <li><p>HDX: High-definition Experience (HDX) protocol</p>
+         * </li>
+         * <li><p>ASP: in-house Adaptive Streaming Protocol (ASP) (recommended)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

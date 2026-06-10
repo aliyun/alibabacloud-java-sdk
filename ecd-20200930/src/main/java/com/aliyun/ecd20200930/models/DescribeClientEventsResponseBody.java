@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeClientEventsResponseBody extends TeaModel {
     /**
-     * <p>The user events.</p>
+     * <p>The list of user events.</p>
      */
     @NameInMap("Events")
     public java.util.List<DescribeClientEventsResponseBodyEvents> events;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * <p>The pagination token. If this parameter is empty, all results have been returned.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
@@ -100,7 +100,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
 
     public static class DescribeClientEventsResponseBodyEvents extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account with which the event is associated.</p>
+         * <p>The ID of the Alibaba Cloud account associated with the event.</p>
          * 
          * <strong>example:</strong>
          * <p>112259558861****</p>
@@ -109,7 +109,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         public String aliUid;
 
         /**
-         * <p>The number of bytes that are received.</p>
+         * <p>The number of bytes received.</p>
          * 
          * <strong>example:</strong>
          * <p>8665</p>
@@ -118,7 +118,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         public String bytesReceived;
 
         /**
-         * <p>The number of bytes that are sent.</p>
+         * <p>The number of bytes sent.</p>
          * 
          * <strong>example:</strong>
          * <p>2345</p>
@@ -136,7 +136,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         public String clientIp;
 
         /**
-         * <p>The OS that the client runs.</p>
+         * <p>The operating system of the client.</p>
          * 
          * <strong>example:</strong>
          * <p>Darwin 17.7.0 x64</p>
@@ -154,7 +154,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         public String clientVersion;
 
         /**
-         * <p>The description.</p>
+         * <p>The description of the event.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -163,7 +163,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The desktop group ID.</p>
+         * <p>The ID of the desktop group.</p>
          * 
          * <strong>example:</strong>
          * <p>dg-kadkdfaf****</p>
@@ -172,7 +172,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         public String desktopGroupId;
 
         /**
-         * <p>The desktop group name.</p>
+         * <p>The name of the desktop group.</p>
          * 
          * <strong>example:</strong>
          * <p>testName</p>
@@ -181,7 +181,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         public String desktopGroupName;
 
         /**
-         * <p>The cloud desktop ID.</p>
+         * <p>The ID of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-8fupvkhg0aayu****</p>
@@ -193,13 +193,13 @@ public class DescribeClientEventsResponseBody extends TeaModel {
          * <p>The IP address of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
-         * <p>10.10.<em>.</em></p>
+         * <p>10.10.XX.XX</p>
          */
         @NameInMap("DesktopIp")
         public String desktopIp;
 
         /**
-         * <p>The cloud desktop name.</p>
+         * <p>The name of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -208,7 +208,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         public String desktopName;
 
         /**
-         * <p>The ID of the directory to which the cloud desktop belongs.</p>
+         * <p>The ID of the cloud desktop\&quot;s directory.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-bh77qa8nmjot4****</p>
@@ -226,7 +226,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         public String directoryType;
 
         /**
-         * <p>The information about the end user that connects to the cloud desktop from the EDS client. The information can be a RAM user ID or an AD username.</p>
+         * <p>The ID of the end user. The value can be the ID of a RAM user or the username of an AD user.</p>
          * 
          * <strong>example:</strong>
          * <p>28961708130834****</p>
@@ -244,7 +244,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         public String eventId;
 
         /**
-         * <p>The time when the event occurred.</p>
+         * <p>The time the event occurred.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-30T06:32:31Z</p>
@@ -253,7 +253,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         public String eventTime;
 
         /**
-         * <p>The event type. Valid values:</p>
+         * <p>The event type.</p>
          * 
          * <strong>example:</strong>
          * <p>DESKTOP_DISCONNECT</p>
@@ -262,7 +262,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         public String eventType;
 
         /**
-         * <p>The ID of the workspace to which the cloud desktop belongs.</p>
+         * <p>The ID of the cloud desktop\&quot;s office site.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-bh77qa8nmjot4****</p>
@@ -271,7 +271,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         public String officeSiteId;
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the office site.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -280,23 +280,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         public String officeSiteName;
 
         /**
-         * <p>The account type of the workspace.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>SIMPLE: convenience account</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>AD_CONNECTOR: enterprise AD account</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>The type of account system for the office site.</p>
          * 
          * <strong>example:</strong>
          * <p>SIMPLE</p>
@@ -314,10 +298,12 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The status of the event. If you set the EventType parameter to <code>DESKTOP_DISCONNECT</code> or <code>GET_CONNECTION_TICKET</code>, this parameter is returned. Valid values:</p>
+         * <p>The status of the event. This parameter is returned for <code>DESKTOP_DISCONNECT</code> and <code>GET_CONNECTION_TICKET</code> events. Valid values:</p>
          * <ul>
-         * <li>200\. The value indicates that the request is successful.</li>
-         * <li>An error message. The value indicates that the request failed. Example: FailedToGetConnectionTicket.</li>
+         * <li><p><code>200</code>: Success.</p>
+         * </li>
+         * <li><p>An error message, such as <code>FailedToGetConnectionTicket</code>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

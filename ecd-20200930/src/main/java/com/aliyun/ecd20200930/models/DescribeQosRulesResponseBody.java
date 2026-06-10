@@ -4,10 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeQosRulesResponseBody extends TeaModel {
+    /**
+     * <p>A list of QoS rules.</p>
+     */
     @NameInMap("QosRules")
     public java.util.List<DescribeQosRulesResponseBodyQosRules> qosRules;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -37,6 +42,8 @@ public class DescribeQosRulesResponseBody extends TeaModel {
 
     public static class DescribeQosRulesResponseBodyQosRules extends TeaModel {
         /**
+         * <p>The number of associated cloud desktops.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -47,6 +54,8 @@ public class DescribeQosRulesResponseBody extends TeaModel {
         public Integer desktopGroupCount;
 
         /**
+         * <p>The download bandwidth.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -54,6 +63,8 @@ public class DescribeQosRulesResponseBody extends TeaModel {
         public String download;
 
         /**
+         * <p>The network package ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>np-5cjh3sqs1ty3s02xq</p>
          */
@@ -61,6 +72,8 @@ public class DescribeQosRulesResponseBody extends TeaModel {
         public String networkPackageId;
 
         /**
+         * <p>The QoS rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>qos-chvkz5ekzgcb6bo0f</p>
          */
@@ -68,6 +81,8 @@ public class DescribeQosRulesResponseBody extends TeaModel {
         public String qosRuleId;
 
         /**
+         * <p>The QoS rule name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -75,6 +90,8 @@ public class DescribeQosRulesResponseBody extends TeaModel {
         public String qosRuleName;
 
         /**
+         * <p>The upload bandwidth.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

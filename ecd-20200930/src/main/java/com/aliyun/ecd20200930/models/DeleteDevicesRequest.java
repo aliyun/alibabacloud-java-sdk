@@ -14,7 +14,7 @@ public class DeleteDevicesRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2</p>
+     * <p>1</p>
      */
     @NameInMap("ClientType")
     public Integer clientType;
@@ -36,7 +36,7 @@ public class DeleteDevicesRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>0</p>
      */
     @NameInMap("Force")
     public Integer force;

@@ -217,9 +217,12 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
          * <p>The office network type and its suitable VPC type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>standard (default): standard, exclusive VPC</li>
-         * <li>customized: custom, user VPC</li>
-         * <li>basic: basic, shared VPC</li>
+         * <li><p>standard (default): standard, exclusive VPC</p>
+         * </li>
+         * <li><p>customized: custom, user VPC</p>
+         * </li>
+         * <li><p>basic: basic, shared VPC</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -17,7 +17,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
      * <p>The total number of file list entries.</p>
      * 
      * <strong>example:</strong>
-     * <p>0</p>
+     * <p>2</p>
      */
     @NameInMap("Count")
     public String count;
@@ -41,7 +41,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
      * <p>The token used to start the next query. If the <code>NextToken</code> is empty, the next query does not exist.</p>
      * 
      * <strong>example:</strong>
-     * <p>WyI2MzhmMjA2ZTFmZGZlZGVjZDk3OTRlNzVhZmIwMDFiZmM5NWQ3YTgwIiwibiIsIm4iLDEsLTEsMTY3MDMyNDMzNTAzMSwiNjM4ZjIwNmZjNDFkMzIwOTZmZWU0NGYxODkwY2I5ZjI0Mjg0NzM2****</p>
+     * <p>aGN4YzAxQGNuLWhhbmd6aG91LjExNzU5NTMyNjgzMTQ1****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -162,7 +162,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
          * <p>The file creator.</p>
          * 
          * <strong>example:</strong>
-         * <p>user01</p>
+         * <p><a href="mailto:demo_user01@cn-shanghai.148875033399">demo_user01@cn-shanghai.148875033399</a>****</p>
          */
         @NameInMap("Creator")
         public String creator;
@@ -248,7 +248,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
          * <p>Modifier.</p>
          * 
          * <strong>example:</strong>
-         * <p>user02</p>
+         * <p><a href="mailto:demo_user02@cn-shanghai.148875033399">demo_user02@cn-shanghai.148875033399</a>****</p>
          */
         @NameInMap("Modifier")
         public String modifier;
@@ -257,7 +257,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
          * <p>The name of the file.</p>
          * 
          * <strong>example:</strong>
-         * <p>fvt-appcenterp4qwa</p>
+         * <p>SampleFile.pdf</p>
          */
         @NameInMap("Name")
         public String name;

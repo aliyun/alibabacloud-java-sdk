@@ -76,6 +76,9 @@ public class MoveCdsFileRequest extends TeaModel {
 
     /**
      * <p>The group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cg-hvyou5jbob3b0****</p>
      */
     @NameInMap("GroupId")
     public String groupId;

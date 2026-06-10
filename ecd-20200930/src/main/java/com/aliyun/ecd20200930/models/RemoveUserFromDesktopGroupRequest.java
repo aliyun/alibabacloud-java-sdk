@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveUserFromDesktopGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud computer share.</p>
+     * <p>The ID of the shared cloud desktop from which you revoke the user’s permission.</p>
      * 
      * <strong>example:</strong>
      * <p>dg-2i8qxpv6t1a03****</p>
@@ -14,19 +14,22 @@ public class RemoveUserFromDesktopGroupRequest extends TeaModel {
     public String desktopGroupId;
 
     /**
-     * <p>The IDs of the cloud computer shares.</p>
+     * <p>A list of shared desktop group IDs.</p>
      */
     @NameInMap("DesktopGroupIds")
     public java.util.List<String> desktopGroupIds;
 
     /**
-     * <p>The IDs of the authorized users that you want to remove.</p>
+     * <p>The list of authorized users to remove.</p>
      */
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
 
+    @NameInMap("OrgId")
+    public String orgId;
+
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to get a list of regions where WUYING Workspace is available.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,6 +74,14 @@ public class RemoveUserFromDesktopGroupRequest extends TeaModel {
     }
     public java.util.List<String> getEndUserIds() {
         return this.endUserIds;
+    }
+
+    public RemoveUserFromDesktopGroupRequest setOrgId(String orgId) {
+        this.orgId = orgId;
+        return this;
+    }
+    public String getOrgId() {
+        return this.orgId;
     }
 
     public RemoveUserFromDesktopGroupRequest setRegionId(String regionId) {

@@ -18,7 +18,7 @@ public class BindConfigGroupRequest extends TeaModel {
      * <p>The ID of the region. Set the value to <code>cn-shanghai</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -95,8 +95,10 @@ public class BindConfigGroupRequest extends TeaModel {
          * <p>The type of the resource.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>RESOURCE_GROUP: the resource group</li>
-         * <li>CLOUD_DESKTOP: the cloud computer service.</li>
+         * <li><p>RESOURCE_GROUP: the resource group</p>
+         * </li>
+         * <li><p>CLOUD_DESKTOP: the cloud computer service.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

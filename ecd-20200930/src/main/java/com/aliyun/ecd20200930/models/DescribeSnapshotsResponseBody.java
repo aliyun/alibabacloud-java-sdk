@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSnapshotsResponseBody extends TeaModel {
     /**
-     * <p>If the NextToken parameter is empty, no next page exists.</p>
+     * <p>The token that marks the start of the next page of results. If NextToken is empty, no more pages exist.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
@@ -23,7 +23,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The snapshots.</p>
+     * <p>A collection of snapshots.</p>
      */
     @NameInMap("Snapshots")
     public java.util.List<DescribeSnapshotsResponseBodySnapshots> snapshots;
@@ -59,7 +59,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
     public static class DescribeSnapshotsResponseBodySnapshots extends TeaModel {
         /**
-         * <p>The point in time at which the snapshot was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-mm-ddthh:mm:ssz</code> format. The time is displayed in UTC.</p>
+         * <p>The point in time at which the snapshot was created. The time follows the <a href="t10049.xdita#">ISO 8601</a> standard in the <code>yyyy-mm-ddthh:mm:ssz</code> format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-20T14:52:28Z</p>
@@ -77,7 +77,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>The time when the snapshot was deleted. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-mm-ddthh:mm:ssz</code> format. The time is displayed in UTC.</p>
+         * <p>The snapshot creation time follows the <a href="t10049.xdita#">ISO 8601</a> standard. It uses UTC+0 time and is formatted as <code>yyyy-mm-ddThh:mm:ssZ</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-20T14:52:28Z</p>
@@ -95,7 +95,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the cloud computer to which the snapshot belongs.</p>
+         * <p>The ID of the cloud desktop to which the snapshot belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-g03l3tlm8djoj****</p>
@@ -104,7 +104,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>The name of the cloud computer.</p>
+         * <p>The name of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -113,18 +113,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String desktopName;
 
         /**
-         * <p>The status of the cloud computer.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Stopped</li>
-         * <li>Starting</li>
-         * <li>Rebuilding</li>
-         * <li>Running</li>
-         * <li>Stopping</li>
-         * <li>Expired</li>
-         * <li>Deleted</li>
-         * <li>Pending</li>
-         * </ul>
+         * <p>The status of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -133,6 +122,8 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String desktopStatus;
 
         /**
+         * <p>Status of the disk to which the snapshot belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>Available</p>
          */
@@ -146,6 +137,8 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String envType;
 
         /**
+         * <p>The operating system type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Windows</p>
          */
@@ -163,22 +156,6 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
         /**
          * <p>The protocol type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>HDX: High-definition Experience (HDX) protocol</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>ASP: in-house Adaptive Streaming Protocol (ASP)</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ASP</p>
@@ -187,9 +164,9 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String protocolType;
 
         /**
-         * <p>The remaining time that is required to complete the snapshot creation. Unit: seconds.</p>
+         * <p>The remaining time to complete snapshot creation. Unit: seconds.</p>
          * <blockquote>
-         * <p> When the <code>Status</code> value is <code>PROGRESSING</code>, the <code>RemainTime</code> value is <code>-1</code>. A value of -1 indicates that the system is calculating the remaining time.</p>
+         * <p>When <code>Status</code> is <code>PROGRESSING</code>, the value of <code>RemainTime</code> is <code>-1</code>. This indicates that the system is calculating the remaining time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -211,7 +188,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
          * <p>The name of the restore point.</p>
          * 
          * <strong>example:</strong>
-         * <p>DataDiskBackup</p>
+         * <p>数据盘备份</p>
          */
         @NameInMap("RestorePointName")
         public String restorePointName;
@@ -236,22 +213,6 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
         /**
          * <p>The type of the snapshot.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>AUTO: automatic snapshot</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>USER: manual snapshot</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>USER</p>
@@ -270,22 +231,6 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
         /**
          * <p>The type of the source disk.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>SYSTEM: system disk</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>DATA: data disk</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM</p>
@@ -295,29 +240,6 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
         /**
          * <p>The status of the snapshot.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>PROGRESSING: The snapshot is being created.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>FAILED: The snapshot fails to be created.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>ACCOMPLISHED: The snapshot is created.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ACCOMPLISHED</p>
@@ -335,7 +257,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public Boolean volumeEncryptionEnabled;
 
         /**
-         * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> operation to query the list of KMS keys.</p>
+         * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the <a href="t22712.xdita#"></a>operation to query the list of KMS keys.</p>
          * 
          * <strong>example:</strong>
          * <p>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</p>

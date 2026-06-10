@@ -15,10 +15,10 @@ public class DescribeTimerGroupRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The ID of the region. Set the value to <code>cn-shanghai</code>.</p>
+     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the most recent region list.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;

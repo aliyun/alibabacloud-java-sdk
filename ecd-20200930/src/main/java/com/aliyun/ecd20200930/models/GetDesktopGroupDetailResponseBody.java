@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetDesktopGroupDetailResponseBody extends TeaModel {
     /**
-     * <p>The cloud computers within the share.</p>
+     * <p>Information about the cloud computer share.</p>
      */
     @NameInMap("Desktops")
     public GetDesktopGroupDetailResponseBodyDesktops desktops;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1B5268CE-5EB3-545F-9F38-A8BCF710****</p>
@@ -42,7 +42,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
 
     public static class GetDesktopGroupDetailResponseBodyDesktopsScaleTimerInfos extends TeaModel {
         /**
-         * <p>The number of cloud computers that you purchase in the cloud computer pool. This parameter is one of the auto scaling parameters. Valid values: 0 to 200.</p>
+         * <p>Scaling parameter: Number of cloud computers to buy. Valid values: 0 to 200.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -51,7 +51,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public Integer buyResAmount;
 
         /**
-         * <p>The cron expression for the scheduled task.</p>
+         * <p>Cron expression for the scheduled scaling task.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 0 * * ?</p>
@@ -60,22 +60,17 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public String cron;
 
         /**
-         * <p>The duration that is retained after the session is disconnected. Unit: milliseconds. Valid values: 180000 to 345600000. That is, the session can be retained for 3 to 5760 minutes (4 days). If you specify the value to 0, the session is permanently retained.</p>
-         * <p>When a session is disconnected, take note of the following situations: If an end user does not resume the session within the specified duration, the session is closed and all unsaved data is cleared. If the end user resumes the session within the specified duration, the end user can still access data of the session.</p>
+         * <p>Time to keep a disconnected session active. Unit: milliseconds. Valid range: 180000 (3 minutes) to 345600000 (4 days). A value of 0 means keep indefinitely.</p>
+         * <p>If a session disconnects due to user action or other reasons, the timer starts at disconnection. If no reconnection occurs within this duration, the session logs off and unsaved data is destroyed. If the user reconnects successfully within this duration, they resume the original session and access all previously saved data.</p>
          * 
          * <strong>example:</strong>
-         * <p>600000</p>
+         * <p>180000</p>
          */
         @NameInMap("KeepDuration")
         public Long keepDuration;
 
         /**
-         * <p>The load balancing policy for the multi-session many-to-many share.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>0: depth-first.</li>
-         * <li>1: breadth-first.</li>
-         * </ul>
+         * <p>Traffic steering policy for multi-session, multi-cloud computer deployments.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -84,7 +79,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public Integer loadPolicy;
 
         /**
-         * <p>The maximum number of cloud computers in the cloud computer pool. This parameter is one of the auto scaling parameters. Valid values: 0 to 200.</p>
+         * <p>Scaling parameter: Maximum number of cloud computers. Valid values: 0 to 200.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -93,7 +88,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public Integer maxResAmount;
 
         /**
-         * <p>The minimum number of cloud computers in the cloud computer pool. This parameter is one of the auto scaling parameters. Valid values: 0 to 200.</p>
+         * <p>Scaling parameter: Minimum number of cloud computers. Valid values: 0 to 200.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -102,25 +97,18 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public Integer minResAmount;
 
         /**
-         * <p>The threshold for the ratio of connected sessions, which triggers automatic scaling of cloud computers within the multi-session many-to-many share. To calculate the ratio of connected sessions, use the following formula:</p>
-         * <p><code>Ratio of connected sessions = Number of connected sessions/(Total number of cloud computers × Maximum number of sessions allowed for each cloud computer) × 100%</code>.</p>
-         * <p>If the session ratio exceeds the threshold, new cloud computers are provisioned. If it falls below the threshold, additional cloud computers are removed.</p>
+         * <p>Session occupancy threshold used to trigger auto scaling for multi-session, multi-cloud computer deployments. Session occupancy is calculated as:</p>
+         * <p><code>Session occupancy = (Bound sessions / (Total cloud computers × Max sessions per cloud computer)) × 100%</code></p>
+         * <p>When occupancy reaches this threshold, new cloud computers are created. When occupancy falls below this threshold, excess cloud computers are deleted.</p>
          * 
          * <strong>example:</strong>
-         * <p>0.5</p>
+         * <p>0.85</p>
          */
         @NameInMap("RatioThreshold")
         public Float ratioThreshold;
 
         /**
-         * <p>The type of the scheduled task.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>drop: decline policy</li>
-         * <li>normal: normal policy</li>
-         * <li>peak: peak hour policy</li>
-         * <li>rise: rise policy</li>
-         * </ul>
+         * <p>Scheduled scaling task type.</p>
          * 
          * <strong>example:</strong>
          * <p>rise</p>
@@ -201,7 +189,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
 
     public static class GetDesktopGroupDetailResponseBodyDesktopsTimerInfos extends TeaModel {
         /**
-         * <p>The cron expression.</p>
+         * <p>Cron expression.</p>
          * 
          * <strong>example:</strong>
          * <p>0 58 11 ? * 2</p>
@@ -210,7 +198,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public String cronExpression;
 
         /**
-         * <p>Indicates whether the scheduled task is forcibly executed.</p>
+         * <p>Whether to force execute this scheduled task.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -219,13 +207,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public Boolean forced;
 
         /**
-         * <p>The status of the cloud computer pool.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>1: enabled</li>
-         * <li>2: disabled</li>
-         * <li>3: deleted</li>
-         * </ul>
+         * <p>Status.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -234,14 +216,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The type of the scheduled task.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>1: scheduled reset</li>
-         * <li>2: scheduled startup</li>
-         * <li>3: scheduled stop</li>
-         * <li>4: scheduled restart</li>
-         * </ul>
+         * <p>Scheduled task type.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -290,12 +265,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
 
     public static class GetDesktopGroupDetailResponseBodyDesktops extends TeaModel {
         /**
-         * <p>Specifies whether to enable batch-based automatic creation of cloud computers in the subscription cloud computer share.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>0: enables batch-based automatic creation of cloud computers.</li>
-         * <li>1: disables batch-based automatic creation of cloud computers.</li>
-         * </ul>
+         * <p>Whether to allow automatic creation of subscription cloud computers.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -304,10 +274,12 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public Integer allowAutoSetup;
 
         /**
-         * <p>This parameter applies to pay-as-you-go cloud computer shares and specifies the number of standby cloud computers that can be reserved per cloud computer share. Valid values:</p>
+         * <p>Number of pre-started, idle cloud computers reserved for immediate connection. Applies only to pay-as-you-go cloud computers. Valid values:</p>
          * <ul>
-         * <li>0: does not reserve any cloud computers.</li>
-         * <li>N: reserves N cloud computers (1≤ N ≤ 100).</li>
+         * <li><p>0: No reservation</p>
+         * </li>
+         * <li><p>N: Reserve N cloud computer(s) (1 ≤ N ≤ 100)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -317,19 +289,16 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public Integer allowBufferCount;
 
         /**
-         * <p>The maximum number of concurrent sessions allowed per cloud computer within the multi-session many-to-many share.</p>
+         * <p>Maximum concurrent sessions per cloud computer in multi-session, multi-cloud computer deployments.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>2</p>
          */
         @NameInMap("BindAmount")
         public Integer bindAmount;
 
         /**
-         * <ul>
-         * <li>The number of purchased cloud computers in the subscription share. Valid values: 0 to 200.</li>
-         * <li>The minimum initial number of cloud computers created in the pay-as-you-go share. Default value: 1. Valid values: 0 to <code>MaxDesktopsCount</code>.</li>
-         * </ul>
+         * <p>Initial purchase count for subscription cloud computers. Valid values: 0 to 200.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -338,25 +307,25 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public Integer buyDesktopsCount;
 
         /**
-         * <p>The remarks.</p>
+         * <p>Remarks.</p>
          * 
          * <strong>example:</strong>
-         * <p>for students</p>
+         * <p>comment</p>
          */
         @NameInMap("Comments")
         public String comments;
 
         /**
-         * <p>The maximum period of time during which the session is connected. When the specified maximum period of time is reached, the session is automatically disconnected. Unit: milliseconds.</p>
+         * <p>Maximum time a session remains connected. The session disconnects automatically when this duration is reached. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
-         * <p>60000</p>
+         * <p>3600000</p>
          */
         @NameInMap("ConnectDuration")
         public Long connectDuration;
 
         /**
-         * <p>The number of vCPUs.</p>
+         * <p>vCPU count.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -365,7 +334,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public Integer cpu;
 
         /**
-         * <p>The time when the desktop group was created. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>Creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-06T08:28Z</p>
@@ -374,7 +343,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The Alibaba Cloud account that creates the cloud computer pool.</p>
+         * <p>Alibaba Cloud account ID of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>155177335370****</p>
@@ -383,7 +352,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>The category of the user disk.</p>
+         * <p>User disk type.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_essd</p>
@@ -392,7 +361,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public String dataDiskCategory;
 
         /**
-         * <p>The user disk capacity. Unit: GiB.</p>
+         * <p>User disk capacity in GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -401,7 +370,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public String dataDiskSize;
 
         /**
-         * <p>The ID of the cloud computer share.</p>
+         * <p>Cloud computer share ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dg-3uiojcc0j4kh7****</p>
@@ -410,16 +379,16 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public String desktopGroupId;
 
         /**
-         * <p>The name of the cloud computer share.</p>
+         * <p>The name of the cloud computer share that you want to query.</p>
          * 
          * <strong>example:</strong>
-         * <p>DesktopGroupDemo</p>
+         * <p>CloudComputerPool01</p>
          */
         @NameInMap("DesktopGroupName")
         public String desktopGroupName;
 
         /**
-         * <p>The ID of the directory or office network.</p>
+         * <p>Directory ID (office network ID).</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-363353****</p>
@@ -428,7 +397,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public String directoryId;
 
         /**
-         * <p>The type of the directory.</p>
+         * <p>Directory type.</p>
          * 
          * <strong>example:</strong>
          * <p>SIMPLE</p>
@@ -443,7 +412,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public String envType;
 
         /**
-         * <p>The expiration date of the subscription cloud computer share.</p>
+         * <p>Expiration time for subscription cloud computers.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-31T15:59Z</p>
@@ -455,7 +424,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public java.util.List<String> expiredTimes;
 
         /**
-         * <p>The number of vGPUs.</p>
+         * <p>Number of GPU cores.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -464,7 +433,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public Float gpuCount;
 
         /**
-         * <p>The GPU specifications.</p>
+         * <p>GPU specification.</p>
          * 
          * <strong>example:</strong>
          * <p>NVIDIA T4</p>
@@ -473,7 +442,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public String gpuSpec;
 
         /**
-         * <p>After an end user connects to a cloud computer, the session is established. If the system does not detect any inputs from the keyboard or mouse within the specified period of time, the session is closed. Unit: milliseconds.</p>
+         * <p>Time after which an idle session disconnects. If no keyboard or mouse activity occurs during this period, the session disconnects. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>900000</p>
@@ -482,7 +451,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public Long idleDisconnectDuration;
 
         /**
-         * <p>The ID of the image.</p>
+         * <p>Image ID.</p>
          * 
          * <strong>example:</strong>
          * <p>m-4zfb6zj728hhr****</p>
@@ -491,8 +460,8 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The amount of time to retain a session after it is disconnected. Unit: milliseconds. Valid values: 180000 to 345600000. That is, the session can be retained for 3 to 5760 minutes (4 days). If you specify the value to 0, the session is permanently retained.</p>
-         * <p>When a session is disconnected, take note of the following situations: If an end user does not resume the session within the specified duration, the session is closed and all unsaved data is cleared. If the end user resumes the session within the specified duration, the end user can still access data of the session.</p>
+         * <p>Time to keep a disconnected session active. Unit: milliseconds. Valid range: 180000 (3 minutes) to 345600000 (4 days). A value of 0 means keep indefinitely.</p>
+         * <p>If a session disconnects due to user action or other reasons, the timer starts at disconnection. If no reconnection occurs within this duration, the session logs off and unsaved data is destroyed. If the user reconnects successfully within this duration, they resume the original session and access all previously saved data.</p>
          * 
          * <strong>example:</strong>
          * <p>180000</p>
@@ -501,12 +470,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public Long keepDuration;
 
         /**
-         * <p>The load balancing policy for the multi-session many-to-many share.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>0: depth-first.</li>
-         * <li>1: breadth-first.</li>
-         * </ul>
+         * <p>Traffic steering policy for multi-session, multi-cloud computer deployments.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -515,16 +479,21 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public Integer loadPolicy;
 
         /**
-         * <p>The maximum number of cloud computers allowed in the pay-as-you-go cloud computer share.</p>
+         * <ul>
+         * <li><p>For pay-as-you-go cloud computers, this is the maximum number of cloud computers that can be created.</p>
+         * </li>
+         * <li><p>For subscription cloud computers, this is the sum of the initial purchase count (<code>BuyDesktopsCount</code>) and the number of cloud computers allowed for automatic creation.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>10</p>
+         * <p>3</p>
          */
         @NameInMap("MaxDesktopsCount")
         public Integer maxDesktopsCount;
 
         /**
-         * <p>The memory size. Unit: MiB.</p>
+         * <p>Memory size in MiB.</p>
          * 
          * <strong>example:</strong>
          * <p>4096</p>
@@ -533,7 +502,12 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public Long memory;
 
         /**
-         * <p>The number of cloud computers created in the initial batch within the subscription cloud computer share.</p>
+         * <ul>
+         * <li><p>For pay-as-you-go cloud computers, this is the minimum number of cloud computers to create.</p>
+         * </li>
+         * <li><p>For subscription cloud computers, this equals <code>BuyDesktopsCount</code>, the initial purchase count.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -542,7 +516,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public Integer minDesktopsCount;
 
         /**
-         * <p>The ID of the File Storage NAS (NAS) file system for the user data roaming feature.</p>
+         * <p>NAS file system ID used for user profile roaming.</p>
          * 
          * <strong>example:</strong>
          * <p>0783b4****</p>
@@ -551,7 +525,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public String nasFileSystemID;
 
         /**
-         * <p>The name of the NAS file system for the user data roaming feature.</p>
+         * <p>NAS file system name used for user profile roaming.</p>
          * 
          * <strong>example:</strong>
          * <p>abcd</p>
@@ -560,7 +534,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public String nasFileSystemName;
 
         /**
-         * <p>The ID of the office network.</p>
+         * <p>Office network ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-990541****</p>
@@ -569,7 +543,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public String officeSiteId;
 
         /**
-         * <p>The name of the office network in which the cloud computer resides.</p>
+         * <p>Name of the office network where the cloud computer share resides.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -578,14 +552,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public String officeSiteName;
 
         /**
-         * <p>The office network type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>PERSONAL: individual office network</li>
-         * <li>SIMPLE: convenience office network</li>
-         * <li>AD_CONNECTOR: enterprise Active Directory (AD) office network</li>
-         * <li>RAM: Resource Access Management (RAM)-based office network</li>
-         * </ul>
+         * <p>Account system type of the office network.</p>
          * 
          * <strong>example:</strong>
          * <p>SIMPLE</p>
@@ -597,7 +564,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public String osType;
 
         /**
-         * <p>The ID of the cloud computer template.</p>
+         * <p>Cloud computer template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>b-1se9fb37r5tfq****</p>
@@ -606,7 +573,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public String ownBundleId;
 
         /**
-         * <p>The name of the cloud computer template.</p>
+         * <p>Cloud computer template name.</p>
          * 
          * <strong>example:</strong>
          * <p>BundleDemo</p>
@@ -615,12 +582,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public String ownBundleName;
 
         /**
-         * <p>The type of the cloud computer share.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>0: a one-to-many share.</li>
-         * <li>1: a many-to-many share.</li>
-         * </ul>
+         * <p>Cloud computer share type.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -629,14 +591,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public Integer ownType;
 
         /**
-         * <p>The billing method.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>PostPaid: pay-as-you-go.</p>
-         * </li>
-         * <li><p>PrePaid: subscription.</p>
-         * </li>
-         * </ul>
+         * <p>Billing method.</p>
          * 
          * <strong>example:</strong>
          * <p>PrePaid</p>
@@ -645,7 +600,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public String payType;
 
         /**
-         * <p>The ID of the applied policy.</p>
+         * <p>ID of the policy associated with the cloud computer share.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-9cktlowtxfl6****</p>
@@ -654,31 +609,31 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public String policyGroupId;
 
         /**
-         * <p>The IDs of the applied policies.</p>
+         * <p>The IDs of the policies that are associated with the cloud computer share.</p>
          */
         @NameInMap("PolicyGroupIds")
         public java.util.List<String> policyGroupIds;
 
         /**
-         * <p>The name of the applied policy.</p>
+         * <p>The name of the policy that is associated with the cloud computer share.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>All enabled policy</p>
          */
         @NameInMap("PolicyGroupName")
         public String policyGroupName;
 
         /**
-         * <p>The names of the applied policies.</p>
+         * <p>A list of policy names associated with cloud computer share.</p>
          */
         @NameInMap("PolicyGroupNames")
         public java.util.List<String> policyGroupNames;
 
         /**
-         * <p>Indicates whether user data roaming is enabled.</p>
+         * <p>Whether to enable user profile roaming.</p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>false</p>
          */
         @NameInMap("ProfileFollowSwitch")
         public Boolean profileFollowSwitch;
@@ -687,22 +642,18 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public String protocolType;
 
         /**
-         * <p>The threshold for the ratio of connected sessions, which triggers automatic scaling of cloud computers within the multi-session many-to-many share. To calculate the ratio of connected sessions, use the following formula:</p>
-         * <p><code>Ratio of connected sessions = Number of connected sessions/(Total number of cloud computers × Maximum number of sessions allowed for each cloud computer) × 100%</code>.</p>
-         * <p>If the session ratio exceeds the threshold, new cloud computers are provisioned. If it falls below the threshold, additional cloud computers are removed.</p>
+         * <p>Session occupancy threshold used to trigger auto scaling for multi-session, multi-cloud computer deployments. Session occupancy is calculated as:</p>
+         * <p><code>Session occupancy = (Bound sessions / (Total cloud computers × Max sessions per cloud computer)) × 100%</code></p>
+         * <p>When occupancy reaches this threshold, new cloud computers are created. When occupancy falls below this threshold, excess cloud computers are deleted.</p>
          * 
          * <strong>example:</strong>
-         * <p>0.6</p>
+         * <p>0.85</p>
          */
         @NameInMap("RatioThreshold")
         public Float ratioThreshold;
 
         /**
-         * <p>The type of the resource. Only Elastic Compute Service (ECS) instances are supported.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>0: ECS</li>
-         * </ul>
+         * <p>Resource type. Only Elastic Compute Service (ECS) is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -711,14 +662,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public Integer resType;
 
         /**
-         * <p>The disk reset type of the cloud computer.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>0: does not reset disks.</li>
-         * <li>1: resets only the system disk.</li>
-         * <li>2: resets only the user disk.</li>
-         * <li>3: resets the system disk and the user disk.</li>
-         * </ul>
+         * <p>Cloud computer reset type.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -727,19 +671,13 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public Integer resetType;
 
         /**
-         * <p>The scheduled tasks.</p>
+         * <p>Scheduled scaling task information.</p>
          */
         @NameInMap("ScaleTimerInfos")
         public java.util.List<GetDesktopGroupDetailResponseBodyDesktopsScaleTimerInfos> scaleTimerInfos;
 
         /**
-         * <p>The status of the cloud computer share.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>0: The cloud computer share is unpaid.</li>
-         * <li>1: The cloud computer share is normal.</li>
-         * <li>2: The cloud computer share expired, or your account has an overdue payment.</li>
-         * </ul>
+         * <p>Cloud computer share status.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -748,7 +686,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The period of time before the idle cloud computer enters the Stopped state. If the specified value is reached, the cloud computer is automatically stopped. If an end user connects to the stopped cloud computer, the cloud computer automatically starts. Unit: milliseconds.</p>
+         * <p>Idle shutdown time. The cloud computer shuts down automatically after being idle for this duration. If a user connects after shutdown, the cloud computer starts automatically. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>180000</p>
@@ -757,7 +695,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public Long stopDuration;
 
         /**
-         * <p>The category of the system disk.</p>
+         * <p>System disk type.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_essd</p>
@@ -766,7 +704,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public String systemDiskCategory;
 
         /**
-         * <p>The system disk capacity. Unit: GiB.</p>
+         * <p>System disk capacity in GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -775,13 +713,13 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public Integer systemDiskSize;
 
         /**
-         * <p>The list of scheduled points in time for desktop group tasks.</p>
+         * <p>List of scheduled tasks.</p>
          */
         @NameInMap("TimerInfos")
         public java.util.List<GetDesktopGroupDetailResponseBodyDesktopsTimerInfos> timerInfos;
 
         /**
-         * <p>The information about the scheduling policy.</p>
+         * <p>Scheduled application information.</p>
          * 
          * <strong>example:</strong>
          * <p>abcd</p>
@@ -793,7 +731,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
          * <p>The version number of the cloud computer share.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>2</p>
          */
         @NameInMap("Version")
         public Long version;

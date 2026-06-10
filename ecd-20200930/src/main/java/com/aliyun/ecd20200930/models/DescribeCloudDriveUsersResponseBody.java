@@ -4,10 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudDriveUsersResponseBody extends TeaModel {
+    /**
+     * <p>A list of user personal drives.</p>
+     */
     @NameInMap("CloudDriveUsers")
     public java.util.List<DescribeCloudDriveUsersResponseBodyCloudDriveUsers> cloudDriveUsers;
 
     /**
+     * <p>The token for the next page of results. An empty value indicates that all results have been returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>aGN4YzAxQGNuLWhhbmd6aG91LjExNzU5NTMyNjgzMTQ1****</p>
      */
@@ -15,6 +20,8 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F083AAE5-7AA9-53BB-9060-AFFB2C18****</p>
      */
@@ -52,16 +59,26 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
 
     public static class DescribeCloudDriveUsersResponseBodyCloudDriveUsers extends TeaModel {
         /**
+         * <p>The ID of the user personal drive.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
         @NameInMap("DriveId")
         public String driveId;
 
+        /**
+         * <p>The ID of the end user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
         @NameInMap("EndUserId")
         public String endUserId;
 
         /**
+         * <p>The status of the user personal drive.</p>
+         * 
          * <strong>example:</strong>
          * <p>enabled</p>
          */
@@ -69,29 +86,37 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Maximum storage capacity for the user’s personal drive, in bytes.</p>
+         * 
          * <strong>example:</strong>
-         * <p>10240000</p>
+         * <p>104857600</p>
          */
         @NameInMap("TotalSize")
         public Long totalSize;
 
         /**
+         * <p>The used storage space, in bytes.</p>
+         * 
          * <strong>example:</strong>
-         * <p>20490</p>
+         * <p>10485760</p>
          */
         @NameInMap("UsedSize")
         public Long usedSize;
 
         /**
+         * <p>The internal ID of the user.</p>
+         * 
          * <strong>example:</strong>
-         * <p>abc</p>
+         * <p><a href="mailto:alice@cn-shanghai.148875033399">alice@cn-shanghai.148875033399</a>****</p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
+         * <p>The name of the end user.</p>
+         * 
          * <strong>example:</strong>
-         * <p>abc</p>
+         * <p>alice</p>
          */
         @NameInMap("UserName")
         public String userName;

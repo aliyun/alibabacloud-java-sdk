@@ -110,8 +110,10 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         /**
          * <p>The time when the premium bandwidth plan expires.</p>
          * <ul>
-         * <li>If the plan is a subscription one, the time when the plan expires is returned.</li>
-         * <li>If the plan is a pay-as-you-go one, <code>2099-12-31T15:59:59Z</code> is returned.</li>
+         * <li><p>If the plan is a subscription one, the time when the plan expires is returned.</p>
+         * </li>
+         * <li><p>If the plan is a pay-as-you-go one, <code>2099-12-31T15:59:59Z</code> is returned.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -130,8 +132,10 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
          * </li>
          * <li><p>Valid values when the <code>PayType</code> parameter is set to <code>PostPaid</code>:</p>
          * <ul>
-         * <li>PayByTraffic: charges by data transfer.</li>
-         * <li>PayByBandwidth: charges by fixed bandwidth.</li>
+         * <li><p>PayByTraffic: charges by data transfer.</p>
+         * </li>
+         * <li><p>PayByBandwidth: charges by fixed bandwidth.</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>
@@ -203,7 +207,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
          * <p>The office network name.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>default</p>
          */
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
@@ -212,9 +216,12 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
          * <p>The type of the office network.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>standard: advanced office network</li>
-         * <li>customized: custom office network</li>
-         * <li>basic: basic office network</li>
+         * <li><p>standard: advanced office network</p>
+         * </li>
+         * <li><p>customized: custom office network</p>
+         * </li>
+         * <li><p>basic: basic office network</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -227,8 +234,10 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
          * <p>The billing method of the premium bandwidth plan.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>PostPaid: pay-as-you-go</li>
-         * <li>PrePaid: subscription</li>
+         * <li><p>PostPaid: pay-as-you-go</p>
+         * </li>
+         * <li><p>PrePaid: subscription</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

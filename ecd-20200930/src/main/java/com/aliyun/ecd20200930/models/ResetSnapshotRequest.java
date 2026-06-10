@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetSnapshotRequest extends TeaModel {
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ResetSnapshotRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the snapshot.</p>
+     * <p>The ID of the snapshot used to recover disk data.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +24,9 @@ public class ResetSnapshotRequest extends TeaModel {
     @NameInMap("SnapshotId")
     public String snapshotId;
 
+    /**
+     * <p>Indicates whether to shut down and recover the disk using the snapshot.</p>
+     */
     @NameInMap("StopDesktop")
     public Boolean stopDesktop;
 

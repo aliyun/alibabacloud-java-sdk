@@ -42,7 +42,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
     public static class DescribeRenewalPriceResponseBodyPriceInfoPricePromotions extends TeaModel {
         /**
-         * <p>The description of the promotion rule.</p>
+         * <p>The promotion rule description.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -52,6 +52,9 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
         /**
          * <p>The promotion description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>新品上市，立享优惠</p>
          */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
@@ -67,12 +70,15 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
         /**
          * <p>The promotion name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Featured deals</p>
          */
         @NameInMap("PromotionName")
         public String promotionName;
 
         /**
-         * <p>Indicates whether an item is selected.</p>
+         * <p>Indicates whether the promotion is selected.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -129,7 +135,8 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
     public static class DescribeRenewalPriceResponseBodyPriceInfoPrice extends TeaModel {
         /**
-         * <p>The unit of currency (USD).</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The unit of currency. The value is CNY.
+         * &lt;props=&quot;intl&quot;&gt;The unit of currency. The value is USD.</p>
          * 
          * <strong>example:</strong>
          * <p>CNY</p>
@@ -138,7 +145,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>The discounted amount.</p>
+         * <p>The discount.</p>
          * 
          * <strong>example:</strong>
          * <p>15.8</p>
@@ -147,7 +154,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         public Float discountPrice;
 
         /**
-         * <p>The orders.</p>
+         * <p>The order details.</p>
          */
         @NameInMap("OrderLines")
         public java.util.Map<String, String> orderLines;
@@ -162,13 +169,13 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         public Float originalPrice;
 
         /**
-         * <p>The promotions.</p>
+         * <p>The promotion details.</p>
          */
         @NameInMap("Promotions")
         public java.util.List<DescribeRenewalPriceResponseBodyPriceInfoPricePromotions> promotions;
 
         /**
-         * <p>The actual price. The actual price is the original price minus the discount.</p>
+         * <p>The final price. This is the value of <code>OriginalPrice</code> minus <code>DiscountPrice</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>63.2</p>
@@ -234,6 +241,9 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     public static class DescribeRenewalPriceResponseBodyPriceInfoRules extends TeaModel {
         /**
          * <p>The rule description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>买满1年，立享官网价格8.5折优惠。</p>
          */
         @NameInMap("Description")
         public String description;

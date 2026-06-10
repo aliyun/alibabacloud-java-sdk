@@ -9,7 +9,7 @@ public class ApplyCoordinatePrivilegeRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>co-fqsm6e8ee75w61fp9</p>
+     * <p>co-fqsm6e8ee75w6****</p>
      */
     @NameInMap("CoId")
     public String coId;
@@ -18,7 +18,7 @@ public class ApplyCoordinatePrivilegeRequest extends TeaModel {
      * <p>The ID of the end user.</p>
      * 
      * <strong>example:</strong>
-     * <p>zhangsan</p>
+     * <p>alice</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;
@@ -48,7 +48,7 @@ public class ApplyCoordinatePrivilegeRequest extends TeaModel {
      * <p>The unique identifier of the client. If you use an Alibaba Cloud Workspace client, click <strong>About</strong> on the client logon page to view the identifier of the client.</p>
      * 
      * <strong>example:</strong>
-     * <p>8b241d415da244a6936d6d6fa4f20f4d</p>
+     * <p>3E14A18BD4D088504B9F8A8751AB****</p>
      */
     @NameInMap("Uuid")
     public String uuid;

@@ -14,7 +14,7 @@ public class DescribeNASFileSystemsRequest extends TeaModel {
     public java.util.List<String> fileSystemId;
 
     /**
-     * <p>Specifies whether to include only NAS file systems that support the User Profile Management (UPM) feature in the query results.</p>
+     * <p>Specifies whether to return only NAS file systems that are compatible with User Profile Management (UPM).</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -24,8 +24,12 @@ public class DescribeNASFileSystemsRequest extends TeaModel {
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <p>Maximum value: 100.</p>
-     * <p>Default value: 10.</p>
+     * <ul>
+     * <li><p>Maximum value: 100.</p>
+     * </li>
+     * <li><p>Default value: 10.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -34,7 +38,7 @@ public class DescribeNASFileSystemsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the query.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -52,7 +56,7 @@ public class DescribeNASFileSystemsRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions where Elastic Desktop Service (EDS) is available.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

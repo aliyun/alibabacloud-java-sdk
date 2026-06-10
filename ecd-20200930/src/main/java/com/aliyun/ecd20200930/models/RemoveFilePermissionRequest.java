@@ -18,7 +18,7 @@ public class RemoveFilePermissionRequest extends TeaModel {
      * <p>The ID of the end user.</p>
      * 
      * <strong>example:</strong>
-     * <p>user01</p>
+     * <p>alice</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;

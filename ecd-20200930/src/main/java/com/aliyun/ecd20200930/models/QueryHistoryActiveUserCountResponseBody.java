@@ -4,10 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class QueryHistoryActiveUserCountResponseBody extends TeaModel {
+    /**
+     * <p>The active user statistics.</p>
+     */
     @NameInMap("ActiveUserCount")
     public QueryHistoryActiveUserCountResponseBodyActiveUserCount activeUserCount;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567890abcdefg</p>
      */
@@ -37,6 +42,8 @@ public class QueryHistoryActiveUserCountResponseBody extends TeaModel {
 
     public static class QueryHistoryActiveUserCountResponseBodyActiveUserCount extends TeaModel {
         /**
+         * <p>The number of daily active users.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -44,6 +51,8 @@ public class QueryHistoryActiveUserCountResponseBody extends TeaModel {
         public Integer dailyActiveUserCount;
 
         /**
+         * <p>The number of monthly active users.</p>
+         * 
          * <strong>example:</strong>
          * <p>300</p>
          */

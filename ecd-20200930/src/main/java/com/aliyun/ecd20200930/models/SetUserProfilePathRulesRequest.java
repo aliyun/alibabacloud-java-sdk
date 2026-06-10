@@ -4,60 +4,18 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class SetUserProfilePathRulesRequest extends TeaModel {
-    /**
-     * <p>The desktop group ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>dg-2i8qxpv6t1a03****</p>
-     */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
     /**
-     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The directories that you want to configure in the blacklist and whitelist.</p>
-     */
     @NameInMap("UserProfilePathRule")
     public java.util.List<SetUserProfilePathRulesRequestUserProfilePathRule> userProfilePathRule;
 
-    /**
-     * <p>The directory type that you want to configure.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>Both_Default_DesktopGroup</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>DesktopGroup</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Default</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>DesktopGroup</p>
-     */
     @NameInMap("UserProfileRuleType")
     public String userProfileRuleType;
 
@@ -99,37 +57,9 @@ public class SetUserProfilePathRulesRequest extends TeaModel {
     }
 
     public static class SetUserProfilePathRulesRequestUserProfilePathRuleBlackPath extends TeaModel {
-        /**
-         * <p>The blacklist path.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>AppLocal/Data</p>
-         */
         @NameInMap("Path")
         public String path;
 
-        /**
-         * <p>The path type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>file</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>folder</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>folder</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -157,37 +87,9 @@ public class SetUserProfilePathRulesRequest extends TeaModel {
     }
 
     public static class SetUserProfilePathRulesRequestUserProfilePathRuleWhitePaths extends TeaModel {
-        /**
-         * <p>The whitelist path.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>whitePath</p>
-         */
         @NameInMap("Path")
         public String path;
 
-        /**
-         * <p>The path type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>file</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>folder</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>file</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -215,15 +117,9 @@ public class SetUserProfilePathRulesRequest extends TeaModel {
     }
 
     public static class SetUserProfilePathRulesRequestUserProfilePathRule extends TeaModel {
-        /**
-         * <p>The directory in the blacklist.</p>
-         */
         @NameInMap("BlackPath")
         public SetUserProfilePathRulesRequestUserProfilePathRuleBlackPath blackPath;
 
-        /**
-         * <p>The directories that you want to configure in the whitelist.</p>
-         */
         @NameInMap("WhitePaths")
         public java.util.List<SetUserProfilePathRulesRequestUserProfilePathRuleWhitePaths> whitePaths;
 

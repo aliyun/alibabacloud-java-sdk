@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAutoSnapshotPolicyRequest extends TeaModel {
     /**
-     * <p>The CRON expression.</p>
+     * <p>The cron expression.</p>
      * 
      * <strong>example:</strong>
      * <p>0 20 16 ? * 1,2,3,4,5,6,7</p>
@@ -27,16 +27,16 @@ public class ModifyAutoSnapshotPolicyRequest extends TeaModel {
     public String policyId;
 
     /**
-     * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-). This parameter is empty by default.</p>
+     * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters long, start with a letter or a Chinese character, and must not start with <code>http://</code> or <code>https://</code>. It can contain digits, colons (:), underscores (_), and hyphens (-). The default is an empty string.</p>
      * 
      * <strong>example:</strong>
-     * <p>Automatic system snapshot</p>
+     * <p>SystemAutoSnapshot</p>
      */
     @NameInMap("PolicyName")
     public String policyName;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to get a list of regions where Elastic Desktop Service is available.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,10 +46,10 @@ public class ModifyAutoSnapshotPolicyRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The retention period of the automatic snapshots. Unit: days. Valid values: 1 to 180.</p>
+     * <p>The number of days to retain automatic snapshots. The value must be an integer from 1 to 180.</p>
      * 
      * <strong>example:</strong>
-     * <p>5</p>
+     * <p>2</p>
      */
     @NameInMap("RetentionDays")
     public Integer retentionDays;

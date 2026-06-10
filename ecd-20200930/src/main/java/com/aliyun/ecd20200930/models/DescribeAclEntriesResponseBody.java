@@ -62,8 +62,10 @@ public class DescribeAclEntriesResponseBody extends TeaModel {
          * <p>The ACL type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>allow: whitelist</li>
-         * <li>disable: blacklist</li>
+         * <li><p>allow: whitelist</p>
+         * </li>
+         * <li><p>disable: blacklist</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -76,7 +78,7 @@ public class DescribeAclEntriesResponseBody extends TeaModel {
          * <p>The ID of the instance to which the ACL applies. You can specify an office network ID or a cloud computer ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>ecd-fsafeweh***</p>
+         * <p>ecd-22poqua477xo4****</p>
          */
         @NameInMap("SourceId")
         public String sourceId;
@@ -85,8 +87,10 @@ public class DescribeAclEntriesResponseBody extends TeaModel {
          * <p>The granularity of the ACL.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>desktop: cloud computer</li>
-         * <li>vpc: office network</li>
+         * <li><p>desktop: cloud computer</p>
+         * </li>
+         * <li><p>vpc: office network</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

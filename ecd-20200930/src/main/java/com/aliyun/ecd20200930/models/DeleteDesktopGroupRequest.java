@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDesktopGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud computer share.</p>
+     * <p>Shared desktop group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteDesktopGroupRequest extends TeaModel {
     public String desktopGroupId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>Region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the list of regions supported by WUYING Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

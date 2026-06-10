@@ -8,7 +8,7 @@ public class RebuildDesktopsRequest extends TeaModel {
     public String afterStatus;
 
     /**
-     * <p>The cloud computer IDs. You can specify the IDs of 1 to 20 cloud computers.</p>
+     * <p>The IDs of the cloud computers to rebuild. You can specify 1 to 20 IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,14 +27,7 @@ public class RebuildDesktopsRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The OS language. Only system images are supported, and Linux cloud computers support only English.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>en-US: English</li>
-     * <li>zh-HK: Traditional Chinese (Hong Kong, China)</li>
-     * <li>zh-CN: Simplified Chinese</li>
-     * <li>ja-JP: Japanese</li>
-     * </ul>
+     * <p>The operating system language. This parameter applies only to system images. For Linux cloud computers, only English is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>en-US</p>
@@ -43,26 +36,29 @@ public class RebuildDesktopsRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The operation type on the data disk.</p>
+     * <p>Specifies how to handle the data disk.</p>
      * <blockquote>
-     * <p> This parameter is empty by default regardless of whether data disks are attached to the cloud computer.</p>
+     * <p>This parameter is optional.</p>
      * </blockquote>
      * <ul>
-     * <li><p>No data disks are attached to the cloud computer:\
-     * No operation is performed on the data disks of the cloud computer regardless of the value of this parameter.</p>
+     * <li><p>If a cloud computer does not have a data disk, this parameter is ignored.<br></p>
      * </li>
-     * <li><p>Data disks are attached to the cloud computer:</p>
+     * <li><p>If a cloud computer has a data disk:</p>
      * <ol>
-     * <li><p>The OS of the cloud computer is the same as the OS of the destination image:</p>
+     * <li><p>If the new image has the same operating system as the original one:</p>
      * <ul>
-     * <li>If you set the OperateType parameter to <code>replace</code>, the data in the data disks of the cloud computer is replaced.</li>
-     * <li>If you leave the OperateType parameter empty, the data in the data disks of the cloud computer is retained.</li>
+     * <li><p>If you set this parameter to <code>replace</code>, the data disk is replaced.</p>
+     * </li>
+     * <li><p>If you do not specify this parameter, the data disk is retained.</p>
+     * </li>
      * </ul>
      * </li>
-     * <li><p>The OS of the cloud computer is different from the OS of the destination image:</p>
+     * <li><p>If the new image has a different operating system:</p>
      * <ul>
-     * <li>If you set the OperateType parameter to <code>replace</code>, the data in the data disks of the cloud computer is replaced.</li>
-     * <li>If you leave the OperateType parameter empty, the data in the data disks of the cloud computer is cleared.</li>
+     * <li><p>If you set this parameter to <code>replace</code>, the data disk is replaced.</p>
+     * </li>
+     * <li><p>If you do not specify this parameter, the data disk is erased.</p>
+     * </li>
      * </ul>
      * </li>
      * </ol>
@@ -76,7 +72,7 @@ public class RebuildDesktopsRequest extends TeaModel {
     public String operateType;
 
     /**
-     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</p>
+     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to find the regions where Elastic Desktop Service is available.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

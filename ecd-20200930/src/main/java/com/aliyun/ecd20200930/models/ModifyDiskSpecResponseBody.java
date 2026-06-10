@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDiskSpecResponseBody extends TeaModel {
     /**
-     * <p>The ID of the order. You can obtain the ID of an order from the <a href="https://usercenter2-intl.aliyun.com/order/list">Expenses and Costs &gt; Orders</a> page.</p>
+     * <p>The order ID. You can find the order ID in &lt;props=&quot;china&quot;&gt;<a href="https://billing-cost.console.aliyun.com/order/list">Expenses and Costs &gt; My Orders</a>. &lt;props=&quot;intl&quot;&gt;<a href="https://usercenter2-intl.aliyun.com/order/list">Expenses and Costs &gt; Order Management</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>219861020660568</p>

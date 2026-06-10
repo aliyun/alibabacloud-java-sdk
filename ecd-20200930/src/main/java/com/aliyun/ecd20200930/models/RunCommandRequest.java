@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class RunCommandRequest extends TeaModel {
     /**
-     * <p>The content of the command. The command content can be plaintext or Base64-encoded.\
-     * The Base64-encoded command content cannot exceed 16 KB in size.</p>
+     * <p>The script content in plaintext or Base64-encoded format.<br>
+     * The Base64-encoded script content cannot exceed 16 KB.<br></p>
      * <blockquote>
-     * <p>If the command content is Base64-encoded, you must set the ContentEncoding parameter to Base64.</p>
+     * <p>If the script content is Base64-encoded, you must set the <code>ContentEncoding</code> parameter to <code>Base64</code>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -22,12 +22,10 @@ public class RunCommandRequest extends TeaModel {
     public String commandRole;
 
     /**
-     * <p>The encoding mode of the command content. Valid values:</p>
-     * <ul>
-     * <li>PlainText: The command content is not encoded.</li>
-     * <li>Base64: The command content is Base64-encoded.</li>
-     * </ul>
-     * <p>Default value: PlainText. If the specified value of this parameter is invalid, PlainText is used by default.</p>
+     * <p>The encoding mode of the script content.</p>
+     * <blockquote>
+     * <p>If you specify a value that is not a valid enumeration member, the system defaults to <code>PlainText</code>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Base64</p>
@@ -36,24 +34,27 @@ public class RunCommandRequest extends TeaModel {
     public String contentEncoding;
 
     /**
-     * <p>The ID of cloud desktop N. Valid values of N: 1 to 50.\
-     * If multiple cloud desktops are specified and the command execution succeeds on at least one of the cloud desktops, the operation is considered successful. If multiple cloud desktops are specified and the command execution fails on all the cloud desktops, verify the value of the parameter and try again.</p>
+     * <p>The IDs of the cloud computers on which to run the script. You can specify up to 50 IDs.<br>
+     * The API call is considered successful if the script runs on at least one of the specified cloud computers. The call fails only if the script fails on all of them.<br></p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
-     * <p>The ID of the end user. If you specify a value, you run the command as the end user that is granted specific permissions. Note: The end user has sessions on a cloud computer. That is, when the cloud computer is started, the end user logs on to an Alibaba Cloud Workspace client and connects to the cloud computer, and the cloud computer is not preempted by another end user during the connection. This parameter is not available for Linux cloud computers.</p>
+     * <p>If you specify this parameter, the command runs with the permissions of the specified end user.</p>
+     * <blockquote>
+     * <p>This user must have a session history on the cloud computer. This means the user must have logged in after the cloud computer started and their session was not taken over by another user. This parameter is not supported for Linux cloud computers.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>User1</p>
+     * <p>alice</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,8 +64,8 @@ public class RunCommandRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The timeout period for the command to run. Unit: seconds. Default value: 60.\
-     * A timeout error occurs if the command cannot be run because the process slows down or because a specific module or the Cloud Assistant client does not exist. When a timeout error occurs, the command process is forcibly terminated.</p>
+     * <p>The script execution timeout, in seconds. Default value: 300.<br>
+     * A command times out if the script cannot be run due to issues such as process conflicts, missing modules, or an unavailable Cloud Assistant client. When a command times out, the system forcibly terminates the script process.<br></p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -73,11 +74,7 @@ public class RunCommandRequest extends TeaModel {
     public Long timeout;
 
     /**
-     * <p>The language of the O\&amp;M command. Valid values:</p>
-     * <ul>
-     * <li>RunBatScript</li>
-     * <li>RunPowerShellScript</li>
-     * </ul>
+     * <p>The type of the script.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

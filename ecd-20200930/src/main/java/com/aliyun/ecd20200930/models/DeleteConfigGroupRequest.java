@@ -14,7 +14,7 @@ public class DeleteConfigGroupRequest extends TeaModel {
      * <p>The ID of the region. Set the value to <code>cn-shanghai</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;

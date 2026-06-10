@@ -8,7 +8,7 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
      * <p>A pagination token.</p>
      * 
      * <strong>example:</strong>
-     * <p>CAAAAA==</p>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

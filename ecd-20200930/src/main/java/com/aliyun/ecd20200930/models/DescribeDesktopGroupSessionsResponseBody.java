@@ -152,7 +152,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
 
     public static class DescribeDesktopGroupSessionsResponseBodySessions extends TeaModel {
         /**
-         * <p>账号类型</p>
+         * <p>The account type.</p>
          * 
          * <strong>example:</strong>
          * <p>SIMPLE</p>
@@ -173,7 +173,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
          * <p>The operating system of the client.</p>
          * 
          * <strong>example:</strong>
-         * <p>windows_\&quot;Windows10Enterprise\&quot;10.0(Build22000)</p>
+         * <p>windows</p>
          */
         @NameInMap("ClientOS")
         public String clientOS;
@@ -182,7 +182,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
          * <p>The version of the client.</p>
          * 
          * <strong>example:</strong>
-         * <p>2.0.0-R-20221030.08****</p>
+         * <p>7.8.0</p>
          */
         @NameInMap("ClientVersion")
         public String clientVersion;
@@ -200,7 +200,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
          * <p>The name of the cloud computer share.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test</p>
+         * <p>DemoCCGroup</p>
          */
         @NameInMap("DesktopGroupName")
         public String desktopGroupName;
@@ -215,7 +215,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>办公网络类型</p>
+         * <p>The office network type.</p>
          * 
          * <strong>example:</strong>
          * <p>SIMPLE</p>
@@ -236,7 +236,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
          * <p>The user ID of the terminal that connects to the session.</p>
          * 
          * <strong>example:</strong>
-         * <p>xianqiu</p>
+         * <p>alice</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
@@ -245,7 +245,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
          * <p>The end time of the most recent connection.</p>
          * 
          * <strong>example:</strong>
-         * <p>2022-08-31 06:56:45</p>
+         * <p>2022-08-31 07:56:45</p>
          */
         @NameInMap("LastSessionEndTime")
         public String lastSessionEndTime;
@@ -281,18 +281,13 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
          * <p>The office network name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test</p>
+         * <p>DemoOfficeNetwork</p>
          */
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
         /**
          * <p>The operating system type of the cloud computer.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>linux.</li>
-         * <li>Windows.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Windows</p>
@@ -302,11 +297,6 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
 
         /**
          * <p>The type of the session.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>0: single-session</li>
-         * <li>1: multi-session</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -316,11 +306,6 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
 
         /**
          * <p>The protocol type supported by the rule.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>High-definition Experience (HDX).</li>
-         * <li>ASP.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ASP</p>
@@ -339,22 +324,6 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
 
         /**
          * <p>The state of the session.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>Connected</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Disconnected</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Connected</p>

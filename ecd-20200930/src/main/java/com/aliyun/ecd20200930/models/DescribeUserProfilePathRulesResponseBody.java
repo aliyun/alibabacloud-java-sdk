@@ -4,18 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>A87DBB05-653A-5E4B-B72B-5F4A1E07****</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The directory blacklist and whitelist.</p>
-     */
     @NameInMap("UserProfilePathRule")
     public DescribeUserProfilePathRulesResponseBodyUserProfilePathRule userProfilePathRule;
 
@@ -41,37 +32,9 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeUserProfilePathRulesResponseBodyUserProfilePathRuleRulesBlackPath extends TeaModel {
-        /**
-         * <p>The path.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>AppLocal/Data</p>
-         */
         @NameInMap("Path")
         public String path;
 
-        /**
-         * <p>The path type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>file</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>folder</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>file</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -99,37 +62,9 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeUserProfilePathRulesResponseBodyUserProfilePathRuleRulesWhitePaths extends TeaModel {
-        /**
-         * <p>The path.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>games</p>
-         */
         @NameInMap("Path")
         public String path;
 
-        /**
-         * <p>The path type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>file</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>folder</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>folder</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -157,15 +92,9 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeUserProfilePathRulesResponseBodyUserProfilePathRuleRules extends TeaModel {
-        /**
-         * <p>The blacklist that is configured.</p>
-         */
         @NameInMap("BlackPath")
         public DescribeUserProfilePathRulesResponseBodyUserProfilePathRuleRulesBlackPath blackPath;
 
-        /**
-         * <p>The directories in the whitelist.</p>
-         */
         @NameInMap("WhitePaths")
         public java.util.List<DescribeUserProfilePathRulesResponseBodyUserProfilePathRuleRulesWhitePaths> whitePaths;
 
@@ -193,43 +122,12 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeUserProfilePathRulesResponseBodyUserProfilePathRule extends TeaModel {
-        /**
-         * <p>The desktop group ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dg-4i8fvpv6tfs03****</p>
-         */
         @NameInMap("DesktopGroupId")
         public String desktopGroupId;
 
-        /**
-         * <p>The directory rules.</p>
-         */
         @NameInMap("Rules")
         public java.util.List<DescribeUserProfilePathRulesResponseBodyUserProfilePathRuleRules> rules;
 
-        /**
-         * <p>The directory type that is configured for the directory.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>DesktopGroup</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Default</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Default</p>
-         */
         @NameInMap("UserProfileRuleType")
         public String userProfileRuleType;
 

@@ -8,7 +8,7 @@ public class RebootDesktopsRequest extends TeaModel {
     public Boolean createSnapshot;
 
     /**
-     * <p>The IDs of the cloud computers. You can specify 1 to 100 IDs.</p>
+     * <p>An array of 1 to 100 desktop IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +17,9 @@ public class RebootDesktopsRequest extends TeaModel {
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
+    /**
+     * <p>Specifies whether to install system patches.</p>
+     */
     @NameInMap("OsUpdate")
     public Boolean osUpdate;
 
@@ -28,7 +31,7 @@ public class RebootDesktopsRequest extends TeaModel {
     public String patchId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to get a list of regions where Elastic Desktop Service is available.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

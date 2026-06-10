@@ -27,24 +27,12 @@ public class DescribeEcdReportTasksRequest extends TeaModel {
 
     /**
      * <p>The task status.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>INIT: initializing</li>
-     * <li>FAILED</li>
-     * <li>RUNNING</li>
-     * <li>EXPIRED</li>
-     * <li>FINISHED</li>
-     * </ul>
      */
     @NameInMap("Status")
     public java.util.List<String> status;
 
     /**
      * <p>The sub-type of the report export task.</p>
-     * <p>Valid value:</p>
-     * <ul>
-     * <li>DESKTOP: cloud computer</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>DESKTOP</p>

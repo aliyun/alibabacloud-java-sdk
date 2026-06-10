@@ -15,22 +15,6 @@ public class DescribeBundlesRequest extends TeaModel {
 
     /**
      * <p>The type of the cloud computer template.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>SYSTEM: system template</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>CUSTOM: custom template</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM</p>
@@ -58,12 +42,6 @@ public class DescribeBundlesRequest extends TeaModel {
 
     /**
      * <p>The instance family of the cloud computers.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>eds.graphics: graphical instance families</li>
-     * <li>eds.hf: instance families with high clock speeds</li>
-     * <li>eds.general: general-purpose instance families</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>eds.general</p>
@@ -73,33 +51,17 @@ public class DescribeBundlesRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter is not available for public use.</p>
+     * <p>This parameter is not available for public use.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>This parameter is now in invitational preview and unavailable.</p>
+     * <p>example</p>
      */
     @NameInMap("FotaChannel")
     public String fotaChannel;
 
     /**
      * <p>Specifies whether the cloud computers in the template belong to a cloud computer pool.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>true</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>false</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -118,13 +80,6 @@ public class DescribeBundlesRequest extends TeaModel {
 
     /**
      * <p>The GPU driver type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>T4</li>
-     * <li>A10</li>
-     * <li>G28</li>
-     * <li>G39</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>T4</p>
@@ -169,22 +124,6 @@ public class DescribeBundlesRequest extends TeaModel {
 
     /**
      * <p>The type of the OS.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>Linux</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Windows</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Windows</p>
@@ -194,11 +133,6 @@ public class DescribeBundlesRequest extends TeaModel {
 
     /**
      * <p>The protocol type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>HDX: High-definition Experience (HDX) protocol</li>
-     * <li>ASP: in-house Adaptive Streaming Protocol (ASP) (recommend)</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>ASP</p>
@@ -207,7 +141,7 @@ public class DescribeBundlesRequest extends TeaModel {
     public String protocolType;
 
     /**
-     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</p>
+     * <p>The region ID. You can call the <a href="t2167755.xdita#"></a>operation to query the regions supported by Elastic Desktop Service (EDS).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -235,11 +169,7 @@ public class DescribeBundlesRequest extends TeaModel {
     public Boolean selectedBundle;
 
     /**
-     * <p>The type of the session. Valide values:</p>
-     * <ul>
-     * <li>SingleSession</li>
-     * <li>MultipleSession</li>
-     * </ul>
+     * <p>The type of the session.</p>
      * 
      * <strong>example:</strong>
      * <p>SingleSession</p>

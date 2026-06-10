@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDesktopChargeTypeResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the cloud computers.</p>
+     * <p>The IDs of the cloud desktops.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
@@ -20,7 +20,7 @@ public class ModifyDesktopChargeTypeResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>

@@ -8,7 +8,7 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
      * <p>The number of available cloud computers in the office network.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>2</p>
      */
     @NameInMap("DesktopCount")
     public Integer desktopCount;

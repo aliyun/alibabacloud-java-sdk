@@ -87,7 +87,7 @@ public class TagResourcesRequest extends TeaModel {
          * <p>The tag keys. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with <code>acs:</code> or <code>aliyun</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>TestKey</p>
+         * <p>department</p>
          */
         @NameInMap("Key")
         public String key;
@@ -96,7 +96,7 @@ public class TagResourcesRequest extends TeaModel {
          * <p>The tag values. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>TestValue</p>
+         * <p>design</p>
          */
         @NameInMap("Value")
         public String value;

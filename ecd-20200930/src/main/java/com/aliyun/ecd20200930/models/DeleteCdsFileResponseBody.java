@@ -17,8 +17,10 @@ public class DeleteCdsFileResponseBody extends TeaModel {
      * <p>Indicates whether the data is returned.</p>
      * <p>Valid value:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,8 +51,10 @@ public class DeleteCdsFileResponseBody extends TeaModel {
      * <p>Indicates whether the operation was successful.</p>
      * <p>Valid value:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

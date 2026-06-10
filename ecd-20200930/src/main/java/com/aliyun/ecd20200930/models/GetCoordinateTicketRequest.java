@@ -18,7 +18,7 @@ public class GetCoordinateTicketRequest extends TeaModel {
      * <p>The name of the convenience user account. If you initiate the request as an administrator, you do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>Alice</p>
+     * <p>alice</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;

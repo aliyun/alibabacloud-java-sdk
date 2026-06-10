@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class MigrateDesktopsRequest extends TeaModel {
     /**
-     * <p>The IDs of the cloud computers. You can specify 1 to 100 IDs.</p>
+     * <p>The IDs of the cloud computers to migrate. You can specify 1 to 100 IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. To get a list of supported regions, call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,11 +21,14 @@ public class MigrateDesktopsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is not publicly available.</p>
+     */
     @NameInMap("TargetMemberIp")
     public String targetMemberIp;
 
     /**
-     * <p>The ID of the destination office network.</p>
+     * <p>The ID of the target office network.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,12 +38,7 @@ public class MigrateDesktopsRequest extends TeaModel {
     public String targetOfficeSiteId;
 
     /**
-     * <blockquote>
-     * <p>This parameter is for internal use only.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>null</p>
+     * <p>This parameter is not publicly available.</p>
      */
     @NameInMap("TargetSubnetId")
     public String targetSubnetId;

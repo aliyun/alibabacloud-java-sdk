@@ -16,8 +16,10 @@ public class DescribePriceRequest extends TeaModel {
     /**
      * <p>The maximum public bandwidth. Unit: Mbit/s.</p>
      * <ul>
-     * <li>Valid values if you set InternetChargeType to PayByBandwidth: 10 to 1000.</li>
-     * <li>Valid values if you set InternetChargeType to InternetChargeType: 10 to 200.</li>
+     * <li><p>Valid values if you set InternetChargeType to PayByBandwidth: 10 to 1000.</p>
+     * </li>
+     * <li><p>Valid values if you set InternetChargeType to InternetChargeType: 10 to 200.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,11 +30,6 @@ public class DescribePriceRequest extends TeaModel {
 
     /**
      * <p>The type of hourly plan if you use the Monthly Subscription billing method. If you set <code>ResourceType</code> to <code>DesktopMonthPackage</code>, you must specify this parameter.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>120: the 120-hour computing plan.</li>
-     * <li>250: the 250-hour computing plan.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>120</p>
@@ -43,7 +40,7 @@ public class DescribePriceRequest extends TeaModel {
     /**
      * <p>The number of cloud computer shares. Default value: 1.</p>
      * <blockquote>
-     * <p> This parameter takes effect only if you set <code>ResourceType</code> to <code>DesktopGroup</code>.</p>
+     * <p>This parameter takes effect only if you set <code>ResourceType</code> to <code>DesktopGroup</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -55,9 +52,12 @@ public class DescribePriceRequest extends TeaModel {
     /**
      * <p>The specifications of the resource.</p>
      * <ul>
-     * <li>This parameter is required if you set <code>ResourceType</code> to <code>Desktop</code>. You can call the <a href="~~DescribeDesktopTypes~~">DescribeDesktopTypes</a> to query the available cloud computer types that correspond to the value of <code>DesktopTypeId</code>.</li>
-     * <li>If you set <code>ResourceType</code> to <code>DesktopGroup</code>, set the value of this parameter to <code>large</code>.</li>
-     * <li>If you set <code>ResourceType</code> to <code>Bandwidth</code>, you can leave this parameter empty.</li>
+     * <li><p>This parameter is required if you set <code>ResourceType</code> to <code>Desktop</code>. You can call the <a href="~~DescribeDesktopTypes~~">DescribeDesktopTypes</a> to query the available cloud computer types that correspond to the value of <code>DesktopTypeId</code>.</p>
+     * </li>
+     * <li><p>If you set <code>ResourceType</code> to <code>DesktopGroup</code>, set the value of this parameter to <code>large</code>.</p>
+     * </li>
+     * <li><p>If you set <code>ResourceType</code> to <code>Bandwidth</code>, you can leave this parameter empty.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,11 +68,6 @@ public class DescribePriceRequest extends TeaModel {
 
     /**
      * <p>The metering method for network traffic.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>PayByTraffic: You are charged for the actually consumed traffic.</li>
-     * <li>PayByBandwidth: You are charged by a fixed bandwidth.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>PayByTraffic</p>
@@ -82,11 +77,6 @@ public class DescribePriceRequest extends TeaModel {
 
     /**
      * <p>The OS type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Linux</li>
-     * <li>Windows (default)</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Windows</p>
@@ -97,9 +87,12 @@ public class DescribePriceRequest extends TeaModel {
     /**
      * <p>The subscription duration. The valid values of this parameter vary based on the value of <code>PeriodUnit</code>.</p>
      * <ul>
-     * <li>If you set <code>PeriodUnit</code> to <code>Hour</code>, set the value of this parameter to 1.</li>
-     * <li>If you set <code>PeriodUnit</code> to <code>Month</code>, set the value of this parameter to 1, 2, 3, or 6.</li>
-     * <li>If you set <code>PeriodUnit</code> to <code>Year</code>, set the value of this parameter to 1, 2, or 3.</li>
+     * <li><p>If you set <code>PeriodUnit</code> to <code>Hour</code>, set the value of this parameter to 1.</p>
+     * </li>
+     * <li><p>If you set <code>PeriodUnit</code> to <code>Month</code>, set the value of this parameter to 1, 2, 3, or 6.</p>
+     * </li>
+     * <li><p>If you set <code>PeriodUnit</code> to <code>Year</code>, set the value of this parameter to 1, 2, or 3.</p>
+     * </li>
      * </ul>
      * <p>Default value: 1.</p>
      * 
@@ -111,12 +104,6 @@ public class DescribePriceRequest extends TeaModel {
 
     /**
      * <p>The billing cycle.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Month</li>
-     * <li>Year</li>
-     * <li>Hour (default)</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Hour</p>
@@ -134,7 +121,7 @@ public class DescribePriceRequest extends TeaModel {
     public String promotionId;
 
     /**
-     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by EDS.</p>
+     * <p>The region ID. You can call the <a href="t2167755.xdita#"></a>operation to query the regions supported by EDS.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -143,18 +130,17 @@ public class DescribePriceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>User ID of the resource owner in resale mode. This parameter is not required in non-resale mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1422724566551XXX</p>
+     */
     @NameInMap("ResellerOwnerUid")
     public Long resellerOwnerUid;
 
     /**
      * <p>The type of the resource.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>DesktopMonthPackage: monthly subscription cloud computers that use hourly limit plans.</li>
-     * <li>Desktop (default): pay-as-you-go cloud computers/monthly subscription cloud computers that use unlimited plans.</li>
-     * <li>Bandwidth: premium bandwidth plans.</li>
-     * <li>DesktopGroup: cloud computer shares.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Desktop</p>
@@ -164,12 +150,6 @@ public class DescribePriceRequest extends TeaModel {
 
     /**
      * <p>The category of the system disk.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>cloud_efficiency: the ultra disk</li>
-     * <li>cloud_auto: the standard SSD.</li>
-     * <li>cloud_essd: the Enterprise SSD (ESSD). Take note that only specific cloud computer types support ESSDs.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>40</p>
@@ -177,6 +157,12 @@ public class DescribePriceRequest extends TeaModel {
     @NameInMap("RootDiskCategory")
     public String rootDiskCategory;
 
+    /**
+     * <p>Performance level of the system disk. You can configure the disk performance level when the cloud desktop instance type is graphics-optimized or high clock speed. For differences among performance levels of disks, see <a href="t583241.xdita#"></a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PL0</p>
+     */
     @NameInMap("RootDiskPerformanceLevel")
     public String rootDiskPerformanceLevel;
 
@@ -191,12 +177,6 @@ public class DescribePriceRequest extends TeaModel {
 
     /**
      * <p>The category of the data disk.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>cloud_efficiency: the ultra disk</li>
-     * <li>cloud_auto: the standard SSD.</li>
-     * <li>cloud_essd: the ESSD. Take note that only specific cloud computer types support ESSDs.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -204,6 +184,12 @@ public class DescribePriceRequest extends TeaModel {
     @NameInMap("UserDiskCategory")
     public String userDiskCategory;
 
+    /**
+     * <p>Performance level of the data disk. You can specify the disk performance level when the WUYING Workspace instance type is set to graphics-optimized or high clock speed. For differences between performance levels of disks, see <a href="t583241.xdita#"></a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PL0</p>
+     */
     @NameInMap("UserDiskPerformanceLevel")
     public String userDiskPerformanceLevel;
 

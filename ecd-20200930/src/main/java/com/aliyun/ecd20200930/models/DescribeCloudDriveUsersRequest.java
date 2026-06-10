@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudDriveUsersRequest extends TeaModel {
     /**
+     * <p>The ID of the enterprise network drive.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,13 +15,24 @@ public class DescribeCloudDriveUsersRequest extends TeaModel {
     public String cdsId;
 
     /**
+     * <p>The end user ID.</p>
+     * <p>If specified, the query returns only the personal drive of that user. If left empty, the query returns the personal drives of all users.</p>
+     * 
      * <strong>example:</strong>
-     * <p>abc</p>
+     * <p>alice</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;
 
     /**
+     * <p>The number of entries per page.</p>
+     * <ul>
+     * <li><p>Maximum: 100.</p>
+     * </li>
+     * <li><p>Default: 10.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -28,6 +40,8 @@ public class DescribeCloudDriveUsersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token for the next page of results. This is the <code>NextToken</code> value from the previous response. Leave this parameter empty for the first request.</p>
+     * 
      * <strong>example:</strong>
      * <p>aGN4YzAxQGNuLWhhbmd6aG91LjExNzU5NTMyNjgzMTQ1****</p>
      */
@@ -35,6 +49,7 @@ public class DescribeCloudDriveUsersRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The region ID. To obtain a list of supported regions, call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

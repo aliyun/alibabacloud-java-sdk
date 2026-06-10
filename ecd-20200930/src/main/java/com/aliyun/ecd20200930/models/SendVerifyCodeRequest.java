@@ -7,11 +7,13 @@ public class SendVerifyCodeRequest extends TeaModel {
     /**
      * <p>The information that is required to send the verification code, in JSON format. When you verify the CEN instance of another Alibaba Cloud account, you must provide the ID of the CEN instance and the ID of the Alibaba Cloud account to which the instance belongs.</p>
      * <ul>
-     * <li>CenId: the ID of the CEN instance.</li>
-     * <li>CenOwnerId: the ID of the Alibaba Cloud account to which the CEN instance belongs.</li>
+     * <li><p>CenId: the ID of the CEN instance.</p>
+     * </li>
+     * <li><p>CenOwnerId: the ID of the Alibaba Cloud account to which the CEN instance belongs.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you own the CEN instance, skip this parameter. If you do not own the CEN instance, specify the ID of the Alibaba Cloud account that owns the CEN instance.</p>
+     * <p>If you own the CEN instance, skip this parameter. If you do not own the CEN instance, specify the ID of the Alibaba Cloud account that owns the CEN instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

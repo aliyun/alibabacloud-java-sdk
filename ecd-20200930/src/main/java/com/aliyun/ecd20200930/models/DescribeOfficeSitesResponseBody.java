@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOfficeSitesResponseBody extends TeaModel {
     /**
-     * <p>The token that determines the start point of the next query. If this parameter is empty, all results are returned.</p>
+     * <p>The token used to retrieve the next page of results. If this parameter is empty, all results have been returned.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -14,13 +14,13 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The office networks.</p>
+     * <p>A list of office networks.</p>
      */
     @NameInMap("OfficeSites")
     public java.util.List<DescribeOfficeSitesResponseBodyOfficeSites> officeSites;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -86,14 +86,6 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
         /**
          * <p>The status of the AD connector.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>CONNECT_ERROR</li>
-         * <li>RUNNING</li>
-         * <li>CONNECTING (You must configure the AD domain in which the AD connector is used.)</li>
-         * <li>EXPIRED</li>
-         * <li>CREATING</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -102,7 +94,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String connectorStatus;
 
         /**
-         * <p>The ID of an elastic network interface (ENI) to which the AD connector is mounted.</p>
+         * <p>The ID of the elastic network interface (ENI) to which the AD connector is attached.</p>
          * 
          * <strong>example:</strong>
          * <p>eni-bp1i4wx78lgosrj6****</p>
@@ -111,12 +103,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String networkInterfaceId;
 
         /**
-         * <p>The AD connector type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>1: General</li>
-         * <li>2: Advanced</li>
-         * </ul>
+         * <p>The specification of the AD connector.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +112,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String specification;
 
         /**
-         * <p>The trust password that is specified when you configure the AD trust relationship.</p>
+         * <p>The trust password that is configured when you set up an AD trust relationship.</p>
          * 
          * <strong>example:</strong>
          * <p>password123***</p>
@@ -134,7 +121,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String trustKey;
 
         /**
-         * <p>The ID of the vSwitch that resides in the network of the AD connector.</p>
+         * <p>The ID of the vSwitch that corresponds to the network of the AD connector.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp19ocz3erfx15uon****</p>
@@ -199,13 +186,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
     public static class DescribeOfficeSitesResponseBodyOfficeSitesLogs extends TeaModel {
         /**
-         * <p>The log severity.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>ERROR</li>
-         * <li>INFO</li>
-         * <li>WARN</li>
-         * </ul>
+         * <p>The log level.</p>
          * 
          * <strong>example:</strong>
          * <p>INFO</p>
@@ -214,7 +195,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String level;
 
         /**
-         * <p>Details of the log entry.</p>
+         * <p>The log message.</p>
          * 
          * <strong>example:</strong>
          * <p>code:success | message:Create Connector complete</p>
@@ -223,7 +204,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The step in the log entry.</p>
+         * <p>The registration step.</p>
          * 
          * <strong>example:</strong>
          * <p>CREATE_CONNECTOR</p>
@@ -232,7 +213,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String step;
 
         /**
-         * <p>The time when the log entry was printed.</p>
+         * <p>The timestamp of the log entry.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-05-12T09:42Z</p>
@@ -281,7 +262,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
     public static class DescribeOfficeSitesResponseBodyOfficeSitesResourceAmounts extends TeaModel {
         /**
-         * <p>The number of resources.</p>
+         * <p>The number of resources of this type.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -291,11 +272,6 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
         /**
          * <p>The resource type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>desktop: the cloud computer.</li>
-         * <li>DesktopGroup: the cloud computer share.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>desktop</p>
@@ -328,13 +304,13 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
     public static class DescribeOfficeSitesResponseBodyOfficeSites extends TeaModel {
         /**
-         * <p>Details of AD connectors.</p>
+         * <p>A list of AD connectors.</p>
          */
         @NameInMap("ADConnectors")
         public java.util.List<DescribeOfficeSitesResponseBodyOfficeSitesADConnectors> ADConnectors;
 
         /**
-         * <p>The ID of the GA instance.</p>
+         * <p>The ID of the Global Accelerator (GA) instance.</p>
          * 
          * <strong>example:</strong>
          * <p>ga-bp1astu3yrplkzoo2****</p>
@@ -349,7 +325,8 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String accountType;
 
         /**
-         * <p>The hostname of the domain controller. The hostname must comply with the hostname naming convention of Windows.</p>
+         * <p>The hostname of the domain controller.
+         * The hostname must comply with the Windows hostname naming conventions.</p>
          * 
          * <strong>example:</strong>
          * <p>beijing-ad01</p>
@@ -361,7 +338,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String authorityHost;
 
         /**
-         * <p>The hostname of the secondary domain controller.</p>
+         * <p>The hostname of the backup domain controller.</p>
          * 
          * <strong>example:</strong>
          * <p>beijing-ad02</p>
@@ -370,7 +347,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String backupDCHostname;
 
         /**
-         * <p>The DNS address of the secondary domain controller.</p>
+         * <p>The DNS address of the backup domain controller.</p>
          * 
          * <strong>example:</strong>
          * <p>172.24.XX.XX</p>
@@ -379,8 +356,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String backupDns;
 
         /**
-         * <p>The maximum public bandwidth value. Valid values: 0 to 1000.\
-         * If you leave this parameter empty or set this parameter to 0, Internet access is not enabled.</p>
+         * <p>The peak public bandwidth, in Mbit/s. Valid values: 0 to 1000. <br>A value of 0 indicates that internet access is disabled.<br></p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -389,7 +365,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public Integer bandwidth;
 
         /**
-         * <p>The CEN instance status.</p>
+         * <p>The attachment status of the Cloud Enterprise Network (CEN) instance.</p>
          * 
          * <strong>example:</strong>
          * <p>attached</p>
@@ -398,7 +374,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String cenAttachStatus;
 
         /**
-         * <p>The CEN instance ID.</p>
+         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-3gwy16dojz1m65****</p>
@@ -407,10 +383,10 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String cenId;
 
         /**
-         * <p>The IPv4 CIDR block of the VPC that the office network uses.</p>
+         * <p>The IPv4 CIDR block of the office network\&quot;s Virtual Private Cloud (VPC).</p>
          * 
          * <strong>example:</strong>
-         * <p>172.16.0.0/16</p>
+         * <p>47.100.XX.XX</p>
          */
         @NameInMap("CidrBlock")
         public String cidrBlock;
@@ -422,12 +398,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String clientSecret;
 
         /**
-         * <p>Indicates whether the CloudBox-based office network is created.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
+         * <p>Specifies whether the office network is a CloudBox-based office network.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -445,7 +416,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The custom endpoint of the access gateway.</p>
+         * <p>The address of the custom access gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-****.com</p>
@@ -460,7 +431,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public java.util.List<String> customDnsAddress;
 
         /**
-         * <p>The ID of the security group.</p>
+         * <p>The security group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-bp1ce64o4g9mdf5u****</p>
@@ -469,16 +440,10 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String customSecurityGroupId;
 
         /**
-         * <p>The method that is used to connect cloud computers that reside in the office network from Alibaba Cloud Workspace clients.</p>
+         * <p>The method for connecting to cloud computers from an Elastic Desktop Service client.</p>
          * <blockquote>
-         * <p> The VPC connection depends on Alibaba Cloud PrivateLink. You can use Alibaba Cloud PrivateLink for free. When you set this parameter to <code>VPC</code> or <code>Any</code>, PrivateLink is automatically activated.</p>
+         * <p>Connections over a VPC use Alibaba Cloud PrivateLink, which is provided free of charge. The PrivateLink service is enabled when this parameter is returned as <code>VPC</code> or <code>Any</code>.</p>
          * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>INTERNET (default): Cloud computers are connected from Alibaba Cloud Workspace clients over the Internet.</li>
-         * <li>VPC: Cloud computers are connected from Alibaba Cloud Workspace clients over the VPC.</li>
-         * <li>ANY: Cloud computers are connected from Alibaba Cloud Workspace clients over the Internet or the VPC. When end users connect to cloud computers from Alibaba Cloud Workspace clients, you can choose a connection method based on your business requirements.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>INTERNET</p>
@@ -487,7 +452,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String desktopAccessType;
 
         /**
-         * <p>The number of cloud computers that are created.</p>
+         * <p>The number of individually provisioned cloud computers.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -496,7 +461,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public Long desktopCount;
 
         /**
-         * <p>The endpoint that is used to connect to cloud computers in the directory over a VPC.</p>
+         * <p>The endpoint used to connect to cloud computers over a VPC.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://ep-bp1s2vmbj55r5rzc****.epsrv-bp1pcfhpwvlpny01****.cn-hangzhou.privatelink.aliyuncs.com">http://ep-bp1s2vmbj55r5rzc****.epsrv-bp1pcfhpwvlpny01****.cn-hangzhou.privatelink.aliyuncs.com</a></p>
@@ -505,13 +470,13 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String desktopVpcEndpoint;
 
         /**
-         * <p>The DNS addresses for the AD domains.</p>
+         * <p>The DNS addresses of the AD domain.</p>
          */
         @NameInMap("DnsAddress")
         public java.util.List<String> dnsAddress;
 
         /**
-         * <p>The username of a Domain Name System (DNS) user.</p>
+         * <p>The DNS username.</p>
          * 
          * <strong>example:</strong>
          * <p>testDnsUserName</p>
@@ -550,12 +515,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String eid;
 
         /**
-         * <p>Indicates whether the local administrator permissions are granted to users that are authorized to use cloud computers in the office network.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true (default)</li>
-         * <li>false</li>
-         * </ul>
+         * <p>Specifies whether to grant local administrator permissions to users of cloud computers in the office network.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -564,7 +524,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public Boolean enableAdminAccess;
 
         /**
-         * <p>Indicates whether the connection between cloud computers in the office network is enabled. After you enable the connection between cloud computers in the office network, cloud computers in the office network can access each other.</p>
+         * <p>Specifies whether cloud computers in the office network can access each other.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -573,7 +533,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public Boolean enableCrossDesktopAccess;
 
         /**
-         * <p>Indicates whether Internet access is enabled.</p>
+         * <p>Indicates whether internet access is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -582,7 +542,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public Boolean enableInternetAccess;
 
         /**
-         * <p>Indicates whether route access control is enabled for cloud services.</p>
+         * <p>Specifies whether to enable access control for cloud service routing.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -594,7 +554,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String envType;
 
         /**
-         * <p>An array of File Storage NAS (NAS) file system IDs.</p>
+         * <p>The IDs of Apsara File Storage for NAS file systems.</p>
          */
         @NameInMap("FileSystemIds")
         public java.util.List<String> fileSystemIds;
@@ -606,7 +566,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String ldapUrl;
 
         /**
-         * <p>Details about registration logs.</p>
+         * <p>The registration logs.</p>
          */
         @NameInMap("Logs")
         public java.util.List<DescribeOfficeSitesResponseBodyOfficeSitesLogs> logs;
@@ -621,7 +581,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public Boolean mfaEnabled;
 
         /**
-         * <p>The name of the office network. The name is unique in a region.</p>
+         * <p>The name of the office network. The name must be unique within the same region.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -630,7 +590,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Indicates whether two-factor verification is enabled when an end user logs on to an Alibaba Cloud Workspace client. This parameter is required only for convenience office networks. If two-factor verification is enabled, the system checks whether security risks exist within the logon account when a convenience user logs on to the client. If risks are detected, the system sends a verification code to the email address that is associated with the account. Then, the convenience user can log on to the client only after the user enters the correct verification code.</p>
+         * <p>Indicates whether risk-based verification is enabled for user logon. This feature applies only to office networks that use convenience accounts. If enabled, the system checks for security risks during logon. If a risk is detected, the user must enter a verification code sent to their email address to complete the logon process.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -639,12 +599,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public Boolean needVerifyLoginRisk;
 
         /**
-         * <p>Indicates whether the trusted device verification is enabled.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
+         * <p>Specifies whether to enable trusted device verification.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -653,7 +608,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public Boolean needVerifyZeroDevice;
 
         /**
-         * <p>The premium bandwidth plan ID.</p>
+         * <p>The ID of the premium bandwidth plan.</p>
          * 
          * <strong>example:</strong>
          * <p>np-amtp8e8q1o9e4****</p>
@@ -662,12 +617,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String networkPackageId;
 
         /**
-         * <p>The network version. The new version supports App Streaming.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>DEFAULT: the old version.</li>
-         * <li>NM: the new version.</li>
-         * </ul>
+         * <p>The network version. The new version supports products such as App Streaming.</p>
          * 
          * <strong>example:</strong>
          * <p>NM</p>
@@ -676,7 +626,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String nmVersion;
 
         /**
-         * <p>The IDs of the office networks.</p>
+         * <p>The office network ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-363353****</p>
@@ -686,11 +636,6 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
         /**
          * <p>The account type of the office network.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>SIMPLE: the convenience account</li>
-         * <li>AD_CONNECTOR: the enterprise AD account</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>AD_CONNECTOR</p>
@@ -699,7 +644,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String officeSiteType;
 
         /**
-         * <p>The organizational unit (OU) in the AD domain to which the office network is connected.</p>
+         * <p>The organizational unit (OU) in the Active Directory (AD) domain.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com/Domain Controllers</p>
@@ -708,12 +653,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String ouName;
 
         /**
-         * <p>The protocol type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>HDX</li>
-         * <li>ASP</li>
-         * </ul>
+         * <p>The streaming protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>ASP</p>
@@ -722,7 +662,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String protocolType;
 
         /**
-         * <p>The IP address of the RDS license.</p>
+         * <p>The IP address of the RDS license server.</p>
          * 
          * <strong>example:</strong>
          * <p>47.100.XX.XX</p>
@@ -731,16 +671,16 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String rdsLicenseAddress;
 
         /**
-         * <p>The domain name of the RDS license.</p>
+         * <p>The domain name of the RDS license server.</p>
          * 
          * <strong>example:</strong>
-         * <p>test.com</p>
+         * <p>example.com</p>
          */
         @NameInMap("RdsLicenseDomainName")
         public String rdsLicenseDomainName;
 
         /**
-         * <p>The remote desktop service (RDS) license status.</p>
+         * <p>The status of the Remote Desktop Services (RDS) license.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -749,18 +689,13 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String rdsLicenseStatus;
 
         /**
-         * <p>The number of resources.</p>
+         * <p>A list of resource quantities.</p>
          */
         @NameInMap("ResourceAmounts")
         public java.util.List<DescribeOfficeSitesResponseBodyOfficeSitesResourceAmounts> resourceAmounts;
 
         /**
-         * <p>The security protection setting of the office network.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>SASE: SASE is configured.</li>
-         * <li>OFF: No security protection setting is configured.</li>
-         * </ul>
+         * <p>The security protection configuration for the office network.</p>
          * 
          * <strong>example:</strong>
          * <p>SASE</p>
@@ -769,7 +704,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String securityProtection;
 
         /**
-         * <p>Indicates whether single sign-on (SSO) is enabled.</p>
+         * <p>Specifies whether to enable single sign-on (SSO).</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -778,32 +713,16 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public Boolean ssoEnabled;
 
         /**
-         * <p>The SSO type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>SAML.</li>
-         * </ul>
+         * <p>The single sign-on (SSO) type.</p>
          * 
          * <strong>example:</strong>
-         * <p>null</p>
+         * <p>SAML</p>
          */
         @NameInMap("SsoType")
         public String ssoType;
 
         /**
-         * <p>The office network status.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>REGISTERING: The office network is being registered.</li>
-         * <li>DEREGISTERING: The office network is being deregistered.</li>
-         * <li>REGISTERED: The office network is registered.</li>
-         * <li>NEEDCONFIGTRUST: A trust relationship is required for the office network.</li>
-         * <li>CONFIGTRUSTFAILED: A trust relationship fails to be configured for the office network.</li>
-         * <li>DEREGISTERED: The office network is deregistered.</li>
-         * <li>ERROR: One or more configurations of the office network are invalid.</li>
-         * <li>CONFIGTRUSTING: A trust relationship is being configured for the office network.</li>
-         * <li>NEEDCONFIGUSER: Users are required for the office network.</li>
-         * </ul>
+         * <p>The status of the office network.</p>
          * 
          * <strong>example:</strong>
          * <p>REGISTERED</p>
@@ -812,13 +731,13 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The DNS addresses for the AD subdomains.</p>
+         * <p>The DNS addresses of the AD subdomains.</p>
          */
         @NameInMap("SubDnsAddress")
         public java.util.List<String> subDnsAddress;
 
         /**
-         * <p>The username of enterprise AD subdomain.</p>
+         * <p>The name of the Active Directory (AD) subdomain.</p>
          * 
          * <strong>example:</strong>
          * <p>testSubDnsUserName</p>
@@ -828,11 +747,6 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
         /**
          * <p>The subnet mode of the office network.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>0: disabled.</li>
-         * <li>1: enabled.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -844,7 +758,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String tenantId;
 
         /**
-         * <p>The total number of cloud computers.</p>
+         * <p>The total number of cloud computers in the office network, including individual and shared computers.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -853,7 +767,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public Long totalEdsCount;
 
         /**
-         * <p>The number of cloud computers in the cloud computer share.</p>
+         * <p>The number of shared cloud computers.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -862,7 +776,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public Long totalEdsCountForGroup;
 
         /**
-         * <p>The number of network interface controllers (NICs).</p>
+         * <p>The total number of resources, including cloud computers and shared cloud computers.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -872,23 +786,23 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
         /**
          * <blockquote>
-         * <p> This parameter is unavailable.</p>
+         * <p>This parameter is not available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>null</p>
+         * <p>To be hidden.</p>
          */
         @NameInMap("TrustPassword")
         public String trustPassword;
 
         /**
-         * <p>An array of VSwitch IDs.</p>
+         * <p>The vSwitch IDs.</p>
          */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the office network\&quot;s Virtual Private Cloud (VPC).</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-uf6tz5k67puge5jn8****</p>
@@ -898,12 +812,6 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
         /**
          * <p>The VPC type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Basic</li>
-         * <li>Customized</li>
-         * <li>Standard</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Basic</p>

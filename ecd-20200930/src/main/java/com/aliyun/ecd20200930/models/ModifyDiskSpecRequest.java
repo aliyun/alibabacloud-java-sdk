@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyDiskSpecRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the automatic payment feature.</p>
+     * <p>Specifies whether to enable automatic payment.</p>
      * <ul>
-     * <li>If you set the value to <code>true</code>, ensure your account has sufficient balance to avoid generating abnormal orders.</li>
-     * <li>If you set the value to <code>false</code>, go to the <strong>Expenses and Costs</strong> page to complete the payment based on the order number.</li>
-     * </ul>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true (default): enables the automatic payment feature.</li>
-     * <li>false: generates the order and manually complete the payment.</li>
+     * <li><p>If set to <code>true</code>, ensure your account has a sufficient balance. Otherwise, an abnormal order is generated.</p>
+     * </li>
+     * <li><p>If set to <code>false</code>, log on to the console. Then, go to the <strong>Expenses and Costs</strong> page to pay for the order using the returned order ID.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -23,17 +20,17 @@ public class ModifyDiskSpecRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The ID of the cloud computer.</p>
+     * <p>The ID of the cloud desktop.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ecd-2yjhqxo1monxxxxxx</p>
+     * <p>ecd-2yjhqxo1monbf****</p>
      */
     @NameInMap("DesktopId")
     public String desktopId;
 
     /**
-     * <p>The ID of the sales promotion activity. You can call the DescribePrice operation to obtain the IDs of matching sales promotion activities.</p>
+     * <p>The promotion ID. Call a pricing inquiry API to get a list of applicable promotion IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>youhuiquan_promotion_option_id_for_blank</p>
@@ -42,7 +39,7 @@ public class ModifyDiskSpecRequest extends TeaModel {
     public String promotionId;
 
     /**
-     * <p>The ID of the region. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+     * <p>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to get a list of supported regions for WUYING Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,14 +52,7 @@ public class ModifyDiskSpecRequest extends TeaModel {
     public Long resellerOwnerUid;
 
     /**
-     * <p>The PL of the system disk. Only Enterprise Graphics or High Frequency cloud computers support disk PL adjustments.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>PL1</li>
-     * <li>PL0</li>
-     * <li>PL3</li>
-     * <li>PL2</li>
-     * </ul>
+     * <p>The performance level of the system disk. You can set the performance level for Graphics or High-frequency workspaces.</p>
      * 
      * <strong>example:</strong>
      * <p>PL1</p>
@@ -71,14 +61,7 @@ public class ModifyDiskSpecRequest extends TeaModel {
     public String rootDiskPerformanceLevel;
 
     /**
-     * <p>The PL of the data disk. Only Enterprise Graphics or High Frequency cloud computers support disk PL adjustments.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>PL1</li>
-     * <li>PL0</li>
-     * <li>PL3</li>
-     * <li>PL2</li>
-     * </ul>
+     * <p>The performance level of the data disk. You can set the performance level for Graphics or High-frequency workspaces.</p>
      * 
      * <strong>example:</strong>
      * <p>PL1</p>
