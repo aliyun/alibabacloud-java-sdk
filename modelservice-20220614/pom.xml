@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>modelservice20220614</artifactId>
-  <version>3.0.1</version>
+  <version>4.0.0</version>
   <packaging>jar</packaging>
   <name>modelservice20220614</name>
   <description>Alibaba Cloud modelService (20220614) SDK for Java

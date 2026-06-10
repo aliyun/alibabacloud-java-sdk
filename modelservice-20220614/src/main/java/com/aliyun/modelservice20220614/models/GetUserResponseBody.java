@@ -8,50 +8,26 @@ public class GetUserResponseBody extends TeaModel {
     public String anthropicHost;
 
     @NameInMap("ApiKeys")
-    public Object apiKeys;
+    public java.util.List<GetUserResponseBodyApiKeys> apiKeys;
 
-    /**
-     * <strong>example:</strong>
-     * <p>20200425******</p>
-     */
     @NameInMap("AppId")
     public String appId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>OK</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <strong>example:</strong>
-     * <p>ai-service.******.alicontainer.com</p>
-     */
     @NameInMap("Host")
     public String host;
 
     @NameInMap("InnerToken")
     public String innerToken;
 
-    /**
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <strong>example:</strong>
-     * <p>897658D5-1FB8-5CFA-A030-727CCAE59EB0</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>Njk0Njk******</p>
-     */
     @NameInMap("Token")
     public String token;
 
@@ -68,11 +44,11 @@ public class GetUserResponseBody extends TeaModel {
         return this.anthropicHost;
     }
 
-    public GetUserResponseBody setApiKeys(Object apiKeys) {
+    public GetUserResponseBody setApiKeys(java.util.List<GetUserResponseBodyApiKeys> apiKeys) {
         this.apiKeys = apiKeys;
         return this;
     }
-    public Object getApiKeys() {
+    public java.util.List<GetUserResponseBodyApiKeys> getApiKeys() {
         return this.apiKeys;
     }
 
@@ -130,6 +106,36 @@ public class GetUserResponseBody extends TeaModel {
     }
     public String getToken() {
         return this.token;
+    }
+
+    public static class GetUserResponseBodyApiKeys extends TeaModel {
+        @NameInMap("ApiKey")
+        public String apiKey;
+
+        @NameInMap("InnerApiKey")
+        public String innerApiKey;
+
+        public static GetUserResponseBodyApiKeys build(java.util.Map<String, ?> map) throws Exception {
+            GetUserResponseBodyApiKeys self = new GetUserResponseBodyApiKeys();
+            return TeaModel.build(map, self);
+        }
+
+        public GetUserResponseBodyApiKeys setApiKey(String apiKey) {
+            this.apiKey = apiKey;
+            return this;
+        }
+        public String getApiKey() {
+            return this.apiKey;
+        }
+
+        public GetUserResponseBodyApiKeys setInnerApiKey(String innerApiKey) {
+            this.innerApiKey = innerApiKey;
+            return this;
+        }
+        public String getInnerApiKey() {
+            return this.innerApiKey;
+        }
+
     }
 
 }
