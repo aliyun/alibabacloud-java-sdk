@@ -1293,6 +1293,9 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         @NameInMap("questionDescription")
         public String questionDescription;
 
+        @NameInMap("questionSample")
+        public String questionSample;
+
         @NameInMap("scriptPointId")
         public String scriptPointId;
 
@@ -1353,6 +1356,14 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         }
         public String getQuestionDescription() {
             return this.questionDescription;
+        }
+
+        public GetAICoachScriptResponseBodyPoints setQuestionSample(String questionSample) {
+            this.questionSample = questionSample;
+            return this;
+        }
+        public String getQuestionSample() {
+            return this.questionSample;
         }
 
         public GetAICoachScriptResponseBodyPoints setScriptPointId(String scriptPointId) {

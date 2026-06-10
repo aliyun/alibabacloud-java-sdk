@@ -66,6 +66,9 @@ public class ListAgentsResponseBody extends TeaModel {
     }
 
     public static class ListAgentsResponseBodyList extends TeaModel {
+        @NameInMap("agentIconUrl")
+        public String agentIconUrl;
+
         /**
          * <strong>example:</strong>
          * <p>840016700254633984</p>
@@ -82,6 +85,12 @@ public class ListAgentsResponseBody extends TeaModel {
          */
         @NameInMap("agentScene")
         public String agentScene;
+
+        @NameInMap("characterAgeStage")
+        public String characterAgeStage;
+
+        @NameInMap("characterName")
+        public String characterName;
 
         @NameInMap("charactersDescription")
         public String charactersDescription;
@@ -148,6 +157,14 @@ public class ListAgentsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListAgentsResponseBodyList setAgentIconUrl(String agentIconUrl) {
+            this.agentIconUrl = agentIconUrl;
+            return this;
+        }
+        public String getAgentIconUrl() {
+            return this.agentIconUrl;
+        }
+
         public ListAgentsResponseBodyList setAgentId(String agentId) {
             this.agentId = agentId;
             return this;
@@ -170,6 +187,22 @@ public class ListAgentsResponseBody extends TeaModel {
         }
         public String getAgentScene() {
             return this.agentScene;
+        }
+
+        public ListAgentsResponseBodyList setCharacterAgeStage(String characterAgeStage) {
+            this.characterAgeStage = characterAgeStage;
+            return this;
+        }
+        public String getCharacterAgeStage() {
+            return this.characterAgeStage;
+        }
+
+        public ListAgentsResponseBodyList setCharacterName(String characterName) {
+            this.characterName = characterName;
+            return this;
+        }
+        public String getCharacterName() {
+            return this.characterName;
         }
 
         public ListAgentsResponseBodyList setCharactersDescription(String charactersDescription) {
