@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveContactBlockListRequest extends TeaModel {
     /**
+     * <p>The list of contacts. [Deprecated]</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,13 +14,27 @@ public class SaveContactBlockListRequest extends TeaModel {
     public java.util.List<String> contactBlockListList;
 
     /**
+     * <p>A JSON string that contains the blocklist. This parameter is required.</p>
+     * <ul>
+     * <li><p>phoneNumber: The mobile phone number.</p>
+     * </li>
+     * <li><p>remark: The remarks.</p>
+     * </li>
+     * <li><p>name: The name.</p>
+     * </li>
+     * <li><p>creator: The creator.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>{}</p>
+     * <p>[{&quot;phoneNumber&quot;:&quot;132322&quot;,&quot;remark&quot;:&quot;123321&quot;,&quot;name&quot;:&quot;ccc1&quot;,&quot;creator&quot;:&quot;ccc222&quot;}]</p>
      */
     @NameInMap("ContactBlockListsJson")
     public String contactBlockListsJson;
 
     /**
+     * <p>The instance ID. This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>c3c92de8-e4bd-4db4-a962-50f8acce40bc</p>
      */

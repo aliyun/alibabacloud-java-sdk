@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApiPluginsRequest extends TeaModel {
     /**
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListApiPluginsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Page number</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ListApiPluginsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Number of entries per page</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,8 @@ public class ListApiPluginsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>API plugin unique identifiers</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;d17d5bfa-4972-4389-9718-f9602edabe48&quot;]</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyBeebotIntentUserSayResponseBody extends TeaModel {
     /**
+     * <p>The internal request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A1F21BF2-CB21-1968-8039-C74699E7DDEB</p>
      */
@@ -12,6 +14,8 @@ public class ModifyBeebotIntentUserSayResponseBody extends TeaModel {
     public String beebotRequestId;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -19,6 +23,8 @@ public class ModifyBeebotIntentUserSayResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class ModifyBeebotIntentUserSayResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The message returned by the API.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -33,6 +41,8 @@ public class ModifyBeebotIntentUserSayResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -40,6 +50,8 @@ public class ModifyBeebotIntentUserSayResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -47,6 +59,8 @@ public class ModifyBeebotIntentUserSayResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The user utterance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>17448458</p>
      */

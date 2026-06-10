@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RollbackScriptRequest extends TeaModel {
     /**
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,15 +15,20 @@ public class RollbackScriptRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Version to roll back to</p>
+     * <blockquote>
+     * <p>For valid values, see the ListScriptPublishHistories operation.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1579055782000</p>
+     * <p>1578965079000</p>
      */
     @NameInMap("RollbackVersion")
     public String rollbackVersion;
 
     /**
+     * <p>Script ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

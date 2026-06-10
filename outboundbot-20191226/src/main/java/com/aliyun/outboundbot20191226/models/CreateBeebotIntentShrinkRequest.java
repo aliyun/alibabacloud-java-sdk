@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBeebotIntentShrinkRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,14 @@ public class CreateBeebotIntentShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The description of the intent.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("IntentDefinition")
     public String intentDefinitionShrink;
 
     /**
+     * <p>The scenario ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

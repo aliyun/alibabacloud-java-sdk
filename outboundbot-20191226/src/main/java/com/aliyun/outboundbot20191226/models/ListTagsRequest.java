@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagsRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListTagsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the script.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

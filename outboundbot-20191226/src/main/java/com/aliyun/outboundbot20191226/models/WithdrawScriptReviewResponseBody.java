@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class WithdrawScriptReviewResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -26,16 +32,23 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The script information.</p>
+     */
     @NameInMap("Script")
     public WithdrawScriptReviewResponseBodyScript script;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,16 +110,26 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
 
     public static class WithdrawScriptReviewResponseBodyScript extends TeaModel {
         /**
+         * <p>The debug status.</p>
+         * 
          * <strong>example:</strong>
          * <p>PUBLISHED</p>
          */
         @NameInMap("DebugStatus")
         public String debugStatus;
 
+        /**
+         * <p>The industry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>金融</p>
+         */
         @NameInMap("Industry")
         public String industry;
 
         /**
+         * <p>Indicates whether the debug version is a draft.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -114,29 +137,53 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
         public Boolean isDebugDrafted;
 
         /**
+         * <p>Indicates whether the application version is a draft.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("IsDrafted")
         public Boolean isDrafted;
 
+        /**
+         * <p>The scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>电销</p>
+         */
         @NameInMap("Scene")
         public String scene;
 
+        /**
+         * <p>The script description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>销售话术</p>
+         */
         @NameInMap("ScriptDescription")
         public String scriptDescription;
 
         /**
+         * <p>The script ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>e4e2a770-b97b-465a-80d8-06dca008c503</p>
          */
         @NameInMap("ScriptId")
         public String scriptId;
 
+        /**
+         * <p>The script name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>销售话术</p>
+         */
         @NameInMap("ScriptName")
         public String scriptName;
 
         /**
+         * <p>The status of the application version.</p>
+         * 
          * <strong>example:</strong>
          * <p>PUBLISHED</p>
          */
@@ -144,6 +191,8 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The time when the script was updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>1578881227000</p>
          */

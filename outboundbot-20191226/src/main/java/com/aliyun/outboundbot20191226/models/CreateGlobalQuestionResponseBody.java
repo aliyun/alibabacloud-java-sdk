@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateGlobalQuestionResponseBody extends TeaModel {
     /**
+     * <p>The status code of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class CreateGlobalQuestionResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The ID of the global question.</p>
+     * 
      * <strong>example:</strong>
      * <p>a546b616-724b-437f-bdb3-629a30c98567</p>
      */
@@ -19,6 +23,8 @@ public class CreateGlobalQuestionResponseBody extends TeaModel {
     public String globalQuestionId;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class CreateGlobalQuestionResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -33,13 +41,17 @@ public class CreateGlobalQuestionResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     * <p>56666881-887A-530A-B679-C3B6B6B142C0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

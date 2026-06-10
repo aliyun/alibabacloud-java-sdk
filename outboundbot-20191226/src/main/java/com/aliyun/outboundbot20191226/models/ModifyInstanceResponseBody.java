@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ModifyInstanceResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class ModifyInstanceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The instance information.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;InstanceId\&quot;: \&quot;ob369xifpi2074\&quot;, \&quot;AutoUpgradeObVersion\&quot;: False}</p>
      */
@@ -26,6 +32,8 @@ public class ModifyInstanceResponseBody extends TeaModel {
     public ModifyInstanceResponseBodyInstance instance;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -33,6 +41,8 @@ public class ModifyInstanceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -40,6 +50,8 @@ public class ModifyInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -101,6 +113,8 @@ public class ModifyInstanceResponseBody extends TeaModel {
 
     public static class ModifyInstanceResponseBodyInstance extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1578469042851</p>
          */
@@ -108,6 +122,8 @@ public class ModifyInstanceResponseBody extends TeaModel {
         public Long creationTime;
 
         /**
+         * <p>The ID of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>123123</p>
          */
@@ -115,26 +131,44 @@ public class ModifyInstanceResponseBody extends TeaModel {
         public Long creatorId;
 
         /**
+         * <p>The name of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
         @NameInMap("CreatorName")
         public String creatorName;
 
+        /**
+         * <p>The instance description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是第一个实例</p>
+         */
         @NameInMap("InstanceDescription")
         public String instanceDescription;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>90515b5-6115-4ccf-83e2-52d5bfaf2ddf</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>第一个实例</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
+         * <p>The maximum number of concurrent conversations.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -142,6 +176,8 @@ public class ModifyInstanceResponseBody extends TeaModel {
         public Integer maxConcurrentConversation;
 
         /**
+         * <p>The name of the owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */

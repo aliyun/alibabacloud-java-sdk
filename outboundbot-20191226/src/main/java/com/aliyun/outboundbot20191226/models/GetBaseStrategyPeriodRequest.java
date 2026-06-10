@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBaseStrategyPeriodRequest extends TeaModel {
     /**
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,16 @@ public class GetBaseStrategyPeriodRequest extends TeaModel {
     public String entryId;
 
     /**
+     * <p>Strategy level. Default value is 2.</p>
+     * <ul>
+     * <li><p>0: System</p>
+     * </li>
+     * <li><p>1: Tenant</p>
+     * </li>
+     * <li><p>2: Instance</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

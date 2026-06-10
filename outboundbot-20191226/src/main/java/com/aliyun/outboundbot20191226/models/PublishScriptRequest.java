@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class PublishScriptRequest extends TeaModel {
     /**
+     * <p>A description of the publication.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>本次发布了xxxx内容</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +25,7 @@ public class PublishScriptRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the scenario to publish.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

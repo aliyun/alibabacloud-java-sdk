@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
+     * <p>This parameter is deprecated.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>A list of resource IDs. The value of n can be from 1 to 50.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,15 +25,20 @@ public class TagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
+     * <p>The resource type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>instance</p>
+     * <p>INSTANCE</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
+     * <p>The list of tags. If the key and value of a tag are different from existing tags, a new tag is created.</p>
+     * <blockquote>
+     * <p>Use the ListResourceTags operation to get the list of tags for an instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -76,6 +83,8 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
+         * <p>The tag key. The value of n can be from 1 to 20.</p>
+         * 
          * <strong>example:</strong>
          * <p>Tag.1.Key=key1</p>
          */
@@ -83,6 +92,8 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the tag. The value can contain 1 to 20 characters.</p>
+         * 
          * <strong>example:</strong>
          * <p>Tag.1.Value=value1</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListResourceTagsResponseBody extends TeaModel {
     /**
+     * <p>Response code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListResourceTagsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class ListResourceTagsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Response message</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -26,6 +32,8 @@ public class ListResourceTagsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -33,6 +41,8 @@ public class ListResourceTagsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Resource tag information</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -40,6 +50,8 @@ public class ListResourceTagsResponseBody extends TeaModel {
     public ListResourceTagsResponseBodyResourceTags resourceTags;
 
     /**
+     * <p>Indicates whether the request succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -101,6 +113,8 @@ public class ListResourceTagsResponseBody extends TeaModel {
 
     public static class ListResourceTagsResponseBodyResourceTagsList extends TeaModel {
         /**
+         * <p>Tag key</p>
+         * 
          * <strong>example:</strong>
          * <p>name</p>
          */
@@ -108,6 +122,8 @@ public class ListResourceTagsResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>Tag value</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -139,6 +155,8 @@ public class ListResourceTagsResponseBody extends TeaModel {
 
     public static class ListResourceTagsResponseBodyResourceTags extends TeaModel {
         /**
+         * <p>List of resource tags</p>
+         * 
          * <strong>example:</strong>
          * <p>[]</p>
          */
@@ -146,6 +164,8 @@ public class ListResourceTagsResponseBody extends TeaModel {
         public java.util.List<ListResourceTagsResponseBodyResourceTagsList> list;
 
         /**
+         * <p>Page number</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -153,6 +173,8 @@ public class ListResourceTagsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Number of items per page</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -160,6 +182,8 @@ public class ListResourceTagsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total number of items</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

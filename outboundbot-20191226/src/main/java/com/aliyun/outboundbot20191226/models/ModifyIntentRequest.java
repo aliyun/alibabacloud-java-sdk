@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyIntentRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,17 @@ public class ModifyIntentRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The intent description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>询问车险意图</p>
+     */
     @NameInMap("IntentDescription")
     public String intentDescription;
 
     /**
+     * <p>The intent ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,12 +34,18 @@ public class ModifyIntentRequest extends TeaModel {
     public String intentId;
 
     /**
+     * <p>The intent name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>车险如何办理</p>
      */
     @NameInMap("IntentName")
     public String intentName;
 
     /**
+     * <p>The keywords. The value must be a JSON array of strings.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -39,6 +53,7 @@ public class ModifyIntentRequest extends TeaModel {
     public String keywords;
 
     /**
+     * <p>The script ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +63,11 @@ public class ModifyIntentRequest extends TeaModel {
     public String scriptId;
 
     /**
+     * <p>The user utterances. The value must be a JSON array of strings.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;车险如何办理&quot;]</p>
      */
     @NameInMap("Utterances")
     public String utterances;

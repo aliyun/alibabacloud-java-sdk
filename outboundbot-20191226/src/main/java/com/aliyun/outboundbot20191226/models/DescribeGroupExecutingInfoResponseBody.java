@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
     /**
+     * <p>API status code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Execution information</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -19,6 +23,8 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
     public DescribeGroupExecutingInfoResponseBodyExecutingInfo executingInfo;
 
     /**
+     * <p>Task group ID</p>
+     * 
      * <strong>example:</strong>
      * <p>b24d321a-2a74-4dd1-a0ba-4ab09cef6652</p>
      */
@@ -26,6 +32,8 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
     public String groupId;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +41,8 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Instance ID</p>
+     * 
      * <strong>example:</strong>
      * <p>c46001bc-3ead-4bfd-9a69-4b5b66a4a3f4</p>
      */
@@ -40,6 +50,8 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>API message</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -47,6 +59,8 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -54,6 +68,8 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -131,6 +147,8 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
 
     public static class DescribeGroupExecutingInfoResponseBodyExecutingInfoJobsProgress extends TeaModel {
         /**
+         * <p>Number of canceled tasks</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -138,6 +156,8 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         public Integer cancelledNum;
 
         /**
+         * <p>Number of executing jobs</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -145,6 +165,8 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         public Integer executingNum;
 
         /**
+         * <p>Number of failed tasks</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -152,6 +174,8 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         public Integer failedNum;
 
         /**
+         * <p>Number of paused tasks</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -159,6 +183,8 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         public Integer pausedNum;
 
         /**
+         * <p>Number of tasks being scheduled</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -166,6 +192,8 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         public Integer schedulingNum;
 
         /**
+         * <p>Total number of completed tasks</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -173,6 +201,8 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         public Integer totalCompletedNum;
 
         /**
+         * <p>Total number of jobs</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -180,6 +210,8 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         public Integer totalJobs;
 
         /**
+         * <p>Number of unanswered calls</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -258,10 +290,18 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeGroupExecutingInfoResponseBodyExecutingInfo extends TeaModel {
+        /**
+         * <p>Average talk time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>258</p>
+         */
         @NameInMap("AvgTalkTime")
         public Integer avgTalkTime;
 
         /**
+         * <p>Number of failed calls</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -269,6 +309,8 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         public Integer callFailedNum;
 
         /**
+         * <p>Number of outbound calls</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -276,16 +318,26 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         public Integer callNum;
 
         /**
+         * <p>Deprecated</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
         @NameInMap("CreatorName")
         public String creatorName;
 
+        /**
+         * <p>Call duration distribution</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;max&quot;:&quot;40&quot;,&quot;1&quot;:&quot;1&quot;,&quot;total&quot;:&quot;40&quot;,&quot;min&quot;:&quot;40&quot;}</p>
+         */
         @NameInMap("DurationDistribution")
         public String durationDistribution;
 
         /**
+         * <p>End time</p>
+         * 
          * <strong>example:</strong>
          * <p>1640087774563</p>
          */
@@ -293,6 +345,8 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         public Long endTime;
 
         /**
+         * <p>Number of completed executions</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -300,6 +354,8 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         public Integer finishedNum;
 
         /**
+         * <p>Number of calls hung up by customers</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -307,26 +363,55 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         public Integer hangUpByClientNum;
 
         /**
+         * <p>Execution progress</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
         @NameInMap("JobsProgress")
         public DescribeGroupExecutingInfoResponseBodyExecutingInfoJobsProgress jobsProgress;
 
+        /**
+         * <p>Number of calls with no interaction</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("NoInteractionNum")
         public Integer noInteractionNum;
 
         /**
+         * <p>Start time</p>
+         * 
          * <strong>example:</strong>
          * <p>1640087774563</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>Distribution of conversation rounds</p>
+         * <ul>
+         * <li><p>total: total number of conversation rounds involved</p>
+         * </li>
+         * <li><p>number: specific round number</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>Example: {&quot;total&quot;:&quot;5&quot;,&quot;5&quot;:&quot;1&quot;} means 5 conversation rounds were involved, and 1 call had 5 user turns.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;total&quot;:&quot;5&quot;,&quot;5&quot;:&quot;4&quot;}</p>
+         */
         @NameInMap("TalkTurnsDistribution")
         public String talkTurnsDistribution;
 
         /**
+         * <p>Intent recognition</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -334,6 +419,8 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         public Integer transferByIntentNum;
 
         /**
+         * <p>No answer</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */

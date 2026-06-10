@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListJobGroupsAsyncRequest extends TeaModel {
     /**
+     * <p>The ID returned by an asynchronous call to <code>ListJobGroup</code>. Use this ID to retrieve the results of the asynchronous query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

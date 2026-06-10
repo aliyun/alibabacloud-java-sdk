@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class CreateAnnotationMissionResponseBody extends TeaModel {
     /**
+     * <p>The status code of the API.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public CreateAnnotationMissionResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Additional information. If the request is successful, \<code>success\\</code> is returned. If the request fails, a specific error code is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>执行失败：查找元素或操作超时,outTaskId:trademark_regnew_public_cn-uax33hol2uu,flowId:null,nodeUUID:541b6c71-8cce-4ab0-af84-713ca9741821</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -32,6 +47,8 @@ public class CreateAnnotationMissionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. \<code>true\\</code>: The call was successful. \<code>false\\</code>: The call failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -92,10 +109,18 @@ public class CreateAnnotationMissionResponseBody extends TeaModel {
     }
 
     public static class CreateAnnotationMissionResponseBodyData extends TeaModel {
+        /**
+         * <p>Additional information. If the request is successful, \<code>success\\</code> is returned. If the request fails, a specific error code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>执行失败：查找元素或操作超时,outTaskId:trademark_regnew_public_cn-uax33hol2uu,flowId:null,nodeUUID:541b6c71-8cce-4ab0-af84-713ca9741821</p>
+         */
         @NameInMap("Message")
         public String message;
 
         /**
+         * <p>Indicates whether the operation was successful.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */

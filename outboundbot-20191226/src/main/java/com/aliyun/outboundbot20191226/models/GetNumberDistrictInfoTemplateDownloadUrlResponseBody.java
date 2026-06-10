@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetNumberDistrictInfoTemplateDownloadUrlResponseBody extends TeaModel {
     /**
+     * <p>API status code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetNumberDistrictInfoTemplateDownloadUrlResponseBody extends TeaMod
     public String code;
 
     /**
+     * <p>File URL</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://xxx.xx.com/xx">http://xxx.xx.com/xx</a></p>
      */
@@ -19,6 +23,8 @@ public class GetNumberDistrictInfoTemplateDownloadUrlResponseBody extends TeaMod
     public String fileHttpUrl;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class GetNumberDistrictInfoTemplateDownloadUrlResponseBody extends TeaMod
     public Integer httpStatusCode;
 
     /**
+     * <p>API message</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -33,6 +41,8 @@ public class GetNumberDistrictInfoTemplateDownloadUrlResponseBody extends TeaMod
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -40,6 +50,8 @@ public class GetNumberDistrictInfoTemplateDownloadUrlResponseBody extends TeaMod
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

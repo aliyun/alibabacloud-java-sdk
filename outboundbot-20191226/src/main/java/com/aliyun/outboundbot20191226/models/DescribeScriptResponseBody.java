@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeScriptResponseBody extends TeaModel {
     /**
+     * <p>API status code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class DescribeScriptResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class DescribeScriptResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>API message</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -26,6 +32,8 @@ public class DescribeScriptResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Deprecated</p>
+     * 
      * <strong>example:</strong>
      * <p>none</p>
      */
@@ -33,6 +41,8 @@ public class DescribeScriptResponseBody extends TeaModel {
     public String nlsConfig;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -40,6 +50,8 @@ public class DescribeScriptResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Script details</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -47,6 +59,8 @@ public class DescribeScriptResponseBody extends TeaModel {
     public DescribeScriptResponseBodyScript script;
 
     /**
+     * <p>Indicates whether the call succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -115,12 +129,30 @@ public class DescribeScriptResponseBody extends TeaModel {
     }
 
     public static class DescribeScriptResponseBodyScriptNluProfile extends TeaModel {
+        /**
+         * <p>Function service name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sanfang_test</p>
+         */
         @NameInMap("FcFunction")
         public String fcFunction;
 
+        /**
+         * <p>Function service trigger URL</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://sanfang_test-xxxxxx.cn-shanghai-vpc.fcapp.run">http://sanfang_test-xxxxxx.cn-shanghai-vpc.fcapp.run</a></p>
+         */
         @NameInMap("FcHttpTriggerUrl")
         public String fcHttpTriggerUrl;
 
+        /**
+         * <p>Function service region</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("FcRegion")
         public String fcRegion;
 
@@ -167,33 +199,73 @@ public class DescribeScriptResponseBody extends TeaModel {
     }
 
     public static class DescribeScriptResponseBodyScript extends TeaModel {
+        /**
+         * <p>Robot workspace access key</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1218333</p>
+         */
         @NameInMap("AgentId")
         public Long agentId;
 
+        /**
+         * <p>Robot workspace access key</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14791f5f226b4878b3d9b676a0291234</p>
+         */
         @NameInMap("AgentKey")
         public String agentKey;
 
+        /**
+         * <p>Indicates whether the robot workspace uses a Large Language Model (LLM)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AgentLlm")
         public Boolean agentLlm;
 
         /**
+         * <p>ASR configuration</p>
+         * 
          * <strong>example:</strong>
-         * <p>{\&quot;AppKey\&quot;:\&quot;3GHttnsvir1FeWWb\&quot;}</p>
+         * <p>{
+         *     &quot;appKey&quot;: &quot;oQDVNlE6fZ5mg46X&quot;,
+         *     &quot;engine&quot;: &quot;ali&quot;,
+         *     &quot;engineXunfei&quot;: &quot;&quot;,
+         *     &quot;globalMaxEndSilence&quot;: 700,
+         *     &quot;globalMaxEndSilenceEnable&quot;: true,
+         *     &quot;maxEndSilence&quot;: &quot;500&quot;,
+         *     &quot;nlsServiceType&quot;: &quot;Managed&quot;,
+         *     &quot;silenceTimeout&quot;: &quot;5000&quot;,
+         *     &quot;speechNoiseThreshold&quot;: &quot;0&quot;
+         * }</p>
          */
         @NameInMap("AsrConfig")
         public String asrConfig;
 
+        /**
+         * <p>Call configuration</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;silenceConfig&quot;:{&quot;silenceReplyTimeout&quot;:499,&quot;silenceTimeoutMaxCount&quot;:10,&quot;silenceTimeoutMaxCountEnable&quot;:true},&quot;hangupConfig&quot;:{&quot;aiHangupEnable&quot;:false,&quot;delayHangup&quot;:0,&quot;hangupMaxRounds&quot;:20,&quot;hangupMaxRoundsBroadcast&quot;:&quot;感谢您的接听，祝您生活愉快，再见!&quot;,&quot;hangupMaxRoundsEnable&quot;:false},&quot;securityInterceptConfig&quot;:{&quot;broadcast&quot;:&quot;您说的这个问题我不能回答您，您可以尝试询问其他问题。&quot;},&quot;specialInterceptConfig&quot;:{&quot;specialInterceptEnable&quot;:false,&quot;specialIntercepts&quot;:[{&quot;code&quot;:&quot;voiceAssistant&quot;},{&quot;code&quot;:&quot;extensionNumberTransfer&quot;}]},&quot;transitionConfig&quot;:{&quot;transitionSwitch&quot;:false}}</p>
+         */
         @NameInMap("ChatConfig")
         public String chatConfig;
 
         /**
+         * <p>Chatbot ID</p>
+         * 
          * <strong>example:</strong>
-         * <p>chatbot-cn-EJfqqa***</p>
+         * <p>d31794e2a51f47d2901b4094d88311d7</p>
          */
         @NameInMap("ChatbotId")
         public String chatbotId;
 
         /**
+         * <p>Status of the debug script</p>
+         * 
          * <strong>example:</strong>
          * <p>DRAFTED</p>
          */
@@ -201,16 +273,26 @@ public class DescribeScriptResponseBody extends TeaModel {
         public String debugStatus;
 
         /**
+         * <p>Enables emotion detection</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("EmotionEnable")
         public Boolean emotionEnable;
 
+        /**
+         * <p>Industry</p>
+         * 
+         * <strong>example:</strong>
+         * <p>金融</p>
+         */
         @NameInMap("Industry")
         public String industry;
 
         /**
+         * <p>Indicates whether the debug version is in draft status</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -218,6 +300,8 @@ public class DescribeScriptResponseBody extends TeaModel {
         public Boolean isDebugDrafted;
 
         /**
+         * <p>Indicates whether the script is in draft status</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -228,6 +312,8 @@ public class DescribeScriptResponseBody extends TeaModel {
         public String labelConfig;
 
         /**
+         * <p>Enables intelligent sentence break</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -235,6 +321,8 @@ public class DescribeScriptResponseBody extends TeaModel {
         public Boolean longWaitEnable;
 
         /**
+         * <p>Enables tone continuity</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -242,35 +330,74 @@ public class DescribeScriptResponseBody extends TeaModel {
         public Boolean miniPlaybackEnable;
 
         /**
+         * <p>Enables graceful barge-in</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("NewBargeInEnable")
         public Boolean newBargeInEnable;
 
+        /**
+         * <p>NLU engine (applies only to LLM scenarios)</p>
+         * <ul>
+         * <li><p>Prompts — Text entry mode</p>
+         * </li>
+         * <li><p>SSE_FUNCTION — Function Compute service mode</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Prompts</p>
+         */
         @NameInMap("NluEngine")
         public String nluEngine;
 
+        /**
+         * <p>Function Compute service mode configuration</p>
+         */
         @NameInMap("NluProfile")
         public DescribeScriptResponseBodyScriptNluProfile nluProfile;
 
+        /**
+         * <p>Scenario</p>
+         * 
+         * <strong>example:</strong>
+         * <p>催收</p>
+         */
         @NameInMap("Scene")
         public String scene;
 
+        /**
+         * <p>Script description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>催收话术</p>
+         */
         @NameInMap("ScriptDescription")
         public String scriptDescription;
 
         /**
+         * <p>Script ID</p>
+         * 
          * <strong>example:</strong>
          * <p>810b5872-57f0-4b27-80ab-7b3f4d8a6374</p>
          */
         @NameInMap("ScriptId")
         public String scriptId;
 
+        /**
+         * <p>Script name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>催收话术</p>
+         */
         @NameInMap("ScriptName")
         public String scriptName;
 
         /**
+         * <p>Script status</p>
+         * 
          * <strong>example:</strong>
          * <p>DRAFTED</p>
          */
@@ -278,13 +405,27 @@ public class DescribeScriptResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>TTS configuration for the script</p>
+         * 
          * <strong>example:</strong>
-         * <p>{\&quot;voice\&quot;:\&quot;xiaobei\&quot;,\&quot;volume\&quot;:\&quot;50\&quot;,\&quot;speechRate\&quot;:\&quot;-150\&quot;,\&quot;pitchRate\&quot;:\&quot;0\&quot;}</p>
+         * <p>{
+         *     &quot;appKey&quot;: &quot;oQDVNlE6fZ5mg46X&quot;,
+         *     &quot;engine&quot;: &quot;ali&quot;,
+         *     &quot;engineXunfei&quot;: &quot;&quot;,
+         *     &quot;globalInterruptible&quot;: true,
+         *     &quot;nlsServiceType&quot;: &quot;Managed&quot;,
+         *     &quot;pitchRate&quot;: &quot;0&quot;,
+         *     &quot;speechRate&quot;: &quot;0&quot;,
+         *     &quot;voice&quot;: &quot;zhiyuan&quot;,
+         *     &quot;volume&quot;: &quot;50&quot;
+         * }</p>
          */
         @NameInMap("TtsConfig")
         public String ttsConfig;
 
         /**
+         * <p>Time when the script was last updated</p>
+         * 
          * <strong>example:</strong>
          * <p>1578881227000</p>
          */

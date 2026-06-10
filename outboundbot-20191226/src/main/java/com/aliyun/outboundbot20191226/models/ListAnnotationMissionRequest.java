@@ -5,19 +5,43 @@ import com.aliyun.tea.*;
 
 public class ListAnnotationMissionRequest extends TeaModel {
     /**
+     * <p>Annotation mission ID</p>
+     * 
      * <strong>example:</strong>
      * <p>0943abcb-bd7d-4ace-8cf7-97d39d4dd0b9</p>
      */
     @NameInMap("AnnotationMissionId")
     public String annotationMissionId;
 
+    /**
+     * <p>Annotation mission name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>全景服务场景-标注任务-20230316-103253</p>
+     */
     @NameInMap("AnnotationMissionName")
     public String annotationMissionName;
 
+    /**
+     * <p>Annotation status filter. Deprecated.</p>
+     */
     @NameInMap("AnnotationStatusListFilter")
     public java.util.List<Integer> annotationStatusListFilter;
 
     /**
+     * <p>Annotation status filter</p>
+     * <blockquote>
+     * <p>Format: [1]. You can specify multiple values. Valid values:</p>
+     * </blockquote>
+     * <ul>
+     * <li><p>1: In progress</p>
+     * </li>
+     * <li><p>2: Completed</p>
+     * </li>
+     * <li><p>3: Closed</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>[1]</p>
      */
@@ -25,6 +49,8 @@ public class ListAnnotationMissionRequest extends TeaModel {
     public String annotationStatusListStringFilter;
 
     /**
+     * <p>End time of the annotation mission creation filter</p>
+     * 
      * <strong>example:</strong>
      * <p>1673280000000</p>
      */
@@ -32,6 +58,8 @@ public class ListAnnotationMissionRequest extends TeaModel {
     public Long createTimeEndFilter;
 
     /**
+     * <p>Start time of the annotation mission creation filter</p>
+     * 
      * <strong>example:</strong>
      * <p>1661961600000</p>
      */
@@ -39,6 +67,8 @@ public class ListAnnotationMissionRequest extends TeaModel {
     public Long createTimeStartFilter;
 
     /**
+     * <p>Instance ID</p>
+     * 
      * <strong>example:</strong>
      * <p>191ef468-75a2-4004-9441-a5c31bf5cd9d</p>
      */
@@ -46,6 +76,8 @@ public class ListAnnotationMissionRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -53,6 +85,8 @@ public class ListAnnotationMissionRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>Number of entries per page</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

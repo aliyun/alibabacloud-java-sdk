@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTagHitsSummaryRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,10 +15,11 @@ public class DescribeTagHitsSummaryRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The job group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>8a4c6d3d-5ed6-44ca-b779-16c20f8862be</p>
+     * <p>292eba45-df08-4065-87e7-7e587a1ce4ce</p>
      */
     @NameInMap("JobGroupId")
     public String jobGroupId;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAgentProfilesRequest extends TeaModel {
     /**
+     * <p>The IP address of the application. This is an optional system field.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */
@@ -12,6 +14,7 @@ public class ListAgentProfilesRequest extends TeaModel {
     public String appIp;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class ListAgentProfilesRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The scenario ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>d004cfd2-6a81-491c-83c6-cbe186620c95</p>
      */

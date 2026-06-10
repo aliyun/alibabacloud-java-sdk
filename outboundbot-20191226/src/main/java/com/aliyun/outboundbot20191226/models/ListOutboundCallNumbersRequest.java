@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOutboundCallNumbersRequest extends TeaModel {
     /**
+     * <p>ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListOutboundCallNumbersRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ListOutboundCallNumbersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Number of entries to return on each page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

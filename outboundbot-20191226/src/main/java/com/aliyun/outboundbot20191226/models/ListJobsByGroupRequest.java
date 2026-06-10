@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListJobsByGroupRequest extends TeaModel {
     /**
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListJobsByGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Job failure reason</p>
+     * 
      * <strong>example:</strong>
      * <p>NoAnswer</p>
      */
@@ -21,6 +24,7 @@ public class ListJobsByGroupRequest extends TeaModel {
     public String jobFailureReason;
 
     /**
+     * <p>Job group ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class ListJobsByGroupRequest extends TeaModel {
     public String jobGroupId;
 
     /**
+     * <p>Job status</p>
+     * 
      * <strong>example:</strong>
      * <p>Succeeded</p>
      */
@@ -37,6 +43,7 @@ public class ListJobsByGroupRequest extends TeaModel {
     public String jobStatus;
 
     /**
+     * <p>Page number</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +53,7 @@ public class ListJobsByGroupRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Number of entries per page</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

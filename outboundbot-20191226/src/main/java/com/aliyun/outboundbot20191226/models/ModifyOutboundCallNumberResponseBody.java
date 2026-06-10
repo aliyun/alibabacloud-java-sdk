@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyOutboundCallNumberResponseBody extends TeaModel {
     /**
+     * <p>API status code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ModifyOutboundCallNumberResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,16 +23,23 @@ public class ModifyOutboundCallNumberResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Response message</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Number information</p>
+     */
     @NameInMap("OutboundCallNumber")
     public ModifyOutboundCallNumberResponseBodyOutboundCallNumber outboundCallNumber;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -36,6 +47,8 @@ public class ModifyOutboundCallNumberResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,13 +110,17 @@ public class ModifyOutboundCallNumberResponseBody extends TeaModel {
 
     public static class ModifyOutboundCallNumberResponseBodyOutboundCallNumber extends TeaModel {
         /**
+         * <p>Outbound call number</p>
+         * 
          * <strong>example:</strong>
-         * <p>10088</p>
+         * <p>10088xxxx</p>
          */
         @NameInMap("Number")
         public String number;
 
         /**
+         * <p>Number ID</p>
+         * 
          * <strong>example:</strong>
          * <p>fa0e21e9-caab-4629-9121-1e341243d599</p>
          */
@@ -111,6 +128,8 @@ public class ModifyOutboundCallNumberResponseBody extends TeaModel {
         public String outboundCallNumberId;
 
         /**
+         * <p>Rate limiting period</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -118,6 +137,8 @@ public class ModifyOutboundCallNumberResponseBody extends TeaModel {
         public String rateLimitCount;
 
         /**
+         * <p>Rate limiting count</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

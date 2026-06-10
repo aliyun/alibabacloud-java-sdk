@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAnnotationMissionSummaryRequest extends TeaModel {
     /**
+     * <p>The ID of the annotation task.</p>
+     * 
      * <strong>example:</strong>
      * <p>50e53ac8-24a4-46d5-b174-ee88867f4780</p>
      */

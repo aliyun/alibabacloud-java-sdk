@@ -5,26 +5,49 @@ import com.aliyun.tea.*;
 
 public class CreateBatchRepeatJobRequest extends TeaModel {
     /**
+     * <p>Calling number</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
     @NameInMap("CallingNumber")
     public java.util.List<String> callingNumber;
 
+    /**
+     * <p>Job group description</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试3</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>Job group status</p>
+     * 
      * <strong>example:</strong>
      * <p>Succeeded,NoInteraction,Failed,Cancelled</p>
      */
     @NameInMap("FilterStatus")
     public String filterStatus;
 
+    /**
+     * <p>Configuration parameters for flash SMS push, in JSON format, including configuration information for third-party flash SMS.</p>
+     * <ul>
+     * <li><p>Template ID: Flash SMS template ID.</p>
+     * </li>
+     * <li><p>Config ID: Flash SMS configuration ID.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;templateId&quot;:&quot;10471&quot;,&quot;configId&quot;:&quot;8037f524-6ff2-4dbe-bb28-f59234ea7a64&quot;}</p>
+     */
     @NameInMap("FlashSmsExtras")
     public String flashSmsExtras;
 
     /**
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +57,8 @@ public class CreateBatchRepeatJobRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Minimum concurrency</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -41,6 +66,7 @@ public class CreateBatchRepeatJobRequest extends TeaModel {
     public Long minConcurrency;
 
     /**
+     * <p>Job name</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,16 +76,23 @@ public class CreateBatchRepeatJobRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>Job priority</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("Priority")
     public String priority;
 
+    /**
+     * <p>Redial calling number list</p>
+     */
     @NameInMap("RecallCallingNumber")
     public java.util.List<String> recallCallingNumber;
 
     /**
+     * <p>Redial policy JSON</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;emptyNumberIgnore\&quot;:false,\&quot;inArrearsIgnore\&quot;:false,\&quot;outOfServiceIgnore\&quot;:false}</p>
      */
@@ -67,6 +100,8 @@ public class CreateBatchRepeatJobRequest extends TeaModel {
     public String recallStrategyJson;
 
     /**
+     * <p>Ringing duration</p>
+     * 
      * <strong>example:</strong>
      * <p>25</p>
      */
@@ -74,6 +109,8 @@ public class CreateBatchRepeatJobRequest extends TeaModel {
     public Long ringingDuration;
 
     /**
+     * <p>Script ID</p>
+     * 
      * <strong>example:</strong>
      * <p>0fe7f71c-8771-42ef-9bb1-19aa16ae7120</p>
      */
@@ -81,6 +118,7 @@ public class CreateBatchRepeatJobRequest extends TeaModel {
     public String scriptId;
 
     /**
+     * <p>Job group ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -90,6 +128,8 @@ public class CreateBatchRepeatJobRequest extends TeaModel {
     public String sourceGroupId;
 
     /**
+     * <p>Job execution policy</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;maxAttemptsPerDay\&quot;:1,\&quot;minAttemptInterval\&quot;:1,\&quot;routingStrategy\&quot;:\&quot;LocalFirst\&quot;}</p>
      */

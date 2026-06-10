@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeJobDataParsingTaskProgressResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class DescribeJobDataParsingTaskProgressResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class DescribeJobDataParsingTaskProgressResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -26,6 +32,8 @@ public class DescribeJobDataParsingTaskProgressResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Parsing progress.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -33,6 +41,8 @@ public class DescribeJobDataParsingTaskProgressResponseBody extends TeaModel {
     public DescribeJobDataParsingTaskProgressResponseBodyProgress progress;
 
     /**
+     * <p>ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -40,6 +50,8 @@ public class DescribeJobDataParsingTaskProgressResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -101,6 +113,8 @@ public class DescribeJobDataParsingTaskProgressResponseBody extends TeaModel {
 
     public static class DescribeJobDataParsingTaskProgressResponseBodyProgress extends TeaModel {
         /**
+         * <p>Error code for a failed parsing task.</p>
+         * 
          * <strong>example:</strong>
          * <p>Permission.JobStatus</p>
          */
@@ -108,16 +122,26 @@ public class DescribeJobDataParsingTaskProgressResponseBody extends TeaModel {
         public String failErrorCode;
 
         /**
+         * <p>Reason for failure.</p>
+         * 
          * <strong>example:</strong>
          * <p>CreateCorpus</p>
          */
         @NameInMap("FailReason")
         public String failReason;
 
+        /**
+         * <p>Download URL for the file that lists parsing failures. This field is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
+         */
         @NameInMap("FeedbackUrl")
         public String feedbackUrl;
 
         /**
+         * <p>Number of jobs processed so far.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -125,6 +149,20 @@ public class DescribeJobDataParsingTaskProgressResponseBody extends TeaModel {
         public Integer handledJobCount;
 
         /**
+         * <p>Status of the job.</p>
+         * <ul>
+         * <li><p>Pending: The job is waiting to start.</p>
+         * </li>
+         * <li><p>InProgress: The job is running.</p>
+         * </li>
+         * <li><p>Finished: The job completed successfully.</p>
+         * </li>
+         * <li><p>PartialFinished: The job completed partially.</p>
+         * </li>
+         * <li><p>Failed: The job failed.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Pending</p>
          */
@@ -132,6 +170,8 @@ public class DescribeJobDataParsingTaskProgressResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Total number of jobs in the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteContactBlockListRequest extends TeaModel {
     /**
+     * <p>Contact block list ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteContactBlockListRequest extends TeaModel {
     public String contactBlockListId;
 
     /**
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class DeleteContactBlockListRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Operator information</p>
+     * 
      * <strong>example:</strong>
      * <p>160131</p>
      */

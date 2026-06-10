@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteBeebotIntentUserSayResponseBody extends TeaModel {
     /**
+     * <p>Internal request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>0B219FCB-EC71-1F08-BB1B-0E87C20158C8</p>
      */
@@ -12,6 +14,8 @@ public class DeleteBeebotIntentUserSayResponseBody extends TeaModel {
     public String beebotRequestId;
 
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -19,6 +23,8 @@ public class DeleteBeebotIntentUserSayResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class DeleteBeebotIntentUserSayResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>API message</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -33,6 +41,8 @@ public class DeleteBeebotIntentUserSayResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -40,6 +50,8 @@ public class DeleteBeebotIntentUserSayResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Success</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -47,6 +59,8 @@ public class DeleteBeebotIntentUserSayResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>User Say ID</p>
+     * 
      * <strong>example:</strong>
      * <p>17448458</p>
      */

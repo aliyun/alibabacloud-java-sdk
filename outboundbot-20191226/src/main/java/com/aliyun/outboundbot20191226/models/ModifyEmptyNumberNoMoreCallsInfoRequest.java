@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyEmptyNumberNoMoreCallsInfoRequest extends TeaModel {
     /**
+     * <p>Enable or disable the nonexistent number no-call feature.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,7 @@ public class ModifyEmptyNumberNoMoreCallsInfoRequest extends TeaModel {
     public Boolean emptyNumberNoMoreCalls;
 
     /**
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,16 @@ public class ModifyEmptyNumberNoMoreCallsInfoRequest extends TeaModel {
     public String entryId;
 
     /**
+     * <p>Policy level. Use 2 for business instances.</p>
+     * <ul>
+     * <li><p>0: system</p>
+     * </li>
+     * <li><p>1: tenant</p>
+     * </li>
+     * <li><p>2: instance</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

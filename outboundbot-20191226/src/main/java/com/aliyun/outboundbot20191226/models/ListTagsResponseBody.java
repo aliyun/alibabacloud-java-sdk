@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTagsResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListTagsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class ListTagsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -26,6 +32,8 @@ public class ListTagsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -33,15 +41,23 @@ public class ListTagsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The list of tag groups.</p>
+     */
     @NameInMap("TagGroups")
     public java.util.List<ListTagsResponseBodyTagGroups> tagGroups;
 
+    /**
+     * <p>The list of tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<ListTagsResponseBodyTags> tags;
 
@@ -108,16 +124,26 @@ public class ListTagsResponseBody extends TeaModel {
 
     public static class ListTagsResponseBodyTagGroups extends TeaModel {
         /**
+         * <p>The ID of the script.</p>
+         * 
          * <strong>example:</strong>
-         * <p>8a4c6d3d-5ed6-44ca-b779-16c20f8862be</p>
+         * <p>365b955d-6f4d-4ab5-a6e1-9a301307f4b1</p>
          */
         @NameInMap("ScriptId")
         public String scriptId;
 
+        /**
+         * <p>The name of the tag group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>当前学历</p>
+         */
         @NameInMap("TagGroup")
         public String tagGroup;
 
         /**
+         * <p>The ID of the tag group.</p>
+         * 
          * <strong>example:</strong>
          * <p>38c03261-9fe8-4b9b-8c3b-983a60319012</p>
          */
@@ -125,6 +151,8 @@ public class ListTagsResponseBody extends TeaModel {
         public String tagGroupId;
 
         /**
+         * <p>The index of the tag group.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -172,16 +200,26 @@ public class ListTagsResponseBody extends TeaModel {
 
     public static class ListTagsResponseBodyTags extends TeaModel {
         /**
+         * <p>The ID of the script.</p>
+         * 
          * <strong>example:</strong>
          * <p>8a4c6d3d-5ed6-44ca-b779-16c20f8862be</p>
          */
         @NameInMap("ScriptId")
         public String scriptId;
 
+        /**
+         * <p>The name of the tag group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>当前学历</p>
+         */
         @NameInMap("TagGroup")
         public String tagGroup;
 
         /**
+         * <p>The ID of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>d62be647-6202-4b1f-9708-0baeec552635</p>
          */
@@ -189,12 +227,20 @@ public class ListTagsResponseBody extends TeaModel {
         public String tagId;
 
         /**
+         * <p>The index of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("TagIndex")
         public Integer tagIndex;
 
+        /**
+         * <p>The name of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>本科</p>
+         */
         @NameInMap("TagName")
         public String tagName;
 

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyBeebotIntentUserSayShrinkRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyBeebotIntentUserSayShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The scenario ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,12 +25,14 @@ public class ModifyBeebotIntentUserSayShrinkRequest extends TeaModel {
     public String scriptId;
 
     /**
+     * <p>The definition of the user utterance.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserSayDefinition")
     public String userSayDefinitionShrink;
 
     /**
+     * <p>The user utterance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

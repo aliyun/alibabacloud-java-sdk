@@ -4,18 +4,48 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class DeleteScriptWaveformResponseBody extends TeaModel {
+    /**
+     * <p>API status code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>HTTP status code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>API message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Request ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FD69531-F82C-542D-A5E7-CB54544041C5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Success</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

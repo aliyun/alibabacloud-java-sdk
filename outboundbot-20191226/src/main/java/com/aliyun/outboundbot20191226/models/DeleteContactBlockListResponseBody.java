@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class DeleteContactBlockListResponseBody extends TeaModel {
     /**
+     * <p>Affected rows (deprecated)</p>
+     * 
      * <strong>example:</strong>
-     * <p>5</p>
+     * <p>1</p>
      */
     @NameInMap("AffectedRows")
     public Integer affectedRows;
 
     /**
+     * <p>API status code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -19,6 +23,8 @@ public class DeleteContactBlockListResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class DeleteContactBlockListResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>API message</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -33,6 +41,8 @@ public class DeleteContactBlockListResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -40,6 +50,8 @@ public class DeleteContactBlockListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

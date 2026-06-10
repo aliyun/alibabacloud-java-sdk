@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteScriptRecordingResponseBody extends TeaModel {
     /**
+     * <p>The API status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class DeleteScriptRecordingResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class DeleteScriptRecordingResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The message returned by the API.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -26,6 +32,8 @@ public class DeleteScriptRecordingResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>56666881-887A-530A-B679-C3B6B6B142C0</p>
      */
@@ -33,6 +41,8 @@ public class DeleteScriptRecordingResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

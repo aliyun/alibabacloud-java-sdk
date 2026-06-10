@@ -4,10 +4,15 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class StartJobResponseBody extends TeaModel {
+    /**
+     * <p>List of call IDs</p>
+     */
     @NameInMap("CallIds")
     public java.util.List<StartJobResponseBodyCallIds> callIds;
 
     /**
+     * <p>API status code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -15,6 +20,8 @@ public class StartJobResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class StartJobResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>API message</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -29,6 +38,8 @@ public class StartJobResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>8a621aa1-d2e7-43f3-b54d-8830af73c468</p>
      */
@@ -36,12 +47,17 @@ public class StartJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call succeeded. true means success. false means failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>Mapping between third-party contact IDs and outbound call task IDs</p>
+     */
     @NameInMap("TaskIds")
     public java.util.List<StartJobResponseBodyTaskIds> taskIds;
 
@@ -108,6 +124,8 @@ public class StartJobResponseBody extends TeaModel {
 
     public static class StartJobResponseBodyCallIds extends TeaModel {
         /**
+         * <p>Third-party contact ID</p>
+         * 
          * <strong>example:</strong>
          * <p>c93cdd1c-f9b5-4758-be43-7a237a7eaa1d</p>
          */
@@ -115,6 +133,8 @@ public class StartJobResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>Call ID for the task</p>
+         * 
          * <strong>example:</strong>
          * <p>62229628-45d8-41bd-a80f-6e4c0a39f79b</p>
          */
@@ -146,6 +166,8 @@ public class StartJobResponseBody extends TeaModel {
 
     public static class StartJobResponseBodyTaskIds extends TeaModel {
         /**
+         * <p>Third-party contact ID</p>
+         * 
          * <strong>example:</strong>
          * <p>c93cdd1c-f9b5-4758-be43-7a237a7eaa1d</p>
          */
@@ -153,6 +175,8 @@ public class StartJobResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>Outbound call task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>62229628-45d8-41bd-a80f-6e4c0a39f79b</p>
          */

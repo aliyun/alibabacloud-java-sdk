@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AssignJobsResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class AssignJobsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,16 +23,23 @@ public class AssignJobsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The job group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>390515b5-6115-4ccf-83e2-52d5bfaf2ddf</p>
      */
     @NameInMap("JobGroupId")
     public String jobGroupId;
 
+    /**
+     * <p>A list of job IDs.</p>
+     */
     @NameInMap("JobsId")
     public java.util.List<String> jobsId;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -36,6 +47,8 @@ public class AssignJobsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -43,6 +56,8 @@ public class AssignJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

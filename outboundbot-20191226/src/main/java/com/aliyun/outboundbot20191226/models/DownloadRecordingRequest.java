@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DownloadRecordingRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,26 @@ public class DownloadRecordingRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Specifies whether to retrieve voice slice recordings.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("NeedVoiceSliceRecording")
     public Boolean needVoiceSliceRecording;
 
     /**
+     * <p>Specifies whether to swap the left and right audio channels. The default value is <code>false</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("SwapChannels")
+    public Boolean swapChannels;
+
+    /**
+     * <p>The call ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +61,14 @@ public class DownloadRecordingRequest extends TeaModel {
     }
     public Boolean getNeedVoiceSliceRecording() {
         return this.needVoiceSliceRecording;
+    }
+
+    public DownloadRecordingRequest setSwapChannels(Boolean swapChannels) {
+        this.swapChannels = swapChannels;
+        return this;
+    }
+    public Boolean getSwapChannels() {
+        return this.swapChannels;
     }
 
     public DownloadRecordingRequest setTaskId(String taskId) {

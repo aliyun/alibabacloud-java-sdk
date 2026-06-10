@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeIntentStatisticsResponseBody extends TeaModel {
     /**
+     * <p>API status code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Total count of global intents</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -19,6 +23,8 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
     public Integer globalIntentNum;
 
     /**
+     * <p>Global intent array</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -26,6 +32,8 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
     public java.util.List<DescribeIntentStatisticsResponseBodyGlobalIntents> globalIntents;
 
     /**
+     * <p>Group ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>0c3f352f-d045-491d-9ce7-11f2d2b7775d</p>
      */
@@ -33,6 +41,8 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
     public String groupId;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -40,16 +50,23 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Instance ID</p>
+     * 
      * <strong>example:</strong>
      * <p>a4274627-265f-4e14-b2d6-4ee7d4f8593e</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Rejected intent information list</p>
+     */
     @NameInMap("IntentsAfterNoAnswer")
     public java.util.List<DescribeIntentStatisticsResponseBodyIntentsAfterNoAnswer> intentsAfterNoAnswer;
 
     /**
+     * <p>API message</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -57,6 +74,8 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Total count of flow intents</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
@@ -64,6 +83,8 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
     public Integer processIntentNum;
 
     /**
+     * <p>Intent information list</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -71,6 +92,8 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
     public java.util.List<DescribeIntentStatisticsResponseBodyProcessIntents> processIntents;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -78,6 +101,8 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Success</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -187,6 +212,8 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
 
     public static class DescribeIntentStatisticsResponseBodyGlobalIntents extends TeaModel {
         /**
+         * <p>Task group ID</p>
+         * 
          * <strong>example:</strong>
          * <p>0c3f352f-d045-491d-9ce7-11f2d2b7775d</p>
          */
@@ -194,6 +221,8 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
         public String groupId;
 
         /**
+         * <p>Hit after no acknowledgement</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -201,6 +230,8 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
         public Integer hitAfterNoAnswer;
 
         /**
+         * <p>Hit count</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -208,6 +239,8 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
         public Integer hitNum;
 
         /**
+         * <p>Instance ID</p>
+         * 
          * <strong>example:</strong>
          * <p>a4274627-265f-4e14-b2d6-4ee7d4f8593e</p>
          */
@@ -215,16 +248,28 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Intent ID</p>
+         * 
          * <strong>example:</strong>
          * <p>21343425</p>
          */
         @NameInMap("IntentId")
         public String intentId;
 
+        /**
+         * <p>Intent name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>请假意图</p>
+         */
         @NameInMap("IntentName")
         public String intentName;
 
         /**
+         * <p>Type</p>
+         * <p>GlobalIntent(0): Global intent</p>
+         * <p>ProcessIntent(1): Flow intent</p>
+         * 
          * <strong>example:</strong>
          * <p>GlobalIntent</p>
          */
@@ -295,22 +340,48 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribeIntentStatisticsResponseBodyIntentsAfterNoAnswer extends TeaModel {
+        /**
+         * <p>Task group ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b24d321a-2a74-4dd1-a0ba-4ab09cef6652</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>No acknowledgement is received after a hit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("HitAfterNoAnswer")
         public Integer hitAfterNoAnswer;
 
         /**
+         * <p>Instance ID</p>
+         * 
          * <strong>example:</strong>
          * <p>a4274627-265f-4e14-b2d6-4ee7d4f8593e</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>Intent ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10398032</p>
+         */
         @NameInMap("IntentId")
         public String intentId;
 
+        /**
+         * <p>Intent name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>请假意图</p>
+         */
         @NameInMap("IntentName")
         public String intentName;
 
@@ -363,6 +434,8 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
 
     public static class DescribeIntentStatisticsResponseBodyProcessIntents extends TeaModel {
         /**
+         * <p>Task group ID</p>
+         * 
          * <strong>example:</strong>
          * <p>0c3f352f-d045-491d-9ce7-11f2d2b7775d</p>
          */
@@ -370,6 +443,8 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
         public String groupId;
 
         /**
+         * <p>Hit after no acknowledgement</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -377,6 +452,8 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
         public Integer hitAfterNoAnswer;
 
         /**
+         * <p>Hit count</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -384,6 +461,8 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
         public Integer hitNum;
 
         /**
+         * <p>Instance ID</p>
+         * 
          * <strong>example:</strong>
          * <p>a4274627-265f-4e14-b2d6-4ee7d4f8593e</p>
          */
@@ -391,19 +470,41 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Intent ID</p>
+         * 
          * <strong>example:</strong>
          * <p>12343</p>
          */
         @NameInMap("IntentId")
         public String intentId;
 
+        /**
+         * <p>Intent name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>请假意图</p>
+         */
         @NameInMap("IntentName")
         public String intentName;
 
+        /**
+         * <p>Percentage</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33.33%</p>
+         */
         @NameInMap("RateDisplay")
         public String rateDisplay;
 
         /**
+         * <p>Type</p>
+         * <ul>
+         * <li><p>GlobalIntent(0): Global intent</p>
+         * </li>
+         * <li><p>ProcessIntent(1): Flow intent</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ProcessIntent</p>
          */

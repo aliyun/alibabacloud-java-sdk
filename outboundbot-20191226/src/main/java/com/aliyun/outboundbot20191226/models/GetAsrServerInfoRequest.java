@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAsrServerInfoRequest extends TeaModel {
     /**
+     * <p>Instance ID</p>
+     * 
      * <strong>example:</strong>
      * <p>024f8cf0-c842-4c01-b74b-c8667e4579c7</p>
      */
@@ -12,6 +14,8 @@ public class GetAsrServerInfoRequest extends TeaModel {
     public String entryId;
 
     /**
+     * <p>Policy level</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

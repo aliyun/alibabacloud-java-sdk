@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateScriptResponseBody extends TeaModel {
     /**
+     * <p>Response code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class CreateScriptResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class CreateScriptResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>API message</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -26,16 +32,23 @@ public class CreateScriptResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Script information</p>
+     */
     @NameInMap("Script")
     public CreateScriptResponseBodyScript script;
 
     /**
+     * <p>Indicates whether the operation was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,16 +110,26 @@ public class CreateScriptResponseBody extends TeaModel {
 
     public static class CreateScriptResponseBodyScript extends TeaModel {
         /**
+         * <p>Script debug status</p>
+         * 
          * <strong>example:</strong>
          * <p>DRAFTED</p>
          */
         @NameInMap("DebugStatus")
         public String debugStatus;
 
+        /**
+         * <p>Industry</p>
+         * 
+         * <strong>example:</strong>
+         * <p>教育</p>
+         */
         @NameInMap("Industry")
         public String industry;
 
         /**
+         * <p>Is debug draft</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -114,35 +137,95 @@ public class CreateScriptResponseBody extends TeaModel {
         public Boolean isDebugDrafted;
 
         /**
+         * <p>Is draft</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("IsDrafted")
         public Boolean isDrafted;
 
+        /**
+         * <p>NLU access method (applicable only to Large Language Model (LLM) scenarios). Enumeration: Managed - Access using an Alibaba public account. This field is empty for non-LLM scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Managed</p>
+         */
         @NameInMap("NluAccessType")
         public String nluAccessType;
 
+        /**
+         * <p>NLU engine (applicable only to Large Language Model (LLM) scenarios). Enumeration: Prompts - Large Language Model (LLM) scenario. This field is empty for non-LLM scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Prompts</p>
+         */
         @NameInMap("NluEngine")
         public String nluEngine;
 
+        /**
+         * <p>Scenario</p>
+         * 
+         * <strong>example:</strong>
+         * <p>回访</p>
+         */
         @NameInMap("Scene")
         public String scene;
 
+        /**
+         * <p>Script description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>课程满意度回访</p>
+         */
         @NameInMap("ScriptDescription")
         public String scriptDescription;
 
         /**
+         * <p>Script ID</p>
+         * 
          * <strong>example:</strong>
          * <p>8c58d3e0-bf27-4685-a5a5-65872ec5abc4</p>
          */
         @NameInMap("ScriptId")
         public String scriptId;
 
+        /**
+         * <p>Script name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>课程满意度回访</p>
+         */
         @NameInMap("ScriptName")
         public String scriptName;
 
         /**
+         * <p>Job status. Valid values:</p>
+         * <ul>
+         * <li><p><strong>DRAFTED</strong>: Draft.</p>
+         * </li>
+         * <li><p><strong>INITIALIZE_IN_PROGRESS</strong>: Initializing.</p>
+         * </li>
+         * <li><p><strong>PUBLISHED</strong>: Published.</p>
+         * </li>
+         * <li><p><strong>PUBLISH_IN_PROGRESS</strong>: Publishing.</p>
+         * </li>
+         * <li><p><strong>ROLLBACK_IN_PROGRESS</strong>: Rolling back.</p>
+         * </li>
+         * <li><p><strong>EXAMINE_IN_PROGRESS</strong>: Pending review.</p>
+         * </li>
+         * <li><p><strong>PUBLISHED_AND_EXAMINE_IN_PROGRESS</strong>: Published and pending review.</p>
+         * </li>
+         * <li><p><strong>PUBLISH_FAILED</strong>: Publish failed.</p>
+         * </li>
+         * <li><p><strong>ROLLBACK_FAILED</strong>: Rollback failed.</p>
+         * </li>
+         * <li><p><strong>IMPORT_IN_PROGRESS</strong>: Importing.</p>
+         * </li>
+         * <li><p><strong>IMPORT_FAILED</strong>: Import failed.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DRAFTED</p>
          */
@@ -150,6 +233,8 @@ public class CreateScriptResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Script update time (unit: milliseconds)</p>
+         * 
          * <strong>example:</strong>
          * <p>1578474045152</p>
          */

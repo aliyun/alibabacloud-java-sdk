@@ -5,15 +5,26 @@ import com.aliyun.tea.*;
 
 public class SubmitScriptReviewRequest extends TeaModel {
     /**
+     * <p>Description</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>第一版本提交审核</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Source of review submission</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MAINSITE</p>
+     */
     @NameInMap("From")
     public String from;
 
     /**
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,10 +34,11 @@ public class SubmitScriptReviewRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Script ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>b0f35dd1-0337-402e-9c4f-3a6c2426950a</p>
+     * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
      */
     @NameInMap("ScriptId")
     public String scriptId;

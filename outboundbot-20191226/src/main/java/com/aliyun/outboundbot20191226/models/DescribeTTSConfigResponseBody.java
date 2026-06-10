@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeTTSConfigResponseBody extends TeaModel {
     /**
+     * <p>API status code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>API message</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -26,6 +32,8 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>f765d3ee-ec03-4765-b235-6877501d99d1</p>
      */
@@ -33,12 +41,17 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>TTS configuration</p>
+     */
     @NameInMap("TTSConfig")
     public DescribeTTSConfigResponseBodyTTSConfig TTSConfig;
 
@@ -96,10 +109,18 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeTTSConfigResponseBodyTTSConfig extends TeaModel {
+        /**
+         * <p>AppKey for invoking TTS</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p2SjSj4zxxxxxxxx</p>
+         */
         @NameInMap("AppKey")
         public String appKey;
 
         /**
+         * <p>Instance ID</p>
+         * 
          * <strong>example:</strong>
          * <p>947e0875-b5d4-4b33-b18c-7b2cf85bcb4f</p>
          */
@@ -107,6 +128,8 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Service type</p>
+         * 
          * <strong>example:</strong>
          * <p>Managed</p>
          */
@@ -114,6 +137,8 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         public String nlsServiceType;
 
         /**
+         * <p>Speech rate</p>
+         * 
          * <strong>example:</strong>
          * <p>-150</p>
          */
@@ -121,6 +146,8 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         public String speechRate;
 
         /**
+         * <p>TTS model</p>
+         * 
          * <strong>example:</strong>
          * <p>xiaoyun</p>
          */
@@ -128,6 +155,8 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         public String voice;
 
         /**
+         * <p>Volume</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

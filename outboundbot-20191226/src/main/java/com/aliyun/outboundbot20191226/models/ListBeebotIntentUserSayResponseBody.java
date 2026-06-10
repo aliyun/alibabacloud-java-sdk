@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListBeebotIntentUserSayResponseBody extends TeaModel {
     /**
+     * <p>The internal request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D7BBFCDF-59B0-1ADA-BCA3-4B77F642DDFB</p>
      */
@@ -12,6 +14,8 @@ public class ListBeebotIntentUserSayResponseBody extends TeaModel {
     public String beebotRequestId;
 
     /**
+     * <p>The status code of the API.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -19,6 +23,8 @@ public class ListBeebotIntentUserSayResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class ListBeebotIntentUserSayResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The message returned for the API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -33,6 +41,8 @@ public class ListBeebotIntentUserSayResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +50,8 @@ public class ListBeebotIntentUserSayResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries displayed per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -47,6 +59,8 @@ public class ListBeebotIntentUserSayResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0956D5DA-0978-5DC9-94B0-C68527DA7475</p>
      */
@@ -54,6 +68,8 @@ public class ListBeebotIntentUserSayResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -61,12 +77,17 @@ public class ListBeebotIntentUserSayResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The list of user utterances.</p>
+     */
     @NameInMap("UserSays")
     public java.util.List<ListBeebotIntentUserSayResponseBodyUserSays> userSays;
 
@@ -156,10 +177,18 @@ public class ListBeebotIntentUserSayResponseBody extends TeaModel {
     }
 
     public static class ListBeebotIntentUserSayResponseBodyUserSays extends TeaModel {
+        /**
+         * <p>The content of the utterance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>你知道xxxx么？</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>The time when the utterance was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-04-21 14:16:05.+0800</p>
          */
@@ -167,6 +196,8 @@ public class ListBeebotIntentUserSayResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The intent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>10717802</p>
          */
@@ -174,6 +205,8 @@ public class ListBeebotIntentUserSayResponseBody extends TeaModel {
         public Long intentId;
 
         /**
+         * <p>The time when the utterance was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-04-21 14:16:05.+0800</p>
          */
@@ -181,6 +214,8 @@ public class ListBeebotIntentUserSayResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
+         * <p>The utterance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>17448458</p>
          */

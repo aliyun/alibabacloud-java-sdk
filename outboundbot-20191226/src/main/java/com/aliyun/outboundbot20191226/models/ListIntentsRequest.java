@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIntentsRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,13 +15,16 @@ public class ListIntentsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>A keyword to filter intents.</p>
+     * 
      * <strong>example:</strong>
-     * <p>&quot;&quot;</p>
+     * <p>还款</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
+     * <p>The number of the page to return.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class ListIntentsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,7 @@ public class ListIntentsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The script ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

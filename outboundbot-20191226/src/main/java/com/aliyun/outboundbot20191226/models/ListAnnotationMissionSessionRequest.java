@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAnnotationMissionSessionRequest extends TeaModel {
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8434a4b0-41fc-41b1-aa75-bbd1f2ab0c8d</p>
      */
@@ -12,6 +14,11 @@ public class ListAnnotationMissionSessionRequest extends TeaModel {
     public String annotationMissionId;
 
     /**
+     * <p>The ID of the chat instance for the annotation task.</p>
+     * <blockquote>
+     * <p>Obtain this ID by calling the SaveAnnotationMissionSessionList operation.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>8434a4b0-41fc-41b1-aa75-bbd1f2ab0c8d</p>
      */
@@ -19,6 +26,20 @@ public class ListAnnotationMissionSessionRequest extends TeaModel {
     public String annotationMissionSessionId;
 
     /**
+     * <p>The environment.</p>
+     * <blockquote>
+     * <p>The default value is 2.</p>
+     * </blockquote>
+     * <p><strong>Enumeration values</strong></p>
+     * <ul>
+     * <li><p>0: NONE</p>
+     * </li>
+     * <li><p>1: Private cloud</p>
+     * </li>
+     * <li><p>2: Public cloud</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -26,6 +47,24 @@ public class ListAnnotationMissionSessionRequest extends TeaModel {
     public Integer environment;
 
     /**
+     * <p>The list of statuses to include.</p>
+     * <blockquote>
+     * <p>The format is [1]. Fill the array with specific enumeration values.</p>
+     * </blockquote>
+     * <p><strong>Enumeration values</strong></p>
+     * <ul>
+     * <li><p>1: Correctly detected</p>
+     * </li>
+     * <li><p>2: Incorrectly detected</p>
+     * </li>
+     * <li><p>8: Invalid data</p>
+     * </li>
+     * <li><p>4: Uncovered intent</p>
+     * </li>
+     * <li><p>16: Transcription error</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>[1]</p>
      */
@@ -33,6 +72,8 @@ public class ListAnnotationMissionSessionRequest extends TeaModel {
     public String includeStatusListJsonString;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -40,6 +81,8 @@ public class ListAnnotationMissionSessionRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The number of records to display on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

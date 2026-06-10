@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DialogueResponseBody extends TeaModel {
     /**
+     * <p>Interface status code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Returns dialogue information</p>
+     */
     @NameInMap("Feedback")
     public DialogueResponseBodyFeedback feedback;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class DialogueResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Interface message</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -29,6 +38,8 @@ public class DialogueResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -36,6 +47,8 @@ public class DialogueResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,20 +110,34 @@ public class DialogueResponseBody extends TeaModel {
 
     public static class DialogueResponseBodyFeedback extends TeaModel {
         /**
+         * <p>Instruction for IVR</p>
+         * 
          * <strong>example:</strong>
          * <p>broadcast</p>
          */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>Instruction parameters</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("ActionParams")
         public String actionParams;
 
+        /**
+         * <p>Dialogue text</p>
+         * 
+         * <strong>example:</strong>
+         * <p>你好，我是**客服</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
-         * <p>已废弃</p>
+         * <p>Deprecated</p>
          * 
          * <strong>example:</strong>
          * <p>“”</p>
@@ -119,6 +146,8 @@ public class DialogueResponseBody extends TeaModel {
         public String contentParams;
 
         /**
+         * <p>Indicates whether the broadcast can be interrupted</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

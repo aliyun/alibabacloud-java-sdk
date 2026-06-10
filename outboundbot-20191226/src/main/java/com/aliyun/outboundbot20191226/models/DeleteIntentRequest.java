@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteIntentRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteIntentRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the intent to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class DeleteIntentRequest extends TeaModel {
     public String intentId;
 
     /**
+     * <p>The ID of the script that contains the intent.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

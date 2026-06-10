@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetPublicKeyResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetPublicKeyResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The public key in PEM format.</p>
+     * 
      * <strong>example:</strong>
      * <p>-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwkftR4j5P9ng+Si/2ydc\\/K03NlhpzI4nW3JoNZIZR83P\nMeyoULt+ivvFI7R++BU413QfX7l5FZnuUrII\nNNBfFX84m1tmsdythDQmS2soG2sBiGKMv6O5mlBvXi+GA0/GqQ2juEv5DAb0GfOk\nw8syQDkpNZflUSTnh10qbnDQxIGeisv1S4/Eo00djX48y5N8qXEcz9CUgwQpKQ0s\nWQIDAQAB\n-----END PUBLIC KEY-----\n</p>
      */
@@ -19,6 +23,8 @@ public class GetPublicKeyResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class GetPublicKeyResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -33,6 +41,8 @@ public class GetPublicKeyResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -40,6 +50,8 @@ public class GetPublicKeyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

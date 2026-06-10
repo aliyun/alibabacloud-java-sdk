@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SuspendCallRequest extends TeaModel {
     /**
+     * <p>The list of called numbers.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,6 +14,8 @@ public class SuspendCallRequest extends TeaModel {
     public java.util.List<String> calledNumbers;
 
     /**
+     * <p>The task group ID. This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>f745881b-343d-43e4-9c51-31b7b063031c</p>
      */
@@ -19,6 +23,7 @@ public class SuspendCallRequest extends TeaModel {
     public String groupId;
 
     /**
+     * <p>The instance ID. This parameter is required.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

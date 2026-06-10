@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SuspendJobsResponseBody extends TeaModel {
     /**
+     * <p>API status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class SuspendJobsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class SuspendJobsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>API message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -26,13 +32,17 @@ public class SuspendJobsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     * <p>1364f208-982d-4d0c-89aa-d56e22b47589</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Whether successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

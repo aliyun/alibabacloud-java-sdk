@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyBeebotIntentLgfResponseBody extends TeaModel {
     /**
+     * <p>Internal Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>A1F21BF2-CB21-1968-8039-C74699E7DDEB</p>
      */
@@ -12,6 +14,8 @@ public class ModifyBeebotIntentLgfResponseBody extends TeaModel {
     public String beebotRequestId;
 
     /**
+     * <p>status code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -19,6 +23,8 @@ public class ModifyBeebotIntentLgfResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class ModifyBeebotIntentLgfResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Utterance Template ID</p>
+     * 
      * <strong>example:</strong>
      * <p>5666117</p>
      */
@@ -33,6 +41,8 @@ public class ModifyBeebotIntentLgfResponseBody extends TeaModel {
     public Long lgfId;
 
     /**
+     * <p>Response message</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -40,6 +50,8 @@ public class ModifyBeebotIntentLgfResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>302C67BD-19FF-5B66-A45D-F95544604155</p>
      */
@@ -47,6 +59,8 @@ public class ModifyBeebotIntentLgfResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

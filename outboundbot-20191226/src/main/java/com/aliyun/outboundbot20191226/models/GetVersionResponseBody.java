@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetVersionResponseBody extends TeaModel {
     /**
+     * <p>Response code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetVersionResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class GetVersionResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Response message</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -26,6 +32,8 @@ public class GetVersionResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1364f208-982d-4d0c-89aa-d56e22b47589</p>
      */
@@ -33,6 +41,8 @@ public class GetVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -40,8 +50,10 @@ public class GetVersionResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Version number</p>
+     * 
      * <strong>example:</strong>
-     * <p>2018-12-13</p>
+     * <p>v2.4.1.xxxxxxx_release</p>
      */
     @NameInMap("Version")
     public String version;

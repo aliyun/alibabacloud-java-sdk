@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateIntentRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,29 +14,50 @@ public class CreateIntentRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>A description of the intent.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>确定是本人的意图</p>
+     */
     @NameInMap("IntentDescription")
     public String intentDescription;
 
     /**
+     * <p>The name of the intent. This name must be unique within the script.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>是本人</p>
      */
     @NameInMap("IntentName")
     public String intentName;
 
+    /**
+     * <p>A JSON-formatted string containing an array of keywords that help identify the intent.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;是&quot;,&quot;是的&quot;]</p>
+     */
     @NameInMap("Keywords")
     public String keywords;
 
     /**
+     * <p>The script ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>b06fad9a-cc74-4ab6-b3a5-8d062adebf2c</p>
+     * <p>c5c5d8c0-c0f1-48a7-be2b-dc46006d888a</p>
      */
     @NameInMap("ScriptId")
     public String scriptId;
 
     /**
+     * <p>A JSON-formatted string containing an array of sample utterances that trigger this intent.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;是&quot;,&quot;是的&quot;,&quot;是啊&quot;,&quot;嗯嗯&quot;,&quot;是我&quot;,&quot;是我，有事吗&quot;,&quot;对，是&quot;,&quot;对的&quot;,&quot;对是我&quot;,&quot;&quot;]</p>
      */
     @NameInMap("Utterances")
     public String utterances;

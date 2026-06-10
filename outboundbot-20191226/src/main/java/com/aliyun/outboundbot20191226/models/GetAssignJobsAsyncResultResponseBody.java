@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAssignJobsAsyncResultResponseBody extends TeaModel {
     /**
+     * <p>The API status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetAssignJobsAsyncResultResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,16 +23,23 @@ public class GetAssignJobsAsyncResultResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The task group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>d3550dd1-360d-4fe5-b4b2-667a4a664dab</p>
      */
     @NameInMap("JobGroupId")
     public String jobGroupId;
 
+    /**
+     * <p>The list of job IDs.</p>
+     */
     @NameInMap("JobsId")
     public java.util.List<String> jobsId;
 
     /**
+     * <p>The API message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -36,6 +47,8 @@ public class GetAssignJobsAsyncResultResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -43,6 +56,8 @@ public class GetAssignJobsAsyncResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +65,8 @@ public class GetAssignJobsAsyncResultResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Indicates whether the asynchronous task timed out.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -57,6 +74,8 @@ public class GetAssignJobsAsyncResultResponseBody extends TeaModel {
     public Boolean timeout;
 
     /**
+     * <p>Indicates whether the result has been fully generated.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

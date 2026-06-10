@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListScriptPublishHistoriesResponseBody extends TeaModel {
     /**
+     * <p>The API status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -26,16 +32,23 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The script publishing histories.</p>
+     */
     @NameInMap("ScriptPublishHistories")
     public ListScriptPublishHistoriesResponseBodyScriptPublishHistories scriptPublishHistories;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -96,10 +109,18 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
     }
 
     public static class ListScriptPublishHistoriesResponseBodyScriptPublishHistoriesList extends TeaModel {
+        /**
+         * <p>The description of this published version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>第一次发布</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
          */
@@ -107,6 +128,8 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The publish time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1578965079000</p>
          */
@@ -114,6 +137,8 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
         public Long publishTime;
 
         /**
+         * <p>The script ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>29420f65-8f1f-4009-b2f8-f4f7b5d59090</p>
          */
@@ -121,6 +146,8 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
         public String scriptId;
 
         /**
+         * <p>The script version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1578965079000</p>
          */
@@ -175,10 +202,15 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
     }
 
     public static class ListScriptPublishHistoriesResponseBodyScriptPublishHistories extends TeaModel {
+        /**
+         * <p>The data list.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListScriptPublishHistoriesResponseBodyScriptPublishHistoriesList> list;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -186,6 +218,8 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -193,6 +227,8 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

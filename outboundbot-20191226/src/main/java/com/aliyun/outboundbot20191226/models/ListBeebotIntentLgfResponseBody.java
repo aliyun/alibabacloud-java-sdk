@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListBeebotIntentLgfResponseBody extends TeaModel {
     /**
+     * <p>The internal request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>497CFAFF-48CC-161A-AD2C-252DED569037</p>
      */
@@ -12,6 +14,8 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
     public String beebotRequestId;
 
     /**
+     * <p>The API status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -19,16 +23,23 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The list of LGFs.</p>
+     */
     @NameInMap("Lgfs")
     public java.util.List<ListBeebotIntentLgfResponseBodyLgfs> lgfs;
 
     /**
+     * <p>The message returned by the API.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -36,6 +47,8 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -43,6 +56,8 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -50,6 +65,8 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -57,6 +74,8 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -64,6 +83,8 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -157,6 +178,8 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
 
     public static class ListBeebotIntentLgfResponseBodyLgfs extends TeaModel {
         /**
+         * <p>The time when the template was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-04-21 10:54:18.+0800</p>
          */
@@ -164,6 +187,8 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The intent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>10717802</p>
          */
@@ -171,6 +196,8 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
         public Long intentId;
 
         /**
+         * <p>The ID of the utterance template.</p>
+         * 
          * <strong>example:</strong>
          * <p>5666117</p>
          */
@@ -178,12 +205,20 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
         public Long lgfId;
 
         /**
+         * <p>The time when the template was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-04-21 10:54:18.+0800</p>
          */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        /**
+         * <p>The content of the utterance template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>我是一个问法模版</p>
+         */
         @NameInMap("RuleText")
         public String ruleText;
 

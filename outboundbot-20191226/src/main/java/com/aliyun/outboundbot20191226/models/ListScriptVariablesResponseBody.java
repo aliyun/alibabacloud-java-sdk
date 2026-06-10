@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListScriptVariablesResponseBody extends TeaModel {
     /**
+     * <p>The API status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListScriptVariablesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class ListScriptVariablesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The API message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -26,6 +32,8 @@ public class ListScriptVariablesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -33,12 +41,17 @@ public class ListScriptVariablesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The script variables.</p>
+     */
     @NameInMap("Variables")
     public java.util.List<ListScriptVariablesResponseBodyVariables> variables;
 
@@ -96,13 +109,27 @@ public class ListScriptVariablesResponseBody extends TeaModel {
     }
 
     public static class ListScriptVariablesResponseBodyVariables extends TeaModel {
+        /**
+         * <p>The variable description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>表示客户的真实姓名</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The variable display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>姓名</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>The variable name.</p>
+         * 
          * <strong>example:</strong>
          * <p>name</p>
          */

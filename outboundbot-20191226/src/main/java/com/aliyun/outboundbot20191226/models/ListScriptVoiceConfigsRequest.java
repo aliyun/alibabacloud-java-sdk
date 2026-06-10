@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListScriptVoiceConfigsRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListScriptVoiceConfigsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The page number of the page to return.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ListScriptVoiceConfigsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class ListScriptVoiceConfigsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the script.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

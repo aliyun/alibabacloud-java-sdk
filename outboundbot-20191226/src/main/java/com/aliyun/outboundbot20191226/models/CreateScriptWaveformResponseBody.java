@@ -4,21 +4,57 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class CreateScriptWaveformResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Script information</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the script waveform.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>df8216aa-d8f6-4501-864f-f8334d946561</p>
+     */
     @NameInMap("ScriptWaveformId")
     public String scriptWaveformId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

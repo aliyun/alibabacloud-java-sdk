@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class TaskPreparingRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class TaskPreparingRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the account that owns the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>1971226538081821</p>
      */
@@ -21,6 +24,7 @@ public class TaskPreparingRequest extends TeaModel {
     public Long instanceOwnerId;
 
     /**
+     * <p>The job ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

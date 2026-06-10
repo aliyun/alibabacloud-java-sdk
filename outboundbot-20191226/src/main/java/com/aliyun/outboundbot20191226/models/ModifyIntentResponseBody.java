@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyIntentResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ModifyIntentResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class ModifyIntentResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The intent ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3b9a2b33-50d4-4576-8c68-22498f4bf731</p>
      */
@@ -26,6 +32,8 @@ public class ModifyIntentResponseBody extends TeaModel {
     public String intentId;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -33,6 +41,8 @@ public class ModifyIntentResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -40,6 +50,8 @@ public class ModifyIntentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

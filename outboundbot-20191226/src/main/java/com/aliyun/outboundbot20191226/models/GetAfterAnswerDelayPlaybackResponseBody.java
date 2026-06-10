@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetAfterAnswerDelayPlaybackResponseBody extends TeaModel {
     /**
+     * <p>Delay before playing audio after the call is answered, in seconds</p>
+     * 
      * <strong>example:</strong>
-     * <p>500</p>
+     * <p>1</p>
      */
     @NameInMap("AfterAnswerDelayPlayback")
     public Integer afterAnswerDelayPlayback;
 
     /**
+     * <p>API status code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -19,6 +23,8 @@ public class GetAfterAnswerDelayPlaybackResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class GetAfterAnswerDelayPlaybackResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Response message</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -33,6 +41,8 @@ public class GetAfterAnswerDelayPlaybackResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -40,6 +50,8 @@ public class GetAfterAnswerDelayPlaybackResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

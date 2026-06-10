@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SaveMaxAttemptsPerDayRequest extends TeaModel {
     /**
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,13 +15,20 @@ public class SaveMaxAttemptsPerDayRequest extends TeaModel {
     public String entryId;
 
     /**
+     * <p>Daily maximum redial attempts. Default is 3 if not specified.</p>
+     * 
      * <strong>example:</strong>
-     * <p>5</p>
+     * <p>3</p>
      */
     @NameInMap("MaxAttemptsPerDay")
     public Integer maxAttemptsPerDay;
 
     /**
+     * <p>Policy level (required)</p>
+     * <ul>
+     * <li>2: Instance</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveEffectiveDaysRequest extends TeaModel {
     /**
+     * <p>The effective time.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -12,6 +14,7 @@ public class SaveEffectiveDaysRequest extends TeaModel {
     public Integer effectiveDays;
 
     /**
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class SaveEffectiveDaysRequest extends TeaModel {
     public String entryId;
 
     /**
+     * <p>Policy level</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

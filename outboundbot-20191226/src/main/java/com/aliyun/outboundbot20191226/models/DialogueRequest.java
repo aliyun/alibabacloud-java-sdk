@@ -5,16 +5,25 @@ import com.aliyun.tea.*;
 
 public class DialogueRequest extends TeaModel {
     /**
+     * <p>Action to perform for outbound calls. Hangup ends the call.</p>
+     * 
      * <strong>example:</strong>
      * <p>broadcast</p>
      */
     @NameInMap("ActionKey")
     public String actionKey;
 
+    /**
+     * <p>Parameters required to perform the action. (Deprecated)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("ActionParams")
     public String actionParams;
 
     /**
+     * <p>Call ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +33,7 @@ public class DialogueRequest extends TeaModel {
     public String callId;
 
     /**
+     * <p>Call type, typically Outbound</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +43,7 @@ public class DialogueRequest extends TeaModel {
     public String callType;
 
     /**
+     * <p>Called number</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +53,7 @@ public class DialogueRequest extends TeaModel {
     public String calledNumber;
 
     /**
+     * <p>Calling number</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +63,7 @@ public class DialogueRequest extends TeaModel {
     public String callingNumber;
 
     /**
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,6 +73,8 @@ public class DialogueRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Scenario ID</p>
+     * 
      * <strong>example:</strong>
      * <p>6cea9bed-63e6-439e-ae4c-b3333efff53d</p>
      */
@@ -67,7 +82,7 @@ public class DialogueRequest extends TeaModel {
     public String scenarioId;
 
     /**
-     * <p>场景id</p>
+     * <p>Scenario ID</p>
      * 
      * <strong>example:</strong>
      * <p>c5c5d8c0-c0f1-48a7-be2b-dc46006d888a</p>
@@ -76,6 +91,8 @@ public class DialogueRequest extends TeaModel {
     public String scriptId;
 
     /**
+     * <p>Task ID</p>
+     * 
      * <strong>example:</strong>
      * <p>ff44709e-39a6-43ba-959b-20fcabe3e496</p>
      */
@@ -83,7 +100,11 @@ public class DialogueRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>User utterance</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>是的</p>
      */
     @NameInMap("Utterance")
     public String utterance;

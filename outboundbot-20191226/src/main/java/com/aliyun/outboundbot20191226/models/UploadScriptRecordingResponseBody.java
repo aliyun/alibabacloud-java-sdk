@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UploadScriptRecordingResponseBody extends TeaModel {
     /**
+     * <p>Return code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class UploadScriptRecordingResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class UploadScriptRecordingResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Interface message</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -26,6 +32,8 @@ public class UploadScriptRecordingResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -33,6 +41,8 @@ public class UploadScriptRecordingResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Is successful</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -40,6 +50,8 @@ public class UploadScriptRecordingResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Unique recording ID</p>
+     * 
      * <strong>example:</strong>
      * <p>5feaab8a-97fd-4720-8108-79e017f2d3ac</p>
      */

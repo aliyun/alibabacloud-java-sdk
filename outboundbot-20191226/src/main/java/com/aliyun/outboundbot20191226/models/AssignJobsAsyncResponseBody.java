@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AssignJobsAsyncResponseBody extends TeaModel {
     /**
+     * <p>The asynchronous task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12f3dd08-0c55-44ce-9b64-e69d35ed3a76</p>
      */
@@ -12,6 +14,8 @@ public class AssignJobsAsyncResponseBody extends TeaModel {
     public String asyncTaskId;
 
     /**
+     * <p>The API status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -19,6 +23,8 @@ public class AssignJobsAsyncResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class AssignJobsAsyncResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The API response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -33,6 +41,8 @@ public class AssignJobsAsyncResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -40,6 +50,8 @@ public class AssignJobsAsyncResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

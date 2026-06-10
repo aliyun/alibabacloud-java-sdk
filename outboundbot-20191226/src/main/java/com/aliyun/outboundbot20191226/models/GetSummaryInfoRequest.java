@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSummaryInfoRequest extends TeaModel {
     /**
+     * <p>List of instance IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */

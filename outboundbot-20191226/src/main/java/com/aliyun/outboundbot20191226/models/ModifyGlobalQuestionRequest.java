@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ModifyGlobalQuestionRequest extends TeaModel {
     /**
+     * <p>A JSON string containing an array of answers.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;你好,我是你的专属客服顾问.&quot;]</p>
      */
     @NameInMap("Answers")
     public String answers;
 
     /**
+     * <p>The unique ID of the global question.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,12 +25,17 @@ public class ModifyGlobalQuestionRequest extends TeaModel {
     public String globalQuestionId;
 
     /**
+     * <p>The global question name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>未识别全局问题</p>
      */
     @NameInMap("GlobalQuestionName")
     public String globalQuestionName;
 
     /**
+     * <p>The global question type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,25 +45,31 @@ public class ModifyGlobalQuestionRequest extends TeaModel {
     public String globalQuestionType;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>8fa1953f-4a84-46d8-b80c-8ce9cf684fb3</p>
+     * <p>e5035654-1745-484a-8c5b-165f7c7bcd79</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
+     * <p>A JSON string containing an array of questions.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;你是谁&quot;,&quot;你叫什么&quot;]</p>
      */
     @NameInMap("Questions")
     public String questions;
 
     /**
+     * <p>The script ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>19ac2375-53e3-477f-abe9-6cd334227981</p>
+     * <p>0fe7f71c-8771-42ef-9bb1-19aa16ae7120</p>
      */
     @NameInMap("ScriptId")
     public String scriptId;

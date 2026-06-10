@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListGlobalQuestionsResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The global question data.</p>
+     */
     @NameInMap("GlobalQuestions")
     public ListGlobalQuestionsResponseBodyGlobalQuestions globalQuestions;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListGlobalQuestionsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -29,6 +38,8 @@ public class ListGlobalQuestionsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -36,6 +47,8 @@ public class ListGlobalQuestionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -96,30 +109,60 @@ public class ListGlobalQuestionsResponseBody extends TeaModel {
     }
 
     public static class ListGlobalQuestionsResponseBodyGlobalQuestionsList extends TeaModel {
+        /**
+         * <p>The replies to the global question.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;你好,您可以再说一遍吗&quot;,&quot;不好意思我刚才没有听清&quot;]</p>
+         */
         @NameInMap("Answers")
         public String answers;
 
         /**
+         * <p>The global question ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>53c27755-d41e-46a6-bb3c-4f66f257d50c</p>
          */
         @NameInMap("GlobalQuestionId")
         public String globalQuestionId;
 
+        /**
+         * <p>The name of the global question.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>未识别</p>
+         */
         @NameInMap("GlobalQuestionName")
         public String globalQuestionName;
 
         /**
+         * <p>The type of the global question.</p>
+         * <ul>
+         * <li><p>SYSTEM: System-defined</p>
+         * </li>
+         * <li><p>COMMON: General</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SYSTEM</p>
          */
         @NameInMap("GlobalQuestionType")
         public String globalQuestionType;
 
+        /**
+         * <p>The list of global questions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;测试问题1&quot;,&quot;测试问题2&quot;]</p>
+         */
         @NameInMap("Questions")
         public String questions;
 
         /**
+         * <p>The scenario ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>aa279896-64a6-4182-864c-4f2b04ec8d17</p>
          */
@@ -182,10 +225,15 @@ public class ListGlobalQuestionsResponseBody extends TeaModel {
     }
 
     public static class ListGlobalQuestionsResponseBodyGlobalQuestions extends TeaModel {
+        /**
+         * <p>The array of global questions.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListGlobalQuestionsResponseBodyGlobalQuestionsList> list;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -193,6 +241,8 @@ public class ListGlobalQuestionsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -200,8 +250,10 @@ public class ListGlobalQuestionsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
-         * <p>12</p>
+         * <p>10</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

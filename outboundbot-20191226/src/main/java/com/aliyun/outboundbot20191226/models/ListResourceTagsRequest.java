@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListResourceTagsRequest extends TeaModel {
     /**
+     * <p>Page number</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListResourceTagsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ListResourceTagsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Resource type</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

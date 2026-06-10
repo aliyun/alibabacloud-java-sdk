@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RecordFailureRequest extends TeaModel {
     /**
+     * <p>Call start time</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RecordFailureRequest extends TeaModel {
     public Long actualTime;
 
     /**
+     * <p>Call ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class RecordFailureRequest extends TeaModel {
     public String callId;
 
     /**
+     * <p>Called number</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class RecordFailureRequest extends TeaModel {
     public String calledNumber;
 
     /**
+     * <p>Calling number</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,18 +45,42 @@ public class RecordFailureRequest extends TeaModel {
     public String callingNumber;
 
     /**
+     * <p>Failure reason.</p>
+     * <ul>
+     * <li><p>Nonexistent number (NotExists)</p>
+     * </li>
+     * <li><p>Busy (Busy)</p>
+     * </li>
+     * <li><p>No answer (NotAnswered)</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>OutOfService</p>
+     * <p>NotExists</p>
      */
     @NameInMap("DispositionCode")
     public String dispositionCode;
 
+    /**
+     * <p>Error code when the outbound call fails.</p>
+     * <ul>
+     * <li><p>Nonexistent number (NotExists)</p>
+     * </li>
+     * <li><p>Busy (Busy)</p>
+     * </li>
+     * <li><p>No answer (NotAnswered)</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>NotExists</p>
+     */
     @NameInMap("ExceptionCodes")
     public String exceptionCodes;
 
     /**
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,6 +90,7 @@ public class RecordFailureRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Task ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

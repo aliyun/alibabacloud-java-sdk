@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class SaveAnnotationMissionSessionListResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public SaveAnnotationMissionSessionListResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The returned message. If the request is successful, success is returned. If the request fails, an error code is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>执行失败：查找元素或操作超时,outTaskId:trademark_regnew_public_cn-zz4310rp1lb,flowId:null,nodeUUID:541b6c71-8cce-4ab0-af84-713ca9741821</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>76E93048-F90F-57B7-BD46-6097611A706D</p>
      */
@@ -32,6 +47,8 @@ public class SaveAnnotationMissionSessionListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. A value of true indicates success. A value of false indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -92,6 +109,12 @@ public class SaveAnnotationMissionSessionListResponseBody extends TeaModel {
     }
 
     public static class SaveAnnotationMissionSessionListResponseBodyDataSaveAnnotationMissionSessionListRequest extends TeaModel {
+        /**
+         * <p>The content of the script for the approval requests</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
+         */
         @NameInMap("AnnotationMissionSessionListJsonString")
         public String annotationMissionSessionListJsonString;
 
@@ -111,16 +134,30 @@ public class SaveAnnotationMissionSessionListResponseBody extends TeaModel {
     }
 
     public static class SaveAnnotationMissionSessionListResponseBodyData extends TeaModel {
+        /**
+         * <p>The message returned for the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>执行失败：查找元素或操作超时,outTaskId:trademark_regnew_public_cn-zz4310rp1lb,flowId:null,nodeUUID:541b6c71-8cce-4ab0-af84-713ca9741821</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The list of messages.</p>
+         */
         @NameInMap("MessageList")
         public java.util.List<String> messageList;
 
+        /**
+         * <p>The request result.</p>
+         */
         @NameInMap("SaveAnnotationMissionSessionListRequest")
         public SaveAnnotationMissionSessionListResponseBodyDataSaveAnnotationMissionSessionListRequest saveAnnotationMissionSessionListRequest;
 
         /**
+         * <p>Indicates whether the operation was successful.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

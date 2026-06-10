@@ -4,10 +4,15 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class DeleteAgentProfilesShrinkRequest extends TeaModel {
+    /**
+     * <p>Collection of agent profile IDs</p>
+     */
     @NameInMap("AgentProfileIds")
     public String agentProfileIdsShrink;
 
     /**
+     * <p>app_ip (system field, optional)</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */

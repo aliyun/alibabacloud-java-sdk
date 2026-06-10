@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetConcurrentConversationQuotaResponseBody extends TeaModel {
     /**
+     * <p>API status code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetConcurrentConversationQuotaResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,7 +23,7 @@ public class GetConcurrentConversationQuotaResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>maxConcurrent</p>
+     * <p>Maximum number of concurrent conversations</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -28,6 +32,8 @@ public class GetConcurrentConversationQuotaResponseBody extends TeaModel {
     public Integer maxConcurrent;
 
     /**
+     * <p>API message</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -35,6 +41,8 @@ public class GetConcurrentConversationQuotaResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Remaining concurrent conversations</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -42,6 +50,8 @@ public class GetConcurrentConversationQuotaResponseBody extends TeaModel {
     public Integer remainingConcurrent;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -49,6 +59,8 @@ public class GetConcurrentConversationQuotaResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates if the call succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
     /**
+     * <p>API status code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,16 +14,23 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Task group ID</p>
+     * 
      * <strong>example:</strong>
      * <p>f06f7c9f-2895-4b30-a8c2-6ecccb9c9f89</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>Hang-up nodes</p>
+     */
     @NameInMap("HangUpDialogueNodes")
     public java.util.List<DescribeDialogueNodeStatisticsResponseBodyHangUpDialogueNodes> hangUpDialogueNodes;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Instance ID</p>
+     * 
      * <strong>example:</strong>
      * <p>e5035654-1745-484a-8c5b-165f7c7bcd79</p>
      */
@@ -36,6 +47,8 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>API message</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -43,6 +56,8 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>No-answer nodes</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -50,6 +65,8 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
     public java.util.List<DescribeDialogueNodeStatisticsResponseBodyNoAnswerDialogueNodes> noAnswerDialogueNodes;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -57,6 +74,8 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates success</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -64,6 +83,8 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Number of completed tasks in the task group</p>
+     * 
      * <strong>example:</strong>
      * <p>13</p>
      */
@@ -156,15 +177,39 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribeDialogueNodeStatisticsResponseBodyHangUpDialogueNodes extends TeaModel {
+        /**
+         * <p>Number of hang-ups</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("HangUpNum")
         public Integer hangUpNum;
 
+        /**
+         * <p>Node ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e5035654-1745-484a-8c5b-165f7c7bcd79</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>Node name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <p>Proportion of quantity</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100%</p>
+         */
         @NameInMap("RateDisplay")
         public String rateDisplay;
 
@@ -209,6 +254,8 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
 
     public static class DescribeDialogueNodeStatisticsResponseBodyNoAnswerDialogueNodes extends TeaModel {
         /**
+         * <p>Task group ID</p>
+         * 
          * <strong>example:</strong>
          * <p>f06f7c9f-2895-4b30-a8c2-6ecccb9c9f89</p>
          */
@@ -216,6 +263,8 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
         public String groupId;
 
         /**
+         * <p>Number of hang-ups</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -223,6 +272,8 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
         public Integer hangUpNum;
 
         /**
+         * <p>Number of hits</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -230,7 +281,7 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
         public Integer hitNum;
 
         /**
-         * <p>id</p>
+         * <p>ID, unique identifier</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -239,6 +290,8 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Instance ID</p>
+         * 
          * <strong>example:</strong>
          * <p>e5035654-1745-484a-8c5b-165f7c7bcd79</p>
          */
@@ -246,6 +299,8 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Number of no-answers</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -253,6 +308,8 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
         public Integer noAnswerNum;
 
         /**
+         * <p>Node ID</p>
+         * 
          * <strong>example:</strong>
          * <p>e5035654-1745-484a-8c5b-165f7c7bcd79</p>
          */
@@ -260,6 +317,8 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>Node name</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */

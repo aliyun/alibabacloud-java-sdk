@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ModifyAnnotationMissionResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Response data.</p>
+     */
     @NameInMap("Data")
     public ModifyAnnotationMissionResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ModifyAnnotationMissionResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>The operation is not allowed. User state (DIALING) does not meet expectations (READY).</p>
      */
@@ -29,6 +38,8 @@ public class ModifyAnnotationMissionResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -36,6 +47,8 @@ public class ModifyAnnotationMissionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call succeeded. true: The call succeeded. false: The call failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class ModifyAnnotationMissionResponseBody extends TeaModel {
 
     public static class ModifyAnnotationMissionResponseBodyData extends TeaModel {
         /**
+         * <p>Error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>The operation is not allowed. User state (DIALING) does not meet expectations (READY).</p>
          */
@@ -104,6 +119,8 @@ public class ModifyAnnotationMissionResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>Indicates whether the operation succeeded.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

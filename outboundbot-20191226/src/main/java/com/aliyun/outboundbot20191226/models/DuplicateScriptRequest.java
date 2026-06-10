@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DuplicateScriptRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,17 @@ public class DuplicateScriptRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The name for the new script.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>复制的催收话术</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The ID of the source script.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

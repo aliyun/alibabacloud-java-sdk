@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceBindNumberResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("Data")
     public CreateInstanceBindNumberResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class CreateInstanceBindNumberResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>API message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -29,6 +38,8 @@ public class CreateInstanceBindNumberResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -36,6 +47,8 @@ public class CreateInstanceBindNumberResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class CreateInstanceBindNumberResponseBody extends TeaModel {
 
     public static class CreateInstanceBindNumberResponseBodyDataList extends TeaModel {
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>96b847ad-2683-4794-b7b4-7ef094fb81f6</p>
          */
@@ -104,6 +119,8 @@ public class CreateInstanceBindNumberResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Indicates whether the binding was successful.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -134,6 +151,9 @@ public class CreateInstanceBindNumberResponseBody extends TeaModel {
     }
 
     public static class CreateInstanceBindNumberResponseBodyData extends TeaModel {
+        /**
+         * <p>List of number data.</p>
+         */
         @NameInMap("List")
         public java.util.List<CreateInstanceBindNumberResponseBodyDataList> list;
 

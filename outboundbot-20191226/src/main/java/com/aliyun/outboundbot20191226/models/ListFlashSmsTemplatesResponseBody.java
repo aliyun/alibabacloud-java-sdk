@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListFlashSmsTemplatesResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListFlashSmsTemplatesResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>EC08CC41-6870-5594-939A-F758F057898F</p>
      */
@@ -32,6 +47,8 @@ public class ListFlashSmsTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call succeeded. A value of true indicates a successful call. A value of false indicates a failed call.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -92,16 +109,30 @@ public class ListFlashSmsTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListFlashSmsTemplatesResponseBodyData extends TeaModel {
+        /**
+         * <p>The content of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>您好，xxx来电。</p>
+         */
         @NameInMap("TemplateContent")
         public String templateContent;
 
         /**
+         * <p>The ID of the flash SMS template.</p>
+         * 
          * <strong>example:</strong>
          * <p>17*******************01</p>
          */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <p>The name of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>模板1</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 

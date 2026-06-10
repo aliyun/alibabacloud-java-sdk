@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetBaseStrategyPeriodResponseBody extends TeaModel {
     /**
+     * <p>API status code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetBaseStrategyPeriodResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class GetBaseStrategyPeriodResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Response message</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -26,16 +32,26 @@ public class GetBaseStrategyPeriodResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Indicates whether the period applies only to weekends</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("OnlyWeekdays")
     public Boolean onlyWeekdays;
 
+    /**
+     * <p>Indicates whether the period applies only to weekdays</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("OnlyWorkdays")
     public Boolean onlyWorkdays;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -43,6 +59,8 @@ public class GetBaseStrategyPeriodResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +68,8 @@ public class GetBaseStrategyPeriodResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Time periods when the strategy runs</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -127,6 +147,8 @@ public class GetBaseStrategyPeriodResponseBody extends TeaModel {
 
     public static class GetBaseStrategyPeriodResponseBodyWorkingTime extends TeaModel {
         /**
+         * <p>Start time</p>
+         * 
          * <strong>example:</strong>
          * <p>00:00:00</p>
          */
@@ -134,6 +156,8 @@ public class GetBaseStrategyPeriodResponseBody extends TeaModel {
         public String beginTime;
 
         /**
+         * <p>Daily start time, in milliseconds</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -141,6 +165,8 @@ public class GetBaseStrategyPeriodResponseBody extends TeaModel {
         public Long beginTimeMillis;
 
         /**
+         * <p>End time</p>
+         * 
          * <strong>example:</strong>
          * <p>00:00:00</p>
          */
@@ -148,6 +174,8 @@ public class GetBaseStrategyPeriodResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>Daily end time, in milliseconds</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

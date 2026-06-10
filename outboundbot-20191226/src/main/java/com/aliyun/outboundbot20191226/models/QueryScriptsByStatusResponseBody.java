@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryScriptsByStatusResponseBody extends TeaModel {
     /**
+     * <p>The API status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -26,16 +32,23 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The scenarios.</p>
+     */
     @NameInMap("Scripts")
     public QueryScriptsByStatusResponseBodyScripts scripts;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
 
     public static class QueryScriptsByStatusResponseBodyScriptsList extends TeaModel {
         /**
+         * <p>The version ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1579055782000</p>
          */
@@ -104,6 +119,8 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
         public String appliedVersion;
 
         /**
+         * <p>The debug status.</p>
+         * 
          * <strong>example:</strong>
          * <p>PUBLISHED</p>
          */
@@ -111,16 +128,26 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
         public String debugStatus;
 
         /**
+         * <p>The debug version.</p>
+         * 
          * <strong>example:</strong>
-         * <p>1579055782000</p>
+         * <p>01bb2df2-a273-42bb-a214-d3c626b13296</p>
          */
         @NameInMap("DebugVersion")
         public String debugVersion;
 
+        /**
+         * <p>The industry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>通用</p>
+         */
         @NameInMap("Industry")
         public String industry;
 
         /**
+         * <p>Indicates whether the debug version is a draft.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -128,29 +155,77 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
         public Boolean isDebugDrafted;
 
         /**
+         * <p>Indicates whether the version is a draft.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("IsDrafted")
         public Boolean isDrafted;
 
+        /**
+         * <p>The scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>电销</p>
+         */
         @NameInMap("Scene")
         public String scene;
 
+        /**
+         * <p>The script description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>销售话术</p>
+         */
         @NameInMap("ScriptDescription")
         public String scriptDescription;
 
         /**
+         * <p>The scenario ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>fa0e21e9-caab-4629-9121-1e341243d599</p>
          */
         @NameInMap("ScriptId")
         public String scriptId;
 
+        /**
+         * <p>The scenario name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>销售话术</p>
+         */
         @NameInMap("ScriptName")
         public String scriptName;
 
         /**
+         * <p>The status of the application version. Valid values:</p>
+         * <ul>
+         * <li><p><strong>DRAFTED</strong>: The script is a draft.</p>
+         * </li>
+         * <li><p><strong>INITIALIZE_IN_PROGRESS</strong>: The script is being initialized.</p>
+         * </li>
+         * <li><p><strong>PUBLISHED</strong>: The script is published.</p>
+         * </li>
+         * <li><p><strong>PUBLISH_IN_PROGRESS</strong>: The script is being published.</p>
+         * </li>
+         * <li><p><strong>ROLLBACK_IN_PROGRESS</strong>: The script is being rolled back.</p>
+         * </li>
+         * <li><p><strong>EXAMINE_IN_PROGRESS</strong>: The script is pending approval.</p>
+         * </li>
+         * <li><p><strong>PUBLISHED_AND_EXAMINE_IN_PROGRESS</strong>: The script is published and pending approval.</p>
+         * </li>
+         * <li><p><strong>PUBLISH_FAILED</strong>: The script failed to be published.</p>
+         * </li>
+         * <li><p><strong>ROLLBACK_FAILED</strong>: The script failed to be rolled back.</p>
+         * </li>
+         * <li><p><strong>IMPORT_IN_PROGRESS</strong>: The script is being imported.</p>
+         * </li>
+         * <li><p><strong>IMPORT_FAILED</strong>: The script failed to be imported.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PUBLISHED</p>
          */
@@ -158,6 +233,8 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The time when the script was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>1579055782000</p>
          */
@@ -268,10 +345,15 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
     }
 
     public static class QueryScriptsByStatusResponseBodyScripts extends TeaModel {
+        /**
+         * <p>The list of scenarios.</p>
+         */
         @NameInMap("List")
         public java.util.List<QueryScriptsByStatusResponseBodyScriptsList> list;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -279,6 +361,8 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -286,8 +370,10 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>15</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

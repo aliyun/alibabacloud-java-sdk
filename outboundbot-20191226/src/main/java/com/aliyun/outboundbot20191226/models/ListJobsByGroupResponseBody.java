@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListJobsByGroupResponseBody extends TeaModel {
     /**
+     * <p>Response code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,16 +14,23 @@ public class ListJobsByGroupResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Job array</p>
+     */
     @NameInMap("Jobs")
     public ListJobsByGroupResponseBodyJobs jobs;
 
     /**
+     * <p>API message</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -29,6 +38,8 @@ public class ListJobsByGroupResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -36,6 +47,8 @@ public class ListJobsByGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,19 +110,35 @@ public class ListJobsByGroupResponseBody extends TeaModel {
 
     public static class ListJobsByGroupResponseBodyJobsListContacts extends TeaModel {
         /**
+         * <p>Contact ID (system-generated)</p>
+         * 
          * <strong>example:</strong>
          * <p>db3db762-e421-44c9-9a01-cb423470757c</p>
          */
         @NameInMap("ContactId")
         public String contactId;
 
+        /**
+         * <p>Contact name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("ContactName")
         public String contactName;
 
+        /**
+         * <p>Honorific (same as contact name)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张先生</p>
+         */
         @NameInMap("Honorific")
         public String honorific;
 
         /**
+         * <p>Job ID (deprecated)</p>
+         * 
          * <strong>example:</strong>
          * <p>72dcd26b-f12d-4c27-b3af-18f6aed5b160</p>
          */
@@ -117,13 +146,17 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>Phone number</p>
+         * 
          * <strong>example:</strong>
-         * <p>135****8888</p>
+         * <p>134********</p>
          */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
         /**
+         * <p>Contact third-party system ID (uploaded by customer)</p>
+         * 
          * <strong>example:</strong>
          * <p>2fa6bac3-06da-4315-82ab-72d6fd3a6f34</p>
          */
@@ -131,6 +164,8 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         public String referenceId;
 
         /**
+         * <p>Deprecated</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -140,6 +175,8 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         public String role;
 
         /**
+         * <p>Deprecated</p>
+         * 
          * <strong>example:</strong>
          * <p>Available</p>
          */
@@ -219,15 +256,19 @@ public class ListJobsByGroupResponseBody extends TeaModel {
 
     public static class ListJobsByGroupResponseBodyJobsListExtras extends TeaModel {
         /**
+         * <p>Business parameter name</p>
+         * 
          * <strong>example:</strong>
-         * <p>djrq</p>
+         * <p>性别</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
+         * <p>Business parameter value</p>
+         * 
          * <strong>example:</strong>
-         * <p>2019-08-21 09:49:59.0</p>
+         * <p>男</p>
          */
         @NameInMap("Value")
         public String value;
@@ -257,6 +298,8 @@ public class ListJobsByGroupResponseBody extends TeaModel {
 
     public static class ListJobsByGroupResponseBodyJobsListSummary extends TeaModel {
         /**
+         * <p>Conversation summary category</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -264,6 +307,8 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         public String category;
 
         /**
+         * <p>Conversation summary content</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -271,6 +316,8 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>Call record ID</p>
+         * 
          * <strong>example:</strong>
          * <p>62a860f5-a8b3-4b75-9512-c7e04bb7c8bc</p>
          */
@@ -278,6 +325,8 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         public String conversationDetailId;
 
         /**
+         * <p>Job group ID</p>
+         * 
          * <strong>example:</strong>
          * <p>88e56cfb-33f8-477a-907c-0fe83292d924</p>
          */
@@ -285,6 +334,8 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         public String jobGroupId;
 
         /**
+         * <p>Job ID</p>
+         * 
          * <strong>example:</strong>
          * <p>f102a853-5f5a-47fb-8869-b31ea74a9620</p>
          */
@@ -292,6 +343,8 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>Summary ID</p>
+         * 
          * <strong>example:</strong>
          * <p>680f1905-81ae-4aab-99dd-2964dfb767fa</p>
          */
@@ -299,6 +352,8 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         public String summaryId;
 
         /**
+         * <p>Summary name</p>
+         * 
          * <strong>example:</strong>
          * <p>score</p>
          */
@@ -306,6 +361,8 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         public String summaryName;
 
         /**
+         * <p>Call ID</p>
+         * 
          * <strong>example:</strong>
          * <p>b0f35dd1-0337-402e-9c4f-3a6c2426950a</p>
          */
@@ -384,16 +441,62 @@ public class ListJobsByGroupResponseBody extends TeaModel {
     }
 
     public static class ListJobsByGroupResponseBodyJobsList extends TeaModel {
+        /**
+         * <p>Caller number list</p>
+         */
         @NameInMap("CallingNumbers")
         public java.util.List<String> callingNumbers;
 
+        /**
+         * <p>Contact list</p>
+         */
         @NameInMap("Contacts")
         public java.util.List<ListJobsByGroupResponseBodyJobsListContacts> contacts;
 
+        /**
+         * <p>Business data</p>
+         * <blockquote>
+         * <p>TenantId and ServiceId are system-generated. All other parameters are custom.</p>
+         * </blockquote>
+         */
         @NameInMap("Extras")
         public java.util.List<ListJobsByGroupResponseBodyJobsListExtras> extras;
 
         /**
+         * <p>The failure reason.</p>
+         * <ul>
+         * <li><p>Unknown: An unknown error occurred.</p>
+         * </li>
+         * <li><p>NoAnswer: The call was not answered.</p>
+         * </li>
+         * <li><p>InvalidStrategy: The policy is invalid or incorrectly configured.</p>
+         * </li>
+         * <li><p>TimeUp: The task timed out during scheduling.</p>
+         * </li>
+         * <li><p>NoStrategy: The policy is empty or was not found.</p>
+         * </li>
+         * <li><p>CallFailed: The call failed.</p>
+         * </li>
+         * <li><p>PerDayCallCountLimit: The daily call limit for the phone number was reached.</p>
+         * </li>
+         * <li><p>ContactBlockList: The phone number is on the blocklist.</p>
+         * </li>
+         * <li><p>EmptyNumber: The phone number is nonexistent.</p>
+         * </li>
+         * <li><p>JobPerDayCallCountLimit: The daily call limit for the phone number within the job was reached.</p>
+         * </li>
+         * <li><p>VerificationCancelled: The call was canceled because it failed pre-call validation.</p>
+         * </li>
+         * <li><p>ContactSuspended: Calling to the contact is suspended.</p>
+         * </li>
+         * <li><p>InArrears: The account has an overdue payment.</p>
+         * </li>
+         * <li><p>OutOfService: The phone number is out of service.</p>
+         * </li>
+         * <li><p>NoneRepeatableJobMaxAttemptCountLimit: The non-repeatable job reached the maximum number of attempts.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>NoAnswer</p>
          */
@@ -401,6 +504,8 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         public String failureReason;
 
         /**
+         * <p>Job ID</p>
+         * 
          * <strong>example:</strong>
          * <p>fce6c599-8ede-40e3-9f78-0928eda7b4e8</p>
          */
@@ -408,6 +513,8 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         public String jobGroupId;
 
         /**
+         * <p>Job ID</p>
+         * 
          * <strong>example:</strong>
          * <p>b72425bd-7871-4050-838e-033d80d754b7</p>
          */
@@ -415,6 +522,8 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>Priority</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -422,6 +531,8 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         public Integer priority;
 
         /**
+         * <p>Third-party system ID</p>
+         * 
          * <strong>example:</strong>
          * <p>d5971d98-7312-4f0e-a918-a17d67133e28</p>
          */
@@ -429,6 +540,8 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         public String referenceId;
 
         /**
+         * <p>Scenario ID (legacy parameter)</p>
+         * 
          * <strong>example:</strong>
          * <p>ade80092-03d9-4f4d-ad4f-ab8a247d3150</p>
          */
@@ -436,6 +549,24 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         public String scenarioId;
 
         /**
+         * <p>Job status</p>
+         * <ul>
+         * <li><p>Scheduling (0)</p>
+         * </li>
+         * <li><p>Executing (1)</p>
+         * </li>
+         * <li><p>Succeeded (2)</p>
+         * </li>
+         * <li><p>Paused (3)</p>
+         * </li>
+         * <li><p>Failed (4)</p>
+         * </li>
+         * <li><p>Cancelled (5)</p>
+         * </li>
+         * <li><p>Drafted (6)</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Succeeded</p>
          */
@@ -443,16 +574,26 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Strategy ID</p>
+         * 
          * <strong>example:</strong>
          * <p>c8a2b7f2-ad1a-4865-b872-d0080d9802d9</p>
          */
         @NameInMap("StrategyId")
         public String strategyId;
 
+        /**
+         * <p>Conversation summary (deprecated)</p>
+         * <blockquote>
+         * <p>Use the DescribeJob API to retrieve this data.</p>
+         * </blockquote>
+         */
         @NameInMap("Summary")
         public java.util.List<ListJobsByGroupResponseBodyJobsListSummary> summary;
 
         /**
+         * <p>System priority</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -571,10 +712,15 @@ public class ListJobsByGroupResponseBody extends TeaModel {
     }
 
     public static class ListJobsByGroupResponseBodyJobs extends TeaModel {
+        /**
+         * <p>Job list</p>
+         */
         @NameInMap("List")
         public java.util.List<ListJobsByGroupResponseBodyJobsList> list;
 
         /**
+         * <p>Page number</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -582,6 +728,8 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Page size</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -589,8 +737,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total count</p>
+         * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>18</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

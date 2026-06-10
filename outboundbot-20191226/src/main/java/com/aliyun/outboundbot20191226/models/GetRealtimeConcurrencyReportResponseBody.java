@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetRealtimeConcurrencyReportResponseBody extends TeaModel {
     /**
+     * <p>API status code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetRealtimeConcurrencyReportResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class GetRealtimeConcurrencyReportResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Response message</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -26,16 +32,23 @@ public class GetRealtimeConcurrencyReportResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Report generation time</p>
+     * 
      * <strong>example:</strong>
      * <p>1743474900488</p>
      */
     @NameInMap("ReportDate")
     public Long reportDate;
 
+    /**
+     * <p>Report details.</p>
+     */
     @NameInMap("Reports")
     public GetRealtimeConcurrencyReportResponseBodyReports reports;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -43,6 +56,8 @@ public class GetRealtimeConcurrencyReportResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Is successful</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -112,26 +127,44 @@ public class GetRealtimeConcurrencyReportResponseBody extends TeaModel {
 
     public static class GetRealtimeConcurrencyReportResponseBodyReportsList extends TeaModel {
         /**
+         * <p>Instance ID</p>
+         * 
          * <strong>example:</strong>
          * <p>85bf7efa-a07c-498a-850e-99a5849b8589</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>Instance name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>智能外呼场景</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
+         * <p>Job ID</p>
+         * 
          * <strong>example:</strong>
          * <p>c62e6789-28a8-41db-941e-171a01d3b3b9</p>
          */
         @NameInMap("JobGroupId")
         public String jobGroupId;
 
+        /**
+         * <p>Job name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>第一个作业组</p>
+         */
         @NameInMap("JobGroupName")
         public String jobGroupName;
 
         /**
+         * <p>Maximum configured concurrency limit</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -139,6 +172,8 @@ public class GetRealtimeConcurrencyReportResponseBody extends TeaModel {
         public Long maxConcurrencyLimit;
 
         /**
+         * <p>Minimum concurrency limit for the job</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -146,6 +181,8 @@ public class GetRealtimeConcurrencyReportResponseBody extends TeaModel {
         public Long minConcurrencyLimit;
 
         /**
+         * <p>Occupied concurrency value</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -153,6 +190,8 @@ public class GetRealtimeConcurrencyReportResponseBody extends TeaModel {
         public Long occupiedConcurrencyCount;
 
         /**
+         * <p>Report generation time</p>
+         * 
          * <strong>example:</strong>
          * <p>1743474900488</p>
          */
@@ -231,10 +270,15 @@ public class GetRealtimeConcurrencyReportResponseBody extends TeaModel {
     }
 
     public static class GetRealtimeConcurrencyReportResponseBodyReports extends TeaModel {
+        /**
+         * <p>Report collection data</p>
+         */
         @NameInMap("List")
         public java.util.List<GetRealtimeConcurrencyReportResponseBodyReportsList> list;
 
         /**
+         * <p>Page number</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -242,6 +286,8 @@ public class GetRealtimeConcurrencyReportResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Page size</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -249,6 +295,8 @@ public class GetRealtimeConcurrencyReportResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total count</p>
+         * 
          * <strong>example:</strong>
          * <p>16</p>
          */

@@ -5,15 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListDialogueFlowsRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>361c8a53-0e29-42f3-8aa7-c7752d010399</p>
+     * <p>b5b0a30f-69e7-4147-98b5-553fc526361d</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
+     * <p>The script ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

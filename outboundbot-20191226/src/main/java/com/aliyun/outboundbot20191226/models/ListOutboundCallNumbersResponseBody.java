@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListOutboundCallNumbersResponseBody extends TeaModel {
     /**
+     * <p>API status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,16 +23,23 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>API message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>List of outbound call numbers.</p>
+     */
     @NameInMap("OutboundCallNumbers")
     public ListOutboundCallNumbersResponseBodyOutboundCallNumbers outboundCallNumbers;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -36,6 +47,8 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
 
     public static class ListOutboundCallNumbersResponseBodyOutboundCallNumbersList extends TeaModel {
         /**
+         * <p>Phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>10088</p>
          */
@@ -104,6 +119,8 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
         public String number;
 
         /**
+         * <p>ID of the phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>fa0e21e9-caab-4629-9121-1e341243d599</p>
          */
@@ -111,6 +128,8 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
         public String outboundCallNumberId;
 
         /**
+         * <p>Time window for rate limiting, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -118,6 +137,8 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
         public String rateLimitCount;
 
         /**
+         * <p>Maximum number of calls allowed in the time window.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -164,10 +185,15 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
     }
 
     public static class ListOutboundCallNumbersResponseBodyOutboundCallNumbers extends TeaModel {
+        /**
+         * <p>List of outbound call number data.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListOutboundCallNumbersResponseBodyOutboundCallNumbersList> list;
 
         /**
+         * <p>Page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -175,6 +201,8 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Number of entries on the page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -182,6 +210,8 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

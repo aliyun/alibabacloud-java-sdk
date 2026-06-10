@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGlobalQuestionRequest extends TeaModel {
     /**
+     * <p>The ID of the global question.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeGlobalQuestionRequest extends TeaModel {
     public String globalQuestionId;
 
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class DescribeGlobalQuestionRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the script.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

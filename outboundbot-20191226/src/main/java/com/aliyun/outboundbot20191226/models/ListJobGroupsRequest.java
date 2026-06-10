@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListJobGroupsRequest extends TeaModel {
     /**
+     * <p>Specifies whether to retrieve the query results asynchronously.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class ListJobGroupsRequest extends TeaModel {
     public Boolean asyncQuery;
 
     /**
+     * <p>The end of the time range for the query, based on the creation time of the job group. Specify the time as a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1579965079000</p>
      */
@@ -19,6 +23,7 @@ public class ListJobGroupsRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,13 +32,44 @@ public class ListJobGroupsRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Filters results by job status. To specify multiple statuses, separate them with commas. The statuses are combined with a logical OR. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Draft</strong>: The job group is a draft.</p>
+     * </li>
+     * <li><p><strong>Scheduling</strong>: The job group is being scheduled.</p>
+     * </li>
+     * <li><p><strong>Executing</strong>: The job group is executing.</p>
+     * </li>
+     * <li><p><strong>Completed</strong>: The job group has completed.</p>
+     * </li>
+     * <li><p><strong>Paused</strong>: The job group is paused.</p>
+     * </li>
+     * <li><p><strong>Failed</strong>: The job group has failed.</p>
+     * </li>
+     * <li><p><strong>Cancelled</strong>: The job group is canceled.</p>
+     * </li>
+     * <li><p><strong>Initializing</strong>: The job group is initializing.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Draft</p>
+     */
     @NameInMap("JobGroupStatusFilter")
     public String jobGroupStatusFilter;
 
+    /**
+     * <p>Specifies whether to return only job groups with minimum concurrency enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("OnlyMinConcurrencyEnabled")
     public Boolean onlyMinConcurrencyEnabled;
 
     /**
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,6 +79,7 @@ public class ListJobGroupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,10 +88,18 @@ public class ListJobGroupsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The search text.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>面试</p>
+     */
     @NameInMap("SearchText")
     public String searchText;
 
     /**
+     * <p>The start of the time range for the query, based on the creation time of the job group. Specify the time as a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1578965079000</p>
      */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListAnnotationMissionResponseBody extends TeaModel {
     /**
+     * <p>Response code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data</p>
+     */
     @NameInMap("Data")
     public ListAnnotationMissionResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Additional information. Returns success for normal requests. Returns a specific error code for abnormal requests.</p>
+     * 
      * <strong>example:</strong>
      * <p>CDR \&quot;job-c7b8a817-b8e8-40f3-b7ad-f28dcea218ff\&quot; doesn\&quot;t exists.</p>
      */
@@ -29,6 +38,8 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -36,6 +47,8 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call succeeded. true: succeeded. false: failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,26 +110,52 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
 
     public static class ListAnnotationMissionResponseBodyDataAnnotationMissionList extends TeaModel {
         /**
+         * <p>Annotation data source type. 1: Outbound call. 2: Navigation.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("AnnotationMissionDataSourceType")
         public Integer annotationMissionDataSourceType;
 
+        /**
+         * <p>Annotation debug data source list</p>
+         * <blockquote>
+         * <p>The response includes an extra 0. Valid responses are [0,1], [0,2], or [0,1,2].</p>
+         * </blockquote>
+         */
         @NameInMap("AnnotationMissionDebugDataSourceList")
         public java.util.List<Integer> annotationMissionDebugDataSourceList;
 
         /**
+         * <p>Mission ID</p>
+         * 
          * <strong>example:</strong>
          * <p>ddce607f-f537-4ebd-9914-cf45671defb9</p>
          */
         @NameInMap("AnnotationMissionId")
         public String annotationMissionId;
 
+        /**
+         * <p>Mission name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>体验场景--移车-标注任务-20230220-141347</p>
+         */
         @NameInMap("AnnotationMissionName")
         public String annotationMissionName;
 
         /**
+         * <p>Annotation status</p>
+         * <ul>
+         * <li><p>1: In progress</p>
+         * </li>
+         * <li><p>2: Completed</p>
+         * </li>
+         * <li><p>3: Closed</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -124,6 +163,8 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
         public Integer annotationStatus;
 
         /**
+         * <p>End time of the conversation time query condition for the annotation mission</p>
+         * 
          * <strong>example:</strong>
          * <p>1684511999000</p>
          */
@@ -131,6 +172,8 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
         public Long conversationTimeEndFilter;
 
         /**
+         * <p>Start time of the conversation time query condition for the annotation mission</p>
+         * 
          * <strong>example:</strong>
          * <p>1683216000000</p>
          */
@@ -138,6 +181,8 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
         public Long conversationTimeStartFilter;
 
         /**
+         * <p>Creation time</p>
+         * 
          * <strong>example:</strong>
          * <p>1676170339515</p>
          */
@@ -145,6 +190,8 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>Indicates whether to exclude call records already annotated in other missions</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -152,6 +199,8 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
         public Boolean excludeOtherMissionSession;
 
         /**
+         * <p>Completion time of the annotation mission</p>
+         * 
          * <strong>example:</strong>
          * <p>1683443903785</p>
          */
@@ -159,6 +208,8 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
         public Long finishTime;
 
         /**
+         * <p>Instance ID</p>
+         * 
          * <strong>example:</strong>
          * <p>32be9d94-1346-4c4a-a4d0-ccd379f87013</p>
          */
@@ -166,16 +217,26 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Maximum sampling count limit</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("SamplingCount")
         public Integer samplingCount;
 
+        /**
+         * <p>Sampling description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>标注</p>
+         */
         @NameInMap("SamplingDescription")
         public String samplingDescription;
 
         /**
+         * <p>Sampling rate</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -183,16 +244,47 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
         public Integer samplingRate;
 
         /**
+         * <p>Sampling type</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("SamplingType")
         public Integer samplingType;
 
+        /**
+         * <p>List of session end reason types used when creating the mission</p>
+         * <ul>
+         * <li><p>1: Normal completion</p>
+         * </li>
+         * <li><p>2: Bot hangup after rejection</p>
+         * </li>
+         * <li><p>3: Hangup due to silence timeout</p>
+         * </li>
+         * <li><p>4: User hangup after rejection</p>
+         * </li>
+         * <li><p>5: User hangup without reason</p>
+         * </li>
+         * <li><p>6: Transfer to agent after intent match</p>
+         * </li>
+         * <li><p>7: Transfer to agent after rejection</p>
+         * </li>
+         * <li><p>8: No interaction from user side</p>
+         * </li>
+         * <li><p>9: System exception interruption</p>
+         * </li>
+         * <li><p>10: Transfer to IVR after intent match</p>
+         * </li>
+         * <li><p>11: Transfer to IVR after rejection</p>
+         * </li>
+         * </ul>
+         */
         @NameInMap("SessionEndReasonFilterList")
         public java.util.List<Integer> sessionEndReasonFilterList;
 
         /**
+         * <p>Number of completed sessions in the annotation mission</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -200,6 +292,8 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
         public Integer sessionFinishCount;
 
         /**
+         * <p>Total number of sessions in the annotation mission</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -358,10 +452,15 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
     }
 
     public static class ListAnnotationMissionResponseBodyData extends TeaModel {
+        /**
+         * <p>Annotation mission list</p>
+         */
         @NameInMap("AnnotationMissionList")
         public java.util.List<ListAnnotationMissionResponseBodyDataAnnotationMissionList> annotationMissionList;
 
         /**
+         * <p>Additional information. Returns success for normal requests. Returns a specific error code for abnormal requests.</p>
+         * 
          * <strong>example:</strong>
          * <p>CDR \&quot;job-c7b8a817-b8e8-40f3-b7ad-f28dcea218ff\&quot; doesn\&quot;t exists.</p>
          */
@@ -369,6 +468,8 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>Page number</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -376,6 +477,8 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
         public Long pageIndex;
 
         /**
+         * <p>Number of entries per page</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -383,6 +486,8 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
+         * <p>Indicates whether the call succeeded. true: succeeded. false: failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -390,6 +495,8 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
         public Boolean success;
 
         /**
+         * <p>Total count</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -397,6 +504,8 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
         public Long totalCount;
 
         /**
+         * <p>Total number of pages</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */

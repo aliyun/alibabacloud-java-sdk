@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class TerminateCallRequest extends TeaModel {
     /**
+     * <p>ID of the call.</p>
+     * <blockquote>
+     * <p>You can get this ID by calling the DescribeJob operation.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,7 @@ public class TerminateCallRequest extends TeaModel {
     public String callId;
 
     /**
+     * <p>ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

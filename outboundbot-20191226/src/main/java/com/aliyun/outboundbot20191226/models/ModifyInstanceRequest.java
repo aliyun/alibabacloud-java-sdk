@@ -5,16 +5,28 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceRequest extends TeaModel {
     /**
+     * <p>A list of calling numbers.</p>
+     * <blockquote>
+     * <p>This parameter is optional.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;95187&quot;]</p>
      */
     @NameInMap("CallingNumber")
     public java.util.List<String> callingNumber;
 
+    /**
+     * <p>The description of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>这是新的实例</p>
+     */
     @NameInMap("InstanceDescription")
     public String instanceDescription;
 
     /**
+     * <p>The ID of the Outbound Bot instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,10 +35,17 @@ public class ModifyInstanceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The name of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>新实例</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
+     * <p>The maximum number of concurrent conversations.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

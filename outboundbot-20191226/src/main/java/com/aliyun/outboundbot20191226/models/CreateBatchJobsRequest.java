@@ -4,16 +4,28 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class CreateBatchJobsRequest extends TeaModel {
+    /**
+     * <p>Description of the batch job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>描述</p>
+     */
     @NameInMap("BatchJobDescription")
     public String batchJobDescription;
 
     /**
+     * <p>Name of the batch job.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>第一个作业组</p>
      */
     @NameInMap("BatchJobName")
     public String batchJobName;
 
     /**
+     * <p>List of caller numbers.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;95187&quot;]</p>
      */
@@ -21,6 +33,7 @@ public class CreateBatchJobsRequest extends TeaModel {
     public java.util.List<String> callingNumber;
 
     /**
+     * <p>ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +43,11 @@ public class CreateBatchJobsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Path to the Excel file that contains the batch job data.</p>
+     * <blockquote>
+     * <p>Get this value from the Folder parameter in the response of the GetJobDataUploadParams operation.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>52e80b02-0126-4556-a1e6-ef5b3747ed53/a9a3ddc7-d7d7-48cd-82b5-b31bb5510e71_2a66f8ad-dfbb-4980-9b84-439171295a11.xlsx</p>
      */
@@ -37,6 +55,8 @@ public class CreateBatchJobsRequest extends TeaModel {
     public String jobFilePath;
 
     /**
+     * <p>ID of the scenario.</p>
+     * 
      * <strong>example:</strong>
      * <p>c6a668d1-3145-4048-9101-cb3678bb8884</p>
      */
@@ -44,16 +64,25 @@ public class CreateBatchJobsRequest extends TeaModel {
     public String scenarioId;
 
     /**
+     * <p>ID of the script.</p>
+     * 
      * <strong>example:</strong>
      * <p>b9ff4e88-65f9-4eb3-987c-11ba51f3f24d</p>
      */
     @NameInMap("ScriptId")
     public String scriptId;
 
+    /**
+     * <p>JSON string that defines the job execution policy. Required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;maxAttemptsPerDay&quot;:2,&quot;name&quot;:&quot;策略名字&quot;,&quot;workingTime&quot;:[{&quot;beginTime&quot;:&quot;09:00:00&quot;,&quot;endTime&quot;:&quot;12:00:00&quot;},{&quot;beginTime&quot;:&quot;13:00:00&quot;,&quot;endTime&quot;:&quot;18:30:00&quot;}],&quot;minAttemptInterval&quot;:60}</p>
+     */
     @NameInMap("StrategyJson")
     public String strategyJson;
 
     /**
+     * <p>Indicates whether the job is submitted. Set to false to submit the job. Set to true to save it as a draft.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

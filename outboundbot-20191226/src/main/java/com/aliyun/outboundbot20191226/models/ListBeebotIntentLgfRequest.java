@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListBeebotIntentLgfRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListBeebotIntentLgfRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The intent ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,10 +24,17 @@ public class ListBeebotIntentLgfRequest extends TeaModel {
     @NameInMap("IntentId")
     public String intentId;
 
+    /**
+     * <p>The utterance template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>我是一个问法模版</p>
+     */
     @NameInMap("LgfText")
     public String lgfText;
 
     /**
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +44,7 @@ public class ListBeebotIntentLgfRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Number of items</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +54,7 @@ public class ListBeebotIntentLgfRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The scenario ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

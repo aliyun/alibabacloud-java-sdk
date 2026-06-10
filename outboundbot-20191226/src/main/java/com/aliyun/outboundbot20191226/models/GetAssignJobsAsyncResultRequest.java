@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAssignJobsAsyncResultRequest extends TeaModel {
     /**
+     * <p>The ID of the asynchronous task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

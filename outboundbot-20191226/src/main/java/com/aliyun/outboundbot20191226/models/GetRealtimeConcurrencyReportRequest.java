@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetRealtimeConcurrencyReportRequest extends TeaModel {
     /**
+     * <p>Instance ID</p>
+     * 
      * <strong>example:</strong>
      * <p>85bf7efa-a07c-498a-850e-99a5849b8589</p>
      */
@@ -12,6 +14,8 @@ public class GetRealtimeConcurrencyReportRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Task group ID</p>
+     * 
      * <strong>example:</strong>
      * <p>c62e6789-28a8-41db-941e-171a01d3b3b9</p>
      */
@@ -19,6 +23,8 @@ public class GetRealtimeConcurrencyReportRequest extends TeaModel {
     public String jobGroupId;
 
     /**
+     * <p>Page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class GetRealtimeConcurrencyReportRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

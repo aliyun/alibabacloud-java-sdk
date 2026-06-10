@@ -4,10 +4,15 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class ListChatbotInstancesResponseBody extends TeaModel {
+    /**
+     * <p>Chatbot list details</p>
+     */
     @NameInMap("Bots")
     public java.util.List<ListChatbotInstancesResponseBodyBots> bots;
 
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -15,6 +20,8 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -29,6 +38,8 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -36,6 +47,8 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>Number of items per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -43,6 +56,8 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -50,6 +65,8 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -57,6 +74,8 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Total number of items.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -142,6 +161,8 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
 
     public static class ListChatbotInstancesResponseBodyBots extends TeaModel {
         /**
+         * <p>Profile picture URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://ccrm.wengine.cn/ccrm/system/common/fileDownload/noToken?fileId=975cdeaa064846e3b6004abd9ba1d7c8">https://ccrm.wengine.cn/ccrm/system/common/fileDownload/noToken?fileId=975cdeaa064846e3b6004abd9ba1d7c8</a></p>
          */
@@ -149,6 +170,8 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
         public String avatar;
 
         /**
+         * <p>Creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-01-18T02:36:00Z</p>
          */
@@ -156,26 +179,44 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>e874fcf0-d2f4-4e62-9377-b6f35fe55210</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>Chatbot description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是直播的描述</p>
+         */
         @NameInMap("Introduction")
         public String introduction;
 
         /**
+         * <p>Language used by the chatbot, such as zh-cn or en-us.</p>
+         * 
          * <strong>example:</strong>
          * <p>zh-cn</p>
          */
         @NameInMap("LanguageCode")
         public String languageCode;
 
+        /**
+         * <p>Chatbot name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>智能回访2</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>Time zone of the chatbot. See Common Time Zone Codes.</p>
+         * 
          * <strong>example:</strong>
          * <p>Asia/Shanghai</p>
          */

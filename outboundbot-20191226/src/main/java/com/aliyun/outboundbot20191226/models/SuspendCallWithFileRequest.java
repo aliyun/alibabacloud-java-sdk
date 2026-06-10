@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class SuspendCallWithFileRequest extends TeaModel {
     /**
+     * <p>File path. Required.</p>
+     * <blockquote>
+     * <p>Get the value for this parameter by calling the GetJobDataUploadParams operation. Use the Folder value returned in the response as the FilePath value.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */
@@ -12,6 +17,8 @@ public class SuspendCallWithFileRequest extends TeaModel {
     public String filePath;
 
     /**
+     * <p>Task group ID. Required.</p>
+     * 
      * <strong>example:</strong>
      * <p>0197261b-30e6-467b-83d6-7f72af868b03</p>
      */
@@ -19,6 +26,8 @@ public class SuspendCallWithFileRequest extends TeaModel {
     public String groupId;
 
     /**
+     * <p>Instance ID. Required.</p>
+     * 
      * <strong>example:</strong>
      * <p>a4274627-265f-4e14-b2d6-4ee7d4f8593e</p>
      */

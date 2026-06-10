@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetContactBlockListRequest extends TeaModel {
     /**
+     * <p>Specifies whether to return the total number of entries.</p>
+     * 
      * <strong>example:</strong>
-     * <p>100</p>
+     * <p>true</p>
      */
     @NameInMap("CountTotalRow")
     public Boolean countTotalRow;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class GetContactBlockListRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The page number. This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,6 +33,8 @@ public class GetContactBlockListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries (required)</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

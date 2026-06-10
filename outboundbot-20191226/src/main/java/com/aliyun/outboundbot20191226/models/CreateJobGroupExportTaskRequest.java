@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateJobGroupExportTaskRequest extends TeaModel {
     /**
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class CreateJobGroupExportTaskRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Job group ID. Required.</p>
+     * 
      * <strong>example:</strong>
      * <p>baf6dfdc-eb79-4c63-ab19-c56388b1fbdd</p>
      */
@@ -21,6 +24,8 @@ public class CreateJobGroupExportTaskRequest extends TeaModel {
     public String jobGroupId;
 
     /**
+     * <p>Parameters that control task execution for the import.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */

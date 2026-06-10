@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateBatchRepeatJobResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class CreateBatchRepeatJobResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP error code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class CreateBatchRepeatJobResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Job group information</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -26,6 +32,8 @@ public class CreateBatchRepeatJobResponseBody extends TeaModel {
     public CreateBatchRepeatJobResponseBodyJobGroup jobGroup;
 
     /**
+     * <p>Response message</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -33,6 +41,8 @@ public class CreateBatchRepeatJobResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -40,6 +50,8 @@ public class CreateBatchRepeatJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -101,6 +113,8 @@ public class CreateBatchRepeatJobResponseBody extends TeaModel {
 
     public static class CreateBatchRepeatJobResponseBodyJobGroup extends TeaModel {
         /**
+         * <p>Job group ID</p>
+         * 
          * <strong>example:</strong>
          * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
@@ -108,6 +122,8 @@ public class CreateBatchRepeatJobResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Minimum concurrency</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -115,6 +131,8 @@ public class CreateBatchRepeatJobResponseBody extends TeaModel {
         public Long minConcurrency;
 
         /**
+         * <p>Job priority</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -122,6 +140,8 @@ public class CreateBatchRepeatJobResponseBody extends TeaModel {
         public String priority;
 
         /**
+         * <p>Ringing duration</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */

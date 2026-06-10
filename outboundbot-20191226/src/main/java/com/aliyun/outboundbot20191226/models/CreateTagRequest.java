@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTagRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,22 +15,31 @@ public class CreateTagRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the script.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>797203ac-3874-422f-838f-d4cd63c72681</p>
+     * <p>0fe7f71c-8771-42ef-9bb1-19aa16ae7120</p>
      */
     @NameInMap("ScriptId")
     public String scriptId;
 
     /**
+     * <p>The tag group name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>目标学历</p>
      */
     @NameInMap("TagGroup")
     public String tagGroup;
 
     /**
+     * <p>The tag name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>研究生</p>
      */
     @NameInMap("TagName")
     public String tagName;

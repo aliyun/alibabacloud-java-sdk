@@ -4,10 +4,18 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class QueryJobsRequest extends TeaModel {
+    /**
+     * <p>Filter condition. Contact name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>张三</p>
+     */
     @NameInMap("ContactName")
     public String contactName;
 
     /**
+     * <p>Filter condition. End time. Default value is 0, which means up to now.</p>
+     * 
      * <strong>example:</strong>
      * <p>1579077794665</p>
      */
@@ -15,6 +23,7 @@ public class QueryJobsRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +33,8 @@ public class QueryJobsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Task group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>994b8baf-7ef8-480c-b141-b7b6db77c4df</p>
      */
@@ -31,6 +42,7 @@ public class QueryJobsRequest extends TeaModel {
     public String jobGroupId;
 
     /**
+     * <p>Page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +52,7 @@ public class QueryJobsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +62,8 @@ public class QueryJobsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Filter condition. Contact phone number.</p>
+     * 
      * <strong>example:</strong>
      * <p>135****8888</p>
      */
@@ -56,6 +71,8 @@ public class QueryJobsRequest extends TeaModel {
     public String phoneNumber;
 
     /**
+     * <p>Scenario ID. This parameter is deprecated.</p>
+     * 
      * <strong>example:</strong>
      * <p>b0f35dd1-0337-402e-9c4f-3a6c2426950a</p>
      */
@@ -63,6 +80,8 @@ public class QueryJobsRequest extends TeaModel {
     public String scenarioId;
 
     /**
+     * <p>Filter condition. Start time. Default value is 0, which means from 00:00 today.</p>
+     * 
      * <strong>example:</strong>
      * <p>1579068424883</p>
      */
@@ -70,6 +89,8 @@ public class QueryJobsRequest extends TeaModel {
     public Long startTime;
 
     /**
+     * <p>Time filter basis. Valid values: start, end, and job_create.</p>
+     * 
      * <strong>example:</strong>
      * <p>start</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBeebotIntentLgfShrinkRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,14 @@ public class CreateBeebotIntentLgfShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The LGF definition.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("LgfDefinition")
     public String lgfDefinitionShrink;
 
     /**
+     * <p>The scenario ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

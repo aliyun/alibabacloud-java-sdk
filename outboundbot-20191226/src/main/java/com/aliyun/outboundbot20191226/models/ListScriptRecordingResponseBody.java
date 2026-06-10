@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListScriptRecordingResponseBody extends TeaModel {
     /**
+     * <p>API status</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListScriptRecordingResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class ListScriptRecordingResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>API message</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -26,6 +32,8 @@ public class ListScriptRecordingResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +41,8 @@ public class ListScriptRecordingResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Number of entries per page</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -40,16 +50,23 @@ public class ListScriptRecordingResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Recording list</p>
+     */
     @NameInMap("ScriptRecordings")
     public java.util.List<ListScriptRecordingResponseBodyScriptRecordings> scriptRecordings;
 
     /**
+     * <p>Success</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -57,6 +74,8 @@ public class ListScriptRecordingResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Total count</p>
+     * 
      * <strong>example:</strong>
      * <p>99</p>
      */
@@ -142,13 +161,17 @@ public class ListScriptRecordingResponseBody extends TeaModel {
 
     public static class ListScriptRecordingResponseBodyScriptRecordings extends TeaModel {
         /**
+         * <p>Creation time.</p>
+         * 
          * <strong>example:</strong>
-         * <p>2022-07-11T07:51:49.000+0000</p>
+         * <p>1744963749000</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
+         * <p>Update time</p>
+         * 
          * <strong>example:</strong>
          * <p>1654601332000</p>
          */
@@ -156,6 +179,8 @@ public class ListScriptRecordingResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
+         * <p>Recording upload time</p>
+         * 
          * <strong>example:</strong>
          * <p>1654601332000</p>
          */
@@ -163,23 +188,35 @@ public class ListScriptRecordingResponseBody extends TeaModel {
         public Long gmtUpload;
 
         /**
+         * <p>The ID of the recording file within the instance</p>
+         * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>000003</p>
          */
         @NameInMap("InnerId")
         public String innerId;
 
         /**
+         * <p>Instance ID</p>
+         * 
          * <strong>example:</strong>
          * <p>ff0fb845-9f90-46d3-9716-d36b8a1e753a</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>Recording content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>您好！</p>
+         */
         @NameInMap("RecordingContent")
         public String recordingContent;
 
         /**
+         * <p>Recording duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -187,16 +224,26 @@ public class ListScriptRecordingResponseBody extends TeaModel {
         public Integer recordingDuration;
 
         /**
+         * <p>Recording name</p>
+         * 
          * <strong>example:</strong>
          * <p>hello.wav</p>
          */
         @NameInMap("RecordingName")
         public String recordingName;
 
+        /**
+         * <p>The unique ID of the recording.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a77386e-6402-8d23-4adf-6ec13b3f404d</p>
+         */
         @NameInMap("RefId")
         public String refId;
 
         /**
+         * <p>Scenario ID of the recording</p>
+         * 
          * <strong>example:</strong>
          * <p>6019b692-fd9e-4adb-8877-cef6a297b234</p>
          */
@@ -204,16 +251,26 @@ public class ListScriptRecordingResponseBody extends TeaModel {
         public String scriptId;
 
         /**
+         * <p>Recording status</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
         @NameInMap("State")
         public Integer state;
 
+        /**
+         * <p>State extension</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("StateExtend")
         public String stateExtend;
 
         /**
+         * <p>Storage UUID</p>
+         * 
          * <strong>example:</strong>
          * <p>393674ed-3b5d-db44-0fda-615d05210178</p>
          */
@@ -221,6 +278,8 @@ public class ListScriptRecordingResponseBody extends TeaModel {
         public String storageUuid;
 
         /**
+         * <p>Unique ID of the recording</p>
+         * 
          * <strong>example:</strong>
          * <p>0a77386e-6402-8d23-4adf-6ec13b3f404d</p>
          */

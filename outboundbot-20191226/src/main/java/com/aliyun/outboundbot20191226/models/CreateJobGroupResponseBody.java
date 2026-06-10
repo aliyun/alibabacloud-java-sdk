@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateJobGroupResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,16 +14,23 @@ public class CreateJobGroupResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Job information.</p>
+     */
     @NameInMap("JobGroup")
     public CreateJobGroupResponseBodyJobGroup jobGroup;
 
     /**
+     * <p>Message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -29,6 +38,8 @@ public class CreateJobGroupResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -36,6 +47,8 @@ public class CreateJobGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class CreateJobGroupResponseBody extends TeaModel {
 
     public static class CreateJobGroupResponseBodyJobGroupExportProgress extends TeaModel {
         /**
+         * <p>File URL. [Deprecated]</p>
+         * 
          * <strong>example:</strong>
          * <p>https://***.oss-cn-shanghai.aliyuncs.com/sample</p>
          */
@@ -104,6 +119,8 @@ public class CreateJobGroupResponseBody extends TeaModel {
         public String fileHttpUrl;
 
         /**
+         * <p>Progress. [Deprecated]</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -111,6 +128,8 @@ public class CreateJobGroupResponseBody extends TeaModel {
         public String progress;
 
         /**
+         * <p>Job export status. [Deprecated]</p>
+         * 
          * <strong>example:</strong>
          * <p>FINISHED</p>
          */
@@ -149,12 +168,30 @@ public class CreateJobGroupResponseBody extends TeaModel {
     }
 
     public static class CreateJobGroupResponseBodyJobGroupRecallStrategy extends TeaModel {
+        /**
+         * <p>Do not make outbound calls to nonexistent numbers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EmptyNumberIgnore")
         public Boolean emptyNumberIgnore;
 
+        /**
+         * <p>Do not make outbound calls to numbers with overdue payment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("InArrearsIgnore")
         public Boolean inArrearsIgnore;
 
+        /**
+         * <p>Do not make outbound calls to numbers that are out of service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("OutOfServiceIgnore")
         public Boolean outOfServiceIgnore;
 
@@ -191,6 +228,8 @@ public class CreateJobGroupResponseBody extends TeaModel {
 
     public static class CreateJobGroupResponseBodyJobGroupStrategyWorkingTime extends TeaModel {
         /**
+         * <p>End Time of the window.</p>
+         * 
          * <strong>example:</strong>
          * <p>09:00:00</p>
          */
@@ -198,6 +237,8 @@ public class CreateJobGroupResponseBody extends TeaModel {
         public String beginTime;
 
         /**
+         * <p>Start Time of the window.</p>
+         * 
          * <strong>example:</strong>
          * <p>12:00:00</p>
          */
@@ -229,6 +270,8 @@ public class CreateJobGroupResponseBody extends TeaModel {
 
     public static class CreateJobGroupResponseBodyJobGroupStrategy extends TeaModel {
         /**
+         * <p>Custom policy data</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -236,6 +279,8 @@ public class CreateJobGroupResponseBody extends TeaModel {
         public String customized;
 
         /**
+         * <p>End Time</p>
+         * 
          * <strong>example:</strong>
          * <p>2209702074000</p>
          */
@@ -243,6 +288,8 @@ public class CreateJobGroupResponseBody extends TeaModel {
         public Long endTime;
 
         /**
+         * <p>Post-execution handling method after the epoch ends (this field is deprecated).</p>
+         * 
          * <strong>example:</strong>
          * <p>CONTINUE</p>
          */
@@ -250,6 +297,8 @@ public class CreateJobGroupResponseBody extends TeaModel {
         public String followUpStrategy;
 
         /**
+         * <p>Indicates whether it is a template.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -257,6 +306,8 @@ public class CreateJobGroupResponseBody extends TeaModel {
         public Boolean isTemplate;
 
         /**
+         * <p>The maximum number of attempts per day when a call in the job fails to connect.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -264,6 +315,8 @@ public class CreateJobGroupResponseBody extends TeaModel {
         public Integer maxAttemptsPerDay;
 
         /**
+         * <p>Calling interval.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -271,16 +324,32 @@ public class CreateJobGroupResponseBody extends TeaModel {
         public Integer minAttemptInterval;
 
         /**
+         * <p>Repetition mode: &quot;once&quot; for no repetition, &quot;day&quot; for daily repetition, &quot;week&quot; for weekly repetition, and &quot;month&quot; for monthly repetition.</p>
+         * 
          * <strong>example:</strong>
          * <p>Once</p>
          */
         @NameInMap("RepeatBy")
         public String repeatBy;
 
+        /**
+         * <p>Days on which execution repeats.</p>
+         * <ul>
+         * <li>If the recurrence <strong>RepeatBy</strong> is set to <strong>Week</strong>, 0 represents Sunday, and 1–6 represent Monday through Saturday, respectively.</li>
+         * <li>If the recurrence <strong>RepeatBy</strong> is set to <strong>Month</strong>, values 1–31 represent the 1st through the 31st day of the month. Months that do not contain the specified date will not execute the task. For example, if the 30th is selected, the task will not run in February.</li>
+         * </ul>
+         */
         @NameInMap("RepeatDays")
         public java.util.List<String> repeatDays;
 
         /**
+         * <p>Number routing policy.</p>
+         * <ul>
+         * <li>None: No special rule.</li>
+         * <li>LocalFirst: Local city numbers are prioritized.</li>
+         * <li>LocalProvinceFirst: Numbers from the same province are prioritized.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>LocalFirst</p>
          */
@@ -288,32 +357,53 @@ public class CreateJobGroupResponseBody extends TeaModel {
         public String routingStrategy;
 
         /**
+         * <p>Start Time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1578550074000</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>Policy Description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>催收策略</p>
+         */
         @NameInMap("StrategyDescription")
         public String strategyDescription;
 
         /**
+         * <p>Policy ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc9a436e-03b0-4ada-8364-77ec2290aa39</p>
          */
         @NameInMap("StrategyId")
         public String strategyId;
 
+        /**
+         * <p>Policy Name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>催收策略</p>
+         */
         @NameInMap("StrategyName")
         public String strategyName;
 
         /**
+         * <p>Policy Type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Repeatable</p>
          */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>Time window for policy execution.</p>
+         */
         @NameInMap("WorkingTime")
         public java.util.List<CreateJobGroupResponseBodyJobGroupStrategyWorkingTime> workingTime;
 
@@ -445,20 +535,36 @@ public class CreateJobGroupResponseBody extends TeaModel {
     }
 
     public static class CreateJobGroupResponseBodyJobGroup extends TeaModel {
+        /**
+         * <p>List of calling numbers.</p>
+         */
         @NameInMap("CallingNumbers")
         public java.util.List<String> callingNumbers;
 
         /**
+         * <p>Creation Time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1578550074361</p>
          */
         @NameInMap("CreationTime")
         public Long creationTime;
 
+        /**
+         * <p>Export progress.  </p>
+         * <blockquote>
+         * <p>This field is deprecated in the current parameter.</p>
+         * </blockquote>
+         */
         @NameInMap("ExportProgress")
         public CreateJobGroupResponseBodyJobGroupExportProgress exportProgress;
 
         /**
+         * <p>The ID of the asynchronous parsing operation in the backend corresponding to the uploaded job file.  </p>
+         * <blockquote>
+         * <p>If empty, it is not returned.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>744ff448-2b4c-40d4-94ca-51f246905b0f</p>
          */
@@ -466,26 +572,47 @@ public class CreateJobGroupResponseBody extends TeaModel {
         public String jobDataParsingTaskId;
 
         /**
+         * <p>OSS path of the job file.  </p>
+         * <blockquote>
+         * <p>If empty, it is not returned.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>UPLOADED/JOB/b3865dc3-40fa-4afd-9fe4-dc7cda305a24/229eac13-379d-4abe-96e0-8cf026b56c0b_template (1).xlsx</p>
          */
         @NameInMap("JobFilePath")
         public String jobFilePath;
 
+        /**
+         * <p>Task description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>第一个的作业组</p>
+         */
         @NameInMap("JobGroupDescription")
         public String jobGroupDescription;
 
         /**
+         * <p>Task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>c62e6789-28a8-41db-941e-171a01d3b3b9</p>
          */
         @NameInMap("JobGroupId")
         public String jobGroupId;
 
+        /**
+         * <p>Task Name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>第一个作业组</p>
+         */
         @NameInMap("JobGroupName")
         public String jobGroupName;
 
         /**
+         * <p>Concurrent guarantee value.<br>When the job starts, it guarantees a minimum of N concurrent instances.<br>The sum of concurrent guarantee values for jobs with the same priority must not exceed the instance concurrency limit.<br>If the concurrent guarantee value is set to 0, the system intelligently assigns available idle concurrency.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -493,22 +620,42 @@ public class CreateJobGroupResponseBody extends TeaModel {
         public Long minConcurrency;
 
         /**
+         * <p>Updated At.</p>
+         * 
          * <strong>example:</strong>
          * <p>1628425608429</p>
          */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        /**
+         * <p>Job group priority. Valid values:  </p>
+         * <ul>
+         * <li><strong>Urgent</strong>: Urgent job.  </li>
+         * <li><strong>Daily</strong>: Daily job.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Daily</p>
+         */
         @NameInMap("Priority")
         public String priority;
 
+        /**
+         * <p>List of recall calling numbers</p>
+         */
         @NameInMap("RecallCallingNumbers")
         public java.util.List<String> recallCallingNumbers;
 
+        /**
+         * <p>Redial policy.</p>
+         */
         @NameInMap("RecallStrategy")
         public CreateJobGroupResponseBodyJobGroupRecallStrategy recallStrategy;
 
         /**
+         * <p>Ringing duration.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -516,16 +663,26 @@ public class CreateJobGroupResponseBody extends TeaModel {
         public Long ringingDuration;
 
         /**
+         * <p>Scenario ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>6cea9bed-63e6-439e-ae4c-b3333efff53d</p>
          */
         @NameInMap("ScenarioId")
         public String scenarioId;
 
+        /**
+         * <p>Scenario name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>话术</p>
+         */
         @NameInMap("ScriptName")
         public String scriptName;
 
         /**
+         * <p>Script scenario version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1628425608429</p>
          */
@@ -533,12 +690,17 @@ public class CreateJobGroupResponseBody extends TeaModel {
         public String scriptVersion;
 
         /**
+         * <p>Task status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Scheduling</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>Job scheduling policy.</p>
+         */
         @NameInMap("Strategy")
         public CreateJobGroupResponseBodyJobGroupStrategy strategy;
 

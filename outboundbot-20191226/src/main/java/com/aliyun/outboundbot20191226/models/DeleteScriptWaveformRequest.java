@@ -5,19 +5,31 @@ import com.aliyun.tea.*;
 
 public class DeleteScriptWaveformRequest extends TeaModel {
     /**
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e5035654-1745-484a-8c5b-165f7c7bcd79</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
+     * <p>Scenario ID</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b9ff4e88-65f9-4eb3-987c-11ba51f3f24d</p>
      */
     @NameInMap("ScriptId")
     public String scriptId;
 
     /**
+     * <p>Deleted recording ID</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>df8216aa-d8f6-4501-864f-f8334d946561</p>
      */
     @NameInMap("ScriptWaveformId")
     public String scriptWaveformId;

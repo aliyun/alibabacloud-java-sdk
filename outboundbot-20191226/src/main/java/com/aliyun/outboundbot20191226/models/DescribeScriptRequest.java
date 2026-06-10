@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeScriptRequest extends TeaModel {
     /**
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeScriptRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Script ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

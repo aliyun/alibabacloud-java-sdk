@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class SaveAfterAnswerDelayPlaybackRequest extends TeaModel {
     /**
+     * <p>Delay before playback starts, in seconds. Default is 0 if not specified.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1000</p>
+     * <p>1</p>
      */
     @NameInMap("AfterAnswerDelayPlayback")
     public Integer afterAnswerDelayPlayback;
 
     /**
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,11 @@ public class SaveAfterAnswerDelayPlaybackRequest extends TeaModel {
     public String entryId;
 
     /**
+     * <p>Policy level (required)</p>
+     * <ul>
+     * <li>2: Instance</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

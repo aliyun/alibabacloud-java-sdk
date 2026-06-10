@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GenerateUploadUrlRequest extends TeaModel {
     /**
+     * <p>File name, including the extension</p>
+     * 
      * <strong>example:</strong>
      * <p>faaf8508-9542-4ac4-84a2-0ddcbb5f79a6 (2).json</p>
      */
@@ -12,6 +14,8 @@ public class GenerateUploadUrlRequest extends TeaModel {
     public String fileName;
 
     /**
+     * <p>Upload URL key</p>
+     * 
      * <strong>example:</strong>
      * <p>3b9b5dc6d67ee9fa</p>
      */

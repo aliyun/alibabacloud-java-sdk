@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteBeebotIntentUserSayRequest extends TeaModel {
     /**
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteBeebotIntentUserSayRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Intent ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class DeleteBeebotIntentUserSayRequest extends TeaModel {
     public String intentId;
 
     /**
+     * <p>Scenario ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class DeleteBeebotIntentUserSayRequest extends TeaModel {
     public String scriptId;
 
     /**
+     * <p>User Say ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

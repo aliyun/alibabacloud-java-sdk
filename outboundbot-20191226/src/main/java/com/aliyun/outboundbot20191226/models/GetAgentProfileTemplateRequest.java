@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAgentProfileTemplateRequest extends TeaModel {
     /**
+     * <p>ID of the agent profile template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GetAgentProfileTemplateRequest extends TeaModel {
     public String agentProfileTemplateId;
 
     /**
+     * <p>IP address of the application. This is a system field and is optional.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */

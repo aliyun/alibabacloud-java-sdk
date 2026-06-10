@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,29 +14,50 @@ public class ListInstancesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>A list of service instances.</p>
+     */
     @NameInMap("Instances")
     public java.util.List<ListInstancesResponseBodyInstances> instances;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -42,12 +65,20 @@ public class ListInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -130,6 +161,8 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstancesResourceTags extends TeaModel {
         /**
+         * <p>The key of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>age</p>
          */
@@ -137,6 +170,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -168,6 +203,8 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstances extends TeaModel {
         /**
+         * <p>The time when the instance was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1578469042851</p>
          */
@@ -175,6 +212,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long creationTime;
 
         /**
+         * <p>The ID of the user who created the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>34234</p>
          */
@@ -182,29 +221,53 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long creatorId;
 
         /**
+         * <p>The name of the user who created the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
         @NameInMap("CreatorName")
         public String creatorName;
 
+        /**
+         * <p>The description of the Outbound Calling Bot service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一个实例</p>
+         */
         @NameInMap("InstanceDescription")
         public String instanceDescription;
 
         /**
+         * <p>The ID of the service instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>90515b5-6115-4ccf-83e2-52d5bfaf2ddf</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the Outbound Calling Bot service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>回访</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>Indicates whether the instance is a system-predefined instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsPreset")
         public Boolean isPreset;
 
         /**
+         * <p>The maximum number of concurrent outbound calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -212,6 +275,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer maxConcurrentConversation;
 
         /**
+         * <p>The name of the Alibaba Cloud account.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -219,6 +284,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String ownerName;
 
         /**
+         * <p>The ID of the resource group.</p>
+         * 
          * <strong>example:</strong>
          * <p>90515b5-6115-4ccf-83e2-52d5bfaf2ddf</p>
          */
@@ -226,6 +293,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The tags.</p>
+         * 
          * <strong>example:</strong>
          * <p>[]</p>
          */

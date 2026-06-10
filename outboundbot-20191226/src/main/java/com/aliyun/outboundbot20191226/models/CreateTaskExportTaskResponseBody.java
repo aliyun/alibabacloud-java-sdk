@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateTaskExportTaskResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class CreateTaskExportTaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class CreateTaskExportTaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Response message</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -26,6 +32,8 @@ public class CreateTaskExportTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>C377C5FF-4F94-1B23-89D0-50C560623EE4</p>
      */
@@ -33,6 +41,8 @@ public class CreateTaskExportTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -40,6 +50,8 @@ public class CreateTaskExportTaskResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Export task ID</p>
+     * 
      * <strong>example:</strong>
      * <p>a7d6dcff1b8b40f4a8b769a9c24e7852</p>
      */

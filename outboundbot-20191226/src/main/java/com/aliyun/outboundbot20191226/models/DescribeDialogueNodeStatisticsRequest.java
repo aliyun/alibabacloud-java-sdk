@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDialogueNodeStatisticsRequest extends TeaModel {
     /**
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeDialogueNodeStatisticsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Task group ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class DescribeDialogueNodeStatisticsRequest extends TeaModel {
     public String jobGroupId;
 
     /**
+     * <p>Limit for displaying statistics</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

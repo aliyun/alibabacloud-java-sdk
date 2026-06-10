@@ -4,21 +4,63 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class ImportScriptResponseBody extends TeaModel {
+    /**
+     * <p>API status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>API message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Outbound scenario ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d7fbd0a0-27bc-49c4-a456-ecb75e79122b</p>
+     */
     @NameInMap("ScriptId")
     public String scriptId;
 
+    /**
+     * <p>Indicates whether the call succeeded.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The call succeeded.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The call failed.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

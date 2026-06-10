@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteJobGroupResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class DeleteJobGroupResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,13 +23,17 @@ public class DeleteJobGroupResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message. The value is <code>Success</code> for a successful request. Otherwise, an error message is returned.</p>
+     * 
      * <strong>example:</strong>
-     * <p>Success</p>
+     * <p>无</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -33,6 +41,8 @@ public class DeleteJobGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SaveBaseStrategyPeriodRequest extends TeaModel {
     /**
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,16 +15,29 @@ public class SaveBaseStrategyPeriodRequest extends TeaModel {
     public String entryId;
 
     /**
+     * <p>Make outbound calls only on weekdays. Defaults to false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("OnlyWeekdays")
     public Boolean onlyWeekdays;
 
+    /**
+     * <p>Make outbound calls only on non-holiday days. Defaults to false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("OnlyWorkdays")
     public Boolean onlyWorkdays;
 
     /**
+     * <p>Policy level (required)</p>
+     * <ul>
+     * <li>2: Instance</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -31,6 +45,8 @@ public class SaveBaseStrategyPeriodRequest extends TeaModel {
     public Integer strategyLevel;
 
     /**
+     * <p>Running time (deprecated)</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -38,8 +54,10 @@ public class SaveBaseStrategyPeriodRequest extends TeaModel {
     public java.util.List<String> workingTime;
 
     /**
+     * <p>Running time</p>
+     * 
      * <strong>example:</strong>
-     * <p>[{\&quot;beginTime\&quot;:\&quot;09:00:00\&quot;,\&quot;beginTimeMillis\&quot;:324000000000,\&quot;endTime\&quot;:\&quot;21:00:00\&quot;,\&quot;endTimeMillis\&quot;:756000000000}]</p>
+     * <p>[{&quot;beginTime&quot;:&quot;09:00:00&quot;,&quot;endTime&quot;:&quot;21:00:00&quot;}]</p>
      */
     @NameInMap("WorkingTimeFramesJson")
     public String workingTimeFramesJson;

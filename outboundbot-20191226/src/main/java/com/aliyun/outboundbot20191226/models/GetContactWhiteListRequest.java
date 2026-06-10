@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetContactWhiteListRequest extends TeaModel {
     /**
+     * <p>Whether to return the total count</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,7 @@ public class GetContactWhiteListRequest extends TeaModel {
     public Boolean countTotalRow;
 
     /**
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class GetContactWhiteListRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,6 +33,8 @@ public class GetContactWhiteListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Number of entries per page</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

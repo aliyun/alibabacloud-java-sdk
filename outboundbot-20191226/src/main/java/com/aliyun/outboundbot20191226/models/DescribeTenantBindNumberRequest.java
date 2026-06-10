@@ -5,8 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeTenantBindNumberRequest extends TeaModel {
     /**
+     * <p>Phone number to query (required)</p>
+     * <blockquote>
+     * <p>Query the binding status of this number across all instances. Get the number from the response of ListAllTenantBindNumberBinding.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
-     * <p>95187</p>
+     * <p>15005059355</p>
      */
     @NameInMap("Number")
     public String number;

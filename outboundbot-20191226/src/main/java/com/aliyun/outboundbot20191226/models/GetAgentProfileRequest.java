@@ -5,15 +5,21 @@ import com.aliyun.tea.*;
 
 public class GetAgentProfileRequest extends TeaModel {
     /**
+     * <p>The ID of the agent configuration.</p>
+     * <blockquote>
+     * <p>The agent configuration ID for a created scenario is available in the ChatbotId parameter returned by the DescribeScript operation.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>37ca3ca1ac4b4e57adf3da5b5d939d04</p>
+     * <p>d31794e2a51f47d2901b4094d88311d7</p>
      */
     @NameInMap("AgentProfileId")
     public String agentProfileId;
 
     /**
+     * <p>The IP address of the application. This is a system field and is optional.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */
@@ -21,6 +27,7 @@ public class GetAgentProfileRequest extends TeaModel {
     public String appIp;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

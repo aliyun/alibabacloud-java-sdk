@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyBeebotIntentLgfShrinkRequest extends TeaModel {
     /**
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,14 @@ public class ModifyBeebotIntentLgfShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Utterance Template Definition</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("LgfDefinition")
     public String lgfDefinitionShrink;
 
     /**
+     * <p>Utterance Template ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +32,7 @@ public class ModifyBeebotIntentLgfShrinkRequest extends TeaModel {
     public Long lgfId;
 
     /**
+     * <p>Scenario ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

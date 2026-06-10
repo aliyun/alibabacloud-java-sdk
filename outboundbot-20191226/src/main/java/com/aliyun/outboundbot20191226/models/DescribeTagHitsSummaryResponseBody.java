@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeTagHitsSummaryResponseBody extends TeaModel {
     /**
+     * <p>The response code. <code>OK</code> indicates a successful request.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -26,6 +32,8 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5391EB13-A0E7-402D-A407-B99D4ABAF22A</p>
      */
@@ -33,15 +41,23 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>A list of tag groups.</p>
+     */
     @NameInMap("TagGroups")
     public java.util.List<DescribeTagHitsSummaryResponseBodyTagGroups> tagGroups;
 
+    /**
+     * <p>A list of tag hit statistics.</p>
+     */
     @NameInMap("TagHitsList")
     public java.util.List<DescribeTagHitsSummaryResponseBodyTagHitsList> tagHitsList;
 
@@ -108,7 +124,7 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
 
     public static class DescribeTagHitsSummaryResponseBodyTagGroups extends TeaModel {
         /**
-         * <p>ID</p>
+         * <p>The ID of the tag group.</p>
          * 
          * <strong>example:</strong>
          * <p>8bb6f8ca-85a3-49f8-86a5-3127902a2156</p>
@@ -117,16 +133,26 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The script ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>84fc7c41-f918-4a47-b742-a439b35a8567</p>
+         * <p>8a4c6d3d-5ed6-44ca-b779-16c20f8862be</p>
          */
         @NameInMap("ScriptId")
         public String scriptId;
 
+        /**
+         * <p>The tag group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>标签组</p>
+         */
         @NameInMap("TagGroup")
         public String tagGroup;
 
         /**
+         * <p>The index of the tag group.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -174,15 +200,29 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
 
     public static class DescribeTagHitsSummaryResponseBodyTagHitsList extends TeaModel {
         /**
+         * <p>The hit count for the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("HitCount")
         public Integer hitCount;
 
+        /**
+         * <p>The tag group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>当前学历</p>
+         */
         @NameInMap("TagGroup")
         public String tagGroup;
 
+        /**
+         * <p>The tag name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>本科</p>
+         */
         @NameInMap("TagName")
         public String tagName;
 

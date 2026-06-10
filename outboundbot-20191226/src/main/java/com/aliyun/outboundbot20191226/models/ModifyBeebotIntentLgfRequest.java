@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyBeebotIntentLgfRequest extends TeaModel {
     /**
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,14 @@ public class ModifyBeebotIntentLgfRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Utterance Template Definition</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("LgfDefinition")
     public ModifyBeebotIntentLgfRequestLgfDefinition lgfDefinition;
 
     /**
+     * <p>Utterance Template ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +32,7 @@ public class ModifyBeebotIntentLgfRequest extends TeaModel {
     public Long lgfId;
 
     /**
+     * <p>Scenario ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,6 +80,7 @@ public class ModifyBeebotIntentLgfRequest extends TeaModel {
 
     public static class ModifyBeebotIntentLgfRequestLgfDefinition extends TeaModel {
         /**
+         * <p>Intent ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -85,7 +90,11 @@ public class ModifyBeebotIntentLgfRequest extends TeaModel {
         public Long intentId;
 
         /**
+         * <p>Intent Configuration</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>我是一个问法模版</p>
          */
         @NameInMap("RuleText")
         public String ruleText;

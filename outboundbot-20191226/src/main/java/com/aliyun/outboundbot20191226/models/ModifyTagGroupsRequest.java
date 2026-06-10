@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyTagGroupsRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyTagGroupsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The script ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,13 +25,21 @@ public class ModifyTagGroupsRequest extends TeaModel {
     public String scriptId;
 
     /**
+     * <p>The tag groups to modify.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;TagName&quot;:&quot;111&quot;,&quot;TagGroup&quot;:&quot;多层次&quot;,&quot;ScriptId&quot;:&quot;b4d0dcc8-892d-4323-8c9d-3568e5faa62f&quot;,&quot;showInput&quot;:true,&quot;Id&quot;:&quot;a683fa32-91c5-457e-9ddf-aa8549d14ce0&quot;}]</p>
      */
     @NameInMap("TagGroups")
     public String tagGroups;
 
     /**
+     * <p>The list of tags.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;TagGroup&quot;:&quot;多层次&quot;,&quot;ScriptId&quot;:&quot;b4d0dcc8-892d-43234-987c9d-3568e5faa62f&quot;,&quot;TagGroupIndex&quot;:0,&quot;Id&quot;:&quot;56728a30-c392-453a-a287-31af8301150f&quot;}]</p>
      */
     @NameInMap("Tags")
     public String tags;

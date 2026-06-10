@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateTaskExportTaskRequest extends TeaModel {
     /**
+     * <p>Start time of the call time range (inclusive)</p>
+     * 
      * <strong>example:</strong>
      * <p>1646496000000</p>
      */
@@ -12,6 +14,8 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     public Long actualTimeGte;
 
     /**
+     * <p>End time of the call time range (inclusive)</p>
+     * 
      * <strong>example:</strong>
      * <p>1646582400000</p>
      */
@@ -19,6 +23,8 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     public Long actualTimeLte;
 
     /**
+     * <p>Minimum call duration</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     public Long callDurationGte;
 
     /**
+     * <p>Maximum call duration</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -33,6 +41,8 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     public Long callDurationLte;
 
     /**
+     * <p>Called number</p>
+     * 
      * <strong>example:</strong>
      * <p>11111111111</p>
      */
@@ -43,6 +53,8 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     public String callingNumber;
 
     /**
+     * <p>Whether the call was answered</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +62,8 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     public Boolean hasAnswered;
 
     /**
+     * <p>Whether the call ended because the contact rejected it</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -57,6 +71,8 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     public Boolean hasHangUpByRejection;
 
     /**
+     * <p>Whether the conversation ended normally</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -64,6 +80,7 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     public Boolean hasReachedEndOfFlow;
 
     /**
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,16 +90,26 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Task group ID</p>
+     * 
      * <strong>example:</strong>
      * <p>cb731aee-0a5b-4c2b-924c-d9e82eb1d8d7</p>
      */
     @NameInMap("JobGroupId")
     public String jobGroupId;
 
+    /**
+     * <p>Task name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试_20220217_160147</p>
+     */
     @NameInMap("JobGroupNameQuery")
     public String jobGroupNameQuery;
 
     /**
+     * <p>Job ID</p>
+     * 
      * <strong>example:</strong>
      * <p>82097dd5-54df-475f-beba-eec8f4b7a3e1</p>
      */
@@ -90,6 +117,8 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     public String jobId;
 
     /**
+     * <p>Job status</p>
+     * 
      * <strong>example:</strong>
      * <p>Succeeded</p>
      */
@@ -97,6 +126,8 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     public String jobStatusStringList;
 
     /**
+     * <p>Other ID</p>
+     * 
      * <strong>example:</strong>
      * <p>64ebe700-91b4-49cb-b457-0b7c0b598a86</p>
      */
@@ -104,6 +135,8 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     public String otherId;
 
     /**
+     * <p>Page number, starting from 0</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -111,6 +144,8 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>Number of items per page</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -118,6 +153,8 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The start time for the ring duration search.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -125,16 +162,26 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     public Long recordingDurationGte;
 
     /**
+     * <p>End time of the ring duration search.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("RecordingDurationLte")
     public Long recordingDurationLte;
 
+    /**
+     * <p>Scenario name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试</p>
+     */
     @NameInMap("ScriptNameQuery")
     public String scriptNameQuery;
 
     /**
+     * <p>Sort field</p>
+     * 
      * <strong>example:</strong>
      * <p>actualTime</p>
      */
@@ -142,6 +189,8 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>Sort order. Valid values: asc (ascending), desc (descending)</p>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -149,6 +198,8 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     public String sortOrder;
 
     /**
+     * <p>Start time of the task creation time range</p>
+     * 
      * <strong>example:</strong>
      * <p>1646496000000</p>
      */
@@ -156,6 +207,8 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     public Long taskCreateTimeGte;
 
     /**
+     * <p>End time of the task creation time range</p>
+     * 
      * <strong>example:</strong>
      * <p>1646582400000</p>
      */
@@ -163,6 +216,8 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     public Long taskCreateTimeLte;
 
     /**
+     * <p>Task ID</p>
+     * 
      * <strong>example:</strong>
      * <p>64ebe700-91b4-49cb-b457-0b7c0b598a86</p>
      */
@@ -170,6 +225,8 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>Call status</p>
+     * 
      * <strong>example:</strong>
      * <p>Succeeded,Failed</p>
      */
@@ -177,6 +234,8 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     public String taskStatusStringList;
 
     /**
+     * <p>User ID</p>
+     * 
      * <strong>example:</strong>
      * <p>82097dd5-54df-475f-beba-eec8f4b7a3e1</p>
      */

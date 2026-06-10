@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListAnnotationMissionSessionResponseBody extends TeaModel {
     /**
+     * <p>The status code of the API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data.</p>
+     */
     @NameInMap("Data")
     public ListAnnotationMissionSessionResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Additional information. If the call is successful, \<code>success\\</code> is returned. If the call fails, a specific error code is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>bp.java.nopowerContact</p>
      */
@@ -29,6 +38,8 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -36,6 +47,8 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. A value of \<code>true\\</code> indicates success. A value of \<code>false\\</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,31 +110,53 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
 
     public static class ListAnnotationMissionSessionResponseBodyDataAnnotationMissionSessionListAnnotationMissionChatListAnnotationMissionChatCustomizationDataInfoList extends TeaModel {
         /**
-         * <p>id</p>
+         * <p>The ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03f56192-fa8a-40dc-9558-39b357f0618f</p>
          */
         @NameInMap("AnnotationMissionChatCustomizationDataInfoId")
         public String annotationMissionChatCustomizationDataInfoId;
 
         /**
-         * <p>chat id</p>
+         * <p>The chat ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03f56192-fa8a-40dc-9558-39b357f0618f</p>
          */
         @NameInMap("AnnotationMissionChatId")
         public String annotationMissionChatId;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2f03b24a-fda2-4501-90ba-0a9a59f8dd9d</p>
          */
         @NameInMap("AnnotationMissionId")
         public String annotationMissionId;
 
+        /**
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03f56192-fa8a-40dc-9558-39b357f0618f</p>
+         */
         @NameInMap("AnnotationMissionSessionId")
         public String annotationMissionSessionId;
 
+        /**
+         * <p>The text of the voice annotation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>抱歉哈，可能给您造成困扰了，这边先不打扰您，祝您生活愉快，再见</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>Indicates whether the data is created.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -129,28 +164,53 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public Boolean create;
 
         /**
+         * <p>The time when the information was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1682216045619</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>默认数据</p>
+         */
         @NameInMap("CustomizationDataDescription")
         public String customizationDataDescription;
 
         /**
-         * <p>id</p>
+         * <p>The custom data ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03f56192-fa8a-40dc-9558-39b357f0618f</p>
          */
         @NameInMap("CustomizationDataId")
         public String customizationDataId;
 
+        /**
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>默认数据</p>
+         */
         @NameInMap("CustomizationDataName")
         public String customizationDataName;
 
+        /**
+         * <p>The weight of the language model data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CustomizationDataWeight")
         public Integer customizationDataWeight;
 
         /**
+         * <p>Indicates whether the data is deleted.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -158,6 +218,8 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public Boolean delete;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>d3fbfca8-4208-4d4b-a53a-c4dba5e43a66</p>
          */
@@ -165,6 +227,8 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The time when the information was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>1679552585384</p>
          */
@@ -292,7 +356,7 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
 
     public static class ListAnnotationMissionSessionResponseBodyDataAnnotationMissionSessionListAnnotationMissionChatListAnnotationMissionChatIntentUserSayInfoList extends TeaModel {
         /**
-         * <p>chat id</p>
+         * <p>The chat ID.</p>
          * 
          * <strong>example:</strong>
          * <p>77343553-cbc2-4487-a35c-869f1e86c573</p>
@@ -301,12 +365,17 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public String annotationMissionChatId;
 
         /**
-         * <p>id</p>
+         * <p>The ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03f56192-fa8a-40dc-9558-39b357f0618f</p>
          */
         @NameInMap("AnnotationMissionChatIntentUserSayInfoId")
         public String annotationMissionChatIntentUserSayInfoId;
 
         /**
+         * <p>The annotation task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>77343553-cbc2-4487-a35c-869f1e86c573</p>
          */
@@ -314,6 +383,8 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public String annotationMissionId;
 
         /**
+         * <p>The session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>77343553-cbc2-4487-a35c-869f1e86c573</p>
          */
@@ -321,16 +392,26 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public String annotationMissionSessionId;
 
         /**
+         * <p>The bot ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>77343553-cbc2-4487-a35c-869f1e86c573</p>
          */
         @NameInMap("BotId")
         public String botId;
 
+        /**
+         * <p>The modified query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>Created.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -338,6 +419,8 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public Boolean create;
 
         /**
+         * <p>The time when the intent was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1682216045619</p>
          */
@@ -345,6 +428,8 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>Deleted</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -352,13 +437,17 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public Boolean delete;
 
         /**
+         * <p>The dialog ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>77343553-cbc2-4487-a35c-869f1e86c573</p>
+         * <p>29921312</p>
          */
         @NameInMap("DialogId")
         public Long dialogId;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>77343553-cbc2-4487-a35c-869f1e86c573</p>
          */
@@ -366,13 +455,17 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The intent ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>77343553-cbc2-4487-a35c-869f1e86c573</p>
+         * <p>11234112</p>
          */
         @NameInMap("IntentId")
         public Long intentId;
 
         /**
+         * <p>The time when the intent was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>1682216045619</p>
          */
@@ -492,37 +585,62 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
 
     public static class ListAnnotationMissionSessionResponseBodyDataAnnotationMissionSessionListAnnotationMissionChatListAnnotationMissionChatTagInfoList extends TeaModel {
         /**
-         * <p>chat id</p>
+         * <p>The chat ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03f56192-fa8a-40dc-9558-39b357f0618f</p>
          */
         @NameInMap("AnnotationMissionChatId")
         public String annotationMissionChatId;
 
         /**
-         * <p>id</p>
+         * <p>The ID of the chat tag information for the comment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03f56192-fa8a-40dc-9558-39b357f0618f</p>
          */
         @NameInMap("AnnotationMissionChatTagInfoId")
         public String annotationMissionChatTagInfoId;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>e7272cbb-a60d-4b41-b5c4-8863edc0b8f7</p>
          */
         @NameInMap("AnnotationMissionId")
         public String annotationMissionId;
 
+        /**
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03f56192-fa8a-40dc-9558-39b357f0618f</p>
+         */
         @NameInMap("AnnotationMissionSessionId")
         public String annotationMissionSessionId;
 
         /**
-         * <p>tag id</p>
+         * <p>The tag ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03f56192-fa8a-40dc-9558-39b357f0618f</p>
          */
         @NameInMap("AnnotationMissionTagInfoId")
         public String annotationMissionTagInfoId;
 
+        /**
+         * <p>The tag name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>标签</p>
+         */
         @NameInMap("AnnotationMissionTagInfoName")
         public String annotationMissionTagInfoName;
 
         /**
+         * <p>Create</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -530,6 +648,8 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public Boolean create;
 
         /**
+         * <p>The time when the tag was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1686797050000</p>
          */
@@ -537,6 +657,8 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>Delete.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -544,6 +666,8 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public Boolean delete;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>32be9d94-1346-4c4a-a4d0-ccd379f87013</p>
          */
@@ -551,6 +675,8 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The time when the tag was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>1679019660000</p>
          */
@@ -654,7 +780,7 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
 
     public static class ListAnnotationMissionSessionResponseBodyDataAnnotationMissionSessionListAnnotationMissionChatListAnnotationMissionChatVocabularyInfoList extends TeaModel {
         /**
-         * <p>chat id</p>
+         * <p>The chat ID.</p>
          * 
          * <strong>example:</strong>
          * <p>77343553-cbc2-4487-a35c-869f1e86c573</p>
@@ -663,12 +789,17 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public String annotationMissionChatId;
 
         /**
-         * <p>id</p>
+         * <p>The ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03f56192-fa8a-40dc-9558-39b357f0618f</p>
          */
         @NameInMap("AnnotationMissionChatVocabularyInfoId")
         public String annotationMissionChatVocabularyInfoId;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>b3f2c931-5180-43ca-b4aa-2baee2d73c8b</p>
          */
@@ -676,6 +807,8 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public String annotationMissionId;
 
         /**
+         * <p>The session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>77343553-cbc2-4487-a35c-869f1e86c573</p>
          */
@@ -683,6 +816,8 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public String annotationMissionSessionId;
 
         /**
+         * <p>Created</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -690,6 +825,8 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public Boolean create;
 
         /**
+         * <p>The time when the resource was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1675218421941</p>
          */
@@ -697,6 +834,8 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>Deleted</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -704,6 +843,8 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public Boolean delete;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>818961ce-d9ba-4f88-89ca-2a04b24bdf01</p>
          */
@@ -711,28 +852,56 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The time when the hotword was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>1676272557653</p>
          */
         @NameInMap("ModifiedTime")
         public Long modifiedTime;
 
+        /**
+         * <p>The content of the hotword annotation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
+         */
         @NameInMap("Vocabulary")
         public String vocabulary;
 
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>描述</p>
+         */
         @NameInMap("VocabularyDescription")
         public String vocabularyDescription;
 
         /**
+         * <p>The hotword ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>77343553-cbc2-4487-a35c-869f1e86c573</p>
          */
         @NameInMap("VocabularyId")
         public String vocabularyId;
 
+        /**
+         * <p>The name of the vocabulary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>名称</p>
+         */
         @NameInMap("VocabularyName")
         public String vocabularyName;
 
+        /**
+         * <p>The weight of the hotword. The value ranges from -6 to 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("VocabularyWeight")
         public Integer vocabularyWeight;
 
@@ -856,14 +1025,23 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
     }
 
     public static class ListAnnotationMissionSessionResponseBodyDataAnnotationMissionSessionListAnnotationMissionChatList extends TeaModel {
+        /**
+         * <p>The result of manual ASR annotation, used to calculate character accuracy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
+         */
         @NameInMap("AnnotationAsrResult")
         public String annotationAsrResult;
 
+        /**
+         * <p>The table of language model annotation information for the annotation task chat.</p>
+         */
         @NameInMap("AnnotationMissionChatCustomizationDataInfoList")
         public java.util.List<ListAnnotationMissionSessionResponseBodyDataAnnotationMissionSessionListAnnotationMissionChatListAnnotationMissionChatCustomizationDataInfoList> annotationMissionChatCustomizationDataInfoList;
 
         /**
-         * <p>chat id</p>
+         * <p>The chat ID.</p>
          * 
          * <strong>example:</strong>
          * <p>40669e52-c1c8-487f-9593-29749086bdc9</p>
@@ -871,26 +1049,55 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         @NameInMap("AnnotationMissionChatId")
         public String annotationMissionChatId;
 
+        /**
+         * <p>The list of chat intents.</p>
+         */
         @NameInMap("AnnotationMissionChatIntentUserSayInfoList")
         public java.util.List<ListAnnotationMissionSessionResponseBodyDataAnnotationMissionSessionListAnnotationMissionChatListAnnotationMissionChatIntentUserSayInfoList> annotationMissionChatIntentUserSayInfoList;
 
+        /**
+         * <p>The list of mappings between chat annotation information and attached tags.</p>
+         */
         @NameInMap("AnnotationMissionChatTagInfoList")
         public java.util.List<ListAnnotationMissionSessionResponseBodyDataAnnotationMissionSessionListAnnotationMissionChatListAnnotationMissionChatTagInfoList> annotationMissionChatTagInfoList;
 
+        /**
+         * <p>The table of hotword annotation information for the annotation task chat.</p>
+         */
         @NameInMap("AnnotationMissionChatVocabularyInfoList")
         public java.util.List<ListAnnotationMissionSessionResponseBodyDataAnnotationMissionSessionListAnnotationMissionChatListAnnotationMissionChatVocabularyInfoList> annotationMissionChatVocabularyInfoList;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>03f56192-fa8a-40dc-9558-39b357f0618f</p>
          */
         @NameInMap("AnnotationMissionId")
         public String annotationMissionId;
 
+        /**
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03f56192-fa8a-40dc-9558-39b357f0618f</p>
+         */
         @NameInMap("AnnotationMissionSessionId")
         public String annotationMissionSessionId;
 
         /**
+         * <p>The annotation status of the chat.</p>
+         * <ul>
+         * <li><p>0: UNDO</p>
+         * </li>
+         * <li><p>1: DOING</p>
+         * </li>
+         * <li><p>2: DONE</p>
+         * </li>
+         * <li><p>3: CLOSED</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -898,16 +1105,36 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public Integer annotationStatus;
 
         /**
+         * <p>The content of the bot\&quot;s reply.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;Answer\&quot;: u\&quot;\u53c2\u8003\u6587\u6863\uff1a<a href="https://help.aliyun.com/document_detail/215402.html%5C%5C">https://help.aliyun.com/document_detail/215402.html\\</a>&quot;, \&quot;QuestionId\&quot;: 371159, \&quot;Uuid\&quot;: \&quot;ac14000116781568127896224d0044\&quot;}</p>
          */
         @NameInMap("Answer")
         public String answer;
 
+        /**
+         * <p>The status of Automatic Speech Recognition (ASR) annotation.</p>
+         * <ul>
+         * <li><p>0: UNDO</p>
+         * </li>
+         * <li><p>1: DOING</p>
+         * </li>
+         * <li><p>2: DONE</p>
+         * </li>
+         * <li><p>3: CLOSED</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AsrAnnotationStatus")
         public Integer asrAnnotationStatus;
 
         /**
+         * <p>The time when the chat was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1682216045619</p>
          */
@@ -915,16 +1142,36 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>77343553-cbc2-4487-a35c-869f1e86c573</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The status of semantic tagging.</p>
+         * <ul>
+         * <li><p>0: UNDO</p>
+         * </li>
+         * <li><p>1: DOING</p>
+         * </li>
+         * <li><p>2: DONE</p>
+         * </li>
+         * <li><p>3: CLOSED</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IntentAnnotationStatus")
         public Integer intentAnnotationStatus;
 
         /**
+         * <p>The time when the chat was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>1571649300000</p>
          */
@@ -932,29 +1179,69 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public Long modifiedTime;
 
         /**
+         * <p>The time when the chat was triggered.</p>
+         * 
          * <strong>example:</strong>
          * <p>1682390676403</p>
          */
         @NameInMap("OccurTime")
         public Long occurTime;
 
+        /**
+         * <p>The ASR result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
+         */
         @NameInMap("OriginalAsrResult")
         public String originalAsrResult;
 
         /**
+         * <p>The sequence ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>380578077</p>
          */
         @NameInMap("SequenceId")
         public String sequenceId;
 
+        /**
+         * <p>The annotation action. 1: Correct. 20: Matching error, not optimized. 21: Matching error, optimized. 3: Uncovered. 4: Invalid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SubStatus")
         public Integer subStatus;
 
+        /**
+         * <p>The status of tag annotation.</p>
+         * <ul>
+         * <li><p>0: UNDO</p>
+         * </li>
+         * <li><p>1: DOING</p>
+         * </li>
+         * <li><p>2: DONE</p>
+         * </li>
+         * <li><p>3: CLOSED</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TagAnnotationStatus")
         public Integer tagAnnotationStatus;
 
         /**
+         * <p>Indicates a transcription error.</p>
+         * <ul>
+         * <li><p>0: No</p>
+         * </li>
+         * <li><p>1: Yes</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1137,10 +1424,15 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
     }
 
     public static class ListAnnotationMissionSessionResponseBodyDataAnnotationMissionSessionList extends TeaModel {
+        /**
+         * <p>The list of chats.</p>
+         */
         @NameInMap("AnnotationMissionChatList")
         public java.util.List<ListAnnotationMissionSessionResponseBodyDataAnnotationMissionSessionListAnnotationMissionChatList> annotationMissionChatList;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>64ba5ac9-a4e1-4333-b03c-9d4a588c9f6c</p>
          */
@@ -1148,7 +1440,7 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public String annotationMissionId;
 
         /**
-         * <p>ID</p>
+         * <p>The session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>64ba5ac9-a4e1-4333-b03c-9d4a588c9f6c</p>
@@ -1157,6 +1449,18 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public String annotationMissionSessionId;
 
         /**
+         * <p>The annotation status.</p>
+         * <ul>
+         * <li><p>0: UNDO</p>
+         * </li>
+         * <li><p>1: DOING</p>
+         * </li>
+         * <li><p>2: DONE</p>
+         * </li>
+         * <li><p>3: CLOSED</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1164,6 +1468,8 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public Integer annotationStatus;
 
         /**
+         * <p>The time when the session was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1691117009000</p>
          */
@@ -1171,6 +1477,8 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>Debug conversation</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -1178,6 +1486,8 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public Boolean debugConversation;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>a4274627-265f-4e14-b2d6-4ee7d4f8593e</p>
          */
@@ -1185,6 +1495,8 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The task group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2f642da1-b00b-4dd6-ac7d-dcbeefd13ff3</p>
          */
@@ -1192,6 +1504,8 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public String jobGroupId;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>42da7cde-a5e8-45cc-b9d2-828711d95b30</p>
          */
@@ -1199,6 +1513,8 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The time when the session was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>1677987898384</p>
          */
@@ -1206,6 +1522,8 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public Long modifiedTime;
 
         /**
+         * <p>The scenario ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>408d6c4d-23e2-41f6-bbdd-f919a8297aa4</p>
          */
@@ -1213,6 +1531,8 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public String scriptId;
 
         /**
+         * <p>The ID of the task in the outbound call system, or the ID of the conversation in the navigation system.</p>
+         * 
          * <strong>example:</strong>
          * <p>40669e52-c1c8-487f-9593-29749086bdc9</p>
          */
@@ -1220,6 +1540,8 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>The version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1339,16 +1661,23 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
 
     public static class ListAnnotationMissionSessionResponseBodyData extends TeaModel {
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>b3f2c931-5180-43ca-b4aa-2baee2d73c8b</p>
          */
         @NameInMap("AnnotationMissionId")
         public String annotationMissionId;
 
+        /**
+         * <p>The list of sessions.</p>
+         */
         @NameInMap("AnnotationMissionSessionList")
         public java.util.List<ListAnnotationMissionSessionResponseBodyDataAnnotationMissionSessionList> annotationMissionSessionList;
 
         /**
+         * <p>Additional information. If the call is successful, \<code>success\\</code> is returned. If the call fails, a specific error code is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>bp.java.nopowerContact</p>
          */
@@ -1356,6 +1685,8 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>Indicates whether the call was successful. \<code>true\\</code> indicates success. \<code>false\\</code> indicates failure.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -1363,6 +1694,8 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         public Boolean success;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */

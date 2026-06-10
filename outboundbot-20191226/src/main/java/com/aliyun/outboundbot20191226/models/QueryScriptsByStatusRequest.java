@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryScriptsByStatusRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class QueryScriptsByStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class QueryScriptsByStatusRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class QueryScriptsByStatusRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The list of statuses.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("StatusList")

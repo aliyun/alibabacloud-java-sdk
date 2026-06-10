@@ -4,21 +4,57 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class QueryScriptWaveformsResponseBody extends TeaModel {
+    /**
+     * <p>API status code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>HTTP status code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>API message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Request ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Recording list of scenario voices</p>
+     * <blockquote>
+     * <p>Recording data is returned only when the voice type is recording. It is not returned when the voice is speech synthesis.</p>
+     * </blockquote>
+     */
     @NameInMap("ScriptWaveforms")
     public java.util.List<QueryScriptWaveformsResponseBodyScriptWaveforms> scriptWaveforms;
 
+    /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,18 +112,48 @@ public class QueryScriptWaveformsResponseBody extends TeaModel {
     }
 
     public static class QueryScriptWaveformsResponseBodyScriptWaveforms extends TeaModel {
+        /**
+         * <p>File key in OSS</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UPLOADED/RECORDING/a8xxxxx-2b26-4b6d-a54f-696b95xxx1/a6bf591a-cf6d-4xxxxxx.wav</p>
+         */
         @NameInMap("FileId")
         public String fileId;
 
+        /**
+         * <p>Recording file name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SHUKE_ZA_ol_32_邀约.wav</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <p>Scenario voice name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
+         */
         @NameInMap("ScriptContent")
         public String scriptContent;
 
+        /**
+         * <p>Scenario ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25b26ce1-009c-4791-a720-e7ac4f9821a1</p>
+         */
         @NameInMap("ScriptId")
         public String scriptId;
 
+        /**
+         * <p>Scenario voice recording ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>444df4-009c-4791-a720-e7ac4f9821a1</p>
+         */
         @NameInMap("ScriptWaveformId")
         public String scriptWaveformId;
 

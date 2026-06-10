@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyTTSConfigRequest extends TeaModel {
     /**
+     * <p>AppKey for your Intelligent Speech Interaction project. Required only when NlsServiceType is Authorized.</p>
+     * 
      * <strong>example:</strong>
      * <p>99****Aw</p>
      */
@@ -12,6 +14,7 @@ public class ModifyTTSConfigRequest extends TeaModel {
     public String appKey;
 
     /**
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,10 @@ public class ModifyTTSConfigRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The service type.
+     * Managed: The default public Intelligent Speech Interaction service for Outbound Bot.
+     * Authorized: A private Intelligent Speech Interaction service that you have purchased. To grant authorization, navigate to Scenario Management &gt; Edit &gt; Call Service &gt; Custom Service.</p>
+     * 
      * <strong>example:</strong>
      * <p>Managed</p>
      */
@@ -28,14 +35,18 @@ public class ModifyTTSConfigRequest extends TeaModel {
     public String nlsServiceType;
 
     /**
-     * <p>语调 [-500,500]之间整数。默认值为0。</p>
-     * <p>大于0表示升高音高。</p>
-     * <p>小于0表示降低音高。</p>
+     * <p>Pitch. An integer between -500 and 500. Default is 0.</p>
+     * <p>A value greater than 0 raises pitch.</p>
+     * <p>A value less than 0 lowers pitch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("PitchRate")
     public String pitchRate;
 
     /**
+     * <p>Scenario ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,13 +55,31 @@ public class ModifyTTSConfigRequest extends TeaModel {
     @NameInMap("ScriptId")
     public String scriptId;
 
+    /**
+     * <p>Speech rate. An integer between -500 and 500. Default is 0.</p>
+     * <p>A value greater than 0 increases speech speed.</p>
+     * <p>A value less than 0 decreases speech speed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SpeechRate")
     public String speechRate;
 
+    /**
+     * <p>Voice model, such as aixia, siyue, or xiaoyun</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aixia</p>
+     */
     @NameInMap("Voice")
     public String voice;
 
     /**
+     * <p>Volume. An integer between 0 and 100. Default is 50.</p>
+     * <p>A value greater than 50 increases volume.</p>
+     * <p>A value less than 50 decreases volume.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */

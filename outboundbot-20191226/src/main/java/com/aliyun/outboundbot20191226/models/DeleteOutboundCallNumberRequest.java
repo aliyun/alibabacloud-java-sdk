@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteOutboundCallNumberRequest extends TeaModel {
     /**
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteOutboundCallNumberRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Number ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

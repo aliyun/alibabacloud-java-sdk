@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetJobDataUploadParamsRequest extends TeaModel {
     /**
+     * <p>Business type</p>
+     * 
      * <strong>example:</strong>
      * <p>SCRIPT_RECORDING</p>
      */
@@ -12,12 +14,17 @@ public class GetJobDataUploadParamsRequest extends TeaModel {
     public String busiType;
 
     /**
+     * <p>File name</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SHUKE_ZA_ol_2_开场白.wav</p>
      */
     @NameInMap("FileName")
     public String fileName;
 
     /**
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +34,8 @@ public class GetJobDataUploadParamsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Relative path for file storage</p>
+     * 
      * <strong>example:</strong>
      * <p>//airwaybill/1237185904146124802</p>
      */
@@ -34,6 +43,8 @@ public class GetJobDataUploadParamsRequest extends TeaModel {
     public String path;
 
     /**
+     * <p>Unique business ID (prevents duplicate file names; the system automatically adds one if left blank)</p>
+     * 
      * <strong>example:</strong>
      * <p>sas_siema_1477832102462645_siem_f07e90c2c147cf8cf1549ccb974e1956</p>
      */

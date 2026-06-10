@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetContactBlockListResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetContactBlockListResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The list of blocked contacts.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -19,6 +23,8 @@ public class GetContactBlockListResponseBody extends TeaModel {
     public GetContactBlockListResponseBodyContactBlocklistList contactBlocklistList;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class GetContactBlockListResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -33,6 +41,8 @@ public class GetContactBlockListResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -40,6 +50,8 @@ public class GetContactBlockListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -101,6 +113,8 @@ public class GetContactBlockListResponseBody extends TeaModel {
 
     public static class GetContactBlockListResponseBodyContactBlocklistListList extends TeaModel {
         /**
+         * <p>The unique key of the entry in the do-not-call list.</p>
+         * 
          * <strong>example:</strong>
          * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
@@ -108,6 +122,8 @@ public class GetContactBlockListResponseBody extends TeaModel {
         public String contactBlockListId;
 
         /**
+         * <p>The time when the entry was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1640077685465</p>
          */
@@ -115,6 +131,8 @@ public class GetContactBlockListResponseBody extends TeaModel {
         public Long creationTime;
 
         /**
+         * <p>The user who created the entry.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -122,6 +140,8 @@ public class GetContactBlockListResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
@@ -129,6 +149,8 @@ public class GetContactBlockListResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The name of the contact.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -136,6 +158,8 @@ public class GetContactBlockListResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The operator.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -143,6 +167,8 @@ public class GetContactBlockListResponseBody extends TeaModel {
         public String operator;
 
         /**
+         * <p>The mobile phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1388888888</p>
          */
@@ -150,6 +176,8 @@ public class GetContactBlockListResponseBody extends TeaModel {
         public String phoneNumber;
 
         /**
+         * <p>The remarks.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxx</p>
          */
@@ -229,6 +257,8 @@ public class GetContactBlockListResponseBody extends TeaModel {
 
     public static class GetContactBlockListResponseBodyContactBlocklistList extends TeaModel {
         /**
+         * <p>The data array.</p>
+         * 
          * <strong>example:</strong>
          * <p>[]</p>
          */
@@ -236,6 +266,8 @@ public class GetContactBlockListResponseBody extends TeaModel {
         public java.util.List<GetContactBlockListResponseBodyContactBlocklistListList> list;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -243,6 +275,8 @@ public class GetContactBlockListResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -250,6 +284,8 @@ public class GetContactBlockListResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

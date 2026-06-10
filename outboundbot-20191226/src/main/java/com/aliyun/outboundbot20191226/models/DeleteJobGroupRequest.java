@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteJobGroupRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteJobGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the job group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

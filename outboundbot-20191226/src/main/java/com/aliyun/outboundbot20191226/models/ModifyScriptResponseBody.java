@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyScriptResponseBody extends TeaModel {
     /**
+     * <p>The status of the API.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ModifyScriptResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class ModifyScriptResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -26,16 +32,23 @@ public class ModifyScriptResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The script information.</p>
+     */
     @NameInMap("Script")
     public ModifyScriptResponseBodyScript script;
 
     /**
+     * <p>Indicates whether the call is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,16 +110,26 @@ public class ModifyScriptResponseBody extends TeaModel {
 
     public static class ModifyScriptResponseBodyScript extends TeaModel {
         /**
+         * <p>The debug status of the script.</p>
+         * 
          * <strong>example:</strong>
          * <p>DRAFTED</p>
          */
         @NameInMap("DebugStatus")
         public String debugStatus;
 
+        /**
+         * <p>The industry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>政务</p>
+         */
         @NameInMap("Industry")
         public String industry;
 
         /**
+         * <p>Indicates whether the script is a debug draft.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -114,29 +137,53 @@ public class ModifyScriptResponseBody extends TeaModel {
         public Boolean isDebugDrafted;
 
         /**
+         * <p>Indicates whether the script is a draft.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("IsDrafted")
         public Boolean isDrafted;
 
+        /**
+         * <p>The scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>回访</p>
+         */
         @NameInMap("Scene")
         public String scene;
 
+        /**
+         * <p>The description of the script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>返工回访话术</p>
+         */
         @NameInMap("ScriptDescription")
         public String scriptDescription;
 
         /**
+         * <p>The ID of the script.</p>
+         * 
          * <strong>example:</strong>
          * <p>c153d0d8-ba04-41c0-8632-453944c9dd0b</p>
          */
         @NameInMap("ScriptId")
         public String scriptId;
 
+        /**
+         * <p>The name of the script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>回访话术</p>
+         */
         @NameInMap("ScriptName")
         public String scriptName;
 
         /**
+         * <p>The status of the script.</p>
+         * 
          * <strong>example:</strong>
          * <p>PUBLISHED</p>
          */
@@ -144,6 +191,8 @@ public class ModifyScriptResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1578881227000</p>
          */

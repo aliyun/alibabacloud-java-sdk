@@ -5,15 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListGlobalQuestionsRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>361c8a53-0e29-42f3-8aa7-c7752d010399</p>
+     * <p>dd8c2b62-4660-457f-9597-6723b5722aff</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ListGlobalQuestionsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to display on each page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,10 +35,11 @@ public class ListGlobalQuestionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The scenario ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>aa279896-64a6-4182-864c-4f2b04ec8d17</p>
+     * <p>f63b0dfc-848a-42f3-9329-8854e232e977</p>
      */
     @NameInMap("ScriptId")
     public String scriptId;

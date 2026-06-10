@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListDownloadTasksResponseBody extends TeaModel {
     /**
+     * <p>API status code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Download task list</p>
+     */
     @NameInMap("DownloadTasks")
     public ListDownloadTasksResponseBodyDownloadTasks downloadTasks;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListDownloadTasksResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>API message</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -29,6 +38,8 @@ public class ListDownloadTasksResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>904CFA7B-8AD9-50FF-9B3E-404B20B9EE31</p>
      */
@@ -36,6 +47,8 @@ public class ListDownloadTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Success</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -97,13 +110,17 @@ public class ListDownloadTasksResponseBody extends TeaModel {
 
     public static class ListDownloadTasksResponseBodyDownloadTasksListDownloadTaskFiles extends TeaModel {
         /**
+         * <p>File ID</p>
+         * 
          * <strong>example:</strong>
-         * <p>UPLOADED/RECORDING/d5c651b3-3c0f-44b8-aafd-40526f2fb43d/dd33377f-abad-471b-84dd-04aed572ce60_2.wav</p>
+         * <p>01f8d11abdb9406996c0c46e7*******</p>
          */
         @NameInMap("FileId")
         public String fileId;
 
         /**
+         * <p>Completion progress [Deprecated]</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -111,12 +128,34 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         public Integer progress;
 
         /**
+         * <p>File status</p>
+         * <ul>
+         * <li><p>Pending: Pending</p>
+         * </li>
+         * <li><p>InProgress: In progress</p>
+         * </li>
+         * <li><p>Finished: Completed</p>
+         * </li>
+         * <li><p>Failed: Failed</p>
+         * </li>
+         * <li><p>Expired: Expired</p>
+         * </li>
+         * <li><p>Cancelled: Canceled</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Empty</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>Title</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GUI-TEST-新建风险</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -160,10 +199,15 @@ public class ListDownloadTasksResponseBody extends TeaModel {
     }
 
     public static class ListDownloadTasksResponseBodyDownloadTasksList extends TeaModel {
+        /**
+         * <p>Download task file list</p>
+         */
         @NameInMap("DownloadTaskFiles")
         public java.util.List<ListDownloadTasksResponseBodyDownloadTasksListDownloadTaskFiles> downloadTaskFiles;
 
         /**
+         * <p>The expiration time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1646792941</p>
          */
@@ -171,6 +215,22 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         public Long expireTime;
 
         /**
+         * <p>Export status.</p>
+         * <ul>
+         * <li><p>Pending: Pending</p>
+         * </li>
+         * <li><p>InProgress: In progress</p>
+         * </li>
+         * <li><p>Finished: Completed</p>
+         * </li>
+         * <li><p>Failed: Failed</p>
+         * </li>
+         * <li><p>Expired: Expired</p>
+         * </li>
+         * <li><p>Cancelled: Canceled</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Empty</p>
          */
@@ -178,12 +238,20 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>6b0e547e-501c-480a-812f-d27e28e74f9a</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>Title</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GUI-TEST-新建风险</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -235,10 +303,15 @@ public class ListDownloadTasksResponseBody extends TeaModel {
     }
 
     public static class ListDownloadTasksResponseBodyDownloadTasks extends TeaModel {
+        /**
+         * <p>Download task array</p>
+         */
         @NameInMap("List")
         public java.util.List<ListDownloadTasksResponseBodyDownloadTasksList> list;
 
         /**
+         * <p>Page number</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -246,6 +319,8 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Count</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -253,6 +328,8 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total count</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

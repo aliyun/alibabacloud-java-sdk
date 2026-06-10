@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class WithdrawScriptReviewRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class WithdrawScriptReviewRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The script ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

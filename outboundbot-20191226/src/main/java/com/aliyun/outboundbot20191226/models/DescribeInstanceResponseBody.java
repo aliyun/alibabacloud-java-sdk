@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,16 +14,23 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The details of the instance.</p>
+     */
     @NameInMap("Instance")
     public DescribeInstanceResponseBodyInstance instance;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -29,6 +38,8 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -36,6 +47,8 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     public static class DescribeInstanceResponseBodyInstance extends TeaModel {
         /**
+         * <p>The time when the instance was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1578469042851</p>
          */
@@ -104,6 +119,8 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Long creationTime;
 
         /**
+         * <p>The ID of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>435986</p>
          */
@@ -111,26 +128,44 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Long creatorId;
 
         /**
+         * <p>The name of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
         @NameInMap("CreatorName")
         public String creatorName;
 
+        /**
+         * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这个是第一个实例</p>
+         */
         @NameInMap("InstanceDescription")
         public String instanceDescription;
 
         /**
+         * <p>The ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>90515b5-6115-4ccf-83e2-52d5bfaf2ddf</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>第一个实例</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
+         * <p>The maximum number of concurrent conversations for the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -138,6 +173,8 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Integer maxConcurrentConversation;
 
         /**
+         * <p>The name of the instance owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxx</p>
          */
@@ -145,6 +182,8 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public String ownerName;
 
         /**
+         * <p>The ID of the resource group.</p>
+         * 
          * <strong>example:</strong>
          * <p>90515b5-6115-4ccf-83e2-52d5bfaf2ddf</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateTagResponseBody extends TeaModel {
     /**
+     * <p>The status code returned for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class CreateTagResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class CreateTagResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The message returned for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -26,6 +32,8 @@ public class CreateTagResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -33,6 +41,8 @@ public class CreateTagResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -40,6 +50,8 @@ public class CreateTagResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The tag ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>390515b5-6115-4ccf-83e2-52d5bfaf2ddf</p>
      */

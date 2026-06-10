@@ -4,22 +4,51 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
+    /**
+     * <p>The name of the Outbound Calling Bot instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
+     * <p>The ID of the resource group.</p>
+     * <blockquote>
+     * <p>For more information, see ListResourceGroups.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfm3iugit3uw7a</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tags of the service instance.</p>
+     * <blockquote>
+     * <p>You can call the ListResourceTags operation to obtain the tags.</p>
+     * </blockquote>
+     */
     @NameInMap("Tag")
     public java.util.List<ListInstancesRequestTag> tag;
 
@@ -70,6 +99,8 @@ public class ListInstancesRequest extends TeaModel {
 
     public static class ListInstancesRequestTag extends TeaModel {
         /**
+         * <p>The key of the instance tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>name</p>
          */
@@ -77,6 +108,8 @@ public class ListInstancesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the instance tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */

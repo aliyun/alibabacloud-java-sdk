@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSummaryInfoResponseBody extends TeaModel {
     /**
+     * <p>List of instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,6 +14,8 @@ public class GetSummaryInfoResponseBody extends TeaModel {
     public java.util.List<GetSummaryInfoResponseBodyAgentBotInstanceSummaryList> agentBotInstanceSummaryList;
 
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -19,6 +23,8 @@ public class GetSummaryInfoResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class GetSummaryInfoResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -33,6 +41,8 @@ public class GetSummaryInfoResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -40,6 +50,8 @@ public class GetSummaryInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -101,6 +113,8 @@ public class GetSummaryInfoResponseBody extends TeaModel {
 
     public static class GetSummaryInfoResponseBodyAgentBotInstanceSummaryList extends TeaModel {
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
@@ -108,6 +122,8 @@ public class GetSummaryInfoResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Total number of outbound calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -115,6 +131,8 @@ public class GetSummaryInfoResponseBody extends TeaModel {
         public Long totalCallCount;
 
         /**
+         * <p>Total call duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -122,6 +140,8 @@ public class GetSummaryInfoResponseBody extends TeaModel {
         public Long totalCallTime;
 
         /**
+         * <p>Used recording storage space, in MB.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

@@ -5,15 +5,17 @@ import com.aliyun.tea.*;
 
 public class DeleteDialogueFlowRequest extends TeaModel {
     /**
+     * <p>The ID of the dialogue flow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>40a1457a-d2f3-43cf-ac81-c9e14cf07d88</p>
+     * <p>caab25d1-1f30-4996-8135-0036f5661b43</p>
      */
     @NameInMap("DialogueFlowId")
     public String dialogueFlowId;
 
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class DeleteDialogueFlowRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the script.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

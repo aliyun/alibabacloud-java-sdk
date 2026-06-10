@@ -4,10 +4,17 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class ListBeebotIntentUserSayRequest extends TeaModel {
+    /**
+     * <p>The keyword in the user utterance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>知道</p>
+     */
     @NameInMap("Content")
     public String content;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +24,7 @@ public class ListBeebotIntentUserSayRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The intent ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +34,7 @@ public class ListBeebotIntentUserSayRequest extends TeaModel {
     public String intentId;
 
     /**
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +44,7 @@ public class ListBeebotIntentUserSayRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to display on each page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +54,7 @@ public class ListBeebotIntentUserSayRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The scenario ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

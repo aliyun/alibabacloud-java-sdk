@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DownloadScriptRecordingResponseBody extends TeaModel {
     /**
+     * <p>API status code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Parameters</p>
+     */
     @NameInMap("DownloadParams")
     public DownloadScriptRecordingResponseBodyDownloadParams downloadParams;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class DownloadScriptRecordingResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>API message</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -29,6 +38,8 @@ public class DownloadScriptRecordingResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -36,6 +47,8 @@ public class DownloadScriptRecordingResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Success</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class DownloadScriptRecordingResponseBody extends TeaModel {
 
     public static class DownloadScriptRecordingResponseBodyDownloadParams extends TeaModel {
         /**
+         * <p>Recording file name</p>
+         * 
          * <strong>example:</strong>
          * <p>281eb174-3865-41c1-9274-7b6813edadab.wav</p>
          */
@@ -104,6 +119,8 @@ public class DownloadScriptRecordingResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>A URL pointing to the recording file. Use this address for playback or download.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://tiangong-staging.oss-cn-shanghai.aliyuncs.com/record/281eb174-3865-41c1-9274-7b6813edadab.wav?Expires=1578624046&OSSAccessKeyId=LTAI****cqw&Signature=dL2dxWS6VcdZrvG9xOMOBMSP3Fg%3D">http://tiangong-staging.oss-cn-shanghai.aliyuncs.com/record/281eb174-3865-41c1-9274-7b6813edadab.wav?Expires=1578624046&amp;OSSAccessKeyId=LTAI****cqw&amp;Signature=dL2dxWS6VcdZrvG9xOMOBMSP3Fg%3D</a></p>
          */

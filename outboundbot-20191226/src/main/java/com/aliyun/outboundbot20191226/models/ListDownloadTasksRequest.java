@@ -4,10 +4,17 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class ListDownloadTasksRequest extends TeaModel {
+    /**
+     * <p>Instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ae4572af-376f-439f-8970-38764acbaa91</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
+     * <p>Page number</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +24,7 @@ public class ListDownloadTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Count</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

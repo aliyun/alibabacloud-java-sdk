@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveContactWhiteListRequest extends TeaModel {
     /**
+     * <p>The contact whitelist. This parameter is deprecated.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,13 +14,16 @@ public class SaveContactWhiteListRequest extends TeaModel {
     public java.util.List<String> contactWhiteListList;
 
     /**
+     * <p>The whitelist. This parameter is required.</p>
+     * 
      * <strong>example:</strong>
-     * <p>{}</p>
+     * <p>[{&quot;phoneNumber&quot;:&quot;132322&quot;,&quot;remark&quot;:&quot;123321&quot;,&quot;name&quot;:&quot;ccc1&quot;,&quot;creator&quot;:&quot;ccc222&quot;}]</p>
      */
     @NameInMap("ContactWhiteListsJson")
     public String contactWhiteListsJson;
 
     /**
+     * <p>The instance ID. This parameter is required.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

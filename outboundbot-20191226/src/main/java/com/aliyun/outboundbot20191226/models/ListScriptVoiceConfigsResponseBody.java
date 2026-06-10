@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListScriptVoiceConfigsResponseBody extends TeaModel {
     /**
+     * <p>The API status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -26,16 +32,23 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The paginated list of script voice configurations.</p>
+     */
     @NameInMap("ScriptVoiceConfigs")
     public ListScriptVoiceConfigsResponseBodyScriptVoiceConfigs scriptVoiceConfigs;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,16 +110,26 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
 
     public static class ListScriptVoiceConfigsResponseBodyScriptVoiceConfigsList extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>bdd49242-114c-4045-b1d1-25ccc1756c75</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The text content of the script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>请问你是 @name 吗</p>
+         */
         @NameInMap("ScriptContent")
         public String scriptContent;
 
         /**
+         * <p>The script ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>a7441a05-43bb-4a2d-acb0-365f245d7a5b</p>
          */
@@ -114,6 +137,8 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
         public String scriptId;
 
         /**
+         * <p>The ID of the voice configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>2c8fa91f-9856-4145-90f2-08252f09bc18</p>
          */
@@ -121,6 +146,8 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
         public String scriptVoiceConfigId;
 
         /**
+         * <p>The relationship between the script and the audio file.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
          */
@@ -128,6 +155,8 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
         public String scriptWaveformRelation;
 
         /**
+         * <p>The source of the script.</p>
+         * 
          * <strong>example:</strong>
          * <p>DIALOGUE_FLOW</p>
          */
@@ -135,6 +164,8 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>The voice type.</p>
+         * 
          * <strong>example:</strong>
          * <p>TTS</p>
          */
@@ -205,10 +236,15 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
     }
 
     public static class ListScriptVoiceConfigsResponseBodyScriptVoiceConfigs extends TeaModel {
+        /**
+         * <p>An array of script voice configuration objects.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListScriptVoiceConfigsResponseBodyScriptVoiceConfigsList> list;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -216,6 +252,8 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -223,6 +261,8 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

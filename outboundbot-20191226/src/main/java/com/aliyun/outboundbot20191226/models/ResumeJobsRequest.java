@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResumeJobsRequest extends TeaModel {
     /**
+     * <p>Filter condition: Specifies whether to restart all jobs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ResumeJobsRequest extends TeaModel {
     public Boolean all;
 
     /**
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class ResumeJobsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Filter condition: Task group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>de48407d-309e-451a-81ec-6fb11f8fdbf3</p>
      */
@@ -30,6 +34,11 @@ public class ResumeJobsRequest extends TeaModel {
     public String jobGroupId;
 
     /**
+     * <p>Job ID list.</p>
+     * <blockquote>
+     * <p>This parameter is required when All is false.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>b72425bd-7871-4050-838e-033d80d754b7</p>
      */
@@ -37,6 +46,11 @@ public class ResumeJobsRequest extends TeaModel {
     public java.util.List<String> jobId;
 
     /**
+     * <p>Third-party ID of the job.</p>
+     * <blockquote>
+     * <p>This is the ReferenceId uploaded by the customer when uploading the outbound list.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>d5971d98-7312-4f0e-a918-a17d67133e28</p>
      */
@@ -44,6 +58,8 @@ public class ResumeJobsRequest extends TeaModel {
     public java.util.List<String> jobReferenceId;
 
     /**
+     * <p>Filter condition: Scenario ID (historical parameter, deprecated).</p>
+     * 
      * <strong>example:</strong>
      * <p>b016fbdb-b81c-4c06-8870-cb36b8783b6d</p>
      */

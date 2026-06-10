@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGroupExecutingInfoRequest extends TeaModel {
     /**
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeGroupExecutingInfoRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Task group ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

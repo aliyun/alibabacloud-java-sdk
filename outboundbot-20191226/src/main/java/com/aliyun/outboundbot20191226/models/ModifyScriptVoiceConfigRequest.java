@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyScriptVoiceConfigRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyScriptVoiceConfigRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The script ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ModifyScriptVoiceConfigRequest extends TeaModel {
     public String scriptId;
 
     /**
+     * <p>The script voice configuration ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,14 +34,30 @@ public class ModifyScriptVoiceConfigRequest extends TeaModel {
     @NameInMap("ScriptVoiceConfigId")
     public String scriptVoiceConfigId;
 
+    /**
+     * <p>Maps script segments to audio recordings. This parameter is required only when Type is set to WAVEFORM.</p>
+     * <blockquote>
+     * <p>To obtain the value for the ScriptWaveformId parameter, call the CreateScriptWaveform operation. The ScriptContent parameter specifies the text that corresponds to the audio segment.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;ScriptContent&quot;:&quot;请问你是&quot;,&quot;ScriptWaveformId&quot;:&quot;07db2f0a-acb2-4e68-b9f4-66397414f50c&quot;},{&quot;ScriptContent&quot;:&quot;吗？&quot;,&quot;ScriptWaveformId&quot;:&quot;c2a69440-03e3-406e-b0a9-a9791fccb31b&quot;}]</p>
+     */
     @NameInMap("ScriptWaveformRelation")
     public String scriptWaveformRelation;
 
     /**
+     * <p>The audio source type.</p>
+     * <ul>
+     * <li><p>WAVEFORM: A pre-recorded audio file.</p>
+     * </li>
+     * <li><p>TTS: Audio generated from text using the text-to-speech (TTS) service.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>WAVEFORM</p>
+     * <p>TTS</p>
      */
     @NameInMap("Type")
     public String type;

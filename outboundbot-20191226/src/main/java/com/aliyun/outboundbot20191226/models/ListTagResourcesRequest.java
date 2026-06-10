@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
+     * <p>The token to start the next query</p>
+     * 
      * <strong>example:</strong>
      * <p>b949ae1f-01dc-4191-ae5a-70fbe6772fd8</p>
      */
@@ -12,6 +14,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Deprecated</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class ListTagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The list of resource IDs. The value range of n is [1, 50].</p>
+     * 
      * <strong>example:</strong>
      * <p>ResourceId.1=b949ae1f-01dc-4191-ae5a-70fbe6772fd8</p>
      */
@@ -28,14 +33,18 @@ public class ListTagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
+     * <p>Resource type</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>instance</p>
+     * <p>INSTANCE</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The list of tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
@@ -86,6 +95,8 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
+         * <p>The tag key. The value range of n is [1, 20].</p>
+         * 
          * <strong>example:</strong>
          * <p>Tag.1.Key=key1</p>
          */
@@ -93,6 +104,8 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value. The value range of n is [1, 20].</p>
+         * 
          * <strong>example:</strong>
          * <p>Tag.1.Value=value1</p>
          */

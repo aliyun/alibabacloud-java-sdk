@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExportScriptRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ExportScriptRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The scenario ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

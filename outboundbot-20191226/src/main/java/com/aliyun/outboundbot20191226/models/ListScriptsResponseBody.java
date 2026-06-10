@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListScriptsResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListScriptsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class ListScriptsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -26,16 +32,23 @@ public class ListScriptsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The paginated list of scripts.</p>
+     */
     @NameInMap("Scripts")
     public ListScriptsResponseBodyScripts scripts;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -96,12 +109,30 @@ public class ListScriptsResponseBody extends TeaModel {
     }
 
     public static class ListScriptsResponseBodyScriptsListNluProfile extends TeaModel {
+        /**
+         * <p>The function name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sanfang_test</p>
+         */
         @NameInMap("FcFunction")
         public String fcFunction;
 
+        /**
+         * <p>The URL of the function trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://sanfang_test-xxxxxx.cn-shanghai-vpc.fcapp.run">http://sanfang_test-xxxxxx.cn-shanghai-vpc.fcapp.run</a></p>
+         */
         @NameInMap("FcHttpTriggerUrl")
         public String fcHttpTriggerUrl;
 
+        /**
+         * <p>The function region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("FcRegion")
         public String fcRegion;
 
@@ -137,16 +168,36 @@ public class ListScriptsResponseBody extends TeaModel {
     }
 
     public static class ListScriptsResponseBodyScriptsList extends TeaModel {
+        /**
+         * <p>The agent access key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14791f5f226b4878b3d9b676a0291234</p>
+         */
         @NameInMap("AgentKey")
         public String agentKey;
 
+        /**
+         * <p>Indicates whether the agent is an LLM agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("AgentLlm")
         public Boolean agentLlm;
 
+        /**
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1578965079000</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
+         * <p>The debug status.</p>
+         * 
          * <strong>example:</strong>
          * <p>DRAFTED</p>
          */
@@ -154,16 +205,26 @@ public class ListScriptsResponseBody extends TeaModel {
         public String debugStatus;
 
         /**
+         * <p>Indicates whether emotion detection is enabled. This parameter is always false for LLM-based scripts.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("EmotionEnable")
         public Boolean emotionEnable;
 
+        /**
+         * <p>The industry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>金融</p>
+         */
         @NameInMap("Industry")
         public String industry;
 
         /**
+         * <p>Indicates whether the debug version of the script is a draft.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -171,6 +232,8 @@ public class ListScriptsResponseBody extends TeaModel {
         public Boolean isDebugDrafted;
 
         /**
+         * <p>Indicates whether the script is a draft.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -178,6 +241,8 @@ public class ListScriptsResponseBody extends TeaModel {
         public Boolean isDrafted;
 
         /**
+         * <p>Indicates whether the script is for a preset scene.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -185,6 +250,8 @@ public class ListScriptsResponseBody extends TeaModel {
         public Boolean isPreset;
 
         /**
+         * <p>Indicates whether long wait is enabled. This parameter is always false for LLM-based scripts.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -192,6 +259,8 @@ public class ListScriptsResponseBody extends TeaModel {
         public Boolean longWaitEnable;
 
         /**
+         * <p>Indicates whether mini playback is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -199,41 +268,86 @@ public class ListScriptsResponseBody extends TeaModel {
         public Boolean miniPlaybackEnable;
 
         /**
+         * <p>Indicates whether graceful barge-in is enabled. This parameter is always false for LLM-based scripts.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("NewBargeInEnable")
         public Boolean newBargeInEnable;
 
+        /**
+         * <p>The NLU access type, which is set to Managed for LLM scenarios and is empty for small model scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>空或者Managed</p>
+         */
         @NameInMap("NluAccessType")
         public String nluAccessType;
 
+        /**
+         * <p>The NLU engine, which is set to Prompts for LLM scenarios and is empty for small model scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>空或者Prompts</p>
+         */
         @NameInMap("NluEngine")
         public String nluEngine;
 
+        /**
+         * <p>The Function Compute configuration for function calling mode.</p>
+         */
         @NameInMap("NluProfile")
         public ListScriptsResponseBodyScriptsListNluProfile nluProfile;
 
+        /**
+         * <p>The rejection reason.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>话术用语不合规</p>
+         */
         @NameInMap("RejectReason")
         public String rejectReason;
 
+        /**
+         * <p>The scene.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>电销</p>
+         */
         @NameInMap("Scene")
         public String scene;
 
+        /**
+         * <p>The script description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>电话销售话术</p>
+         */
         @NameInMap("ScriptDescription")
         public String scriptDescription;
 
         /**
+         * <p>The script ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>8d6a6e41-8093-49af-a9d1-0281878758ac</p>
          */
         @NameInMap("ScriptId")
         public String scriptId;
 
+        /**
+         * <p>The script name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>电话销售话术</p>
+         */
         @NameInMap("ScriptName")
         public String scriptName;
 
         /**
+         * <p>The script status.</p>
+         * 
          * <strong>example:</strong>
          * <p>DRAFTED</p>
          */
@@ -241,12 +355,20 @@ public class ListScriptsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1578965079000</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
+        /**
+         * <p>The agent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1160195</p>
+         */
         @NameInMap("agentId")
         public Long agentId;
 
@@ -442,10 +564,15 @@ public class ListScriptsResponseBody extends TeaModel {
     }
 
     public static class ListScriptsResponseBodyScripts extends TeaModel {
+        /**
+         * <p>The list of scripts.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListScriptsResponseBodyScriptsList> list;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -453,6 +580,8 @@ public class ListScriptsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -460,6 +589,8 @@ public class ListScriptsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of scripts.</p>
+         * 
          * <strong>example:</strong>
          * <p>15</p>
          */

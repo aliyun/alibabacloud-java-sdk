@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyTTSConfigResponseBody extends TeaModel {
     /**
+     * <p>API status code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ModifyTTSConfigResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class ModifyTTSConfigResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>API message</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -26,6 +32,8 @@ public class ModifyTTSConfigResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>f765d3ee-ec03-4765-b235-6877501d99d1</p>
      */
@@ -33,12 +41,17 @@ public class ModifyTTSConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>TTS configuration</p>
+     */
     @NameInMap("TTSConfig")
     public ModifyTTSConfigResponseBodyTTSConfig TTSConfig;
 
@@ -97,6 +110,8 @@ public class ModifyTTSConfigResponseBody extends TeaModel {
 
     public static class ModifyTTSConfigResponseBodyTTSConfig extends TeaModel {
         /**
+         * <p>Instance ID</p>
+         * 
          * <strong>example:</strong>
          * <p>291cfc6a-8703-4bdd-a99d-9cba32d5288a</p>
          */
@@ -104,15 +119,19 @@ public class ModifyTTSConfigResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>语调
-         * [-500,500]之间整数。默认值为0。</p>
-         * <p>大于0表示升高音高。</p>
-         * <p>小于0表示降低音高。</p>
+         * <p>Pitch. An integer between -500 and 500. Default is 0.</p>
+         * <p>A value greater than 0 raises pitch.</p>
+         * <p>A value less than 0 lowers pitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PitchRate")
         public String pitchRate;
 
         /**
+         * <p>Scenario ID</p>
+         * 
          * <strong>example:</strong>
          * <p>947e0875-b5d4-4b33-b18c-7b2cf85bcb4f</p>
          */
@@ -120,6 +139,8 @@ public class ModifyTTSConfigResponseBody extends TeaModel {
         public String scriptId;
 
         /**
+         * <p>Speech rate</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -127,6 +148,8 @@ public class ModifyTTSConfigResponseBody extends TeaModel {
         public String speechRate;
 
         /**
+         * <p>Configuration ID</p>
+         * 
          * <strong>example:</strong>
          * <p>2a07b634-e15d-445f-bbcb-fc4ea2df7b87</p>
          */
@@ -134,6 +157,8 @@ public class ModifyTTSConfigResponseBody extends TeaModel {
         public String TTSConfigId;
 
         /**
+         * <p>Voice model</p>
+         * 
          * <strong>example:</strong>
          * <p>xiaoyun</p>
          */
@@ -141,6 +166,8 @@ public class ModifyTTSConfigResponseBody extends TeaModel {
         public String voice;
 
         /**
+         * <p>Volume</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
