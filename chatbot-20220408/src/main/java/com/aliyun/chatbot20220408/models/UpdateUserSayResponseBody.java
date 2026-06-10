@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateUserSayResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2356fg3wf34634vdt23wef2</p>
      */
@@ -12,6 +14,8 @@ public class UpdateUserSayResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the updated user say.</p>
+     * 
      * <strong>example:</strong>
      * <p>34512323</p>
      */

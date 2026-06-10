@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDSEntityValueRequest extends TeaModel {
     /**
+     * <p>The key for the business space. If omitted, the default business space is used. You can get this key from the Business Management page of your primary account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,7 @@ public class ListDSEntityValueRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The ID of the entity.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class ListDSEntityValueRequest extends TeaModel {
     public Long entityId;
 
     /**
+     * <p>The ID of the entity value.</p>
+     * 
      * <strong>example:</strong>
      * <p>234</p>
      */
@@ -28,6 +33,7 @@ public class ListDSEntityValueRequest extends TeaModel {
     public Long entityValueId;
 
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,10 +42,18 @@ public class ListDSEntityValueRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The keyword used to search for entity values and their synonyms.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>书</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
+     * <p>The page number. Defaults to 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -47,6 +61,8 @@ public class ListDSEntityValueRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The page size. Defaults to 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

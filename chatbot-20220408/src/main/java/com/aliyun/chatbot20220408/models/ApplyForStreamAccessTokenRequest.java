@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ApplyForStreamAccessTokenRequest extends TeaModel {
     /**
+     * <p>Workspace key. If not set, the default workspace is accessed. The key value can be obtained from the Alibaba Cloud account workspace Management page.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */

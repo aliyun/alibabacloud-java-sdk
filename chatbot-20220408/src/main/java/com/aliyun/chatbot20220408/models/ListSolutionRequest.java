@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSolutionRequest extends TeaModel {
     /**
+     * <p>The agent key. If omitted, the default agent is used. You can find the key on the agent management page of your main account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,7 @@ public class ListSolutionRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The knowledge ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

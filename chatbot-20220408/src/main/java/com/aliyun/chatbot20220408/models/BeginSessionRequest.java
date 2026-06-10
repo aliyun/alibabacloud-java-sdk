@@ -5,16 +5,14 @@ import com.aliyun.tea.*;
 
 public class BeginSessionRequest extends TeaModel {
     /**
+     * <p>The key for the business space. If not specified, the default business space is used. You can find the key on the Business Management page of your main account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
     @NameInMap("AgentKey")
     public String agentKey;
 
-    /**
-     * <strong>example:</strong>
-     * <p>chatbot-cn-mp90s2lrk00050</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
 

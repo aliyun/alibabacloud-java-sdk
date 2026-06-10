@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDocResponseBody extends TeaModel {
     /**
+     * <p>The knowledge ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001905617</p>
      */
@@ -12,6 +14,8 @@ public class CreateDocResponseBody extends TeaModel {
     public Long knowledgeId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>07B270A4-61D8-57F6-A609-A3C216CFB872</p>
      */

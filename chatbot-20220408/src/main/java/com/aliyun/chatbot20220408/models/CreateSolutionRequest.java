@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateSolutionRequest extends TeaModel {
     /**
+     * <p>The key of the business space. If this parameter is omitted, the system uses the default business space. You can obtain the key from the Business Management page of your primary account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,12 +14,18 @@ public class CreateSolutionRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The content of the knowledge answer.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>答案内容</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
+     * <p>The answer type. Valid values: <code>0</code> (plain text) and <code>1</code> (rich text).</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -25,6 +33,7 @@ public class CreateSolutionRequest extends TeaModel {
     public Integer contentType;
 
     /**
+     * <p>The ID of the knowledge.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,11 +43,15 @@ public class CreateSolutionRequest extends TeaModel {
     public Long knowledgeId;
 
     /**
+     * <p>A list of perspective codes.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PerspectiveCodes")
     public java.util.List<String> perspectiveCodes;
 
+    /**
+     * <p>A list of tag IDs.</p>
+     */
     @NameInMap("TagIdList")
     public java.util.List<Long> tagIdList;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDocResponseBody extends TeaModel {
     /**
+     * <p>The business code.</p>
+     * 
      * <strong>example:</strong>
      * <p>bizcode123</p>
      */
@@ -12,6 +14,8 @@ public class DescribeDocResponseBody extends TeaModel {
     public String bizCode;
 
     /**
+     * <p>The category ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30000049006</p>
      */
@@ -19,6 +23,11 @@ public class DescribeDocResponseBody extends TeaModel {
     public Long categoryId;
 
     /**
+     * <p>The configuration for document parsing and splitting. Key: <code>Splitter</code>. Valid values: <code>paragraphSplitter</code> (splits by recognition level, default) and <code>treeSplitter</code> (splits by rule level).</p>
+     * <p>Key: <code>ChunkSize</code>. The size of each document chunk, which must be between 200 and 800. The default value is 500.</p>
+     * <p>Key: <code>TreePatterns</code>. The patterns for the rule-based hierarchy. The default value is [].</p>
+     * <p>Key: <code>TitleSource</code>. The source of the document title. Valid values: <code>ocrTitle</code> (OCR-recognized title, default) and <code>docName</code> (document name).</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;Splitter&quot;:&quot;treeSplitter&quot;,&quot;ChunkSize&quot;:500,&quot;TreePatterns&quot;:[&quot;^# .<em>&quot;,&quot;^## .</em>&quot;,&quot;^### .<em>&quot;,&quot;^#### .</em>&quot;],&quot;TitleSource&quot;:&quot;docName&quot;}</p>
      */
@@ -26,6 +35,8 @@ public class DescribeDocResponseBody extends TeaModel {
     public String config;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-04-12T06:30:17Z</p>
      */
@@ -33,28 +44,53 @@ public class DescribeDocResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The creator ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1111111111</p>
      */
     @NameInMap("CreateUserId")
     public Long createUserId;
 
+    /**
+     * <p>The creator name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>张三</p>
+     */
     @NameInMap("CreateUserName")
     public String createUserName;
 
+    /**
+     * <p>The document details.</p>
+     */
     @NameInMap("DocInfo")
     public DescribeDocResponseBodyDocInfo docInfo;
 
+    /**
+     * <p>A list of metadata sets, where each set corresponds to a business view.</p>
+     */
     @NameInMap("DocMetadata")
     public java.util.List<DescribeDocResponseBodyDocMetadata> docMetadata;
 
+    /**
+     * <p>The document name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>文档名称</p>
+     */
     @NameInMap("DocName")
     public String docName;
 
+    /**
+     * <p>A list of document tags.</p>
+     */
     @NameInMap("DocTags")
     public java.util.List<DescribeDocResponseBodyDocTags> docTags;
 
     /**
+     * <p>The effective status, calculated from <code>StartDate</code> and <code>EndDate</code>.<br>20: Active<br>21: Expired<br>22: Pending<br><br><br></p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -62,6 +98,8 @@ public class DescribeDocResponseBody extends TeaModel {
     public Integer effectStatus;
 
     /**
+     * <p>The end time in UTC format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-04-27T06:08:54Z</p>
      */
@@ -69,6 +107,8 @@ public class DescribeDocResponseBody extends TeaModel {
     public String endDate;
 
     /**
+     * <p>The knowledge ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001979424</p>
      */
@@ -76,6 +116,8 @@ public class DescribeDocResponseBody extends TeaModel {
     public Long knowledgeId;
 
     /**
+     * <p>The document\&quot;s metadata.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;code&quot;:&quot;xxx&quot;}</p>
      */
@@ -83,6 +125,8 @@ public class DescribeDocResponseBody extends TeaModel {
     public String meta;
 
     /**
+     * <p>The modification time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-11-25T08:56:55Z</p>
      */
@@ -90,26 +134,44 @@ public class DescribeDocResponseBody extends TeaModel {
     public String modifyTime;
 
     /**
+     * <p>The modifier ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2222222222</p>
      */
     @NameInMap("ModifyUserId")
     public Long modifyUserId;
 
+    /**
+     * <p>The modifier name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>李四</p>
+     */
     @NameInMap("ModifyUserName")
     public String modifyUserName;
 
     /**
+     * <p>Indicates whether a failed task can be retried.<br><code>true</code>: The task can be retried.<br><code>false</code>: The task cannot be retried.<br><br></p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("ProcessCanRetry")
     public Boolean processCanRetry;
 
+    /**
+     * <p>The processing message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>任务处理成功</p>
+     */
     @NameInMap("ProcessMessage")
     public String processMessage;
 
     /**
+     * <p>The processing status of the task.<br>-1: Queued<br>0: Succeeded<br>1: Parsing<br>2: Processing<br>3: Failed<br><br><br><br><br></p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -117,7 +179,7 @@ public class DescribeDocResponseBody extends TeaModel {
     public Integer processStatus;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7F132693-212A-40A9-8A81-11E7694E478B</p>
@@ -126,6 +188,8 @@ public class DescribeDocResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The start time in UTC format.</p>
+     * 
      * <strong>example:</strong>
      * <p>1979-12-31T16:00:00Z</p>
      */
@@ -133,15 +197,29 @@ public class DescribeDocResponseBody extends TeaModel {
     public String startDate;
 
     /**
+     * <p>The edit status.<br>1: Unpublished<br>2: Published<br>3: Updated but not published<br><br><br></p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <p>The document title.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试标题</p>
+     */
     @NameInMap("Title")
     public String title;
 
+    /**
+     * <p>The OSS address of the document.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://doc2bot-bucket-cloud.oss-cn-shanghai.aliyuncs.com/doc2bot/input/%E6%96%87%E6%A1%A3%E9%97%AE%E7%AD%94%E8%AF%B4%E6%98%8E%E4%B9%A6_V1.pdf">https://doc2bot-bucket-cloud.oss-cn-shanghai.aliyuncs.com/doc2bot/input/文档问答说明书_V1.pdf</a></p>
+     */
     @NameInMap("Url")
     public String url;
 
@@ -352,6 +430,8 @@ public class DescribeDocResponseBody extends TeaModel {
 
     public static class DescribeDocResponseBodyDocInfoDocParas extends TeaModel {
         /**
+         * <p>The paragraph level.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -359,16 +439,26 @@ public class DescribeDocResponseBody extends TeaModel {
         public Integer paraLevel;
 
         /**
+         * <p>The paragraph number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("ParaNo")
         public Integer paraNo;
 
+        /**
+         * <p>The paragraph content. The content can be plain text, text extracted from an image using optical character recognition (OCR), or a table in Markdown format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>内容</p>
+         */
         @NameInMap("ParaText")
         public String paraText;
 
         /**
+         * <p>The paragraph type.<br>text: Text<br>figure: Image<br>table: Table<br><br><br></p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -415,6 +505,9 @@ public class DescribeDocResponseBody extends TeaModel {
     }
 
     public static class DescribeDocResponseBodyDocInfo extends TeaModel {
+        /**
+         * <p>The paragraphs of the document.</p>
+         */
         @NameInMap("DocParas")
         public java.util.List<DescribeDocResponseBodyDocInfoDocParas> docParas;
 
@@ -434,12 +527,21 @@ public class DescribeDocResponseBody extends TeaModel {
     }
 
     public static class DescribeDocResponseBodyDocMetadataMetaCellInfoDTOList extends TeaModel {
+        /**
+         * <p>The code of the field.</p>
+         */
         @NameInMap("FieldCode")
         public String fieldCode;
 
+        /**
+         * <p>The field name.</p>
+         */
         @NameInMap("FieldName")
         public String fieldName;
 
+        /**
+         * <p>The value of the field.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -475,12 +577,21 @@ public class DescribeDocResponseBody extends TeaModel {
     }
 
     public static class DescribeDocResponseBodyDocMetadata extends TeaModel {
+        /**
+         * <p>The ID of the business view.</p>
+         */
         @NameInMap("BusinessViewId")
         public String businessViewId;
 
+        /**
+         * <p>The business view name.</p>
+         */
         @NameInMap("BusinessViewName")
         public String businessViewName;
 
+        /**
+         * <p>A list of metadata cells.</p>
+         */
         @NameInMap("MetaCellInfoDTOList")
         public java.util.List<DescribeDocResponseBodyDocMetadataMetaCellInfoDTOList> metaCellInfoDTOList;
 
@@ -516,18 +627,48 @@ public class DescribeDocResponseBody extends TeaModel {
     }
 
     public static class DescribeDocResponseBodyDocTags extends TeaModel {
+        /**
+         * <p>Indicates whether the tag represents all items by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("DefaultTag")
         public Boolean defaultTag;
 
+        /**
+         * <p>The tag\&quot;s group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3610</p>
+         */
         @NameInMap("GroupId")
         public Long groupId;
 
+        /**
+         * <p>The tag group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文章</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The tag ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1201</p>
+         */
         @NameInMap("TagId")
         public Long tagId;
 
+        /**
+         * <p>The tag name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>小说</p>
+         */
         @NameInMap("TagName")
         public String tagName;
 

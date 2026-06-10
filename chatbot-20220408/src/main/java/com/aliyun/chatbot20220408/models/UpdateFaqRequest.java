@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateFaqRequest extends TeaModel {
     /**
+     * <p>The key for the business space. If this parameter is omitted, the default business space is used. You can find this key on the Business Management page of your main account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,7 @@ public class UpdateFaqRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The ID of the knowledge entry\&quot;s category.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class UpdateFaqRequest extends TeaModel {
     public Long categoryId;
 
     /**
+     * <p>The expiration date and time. The value must be in ISO 8601 format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2030-12-31T16:00:00Z</p>
      */
@@ -28,6 +33,7 @@ public class UpdateFaqRequest extends TeaModel {
     public String endDate;
 
     /**
+     * <p>The ID of the knowledge entry.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,17 +43,26 @@ public class UpdateFaqRequest extends TeaModel {
     public Long knowledgeId;
 
     /**
+     * <p>The effective start date and time. The value must be in ISO 8601 format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-05-27T05:18:20Z</p>
      */
     @NameInMap("StartDate")
     public String startDate;
 
+    /**
+     * <p>A list of tag IDs.</p>
+     */
     @NameInMap("TagIdList")
     public java.util.List<Long> tagIdList;
 
     /**
+     * <p>The knowledge title.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试标题</p>
      */
     @NameInMap("Title")
     public String title;

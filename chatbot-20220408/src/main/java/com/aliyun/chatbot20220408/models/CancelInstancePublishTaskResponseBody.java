@@ -4,20 +4,33 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class CancelInstancePublishTaskResponseBody extends TeaModel {
+    /**
+     * <p>A list of business types.</p>
+     */
     @NameInMap("BizTypeList")
     public java.util.List<String> bizTypeList;
 
     /**
+     * <p>The creation time of the task in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-04-12T06:30:17Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The error message if the task fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>检查待发布模块是否空闲发生错误，faq</p>
+     */
     @NameInMap("Error")
     public String error;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8522</p>
      */
@@ -25,6 +38,8 @@ public class CancelInstancePublishTaskResponseBody extends TeaModel {
     public Long id;
 
     /**
+     * <p>The last modification time of the task in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-04-12T06:30:33Z</p>
      */
@@ -32,6 +47,8 @@ public class CancelInstancePublishTaskResponseBody extends TeaModel {
     public String modifyTime;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5CBF0581-EAE7-1DC4-95C6-A089656A1E2D</p>
      */
@@ -39,6 +56,8 @@ public class CancelInstancePublishTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task ID, returned as a string.</p>
+     * 
      * <strong>example:</strong>
      * <p>8522</p>
      */
@@ -46,6 +65,8 @@ public class CancelInstancePublishTaskResponseBody extends TeaModel {
     public String response;
 
     /**
+     * <p>The task status.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE_ABORTED</p>
      */

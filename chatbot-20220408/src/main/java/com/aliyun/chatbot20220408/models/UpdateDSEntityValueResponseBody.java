@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateDSEntityValueResponseBody extends TeaModel {
     /**
+     * <p>The ID of the updated entity value.</p>
+     * 
      * <strong>example:</strong>
      * <p>2342377423</p>
      */
@@ -12,6 +14,8 @@ public class UpdateDSEntityValueResponseBody extends TeaModel {
     public Long entityValueId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>sDag3g43wesf2</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class SearchFaqResponseBody extends TeaModel {
+    /**
+     * <p>The list of matching FAQs.</p>
+     */
     @NameInMap("FaqHits")
     public java.util.List<SearchFaqResponseBodyFaqHits> faqHits;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class SearchFaqResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class SearchFaqResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E45491D5-7E0A-42C6-9B21-91D1066B1475</p>
      */
@@ -29,6 +38,8 @@ public class SearchFaqResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of matched entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>1075</p>
      */
@@ -82,6 +93,8 @@ public class SearchFaqResponseBody extends TeaModel {
 
     public static class SearchFaqResponseBodyFaqHits extends TeaModel {
         /**
+         * <p>The category ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>30000055639</p>
          */
@@ -89,6 +102,8 @@ public class SearchFaqResponseBody extends TeaModel {
         public Long categoryId;
 
         /**
+         * <p>The creation time (UTC).</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-04-02T03:09:30Z</p>
          */
@@ -96,6 +111,8 @@ public class SearchFaqResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The creator ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>18453</p>
          */
@@ -103,6 +120,8 @@ public class SearchFaqResponseBody extends TeaModel {
         public Long createUserId;
 
         /**
+         * <p>The creator\&quot;s username.</p>
+         * 
          * <strong>example:</strong>
          * <p>test01</p>
          */
@@ -110,19 +129,29 @@ public class SearchFaqResponseBody extends TeaModel {
         public String createUserName;
 
         /**
+         * <p>The effective status of the FAQ. This status is determined by the StartDate and EndDate parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
         @NameInMap("EffectStatus")
         public Integer effectStatus;
 
+        /**
+         * <p>A list of matched similar titles.</p>
+         */
         @NameInMap("HitSimilarTitles")
         public java.util.List<String> hitSimilarTitles;
 
+        /**
+         * <p>A list of matched answers.</p>
+         */
         @NameInMap("HitSolutions")
         public java.util.List<String> hitSolutions;
 
         /**
+         * <p>The FAQ ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>30002145804</p>
          */
@@ -130,6 +159,8 @@ public class SearchFaqResponseBody extends TeaModel {
         public Long knowledgeId;
 
         /**
+         * <p>The modification time (UTC).</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-04-02T03:09:30Z</p>
          */
@@ -137,6 +168,8 @@ public class SearchFaqResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
+         * <p>The modifier ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>18453</p>
          */
@@ -144,6 +177,8 @@ public class SearchFaqResponseBody extends TeaModel {
         public Long modifyUserId;
 
         /**
+         * <p>The modifier\&quot;s username.</p>
+         * 
          * <strong>example:</strong>
          * <p>test01</p>
          */
@@ -151,12 +186,20 @@ public class SearchFaqResponseBody extends TeaModel {
         public String modifyUserName;
 
         /**
+         * <p>The FAQ status.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The title of the FAQ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试标题</p>
+         */
         @NameInMap("Title")
         public String title;
 

@@ -4,10 +4,15 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class CreateCategoryResponseBody extends TeaModel {
+    /**
+     * <p>Details of the created category.</p>
+     */
     @NameInMap("Category")
     public CreateCategoryResponseBodyCategory category;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A629A28F-F25E-5572-A679-FA46FB0151D6</p>
      */
@@ -36,20 +41,36 @@ public class CreateCategoryResponseBody extends TeaModel {
     }
 
     public static class CreateCategoryResponseBodyCategory extends TeaModel {
+        /**
+         * <p>The business code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bizcode123</p>
+         */
         @NameInMap("BizCode")
         public String bizCode;
 
         /**
+         * <p>The category ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>30000049006</p>
          */
         @NameInMap("CategoryId")
         public Long categoryId;
 
+        /**
+         * <p>The category name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>类目名称</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The ID of the parent category.</p>
+         * 
          * <strong>example:</strong>
          * <p>-1</p>
          */
@@ -57,6 +78,8 @@ public class CreateCategoryResponseBody extends TeaModel {
         public Long parentCategoryId;
 
         /**
+         * <p>The category status. A value of -1 indicates that the category has been deleted, but this change has not been published. A value of 0 indicates Normal.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

@@ -4,20 +4,33 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class CancelPublishTaskResponseBody extends TeaModel {
+    /**
+     * <p>A list of business types.</p>
+     */
     @NameInMap("BizTypeList")
     public java.util.List<String> bizTypeList;
 
     /**
+     * <p>The time when the task was created, in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-04-12T06:30:17Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The error message returned if the task fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>检查待发布模块是否空闲发生错误，faq</p>
+     */
     @NameInMap("Error")
     public String error;
 
     /**
+     * <p>The ID of the publish task.</p>
+     * 
      * <strong>example:</strong>
      * <p>8522</p>
      */
@@ -25,6 +38,8 @@ public class CancelPublishTaskResponseBody extends TeaModel {
     public Long id;
 
     /**
+     * <p>The time when the task was last modified, in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-04-12T06:30:33Z</p>
      */
@@ -32,6 +47,8 @@ public class CancelPublishTaskResponseBody extends TeaModel {
     public String modifyTime;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5CBF0581-EAE7-1DC4-95C6-A089656A1E2D</p>
      */
@@ -39,6 +56,8 @@ public class CancelPublishTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the publish task. This is a redundant field. We recommend that you use the <code>Id</code> field instead.</p>
+     * 
      * <strong>example:</strong>
      * <p>8522</p>
      */
@@ -46,6 +65,9 @@ public class CancelPublishTaskResponseBody extends TeaModel {
     public String response;
 
     /**
+     * <p>The task status. Valid values:</p>
+     * <p><code>FE_RUNNING</code>: in progress, <code>FE_SUCCESS</code>: succeeded, <code>FE_FAILED</code>: failed, <code>FE_ABORTED</code>: aborted.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE_ABORTED</p>
      */

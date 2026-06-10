@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDSEntityRequest extends TeaModel {
     /**
+     * <p>The key for the <code>business space</code>. If you omit this parameter, the default <code>business space</code> is used. You can get the key from the Business Management page of your <code>main account</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,7 @@ public class CreateDSEntityRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The <code>entity name</code>. The name can contain Chinese characters, uppercase and lowercase letters, digits, and underscores (_).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class CreateDSEntityRequest extends TeaModel {
     public String entityName;
 
     /**
+     * <p>The <code>entity type</code>. Valid values: <code>synonyms</code> and <code>regex</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>synonyms</p>
      */
@@ -28,6 +33,7 @@ public class CreateDSEntityRequest extends TeaModel {
     public String entityType;
 
     /**
+     * <p>The <code>instance ID</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

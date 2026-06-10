@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateIntentResponseBody extends TeaModel {
     /**
+     * <p>The ID of the updated intent.</p>
+     * 
      * <strong>example:</strong>
      * <p>234234234534</p>
      */
@@ -12,6 +14,8 @@ public class UpdateIntentResponseBody extends TeaModel {
     public Long intentId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>dfaf23dfas234234234534</p>
      */

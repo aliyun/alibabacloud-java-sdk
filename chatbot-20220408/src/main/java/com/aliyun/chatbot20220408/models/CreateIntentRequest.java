@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateIntentRequest extends TeaModel {
     /**
+     * <p>The key of the business space. If you do not specify this parameter, the default business space is used. You can get the key from the business management page of your main account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,7 @@ public class CreateIntentRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +23,9 @@ public class CreateIntentRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The intent definition.</p>
+     */
     @NameInMap("IntentDefinition")
     public CreateIntentRequestIntentDefinition intentDefinition;
 
@@ -54,6 +60,8 @@ public class CreateIntentRequest extends TeaModel {
 
     public static class CreateIntentRequestIntentDefinitionSlotInfos extends TeaModel {
         /**
+         * <p>Specifies whether the slot can have multiple values.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -61,6 +69,8 @@ public class CreateIntentRequest extends TeaModel {
         public Boolean array;
 
         /**
+         * <p>Specifies whether to encrypt the slot value.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -68,6 +78,8 @@ public class CreateIntentRequest extends TeaModel {
         public Boolean encrypt;
 
         /**
+         * <p>Specifies whether the slot is interactive.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -75,12 +87,17 @@ public class CreateIntentRequest extends TeaModel {
         public Boolean interactive;
 
         /**
+         * <p>The slot name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>天气</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The slot ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -90,7 +107,11 @@ public class CreateIntentRequest extends TeaModel {
         public String slotId;
 
         /**
+         * <p>The name of the associated entity.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>天气</p>
          */
         @NameInMap("Value")
         public String value;
@@ -151,15 +172,28 @@ public class CreateIntentRequest extends TeaModel {
     }
 
     public static class CreateIntentRequestIntentDefinition extends TeaModel {
+        /**
+         * <p>The intent alias.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>查天气意图</p>
+         */
         @NameInMap("AliasName")
         public String aliasName;
 
         /**
+         * <p>The intent name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>查天气意图</p>
          */
         @NameInMap("IntentName")
         public String intentName;
 
+        /**
+         * <p>An array of objects, each defining a slot for the intent.</p>
+         */
         @NameInMap("SlotInfos")
         public java.util.List<CreateIntentRequestIntentDefinitionSlotInfos> slotInfos;
 

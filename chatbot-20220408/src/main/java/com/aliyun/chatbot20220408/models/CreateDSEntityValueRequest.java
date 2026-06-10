@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDSEntityValueRequest extends TeaModel {
     /**
+     * <p>The business space key. If omitted, the default business space is used. You can obtain the key from the Business Management page of your primary account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,15 +14,17 @@ public class CreateDSEntityValueRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The entity value (or regular expression).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ada</p>
+     * <p>书类型</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
+     * <p>The entity ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class CreateDSEntityValueRequest extends TeaModel {
     public Long entityId;
 
     /**
+     * <p>The robot ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +43,9 @@ public class CreateDSEntityValueRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>A list of synonyms for the entity value.</p>
+     */
     @NameInMap("Synonyms")
     public java.util.List<String> synonyms;
 

@@ -4,23 +4,46 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class GetPublishTaskStateResponseBody extends TeaModel {
+    /**
+     * <p>The list of business types.</p>
+     */
     @NameInMap("BizTypeList")
     public java.util.List<String> bizTypeList;
 
     /**
+     * <p>The UTC time when the task was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-04-12T06:30:17Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The error message returned if the task fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>检查待发布模块是否空闲发生错误，faq</p>
+     */
     @NameInMap("Error")
     public String error;
 
+    /**
+     * <p>A map of error messages for each submodule, where the key is the submodule name and the value is the error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;faq&quot;: [
+     *         &quot;答案资源未发布, 资源类型: 全局服务,名称: 动态答案服务&quot;
+     *     ]
+     * }</p>
+     */
     @NameInMap("Errors")
     public java.util.Map<String, ?> errors;
 
     /**
+     * <p>The publish task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8522</p>
      */
@@ -28,6 +51,8 @@ public class GetPublishTaskStateResponseBody extends TeaModel {
     public Long id;
 
     /**
+     * <p>The UTC time when the task was last modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-04-12T06:30:33Z</p>
      */
@@ -35,6 +60,8 @@ public class GetPublishTaskStateResponseBody extends TeaModel {
     public String modifyTime;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5CBF0581-EAE7-1DC4-95C6-A089656A1E2D</p>
      */
@@ -42,6 +69,8 @@ public class GetPublishTaskStateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The publish task ID. This field is redundant. Use the <code>Id</code> field instead.</p>
+     * 
      * <strong>example:</strong>
      * <p>8522</p>
      */
@@ -49,12 +78,34 @@ public class GetPublishTaskStateResponseBody extends TeaModel {
     public String response;
 
     /**
+     * <p>The task status. Valid values:</p>
+     * <ul>
+     * <li><p><code>FE_RUNNING</code>: Publishing</p>
+     * </li>
+     * <li><p><code>FE_SUCCESS</code>: Success</p>
+     * </li>
+     * <li><p><code>FE_FAILED</code>: Failed</p>
+     * </li>
+     * <li><p><code>FE_ABORTED</code>: Aborted</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>FE_RUNNING</p>
      */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>A map of warning messages for each submodule, where the key is the submodule name and the value is the warning message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;faq&quot;: [
+     *         &quot;答案资源未发布,类型:service名称:null,答案资源未发布,类型:service名称:null&quot;
+     *     ]
+     * }</p>
+     */
     @NameInMap("Warnings")
     public java.util.Map<String, ?> warnings;
 

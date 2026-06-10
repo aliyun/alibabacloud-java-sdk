@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListTongyiChatHistorysResponseBody extends TeaModel {
     /**
+     * <p>The request duration, in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>116</p>
      */
     @NameInMap("CostTime")
     public String costTime;
 
+    /**
+     * <p>A list of chat history entries.</p>
+     */
     @NameInMap("Datas")
     public java.util.List<java.util.Map<String, ?>> datas;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D0DDFC4C-D66D-4787-9AE4-4D757481EDEE</p>
      */

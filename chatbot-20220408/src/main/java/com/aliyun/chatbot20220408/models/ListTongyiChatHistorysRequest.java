@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTongyiChatHistorysRequest extends TeaModel {
     /**
+     * <p>The key for the business space. If this parameter is omitted, the default business space is used. You can obtain this key from the Business Management page of your primary account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,7 @@ public class ListTongyiChatHistorysRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The end time for the query, in <code>yyyy-MM-dd HH:mm:ss</code> format. For example: <code>2024-04-01 08:00:00</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class ListTongyiChatHistorysRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The number of entries to return. Default: 30. Maximum: 500.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -28,6 +33,7 @@ public class ListTongyiChatHistorysRequest extends TeaModel {
     public Integer limit;
 
     /**
+     * <p>The robot instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,7 @@ public class ListTongyiChatHistorysRequest extends TeaModel {
     public String robotInstanceId;
 
     /**
+     * <p>The start time for the query, in <code>yyyy-MM-dd HH:mm:ss</code> format. For example: <code>2024-04-01 00:00:00</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

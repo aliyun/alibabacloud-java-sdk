@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateFaqResponseBody extends TeaModel {
     /**
+     * <p>The ID of the newly created knowledge.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001979424</p>
      */
@@ -12,6 +14,8 @@ public class CreateFaqResponseBody extends TeaModel {
     public Long knowledgeId;
 
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>28805A7C-D695-548C-A31B-67E52C2C274F</p>
      */

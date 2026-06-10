@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLgfResponseBody extends TeaModel {
     /**
-     * <p>LGF ID</p>
+     * <p>The LGF ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123453433453</p>
@@ -14,6 +14,8 @@ public class CreateLgfResponseBody extends TeaModel {
     public Long lgfId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>af5fg3sdf457j5</p>
      */

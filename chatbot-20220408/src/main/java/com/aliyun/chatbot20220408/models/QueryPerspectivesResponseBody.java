@@ -4,10 +4,15 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class QueryPerspectivesResponseBody extends TeaModel {
+    /**
+     * <p>A list of perspectives.</p>
+     */
     @NameInMap("Perspectives")
     public java.util.List<QueryPerspectivesResponseBodyPerspectives> perspectives;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F285D735-D580-18A8-B97F-B2E72B00F101</p>
      */
@@ -37,6 +42,8 @@ public class QueryPerspectivesResponseBody extends TeaModel {
 
     public static class QueryPerspectivesResponseBodyPerspectives extends TeaModel {
         /**
+         * <p>The creation time in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-04-12T06:30:17Z</p>
          */
@@ -44,6 +51,8 @@ public class QueryPerspectivesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The modification time in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-04-29T03:38:54Z</p>
          */
@@ -51,6 +60,8 @@ public class QueryPerspectivesResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
+         * <p>The perspective name.</p>
+         * 
          * <strong>example:</strong>
          * <p>移动端视角</p>
          */
@@ -58,6 +69,8 @@ public class QueryPerspectivesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The perspective code (used for the Q\&amp;A API).</p>
+         * 
          * <strong>example:</strong>
          * <p>FZJBY3raWr</p>
          */
@@ -65,6 +78,8 @@ public class QueryPerspectivesResponseBody extends TeaModel {
         public String perspectiveCode;
 
         /**
+         * <p>The perspective ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3001</p>
          */
@@ -72,6 +87,8 @@ public class QueryPerspectivesResponseBody extends TeaModel {
         public String perspectiveId;
 
         /**
+         * <p>Indicates whether the perspective is custom-defined.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -79,6 +96,8 @@ public class QueryPerspectivesResponseBody extends TeaModel {
         public Boolean selfDefine;
 
         /**
+         * <p>The status of the perspective. Valid values are 3 (enabled) and 1 (disabled).</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

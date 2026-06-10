@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteLgfRequest extends TeaModel {
     /**
+     * <p>The key of the business space. If omitted, the default business space is used. You can find this key on the Business Management page of your primary account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,7 @@ public class DeleteLgfRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The robot ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class DeleteLgfRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The intent ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +34,7 @@ public class DeleteLgfRequest extends TeaModel {
     public Long intentId;
 
     /**
-     * <p>lgf Id</p>
+     * <p>The ID of the LGF configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

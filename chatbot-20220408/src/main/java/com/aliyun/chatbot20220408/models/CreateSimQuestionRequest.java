@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateSimQuestionRequest extends TeaModel {
     /**
+     * <p>The business space key. If omitted, the default business space is used. You can find the key on the business management page of your main account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,7 @@ public class CreateSimQuestionRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The knowledge ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +24,11 @@ public class CreateSimQuestionRequest extends TeaModel {
     public Long knowledgeId;
 
     /**
+     * <p>The similar question title. Maximum length: 120 characters.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试相似问标题</p>
      */
     @NameInMap("Title")
     public String title;

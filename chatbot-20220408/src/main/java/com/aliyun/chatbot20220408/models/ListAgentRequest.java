@@ -4,13 +4,27 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class ListAgentRequest extends TeaModel {
+    /**
+     * <p>The name of the business space. Use this parameter to filter the results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>业务空间_001</p>
+     */
     @NameInMap("AgentName")
     public String agentName;
 
+    /**
+     * <p>The commodity code. Filters the results to return only business spaces associated with a specific commodity code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>G_cloudBeeBot_public</p>
+     */
     @NameInMap("GoodsCodes")
     public String goodsCodes;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -18,6 +32,8 @@ public class ListAgentRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeletePerspectiveRequest extends TeaModel {
     /**
+     * <p>The business space key. If you do not set this parameter, the default business space is used. You can obtain the key on the Business Management page of your Alibaba Cloud account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,8 @@ public class DeletePerspectiveRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The perspective ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3001</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteIntentRequest extends TeaModel {
     /**
+     * <p>The key that identifies the business space. If you omit this parameter, the service uses the default business space. You can get this key from the Business Management page of your primary account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,7 @@ public class DeleteIntentRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The robot ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class DeleteIntentRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The intent ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

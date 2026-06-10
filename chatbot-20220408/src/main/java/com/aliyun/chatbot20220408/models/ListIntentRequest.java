@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListIntentRequest extends TeaModel {
     /**
+     * <p>The unique key for the business space. If you omit this parameter, the default business space is used. You can find this key on the business management page of your main account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,7 @@ public class ListIntentRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The ID of the chatbot.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class ListIntentRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The intent name.</p>
+     * 
      * <strong>example:</strong>
      * <p>查天气</p>
      */
@@ -28,6 +33,8 @@ public class ListIntentRequest extends TeaModel {
     public String intentName;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -35,6 +42,8 @@ public class ListIntentRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of intents per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

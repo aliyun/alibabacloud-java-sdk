@@ -4,20 +4,33 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class CreatePublishTaskResponseBody extends TeaModel {
+    /**
+     * <p>The list of business types.</p>
+     */
     @NameInMap("BizTypeList")
     public java.util.List<String> bizTypeList;
 
     /**
+     * <p>The time when the task was created, in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-04-12T06:30:17Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The error message if the task fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>检查待发布模块是否空闲发生错误，faq</p>
+     */
     @NameInMap("Error")
     public String error;
 
     /**
+     * <p>The publish task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8522</p>
      */
@@ -25,6 +38,8 @@ public class CreatePublishTaskResponseBody extends TeaModel {
     public Long id;
 
     /**
+     * <p>The time when the task was last modified, in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-04-12T06:30:33Z</p>
      */
@@ -32,6 +47,8 @@ public class CreatePublishTaskResponseBody extends TeaModel {
     public String modifyTime;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5CBF0581-EAE7-1DC4-95C6-A089656A1E2D</p>
      */
@@ -39,6 +56,8 @@ public class CreatePublishTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The publish task ID. This parameter is redundant. Use the <code>Id</code> parameter instead.</p>
+     * 
      * <strong>example:</strong>
      * <p>8522</p>
      */
@@ -46,6 +65,9 @@ public class CreatePublishTaskResponseBody extends TeaModel {
     public String response;
 
     /**
+     * <p>The task status. Valid values:</p>
+     * <p><code>FE_RUNNING</code>: Publishing<br><br><code>FE_SUCCESS</code>: Published<br><br><code>FE_FAILED</code>: Failed<br><br><code>FE_ABORTED</code>: Canceled<br><br><br><br><br><br></p>
+     * 
      * <strong>example:</strong>
      * <p>FE_RUNNING</p>
      */

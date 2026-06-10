@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListUserSayResponseBody extends TeaModel {
     /**
+     * <p>The page number of the returned page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListUserSayResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries returned on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class ListUserSayResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>fs1fg4512v43572v23</p>
      */
@@ -26,12 +32,17 @@ public class ListUserSayResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of matching entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>A list of user says.</p>
+     */
     @NameInMap("UserSays")
     public java.util.List<ListUserSayResponseBodyUserSays> userSays;
 
@@ -82,6 +93,8 @@ public class ListUserSayResponseBody extends TeaModel {
 
     public static class ListUserSayResponseBodyUserSaysSlotInfos extends TeaModel {
         /**
+         * <p>The zero-based end index of the slot in the user say. This value is exclusive.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -89,6 +102,8 @@ public class ListUserSayResponseBody extends TeaModel {
         public Integer endIndex;
 
         /**
+         * <p>The ID of the intent slot.</p>
+         * 
          * <strong>example:</strong>
          * <p>3456sdfg3tu</p>
          */
@@ -96,6 +111,8 @@ public class ListUserSayResponseBody extends TeaModel {
         public String slotId;
 
         /**
+         * <p>The zero-based start index of the slot in the user say. This value is inclusive.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -134,10 +151,18 @@ public class ListUserSayResponseBody extends TeaModel {
     }
 
     public static class ListUserSayResponseBodyUserSays extends TeaModel {
+        /**
+         * <p>The content of the user say.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>您做核酸了嘛</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>The time when the user say was created. The time is in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-08-12T16:00:01Z</p>
          */
@@ -145,6 +170,8 @@ public class ListUserSayResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The ID of the intent.</p>
+         * 
          * <strong>example:</strong>
          * <p>235564564</p>
          */
@@ -152,16 +179,23 @@ public class ListUserSayResponseBody extends TeaModel {
         public Long intentId;
 
         /**
+         * <p>The time when the user say was last modified. The time is in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-08-12T16:00:01Z</p>
          */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        /**
+         * <p>A list of associated slots.</p>
+         */
         @NameInMap("SlotInfos")
         public java.util.List<ListUserSayResponseBodyUserSaysSlotInfos> slotInfos;
 
         /**
+         * <p>The ID of the user say.</p>
+         * 
          * <strong>example:</strong>
          * <p>3453452138</p>
          */

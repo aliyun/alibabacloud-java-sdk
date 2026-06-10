@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GenerateUserAccessTokenResponseBody extends TeaModel {
     /**
+     * <p>The response code. 200 indicates a successful request.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class GenerateUserAccessTokenResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The generated token value.</p>
+     * 
      * <strong>example:</strong>
      * <p>DDEXEDAFWAGASDFWAEFFAWEFAWFWEAFWAFWAEF</p>
      */
@@ -19,6 +23,8 @@ public class GenerateUserAccessTokenResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The error message for a failed request.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter.Invalid</p>
      */
@@ -26,7 +32,7 @@ public class GenerateUserAccessTokenResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E6988CE6-41CF-1103-9BEC-2B20D26C0B51</p>
@@ -35,6 +41,8 @@ public class GenerateUserAccessTokenResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values: <code>true</code> and <code>false</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

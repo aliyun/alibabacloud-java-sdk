@@ -4,10 +4,15 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class AssociateResponseBody extends TeaModel {
+    /**
+     * <p>A list of suggested FAQs.</p>
+     */
     @NameInMap("Associate")
     public java.util.List<AssociateResponseBodyAssociate> associate;
 
     /**
+     * <p>The response message ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5ADF0EBD-7C50-1922-A28B-43215B47CC1A</p>
      */
@@ -15,6 +20,8 @@ public class AssociateResponseBody extends TeaModel {
     public String messageId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5C20F0D4-9721-178A-8236-3BF990634962</p>
      */
@@ -22,6 +29,8 @@ public class AssociateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The session ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1531ded6b3df4afca4be63943f708bb7</p>
      */
@@ -67,6 +76,8 @@ public class AssociateResponseBody extends TeaModel {
 
     public static class AssociateResponseBodyAssociate extends TeaModel {
         /**
+         * <p>Additional information.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -74,6 +85,8 @@ public class AssociateResponseBody extends TeaModel {
         public String meta;
 
         /**
+         * <p>The title of the suggested FAQ.</p>
+         * 
          * <strong>example:</strong>
          * <p>公积金提取的政策</p>
          */

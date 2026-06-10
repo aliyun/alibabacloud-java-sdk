@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDSEntityRequest extends TeaModel {
     /**
+     * <p>The key of the business space. If this parameter is not set, the default business space is used. You can find this key on the Business Management page of your main account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,13 +14,18 @@ public class ListDSEntityRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The entity type. If you omit this parameter, all custom entities are returned.</p>
+     * 
      * <strong>example:</strong>
-     * <p>system</p>
+     * <p>synonyms
+     * regex
+     * system</p>
      */
     @NameInMap("EntityType")
     public String entityType;
 
     /**
+     * <p>The robot ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +35,8 @@ public class ListDSEntityRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>A keyword to filter entities by name using a \&quot;contains\&quot; match. Future releases will also support searching by entity member and synonym.</p>
+     * 
      * <strong>example:</strong>
      * <p>实体</p>
      */
@@ -35,6 +44,8 @@ public class ListDSEntityRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The current page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -42,6 +53,8 @@ public class ListDSEntityRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return per page. The default value is 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

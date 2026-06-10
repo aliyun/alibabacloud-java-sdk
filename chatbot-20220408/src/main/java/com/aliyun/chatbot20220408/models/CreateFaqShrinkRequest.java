@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateFaqShrinkRequest extends TeaModel {
     /**
+     * <p>The agent key. If omitted, the default agent is used. Find this key on the Agent Management page.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,7 @@ public class CreateFaqShrinkRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The ID of the knowledge category.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,16 +24,26 @@ public class CreateFaqShrinkRequest extends TeaModel {
     public Long categoryId;
 
     /**
+     * <p>The knowledge end time. The time is in UTC and in ISO 8601 format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2030-12-31T16:00:00Z</p>
      */
     @NameInMap("EndDate")
     public String endDate;
 
+    /**
+     * <p>The content of the default solution. Required if the fallback feature is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试答案</p>
+     */
     @NameInMap("SolutionContent")
     public String solutionContent;
 
     /**
+     * <p>The type of the default solution. Valid values: <code>0</code> (plain text) and <code>1</code> (rich text).</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -38,17 +51,26 @@ public class CreateFaqShrinkRequest extends TeaModel {
     public Integer solutionType;
 
     /**
+     * <p>The knowledge start time. The time is in UTC and in ISO 8601 format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-05-25T16:28:36Z</p>
      */
     @NameInMap("StartDate")
     public String startDate;
 
+    /**
+     * <p>A list of tag IDs to associate with the knowledge.</p>
+     */
     @NameInMap("TagIdList")
     public String tagIdListShrink;
 
     /**
+     * <p>The knowledge title. Max length: 120 characters.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试标题</p>
      */
     @NameInMap("Title")
     public String title;

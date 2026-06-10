@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListTongyiConversationLogsResponseBody extends TeaModel {
     /**
+     * <p>The request processing time, in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>66</p>
      */
     @NameInMap("CostTime")
     public String costTime;
 
+    /**
+     * <p>An array of conversation log entries.</p>
+     */
     @NameInMap("Datas")
     public java.util.List<java.util.Map<String, ?>> datas;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>28805A7C-D695-548C-A31B-67E52C2C274F</p>
      */
@@ -22,6 +29,8 @@ public class ListTongyiConversationLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The debug information for the session flow.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -66,9 +75,15 @@ public class ListTongyiConversationLogsResponseBody extends TeaModel {
     }
 
     public static class ListTongyiConversationLogsResponseBodySessionFlowDebugInfo extends TeaModel {
+        /**
+         * <p>The API parameters from the session flow.</p>
+         */
         @NameInMap("ApiParams")
         public java.util.Map<String, ?> apiParams;
 
+        /**
+         * <p>The slot parameters from the session flow.</p>
+         */
         @NameInMap("SlotParams")
         public java.util.Map<String, ?> slotParams;
 

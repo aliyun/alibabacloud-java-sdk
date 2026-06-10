@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateUserSayResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8g4n8bnd236fg79</p>
      */
@@ -12,6 +14,8 @@ public class CreateUserSayResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The unique ID of the intent-user say pair.</p>
+     * 
      * <strong>example:</strong>
      * <p>46456176856</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteConnQuestionResponseBody extends TeaModel {
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>FC323352-3AD7-59A1-9088-A64470BAFC9D</p>
      */

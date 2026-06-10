@@ -4,10 +4,15 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class ListCategoryResponseBody extends TeaModel {
+    /**
+     * <p>An array of categories.</p>
+     */
     @NameInMap("Categories")
     public java.util.List<ListCategoryResponseBodyCategories> categories;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9C5F8186-2D22-433E-9545-606D344F30B5</p>
      */
@@ -36,20 +41,36 @@ public class ListCategoryResponseBody extends TeaModel {
     }
 
     public static class ListCategoryResponseBodyCategories extends TeaModel {
+        /**
+         * <p>The business code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bizcode123</p>
+         */
         @NameInMap("BizCode")
         public String bizCode;
 
         /**
+         * <p>The category ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>231001028593</p>
          */
         @NameInMap("CategoryId")
         public Long categoryId;
 
+        /**
+         * <p>The category name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>类目名称</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The parent category ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>-1</p>
          */
@@ -57,6 +78,8 @@ public class ListCategoryResponseBody extends TeaModel {
         public Long parentCategoryId;
 
         /**
+         * <p>The status of the category. Valid values: <code>0</code> (Normal) and <code>-1</code> (Deleted).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

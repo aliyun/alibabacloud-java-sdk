@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateSimQuestionResponseBody extends TeaModel {
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>DFB71B34-4188-4EA2-9988-EF3014E75910</p>
      */

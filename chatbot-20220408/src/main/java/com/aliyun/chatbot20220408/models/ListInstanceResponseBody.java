@@ -4,10 +4,15 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The list of chatbots.</p>
+     */
     @NameInMap("Instances")
     public java.util.List<ListInstanceResponseBodyInstances> instances;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListInstanceResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -22,6 +29,8 @@ public class ListInstanceResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>92B81548-42B9-4B34-924B-4E778AEB412B</p>
      */
@@ -29,6 +38,8 @@ public class ListInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>23</p>
      */
@@ -82,6 +93,8 @@ public class ListInstanceResponseBody extends TeaModel {
 
     public static class ListInstanceResponseBodyInstances extends TeaModel {
         /**
+         * <p>The URL of the chatbot avatar.</p>
+         * 
          * <strong>example:</strong>
          * <p>/alimefe/meebot/robot/0.0.5/img/xxx-90-97.png</p>
          */
@@ -89,6 +102,8 @@ public class ListInstanceResponseBody extends TeaModel {
         public String avatar;
 
         /**
+         * <p>The time when the chatbot was created. The time is in the UTC format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-08-12T16:00:01Z</p>
          */
@@ -96,6 +111,8 @@ public class ListInstanceResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The unique ID of the chatbot.</p>
+         * 
          * <strong>example:</strong>
          * <p>chatbot-cn-mp90s2lrk00050</p>
          */
@@ -103,6 +120,8 @@ public class ListInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The remarks on the chatbot.</p>
+         * 
          * <strong>example:</strong>
          * <p>用于C端问答的机器人</p>
          */
@@ -110,6 +129,8 @@ public class ListInstanceResponseBody extends TeaModel {
         public String introduction;
 
         /**
+         * <p>The language of the chatbot, such as zh-cn and en-us. For more information, see http\://www\.lingoes.net/en/translator/langcode.htm.</p>
+         * 
          * <strong>example:</strong>
          * <p>zh-cn</p>
          */
@@ -117,6 +138,8 @@ public class ListInstanceResponseBody extends TeaModel {
         public String languageCode;
 
         /**
+         * <p>The name of the chatbot.</p>
+         * 
          * <strong>example:</strong>
          * <p>智能客服-小C</p>
          */
@@ -124,6 +147,8 @@ public class ListInstanceResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The type of the chatbot.</p>
+         * 
          * <strong>example:</strong>
          * <p>scenario_im</p>
          */

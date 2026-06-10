@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteSimQuestionRequest extends TeaModel {
     /**
+     * <p>The key for the business space. If you omit this parameter, the default business space is used. You can find the key on the business management page of your primary account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,7 @@ public class DeleteSimQuestionRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The ID of the similar question.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

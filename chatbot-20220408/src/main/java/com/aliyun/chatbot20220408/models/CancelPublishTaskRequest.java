@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CancelPublishTaskRequest extends TeaModel {
     /**
+     * <p>The key of the business space. If you do not specify this parameter, the default business space is used. You can find the key on the Business Management page of your master account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,8 @@ public class CancelPublishTaskRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The ID of the publish task.</p>
+     * 
      * <strong>example:</strong>
      * <p>8521</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateDSEntityResponseBody extends TeaModel {
     /**
+     * <p>The ID of the updated entity.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
@@ -12,6 +14,8 @@ public class UpdateDSEntityResponseBody extends TeaModel {
     public Long entityId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>df23fgh4hyj67hn56</p>
      */

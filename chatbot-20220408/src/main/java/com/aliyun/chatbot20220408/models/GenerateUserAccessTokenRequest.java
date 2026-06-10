@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GenerateUserAccessTokenRequest extends TeaModel {
     /**
+     * <p>The key of the business space. If you do not specify this parameter, the system accesses the default business space. You can obtain the key from the Business Management page of your main account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,13 +14,14 @@ public class GenerateUserAccessTokenRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <strong>example:</strong>
-     * <p>a***<a href="mailto:bcx@gmail.com">bcx@gmail.com</a></p>
+     * <p>The user\&quot;s email address.</p>
      */
     @NameInMap("Email")
     public String email;
 
     /**
+     * <p>This parameter is reserved. You do not need to specify it.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -26,6 +29,8 @@ public class GenerateUserAccessTokenRequest extends TeaModel {
     public Integer expireTime;
 
     /**
+     * <p>Additional information formatted as a JSON string.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;xx&quot;: 123,
@@ -50,6 +55,7 @@ public class GenerateUserAccessTokenRequest extends TeaModel {
     public String extraInfo;
 
     /**
+     * <p>The external user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +65,7 @@ public class GenerateUserAccessTokenRequest extends TeaModel {
     public String foreignId;
 
     /**
+     * <p>The visitor\&quot;s nickname.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,8 +75,7 @@ public class GenerateUserAccessTokenRequest extends TeaModel {
     public String nick;
 
     /**
-     * <strong>example:</strong>
-     * <p>1381111****</p>
+     * <p>The user\&quot;s telephone number.</p>
      */
     @NameInMap("Telephone")
     public String telephone;

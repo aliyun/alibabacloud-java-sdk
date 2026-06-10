@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateConnQuestionResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>004EB5C0-9DEB-53BF-A57A-0407A6D6B3C9</p>
      */

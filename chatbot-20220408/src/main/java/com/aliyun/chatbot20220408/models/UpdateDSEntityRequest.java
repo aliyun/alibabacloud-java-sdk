@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateDSEntityRequest extends TeaModel {
     /**
+     * <p>The business space key. If you do not specify this parameter, the system uses the default business space. You can get this key from the business management page of your Alibaba Cloud account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,7 @@ public class UpdateDSEntityRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The ID of the entity.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class UpdateDSEntityRequest extends TeaModel {
     public Long entityId;
 
     /**
+     * <p>The new name for the entity. The name can contain only Chinese characters, letters, digits, and underscores (_).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class UpdateDSEntityRequest extends TeaModel {
     public String entityName;
 
     /**
+     * <p>The type of the entity. This parameter cannot be modified. Valid values: <code>synonyms</code> and <code>regex</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>synonyms</p>
      */
@@ -37,6 +43,7 @@ public class UpdateDSEntityRequest extends TeaModel {
     public String entityType;
 
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

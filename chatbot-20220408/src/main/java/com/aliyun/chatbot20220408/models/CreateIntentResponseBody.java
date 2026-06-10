@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateIntentResponseBody extends TeaModel {
     /**
+     * <p>The intent ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>43546474</p>
      */
@@ -12,6 +14,8 @@ public class CreateIntentResponseBody extends TeaModel {
     public Long intentId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>df56gjh5et34g3g3</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateSimQuestionResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>16AC1B3C-66E0-438B-BB7C-71B692407B67</p>
      */
@@ -12,6 +14,8 @@ public class CreateSimQuestionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The similar question ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000002788</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeFaqResponseBody extends TeaModel {
     /**
+     * <p>The category ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30000055617</p>
      */
@@ -12,6 +14,8 @@ public class DescribeFaqResponseBody extends TeaModel {
     public Long categoryId;
 
     /**
+     * <p>The time the knowledge was created, in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-11-30T03:03:37Z</p>
      */
@@ -19,6 +23,8 @@ public class DescribeFaqResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The creator of the knowledge.</p>
+     * 
      * <strong>example:</strong>
      * <p>test01</p>
      */
@@ -26,6 +32,8 @@ public class DescribeFaqResponseBody extends TeaModel {
     public String createUserName;
 
     /**
+     * <p>The validity status of the knowledge, calculated based on <code>StartDate</code> and <code>EndDate</code>. Valid values: <code>20</code> (Active), <code>21</code> (Expired), and <code>22</code> (Pending).</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -33,6 +41,8 @@ public class DescribeFaqResponseBody extends TeaModel {
     public Integer effectStatus;
 
     /**
+     * <p>The expiration time of the knowledge, in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-04-27T06:08:54Z</p>
      */
@@ -40,6 +50,8 @@ public class DescribeFaqResponseBody extends TeaModel {
     public String endDate;
 
     /**
+     * <p>The knowledge ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001979424</p>
      */
@@ -47,6 +59,8 @@ public class DescribeFaqResponseBody extends TeaModel {
     public Long knowledgeId;
 
     /**
+     * <p>The time the knowledge was last modified, in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-12-02T06:35:50Z</p>
      */
@@ -54,29 +68,44 @@ public class DescribeFaqResponseBody extends TeaModel {
     public String modifyTime;
 
     /**
+     * <p>The user who last modified the knowledge.</p>
+     * 
      * <strong>example:</strong>
      * <p>test01</p>
      */
     @NameInMap("ModifyUserName")
     public String modifyUserName;
 
+    /**
+     * <p>A list of related questions.</p>
+     */
     @NameInMap("Outlines")
     public java.util.List<DescribeFaqResponseBodyOutlines> outlines;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8AD9FA10-7780-5E12-B701-13C928524F32</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A list of similar questions.</p>
+     */
     @NameInMap("SimQuestions")
     public java.util.List<DescribeFaqResponseBodySimQuestions> simQuestions;
 
+    /**
+     * <p>A list of solutions.</p>
+     */
     @NameInMap("Solutions")
     public java.util.List<DescribeFaqResponseBodySolutions> solutions;
 
     /**
+     * <p>The effective start time of the knowledge, in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-04-27T07:04:39Z</p>
      */
@@ -84,15 +113,26 @@ public class DescribeFaqResponseBody extends TeaModel {
     public String startDate;
 
     /**
+     * <p>The knowledge status. Valid values: <code>-1</code> (Deleted and unpublished), <code>1</code> (Unpublished), <code>2</code> (Published), and <code>3</code> (Updated and unpublished).</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <p>A list of tag IDs associated with the knowledge.</p>
+     */
     @NameInMap("TagIdList")
     public java.util.List<Long> tagIdList;
 
+    /**
+     * <p>The knowledge title.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试标题</p>
+     */
     @NameInMap("Title")
     public String title;
 
@@ -231,6 +271,8 @@ public class DescribeFaqResponseBody extends TeaModel {
 
     public static class DescribeFaqResponseBodyOutlines extends TeaModel {
         /**
+         * <p>The related knowledge ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000098002</p>
          */
@@ -238,6 +280,8 @@ public class DescribeFaqResponseBody extends TeaModel {
         public Long connQuestionId;
 
         /**
+         * <p>The time the related question was created, in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-05-26T10:24:00Z</p>
          */
@@ -245,6 +289,8 @@ public class DescribeFaqResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The time the related question was last modified, in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-05-26T18:12:02Z</p>
          */
@@ -252,12 +298,20 @@ public class DescribeFaqResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
+         * <p>The relationship ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>797</p>
          */
         @NameInMap("OutlineId")
         public Long outlineId;
 
+        /**
+         * <p>The related knowledge title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试关联问标题</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -310,6 +364,8 @@ public class DescribeFaqResponseBody extends TeaModel {
 
     public static class DescribeFaqResponseBodySimQuestions extends TeaModel {
         /**
+         * <p>The time the similar question was created, in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-05-26T10:24:00Z</p>
          */
@@ -317,6 +373,8 @@ public class DescribeFaqResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The time the similar question was last modified, in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-05-29T03:55:07Z</p>
          */
@@ -324,12 +382,20 @@ public class DescribeFaqResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
+         * <p>The similar question ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000000581</p>
          */
         @NameInMap("SimQuestionId")
         public Long simQuestionId;
 
+        /**
+         * <p>The similar question title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试相似问标题</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -373,10 +439,18 @@ public class DescribeFaqResponseBody extends TeaModel {
     }
 
     public static class DescribeFaqResponseBodySolutions extends TeaModel {
+        /**
+         * <p>The solution content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试答案内容</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>The solution content type. Valid values: <code>0</code> (plain text) and <code>1</code> (rich text).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -384,6 +458,8 @@ public class DescribeFaqResponseBody extends TeaModel {
         public Integer contentType;
 
         /**
+         * <p>The time the solution was created, in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-05-26T10:24:00Z</p>
          */
@@ -391,25 +467,41 @@ public class DescribeFaqResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The time the solution was last modified, in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-05-29T07:07:13Z</p>
          */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        /**
+         * <p>A list of perspective codes.</p>
+         */
         @NameInMap("PerspectiveCodes")
         public java.util.List<String> perspectiveCodes;
 
+        /**
+         * <p>The plain text content of the solution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试答案内容</p>
+         */
         @NameInMap("PlainText")
         public String plainText;
 
         /**
+         * <p>The solution ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000003071</p>
          */
         @NameInMap("SolutionId")
         public Long solutionId;
 
+        /**
+         * <p>A list of tag IDs.</p>
+         */
         @NameInMap("TagIdList")
         public java.util.List<Long> tagIdList;
 

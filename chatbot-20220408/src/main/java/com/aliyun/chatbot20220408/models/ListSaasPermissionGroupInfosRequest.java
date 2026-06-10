@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSaasPermissionGroupInfosRequest extends TeaModel {
     /**
+     * <p>The key for the business space. If unspecified, the default business space is used. You can find this key on the Business Management page of your main account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

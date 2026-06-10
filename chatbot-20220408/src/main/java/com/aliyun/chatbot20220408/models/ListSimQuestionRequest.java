@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSimQuestionRequest extends TeaModel {
     /**
+     * <p>The key for the business space. If you do not specify this parameter, the default business space is used. You can get the key from the Business Management Page of your Alibaba Cloud account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,7 @@ public class ListSimQuestionRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The knowledge entry ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateUserSayShrinkRequest extends TeaModel {
     /**
+     * <p>The key of the business space. If you do not specify this parameter, the default business space is used. You can find the key on the Business Management page of your Alibaba Cloud account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,7 @@ public class CreateUserSayShrinkRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The ID of the chatbot instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +23,9 @@ public class CreateUserSayShrinkRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The definition of the user say.</p>
+     */
     @NameInMap("UserSayDefinition")
     public String userSayDefinitionShrink;
 

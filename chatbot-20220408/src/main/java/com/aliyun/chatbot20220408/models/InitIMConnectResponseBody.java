@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class InitIMConnectResponseBody extends TeaModel {
     /**
+     * <p>The return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class InitIMConnectResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The IM connection information, returned as a JSON string.</p>
+     * 
      * <strong>example:</strong>
      * <p>{     &quot;imDomain&quot;: &quot;im.alimebot.com&quot;,     &quot;appKey&quot;: &quot;WDg2VfNv&quot;,     &quot;token&quot;: &quot;QUM4SndaY3VPMjhkQldDZUNOR0ZaTmZ5R3NBY0FKWHJ4OGc4dERZbEJzcjNIKzFiS1RyTjhXRUpBYmVpQlpsakprNDRFVkdxcy9HWVk2RXZvalU3bHhxRkJlc1NBUXZwdHFKOTE2UTNwamQ4b1U4N3dEbmhyRjc4R2hOQStvMnMrYkV2dlVpSHNvWC96SEVNZWRqMjBuMXdjNklpamJzaDNWYllnUldDZGhJPQ==&quot;   }</p>
      */
@@ -19,6 +23,8 @@ public class InitIMConnectResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The response message. If the request fails, this parameter provides the exception message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter.Invalid</p>
      */
@@ -26,7 +32,7 @@ public class InitIMConnectResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E6988CE6-41CF-1103-9BEC-2B20D26C0B52</p>
@@ -35,6 +41,8 @@ public class InitIMConnectResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

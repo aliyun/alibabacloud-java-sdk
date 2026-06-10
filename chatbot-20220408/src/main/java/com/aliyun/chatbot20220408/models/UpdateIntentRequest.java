@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateIntentRequest extends TeaModel {
     /**
+     * <p>The key for the business space. If you omit this parameter, the system uses the default business space. You can find this key on the Business Management page of your primary account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,7 @@ public class UpdateIntentRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The ID of the chatbot instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,10 +23,14 @@ public class UpdateIntentRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The intent definition object.</p>
+     */
     @NameInMap("IntentDefinition")
     public UpdateIntentRequestIntentDefinition intentDefinition;
 
     /**
+     * <p>The ID of the intent.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,6 +78,8 @@ public class UpdateIntentRequest extends TeaModel {
 
     public static class UpdateIntentRequestIntentDefinitionSlotInfos extends TeaModel {
         /**
+         * <p>Specifies whether the slot can contain an array of values.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -78,6 +87,8 @@ public class UpdateIntentRequest extends TeaModel {
         public Boolean array;
 
         /**
+         * <p>Specifies whether to enable data masking for the slot value.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -85,6 +96,8 @@ public class UpdateIntentRequest extends TeaModel {
         public Boolean encrypt;
 
         /**
+         * <p>Specifies whether the slot is interactive. If true, the chatbot prompts the user for a value if the user does not provide one.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -92,12 +105,17 @@ public class UpdateIntentRequest extends TeaModel {
         public Boolean interactive;
 
         /**
+         * <p>The name of the slot.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>天气</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The ID of the slot.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -107,7 +125,11 @@ public class UpdateIntentRequest extends TeaModel {
         public String slotId;
 
         /**
+         * <p>The name of the associated entity.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>天气</p>
          */
         @NameInMap("Value")
         public String value;
@@ -168,15 +190,28 @@ public class UpdateIntentRequest extends TeaModel {
     }
 
     public static class UpdateIntentRequestIntentDefinition extends TeaModel {
+        /**
+         * <p>The alias for the intent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>查天气意图</p>
+         */
         @NameInMap("AliasName")
         public String aliasName;
 
         /**
+         * <p>The name of the intent.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>查天气意图</p>
          */
         @NameInMap("IntentName")
         public String intentName;
 
+        /**
+         * <p>A list of slot objects.</p>
+         */
         @NameInMap("SlotInfos")
         public java.util.List<UpdateIntentRequestIntentDefinitionSlotInfos> slotInfos;
 

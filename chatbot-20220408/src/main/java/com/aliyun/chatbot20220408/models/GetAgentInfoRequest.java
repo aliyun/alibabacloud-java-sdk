@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAgentInfoRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>beebot_bot_public_cn-ca36x8v3n1x</p>
      */

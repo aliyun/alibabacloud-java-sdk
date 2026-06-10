@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDocRequest extends TeaModel {
     /**
+     * <p>The key that identifies the workspace. If this parameter is omitted, the default workspace is used. You can find this key on the workspace management page of your root account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,7 @@ public class DescribeDocRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The knowledge ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class DescribeDocRequest extends TeaModel {
     public Long knowledgeId;
 
     /**
+     * <p>Specifies whether to return detailed information for paragraphs. true: Detailed information is returned. false: Detailed information is not returned (default).</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

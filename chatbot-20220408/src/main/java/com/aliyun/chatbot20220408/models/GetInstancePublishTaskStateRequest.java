@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetInstancePublishTaskStateRequest extends TeaModel {
     /**
+     * <p>The key for the business space. If you do not specify this parameter, the default business space is used. You can find the key on the Business Management page of your main account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,8 @@ public class GetInstancePublishTaskStateRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8521</p>
      */
@@ -19,6 +23,8 @@ public class GetInstancePublishTaskStateRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The unique identifier of the bot instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>chatbot-cn-mp90s2lrk00050</p>
      */

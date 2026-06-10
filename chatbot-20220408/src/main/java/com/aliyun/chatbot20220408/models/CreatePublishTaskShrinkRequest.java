@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreatePublishTaskShrinkRequest extends TeaModel {
     /**
+     * <p>The key of the business space. If you omit this parameter, the default business space is used. You can obtain the key from the Business Management page of your main account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,8 @@ public class CreatePublishTaskShrinkRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The type of content to publish. To publish a bot, use the <code>CreateInstancePublishTask</code> API.</p>
+     * 
      * <strong>example:</strong>
      * <p>faq</p>
      */
@@ -19,6 +23,8 @@ public class CreatePublishTaskShrinkRequest extends TeaModel {
     public String bizType;
 
     /**
+     * <p>Specifies data to publish by ID. This parameter is used only when <code>BizType</code> is set to <code>faq</code>. In this case, provide one or more category IDs to publish knowledge exclusively from the specified categories.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;8521&quot;]</p>
      */

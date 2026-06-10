@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceRequest extends TeaModel {
     /**
+     * <p>The workspace key. If you omit this parameter, the default workspace is used. You can get this key from the Business Management page in your Alibaba Cloud account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,8 @@ public class UpdateInstanceRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The unique ID of the chatbot instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>chatbot-cn-mp90s2lrk00050</p>
      */
@@ -19,6 +23,8 @@ public class UpdateInstanceRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The new description of the chatbot.</p>
+     * 
      * <strong>example:</strong>
      * <p>用于C端问答的机器人</p>
      */
@@ -26,6 +32,8 @@ public class UpdateInstanceRequest extends TeaModel {
     public String introduction;
 
     /**
+     * <p>The new name of the chatbot. The maximum length is 50 characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>智能客服-小C</p>
      */

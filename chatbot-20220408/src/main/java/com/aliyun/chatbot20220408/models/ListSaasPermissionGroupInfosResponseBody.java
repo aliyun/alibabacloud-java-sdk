@@ -4,11 +4,14 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
+    /**
+     * <p>The permission details for integrated SaaS pages.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListSaasPermissionGroupInfosResponseBodyData> data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>8AD9FA10-7780-5E12-B701-13C928524F32</p>
@@ -39,6 +42,8 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
 
     public static class ListSaasPermissionGroupInfosResponseBodyDataPgInfos extends TeaModel {
         /**
+         * <p>The unique permission group code.</p>
+         * 
          * <strong>example:</strong>
          * <p>FAQ</p>
          */
@@ -46,12 +51,20 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
         public String pgCode;
 
         /**
+         * <p>The English name of the permission group.</p>
+         * 
          * <strong>example:</strong>
          * <p>FAQ</p>
          */
         @NameInMap("PgEnName")
         public String pgEnName;
 
+        /**
+         * <p>The name of the permission group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FAQ管理</p>
+         */
         @NameInMap("PgName")
         public String pgName;
 
@@ -88,19 +101,32 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
 
     public static class ListSaasPermissionGroupInfosResponseBodyData extends TeaModel {
         /**
+         * <p>The name of the page in English.</p>
+         * 
          * <strong>example:</strong>
          * <p>Release Center</p>
          */
         @NameInMap("EnName")
         public String enName;
 
+        /**
+         * <p>The name of the page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>发布中心</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The SaaS permission groups.</p>
+         */
         @NameInMap("PgInfos")
         public java.util.List<ListSaasPermissionGroupInfosResponseBodyDataPgInfos> pgInfos;
 
         /**
+         * <p>The unique code for the SaaS page.</p>
+         * 
          * <strong>example:</strong>
          * <p>FAQ</p>
          */

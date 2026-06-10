@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteCategoryRequest extends TeaModel {
     /**
+     * <p>The agent key. If not specified, the default agent is used. You can obtain the key from the agent management page of your main account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,7 @@ public class DeleteCategoryRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The unique identifier of the category.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

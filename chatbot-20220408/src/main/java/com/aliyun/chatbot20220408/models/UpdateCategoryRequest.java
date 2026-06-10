@@ -5,16 +5,25 @@ import com.aliyun.tea.*;
 
 public class UpdateCategoryRequest extends TeaModel {
     /**
+     * <p>The key for the business space. If this parameter is omitted, the default business space is used. You can obtain the key on the <strong>Business Management</strong> page of your primary account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>The business code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bizcode123</p>
+     */
     @NameInMap("BizCode")
     public String bizCode;
 
     /**
+     * <p>The category ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +33,11 @@ public class UpdateCategoryRequest extends TeaModel {
     public Long categoryId;
 
     /**
+     * <p>The category name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>类目名称</p>
      */
     @NameInMap("Name")
     public String name;

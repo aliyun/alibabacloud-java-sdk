@@ -4,10 +4,18 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class GetAsyncResultResponseBody extends TeaModel {
+    /**
+     * <p>The task result, returned as a JSON-formatted string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;message&quot;:&quot;执行完成&quot;}</p>
+     */
     @NameInMap("Data")
     public String data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F79E7305-5314-5069-A701-9591AD051902</p>
      */
@@ -15,6 +23,28 @@ public class GetAsyncResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task\&quot;s execution status. Valid values:</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Value</th>
+     * <th>Description</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Success</td>
+     * <td>The task completed successfully.</td>
+     * </tr>
+     * <tr>
+     * <td>Running</td>
+     * <td>The task is running.</td>
+     * </tr>
+     * <tr>
+     * <td>Fail</td>
+     * <td>The task failed.</td>
+     * </tr>
+     * </tbody></table>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */

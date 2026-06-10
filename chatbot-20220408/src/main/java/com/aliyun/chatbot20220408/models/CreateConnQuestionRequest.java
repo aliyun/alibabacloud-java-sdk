@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateConnQuestionRequest extends TeaModel {
     /**
+     * <p>The agent key. If you do not specify this parameter, the default agent is used. You can obtain the key from the Business Management page of your main account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,7 @@ public class CreateConnQuestionRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The connected question ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class CreateConnQuestionRequest extends TeaModel {
     public Long connQuestionId;
 
     /**
+     * <p>The knowledge ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

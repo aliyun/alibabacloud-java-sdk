@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateUserSayShrinkRequest extends TeaModel {
     /**
+     * <p>The workspace key. If you omit this parameter, the default workspace is used. You can find this key on the Workspace Management page in your main account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,7 @@ public class UpdateUserSayShrinkRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The ID of the bot.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,10 +23,14 @@ public class UpdateUserSayShrinkRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The definition of the user say.</p>
+     */
     @NameInMap("UserSayDefinition")
     public String userSayDefinitionShrink;
 
     /**
+     * <p>The ID of the user say.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

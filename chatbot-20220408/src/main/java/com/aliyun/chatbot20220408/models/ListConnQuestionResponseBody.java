@@ -4,10 +4,15 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class ListConnQuestionResponseBody extends TeaModel {
+    /**
+     * <p>A list of connected questions.</p>
+     */
     @NameInMap("Outlines")
     public java.util.List<ListConnQuestionResponseBodyOutlines> outlines;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>92B81548-42B9-4B34-924B-4E778AEB412B</p>
      */
@@ -37,6 +42,8 @@ public class ListConnQuestionResponseBody extends TeaModel {
 
     public static class ListConnQuestionResponseBodyOutlines extends TeaModel {
         /**
+         * <p>The ID of the connected question.</p>
+         * 
          * <strong>example:</strong>
          * <p>30001979424</p>
          */
@@ -44,6 +51,8 @@ public class ListConnQuestionResponseBody extends TeaModel {
         public Long connQuestionId;
 
         /**
+         * <p>The creation time, in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-02-25T02:47:18Z</p>
          */
@@ -51,6 +60,8 @@ public class ListConnQuestionResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The last modification time, in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-05-26T10:18:15Z</p>
          */
@@ -58,12 +69,20 @@ public class ListConnQuestionResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
+         * <p>The relation ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>797</p>
          */
         @NameInMap("OutlineId")
         public Long outlineId;
 
+        /**
+         * <p>The title of the connected question.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>关联问</p>
+         */
         @NameInMap("Title")
         public String title;
 

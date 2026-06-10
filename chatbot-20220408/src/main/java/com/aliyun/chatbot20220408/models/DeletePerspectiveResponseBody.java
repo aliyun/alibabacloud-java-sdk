@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeletePerspectiveResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FC384CE1-8D42-1900-84E1-F33F990F2B5E</p>
      */
@@ -12,6 +14,8 @@ public class DeletePerspectiveResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the perspective was successfully deleted.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

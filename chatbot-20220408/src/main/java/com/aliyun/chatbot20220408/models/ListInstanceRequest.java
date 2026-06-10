@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListInstanceRequest extends TeaModel {
     /**
+     * <p>The key of the business space. You can obtain the key on the Business Management page of the primary account. If you do not set this parameter, the default business space is accessed.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,13 +14,17 @@ public class ListInstanceRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The name of the chatbot. A fuzzy search is supported.</p>
+     * 
      * <strong>example:</strong>
-     * <p>scenario_im</p>
+     * <p>售前客服</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class ListInstanceRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of instances to return on each page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +41,8 @@ public class ListInstanceRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The type of the chatbot.</p>
+     * 
      * <strong>example:</strong>
      * <p>scenario_im</p>
      */

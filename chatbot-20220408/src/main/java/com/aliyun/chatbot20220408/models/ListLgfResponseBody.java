@@ -4,10 +4,15 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class ListLgfResponseBody extends TeaModel {
+    /**
+     * <p>A list of advanced semantic configurations.</p>
+     */
     @NameInMap("Lgfs")
     public java.util.List<ListLgfResponseBodyLgfs> lgfs;
 
     /**
+     * <p>The returned page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListLgfResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListLgfResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>34fg57h2gh5783</p>
      */
@@ -29,6 +38,8 @@ public class ListLgfResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total count of matching entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -82,6 +93,8 @@ public class ListLgfResponseBody extends TeaModel {
 
     public static class ListLgfResponseBodyLgfs extends TeaModel {
         /**
+         * <p>The creation time, in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-08-12T16:00:01Z</p>
          */
@@ -89,6 +102,8 @@ public class ListLgfResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The ID of the intent.</p>
+         * 
          * <strong>example:</strong>
          * <p>256756734345</p>
          */
@@ -96,7 +111,7 @@ public class ListLgfResponseBody extends TeaModel {
         public Long intentId;
 
         /**
-         * <p>LGF ID</p>
+         * <p>The LGF ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -105,12 +120,20 @@ public class ListLgfResponseBody extends TeaModel {
         public Long lgfId;
 
         /**
+         * <p>The modification time, in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-08-12T16:00:01Z</p>
          */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        /**
+         * <p>The LGF rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>.{0,5}北京天气</p>
+         */
         @NameInMap("RuleText")
         public String ruleText;
 

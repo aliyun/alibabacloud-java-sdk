@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteDSEntityValueRequest extends TeaModel {
     /**
+     * <p>The Agent key. If omitted, the system uses the default Agent. You can get this key from the Business Management page of your main account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,7 @@ public class DeleteDSEntityValueRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The unique identifier of the entity.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class DeleteDSEntityValueRequest extends TeaModel {
     public Long entityId;
 
     /**
+     * <p>The unique identifier of the entity value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class DeleteDSEntityValueRequest extends TeaModel {
     public Long entityValueId;
 
     /**
+     * <p>The unique identifier of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

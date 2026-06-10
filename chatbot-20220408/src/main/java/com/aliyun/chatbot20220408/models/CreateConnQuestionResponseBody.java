@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateConnQuestionResponseBody extends TeaModel {
     /**
+     * <p>The outline ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000002123</p>
      */
@@ -12,6 +14,8 @@ public class CreateConnQuestionResponseBody extends TeaModel {
     public Long outlineId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C191B48B-9268-4FB1-A3C2-5143B4A91D0C</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateLgfShrinkRequest extends TeaModel {
     /**
+     * <p>The key for the business space. If omitted, the default business space is used. You can get the key on the Business Management page of your main account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,7 @@ public class UpdateLgfShrinkRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The bot ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,13 +24,14 @@ public class UpdateLgfShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The LGF definition.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("LgfDefinition")
     public String lgfDefinitionShrink;
 
     /**
-     * <p>LGF ID</p>
+     * <p>The LGF ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

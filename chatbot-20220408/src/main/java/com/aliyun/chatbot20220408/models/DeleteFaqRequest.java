@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteFaqRequest extends TeaModel {
     /**
+     * <p>The business space key. If you do not specify this parameter, the default business space is used. You can obtain the key from the Business Management page of your Alibaba Cloud account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,7 @@ public class DeleteFaqRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The unique identifier for the knowledge item.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

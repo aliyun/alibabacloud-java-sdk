@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDSEntityResponseBody extends TeaModel {
     /**
+     * <p>The time when the entity was created, in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-08-12T16:00:01Z</p>
      */
@@ -12,6 +14,8 @@ public class DescribeDSEntityResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The ID of the user who created the entity.</p>
+     * 
      * <strong>example:</strong>
      * <p>123231</p>
      */
@@ -19,6 +23,8 @@ public class DescribeDSEntityResponseBody extends TeaModel {
     public String createUserId;
 
     /**
+     * <p>The name of the user who created the entity.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -26,16 +32,26 @@ public class DescribeDSEntityResponseBody extends TeaModel {
     public String createUserName;
 
     /**
+     * <p>The entity ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
     @NameInMap("EntityId")
     public Long entityId;
 
+    /**
+     * <p>The entity name. The name can contain only Chinese characters, letters, digits, and underscores (_).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>书类型</p>
+     */
     @NameInMap("EntityName")
     public String entityName;
 
     /**
+     * <p>The entity type. Valid values are <code>synonyms</code> and <code>regex</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>synonyms</p>
      */
@@ -43,6 +59,8 @@ public class DescribeDSEntityResponseBody extends TeaModel {
     public String entityType;
 
     /**
+     * <p>The time when the entity was last modified, in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-08-12T16:00:01Z</p>
      */
@@ -50,6 +68,8 @@ public class DescribeDSEntityResponseBody extends TeaModel {
     public String modifyTime;
 
     /**
+     * <p>The ID of the user who last modified the entity.</p>
+     * 
      * <strong>example:</strong>
      * <p>123231</p>
      */
@@ -57,6 +77,8 @@ public class DescribeDSEntityResponseBody extends TeaModel {
     public String modifyUserId;
 
     /**
+     * <p>The name of the user who last modified the entity.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -64,12 +86,20 @@ public class DescribeDSEntityResponseBody extends TeaModel {
     public String modifyUserName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ad23234dsf234fga</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The code of the system entity, such as sys.date. This parameter is empty for user-defined entities.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sys.date</p>
+     */
     @NameInMap("SysEntityCode")
     public String sysEntityCode;
 

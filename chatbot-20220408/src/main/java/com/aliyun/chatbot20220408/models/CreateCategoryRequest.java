@@ -5,25 +5,45 @@ import com.aliyun.tea.*;
 
 public class CreateCategoryRequest extends TeaModel {
     /**
+     * <p>The key of the business space. If this parameter is not specified, the default business space is used. You can obtain the key from the Business Management page of your main account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>The business code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bizcode123</p>
+     */
     @NameInMap("BizCode")
     public String bizCode;
 
+    /**
+     * <p>The knowledge type. Valid values are 1 for an FAQ category and 3 for a document category. The default value is 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("KnowledgeType")
     public Integer knowledgeType;
 
     /**
+     * <p>The category name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试1</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The ID of the parent category. Defaults to -1, which indicates the root category.</p>
+     * 
      * <strong>example:</strong>
      * <p>-1</p>
      */

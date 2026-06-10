@@ -4,11 +4,14 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class ListSaasInfoResponseBody extends TeaModel {
+    /**
+     * <p>A list of SaaS integrations.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListSaasInfoResponseBodyData> data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A629A28F-F25E-5572-A679-FA46FB0151D6</p>
@@ -17,6 +20,8 @@ public class ListSaasInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The SaaS integration token issued by Chatbot.</p>
+     * 
      * <strong>example:</strong>
      * <p>06614fdb-c72f-436e-8003-dfe8a2854a15</p>
      */
@@ -54,6 +59,8 @@ public class ListSaasInfoResponseBody extends TeaModel {
 
     public static class ListSaasInfoResponseBodyData extends TeaModel {
         /**
+         * <p>The unique identifier of the SaaS atomic page. Use this code to reference the page and query its information.</p>
+         * 
          * <strong>example:</strong>
          * <p>GLOBAL_SERVICE</p>
          */
@@ -61,16 +68,26 @@ public class ListSaasInfoResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The English name of the atomic page.</p>
+         * 
          * <strong>example:</strong>
          * <p>GLOBAL SERVICE</p>
          */
         @NameInMap("EnName")
         public String enName;
 
+        /**
+         * <p>The Chinese name of the atomic page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>全局服务</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The URL to embed the SaaS page in an iframe.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://pre-alime4service.console.aliyun.com/?productCode=p_beebot_public&switchAgent=1204001&saasCode=Robot&saasToken=06614fdb-c72f-436e-8003-dfe8a2854a15&saasName=123#/robot">https://pre-alime4service.console.aliyun.com/?productCode=p_beebot_public&amp;switchAgent=1204001&amp;saasCode=Robot&amp;saasToken=06614fdb-c72f-436e-8003-dfe8a2854a15&amp;saasName=123#/robot</a></p>
          */
@@ -78,6 +95,8 @@ public class ListSaasInfoResponseBody extends TeaModel {
         public String serviceUrl;
 
         /**
+         * <p>The URL of the atomic page.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://alime.console.aliyun.com/?productCode=p_beebot_public&switchAgent=1204001&saasCode=Robot&saasToken=06614fdb-c72f-436e-8003-dfe8a2854a15&saasName=123#/robot">https://alime.console.aliyun.com/?productCode=p_beebot_public&amp;switchAgent=1204001&amp;saasCode=Robot&amp;saasToken=06614fdb-c72f-436e-8003-dfe8a2854a15&amp;saasName=123#/robot</a></p>
          */

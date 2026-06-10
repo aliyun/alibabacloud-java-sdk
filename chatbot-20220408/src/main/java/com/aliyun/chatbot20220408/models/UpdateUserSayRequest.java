@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateUserSayRequest extends TeaModel {
     /**
+     * <p>The workspace key. If you omit this parameter, the default workspace is used. You can find this key on the Workspace Management page in your main account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,7 @@ public class UpdateUserSayRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The ID of the bot.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,10 +23,14 @@ public class UpdateUserSayRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The definition of the user say.</p>
+     */
     @NameInMap("UserSayDefinition")
     public UpdateUserSayRequestUserSayDefinition userSayDefinition;
 
     /**
+     * <p>The ID of the user say.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,6 +78,8 @@ public class UpdateUserSayRequest extends TeaModel {
 
     public static class UpdateUserSayRequestUserSayDefinitionSlotInfos extends TeaModel {
         /**
+         * <p>The zero-based end index (exclusive) of the slot within the content of the user say.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -78,6 +87,8 @@ public class UpdateUserSayRequest extends TeaModel {
         public Integer endIndex;
 
         /**
+         * <p>The ID of the slot.</p>
+         * 
          * <strong>example:</strong>
          * <p>346ffg3q23dv</p>
          */
@@ -85,6 +96,8 @@ public class UpdateUserSayRequest extends TeaModel {
         public String slotId;
 
         /**
+         * <p>The zero-based start index of the slot within the content of the user say.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -124,12 +137,17 @@ public class UpdateUserSayRequest extends TeaModel {
 
     public static class UpdateUserSayRequestUserSayDefinition extends TeaModel {
         /**
+         * <p>The content of the user say.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>做核酸了吗您</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>The ID of the intent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,6 +156,9 @@ public class UpdateUserSayRequest extends TeaModel {
         @NameInMap("IntentId")
         public Long intentId;
 
+        /**
+         * <p>An array that contains information for each slot.</p>
+         */
         @NameInMap("SlotInfos")
         public java.util.List<UpdateUserSayRequestUserSayDefinitionSlotInfos> slotInfos;
 

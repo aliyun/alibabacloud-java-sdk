@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class NluResponseBody extends TeaModel {
     /**
+     * <p>The ID of the natural language understanding response.</p>
+     * 
      * <strong>example:</strong>
      * <p>2828708A-2C7A-1BAE-B810-87DB9DA9C661</p>
      */
     @NameInMap("MessageId")
     public String messageId;
 
+    /**
+     * <p>The list of messages.</p>
+     */
     @NameInMap("Messages")
     public java.util.List<NluResponseBodyMessages> messages;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A6357C1B-1D79-1382-B259-BD9E80751B42</p>
      */
@@ -52,6 +59,8 @@ public class NluResponseBody extends TeaModel {
 
     public static class NluResponseBodyMessagesDialogHubNluInfoGlobalDictList extends TeaModel {
         /**
+         * <p>The standard word.</p>
+         * 
          * <strong>example:</strong>
          * <p>天气</p>
          */
@@ -59,6 +68,8 @@ public class NluResponseBody extends TeaModel {
         public String standardWord;
 
         /**
+         * <p>The synonym.</p>
+         * 
          * <strong>example:</strong>
          * <p>天气</p>
          */
@@ -90,6 +101,8 @@ public class NluResponseBody extends TeaModel {
 
     public static class NluResponseBodyMessagesDialogHubNluInfoGlobalSensitiveWordList extends TeaModel {
         /**
+         * <p>The standard word.</p>
+         * 
          * <strong>example:</strong>
          * <p>天气</p>
          */
@@ -97,6 +110,8 @@ public class NluResponseBody extends TeaModel {
         public String standardWord;
 
         /**
+         * <p>The synonym.</p>
+         * 
          * <strong>example:</strong>
          * <p>天气</p>
          */
@@ -127,9 +142,15 @@ public class NluResponseBody extends TeaModel {
     }
 
     public static class NluResponseBodyMessagesDialogHubNluInfo extends TeaModel {
+        /**
+         * <p>The list of global dictionary entries.</p>
+         */
         @NameInMap("GlobalDictList")
         public java.util.List<NluResponseBodyMessagesDialogHubNluInfoGlobalDictList> globalDictList;
 
+        /**
+         * <p>The list of global sensitive words.</p>
+         */
         @NameInMap("GlobalSensitiveWordList")
         public java.util.List<NluResponseBodyMessagesDialogHubNluInfoGlobalSensitiveWordList> globalSensitiveWordList;
 
@@ -158,6 +179,8 @@ public class NluResponseBody extends TeaModel {
 
     public static class NluResponseBodyMessagesDsNluInfoEntityList extends TeaModel {
         /**
+         * <p>The name of the entity.</p>
+         * 
          * <strong>example:</strong>
          * <p>@城市</p>
          */
@@ -165,6 +188,8 @@ public class NluResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The original word for the entity, also known as an entity member.</p>
+         * 
          * <strong>example:</strong>
          * <p>北京</p>
          */
@@ -172,6 +197,8 @@ public class NluResponseBody extends TeaModel {
         public String origin;
 
         /**
+         * <p>The type of the entity. Currently, only the <code>text</code> type is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -179,6 +206,8 @@ public class NluResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The entity\&quot;s synonym.</p>
+         * 
          * <strong>example:</strong>
          * <p>首都</p>
          */
@@ -226,6 +255,8 @@ public class NluResponseBody extends TeaModel {
 
     public static class NluResponseBodyMessagesDsNluInfoIntentListSlotList extends TeaModel {
         /**
+         * <p>The name of the entity.</p>
+         * 
          * <strong>example:</strong>
          * <p>@城市</p>
          */
@@ -233,6 +264,8 @@ public class NluResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The original word for the entity, also known as an entity member.</p>
+         * 
          * <strong>example:</strong>
          * <p>北京</p>
          */
@@ -240,6 +273,8 @@ public class NluResponseBody extends TeaModel {
         public String origin;
 
         /**
+         * <p>The type of the entity. Currently, only the <code>text</code> type is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -247,6 +282,8 @@ public class NluResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The entity\&quot;s synonym.</p>
+         * 
          * <strong>example:</strong>
          * <p>首都</p>
          */
@@ -294,6 +331,8 @@ public class NluResponseBody extends TeaModel {
 
     public static class NluResponseBodyMessagesDsNluInfoIntentList extends TeaModel {
         /**
+         * <p>The intent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>724387</p>
          */
@@ -301,6 +340,8 @@ public class NluResponseBody extends TeaModel {
         public Long intentId;
 
         /**
+         * <p>The details of the matching process.</p>
+         * 
          * <strong>example:</strong>
          * <p>classifierType=Fewshot,from=Fewshot,content=[我要查北京的天气, 帮我查北京的天气, 北京天气怎么样, 北京今天下雨吗, 北京今天多少度]</p>
          */
@@ -308,6 +349,8 @@ public class NluResponseBody extends TeaModel {
         public String matchDetail;
 
         /**
+         * <p>The match type. Valid values are <code>Similarity</code> (match by utterance similarity), <code>Lgf</code> (match by LGF), <code>Classify</code> (match by model training), <code>FewShotLearning</code> (match by the built-in few-shot learning model), and <code>BuildIn</code> (match with a built-in intent).</p>
+         * 
          * <strong>example:</strong>
          * <p>FewShotLearning</p>
          */
@@ -315,6 +358,8 @@ public class NluResponseBody extends TeaModel {
         public String matchType;
 
         /**
+         * <p>The name of the intent.</p>
+         * 
          * <strong>example:</strong>
          * <p>查天气意图</p>
          */
@@ -322,12 +367,17 @@ public class NluResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The confidence score of the match.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.995</p>
          */
         @NameInMap("Score")
         public Double score;
 
+        /**
+         * <p>The list of slots for the matched intent.</p>
+         */
         @NameInMap("SlotList")
         public java.util.List<NluResponseBodyMessagesDsNluInfoIntentListSlotList> slotList;
 
@@ -387,9 +437,15 @@ public class NluResponseBody extends TeaModel {
     }
 
     public static class NluResponseBodyMessagesDsNluInfo extends TeaModel {
+        /**
+         * <p>The list of entities.</p>
+         */
         @NameInMap("EntityList")
         public java.util.List<NluResponseBodyMessagesDsNluInfoEntityList> entityList;
 
+        /**
+         * <p>The list of intents.</p>
+         */
         @NameInMap("IntentList")
         public java.util.List<NluResponseBodyMessagesDsNluInfoIntentList> intentList;
 
@@ -417,9 +473,15 @@ public class NluResponseBody extends TeaModel {
     }
 
     public static class NluResponseBodyMessages extends TeaModel {
+        /**
+         * <p>The natural language understanding information from DialogHub.</p>
+         */
         @NameInMap("DialogHubNluInfo")
         public NluResponseBodyMessagesDialogHubNluInfo dialogHubNluInfo;
 
+        /**
+         * <p>The natural language understanding information from Dialog Studio.</p>
+         */
         @NameInMap("DsNluInfo")
         public NluResponseBodyMessagesDsNluInfo dsNluInfo;
 

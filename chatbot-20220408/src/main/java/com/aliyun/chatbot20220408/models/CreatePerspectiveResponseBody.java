@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreatePerspectiveResponseBody extends TeaModel {
     /**
+     * <p>The perspective ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3001</p>
      */
@@ -12,6 +14,8 @@ public class CreatePerspectiveResponseBody extends TeaModel {
     public String perspectiveId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F285D735-D580-18A8-B97F-B2E72B00F101</p>
      */

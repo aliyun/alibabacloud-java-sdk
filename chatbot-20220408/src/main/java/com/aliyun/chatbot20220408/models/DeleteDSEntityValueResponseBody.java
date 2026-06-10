@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteDSEntityValueResponseBody extends TeaModel {
     /**
+     * <p>The ID of the deleted entity value.</p>
+     * 
      * <strong>example:</strong>
      * <p>3453453452</p>
      */
@@ -12,6 +14,8 @@ public class DeleteDSEntityValueResponseBody extends TeaModel {
     public Long entityValueId;
 
     /**
+     * <p>The unique identifier of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>dfdf2t3rfvb45y</p>
      */

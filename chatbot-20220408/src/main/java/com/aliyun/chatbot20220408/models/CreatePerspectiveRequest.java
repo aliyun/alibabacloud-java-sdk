@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreatePerspectiveRequest extends TeaModel {
     /**
+     * <p>The agent key. If unspecified, the system uses the default agent. You can obtain this key from the Business Management page of your Alibaba Cloud account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,8 @@ public class CreatePerspectiveRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The description of the perspective.</p>
+     * 
      * <strong>example:</strong>
      * <p>用于购物APP的移动端视角</p>
      */
@@ -19,6 +23,8 @@ public class CreatePerspectiveRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The name of the perspective. The maximum length is 50 characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>移动端视角</p>
      */

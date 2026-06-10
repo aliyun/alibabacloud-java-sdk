@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribePerspectiveResponseBody extends TeaModel {
     /**
+     * <p>The creation time in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-07-27T07:05:37Z</p>
      */
@@ -12,6 +14,8 @@ public class DescribePerspectiveResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The modification time in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-07-26T07:05:37Z</p>
      */
@@ -19,6 +23,8 @@ public class DescribePerspectiveResponseBody extends TeaModel {
     public String modifyTime;
 
     /**
+     * <p>The name of the perspective.</p>
+     * 
      * <strong>example:</strong>
      * <p>移动端视角</p>
      */
@@ -26,6 +32,8 @@ public class DescribePerspectiveResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>The perspective code (used for the Q\&amp;A API).</p>
+     * 
      * <strong>example:</strong>
      * <p>FZJBY3raWr</p>
      */
@@ -33,6 +41,8 @@ public class DescribePerspectiveResponseBody extends TeaModel {
     public String perspectiveCode;
 
     /**
+     * <p>The ID of the perspective.</p>
+     * 
      * <strong>example:</strong>
      * <p>3001</p>
      */
@@ -40,6 +50,8 @@ public class DescribePerspectiveResponseBody extends TeaModel {
     public String perspectiveId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F285D735-D580-18A8-B97F-B2E72B00F101</p>
      */
@@ -47,6 +59,8 @@ public class DescribePerspectiveResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the perspective is user-defined.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -54,6 +68,8 @@ public class DescribePerspectiveResponseBody extends TeaModel {
     public Boolean selfDefine;
 
     /**
+     * <p>The status of the perspective. Valid values: 3 (Enabled) and 1 (Disabled).</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

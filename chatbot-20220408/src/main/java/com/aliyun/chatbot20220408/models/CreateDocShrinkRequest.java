@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDocShrinkRequest extends TeaModel {
     /**
+     * <p>The key for the business space. If this parameter is not specified, the default business space is used. You can obtain the key from the Business Management page of your primary account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,7 @@ public class CreateDocShrinkRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The document category ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,12 +24,23 @@ public class CreateDocShrinkRequest extends TeaModel {
     public Long categoryId;
 
     /**
+     * <p>The configuration for document splitting. Set the key to <code>Splitter</code>. Valid values are <code>paragraphSplitter</code> (identifies content hierarchy) and <code>treeSplitter</code> (uses a rule-based hierarchy).</p>
+     * <p>The document chunk size. Set the key to <code>ChunkSize</code>. The default value is 500. The value must be in the range of 200 to 800.</p>
+     * <p>The patterns for the rule-based hierarchy. Set the key to <code>TreePatterns</code>. The default value is an empty array (<code>[]</code>).</p>
+     * <p>The document title source. Set the key to <code>TitleSource</code>. Valid values are <code>ocrTitle</code> (default), which uses the title recognized by Optical Character Recognition (OCR), and <code>docName</code>, which uses the document name as the title.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;Splitter&quot;:&quot;treeSplitter&quot;,&quot;ChunkSize&quot;:500,&quot;TreePatterns&quot;:[&quot;^# .<em>&quot;,&quot;^## .</em>&quot;,&quot;^### .<em>&quot;,&quot;^#### .</em>&quot;],&quot;TitleSource&quot;:&quot;&quot;}</p>
      */
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <p>The document content. You must specify either this parameter or <code>Url</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试内容</p>
+     */
     @NameInMap("Content")
     public String content;
 
@@ -34,6 +48,8 @@ public class CreateDocShrinkRequest extends TeaModel {
     public String docMetadataShrink;
 
     /**
+     * <p>The time when the document expires. The time is in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2032-05-25T16:28:36Z</p>
      */
@@ -41,6 +57,8 @@ public class CreateDocShrinkRequest extends TeaModel {
     public String endDate;
 
     /**
+     * <p>The passthrough data of the document.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;code&quot;:&quot;xxx&quot;}</p>
      */
@@ -48,22 +66,33 @@ public class CreateDocShrinkRequest extends TeaModel {
     public String meta;
 
     /**
+     * <p>The time when the document takes effect. The time is in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-05-25T16:28:36Z</p>
      */
     @NameInMap("StartDate")
     public String startDate;
 
+    /**
+     * <p>A list of tag IDs.</p>
+     */
     @NameInMap("TagIds")
     public String tagIdsShrink;
 
     /**
+     * <p>The document title.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试标题</p>
      */
     @NameInMap("Title")
     public String title;
 
     /**
+     * <p>The URL of the document. You must specify either this parameter or <code>Content</code>. Supported formats include .txt, .pdf, .markdown, .doc, and .docx. The following limits apply to a single file: a maximum of 100 pages, less than 200 KB for .txt and .markdown files, and less than 100 MB for .pdf, .doc, and .docx files.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/example.pdf">https://example.com/example.pdf</a></p>
      */

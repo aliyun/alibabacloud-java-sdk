@@ -5,19 +5,29 @@ import com.aliyun.tea.*;
 
 public class ChatResponseBody extends TeaModel {
     /**
+     * <p>The unique message ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A2315C4B-A872-5DEE-9DAD-D73B194A4AEC</p>
      */
     @NameInMap("MessageId")
     public String messageId;
 
+    /**
+     * <p>A list of message objects.</p>
+     */
     @NameInMap("Messages")
     public java.util.List<ChatResponseBodyMessages> messages;
 
+    /**
+     * <p>The words segmented from the query. This field may be empty.</p>
+     */
     @NameInMap("QuerySegList")
     public java.util.List<String> querySegList;
 
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A2315C4B-A872-5DEE-9DAD-D73B194A4AEC</p>
      */
@@ -25,6 +35,8 @@ public class ChatResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The unique session ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>a6f216a0685c4c8baa0e8beb6d5ec6db</p>
      */
@@ -78,12 +90,20 @@ public class ChatResponseBody extends TeaModel {
 
     public static class ChatResponseBodyMessagesKnowledgeRelatedKnowledges extends TeaModel {
         /**
+         * <p>The ID of the related knowledge entry.</p>
+         * 
          * <strong>example:</strong>
          * <p>735899</p>
          */
         @NameInMap("KnowledgeId")
         public String knowledgeId;
 
+        /**
+         * <p>The title of the related knowledge entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>公积金查询</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -112,48 +132,90 @@ public class ChatResponseBody extends TeaModel {
 
     public static class ChatResponseBodyMessagesKnowledge extends TeaModel {
         /**
+         * <p>The source of the answer.
+         * <code>KnowledgeBase</code>: The answer is from the knowledge base.</p>
+         * 
          * <strong>example:</strong>
          * <p>KnowledgeBase</p>
          */
         @NameInMap("AnswerSource")
         public String answerSource;
 
+        /**
+         * <p>The category of the knowledge entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>公积金</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The content of the matched knowledge entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>公积金提取，请在首页搜索公积金提取，提交办事的表单</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>Content format of the answer.</p>
+         * 
          * <strong>example:</strong>
          * <p>PLAIN_TEXT</p>
          */
         @NameInMap("ContentType")
         public String contentType;
 
+        /**
+         * <p>The hit statement matching the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>公积金</p>
+         */
         @NameInMap("HitStatement")
         public String hitStatement;
 
         /**
+         * <p>ID of the matched knowledge entry in the knowledge base.</p>
+         * 
          * <strong>example:</strong>
          * <p>735898</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>A list of related knowledge objects.</p>
+         */
         @NameInMap("RelatedKnowledges")
         public java.util.List<ChatResponseBodyMessagesKnowledgeRelatedKnowledges> relatedKnowledges;
 
         /**
+         * <p>The confidence score.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.998</p>
          */
         @NameInMap("Score")
         public Double score;
 
+        /**
+         * <p>Summary of the matched knowledge entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>公积金提取</p>
+         */
         @NameInMap("Summary")
         public String summary;
 
+        /**
+         * <p>The title of the matched knowledge entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>公积金提取</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -246,6 +308,8 @@ public class ChatResponseBody extends TeaModel {
 
     public static class ChatResponseBodyMessagesRecommends extends TeaModel {
         /**
+         * <p>Source of the clarification.</p>
+         * 
          * <strong>example:</strong>
          * <p>KNOWLEDGE</p>
          */
@@ -253,6 +317,8 @@ public class ChatResponseBody extends TeaModel {
         public String answerSource;
 
         /**
+         * <p>The knowledge ID for the clarification.</p>
+         * 
          * <strong>example:</strong>
          * <p>4548</p>
          */
@@ -260,12 +326,20 @@ public class ChatResponseBody extends TeaModel {
         public String knowledgeId;
 
         /**
+         * <p>The score of the recommended content. Returned only if <code>AnswerSource</code> is <code>KNOWLEDGE</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.46</p>
          */
         @NameInMap("Score")
         public Double score;
 
+        /**
+         * <p>Clarification content. This can be an entity from knowledge graph QA, a knowledge title from FAQ-based QA, or a column value from table QA.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试纯文本</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -310,18 +384,38 @@ public class ChatResponseBody extends TeaModel {
 
     public static class ChatResponseBodyMessagesTextSlots extends TeaModel {
         /**
+         * <p>Indicates whether the slot was filled.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("Hit")
         public Boolean hit;
 
+        /**
+         * <p>The name of the slot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>查天气意图.city</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The original value from the user\&quot;s input.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>北京</p>
+         */
         @NameInMap("Origin")
         public String origin;
 
+        /**
+         * <p>Extracted value of the slot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>北京</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -366,16 +460,26 @@ public class ChatResponseBody extends TeaModel {
 
     public static class ChatResponseBodyMessagesText extends TeaModel {
         /**
+         * <p>The source of the answer.</p>
+         * 
          * <strong>example:</strong>
          * <p>BotFramework</p>
          */
         @NameInMap("AnswerSource")
         public String answerSource;
 
+        /**
+         * <p>Title of the matched article. Returned only if <code>AnswerSource</code> is <code>MACHINE_READ</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>备案十一</p>
+         */
         @NameInMap("ArticleTitle")
         public String articleTitle;
 
         /**
+         * <p>Command parameters, such as the skill group for transferring to a human agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *     &quot;sysToAgent&quot;: &quot;{\&quot;skillGroup\&quot;:\&quot;12\&quot;}&quot;
@@ -384,45 +488,110 @@ public class ChatResponseBody extends TeaModel {
         @NameInMap("Commands")
         public java.util.Map<String, ?> commands;
 
+        /**
+         * <p>The content of the text message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>请问您要查哪里的天气？</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>The content format of the answer.</p>
+         * 
          * <strong>example:</strong>
          * <p>PLAIN_TEXT</p>
          */
         @NameInMap("ContentType")
         public String contentType;
 
+        /**
+         * <p>Name of the dialog. Returned only if <code>AnswerSource</code> is <code>BotFramework</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例_查天气</p>
+         */
         @NameInMap("DialogName")
         public String dialogName;
 
+        /**
+         * <p>Contains passthrough parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;MATCHED_INTENT_SOURCE&quot;: &quot;&quot;,
+         *     &quot;INTENT_ID&quot;: 724414,
+         *     &quot;IntentName&quot;: &quot;查天气意图&quot;,
+         *     &quot;INTENT_DETAIL&quot;: &quot;[我想|我要]查天气&quot;,
+         *     &quot;LGF_EXPRESSION&quot;: &quot;[我想|我要]查天气&quot;,
+         *     &quot;IS_SESSION_FINISHED&quot;: false,
+         *     &quot;DsScore&quot;: 100.0,
+         *     &quot;DIALOG_ID&quot;: &quot;299034&quot;,
+         *     &quot;FINISH_LABEL&quot;: false,
+         *     &quot;MODULE_START&quot;: false,
+         *     &quot;INTENT_NAME&quot;: &quot;查天气意图&quot;,
+         *     &quot;INTENT_SOURCE&quot;: &quot;Lgf&quot;,
+         *     &quot;DIALOG_NAME&quot;: &quot;示例_查天气&quot;
+         * }</p>
+         */
         @NameInMap("Ext")
         public java.util.Map<String, ?> ext;
 
+        /**
+         * <p>Passthrough parameters. Returned only if <code>AnswerSource</code> is <code>BotFramework</code>.</p>
+         */
         @NameInMap("ExternalFlags")
         public java.util.Map<String, ?> externalFlags;
 
+        /**
+         * <p>The hit statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>查天气</p>
+         */
         @NameInMap("HitStatement")
         public String hitStatement;
 
+        /**
+         * <p>The name of the intent. This field is returned when <code>AnswerSource</code> is <code>BotFramework</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>查天气意图</p>
+         */
         @NameInMap("IntentName")
         public String intentName;
 
+        /**
+         * <p>Metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[[{\&quot;columnName\&quot;:\&quot;姓名\&quot;,\&quot;stringValue\&quot;:\&quot;王珊珊\&quot;}]]</p>
+         */
         @NameInMap("MetaData")
         public String metaData;
 
         /**
+         * <p>The node ID. Returned only if <code>AnswerSource</code> is <code>BotFramework</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>1410-c7a72a78.__city</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>The name of the node. This field is returned when <code>AnswerSource</code> is <code>BotFramework</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例_查天气.查天气填槽.__city</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
+         * <p>A value of <code>SSML</code> indicates that an interactive slot-filling process has started in the dialog factory. This field is returned only if <code>AnswerSource</code> is <code>BotFramework</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>SSML</p>
          */
@@ -430,15 +599,26 @@ public class ChatResponseBody extends TeaModel {
         public String responseType;
 
         /**
+         * <p>The confidence score.</p>
+         * 
          * <strong>example:</strong>
          * <p>100.0</p>
          */
         @NameInMap("Score")
         public Double score;
 
+        /**
+         * <p>A list of slot objects. Returned only if <code>AnswerSource</code> is <code>BotFramework</code>.</p>
+         */
         @NameInMap("Slots")
         public java.util.List<ChatResponseBodyMessagesTextSlots> slots;
 
+        /**
+         * <p>The title of a custom chit-chat topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>问候</p>
+         */
         @NameInMap("UserDefinedChatTitle")
         public String userDefinedChatTitle;
 
@@ -587,6 +767,8 @@ public class ChatResponseBody extends TeaModel {
 
     public static class ChatResponseBodyMessages extends TeaModel {
         /**
+         * <p>Indicates the source of the recommended answer if <code>AnswerType</code> is <code>Recommend</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>KNOWLEDGE</p>
          */
@@ -594,24 +776,47 @@ public class ChatResponseBody extends TeaModel {
         public String answerSource;
 
         /**
+         * <p>Type of the message.</p>
+         * 
          * <strong>example:</strong>
          * <p>Text</p>
          */
         @NameInMap("AnswerType")
         public String answerType;
 
+        /**
+         * <p>Contains the <code>Knowledge</code> object if <code>AnswerType</code> is <code>Knowledge</code>.</p>
+         */
         @NameInMap("Knowledge")
         public ChatResponseBodyMessagesKnowledge knowledge;
 
+        /**
+         * <p>Contains a list of <code>Recommend</code> objects if <code>AnswerType</code> is <code>Recommend</code>.</p>
+         */
         @NameInMap("Recommends")
         public java.util.List<ChatResponseBodyMessagesRecommends> recommends;
 
+        /**
+         * <p>Contains the <code>Text</code> object if <code>AnswerType</code> is <code>Text</code>.</p>
+         */
         @NameInMap("Text")
         public ChatResponseBodyMessagesText text;
 
+        /**
+         * <p>The title of the clarification question for text-based chat scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>请问您想咨询的是哪个投保年龄区间呢？</p>
+         */
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <p>The clarification content for voice-based scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>请问你说的是公积金查询，还是公积金提取</p>
+         */
         @NameInMap("VoiceTitle")
         public String voiceTitle;
 

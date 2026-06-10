@@ -4,13 +4,27 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class BeginSessionResponseBody extends TeaModel {
+    /**
+     * <p>The ASR end-pointing detection time, in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>700</p>
+     */
     @NameInMap("AsrMaxEndSilence")
     public Integer asrMaxEndSilence;
 
+    /**
+     * <p>Indicates whether voice playback is interruptible.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Interruptible")
     public Boolean interruptible;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>149C7528-C104-1B50-A4F9-0C5907A8AD9D</p>
      */
@@ -18,7 +32,7 @@ public class BeginSessionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>静默超时时间</p>
+     * <p>The silence timeout, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -27,6 +41,8 @@ public class BeginSessionResponseBody extends TeaModel {
     public Integer silenceReplyTimeout;
 
     /**
+     * <p>The welcome message.</p>
+     * 
      * <strong>example:</strong>
      * <p>智能对话机器人为您服务，请问有什么可以帮您？</p>
      */

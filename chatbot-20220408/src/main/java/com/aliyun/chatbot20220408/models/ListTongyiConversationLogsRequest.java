@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTongyiConversationLogsRequest extends TeaModel {
     /**
+     * <p>The key for the business space. If omitted, the default business space is used. You can find this key on the Business Management page of your root account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,7 @@ public class ListTongyiConversationLogsRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The ID of the chatbot instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class ListTongyiConversationLogsRequest extends TeaModel {
     public String robotInstanceId;
 
     /**
+     * <p>The ID of the session.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

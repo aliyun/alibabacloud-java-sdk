@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteFaqResponseBody extends TeaModel {
     /**
+     * <p>A unique identifier for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>F79E7305-5314-5069-A701-9591AD051902</p>
      */

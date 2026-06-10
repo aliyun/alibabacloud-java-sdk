@@ -4,10 +4,15 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class DeleteInstanceResponseBody extends TeaModel {
+    /**
+     * <p>A list of business types.</p>
+     */
     @NameInMap("BizTypeList")
     public java.util.List<String> bizTypeList;
 
     /**
+     * <p>The UTC time when the task was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-09-11T09:26:14Z</p>
      */
@@ -15,6 +20,8 @@ public class DeleteInstanceResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The ID of the user who created the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>9052</p>
      */
@@ -22,16 +29,26 @@ public class DeleteInstanceResponseBody extends TeaModel {
     public Long createUserId;
 
     /**
+     * <p>The username of the user who created the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>xuqiang_test</p>
      */
     @NameInMap("CreateUserName")
     public String createUserName;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>检查待发布模块是否空闲发生错误，faq</p>
+     */
     @NameInMap("Error")
     public String error;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8521</p>
      */
@@ -39,6 +56,8 @@ public class DeleteInstanceResponseBody extends TeaModel {
     public Long id;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5CBF0581-EAE7-1DC4-95C6-A089656A1E2D</p>
      */
@@ -46,6 +65,8 @@ public class DeleteInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task ID. This parameter is an alias for <code>Id</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>8521</p>
      */
@@ -53,6 +74,8 @@ public class DeleteInstanceResponseBody extends TeaModel {
     public Long response;
 
     /**
+     * <p>The task status. For more information about possible states, see the GetInstancePublishTaskState API operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE_RUNNING</p>
      */

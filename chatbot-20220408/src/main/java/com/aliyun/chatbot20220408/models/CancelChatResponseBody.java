@@ -4,10 +4,15 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class CancelChatResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the operation was successful.</p>
+     */
     @NameInMap("CancelResult")
     public Boolean cancelResult;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>E3E5C779-A630-45AC-B0F2-A4506A4212F1</p>
      */

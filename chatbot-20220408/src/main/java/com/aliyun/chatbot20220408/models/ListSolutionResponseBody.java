@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListSolutionResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5B29DB5E-251D-5A73-84B5-A12DF795F231</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A list of solutions.</p>
+     */
     @NameInMap("Solutions")
     public java.util.List<ListSolutionResponseBodySolutions> solutions;
 
@@ -36,10 +41,18 @@ public class ListSolutionResponseBody extends TeaModel {
     }
 
     public static class ListSolutionResponseBodySolutions extends TeaModel {
+        /**
+         * <p>The content of the solution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>答案内容</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>The type of the solution content. Valid values: <code>0</code> (plain text) and <code>1</code> (rich text).</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -47,6 +60,8 @@ public class ListSolutionResponseBody extends TeaModel {
         public Integer contentType;
 
         /**
+         * <p>The time when the solution was created, in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-03-29T03:55:04Z</p>
          */
@@ -54,25 +69,41 @@ public class ListSolutionResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The time when the solution was last modified, in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-03-29T06:23:53Z</p>
          */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        /**
+         * <p>A list of perspective codes.</p>
+         */
         @NameInMap("PerspectiveCodes")
         public java.util.List<String> perspectiveCodes;
 
+        /**
+         * <p>The content of the solution in plain text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>答案内容</p>
+         */
         @NameInMap("PlainText")
         public String plainText;
 
         /**
+         * <p>The solution ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>496</p>
          */
         @NameInMap("SolutionId")
         public Long solutionId;
 
+        /**
+         * <p>A list of tag IDs.</p>
+         */
         @NameInMap("TagIdList")
         public java.util.List<Long> tagIdList;
 

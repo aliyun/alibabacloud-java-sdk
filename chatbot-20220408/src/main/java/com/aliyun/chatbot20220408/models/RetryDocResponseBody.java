@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RetryDocResponseBody extends TeaModel {
     /**
+     * <p>The knowledge ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001905617</p>
      */
@@ -12,7 +14,7 @@ public class RetryDocResponseBody extends TeaModel {
     public Long knowledgeId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6419BA93-D111-5225-8998-13E63E6D3940</p>

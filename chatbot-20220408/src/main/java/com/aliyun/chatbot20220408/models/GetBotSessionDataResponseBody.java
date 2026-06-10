@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetBotSessionDataResponseBody extends TeaModel {
     /**
+     * <p>The API call latency, in milliseconds (ms).</p>
+     * 
      * <strong>example:</strong>
      * <p>116</p>
      */
     @NameInMap("CostTime")
     public String costTime;
 
+    /**
+     * <p>An array of objects containing the data details.</p>
+     */
     @NameInMap("Datas")
     public java.util.List<java.util.Map<String, ?>> datas;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>15CD94CC-CBEB-4189-806C-A132D1F45D51</p>
      */

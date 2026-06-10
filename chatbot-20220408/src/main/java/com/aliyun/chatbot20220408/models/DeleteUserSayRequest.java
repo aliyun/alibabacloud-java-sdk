@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteUserSayRequest extends TeaModel {
     /**
+     * <p>The key of the business space. If omitted, the default business space is used. You can obtain the key from the Business Management page of your primary account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,6 +14,7 @@ public class DeleteUserSayRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The instance ID of the bot.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class DeleteUserSayRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the intent.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class DeleteUserSayRequest extends TeaModel {
     public Long intentId;
 
     /**
+     * <p>The ID of the user say.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

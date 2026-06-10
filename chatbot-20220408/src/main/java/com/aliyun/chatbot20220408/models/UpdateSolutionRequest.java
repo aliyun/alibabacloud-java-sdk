@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateSolutionRequest extends TeaModel {
     /**
+     * <p>The agent key. If you omit this parameter, the default agent is used. You can obtain the key on the Business Management page of your primary account.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
@@ -12,12 +14,18 @@ public class UpdateSolutionRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The content of the solution.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>修改的答案内容</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
+     * <p>The content type. Valid values: 0 for plain text and 1 for rich text.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -25,12 +33,14 @@ public class UpdateSolutionRequest extends TeaModel {
     public Integer contentType;
 
     /**
+     * <p>A list of perspective codes.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PerspectiveCodes")
     public java.util.List<String> perspectiveCodes;
 
     /**
+     * <p>The ID of the solution.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +49,9 @@ public class UpdateSolutionRequest extends TeaModel {
     @NameInMap("SolutionId")
     public Long solutionId;
 
+    /**
+     * <p>A list of tag IDs.</p>
+     */
     @NameInMap("TagIdList")
     public java.util.List<Long> tagIdList;
 

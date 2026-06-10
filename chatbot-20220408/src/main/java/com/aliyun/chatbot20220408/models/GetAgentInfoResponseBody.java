@@ -4,10 +4,15 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class GetAgentInfoResponseBody extends TeaModel {
+    /**
+     * <p>The agent details.</p>
+     */
     @NameInMap("Data")
     public GetAgentInfoResponseBodyData data;
 
     /**
+     * <p>The error message returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter.Invalid</p>
      */
@@ -15,7 +20,7 @@ public class GetAgentInfoResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>FC384CE1-8D42-1900-84E1-F33F990F2B5E</p>
@@ -24,6 +29,8 @@ public class GetAgentInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -69,12 +76,20 @@ public class GetAgentInfoResponseBody extends TeaModel {
 
     public static class GetAgentInfoResponseBodyData extends TeaModel {
         /**
+         * <p>The agent key. It is used to specify the agent in Platform as a Service (PaaS) API calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>4e7400028e6f4a7393ed3acf6a7b8927_p_beebot_public</p>
          */
         @NameInMap("AgentKey")
         public String agentKey;
 
+        /**
+         * <p>The agent name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>业务空间_881</p>
+         */
         @NameInMap("AgentName")
         public String agentName;
 
