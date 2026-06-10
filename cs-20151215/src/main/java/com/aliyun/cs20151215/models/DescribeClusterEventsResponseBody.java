@@ -10,6 +10,9 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
     @NameInMap("events")
     public java.util.List<DescribeClusterEventsResponseBodyEvents> events;
 
+    /**
+     * <p>The token used to retrieve the next page of results. If this parameter is empty, there are no more results to return.</p>
+     */
     @NameInMap("next_token")
     public String nextToken;
 
@@ -51,29 +54,6 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
     public static class DescribeClusterEventsResponseBodyEventsData extends TeaModel {
         /**
          * <p>The severity level of the event.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>warning</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>error</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>info</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>info</p>
@@ -82,7 +62,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
         public String level;
 
         /**
-         * <p>The details of the event.</p>
+         * <p>The event message.</p>
          * 
          * <strong>example:</strong>
          * <p>Start to upgrade NodePool nodePool/npdd89dc2b76c04f14b06774883b******</p>
@@ -91,7 +71,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The status of the event.</p>
+         * <p>The event status.</p>
          * 
          * <strong>example:</strong>
          * <p>Started</p>
@@ -132,7 +112,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
 
     public static class DescribeClusterEventsResponseBodyEvents extends TeaModel {
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c82e6987e2961451182edacd74faf****</p>
@@ -141,7 +121,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The description of the event.</p>
+         * <p>The event data.</p>
          */
         @NameInMap("data")
         public DescribeClusterEventsResponseBodyEventsData data;
@@ -159,13 +139,13 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
          * <p>The event source.</p>
          * 
          * <strong>example:</strong>
-         * <p>cluster</p>
+         * <p>task</p>
          */
         @NameInMap("source")
         public String source;
 
         /**
-         * <p>The subject related to the event.</p>
+         * <p>The object associated with the event.</p>
          * 
          * <strong>example:</strong>
          * <p>npdd89dc2b76c04f14b06774883b******</p>
@@ -174,16 +154,50 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
         public String subject;
 
         /**
-         * <p>The time when the event started.</p>
+         * <p>The time the event occurred.</p>
          * 
          * <strong>example:</strong>
-         * <p>2020-12-01T17:31:00Z</p>
+         * <p>2025-05-14T10:00:56+08:00</p>
          */
         @NameInMap("time")
         public String time;
 
         /**
-         * <p>The type of event. Valid values:</p>
+         * <p>The event type. Valid values:</p>
+         * <ul>
+         * <li><p><code>cluster_create</code>: Cluster creation.</p>
+         * </li>
+         * <li><p><code>cluster_scaleout</code>: Cluster scale-out.</p>
+         * </li>
+         * <li><p><code>cluster_attach</code>: Attaching existing nodes to a cluster.</p>
+         * </li>
+         * <li><p><code>cluster_delete</code>: Cluster deletion.</p>
+         * </li>
+         * <li><p><code>cluster_upgrade</code>: Cluster upgrade.</p>
+         * </li>
+         * <li><p><code>cluster_migrate</code>: Cluster migration.</p>
+         * </li>
+         * <li><p><code>cluster_node_delete</code>: Node removal.</p>
+         * </li>
+         * <li><p><code>cluster_node_drain</code>: Node drain.</p>
+         * </li>
+         * <li><p><code>cluster_modify</code>: Cluster modification.</p>
+         * </li>
+         * <li><p><code>cluster_configuration_modify</code>: Control plane configuration modification.</p>
+         * </li>
+         * <li><p><code>cluster_addon_install</code>: Add-on installation.</p>
+         * </li>
+         * <li><p><code>cluster_addon_upgrade</code>: Add-on upgrade.</p>
+         * </li>
+         * <li><p><code>cluster_addon_uninstall</code>: Add-on uninstallation.</p>
+         * </li>
+         * <li><p><code>runtime_upgrade</code>: Container runtime upgrade.</p>
+         * </li>
+         * <li><p><code>nodepool_upgrade</code>: Node pool upgrade.</p>
+         * </li>
+         * <li><p><code>nodepool_update</code>: Node pool update.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>nodepool_update</p>
@@ -256,7 +270,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
 
     public static class DescribeClusterEventsResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -265,7 +279,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 50. Default value: 50.</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -274,10 +288,10 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries that match the query.</p>
          * 
          * <strong>example:</strong>
-         * <p>3</p>
+         * <p>126</p>
          */
         @NameInMap("total_count")
         public Long totalCount;

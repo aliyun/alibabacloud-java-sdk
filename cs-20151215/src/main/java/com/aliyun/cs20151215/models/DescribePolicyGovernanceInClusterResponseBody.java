@@ -4,17 +4,20 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
+    /**
+     * <p>A summary of policy violations, grouped by severity.</p>
+     */
     @NameInMap("Violation")
     public DescribePolicyGovernanceInClusterResponseBodyViolation violation;
 
     /**
-     * <p>The audit logs of the policies in the cluster.</p>
+     * <p>The audit log for policy governance in the cluster.</p>
      */
     @NameInMap("admit_log")
     public DescribePolicyGovernanceInClusterResponseBodyAdmitLog admitLog;
 
     /**
-     * <p>Details about the policies of different severity levels that are enabled for the cluster.</p>
+     * <p>The statistics for enabled policies in the cluster, categorized by severity.</p>
      */
     @NameInMap("on_state")
     public java.util.List<DescribePolicyGovernanceInClusterResponseBodyOnState> onState;
@@ -49,9 +52,21 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolationsDeny extends TeaModel {
+        /**
+         * <p>The severity level. Valid values: <code>low</code>, <code>medium</code>, and <code>high</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>medium</p>
+         */
         @NameInMap("severity")
         public String severity;
 
+        /**
+         * <p>The number of violations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("violations")
         public String violations;
 
@@ -79,9 +94,21 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolationsWarn extends TeaModel {
+        /**
+         * <p>The severity level. Valid values: <code>low</code>, <code>medium</code>, and <code>high</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
+         */
         @NameInMap("severity")
         public String severity;
 
+        /**
+         * <p>The number of violations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("violations")
         public Long violations;
 
@@ -109,9 +136,15 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolations extends TeaModel {
+        /**
+         * <p>A summary of deny actions.</p>
+         */
         @NameInMap("deny")
         public java.util.List<DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolationsDeny> deny;
 
+        /**
+         * <p>A summary of warn actions.</p>
+         */
         @NameInMap("warn")
         public java.util.List<DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolationsWarn> warn;
 
@@ -139,15 +172,39 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGovernanceInClusterResponseBodyViolationViolationsDeny extends TeaModel {
+        /**
+         * <p>The policy description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Prevent specific namespaces from being deleted.</p>
+         */
         @NameInMap("policyDescription")
         public String policyDescription;
 
+        /**
+         * <p>The policy name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACKNamespacesDeleteProtection</p>
+         */
         @NameInMap("policyName")
         public String policyName;
 
+        /**
+         * <p>The severity level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>medium</p>
+         */
         @NameInMap("severity")
         public String severity;
 
+        /**
+         * <p>The number of violations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("violations")
         public Long violations;
 
@@ -191,15 +248,27 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGovernanceInClusterResponseBodyViolationViolationsWarn extends TeaModel {
+        /**
+         * <p>The policy description.</p>
+         */
         @NameInMap("policyDescription")
         public String policyDescription;
 
+        /**
+         * <p>The policy name.</p>
+         */
         @NameInMap("policyName")
         public String policyName;
 
+        /**
+         * <p>The severity level.</p>
+         */
         @NameInMap("severity")
         public String severity;
 
+        /**
+         * <p>The number of violations.</p>
+         */
         @NameInMap("violations")
         public Long violations;
 
@@ -243,9 +312,15 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGovernanceInClusterResponseBodyViolationViolations extends TeaModel {
+        /**
+         * <p>A summary of deny actions.</p>
+         */
         @NameInMap("deny")
         public java.util.List<DescribePolicyGovernanceInClusterResponseBodyViolationViolationsDeny> deny;
 
+        /**
+         * <p>A summary of warn actions.</p>
+         */
         @NameInMap("warn")
         public java.util.List<DescribePolicyGovernanceInClusterResponseBodyViolationViolationsWarn> warn;
 
@@ -273,9 +348,15 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGovernanceInClusterResponseBodyViolation extends TeaModel {
+        /**
+         * <p>A summary of all policy violations.</p>
+         */
         @NameInMap("totalViolations")
         public DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolations totalViolations;
 
+        /**
+         * <p>A summary of violations, grouped by policy name.</p>
+         */
         @NameInMap("violations")
         public DescribePolicyGovernanceInClusterResponseBodyViolationViolations violations;
 
@@ -303,48 +384,144 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGovernanceInClusterResponseBodyAdmitLogLogs extends TeaModel {
+        /**
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hash code</p>
+         */
         @NameInMap("cluster_id")
         public String clusterId;
 
+        /**
+         * <p>The enforcement action of the policy. Valid values:</p>
+         * <ul>
+         * <li><p><code>warn</code>: Logs a warning for the violating request but allows it to proceed.</p>
+         * </li>
+         * <li><p>deny: Deny requests that violate the policy.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>deny</p>
+         */
         @NameInMap("constraint_action")
         public String constraintAction;
 
+        /**
+         * <p>The API version of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1beta1</p>
+         */
         @NameInMap("constraint_api_version")
         public String constraintApiVersion;
 
+        /**
+         * <p>The policy type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cis-k8s</p>
+         */
         @NameInMap("constraint_category")
         public String constraintCategory;
 
+        /**
+         * <p>The API group of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>constraints.gatekeeper.sh</p>
+         */
         @NameInMap("constraint_group")
         public String constraintGroup;
 
+        /**
+         * <p>The kind of the policy constraint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACKNamespacesDeleteProtection</p>
+         */
         @NameInMap("constraint_kind")
         public String constraintKind;
 
+        /**
+         * <p>The name of the policy instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>namespace-delete-protection-jpjwv</p>
+         */
         @NameInMap("constraint_name")
         public String constraintName;
 
+        /**
+         * <p>The message generated by the policy enforcement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Admission webhook \&quot;validation.gatekeeper.sh\&quot; denied request, Resource Namespace: , Constraint: namespace-delete-protection-jpjwv, Message: not allow to delete protection namespace test.</p>
+         */
         @NameInMap("event_msg")
         public String eventMsg;
 
+        /**
+         * <p>The type of the logged event, such as <code>violation</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>violation</p>
+         */
         @NameInMap("event_type")
         public String eventType;
 
+        /**
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hash code</p>
+         */
         @NameInMap("request_uid")
         public String requestUid;
 
+        /**
+         * <p>Information about the user who made the request that violated the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>account id</p>
+         */
         @NameInMap("request_userinfo")
         public String requestUserinfo;
 
+        /**
+         * <p>The name of the user who made the request that violated the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>account user name</p>
+         */
         @NameInMap("request_username")
         public String requestUsername;
 
+        /**
+         * <p>The type of the violating resource. For example, if a request to operate on a namespace is denied, the value is <code>Namespace</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Namespace</p>
+         */
         @NameInMap("resource_kind")
         public String resourceKind;
 
+        /**
+         * <p>The name of the violating resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("resource_name")
         public String resourceName;
 
+        /**
+         * <p>The time when the policy violation occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-10-27T11:31:40Z</p>
+         */
         @NameInMap("time")
         public String time;
 
@@ -477,7 +654,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
     public static class DescribePolicyGovernanceInClusterResponseBodyAdmitLog extends TeaModel {
         /**
-         * <p>The number of audit log entries.</p>
+         * <p>The total number of logs returned by the current query.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -485,20 +662,37 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         @NameInMap("count")
         public Long count;
 
+        /**
+         * <p>The log project that stores policy enforcement information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k8s-log-clusterid</p>
+         */
         @NameInMap("log_project")
         public String logProject;
 
+        /**
+         * <p>The log store that stores policy enforcement information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policyadmit-clusterid</p>
+         */
         @NameInMap("log_store")
         public String logStore;
 
+        /**
+         * <p>The log entries for policy violations.</p>
+         */
         @NameInMap("logs")
         public java.util.List<DescribePolicyGovernanceInClusterResponseBodyAdmitLogLogs> logs;
 
         /**
          * <p>The status of the query. Valid values:</p>
          * <ul>
-         * <li><code>Complete</code>: The query succeeded and the complete query result is returned.</li>
-         * <li><code>Incomplete</code>: The query succeeded but the query result is incomplete. To obtain the complete query result, you must repeat the request.</li>
+         * <li><p><code>Complete</code>: All query results are returned.</p>
+         * </li>
+         * <li><p><code>Incomplete</code>: The query returned a partial result set. Send the request again to retrieve the remaining results.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -556,7 +750,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
     public static class DescribePolicyGovernanceInClusterResponseBodyOnState extends TeaModel {
         /**
-         * <p>The number of policies that are enabled.</p>
+         * <p>The number of enabled policy types.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -574,7 +768,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public String severity;
 
         /**
-         * <p>The total number of policies of the severity level.</p>
+         * <p>The total number of policy types for this severity.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>

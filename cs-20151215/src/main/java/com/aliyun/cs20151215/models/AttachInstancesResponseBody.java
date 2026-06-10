@@ -14,7 +14,7 @@ public class AttachInstancesResponseBody extends TeaModel {
      * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>T-5a544aff80282e39ea000039</p>
+     * <p>T-5a544aff80282e39ea00****</p>
      */
     @NameInMap("task_id")
     public String taskId;

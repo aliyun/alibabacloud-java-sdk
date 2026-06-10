@@ -4,29 +4,44 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ContainerdConfig extends TeaModel {
+    /**
+     * <p>Whether to ignore volumes defined in the image.</p>
+     */
     @NameInMap("ignoreImageDefinedVolume")
     public Boolean ignoreImageDefinedVolume;
 
     /**
-     * <p>Insecure image repositories that skipped the TLS certificate verification.</p>
+     * <p>A list of insecure registries that skip TLS certificate verification.</p>
      */
     @NameInMap("insecureRegistries")
     public java.util.List<String> insecureRegistries;
 
+    /**
+     * <p>Maximum core dump size in bytes.</p>
+     */
     @NameInMap("limitCore")
     public Long limitCore;
 
+    /**
+     * <p>Maximum locked memory in bytes.</p>
+     */
     @NameInMap("limitMemLock")
     public Long limitMemLock;
 
+    /**
+     * <p>Maximum number of open file handles.</p>
+     */
     @NameInMap("limitNoFile")
     public Long limitNoFile;
 
+    /**
+     * <p>The maximum number of concurrent image layer downloads.</p>
+     */
     @NameInMap("maxConcurrentDownloads")
     public Long maxConcurrentDownloads;
 
     /**
-     * <p>The image accelerator configuration.</p>
+     * <p>A list of registry mirrors to accelerate image pulls.</p>
      */
     @NameInMap("registryMirrors")
     public java.util.List<String> registryMirrors;

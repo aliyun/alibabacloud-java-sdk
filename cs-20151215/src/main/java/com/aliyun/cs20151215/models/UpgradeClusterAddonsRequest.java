@@ -38,7 +38,7 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
          * <p>The custom component settings that you want to use. The value is a JSON string.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;CpuRequest\&quot;:\&quot;800m\&quot;}</p>
+         * <p>{&quot;CpuRequest&quot;:&quot;800m&quot;}</p>
          */
         @NameInMap("config")
         public String config;
@@ -48,7 +48,7 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1.6.7</p>
+         * <p>v1.11.3.5-5321daf49-aliyun</p>
          */
         @NameInMap("next_version")
         public String nextVersion;
@@ -70,7 +70,7 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
          * <p>The current version of the component.</p>
          * 
          * <strong>example:</strong>
-         * <p>v1.6.2</p>
+         * <p>v1.11.3.2-f57ea7ed6-aliyun</p>
          */
         @NameInMap("version")
         public String version;

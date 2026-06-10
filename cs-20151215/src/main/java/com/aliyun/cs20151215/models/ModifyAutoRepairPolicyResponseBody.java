@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyAutoRepairPolicyResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>db82195b-75a8-40e5-9be4-16f182******</p>
      */

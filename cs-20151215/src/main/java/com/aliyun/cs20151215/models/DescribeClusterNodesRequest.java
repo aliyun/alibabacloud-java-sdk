@@ -17,7 +17,7 @@ public class DescribeClusterNodesRequest extends TeaModel {
      * <p>The node pool ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>np****</p>
+     * <p>npe25633140a7d4fbea56cd0479c******</p>
      */
     @NameInMap("nodepool_id")
     public String nodepoolId;

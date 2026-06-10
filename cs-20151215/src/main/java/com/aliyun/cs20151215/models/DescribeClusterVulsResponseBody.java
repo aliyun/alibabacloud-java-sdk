@@ -58,7 +58,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
          * <p>The node pool ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>np0156da1082b54fa987e32618dd45f5d3</p>
+         * <p>np0156da1082b54fa987e32618dd******</p>
          */
         @NameInMap("nodepool_id")
         public String nodepoolId;
@@ -76,7 +76,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
          * <p>The alias of the vulnerability.</p>
          * 
          * <strong>example:</strong>
-         * <p>CVE-2022-xxxx:rsync Security vulnerabilities</p>
+         * <p>CVE-2022-xxxx:rsync 安全漏洞</p>
          */
         @NameInMap("vul_alias_name")
         public String vulAliasName;

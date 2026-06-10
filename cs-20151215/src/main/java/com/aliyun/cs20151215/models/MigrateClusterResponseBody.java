@@ -8,7 +8,7 @@ public class MigrateClusterResponseBody extends TeaModel {
      * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>c8155823d057948c69a****</p>
+     * <p>c21e0591548ba4c10bdb535d657******</p>
      */
     @NameInMap("cluster_id")
     public String clusterId;
@@ -17,7 +17,7 @@ public class MigrateClusterResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>20758A-585D-4A41-A9B2-28DA8F4F534F</p>
+     * <p>687C5BAA-D103-4993-884B-C35E43******</p>
      */
     @NameInMap("request_id")
     public String requestId;
@@ -26,7 +26,7 @@ public class MigrateClusterResponseBody extends TeaModel {
      * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>T-62ccd14aacb8db06ca00****</p>
+     * <p>T-62ccd14aacb8db06ca******</p>
      */
     @NameInMap("task_id")
     public String taskId;

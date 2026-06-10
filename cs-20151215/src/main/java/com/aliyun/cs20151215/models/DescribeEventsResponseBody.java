@@ -5,11 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeEventsResponseBody extends TeaModel {
     /**
-     * <p>The details of the events.</p>
+     * <p>A list of events.</p>
      */
     @NameInMap("events")
     public java.util.List<DescribeEventsResponseBodyEvents> events;
 
+    /**
+     * <p>The token to retrieve the next page of results. If this parameter is absent from the response, all results have been returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5c0a1c0f91c14c6****</p>
+     */
     @NameInMap("next_token")
     public String nextToken;
 
@@ -52,9 +58,12 @@ public class DescribeEventsResponseBody extends TeaModel {
         /**
          * <p>The severity level of the event. Valid values:</p>
          * <ul>
-         * <li>info</li>
-         * <li>warning</li>
-         * <li>error</li>
+         * <li><p>info: An informational message.</p>
+         * </li>
+         * <li><p>warning: A warning.</p>
+         * </li>
+         * <li><p>error: An error.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -64,7 +73,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String level;
 
         /**
-         * <p>The details of the event.</p>
+         * <p>A human-readable description of the event.</p>
          * 
          * <strong>example:</strong>
          * <p>Start to upgrade NodePool nodePool/nodePool-A</p>
@@ -73,7 +82,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The status of the event.</p>
+         * <p>A brief, machine-readable string that describes the reason for the event.</p>
          * 
          * <strong>example:</strong>
          * <p>Started</p>
@@ -114,7 +123,7 @@ public class DescribeEventsResponseBody extends TeaModel {
 
     public static class DescribeEventsResponseBodyEvents extends TeaModel {
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cf62854ac2130470897be7a27ed1f****</p>
@@ -123,7 +132,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The description of the event.</p>
+         * <p>The event details.</p>
          */
         @NameInMap("data")
         public DescribeEventsResponseBodyEventsData data;
@@ -147,7 +156,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The subject of the event.</p>
+         * <p>The object that the event is about.</p>
          * 
          * <strong>example:</strong>
          * <p>np6a5c86f4ecae436f8f4a3dc034a7****</p>
@@ -156,7 +165,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String subject;
 
         /**
-         * <p>The time when the event started.</p>
+         * <p>The event timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-23T20:48:01+08:00</p>
@@ -167,22 +176,38 @@ public class DescribeEventsResponseBody extends TeaModel {
         /**
          * <p>The event type. Valid values:</p>
          * <ul>
-         * <li><code>cluster_create</code>: cluster creation.</li>
-         * <li><code>cluster_scaleout</code>: cluster scale-out.</li>
-         * <li><code>cluster_attach</code>: node addition.</li>
-         * <li><code>cluster_delete</code>: cluster deletion.</li>
-         * <li><code>cluster_upgrade</code>: cluster upgrades.</li>
-         * <li><code>cluster_migrate</code>: cluster migration.</li>
-         * <li><code>cluster_node_delete</code>: node removal.</li>
-         * <li><code>cluster_node_drain</code>: node draining.</li>
-         * <li><code>cluster_modify</code>: cluster modifications.</li>
-         * <li><code>cluster_configuration_modify</code>: modifications of control plane configurations.</li>
-         * <li><code>cluster_addon_install</code>: component installation.</li>
-         * <li><code>cluster_addon_upgrade</code>: component updates.</li>
-         * <li><code>cluster_addon_uninstall</code>: component uninstallation.</li>
-         * <li><code>runtime_upgrade</code>: runtime updates.</li>
-         * <li><code>nodepool_upgrade</code>: node pool upgrades.</li>
-         * <li><code>nodepool_update</code>: node pool updates.</li>
+         * <li><p><code>cluster_create</code>: A cluster is created.</p>
+         * </li>
+         * <li><p><code>cluster_scaleout</code>: A cluster is scaled out.</p>
+         * </li>
+         * <li><p><code>cluster_attach</code>: An existing node is added.</p>
+         * </li>
+         * <li><p><code>cluster_delete</code>: A cluster is deleted.</p>
+         * </li>
+         * <li><p><code>cluster_upgrade</code>: A cluster is upgraded.</p>
+         * </li>
+         * <li><p><code>cluster_migrate</code>: A cluster is migrated.</p>
+         * </li>
+         * <li><p><code>cluster_node_delete</code>: A node is removed.</p>
+         * </li>
+         * <li><p><code>cluster_node_drain</code>: A node is drained.</p>
+         * </li>
+         * <li><p><code>cluster_modify</code>: A cluster is modified.</p>
+         * </li>
+         * <li><p><code>cluster_configuration_modify</code>: The control plane configuration of a cluster is modified.</p>
+         * </li>
+         * <li><p><code>cluster_addon_install</code>: An add-on is installed.</p>
+         * </li>
+         * <li><p><code>cluster_addon_upgrade</code>: An add-on is upgraded.</p>
+         * </li>
+         * <li><p><code>cluster_addon_uninstall</code>: An add-on is uninstalled.</p>
+         * </li>
+         * <li><p><code>runtime_upgrade</code>: The runtime is upgraded.</p>
+         * </li>
+         * <li><p><code>nodepool_upgrade</code>: A node pool is upgraded.</p>
+         * </li>
+         * <li><p><code>nodepool_update</code>: A node pool is updated.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -256,7 +281,7 @@ public class DescribeEventsResponseBody extends TeaModel {
 
     public static class DescribeEventsResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -265,7 +290,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -274,7 +299,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries that match the query.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

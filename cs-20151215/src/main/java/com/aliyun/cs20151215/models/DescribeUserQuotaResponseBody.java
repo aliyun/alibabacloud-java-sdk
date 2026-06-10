@@ -40,10 +40,6 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
     @NameInMap("cluster_quota")
     public Long clusterQuota;
 
-    /**
-     * <p>This parameter is discontinued.</p>
-     * <p>The quotas of enhanced edge node pools.</p>
-     */
     @NameInMap("edge_improved_nodepool_quota")
     public DescribeUserQuotaResponseBodyEdgeImprovedNodepoolQuota edgeImprovedNodepoolQuota;
 
@@ -124,36 +120,12 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
     }
 
     public static class DescribeUserQuotaResponseBodyEdgeImprovedNodepoolQuota extends TeaModel {
-        /**
-         * <p>This parameter is discontinued.</p>
-         * <p>The maximum bandwidth of each enhanced edge node pool. Unit: Mbit/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("bandwidth")
         public Integer bandwidth;
 
-        /**
-         * <p>This parameter is discontinued.</p>
-         * <p>The maximum number of enhanced edge node pools that you can create within an Alibaba Cloud account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("count")
         public Integer count;
 
-        /**
-         * <p>This parameter is discontinued.</p>
-         * <p>The maximum subscription duration of an enhanced edge node pool. Unit: months.</p>
-         * <blockquote>
-         * <p> You are charged for enhanced edge node pools based on the pay-as-you-go billing method. Therefore, you can ignore this parameter.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("period")
         public Integer period;
 

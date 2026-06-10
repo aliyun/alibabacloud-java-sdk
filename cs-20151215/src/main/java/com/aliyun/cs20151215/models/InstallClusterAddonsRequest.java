@@ -41,7 +41,7 @@ public class InstallClusterAddonsRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>logtail-ds</p>
+         * <p>storage-operato</p>
          */
         @NameInMap("name")
         public String name;
@@ -51,7 +51,7 @@ public class InstallClusterAddonsRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>v1.7.3.0-aliyun</p>
+         * <p>v1.32.9</p>
          */
         @NameInMap("version")
         public String version;

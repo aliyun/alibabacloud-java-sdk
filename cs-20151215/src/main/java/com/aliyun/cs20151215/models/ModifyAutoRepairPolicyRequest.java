@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ModifyAutoRepairPolicyRequest extends TeaModel {
     /**
+     * <p>The name of the self-healing rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>A list of self-healing sub-rules.</p>
+     */
     @NameInMap("rules")
     public java.util.List<ModifyAutoRepairPolicyRequestRules> rules;
 
@@ -37,6 +42,8 @@ public class ModifyAutoRepairPolicyRequest extends TeaModel {
 
     public static class ModifyAutoRepairPolicyRequestRulesIncidents extends TeaModel {
         /**
+         * <p>The incident name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Node.FaultNeedReboot.HOST</p>
          */
@@ -44,6 +51,8 @@ public class ModifyAutoRepairPolicyRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The incident type.</p>
+         * 
          * <strong>example:</strong>
          * <p>system</p>
          */
@@ -75,6 +84,8 @@ public class ModifyAutoRepairPolicyRequest extends TeaModel {
 
     public static class ModifyAutoRepairPolicyRequestRulesRepairProcedureInterventionApprovedLabel extends TeaModel {
         /**
+         * <p>The label <code>key</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>k8s.aliyun.com/incident</p>
          */
@@ -82,6 +93,8 @@ public class ModifyAutoRepairPolicyRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The label <code>value</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>approved</p>
          */
@@ -113,6 +126,8 @@ public class ModifyAutoRepairPolicyRequest extends TeaModel {
 
     public static class ModifyAutoRepairPolicyRequestRulesRepairProcedureInterventionInquiringLabel extends TeaModel {
         /**
+         * <p>The label <code>key</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>k8s.aliyun.com/incident</p>
          */
@@ -120,6 +135,8 @@ public class ModifyAutoRepairPolicyRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The label <code>value</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>inquiring</p>
          */
@@ -150,20 +167,30 @@ public class ModifyAutoRepairPolicyRequest extends TeaModel {
     }
 
     public static class ModifyAutoRepairPolicyRequestRulesRepairProcedureIntervention extends TeaModel {
+        /**
+         * <p>The label configuration for authorization confirmation. Add this label to the node to authorize ACK to proceed with this stage. After the stage completes, ACK automatically removes the inquiry and confirmation labels. If you do not add this label in time, ACK will not proceed with this or subsequent stages, leaving the node in an unhealthy state.</p>
+         */
         @NameInMap("approved_label")
         public ModifyAutoRepairPolicyRequestRulesRepairProcedureInterventionApprovedLabel approvedLabel;
 
         /**
+         * <p>Specifies whether to enable manual approval.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("enable")
         public Boolean enable;
 
+        /**
+         * <p>The label configuration for the authorization inquiry. At this stage, ACK adds this label to the node and waits for your authorization before proceeding.</p>
+         */
         @NameInMap("inquiring_label")
         public ModifyAutoRepairPolicyRequestRulesRepairProcedureInterventionInquiringLabel inquiringLabel;
 
         /**
+         * <p>The approval type.</p>
+         * 
          * <strong>example:</strong>
          * <p>label</p>
          */
@@ -210,13 +237,21 @@ public class ModifyAutoRepairPolicyRequest extends TeaModel {
     }
 
     public static class ModifyAutoRepairPolicyRequestRulesRepairProcedure extends TeaModel {
+        /**
+         * <p>Configuration parameters for the procedure.</p>
+         */
         @NameInMap("config")
         public java.util.Map<String, ?> config;
 
+        /**
+         * <p>The configuration for the manual intervention procedure.</p>
+         */
         @NameInMap("intervention")
         public ModifyAutoRepairPolicyRequestRulesRepairProcedureIntervention intervention;
 
         /**
+         * <p>The procedure name.</p>
+         * 
          * <strong>example:</strong>
          * <p>QuarantineGPU</p>
          */
@@ -255,9 +290,15 @@ public class ModifyAutoRepairPolicyRequest extends TeaModel {
     }
 
     public static class ModifyAutoRepairPolicyRequestRules extends TeaModel {
+        /**
+         * <p>A list of identified incidents.</p>
+         */
         @NameInMap("incidents")
         public java.util.List<ModifyAutoRepairPolicyRequestRulesIncidents> incidents;
 
+        /**
+         * <p>A list of repair procedures.</p>
+         */
         @NameInMap("repair_procedure")
         public java.util.List<ModifyAutoRepairPolicyRequestRulesRepairProcedure> repairProcedure;
 

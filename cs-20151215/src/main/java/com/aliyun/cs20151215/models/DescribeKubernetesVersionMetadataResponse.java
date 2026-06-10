@@ -47,7 +47,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
          * <p>The ID of the image.</p>
          * 
          * <strong>example:</strong>
-         * <p>centos_7_7_x64_20G_alibase_20200426.vhd</p>
+         * <p>aliyun_3_x64_20G_alibase_20241218.vhd</p>
          */
         @NameInMap("image_id")
         public String imageId;
@@ -56,7 +56,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
          * <p>The image name.</p>
          * 
          * <strong>example:</strong>
-         * <p>CentOS 7.7</p>
+         * <p>Alibaba Cloud Linux 3.2104</p>
          */
         @NameInMap("image_name")
         public String imageName;
@@ -71,7 +71,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>CentOS</p>
+         * <p>AliyunLinux</p>
          */
         @NameInMap("platform")
         public String platform;
@@ -80,7 +80,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
          * <p>The version of the image.</p>
          * 
          * <strong>example:</strong>
-         * <p>7.7</p>
+         * <p>3.2104</p>
          */
         @NameInMap("os_version")
         public String osVersion;
@@ -100,7 +100,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>centos_7_7_20</p>
+         * <p>AliyunLinux3</p>
          */
         @NameInMap("image_type")
         public String imageType;
@@ -255,7 +255,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
          * <p>The Kubernetes version supported by ACK. For more information, see <a href="https://help.aliyun.com/document_detail/185269.html">Release notes for Kubernetes versions</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>1.16.9-aliyun.1</p>
+         * <p>1.31.1-aliyun.1</p>
          */
         @NameInMap("version")
         public String version;
@@ -264,7 +264,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
          * <p>The release date of the Kubernetes version.</p>
          * 
          * <strong>example:</strong>
-         * <p>2023-04-30T00:00:00Z</p>
+         * <p>2025-01-30T00:00:00Z</p>
          */
         @NameInMap("release_date")
         public String releaseDate;
@@ -273,7 +273,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
          * <p>The expiration date of the Kubernetes version.</p>
          * 
          * <strong>example:</strong>
-         * <p>2025-04-30T00:00:00Z</p>
+         * <p>2026-01-30T00:00:00Z</p>
          */
         @NameInMap("expiration_date")
         public String expirationDate;

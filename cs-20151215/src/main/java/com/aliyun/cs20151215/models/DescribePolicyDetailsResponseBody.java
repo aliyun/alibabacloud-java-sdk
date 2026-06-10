@@ -88,7 +88,7 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
      * <p>The content of the policy.</p>
      * 
      * <strong>example:</strong>
-     * <p>For more information, see sample requests.</p>
+     * <p>详情请参见请求示例</p>
      */
     @NameInMap("template")
     public String template;

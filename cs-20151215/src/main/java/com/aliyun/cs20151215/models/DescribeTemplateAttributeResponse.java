@@ -125,7 +125,7 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
          * <p>The time when the template was created.</p>
          * 
          * <strong>example:</strong>
-         * <p>2020-09-16T19:21:29+08:00</p>
+         * <p>2025-04-25T16:56:33+08:00</p>
          */
         @NameInMap("created")
         public String created;
@@ -134,7 +134,7 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
          * <p>The time when the template was updated.</p>
          * 
          * <strong>example:</strong>
-         * <p>2020-09-16T19:21:29+08:00</p>
+         * <p>2025-04-25T16:56:33+08:00</p>
          */
         @NameInMap("updated")
         public String updated;

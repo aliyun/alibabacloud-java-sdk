@@ -17,7 +17,7 @@ public class UpgradeClusterNodepoolResponseBody extends TeaModel {
      * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>T-5fd211e924e1d0078700xxxx</p>
+     * <p>T-5fd211e924e1d0078700****</p>
      */
     @NameInMap("task_id")
     public String taskId;

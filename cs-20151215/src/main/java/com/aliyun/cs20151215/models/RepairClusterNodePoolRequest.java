@@ -10,7 +10,7 @@ public class RepairClusterNodePoolRequest extends TeaModel {
      * <p><strong>Warning</strong> This parameter is deprecated. Any configured values will be ignored.</p>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>null</p>
      */
     @NameInMap("auto_restart")
     @Deprecated

@@ -5,7 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to query the resources created by cluster components.</p>
+     * <p>Specifies whether to query resources created by cluster add-ons.</p>
+     * <ul>
+     * <li><p>true: Add-on resources are included.</p>
+     * </li>
+     * <li><p>false: Add-on resources are not included.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>

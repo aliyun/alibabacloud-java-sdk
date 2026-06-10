@@ -13,7 +13,7 @@ public class DescribeClusterUserKubeconfigRequest extends TeaModel {
      * <p>Default value: <code>false</code></p>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>false</p>
      */
     @NameInMap("PrivateIpAddress")
     public Boolean privateIpAddress;

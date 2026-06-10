@@ -20,7 +20,7 @@ public class UpdateK8sClusterUserConfigExpireRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>The ID of the Resource Access Management (RAM) user that you use.</p>
+     * <p>206945240368******</p>
      */
     @NameInMap("user")
     public String user;

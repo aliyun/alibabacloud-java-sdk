@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeployPolicyInstanceRequest extends TeaModel {
     /**
-     * <p>The action of the policy. Valid values:</p>
+     * <p>The governance action. Valid values:</p>
      * <ul>
-     * <li><code>deny</code>: Deployments that match the policy are denied.</li>
-     * <li><code>warn</code>: Alerts are generated for Deployments that match the policy.</li>
+     * <li><p><code>deny</code>: Denies deployments that violate the rule.</p>
+     * </li>
+     * <li><p><code>warn</code>: Generates an alert for deployments that violate the rule.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,16 +20,16 @@ public class DeployPolicyInstanceRequest extends TeaModel {
     public String action;
 
     /**
-     * <p>The namespaces to which the policy applies. If you leave this parameter empty, the policy is applicable to all namespaces of the cluster.</p>
+     * <p>The namespaces where the policy applies. If you omit this parameter, the policy applies to all namespaces.</p>
      */
     @NameInMap("namespaces")
     public java.util.List<String> namespaces;
 
     /**
-     * <p>The parameter settings of the policy. For more information about the parameters supported by each policy, see <a href="https://www.alibabacloud.com/help/doc-detail/359819.html">Predefined security policies of ACK</a>.</p>
+     * <p>For details on the parameters supported by each policy governance rule, see <a href="https://www.alibabacloud.com/help/doc-detail/359819.html">Container security policy rules</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;restrictedNamespaces&quot;: [ &quot;test&quot; ]}</p>
+     * <p>{   &quot;repos&quot;: [     &quot;registry-vpc.cn-hangzhou.aliyuncs.com/acs/&quot;,     &quot;registry.cn-hangzhou.aliyuncs.com/acs/&quot;   ] }</p>
      */
     @NameInMap("parameters")
     public java.util.Map<String, ?> parameters;

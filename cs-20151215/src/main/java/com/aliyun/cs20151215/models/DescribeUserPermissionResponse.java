@@ -75,7 +75,7 @@ public class DescribeUserPermissionResponse extends TeaModel {
          * <p>The name of the custom role. If a custom role is assigned, the value is the name of the assigned custom role.</p>
          * 
          * <strong>example:</strong>
-         * <p>view</p>
+         * <p>terway-pod-reader</p>
          */
         @NameInMap("role_name")
         public String roleName;

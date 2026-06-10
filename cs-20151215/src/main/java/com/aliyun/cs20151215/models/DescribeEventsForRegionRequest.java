@@ -20,7 +20,7 @@ public class DescribeEventsForRegionRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The number of pages.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +29,9 @@ public class DescribeEventsForRegionRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of records on each page.</p>
+     * <p>The number of entries to return on each page.</p>
+     * <p>Valid values: 1 to 100.</p>
+     * <p>Default value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>

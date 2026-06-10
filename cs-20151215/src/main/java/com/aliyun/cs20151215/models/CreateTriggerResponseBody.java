@@ -26,7 +26,7 @@ public class CreateTriggerResponseBody extends TeaModel {
      * <p>The trigger ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>102536</p>
+     * <p>75973497486******</p>
      */
     @NameInMap("id")
     public String id;

@@ -42,7 +42,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
          * <p>The time when the node was created.</p>
          * 
          * <strong>example:</strong>
-         * <p>2020-08-25T11:25:35+08:00</p>
+         * <p>2025-04-16T07:28:00Z</p>
          */
         @NameInMap("creation_time")
         public String creationTime;
@@ -60,7 +60,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
          * <p>The expiration date of the node.</p>
          * 
          * <strong>example:</strong>
-         * <p>2099-12-31T23:59:00+08:00</p>
+         * <p>2099-12-31T15:59:00Z</p>
          */
         @NameInMap("expired_time")
         public String expiredTime;
@@ -78,7 +78,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
          * <p>The ID of the system image that is used by the node.</p>
          * 
          * <strong>example:</strong>
-         * <p>aliyun_2_1903_x64_20G_alibase_20200529.vhd</p>
+         * <p>aliyun_3_x64_20G_alibase_20241218.vhd</p>
          */
         @NameInMap("image_id")
         public String imageId;
@@ -177,7 +177,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
          * <p>The name of the node. This name is the identifier of the node in the cluster.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-chengdu.192.168.0.36</p>
+         * <p>cn-chengdu.192.168xx.xx</p>
          */
         @NameInMap("node_name")
         public String nodeName;
@@ -210,7 +210,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
          * <p>Indicates how the node is initialized. A node can be manually created or created by using Resource Orchestration Service (ROS).</p>
          * 
          * <strong>example:</strong>
-         * <p>ess_attach</p>
+         * <p>ess</p>
          */
         @NameInMap("source")
         public String source;

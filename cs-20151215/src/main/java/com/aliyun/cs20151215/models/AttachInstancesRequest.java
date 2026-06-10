@@ -93,7 +93,7 @@ public class AttachInstancesRequest extends TeaModel {
      * <p>Default value: <code>false</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>false</p>
      */
     @NameInMap("keep_instance_name")
     public Boolean keepInstanceName;
@@ -105,7 +105,7 @@ public class AttachInstancesRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>secrity-key</p>
+     * <p>security-key</p>
      */
     @NameInMap("key_pair")
     public String keyPair;

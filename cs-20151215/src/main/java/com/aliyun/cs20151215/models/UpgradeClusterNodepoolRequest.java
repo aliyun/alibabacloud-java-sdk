@@ -8,7 +8,7 @@ public class UpgradeClusterNodepoolRequest extends TeaModel {
      * <p>The ID of the OS image used by the nodes.</p>
      * 
      * <strong>example:</strong>
-     * <p>aliyun_2_1903_x64_20G_alibase_20200529.vhd</p>
+     * <p>aliyun_3_x64_20G_container_optimized_20241226.vhd</p>
      */
     @NameInMap("image_id")
     public String imageId;
@@ -17,7 +17,7 @@ public class UpgradeClusterNodepoolRequest extends TeaModel {
      * <p>The Kubernetes version used by the nodes. You can call the <a href="https://help.aliyun.com/document_detail/2667899.html">DescribeKubernetesVersionMetadata</a> operation and get the Kubernetes version of the current cluster in the current_version field.</p>
      * 
      * <strong>example:</strong>
-     * <p>1.22.15-aliyun.1</p>
+     * <p>1.32.1-aliyun.1</p>
      */
     @NameInMap("kubernetes_version")
     public String kubernetesVersion;
@@ -47,7 +47,7 @@ public class UpgradeClusterNodepoolRequest extends TeaModel {
      * <p>The version of the container runtime used by the nodes. You can call the <a href="https://help.aliyun.com/document_detail/2667899.html">DescribeKubernetesVersionMetadata</a> operation and get the runtime version in the runtime field.</p>
      * 
      * <strong>example:</strong>
-     * <p>1.5.10</p>
+     * <p>1.6.36</p>
      */
     @NameInMap("runtime_version")
     public String runtimeVersion;
@@ -132,7 +132,7 @@ public class UpgradeClusterNodepoolRequest extends TeaModel {
          * <p>The update interval between batches takes effect only when the pause policy is set to NotPause. Unit: minutes. Valid values: 5 to 120.</p>
          * 
          * <strong>example:</strong>
-         * <p>5 minutes</p>
+         * <p>5</p>
          */
         @NameInMap("batch_interval")
         public Integer batchInterval;
@@ -141,7 +141,7 @@ public class UpgradeClusterNodepoolRequest extends TeaModel {
          * <p>The maximum number of nodes per batch.</p>
          * 
          * <strong>example:</strong>
-         * <p>3</p>
+         * <p>2</p>
          */
         @NameInMap("max_parallelism")
         public Integer maxParallelism;

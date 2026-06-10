@@ -17,7 +17,7 @@ public class ModifyNodePoolNodeConfigResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>D7631D83-6E98-1949-B665-766A62xxxxxx</p>
+     * <p>D7631D83-6E98-1949-B665-766A62****</p>
      */
     @NameInMap("request_id")
     public String requestId;
@@ -26,7 +26,7 @@ public class ModifyNodePoolNodeConfigResponseBody extends TeaModel {
      * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>T-5fd211e924e1d00787xxxxxx</p>
+     * <p>T-5fd211e924e1d00787****</p>
      */
     @NameInMap("task_id")
     public String taskId;

@@ -13,7 +13,7 @@ public class DeleteClusterNodesRequest extends TeaModel {
      * <p>Default value: <code>false</code></p>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>false</p>
      */
     @NameInMap("drain_node")
     public Boolean drainNode;

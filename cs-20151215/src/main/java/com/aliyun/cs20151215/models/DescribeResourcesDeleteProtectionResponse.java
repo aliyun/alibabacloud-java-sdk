@@ -48,7 +48,7 @@ public class DescribeResourcesDeleteProtectionResponse extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>arms-prom</p>
          */
         @NameInMap("name")
         public String name;

@@ -8,17 +8,27 @@ public class DescribeClustersV1Request extends TeaModel {
      * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>ca418e5e6fa2849d78301341700axxxxx</p>
+     * <p>c3fb96524f9274b4495df0f12a6b5****</p>
      */
     @NameInMap("cluster_id")
     public String clusterId;
 
     /**
-     * <p>After you set <code>cluster_type</code> to <code>ManagedKubernetes</code> and configure the <code>profile</code> parameter, you can further specify the edition of the cluster. Valid values:</p>
+     * <p>The cluster specification. This parameter is valid only when <code>cluster_type</code> is set to <code>ManagedKubernetes</code> and the <code>profile</code> parameter is specified. Valid values:</p>
      * <ul>
-     * <li><code>ack.pro.small</code>: ACK Pro cluster.</li>
-     * <li><code>ack.standard</code>: ACK Basic cluster. If you leave the parameter empty, ACK Basic cluster is selected.</li>
+     * <li><p><code>ack.standard</code>: Standard</p>
+     * </li>
+     * <li><p><code>ack.pro.small</code>: Pro</p>
+     * </li>
+     * <li><p><code>ack.pro.xlarge</code>: Pro XL</p>
+     * </li>
+     * <li><p><code>ack.pro.2xlarge</code>: Pro 2XL</p>
+     * </li>
+     * <li><p><code>ack.pro.4xlarge</code>: Pro 4XL (Contact customer service to enable this option.)</p>
+     * </li>
      * </ul>
+     * <p>Pro XL, Pro 2XL, and Pro 4XL are three tiers provided by the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>. These tiers pre-allocate and dedicate control plane resources to ensure a consistently high, predictable level of performance for API concurrency and pod scheduling. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</p>
+     * <p>For information about the cluster management fees for Pro and provisioned control plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fee</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fee</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>ack.pro.small</p>
@@ -27,11 +37,14 @@ public class DescribeClustersV1Request extends TeaModel {
     public String clusterSpec;
 
     /**
-     * <p>The type of the instance.</p>
+     * <p>The cluster type.</p>
      * <ul>
-     * <li><code>Kubernetes</code>: ACK dedicated cluster.</li>
-     * <li><code>ManagedKubernetes</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless Basic clusters, ACK Serverless Pro clusters, ACK Edge Basic clusters, ACK Edge Pro clusters, and ACK Lingjun Pro clusters.</li>
-     * <li><code>ExternalKubernetes</code>: registered cluster</li>
+     * <li><p><code>Kubernetes</code>: an ACK dedicated cluster.</p>
+     * </li>
+     * <li><p><code>ManagedKubernetes</code>: an ACK managed cluster. This type includes ACK managed clusters (Pro and Standard), ACK Serverless clusters (Pro and Standard), ACK Edge clusters (Pro and Standard), and ACK Lingjun clusters (Pro).</p>
+     * </li>
+     * <li><p><code>ExternalKubernetes</code>: a registered cluster.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +54,7 @@ public class DescribeClustersV1Request extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>The cluster name.</p>
+     * <p>The name of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>cluster-demo</p>
@@ -50,10 +63,10 @@ public class DescribeClustersV1Request extends TeaModel {
     public String name;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
-     * <p>3</p>
+     * <p>1</p>
      */
     @NameInMap("page_number")
     public Long pageNumber;
@@ -68,12 +81,16 @@ public class DescribeClustersV1Request extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>If you set <code>cluster_type</code> to <code>ManagedKubernetes</code>, an ACK managed cluster is created. In this case, you can further specify the cluster edition. Valid values:</p>
+     * <p>When <code>cluster_type</code> is set to <code>ManagedKubernetes</code>, you can further specify a sub-type of the cluster.</p>
      * <ul>
-     * <li><code>Default</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.</li>
-     * <li><code>Edge</code>: ACK Edge cluster. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.</li>
-     * <li><code>Serverless</code>: ACK Serverless cluster. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.</li>
-     * <li><code>Lingjun</code>: ACK Lingjun Pro cluster.</li>
+     * <li><p><code>Default</code>: an ACK managed cluster. This includes ACK Pro and ACK Standard clusters.</p>
+     * </li>
+     * <li><p><code>Edge</code>: an ACK Edge cluster. This includes ACK Edge Pro and ACK Edge Standard clusters.</p>
+     * </li>
+     * <li><p><code>Serverless</code>: an ACK Serverless cluster. This includes ACK Serverless Pro and ACK Serverless Standard clusters.</p>
+     * </li>
+     * <li><p><code>Lingjun</code>: an ACK Lingjun cluster (Pro edition).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,7 +100,7 @@ public class DescribeClustersV1Request extends TeaModel {
     public String profile;
 
     /**
-     * <p>The region ID of the clusters. You can use this parameter to query all clusters in the specified region.</p>
+     * <p>The ID of the region to which the clusters belong.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

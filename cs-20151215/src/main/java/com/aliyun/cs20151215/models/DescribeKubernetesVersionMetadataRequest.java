@@ -24,7 +24,7 @@ public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
      * <p>For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Release notes for Kubernetes versions</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>1.16.9-aliyun.1</p>
+     * <p>1.32.1-aliyun.1</p>
      */
     @NameInMap("KubernetesVersion")
     public String kubernetesVersion;
@@ -93,7 +93,7 @@ public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
      * <p>Otherwise, all OS images are returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>docker</p>
+     * <p>containerd</p>
      */
     @NameInMap("runtime")
     public String runtime;

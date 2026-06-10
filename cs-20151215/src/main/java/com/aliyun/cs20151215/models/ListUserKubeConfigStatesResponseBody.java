@@ -101,7 +101,7 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
          * <p>The expiration date of the certificate used in a kubeconfig file. Format: the UTC time in the RFC3339 format.</p>
          * 
          * <strong>example:</strong>
-         * <p>2026-11-30T07:41:50Z</p>
+         * <p>2028-04-09T06:20:47Z</p>
          */
         @NameInMap("cert_expire_time")
         public String certExpireTime;

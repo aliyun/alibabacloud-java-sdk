@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GrantPermissionsRequest extends TeaModel {
     /**
-     * <p>The request body.</p>
+     * <p>The request body parameters.</p>
      */
     @NameInMap("body")
     public java.util.List<GrantPermissionsRequestBody> body;
@@ -25,9 +25,9 @@ public class GrantPermissionsRequest extends TeaModel {
 
     public static class GrantPermissionsRequestBody extends TeaModel {
         /**
-         * <p>The ID of the cluster on which you want to grant permissions to the RAM role or RAM role.</p>
+         * <p>The ID of the target cluster.</p>
          * <ul>
-         * <li>Set this parameter to an empty string if <code>role_type</code> is set to <code>all-clusters</code>.</li>
+         * <li>If you set the <code>role_type</code> parameter to <code>all-clusters</code>, set this parameter to an empty string.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -38,7 +38,7 @@ public class GrantPermissionsRequest extends TeaModel {
         public String cluster;
 
         /**
-         * <p>Specifies whether to assign a custom role to the RAM user or RAM role. If you want to assign a custom role to the RAM user or RAM role, set <code>role_name</code> to the name of the custom role.</p>
+         * <p>Set to true if <code>role_name</code> specifies a custom ClusterRole.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -47,7 +47,7 @@ public class GrantPermissionsRequest extends TeaModel {
         public Boolean isCustom;
 
         /**
-         * <p>Specifies whether to use a RAM role to grant permissions.</p>
+         * <p>Set to true if you are granting permissions to a RAM role.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -56,7 +56,7 @@ public class GrantPermissionsRequest extends TeaModel {
         public Boolean isRamRole;
 
         /**
-         * <p>The namespace that you want to authorize the RAM user or RAM role to manage. This parameter is required only if you set role_type to namespace.</p>
+         * <p>The name of the namespace. This parameter is required only when <code>role_type</code> is set to <code>namespace</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -65,19 +65,29 @@ public class GrantPermissionsRequest extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The predefined role name. Valid values:</p>
+         * <p>The name of the role to grant. Valid values:</p>
          * <ul>
-         * <li><code>admin</code>: administrator</li>
-         * <li><code>admin-view</code>: read-only administrator</li>
-         * <li><code>ops</code>: O\&amp;M engineer</li>
-         * <li><code>dev</code>: developer</li>
-         * <li><code>restricted</code>: restricted user</li>
-         * <li>Custom role</li>
+         * <li><p><code>admin</code>: The administrator role.</p>
+         * </li>
+         * <li><p><code>admin-view</code>: The read-only administrator role.</p>
+         * </li>
+         * <li><p><code>ops</code>: The operations role.</p>
+         * </li>
+         * <li><p><code>dev</code>: The developer role.</p>
+         * </li>
+         * <li><p><code>restricted</code>: The restricted role.</p>
+         * </li>
+         * <li><p>The name of a custom ClusterRole.</p>
+         * </li>
          * </ul>
-         * <p>Note:</p>
+         * <blockquote>
+         * <p>Notice: </p>
+         * </blockquote>
          * <ul>
-         * <li>You cannot grant namespace-level permissions to the <code>admin</code>, <code>admin-view</code>, and <code>ops</code> roles.</li>
-         * <li>You cannot grant all cluster-level permissions to the <code>admin-view</code> role.</li>
+         * <li><p>The <code>admin</code>, <code>admin-view</code>, and <code>ops</code> roles cannot be granted at the namespace scope.</p>
+         * </li>
+         * <li><p>The <code>admin-view</code> role is not currently supported for the all-clusters scope.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -88,11 +98,14 @@ public class GrantPermissionsRequest extends TeaModel {
         public String roleName;
 
         /**
-         * <p>The authorization type. Valid values:</p>
+         * <p>The authorization scope. Valid values:</p>
          * <ul>
-         * <li><code>cluster</code>: authorizes the RAM user or RAM role to manage the specified clusters.</li>
-         * <li><code>namespace</code>: authorizes the RAM user or RAM role to manage the specified namespaces.</li>
-         * <li><code>all-clusters</code>: authorizes the RAM user or RAM role to manage all clusters.</li>
+         * <li><p><code>cluster</code>: Grants permissions at the cluster scope.</p>
+         * </li>
+         * <li><p><code>namespace</code>: Grants permissions at the namespace scope.</p>
+         * </li>
+         * <li><p><code>all-clusters</code>: Grants permissions at the all-clusters scope.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

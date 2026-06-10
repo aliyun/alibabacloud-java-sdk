@@ -44,7 +44,7 @@ public class DescribeClusterResourcesResponse extends TeaModel {
 
     public static class DescribeClusterResourcesResponseBodyDependencies extends TeaModel {
         /**
-         * <p>The ID of the cluster to which the dependent resource is related.</p>
+         * <p>The cluster ID of the dependent resource.</p>
          * 
          * <strong>example:</strong>
          * <p>cc5ee03f63e43425cb6f71f1a1756****</p>
@@ -53,7 +53,7 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The dependent resource type.</p>
+         * <p>The type of the dependent resource.</p>
          * 
          * <strong>example:</strong>
          * <p>ALIYUN::VPC::NatGateway</p>
@@ -62,7 +62,7 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The dependent resource ID.</p>
+         * <p>The instance ID of the dependent resource.</p>
          * 
          * <strong>example:</strong>
          * <p>ngw-wz9sphwk42sdtjixo****</p>
@@ -103,7 +103,7 @@ public class DescribeClusterResourcesResponse extends TeaModel {
 
     public static class DescribeClusterResourcesResponseBodyAssociatedObject extends TeaModel {
         /**
-         * <p>The Kubernetes object type.</p>
+         * <p>The type of the Kubernetes object.</p>
          * 
          * <strong>example:</strong>
          * <p>Service</p>
@@ -112,7 +112,7 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public String kind;
 
         /**
-         * <p>The namespace in which the Kubernetes object resides.</p>
+         * <p>The namespace of the Kubernetes object.</p>
          * 
          * <strong>example:</strong>
          * <p>kube-system</p>
@@ -121,7 +121,7 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The Kubernetes object name.</p>
+         * <p>The name of the Kubernetes object.</p>
          * 
          * <strong>example:</strong>
          * <p>nginx-ingress-lb</p>
@@ -162,7 +162,13 @@ public class DescribeClusterResourcesResponse extends TeaModel {
 
     public static class DescribeClusterResourcesResponseBodyDeleteBehavior extends TeaModel {
         /**
-         * <p>Specifies whether to delete the resource by default when the cluster is deleted.</p>
+         * <p>Indicates whether to delete the resource by default when the cluster is deleted. Valid values:</p>
+         * <ul>
+         * <li><p>true: The resource is deleted by default.</p>
+         * </li>
+         * <li><p>false: The resource is not deleted by default.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -171,7 +177,13 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public Boolean deleteByDefault;
 
         /**
-         * <p>Specifies whether the default behavior returned in delete_by_default can be changed.</p>
+         * <p>Indicates whether the default behavior specified by the <code>delete_by_default</code> parameter can be changed. Valid values:</p>
+         * <ul>
+         * <li><p>true: The default behavior can be changed.</p>
+         * </li>
+         * <li><p>false: The default behavior cannot be changed.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -216,7 +228,7 @@ public class DescribeClusterResourcesResponse extends TeaModel {
          * <p>The time when the resource was created.</p>
          * 
          * <strong>example:</strong>
-         * <p>2020-09-11T10:11:54+08:00</p>
+         * <p>2023-08-15T14:34:42+08:00</p>
          */
         @NameInMap("created")
         public String created;
@@ -225,16 +237,16 @@ public class DescribeClusterResourcesResponse extends TeaModel {
          * <p>The resource ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>lb-wz9poz4r0ymh8u0uf****</p>
+         * <p>ngw-wz9sphwk42sdtjixo****</p>
          */
         @NameInMap("instance_id")
         public String instanceId;
 
         /**
-         * <p>The resource information. For more information about how to query the source information about the resource, see <a href="https://help.aliyun.com/document_detail/133836.html">ListStackResources</a>.</p>
+         * <p>Information about the resource. For more details about its source, see <a href="https://help.aliyun.com/document_detail/133836.html">ListStackResources</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;Id\&quot;:\&quot;k8s_master_slb\&quot;,\&quot;Name\&quot;:\&quot;k8s_master_slb\&quot;,\&quot;Type\&quot;:\&quot;ALIYUN::SLB::LoadBalancer\&quot;,\&quot;Status\&quot;:\&quot;CREATE_COMPLETE\&quot;,\&quot;StatusReason\&quot;:\&quot;state changed\&quot;,\&quot;Updated\&quot;:\&quot;2020-05-21T13:25:02\&quot;,\&quot;PhysicalId\&quot;:\&quot;lb-wz9poz4r0ymh8u0uf****\&quot;}</p>
+         * <p>{\&quot;Id\&quot;:\&quot;KubernetesWorkerRole\&quot;,\&quot;Name\&quot;:\&quot;KubernetesWorkerRole\&quot;,\&quot;Type\&quot;:\&quot;ALIYUN::RAM::Role\&quot;,\&quot;Status\&quot;:\&quot;CREATE_COMPLETE\&quot;,\&quot;StatusReason\&quot;:\&quot;state changed\&quot;,\&quot;Updated\&quot;:\&quot;2025-04-10T06:21:17\&quot;,\&quot;PhysicalId\&quot;:\&quot;KubernetesWorkerRole-7e611193-225f-40f6-bc3c-ea8633******\&quot;}</p>
          */
         @NameInMap("resource_info")
         public String resourceInfo;
@@ -243,22 +255,30 @@ public class DescribeClusterResourcesResponse extends TeaModel {
          * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
-         * <p>ALIYUN::SLB::LoadBalancer</p>
+         * <p>ALIYUN::VPC::NatGateway</p>
          */
         @NameInMap("resource_type")
         public String resourceType;
 
         /**
-         * <p>The resource status. Valid values:</p>
+         * <p>The state of the resource. Valid values:</p>
          * <ul>
-         * <li><code>CREATE_COMPLETE</code>: the resource is created.</li>
-         * <li><code>CREATE_FAILED</code>: the resource failed to be created.</li>
-         * <li><code>CREATE_IN_PROGRESS</code>: the resource is being created.</li>
-         * <li><code>DELETE_FAILED</code>: the resource failed to be deleted.</li>
-         * <li><code>DELETE_IN_PROGRESS</code>: the resource is being deleted.</li>
-         * <li><code>ROLLBACK_COMPLETE</code>: the resource is rolled back.</li>
-         * <li><code>ROLLBACK_FAILED</code>: the resource failed to be rolled back.</li>
-         * <li><code>ROLLBACK_IN_PROGRESS</code>: the resource is being rolled back.</li>
+         * <li><p><code>CREATE_COMPLETE</code>: The resource is successfully created.</p>
+         * </li>
+         * <li><p><code>CREATE_FAILED</code>: The resource fails to be created.</p>
+         * </li>
+         * <li><p><code>CREATE_IN_PROGRESS</code>: The resource is being created.</p>
+         * </li>
+         * <li><p><code>DELETE_FAILED</code>: The resource fails to be deleted.</p>
+         * </li>
+         * <li><p><code>DELETE_IN_PROGRESS</code>: The resource is being deleted.</p>
+         * </li>
+         * <li><p><code>ROLLBACK_COMPLETE</code>: The rollback is successful.</p>
+         * </li>
+         * <li><p><code>ROLLBACK_FAILED</code>: The rollback fails.</p>
+         * </li>
+         * <li><p><code>ROLLBACK_IN_PROGRESS</code>: The rollback is in progress.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -268,10 +288,12 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public String state;
 
         /**
-         * <p>Specifies whether the resource is created by Container Service for Kubernetes (ACK). Valid values:</p>
+         * <p>Indicates whether the resource is created by ACK. Valid values:</p>
          * <ul>
-         * <li>1: the resource is created by ACK.</li>
-         * <li>0: the resource is an existing resource.</li>
+         * <li><p>1: The resource is created by ACK.</p>
+         * </li>
+         * <li><p>0: The resource is an existing resource.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -281,13 +303,13 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public Long autoCreate;
 
         /**
-         * <p>The dependent resources.</p>
+         * <p>The list of dependent resources.</p>
          */
         @NameInMap("dependencies")
         public java.util.List<DescribeClusterResourcesResponseBodyDependencies> dependencies;
 
         /**
-         * <p>The Kubernetes object with which the resource is associated.</p>
+         * <p>The Kubernetes object that is associated with the resource.</p>
          */
         @NameInMap("associated_object")
         public DescribeClusterResourcesResponseBodyAssociatedObject associatedObject;
@@ -299,11 +321,14 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public DescribeClusterResourcesResponseBodyDeleteBehavior deleteBehavior;
 
         /**
-         * <p>The type of the resource creator. Valid values:</p>
+         * <p>The type of the creator of the resource. Valid values:</p>
          * <ul>
-         * <li>user: The resource is created by the user.</li>
-         * <li>system: The resource is created by the ACK management system.</li>
-         * <li>addon: The resource is created by a cluster component.</li>
+         * <li><p>user: The resource is created by a user.</p>
+         * </li>
+         * <li><p>system: The resource is created by the ACK control plane.</p>
+         * </li>
+         * <li><p>addon: The resource is created by an add-on.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -313,10 +338,10 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public String creatorType;
 
         /**
-         * <p>The additional information about the resource.</p>
+         * <p>Extra information about the resource.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;IP&quot;: &quot;xx.xx.xx.xx&quot;}</p>
+         * <p>{ &quot;type&quot;: &quot;SLS_Data&quot; }</p>
          */
         @NameInMap("extra_info")
         public java.util.Map<String, ?> extraInfo;

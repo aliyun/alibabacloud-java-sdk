@@ -8,7 +8,7 @@ public class DescribeClusterUserKubeconfigResponseBody extends TeaModel {
      * <p>The kubeconfig file of the cluster.</p>
      * 
      * <strong>example:</strong>
-     * <p>apiVersion: v1****</p>
+     * <p>apiVersion: v1\nclusters:\n- cluster:\n    server: <a href="https://114.55.xx.xx:6443%5C%5Cn">https://114.55.xx.xx:6443\\n</a>    certificate-authority-data: LS0tLS****</p>
      */
     @NameInMap("config")
     public String config;

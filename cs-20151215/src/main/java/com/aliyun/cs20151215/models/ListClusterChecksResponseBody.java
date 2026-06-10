@@ -37,7 +37,7 @@ public class ListClusterChecksResponseBody extends TeaModel {
          * <p>The time when the cluster check task was created.</p>
          * 
          * <strong>example:</strong>
-         * <p>2023-10-16T08:31:20.292030178Z</p>
+         * <p>2025-04-11T02:56:02.565982623Z</p>
          */
         @NameInMap("created_at")
         public String createdAt;
@@ -46,7 +46,7 @@ public class ListClusterChecksResponseBody extends TeaModel {
          * <p>The time when the cluster check task was completed.</p>
          * 
          * <strong>example:</strong>
-         * <p>2023-10-16T08:35:20.292030178Z</p>
+         * <p>2025-04-11T02:56:18.881054031Z</p>
          */
         @NameInMap("finished_at")
         public String finishedAt;

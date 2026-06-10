@@ -120,7 +120,7 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
          * <p>The Simple Log Service project that is used to collect logs for the component.</p>
          * 
          * <strong>example:</strong>
-         * <p>my-log-project</p>
+         * <p>k8s-log-c02b3e03be10643e8a644a843ffcb****</p>
          */
         @NameInMap("log_project")
         public String logProject;

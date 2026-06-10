@@ -23,7 +23,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the tasks.</p>
+     * <p>The tasks.</p>
      */
     @NameInMap("tasks")
     public java.util.List<DescribeClusterTasksResponseBodyTasks> tasks;
@@ -67,7 +67,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
 
     public static class DescribeClusterTasksResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of the page returned.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -76,7 +76,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -85,7 +85,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -126,7 +126,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
 
     public static class DescribeClusterTasksResponseBodyTasksError extends TeaModel {
         /**
-         * <p>The error code returned.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>BadRequest</p>
@@ -135,7 +135,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Addon status not match</p>
@@ -177,13 +177,13 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
         public String created;
 
         /**
-         * <p>The error returned for the task.</p>
+         * <p>The error message.</p>
          */
         @NameInMap("error")
         public DescribeClusterTasksResponseBodyTasksError error;
 
         /**
-         * <p>The status of the task.</p>
+         * <p>The task state.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -201,7 +201,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The type of task.</p>
+         * <p>The task type.</p>
          * 
          * <strong>example:</strong>
          * <p>cluster_addon_install</p>

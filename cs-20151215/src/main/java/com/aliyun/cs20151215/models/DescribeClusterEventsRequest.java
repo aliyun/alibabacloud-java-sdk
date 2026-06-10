@@ -11,7 +11,7 @@ public class DescribeClusterEventsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,9 @@ public class DescribeClusterEventsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 50. Default value: 50.</p>
+     * <p>The number of entries to return per page.</p>
+     * <p>Valid values: 1 to 100.</p>
+     * <p>Default value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -29,10 +31,10 @@ public class DescribeClusterEventsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The ID of the query task.</p>
+     * <p>The task ID. If specified, only events associated with this task are returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>T-xascadasd*****</p>
+     * <p>T-6823f946ffadbb0106****</p>
      */
     @NameInMap("task_id")
     public String taskId;

@@ -8,7 +8,7 @@ public class DeleteClusterNodesResponseBody extends TeaModel {
      * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>c104d5d5f301c4e2a8ee578c37bc****</p>
+     * <p>c104d5d5f301c4e2a8ee578c37******</p>
      */
     @NameInMap("cluster_id")
     public String clusterId;
@@ -17,7 +17,7 @@ public class DeleteClusterNodesResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>A9891419-D125-4D89-AFCA-68846675E2F7</p>
+     * <p>A9891419-D125-4D89-AFCA-688466******</p>
      */
     @NameInMap("request_id")
     public String requestId;
@@ -26,7 +26,7 @@ public class DeleteClusterNodesResponseBody extends TeaModel {
      * <p>The ID of the task.</p>
      * 
      * <strong>example:</strong>
-     * <p>T-60fea8ad2e277f0879000ae9</p>
+     * <p>T-60fea8ad2e27000ae9******</p>
      */
     @NameInMap("task_id")
     public String taskId;

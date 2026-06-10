@@ -97,15 +97,40 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
     }
 
     public static class ListClusterKubeconfigStatesResponseBodyStatesCloudServiceRoles extends TeaModel {
+        /**
+         * <p>Indicates whether the content matches the default cluster role template.  </p>
+         * <ul>
+         * <li>true: Matches  </li>
+         * <li>false: Does not match</li>
+         * </ul>
+         */
         @NameInMap("is_default_template")
         public Boolean isDefaultTemplate;
 
+        /**
+         * <p>Name of the cluster role associated with the cluster cloud product service role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster-admin</p>
+         */
         @NameInMap("role_name")
         public String roleName;
 
+        /**
+         * <p>Namespace of the cluster role associated with the cluster cloud product service role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kube-system</p>
+         */
         @NameInMap("role_namespace")
         public String roleNamespace;
 
+        /**
+         * <p>The type of the cluster role associated with the cloud service role of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ClusterRole</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -227,9 +252,18 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         @NameInMap("cert_state")
         public String certState;
 
+        /**
+         * <p>Cloud service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cs/ecs/sls</p>
+         */
         @NameInMap("cloud_service_name")
         public String cloudServiceName;
 
+        /**
+         * <p>List of cluster roles associated with the cluster cloud product service roles.</p>
+         */
         @NameInMap("cloud_service_roles")
         public java.util.List<ListClusterKubeconfigStatesResponseBodyStatesCloudServiceRoles> cloudServiceRoles;
 

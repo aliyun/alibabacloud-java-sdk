@@ -5,13 +5,6 @@ import com.aliyun.tea.*;
 
 public class ScaleOutClusterRequest extends TeaModel {
     /**
-     * <p>Specifies whether to install the CloudMonitor agent. Valid values:</p>
-     * <ul>
-     * <li><code>true</code>: installs the CloudMonitor agent.</li>
-     * <li><code>false</code>: does not install the CloudMonitor agent.</li>
-     * </ul>
-     * <p>Default value: <code>false</code>.</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,23 +12,15 @@ public class ScaleOutClusterRequest extends TeaModel {
     public Boolean cloudMonitorFlags;
 
     /**
-     * <p>The number of worker nodes that you want to add.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>3</p>
+     * <p>1</p>
      */
     @NameInMap("count")
     public Long count;
 
     /**
-     * <p>The CPU management policy of nodes in the node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:</p>
-     * <ul>
-     * <li><code>static</code>: allows pods with specific resource characteristics on the node to be granted with enhanced CPU affinity and exclusivity.</li>
-     * <li><code>none</code>: specifies that the default CPU affinity is used.</li>
-     * </ul>
-     * <p>Default value: <code>none</code>.</p>
-     * 
      * <strong>example:</strong>
      * <p>none</p>
      */
@@ -43,86 +28,56 @@ public class ScaleOutClusterRequest extends TeaModel {
     public String cpuPolicy;
 
     /**
-     * <p>Specifies a custom image for nodes. By default, the image provided by ACK is used. You can select a custom image to replace the default image. For more information, see <a href="https://help.aliyun.com/document_detail/146647.html">Custom images</a>.</p>
-     * 
      * <strong>example:</strong>
-     * <p>m-bp16z7xko3vvv8gt****</p>
+     * <p>centos_7_7_x64_20G_alibase_20200426.vhd</p>
      */
     @NameInMap("image_id")
     public String imageId;
 
     /**
-     * <p>The name of the key pair. You must configure this parameter or the <code>login_password</code> parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>secrity-key</p>
+     * <p>key_name</p>
      */
     @NameInMap("key_pair")
     public String keyPair;
 
     /**
-     * <p>The password for SSH logon. You must configure this parameter or the <code>key_pair</code> parameter. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Hello@1234</p>
+     * <p>Hello1234</p>
      */
     @NameInMap("login_password")
     public String loginPassword;
 
-    /**
-     * <p>The ApsaraDB RDS instances. If you specify a list of ApsaraDB RDS instances, ECS instances in the cluster are automatically added to the whitelist of the ApsaraDB RDS instances.</p>
-     */
     @NameInMap("rds_instances")
     public java.util.List<String> rdsInstances;
 
-    /**
-     * <p>The container runtime.</p>
-     */
     @NameInMap("runtime")
     public Runtime runtime;
 
-    /**
-     * <p>The labels that you want to add to the node. When you add labels to a node, the following rules apply:</p>
-     * <ul>
-     * <li>A label is a case-sensitive key-value pair. You can add up to 20 labels.</li>
-     * <li>The key must be unique and cannot exceed 64 characters in length. The value can be empty and cannot exceed 128 characters in length. Keys and values cannot start with aliyun, acs:, https://, or http://. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</li>
-     * </ul>
-     */
     @NameInMap("tags")
     public java.util.List<Tag> tags;
 
-    /**
-     * <p>The taints that you want to add to nodes. Taints can be used together with tolerations to avoid scheduling pods to specified nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</p>
-     */
     @NameInMap("taints")
     public java.util.List<Taint> taints;
 
     /**
-     * <p>The user-defined data of the node pool. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate user-defined data</a>.</p>
-     * 
      * <strong>example:</strong>
-     * <p>IyEvdXNyL2Jpbi9iYXNoCmVjaG8gIkhlbGxvIEFD****</p>
+     * <p>IyEvdXNyL2Jpbi9iYXNoCmVjaG8gIkhlbGxvIEFDSyEi</p>
      */
     @NameInMap("user_data")
     public String userData;
 
     /**
-     * <p>The vSwitch IDs. You can select one to three vSwitches when you create a cluster. To ensure the high availability of the cluster, we recommend that you select vSwitches in different zones.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("vswitch_ids")
     public java.util.List<String> vswitchIds;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for worker nodes. This parameter takes effect and is required only if <code>worker_instance_charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
-     * <ul>
-     * <li><code>true</code>: enables auto-renewal.</li>
-     * <li><code>false</code>: does not enable auto-renewal.</li>
-     * </ul>
-     * <p>Default value: <code>true</code></p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -130,30 +85,16 @@ public class ScaleOutClusterRequest extends TeaModel {
     public Boolean workerAutoRenew;
 
     /**
-     * <p>The auto-renewal duration of worker nodes. This parameter takes effect and is required only if the subscription billing method is selected for worker nodes.</p>
-     * <p>Valid values: 1, 2, 3, 6, and 12.</p>
-     * <p>Default value: <code>1</code>.</p>
-     * 
      * <strong>example:</strong>
-     * <p>6</p>
+     * <p>1</p>
      */
     @NameInMap("worker_auto_renew_period")
     public Long workerAutoRenewPeriod;
 
-    /**
-     * <p>The configurations of the data disks that you want to mount to worker nodes. The configurations include the disk type and disk size.</p>
-     */
     @NameInMap("worker_data_disks")
     public java.util.List<ScaleOutClusterRequestWorkerDataDisks> workerDataDisks;
 
     /**
-     * <p>The billing method of worker nodes. Valid values:</p>
-     * <ul>
-     * <li><code>PrePaid</code>: subscription.</li>
-     * <li><code>PostPaid</code>: pay-as-you-go.</li>
-     * </ul>
-     * <p>Default value: <code>PostPaid</code>.</p>
-     * 
      * <strong>example:</strong>
      * <p>PrePaid</p>
      */
@@ -161,17 +102,12 @@ public class ScaleOutClusterRequest extends TeaModel {
     public String workerInstanceChargeType;
 
     /**
-     * <p>The instance configurations of worker nodes.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("worker_instance_types")
     public java.util.List<String> workerInstanceTypes;
 
     /**
-     * <p>The subscription duration of worker nodes. This parameter takes effect and is required only if <code>worker_instance_charge_type</code> is set to <code>PrePaid</code>.</p>
-     * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
-     * <p>Default value: 1.</p>
-     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -179,9 +115,6 @@ public class ScaleOutClusterRequest extends TeaModel {
     public Long workerPeriod;
 
     /**
-     * <p>The billing cycle of worker nodes. This parameter is required only if worker_instance_charge_type is set to <code>PrePaid</code>.</p>
-     * <p>Set the value to <code>Month</code>.</p>
-     * 
      * <strong>example:</strong>
      * <p>Month</p>
      */
@@ -189,13 +122,6 @@ public class ScaleOutClusterRequest extends TeaModel {
     public String workerPeriodUnit;
 
     /**
-     * <p>The system disk category of worker nodes. Valid values:</p>
-     * <ul>
-     * <li><code>cloud_efficiency</code>: ultra disk.</li>
-     * <li><code>cloud_ssd</code>: standard SSD.</li>
-     * <li><code>cloud_essd</code>: Enterprise SSD (ESSD).</li>
-     * </ul>
-     * <p>Default value: <code>cloud_ssd</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -205,9 +131,6 @@ public class ScaleOutClusterRequest extends TeaModel {
     public String workerSystemDiskCategory;
 
     /**
-     * <p>The system disk size of worker nodes. Unit: GiB.</p>
-     * <p>Valid values: 40 to 500.</p>
-     * <p>Default value: <code>120</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -391,32 +314,20 @@ public class ScaleOutClusterRequest extends TeaModel {
 
     public static class ScaleOutClusterRequestWorkerDataDisks extends TeaModel {
         /**
-         * <p>The ID of the automatic snapshot policy. The system performs automatic backup for a cloud disk based on the specified automatic snapshot policy.</p>
-         * <p>By default, this parameter is left empty, which indicates that automatic backup is disabled.</p>
-         * 
          * <strong>example:</strong>
-         * <p>sp-bp14yziiuvu3s6jn****</p>
+         * <p>sp-2zej1nogjvovnz4z****</p>
          */
         @NameInMap("auto_snapshot_policy_id")
         public String autoSnapshotPolicyId;
 
         /**
-         * <p>The type of the data disk.</p>
-         * 
          * <strong>example:</strong>
-         * <p>cloud_essd</p>
+         * <p>cloud_efficiency</p>
          */
         @NameInMap("category")
         public String category;
 
         /**
-         * <p>Specifies whether to encrypt the data disks. Valid values:</p>
-         * <ul>
-         * <li><code>true</code>: encrypts the data disk.</li>
-         * <li><code>false</code>: does not encrypt the data disk.</li>
-         * </ul>
-         * <p>Default value: <code>false</code>.</p>
-         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -424,8 +335,6 @@ public class ScaleOutClusterRequest extends TeaModel {
         public String encrypted;
 
         /**
-         * <p>The size of the data disk. Valid values: 40 to 32767.</p>
-         * 
          * <strong>example:</strong>
          * <p>120</p>
          */

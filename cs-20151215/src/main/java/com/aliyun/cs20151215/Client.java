@@ -59,6 +59,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>调用本接口前，请仔细阅读<a href="https://help.aliyun.com/document_detail/86919.html">使用限制</a>，确保待添加的ECS实例满足条件。</p>
+     * 
      * <b>summary</b> : 
      * <p>Adds existing Elastic Compute Service (ECS) instances to a Container Service for Kubernetes (ACK) cluster. When you need to add an ECS instance as a worker node to an ACK cluster or re-add a worker node to the cluster, you can call this operation.</p>
      * 
@@ -141,6 +144,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>调用本接口前，请仔细阅读<a href="https://help.aliyun.com/document_detail/86919.html">使用限制</a>，确保待添加的ECS实例满足条件。</p>
+     * 
      * <b>summary</b> : 
      * <p>Adds existing Elastic Compute Service (ECS) instances to a Container Service for Kubernetes (ACK) cluster. When you need to add an ECS instance as a worker node to an ACK cluster or re-add a worker node to the cluster, you can call this operation.</p>
      * 
@@ -601,8 +607,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: 
+     * This API is not yet available.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Creates an auto-repair policy.</p>
+     * <p>Create a self-healing rule.</p>
      * 
      * @param request CreateAutoRepairPolicyRequest
      * @param headers map
@@ -647,8 +659,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: 
+     * This API is not yet available.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Creates an auto-repair policy.</p>
+     * <p>Create a self-healing rule.</p>
      * 
      * @param request CreateAutoRepairPolicyRequest
      * @return CreateAutoRepairPolicyResponse
@@ -661,7 +679,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a scaling configuration to allow the system to scale resources based on the given scaling rules. When you create a scaling configuration, you can specify the scaling metrics, thresholds, scaling order, and scaling interval.</p>
+     * <p>Create an auto scaling policy to automatically add or remove compute resources based on configured scaling rules to handle your cluster\&quot;s workload. You can specify metrics and thresholds, scaling order, a cooldown period, and more.</p>
      * 
      * @param request CreateAutoscalingConfigRequest
      * @param headers map
@@ -755,7 +773,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a scaling configuration to allow the system to scale resources based on the given scaling rules. When you create a scaling configuration, you can specify the scaling metrics, thresholds, scaling order, and scaling interval.</p>
+     * <p>Create an auto scaling policy to automatically add or remove compute resources based on configured scaling rules to handle your cluster\&quot;s workload. You can specify metrics and thresholds, scaling order, a cooldown period, and more.</p>
      * 
      * @param request CreateAutoscalingConfigRequest
      * @return CreateAutoscalingConfigResponse
@@ -768,18 +786,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#-openapi-"></a>Generate API request parameters through the ACK console</h3>
-     * <p>When calling the CreateCluster operation to create a cluster, if the API call fails due to invalid parameter settings, you can generate valid request parameters through the ACK console. Follow these steps:</p>
+     * <h3>Generate OpenAPI request parameters in the console</h3>
+     * <p>If your CreateCluster API call fails due to invalid parameter combinations, you can generate valid request parameters directly in the console. Follow these steps:</p>
      * <ol>
-     * <li>Log on to the <a href="https://csnew.console.aliyun.com">ACK console</a>. In the left-side navigation pane, click <strong>Clusters</strong>.</li>
+     * <li>Log on to the <a href="https://csnew.console.aliyun.com">Container Service for Kubernetes console</a>. In the left navigation pane, select <strong>Clusters</strong>.</li>
      * <li>On the <strong>Clusters</strong> page, click <strong>Cluster Templates</strong>.</li>
-     * <li>In the Select Cluster Template dialog box, select the type of cluster you want to create and click Create. Then, configure the cluster parameters.</li>
-     * <li>In the <strong>Confirm</strong> step, click <strong>Generate API Request Parameters</strong>.
-     * The API request parameters are displayed in the API Request Parameters dialog box.</li>
+     * <li>In the dialog box, select the cluster type you want to create and click Create. Then configure your cluster on the cluster configuration page.</li>
+     * <li>After completing your configuration, go to the <strong>Review Configuration</strong> page and click <strong>Equivalent Code</strong> in the upper-right corner. The dialog box displays the required parameter combination for cluster creation. Copy and use it as needed.<blockquote>
+     * <p>Notice: 
+     * Starting July 4, 2026, some request parameters will no longer take effect. For details about the changes and replacement parameters, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on Changes and Deprecation of OpenAPI Parameters for ACK Cluster Management</a>.</p>
+     * </blockquote>
+     * </li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Container Service for Kubernetes (ACK) cluster. For example, you can create an ACK managed cluster, ACK Serverless cluster, ACK Edge cluster, or registered cluster. When you create an ACK cluster, you need to configure the cluster information, components, and cloud resources used by ACK.</p>
+     * <p>Create an ACK cluster using OpenAPI. Supported cluster types include ACK managed clusters, ACK serverless clusters, ACK Edge clusters, and registered clusters. When creating a cluster, configure the cluster information, components, and related Alibaba Cloud resources.</p>
      * 
      * @param request CreateClusterRequest
      * @param headers map
@@ -1221,18 +1242,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#-openapi-"></a>Generate API request parameters through the ACK console</h3>
-     * <p>When calling the CreateCluster operation to create a cluster, if the API call fails due to invalid parameter settings, you can generate valid request parameters through the ACK console. Follow these steps:</p>
+     * <h3>Generate OpenAPI request parameters in the console</h3>
+     * <p>If your CreateCluster API call fails due to invalid parameter combinations, you can generate valid request parameters directly in the console. Follow these steps:</p>
      * <ol>
-     * <li>Log on to the <a href="https://csnew.console.aliyun.com">ACK console</a>. In the left-side navigation pane, click <strong>Clusters</strong>.</li>
+     * <li>Log on to the <a href="https://csnew.console.aliyun.com">Container Service for Kubernetes console</a>. In the left navigation pane, select <strong>Clusters</strong>.</li>
      * <li>On the <strong>Clusters</strong> page, click <strong>Cluster Templates</strong>.</li>
-     * <li>In the Select Cluster Template dialog box, select the type of cluster you want to create and click Create. Then, configure the cluster parameters.</li>
-     * <li>In the <strong>Confirm</strong> step, click <strong>Generate API Request Parameters</strong>.
-     * The API request parameters are displayed in the API Request Parameters dialog box.</li>
+     * <li>In the dialog box, select the cluster type you want to create and click Create. Then configure your cluster on the cluster configuration page.</li>
+     * <li>After completing your configuration, go to the <strong>Review Configuration</strong> page and click <strong>Equivalent Code</strong> in the upper-right corner. The dialog box displays the required parameter combination for cluster creation. Copy and use it as needed.<blockquote>
+     * <p>Notice: 
+     * Starting July 4, 2026, some request parameters will no longer take effect. For details about the changes and replacement parameters, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on Changes and Deprecation of OpenAPI Parameters for ACK Cluster Management</a>.</p>
+     * </blockquote>
+     * </li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Container Service for Kubernetes (ACK) cluster. For example, you can create an ACK managed cluster, ACK Serverless cluster, ACK Edge cluster, or registered cluster. When you create an ACK cluster, you need to configure the cluster information, components, and cloud resources used by ACK.</p>
+     * <p>Create an ACK cluster using OpenAPI. Supported cluster types include ACK managed clusters, ACK serverless clusters, ACK Edge clusters, and registered clusters. When creating a cluster, configure the cluster information, components, and related Alibaba Cloud resources.</p>
      * 
      * @param request CreateClusterRequest
      * @return CreateClusterResponse
@@ -1351,7 +1375,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a node pool for a Container Service for Kubernetes (ACK) cluster. You can use node pools to facilitate node management. For example, you can schedule, configure, or maintain nodes by node pool, and enable auto scaling for a node pool. We recommend that you use a managed node pool, which can help automate specific O\\\\\\&amp;M tasks for nodes, such as Common Vulnerabilities and Exposures (CVE) patching and node repair. This reduces your O\\\\\\&amp;M workload.</p>
+     * <p>A node pool is a logical collection of nodes that share the same properties, enabling unified management and O&amp;M operations such as node upgrades and Auto Scaling. You can further leverage the automated O&amp;M capabilities of node pools to reduce operational costs—for example, by automatically patching OS CVE vulnerabilities, automatically recovering failed nodes, and automatically upgrading kubelet and containerd versions. You can invoke CreateClusterNodePool to create a node pool for a cluster.</p>
      * 
      * @param request CreateClusterNodePoolRequest
      * @param headers map
@@ -1445,7 +1469,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a node pool for a Container Service for Kubernetes (ACK) cluster. You can use node pools to facilitate node management. For example, you can schedule, configure, or maintain nodes by node pool, and enable auto scaling for a node pool. We recommend that you use a managed node pool, which can help automate specific O\\\\\\&amp;M tasks for nodes, such as Common Vulnerabilities and Exposures (CVE) patching and node repair. This reduces your O\\\\\\&amp;M workload.</p>
+     * <p>A node pool is a logical collection of nodes that share the same properties, enabling unified management and O&amp;M operations such as node upgrades and Auto Scaling. You can further leverage the automated O&amp;M capabilities of node pools to reduce operational costs—for example, by automatically patching OS CVE vulnerabilities, automatically recovering failed nodes, and automatically upgrading kubelet and containerd versions. You can invoke CreateClusterNodePool to create a node pool for a cluster.</p>
      * 
      * @param request CreateClusterNodePoolRequest
      * @return CreateClusterNodePoolResponse
@@ -1587,6 +1611,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>创建触发器仅支持Pod的重新部署。</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
      * <p>Creates a trigger for an application to redeploy the application pods when specific conditions are met.</p>
      * 
@@ -1633,6 +1662,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>创建触发器仅支持Pod的重新部署。</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
      * <p>Creates a trigger for an application to redeploy the application pods when specific conditions are met.</p>
      * 
@@ -1647,7 +1681,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes one or more ACK alert contacts.</p>
+     * <p>Deletes ACK alert contacts.</p>
      * 
      * @param tmpReq DeleteAlertContactRequest
      * @param headers map
@@ -1687,7 +1721,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes one or more ACK alert contacts.</p>
+     * <p>Deletes ACK alert contacts.</p>
      * 
      * @param request DeleteAlertContactRequest
      * @return DeleteAlertContactResponse
@@ -1752,8 +1786,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: 
+     * This API is not yet publicly available.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>查询自愈规则</p>
+     * <p>Deletes an auto repair policy.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1778,8 +1818,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: 
+     * This API is not yet publicly available.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>查询自愈规则</p>
+     * <p>Deletes an auto repair policy.</p>
      * @return DeleteAutoRepairPolicyResponse
      */
     public DeleteAutoRepairPolicyResponse deleteAutoRepairPolicy(String clusterId, String policyId) throws Exception {
@@ -1790,17 +1836,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Warning:</p>
+     * <p>Important</p>
      * <ul>
-     * <li>Subscription ECS instances and Lingjun nodes in a cluster cannot be automatically released. To avoid unnecessary costs, we recommend that you manually release the resources. For more information, see \<a href="{0}" target="_blank">Rules for deleting clusters and releasing nodes\</a>.</li>
-     * <li>If the SLB instance of the API server uses the subscription billing method, it cannot be automatically released. To avoid unnecessary costs, we recommend that you manually release it.</li>
-     * <li>By default, virtual private clouds (VPCs), vSwitches, security groups, and RAM roles are retained if they are used by other resources. To avoid unnecessary costs, we recommend that you manually release the resources.</li>
-     * <li>Elastic container instances created on virtual nodes are automatically released.</li>
-     * <li>Some resources created together with a cluster are not automatically released when the cluster is deleted. After the cluster is deleted, you are still charged for the resources. Release or retain the resources based on your actual needs. The resources include Simple Log Service projects automatically created by the cluster and dynamically provisioned disks.</li>
+     * <li>Subscription-based resources, such as ECS instances and Lingjun computing nodes, are not automatically released. You must manually release them to avoid unnecessary charges. For more details, see Cluster deletion and node release rules.</li>
+     * <li>Subscription-based APIServer SLB resources are not automatically released. You must manually release them to avoid unnecessary charges.</li>
+     * <li>If resources such as VPCs, VSwitches, security groups, and RAM roles are in use by other resources, they are retained by default. You must release them manually.</li>
+     * <li>ECIs created with virtual nodes are automatically released.</li>
+     * <li>Some cloud resources created with the cluster are not automatically released when you delete the cluster and continue to incur charges. You can choose to retain or release them. These resources include SLS projects automatically created by the cluster and cloud disks purchased via dynamic volumes.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>You can call the DeleteCluster operation to delete a cluster and specify whether to delete or retain the relevant cluster resources. Before you delete a cluster, you must manually delete workloads in the cluster, such as Deployments, StatefulSets, Jobs, and CronJobs. Otherwise, you may fail to delete the cluster.</p>
+     * <p>When you no longer need a cluster, you can delete it and choose whether to delete or retain its associated resources. Before deleting a cluster, you must manually remove its workloads, such as stateless applications, stateful applications, jobs, and cronjobs. Otherwise, the deletion might fail.</p>
      * 
      * @param tmpReq DeleteClusterRequest
      * @param headers map
@@ -1856,17 +1902,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Warning:</p>
+     * <p>Important</p>
      * <ul>
-     * <li>Subscription ECS instances and Lingjun nodes in a cluster cannot be automatically released. To avoid unnecessary costs, we recommend that you manually release the resources. For more information, see \<a href="{0}" target="_blank">Rules for deleting clusters and releasing nodes\</a>.</li>
-     * <li>If the SLB instance of the API server uses the subscription billing method, it cannot be automatically released. To avoid unnecessary costs, we recommend that you manually release it.</li>
-     * <li>By default, virtual private clouds (VPCs), vSwitches, security groups, and RAM roles are retained if they are used by other resources. To avoid unnecessary costs, we recommend that you manually release the resources.</li>
-     * <li>Elastic container instances created on virtual nodes are automatically released.</li>
-     * <li>Some resources created together with a cluster are not automatically released when the cluster is deleted. After the cluster is deleted, you are still charged for the resources. Release or retain the resources based on your actual needs. The resources include Simple Log Service projects automatically created by the cluster and dynamically provisioned disks.</li>
+     * <li>Subscription-based resources, such as ECS instances and Lingjun computing nodes, are not automatically released. You must manually release them to avoid unnecessary charges. For more details, see Cluster deletion and node release rules.</li>
+     * <li>Subscription-based APIServer SLB resources are not automatically released. You must manually release them to avoid unnecessary charges.</li>
+     * <li>If resources such as VPCs, VSwitches, security groups, and RAM roles are in use by other resources, they are retained by default. You must release them manually.</li>
+     * <li>ECIs created with virtual nodes are automatically released.</li>
+     * <li>Some cloud resources created with the cluster are not automatically released when you delete the cluster and continue to incur charges. You can choose to retain or release them. These resources include SLS projects automatically created by the cluster and cloud disks purchased via dynamic volumes.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>You can call the DeleteCluster operation to delete a cluster and specify whether to delete or retain the relevant cluster resources. Before you delete a cluster, you must manually delete workloads in the cluster, such as Deployments, StatefulSets, Jobs, and CronJobs. Otherwise, you may fail to delete the cluster.</p>
+     * <p>When you no longer need a cluster, you can delete it and choose whether to delete or retain its associated resources. Before deleting a cluster, you must manually remove its workloads, such as stateless applications, stateful applications, jobs, and cronjobs. Otherwise, the deletion might fail.</p>
      * 
      * @param request DeleteClusterRequest
      * @return DeleteClusterResponse
@@ -2204,7 +2250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deploys a policy in the specified namespaces of a specific Container Service for Kubernetes (ACK) cluster. You can create and deploy a security policy by specifying the policy type, action of the policy such as alerting or denying, and namespaces to which the policy applies.</p>
+     * <p>Call the <code>DeployPolicyInstance</code> operation to deploy a policy instance to specified namespaces in an ACK cluster. To create a policy instance, select a security policy, configure a governance action (alert or deny), and specify the target namespaces for the policy.</p>
      * 
      * @param request DeployPolicyInstanceRequest
      * @param headers map
@@ -2246,7 +2292,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deploys a policy in the specified namespaces of a specific Container Service for Kubernetes (ACK) cluster. You can create and deploy a security policy by specifying the policy type, action of the policy such as alerting or denying, and namespaces to which the policy applies.</p>
+     * <p>Call the <code>DeployPolicyInstance</code> operation to deploy a policy instance to specified namespaces in an ACK cluster. To create a policy instance, select a security policy, configure a governance action (alert or deny), and specify the target namespaces for the policy.</p>
      * 
      * @param request DeployPolicyInstanceRequest
      * @return DeployPolicyInstanceResponse
@@ -2400,8 +2446,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: 
+     * This API is not yet available.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>查询自愈规则</p>
+     * <p>View self-healing rules.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2426,8 +2478,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: 
+     * This API is not yet available.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>查询自愈规则</p>
+     * <p>View self-healing rules.</p>
      * @return DescribeAutoRepairPolicyResponse
      */
     public DescribeAutoRepairPolicyResponse describeAutoRepairPolicy(String clusterId, String policyId) throws Exception {
@@ -2689,7 +2747,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the scripts used to add existing nodes to a Container Service for Kubernetes (ACK) cluster. ACK allows you to manually add existing Elastic Compute Service (ECS) instances to an ACK cluster as worker nodes or re-add worker nodes that you remove from the cluster to a node pool.</p>
+     * <p>To manually add existing ECS instances to an ACK cluster as worker nodes or add nodes back to a node pool, call the DescribeClusterAttachScripts operation to obtain the required attachment script.</p>
      * 
      * @param request DescribeClusterAttachScriptsRequest
      * @param headers map
@@ -2751,7 +2809,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the scripts used to add existing nodes to a Container Service for Kubernetes (ACK) cluster. ACK allows you to manually add existing Elastic Compute Service (ECS) instances to an ACK cluster as worker nodes or re-add worker nodes that you remove from the cluster to a node pool.</p>
+     * <p>To manually add existing ECS instances to an ACK cluster as worker nodes or add nodes back to a node pool, call the DescribeClusterAttachScripts operation to obtain the required attachment script.</p>
      * 
      * @param request DescribeClusterAttachScriptsRequest
      * @return DescribeClusterAttachScriptsResponse
@@ -2764,7 +2822,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the DescribeClusterDetail operation to query the details of a Container Service for Kubernetes (ACK) cluster by cluster ID.</p>
+     * <p>You can call the DescribeClusterDetail operation to query detailed information about a specified cluster by its cluster ID.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2790,7 +2848,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the DescribeClusterDetail operation to query the details of a Container Service for Kubernetes (ACK) cluster by cluster ID.</p>
+     * <p>You can call the DescribeClusterDetail operation to query detailed information about a specified cluster by its cluster ID.</p>
      * @return DescribeClusterDetailResponse
      */
     public DescribeClusterDetailResponse describeClusterDetail(String ClusterId) throws Exception {
@@ -2801,7 +2859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries events and event details in a Container Service for Kubernetes (ACK) cluster, including the severity level, status, and start time of each event. Events are generated when clusters created, modified, and updated, node pools are created and scaled out, and components are installed.</p>
+     * <p>Cluster operation events include cluster creation, modification, and upgrades, node pool creation and scale-out, and add-on installations. You can call the <code>DescribeClusterEvents</code> operation to retrieve events for a specified cluster and query their details, such as the severity level, status, and time.</p>
      * 
      * @param request DescribeClusterEventsRequest
      * @param headers map
@@ -2851,7 +2909,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries events and event details in a Container Service for Kubernetes (ACK) cluster, including the severity level, status, and start time of each event. Events are generated when clusters created, modified, and updated, node pools are created and scaled out, and components are installed.</p>
+     * <p>Cluster operation events include cluster creation, modification, and upgrades, node pool creation and scale-out, and add-on installations. You can call the <code>DescribeClusterEvents</code> operation to retrieve events for a specified cluster and query their details, such as the severity level, status, and time.</p>
      * 
      * @param request DescribeClusterEventsRequest
      * @return DescribeClusterEventsResponse
@@ -2901,7 +2959,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the DescribeClusterNodePoolDetail.html operation to query the details about a node pool in a cluster by node pool ID.</p>
+     * <p>You can call the DescribeClusterNodePoolDetail operation with a node pool ID to query the configuration of a specific node pool in a cluster.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2927,7 +2985,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the DescribeClusterNodePoolDetail.html operation to query the details about a node pool in a cluster by node pool ID.</p>
+     * <p>You can call the DescribeClusterNodePoolDetail operation with a node pool ID to query the configuration of a specific node pool in a cluster.</p>
      * @return DescribeClusterNodePoolDetailResponse
      */
     public DescribeClusterNodePoolDetailResponse describeClusterNodePoolDetail(String ClusterId, String NodepoolId) throws Exception {
@@ -2938,7 +2996,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about all node pools in a cluster.</p>
+     * <p>Lists all node pools in a cluster.</p>
      * 
      * @param request DescribeClusterNodePoolsRequest
      * @param headers map
@@ -2972,7 +3030,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about all node pools in a cluster.</p>
+     * <p>Lists all node pools in a cluster.</p>
      * 
      * @param request DescribeClusterNodePoolsRequest
      * @return DescribeClusterNodePoolsResponse
@@ -3048,7 +3106,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the DescribeClusterResources operation to query all resources in a cluster by cluster ID.</p>
+     * <p>Container Service for Kubernetes uses other Alibaba Cloud resources, such as VPCs and SLBs. To query the resources associated with a specific cluster, call the <code>DescribeClusterResources</code> operation. To query node pools or nodes, call the <code>DescribeClusterNodePools</code> or <code>DescribeClusterNodes</code> operations.</p>
      * 
      * @param request DescribeClusterResourcesRequest
      * @param headers map
@@ -3082,7 +3140,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the DescribeClusterResources operation to query all resources in a cluster by cluster ID.</p>
+     * <p>Container Service for Kubernetes uses other Alibaba Cloud resources, such as VPCs and SLBs. To query the resources associated with a specific cluster, call the <code>DescribeClusterResources</code> operation. To query node pools or nodes, call the <code>DescribeClusterNodePools</code> or <code>DescribeClusterNodes</code> operations.</p>
      * 
      * @param request DescribeClusterResourcesRequest
      * @return DescribeClusterResourcesResponse
@@ -3095,7 +3153,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries tasks in a Container Service for Kubernetes (ACK) cluster.</p>
+     * <p>Lists the tasks in a specified cluster.</p>
      * 
      * @param request DescribeClusterTasksRequest
      * @param headers map
@@ -3141,7 +3199,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries tasks in a Container Service for Kubernetes (ACK) cluster.</p>
+     * <p>Lists the tasks in a specified cluster.</p>
      * 
      * @param request DescribeClusterTasksRequest
      * @return DescribeClusterTasksResponse
@@ -3217,7 +3275,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取集群kubeconfig接口</p>
+     * <p>Obtain the kubeconfig API for a cluster</p>
      * 
      * @deprecated OpenAPI DescribeClusterV2UserKubeconfig is deprecated
      * 
@@ -3259,7 +3317,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取集群kubeconfig接口</p>
+     * <p>Obtain the kubeconfig API for a cluster</p>
      * 
      * @deprecated OpenAPI DescribeClusterV2UserKubeconfig is deprecated
      * 
@@ -3313,7 +3371,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all existing clusters in ACK, including Kubernetes clusters and Swarm clusters.</p>
+     * <p>View all clusters (including Swarm and Kubernetes clusters) created in the container service.</p>
      * 
      * @deprecated OpenAPI DescribeClusters is deprecated
      * 
@@ -3359,7 +3417,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all existing clusters in ACK, including Kubernetes clusters and Swarm clusters.</p>
+     * <p>View all clusters (including Swarm and Kubernetes clusters) created in the container service.</p>
      * 
      * @deprecated OpenAPI DescribeClusters is deprecated
      * 
@@ -3376,7 +3434,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all clusters in a specified region.</p>
+     * <p>Lists all clusters in a specified region.</p>
      * 
      * @param request DescribeClustersForRegionRequest
      * @param headers map
@@ -3434,7 +3492,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all clusters in a specified region.</p>
+     * <p>Lists all clusters in a specified region.</p>
      * 
      * @param request DescribeClustersForRegionRequest
      * @return DescribeClustersForRegionResponse
@@ -3447,7 +3505,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details about Container Service for Kubernetes (ACK) clusters of specified types or specifications within an account.</p>
+     * <p>Use the DescribeClustersV1 API to list ACK clusters by criteria such as cluster type and cluster specification.</p>
      * 
      * @param request DescribeClustersV1Request
      * @param headers map
@@ -3509,7 +3567,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details about Container Service for Kubernetes (ACK) clusters of specified types or specifications within an account.</p>
+     * <p>Use the DescribeClustersV1 API to list ACK clusters by criteria such as cluster type and cluster specification.</p>
      * 
      * @param request DescribeClustersV1Request
      * @return DescribeClustersV1Response
@@ -3522,7 +3580,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the detailed information about a type of events, including the severity level, status, and time. Events are generated when clusters are created, modified, and updated, node pools are created and scaled out, and components are installed.</p>
+     * <p>Cluster operation events include cluster creation, cluster changes, node pool creation, node pool scale-out, add-on installation, and cluster upgrade. Use the <code>DescribeEvents</code> API to query details for a specific event type, including its level, status, and timestamp.</p>
      * 
      * @param request DescribeEventsRequest
      * @param headers map
@@ -3576,7 +3634,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the detailed information about a type of events, including the severity level, status, and time. Events are generated when clusters are created, modified, and updated, node pools are created and scaled out, and components are installed.</p>
+     * <p>Cluster operation events include cluster creation, cluster changes, node pool creation, node pool scale-out, add-on installation, and cluster upgrade. Use the <code>DescribeEvents</code> API to query details for a specific event type, including its level, status, and timestamp.</p>
      * 
      * @param request DescribeEventsRequest
      * @return DescribeEventsResponse
@@ -3589,7 +3647,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all events in a specified region.</p>
+     * <p>Retrieves a list of events in a specified region.</p>
      * 
      * @param request DescribeEventsForRegionRequest
      * @param headers map
@@ -3639,7 +3697,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all events in a specified region.</p>
+     * <p>Retrieves a list of events in a specified region.</p>
      * 
      * @param request DescribeEventsForRegionRequest
      * @return DescribeEventsForRegionResponse
@@ -3909,7 +3967,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Container Service for Kubernetes (ACK) clusters offer a variety of built-in container security policies, such as Compliance, Infra, K8s-general, and pod security policy (PSP). You can use these policies to ensure the security of containers running in a production environment. You can call the DescribePolicyGovernanceInCluster operation to query the details of policies for an ACK cluster. For example, you can query the number of policies that are enabled per severity level, the audit logs of policies, and the blocking and alerting information.</p>
+     * <p>Container security policies for ACK clusters provide a rich set of built-in rule libraries, including <code>Compliance</code>, <code>Infra</code>, <code>K8s-general</code>, and <code>PSP</code>, to secure containers in a production environment. Call the <code>DescribePolicyGovernanceInCluster</code> API to retrieve policy governance details for a target cluster, such as policy statistics by severity, audit logs, and interception and alert events.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3935,7 +3993,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Container Service for Kubernetes (ACK) clusters offer a variety of built-in container security policies, such as Compliance, Infra, K8s-general, and pod security policy (PSP). You can use these policies to ensure the security of containers running in a production environment. You can call the DescribePolicyGovernanceInCluster operation to query the details of policies for an ACK cluster. For example, you can query the number of policies that are enabled per severity level, the audit logs of policies, and the blocking and alerting information.</p>
+     * <p>Container security policies for ACK clusters provide a rich set of built-in rule libraries, including <code>Compliance</code>, <code>Infra</code>, <code>K8s-general</code>, and <code>PSP</code>, to secure containers in a production environment. Call the <code>DescribePolicyGovernanceInCluster</code> API to retrieve policy governance details for a target cluster, such as policy statistics by severity, audit logs, and interception and alert events.</p>
      * @return DescribePolicyGovernanceInClusterResponse
      */
     public DescribePolicyGovernanceInClusterResponse describePolicyGovernanceInCluster(String clusterId) throws Exception {
@@ -4197,7 +4255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries detailed information about a task, such as the task type, status, and progress.</p>
+     * <p>Use the DescribeTaskInfo operation to query details about a cluster task, such as its task type, running state, and running stage.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4223,7 +4281,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries detailed information about a task, such as the task type, status, and progress.</p>
+     * <p>Use the DescribeTaskInfo operation to query details about a cluster task, such as its task type, running state, and running stage.</p>
      * @return DescribeTaskInfoResponse
      */
     public DescribeTaskInfoResponse describeTaskInfo(String taskId) throws Exception {
@@ -5018,13 +5076,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  If you use a Resource Access Management (RAM) account to call this operation, make sure it has permissions to modify cluster authorization information for other RAM users or RAM roles. Otherwise, the <code>StatusForbidden</code> or <code>ForbiddenGrantPermissions</code> error code is returned. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Use a RAM user to grant RBAC permissions to other RAM users</a>.</p>
      * <ul>
-     * <li>This operation overwrites all existing cluster permissions for the target RAM user or RAM role. You must specify all the permissions you want to grant to the RAM user or RAM role in the request.</li>
+     * <li>If you call this operation as a RAM user, you must have permission to modify the cluster permissions of other RAM users or RAM roles. Otherwise, the API call fails and returns the <code>StatusForbidden</code> or <code>ForbiddenGrantPermissions</code> error code. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Authorize a RAM user to manage the RBAC permissions of other RAM users</a>.</li>
+     * <li>This operation overwrites all existing cluster permissions for the specified RAM user or RAM role. Your request must include the complete set of permissions you want to grant.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>By default, RAM users or roles who aren\&quot;t cluster creators and haven\&quot;t been granted full cluster permissions have no RBAC permissions in the cluster. You can call this interface to update RBAC access permissions for RAM users/roles, including accessible resources, permission scopes, and preset roles, for enhanced security control on resources in Container Service for Kubernetes (ACK) clusters.</p>
+     * <p>By default, a RAM user or RAM role has no RBAC permissions in a cluster they did not create, unless granted permissions at the all-clusters scope. Call the GrantPermissions operation to update the RBAC permissions for a RAM user or RAM role. This operation lets you configure accessible resources, permission scopes, and predefined roles to manage cluster access control.</p>
      * 
      * @param request GrantPermissionsRequest
      * @param headers map
@@ -5053,13 +5111,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  If you use a Resource Access Management (RAM) account to call this operation, make sure it has permissions to modify cluster authorization information for other RAM users or RAM roles. Otherwise, the <code>StatusForbidden</code> or <code>ForbiddenGrantPermissions</code> error code is returned. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Use a RAM user to grant RBAC permissions to other RAM users</a>.</p>
      * <ul>
-     * <li>This operation overwrites all existing cluster permissions for the target RAM user or RAM role. You must specify all the permissions you want to grant to the RAM user or RAM role in the request.</li>
+     * <li>If you call this operation as a RAM user, you must have permission to modify the cluster permissions of other RAM users or RAM roles. Otherwise, the API call fails and returns the <code>StatusForbidden</code> or <code>ForbiddenGrantPermissions</code> error code. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Authorize a RAM user to manage the RBAC permissions of other RAM users</a>.</li>
+     * <li>This operation overwrites all existing cluster permissions for the specified RAM user or RAM role. Your request must include the complete set of permissions you want to grant.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>By default, RAM users or roles who aren\&quot;t cluster creators and haven\&quot;t been granted full cluster permissions have no RBAC permissions in the cluster. You can call this interface to update RBAC access permissions for RAM users/roles, including accessible resources, permission scopes, and preset roles, for enhanced security control on resources in Container Service for Kubernetes (ACK) clusters.</p>
+     * <p>By default, a RAM user or RAM role has no RBAC permissions in a cluster they did not create, unless granted permissions at the all-clusters scope. Call the GrantPermissions operation to update the RBAC permissions for a RAM user or RAM role. This operation lets you configure accessible resources, permission scopes, and predefined roles to manage cluster access control.</p>
      * 
      * @param request GrantPermissionsRequest
      * @return GrantPermissionsResponse
@@ -5235,8 +5293,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: 
+     * This API will be available in a future release.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>List auto-repair policies.</p>
+     * <p>Returns a list of self-healing rules.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5261,8 +5325,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: 
+     * This API will be available in a future release.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>List auto-repair policies.</p>
+     * <p>Returns a list of self-healing rules.</p>
      * @return ListAutoRepairPoliciesResponse
      */
     public ListAutoRepairPoliciesResponse listAutoRepairPolicies(String clusterId) throws Exception {
@@ -5451,13 +5521,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>To call this operation, make sure that you have ram:ListUsers and ram:ListRoles permissions.</li>
-     * <li>To call this operation, make sure that you have the AliyunCSFullAccess permissions.</li>
+     * <li>Invoking this API requires the ram:ListUsers and ram:ListRoles permissions.  </li>
+     * <li>Invoking this API requires permissions to manage Container Service (CS) (AliyunCSFullAccess).</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the kubeconfig files that are issued to users for the current cluster and the status of the kubeconfig files.</p>
+     * <p>If you need to view the access control status of the current cluster, you can invoke the ListClusterKubeconfigStates API to obtain the list and status of KubeConfig configurations that have been issued to users for the current cluster.</p>
      * 
      * @param request ListClusterKubeconfigStatesRequest
      * @param headers map
@@ -5501,13 +5571,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>To call this operation, make sure that you have ram:ListUsers and ram:ListRoles permissions.</li>
-     * <li>To call this operation, make sure that you have the AliyunCSFullAccess permissions.</li>
+     * <li>Invoking this API requires the ram:ListUsers and ram:ListRoles permissions.  </li>
+     * <li>Invoking this API requires permissions to manage Container Service (CS) (AliyunCSFullAccess).</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the kubeconfig files that are issued to users for the current cluster and the status of the kubeconfig files.</p>
+     * <p>If you need to view the access control status of the current cluster, you can invoke the ListClusterKubeconfigStates API to obtain the list and status of KubeConfig configurations that have been issued to users for the current cluster.</p>
      * 
      * @param request ListClusterKubeconfigStatesRequest
      * @return ListClusterKubeconfigStatesResponse
@@ -5571,7 +5641,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取单个地域的自动运维执行计划列表</p>
+     * <p>Query the list of the latest 100 automated O&amp;M execution plans in a specified region. When features such as Auto Mode for Intelligent Cluster Management, automatic cluster upgrade, and node pool automated O&amp;M are enabled, you can use this API to query O&amp;M plans automatically generated by the System and their execution status, such as cluster upgrades or CVE fixes for node pools.</p>
      * 
      * @param request ListOperationPlansForRegionRequest
      * @param headers map
@@ -5613,7 +5683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取单个地域的自动运维执行计划列表</p>
+     * <p>Query the list of the latest 100 automated O&amp;M execution plans in a specified region. When features such as Auto Mode for Intelligent Cluster Management, automatic cluster upgrade, and node pool automated O&amp;M are enabled, you can use this API to query O&amp;M plans automatically generated by the System and their execution status, such as cluster upgrades or CVE fixes for node pools.</p>
      * 
      * @param request ListOperationPlansForRegionRequest
      * @return ListOperationPlansForRegionResponse
@@ -5759,6 +5829,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>ACK托管集群基础版迁移至ACK托管集群Pro版后，将新增<a href="https://help.aliyun.com/document_detail/462278.html">集群管理费用</a>（由ACK收取），其他云资源计费保持不变。</p>
+     * 
      * <b>summary</b> : 
      * <p>The Container Service for Kubernetes (ACK) managed Pro cluster type is developed based on the ACK managed Basic cluster type. It inherits all benefits of ACK managed clusters, such as fully-managed control planes and control plane high availability. It further enhances reliability, security, scheduling capabilities, and offers service level agreement (SLA)-backed guarantees, making it ideal for enterprise customers with large-scale production workloads requiring high stability and security. You can call the MigrateCluster operation to migrate an ACK managed Basic cluster to an ACK managed Pro cluster.</p>
      * 
@@ -5797,6 +5870,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>ACK托管集群基础版迁移至ACK托管集群Pro版后，将新增<a href="https://help.aliyun.com/document_detail/462278.html">集群管理费用</a>（由ACK收取），其他云资源计费保持不变。</p>
+     * 
      * <b>summary</b> : 
      * <p>The Container Service for Kubernetes (ACK) managed Pro cluster type is developed based on the ACK managed Basic cluster type. It inherits all benefits of ACK managed clusters, such as fully-managed control planes and control plane high availability. It further enhances reliability, security, scheduling capabilities, and offers service level agreement (SLA)-backed guarantees, making it ideal for enterprise customers with large-scale production workloads requiring high stability and security. You can call the MigrateCluster operation to migrate an ACK managed Basic cluster to an ACK managed Pro cluster.</p>
      * 
@@ -5810,8 +5886,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: 
+     * This API is not yet available.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>查询自愈规则</p>
+     * <p>Modify a self-healing rule</p>
      * 
      * @param request ModifyAutoRepairPolicyRequest
      * @param headers map
@@ -5848,8 +5930,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: 
+     * This API is not yet available.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>查询自愈规则</p>
+     * <p>Modify a self-healing rule</p>
      * 
      * @param request ModifyAutoRepairPolicyRequest
      * @return ModifyAutoRepairPolicyResponse
@@ -5861,8 +5949,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: 
+     * Starting July 4, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For details about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on changes to input and output parameters and deprecation of OpenAPI operations related to ACK cluster management</a>.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>You can call the ModifyCluster operation to modify the cluster configurations by cluster ID.</p>
+     * <p>You can call the ModifyCluster operation to modify the configuration of an ACK cluster.</p>
      * 
      * @param request ModifyClusterRequest
      * @param headers map
@@ -5971,8 +6065,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: 
+     * Starting July 4, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For details about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on changes to input and output parameters and deprecation of OpenAPI operations related to ACK cluster management</a>.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>You can call the ModifyCluster operation to modify the cluster configurations by cluster ID.</p>
+     * <p>You can call the ModifyCluster operation to modify the configuration of an ACK cluster.</p>
      * 
      * @param request ModifyClusterRequest
      * @return ModifyClusterResponse
@@ -6048,7 +6148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the ModifyClusterNodePool operation to modify the configuration of a node pool with the specified node pool ID.</p>
+     * <p>You can call the ModifyClusterNodePool API to update the configuration of a node pool by specifying its node pool ID.</p>
      * 
      * @param request ModifyClusterNodePoolRequest
      * @param headers map
@@ -6110,7 +6210,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the ModifyClusterNodePool operation to modify the configuration of a node pool with the specified node pool ID.</p>
+     * <p>You can call the ModifyClusterNodePool API to update the configuration of a node pool by specifying its node pool ID.</p>
      * 
      * @param request ModifyClusterNodePoolRequest
      * @return ModifyClusterNodePoolResponse
@@ -6122,6 +6222,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>该API为全量更新，使用时请注意将完整的目标Tags设定为入参，避免丢失已有Tags。如需增量更新，请使用<a href="https://help.aliyun.com/document_detail/2667969.html">TagResources接口为集群绑定标签</a>。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>You can add labels in key-value pairs to clusters. This allows cluster developers or O\\\&amp;M engineers to classify and manage clusters in a more flexible manner. This also meets the requirements for monitoring, cost analysis, and tenant isolation. You can call the ModifyClusterTags operation to modify the labels of a cluster.</p>
      * 
@@ -6151,6 +6256,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>该API为全量更新，使用时请注意将完整的目标Tags设定为入参，避免丢失已有Tags。如需增量更新，请使用<a href="https://help.aliyun.com/document_detail/2667969.html">TagResources接口为集群绑定标签</a>。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>You can add labels in key-value pairs to clusters. This allows cluster developers or O\\\&amp;M engineers to classify and manage clusters in a more flexible manner. This also meets the requirements for monitoring, cost analysis, and tenant isolation. You can call the ModifyClusterTags operation to modify the labels of a cluster.</p>
      * 
@@ -6482,17 +6592,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <hr>
-     * <ul>
-     * <li>When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.</li>
-     * <li>Unknown errors may occur when you remove nodes. Before you remove nodes, back up the data on the nodes.</li>
-     * <li>Nodes remain in the Unschedulable state when they are being removed.</li>
-     * <li>You can remove only worker nodes. You cannot remove master nodes.</li>
-     * </ul>
-     * 
      * <b>summary</b> : 
-     * <p>You can call the RemoveClusterNodes operation to remove nodes from a Container Service for Kubernetes (ACK) cluster.</p>
+     * <p>移除集群节点</p>
      * 
      * @deprecated OpenAPI RemoveClusterNodes is deprecated
      * 
@@ -6537,17 +6638,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <hr>
-     * <ul>
-     * <li>When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.</li>
-     * <li>Unknown errors may occur when you remove nodes. Before you remove nodes, back up the data on the nodes.</li>
-     * <li>Nodes remain in the Unschedulable state when they are being removed.</li>
-     * <li>You can remove only worker nodes. You cannot remove master nodes.</li>
-     * </ul>
-     * 
      * <b>summary</b> : 
-     * <p>You can call the RemoveClusterNodes operation to remove nodes from a Container Service for Kubernetes (ACK) cluster.</p>
+     * <p>移除集群节点</p>
      * 
      * @deprecated OpenAPI RemoveClusterNodes is deprecated
      * 
@@ -7022,13 +7114,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <ul>
-     * <li>****The ScaleOutCluster API operation is phased out. You must call the node pool-related API operations to manage nodes. If you want to add worker nodes to a Container Service for Kubernetes (ACK) cluster, call the ScaleClusterNodePool API operation. For more information, see <a href="https://help.aliyun.com/document_detail/184928.html">ScaleClusterNodePool</a>.</li>
-     * </ul>
-     * 
      * <b>summary</b> : 
-     * <p>You can call the ScaleOutCluster operation to scale out a cluster by cluster ID.</p>
+     * <p>扩容Kubernetes集群</p>
      * 
      * @param request ScaleOutClusterRequest
      * @param headers map
@@ -7141,13 +7228,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <ul>
-     * <li>****The ScaleOutCluster API operation is phased out. You must call the node pool-related API operations to manage nodes. If you want to add worker nodes to a Container Service for Kubernetes (ACK) cluster, call the ScaleClusterNodePool API operation. For more information, see <a href="https://help.aliyun.com/document_detail/184928.html">ScaleClusterNodePool</a>.</li>
-     * </ul>
-     * 
      * <b>summary</b> : 
-     * <p>You can call the ScaleOutCluster operation to scale out a cluster by cluster ID.</p>
+     * <p>扩容Kubernetes集群</p>
      * 
      * @param request ScaleOutClusterRequest
      * @return ScaleOutClusterResponse
@@ -7802,8 +7884,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>开启或关闭落盘加密功能的过程中以及成功开启该功能后，请勿使用 KMS 控制台或 OpenAPI 禁用或删除该功能所使用的 KMS 密钥，否则会导致集群 API Server 不可用，继而无法正常获取 Secret 和 ServiceAccount 等对象，影响业务应用的正常运行。更多信息，请参见<a href="https://help.aliyun.com/document_detail/177372.html">使用阿里云KMS进行Secret的落盘加密</a>。</p>
+     * <ul>
+     * <li>调用该 API 的用户或角色需要额外被授予所需的集群 RBAC 权限（需要被授予运维人员或管理员权限），否则将返回“ForbiddenUpdateKMSState”错误码。</li>
+     * <li>成功调用该 API 后，集群状态将被变更为“更新中”，待变更完成后集群状态将恢复为“运行中”。针对同一个集群的变更完成后，需要间隔 5 分钟以上才能再次调用该 API，否则将返回“409”状态码。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Updates the Secret encryption at rest configuration for a specified cluster by cluster ID.</p>
+     * <p>Update the configuration of the Secret-at-rest encryption feature for a specified cluster by cluster ID.</p>
      * 
      * @param request UpdateKMSEncryptionRequest
      * @param headers map
@@ -7840,8 +7929,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>开启或关闭落盘加密功能的过程中以及成功开启该功能后，请勿使用 KMS 控制台或 OpenAPI 禁用或删除该功能所使用的 KMS 密钥，否则会导致集群 API Server 不可用，继而无法正常获取 Secret 和 ServiceAccount 等对象，影响业务应用的正常运行。更多信息，请参见<a href="https://help.aliyun.com/document_detail/177372.html">使用阿里云KMS进行Secret的落盘加密</a>。</p>
+     * <ul>
+     * <li>调用该 API 的用户或角色需要额外被授予所需的集群 RBAC 权限（需要被授予运维人员或管理员权限），否则将返回“ForbiddenUpdateKMSState”错误码。</li>
+     * <li>成功调用该 API 后，集群状态将被变更为“更新中”，待变更完成后集群状态将恢复为“运行中”。针对同一个集群的变更完成后，需要间隔 5 分钟以上才能再次调用该 API，否则将返回“409”状态码。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Updates the Secret encryption at rest configuration for a specified cluster by cluster ID.</p>
+     * <p>Update the configuration of the Secret-at-rest encryption feature for a specified cluster by cluster ID.</p>
      * 
      * @param request UpdateKMSEncryptionRequest
      * @return UpdateKMSEncryptionResponse
@@ -7920,6 +8016,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>调用本接口前，您需要先为集群安装或升级安全策略组件。具体操作，请参见<a href="https://help.aliyun.com/document_detail/359818.html">启用安全策略管理</a>。</p>
+     * 
      * <b>summary</b> : 
      * <p>Updates the deletion protection status of the specified resources. You can enable or disable deletion protection for namespaces and Services. You can call this operation to enable deletion protection for namespaces or Services that involve businesses-critical and sensitive data to avoid incurring maintenance costs caused by accidental namespace or Service deletion.</p>
      * 
@@ -7966,6 +8065,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>调用本接口前，您需要先为集群安装或升级安全策略组件。具体操作，请参见<a href="https://help.aliyun.com/document_detail/359818.html">启用安全策略管理</a>。</p>
+     * 
      * <b>summary</b> : 
      * <p>Updates the deletion protection status of the specified resources. You can enable or disable deletion protection for namespaces and Services. You can call this operation to enable deletion protection for namespaces or Services that involve businesses-critical and sensitive data to avoid incurring maintenance costs caused by accidental namespace or Service deletion.</p>
      * 
@@ -8183,6 +8285,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>升级集群组件实例版本可能会影响业务，请评估影响后在业务低峰期操作并提前做好相关的数据备份。</li>
+     * <li>升级组件前，请参考<a href="https://help.aliyun.com/document_detail/176087.html">组件发布记录</a>了解指定组件的变更内容和变更影响。</li>
+     * <li>请依次逐个组件升级，确认一个组件升级成功后再升级下一个组件。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Updates cluster components to use new features and patch vulnerabilities. You must update cluster components one after one and update a component only after the previous one is successfully updated. Before you update a component, we recommend that you read the update notes for each component. Cluster component updates may affect your businesses. Assess the impact, back up data, and perform the update during off-peak hours.</p>
      * 
@@ -8212,6 +8321,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>升级集群组件实例版本可能会影响业务，请评估影响后在业务低峰期操作并提前做好相关的数据备份。</li>
+     * <li>升级组件前，请参考<a href="https://help.aliyun.com/document_detail/176087.html">组件发布记录</a>了解指定组件的变更内容和变更影响。</li>
+     * <li>请依次逐个组件升级，确认一个组件升级成功后再升级下一个组件。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Updates cluster components to use new features and patch vulnerabilities. You must update cluster components one after one and update a component only after the previous one is successfully updated. Before you update a component, we recommend that you read the update notes for each component. Cluster component updates may affect your businesses. Assess the impact, back up data, and perform the update during off-peak hours.</p>
      * 

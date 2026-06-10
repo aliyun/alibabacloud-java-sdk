@@ -45,6 +45,12 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
     }
 
     public static class DescribeNodePoolVulsResponseBodyVulRecordsVulListPackageList extends TeaModel {
+        /**
+         * <p>Package name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WebLogic</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -112,6 +118,9 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
         @NameInMap("need_reboot")
         public Boolean needReboot;
 
+        /**
+         * <p>List of packages affected by the vulnerability.</p>
+         */
         @NameInMap("package_list")
         public java.util.List<DescribeNodePoolVulsResponseBodyVulRecordsVulListPackageList> packageList;
 

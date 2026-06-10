@@ -35,7 +35,7 @@ public class ListAddonsRequest extends TeaModel {
      * <p>The version of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.</p>
      * 
      * <strong>example:</strong>
-     * <p>1.26.3-aliyun.1</p>
+     * <p>1.32.1-aliyun.1</p>
      */
     @NameInMap("cluster_version")
     public String clusterVersion;

@@ -171,12 +171,18 @@ public class GetClusterInspectReportDetailResponseBody extends TeaModel {
 
         /**
          * <p>The description of the inspection item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>集群API Server负载均衡实例异常会影响集群可用性，请检查负载均衡实例状态是否正常。</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
          * <p>The fixing suggestion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>请提交工单处理。</p>
          */
         @NameInMap("fix")
         public String fix;
@@ -198,6 +204,9 @@ public class GetClusterInspectReportDetailResponseBody extends TeaModel {
 
         /**
          * <p>The name of the inspection item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API Server CLB 实例状态异常</p>
          */
         @NameInMap("name")
         public String name;

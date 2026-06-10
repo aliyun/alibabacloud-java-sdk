@@ -17,7 +17,7 @@ public class UpgradeClusterAddonsResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>bfd12953-31cb-42f1-8a36-7b80ec345094</p>
+     * <p>bfd12953-31cb-42f1-8a36-7b80ec34****</p>
      */
     @NameInMap("request_id")
     public String requestId;

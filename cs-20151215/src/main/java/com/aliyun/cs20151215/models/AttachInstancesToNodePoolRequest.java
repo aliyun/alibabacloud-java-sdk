@@ -50,7 +50,7 @@ public class AttachInstancesToNodePoolRequest extends TeaModel {
      * <p>The SSH password that is used to log on to the instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>Hello1234</p>
+     * <hr>
      */
     @NameInMap("password")
     public String password;

@@ -47,7 +47,7 @@ public class DescribeTriggerResponse extends TeaModel {
          * <p>The ID of the trigger.</p>
          * 
          * <strong>example:</strong>
-         * <p>1234</p>
+         * <p>75973497486******</p>
          */
         @NameInMap("id")
         public String id;

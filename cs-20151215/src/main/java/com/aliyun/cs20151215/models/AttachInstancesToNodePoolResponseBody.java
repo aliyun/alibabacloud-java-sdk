@@ -17,7 +17,7 @@ public class AttachInstancesToNodePoolResponseBody extends TeaModel {
      * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>T-5a54309c80282e39ea00002f</p>
+     * <p>T-5a54309c80282e39eaxxxxxx</p>
      */
     @NameInMap("task_id")
     public String taskId;

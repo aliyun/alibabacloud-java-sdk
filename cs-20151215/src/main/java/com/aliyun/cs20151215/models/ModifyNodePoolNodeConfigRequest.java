@@ -16,6 +16,9 @@ public class ModifyNodePoolNodeConfigRequest extends TeaModel {
     @NameInMap("kubelet_config")
     public KubeletConfig kubeletConfig;
 
+    /**
+     * <p>List of nodes to upgrade.</p>
+     */
     @NameInMap("node_names")
     public java.util.List<String> nodeNames;
 
@@ -77,6 +80,9 @@ public class ModifyNodePoolNodeConfigRequest extends TeaModel {
     }
 
     public static class ModifyNodePoolNodeConfigRequestOsConfig extends TeaModel {
+        /**
+         * <p>Hugepage configuration.</p>
+         */
         @NameInMap("hugepage")
         public Hugepage hugepage;
 

@@ -8,7 +8,7 @@ public class UpgradeClusterRequest extends TeaModel {
      * <p>This parameter is deprecated. No need to pass values.</p>
      * 
      * <strong>example:</strong>
-     * <p>k8s</p>
+     * <p>null</p>
      */
     @NameInMap("component_name")
     @Deprecated
@@ -31,7 +31,7 @@ public class UpgradeClusterRequest extends TeaModel {
      * <p>The target Kubernetes version for cluster upgrade.</p>
      * 
      * <strong>example:</strong>
-     * <p>1.16.9-aliyun.1</p>
+     * <p>1.32.1-aliyun.1</p>
      */
     @NameInMap("next_version")
     public String nextVersion;
@@ -47,7 +47,7 @@ public class UpgradeClusterRequest extends TeaModel {
      * <p>This parameter is deprecated. Use next_version to specify the upgrade target Kubernetes version.</p>
      * 
      * <strong>example:</strong>
-     * <p>1.14.8-aliyun.1</p>
+     * <p>null</p>
      */
     @NameInMap("version")
     @Deprecated

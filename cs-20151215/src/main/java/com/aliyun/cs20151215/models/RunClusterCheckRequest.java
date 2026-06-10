@@ -15,7 +15,7 @@ public class RunClusterCheckRequest extends TeaModel {
      * <p>If you set <code>type=NodePoolUpgrade</code>, you must set this parameter to the node pool ID. Otherwise, this parameter is optional.</p>
      * 
      * <strong>example:</strong>
-     * <p>np1f6779297c4444a3a1cdd29be8e5****</p>
+     * <p>np1f6779297c4444a3a1cdd29be8******</p>
      */
     @NameInMap("target")
     public String target;
@@ -32,7 +32,7 @@ public class RunClusterCheckRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ClusterUpgrade</p>
+     * <p>NodePoolUpgrade</p>
      */
     @NameInMap("type")
     public String type;

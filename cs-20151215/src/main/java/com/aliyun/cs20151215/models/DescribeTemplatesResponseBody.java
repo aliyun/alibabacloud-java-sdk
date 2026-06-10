@@ -116,7 +116,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
          * <p>The time when the template was created.</p>
          * 
          * <strong>example:</strong>
-         * <p>2020-06-10T16:30:16+08:00</p>
+         * <p>2025-04-25T16:56:33+08:00</p>
          */
         @NameInMap("created")
         public String created;
@@ -134,7 +134,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
          * <p>The ID of the template.</p>
          * 
          * <strong>example:</strong>
-         * <p>874ec485-e7e6-4373-8a3b-47bde8ae789f</p>
+         * <p>874ec485-e7e6-4373-8a3b-47bde8******</p>
          */
         @NameInMap("id")
         public String id;
@@ -183,7 +183,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
          * <p>The ID of the parent template. The value of <code>template_with_hist_id</code> is the same for each template version. This allows you to manage different template versions.</p>
          * 
          * <strong>example:</strong>
-         * <p>ad81d115-7c8b-47e7-a222-9c28d7f6e588</p>
+         * <p>ad81d115-7c8b-47e7-a222-9c28d7******</p>
          */
         @NameInMap("template_with_hist_id")
         public String templateWithHistId;
@@ -192,7 +192,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
          * <p>The time when the template was updated.</p>
          * 
          * <strong>example:</strong>
-         * <p>2020-06-10T16:30:16+08:00</p>
+         * <p>2025-04-25T16:56:33+08:00</p>
          */
         @NameInMap("updated")
         public String updated;

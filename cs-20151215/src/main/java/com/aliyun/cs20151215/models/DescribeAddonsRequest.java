@@ -39,7 +39,7 @@ public class DescribeAddonsRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>kubernetes</p>
+     * <p>ManagedKubernetes</p>
      */
     @NameInMap("cluster_type")
     public String clusterType;

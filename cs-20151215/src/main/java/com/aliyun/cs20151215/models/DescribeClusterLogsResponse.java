@@ -47,7 +47,7 @@ public class DescribeClusterLogsResponse extends TeaModel {
          * <p>The ID of the log entry.</p>
          * 
          * <strong>example:</strong>
-         * <p>590749245</p>
+         * <p>73117232145******</p>
          */
         @NameInMap("ID")
         public Long ID;
@@ -74,7 +74,7 @@ public class DescribeClusterLogsResponse extends TeaModel {
          * <p>The time when the log entry was generated.</p>
          * 
          * <strong>example:</strong>
-         * <p>2020-09-11T10:11:51+08:00</p>
+         * <p>2025-04-10T17:54:26+08:00</p>
          */
         @NameInMap("created")
         public String created;
@@ -83,7 +83,7 @@ public class DescribeClusterLogsResponse extends TeaModel {
          * <p>The time when the log entry was updated.</p>
          * 
          * <strong>example:</strong>
-         * <p>2020-09-11T10:11:51+08:00</p>
+         * <p>2025-04-10T17:54:26+08:00</p>
          */
         @NameInMap("updated")
         public String updated;

@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class CreateClusterNodePoolRequest extends TeaModel {
+    /**
+     * <p>Intelligent managed configuration for the node pool.</p>
+     */
     @NameInMap("auto_mode")
     public CreateClusterNodePoolRequestAutoMode autoMode;
 
@@ -18,12 +21,15 @@ public class CreateClusterNodePoolRequest extends TeaModel {
      * <p>The number of nodes in the node pool.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>null</p>
      */
     @NameInMap("count")
     @Deprecated
     public Long count;
 
+    /**
+     * <p>Lingjun node pool configuration.</p>
+     */
     @NameInMap("eflo_node_group")
     public CreateClusterNodePoolRequestEfloNodeGroup efloNodeGroup;
 
@@ -91,12 +97,15 @@ public class CreateClusterNodePoolRequest extends TeaModel {
      * <p>The maximum number of nodes that can be contained in the edge node pool.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>null</p>
      */
     @NameInMap("max_nodes")
     @Deprecated
     public Long maxNodes;
 
+    /**
+     * <p>List of edge zone widgets.</p>
+     */
     @NameInMap("node_components")
     public java.util.List<CreateClusterNodePoolRequestNodeComponents> nodeComponents;
 
@@ -261,6 +270,16 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     }
 
     public static class CreateClusterNodePoolRequestAutoMode extends TeaModel {
+        /**
+         * <p>Whether to enable the intelligent managed mode.<br>Valid values:  </p>
+         * <ul>
+         * <li>true: Enables the intelligent managed mode. This can be enabled only when the cluster has the intelligent managed mode enabled.  </li>
+         * <li>false: Disables the intelligent managed mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("enable")
         public Boolean enable;
 
@@ -287,7 +306,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p><strong>Important</strong> This parameter is deprecated. Use the internet_charge_type and internet_max_bandwidth_out parameters instead.</p>
          * 
          * <strong>example:</strong>
-         * <p>5</p>
+         * <p>null</p>
          */
         @NameInMap("eip_bandwidth")
         @Deprecated
@@ -305,7 +324,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p><strong>Important</strong> This parameter is deprecated. Use the internet_charge_type and internet_max_bandwidth_out parameters instead.</p>
          * 
          * <strong>example:</strong>
-         * <p>PayByBandwidth</p>
+         * <p>null</p>
          */
         @NameInMap("eip_internet_charge_type")
         @Deprecated
@@ -320,7 +339,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p>Default value: <code>false</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>false</p>
          */
         @NameInMap("enable")
         public Boolean enable;
@@ -337,7 +356,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p><strong>Important</strong> This parameter is deprecated. Use the internet_charge_type and internet_max_bandwidth_out parameters instead.</p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>null</p>
          */
         @NameInMap("is_bond_eip")
         @Deprecated
@@ -447,9 +466,21 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     }
 
     public static class CreateClusterNodePoolRequestEfloNodeGroup extends TeaModel {
+        /**
+         * <p>The Lingjun cluster ID that must be associated when creating a Lingjun node pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i1169130516633730****</p>
+         */
         @NameInMap("cluster_id")
         public String clusterId;
 
+        /**
+         * <p>The ID of the Lingjun group in the Lingjun cluster to associate when creating a Lingjun node pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-ec3c96ff0aa****</p>
+         */
         @NameInMap("group_id")
         public String groupId;
 
@@ -482,7 +513,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p>The bandwidth of the enhanced edge node pool. Unit: Mbit/s.</p>
          * 
          * <strong>example:</strong>
-         * <p>10</p>
+         * <p>null</p>
          */
         @NameInMap("bandwidth")
         public Long bandwidth;
@@ -492,7 +523,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p>The ID of the Cloud Connect Network (CCN) instance that is associated with the enhanced edge node pool.</p>
          * 
          * <strong>example:</strong>
-         * <p>ccn-qm5i0i0q9yi*******</p>
+         * <p>null</p>
          */
         @NameInMap("ccn_id")
         public String ccnId;
@@ -502,7 +533,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p>The region to which the CCN instance that is associated with the enhanced edge node pool belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-shanghai</p>
+         * <p>null</p>
          */
         @NameInMap("ccn_region_id")
         public String ccnRegionId;
@@ -512,7 +543,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p>The ID of the Cloud Enterprise Network (CEN) instance that is associated with the enhanced edge node pool.</p>
          * 
          * <strong>example:</strong>
-         * <p>cen-ey9k9nfhz0f*******</p>
+         * <p>null</p>
          */
         @NameInMap("cen_id")
         public String cenId;
@@ -522,7 +553,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p>The subscription duration of the enhanced edge node pool. The duration is measured in months.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>null</p>
          */
         @NameInMap("improved_period")
         public String improvedPeriod;
@@ -584,7 +615,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p>Default value: <code>false</code></p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>false</p>
          */
         @NameInMap("cms_enabled")
         public Boolean cmsEnabled;
@@ -618,7 +649,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p>Set the parameter to a value in the customized,aliyun,ip,com format. The value consists of four parts that are separated by commas (,). customized and ip are fixed content. aliyun is the prefix and com is the suffix. Example: aliyun.192.168.xxx.xxx.com.</p>
          * 
          * <strong>example:</strong>
-         * <p>customized,aliyun,ip,com</p>
+         * <p>aliyun.com192.XX.YY.55test</p>
          */
         @NameInMap("node_name_mode")
         public String nodeNameMode;
@@ -642,7 +673,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p>Default value: containerd.</p>
          * 
          * <strong>example:</strong>
-         * <p>docker</p>
+         * <p>containerd</p>
          */
         @NameInMap("runtime")
         public String runtime;
@@ -651,7 +682,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p>The version of the container runtime.</p>
          * 
          * <strong>example:</strong>
-         * <p>19.03.5</p>
+         * <p>1.6.38</p>
          */
         @NameInMap("runtime_version")
         public String runtimeVersion;
@@ -768,6 +799,9 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     }
 
     public static class CreateClusterNodePoolRequestManagementAutoRepairPolicy extends TeaModel {
+        /**
+         * <p>Whether manual approval is required for edge zone repair.</p>
+         */
         @NameInMap("approval_required")
         public Boolean approvalRequired;
 
@@ -883,6 +917,13 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     }
 
     public static class CreateClusterNodePoolRequestManagementAutoVulFixPolicy extends TeaModel {
+        /**
+         * <p>Packages to exclude during vulnerability remediation.</p>
+         * <p>Default Value: <code>kernel</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kernel</p>
+         */
         @NameInMap("exclude_packages")
         public String excludePackages;
 
@@ -894,7 +935,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>false</p>
          */
         @NameInMap("restart_node")
         public Boolean restartNode;
@@ -956,7 +997,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p><strong>Caution</strong> This parameter is deprecated. Use the preceding auto_upgrade parameter instead.</p>
          * 
          * <strong>example:</strong>
-         * <p>false</p>
+         * <p>null</p>
          */
         @NameInMap("auto_upgrade")
         @Deprecated
@@ -1031,6 +1072,9 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     }
 
     public static class CreateClusterNodePoolRequestManagement extends TeaModel {
+        @NameInMap("auto_fault_diagnosis")
+        public Boolean autoFaultDiagnosis;
+
         /**
          * <p>Specifies whether to enable auto node repair. This parameter takes effect only when <code>enable</code> is set to true.</p>
          * <ul>
@@ -1040,7 +1084,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p>If <code>enable</code> is set to true, the default value of this parameter is <code>true</code>. If <code>enable</code> is set to false, the default value of this parameter is <code>false</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>false</p>
+         * <p>true</p>
          */
         @NameInMap("auto_repair")
         public Boolean autoRepair;
@@ -1117,6 +1161,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public CreateClusterNodePoolRequestManagement setAutoFaultDiagnosis(Boolean autoFaultDiagnosis) {
+            this.autoFaultDiagnosis = autoFaultDiagnosis;
+            return this;
+        }
+        public Boolean getAutoFaultDiagnosis() {
+            return this.autoFaultDiagnosis;
+        }
+
         public CreateClusterNodePoolRequestManagement setAutoRepair(Boolean autoRepair) {
             this.autoRepair = autoRepair;
             return this;
@@ -1185,6 +1237,9 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     }
 
     public static class CreateClusterNodePoolRequestNodeComponentsConfig extends TeaModel {
+        /**
+         * <p>Custom Configuration of the edge zone widget.</p>
+         */
         @NameInMap("custom_config")
         public java.util.Map<String, String> customConfig;
 
@@ -1204,10 +1259,15 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     }
 
     public static class CreateClusterNodePoolRequestNodeComponents extends TeaModel {
+        /**
+         * <p>Configuration of the edge zone widget.</p>
+         */
         @NameInMap("config")
         public CreateClusterNodePoolRequestNodeComponentsConfig config;
 
         /**
+         * <p>Name of the edge zone widget.</p>
+         * 
          * <strong>example:</strong>
          * <p>kubelet</p>
          */
@@ -1215,6 +1275,8 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>Version of the edge zone widget.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.33.3-aliyun.1</p>
          */
@@ -1280,7 +1342,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>cluster-demo</p>
+         * <p>nodepool-test</p>
          */
         @NameInMap("name")
         public String name;
@@ -1358,7 +1420,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Open</p>
+         * <p>Target</p>
          */
         @NameInMap("match_criteria")
         public String matchCriteria;
@@ -1387,10 +1449,19 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     }
 
     public static class CreateClusterNodePoolRequestScalingGroupResourcePoolOptions extends TeaModel {
+        /**
+         * <p>A list of private pool IDs, which are either Elasticity Assurance service IDs or Capacity Reservation service IDs. This parameter accepts only private pool IDs in Target pattern. The value range for N is 1 to 20.</p>
+         */
         @NameInMap("private_pool_ids")
         public java.util.List<String> privatePoolIds;
 
         /**
+         * <p>The resource pool policy used when creating an instance. Resource pools include private pools generated after Elasticity Assurance or Capacity Reservation services take effect, as well as the public pool, which are available for selection when starting an instance. Valid values:
+         * PrivatePoolFirst: Private pool first. With this policy, if <code>resource_pool_options.private_pool_ids</code> is specified, the specified private pool is used first. If no private pool is specified or the specified private pool lacks sufficient capacity, an open-type private pool is automatically matched. If no eligible private pool exists, the instance is created using the public pool.
+         * PrivatePoolOnly: Private pool only. With this policy, you must specify <code>resource_pool_options.private_pool_ids</code>. If the specified private pool lacks sufficient capacity, instance startup fails.
+         * None: Do not use a resource pool policy.
+         * Default Value: None.</p>
+         * 
          * <strong>example:</strong>
          * <p>PrivatePoolFirst</p>
          */
@@ -1537,7 +1608,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p>This parameter is deprecated. Use security_hardening_os instead.</p>
          * 
          * <strong>example:</strong>
-         * <p>false</p>
+         * <p>null</p>
          */
         @NameInMap("cis_enabled")
         @Deprecated
@@ -1580,6 +1651,9 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         @NameInMap("desired_size")
         public Long desiredSize;
 
+        /**
+         * <p>Block device initialization configuration.</p>
+         */
         @NameInMap("disk_init")
         public java.util.List<DiskInit> diskInit;
 
@@ -1608,7 +1682,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>AliyunLinux</p>
+         * <p>AliyunLinux3</p>
          */
         @NameInMap("image_type")
         public String imageType;
@@ -1623,11 +1697,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>PrePaid</p>
+         * <p>PostPaid</p>
          */
         @NameInMap("instance_charge_type")
         public String instanceChargeType;
 
+        /**
+         * <p>Access configuration for ECS instance metadata.</p>
+         */
         @NameInMap("instance_metadata_options")
         public InstanceMetadataOptions instanceMetadataOptions;
 
@@ -1694,7 +1771,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p>The password for SSH logon. You must specify this parameter or the <code>key_pair</code> parameter. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
          * 
          * <strong>example:</strong>
-         * <p>Hello1234</p>
+         * <hr>
          */
         @NameInMap("login_password")
         public String loginPassword;
@@ -1775,7 +1852,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p>Default value: <code>AliyunLinux</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>AliyunLinux</p>
+         * <p>null</p>
          */
         @NameInMap("platform")
         @Deprecated
@@ -1809,6 +1886,11 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         @NameInMap("rds_instances")
         public java.util.List<String> rdsInstances;
 
+        /**
+         * <p>The resource pool and resource pool policy used when creating instances. After you set this parameter, note the following:</p>
+         * <p>This parameter takes effect only when pay-as-you-go instances are created.</p>
+         * <p>This parameter cannot be set together with <code>private_pool_options.match_criteria</code> or <code>private_pool_options.id</code>.</p>
+         */
         @NameInMap("resource_pool_options")
         public CreateClusterNodePoolRequestScalingGroupResourcePoolOptions resourcePoolOptions;
 
@@ -2019,6 +2101,12 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         @NameInMap("system_disk_size")
         public Long systemDiskSize;
 
+        /**
+         * <p>Snapshot policy for the system disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-0jl6xnmme8v7o935****</p>
+         */
         @NameInMap("system_disk_snapshot_policy_id")
         public String systemDiskSnapshotPolicyId;
 

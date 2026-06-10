@@ -17,7 +17,7 @@ public class UpdateClusterAuditLogConfigResponseBody extends TeaModel {
      * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>48BD70F6-A7E6-543D-9F23-08DEB764C92E</p>
+     * <p>48BD70F6-A7E6-543D-9F23-08DEB764****</p>
      */
     @NameInMap("request_id")
     public String requestId;

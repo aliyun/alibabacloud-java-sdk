@@ -9,7 +9,7 @@ public class DescribeSubaccountK8sClusterUserConfigResponseBody extends TeaModel
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>apiVersion: v1****</p>
+     * <p>apiVersion: v1\nclusters:\n- cluster:\n    server: <a href="https://114.55.xx.xx:6443%5C%5Cn">https://114.55.xx.xx:6443\\n</a>    certificate-authority-data: LS0tLS****</p>
      */
     @NameInMap("config")
     public String config;
@@ -18,7 +18,7 @@ public class DescribeSubaccountK8sClusterUserConfigResponseBody extends TeaModel
      * <p>The expiration date of the kubeconfig file. The value is the UTC time displayed in RFC3339 format.</p>
      * 
      * <strong>example:</strong>
-     * <p>2024-03-10T09:56:17Z</p>
+     * <p>2028-04-09T06:20:47Z</p>
      */
     @NameInMap("expiration")
     public String expiration;

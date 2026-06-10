@@ -4,6 +4,16 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ListClusterKubeconfigStatesRequest extends TeaModel {
+    /**
+     * <p>Whether to query the KubeConfig list of service roles for cloud products within the cluster.  </p>
+     * <ul>
+     * <li>true: Query the KubeConfig list of service roles for cloud products within the cluster.  </li>
+     * <li>false: Query the KubeConfig list of Resource Access Management (RAM) users or roles within the cluster.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("cloudServiceKubeConfig")
     public Boolean cloudServiceKubeConfig;
 
