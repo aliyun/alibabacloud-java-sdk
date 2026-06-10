@@ -934,4 +934,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.textTranslateWithOptions(request, headers, runtime);
     }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通义多模态文档翻译查询Usage</p>
+     * 
+     * @param request UsageQueryRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UsageQueryResponse
+     */
+    public UsageQueryResponse usageQueryWithOptions(UsageQueryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            body.put("endTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            body.put("startTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("workspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UsageQuery"),
+            new TeaPair("version", "2025-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/anytrans/translate/doc/usage/query"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UsageQueryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通义多模态文档翻译查询Usage</p>
+     * 
+     * @param request UsageQueryRequest
+     * @return UsageQueryResponse
+     */
+    public UsageQueryResponse usageQuery(UsageQueryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.usageQueryWithOptions(request, headers, runtime);
+    }
 }
