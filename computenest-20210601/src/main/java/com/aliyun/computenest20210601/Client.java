@@ -577,6 +577,242 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建Skill</p>
+     * 
+     * @param request CreateSkillRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSkillResponse
+     */
+    public CreateSkillResponse createSkillWithOptions(CreateSkillRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ossUrl)) {
+            query.put("OssUrl", request.ossUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillDescription)) {
+            query.put("SkillDescription", request.skillDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillLabels)) {
+            query.put("SkillLabels", request.skillLabels);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillName)) {
+            query.put("SkillName", request.skillName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillSpaceId)) {
+            query.put("SkillSpaceId", request.skillSpaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceSkillId)) {
+            query.put("SourceSkillId", request.sourceSkillId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
+            query.put("SourceType", request.sourceType);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSkill"),
+            new TeaPair("version", "2021-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSkillResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建Skill</p>
+     * 
+     * @param request CreateSkillRequest
+     * @return CreateSkillResponse
+     */
+    public CreateSkillResponse createSkill(CreateSkillRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createSkillWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建Skill文件检测任务</p>
+     * 
+     * @param request CreateSkillFileDetectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSkillFileDetectResponse
+     */
+    public CreateSkillFileDetectResponse createSkillFileDetectWithOptions(CreateSkillFileDetectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ossUrl)) {
+            query.put("OssUrl", request.ossUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSkillFileDetect"),
+            new TeaPair("version", "2021-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSkillFileDetectResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建Skill文件检测任务</p>
+     * 
+     * @param request CreateSkillFileDetectRequest
+     * @return CreateSkillFileDetectResponse
+     */
+    public CreateSkillFileDetectResponse createSkillFileDetect(CreateSkillFileDetectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createSkillFileDetectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建SkillHub配置</p>
+     * 
+     * @param request CreateSkillHubConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSkillHubConfigResponse
+     */
+    public CreateSkillHubConfigResponse createSkillHubConfigWithOptions(CreateSkillHubConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ossBucketName)) {
+            query.put("OssBucketName", request.ossBucketName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossRegionId)) {
+            query.put("OssRegionId", request.ossRegionId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSkillHubConfig"),
+            new TeaPair("version", "2021-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSkillHubConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建SkillHub配置</p>
+     * 
+     * @param request CreateSkillHubConfigRequest
+     * @return CreateSkillHubConfigResponse
+     */
+    public CreateSkillHubConfigResponse createSkillHubConfig(CreateSkillHubConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createSkillHubConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建SkillSpace</p>
+     * 
+     * @param request CreateSkillSpaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSkillSpaceResponse
+     */
+    public CreateSkillSpaceResponse createSkillSpaceWithOptions(CreateSkillSpaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.skillSpaceDescription)) {
+            query.put("SkillSpaceDescription", request.skillSpaceDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillSpaceName)) {
+            query.put("SkillSpaceName", request.skillSpaceName);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSkillSpace"),
+            new TeaPair("version", "2021-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSkillSpaceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建SkillSpace</p>
+     * 
+     * @param request CreateSkillSpaceRequest
+     * @return CreateSkillSpaceResponse
+     */
+    public CreateSkillSpaceResponse createSkillSpace(CreateSkillSpaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createSkillSpaceWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Prerequisites</h3>
      * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
@@ -678,6 +914,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteServiceInstancesResponse deleteServiceInstances(DeleteServiceInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteServiceInstancesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除Skill</p>
+     * 
+     * @param request DeleteSkillRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteSkillResponse
+     */
+    public DeleteSkillResponse deleteSkillWithOptions(DeleteSkillRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.skillId)) {
+            query.put("SkillId", request.skillId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteSkill"),
+            new TeaPair("version", "2021-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSkillResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除Skill</p>
+     * 
+     * @param request DeleteSkillRequest
+     * @return DeleteSkillResponse
+     */
+    public DeleteSkillResponse deleteSkill(DeleteSkillRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteSkillWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除SkillSpace</p>
+     * 
+     * @param request DeleteSkillSpaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteSkillSpaceResponse
+     */
+    public DeleteSkillSpaceResponse deleteSkillSpaceWithOptions(DeleteSkillSpaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.skillSpaceId)) {
+            query.put("SkillSpaceId", request.skillSpaceId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteSkillSpace"),
+            new TeaPair("version", "2021-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSkillSpaceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除SkillSpace</p>
+     * 
+     * @param request DeleteSkillSpaceRequest
+     * @return DeleteSkillSpaceResponse
+     */
+    public DeleteSkillSpaceResponse deleteSkillSpace(DeleteSkillSpaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteSkillSpaceWithOptions(request, runtime);
     }
 
     /**
@@ -1398,6 +1734,179 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询Skill详情</p>
+     * 
+     * @param request GetSkillRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSkillResponse
+     */
+    public GetSkillResponse getSkillWithOptions(GetSkillRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.skillId)) {
+            query.put("SkillId", request.skillId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSkill"),
+            new TeaPair("version", "2021-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSkillResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询Skill详情</p>
+     * 
+     * @param request GetSkillRequest
+     * @return GetSkillResponse
+     */
+    public GetSkillResponse getSkill(GetSkillRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getSkillWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询Skill文件检测结果</p>
+     * 
+     * @param request GetSkillFileDetectResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSkillFileDetectResultResponse
+     */
+    public GetSkillFileDetectResultResponse getSkillFileDetectResultWithOptions(GetSkillFileDetectResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hashKey)) {
+            query.put("HashKey", request.hashKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSkillFileDetectResult"),
+            new TeaPair("version", "2021-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSkillFileDetectResultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询Skill文件检测结果</p>
+     * 
+     * @param request GetSkillFileDetectResultRequest
+     * @return GetSkillFileDetectResultResponse
+     */
+    public GetSkillFileDetectResultResponse getSkillFileDetectResult(GetSkillFileDetectResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getSkillFileDetectResultWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询SkillHub配置</p>
+     * 
+     * @param request GetSkillHubConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSkillHubConfigResponse
+     */
+    public GetSkillHubConfigResponse getSkillHubConfigWithOptions(GetSkillHubConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSkillHubConfig"),
+            new TeaPair("version", "2021-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSkillHubConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询SkillHub配置</p>
+     * 
+     * @param request GetSkillHubConfigRequest
+     * @return GetSkillHubConfigResponse
+     */
+    public GetSkillHubConfigResponse getSkillHubConfig(GetSkillHubConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getSkillHubConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询SkillSpace详情</p>
+     * 
+     * @param request GetSkillSpaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSkillSpaceResponse
+     */
+    public GetSkillSpaceResponse getSkillSpaceWithOptions(GetSkillSpaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.skillSpaceId)) {
+            query.put("SkillSpaceId", request.skillSpaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSkillSpace"),
+            new TeaPair("version", "2021-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSkillSpaceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询SkillSpace详情</p>
+     * 
+     * @param request GetSkillSpaceRequest
+     * @return GetSkillSpaceResponse
+     */
+    public GetSkillSpaceResponse getSkillSpace(GetSkillSpaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getSkillSpaceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the information about a customer.</p>
      * 
      * @param request GetUserInformationRequest
@@ -1550,6 +2059,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListPoliciesResponse listPolicies(ListPoliciesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listPoliciesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询公开 Skill 列表</p>
+     * 
+     * @param request ListPublicSkillsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPublicSkillsResponse
+     */
+    public ListPublicSkillsResponse listPublicSkillsWithOptions(ListPublicSkillsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            query.put("Filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needDownloadUrl)) {
+            query.put("NeedDownloadUrl", request.needDownloadUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListPublicSkills"),
+            new TeaPair("version", "2021-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "Anonymous"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.doRPCRequest(params.action, params.version, params.protocol, params.method, params.authType, params.bodyType, req, runtime), new ListPublicSkillsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询公开 Skill 列表</p>
+     * 
+     * @param request ListPublicSkillsRequest
+     * @return ListPublicSkillsResponse
+     */
+    public ListPublicSkillsResponse listPublicSkills(ListPublicSkillsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listPublicSkillsWithOptions(request, runtime);
     }
 
     /**
@@ -2099,6 +2664,170 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListServicesResponse listServices(ListServicesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listServicesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取Skill文件列表</p>
+     * 
+     * @param request ListSkillFilesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSkillFilesResponse
+     */
+    public ListSkillFilesResponse listSkillFilesWithOptions(ListSkillFilesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            query.put("Filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillId)) {
+            query.put("SkillId", request.skillId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSkillFiles"),
+            new TeaPair("version", "2021-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSkillFilesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取Skill文件列表</p>
+     * 
+     * @param request ListSkillFilesRequest
+     * @return ListSkillFilesResponse
+     */
+    public ListSkillFilesResponse listSkillFiles(ListSkillFilesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listSkillFilesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询SkillSpace列表</p>
+     * 
+     * @param request ListSkillSpacesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSkillSpacesResponse
+     */
+    public ListSkillSpacesResponse listSkillSpacesWithOptions(ListSkillSpacesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            query.put("Filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSkillSpaces"),
+            new TeaPair("version", "2021-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSkillSpacesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询SkillSpace列表</p>
+     * 
+     * @param request ListSkillSpacesRequest
+     * @return ListSkillSpacesResponse
+     */
+    public ListSkillSpacesResponse listSkillSpaces(ListSkillSpacesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listSkillSpacesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询Skill列表</p>
+     * 
+     * @param request ListSkillsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSkillsResponse
+     */
+    public ListSkillsResponse listSkillsWithOptions(ListSkillsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            query.put("Filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needDownloadUrl)) {
+            query.put("NeedDownloadUrl", request.needDownloadUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSkills"),
+            new TeaPair("version", "2021-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSkillsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询Skill列表</p>
+     * 
+     * @param request ListSkillsRequest
+     * @return ListSkillsResponse
+     */
+    public ListSkillsResponse listSkills(ListSkillsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listSkillsWithOptions(request, runtime);
     }
 
     /**
@@ -2907,6 +3636,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateServiceUsageResponse updateServiceUsage(UpdateServiceUsageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateServiceUsageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新Skill</p>
+     * 
+     * @param request UpdateSkillRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateSkillResponse
+     */
+    public UpdateSkillResponse updateSkillWithOptions(UpdateSkillRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ossUrl)) {
+            query.put("OssUrl", request.ossUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillDescription)) {
+            query.put("SkillDescription", request.skillDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillId)) {
+            query.put("SkillId", request.skillId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillLabels)) {
+            query.put("SkillLabels", request.skillLabels);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillName)) {
+            query.put("SkillName", request.skillName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceSkillId)) {
+            query.put("SourceSkillId", request.sourceSkillId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
+            query.put("SourceType", request.sourceType);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateSkill"),
+            new TeaPair("version", "2021-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSkillResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新Skill</p>
+     * 
+     * @param request UpdateSkillRequest
+     * @return UpdateSkillResponse
+     */
+    public UpdateSkillResponse updateSkill(UpdateSkillRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateSkillWithOptions(request, runtime);
     }
 
     /**
