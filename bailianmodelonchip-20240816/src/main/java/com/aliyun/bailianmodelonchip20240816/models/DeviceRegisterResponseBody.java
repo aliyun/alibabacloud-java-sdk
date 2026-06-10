@@ -129,6 +129,9 @@ public class DeviceRegisterResponseBody extends TeaModel {
         @NameInMap("signature")
         public String signature;
 
+        @NameInMap("workspaceId")
+        public String workspaceId;
+
         public static DeviceRegisterResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DeviceRegisterResponseBodyData self = new DeviceRegisterResponseBodyData();
             return TeaModel.build(map, self);
@@ -172,6 +175,14 @@ public class DeviceRegisterResponseBody extends TeaModel {
         }
         public String getSignature() {
             return this.signature;
+        }
+
+        public DeviceRegisterResponseBodyData setWorkspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
+            return this;
+        }
+        public String getWorkspaceId() {
+            return this.workspaceId;
         }
 
     }

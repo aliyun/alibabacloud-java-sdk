@@ -21,15 +21,24 @@ public class DeviceRegisterRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1748312544852</p>
      */
     @NameInMap("requestTime")
     public String requestTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3spKwUgUpAGsXbbrHKnpVJPlI9wamoyhh96uqJuSyCKyJ7oscLAHRcz15dSzLG5L+ywFgYXSQNqdRtsn/Ri0j7pD0IuoKt9R7EnNo/U6viPvWD3Ldp3ehDDtOFtSrpUg6LTedvGtUWYU4x/zSD2jgCXijEdZCCMGCypcheMHRXfInYWF1xFtnCEXJfxtrBrnCk1p/pW3JSmdHJzmInnUEO3dWbNe3A==</p>
      */
     @NameInMap("signature")
     public String signature;
+
+    @NameInMap("workspaceId")
+    public String workspaceId;
 
     public static DeviceRegisterRequest build(java.util.Map<String, ?> map) throws Exception {
         DeviceRegisterRequest self = new DeviceRegisterRequest();
@@ -66,6 +75,14 @@ public class DeviceRegisterRequest extends TeaModel {
     }
     public String getSignature() {
         return this.signature;
+    }
+
+    public DeviceRegisterRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }
