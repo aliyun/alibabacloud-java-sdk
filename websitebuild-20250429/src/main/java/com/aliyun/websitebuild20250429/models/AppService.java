@@ -28,6 +28,9 @@ public class AppService extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("NodeList")
+    public java.util.List<TreeNode> nodeList;
+
     @NameInMap("Profile")
     public AppServiceProfile profile;
 
@@ -116,6 +119,14 @@ public class AppService extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public AppService setNodeList(java.util.List<TreeNode> nodeList) {
+        this.nodeList = nodeList;
+        return this;
+    }
+    public java.util.List<TreeNode> getNodeList() {
+        return this.nodeList;
     }
 
     public AppService setProfile(AppServiceProfile profile) {

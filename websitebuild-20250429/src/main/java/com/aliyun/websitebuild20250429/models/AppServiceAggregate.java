@@ -22,11 +22,17 @@ public class AppServiceAggregate extends TeaModel {
     @NameInMap("GmtModified")
     public String gmtModified;
 
+    @NameInMap("Group")
+    public AppServiceGroup group;
+
     @NameInMap("InstanceBizId")
     public String instanceBizId;
 
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("NodeList")
+    public java.util.List<TreeNode> nodeList;
 
     @NameInMap("OperationAddress")
     public AppOperationAddress operationAddress;
@@ -105,6 +111,14 @@ public class AppServiceAggregate extends TeaModel {
         return this.gmtModified;
     }
 
+    public AppServiceAggregate setGroup(AppServiceGroup group) {
+        this.group = group;
+        return this;
+    }
+    public AppServiceGroup getGroup() {
+        return this.group;
+    }
+
     public AppServiceAggregate setInstanceBizId(String instanceBizId) {
         this.instanceBizId = instanceBizId;
         return this;
@@ -119,6 +133,14 @@ public class AppServiceAggregate extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public AppServiceAggregate setNodeList(java.util.List<TreeNode> nodeList) {
+        this.nodeList = nodeList;
+        return this;
+    }
+    public java.util.List<TreeNode> getNodeList() {
+        return this.nodeList;
     }
 
     public AppServiceAggregate setOperationAddress(AppOperationAddress operationAddress) {

@@ -1,3 +1,7 @@
+2026-06-10 Version: 2.26.2
+- Update API QueryInspirationConsumeRecords: add response parameters Body.Module.Data.$.RecordKey.
+
+
 2026-06-10 Version: 2.26.1
 - Update API GetAppCodeWorkspaceDetail: add response parameters Body.Module.CommitHash.
 - Update API GetAppPublishStatus: add response parameters Body.Module.Subchannel.

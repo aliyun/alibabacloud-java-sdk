@@ -224,6 +224,9 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         @NameInMap("MetaData")
         public String metaData;
 
+        @NameInMap("RecordKey")
+        public String recordKey;
+
         /**
          * <p>Consumption scenario Name (such as AI application development, AI creative image generation, AI Video creation, AI Content creation)</p>
          * 
@@ -276,6 +279,14 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         }
         public String getMetaData() {
             return this.metaData;
+        }
+
+        public QueryInspirationConsumeRecordsResponseBodyModuleData setRecordKey(String recordKey) {
+            this.recordKey = recordKey;
+            return this;
+        }
+        public String getRecordKey() {
+            return this.recordKey;
         }
 
         public QueryInspirationConsumeRecordsResponseBodyModuleData setSceneName(String sceneName) {
