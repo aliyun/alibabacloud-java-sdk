@@ -977,7 +977,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取metrics数据</p>
+     * <p>Queries metrics data.</p>
      * 
      * @param request GetMetricsRequest
      * @param headers map
@@ -1047,7 +1047,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取metrics数据</p>
+     * <p>Queries metrics data.</p>
      * 
      * @param request GetMetricsRequest
      * @return GetMetricsResponse

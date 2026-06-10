@@ -31,6 +31,9 @@ public class JobSpec extends TeaModel {
     @NameInMap("EcsSpec")
     public String ecsSpec;
 
+    @NameInMap("ElasticSpotSpecs")
+    public java.util.List<ElasticSpotSpec> elasticSpotSpecs;
+
     /**
      * <p>The additional pod configurations.</p>
      */
@@ -178,6 +181,14 @@ public class JobSpec extends TeaModel {
     }
     public String getEcsSpec() {
         return this.ecsSpec;
+    }
+
+    public JobSpec setElasticSpotSpecs(java.util.List<ElasticSpotSpec> elasticSpotSpecs) {
+        this.elasticSpotSpecs = elasticSpotSpecs;
+        return this;
+    }
+    public java.util.List<ElasticSpotSpec> getElasticSpotSpecs() {
+        return this.elasticSpotSpecs;
     }
 
     public JobSpec setExtraPodSpec(ExtraPodSpec extraPodSpec) {

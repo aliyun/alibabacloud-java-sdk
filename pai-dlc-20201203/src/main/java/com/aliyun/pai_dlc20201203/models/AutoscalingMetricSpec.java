@@ -13,6 +13,9 @@ public class AutoscalingMetricSpec extends TeaModel {
     @NameInMap("TargetValue")
     public Integer targetValue;
 
+    @NameInMap("Tolerance")
+    public String tolerance;
+
     public static AutoscalingMetricSpec build(java.util.Map<String, ?> map) throws Exception {
         AutoscalingMetricSpec self = new AutoscalingMetricSpec();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class AutoscalingMetricSpec extends TeaModel {
     }
     public Integer getTargetValue() {
         return this.targetValue;
+    }
+
+    public AutoscalingMetricSpec setTolerance(String tolerance) {
+        this.tolerance = tolerance;
+        return this;
+    }
+    public String getTolerance() {
+        return this.tolerance;
     }
 
 }

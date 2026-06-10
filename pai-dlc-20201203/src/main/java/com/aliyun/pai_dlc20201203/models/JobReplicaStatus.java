@@ -7,6 +7,9 @@ public class JobReplicaStatus extends TeaModel {
     @NameInMap("Active")
     public Integer active;
 
+    @NameInMap("CurrentSpotInstanceType")
+    public String currentSpotInstanceType;
+
     @NameInMap("Dequeued")
     public Integer dequeued;
 
@@ -44,6 +47,14 @@ public class JobReplicaStatus extends TeaModel {
     }
     public Integer getActive() {
         return this.active;
+    }
+
+    public JobReplicaStatus setCurrentSpotInstanceType(String currentSpotInstanceType) {
+        this.currentSpotInstanceType = currentSpotInstanceType;
+        return this;
+    }
+    public String getCurrentSpotInstanceType() {
+        return this.currentSpotInstanceType;
     }
 
     public JobReplicaStatus setDequeued(Integer dequeued) {
