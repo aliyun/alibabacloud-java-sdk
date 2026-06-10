@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateReservedNodePoolRequest extends TeaModel {
     /**
+     * <p>The ID of the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>ehpc-hz-FYUr32****</p>
      */
@@ -12,6 +14,8 @@ public class CreateReservedNodePoolRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The number of reserved nodes.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class CreateReservedNodePoolRequest extends TeaModel {
     public Integer count;
 
     /**
+     * <p>The description of the reserved node pool.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -26,6 +32,8 @@ public class CreateReservedNodePoolRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The suffix of the hostnames for the reserved nodes.</p>
+     * 
      * <strong>example:</strong>
      * <p>ed</p>
      */
@@ -33,6 +41,8 @@ public class CreateReservedNodePoolRequest extends TeaModel {
     public String hostPostfix;
 
     /**
+     * <p>The prefix of the hostnames for the reserved nodes.</p>
+     * 
      * <strong>example:</strong>
      * <p>cloud</p>
      */
@@ -40,6 +50,8 @@ public class CreateReservedNodePoolRequest extends TeaModel {
     public String hostPrefix;
 
     /**
+     * <p>The name of the reserved node pool.</p>
+     * 
      * <strong>example:</strong>
      * <p>nodepool</p>
      */
@@ -47,6 +59,8 @@ public class CreateReservedNodePoolRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The ID of the vSwitch.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-bp1lfcjbfb099rrjn****</p>
      */

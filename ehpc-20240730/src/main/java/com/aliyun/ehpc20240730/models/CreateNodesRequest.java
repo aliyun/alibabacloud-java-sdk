@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateNodesRequest extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+     * <p>The ID of the cluster.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> to obtain the cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ehpc-hz-FYUr32****</p>
@@ -15,17 +15,20 @@ public class CreateNodesRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The hardware configurations of the compute nodes.</p>
+     * <p>Specifies the hardware configuration of the compute node.</p>
      */
     @NameInMap("ComputeNode")
     public NodeTemplate computeNode;
 
     /**
-     * <p>The number of compute nodes that you want to add. Valid values: 1 to 99. The MinCount value must be smaller than the Count value.</p>
+     * <p>The number of compute nodes to add. Valid values: 1 to 99. The value of MinCount must be less than the value of Count.</p>
      * <ul>
-     * <li>If the number of available Elastic Compute Service (ECS) instances is smaller than the MinCount value, the nodes fail to be added.</li>
-     * <li>If the number of available ECS instances is larger than the MinCount value but smaller than the Count value, nodes are added based on the MinCount value.</li>
-     * <li>If the number of available ECS instances is larger than the Count value, nodes are added based on the Count value.</li>
+     * <li><p>If the ECS inventory is less than MinCount, the operation fails.</p>
+     * </li>
+     * <li><p>If the ECS inventory is between MinCount and Count, the number of nodes specified by MinCount is added.</p>
+     * </li>
+     * <li><p>If the ECS inventory is greater than Count, the number of nodes specified by Count is added.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,7 +38,7 @@ public class CreateNodesRequest extends TeaModel {
     public Integer count;
 
     /**
-     * <p>Deployment set ID. You can obtain the deployment set ID through <a href="https://help.aliyun.com/document_detail/91313.html">DescribeDeploymentSets</a>. Currently, only deployment sets with a low network latency strategy are supported.</p>
+     * <p>The ID of the deployment set. You can call the <a href="https://help.aliyun.com/document_detail/91313.html">DescribeDeploymentSets</a> operation to obtain the ID. Only deployment sets that use the low-latency network policy are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>ds-bp1frxuzdg87zh4pzq****</p>
@@ -44,10 +47,12 @@ public class CreateNodesRequest extends TeaModel {
     public String deploymentSetId;
 
     /**
-     * <p>The type of the network between compute nodes. Valid values:</p>
+     * <p>Specifies the network type for communication between compute nodes. Valid values:</p>
      * <ul>
-     * <li>vpc</li>
-     * <li>eRDMA</li>
+     * <li><p>vpc</p>
+     * </li>
+     * <li><p>eRDMA</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,7 +62,7 @@ public class CreateNodesRequest extends TeaModel {
     public String HPCInterConnect;
 
     /**
-     * <p>The hostname prefix of the added compute nodes.</p>
+     * <p>The hostname prefix for the compute nodes in the queue.</p>
      * 
      * <strong>example:</strong>
      * <p>compute</p>
@@ -66,7 +71,7 @@ public class CreateNodesRequest extends TeaModel {
     public String hostnamePrefix;
 
     /**
-     * <p>The hostname suffix of the added compute nodes.</p>
+     * <p>The hostname suffix of the compute nodes in the queue.</p>
      * 
      * <strong>example:</strong>
      * <p>demo</p>
@@ -74,11 +79,14 @@ public class CreateNodesRequest extends TeaModel {
     @NameInMap("HostnameSuffix")
     public String hostnameSuffix;
 
+    /**
+     * <p>The ID of the reserved node pool.</p>
+     */
     @NameInMap("Hostnames")
     public java.util.List<String> hostnames;
 
     /**
-     * <p>Specifies whether to enable deletion protection for the added compute nodes.</p>
+     * <p>Specifies whether deletion protection is enabled for the compute node.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -94,7 +102,7 @@ public class CreateNodesRequest extends TeaModel {
     public Integer minCount;
 
     /**
-     * <p>The name of the queue for which you want to create compute nodes.</p>
+     * <p>The name of the queue to which the compute nodes belong.</p>
      * 
      * <strong>example:</strong>
      * <p>test1</p>
@@ -103,7 +111,7 @@ public class CreateNodesRequest extends TeaModel {
     public String queueName;
 
     /**
-     * <p>The Resource Access Management (RAM) role to be assumed by the added nodes.</p>
+     * <p>The name of the authorized instance role to be attached to the compute nodes in the queue.</p>
      * 
      * <strong>example:</strong>
      * <p>AliyunServiceRoleForOOSBandwidthScheduler</p>
@@ -112,7 +120,7 @@ public class CreateNodesRequest extends TeaModel {
     public String ramRole;
 
     /**
-     * <p>Preset node pool ID.</p>
+     * <p>The ID of the reserved node pool.</p>
      * 
      * <strong>example:</strong>
      * <p>rnp-756vlp7a</p>
@@ -121,7 +129,7 @@ public class CreateNodesRequest extends TeaModel {
     public String reservedNodePoolId;
 
     /**
-     * <p>The ID of the vSwitch to be used by the added nodes.</p>
+     * <p>The ID of the vSwitch.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-bp1lfcjbfb099rrjn****</p>

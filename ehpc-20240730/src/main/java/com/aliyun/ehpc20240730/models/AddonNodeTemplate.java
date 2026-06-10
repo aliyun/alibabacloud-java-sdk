@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class AddonNodeTemplate extends TeaModel {
     /**
+     * <p>Specifies whether to enable auto-renewal for the reserved instance. This parameter takes effect only when InstanceChargeType is set to PrePaid. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,16 +19,36 @@ public class AddonNodeTemplate extends TeaModel {
     public Boolean autoRenew;
 
     /**
+     * <p>The auto-renewal period. Valid values:</p>
+     * <ul>
+     * <li>Valid values when PeriodUnit is set to Week: 1, 2, and 3</li>
+     * <li>Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60</li>
+     * </ul>
+     * <p>Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("AutoRenewPeriod")
     public Integer autoRenewPeriod;
 
+    /**
+     * <p>The data disks.</p>
+     * <blockquote>
+     * <p> You can specify up to 16 data disks.</p>
+     * </blockquote>
+     */
     @NameInMap("DataDisks")
     public java.util.List<AddonNodeTemplateDataDisks> dataDisks;
 
     /**
+     * <p>The protection period for the preemptible instance. Unit: hours. Default value: 1. Valid values:</p>
+     * <ul>
+     * <li>1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within one hour. After the one-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+     * <li>0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for one hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+     * </ul>
+     * <p>Alibaba Cloud sends an ECS system event to notify you five minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify an appropriate protection period based on your business requirements.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +56,12 @@ public class AddonNodeTemplate extends TeaModel {
     public Integer duration;
 
     /**
+     * <p>Specifies whether to enable hyper-threading for the node. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -36,6 +69,7 @@ public class AddonNodeTemplate extends TeaModel {
     public Boolean enableHT;
 
     /**
+     * <p>The ID of the image to be used for instance booting. You can call the <a href="https://help.aliyun.com/zh/ecs/developer-reference/api-ecs-2014-05-26-describeimages?spm=api-workbench.API%20Document.0.0.7e5caef0GBcMYX">DescribeImages</a> operation to query the available image resources.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,16 +79,35 @@ public class AddonNodeTemplate extends TeaModel {
     public String imageId;
 
     /**
+     * <p>The billing method. Valid values:</p>
+     * <ul>
+     * <li>Prepaid: subscription</li>
+     * <li>PostPaid: pay-as-you-go</li>
+     * </ul>
+     * <p>Default value: PostPaid.</p>
+     * <p>If you set this parameter to PrePaid, you must make sure that your account supports payment by balance or credit. Otherwise, the InvalidPayMethod error message will be returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>PostPaid</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
+    /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1bzqq4rj1eemun****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
+     * <p>The ECS instance type.</p>
+     * <ul>
+     * <li>To select an appropriate instance type, you can see <a href="https://help.aliyun.com/zh/ecs/user-guide/overview-of-instance-families?spm=api-workbench.API%20Document.0.0.7e5caef0GBcMYX">Instance families</a> or call the <a href="https://help.aliyun.com/zh/ecs/developer-reference/api-ecs-2014-05-26-describeinstancetypes?spm=api-workbench.API%20Document.0.0.7e5caef0GBcMYX">DescribeInstanceTypes</a> operation to learn the performance data about instance types.</li>
+     * <li>To query the inventory of instance types in specified region or zone, you can call the <a href="https://help.aliyun.com/zh/ecs/developer-reference/api-ecs-2014-05-26-describeavailableresource?spm=api-workbench.API%20Document.0.0.7e5caef0GBcMYX">DescribeAvailableResource</a> operation.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,6 +117,7 @@ public class AddonNodeTemplate extends TeaModel {
     public String instanceType;
 
     /**
+     * <p>OsName</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,6 +127,7 @@ public class AddonNodeTemplate extends TeaModel {
     public String osName;
 
     /**
+     * <p>OsNameEN</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,6 +137,12 @@ public class AddonNodeTemplate extends TeaModel {
     public String osNameEN;
 
     /**
+     * <p>The subscription period of the instance. The unit is specified by the PeriodUnit parameter. This parameter takes effect and is required only when InstanceChargeType is set to PrePaid. If the DedicatedHostId parameter is specified, the subscription duration of the instance must be no longer than that of the dedicated host. Valid values:</p>
+     * <ul>
+     * <li>Valid values when PeriodUnit is set to Week: 1, 2, 3, and 4</li>
+     * <li>Valid values when PeriodUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -89,16 +150,30 @@ public class AddonNodeTemplate extends TeaModel {
     public Integer period;
 
     /**
+     * <p>The unit of the subscription period. Valid values:</p>
+     * <ul>
+     * <li>Week</li>
+     * <li>Month (default)</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Month</p>
      */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    /**
+     * <p>The IP address of the virtual private cloud (VPC) in which the ECS instance is deployed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><code>172.16.**.**</code></p>
+     */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
     /**
+     * <p>The maximum hourly price of the preemptible instance. This parameter takes effect only when SpotStrategy is set to SpotWithPriceLimit. A maximum of three decimal places can be specified.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.97</p>
      */
@@ -106,12 +181,23 @@ public class AddonNodeTemplate extends TeaModel {
     public Float spotPriceLimit;
 
     /**
+     * <p>The bidding policy for the pay-as-you-go instance. This parameter is valid only when InstanceChargeType is set to PostPaid. Valid values:</p>
+     * <ul>
+     * <li>NoSpot: The instance is created as a pay-as-you-go instance.</li>
+     * <li>SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.</li>
+     * <li>SpotAsPriceGo: The instances are created as preemptible instances for which the market price at the time of purchase is automatically used as the bidding price.</li>
+     * </ul>
+     * <p>Default value: NoSpot.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoSpot</p>
      */
     @NameInMap("SpotStrategy")
     public String spotStrategy;
 
+    /**
+     * <p>The system disk configurations of the node.</p>
+     */
     @NameInMap("SystemDisk")
     public AddonNodeTemplateSystemDisk systemDisk;
 
@@ -258,13 +344,27 @@ public class AddonNodeTemplate extends TeaModel {
 
     public static class AddonNodeTemplateDataDisks extends TeaModel {
         /**
+         * <p>The disk category. Valid values:</p>
+         * <ul>
+         * <li>cloud_efficiency: utra disk</li>
+         * <li>cloud_ssd: standard SSD</li>
+         * <li>cloud_essd: ESSD</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>cloud_auto</p>
+         * <p>cloud_essd</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
+         * <p>Specifies whether to release data disk N when the instance is released. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: true.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -272,6 +372,14 @@ public class AddonNodeTemplate extends TeaModel {
         public Boolean deleteWithInstance;
 
         /**
+         * <p>The performance level of the ESSD to be used as the data disk. Valid values:</p>
+         * <ul>
+         * <li>PL0: A single ESSD can deliver up to 10000 random read/write IOPS.</li>
+         * <li>PL1 (default): A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
+         * <li>PL2: A single ESSD can deliver up to 100000 random read/write IOPS.</li>
+         * <li>PL3: A single ESSD can deliver up to 1000000 random read/write IOPS. For more information about ESSD performance levels, see <a href="https://help.aliyun.com/zh/ecs/user-guide/essds?spm=api-workbench.API%20Document.0.0.7e5caef0GBcMYX">ESSDs</a>.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PL0</p>
          */
@@ -279,6 +387,22 @@ public class AddonNodeTemplate extends TeaModel {
         public String level;
 
         /**
+         * <p>The disk size. Valid values of N: 1 to 16. Unit: GiB. Valid values:</p>
+         * <ul>
+         * <li><p>cloud_efficiency: 40 to 32,768</p>
+         * </li>
+         * <li><p>cloud_ssd: 40 to 32,768</p>
+         * </li>
+         * <li><p>Valid values when Category is set to cloud_essd depends on the value of the DataDisk.N.PerformanceLevel parameter. Specifically:</p>
+         * <ul>
+         * <li>PL0: 40 to 65,536</li>
+         * <li>PL1: 40 to 65,536</li>
+         * <li>PL2: 461 to 65,536</li>
+         * <li>PL3: 1,261 to 65,536</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>40</p>
          */
@@ -326,13 +450,29 @@ public class AddonNodeTemplate extends TeaModel {
 
     public static class AddonNodeTemplateSystemDisk extends TeaModel {
         /**
+         * <p>The category of the system disk. Valid values:</p>
+         * <ul>
+         * <li>cloud_efficiency: utra disk</li>
+         * <li>cloud_ssd: standard SSD</li>
+         * <li>cloud_essd: enterprise SSD (ESSD)</li>
+         * <li>cloud: basic disk</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>cloud_auto</p>
+         * <p>cloud_essd</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
+         * <p>The performance level of the ESSD that is used as the system disk. Valid values:</p>
+         * <ul>
+         * <li>PL0: A single ESSD can deliver up to 10000 random read/write IOPS.</li>
+         * <li>PL1 (default): A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
+         * <li>PL2: A single ESSD can deliver up to 100000 random read/write IOPS.</li>
+         * <li>PL3: A single ESSD can deliver up to 1000000 random read/write IOPS. For more information about ESSD performance levels, see <a href="https://help.aliyun.com/zh/ecs/user-guide/essds?spm=api-workbench.API%20Document.0.0.7e5caef0GBcMYX">ESSDs</a>.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PL0</p>
          */
@@ -340,6 +480,24 @@ public class AddonNodeTemplate extends TeaModel {
         public String level;
 
         /**
+         * <p>The disk size. Unit: GiB. Valid values:</p>
+         * <ul>
+         * <li><p>cloud_efficiency: 40 to 32,768</p>
+         * </li>
+         * <li><p>cloud_ssd: 40 to 32,768</p>
+         * </li>
+         * <li><p>Valid values when Category is set to cloud_essd depends on the value of the DataDisk.N.PerformanceLevel parameter. Specifically:</p>
+         * <ul>
+         * <li>PL0: 40 to 65,536</li>
+         * <li>PL1: 40 to 65,536</li>
+         * <li>PL2: 461 to 65,536</li>
+         * <li>PL3: 1,261 to 65,536</li>
+         * </ul>
+         * </li>
+         * <li><p>cloud: 40 to 500</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>40</p>
          */

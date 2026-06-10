@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListRegionsResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of entries returned per page.</p>
+     * <p>Valid values: 1 to 100.</p>
+     * <p>Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,16 +16,23 @@ public class ListRegionsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token to retrieve the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0axxxx</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The list of available regions.</p>
+     */
     @NameInMap("Regions")
     public java.util.List<ListRegionsResponseBodyRegions> regions;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
@@ -29,6 +40,8 @@ public class ListRegionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries that meet the query conditions.<br>This parameter is optional and may not be returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>16</p>
      */
@@ -81,10 +94,18 @@ public class ListRegionsResponseBody extends TeaModel {
     }
 
     public static class ListRegionsResponseBodyRegions extends TeaModel {
+        /**
+         * <p>The name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>华东1（杭州）</p>
+         */
         @NameInMap("LocalName")
         public String localName;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */

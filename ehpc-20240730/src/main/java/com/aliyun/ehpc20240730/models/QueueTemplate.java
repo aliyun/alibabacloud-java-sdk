@@ -5,16 +5,29 @@ import com.aliyun.tea.*;
 
 public class QueueTemplate extends TeaModel {
     /**
+     * <p>The auto scale-out policy for the queue.</p>
+     * 
      * <strong>example:</strong>
      * <p>PriorityInstanceType</p>
      */
     @NameInMap("AllocationStrategy")
     public String allocationStrategy;
 
+    /**
+     * <p>The list of hardware configurations for the compute nodes in the queue. You can specify 0 to 10 configurations.</p>
+     */
     @NameInMap("ComputeNodes")
     public java.util.List<NodeTemplate> computeNodes;
 
     /**
+     * <p>Indicates whether to enable auto scale-in for the queue. Valid values:</p>
+     * <ul>
+     * <li><p>true: enabled</p>
+     * </li>
+     * <li><p>false: disabled</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -22,6 +35,14 @@ public class QueueTemplate extends TeaModel {
     public Boolean enableScaleIn;
 
     /**
+     * <p>Indicates whether to enable auto scale-out for the queue. Valid values:</p>
+     * <ul>
+     * <li><p>true: enabled</p>
+     * </li>
+     * <li><p>false: disabled</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -29,16 +50,30 @@ public class QueueTemplate extends TeaModel {
     public Boolean enableScaleOut;
 
     /**
+     * <p>The hostname prefix of the compute nodes in the queue.</p>
+     * <blockquote>
+     * <p>Notice: </p>
+     * </blockquote>
+     * <p>The prefix can be up to 8 characters in length for Windows operating systems and up to 32 characters in length for Linux operating systems. The prefix can contain only lowercase letters, digits, and hyphens (-).</p>
+     * 
      * <strong>example:</strong>
      * <p>compute</p>
      */
     @NameInMap("HostnamePrefix")
     public String hostnamePrefix;
 
+    /**
+     * <p>The hostname suffix of the compute nodes in the queue.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo</p>
+     */
     @NameInMap("HostnameSuffix")
     public String hostnameSuffix;
 
     /**
+     * <p>The initial number of compute nodes in the queue.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -46,16 +81,29 @@ public class QueueTemplate extends TeaModel {
     public Integer initialCount;
 
     /**
+     * <p>The network type of the compute nodes in the queue. Valid values:</p>
+     * <ul>
+     * <li><p>vpc</p>
+     * </li>
+     * <li><p>eRDMA</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>erdma</p>
      */
     @NameInMap("InterConnect")
     public String interConnect;
 
+    /**
+     * <p>The list of nodes in the queue that have deletion protection enabled.</p>
+     */
     @NameInMap("KeepAliveNodes")
     public java.util.List<String> keepAliveNodes;
 
     /**
+     * <p>The maximum number of compute nodes in the queue.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -63,6 +111,8 @@ public class QueueTemplate extends TeaModel {
     public Integer maxCount;
 
     /**
+     * <p>The maximum number of compute nodes that can be scaled out in each cycle.</p>
+     * 
      * <strong>example:</strong>
      * <p>99</p>
      */
@@ -70,6 +120,8 @@ public class QueueTemplate extends TeaModel {
     public Long maxCountPerCycle;
 
     /**
+     * <p>The minimum number of compute nodes in the queue.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -77,6 +129,7 @@ public class QueueTemplate extends TeaModel {
     public Integer minCount;
 
     /**
+     * <p>The queue name. The name must be 1 to 15 characters long. It can contain letters from the Unicode letter category, such as English letters and digits, and periods (.).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -86,6 +139,8 @@ public class QueueTemplate extends TeaModel {
     public String queueName;
 
     /**
+     * <p>The name of the instance role attached to the compute nodes in the queue.</p>
+     * 
      * <strong>example:</strong>
      * <p>AliyunECSInstanceForEHPCRole</p>
      */
@@ -93,12 +148,20 @@ public class QueueTemplate extends TeaModel {
     public String ramRole;
 
     /**
+     * <p>The ID of the reserved node pool that the queue uses.</p>
+     * <blockquote>
+     * <p>If this parameter is specified, allocatable nodes from the reserved node pool are used to create compute nodes. The <code>VSwitchIds</code>, <code>HostnamePrefix</code>, and <code>HostnameSuffix</code> parameters are ignored.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>rnp-756vlp7a</p>
      */
     @NameInMap("ReservedNodePoolId")
     public String reservedNodePoolId;
 
+    /**
+     * <p>A list of virtual switches available to the compute nodes in the queue. You can specify 1 to 5 virtual switches.</p>
+     */
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;
 

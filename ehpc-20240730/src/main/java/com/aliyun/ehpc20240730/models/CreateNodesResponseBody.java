@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNodesResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the compute nodes to be created.</p>
+     * <p>A list of instance IDs for the created compute nodes.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
@@ -20,10 +20,12 @@ public class CreateNodesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The operation was successful.</p>
+     * </li>
+     * <li><p>false: The operation failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

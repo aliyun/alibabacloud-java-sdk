@@ -4,9 +4,6 @@ package com.aliyun.ehpc20240730.models;
 import com.aliyun.tea.*;
 
 public class ListInstalledSoftwaresResponseBody extends TeaModel {
-    /**
-     * <p>The list of installed software.</p>
-     */
     @NameInMap("AdditionalPackages")
     public ListInstalledSoftwaresResponseBodyAdditionalPackages additionalPackages;
 
@@ -92,70 +89,24 @@ public class ListInstalledSoftwaresResponseBody extends TeaModel {
     }
 
     public static class ListInstalledSoftwaresResponseBodyAdditionalPackagesAdditionalPackageInfos extends TeaModel {
-        /**
-         * <p>The category into which the software falls.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>NWP</p>
-         */
         @NameInMap("Category")
         public String category;
 
-        /**
-         * <p>The time when the software was installed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2024-03-05 18:24:08</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The software description.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The URL of the software icon.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="https://gw.alicdn.com/imgextra/i2/O1CN01FIkxZ81LmE0fvrAyR_!!6000000001341-55-tps-6349-1603.svg">https://gw.alicdn.com/imgextra/i2/O1CN01FIkxZ81LmE0fvrAyR_!!6000000001341-55-tps-6349-1603.svg</a></p>
-         */
         @NameInMap("Icon")
         public String icon;
 
-        /**
-         * <p>The software name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>gromacs</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The installation status of the software.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Installed</li>
-         * <li>Uninstalled</li>
-         * <li>Installing</li>
-         * <li>Exception</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Installed</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The software version.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2024.1</p>
-         */
         @NameInMap("Version")
         public String version;
 

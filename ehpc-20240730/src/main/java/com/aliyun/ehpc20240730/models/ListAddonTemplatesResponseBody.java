@@ -94,12 +94,18 @@ public class ListAddonTemplatesResponseBody extends TeaModel {
     public static class ListAddonTemplatesResponseBodyAddons extends TeaModel {
         /**
          * <p>The addon description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Logon node, mainly used for connecting to the E-HPC cluster environment and submitting user tasks.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The addon label</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Logon node</p>
          */
         @NameInMap("Label")
         public String label;

@@ -4,9 +4,6 @@ package com.aliyun.ehpc20240730.models;
 import com.aliyun.tea.*;
 
 public class ListSoftwaresResponseBody extends TeaModel {
-    /**
-     * <p>The information about the software that can be installed in the cluster.</p>
-     */
     @NameInMap("AdditionalPackages")
     public ListSoftwaresResponseBodyAdditionalPackages additionalPackages;
 
@@ -92,25 +89,9 @@ public class ListSoftwaresResponseBody extends TeaModel {
     }
 
     public static class ListSoftwaresResponseBodyAdditionalPackagesAdditionalPackageInfosVersionsVersionInfosSupportOsSupportOsInfos extends TeaModel {
-        /**
-         * <p>The OS architecture. Valid values:</p>
-         * <ul>
-         * <li>x86_64</li>
-         * <li>arm64</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>x86_64</p>
-         */
         @NameInMap("Architecture")
         public String architecture;
 
-        /**
-         * <p>The image tag.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Alibaba Cloud Linux  3.2104 LTS 64 bit ARM Edition</p>
-         */
         @NameInMap("OsTag")
         public String osTag;
 
@@ -157,27 +138,12 @@ public class ListSoftwaresResponseBody extends TeaModel {
     }
 
     public static class ListSoftwaresResponseBodyAdditionalPackagesAdditionalPackageInfosVersionsVersionInfos extends TeaModel {
-        /**
-         * <p>Indicates whether the version is the latest.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("Latest")
         public String latest;
 
-        /**
-         * <p>The information about the supported OSs.</p>
-         */
         @NameInMap("SupportOs")
         public ListSoftwaresResponseBodyAdditionalPackagesAdditionalPackageInfosVersionsVersionInfosSupportOs supportOs;
 
-        /**
-         * <p>The software version.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2024.1</p>
-         */
         @NameInMap("Version")
         public String version;
 
@@ -232,42 +198,18 @@ public class ListSoftwaresResponseBody extends TeaModel {
     }
 
     public static class ListSoftwaresResponseBodyAdditionalPackagesAdditionalPackageInfos extends TeaModel {
-        /**
-         * <p>The application category.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>NWP</p>
-         */
         @NameInMap("Category")
         public String category;
 
-        /**
-         * <p>The software description.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The URL of the software icon.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="https://gw.alicdn.com/imgextra/i2/O1CN01FIkxZ81LmE0fvrAyR_!!6000000001341-55-tps-6349-1603.svg">https://gw.alicdn.com/imgextra/i2/O1CN01FIkxZ81LmE0fvrAyR_!!6000000001341-55-tps-6349-1603.svg</a></p>
-         */
         @NameInMap("Icon")
         public String icon;
 
-        /**
-         * <p>The software name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>gromacs</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The information about the software versions that can be installed in the cluster.</p>
-         */
         @NameInMap("Versions")
         public ListSoftwaresResponseBodyAdditionalPackagesAdditionalPackageInfosVersions versions;
 

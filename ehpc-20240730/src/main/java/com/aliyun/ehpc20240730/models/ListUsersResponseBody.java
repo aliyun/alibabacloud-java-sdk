@@ -40,9 +40,6 @@ public class ListUsersResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    /**
-     * <p>The information about the users.</p>
-     */
     @NameInMap("Users")
     public ListUsersResponseBodyUsers users;
 
@@ -92,50 +89,18 @@ public class ListUsersResponseBody extends TeaModel {
     }
 
     public static class ListUsersResponseBodyUsersUserInfo extends TeaModel {
-        /**
-         * <p>The time when the user was first added.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2014-08-22T17:46:47</p>
-         */
         @NameInMap("AddTime")
         public String addTime;
 
-        /**
-         * <p>The name of the permission group. Valid values:</p>
-         * <p>users: ordinary permissions, which are suitable for regular users that need only to submit and debug jobs.</p>
-         * <p>wheel: sudo permissions, which are suitable for administrators who need to manage clusters. In addition to submitting and debugging jobs, you can also run sudo commands to install software and restart nodes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>users</p>
-         */
         @NameInMap("Group")
         public String group;
 
-        /**
-         * <p>The permission group ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("GroupId")
         public String groupId;
 
-        /**
-         * <p>The user ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1001</p>
-         */
         @NameInMap("UserId")
         public String userId;
 
-        /**
-         * <p>The username.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testuser</p>
-         */
         @NameInMap("UserName")
         public String userName;
 

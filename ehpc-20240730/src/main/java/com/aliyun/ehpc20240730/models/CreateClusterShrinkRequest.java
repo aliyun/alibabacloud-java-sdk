@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateClusterShrinkRequest extends TeaModel {
     /**
-     * <p>The list of software that you want to install in the cluster. Valid values of N: 0 to 10.</p>
+     * <p>A list of software to install in the cluster. You can specify up to 10 packages.</p>
      */
     @NameInMap("AdditionalPackages")
     public String additionalPackagesShrink;
 
     /**
-     * <p>The configurations of the custom addons in the cluster. Only one addon is supported.</p>
+     * <p>The configuration of the custom service component for the cluster. Only one component is supported.</p>
      */
     @NameInMap("Addons")
     public String addonsShrink;
 
     /**
-     * <p>The client version. By default, the latest version is used.</p>
+     * <p>The version of the E-HPC client. By default, the latest version is used.</p>
      * 
      * <strong>example:</strong>
      * <p>2.1.0</p>
@@ -26,10 +26,12 @@ public class CreateClusterShrinkRequest extends TeaModel {
     public String clientVersion;
 
     /**
-     * <p>The cluster type. Valid values:</p>
+     * <p>The edition of the cluster. Valid values:</p>
      * <ul>
-     * <li>Standard</li>
-     * <li>Serverless</li>
+     * <li><p>Standard</p>
+     * </li>
+     * <li><p>Serverless</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,19 +41,19 @@ public class CreateClusterShrinkRequest extends TeaModel {
     public String clusterCategory;
 
     /**
-     * <p>The access credentials of the cluster.</p>
+     * <p>The security credentials for the cluster.</p>
      */
     @NameInMap("ClusterCredentials")
     public String clusterCredentialsShrink;
 
     /**
-     * <p>The post-processing script of the cluster.</p>
+     * <p>The post-processing script for the cluster.</p>
      */
     @NameInMap("ClusterCustomConfiguration")
     public String clusterCustomConfigurationShrink;
 
     /**
-     * <p>The cluster description. The description must be 1 to 128 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
+     * <p>The description of the cluster. The description must be 2 to 128 characters long and can contain letters, Chinese characters, digits, hyphens (-), and underscores (_).</p>
      * 
      * <strong>example:</strong>
      * <p>slurm22.05.8-cluster-20240718</p>
@@ -60,11 +62,14 @@ public class CreateClusterShrinkRequest extends TeaModel {
     public String clusterDescription;
 
     /**
-     * <p>The deployment mode of the cluster. Valid values:</p>
+     * <p>The cluster\&quot;s deployment type. Valid values:</p>
      * <ul>
-     * <li>Integrated</li>
-     * <li>Hybrid</li>
-     * <li>Custom</li>
+     * <li><p>Integrated: An integrated cluster.</p>
+     * </li>
+     * <li><p>Hybrid: A hybrid cloud cluster.</p>
+     * </li>
+     * <li><p>Custom: A custom cluster.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,7 +79,7 @@ public class CreateClusterShrinkRequest extends TeaModel {
     public String clusterMode;
 
     /**
-     * <p>The cluster name. The name must be 1 to 128 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
+     * <p>The name of the cluster. The name must be 2 to 128 characters long and can contain letters, Chinese characters, digits, hyphens (-), and underscores (_).</p>
      * 
      * <strong>example:</strong>
      * <p>slurm22.05.8-cluster-20240718</p>
@@ -83,8 +88,8 @@ public class CreateClusterShrinkRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The ID of the vSwitch that you want the cluster to use. The vSwitch must reside in the VPC that is specified by the <code>ClusterVpcId</code> parameter.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/448581.html">DescribeVpcs</a> operation to query information about the created VPCs and vSwitches.</p>
+     * <p>The ID of the VSwitch for the cluster. The VSwitch must be in the VPC specified by <code>ClusterVpcId</code>.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/448581.html">DescribeVpcs</a> operation to find available VPCs and VSwitches.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-f8za5p0mwzgdu3wgx****</p>
@@ -93,7 +98,7 @@ public class CreateClusterShrinkRequest extends TeaModel {
     public String clusterVSwitchId;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) in which the cluster resides.</p>
+     * <p>The ID of the VPC for the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-m5efjevmclc0xdmys****</p>
@@ -102,10 +107,12 @@ public class CreateClusterShrinkRequest extends TeaModel {
     public String clusterVpcId;
 
     /**
-     * <p>Specifies whether to enable deletion protection for the cluster. Deletion protection decides whether the cluster can be deleted in the console or by calling the <a href="https://help.aliyun.com/document_detail/424406.html">DeleteCluster</a> operation. Valid values:</p>
+     * <p>Specifies whether to enable deletion protection for the cluster. This feature prevents the cluster from being deleted via the console or the <a href="https://help.aliyun.com/document_detail/424406.html">DeleteCluster</a> operation.</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: Enables deletion protection.</p>
+     * </li>
+     * <li><p>false: Disables deletion protection.</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -115,13 +122,21 @@ public class CreateClusterShrinkRequest extends TeaModel {
     @NameInMap("DeletionProtection")
     public Boolean deletionProtection;
 
+    @NameInMap("GrowInterval")
+    public Integer growInterval;
+
+    @NameInMap("IdleInterval")
+    public Integer idleInterval;
+
     /**
-     * <p>Specifies whether to use an advanced security group. Valid values:</p>
+     * <p>Specifies whether to use an enterprise security group. Valid values:</p>
      * <ul>
-     * <li>true: automatically creates and uses an advanced security group.</li>
-     * <li>false: automatically creates and uses a basic security group.</li>
+     * <li><p>true: The system automatically creates and uses an enterprise security group.</p>
+     * </li>
+     * <li><p>false: The system automatically creates and uses a security group.</p>
+     * </li>
      * </ul>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/605897.html">Basic security groups and advanced security groups</a>.</p>
+     * <p>For more information about how to select a security group type, see <a href="https://help.aliyun.com/document_detail/605897.html">Security groups and enterprise security groups</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -130,13 +145,13 @@ public class CreateClusterShrinkRequest extends TeaModel {
     public Boolean isEnterpriseSecurityGroup;
 
     /**
-     * <p>The configurations of the cluster management node.</p>
+     * <p>Configuration for the cluster manager node.</p>
      */
     @NameInMap("Manager")
     public String managerShrink;
 
     /**
-     * <p>The maximum number of vCPUs that can be used by compute nodes in the cluster. Valid values: 0 to 100,000.</p>
+     * <p>The maximum number of CPU cores that the cluster can manage across all compute nodes. Valid values: 0 to 100,000.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -154,14 +169,14 @@ public class CreateClusterShrinkRequest extends TeaModel {
     public Integer maxCount;
 
     /**
-     * <p>The queues in the cluster. The number of queues can be 0 to 8.</p>
+     * <p>Configuration for the cluster queues. You can specify up to 8 queues.</p>
      */
     @NameInMap("Queues")
     public String queuesShrink;
 
     /**
-     * <p>The ID of the resource group to which the cluster belongs.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to obtain the IDs of the resource groups.</p>
+     * <p>The ID of the resource group.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to find resource group IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxazb4******</p>
@@ -170,8 +185,8 @@ public class CreateClusterShrinkRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the security group to which the cluster belongs.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/25556.html">DescribeSecurityGroups</a> operation to query available security groups in the current region.</p>
+     * <p>The ID of the security group for the cluster.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/25556.html">DescribeSecurityGroups</a> operation to find available security groups in the current region.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-bp13n61xsydodfyg****</p>
@@ -180,13 +195,13 @@ public class CreateClusterShrinkRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The shared storage resources of the cluster.</p>
+     * <p>Configuration for the cluster\&quot;s shared storage.</p>
      */
     @NameInMap("SharedStorages")
     public String sharedStoragesShrink;
 
     /**
-     * <p>The tags of the cluster.</p>
+     * <p>The list of tags to add to the cluster. You can add up to 20 tags.</p>
      */
     @NameInMap("Tags")
     public String tagsShrink;
@@ -290,6 +305,22 @@ public class CreateClusterShrinkRequest extends TeaModel {
     }
     public Boolean getDeletionProtection() {
         return this.deletionProtection;
+    }
+
+    public CreateClusterShrinkRequest setGrowInterval(Integer growInterval) {
+        this.growInterval = growInterval;
+        return this;
+    }
+    public Integer getGrowInterval() {
+        return this.growInterval;
+    }
+
+    public CreateClusterShrinkRequest setIdleInterval(Integer idleInterval) {
+        this.idleInterval = idleInterval;
+        return this;
+    }
+    public Integer getIdleInterval() {
+        return this.idleInterval;
     }
 
     public CreateClusterShrinkRequest setIsEnterpriseSecurityGroup(Boolean isEnterpriseSecurityGroup) {

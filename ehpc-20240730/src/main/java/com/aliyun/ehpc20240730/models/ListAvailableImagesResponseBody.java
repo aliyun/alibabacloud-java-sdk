@@ -189,6 +189,9 @@ public class ListAvailableImagesResponseBody extends TeaModel {
 
         /**
          * <p>The OS name in Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS  7.9 64位</p>
          */
         @NameInMap("OSName")
         public String OSName;

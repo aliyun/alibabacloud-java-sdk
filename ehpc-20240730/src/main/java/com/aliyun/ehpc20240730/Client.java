@@ -182,11 +182,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>Before you call this operation, make sure that you are familiar with the billing and pricing of E-HPC. For more information, see <a href="https://help.aliyun.com/document_detail/2842985.html">Overview</a>.</p>
+     * <h2>API</h2>
+     * <p>Before using this interface, ensure you understand the E-HPC billing method and pricing. For more information, see <a href="https://help.aliyun.com/document_detail/2842985.html">billing overview</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a pay-as-you-go or subscription Elastic High Performance Computing (E-HPC) cluster.</p>
+     * <p>Create a pay-as-you-go or subscription cluster.</p>
      * 
      * @param tmpReq CreateClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -277,6 +277,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DeletionProtection", request.deletionProtection);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.growInterval)) {
+            query.put("GrowInterval", request.growInterval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idleInterval)) {
+            query.put("IdleInterval", request.idleInterval);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.isEnterpriseSecurityGroup)) {
             query.put("IsEnterpriseSecurityGroup", request.isEnterpriseSecurityGroup);
         }
@@ -332,11 +340,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>Before you call this operation, make sure that you are familiar with the billing and pricing of E-HPC. For more information, see <a href="https://help.aliyun.com/document_detail/2842985.html">Overview</a>.</p>
+     * <h2>API</h2>
+     * <p>Before using this interface, ensure you understand the E-HPC billing method and pricing. For more information, see <a href="https://help.aliyun.com/document_detail/2842985.html">billing overview</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a pay-as-you-go or subscription Elastic High Performance Computing (E-HPC) cluster.</p>
+     * <p>Create a pay-as-you-go or subscription cluster.</p>
      * 
      * @param request CreateClusterRequest
      * @return CreateClusterResponse
@@ -411,11 +419,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2><a href="#"></a></h2>
-     * 
      * <b>summary</b> : 
-     * <p>Creates compute nodes for an Elastic High Performance Computing (E-HPC) cluster.</p>
+     * <p>Creates a batch of compute nodes for an E-HPC cluster.</p>
      * 
      * @param tmpReq CreateNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -508,11 +513,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2><a href="#"></a></h2>
-     * 
      * <b>summary</b> : 
-     * <p>Creates compute nodes for an Elastic High Performance Computing (E-HPC) cluster.</p>
+     * <p>Creates a batch of compute nodes for an E-HPC cluster.</p>
      * 
      * @param request CreateNodesRequest
      * @return CreateNodesResponse
@@ -578,7 +580,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建预设节点池</p>
+     * <p>Creates a reserved node pool. A reserved node pool reserves a batch of active IP addresses from a vSwitch. It maps each IP address to a hostname based on a rule and maintains the resources for the node pool. When you use the reserved node pool to scale nodes, the corresponding resources are allocated or released.</p>
      * 
      * @param request CreateReservedNodePoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -634,7 +636,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建预设节点池</p>
+     * <p>Creates a reserved node pool. A reserved node pool reserves a batch of active IP addresses from a vSwitch. It maps each IP address to a hostname based on a rule and maintains the resources for the node pool. When you use the reserved node pool to scale nodes, the corresponding resources are allocated or released.</p>
      * 
      * @param request CreateReservedNodePoolRequest
      * @return CreateReservedNodePoolResponse
@@ -882,7 +884,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除集群预设节点池</p>
+     * <p>Deletes the specified reserved node pool.</p>
      * 
      * @param request DeleteReservedNodePoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -918,7 +920,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除集群预设节点池</p>
+     * <p>Deletes the specified reserved node pool.</p>
      * 
      * @param request DeleteReservedNodePoolRequest
      * @return DeleteReservedNodePoolResponse
@@ -1142,7 +1144,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about an Elastic High Performance Computing (E-HPC) cluster.</p>
+     * <p>Query information about a specified E-HPC cluster.</p>
      * 
      * @param request GetClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1174,7 +1176,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about an Elastic High Performance Computing (E-HPC) cluster.</p>
+     * <p>Query information about a specified E-HPC cluster.</p>
      * 
      * @param request GetClusterRequest
      * @return GetClusterResponse
@@ -1358,7 +1360,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a queue in an Elastic High Performance Computing (E-HPC) cluster.</p>
+     * <p>Query the details of a specified queue in an E-HPC cluster.</p>
      * 
      * @param request GetQueueRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1394,7 +1396,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a queue in an Elastic High Performance Computing (E-HPC) cluster.</p>
+     * <p>Query the details of a specified queue in an E-HPC cluster.</p>
      * 
      * @param request GetQueueRequest
      * @return GetQueueResponse
@@ -2182,7 +2184,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询产品支持的地域列表。</p>
+     * <p>Queries the available regions for the product.</p>
      * 
      * @param request ListRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2226,7 +2228,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询产品支持的地域列表。</p>
+     * <p>Queries the available regions for the product.</p>
      * 
      * @param request ListRegionsRequest
      * @return ListRegionsResponse
@@ -2723,8 +2725,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When you update a queue configuration, the system sets all fields based on the parameters in your current request. If you call this operation multiple times, only the parameters from the last call take effect.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a queue in an Elastic High Performance Computing (E-HPC) cluster.</p>
+     * <p>Updates the configuration of a specified queue in an E-HPC cluster.</p>
      * 
      * @param tmpReq UpdateQueueRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2765,8 +2770,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When you update a queue configuration, the system sets all fields based on the parameters in your current request. If you call this operation multiple times, only the parameters from the last call take effect.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a queue in an Elastic High Performance Computing (E-HPC) cluster.</p>
+     * <p>Updates the configuration of a specified queue in an E-HPC cluster.</p>
      * 
      * @param request UpdateQueueRequest
      * @return UpdateQueueResponse

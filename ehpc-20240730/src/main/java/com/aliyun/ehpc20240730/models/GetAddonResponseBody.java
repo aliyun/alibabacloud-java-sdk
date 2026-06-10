@@ -199,12 +199,18 @@ public class GetAddonResponseBody extends TeaModel {
     public static class GetAddonResponseBodyAddonServicesSpecInputParams extends TeaModel {
         /**
          * <p>The help information of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL installation root directory</p>
          */
         @NameInMap("HelpText")
         public String helpText;
 
         /**
          * <p>The parameter label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL installation path</p>
          */
         @NameInMap("Label")
         public String label;
@@ -452,6 +458,9 @@ public class GetAddonResponseBody extends TeaModel {
 
         /**
          * <p>The addon description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Logon node, mainly used for connecting to the E-HPC cluster environment and submitting user tasks.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -476,6 +485,9 @@ public class GetAddonResponseBody extends TeaModel {
 
         /**
          * <p>The addon label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Logon node</p>
          */
         @NameInMap("Label")
         public String label;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateReservedNodePoolResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
@@ -12,6 +14,8 @@ public class CreateReservedNodePoolResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the reserved node pool.</p>
+     * 
      * <strong>example:</strong>
      * <p>rnp-cdx****</p>
      */

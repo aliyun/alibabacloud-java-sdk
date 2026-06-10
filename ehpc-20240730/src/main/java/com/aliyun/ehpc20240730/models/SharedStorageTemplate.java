@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SharedStorageTemplate extends TeaModel {
     /**
+     * <p>The ID of the mounted file system.</p>
+     * 
      * <strong>example:</strong>
      * <p>008b63****</p>
      */
@@ -12,6 +14,8 @@ public class SharedStorageTemplate extends TeaModel {
     public String fileSystemId;
 
     /**
+     * <p>The local mount directory of the attached file system.</p>
+     * 
      * <strong>example:</strong>
      * <p>/home</p>
      */
@@ -19,6 +23,8 @@ public class SharedStorageTemplate extends TeaModel {
     public String mountDirectory;
 
     /**
+     * <p>The storage mount options of the mounted file system.</p>
+     * 
      * <strong>example:</strong>
      * <p>-t nfs -o vers=3,nolock,noresvport</p>
      */
@@ -26,6 +32,8 @@ public class SharedStorageTemplate extends TeaModel {
     public String mountOptions;
 
     /**
+     * <p>The address of the mount point of the file system.</p>
+     * 
      * <strong>example:</strong>
      * <p>008b****-sihc.cn-hangzhou.extreme.nas.aliyuncs.com</p>
      */
@@ -33,6 +41,8 @@ public class SharedStorageTemplate extends TeaModel {
     public String mountTargetDomain;
 
     /**
+     * <p>The remote mount directory of the mounted file system.</p>
+     * 
      * <strong>example:</strong>
      * <p>/</p>
      */
@@ -40,6 +50,12 @@ public class SharedStorageTemplate extends TeaModel {
     public String NASDirectory;
 
     /**
+     * <p>The protocol type of the mounted file system. Valid values:</p>
+     * <ul>
+     * <li>NFS</li>
+     * <li>SMB</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>NFS</p>
      */

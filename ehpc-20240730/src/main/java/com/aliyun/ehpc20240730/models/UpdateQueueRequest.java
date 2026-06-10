@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class UpdateQueueRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+     * <p>Call <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> to get the cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ehpc-hz-FYUr32****</p>
@@ -15,7 +15,7 @@ public class UpdateQueueRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The information about the queue to be updated.</p>
+     * <p>The queue information to update.</p>
      */
     @NameInMap("Queue")
     public UpdateQueueRequestQueue queue;
@@ -43,7 +43,7 @@ public class UpdateQueueRequest extends TeaModel {
 
     public static class UpdateQueueRequestQueue extends TeaModel {
         /**
-         * <p>The policy based on which instance types are selected for compute nodes during auto scale-outs. Valid values:</p>
+         * <p>The strategy for selecting instance types when the queue scales out automatically. Valid values:</p>
          * <ul>
          * <li>PriorityInstanceType</li>
          * </ul>
@@ -55,16 +55,18 @@ public class UpdateQueueRequest extends TeaModel {
         public String allocationStrategy;
 
         /**
-         * <p>The hardware configurations of the compute nodes in the queue. Valid values of N: 1 to 10.</p>
+         * <p>The hardware configuration of compute nodes in the queue. Valid values for N: 1 to 10.</p>
          */
         @NameInMap("ComputeNodes")
         public java.util.List<NodeTemplate> computeNodes;
 
         /**
-         * <p>Specifies whether to enable auto scale-in for the queue. Valid values:</p>
+         * <p>Enable auto scale-in for the queue. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -74,10 +76,12 @@ public class UpdateQueueRequest extends TeaModel {
         public Boolean enableScaleIn;
 
         /**
-         * <p>Specifies whether to enable auto scale-out for the queue. Valid values:</p>
+         * <p>Enable auto scale-out for the queue. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -87,7 +91,7 @@ public class UpdateQueueRequest extends TeaModel {
         public Boolean enableScaleOut;
 
         /**
-         * <p>The hostname prefix of the added compute nodes.</p>
+         * <p>The hostname prefix for compute nodes in the queue.</p>
          * 
          * <strong>example:</strong>
          * <p>compute</p>
@@ -96,7 +100,7 @@ public class UpdateQueueRequest extends TeaModel {
         public String hostnamePrefix;
 
         /**
-         * <p>The hostname suffix of the compute nodes in the queue.</p>
+         * <p>The hostname suffix for compute nodes in the queue.</p>
          * 
          * <strong>example:</strong>
          * <p>hpc</p>
@@ -114,7 +118,7 @@ public class UpdateQueueRequest extends TeaModel {
         public Integer initialCount;
 
         /**
-         * <p>The type of the network for interconnecting compute nodes in the queue.</p>
+         * <p>The interconnect network type for compute nodes in the queue.</p>
          * 
          * <strong>example:</strong>
          * <p>erdma</p>
@@ -123,13 +127,13 @@ public class UpdateQueueRequest extends TeaModel {
         public String interConnect;
 
         /**
-         * <p>List of excluded compute nodes in the queue.</p>
+         * <p>The list of exceptional compute nodes in the queue.</p>
          */
         @NameInMap("KeepAliveNodes")
         public java.util.List<String> keepAliveNodes;
 
         /**
-         * <p>The maximum number of compute nodes that the queue can contain.</p>
+         * <p>The maximum number of compute nodes that the queue can retain.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -138,7 +142,7 @@ public class UpdateQueueRequest extends TeaModel {
         public Integer maxCount;
 
         /**
-         * <p>The minimum number of compute nodes that are added to the queue during an automatic scale-out.</p>
+         * <p>The minimum number of compute nodes created during auto scale-out.</p>
          * 
          * <strong>example:</strong>
          * <p>99</p>
@@ -147,7 +151,7 @@ public class UpdateQueueRequest extends TeaModel {
         public Long maxCountPerCycle;
 
         /**
-         * <p>The minimum number of compute nodes that the queue must contain.</p>
+         * <p>The minimum number of nodes that the queue retains.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -166,7 +170,7 @@ public class UpdateQueueRequest extends TeaModel {
         public String queueName;
 
         /**
-         * <p>The Resource Access Management (RAM) role that is assumed by compute nodes in the queue.</p>
+         * <p>The name of the instance role attached to compute nodes in the queue.</p>
          * 
          * <strong>example:</strong>
          * <p>AliyunECSInstanceForEHPCRole</p>
@@ -178,7 +182,7 @@ public class UpdateQueueRequest extends TeaModel {
         public String reservedNodePoolId;
 
         /**
-         * <p>The vSwitches available for use by compute nodes in the queue.</p>
+         * <p>The list of vSwitches available for compute nodes in the queue.</p>
          */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;

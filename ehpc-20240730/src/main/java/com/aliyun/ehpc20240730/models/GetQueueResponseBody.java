@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetQueueResponseBody extends TeaModel {
     /**
-     * <p>The queue configurations.</p>
+     * <p>The configuration of the queue.</p>
      */
     @NameInMap("Queue")
     public GetQueueResponseBodyQueue queue;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
@@ -42,7 +42,7 @@ public class GetQueueResponseBody extends TeaModel {
 
     public static class GetQueueResponseBodyQueue extends TeaModel {
         /**
-         * <p>The auto scale-out policy of the queue.</p>
+         * <p>The strategy used for automatic scale-out of the queue.</p>
          * 
          * <strong>example:</strong>
          * <p>PriorityInstanceType</p>
@@ -51,7 +51,7 @@ public class GetQueueResponseBody extends TeaModel {
         public String allocationStrategy;
 
         /**
-         * <p>The hardware configurations of the compute nodes in the queue.</p>
+         * <p>The hardware configurations of compute nodes in the queue.</p>
          */
         @NameInMap("ComputeNodes")
         public java.util.List<NodeTemplate> computeNodes;
@@ -64,10 +64,12 @@ public class GetQueueResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Indicates whether auto scale-in is enabled for the queue. Valid values:</p>
+         * <p>Specifies whether automatic scale-in is enabled for the queue. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -77,10 +79,12 @@ public class GetQueueResponseBody extends TeaModel {
         public Boolean enableScaleIn;
 
         /**
-         * <p>Indicates whether auto scale-out is enabled for the queue. Valid values:</p>
+         * <p>Specifies whether automatic scale-out is enabled for the queue. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -90,7 +94,7 @@ public class GetQueueResponseBody extends TeaModel {
         public Boolean enableScaleOut;
 
         /**
-         * <p>The hostname prefix of the compute nodes in the queue.</p>
+         * <p>The hostname prefix for compute nodes in the queue.</p>
          * 
          * <strong>example:</strong>
          * <p>compute</p>
@@ -99,7 +103,7 @@ public class GetQueueResponseBody extends TeaModel {
         public String hostnamePrefix;
 
         /**
-         * <p>The hostname suffix of the compute nodes in the queue.</p>
+         * <p>The hostname suffix for compute nodes in the queue.</p>
          * 
          * <strong>example:</strong>
          * <p>demo</p>
@@ -117,10 +121,12 @@ public class GetQueueResponseBody extends TeaModel {
         public Integer initialCount;
 
         /**
-         * <p>The type of the network between compute nodes in the queue. Valid values:</p>
+         * <p>The network type between compute nodes in the queue. Valid values:</p>
          * <ul>
-         * <li>vpc</li>
-         * <li>eRDMA</li>
+         * <li><p>vpc</p>
+         * </li>
+         * <li><p>eRDMA</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -130,13 +136,13 @@ public class GetQueueResponseBody extends TeaModel {
         public String interConnect;
 
         /**
-         * <p>The nodes for which deletion protection is enabled in the queue.</p>
+         * <p>The list of nodes with deletion protection enabled in the queue.</p>
          */
         @NameInMap("KeepAliveNodes")
         public java.util.List<String> keepAliveNodes;
 
         /**
-         * <p>The maximum number of compute nodes that the queue can contain.</p>
+         * <p>The maximum number of compute nodes that the queue maintains.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -145,7 +151,7 @@ public class GetQueueResponseBody extends TeaModel {
         public Integer maxCount;
 
         /**
-         * <p>The minimum number of nodes that are delivered to the queue in each scale-out cycle.</p>
+         * <p>The minimum number of nodes delivered per scale-out cycle.</p>
          * 
          * <strong>example:</strong>
          * <p>99</p>
@@ -154,7 +160,7 @@ public class GetQueueResponseBody extends TeaModel {
         public Long maxCountPerCycle;
 
         /**
-         * <p>The minimum number of compute nodes that the queue must contain.</p>
+         * <p>The minimum number of compute nodes that the queue maintains.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -163,7 +169,7 @@ public class GetQueueResponseBody extends TeaModel {
         public Integer minCount;
 
         /**
-         * <p>The queue name.</p>
+         * <p>The name of the queue.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +179,7 @@ public class GetQueueResponseBody extends TeaModel {
         public String queueName;
 
         /**
-         * <p>The Resource Access Management (RAM) role that is assumed by compute nodes in the queue.</p>
+         * <p>The name of the RAM role attached to compute nodes in the queue.</p>
          * 
          * <strong>example:</strong>
          * <p>AliyunECSInstanceForEHPCRole</p>
@@ -182,7 +188,7 @@ public class GetQueueResponseBody extends TeaModel {
         public String ramRole;
 
         /**
-         * <p>Preset node pool ID.</p>
+         * <p>The ID of the reserved node pool.</p>
          * 
          * <strong>example:</strong>
          * <p>rnp-756vlp7a</p>
@@ -198,7 +204,7 @@ public class GetQueueResponseBody extends TeaModel {
         public String updateTime;
 
         /**
-         * <p>The available vSwitches for compute nodes in the queue. Valid values of N: 1 to 5.</p>
+         * <p>The list of virtual switches available to compute nodes in the queue. N ranges from 1 to 5.</p>
          */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;

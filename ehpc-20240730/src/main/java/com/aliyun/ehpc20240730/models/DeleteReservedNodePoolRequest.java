@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteReservedNodePoolRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ehpc-hz-FYUr32****</p>
      */
@@ -12,6 +14,8 @@ public class DeleteReservedNodePoolRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The reserved node pool ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rnp-cdx****</p>
      */
