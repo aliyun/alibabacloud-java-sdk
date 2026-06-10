@@ -4,6 +4,9 @@ package com.aliyun.websitebuild20250429.models;
 import com.aliyun.tea.*;
 
 public class SyncAppInstanceForPartnerResponseBody extends TeaModel {
+    /**
+     * <p>Request result.</p>
+     */
     @NameInMap("Data")
     public SyncAppInstanceForPartnerResponseBodyData data;
 
@@ -39,6 +42,8 @@ public class SyncAppInstanceForPartnerResponseBody extends TeaModel {
 
     public static class SyncAppInstanceForPartnerResponseBodyDataAppInstance extends TeaModel {
         /**
+         * <p>Customer business ID</p>
+         * 
          * <strong>example:</strong>
          * <p>WD20250626114752000001</p>
          */
@@ -61,6 +66,9 @@ public class SyncAppInstanceForPartnerResponseBody extends TeaModel {
     }
 
     public static class SyncAppInstanceForPartnerResponseBodyData extends TeaModel {
+        /**
+         * <p>Application instance information</p>
+         */
         @NameInMap("AppInstance")
         public SyncAppInstanceForPartnerResponseBodyDataAppInstance appInstance;
 

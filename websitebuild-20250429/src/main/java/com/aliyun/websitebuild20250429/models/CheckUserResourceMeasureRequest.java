@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CheckUserResourceMeasureRequest extends TeaModel {
     /**
+     * <p>Belonging ID (site ID or Alibaba Cloud User ID)</p>
+     * 
      * <strong>example:</strong>
      * <p>123456</p>
      */
@@ -12,6 +14,8 @@ public class CheckUserResourceMeasureRequest extends TeaModel {
     public String belongId;
 
     /**
+     * <p>Belonging ID Type (siteId, uid)</p>
+     * 
      * <strong>example:</strong>
      * <p>USER</p>
      */
@@ -19,6 +23,8 @@ public class CheckUserResourceMeasureRequest extends TeaModel {
     public String belongIdType;
 
     /**
+     * <p>ESP business type</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class CheckUserResourceMeasureRequest extends TeaModel {
     public String bizType;
 
     /**
+     * <p>ESP business ID</p>
+     * 
      * <strong>example:</strong>
      * <p>p20202933455</p>
      */
@@ -33,6 +41,8 @@ public class CheckUserResourceMeasureRequest extends TeaModel {
     public String espBizId;
 
     /**
+     * <p>Order module information (espBizId and bizType cannot be empty when this is empty)</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;siteversion&quot;:&quot;test&quot;}</p>
      */
@@ -40,6 +50,8 @@ public class CheckUserResourceMeasureRequest extends TeaModel {
     public String orderComponentParams;
 
     /**
+     * <p>Resource identity</p>
+     * 
      * <strong>example:</strong>
      * <p>InspirationTokens</p>
      */
@@ -47,6 +59,8 @@ public class CheckUserResourceMeasureRequest extends TeaModel {
     public String resourceCode;
 
     /**
+     * <p>Resource value. Default is empty. Required only for feature-type resources. 0 means not supported, and 1 means supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

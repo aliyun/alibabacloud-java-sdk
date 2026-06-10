@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class AppMaterialDirectory extends TeaModel {
     /**
+     * <p>Application instance business ID</p>
+     * 
      * <strong>example:</strong>
      * <p>WD20250814102215000001</p>
      */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>List of subfolders</p>
+     */
     @NameInMap("Children")
     public java.util.List<AppMaterialDirectory> children;
 
     /**
+     * <p>Folder ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>WS20260206134746000001-system</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <p>Name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>图片管理</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>Sorting number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -32,6 +47,8 @@ public class AppMaterialDirectory extends TeaModel {
     public String sortNum;
 
     /**
+     * <p>Folder type</p>
+     * 
      * <strong>example:</strong>
      * <p>CUSTOM</p>
      */

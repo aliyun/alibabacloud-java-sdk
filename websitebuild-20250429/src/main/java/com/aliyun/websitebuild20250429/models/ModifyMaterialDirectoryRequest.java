@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyMaterialDirectoryRequest extends TeaModel {
     /**
+     * <p>Application instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyMaterialDirectoryRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Folder ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,7 +25,11 @@ public class ModifyMaterialDirectoryRequest extends TeaModel {
     public String directoryId;
 
     /**
+     * <p>Modified folder name</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>视频管理</p>
      */
     @NameInMap("Name")
     public String name;

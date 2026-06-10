@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAppLlmApiKeyForPartnerRequest extends TeaModel {
     /**
+     * <p>Business ID of the application instance</p>
+     * 
      * <strong>example:</strong>
      * <p>WD20250814102215000001</p>
      */
@@ -12,6 +14,8 @@ public class CreateAppLlmApiKeyForPartnerRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Idempotent token (reserved)</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxx-xxxx</p>
      */
@@ -19,12 +23,17 @@ public class CreateAppLlmApiKeyForPartnerRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>Description of the API key usage</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Caller-defined IP address whitelist (the backend appends the system default IP segment)</p>
+     */
     @NameInMap("IpWhiteList")
     public java.util.List<String> ipWhiteList;
 

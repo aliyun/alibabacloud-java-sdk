@@ -4,10 +4,15 @@ package com.aliyun.websitebuild20250429.models;
 import com.aliyun.tea.*;
 
 public class GetUserTmpIdentityForPartnerResponseBody extends TeaModel {
+    /**
+     * <p>Result of the request.</p>
+     */
     @NameInMap("Data")
     public GetUserTmpIdentityForPartnerResponseBodyData data;
 
     /**
+     * <p>error code. The value is interpreted as follows: If the request succeeded, the ErrorCode field is not returned. If the request failed, the ErrorCode field is returned. For more information, see the error code List in this topic.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -15,6 +20,8 @@ public class GetUserTmpIdentityForPartnerResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>aliuid:1998006665794443 assumeRole not exist,serviceName:realtimelogpush.dcdnservices.aliyuncs.com</p>
      */
@@ -31,6 +38,8 @@ public class GetUserTmpIdentityForPartnerResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -84,6 +93,8 @@ public class GetUserTmpIdentityForPartnerResponseBody extends TeaModel {
 
     public static class GetUserTmpIdentityForPartnerResponseBodyDataCredentials extends TeaModel {
         /**
+         * <p>Encrypted temporary AccessKey ID</p>
+         * 
          * <strong>example:</strong>
          * <p>7t2Rzt37ND7-xxx</p>
          */
@@ -91,6 +102,8 @@ public class GetUserTmpIdentityForPartnerResponseBody extends TeaModel {
         public String encryptedAccessKeyId;
 
         /**
+         * <p>Encrypted temporary AccessKey secret</p>
+         * 
          * <strong>example:</strong>
          * <p>7t2Rzt37ND7-xxx</p>
          */
@@ -98,6 +111,8 @@ public class GetUserTmpIdentityForPartnerResponseBody extends TeaModel {
         public String encryptedAccessKeySecret;
 
         /**
+         * <p>Encrypted Security Token Service token</p>
+         * 
          * <strong>example:</strong>
          * <p>7t2Rzt37ND7-xxx</p>
          */
@@ -105,6 +120,8 @@ public class GetUserTmpIdentityForPartnerResponseBody extends TeaModel {
         public String encryptedSecurityToken;
 
         /**
+         * <p>Expected expiration time of the certificate</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-04-29T14:00:00Z</p>
          */
@@ -151,9 +168,15 @@ public class GetUserTmpIdentityForPartnerResponseBody extends TeaModel {
     }
 
     public static class GetUserTmpIdentityForPartnerResponseBodyData extends TeaModel {
+        /**
+         * <p>Credential</p>
+         */
         @NameInMap("Credentials")
         public GetUserTmpIdentityForPartnerResponseBodyDataCredentials credentials;
 
+        /**
+         * <p>Indicates whether authorization from the Customer has been obtained.</p>
+         */
         @NameInMap("HasCustomRoleAuth")
         public Boolean hasCustomRoleAuth;
 

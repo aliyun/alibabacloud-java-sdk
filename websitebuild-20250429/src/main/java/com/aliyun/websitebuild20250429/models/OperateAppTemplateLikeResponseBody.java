@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class OperateAppTemplateLikeResponseBody extends TeaModel {
     /**
+     * <p>Permission denied information</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,12 @@ public class OperateAppTemplateLikeResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Indicates whether retry is allowed. Valid values:  </p>
+     * <ul>
+     * <li>false: Retry is not allowed.  </li>
+     * <li>true: Retry is allowed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +27,8 @@ public class OperateAppTemplateLikeResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>Application name. It can contain digits, letters, and hyphens (-). It must start with a letter, cannot end with a hyphen (-), and must be no more than 36 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>ish-intelligence-store-platform-admin-web</p>
      */
@@ -26,6 +36,8 @@ public class OperateAppTemplateLikeResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>Dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,16 +45,23 @@ public class OperateAppTemplateLikeResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>Dynamic message.</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>Returned error parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
+     * <p>Response data</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -59,16 +78,26 @@ public class OperateAppTemplateLikeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>Abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Reserved parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

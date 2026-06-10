@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAppPluginConfigsResponseBody extends TeaModel {
     /**
+     * <p>The detailed reason why access was denied.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class ListAppPluginConfigsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>is retry allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class ListAppPluginConfigsResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>Application Name. Query the application with this name.</p>
+     * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
      */
@@ -26,6 +32,8 @@ public class ListAppPluginConfigsResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>Dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,26 +41,42 @@ public class ListAppPluginConfigsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>Dynamic error message used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> error message.  </p>
+     * <blockquote>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>Returned error parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
+     * <p>The number of results returned per query.  </p>
+     * <p>Valid range: 10 to 100. Default Value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>task object</p>
+     */
     @NameInMap("Module")
     public java.util.List<ListAppPluginConfigsResponseBodyModule> module;
 
     /**
+     * <p>The token to start the next query. It is empty if there is no next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
      */
@@ -69,16 +93,26 @@ public class ListAppPluginConfigsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>is synchronous processing enabled</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -196,6 +230,8 @@ public class ListAppPluginConfigsResponseBody extends TeaModel {
 
     public static class ListAppPluginConfigsResponseBodyModule extends TeaModel {
         /**
+         * <p>Business ID</p>
+         * 
          * <strong>example:</strong>
          * <p>WD20250703155602000001</p>
          */
@@ -203,6 +239,8 @@ public class ListAppPluginConfigsResponseBody extends TeaModel {
         public String bizId;
 
         /**
+         * <p>Indicates whether to display.</p>
+         * 
          * <strong>example:</strong>
          * <p>always</p>
          */
@@ -210,16 +248,27 @@ public class ListAppPluginConfigsResponseBody extends TeaModel {
         public Integer display;
 
         /**
+         * <p>Indicates whether scheduled delivery of resource snapshots is enabled.  </p>
+         * <p>Valid values:  </p>
+         * <ul>
+         * <li>true: Enabled.  </li>
+         * <li>false: Shutdown.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
         @NameInMap("Enabled")
         public Integer enabled;
 
+        /**
+         * <p>Extension information</p>
+         */
         @NameInMap("Extend")
         public java.util.Map<String, String> extend;
 
         /**
+         * <p>Creation Time</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -229,6 +278,7 @@ public class ListAppPluginConfigsResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>Updated At</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -238,6 +288,8 @@ public class ListAppPluginConfigsResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p>primary key</p>
+         * 
          * <strong>example:</strong>
          * <p>16257</p>
          */
@@ -245,6 +297,8 @@ public class ListAppPluginConfigsResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Plugin configuration</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -252,6 +306,8 @@ public class ListAppPluginConfigsResponseBody extends TeaModel {
         public String pluginConfig;
 
         /**
+         * <p>Plugin description</p>
+         * 
          * <strong>example:</strong>
          * <p>a simple test plugin</p>
          */
@@ -259,6 +315,8 @@ public class ListAppPluginConfigsResponseBody extends TeaModel {
         public String pluginDesc;
 
         /**
+         * <p>Plugin ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1bae9ceaceea432d91c7069fab0dfc02</p>
          */
@@ -266,6 +324,8 @@ public class ListAppPluginConfigsResponseBody extends TeaModel {
         public String pluginId;
 
         /**
+         * <p>Plugin name</p>
+         * 
          * <strong>example:</strong>
          * <p>tf_testaccapigatewayplugin29311</p>
          */
@@ -273,6 +333,8 @@ public class ListAppPluginConfigsResponseBody extends TeaModel {
         public String pluginName;
 
         /**
+         * <p>Site name</p>
+         * 
          * <strong>example:</strong>
          * <p>wkweb.cn</p>
          */
@@ -280,6 +342,8 @@ public class ListAppPluginConfigsResponseBody extends TeaModel {
         public String siteName;
 
         /**
+         * <p>User ID</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */

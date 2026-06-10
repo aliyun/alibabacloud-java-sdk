@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAppInstanceTempShortUrlResponseBody extends TeaModel {
     /**
+     * <p>access denied details</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class GetAppInstanceTempShortUrlResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>is retry allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class GetAppInstanceTempShortUrlResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>App Name.</p>
+     * 
      * <strong>example:</strong>
      * <p>dewuApp</p>
      */
@@ -26,6 +32,8 @@ public class GetAppInstanceTempShortUrlResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>dynamic code, currently unused. Please ignore.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,15 +41,23 @@ public class GetAppInstanceTempShortUrlResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>dynamic message.</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>returned error parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>response data</p>
+     */
     @NameInMap("Module")
     public GetAppInstanceTempShortUrlResponseBodyModule module;
 
@@ -55,16 +71,26 @@ public class GetAppInstanceTempShortUrlResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Reserved parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -166,6 +192,7 @@ public class GetAppInstanceTempShortUrlResponseBody extends TeaModel {
 
     public static class GetAppInstanceTempShortUrlResponseBodyModule extends TeaModel {
         /**
+         * <p>time-to-live (TTL)</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -175,6 +202,8 @@ public class GetAppInstanceTempShortUrlResponseBody extends TeaModel {
         public String expireAtTime;
 
         /**
+         * <p>temporary short URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
          */
@@ -182,6 +211,8 @@ public class GetAppInstanceTempShortUrlResponseBody extends TeaModel {
         public String tempShortUrl;
 
         /**
+         * <p>full URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://bj.download.cycore.cn/zhkt-student-cystore-https/2025/9/31/10/12/9b48342f-e595-4c60-8032-dccd355e7552.jpg">https://bj.download.cycore.cn/zhkt-student-cystore-https/2025/9/31/10/12/9b48342f-e595-4c60-8032-dccd355e7552.jpg</a></p>
          */

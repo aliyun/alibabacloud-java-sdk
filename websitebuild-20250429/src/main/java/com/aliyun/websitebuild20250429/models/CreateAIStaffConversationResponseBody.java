@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAIStaffConversationResponseBody extends TeaModel {
     /**
+     * <p>Detailed reason for access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Is retry allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>Application name. Query the application with this name.</p>
+     * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
      */
@@ -26,6 +32,8 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>Dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,15 +41,23 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>Dynamic message.</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>Returned error parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>Response data</p>
+     */
     @NameInMap("Module")
     public CreateAIStaffConversationResponseBodyModule module;
 
@@ -55,16 +71,26 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>Abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Backup parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -166,6 +192,8 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
 
     public static class CreateAIStaffConversationResponseBodyModule extends TeaModel {
         /**
+         * <p>Bot ID</p>
+         * 
          * <strong>example:</strong>
          * <p>Zero2</p>
          */
@@ -173,6 +201,8 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
         public String botId;
 
         /**
+         * <p>ID of the chat.</p>
+         * 
          * <strong>example:</strong>
          * <p>53467af9-8c4e-4498-9032-1f26978007f8</p>
          */
@@ -180,6 +210,8 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
         public String chatId;
 
         /**
+         * <p>Session ID</p>
+         * 
          * <strong>example:</strong>
          * <p>8642d886-0322-43a9-b12f-6629b067978c</p>
          */
@@ -187,6 +219,8 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
         public String conversationId;
 
         /**
+         * <p>Section ID of the check item.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -194,6 +228,8 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
         public String sectionId;
 
         /**
+         * <p>Site ID, which can be obtained by invoking the <a href="~~ListSites~~">ListSites</a> API.</p>
+         * 
          * <strong>example:</strong>
          * <p>865181640657408</p>
          */
@@ -201,6 +237,8 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
         public String siteId;
 
         /**
+         * <p>Current point, equivalent to a news title</p>
+         * 
          * <strong>example:</strong>
          * <p>Feel Like Makin\&quot; Love</p>
          */

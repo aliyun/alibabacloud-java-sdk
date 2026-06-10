@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyMaterialFileResponseBody extends TeaModel {
     /**
+     * <p>Details of access denied</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class ModifyMaterialFileResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Indicates whether retry is allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class ModifyMaterialFileResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>App name</p>
+     * 
      * <strong>example:</strong>
      * <p>dewuApp</p>
      */
@@ -26,6 +32,8 @@ public class ModifyMaterialFileResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>Dynamic error code</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,16 +41,23 @@ public class ModifyMaterialFileResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>Dynamic message</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>Returned error parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
+     * <p>Error code. The ErrorCode field is not returned if the request succeeds. If the request fails, the ErrorCode field is returned. For more information, see the error code list in this topic.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -50,6 +65,8 @@ public class ModifyMaterialFileResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>aliuid:1998006665794443 assumeRole not exist,serviceName:realtimelogpush.dcdnservices.aliyuncs.com</p>
      */
@@ -57,6 +74,8 @@ public class ModifyMaterialFileResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
+     * <p>Indicates whether the modification succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -73,16 +92,26 @@ public class ModifyMaterialFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>Abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Indicates whether the request succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -90,6 +119,8 @@ public class ModifyMaterialFileResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Reserved parameter</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
     /**
+     * <p>Detailed reason for access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Is retry allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>Application Name. Query the application with this name.</p>
+     * 
      * <strong>example:</strong>
      * <p>ish-intelligence-store-platform-admin-web</p>
      */
@@ -26,6 +32,8 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>Dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,15 +41,23 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>Dynamic message. Not currently used. Please ignore.</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>Returned error parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>Whether the deletion succeeded</p>
+     */
     @NameInMap("Module")
     public QueryInspirationConsumeRecordsResponseBodyModule module;
 
@@ -55,16 +71,26 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>Abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Is processed synchronously</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -166,26 +192,44 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
 
     public static class QueryInspirationConsumeRecordsResponseBodyModuleData extends TeaModel {
         /**
+         * <p>Quantity of inspiration value consumed</p>
+         * 
          * <strong>example:</strong>
          * <p>120</p>
          */
         @NameInMap("Amount")
         public Long amount;
 
+        @NameInMap("AmountStr")
+        public String amountStr;
+
         /**
+         * <p>Consumption time</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-06-01 12:00:00</p>
          */
         @NameInMap("ConsumeTime")
         public String consumeTime;
 
+        @NameInMap("ConsumeType")
+        public String consumeType;
+
         /**
+         * <p>Extension information (in JSON string format)</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;MD5\&quot;:\&quot;296f6c01e7fea2697ffe1cf41082b774\&quot;,\&quot;driver\&quot;:\&quot;vhd\&quot;,\&quot;flag\&quot;:\&quot;12845825\&quot;,\&quot;imds_support\&quot;:\&quot;v1\&quot;,\&quot;io_optimized\&quot;:true,\&quot;nvme_supported\&quot;:true,\&quot;uefi_preferred\&quot;:false}</p>
          */
         @NameInMap("MetaData")
         public String metaData;
 
+        /**
+         * <p>Consumption scenario Name (such as AI application development, AI creative image generation, AI Video creation, AI Content creation)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>家装</p>
+         */
         @NameInMap("SceneName")
         public String sceneName;
 
@@ -202,12 +246,28 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             return this.amount;
         }
 
+        public QueryInspirationConsumeRecordsResponseBodyModuleData setAmountStr(String amountStr) {
+            this.amountStr = amountStr;
+            return this;
+        }
+        public String getAmountStr() {
+            return this.amountStr;
+        }
+
         public QueryInspirationConsumeRecordsResponseBodyModuleData setConsumeTime(String consumeTime) {
             this.consumeTime = consumeTime;
             return this;
         }
         public String getConsumeTime() {
             return this.consumeTime;
+        }
+
+        public QueryInspirationConsumeRecordsResponseBodyModuleData setConsumeType(String consumeType) {
+            this.consumeType = consumeType;
+            return this;
+        }
+        public String getConsumeType() {
+            return this.consumeType;
         }
 
         public QueryInspirationConsumeRecordsResponseBodyModuleData setMetaData(String metaData) {
@@ -230,26 +290,44 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
 
     public static class QueryInspirationConsumeRecordsResponseBodyModuleNext extends TeaModel {
         /**
+         * <p>Quantity of inspiration value consumed</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
         @NameInMap("Amount")
         public Long amount;
 
+        @NameInMap("AmountStr")
+        public String amountStr;
+
         /**
+         * <p>Consumption Time</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-06-01 12:00:00</p>
          */
         @NameInMap("ConsumeTime")
         public String consumeTime;
 
+        @NameInMap("ConsumeType")
+        public String consumeType;
+
         /**
+         * <p>Extension information (in JSON string format)</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;MD5\&quot;:\&quot;1042e65a2b7cdd3059b6a873ee1a3260\&quot;,\&quot;driver\&quot;:\&quot;vhd\&quot;,\&quot;flag\&quot;:\&quot;12845825\&quot;,\&quot;imds_support\&quot;:\&quot;v1\&quot;,\&quot;io_optimized\&quot;:true,\&quot;nvme_supported\&quot;:true,\&quot;uefi_preferred\&quot;:false}</p>
          */
         @NameInMap("MetaData")
         public String metaData;
 
+        /**
+         * <p>Consumption scenario Name (such as AI application development, AI creative image generation, AI Video creation, AI Content creation)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>家装</p>
+         */
         @NameInMap("SceneName")
         public String sceneName;
 
@@ -266,12 +344,28 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             return this.amount;
         }
 
+        public QueryInspirationConsumeRecordsResponseBodyModuleNext setAmountStr(String amountStr) {
+            this.amountStr = amountStr;
+            return this;
+        }
+        public String getAmountStr() {
+            return this.amountStr;
+        }
+
         public QueryInspirationConsumeRecordsResponseBodyModuleNext setConsumeTime(String consumeTime) {
             this.consumeTime = consumeTime;
             return this;
         }
         public String getConsumeTime() {
             return this.consumeTime;
+        }
+
+        public QueryInspirationConsumeRecordsResponseBodyModuleNext setConsumeType(String consumeType) {
+            this.consumeType = consumeType;
+            return this;
+        }
+        public String getConsumeType() {
+            return this.consumeType;
         }
 
         public QueryInspirationConsumeRecordsResponseBodyModuleNext setMetaData(String metaData) {
@@ -294,19 +388,29 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
 
     public static class QueryInspirationConsumeRecordsResponseBodyModule extends TeaModel {
         /**
+         * <p>Current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("CurrentPageNum")
         public Integer currentPageNum;
 
+        /**
+         * <p>Request Result.</p>
+         */
         @NameInMap("Data")
         public java.util.List<QueryInspirationConsumeRecordsResponseBodyModuleData> data;
 
+        /**
+         * <p>Next feature ID</p>
+         */
         @NameInMap("Next")
         public QueryInspirationConsumeRecordsResponseBodyModuleNext next;
 
         /**
+         * <p>Indicates whether there is a next page.</p>
+         * 
          * <strong>example:</strong>
          * <p>False</p>
          */
@@ -314,6 +418,8 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         public Boolean nextPage;
 
         /**
+         * <p>Paging size.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -321,16 +427,23 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Whether there is a previous page.</p>
+         * 
          * <strong>example:</strong>
          * <p>False</p>
          */
         @NameInMap("PrePage")
         public Boolean prePage;
 
+        /**
+         * <p>In addition to paging limits, the server-side processes at most the latest 1 000 records for the current query. If the result exceeds 1 000 records, <strong>ResultLimit</strong> is <strong>true</strong>; you should narrow the Time Range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+         */
         @NameInMap("ResultLimit")
         public Boolean resultLimit;
 
         /**
+         * <p>Total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -338,6 +451,8 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         public Integer totalItemNum;
 
         /**
+         * <p>Total number of pages.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

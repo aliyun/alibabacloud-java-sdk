@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetCreateLogoTaskRequest extends TeaModel {
     /**
+     * <p>The job ID returned upon successful invocation. Note: Keep this ID securely. You need this ID to query the device creation status.</p>
+     * 
      * <strong>example:</strong>
      * <p>20051349</p>
      */

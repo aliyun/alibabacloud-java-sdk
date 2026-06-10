@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class OperateAppServiceForPartnerRequest extends TeaModel {
     /**
+     * <p>Business ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>WS00001</p>
      */
@@ -12,6 +14,8 @@ public class OperateAppServiceForPartnerRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Additional extension information in JSON structure, facilitating future parameter extensions.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;user_device_id\&quot;:\&quot;6bef45cb0c76de284d24de074c088b73\&quot;}\n</p>
      */
@@ -19,6 +23,8 @@ public class OperateAppServiceForPartnerRequest extends TeaModel {
     public String extend;
 
     /**
+     * <p>Operation event:<br>SERVICE_FINISH: Service completed</p>
+     * 
      * <strong>example:</strong>
      * <p>SERVICE_FINISH</p>
      */
@@ -26,6 +32,17 @@ public class OperateAppServiceForPartnerRequest extends TeaModel {
     public String operateEvent;
 
     /**
+     * <p>Service Type.  </p>
+     * <p>Valid values:  </p>
+     * <ul>
+     * <li><p>private: Deployed under the user\&quot;s account.  </p>
+     * </li>
+     * <li><p>managed: Hosted under the service provider\&quot;s account.  </p>
+     * </li>
+     * <li><p>operation: Alibaba Cloud Managed Services.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>WEBSITE_DESIGN</p>
      */

@@ -4,6 +4,9 @@ package com.aliyun.websitebuild20250429.models;
 import com.aliyun.tea.*;
 
 public class GetMiniAppBindingForAdminResponseBody extends TeaModel {
+    /**
+     * <p>Request result.</p>
+     */
     @NameInMap("Data")
     public GetMiniAppBindingForAdminResponseBodyData data;
 
@@ -39,6 +42,8 @@ public class GetMiniAppBindingForAdminResponseBody extends TeaModel {
 
     public static class GetMiniAppBindingForAdminResponseBodyData extends TeaModel {
         /**
+         * <p>Authorization status</p>
+         * 
          * <strong>example:</strong>
          * <p>AUTHORIZED</p>
          */
@@ -46,6 +51,8 @@ public class GetMiniAppBindingForAdminResponseBody extends TeaModel {
         public String authStatus;
 
         /**
+         * <p>Business ID</p>
+         * 
          * <strong>example:</strong>
          * <p>WS20250801004817000002</p>
          */
@@ -53,6 +60,8 @@ public class GetMiniAppBindingForAdminResponseBody extends TeaModel {
         public String bizId;
 
         /**
+         * <p>Miniapp ID</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxx</p>
          */

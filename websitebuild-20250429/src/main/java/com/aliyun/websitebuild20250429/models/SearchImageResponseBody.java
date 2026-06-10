@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SearchImageResponseBody extends TeaModel {
     /**
+     * <p>Error code. The ErrorCode field is not returned if the request succeeded. If the request failed, the ErrorCode field is returned. For more information, see the error code list in this topic.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,12 +14,17 @@ public class SearchImageResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>aliuid:1998006665794443 assumeRole not exist,serviceName:realtimelogpush.dcdnservices.aliyuncs.com</p>
      */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    /**
+     * <p>Image search Result</p>
+     */
     @NameInMap("ImageResponse")
     public SearchImageResponseBodyImageResponse imageResponse;
 
@@ -31,6 +38,8 @@ public class SearchImageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -83,10 +92,18 @@ public class SearchImageResponseBody extends TeaModel {
     }
 
     public static class SearchImageResponseBodyImageResponseImageList extends TeaModel {
+        /**
+         * <p>Descriptive hues detected in the Image</p>
+         * 
+         * <strong>example:</strong>
+         * <p>冷色调 蓝色</p>
+         */
         @NameInMap("DescriptiveTones")
         public String descriptiveTones;
 
         /**
+         * <p>Image height</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -94,16 +111,31 @@ public class SearchImageResponseBody extends TeaModel {
         public Integer height;
 
         /**
+         * <p>Image categorization. Valid values:  </p>
+         * <ul>
+         * <li>normal: Illustrations or article images.  </li>
+         * <li>banner: Background images or image carousels.  </li>
+         * <li>goods: Product or service images.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>normal</p>
          */
         @NameInMap("ImageCategory")
         public String imageCategory;
 
+        /**
+         * <p>Aspect ratio</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16:9</p>
+         */
         @NameInMap("ImageRatio")
         public String imageRatio;
 
         /**
+         * <p>Image UUID</p>
+         * 
          * <strong>example:</strong>
          * <p>70687446-821c-4ebd-9be6-b57dc0a3500a</p>
          */
@@ -119,13 +151,27 @@ public class SearchImageResponseBody extends TeaModel {
         @NameInMap("OssKey")
         public String ossKey;
 
+        /**
+         * <p>Quantized color palette (HEX, LAB) extracted by the algorithm</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;hex&quot;: &quot;#3a3f58&quot;, &quot;rgb&quot;: {&quot;r&quot;: 58, &quot;g&quot;: 63, &quot;b&quot;: 88 }, &quot;lab&quot;: {&quot;l&quot;: 27.81, &quot;a&quot;: 2.95, &quot;b&quot;: -16.52 }, &quot;percentage&quot;: 0.4521 }, {&quot;hex&quot;: &quot;#c8a16a&quot;, &quot;rgb&quot;: {&quot;r&quot;: 200, &quot;g&quot;: 161, &quot;b&quot;: 106 }, &quot;lab&quot;: {&quot;l&quot;: 69.35, &quot;a&quot;: 11.23, &quot;b&quot;: 35.18 }, &quot;percentage&quot;: 0.2355 }, {&quot;hex&quot;: &quot;#f1e8da&quot;, &quot;rgb&quot;: {&quot;r&quot;: 241, &quot;g&quot;: 232, &quot;b&quot;: 218 }, &quot;lab&quot;: {&quot;l&quot;: 93.17, &quot;a&quot;: 1.76, &quot;b&quot;: 7.91 }, &quot;percentage&quot;: 0.1873 } ]</p>
+         */
         @NameInMap("QuantitativePalette")
         public String quantitativePalette;
 
+        /**
+         * <p>Image tags</p>
+         * 
+         * <strong>example:</strong>
+         * <p>日出、奔跑</p>
+         */
         @NameInMap("TagsFromImage")
         public String tagsFromImage;
 
         /**
+         * <p>Temporary access URL of the image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://other-general-huadong1.oss-cn-hangzhou.aliyuncs.com/uploadWidget/RollTicket_01.jpeg">https://other-general-huadong1.oss-cn-hangzhou.aliyuncs.com/uploadWidget/RollTicket_01.jpeg</a></p>
          */
@@ -133,6 +179,8 @@ public class SearchImageResponseBody extends TeaModel {
         public String url;
 
         /**
+         * <p>Image width</p>
+         * 
          * <strong>example:</strong>
          * <p>154</p>
          */
@@ -227,10 +275,16 @@ public class SearchImageResponseBody extends TeaModel {
     }
 
     public static class SearchImageResponseBodyImageResponse extends TeaModel {
+        /**
+         * <p>Image List</p>
+         */
         @NameInMap("ImageList")
         public java.util.List<SearchImageResponseBodyImageResponseImageList> imageList;
 
         /**
+         * <p>Number of results per query.</p>
+         * <p>Value range: 10–100. Default Value: 20.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -238,6 +292,8 @@ public class SearchImageResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
+         * <p>Token indicating the start of the next query. It is empty when there is no next query.</p>
+         * 
          * <strong>example:</strong>
          * <p>2c6b65b6f9d625d4e2514a628bde8eb2e0b5e8707e68181f</p>
          */

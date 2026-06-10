@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
     /**
+     * <p>Detailed reason for access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Indicates whether retry is allowed.</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>Application name. Query the application with this name.</p>
+     * 
      * <strong>example:</strong>
      * <p>dewuApp</p>
      */
@@ -26,6 +32,8 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>Dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,16 +41,23 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>dynamic message.</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>parameters that caused the error</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
+     * <p>Error code. The ErrorCode field is not returned if the request succeeds. If the request fails, the ErrorCode field is returned. For more information, see the error code list in this topic.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -50,12 +65,17 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>aliuid:1998006665794443 assumeRole not exist,serviceName:realtimelogpush.dcdnservices.aliyuncs.com</p>
      */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    /**
+     * <p>Response data</p>
+     */
     @NameInMap("Module")
     public QueryMaterialDirectoryTreeResponseBodyModule module;
 
@@ -69,16 +89,26 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -86,6 +116,8 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Indicates whether the processing is synchronous.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -210,6 +242,9 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
     }
 
     public static class QueryMaterialDirectoryTreeResponseBodyModule extends TeaModel {
+        /**
+         * <p>Top-level folder</p>
+         */
         @NameInMap("DirectoryList")
         public java.util.List<AppMaterialDirectory> directoryList;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAppPluginsRequest extends TeaModel {
     /**
+     * <p>Business ID of the application instance</p>
+     * 
      * <strong>example:</strong>
      * <p>WD20250820143531000001</p>
      */
@@ -12,6 +14,9 @@ public class ListAppPluginsRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Number of results per query.  </p>
+     * <p>Valid range: 10 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +24,8 @@ public class ListAppPluginsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Token indicating the start of the next query. Empty if there is no next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
      */
@@ -26,6 +33,13 @@ public class ListAppPluginsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Status of the dataset acceleration instance. Valid values:  </p>
+     * <ul>
+     * <li>Created: Initialization.  </li>
+     * <li>Running: Running.  </li>
+     * <li>Stopped: Stopped.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>http_whitelist</p>
      */
@@ -33,6 +47,8 @@ public class ListAppPluginsRequest extends TeaModel {
     public String phase;
 
     /**
+     * <p>Platform</p>
+     * 
      * <strong>example:</strong>
      * <p>linux/amd64</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveAppSupabaseSecretsRequest extends TeaModel {
     /**
+     * <p>Business ID</p>
+     * 
      * <strong>example:</strong>
      * <p>WD20250703155602000001</p>
      */
@@ -12,6 +14,8 @@ public class SaveAppSupabaseSecretsRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Key list JSON</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;key&quot;:&quot;abc&quot;}</p>
      */

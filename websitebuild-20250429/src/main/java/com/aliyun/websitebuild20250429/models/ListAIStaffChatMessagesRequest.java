@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAIStaffChatMessagesRequest extends TeaModel {
     /**
+     * <p>Business ID</p>
+     * 
      * <strong>example:</strong>
      * <p>WD20250703155602000001</p>
      */
@@ -12,6 +14,8 @@ public class ListAIStaffChatMessagesRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Session ID</p>
+     * 
      * <strong>example:</strong>
      * <p>81bc5a34-1d8d-4ef7-a208-7401c51b054b</p>
      */
@@ -19,6 +23,8 @@ public class ListAIStaffChatMessagesRequest extends TeaModel {
     public String conversationId;
 
     /**
+     * <p>Number of data entries per page (10–100)</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class ListAIStaffChatMessagesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>gmtCreate of the last entry on the previous page; omit for the first page</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */

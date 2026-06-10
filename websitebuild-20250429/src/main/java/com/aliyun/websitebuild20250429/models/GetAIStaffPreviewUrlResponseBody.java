@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAIStaffPreviewUrlResponseBody extends TeaModel {
     /**
+     * <p>Detailed reason for access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class GetAIStaffPreviewUrlResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>is retry allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class GetAIStaffPreviewUrlResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>AppName.</p>
+     * 
      * <strong>example:</strong>
      * <p>dewuApp</p>
      */
@@ -26,6 +32,8 @@ public class GetAIStaffPreviewUrlResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,15 +41,26 @@ public class GetAIStaffPreviewUrlResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>dynamic error message, used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> field of the response.  </p>
+     * <blockquote>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
-     * <p>abc</p>
+     * <p>xxx</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>returned error parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>response data</p>
+     */
     @NameInMap("Module")
     public GetAIStaffPreviewUrlResponseBodyModule module;
 
@@ -55,16 +74,26 @@ public class GetAIStaffPreviewUrlResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Backup parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -165,6 +194,9 @@ public class GetAIStaffPreviewUrlResponseBody extends TeaModel {
     }
 
     public static class GetAIStaffPreviewUrlResponseBodyModule extends TeaModel {
+        /**
+         * <p>preview URL information (including fields such as previewUrl and sessionId)</p>
+         */
         @NameInMap("UrlMap")
         public java.util.Map<String, String> urlMap;
 

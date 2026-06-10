@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RollbackAppCodeSnapshotRequest extends TeaModel {
     /**
+     * <p>site ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1067072706415168</p>
      */
@@ -12,6 +14,8 @@ public class RollbackAppCodeSnapshotRequest extends TeaModel {
     public String siteId;
 
     /**
+     * <p>Target snapshot version number</p>
+     * 
      * <strong>example:</strong>
      * <p>1231</p>
      */

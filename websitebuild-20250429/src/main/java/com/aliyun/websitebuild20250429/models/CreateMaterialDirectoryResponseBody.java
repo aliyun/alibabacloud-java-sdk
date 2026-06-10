@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateMaterialDirectoryResponseBody extends TeaModel {
     /**
+     * <p>The detailed reason why access was denied.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class CreateMaterialDirectoryResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Indicates whether retry is allowed.</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class CreateMaterialDirectoryResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>Application name. Query the application with this name.</p>
+     * 
      * <strong>example:</strong>
      * <p>ish-intelligence-store-platform-admin-web</p>
      */
@@ -26,6 +32,8 @@ public class CreateMaterialDirectoryResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>Dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,22 +41,32 @@ public class CreateMaterialDirectoryResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>Dynamic error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>Returned error parameters.</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
+     * <p>Error code. The value is described as follows: If the request succeeded, the ErrorCode field is not returned. If the request failed, the ErrorCode field is returned. For more information, see the error code list in this topic.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>Returned object.</p>
+     */
     @NameInMap("Module")
     public CreateMaterialDirectoryResponseBodyModule module;
 
@@ -62,16 +80,26 @@ public class CreateMaterialDirectoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -79,6 +107,8 @@ public class CreateMaterialDirectoryResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Indicates whether the processing is synchronous.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -196,6 +226,8 @@ public class CreateMaterialDirectoryResponseBody extends TeaModel {
 
     public static class CreateMaterialDirectoryResponseBodyModule extends TeaModel {
         /**
+         * <p>Folder ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>68157a0a-769a-4364-bbdc-a0e2cf3d5ad</p>
          */

@@ -364,12 +364,21 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
     }
 
     public static class ListAppInstanceDomainsResponseBodyModuleDataQualification extends TeaModel {
+        /**
+         * <p>ICP entity filing number</p>
+         */
         @NameInMap("IcpRecordNumber")
         public String icpRecordNumber;
 
+        /**
+         * <p>ICP website filing number</p>
+         */
         @NameInMap("IcpSiteRecordNumber")
         public String icpSiteRecordNumber;
 
+        /**
+         * <p>Public security filing number</p>
+         */
         @NameInMap("PoliceRecordNumber")
         public String policeRecordNumber;
 
@@ -691,6 +700,9 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         @NameInMap("Ownership")
         public ListAppInstanceDomainsResponseBodyModuleDataOwnership ownership;
 
+        /**
+         * <p>Domain name qualification information</p>
+         */
         @NameInMap("Qualification")
         public ListAppInstanceDomainsResponseBodyModuleDataQualification qualification;
 
@@ -896,12 +908,21 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
     }
 
     public static class ListAppInstanceDomainsResponseBodyModuleNextQualification extends TeaModel {
+        /**
+         * <p>ICP filing number of the entity</p>
+         */
         @NameInMap("IcpRecordNumber")
         public String icpRecordNumber;
 
+        /**
+         * <p>ICP filing number for the website</p>
+         */
         @NameInMap("IcpSiteRecordNumber")
         public String icpSiteRecordNumber;
 
+        /**
+         * <p>Public security filing number</p>
+         */
         @NameInMap("PoliceRecordNumber")
         public String policeRecordNumber;
 
@@ -1206,6 +1227,9 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         @NameInMap("Ownership")
         public ListAppInstanceDomainsResponseBodyModuleNextOwnership ownership;
 
+        /**
+         * <p>Domain name qualification information</p>
+         */
         @NameInMap("Qualification")
         public ListAppInstanceDomainsResponseBodyModuleNextQualification qualification;
 

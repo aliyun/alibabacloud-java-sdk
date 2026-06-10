@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitMaterialTaskResponseBody extends TeaModel {
     /**
+     * <p>details of access denied</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,12 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Indicates whether retry is allowed. Valid values:  </p>
+     * <ul>
+     * <li>false: Retry is not allowed.  </li>
+     * <li>true: Retry is allowed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +27,8 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>application name. Query the application with this name.</p>
+     * 
      * <strong>example:</strong>
      * <p>dewuApp</p>
      */
@@ -26,6 +36,8 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>dynamic error code</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,16 +45,23 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>dynamic message.</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERRROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>returned error parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
+     * <p>error code. The ErrorCode field is returned only when the request fails. If the request succeeds, this field is not returned. For more information, see the error code list in this topic.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -50,12 +69,17 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>aliuid:1998006665794443 assumeRole not exist,serviceName:realtimelogpush.dcdnservices.aliyuncs.com</p>
      */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    /**
+     * <p>response Data</p>
+     */
     @NameInMap("Module")
     public SubmitMaterialTaskResponseBodyModule module;
 
@@ -69,16 +93,26 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -86,6 +120,8 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Indicates whether the processing is synchronous.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -211,6 +247,8 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
 
     public static class SubmitMaterialTaskResponseBodyModule extends TeaModel {
         /**
+         * <p>Job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>01baf7bcdd5c3a4c8d481cdd57c15837</p>
          */

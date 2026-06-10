@@ -4,10 +4,18 @@ package com.aliyun.websitebuild20250429.models;
 import com.aliyun.tea.*;
 
 public class OperateAppInstanceForPartnerRequest extends TeaModel {
+    /**
+     * <p>extension information</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;deliveryNodeName\&quot;:\&quot;交付质检\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Finish\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Provider\&quot;}</p>
+     */
     @NameInMap("Extend")
     public String extend;
 
     /**
+     * <p>event type of the operation</p>
+     * 
      * <strong>example:</strong>
      * <p>SERVICE_DELIVERY_PROCESS</p>
      */

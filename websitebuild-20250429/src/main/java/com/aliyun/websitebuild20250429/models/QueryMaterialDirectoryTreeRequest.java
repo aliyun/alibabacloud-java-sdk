@@ -5,16 +5,22 @@ import com.aliyun.tea.*;
 
 public class QueryMaterialDirectoryTreeRequest extends TeaModel {
     /**
+     * <p>Application instance ID</p>
+     * 
      * <strong>example:</strong>
      * <p>WS20250731233102000001</p>
      */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>Indicates whether shared folders are hidden.</p>
+     */
     @NameInMap("HiddenPublic")
     public Boolean hiddenPublic;
 
     /**
+     * <p>Indicates whether the request is for the top-level root folder.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

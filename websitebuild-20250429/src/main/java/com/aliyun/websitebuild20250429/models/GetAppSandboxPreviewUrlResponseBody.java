@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAppSandboxPreviewUrlResponseBody extends TeaModel {
     /**
+     * <p>Detailed reason for access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class GetAppSandboxPreviewUrlResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>is retry allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class GetAppSandboxPreviewUrlResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>App Name.</p>
+     * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
      */
@@ -26,6 +32,8 @@ public class GetAppSandboxPreviewUrlResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>dynamic code; currently unused, please ignore</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,16 +41,26 @@ public class GetAppSandboxPreviewUrlResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>dynamic error message used to replace <code>%s</code> in the <strong>ErrMessage</strong> error message.  </p>
+     * <blockquote>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the provided request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>returned error parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
+     * <p>returned object.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -59,16 +77,26 @@ public class GetAppSandboxPreviewUrlResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Reserved parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

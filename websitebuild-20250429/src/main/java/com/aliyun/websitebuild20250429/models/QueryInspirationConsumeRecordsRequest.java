@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryInspirationConsumeRecordsRequest extends TeaModel {
     /**
+     * <p>Query end time</p>
+     * 
      * <strong>example:</strong>
      * <p>1762999521</p>
      */
@@ -12,6 +14,8 @@ public class QueryInspirationConsumeRecordsRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>Sorting field</p>
+     * 
      * <strong>example:</strong>
      * <p>CreationTime</p>
      */
@@ -19,6 +23,8 @@ public class QueryInspirationConsumeRecordsRequest extends TeaModel {
     public String orderColumn;
 
     /**
+     * <p>Sorting type: ASC or DESC</p>
+     * 
      * <strong>example:</strong>
      * <p>DESC</p>
      */
@@ -26,6 +32,8 @@ public class QueryInspirationConsumeRecordsRequest extends TeaModel {
     public String orderType;
 
     /**
+     * <p>Page number, default is 1</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -33,16 +41,26 @@ public class QueryInspirationConsumeRecordsRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>Page size, default is 10</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Scenario Name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>百灵鸟-人员认证</p>
+     */
     @NameInMap("SceneName")
     public String sceneName;
 
     /**
+     * <p>Start Time</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-10-19T16:00:00Z</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModuleVersionsValueComponentsValue extends TeaModel {
     /**
+     * <p>Unique component code (system internal identity)</p>
+     * 
      * <strong>example:</strong>
      * <p>ComponentCode</p>
      */
@@ -12,19 +14,29 @@ public class ModuleVersionsValueComponentsValue extends TeaModel {
     public String componentCode;
 
     /**
+     * <p>Widget display name (user-visible name)</p>
+     * 
      * <strong>example:</strong>
      * <p>ComponentName</p>
      */
     @NameInMap("ComponentName")
     public String componentName;
 
+    /**
+     * <p>Component instance attribute configuration</p>
+     */
     @NameInMap("InstanceProperty")
     public java.util.List<ModuleVersionsValueComponentsValueInstanceProperty> instanceProperty;
 
+    /**
+     * <p>Widget instance attribute configuration</p>
+     */
     @NameInMap("Properties")
     public java.util.Map<String, ModuleVersionsValueComponentsValuePropertiesValue> properties;
 
     /**
+     * <p>Module property status</p>
+     * 
      * <strong>example:</strong>
      * <p>attr</p>
      */
@@ -78,6 +90,8 @@ public class ModuleVersionsValueComponentsValue extends TeaModel {
 
     public static class ModuleVersionsValueComponentsValueInstancePropertyValues extends TeaModel {
         /**
+         * <p>Property encoding (system internal identity)</p>
+         * 
          * <strong>example:</strong>
          * <p>code</p>
          */
@@ -85,6 +99,8 @@ public class ModuleVersionsValueComponentsValue extends TeaModel {
         public String code;
 
         /**
+         * <p>Attribute Value encoding (internal System value)</p>
+         * 
          * <strong>example:</strong>
          * <p>value</p>
          */
@@ -92,6 +108,8 @@ public class ModuleVersionsValueComponentsValue extends TeaModel {
         public String value;
 
         /**
+         * <p>Property display name (User-visible name)</p>
+         * 
          * <strong>example:</strong>
          * <p>name</p>
          */
@@ -131,6 +149,8 @@ public class ModuleVersionsValueComponentsValue extends TeaModel {
 
     public static class ModuleVersionsValueComponentsValueInstanceProperty extends TeaModel {
         /**
+         * <p>Property encoding (system internal identity)</p>
+         * 
          * <strong>example:</strong>
          * <p>code</p>
          */
@@ -138,6 +158,8 @@ public class ModuleVersionsValueComponentsValue extends TeaModel {
         public String code;
 
         /**
+         * <p>Attribute display name (user-visible name)</p>
+         * 
          * <strong>example:</strong>
          * <p>name</p>
          */
@@ -145,12 +167,17 @@ public class ModuleVersionsValueComponentsValue extends TeaModel {
         public String name;
 
         /**
+         * <p>Attribute Value encoding (internal System value)</p>
+         * 
          * <strong>example:</strong>
          * <p>value</p>
          */
         @NameInMap("Value")
         public String value;
 
+        /**
+         * <p>List of module Attribute Values</p>
+         */
         @NameInMap("Values")
         public java.util.List<ModuleVersionsValueComponentsValueInstancePropertyValues> values;
 

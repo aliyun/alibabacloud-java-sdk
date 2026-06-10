@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
     /**
+     * <p>Detailed reason for access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Indicates whether retry is allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>App Name.</p>
+     * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
      */
@@ -26,6 +32,8 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>Dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,15 +41,34 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>Dynamic error message used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> error message.  </p>
+     * <blockquote>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it means the provided request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>Returned error parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>Data table module.  </p>
+     * <ul>
+     * <li><p>ABTest: Experiment Data Table  </p>
+     * </li>
+     * <li><p>ExperimentTool: Experiment Tool Table  </p>
+     * </li>
+     * <li><p>DataDiagnosis: Data Diagnosis</p>
+     * </li>
+     * </ul>
+     */
     @NameInMap("Module")
     public GetAppRecommendedCommoditiesResponseBodyModule module;
 
@@ -55,16 +82,26 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>Abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Indicates whether processing is synchronous</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -166,16 +203,23 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
 
     public static class GetAppRecommendedCommoditiesResponseBodyModuleCommodities extends TeaModel {
         /**
+         * <p>Commodity code (used for both resource plans and Marketing Products)</p>
+         * 
          * <strong>example:</strong>
          * <p>rds</p>
          */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
+        /**
+         * <p>Extension fields (such as unsupportedReason)</p>
+         */
         @NameInMap("Extend")
         public java.util.Map<String, String> extend;
 
         /**
+         * <p>Order Type: BUY - Purchase, UPGRADE - upgrade</p>
+         * 
          * <strong>example:</strong>
          * <p>DESC</p>
          */
@@ -183,6 +227,8 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         public String orderType;
 
         /**
+         * <p>Sorting Priority (the smaller the number, the higher the priority)</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -190,6 +236,8 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         public Integer priority;
 
         /**
+         * <p>Marketing Product ID (returned only for new purchases)</p>
+         * 
          * <strong>example:</strong>
          * <p>12345</p>
          */
@@ -197,6 +245,8 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         public String promotionCommodityId;
 
         /**
+         * <p>Hyperlink URL (returned when a redirect is required, such as during an upgrade)</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://ecs-workbench-disposable.aliyun.com/account/disposable/login/sst/1291612921555690/edvo2gevfh">https://ecs-workbench-disposable.aliyun.com/account/disposable/login/sst/1291612921555690/edvo2gevfh</a></p>
          */
@@ -204,6 +254,8 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         public String redirectUrl;
 
         /**
+         * <p>Product Status</p>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -274,6 +326,9 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
     }
 
     public static class GetAppRecommendedCommoditiesResponseBodyModule extends TeaModel {
+        /**
+         * <p>Marketing product list</p>
+         */
         @NameInMap("Commodities")
         public java.util.List<GetAppRecommendedCommoditiesResponseBodyModuleCommodities> commodities;
 

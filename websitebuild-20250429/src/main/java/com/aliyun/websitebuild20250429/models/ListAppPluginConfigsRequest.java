@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAppPluginConfigsRequest extends TeaModel {
     /**
+     * <p>Application instance business ID</p>
+     * 
      * <strong>example:</strong>
      * <p>WD20250703155602000001</p>
      */
@@ -12,6 +14,9 @@ public class ListAppPluginConfigsRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Number of results per query.</p>
+     * <p>Valid values: 10 to 100. Default Value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +24,8 @@ public class ListAppPluginConfigsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Token indicating the start of the next query. It is empty if there is no next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>FFh3Xqm+JgZ/U9Jyb7wdVr9LWk80Tghn5UZjbcWEVEderBcbVF+Y6PS0i8PpCL4PQZ3e0C9oEH0Asd4tJEuGtkl2WuKdiWZpEwadNydQdJPFM=</p>
      */

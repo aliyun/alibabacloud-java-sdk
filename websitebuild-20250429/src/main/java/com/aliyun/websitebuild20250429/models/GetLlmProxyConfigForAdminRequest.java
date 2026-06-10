@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetLlmProxyConfigForAdminRequest extends TeaModel {
     /**
+     * <p>Business ID</p>
+     * 
      * <strong>example:</strong>
      * <p>WD20250814102215000001</p>
      */
@@ -12,6 +14,8 @@ public class GetLlmProxyConfigForAdminRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Capability Type: llm, image, video</p>
+     * 
      * <strong>example:</strong>
      * <p>understand</p>
      */

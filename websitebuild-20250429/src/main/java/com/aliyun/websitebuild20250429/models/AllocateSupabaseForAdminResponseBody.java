@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AllocateSupabaseForAdminResponseBody extends TeaModel {
     /**
+     * <p>Access denied details</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Is retry allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>App Name.</p>
+     * 
      * <strong>example:</strong>
      * <p>or</p>
      */
@@ -26,6 +32,8 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>Dynamic error code</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,15 +41,23 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>Dynamic error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>Returned error parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>Response data</p>
+     */
     @NameInMap("Module")
     public AllocateSupabaseForAdminResponseBodyModule module;
 
@@ -55,16 +71,26 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>Abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Is processed synchronously</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -166,6 +192,8 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
 
     public static class AllocateSupabaseForAdminResponseBodyModule extends TeaModel {
         /**
+         * <p>Anonymity key</p>
+         * 
          * <strong>example:</strong>
          * <p>1111</p>
          */
@@ -173,6 +201,8 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String anonKey;
 
         /**
+         * <p>Business ID</p>
+         * 
          * <strong>example:</strong>
          * <p>WS20250915163734000001</p>
          */
@@ -180,6 +210,8 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String bizId;
 
         /**
+         * <p>Creation Time of the database instance</p>
+         * 
          * <strong>example:</strong>
          * <p>111</p>
          */
@@ -187,6 +219,8 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String dbInstanceCreateTime;
 
         /**
+         * <p>database instance ID</p>
+         * 
          * <strong>example:</strong>
          * <p>selectdb-cn-2bl4djolb02</p>
          */
@@ -194,6 +228,8 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String dbInstanceId;
 
         /**
+         * <p>Database public URL</p>
+         * 
          * <strong>example:</strong>
          * <p>111</p>
          */
@@ -201,6 +237,8 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String dbPublicUrl;
 
         /**
+         * <p>Database type</p>
+         * 
          * <strong>example:</strong>
          * <p>ORACLE</p>
          */
@@ -208,6 +246,8 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String dbType;
 
         /**
+         * <p>Additional information</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;appId\&quot;:\&quot;APP_NTJAK8P11SNZDJ3M6BWC\&quot;}</p>
          */
@@ -215,6 +255,8 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String extra;
 
         /**
+         * <p>Instance creation completion time</p>
+         * 
          * <strong>example:</strong>
          * <p>111</p>
          */
@@ -222,6 +264,8 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String instanceCreateFinishedTime;
 
         /**
+         * <p>Instance creation status</p>
+         * 
          * <strong>example:</strong>
          * <p>1111</p>
          */
@@ -229,6 +273,8 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String instanceCreateStatus;
 
         /**
+         * <p>Deletion flag</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -236,6 +282,8 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public Integer isDeleted;
 
         /**
+         * <p>RDS database access password.</p>
+         * 
          * <strong>example:</strong>
          * <p>111</p>
          */
@@ -243,6 +291,8 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String rdsDatabasePassword;
 
         /**
+         * <p>Service key</p>
+         * 
          * <strong>example:</strong>
          * <p>e80f5a7a08514709a2fb</p>
          */
@@ -250,6 +300,8 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String serviceKey;
 
         /**
+         * <p>0: paused; 1: running</p>
+         * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
          */
@@ -257,6 +309,8 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>Supabase Dashboard password.</p>
+         * 
          * <strong>example:</strong>
          * <p>1111</p>
          */
@@ -264,6 +318,8 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String supabaseDashboardPassword;
 
         /**
+         * <p>Supabase Dashboard username.</p>
+         * 
          * <strong>example:</strong>
          * <p>111</p>
          */
@@ -271,6 +327,8 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String supabaseDashboardUserName;
 
         /**
+         * <p>Creation Time of the Supabase instance</p>
+         * 
          * <strong>example:</strong>
          * <p>111</p>
          */
@@ -278,6 +336,8 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String supabaseInstanceCreateTime;
 
         /**
+         * <p>Supabase instance ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1111</p>
          */
@@ -294,6 +354,8 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String supabaseKongUrl;
 
         /**
+         * <p>PrivateLink connection address of the Supabase instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>1111</p>
          */
@@ -301,6 +363,8 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String supabasePrivateIp;
 
         /**
+         * <p>Public endpoint of the Supabase instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>111</p>
          */
@@ -308,6 +372,8 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String supabasePublicIp;
 
         /**
+         * <p>Supabase public URL</p>
+         * 
          * <strong>example:</strong>
          * <p>111</p>
          */
@@ -315,6 +381,8 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String supabasePublicUrl;
 
         /**
+         * <p>Tenant ID</p>
+         * 
          * <strong>example:</strong>
          * <p>GFCBAMJH-zh_CN</p>
          */
@@ -322,6 +390,8 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String tenantId;
 
         /**
+         * <p>User ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1111</p>
          */

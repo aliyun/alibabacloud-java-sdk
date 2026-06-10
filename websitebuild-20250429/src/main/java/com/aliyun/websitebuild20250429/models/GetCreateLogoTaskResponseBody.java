@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetCreateLogoTaskResponseBody extends TeaModel {
     /**
+     * <p>The error code. The ErrorCode field is not returned if the request succeeds. If the request fails, the ErrorCode field is returned. For more information, see the error code list in this topic.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,6 +14,8 @@ public class GetCreateLogoTaskResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>aliuid:1998006665794443 assumeRole not exist,serviceName:realtimelogpush.dcdnservices.aliyuncs.com</p>
      */
@@ -28,12 +32,17 @@ public class GetCreateLogoTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>Job information</p>
+     */
     @NameInMap("Task")
     public GetCreateLogoTaskResponseBodyTask task;
 
@@ -84,6 +93,8 @@ public class GetCreateLogoTaskResponseBody extends TeaModel {
 
     public static class GetCreateLogoTaskResponseBodyTask extends TeaModel {
         /**
+         * <p>The job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>604860995</p>
          */
@@ -91,12 +102,24 @@ public class GetCreateLogoTaskResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The current status of the job:</p>
+         * <ul>
+         * <li>pending: Pending execution  </li>
+         * <li>configuring: Configuring  </li>
+         * <li>success: Succeeded  </li>
+         * <li>failed: Failed  </li>
+         * <li>partialFailed: Partially failed</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
+        /**
+         * <p>The URLs of the prefetched resources.</p>
+         */
         @NameInMap("Urls")
         public java.util.List<String> urls;
 

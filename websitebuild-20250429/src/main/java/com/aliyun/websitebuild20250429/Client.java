@@ -27,8 +27,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the Supabase instance information corresponding to the resource</p>
+     * 
      * <b>summary</b> : 
-     * <p>分配Supabase实例</p>
+     * <p>Assign a Supabase instance to a resource</p>
      * 
      * @param request AllocateSupabaseForAdminRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -83,8 +86,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the Supabase instance information corresponding to the resource</p>
+     * 
      * <b>summary</b> : 
-     * <p>分配Supabase实例</p>
+     * <p>Assign a Supabase instance to a resource</p>
      * 
      * @param request AllocateSupabaseForAdminRequest
      * @return AllocateSupabaseForAdminResponse
@@ -95,8 +101,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Operation resource-related Supabase instance information</p>
+     * 
      * <b>summary</b> : 
-     * <p>批量校验资源计量</p>
+     * <p>Batch check resource usage</p>
      * 
      * @param request BatchCheckResourceMeasureRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -147,8 +156,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Operation resource-related Supabase instance information</p>
+     * 
      * <b>summary</b> : 
-     * <p>批量校验资源计量</p>
+     * <p>Batch check resource usage</p>
      * 
      * @param request BatchCheckResourceMeasureRequest
      * @return BatchCheckResourceMeasureResponse
@@ -215,8 +227,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the Supabase instance information corresponding to the resource</p>
+     * 
      * <b>summary</b> : 
-     * <p>校验资源计量</p>
+     * <p>Check resource usage</p>
      * 
      * @param request CheckResourceMeasureRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -271,8 +286,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the Supabase instance information corresponding to the resource</p>
+     * 
      * <b>summary</b> : 
-     * <p>校验资源计量</p>
+     * <p>Check resource usage</p>
      * 
      * @param request CheckResourceMeasureRequest
      * @return CheckResourceMeasureResponse
@@ -283,8 +301,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the Supabase instance information corresponding to the resource</p>
+     * 
      * <b>summary</b> : 
-     * <p>校验用户资源计量</p>
+     * <p>Validate user resource metering</p>
      * 
      * @param request CheckUserResourceMeasureRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -339,8 +360,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the Supabase instance information corresponding to the resource</p>
+     * 
      * <b>summary</b> : 
-     * <p>校验用户资源计量</p>
+     * <p>Validate user resource metering</p>
      * 
      * @param request CheckUserResourceMeasureRequest
      * @return CheckUserResourceMeasureResponse
@@ -351,6 +375,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>查询应用实例信息</p>
+     * 
      * <b>summary</b> : 
      * <p>试用转正</p>
      * 
@@ -427,6 +454,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>查询应用实例信息</p>
+     * 
      * <b>summary</b> : 
      * <p>试用转正</p>
      * 
@@ -439,6 +469,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>获取生码插件配置信息</p>
+     * 
      * <b>summary</b> : 
      * <p>复制插件配置</p>
      * 
@@ -475,6 +508,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>获取生码插件配置信息</p>
+     * 
      * <b>summary</b> : 
      * <p>复制插件配置</p>
      * 
@@ -487,8 +523,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Wan Xiaozhi 2.0 AI conversation</p>
+     * 
      * <b>summary</b> : 
-     * <p>异步发起AI员工对话</p>
+     * <p>Initiate an AI employee conversation asynchronously</p>
      * 
      * @param request CreateAIStaffChatRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -540,8 +579,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Wan Xiaozhi 2.0 AI conversation</p>
+     * 
      * <b>summary</b> : 
-     * <p>异步发起AI员工对话</p>
+     * <p>Initiate an AI employee conversation asynchronously</p>
      * 
      * @param request CreateAIStaffChatRequest
      * @return CreateAIStaffChatResponse
@@ -552,8 +594,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Wan Xiaozhi 2.0 API for creating an AI session</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建AI员工会话</p>
+     * <p>Create an AI agent session</p>
      * 
      * @param request CreateAIStaffConversationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -584,8 +629,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Wan Xiaozhi 2.0 API for creating an AI session</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建AI员工会话</p>
+     * <p>Create an AI agent session</p>
      * 
      * @param request CreateAIStaffConversationRequest
      * @return CreateAIStaffConversationResponse
@@ -596,8 +644,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建应用助手智能体</p>
+     * <p>Create Application Assistant Agent</p>
      * 
      * @param request CreateAppAssistantAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -636,8 +687,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建应用助手智能体</p>
+     * <p>Create Application Assistant Agent</p>
      * 
      * @param request CreateAppAssistantAgentRequest
      * @return CreateAppAssistantAgentResponse
@@ -648,8 +702,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>生成应用助手SSO免登</p>
+     * <p>Generate application assistant SSO logon</p>
      * 
      * @param request CreateAppAssistantAgentSsoLoginRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -688,8 +745,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>生成应用助手SSO免登</p>
+     * <p>Generate application assistant SSO logon</p>
      * 
      * @param request CreateAppAssistantAgentSsoLoginRequest
      * @return CreateAppAssistantAgentSsoLoginResponse
@@ -701,7 +761,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>万小智发起AI对话</p>
+     * <p>Wan Xiaozhi initiates an AI conversation</p>
      * 
      * @param request CreateAppChatRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -749,7 +809,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>万小智发起AI对话</p>
+     * <p>Wan Xiaozhi initiates an AI conversation</p>
      * 
      * @param request CreateAppChatRequest
      * @return CreateAppChatResponse
@@ -920,8 +980,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>应用实例创建 LLM 网关 API-KEY</p>
+     * <p>Create an LLM gateway API key for an application instance</p>
      * 
      * @param request CreateAppLlmApiKeyForPartnerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -964,8 +1027,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>应用实例创建 LLM 网关 API-KEY</p>
+     * <p>Create an LLM gateway API key for an application instance</p>
      * 
      * @param request CreateAppLlmApiKeyForPartnerRequest
      * @return CreateAppLlmApiKeyForPartnerResponse
@@ -976,8 +1042,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>Activate the Wanxiaozhi Inspiration Value service</p>
+     * <p>Activate the Wanxiao Zhi Inspiration Value service</p>
      * 
      * @param request CreateAppTokenServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1008,8 +1077,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>Activate the Wanxiaozhi Inspiration Value service</p>
+     * <p>Activate the Wanxiao Zhi Inspiration Value service</p>
      * 
      * @param request CreateAppTokenServiceRequest
      * @return CreateAppTokenServiceResponse
@@ -1021,7 +1093,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交创建Logo任务</p>
+     * <p>Commit a job to create a logo.</p>
      * 
      * @param request CreateLogoTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1065,7 +1137,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交创建Logo任务</p>
+     * <p>Commit a job to create a logo.</p>
      * 
      * @param request CreateLogoTaskRequest
      * @return CreateLogoTaskResponse
@@ -1077,7 +1149,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建素材中心文件夹</p>
+     * <p>Create a subfolder under the parent folder.</p>
      * 
      * @param request CreateMaterialDirectoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1117,7 +1189,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建素材中心文件夹</p>
+     * <p>Create a subfolder under the parent folder.</p>
      * 
      * @param request CreateMaterialDirectoryRequest
      * @return CreateMaterialDirectoryResponse
@@ -1224,6 +1296,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>查询应用实例信息</p>
+     * 
      * <b>summary</b> : 
      * <p>删除文件</p>
      * 
@@ -1260,6 +1335,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>查询应用实例信息</p>
+     * 
      * <b>summary</b> : 
      * <p>删除文件</p>
      * 
@@ -1272,8 +1350,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query application instance information</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除文件</p>
+     * <p>Delete file</p>
      * 
      * @param request DeleteAppInstanceFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1308,8 +1389,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query application instance information</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除文件</p>
+     * <p>Delete file</p>
      * 
      * @param request DeleteAppInstanceFileRequest
      * @return DeleteAppInstanceFileResponse
@@ -1320,8 +1404,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Operation resource corresponds to the supabase instance information</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除Supabase密钥</p>
+     * <p>Delete Supabase key</p>
      * 
      * @param request DeleteAppSupabaseSecretsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1356,8 +1443,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Operation resource corresponds to the supabase instance information</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除Supabase密钥</p>
+     * <p>Delete Supabase key</p>
      * 
      * @param request DeleteAppSupabaseSecretsRequest
      * @return DeleteAppSupabaseSecretsResponse
@@ -1369,7 +1459,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除素材中心文件夹</p>
+     * <p>Delete a material folder</p>
      * 
      * @param request DeleteMaterialDirectoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1405,7 +1495,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除素材中心文件夹</p>
+     * <p>Delete a material folder</p>
      * 
      * @param request DeleteMaterialDirectoryRequest
      * @return DeleteMaterialDirectoryResponse
@@ -1417,7 +1507,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除素材生产任务</p>
+     * <p>Delete Material Generation Job</p>
      * 
      * @param tmpReq DeleteMaterialTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1455,7 +1545,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除素材生产任务</p>
+     * <p>Delete Material Generation Job</p>
      * 
      * @param request DeleteMaterialTaskRequest
      * @return DeleteMaterialTaskResponse
@@ -1579,7 +1669,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>编辑插件配置</p>
+     * <p>Edit plugin configuration.</p>
      * 
      * @param request EditPluginConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1627,7 +1717,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>编辑插件配置</p>
+     * <p>Edit plugin configuration.</p>
      * 
      * @param request EditPluginConfigRequest
      * @return EditPluginConfigResponse
@@ -1639,7 +1729,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导出素材文件</p>
+     * <p>Export material files</p>
      * 
      * @param tmpReq ExportMaterialFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1681,7 +1771,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导出素材文件</p>
+     * <p>Export material files</p>
      * 
      * @param request ExportMaterialFileRequest
      * @return ExportMaterialFileResponse
@@ -1692,8 +1782,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>WanXiaoZhi 2.0 - Obtain Site Preview URL</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取AI员工站点预览地址</p>
+     * <p>WanXiaoZhi 2.0 - Obtain Site Preview URL</p>
      * 
      * @param request GetAIStaffPreviewUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1728,8 +1821,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>WanXiaoZhi 2.0 - Obtain Site Preview URL</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取AI员工站点预览地址</p>
+     * <p>WanXiaoZhi 2.0 - Obtain Site Preview URL</p>
      * 
      * @param request GetAIStaffPreviewUrlRequest
      * @return GetAIStaffPreviewUrlResponse
@@ -1740,8 +1836,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query application instance information</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取代码工作区详情</p>
+     * <p>Retrieve code workspace details</p>
      * 
      * @param request GetAppCodeWorkspaceDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1772,8 +1871,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query application instance information</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取代码工作区详情</p>
+     * <p>Retrieve code workspace details</p>
      * 
      * @param request GetAppCodeWorkspaceDetailRequest
      * @return GetAppCodeWorkspaceDetailResponse
@@ -1784,8 +1886,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Wan Xiaozhi 2.0 API for creating an AI session</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取对话详情</p>
+     * <p>Retrieve conversation details</p>
      * 
      * @param request GetAppConversationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1820,8 +1925,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Wan Xiaozhi 2.0 API for creating an AI session</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取对话详情</p>
+     * <p>Retrieve conversation details</p>
      * 
      * @param request GetAppConversationRequest
      * @return GetAppConversationResponse
@@ -1832,8 +1940,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Wan Xiaozhi 2.0 API for creating AI sessions</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取会话锁定状态</p>
+     * <p>Obtain session lock status</p>
      * 
      * @param request GetAppConversationLockStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1864,8 +1975,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Wan Xiaozhi 2.0 API for creating AI sessions</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取会话锁定状态</p>
+     * <p>Obtain session lock status</p>
      * 
      * @param request GetAppConversationLockStatusRequest
      * @return GetAppConversationLockStatusResponse
@@ -1876,6 +1990,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>查询应用实例信息</p>
+     * 
      * <b>summary</b> : 
      * <p>查询数据库表结构</p>
      * 
@@ -1912,6 +2029,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>查询应用实例信息</p>
+     * 
      * <b>summary</b> : 
      * <p>查询数据库表结构</p>
      * 
@@ -1924,6 +2044,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>获取生码插件配置信息</p>
+     * 
      * <b>summary</b> : 
      * <p>读取文件及修改时间</p>
      * 
@@ -1960,6 +2083,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>获取生码插件配置信息</p>
+     * 
      * <b>summary</b> : 
      * <p>读取文件及修改时间</p>
      * 
@@ -2016,6 +2142,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query application instance information</p>
+     * 
      * <b>summary</b> : 
      * <p>GetAppInstanceEntitlement</p>
      * 
@@ -2048,6 +2177,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query application instance information</p>
+     * 
      * <b>summary</b> : 
      * <p>GetAppInstanceEntitlement</p>
      * 
@@ -2060,6 +2192,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>查询应用实例信息</p>
+     * 
      * <b>summary</b> : 
      * <p>Query application instance information</p>
      * 
@@ -2096,6 +2231,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>查询应用实例信息</p>
+     * 
      * <b>summary</b> : 
      * <p>Query application instance information</p>
      * 
@@ -2108,6 +2246,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
      * <p>Query instance details</p>
      * 
@@ -2140,6 +2281,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
      * <p>Query instance details</p>
      * 
@@ -2152,8 +2296,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取应用临时短链</p>
+     * <p>Obtain a temporary short URL for the application</p>
      * 
      * @param request GetAppInstanceTempShortUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2184,8 +2331,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取应用临时短链</p>
+     * <p>Obtain a temporary short URL for the application</p>
      * 
      * @param request GetAppInstanceTempShortUrlRequest
      * @return GetAppInstanceTempShortUrlResponse
@@ -2196,8 +2346,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin.</p>
+     * 
      * <b>summary</b> : 
-     * <p>生码-获取插件配置信息</p>
+     * <p>Obtain plugin configuration information.</p>
      * 
      * @param request GetAppPluginConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2232,8 +2385,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin.</p>
+     * 
      * <b>summary</b> : 
-     * <p>生码-获取插件配置信息</p>
+     * <p>Obtain plugin configuration information.</p>
      * 
      * @param request GetAppPluginConfigRequest
      * @return GetAppPluginConfigResponse
@@ -2244,8 +2400,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>发布状态查询</p>
+     * <p>Query publishing status</p>
      * 
      * @param request GetAppPublishStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2284,8 +2443,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>发布状态查询</p>
+     * <p>Query publishing status</p>
      * 
      * @param request GetAppPublishStatusRequest
      * @return GetAppPublishStatusResponse
@@ -2296,8 +2458,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain barcode generation plugin configuration information</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询万小智推荐商品</p>
+     * <p>Query recommended products</p>
      * 
      * @param request GetAppRecommendedCommoditiesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2340,8 +2505,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain barcode generation plugin configuration information</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询万小智推荐商品</p>
+     * <p>Query recommended products</p>
      * 
      * @param request GetAppRecommendedCommoditiesRequest
      * @return GetAppRecommendedCommoditiesResponse
@@ -2352,8 +2520,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain barcode generation plugin configuration information</p>
+     * 
      * <b>summary</b> : 
-     * <p>需求查询</p>
+     * <p>Requirement query</p>
      * 
      * @param request GetAppRequirementRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2384,8 +2555,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain barcode generation plugin configuration information</p>
+     * 
      * <b>summary</b> : 
-     * <p>需求查询</p>
+     * <p>Requirement query</p>
      * 
      * @param request GetAppRequirementRequest
      * @return GetAppRequirementResponse
@@ -2396,8 +2570,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Wan Xiaozhi 2.0 - Obtain site preview URL</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取沙箱预览地址</p>
+     * <p>Obtain sandbox preview URL</p>
      * 
      * @param request GetAppSandboxPreviewUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2432,8 +2609,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Wan Xiaozhi 2.0 - Obtain site preview URL</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取沙箱预览地址</p>
+     * <p>Obtain sandbox preview URL</p>
      * 
      * @param request GetAppSandboxPreviewUrlRequest
      * @return GetAppSandboxPreviewUrlResponse
@@ -2444,8 +2624,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询SEO索引状态</p>
+     * <p>Query SEO index status</p>
      * 
      * @param request GetAppSeoStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2484,8 +2667,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询SEO索引状态</p>
+     * <p>Query SEO index status</p>
      * 
      * @param request GetAppSeoStatusRequest
      * @return GetAppSeoStatusResponse
@@ -2496,8 +2682,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain plugin configuration information</p>
+     * 
      * <b>summary</b> : 
-     * <p>SEO索引图表</p>
+     * <p>SEO Index Chart</p>
      * 
      * @param request GetAppSeoTrendsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2536,8 +2725,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain plugin configuration information</p>
+     * 
      * <b>summary</b> : 
-     * <p>SEO索引图表</p>
+     * <p>SEO Index Chart</p>
      * 
      * @param request GetAppSeoTrendsRequest
      * @return GetAppSeoTrendsResponse
@@ -2548,8 +2740,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieve QR code plugin configuration information</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取站点地图</p>
+     * <p>Retrieve site map</p>
      * 
      * @param request GetAppSitemapRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2588,8 +2783,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieve QR code plugin configuration information</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取站点地图</p>
+     * <p>Retrieve site map</p>
      * 
      * @param request GetAppSitemapRequest
      * @return GetAppSitemapResponse
@@ -2600,8 +2798,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the auth configuration information of the Supabase instance corresponding to the resource.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Supabase认证设置查询</p>
+     * <p>Query Supabase authentication settings</p>
      * 
      * @param request GetAppSupabaseAuthConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2636,8 +2837,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the auth configuration information of the Supabase instance corresponding to the resource.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Supabase认证设置查询</p>
+     * <p>Query Supabase authentication settings</p>
      * 
      * @param request GetAppSupabaseAuthConfigRequest
      * @return GetAppSupabaseAuthConfigResponse
@@ -2648,8 +2852,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query application instance information</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取Supabase实例信息</p>
+     * <p>Obtain Supabase instance information</p>
      * 
      * @param request GetAppSupabaseInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2680,8 +2887,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query application instance information</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取Supabase实例信息</p>
+     * <p>Obtain Supabase instance information</p>
      * 
      * @param request GetAppSupabaseInstanceRequest
      * @return GetAppSupabaseInstanceResponse
@@ -2692,8 +2902,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The supabase instance information corresponding to the operated resource</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Supabase密钥</p>
+     * <p>Query Supabase keys</p>
      * 
      * @param request GetAppSupabaseSecretsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2728,8 +2941,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The supabase instance information corresponding to the operated resource</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Supabase密钥</p>
+     * <p>Query Supabase keys</p>
      * 
      * @param request GetAppSupabaseSecretsRequest
      * @return GetAppSupabaseSecretsResponse
@@ -2740,8 +2956,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>模板详情查询</p>
+     * <p>Query template details</p>
      * 
      * @param request GetAppTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2772,8 +2991,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>模板详情查询</p>
+     * <p>Query template details</p>
      * 
      * @param request GetAppTemplateRequest
      * @return GetAppTemplateResponse
@@ -2784,8 +3006,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询万小智灵感值服务</p>
+     * <p>Query the Wan Xiaozhi Inspiration Value service</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAppTokenServiceResponse
@@ -2807,8 +3032,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询万小智灵感值服务</p>
+     * <p>Query the Wan Xiaozhi Inspiration Value service</p>
      * @return GetAppTokenServiceResponse
      */
     public GetAppTokenServiceResponse getAppTokenService() throws Exception {
@@ -2817,8 +3045,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query application instance information</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取工作区目录结构</p>
+     * <p>Obtain the workspace directory structure</p>
      * 
      * @param request GetAppWorkspaceDirectoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2857,8 +3088,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query application instance information</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取工作区目录结构</p>
+     * <p>Obtain the workspace directory structure</p>
      * 
      * @param request GetAppWorkspaceDirectoryRequest
      * @return GetAppWorkspaceDirectoryResponse
@@ -2870,7 +3104,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询Logo创建任务</p>
+     * <p>Query the Logo creation job</p>
      * 
      * @param request GetCreateLogoTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2902,7 +3136,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询Logo创建任务</p>
+     * <p>Query the Logo creation job</p>
      * 
      * @param request GetCreateLogoTaskRequest
      * @return GetCreateLogoTaskResponse
@@ -2914,7 +3148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提供给服务商的域名查询接口</p>
+     * <p>Domain name query API provided to service providers</p>
      * 
      * @param request GetDomainInfoForPartnerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2954,7 +3188,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提供给服务商的域名查询接口</p>
+     * <p>Domain name query API provided to service providers</p>
      * 
      * @param request GetDomainInfoForPartnerRequest
      * @return GetDomainInfoForPartnerResponse
@@ -2966,7 +3200,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询域名备案信息</p>
+     * <p>Query ICP filing information of a domain name</p>
      * 
      * @param request GetIcpFilingInfoForPartnerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3002,7 +3236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询域名备案信息</p>
+     * <p>Query ICP filing information of a domain name</p>
      * 
      * @param request GetIcpFilingInfoForPartnerRequest
      * @return GetIcpFilingInfoForPartnerResponse
@@ -3013,8 +3247,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the Supabase instance configuration information corresponding to the resource.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询LLM Proxy配置</p>
+     * <p>Query LLM Proxy configuration</p>
      * 
      * @param request GetLlmProxyConfigForAdminRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3049,8 +3286,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the Supabase instance configuration information corresponding to the resource.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询LLM Proxy配置</p>
+     * <p>Query LLM Proxy configuration</p>
      * 
      * @param request GetLlmProxyConfigForAdminRequest
      * @return GetLlmProxyConfigForAdminResponse
@@ -3062,7 +3302,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取小程序授权链接</p>
+     * <p>Obtain miniapp authorization link</p>
      * 
      * @param request GetMiniAppAuthUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3102,7 +3342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取小程序授权链接</p>
+     * <p>Obtain miniapp authorization link</p>
      * 
      * @param request GetMiniAppAuthUrlRequest
      * @return GetMiniAppAuthUrlResponse
@@ -3113,8 +3353,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the QR code plugin configuration information</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询站点绑定的小程序</p>
+     * <p>Query the miniapp attached to a site</p>
      * 
      * @param tmpReq GetMiniAppBindingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3159,8 +3402,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the QR code plugin configuration information</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询站点绑定的小程序</p>
+     * <p>Query the miniapp attached to a site</p>
      * 
      * @param request GetMiniAppBindingRequest
      * @return GetMiniAppBindingResponse
@@ -3172,7 +3418,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据条件查询应用实例绑定的小程序</p>
+     * <p>Query the miniapp attached to an application instance based on conditions</p>
      * 
      * @param request GetMiniAppBindingForAdminRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3212,7 +3458,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据条件查询应用实例绑定的小程序</p>
+     * <p>Query the miniapp attached to an application instance based on conditions</p>
      * 
      * @param request GetMiniAppBindingForAdminRequest
      * @return GetMiniAppBindingForAdminResponse
@@ -3223,6 +3469,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>获取生码插件配置信息</p>
+     * 
      * <b>summary</b> : 
      * <p>生成文件上传策略</p>
      * 
@@ -3255,6 +3504,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>获取生码插件配置信息</p>
+     * 
      * <b>summary</b> : 
      * <p>生成文件上传策略</p>
      * 
@@ -3267,6 +3519,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>获取生码插件配置信息</p>
+     * 
      * <b>summary</b> : 
      * <p>获取临时下载地址</p>
      * 
@@ -3299,6 +3554,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>获取生码插件配置信息</p>
+     * 
      * <b>summary</b> : 
      * <p>获取临时下载地址</p>
      * 
@@ -3312,7 +3570,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过授权码得到accessToken</p>
+     * <p>Exchange temporary AccessKey for accessToken</p>
      * 
      * @param request GetUserAccessTokenForPartnerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3348,7 +3606,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过授权码得到accessToken</p>
+     * <p>Exchange temporary AccessKey for accessToken</p>
      * 
      * @param request GetUserAccessTokenForPartnerRequest
      * @return GetUserAccessTokenForPartnerResponse
@@ -3360,7 +3618,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>合作伙伴获取用户SLR角色授权临时凭证</p>
+     * <p>Partnership obtains temporary credentials for User SLR role authorization</p>
      * 
      * @param request GetUserTmpIdentityForPartnerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3408,7 +3666,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>合作伙伴获取用户SLR角色授权临时凭证</p>
+     * <p>Partnership obtains temporary credentials for User SLR role authorization</p>
      * 
      * @param request GetUserTmpIdentityForPartnerRequest
      * @return GetUserTmpIdentityForPartnerResponse
@@ -3420,7 +3678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>检查AccessToken</p>
+     * <p>Introspection analysis of免登 accessToken</p>
      * 
      * @param request IntrospectAppInstanceTicketForPreviewRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3456,7 +3714,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>检查AccessToken</p>
+     * <p>Introspection analysis of免登 accessToken</p>
      * 
      * @param request IntrospectAppInstanceTicketForPreviewRequest
      * @return IntrospectAppInstanceTicketForPreviewResponse
@@ -3467,8 +3725,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Wan Xiaozhi 2.0 – Retrieve streaming output results of AI sessions</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取AI员工对话增量SSE事件</p>
+     * <p>Obtain incremental SSE events of AI employee conversations</p>
      * 
      * @param request ListAIStaffChatEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3513,8 +3774,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Wan Xiaozhi 2.0 – Retrieve streaming output results of AI sessions</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取AI员工对话增量SSE事件</p>
+     * <p>Obtain incremental SSE events of AI employee conversations</p>
      * 
      * @param request ListAIStaffChatEventsRequest
      * @return ListAIStaffChatEventsResponse
@@ -3525,8 +3789,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Wan Xiaozhi 2.0 - API for querying AI session history information</p>
+     * 
      * <b>summary</b> : 
-     * <p>分页查询AI员工对话消息列表</p>
+     * <p>Paged query of AI employee conversation message list</p>
      * 
      * @param request ListAIStaffChatMessagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3571,8 +3838,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Wan Xiaozhi 2.0 - API for querying AI session history information</p>
+     * 
      * <b>summary</b> : 
-     * <p>分页查询AI员工对话消息列表</p>
+     * <p>Paged query of AI employee conversation message list</p>
      * 
      * @param request ListAIStaffChatMessagesRequest
      * @return ListAIStaffChatMessagesResponse
@@ -3583,8 +3853,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query application instance information</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询应用助手智能体列表</p>
+     * <p>Query the list of application assistant agents</p>
      * 
      * @param request ListAppAssistantAgentsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3619,8 +3892,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query application instance information</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询应用助手智能体列表</p>
+     * <p>Query the list of application assistant agents</p>
      * 
      * @param request ListAppAssistantAgentsRequest
      * @return ListAppAssistantAgentsResponse
@@ -3631,8 +3907,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Wan Xiaozhi 2.0 - AI session history information query API</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询指定聊天的消息列表</p>
+     * <p>Query the message list of a specified chat</p>
      * 
      * @param request ListAppChatMessagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3679,8 +3958,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Wan Xiaozhi 2.0 - AI session history information query API</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询指定聊天的消息列表</p>
+     * <p>Query the message list of a specified chat</p>
      * 
      * @param request ListAppChatMessagesRequest
      * @return ListAppChatMessagesResponse
@@ -3691,8 +3973,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取商品配置信息</p>
+     * <p>Product information data</p>
      * 
      * @deprecated OpenAPI ListAppCommoditySpecificationsForPartner is deprecated, please use WebsiteBuild::2025-04-29::ListAppCommoditySpecificationsV2ForPartner instead.
      * 
@@ -3718,8 +4003,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取商品配置信息</p>
+     * <p>Product information data</p>
      * 
      * @deprecated OpenAPI ListAppCommoditySpecificationsForPartner is deprecated, please use WebsiteBuild::2025-04-29::ListAppCommoditySpecificationsV2ForPartner instead.
      * @return ListAppCommoditySpecificationsForPartnerResponse
@@ -3732,8 +4020,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>网站信息查询</p>
+     * <p>Query website building product details</p>
      * 
      * @param request ListAppCommoditySpecificationsV2ForPartnerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3768,8 +4059,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>网站信息查询</p>
+     * <p>Query website building product details</p>
      * 
      * @param request ListAppCommoditySpecificationsV2ForPartnerRequest
      * @return ListAppCommoditySpecificationsV2ForPartnerResponse
@@ -3780,8 +4074,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Wan Xiaozhi 2.0 - AI session history information query API</p>
+     * 
      * <b>summary</b> : 
-     * <p>分页查询对话消息列表</p>
+     * <p>Paged query of conversation message list</p>
      * 
      * @param request ListAppConversationMessagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3832,8 +4129,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Wan Xiaozhi 2.0 - AI session history information query API</p>
+     * 
      * <b>summary</b> : 
-     * <p>分页查询对话消息列表</p>
+     * <p>Paged query of conversation message list</p>
      * 
      * @param request ListAppConversationMessagesRequest
      * @return ListAppConversationMessagesResponse
@@ -3844,8 +4144,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Wan Xiaozhi 2.0 Create AI Session API</p>
+     * 
      * <b>summary</b> : 
-     * <p>搜索对话列表</p>
+     * <p>Search session list</p>
      * 
      * @param request ListAppConversationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3904,8 +4207,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Wan Xiaozhi 2.0 Create AI Session API</p>
+     * 
      * <b>summary</b> : 
-     * <p>搜索对话列表</p>
+     * <p>Search session list</p>
      * 
      * @param request ListAppConversationsRequest
      * @return ListAppConversationsResponse
@@ -4134,8 +4440,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieve the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取码农插件配置列表</p>
+     * <p>Retrieve the list of Code Farmer plugin configurations</p>
      * 
      * @param request ListAppPluginConfigsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4174,8 +4483,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieve the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取码农插件配置列表</p>
+     * <p>Retrieve the list of Code Farmer plugin configurations</p>
      * 
      * @param request ListAppPluginConfigsRequest
      * @return ListAppPluginConfigsResponse
@@ -4186,8 +4498,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain configuration information of code generation plugins</p>
+     * 
      * <b>summary</b> : 
-     * <p>应用插件列表</p>
+     * <p>List of code generation plugins</p>
      * 
      * @param request ListAppPluginsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4234,8 +4549,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain configuration information of code generation plugins</p>
+     * 
      * <b>summary</b> : 
-     * <p>应用插件列表</p>
+     * <p>List of code generation plugins</p>
      * 
      * @param request ListAppPluginsRequest
      * @return ListAppPluginsResponse
@@ -4246,8 +4564,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query application instance information</p>
+     * 
      * <b>summary</b> : 
-     * <p>发布历史查询</p>
+     * <p>Query publish history</p>
      * 
      * @param request ListAppPublishHistoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4284,12 +4605,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.publishEnv)) {
+            query.put("PublishEnv", request.publishEnv);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sort)) {
             query.put("Sort", request.sort);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subchannel)) {
+            query.put("Subchannel", request.subchannel);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.websiteDomain)) {
@@ -4314,8 +4643,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query application instance information</p>
+     * 
      * <b>summary</b> : 
-     * <p>发布历史查询</p>
+     * <p>Query publish history</p>
      * 
      * @param request ListAppPublishHistoryRequest
      * @return ListAppPublishHistoryResponse
@@ -4326,8 +4658,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query application instance information</p>
+     * 
      * <b>summary</b> : 
-     * <p>字典列表查询</p>
+     * <p>Query dictionary list</p>
      * 
      * @param request ListAppTemplateDictsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4366,8 +4701,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query application instance information</p>
+     * 
      * <b>summary</b> : 
-     * <p>字典列表查询</p>
+     * <p>Query dictionary list</p>
      * 
      * @param request ListAppTemplateDictsRequest
      * @return ListAppTemplateDictsResponse
@@ -4378,8 +4716,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain barcode generation plugin configuration information</p>
+     * 
      * <b>summary</b> : 
-     * <p>模板列表查询</p>
+     * <p>Query template list</p>
      * 
      * @param request ListAppTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4446,8 +4787,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain barcode generation plugin configuration information</p>
+     * 
      * <b>summary</b> : 
-     * <p>模板列表查询</p>
+     * <p>Query template list</p>
      * 
      * @param request ListAppTemplatesRequest
      * @return ListAppTemplatesResponse
@@ -4458,8 +4802,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain barcode generation plugin configuration information</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询支付宝ISV插件配置</p>
+     * <p>Query Alipay ISV plugin configuration</p>
      * 
      * @param request ListIsvPaymentPluginConfigsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4498,8 +4845,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain barcode generation plugin configuration information</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询支付宝ISV插件配置</p>
+     * <p>Query Alipay ISV plugin configuration</p>
      * 
      * @param request ListIsvPaymentPluginConfigsRequest
      * @return ListIsvPaymentPluginConfigsResponse
@@ -4579,7 +4929,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改素材中心文件夹</p>
+     * <p>Modify a material folder</p>
      * 
      * @param request ModifyMaterialDirectoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4619,7 +4969,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改素材中心文件夹</p>
+     * <p>Modify a material folder</p>
      * 
      * @param request ModifyMaterialDirectoryRequest
      * @return ModifyMaterialDirectoryResponse
@@ -4631,7 +4981,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改素材文件</p>
+     * <p>Modify a material file</p>
      * 
      * @param request ModifyMaterialFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4671,7 +5021,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改素材文件</p>
+     * <p>Modify a material file</p>
      * 
      * @param request ModifyMaterialFileRequest
      * @return ModifyMaterialFileResponse
@@ -4683,7 +5033,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改素材文件状态</p>
+     * <p>Modify the status of a material file</p>
      * 
      * @param tmpReq ModifyMaterialFileStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4729,7 +5079,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改素材文件状态</p>
+     * <p>Modify the status of a material file</p>
      * 
      * @param request ModifyMaterialFileStatusRequest
      * @return ModifyMaterialFileStatusResponse
@@ -4741,7 +5091,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移动素材中心文件夹</p>
+     * <p>Shift material folder</p>
      * 
      * @param request MoveMaterialDirectoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4785,7 +5135,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移动素材中心文件夹</p>
+     * <p>Shift material folder</p>
      * 
      * @param request MoveMaterialDirectoryRequest
      * @return MoveMaterialDirectoryResponse
@@ -4797,7 +5147,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移动素材文件</p>
+     * <p>Shift material files</p>
      * 
      * @param tmpReq MoveMaterialFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4843,7 +5193,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移动素材文件</p>
+     * <p>Shift material files</p>
      * 
      * @param request MoveMaterialFileRequest
      * @return MoveMaterialFileResponse
@@ -4855,7 +5205,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>合作伙伴操作应用</p>
+     * <p>Operate application for Partnership</p>
      * 
      * @param request OperateAppInstanceForPartnerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4891,7 +5241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>合作伙伴操作应用</p>
+     * <p>Operate application for Partnership</p>
      * 
      * @param request OperateAppInstanceForPartnerRequest
      * @return OperateAppInstanceForPartnerResponse
@@ -4903,7 +5253,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>合作伙伴操作应用服务</p>
+     * <p>Partnership operates application services.</p>
      * 
      * @param request OperateAppServiceForPartnerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4947,7 +5297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>合作伙伴操作应用服务</p>
+     * <p>Partnership operates application services.</p>
      * 
      * @param request OperateAppServiceForPartnerRequest
      * @return OperateAppServiceForPartnerResponse
@@ -4958,8 +5308,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain barcode generation plugin configuration information</p>
+     * 
      * <b>summary</b> : 
-     * <p>切换模板点赞统计</p>
+     * <p>Switch template like statistics</p>
      * 
      * @param request OperateAppTemplateLikeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4994,8 +5347,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain barcode generation plugin configuration information</p>
+     * 
      * <b>summary</b> : 
-     * <p>切换模板点赞统计</p>
+     * <p>Switch template like statistics</p>
      * 
      * @param request OperateAppTemplateLikeRequest
      * @return OperateAppTemplateLikeResponse
@@ -5006,8 +5362,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Supabase instance information corresponding to the operation resource</p>
+     * 
      * <b>summary</b> : 
-     * <p>通用Supabase操作</p>
+     * <p>Supabase instance information corresponding to the operation resource</p>
      * 
      * @param request OperateSupabaseForAdminRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5082,8 +5441,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Supabase instance information corresponding to the operation resource</p>
+     * 
      * <b>summary</b> : 
-     * <p>通用Supabase操作</p>
+     * <p>Supabase instance information corresponding to the operation resource</p>
      * 
      * @param request OperateSupabaseForAdminRequest
      * @return OperateSupabaseForAdminResponse
@@ -5094,8 +5456,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query application instance information</p>
+     * 
      * <b>summary</b> : 
-     * <p>发布应用实例</p>
+     * <p>Publish application instance</p>
      * 
      * @param request PublishAppInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5146,8 +5511,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query application instance information</p>
+     * 
      * <b>summary</b> : 
-     * <p>发布应用实例</p>
+     * <p>Publish application instance</p>
      * 
      * @param request PublishAppInstanceRequest
      * @return PublishAppInstanceResponse
@@ -5158,8 +5526,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the Supabase instance information corresponding to the resource</p>
+     * 
      * <b>summary</b> : 
-     * <p>推送资源计量数据</p>
+     * <p>Push resource metering data</p>
      * 
      * @param request PushResourceMeasureRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5222,8 +5593,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the Supabase instance information corresponding to the resource</p>
+     * 
      * <b>summary</b> : 
-     * <p>推送资源计量数据</p>
+     * <p>Push resource metering data</p>
      * 
      * @param request PushResourceMeasureRequest
      * @return PushResourceMeasureResponse
@@ -5234,8 +5608,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the Supabase instance information corresponding to the resource</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询灵感值获取明细</p>
+     * <p>Query the details of inspiration value acquisition (quota account list, including expiration mark)</p>
      * 
      * @param request QueryInspirationAccountDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5290,8 +5667,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the Supabase instance information corresponding to the resource</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询灵感值获取明细</p>
+     * <p>Query the details of inspiration value acquisition (quota account list, including expiration mark)</p>
      * 
      * @param request QueryInspirationAccountDetailsRequest
      * @return QueryInspirationAccountDetailsResponse
@@ -5302,8 +5682,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the Supabase instance information corresponding to the resource</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询灵感值余额总览</p>
+     * <p>Query the overview of inspiration balance</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryInspirationBalanceResponse
@@ -5325,8 +5708,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the Supabase instance information corresponding to the resource</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询灵感值余额总览</p>
+     * <p>Query the overview of inspiration balance</p>
      * @return QueryInspirationBalanceResponse
      */
     public QueryInspirationBalanceResponse queryInspirationBalance() throws Exception {
@@ -5335,8 +5721,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询灵感值消耗明细</p>
+     * <p>Query inspiration value consumption details</p>
      * 
      * @param request QueryInspirationConsumeRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5391,8 +5780,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询灵感值消耗明细</p>
+     * <p>Query inspiration value consumption details</p>
      * 
      * @param request QueryInspirationConsumeRecordsRequest
      * @return QueryInspirationConsumeRecordsResponse
@@ -5404,7 +5796,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询素材中心文件夹树结构</p>
+     * <p>Query the material folder tree</p>
      * 
      * @param request QueryMaterialDirectoryTreeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5444,7 +5836,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询素材中心文件夹树结构</p>
+     * <p>Query the material folder tree</p>
      * 
      * @param request QueryMaterialDirectoryTreeRequest
      * @return QueryMaterialDirectoryTreeResponse
@@ -5456,7 +5848,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询素材文件详情</p>
+     * <p>Query Material File Details</p>
      * 
      * @param request QueryMaterialFileDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5492,7 +5884,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询素材文件详情</p>
+     * <p>Query Material File Details</p>
      * 
      * @param request QueryMaterialFileDetailRequest
      * @return QueryMaterialFileDetailResponse
@@ -5504,7 +5896,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Material File List</p>
+     * <p>Query the list of material files</p>
      * 
      * @param tmpReq QueryMaterialFileListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5602,7 +5994,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Material File List</p>
+     * <p>Query the list of material files</p>
      * 
      * @param request QueryMaterialFileListRequest
      * @return QueryMaterialFileListResponse
@@ -5614,7 +6006,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询素材中心文件概要信息</p>
+     * <p>Query file overview</p>
      * 
      * @param tmpReq QueryMaterialFileSummaryInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5688,7 +6080,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询素材中心文件概要信息</p>
+     * <p>Query file overview</p>
      * 
      * @param request QueryMaterialFileSummaryInfoRequest
      * @return QueryMaterialFileSummaryInfoResponse
@@ -5700,7 +6092,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询素材生产任务详情</p>
+     * <p>Query the details of a Material generation Job</p>
      * 
      * @param request QueryMaterialTaskDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5732,7 +6124,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询素材生产任务详情</p>
+     * <p>Query the details of a Material generation Job</p>
      * 
      * @param request QueryMaterialTaskDetailRequest
      * @return QueryMaterialTaskDetailResponse
@@ -5744,7 +6136,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询素材生产任务列表</p>
+     * <p>Query the list of Material generation Jobs</p>
      * 
      * @param tmpReq QueryMaterialTaskListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5814,7 +6206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询素材生产任务列表</p>
+     * <p>Query the list of Material generation Jobs</p>
      * 
      * @param request QueryMaterialTaskListRequest
      * @return QueryMaterialTaskListResponse
@@ -5825,8 +6217,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the auth configuration information of the Supabase instance corresponding to the resource</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Supabase Auth配置信息</p>
+     * <p>Query the auth configuration information of the Supabase instance corresponding to the resource</p>
      * 
      * @param request QuerySupabaseAuthConfigsForAdminRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5885,8 +6280,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the auth configuration information of the Supabase instance corresponding to the resource</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Supabase Auth配置信息</p>
+     * <p>Query the auth configuration information of the Supabase instance corresponding to the resource</p>
      * 
      * @param request QuerySupabaseAuthConfigsForAdminRequest
      * @return QuerySupabaseAuthConfigsForAdminResponse
@@ -5897,8 +6295,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the Supabase instance configuration information corresponding to the resource.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Supabase配置信息</p>
+     * <p>Query the Supabase instance configuration information corresponding to the resource.</p>
      * 
      * @param request QuerySupabaseConfigsForAdminRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5953,8 +6354,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the Supabase instance configuration information corresponding to the resource.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Supabase配置信息</p>
+     * <p>Query the Supabase instance configuration information corresponding to the resource.</p>
      * 
      * @param request QuerySupabaseConfigsForAdminRequest
      * @return QuerySupabaseConfigsForAdminResponse
@@ -5965,8 +6369,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the Supabase instance information corresponding to the resource</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Supabase实例信息</p>
+     * <p>Query the Supabase instance information corresponding to the resource</p>
      * 
      * @param request QuerySupabaseInstanceInfoForAdminRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6021,8 +6428,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the Supabase instance information corresponding to the resource</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Supabase实例信息</p>
+     * <p>Query the Supabase instance information corresponding to the resource</p>
      * 
      * @param request QuerySupabaseInstanceInfoForAdminRequest
      * @return QuerySupabaseInstanceInfoForAdminResponse
@@ -6033,8 +6443,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain QR code plugin Configuration Information</p>
+     * 
      * <b>summary</b> : 
-     * <p>重新连接AI对话</p>
+     * <p>Reconnect AI conversation</p>
      * 
      * @param request ReconnectAppChatRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6073,8 +6486,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain QR code plugin Configuration Information</p>
+     * 
      * <b>summary</b> : 
-     * <p>重新连接AI对话</p>
+     * <p>Reconnect AI conversation</p>
      * 
      * @param request ReconnectAppChatRequest
      * @return ReconnectAppChatResponse
@@ -6138,7 +6554,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>渠道业务退款接口</p>
+     * <p>Refund for channel partner website building service.</p>
      * 
      * @param request RefundAppInstanceForPartnerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6182,7 +6598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>渠道业务退款接口</p>
+     * <p>Refund for channel partner website building service.</p>
      * 
      * @param request RefundAppInstanceForPartnerRequest
      * @return RefundAppInstanceForPartnerResponse
@@ -6257,8 +6673,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>续期/刷新沙箱环境</p>
+     * <p>Renewal/Purge Sandbox Environment</p>
      * 
      * @param request RenewAppSandboxRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6289,8 +6708,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>续期/刷新沙箱环境</p>
+     * <p>Renewal/Purge Sandbox Environment</p>
      * 
      * @param request RenewAppSandboxRequest
      * @return RenewAppSandboxResponse
@@ -6301,8 +6723,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>代码快照回滚</p>
+     * <p>Code snapshot rollback</p>
      * 
      * @param request RollbackAppCodeSnapshotRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6337,8 +6762,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>代码快照回滚</p>
+     * <p>Code snapshot rollback</p>
      * 
      * @param request RollbackAppCodeSnapshotRequest
      * @return RollbackAppCodeSnapshotResponse
@@ -6349,8 +6777,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query application instance information</p>
+     * 
      * <b>summary</b> : 
-     * <p>回滚应用实例发布</p>
+     * <p>Roll back application instance deployment</p>
      * 
      * @param request RollbackAppInstancePublishRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6393,8 +6824,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query application instance information</p>
+     * 
      * <b>summary</b> : 
-     * <p>回滚应用实例发布</p>
+     * <p>Roll back application instance deployment</p>
      * 
      * @param request RollbackAppInstancePublishRequest
      * @return RollbackAppInstancePublishResponse
@@ -6405,8 +6839,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain barcode generation plugin configuration information</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存需求</p>
+     * <p>Save requirements</p>
      * 
      * @param request SaveAppRequirementRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6443,8 +6880,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain barcode generation plugin configuration information</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存需求</p>
+     * <p>Save requirements</p>
      * 
      * @param request SaveAppRequirementRequest
      * @return SaveAppRequirementResponse
@@ -6455,8 +6895,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The supabase instance information corresponding to the operation resource</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存Supabase密钥</p>
+     * <p>Save Supabase key</p>
      * 
      * @param request SaveAppSupabaseSecretsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6491,8 +6934,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The supabase instance information corresponding to the operation resource</p>
+     * 
      * <b>summary</b> : 
-     * <p>保存Supabase密钥</p>
+     * <p>Save Supabase key</p>
      * 
      * @param request SaveAppSupabaseSecretsRequest
      * @return SaveAppSupabaseSecretsResponse
@@ -6504,7 +6950,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>图片检索</p>
+     * <p>Image retrieval</p>
      * 
      * @param tmpReq SearchImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6598,7 +7044,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>图片检索</p>
+     * <p>Image retrieval</p>
      * 
      * @param request SearchImageRequest
      * @return SearchImageResponse
@@ -6673,6 +7119,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>获取生码插件配置信息</p>
+     * 
      * <b>summary</b> : 
      * <p>提交SEO索引</p>
      * 
@@ -6717,6 +7166,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>获取生码插件配置信息</p>
+     * 
      * <b>summary</b> : 
      * <p>提交SEO索引</p>
      * 
@@ -6730,7 +7182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交素材生产任务</p>
+     * <p>Submit a Material Generation Job</p>
      * 
      * @param request SubmitMaterialTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6766,7 +7218,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交素材生产任务</p>
+     * <p>Submit a Material Generation Job</p>
      * 
      * @param request SubmitMaterialTaskRequest
      * @return SubmitMaterialTaskResponse
@@ -6777,6 +7229,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>万小智2.0创建AI会话接口</p>
+     * 
      * <b>summary</b> : 
      * <p>切换到指定对话</p>
      * 
@@ -6817,6 +7272,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>万小智2.0创建AI会话接口</p>
+     * 
      * <b>summary</b> : 
      * <p>切换到指定对话</p>
      * 
@@ -6830,7 +7288,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>合作伙伴同步应用实例</p>
+     * <p>Partnership synchronizes application instance</p>
      * 
      * @param tmpReq SyncAppInstanceForPartnerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6884,7 +7342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>合作伙伴同步应用实例</p>
+     * <p>Partnership synchronizes application instance</p>
      * 
      * @param request SyncAppInstanceForPartnerRequest
      * @return SyncAppInstanceForPartnerResponse
@@ -6943,8 +7401,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Wan Xiaozhi 2.0 - AI session history query API</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新消息内容</p>
+     * <p>Update message content</p>
      * 
      * @param request UpdateAppChatMessageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6987,8 +7448,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Wan Xiaozhi 2.0 - AI session history query API</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新消息内容</p>
+     * <p>Update message content</p>
      * 
      * @param request UpdateAppChatMessageRequest
      * @return UpdateAppChatMessageResponse
@@ -6999,8 +7463,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieve the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>编辑JSX代码</p>
+     * <p>Edit JSX Code</p>
      * 
      * @param request UpdateAppCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7035,8 +7502,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieve the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>编辑JSX代码</p>
+     * <p>Edit JSX Code</p>
      * 
      * @param request UpdateAppCodeRequest
      * @return UpdateAppCodeResponse
@@ -7047,8 +7517,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新文件</p>
+     * <p>Update file</p>
      * 
      * @param request UpdateAppFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7087,8 +7560,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新文件</p>
+     * <p>Update file</p>
      * 
      * @param request UpdateAppFileRequest
      * @return UpdateAppFileResponse
@@ -7099,8 +7575,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query application instance information</p>
+     * 
      * <b>summary</b> : 
-     * <p>建站实例变配</p>
+     * <p>Upgrade/Downgrade website instance.</p>
      * 
      * @param tmpReq UpdateAppInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7187,8 +7666,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query application instance information</p>
+     * 
      * <b>summary</b> : 
-     * <p>建站实例变配</p>
+     * <p>Upgrade/Downgrade website instance.</p>
      * 
      * @param request UpdateAppInstanceRequest
      * @return UpdateAppInstanceResponse
@@ -7261,8 +7743,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the auth configuration information of the Supabase instance corresponding to the resource</p>
+     * 
      * <b>summary</b> : 
-     * <p>Supabase认证配置更新</p>
+     * <p>Update Supabase authentication configuration</p>
      * 
      * @param request UpdateAppSupabaseAuthConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7297,8 +7782,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the auth configuration information of the Supabase instance corresponding to the resource</p>
+     * 
      * <b>summary</b> : 
-     * <p>Supabase认证配置更新</p>
+     * <p>Update Supabase authentication configuration</p>
      * 
      * @param request UpdateAppSupabaseAuthConfigRequest
      * @return UpdateAppSupabaseAuthConfigResponse
@@ -7309,8 +7797,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Operation resource corresponds to the supabase instance information</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新Supabase密钥</p>
+     * <p>Update Supabase key</p>
      * 
      * @param request UpdateAppSupabaseSecretRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7357,8 +7848,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Operation resource corresponds to the supabase instance information</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新Supabase密钥</p>
+     * <p>Update Supabase key</p>
      * 
      * @param request UpdateAppSupabaseSecretRequest
      * @return UpdateAppSupabaseSecretResponse
@@ -7370,7 +7864,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新绑定小程序信息</p>
+     * <p>Update miniapp binding information</p>
      * 
      * @param request UpdateMiniAppBindingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7414,7 +7908,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新绑定小程序信息</p>
+     * <p>Update miniapp binding information</p>
      * 
      * @param request UpdateMiniAppBindingRequest
      * @return UpdateMiniAppBindingResponse
@@ -7425,8 +7919,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>上传到站点根目录</p>
+     * <p>Upload to the site root directory</p>
      * 
      * @param request UploadAppSiteValidationFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7477,8 +7974,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the configuration information of the code generation plugin</p>
+     * 
      * <b>summary</b> : 
-     * <p>上传到站点根目录</p>
+     * <p>Upload to the site root directory</p>
      * 
      * @param request UploadAppSiteValidationFileRequest
      * @return UploadAppSiteValidationFileResponse
@@ -7490,7 +7990,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上传素材文件</p>
+     * <p>Upload material files</p>
      * 
      * @param request UploadMaterialFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7534,7 +8034,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上传素材文件</p>
+     * <p>Upload material files</p>
      * 
      * @param request UploadMaterialFileRequest
      * @return UploadMaterialFileResponse

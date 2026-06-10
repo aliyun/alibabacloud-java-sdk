@@ -4,6 +4,9 @@ package com.aliyun.websitebuild20250429.models;
 import com.aliyun.tea.*;
 
 public class GetDomainInfoForPartnerResponseBody extends TeaModel {
+    /**
+     * <p>Request result.</p>
+     */
     @NameInMap("Data")
     public GetDomainInfoForPartnerResponseBodyData data;
 
@@ -39,6 +42,8 @@ public class GetDomainInfoForPartnerResponseBody extends TeaModel {
 
     public static class GetDomainInfoForPartnerResponseBodyDataOwnership extends TeaModel {
         /**
+         * <p>Member name.</p>
+         * 
          * <strong>example:</strong>
          * <p>1189245564569485</p>
          */
@@ -46,6 +51,8 @@ public class GetDomainInfoForPartnerResponseBody extends TeaModel {
         public String account;
 
         /**
+         * <p>Provider</p>
+         * 
          * <strong>example:</strong>
          * <p>pai</p>
          */
@@ -77,6 +84,8 @@ public class GetDomainInfoForPartnerResponseBody extends TeaModel {
 
     public static class GetDomainInfoForPartnerResponseBodyData extends TeaModel {
         /**
+         * <p>Domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>playnew-alilive.daotantan.com</p>
          */
@@ -84,16 +93,23 @@ public class GetDomainInfoForPartnerResponseBody extends TeaModel {
         public String domainName;
 
         /**
+         * <p>List of DNS server IP addresses.</p>
+         * 
          * <strong>example:</strong>
          * <p>NS3.ALIYUN.COM,NS4.ALIYUN.COM</p>
          */
         @NameInMap("NameServers")
         public String nameServers;
 
+        /**
+         * <p>IP ownership.</p>
+         */
         @NameInMap("Ownership")
         public GetDomainInfoForPartnerResponseBodyDataOwnership ownership;
 
         /**
+         * <p>Domain name registrar</p>
+         * 
          * <strong>example:</strong>
          * <p>aliyun</p>
          */

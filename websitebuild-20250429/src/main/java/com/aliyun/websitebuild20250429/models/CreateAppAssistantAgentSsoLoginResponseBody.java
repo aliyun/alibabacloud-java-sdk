@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAppAssistantAgentSsoLoginResponseBody extends TeaModel {
     /**
+     * <p>Detailed reason for access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class CreateAppAssistantAgentSsoLoginResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>is retry allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class CreateAppAssistantAgentSsoLoginResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>App name.</p>
+     * 
      * <strong>example:</strong>
      * <p>dewuApp</p>
      */
@@ -26,6 +32,8 @@ public class CreateAppAssistantAgentSsoLoginResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,15 +41,26 @@ public class CreateAppAssistantAgentSsoLoginResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>Dynamic error message used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> field of the response.  </p>
+     * <blockquote>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>faulty parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>response data</p>
+     */
     @NameInMap("Module")
     public CreateAppAssistantAgentSsoLoginResponseBodyModule module;
 
@@ -55,16 +74,26 @@ public class CreateAppAssistantAgentSsoLoginResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Reserved parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -166,16 +195,23 @@ public class CreateAppAssistantAgentSsoLoginResponseBody extends TeaModel {
 
     public static class CreateAppAssistantAgentSsoLoginResponseBodyModule extends TeaModel {
         /**
+         * <p>Expiration UNIX timestamp</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-07-30T16:00Z</p>
          */
         @NameInMap("ExpireTime")
         public Long expireTime;
 
+        /**
+         * <p>Platform-specific extension fields</p>
+         */
         @NameInMap("Extra")
         public java.util.Map<String, String> extra;
 
         /**
+         * <p>Platform type identifier</p>
+         * 
          * <strong>example:</strong>
          * <p>VMWARE</p>
          */
@@ -183,6 +219,8 @@ public class CreateAppAssistantAgentSsoLoginResponseBody extends TeaModel {
         public String platformType;
 
         /**
+         * <p>SSO免登URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://sso.agent">https://sso.agent</a></p>
          */

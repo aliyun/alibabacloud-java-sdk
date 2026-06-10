@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExportMaterialFileRequest extends TeaModel {
     /**
+     * <p>Business instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ExportMaterialFileRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>List of file IDs</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("FileIds")

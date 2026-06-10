@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryInspirationBalanceResponseBody extends TeaModel {
     /**
+     * <p>Detailed reason for access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Whether retry is allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>Application name; query the application with this name</p>
+     * 
      * <strong>example:</strong>
      * <p>dewuApp</p>
      */
@@ -26,6 +32,8 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>Dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,15 +41,26 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>Dynamic error message used to replace <code>%s</code> in the <strong>ErrMessage</strong> error message.  </p>
+     * <blockquote>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>Fault parameters.</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>Response data</p>
+     */
     @NameInMap("Module")
     public QueryInspirationBalanceResponseBodyModule module;
 
@@ -55,16 +74,26 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>Abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Whether processing is synchronous</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -166,25 +195,40 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
 
     public static class QueryInspirationBalanceResponseBodyModule extends TeaModel {
         /**
+         * <p>Remaining (totalQuota - totalUsed)</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
         @NameInMap("Remaining")
         public Long remaining;
 
+        @NameInMap("RemainingStr")
+        public String remainingStr;
+
         /**
+         * <p>Total quota (sum of initQuota from all valid accounts)</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("TotalQuota")
         public Long totalQuota;
 
+        @NameInMap("TotalQuotaStr")
+        public String totalQuotaStr;
+
         /**
+         * <p>Consumed amount (sum of used from all valid accounts)</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("TotalUsed")
         public Long totalUsed;
+
+        @NameInMap("TotalUsedStr")
+        public String totalUsedStr;
 
         public static QueryInspirationBalanceResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
             QueryInspirationBalanceResponseBodyModule self = new QueryInspirationBalanceResponseBodyModule();
@@ -199,6 +243,14 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
             return this.remaining;
         }
 
+        public QueryInspirationBalanceResponseBodyModule setRemainingStr(String remainingStr) {
+            this.remainingStr = remainingStr;
+            return this;
+        }
+        public String getRemainingStr() {
+            return this.remainingStr;
+        }
+
         public QueryInspirationBalanceResponseBodyModule setTotalQuota(Long totalQuota) {
             this.totalQuota = totalQuota;
             return this;
@@ -207,12 +259,28 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
             return this.totalQuota;
         }
 
+        public QueryInspirationBalanceResponseBodyModule setTotalQuotaStr(String totalQuotaStr) {
+            this.totalQuotaStr = totalQuotaStr;
+            return this;
+        }
+        public String getTotalQuotaStr() {
+            return this.totalQuotaStr;
+        }
+
         public QueryInspirationBalanceResponseBodyModule setTotalUsed(Long totalUsed) {
             this.totalUsed = totalUsed;
             return this;
         }
         public Long getTotalUsed() {
             return this.totalUsed;
+        }
+
+        public QueryInspirationBalanceResponseBodyModule setTotalUsedStr(String totalUsedStr) {
+            this.totalUsedStr = totalUsedStr;
+            return this;
+        }
+        public String getTotalUsedStr() {
+            return this.totalUsedStr;
         }
 
     }

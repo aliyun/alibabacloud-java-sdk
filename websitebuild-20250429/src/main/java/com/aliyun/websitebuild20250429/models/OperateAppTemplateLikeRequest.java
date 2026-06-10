@@ -4,10 +4,15 @@ package com.aliyun.websitebuild20250429.models;
 import com.aliyun.tea.*;
 
 public class OperateAppTemplateLikeRequest extends TeaModel {
+    /**
+     * <p>Indicates whether the item is collected</p>
+     */
     @NameInMap("Liked")
     public Boolean liked;
 
     /**
+     * <p>Template ID</p>
+     * 
      * <strong>example:</strong>
      * <p>K191WHV12URYQN06</p>
      */

@@ -4,6 +4,9 @@ package com.aliyun.websitebuild20250429.models;
 import com.aliyun.tea.*;
 
 public class UpdateMiniAppBindingResponseBody extends TeaModel {
+    /**
+     * <p>Request result.</p>
+     */
     @NameInMap("Data")
     public UpdateMiniAppBindingResponseBodyData data;
 
@@ -39,6 +42,8 @@ public class UpdateMiniAppBindingResponseBody extends TeaModel {
 
     public static class UpdateMiniAppBindingResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether the operation succeeded.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

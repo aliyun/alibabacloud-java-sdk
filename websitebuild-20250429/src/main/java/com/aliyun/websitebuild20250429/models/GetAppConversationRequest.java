@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAppConversationRequest extends TeaModel {
     /**
+     * <p>Bot ID</p>
+     * 
      * <strong>example:</strong>
      * <p>Zero2</p>
      */
@@ -12,6 +14,8 @@ public class GetAppConversationRequest extends TeaModel {
     public String botId;
 
     /**
+     * <p>Session ID</p>
+     * 
      * <strong>example:</strong>
      * <p>81bc5a34-1d8d-4ef7-a208-7401c51b054b</p>
      */

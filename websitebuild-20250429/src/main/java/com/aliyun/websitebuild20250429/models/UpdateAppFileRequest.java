@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateAppFileRequest extends TeaModel {
     /**
+     * <p>File content</p>
+     * 
      * <strong>example:</strong>
      * <p>verify_46630893e2b5efde444c82b4e3707adb</p>
      */
@@ -12,6 +14,8 @@ public class UpdateAppFileRequest extends TeaModel {
     public String content;
 
     /**
+     * <p>Session ID</p>
+     * 
      * <strong>example:</strong>
      * <p>593fe1a2-d0b4-4fde-a2b0-78ad6a438d41</p>
      */
@@ -19,6 +23,8 @@ public class UpdateAppFileRequest extends TeaModel {
     public String conversationId;
 
     /**
+     * <p>File Path</p>
+     * 
      * <strong>example:</strong>
      * <p>pt3/01/31/pengpeixin.png</p>
      */

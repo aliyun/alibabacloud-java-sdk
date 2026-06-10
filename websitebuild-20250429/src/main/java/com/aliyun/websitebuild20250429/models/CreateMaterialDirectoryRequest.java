@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateMaterialDirectoryRequest extends TeaModel {
     /**
+     * <p>Application instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,17 @@ public class CreateMaterialDirectoryRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Folder name</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>图片管理</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>Parent folder ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

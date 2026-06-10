@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class IntrospectAppInstanceTicketForPreviewRequest extends TeaModel {
     /**
+     * <p>Business ID</p>
+     * 
      * <strong>example:</strong>
      * <p>WS12345678</p>
      */
@@ -12,6 +14,8 @@ public class IntrospectAppInstanceTicketForPreviewRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Password-free login access token</p>
+     * 
      * <strong>example:</strong>
      * <p>ogxMqT04nnZOqdIqJZldbm-ZNsAVDz5mcqdCSudfX0SL61jjyWfV-ZnAO-OVpCt_aDl8xaaIO1OVkuvEcMn-HR_QddvaxMqIdsMY1cHdD4SDiRfOBGNdnpSdX9gG_Hi_.ab9c10816d913b51d87520ce0a72b2970668144c552689e9d9e211eb4529f0ea</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryMaterialTaskDetailResponseBody extends TeaModel {
     /**
+     * <p>access denied details</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,12 @@ public class QueryMaterialTaskDetailResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Indicates whether retry is allowed. Valid values:  </p>
+     * <ul>
+     * <li>false: Retry is not allowed.  </li>
+     * <li>true: Retry is allowed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +27,8 @@ public class QueryMaterialTaskDetailResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>AppName. It can contain digits, letters, and hyphens (-). It must start with a letter, cannot end with a hyphen (-), and cannot exceed 36 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>or</p>
      */
@@ -26,6 +36,8 @@ public class QueryMaterialTaskDetailResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>Dynamic error code</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,16 +45,23 @@ public class QueryMaterialTaskDetailResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>dynamic message</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>returned error parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
+     * <p>error code. The ErrorCode field is returned only when the Request fails. If the Request succeeds, the ErrorCode field is not returned. For more information, see the error code List in this topic.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -50,6 +69,8 @@ public class QueryMaterialTaskDetailResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>error message</p>
+     * 
      * <strong>example:</strong>
      * <p>aliuid:1998006665794443 assumeRole not exist,serviceName:realtimelogpush.dcdnservices.aliyuncs.com</p>
      */
@@ -57,6 +78,8 @@ public class QueryMaterialTaskDetailResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
+     * <p>Response data</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;Success\&quot;: True}</p>
      */
@@ -73,16 +96,26 @@ public class QueryMaterialTaskDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Indicates whether the Request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -90,6 +123,8 @@ public class QueryMaterialTaskDetailResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Reserved parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

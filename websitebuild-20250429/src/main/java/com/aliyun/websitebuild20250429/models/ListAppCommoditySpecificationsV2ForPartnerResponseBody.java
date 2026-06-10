@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaModel {
     /**
+     * <p>permission denied information</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
     public String accessDeniedDetail;
 
     /**
+     * <p>is retry allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
     public Boolean allowRetry;
 
     /**
+     * <p>App Name.</p>
+     * 
      * <strong>example:</strong>
      * <p>or</p>
      */
@@ -26,6 +32,8 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
     public String appName;
 
     /**
+     * <p>dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,26 +41,42 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
     public String dynamicCode;
 
     /**
+     * <p>dynamic error message used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> error message.</p>
+     * <blockquote>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the provided request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>faulty parameters.</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
+     * <p>Number of results per query.</p>
+     * <p>Value range: 10–100. Default Value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>Response data</p>
+     */
     @NameInMap("Module")
     public ListAppCommoditySpecificationsV2ForPartnerResponseBodyModule module;
 
     /**
+     * <p>Token for the start of the next query. It is empty if there is no next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
      */
@@ -69,16 +93,26 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
     public String requestId;
 
     /**
+     * <p>error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>is synchronous processing enabled</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -196,18 +230,32 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
 
     public static class ListAppCommoditySpecificationsV2ForPartnerResponseBodyModuleData extends TeaModel {
         /**
+         * <p>API status or POP error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>Default Value</p>
+         */
         @NameInMap("Components")
         public java.util.Map<String, ModuleDataComponentsValue> components;
 
+        /**
+         * <p>File name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文件名</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Duration.</p>
+         */
         @NameInMap("Properties")
         public java.util.Map<String, ModuleDataPropertiesValue> properties;
 
@@ -252,22 +300,32 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
 
     public static class ListAppCommoditySpecificationsV2ForPartnerResponseBodyModuleNext extends TeaModel {
         /**
+         * <p>API status or POP error code</p>
+         * 
          * <strong>example:</strong>
          * <p>OK</p>
          */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>Default Value</p>
+         */
         @NameInMap("Components")
         public java.util.Map<String, ModuleNextComponentsValue> components;
 
         /**
+         * <p>Website Name</p>
+         * 
          * <strong>example:</strong>
          * <p>docs</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Frame rate.</p>
+         */
         @NameInMap("Properties")
         public java.util.Map<String, ModuleNextPropertiesValue> properties;
 
@@ -312,19 +370,29 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
 
     public static class ListAppCommoditySpecificationsV2ForPartnerResponseBodyModule extends TeaModel {
         /**
+         * <p>Current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
         @NameInMap("CurrentPageNum")
         public Integer currentPageNum;
 
+        /**
+         * <p>Request result.</p>
+         */
         @NameInMap("Data")
         public java.util.List<ListAppCommoditySpecificationsV2ForPartnerResponseBodyModuleData> data;
 
+        /**
+         * <p>Next feature ID</p>
+         */
         @NameInMap("Next")
         public ListAppCommoditySpecificationsV2ForPartnerResponseBodyModuleNext next;
 
         /**
+         * <p>Indicates whether there is a next page.</p>
+         * 
          * <strong>example:</strong>
          * <p>False</p>
          */
@@ -332,6 +400,8 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
         public Boolean nextPage;
 
         /**
+         * <p>Paging size.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -339,16 +409,23 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
         public Integer pageSize;
 
         /**
+         * <p>Indicates whether there is a previous page.</p>
+         * 
          * <strong>example:</strong>
          * <p>False</p>
          */
         @NameInMap("PrePage")
         public Boolean prePage;
 
+        /**
+         * <p>For the current query, aside from pagination limits, the server-side processes at most the latest 1 000 records. If the result exceeds 1 000 records, <strong>ResultLimit</strong> is <strong>true</strong>. You can narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+         */
         @NameInMap("ResultLimit")
         public Boolean resultLimit;
 
         /**
+         * <p>Total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -356,6 +433,8 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
         public Integer totalItemNum;
 
         /**
+         * <p>Total number of pages.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

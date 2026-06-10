@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDomainInfoForPartnerRequest extends TeaModel {
     /**
+     * <p>Customer business ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetDomainInfoForPartnerRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GetDomainInfoForPartnerRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>Alibaba Cloud pk</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -39,6 +39,10 @@ public class ConfirmAppInstanceRequest extends TeaModel {
     @NameInMap("Duration")
     public Integer duration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;deliveryNodeName\&quot;:\&quot;视觉设计确认\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Reject\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Customer\&quot;}</p>
+     */
     @NameInMap("Extend")
     public String extend;
 

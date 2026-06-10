@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
     /**
+     * <p>Access denied details</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,12 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Indicates whether retry is allowed. Valid values:</p>
+     * <ul>
+     * <li>false: Retry is not allowed.</li>
+     * <li>true: Retry is allowed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +27,8 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>Application Name. Query the application with this name.</p>
+     * 
      * <strong>example:</strong>
      * <p>or</p>
      */
@@ -26,6 +36,8 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>Dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,15 +45,23 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>Dynamic message.</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>Returned error parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>Response data</p>
+     */
     @NameInMap("Module")
     public QueryInspirationAccountDetailsResponseBodyModule module;
 
@@ -55,16 +75,26 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>Abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Indicates whether processing is synchronous</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -166,6 +196,8 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
 
     public static class QueryInspirationAccountDetailsResponseBodyModuleData extends TeaModel {
         /**
+         * <p>Acquisition Time</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-03 12:00:00</p>
          */
@@ -173,13 +205,20 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public String acquisitionTime;
 
         /**
+         * <p>Balance (initQuota - used)</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
         @NameInMap("Balance")
         public Long balance;
 
+        @NameInMap("BalanceStr")
+        public String balanceStr;
+
         /**
+         * <p>Validity Period expiration time</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-04-11 10:26:27 +0800</p>
          */
@@ -187,6 +226,8 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public String endDate;
 
         /**
+         * <p>Indicates whether it has expired (endDate &lt; current time). The frontend uses this to gray out the display.</p>
+         * 
          * <strong>example:</strong>
          * <p>False</p>
          */
@@ -194,13 +235,20 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public Boolean expired;
 
         /**
+         * <p>Quantity obtained (initial quota)</p>
+         * 
          * <strong>example:</strong>
          * <p>123123</p>
          */
         @NameInMap("InitQuota")
         public Long initQuota;
 
+        @NameInMap("InitQuotaStr")
+        public String initQuotaStr;
+
         /**
+         * <p>Source type code (such as FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, PURCHASED)</p>
+         * 
          * <strong>example:</strong>
          * <p>MARKET_CLOUD_DREAM</p>
          */
@@ -208,6 +256,8 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public String sourceType;
 
         /**
+         * <p>Source Type Display Name</p>
+         * 
          * <strong>example:</strong>
          * <p>FREE_TRIAL_GIFT</p>
          */
@@ -238,6 +288,14 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             return this.balance;
         }
 
+        public QueryInspirationAccountDetailsResponseBodyModuleData setBalanceStr(String balanceStr) {
+            this.balanceStr = balanceStr;
+            return this;
+        }
+        public String getBalanceStr() {
+            return this.balanceStr;
+        }
+
         public QueryInspirationAccountDetailsResponseBodyModuleData setEndDate(String endDate) {
             this.endDate = endDate;
             return this;
@@ -260,6 +318,14 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         }
         public Long getInitQuota() {
             return this.initQuota;
+        }
+
+        public QueryInspirationAccountDetailsResponseBodyModuleData setInitQuotaStr(String initQuotaStr) {
+            this.initQuotaStr = initQuotaStr;
+            return this;
+        }
+        public String getInitQuotaStr() {
+            return this.initQuotaStr;
         }
 
         public QueryInspirationAccountDetailsResponseBodyModuleData setSourceType(String sourceType) {
@@ -290,6 +356,8 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
 
     public static class QueryInspirationAccountDetailsResponseBodyModuleNext extends TeaModel {
         /**
+         * <p>Acquisition time</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-03 12:00:00</p>
          */
@@ -297,13 +365,20 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public String acquisitionTime;
 
         /**
+         * <p>Balance (initQuota - used)</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
         @NameInMap("Balance")
         public Long balance;
 
+        @NameInMap("BalanceStr")
+        public String balanceStr;
+
         /**
+         * <p>Expiration time of the validity period</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-02-25 10:11:25</p>
          */
@@ -311,6 +386,8 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public String endDate;
 
         /**
+         * <p>Indicates whether it has expired (endDate &lt; current time). The frontend uses this to gray out the display.</p>
+         * 
          * <strong>example:</strong>
          * <p>False</p>
          */
@@ -318,13 +395,20 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public Boolean expired;
 
         /**
+         * <p>Quantity obtained (initial quota)</p>
+         * 
          * <strong>example:</strong>
          * <p>123123</p>
          */
         @NameInMap("InitQuota")
         public Long initQuota;
 
+        @NameInMap("InitQuotaStr")
+        public String initQuotaStr;
+
         /**
+         * <p>Source type code (such as FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, PURCHASED)</p>
+         * 
          * <strong>example:</strong>
          * <p>MARKET_CLOUD_DREAM</p>
          */
@@ -332,6 +416,8 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public String sourceType;
 
         /**
+         * <p>Display Name of the source type</p>
+         * 
          * <strong>example:</strong>
          * <p>FREE_TRIAL_GIFT</p>
          */
@@ -359,6 +445,14 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             return this.balance;
         }
 
+        public QueryInspirationAccountDetailsResponseBodyModuleNext setBalanceStr(String balanceStr) {
+            this.balanceStr = balanceStr;
+            return this;
+        }
+        public String getBalanceStr() {
+            return this.balanceStr;
+        }
+
         public QueryInspirationAccountDetailsResponseBodyModuleNext setEndDate(String endDate) {
             this.endDate = endDate;
             return this;
@@ -383,6 +477,14 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             return this.initQuota;
         }
 
+        public QueryInspirationAccountDetailsResponseBodyModuleNext setInitQuotaStr(String initQuotaStr) {
+            this.initQuotaStr = initQuotaStr;
+            return this;
+        }
+        public String getInitQuotaStr() {
+            return this.initQuotaStr;
+        }
+
         public QueryInspirationAccountDetailsResponseBodyModuleNext setSourceType(String sourceType) {
             this.sourceType = sourceType;
             return this;
@@ -403,19 +505,29 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
 
     public static class QueryInspirationAccountDetailsResponseBodyModule extends TeaModel {
         /**
+         * <p>Current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
         @NameInMap("CurrentPageNum")
         public Integer currentPageNum;
 
+        /**
+         * <p>Request result.</p>
+         */
         @NameInMap("Data")
         public java.util.List<QueryInspirationAccountDetailsResponseBodyModuleData> data;
 
+        /**
+         * <p>Decision weight</p>
+         */
         @NameInMap("Next")
         public QueryInspirationAccountDetailsResponseBodyModuleNext next;
 
         /**
+         * <p>Indicates whether there is a next page.</p>
+         * 
          * <strong>example:</strong>
          * <p>False</p>
          */
@@ -423,6 +535,8 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public Boolean nextPage;
 
         /**
+         * <p>Page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -430,16 +544,23 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Indicates whether a previous page exists</p>
+         * 
          * <strong>example:</strong>
          * <p>False</p>
          */
         @NameInMap("PrePage")
         public Boolean prePage;
 
+        /**
+         * <p>In addition to paging limits, the server-side processes at most the latest 1,000 records for the current query. If the result exceeds 1,000 records, <strong>ResultLimit</strong> is <strong>true</strong>. You can narrow the Time Range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+         */
         @NameInMap("ResultLimit")
         public Boolean resultLimit;
 
         /**
+         * <p>Total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -447,6 +568,8 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public Integer totalItemNum;
 
         /**
+         * <p>Total number of pages.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

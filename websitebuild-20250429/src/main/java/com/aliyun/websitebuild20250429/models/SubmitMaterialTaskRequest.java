@@ -5,12 +5,21 @@ import com.aliyun.tea.*;
 
 public class SubmitMaterialTaskRequest extends TeaModel {
     /**
+     * <p>Job parameters</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;brandName&quot;: &quot;品牌名称&quot;,
+     *     &quot;direction&quot;: &quot;HORIZONTAL&quot;,
+     *     &quot;userPrompt&quot;: &quot;设计要求&quot;
+     * }</p>
      */
     @NameInMap("TaskParam")
     public String taskParam;
 
     /**
+     * <p>Task Type</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

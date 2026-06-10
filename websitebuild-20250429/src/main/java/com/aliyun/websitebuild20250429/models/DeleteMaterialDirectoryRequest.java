@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteMaterialDirectoryRequest extends TeaModel {
     /**
+     * <p>The business ID of the application instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>WD20250703155602000001</p>
      */
@@ -12,6 +14,8 @@ public class DeleteMaterialDirectoryRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>The folder ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>68157a0a-769a-4364-bbdc-a0e2cf3d5ad</p>
      */

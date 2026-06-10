@@ -4,6 +4,9 @@ package com.aliyun.websitebuild20250429.models;
 import com.aliyun.tea.*;
 
 public class GetMiniAppBindingResponseBody extends TeaModel {
+    /**
+     * <p>Request result.</p>
+     */
     @NameInMap("Data")
     public GetMiniAppBindingResponseBodyData data;
 
@@ -39,6 +42,8 @@ public class GetMiniAppBindingResponseBody extends TeaModel {
 
     public static class GetMiniAppBindingResponseBodyData extends TeaModel {
         /**
+         * <p>Authorization status</p>
+         * 
          * <strong>example:</strong>
          * <p>disabled</p>
          */
@@ -46,24 +51,53 @@ public class GetMiniAppBindingResponseBody extends TeaModel {
         public String authStatus;
 
         /**
+         * <p>Business ID</p>
+         * 
          * <strong>example:</strong>
          * <p>WS20260206134402000001</p>
          */
         @NameInMap("BizId")
         public String bizId;
 
+        /**
+         * <p>ICP filing status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IcpFiled")
         public Boolean icpFiled;
 
+        /**
+         * <p>Miniapp ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wx7f122a7d23fdxxxx</p>
+         */
         @NameInMap("PlatformAppid")
         public String platformAppid;
 
+        /**
+         * <p>Preview QR code</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxxx">http://xxxx</a></p>
+         */
         @NameInMap("PreviewQrCodeUrl")
         public String previewQrCodeUrl;
 
+        /**
+         * <p>Production QR code</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxxx">http://xxxx</a></p>
+         */
         @NameInMap("ProductionQrCodeUrl")
         public String productionQrCodeUrl;
 
+        /**
+         * <p>Extension information</p>
+         */
         @NameInMap("SettingValues")
         public java.util.Map<String, String> settingValues;
 

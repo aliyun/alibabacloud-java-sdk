@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAppTemplateDictsResponseBody extends TeaModel {
     /**
+     * <p>Detailed reason why access was denied.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>is retry allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>application name; queries the application with this name</p>
+     * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
      */
@@ -26,6 +32,8 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,26 +41,42 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>dynamic error message used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> response parameter.  </p>
+     * <blockquote>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>faulty parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
+     * <p>Number of results per query.  </p>
+     * <p>Value range: 10–100. Default Value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>response Data</p>
+     */
     @NameInMap("Module")
     public java.util.List<ListAppTemplateDictsResponseBodyModule> module;
 
     /**
+     * <p>Token for the start of the next query. It is empty when there is no next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
      */
@@ -69,16 +93,26 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>is processing synchronous</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -196,6 +230,8 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
 
     public static class ListAppTemplateDictsResponseBodyModule extends TeaModel {
         /**
+         * <p>Dictionary Code</p>
+         * 
          * <strong>example:</strong>
          * <p>abc</p>
          */
@@ -203,6 +239,8 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
         public String dictCode;
 
         /**
+         * <p>Dictionary label</p>
+         * 
          * <strong>example:</strong>
          * <p>label</p>
          */
@@ -210,6 +248,8 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
         public String dictLabel;
 
         /**
+         * <p>Enumeration of template dictionary types</p>
+         * 
          * <strong>example:</strong>
          * <p>product_version</p>
          */
@@ -217,16 +257,26 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
         public String dictType;
 
         /**
+         * <p>Dictionary value</p>
+         * 
          * <strong>example:</strong>
          * <p>abc</p>
          */
         @NameInMap("DictValue")
         public String dictValue;
 
+        /**
+         * <p>Indicates whether a template exists.</p>
+         */
         @NameInMap("HasTemplates")
         public Boolean hasTemplates;
 
         /**
+         * <p>Sorting order. The default is descending.  </p>
+         * <p>Enumeration values:  </p>
+         * <p>ASC: ascending.  </p>
+         * <p>DESC: descending.</p>
+         * 
          * <strong>example:</strong>
          * <p>desc</p>
          */

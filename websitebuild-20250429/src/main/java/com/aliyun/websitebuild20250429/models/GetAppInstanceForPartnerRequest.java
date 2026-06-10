@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAppInstanceForPartnerRequest extends TeaModel {
     /**
+     * <p>Business ID</p>
+     * 
      * <strong>example:</strong>
      * <p>WD20250814102215000001</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModuleResultsValue extends TeaModel {
     /**
+     * <p>Whether the check is passed</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class ModuleResultsValue extends TeaModel {
     public Boolean passed;
 
     /**
+     * <p>Resource identity</p>
+     * 
      * <strong>example:</strong>
      * <p>InspirationTokens</p>
      */
@@ -19,12 +23,20 @@ public class ModuleResultsValue extends TeaModel {
     public String resourceCode;
 
     /**
+     * <p>Error code when failed; null when passed</p>
+     * 
      * <strong>example:</strong>
      * <p>Resource.Control.No.Usage</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>Error message when failed; null when passed</p>
+     * 
+     * <strong>example:</strong>
+     * <p>用量耗尽</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 

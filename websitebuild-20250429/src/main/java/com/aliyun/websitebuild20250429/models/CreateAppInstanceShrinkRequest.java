@@ -107,6 +107,8 @@ public class CreateAppInstanceShrinkRequest extends TeaModel {
     public Integer quantity;
 
     /**
+     * <p>Resource group ID</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-aek2smovqqpvuly</p>
      */
@@ -122,6 +124,9 @@ public class CreateAppInstanceShrinkRequest extends TeaModel {
     @NameInMap("SiteVersion")
     public String siteVersion;
 
+    /**
+     * <p>List of tags</p>
+     */
     @NameInMap("Tags")
     public String tagsShrink;
 

@@ -5,16 +5,31 @@ import com.aliyun.tea.*;
 
 public class SearchImageShrinkRequest extends TeaModel {
     /**
+     * <p>Color</p>
+     * 
      * <strong>example:</strong>
      * <p>#B0B0B0</p>
      */
     @NameInMap("ColorHex")
     public String colorHex;
 
+    /**
+     * <p>Indicates whether the image contains a person.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("HasPerson")
     public Boolean hasPerson;
 
     /**
+     * <p>Image category. Valid values:</p>
+     * <ul>
+     * <li>normal: Illustrations or article images.</li>
+     * <li>banner: Background images or image carousels.</li>
+     * <li>goods: Product or service images.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>WindowsWithMssqlStdLicense</p>
      */
@@ -22,6 +37,14 @@ public class SearchImageShrinkRequest extends TeaModel {
     public String imageCategory;
 
     /**
+     * <p>Image aspect ratio, including:
+     * &quot;16:9&quot;
+     * &quot;4:3&quot;
+     * &quot;2:1&quot;
+     * &quot;1:1&quot;
+     * &quot;3:4&quot;
+     * &quot;9:16&quot;</p>
+     * 
      * <strong>example:</strong>
      * <p>16:9</p>
      */
@@ -29,6 +52,8 @@ public class SearchImageShrinkRequest extends TeaModel {
     public String imageRatio;
 
     /**
+     * <p>Maximum image height.</p>
+     * 
      * <strong>example:</strong>
      * <p>4000</p>
      */
@@ -36,6 +61,8 @@ public class SearchImageShrinkRequest extends TeaModel {
     public Integer maxHeight;
 
     /**
+     * <p>Number of items per page in a paged query. Maximum value is 100. Default value is 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>500</p>
      */
@@ -43,6 +70,8 @@ public class SearchImageShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Maximum image width (inclusive).</p>
+     * 
      * <strong>example:</strong>
      * <p>4000</p>
      */
@@ -50,6 +79,8 @@ public class SearchImageShrinkRequest extends TeaModel {
     public Integer maxWidth;
 
     /**
+     * <p>Minimum image height</p>
+     * 
      * <strong>example:</strong>
      * <p>500</p>
      */
@@ -57,6 +88,8 @@ public class SearchImageShrinkRequest extends TeaModel {
     public Integer minHeight;
 
     /**
+     * <p>Minimum image width (inclusive).</p>
+     * 
      * <strong>example:</strong>
      * <p>500</p>
      */
@@ -64,6 +97,8 @@ public class SearchImageShrinkRequest extends TeaModel {
     public Integer minWidth;
 
     /**
+     * <p>Query credential (Token). Set this parameter to the NextToken value returned in the previous API call. You do not need to set this parameter for the initial API call. If NextToken is specified, the request parameters PageSize and PageNumber become invalid, and the TotalCount in the returned data is also invalid.</p>
+     * 
      * <strong>example:</strong>
      * <p>FFh3Xqm+JgZ/U9Jyb7wdVr9LWk80Tghn5UZjbcWEVEderBcbVF+Y6PS0i8PpCL4PQZ3e0C9oEH0Asd4tJEuGtkl2WuKdiWZpEwadNydQdJPFM=</p>
      */
@@ -80,6 +115,8 @@ public class SearchImageShrinkRequest extends TeaModel {
     public String ossKey;
 
     /**
+     * <p>Number of results to return. Default value is 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -87,15 +124,29 @@ public class SearchImageShrinkRequest extends TeaModel {
     public Integer size;
 
     /**
+     * <p>Starting position of the return result. Valid values: 0 to 499. Default value is 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("Start")
     public Integer start;
 
+    /**
+     * <p>Tags.</p>
+     */
     @NameInMap("Tags")
     public String tagsShrink;
 
+    /**
+     * <p>Description text for searching images.</p>
+     * <blockquote>
+     * <p>Supports up to 512 characters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>卫浴五金产品，表面采用拉丝不锈钢材质，整体色调为现代银灰色，呈现简约且富有质感的风格。产品包括淋浴花洒、水龙头及毛巾架等配件，均具备防锈、耐腐蚀性能，适用于潮湿环境。各部件连接处设计精密，配有隐藏式螺丝结构，提升整体美观度。水龙头和花洒喷头支持多模式出水，把手操作顺滑，符合人体工学设计。所有五金件通过国家节水认证，支持冷热水接入，安装方式为壁挂式。</p>
+     */
     @NameInMap("Text")
     public String text;
 

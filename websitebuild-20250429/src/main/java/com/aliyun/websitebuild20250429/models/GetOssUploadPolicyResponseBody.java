@@ -46,8 +46,6 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
     public GetOssUploadPolicyResponseBodyModule module;
 
     /**
-     * <p>Id of the request</p>
-     * 
      * <strong>example:</strong>
      * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
      */
@@ -61,6 +59,10 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
@@ -208,8 +210,6 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
         public String version;
 
         /**
-         * <p>x-oss-credential</p>
-         * 
          * <strong>example:</strong>
          * <p>123123</p>
          */
@@ -217,8 +217,6 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
         public String xossCredential;
 
         /**
-         * <p>x-oss-date</p>
-         * 
          * <strong>example:</strong>
          * <p>20260101</p>
          */

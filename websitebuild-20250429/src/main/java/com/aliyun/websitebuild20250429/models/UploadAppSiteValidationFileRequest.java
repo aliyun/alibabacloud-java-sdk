@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UploadAppSiteValidationFileRequest extends TeaModel {
     /**
+     * <p>business ID</p>
+     * 
      * <strong>example:</strong>
      * <p>WD20250703155602000001</p>
      */
@@ -12,6 +14,8 @@ public class UploadAppSiteValidationFileRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>domain name</p>
+     * 
      * <strong>example:</strong>
      * <p>yjdw.bpu.edu.cn-waf</p>
      */
@@ -19,6 +23,8 @@ public class UploadAppSiteValidationFileRequest extends TeaModel {
     public String domain;
 
     /**
+     * <p>file name</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;URI\&quot;: \&quot;oss://imm-test-co-cn-chengdu/zqh/input/Image/indexImage/nn1.jpg\&quot;, \&quot;LatLong\&quot;:\&quot;+39.998800,+116.480900\&quot;}</p>
      */
@@ -26,6 +32,8 @@ public class UploadAppSiteValidationFileRequest extends TeaModel {
     public String file;
 
     /**
+     * <p>file content</p>
+     * 
      * <strong>example:</strong>
      * <p>abc</p>
      */
@@ -33,6 +41,8 @@ public class UploadAppSiteValidationFileRequest extends TeaModel {
     public String fileContent;
 
     /**
+     * <p>file type</p>
+     * 
      * <strong>example:</strong>
      * <p>APP_MAPPING</p>
      */
@@ -40,6 +50,8 @@ public class UploadAppSiteValidationFileRequest extends TeaModel {
     public String fileType;
 
     /**
+     * <p>site host</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
      */

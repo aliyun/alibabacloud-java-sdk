@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAppTemplateResponseBody extends TeaModel {
     /**
+     * <p>permission denied information</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class GetAppTemplateResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>is retry allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class GetAppTemplateResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>App Name.</p>
+     * 
      * <strong>example:</strong>
      * <p>ish-intelligence-store-platform-admin-web</p>
      */
@@ -26,6 +32,8 @@ public class GetAppTemplateResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>dynamic error Code</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,15 +41,26 @@ public class GetAppTemplateResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>dynamic error message, used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> error message.  </p>
+     * <blockquote>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>returned error parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>whether deletion succeeded</p>
+     */
     @NameInMap("Module")
     public GetAppTemplateResponseBodyModule module;
 
@@ -55,16 +74,26 @@ public class GetAppTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Reserved parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -166,6 +195,8 @@ public class GetAppTemplateResponseBody extends TeaModel {
 
     public static class GetAppTemplateResponseBodyModule extends TeaModel {
         /**
+         * <p>Application type</p>
+         * 
          * <strong>example:</strong>
          * <p>TRACE</p>
          */
@@ -173,6 +204,8 @@ public class GetAppTemplateResponseBody extends TeaModel {
         public String appType;
 
         /**
+         * <p>Business ID</p>
+         * 
          * <strong>example:</strong>
          * <p>WD20250703155602000001</p>
          */
@@ -180,6 +213,8 @@ public class GetAppTemplateResponseBody extends TeaModel {
         public String bizId;
 
         /**
+         * <p>color</p>
+         * 
          * <strong>example:</strong>
          * <p>red</p>
          */
@@ -187,6 +222,8 @@ public class GetAppTemplateResponseBody extends TeaModel {
         public String colorScheme;
 
         /**
+         * <p>Color name</p>
+         * 
          * <strong>example:</strong>
          * <p>red</p>
          */
@@ -194,6 +231,8 @@ public class GetAppTemplateResponseBody extends TeaModel {
         public String colorSchemeName;
 
         /**
+         * <p>The actual data volume of the original table copied during DMS lockless change.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -201,6 +240,8 @@ public class GetAppTemplateResponseBody extends TeaModel {
         public Integer copyCount;
 
         /**
+         * <p>User ID of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>208614160512124381</p>
          */
@@ -208,6 +249,7 @@ public class GetAppTemplateResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>Creation UTC time, in ISO 8601 date format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -217,7 +259,7 @@ public class GetAppTemplateResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>modify time</p>
+         * <p>Modify time</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -227,16 +269,32 @@ public class GetAppTemplateResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p>Primary key</p>
+         * 
          * <strong>example:</strong>
          * <p>16257</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>Industry. Default value: <strong>common</strong> (general industry). Valid values:</p>
+         * <ul>
+         * <li><p><strong>microVideo</strong>: Short video industry.</p>
+         * </li>
+         * <li><p><strong>common</strong>: General industry.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>通用</p>
+         */
         @NameInMap("Industry")
         public String industry;
 
         /**
+         * <p>Industry name.</p>
+         * 
          * <strong>example:</strong>
          * <p>indextry</p>
          */
@@ -244,6 +302,8 @@ public class GetAppTemplateResponseBody extends TeaModel {
         public String industryName;
 
         /**
+         * <p>Last modifier</p>
+         * 
          * <strong>example:</strong>
          * <p>admin</p>
          */
@@ -251,16 +311,38 @@ public class GetAppTemplateResponseBody extends TeaModel {
         public String lastModifier;
 
         /**
+         * <p>Like count.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
         @NameInMap("LikeCount")
         public Integer likeCount;
 
+        /**
+         * <p>Whether the current user has liked it</p>
+         */
         @NameInMap("Liked")
         public Boolean liked;
 
         /**
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <p>Map of metadata for text segmentation.</p>
+         * <blockquote>
+         * <p>In document-search-type knowledge bases, the <code>file_path</code> field in the metadata Map is meaningless. Do not use it in your business code.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p>When retrieving a document-search-type knowledge base, if a segment contains an image, the image URL will be exposed through the <code>image_url</code> field in the metadata Map, along with a time-to-live (TTL).</p>
+         * </blockquote>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <p>Map of metadata for text segmentation.</p>
+         * <blockquote>
+         * <p>In document-search-type knowledge bases, the <code>file_path</code> field in the metadata Map is meaningless. Do not use it in your business code.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p>When retrieving a document-search-type knowledge base, if a segment contains an image, the image URL will be exposed through the <code>image_url</code> field in the metadata Map, along with a time-to-live (TTL).</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;operations\&quot;:[{\&quot;operator\&quot;:\&quot;replace\&quot;,\&quot;oldMetaName\&quot;:\&quot;character2_add\&quot;,\&quot;newMetaType\&quot;:\&quot;varchar(2)\&quot;}]}</p>
          */
@@ -268,6 +350,8 @@ public class GetAppTemplateResponseBody extends TeaModel {
         public String metadata;
 
         /**
+         * <p>Preview URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://preview-lyj.aliyuncs.com/preview/4825a3849c2e49e1b48804c7f90b766f?subSceneIds=807648">https://preview-lyj.aliyuncs.com/preview/4825a3849c2e49e1b48804c7f90b766f?subSceneIds=807648</a></p>
          */
@@ -275,6 +359,15 @@ public class GetAppTemplateResponseBody extends TeaModel {
         public String previewUrl;
 
         /**
+         * <p>Edition. Valid values:</p>
+         * <ul>
+         * <li><strong>BasicVersion</strong>: Basic Edition.</li>
+         * <li><strong>EnterpriseVersion</strong>: Enterprise Edition.<blockquote>
+         * <p>This parameter is required only when ProductForm is set to IntegrationForm.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>V2</p>
          */
@@ -282,6 +375,8 @@ public class GetAppTemplateResponseBody extends TeaModel {
         public String productVersion;
 
         /**
+         * <p>Edition Name.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0.2</p>
          */
@@ -289,6 +384,8 @@ public class GetAppTemplateResponseBody extends TeaModel {
         public String productVersionName;
 
         /**
+         * <p>Share count</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -296,7 +393,7 @@ public class GetAppTemplateResponseBody extends TeaModel {
         public Integer shareCount;
 
         /**
-         * <p>trial,draft,live,refunded,expired,released</p>
+         * <p>trial, draft, live, refunded, expired, released</p>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
@@ -305,6 +402,8 @@ public class GetAppTemplateResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Template ID</p>
+         * 
          * <strong>example:</strong>
          * <p>7cc17da1-b670-4be7-a6b4-0b3cdf7bf5f7</p>
          */
@@ -312,6 +411,8 @@ public class GetAppTemplateResponseBody extends TeaModel {
         public String templateId;
 
         /**
+         * <p>Template Name</p>
+         * 
          * <strong>example:</strong>
          * <p>siemProtect_All_</p>
          */
@@ -319,6 +420,8 @@ public class GetAppTemplateResponseBody extends TeaModel {
         public String templateName;
 
         /**
+         * <p>application thumbnail</p>
+         * 
          * <strong>example:</strong>
          * <p>placeHolder</p>
          */
@@ -326,6 +429,8 @@ public class GetAppTemplateResponseBody extends TeaModel {
         public String thumbnailUrl;
 
         /**
+         * <p>View count.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -333,6 +438,8 @@ public class GetAppTemplateResponseBody extends TeaModel {
         public Integer viewCount;
 
         /**
+         * <p>Hot word weight, an integer in the range [1, 5].<br>Common value: 4.<br>If the effect is not obvious, you can moderately increase the weight. However, if the weight is too high, it may cause negative effects and reduce the accuracy of detecting other words.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

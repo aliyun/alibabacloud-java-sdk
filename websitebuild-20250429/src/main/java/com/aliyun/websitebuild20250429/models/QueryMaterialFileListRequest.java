@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryMaterialFileListRequest extends TeaModel {
     /**
+     * <p>Business ID of the application instance</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class QueryMaterialFileListRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Folder ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class QueryMaterialFileListRequest extends TeaModel {
     public String directoryId;
 
     /**
+     * <p>Maximum file size</p>
+     * 
      * <strong>example:</strong>
      * <p>1024</p>
      */
@@ -30,6 +34,9 @@ public class QueryMaterialFileListRequest extends TeaModel {
     public Long maxFileSize;
 
     /**
+     * <p>Number of results per query.</p>
+     * <p>Valid values: 10 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -37,16 +44,26 @@ public class QueryMaterialFileListRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Minimum file size</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("MinFileSize")
     public Long minFileSize;
 
+    /**
+     * <p>Website name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>Token indicating the start of the next query. It is empty when there is no subsequent query.</p>
+     * 
      * <strong>example:</strong>
      * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
      */
@@ -54,6 +71,8 @@ public class QueryMaterialFileListRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Sorting field</p>
+     * 
      * <strong>example:</strong>
      * <p>gmtCreated</p>
      */
@@ -61,6 +80,8 @@ public class QueryMaterialFileListRequest extends TeaModel {
     public String orderColumn;
 
     /**
+     * <p>Sorting type: ASC or DESC</p>
+     * 
      * <strong>example:</strong>
      * <p>BUY</p>
      */
@@ -68,6 +89,8 @@ public class QueryMaterialFileListRequest extends TeaModel {
     public String orderType;
 
     /**
+     * <p>Page number. Default value is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -75,18 +98,29 @@ public class QueryMaterialFileListRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>Page size. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Status range</p>
+     */
     @NameInMap("StatusList")
     public java.util.List<String> statusList;
 
+    /**
+     * <p>File suffix list</p>
+     */
     @NameInMap("SuffixList")
     public java.util.List<String> suffixList;
 
+    /**
+     * <p>List of file types</p>
+     */
     @NameInMap("TypeList")
     public java.util.List<String> typeList;
 

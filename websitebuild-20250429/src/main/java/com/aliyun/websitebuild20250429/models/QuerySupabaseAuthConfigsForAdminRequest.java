@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuerySupabaseAuthConfigsForAdminRequest extends TeaModel {
     /**
+     * <p>Authentication type</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class QuerySupabaseAuthConfigsForAdminRequest extends TeaModel {
     public String authType;
 
     /**
+     * <p>Business ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +28,8 @@ public class QuerySupabaseAuthConfigsForAdminRequest extends TeaModel {
     public String env;
 
     /**
+     * <p>Sorting field</p>
+     * 
      * <strong>example:</strong>
      * <p>gmtCreated</p>
      */
@@ -33,6 +37,8 @@ public class QuerySupabaseAuthConfigsForAdminRequest extends TeaModel {
     public String orderColumn;
 
     /**
+     * <p>Sorting type: ASC or DESC</p>
+     * 
      * <strong>example:</strong>
      * <p>DESC</p>
      */
@@ -40,6 +46,8 @@ public class QuerySupabaseAuthConfigsForAdminRequest extends TeaModel {
     public String orderType;
 
     /**
+     * <p>Page number, default is 1</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -47,6 +55,8 @@ public class QuerySupabaseAuthConfigsForAdminRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>Page size, default is 10</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -54,6 +64,8 @@ public class QuerySupabaseAuthConfigsForAdminRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>User ID</p>
+     * 
      * <strong>example:</strong>
      * <p>111</p>
      */

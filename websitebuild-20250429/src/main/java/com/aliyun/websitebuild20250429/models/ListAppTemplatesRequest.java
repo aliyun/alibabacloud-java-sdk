@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAppTemplatesRequest extends TeaModel {
     /**
+     * <p>Application Type</p>
+     * 
      * <strong>example:</strong>
      * <p>TRACE</p>
      */
@@ -12,6 +14,8 @@ public class ListAppTemplatesRequest extends TeaModel {
     public String appType;
 
     /**
+     * <p>Color scheme</p>
+     * 
      * <strong>example:</strong>
      * <p>Red</p>
      */
@@ -19,6 +23,8 @@ public class ListAppTemplatesRequest extends TeaModel {
     public String colorScheme;
 
     /**
+     * <p>industry categorization</p>
+     * 
      * <strong>example:</strong>
      * <p>Retail</p>
      */
@@ -26,6 +32,8 @@ public class ListAppTemplatesRequest extends TeaModel {
     public String industry;
 
     /**
+     * <p>Search keyword</p>
+     * 
      * <strong>example:</strong>
      * <p>${\&quot;wget JiexJPWT.popscan.xaliyun.com\&quot;}</p>
      */
@@ -33,6 +41,9 @@ public class ListAppTemplatesRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>Number of results per query.  </p>
+     * <p>Value range: 10–100. Default Value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -40,6 +51,8 @@ public class ListAppTemplatesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Token indicating the start of the next query. It is empty when there is no next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
      */
@@ -47,6 +60,8 @@ public class ListAppTemplatesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -54,6 +69,8 @@ public class ListAppTemplatesRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>Page size</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -61,6 +78,8 @@ public class ListAppTemplatesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Edition</p>
+     * 
      * <strong>example:</strong>
      * <p>V2</p>
      */
@@ -68,6 +87,8 @@ public class ListAppTemplatesRequest extends TeaModel {
     public String productVersion;
 
     /**
+     * <p>template Status</p>
+     * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryMaterialFileSummaryInfoRequest extends TeaModel {
     /**
+     * <p>Business instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class QueryMaterialFileSummaryInfoRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Folder ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,10 +24,18 @@ public class QueryMaterialFileSummaryInfoRequest extends TeaModel {
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <p>File name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>文件名</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>Sorting field</p>
+     * 
      * <strong>example:</strong>
      * <p>CreationTime</p>
      */
@@ -33,6 +43,8 @@ public class QueryMaterialFileSummaryInfoRequest extends TeaModel {
     public String orderColumn;
 
     /**
+     * <p>Sorting type: ASC or DESC</p>
+     * 
      * <strong>example:</strong>
      * <p>BUY</p>
      */
@@ -40,6 +52,8 @@ public class QueryMaterialFileSummaryInfoRequest extends TeaModel {
     public String orderType;
 
     /**
+     * <p>Page number. Default is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -47,15 +61,23 @@ public class QueryMaterialFileSummaryInfoRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>Page size. Default is 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>File status</p>
+     */
     @NameInMap("StatusList")
     public java.util.List<String> statusList;
 
+    /**
+     * <p>File type</p>
+     */
     @NameInMap("TypeList")
     public java.util.List<String> typeList;
 

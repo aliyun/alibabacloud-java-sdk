@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetMiniAppBindingForAdminRequest extends TeaModel {
     /**
+     * <p>Business ID</p>
+     * 
      * <strong>example:</strong>
      * <p>WS20250801152639000005</p>
      */
@@ -12,6 +14,8 @@ public class GetMiniAppBindingForAdminRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Channel</p>
+     * 
      * <strong>example:</strong>
      * <p>WECHAT</p>
      */
@@ -19,6 +23,8 @@ public class GetMiniAppBindingForAdminRequest extends TeaModel {
     public String channel;
 
     /**
+     * <p>Miniapp ID</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */

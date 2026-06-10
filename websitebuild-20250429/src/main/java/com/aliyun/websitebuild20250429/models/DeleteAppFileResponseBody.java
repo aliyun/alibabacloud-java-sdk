@@ -50,8 +50,6 @@ public class DeleteAppFileResponseBody extends TeaModel {
     public Boolean module;
 
     /**
-     * <p>Id of the request</p>
-     * 
      * <strong>example:</strong>
      * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
      */
@@ -65,6 +63,10 @@ public class DeleteAppFileResponseBody extends TeaModel {
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 

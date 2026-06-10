@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryInspirationAccountDetailsRequest extends TeaModel {
     /**
+     * <p>Query End Time</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-07-23T16:00:00Z</p>
      */
@@ -12,6 +14,8 @@ public class QueryInspirationAccountDetailsRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>Sorting field</p>
+     * 
      * <strong>example:</strong>
      * <p>gmtCreated</p>
      */
@@ -19,6 +23,8 @@ public class QueryInspirationAccountDetailsRequest extends TeaModel {
     public String orderColumn;
 
     /**
+     * <p>Sorting type: ASC|DESC</p>
+     * 
      * <strong>example:</strong>
      * <p>BUY</p>
      */
@@ -26,6 +32,8 @@ public class QueryInspirationAccountDetailsRequest extends TeaModel {
     public String orderType;
 
     /**
+     * <p>Page number, default is 1</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -33,6 +41,8 @@ public class QueryInspirationAccountDetailsRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>Page size, default is 10</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -40,6 +50,8 @@ public class QueryInspirationAccountDetailsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Source type filter (such as FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, PURCHASED)</p>
+     * 
      * <strong>example:</strong>
      * <p>MARKET_CLOUD_DREAM</p>
      */
@@ -47,6 +59,8 @@ public class QueryInspirationAccountDetailsRequest extends TeaModel {
     public String sourceType;
 
     /**
+     * <p>Query Start Time</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-06-21T16:00:00Z</p>
      */

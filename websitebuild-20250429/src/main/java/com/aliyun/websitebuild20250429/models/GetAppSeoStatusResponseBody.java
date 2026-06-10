@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAppSeoStatusResponseBody extends TeaModel {
     /**
+     * <p>Detailed reason for access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class GetAppSeoStatusResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>is retry allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class GetAppSeoStatusResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>Application name. Query the application with this name.</p>
+     * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
      */
@@ -26,6 +32,8 @@ public class GetAppSeoStatusResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,15 +41,26 @@ public class GetAppSeoStatusResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>dynamic error message, used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> error message.  </p>
+     * <blockquote>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the provided request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>returned error parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>response data</p>
+     */
     @NameInMap("Module")
     public java.util.List<GetAppSeoStatusResponseBodyModule> module;
 
@@ -55,16 +74,26 @@ public class GetAppSeoStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Fallback parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -166,6 +195,8 @@ public class GetAppSeoStatusResponseBody extends TeaModel {
 
     public static class GetAppSeoStatusResponseBodyModule extends TeaModel {
         /**
+         * <p>Business ID</p>
+         * 
          * <strong>example:</strong>
          * <p>WD20250703155602000001</p>
          */
@@ -173,6 +204,8 @@ public class GetAppSeoStatusResponseBody extends TeaModel {
         public String bizId;
 
         /**
+         * <p>Primary domain name</p>
+         * 
          * <strong>example:</strong>
          * <p>stxycw.com</p>
          */
@@ -180,6 +213,7 @@ public class GetAppSeoStatusResponseBody extends TeaModel {
         public String domain;
 
         /**
+         * <p>Creation time of the output.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -189,6 +223,7 @@ public class GetAppSeoStatusResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>Updated At.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -198,6 +233,8 @@ public class GetAppSeoStatusResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p>Index permission</p>
+         * 
          * <strong>example:</strong>
          * <p>authinfo</p>
          */
@@ -205,6 +242,8 @@ public class GetAppSeoStatusResponseBody extends TeaModel {
         public String seAuthInfo;
 
         /**
+         * <p>index status</p>
+         * 
          * <strong>example:</strong>
          * <p>0,1,2</p>
          */
@@ -212,6 +251,8 @@ public class GetAppSeoStatusResponseBody extends TeaModel {
         public Integer seIndexStatus;
 
         /**
+         * <p>search engine type</p>
+         * 
          * <strong>example:</strong>
          * <p>baidu,bing,google</p>
          */

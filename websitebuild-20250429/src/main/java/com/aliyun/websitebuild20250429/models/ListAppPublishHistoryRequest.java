@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAppPublishHistoryRequest extends TeaModel {
     /**
+     * <p>Business ID</p>
+     * 
      * <strong>example:</strong>
      * <p>WD20250703155602000001</p>
      */
@@ -14,10 +16,19 @@ public class ListAppPublishHistoryRequest extends TeaModel {
     @NameInMap("DeployChannel")
     public String deployChannel;
 
+    /**
+     * <p>Search keyword</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1_运营支持部_销售运营</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
+     * <p>Number of results per query.  </p>
+     * <p>Value range: 10 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -25,6 +36,8 @@ public class ListAppPublishHistoryRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Token indicating the start of the next query. Empty if there is no next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
      */
@@ -32,6 +45,8 @@ public class ListAppPublishHistoryRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -39,13 +54,20 @@ public class ListAppPublishHistoryRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>Page size</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("PublishEnv")
+    public String publishEnv;
+
     /**
+     * <p>Sorting method</p>
+     * 
      * <strong>example:</strong>
      * <p>EndTime</p>
      */
@@ -53,13 +75,20 @@ public class ListAppPublishHistoryRequest extends TeaModel {
     public String sort;
 
     /**
+     * <p>Publish status</p>
+     * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
      */
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("Subchannel")
+    public String subchannel;
+
     /**
+     * <p>Website domain name</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
      */
@@ -127,6 +156,14 @@ public class ListAppPublishHistoryRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public ListAppPublishHistoryRequest setPublishEnv(String publishEnv) {
+        this.publishEnv = publishEnv;
+        return this;
+    }
+    public String getPublishEnv() {
+        return this.publishEnv;
+    }
+
     public ListAppPublishHistoryRequest setSort(String sort) {
         this.sort = sort;
         return this;
@@ -141,6 +178,14 @@ public class ListAppPublishHistoryRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public ListAppPublishHistoryRequest setSubchannel(String subchannel) {
+        this.subchannel = subchannel;
+        return this;
+    }
+    public String getSubchannel() {
+        return this.subchannel;
     }
 
     public ListAppPublishHistoryRequest setWebsiteDomain(String websiteDomain) {

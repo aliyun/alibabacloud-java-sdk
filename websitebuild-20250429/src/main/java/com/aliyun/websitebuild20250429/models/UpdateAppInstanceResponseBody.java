@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateAppInstanceResponseBody extends TeaModel {
     /**
+     * <p>Detailed reason for access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class UpdateAppInstanceResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Is retry allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class UpdateAppInstanceResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>Application name</p>
+     * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
      */
@@ -26,6 +32,8 @@ public class UpdateAppInstanceResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>Dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,15 +41,23 @@ public class UpdateAppInstanceResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>Dynamic message. Not currently used. Please ignore.</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>Returned error parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>Response data</p>
+     */
     @NameInMap("Module")
     public UpdateAppInstanceResponseBodyModule module;
 
@@ -55,16 +71,26 @@ public class UpdateAppInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>Abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Reserved parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -166,16 +192,26 @@ public class UpdateAppInstanceResponseBody extends TeaModel {
 
     public static class UpdateAppInstanceResponseBodyModule extends TeaModel {
         /**
+         * <p>BizId of the associated application instance</p>
+         * 
          * <strong>example:</strong>
          * <p>WD20250703155602000001</p>
          */
         @NameInMap("BizId")
         public String bizId;
 
+        /**
+         * <p>Application icon</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://yzm.zshud.com:34901/cloud-phone/%E5%85%BB%E7%94%9F_1763631730804.png">https://yzm.zshud.com:34901/cloud-phone/养生_1763631730804.png</a></p>
+         */
         @NameInMap("IconUrl")
         public String iconUrl;
 
         /**
+         * <p>Order ID</p>
+         * 
          * <strong>example:</strong>
          * <p>250822465990301</p>
          */
@@ -183,6 +219,8 @@ public class UpdateAppInstanceResponseBody extends TeaModel {
         public String orderId;
 
         /**
+         * <p>Application thumbnail</p>
+         * 
          * <strong>example:</strong>
          * <p>placeHolder</p>
          */

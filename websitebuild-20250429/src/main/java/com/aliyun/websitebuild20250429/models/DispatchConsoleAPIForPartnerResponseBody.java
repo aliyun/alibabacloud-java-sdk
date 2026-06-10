@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DispatchConsoleAPIForPartnerResponseBody extends TeaModel {
     /**
+     * <p>Error code. The value is as follows: If the request succeeds, the ErrorCode field is not returned. If the request fails, the ErrorCode field is returned. For more information, see the error code list in this topic.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>Response data</p>
+     */
     @NameInMap("Module")
     public DispatchConsoleAPIForPartnerResponseBodyModule module;
 
@@ -24,6 +29,8 @@ public class DispatchConsoleAPIForPartnerResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -69,6 +76,8 @@ public class DispatchConsoleAPIForPartnerResponseBody extends TeaModel {
 
     public static class DispatchConsoleAPIForPartnerResponseBodyModule extends TeaModel {
         /**
+         * <p>Request result.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;HasCustomRoleAuth\&quot;: False}</p>
          */

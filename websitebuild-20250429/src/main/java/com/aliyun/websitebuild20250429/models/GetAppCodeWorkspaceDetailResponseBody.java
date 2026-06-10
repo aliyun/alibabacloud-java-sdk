@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
     /**
+     * <p>Detailed reason for access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,12 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Indicates whether retry is allowed. Valid values:  </p>
+     * <ul>
+     * <li>false: Retry is not allowed.  </li>
+     * <li>true: Retry is allowed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +27,8 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>App name.</p>
+     * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
      */
@@ -26,6 +36,8 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>Dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,15 +45,26 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>Dynamic error message, used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> error message.  </p>
+     * <blockquote>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the provided request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>abc</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>Faulty parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>Application module</p>
+     */
     @NameInMap("Module")
     public GetAppCodeWorkspaceDetailResponseBodyModule module;
 
@@ -55,16 +78,26 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>Abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Reserved parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -166,6 +199,8 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
 
     public static class GetAppCodeWorkspaceDetailResponseBodyModuleSnapshots extends TeaModel {
         /**
+         * <p>SDK change log</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li>Add Params.</li>
@@ -175,6 +210,7 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
         public String changeLog;
 
         /**
+         * <p>Creation UTC time in ISO8601 format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -184,6 +220,8 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>Logical value</p>
+         * 
          * <strong>example:</strong>
          * <p>111</p>
          */
@@ -231,6 +269,9 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
         @NameInMap("ActiveLogicalNumber")
         public Integer activeLogicalNumber;
 
+        @NameInMap("CommitHash")
+        public String commitHash;
+
         /**
          * <p>true</p>
          * 
@@ -250,12 +291,17 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
         public Integer maxLogicalNumber;
 
         /**
+         * <p>Site ID, which can be obtained by invoking the <a href="~~ListSites~~">ListSites</a> API.</p>
+         * 
          * <strong>example:</strong>
          * <p>865181640657408</p>
          */
         @NameInMap("SiteId")
         public String siteId;
 
+        /**
+         * <p>API Guide information.</p>
+         */
         @NameInMap("Snapshots")
         public java.util.List<GetAppCodeWorkspaceDetailResponseBodyModuleSnapshots> snapshots;
 
@@ -270,6 +316,14 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
         }
         public Integer getActiveLogicalNumber() {
             return this.activeLogicalNumber;
+        }
+
+        public GetAppCodeWorkspaceDetailResponseBodyModule setCommitHash(String commitHash) {
+            this.commitHash = commitHash;
+            return this;
+        }
+        public String getCommitHash() {
+            return this.commitHash;
         }
 
         public GetAppCodeWorkspaceDetailResponseBodyModule setIsDirty(Boolean isDirty) {

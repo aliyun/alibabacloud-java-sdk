@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
     /**
+     * <p>Detailed reason for access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Indicates whether retry is allowed.</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>App name.</p>
+     * 
      * <strong>example:</strong>
      * <p>dewuApp</p>
      */
@@ -26,6 +32,8 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>Dynamic code; currently unused. Ignore this field.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,26 +41,42 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>Dynamic error message used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> error message.  </p>
+     * <blockquote>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the provided request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>abc</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>Returned error parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
+     * <p>Number of results per query.  </p>
+     * <p>Value range: 10–100. Default Value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>Response data</p>
+     */
     @NameInMap("Module")
     public java.util.List<ListIsvPaymentPluginConfigsResponseBodyModule> module;
 
     /**
+     * <p>Token for starting the next query. It is empty if there is no next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
      */
@@ -69,6 +93,8 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
@@ -76,6 +102,8 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
+     * <p>abnormal message</p>
+     * 
      * <strong>example:</strong>
      * <p>系统异常</p>
      */
@@ -83,6 +111,8 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
+     * <p>Reserved parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -200,16 +230,22 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
 
     public static class ListIsvPaymentPluginConfigsResponseBodyModule extends TeaModel {
         /**
+         * <p>Business ID</p>
+         * 
          * <strong>example:</strong>
          * <p>WS20250915163734000001</p>
          */
         @NameInMap("BizId")
         public String bizId;
 
+        /**
+         * <p>Extension information</p>
+         */
         @NameInMap("Extend")
         public java.util.Map<String, String> extend;
 
         /**
+         * <p>Creation Time</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -219,6 +255,7 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>Updated At</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -228,6 +265,8 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p>Primary key</p>
+         * 
          * <strong>example:</strong>
          * <p>16257</p>
          */
@@ -235,6 +274,8 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Plugin configuration</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -242,6 +283,8 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
         public String pluginConfig;
 
         /**
+         * <p>Plugin description</p>
+         * 
          * <strong>example:</strong>
          * <p>a simple test plugin</p>
          */
@@ -249,6 +292,8 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
         public String pluginDesc;
 
         /**
+         * <p>Plugin ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1bae9ceaceea432d91c7069fab0dfc02</p>
          */
@@ -256,6 +301,8 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
         public String pluginId;
 
         /**
+         * <p>Plugin name</p>
+         * 
          * <strong>example:</strong>
          * <p>tf_testaccapigatewayplugin29311</p>
          */
@@ -263,6 +310,8 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
         public String pluginName;
 
         /**
+         * <p>Site name</p>
+         * 
          * <strong>example:</strong>
          * <p>jugaocai.com</p>
          */
@@ -270,6 +319,8 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
         public String siteName;
 
         /**
+         * <p>User ID</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */

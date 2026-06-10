@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAppConversationsResponseBody extends TeaModel {
     /**
+     * <p>Detailed reason for access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class ListAppConversationsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Indicates whether retry is allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class ListAppConversationsResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>Application name. Queries the application with this name.</p>
+     * 
      * <strong>example:</strong>
      * <p>dewuApp</p>
      */
@@ -26,6 +32,8 @@ public class ListAppConversationsResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>Dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,26 +41,39 @@ public class ListAppConversationsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>Faulty parameters.</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
+     * <p>Number of results per query.  </p>
+     * <p>Value range: 10 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>Response data</p>
+     */
     @NameInMap("Module")
     public ListAppConversationsResponseBodyModule module;
 
     /**
+     * <p>Token indicating the start of the next query. This field is empty if there is no next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
      */
@@ -60,7 +81,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
@@ -69,16 +90,26 @@ public class ListAppConversationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>Abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Reserved parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -205,6 +236,8 @@ public class ListAppConversationsResponseBody extends TeaModel {
         public String aliyunPk;
 
         /**
+         * <p>Bot ID</p>
+         * 
          * <strong>example:</strong>
          * <p>Zero2</p>
          */
@@ -212,6 +245,8 @@ public class ListAppConversationsResponseBody extends TeaModel {
         public String botId;
 
         /**
+         * <p>Chat records</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -219,6 +254,8 @@ public class ListAppConversationsResponseBody extends TeaModel {
         public Integer chatNum;
 
         /**
+         * <p>Session ID</p>
+         * 
          * <strong>example:</strong>
          * <p>799EAC1246C855CAC75B77955E43D841</p>
          */
@@ -226,6 +263,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
         public String conversationId;
 
         /**
+         * <p>Creation Time</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -235,6 +273,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>Update Time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -244,6 +283,8 @@ public class ListAppConversationsResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p>Extension information (in JSON string format)</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;MD5\&quot;:\&quot;296f6c01e7fea2697ffe1cf41082b774\&quot;,\&quot;driver\&quot;:\&quot;vhd\&quot;,\&quot;flag\&quot;:\&quot;12845825\&quot;,\&quot;imds_support\&quot;:\&quot;v1\&quot;,\&quot;io_optimized\&quot;:true,\&quot;nvme_supported\&quot;:true,\&quot;uefi_preferred\&quot;:false}</p>
          */
@@ -251,6 +292,8 @@ public class ListAppConversationsResponseBody extends TeaModel {
         public String metaData;
 
         /**
+         * <p>Section ID of the checklist item.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -258,6 +301,8 @@ public class ListAppConversationsResponseBody extends TeaModel {
         public String sectionId;
 
         /**
+         * <p>Site ID. You can obtain it by invoking the <a href="~~ListSites~~">ListSites</a> API.</p>
+         * 
          * <strong>example:</strong>
          * <p>1068725896006128</p>
          */
@@ -265,6 +310,8 @@ public class ListAppConversationsResponseBody extends TeaModel {
         public String siteId;
 
         /**
+         * <p>Current viewpoint, equivalent to the news title.</p>
+         * 
          * <strong>example:</strong>
          * <p>Sometimes When We Touch</p>
          */
@@ -272,6 +319,8 @@ public class ListAppConversationsResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>User ID</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
@@ -374,10 +423,15 @@ public class ListAppConversationsResponseBody extends TeaModel {
     }
 
     public static class ListAppConversationsResponseBodyModule extends TeaModel {
+        /**
+         * <p>Request result.</p>
+         */
         @NameInMap("Data")
         public java.util.List<ListAppConversationsResponseBodyModuleData> data;
 
         /**
+         * <p>Page number. The default value is 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>16</p>
          */
@@ -385,6 +439,8 @@ public class ListAppConversationsResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
+         * <p>Paging size.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -392,6 +448,8 @@ public class ListAppConversationsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Resource count that matches the filter condition.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */

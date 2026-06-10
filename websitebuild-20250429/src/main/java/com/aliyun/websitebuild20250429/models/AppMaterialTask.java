@@ -5,22 +5,41 @@ import com.aliyun.tea.*;
 
 public class AppMaterialTask extends TeaModel {
     /**
+     * <p>Job completion time</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-12-26 11:30:05</p>
      */
     @NameInMap("CompleteTime")
     public String completeTime;
 
+    /**
+     * <p>Completion time display format</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1分钟前</p>
+     */
     @NameInMap("CompleteTimeFormat")
     public String completeTimeFormat;
 
+    /**
+     * <p>Reason for failure</p>
+     * 
+     * <strong>example:</strong>
+     * <p>参数不合规</p>
+     */
     @NameInMap("FailReason")
     public String failReason;
 
+    /**
+     * <p>List of final files</p>
+     */
     @NameInMap("FinalFileUrls")
     public java.util.List<String> finalFileUrls;
 
     /**
+     * <p>Task Status</p>
+     * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
      */
@@ -28,6 +47,8 @@ public class AppMaterialTask extends TeaModel {
     public String status;
 
     /**
+     * <p>Job substatus</p>
+     * 
      * <strong>example:</strong>
      * <p>PENDING</p>
      */
@@ -35,6 +56,8 @@ public class AppMaterialTask extends TeaModel {
     public String subStatus;
 
     /**
+     * <p>Submitted At.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-12-26 11:30:05</p>
      */
@@ -42,16 +65,30 @@ public class AppMaterialTask extends TeaModel {
     public String submitTime;
 
     /**
+     * <p>Job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>81d04d62c3483b32bacf1d306d2622b2</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <p>Job parameter</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;brandName&quot;: &quot;品牌名称&quot;,
+     *     &quot;direction&quot;: &quot;HORIZONTAL&quot;,
+     *     &quot;userPrompt&quot;: &quot;设计要求&quot;
+     * }</p>
+     */
     @NameInMap("TaskParam")
     public String taskParam;
 
     /**
+     * <p>Task Type.</p>
+     * 
      * <strong>example:</strong>
      * <p>IMAGE_LOGO</p>
      */

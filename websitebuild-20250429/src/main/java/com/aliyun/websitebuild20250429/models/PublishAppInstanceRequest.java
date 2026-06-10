@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PublishAppInstanceRequest extends TeaModel {
     /**
+     * <p>Business ID</p>
+     * 
      * <strong>example:</strong>
      * <p>WD20250821161210000001</p>
      */
@@ -12,6 +14,8 @@ public class PublishAppInstanceRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Deployment channel</p>
+     * 
      * <strong>example:</strong>
      * <p>PC</p>
      */
@@ -19,6 +23,8 @@ public class PublishAppInstanceRequest extends TeaModel {
     public String deployChannel;
 
     /**
+     * <p>Publish description</p>
+     * 
      * <strong>example:</strong>
      * <p>CREATE_BY_NLB.nlb-jcvs5sm9l8um84zbfa</p>
      */
@@ -26,6 +32,8 @@ public class PublishAppInstanceRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>Logical version number</p>
+     * 
      * <strong>example:</strong>
      * <p>111</p>
      */
@@ -33,6 +41,8 @@ public class PublishAppInstanceRequest extends TeaModel {
     public Integer logicalNumber;
 
     /**
+     * <p>Publish number</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
@@ -40,6 +50,8 @@ public class PublishAppInstanceRequest extends TeaModel {
     public String publishNumber;
 
     /**
+     * <p>action</p>
+     * 
      * <strong>example:</strong>
      * <p>BUILD</p>
      */

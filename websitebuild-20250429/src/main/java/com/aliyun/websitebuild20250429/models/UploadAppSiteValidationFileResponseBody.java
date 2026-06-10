@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UploadAppSiteValidationFileResponseBody extends TeaModel {
     /**
+     * <p>access denied details</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class UploadAppSiteValidationFileResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>is retry allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class UploadAppSiteValidationFileResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>application name. Query the application with this name.</p>
+     * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
      */
@@ -26,6 +32,8 @@ public class UploadAppSiteValidationFileResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>dynamic code, currently unused. Ignore it.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,16 +41,23 @@ public class UploadAppSiteValidationFileResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>dynamic error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>returned error parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
+     * <p>indicates whether the deletion succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -59,16 +74,26 @@ public class UploadAppSiteValidationFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Reserved parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

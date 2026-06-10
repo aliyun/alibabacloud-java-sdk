@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyMaterialFileStatusRequest extends TeaModel {
     /**
+     * <p>Business instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,14 @@ public class ModifyMaterialFileStatusRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>File ID</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("FileIds")
     public java.util.List<String> fileIds;
 
     /**
+     * <p>Modified status</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

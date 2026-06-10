@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class OperateAppInstanceForPartnerResponseBody extends TeaModel {
     /**
+     * <p>error code. The value is described as follows: If the request succeeds, the ErrorCode field is not returned. If the request fails, the ErrorCode field is returned. For more information, see the error code List in this topic.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,6 +14,8 @@ public class OperateAppInstanceForPartnerResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>aliuid:1998006665794443 assumeRole not exist,serviceName:realtimelogpush.dcdnservices.aliyuncs.com</p>
      */
@@ -28,6 +32,8 @@ public class OperateAppInstanceForPartnerResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

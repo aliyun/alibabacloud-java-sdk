@@ -5,19 +5,35 @@ import com.aliyun.tea.*;
 
 public class RefundAppInstanceForPartnerRequest extends TeaModel {
     /**
+     * <p>Website building business ID</p>
+     * 
      * <strong>example:</strong>
      * <p>WD20250703155602000001</p>
      */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>Idempotent token</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c6f7e8b9-a0b1-4c2d-9e0f-1a2b3c4d5e6f</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Refund reason</p>
+     * 
+     * <strong>example:</strong>
+     * <p>渠道商退款</p>
+     */
     @NameInMap("RefundReason")
     public String refundReason;
 
     /**
+     * <p>User ID</p>
+     * 
      * <strong>example:</strong>
      * <p>123456</p>
      */

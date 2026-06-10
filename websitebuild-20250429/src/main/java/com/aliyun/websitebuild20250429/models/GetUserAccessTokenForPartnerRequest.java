@@ -8,6 +8,10 @@ public class GetUserAccessTokenForPartnerRequest extends TeaModel {
     public String siteHost;
 
     /**
+     * <p>Credential for connecting to the cloud application.  </p>
+     * <blockquote>
+     * <p>This parameter appears when the API is invoked again (not on the first invocation).</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateAppInstanceRequest extends TeaModel {
     /**
+     * <p>Application type</p>
+     * 
      * <strong>example:</strong>
      * <p>Application</p>
      */
@@ -12,6 +14,8 @@ public class UpdateAppInstanceRequest extends TeaModel {
     public String applicationType;
 
     /**
+     * <p>Business ID</p>
+     * 
      * <strong>example:</strong>
      * <p>WD20250703155602000001</p>
      */
@@ -19,6 +23,8 @@ public class UpdateAppInstanceRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Ensures the idempotence of the request. Generate a unique value from your client for this parameter to guarantee uniqueness across different requests. ClientToken supports only ASCII characters and must not exceed 64 characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
@@ -26,6 +32,8 @@ public class UpdateAppInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>Deployment area</p>
+     * 
      * <strong>example:</strong>
      * <p>ChineseMainland</p>
      */
@@ -33,6 +41,8 @@ public class UpdateAppInstanceRequest extends TeaModel {
     public String deployArea;
 
     /**
+     * <p>Application description</p>
+     * 
      * <strong>example:</strong>
      * <p>description</p>
      */
@@ -40,6 +50,8 @@ public class UpdateAppInstanceRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>Extension information</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;user_device_id\&quot;:\&quot;6bef45cb0c76de284d24de074c088b73\&quot;}\n</p>
      */
@@ -47,16 +59,26 @@ public class UpdateAppInstanceRequest extends TeaModel {
     public String extend;
 
     /**
+     * <p>Application icon</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://app-center-icon-prod-shanghai.oss-cn-shanghai.aliyuncs.com/tenant/1864953777494693/1753841032702_WX20250729-171155%402x.png">https://app-center-icon-prod-shanghai.oss-cn-shanghai.aliyuncs.com/tenant/1864953777494693/1753841032702_WX20250729-171155%402x.png</a></p>
      */
     @NameInMap("IconUrl")
     public String iconUrl;
 
+    /**
+     * <p>Application name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>大角鹿</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>Payment type</p>
+     * 
      * <strong>example:</strong>
      * <p>AUTO_PAY</p>
      */
@@ -64,6 +86,8 @@ public class UpdateAppInstanceRequest extends TeaModel {
     public String paymentType;
 
     /**
+     * <p>The ID of the resource group to which the instance belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-aek3cqkrqibqkby</p>
      */
@@ -71,16 +95,23 @@ public class UpdateAppInstanceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>Website version</p>
+     * 
      * <strong>example:</strong>
      * <p>Basic_Edition</p>
      */
     @NameInMap("SiteVersion")
     public String siteVersion;
 
+    /**
+     * <p>Tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<UpdateAppInstanceRequestTags> tags;
 
     /**
+     * <p>Application thumbnail</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
      */
@@ -198,6 +229,9 @@ public class UpdateAppInstanceRequest extends TeaModel {
 
     public static class UpdateAppInstanceRequestTags extends TeaModel {
         /**
+         * <p>The tag key of the instance. Valid values for N: <strong>1</strong> to <strong>20</strong>. If you specify this parameter, it cannot be an empty string.</p>
+         * <p>It can contain up to 64 characters, must not start with <code>aliyun</code> or <code>acs:</code>, and must not contain <code>http://</code> or <code>https://</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>Group</p>
          */
@@ -205,6 +239,9 @@ public class UpdateAppInstanceRequest extends TeaModel {
         public String tagKey;
 
         /**
+         * <p>The tag value of the instance. Valid values for N: <strong>1</strong> to <strong>20</strong>. If you specify this parameter, it can be an empty string.</p>
+         * <p>It can contain up to 128 characters, must not start with <code>aliyun</code> or <code>acs:</code>, and must not contain <code>http://</code> or <code>https://</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>15</p>
          */

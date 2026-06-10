@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetMiniAppBindingRequest extends TeaModel {
     /**
+     * <p>Site ID</p>
+     * 
      * <strong>example:</strong>
      * <p>WS20250814102215000001</p>
      */
@@ -12,12 +14,20 @@ public class GetMiniAppBindingRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Channel</p>
+     * 
      * <strong>example:</strong>
      * <p>WECHAT</p>
      */
     @NameInMap("Channel")
     public String channel;
 
+    /**
+     * <p>List of extension information keys</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SERVER_DOMAIN</p>
+     */
     @NameInMap("SettingKeys")
     public java.util.List<String> settingKeys;
 

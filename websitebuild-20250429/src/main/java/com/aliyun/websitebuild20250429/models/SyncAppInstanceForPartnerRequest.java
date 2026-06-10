@@ -4,10 +4,15 @@ package com.aliyun.websitebuild20250429.models;
 import com.aliyun.tea.*;
 
 public class SyncAppInstanceForPartnerRequest extends TeaModel {
+    /**
+     * <p>Application instance object data</p>
+     */
     @NameInMap("AppInstance")
     public SyncAppInstanceForPartnerRequestAppInstance appInstance;
 
     /**
+     * <p>Type of system event. CREATE, UPDATE, COMPLETE</p>
+     * 
      * <strong>example:</strong>
      * <p>CREATE</p>
      */
@@ -15,6 +20,8 @@ public class SyncAppInstanceForPartnerRequest extends TeaModel {
     public String eventType;
 
     /**
+     * <p>Operator ID</p>
+     * 
      * <strong>example:</strong>
      * <p>system</p>
      */
@@ -22,6 +29,8 @@ public class SyncAppInstanceForPartnerRequest extends TeaModel {
     public String operator;
 
     /**
+     * <p>Source business ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>31104757</p>
      */
@@ -29,6 +38,8 @@ public class SyncAppInstanceForPartnerRequest extends TeaModel {
     public String sourceBizId;
 
     /**
+     * <p>Source: MARKET_CLOUD_DREAM</p>
+     * 
      * <strong>example:</strong>
      * <p>MARKET_CLOUD_DREAM</p>
      */
@@ -82,6 +93,8 @@ public class SyncAppInstanceForPartnerRequest extends TeaModel {
 
     public static class SyncAppInstanceForPartnerRequestAppInstanceProfile extends TeaModel {
         /**
+         * <p>Deployment region</p>
+         * 
          * <strong>example:</strong>
          * <p>ChineseMainland</p>
          */
@@ -89,6 +102,8 @@ public class SyncAppInstanceForPartnerRequest extends TeaModel {
         public String deployArea;
 
         /**
+         * <p>Lingxiao instance ID</p>
+         * 
          * <strong>example:</strong>
          * <p>12313213</p>
          */
@@ -96,6 +111,8 @@ public class SyncAppInstanceForPartnerRequest extends TeaModel {
         public String lxInstanceId;
 
         /**
+         * <p>Order ID</p>
+         * 
          * <strong>example:</strong>
          * <p>222217928591</p>
          */
@@ -103,6 +120,8 @@ public class SyncAppInstanceForPartnerRequest extends TeaModel {
         public String orderId;
 
         /**
+         * <p>Version</p>
+         * 
          * <strong>example:</strong>
          * <p>Basic_Edition</p>
          */
@@ -110,6 +129,8 @@ public class SyncAppInstanceForPartnerRequest extends TeaModel {
         public String siteVersion;
 
         /**
+         * <p>Template ID</p>
+         * 
          * <strong>example:</strong>
          * <p>DC4D30B7BADDAFE9928A6C36416A2A4C</p>
          */
@@ -117,6 +138,8 @@ public class SyncAppInstanceForPartnerRequest extends TeaModel {
         public String templateEtag;
 
         /**
+         * <p>Model template ID</p>
+         * 
          * <strong>example:</strong>
          * <p>ST20211231160247sYG4</p>
          */
@@ -180,6 +203,8 @@ public class SyncAppInstanceForPartnerRequest extends TeaModel {
 
     public static class SyncAppInstanceForPartnerRequestAppInstance extends TeaModel {
         /**
+         * <p>Application Type: WEBSITE</p>
+         * 
          * <strong>example:</strong>
          * <p>WEBSITE</p>
          */
@@ -187,6 +212,8 @@ public class SyncAppInstanceForPartnerRequest extends TeaModel {
         public String appType;
 
         /**
+         * <p>Website business ID</p>
+         * 
          * <strong>example:</strong>
          * <p>WD20250711094503000001</p>
          */
@@ -194,6 +221,8 @@ public class SyncAppInstanceForPartnerRequest extends TeaModel {
         public String bizId;
 
         /**
+         * <p>Logical deletion</p>
+         * 
          * <strong>example:</strong>
          * <p>fase</p>
          */
@@ -201,6 +230,8 @@ public class SyncAppInstanceForPartnerRequest extends TeaModel {
         public String deleted;
 
         /**
+         * <p>Domain name</p>
+         * 
          * <strong>example:</strong>
          * <p>alliveout.xntv.tv</p>
          */
@@ -208,6 +239,8 @@ public class SyncAppInstanceForPartnerRequest extends TeaModel {
         public String domain;
 
         /**
+         * <p>Event end time (UNIX timestamp).</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-08-23T02:14:00Z</p>
          */
@@ -215,6 +248,8 @@ public class SyncAppInstanceForPartnerRequest extends TeaModel {
         public String endTime;
 
         /**
+         * <p>Deletion time</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-01-01 00:00:00</p>
          */
@@ -222,6 +257,8 @@ public class SyncAppInstanceForPartnerRequest extends TeaModel {
         public String gmtDelete;
 
         /**
+         * <p>Vulnerability published UNIX timestamp, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-01-01 00:00:00</p>
          */
@@ -229,15 +266,29 @@ public class SyncAppInstanceForPartnerRequest extends TeaModel {
         public String gmtPublish;
 
         /**
+         * <p>Application icon URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>icon/WS20250626112715000001/thumbnail.jpg</p>
          */
         @NameInMap("IconUrl")
         public String iconUrl;
 
+        /**
+         * <p>Website name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AI建站</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Website configuration information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>网站配置信息</p>
+         */
         @NameInMap("Profile")
         public SyncAppInstanceForPartnerRequestAppInstanceProfile profile;
 
@@ -251,6 +302,8 @@ public class SyncAppInstanceForPartnerRequest extends TeaModel {
         public String siteHost;
 
         /**
+         * <p>Website SiteID</p>
+         * 
          * <strong>example:</strong>
          * <p>31104757</p>
          */
@@ -258,6 +311,8 @@ public class SyncAppInstanceForPartnerRequest extends TeaModel {
         public String slug;
 
         /**
+         * <p>Query start time. If no start and end times are provided, all historical deployment records of the instance are queried.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-07-15T16:00:00Z</p>
          */
@@ -265,6 +320,18 @@ public class SyncAppInstanceForPartnerRequest extends TeaModel {
         public String startTime;
 
         /**
+         * <p>Instance running status.  </p>
+         * <ul>
+         * <li>NotRun: Not running  </li>
+         * <li>Running: Running  </li>
+         * <li>WaitTime: Waiting for TriggerTime  </li>
+         * <li>CheckingCondition: Checking branch conditions  </li>
+         * <li>WaitResource: Waiting for resources  </li>
+         * <li>Failure: Execution failed  </li>
+         * <li>Success: Execution succeeded  </li>
+         * <li>Checking: Sent to Data Quality check</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;Phase\&quot;: \&quot;Running\&quot;, \&quot;SlotNum\&quot;: 1, \&quot;UsedCapacity\&quot;: \&quot;500.0Gi\&quot;}</p>
          */
@@ -272,6 +339,8 @@ public class SyncAppInstanceForPartnerRequest extends TeaModel {
         public String status;
 
         /**
+         * <p>Thumbnail URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>thumbnails/WS20250626112715000001/thumbnail.jpg</p>
          */

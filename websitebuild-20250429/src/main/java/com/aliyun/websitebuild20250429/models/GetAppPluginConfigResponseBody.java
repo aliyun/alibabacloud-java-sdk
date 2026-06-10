@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAppPluginConfigResponseBody extends TeaModel {
     /**
+     * <p>API status or POP error code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,12 +14,17 @@ public class GetAppPluginConfigResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Additional information</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance <code>wget h33E1En5.popscan.xaliyun.com</code> does not exist.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Response data</p>
+     */
     @NameInMap("Module")
     public GetAppPluginConfigResponseBodyModule module;
 
@@ -31,6 +38,8 @@ public class GetAppPluginConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -84,6 +93,8 @@ public class GetAppPluginConfigResponseBody extends TeaModel {
 
     public static class GetAppPluginConfigResponseBodyModule extends TeaModel {
         /**
+         * <p>Business ID</p>
+         * 
          * <strong>example:</strong>
          * <p>WD20250703155602000001</p>
          */
@@ -91,6 +102,8 @@ public class GetAppPluginConfigResponseBody extends TeaModel {
         public String bizId;
 
         /**
+         * <p>Creation Time</p>
+         * 
          * <strong>example:</strong>
          * <p>1740479834</p>
          */
@@ -98,6 +111,8 @@ public class GetAppPluginConfigResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>Updated At</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-08-28T02:25:41Z</p>
          */
@@ -105,6 +120,8 @@ public class GetAppPluginConfigResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>Primary key</p>
+         * 
          * <strong>example:</strong>
          * <p>16257</p>
          */
@@ -112,6 +129,8 @@ public class GetAppPluginConfigResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Specific widget configuration, formatted as a JSON string. Refer to the utility class: com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig and the toJsonString method of its child classes. Developers should inherit this widget configuration class and implement the corresponding widget configuration. The structure of each widget configuration is identical to the MPS queue configuration structure created on the Dataphin Page.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -119,6 +138,8 @@ public class GetAppPluginConfigResponseBody extends TeaModel {
         public String pluginConfig;
 
         /**
+         * <p>View Description</p>
+         * 
          * <strong>example:</strong>
          * <p>a simple test plugin</p>
          */
@@ -126,6 +147,8 @@ public class GetAppPluginConfigResponseBody extends TeaModel {
         public String pluginDesc;
 
         /**
+         * <p>ID of the attached API Gateway plugin</p>
+         * 
          * <strong>example:</strong>
          * <p>1bae9ceaceea432d91c7069fab0dfc02</p>
          */
@@ -133,6 +156,8 @@ public class GetAppPluginConfigResponseBody extends TeaModel {
         public String pluginId;
 
         /**
+         * <p>Plugin Name. It can contain uppercase and lowercase English letters, Chinese characters, digits, and underscores (_). The length must be between 4 and 50 characters, and it cannot start with an underscore.</p>
+         * 
          * <strong>example:</strong>
          * <p>tf_testaccapigatewayplugin29311</p>
          */
@@ -140,6 +165,8 @@ public class GetAppPluginConfigResponseBody extends TeaModel {
         public String pluginName;
 
         /**
+         * <p>User ID</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */

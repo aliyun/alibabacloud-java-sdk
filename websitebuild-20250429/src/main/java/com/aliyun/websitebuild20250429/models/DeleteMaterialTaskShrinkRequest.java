@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteMaterialTaskShrinkRequest extends TeaModel {
     /**
+     * <p>List of job IDs</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TaskIds")

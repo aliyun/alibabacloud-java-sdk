@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetUserTmpIdentityForPartnerRequest extends TeaModel {
     /**
+     * <p>Authorization purpose</p>
+     * 
      * <strong>example:</strong>
      * <p>BindDomain</p>
      */
@@ -12,16 +14,29 @@ public class GetUserTmpIdentityForPartnerRequest extends TeaModel {
     public String authPurpose;
 
     /**
+     * <p>Customer business ID</p>
+     * 
      * <strong>example:</strong>
      * <p>WD20250703155602000001</p>
      */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>Whether the port number supports fuzzy query. To enable fuzzy query, set the value of this parameter to <strong>1</strong>. Any other value or an empty value indicates that fuzzy query is not supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;deliveryNodeName\&quot;:\&quot;视觉设计确认\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Reject\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Customer\&quot;}</p>
+     */
     @NameInMap("Extend")
     public String extend;
 
     /**
+     * <p>Service-linked role.  </p>
+     * <blockquote>
+     * <p>For service-linked roles supported by RDS, see <a href="https://help.aliyun.com/document_detail/342840.html">Service-linked Role</a>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>AliyunServiceRoleForSasCspm</p>
      */
@@ -29,6 +44,8 @@ public class GetUserTmpIdentityForPartnerRequest extends TeaModel {
     public String serviceLinkedRole;
 
     /**
+     * <p>User ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1231331311</p>
      */

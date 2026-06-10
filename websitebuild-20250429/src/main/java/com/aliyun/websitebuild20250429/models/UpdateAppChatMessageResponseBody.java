@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateAppChatMessageResponseBody extends TeaModel {
     /**
+     * <p>Detailed reason for access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class UpdateAppChatMessageResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>is retry allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class UpdateAppChatMessageResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>App name.</p>
+     * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
      */
@@ -26,6 +32,8 @@ public class UpdateAppChatMessageResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>dynamic code; not currently used. Please ignore.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,15 +41,26 @@ public class UpdateAppChatMessageResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>dynamic error message, used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> error message.  </p>
+     * <blockquote>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the provided request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>faulty parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>The returned object.</p>
+     */
     @NameInMap("Module")
     public UpdateAppChatMessageResponseBodyModule module;
 
@@ -55,6 +74,8 @@ public class UpdateAppChatMessageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
@@ -62,6 +83,8 @@ public class UpdateAppChatMessageResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
+     * <p>abnormal message</p>
+     * 
      * <strong>example:</strong>
      * <p>系统异常</p>
      */
@@ -69,6 +92,8 @@ public class UpdateAppChatMessageResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
+     * <p>is processed synchronously</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -170,6 +195,8 @@ public class UpdateAppChatMessageResponseBody extends TeaModel {
 
     public static class UpdateAppChatMessageResponseBodyModule extends TeaModel {
         /**
+         * <p>Bot ID</p>
+         * 
          * <strong>example:</strong>
          * <p>Zero2</p>
          */
@@ -177,6 +204,8 @@ public class UpdateAppChatMessageResponseBody extends TeaModel {
         public String botId;
 
         /**
+         * <p>The ID of the chat.</p>
+         * 
          * <strong>example:</strong>
          * <p>53467af9-8c4e-4498-9032-1f26978007f8</p>
          */
@@ -184,6 +213,8 @@ public class UpdateAppChatMessageResponseBody extends TeaModel {
         public String chatId;
 
         /**
+         * <p>Current conversation status</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -191,6 +222,8 @@ public class UpdateAppChatMessageResponseBody extends TeaModel {
         public String chatStatus;
 
         /**
+         * <p>The ID of the data class API being invoked.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;code\&quot;: \&quot;200\&quot;, \&quot;success\&quot;: True, \&quot;content\&quot;: True, \&quot;requestId\&quot;: \&quot;4AF53F7B-FEA9-5966-B0F8-BAF9A1EEFE34\&quot;, \&quot;businessError\&quot;: False, \&quot;message\&quot;: \&quot;success\&quot;, \&quot;httpStatusCode\&quot;: 200}</p>
          */
@@ -198,6 +231,8 @@ public class UpdateAppChatMessageResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>Content type.</p>
+         * 
          * <strong>example:</strong>
          * <p>image/png</p>
          */
@@ -205,6 +240,8 @@ public class UpdateAppChatMessageResponseBody extends TeaModel {
         public String contentType;
 
         /**
+         * <p>Session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>872be9bc-3097-433d-b462-596202455102</p>
          */
@@ -212,6 +249,7 @@ public class UpdateAppChatMessageResponseBody extends TeaModel {
         public String conversationId;
 
         /**
+         * <p>Creation Time</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -221,6 +259,7 @@ public class UpdateAppChatMessageResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>Updated At.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -230,6 +269,8 @@ public class UpdateAppChatMessageResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p>Message ID</p>
+         * 
          * <strong>example:</strong>
          * <p>471791769135220858</p>
          */
@@ -237,6 +278,8 @@ public class UpdateAppChatMessageResponseBody extends TeaModel {
         public String messageId;
 
         /**
+         * <p>Business extension metadata (in Map format, must be a JSON string)</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;appId\&quot;:\&quot;WS20260418211121000001\&quot;,\&quot;inputTokens\&quot;:273,\&quot;outputTokens\&quot;:1}</p>
          */
@@ -244,6 +287,8 @@ public class UpdateAppChatMessageResponseBody extends TeaModel {
         public String metaData;
 
         /**
+         * <p>The probability of not wearing a mask, not wearing a uniform, or not wearing a hat.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -251,6 +296,22 @@ public class UpdateAppChatMessageResponseBody extends TeaModel {
         public Integer no;
 
         /**
+         * <p>Indicates the role of a conversation participant. Valid values include:</p>
+         * <ul>
+         * <li><p>user: User</p>
+         * </li>
+         * <li><p>assistant: Assistant</p>
+         * </li>
+         * <li><p>system: System</p>
+         * </li>
+         * <li><p>function: Function</p>
+         * </li>
+         * <li><p>plugin: Plugin</p>
+         * </li>
+         * <li><p>tool: Tool</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>LoC</p>
          */
@@ -258,6 +319,8 @@ public class UpdateAppChatMessageResponseBody extends TeaModel {
         public String role;
 
         /**
+         * <p>Section ID of the checklist item.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -265,6 +328,8 @@ public class UpdateAppChatMessageResponseBody extends TeaModel {
         public String sectionId;
 
         /**
+         * <p>Site ID, which can be obtained by invoking the <a href="~~ListSites~~">ListSites</a> API.</p>
+         * 
          * <strong>example:</strong>
          * <p>865181640657408</p>
          */
@@ -272,6 +337,8 @@ public class UpdateAppChatMessageResponseBody extends TeaModel {
         public String siteId;
 
         /**
+         * <p>File type</p>
+         * 
          * <strong>example:</strong>
          * <p>IMAGE</p>
          */

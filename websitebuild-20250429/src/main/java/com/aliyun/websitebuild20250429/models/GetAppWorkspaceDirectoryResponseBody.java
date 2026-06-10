@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
     /**
+     * <p>Detailed reason for access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Is retry allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>App name.</p>
+     * 
      * <strong>example:</strong>
      * <p>ish-intelligence-store-platform-admin-web</p>
      */
@@ -26,6 +32,8 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>Dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,15 +41,23 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>Dynamic message. Not currently used. Ignore it.</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>Returned error parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>Returned object.</p>
+     */
     @NameInMap("Module")
     public GetAppWorkspaceDirectoryResponseBodyModule module;
 
@@ -55,16 +71,26 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>Abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Spare parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -165,10 +191,15 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
     }
 
     public static class GetAppWorkspaceDirectoryResponseBodyModuleDirectoryList extends TeaModel {
+        /**
+         * <p>Child content</p>
+         */
         @NameInMap("Children")
         public java.util.List<?> children;
 
         /**
+         * <p>Full path (relative to workspace)</p>
+         * 
          * <strong>example:</strong>
          * <p>PolarDBInnoDBRedoLogWrites</p>
          */
@@ -176,6 +207,8 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>Name</p>
+         * 
          * <strong>example:</strong>
          * <p>Evaluable=true</p>
          */
@@ -215,12 +248,17 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
 
     public static class GetAppWorkspaceDirectoryResponseBodyModule extends TeaModel {
         /**
+         * <p>Current time</p>
+         * 
          * <strong>example:</strong>
          * <p>2026</p>
          */
         @NameInMap("CurrentTime")
         public String currentTime;
 
+        /**
+         * <p>Directory structure</p>
+         */
         @NameInMap("DirectoryList")
         public java.util.List<GetAppWorkspaceDirectoryResponseBodyModuleDirectoryList> directoryList;
 

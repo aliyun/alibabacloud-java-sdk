@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAIStaffChatRequest extends TeaModel {
     /**
+     * <p>Site ID</p>
+     * 
      * <strong>example:</strong>
      * <p>WS20250801154628000001</p>
      */
@@ -12,6 +14,8 @@ public class CreateAIStaffChatRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Conversation ID (provided when recovering from a break)</p>
+     * 
      * <strong>example:</strong>
      * <p>3b465fe1-6f06-4899-af9f-d43d9338df25</p>
      */
@@ -19,15 +23,23 @@ public class CreateAIStaffChatRequest extends TeaModel {
     public String chatId;
 
     /**
+     * <p>session ID</p>
+     * 
      * <strong>example:</strong>
      * <p>5b7105a2-2999-430b-ba23-ba09149d5434</p>
      */
     @NameInMap("ConversationId")
     public String conversationId;
 
+    /**
+     * <p>List of conversation messages</p>
+     */
     @NameInMap("Messages")
     public java.util.List<CreateAIStaffChatRequestMessages> messages;
 
+    /**
+     * <p>Additional conversation information</p>
+     */
     @NameInMap("MetaData")
     public java.util.Map<String, String> metaData;
 
@@ -78,6 +90,8 @@ public class CreateAIStaffChatRequest extends TeaModel {
 
     public static class CreateAIStaffChatRequestMessages extends TeaModel {
         /**
+         * <p>Message content</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;CodeRevision\&quot;: \&quot;1750040991876284109\&quot;}</p>
          */
@@ -85,16 +99,23 @@ public class CreateAIStaffChatRequest extends TeaModel {
         public String content;
 
         /**
+         * <p>Content type</p>
+         * 
          * <strong>example:</strong>
          * <p>application/octet-stream</p>
          */
         @NameInMap("ContentType")
         public String contentType;
 
+        /**
+         * <p>Business extension metadata (in Map format, must be a JSON string)</p>
+         */
         @NameInMap("MetaData")
         public java.util.Map<String, String> metaData;
 
         /**
+         * <p>Role in the conversation</p>
+         * 
          * <strong>example:</strong>
          * <p>polarx_dn</p>
          */
@@ -102,6 +123,8 @@ public class CreateAIStaffChatRequest extends TeaModel {
         public String role;
 
         /**
+         * <p>File type</p>
+         * 
          * <strong>example:</strong>
          * <p>risk</p>
          */

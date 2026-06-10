@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
     /**
+     * <p>Detailed reason for access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,12 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Indicates whether retry is allowed. Valid values:  </p>
+     * <ul>
+     * <li>false: Retry is not allowed.  </li>
+     * <li>true: Retry is allowed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +27,8 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>Application name. Query the application with this name.</p>
+     * 
      * <strong>example:</strong>
      * <p>or</p>
      */
@@ -26,6 +36,8 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>Dynamic code. This parameter is not used and can be ignored.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,15 +45,26 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>Dynamic error message used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> error message.  </p>
+     * <blockquote>
+     * <p>For example, if <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>Error parameters returned.</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>Returned object.</p>
+     */
     @NameInMap("Module")
     public GetLlmProxyConfigForAdminResponseBodyModule module;
 
@@ -55,16 +78,26 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>Abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Indicates whether the request is processed synchronously.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -166,6 +199,8 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
 
     public static class GetLlmProxyConfigForAdminResponseBodyModule extends TeaModel {
         /**
+         * <p>List of supported models</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen3.5-plus</p>
          */
@@ -173,6 +208,8 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
         public String allowedModels;
 
         /**
+         * <p>Business ID of the application instance</p>
+         * 
          * <strong>example:</strong>
          * <p>WD20250703155602000001</p>
          */
@@ -180,6 +217,8 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
         public String bizId;
 
         /**
+         * <p>List of blocked models</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen3.5-plus</p>
          */
@@ -187,6 +226,11 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
         public String blockedModels;
 
         /**
+         * <p>Grants specific permissions to processes within the container. Currently, only NET_ADMIN and NET_RAW are supported.  </p>
+         * <blockquote>
+         * <p>NET_RAW is not supported by default. You must submit a ticket to request it.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>adds2</p>
          */
@@ -194,6 +238,8 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
         public String capability;
 
         /**
+         * <p>Daily request quota</p>
+         * 
          * <strong>example:</strong>
          * <p>-1</p>
          */
@@ -201,6 +247,8 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
         public Integer dailyLimit;
 
         /**
+         * <p>Daily token quota</p>
+         * 
          * <strong>example:</strong>
          * <p>-1</p>
          */
@@ -208,16 +256,31 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
         public Long dailyTokenLimit;
 
         /**
+         * <p>Indicates whether scheduled delivery of resource snapshots is enabled.  </p>
+         * <p>Valid values:  </p>
+         * <ul>
+         * <li>true: Enabled.  </li>
+         * <li>false: Shutdown.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <p>Extension configuration (in JSON format)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;deliveryNodeName\&quot;:\&quot;绑定域名及发布\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Finish\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Provider\&quot;}</p>
+         */
         @NameInMap("Extend")
         public String extend;
 
         /**
+         * <p>Creation Time</p>
+         * 
          * <strong>example:</strong>
          * <p>1740479834</p>
          */
@@ -225,6 +288,8 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>Updated At</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-08-28T02:25:41Z</p>
          */
@@ -232,6 +297,8 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>Primary key</p>
+         * 
          * <strong>example:</strong>
          * <p>16257</p>
          */
@@ -239,6 +306,8 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>IP blacklist</p>
+         * 
          * <strong>example:</strong>
          * <p>121.41.11.161,10.200.255.60</p>
          */
@@ -246,6 +315,8 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
         public String ipBlacklist;
 
         /**
+         * <p>IP whitelist, with multiple entries separated by commas</p>
+         * 
          * <strong>example:</strong>
          * <p>121.41.11.161,10.200.255.60</p>
          */
@@ -253,6 +324,8 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
         public String ipWhitelist;
 
         /**
+         * <p>Requests per minute quota</p>
+         * 
          * <strong>example:</strong>
          * <p>-1</p>
          */
@@ -260,7 +333,7 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
         public Integer rpmLimit;
 
         /**
-         * <p>trial,draft,live,refunded,expired,released</p>
+         * <p>trial, draft, live, refunded, expired, released</p>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
@@ -269,6 +342,8 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>Reason for pause.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */

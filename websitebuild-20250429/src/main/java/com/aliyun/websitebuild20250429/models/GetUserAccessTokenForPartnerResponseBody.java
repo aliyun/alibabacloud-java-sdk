@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetUserAccessTokenForPartnerResponseBody extends TeaModel {
     /**
+     * <p>Error code. The value is as follows: If the request succeeded, the ErrorCode field is not returned. If the request failed, the ErrorCode field is returned. For more information, see the error code list in this topic.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>Response data</p>
+     */
     @NameInMap("Module")
     public GetUserAccessTokenForPartnerResponseBodyModule module;
 
@@ -24,6 +29,8 @@ public class GetUserAccessTokenForPartnerResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

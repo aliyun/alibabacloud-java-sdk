@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AppMaterialFile extends TeaModel {
     /**
+     * <p>Application instance ID</p>
+     * 
      * <strong>example:</strong>
      * <p>WD20250703155602000001</p>
      */
@@ -12,6 +14,8 @@ public class AppMaterialFile extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Content Type</p>
+     * 
      * <strong>example:</strong>
      * <p>image/png</p>
      */
@@ -19,6 +23,8 @@ public class AppMaterialFile extends TeaModel {
     public String contentType;
 
     /**
+     * <p>Creation Time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-11-03 02:05:01</p>
      */
@@ -26,6 +32,8 @@ public class AppMaterialFile extends TeaModel {
     public String createTime;
 
     /**
+     * <p>Deletion Time</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-11-03 02:05:01</p>
      */
@@ -33,6 +41,8 @@ public class AppMaterialFile extends TeaModel {
     public String deletedTime;
 
     /**
+     * <p>Folder ID</p>
+     * 
      * <strong>example:</strong>
      * <p>ddddwww</p>
      */
@@ -40,6 +50,8 @@ public class AppMaterialFile extends TeaModel {
     public String directoryId;
 
     /**
+     * <p>File ID</p>
+     * 
      * <strong>example:</strong>
      * <p>d75e1e9693cc460da218419d67735567</p>
      */
@@ -47,6 +59,8 @@ public class AppMaterialFile extends TeaModel {
     public String fileId;
 
     /**
+     * <p>File URL</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://demo-moshicloud-test.oss-cn-hangzhou-internal.aliyuncs.com/document/testcase/aliyun/api_case/pdf_angle90_page1.pdf">https://demo-moshicloud-test.oss-cn-hangzhou-internal.aliyuncs.com/document/testcase/aliyun/api_case/pdf_angle90_page1.pdf</a></p>
      */
@@ -54,16 +68,26 @@ public class AppMaterialFile extends TeaModel {
     public String fileUrl;
 
     /**
+     * <p>Image height</p>
+     * 
      * <strong>example:</strong>
      * <p>1280</p>
      */
     @NameInMap("Height")
     public Integer height;
 
+    /**
+     * <p>File name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>文件名</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>File Status</p>
+     * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
      */
@@ -71,6 +95,8 @@ public class AppMaterialFile extends TeaModel {
     public String status;
 
     /**
+     * <p>Bucket size.</p>
+     * 
      * <strong>example:</strong>
      * <p>23M</p>
      */
@@ -78,6 +104,8 @@ public class AppMaterialFile extends TeaModel {
     public String storageSize;
 
     /**
+     * <p>File suffix</p>
+     * 
      * <strong>example:</strong>
      * <p>png</p>
      */
@@ -85,6 +113,8 @@ public class AppMaterialFile extends TeaModel {
     public String suffix;
 
     /**
+     * <p>File Type</p>
+     * 
      * <strong>example:</strong>
      * <p>IMAGE</p>
      */
@@ -92,6 +122,8 @@ public class AppMaterialFile extends TeaModel {
     public String type;
 
     /**
+     * <p>Image width</p>
+     * 
      * <strong>example:</strong>
      * <p>1920</p>
      */

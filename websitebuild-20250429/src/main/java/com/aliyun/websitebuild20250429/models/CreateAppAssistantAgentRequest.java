@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAppAssistantAgentRequest extends TeaModel {
     /**
+     * <p>Agent name</p>
+     * 
      * <strong>example:</strong>
      * <p>测试业务空间</p>
      */
@@ -12,6 +14,8 @@ public class CreateAppAssistantAgentRequest extends TeaModel {
     public String agentName;
 
     /**
+     * <p>Business ID</p>
+     * 
      * <strong>example:</strong>
      * <p>WS20250731233102000001</p>
      */
@@ -19,6 +23,8 @@ public class CreateAppAssistantAgentRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Platform type</p>
+     * 
      * <strong>example:</strong>
      * <p>LINUX64</p>
      */

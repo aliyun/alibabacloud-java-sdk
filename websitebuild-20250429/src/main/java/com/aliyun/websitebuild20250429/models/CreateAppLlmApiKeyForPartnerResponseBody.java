@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAppLlmApiKeyForPartnerResponseBody extends TeaModel {
     /**
+     * <p>Detailed reason for access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class CreateAppLlmApiKeyForPartnerResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>is retry allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class CreateAppLlmApiKeyForPartnerResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>App Name.</p>
+     * 
      * <strong>example:</strong>
      * <p>watermark</p>
      */
@@ -26,6 +32,8 @@ public class CreateAppLlmApiKeyForPartnerResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,15 +41,23 @@ public class CreateAppLlmApiKeyForPartnerResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>dynamic error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>returned error parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>response data</p>
+     */
     @NameInMap("Module")
     public CreateAppLlmApiKeyForPartnerResponseBodyModule module;
 
@@ -55,16 +71,26 @@ public class CreateAppLlmApiKeyForPartnerResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.EROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>is processed synchronously</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -166,6 +192,8 @@ public class CreateAppLlmApiKeyForPartnerResponseBody extends TeaModel {
 
     public static class CreateAppLlmApiKeyForPartnerResponseBodyModule extends TeaModel {
         /**
+         * <p>ciphertext of the API key encrypted by AES</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxx-xxxxxx</p>
          */

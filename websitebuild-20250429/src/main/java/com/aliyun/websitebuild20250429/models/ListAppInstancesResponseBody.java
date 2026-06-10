@@ -59,7 +59,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
      * <p>Dynamic message, not in use, please ignore</p>
      * 
      * <strong>example:</strong>
-     * <p>SYSTEM_ERROR</p>
+     * <p><a href="https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/u6qw3gxzu3b7sbj/u6qw3gxzu3b7sbj.diff.zip?Expires=1740975709&OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&Signature=FP7dDnkrLlOZHmRRORVqbLOtv9c%3D">https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/u6qw3gxzu3b7sbj/u6qw3gxzu3b7sbj.diff.zip?Expires=1740975709&amp;OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&amp;Signature=FP7dDnkrLlOZHmRRORVqbLOtv9c%3D</a></p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;

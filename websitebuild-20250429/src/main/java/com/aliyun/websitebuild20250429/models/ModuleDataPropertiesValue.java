@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ModuleDataPropertiesValue extends TeaModel {
     /**
+     * <p>Property code, such as &quot;aliyun_commodity_agreement&quot;.</p>
+     * 
      * <strong>example:</strong>
      * <p>placeholder</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>List of attribute values</p>
+     */
     @NameInMap("Values")
     public java.util.List<ModuleDataPropertiesValueValues> values;
 

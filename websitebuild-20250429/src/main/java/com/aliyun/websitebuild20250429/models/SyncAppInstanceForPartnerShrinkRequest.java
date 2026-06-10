@@ -4,10 +4,15 @@ package com.aliyun.websitebuild20250429.models;
 import com.aliyun.tea.*;
 
 public class SyncAppInstanceForPartnerShrinkRequest extends TeaModel {
+    /**
+     * <p>Application instance object data</p>
+     */
     @NameInMap("AppInstance")
     public String appInstanceShrink;
 
     /**
+     * <p>Type of system event. CREATE, UPDATE, COMPLETE</p>
+     * 
      * <strong>example:</strong>
      * <p>CREATE</p>
      */
@@ -15,6 +20,8 @@ public class SyncAppInstanceForPartnerShrinkRequest extends TeaModel {
     public String eventType;
 
     /**
+     * <p>Operator ID</p>
+     * 
      * <strong>example:</strong>
      * <p>system</p>
      */
@@ -22,6 +29,8 @@ public class SyncAppInstanceForPartnerShrinkRequest extends TeaModel {
     public String operator;
 
     /**
+     * <p>Source business ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>31104757</p>
      */
@@ -29,6 +38,8 @@ public class SyncAppInstanceForPartnerShrinkRequest extends TeaModel {
     public String sourceBizId;
 
     /**
+     * <p>Source: MARKET_CLOUD_DREAM</p>
+     * 
      * <strong>example:</strong>
      * <p>MARKET_CLOUD_DREAM</p>
      */

@@ -107,6 +107,8 @@ public class CreateAppInstanceRequest extends TeaModel {
     public Integer quantity;
 
     /**
+     * <p>Resource group ID</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-aek2smovqqpvuly</p>
      */
@@ -122,6 +124,9 @@ public class CreateAppInstanceRequest extends TeaModel {
     @NameInMap("SiteVersion")
     public String siteVersion;
 
+    /**
+     * <p>List of tags</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateAppInstanceRequestTags> tags;
 
@@ -267,6 +272,8 @@ public class CreateAppInstanceRequest extends TeaModel {
 
     public static class CreateAppInstanceRequestTags extends TeaModel {
         /**
+         * <p>tag key</p>
+         * 
          * <strong>example:</strong>
          * <p>Group</p>
          */
@@ -274,6 +281,8 @@ public class CreateAppInstanceRequest extends TeaModel {
         public String tagKey;
 
         /**
+         * <p>value of tag 0</p>
+         * 
          * <strong>example:</strong>
          * <p>ufo</p>
          */

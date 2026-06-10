@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAppAssistantAgentsResponseBody extends TeaModel {
     /**
+     * <p>The detailed reason why access was denied.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class ListAppAssistantAgentsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>is retry allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class ListAppAssistantAgentsResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>App Name.</p>
+     * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
      */
@@ -26,6 +32,8 @@ public class ListAppAssistantAgentsResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,15 +41,26 @@ public class ListAppAssistantAgentsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>dynamic error message, used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> error message.  </p>
+     * <blockquote>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>Returned error parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>response Data</p>
+     */
     @NameInMap("Module")
     public java.util.List<ListAppAssistantAgentsResponseBodyModule> module;
 
@@ -55,16 +74,26 @@ public class ListAppAssistantAgentsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Reserved parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -166,7 +195,7 @@ public class ListAppAssistantAgentsResponseBody extends TeaModel {
 
     public static class ListAppAssistantAgentsResponseBodyModuleCredential extends TeaModel {
         /**
-         * <p>API Key</p>
+         * <p>API key</p>
          * 
          * <strong>example:</strong>
          * <p>akm-xxxxxxx</p>
@@ -183,10 +212,15 @@ public class ListAppAssistantAgentsResponseBody extends TeaModel {
         @NameInMap("ApiSecret")
         public String apiSecret;
 
+        /**
+         * <p>Extension field</p>
+         */
         @NameInMap("Extra")
         public java.util.Map<String, String> extra;
 
         /**
+         * <p>Password</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -194,6 +228,8 @@ public class ListAppAssistantAgentsResponseBody extends TeaModel {
         public String password;
 
         /**
+         * <p>Username</p>
+         * 
          * <strong>example:</strong>
          * <p>Test</p>
          */
@@ -248,9 +284,15 @@ public class ListAppAssistantAgentsResponseBody extends TeaModel {
     }
 
     public static class ListAppAssistantAgentsResponseBodyModuleEmbedConfig extends TeaModel {
+        /**
+         * <p>Extension fields</p>
+         */
         @NameInMap("Extra")
         public java.util.Map<String, String> extra;
 
+        /**
+         * <p>Raw embed script</p>
+         */
         @NameInMap("RawScript")
         public String rawScript;
 
@@ -279,32 +321,53 @@ public class ListAppAssistantAgentsResponseBody extends TeaModel {
 
     public static class ListAppAssistantAgentsResponseBodyModule extends TeaModel {
         /**
+         * <p>Agent ID (returned by the platform)</p>
+         * 
          * <strong>example:</strong>
          * <p>liyang1_v@soulapp</p>
          */
         @NameInMap("AgentId")
         public String agentId;
 
+        /**
+         * <p>Agent Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>演示</p>
+         */
         @NameInMap("AgentName")
         public String agentName;
 
         /**
+         * <p>bizId of the associated application instance</p>
+         * 
          * <strong>example:</strong>
          * <p>WD20250703155602000001</p>
          */
         @NameInMap("BizId")
         public String bizId;
 
+        /**
+         * <p>Credential</p>
+         */
         @NameInMap("Credential")
         public ListAppAssistantAgentsResponseBodyModuleCredential credential;
 
+        /**
+         * <p>Embed configuration</p>
+         */
         @NameInMap("EmbedConfig")
         public ListAppAssistantAgentsResponseBodyModuleEmbedConfig embedConfig;
 
+        /**
+         * <p>Extension parameters</p>
+         */
         @NameInMap("ExtraParams")
         public java.util.Map<String, String> extraParams;
 
         /**
+         * <p>Creation Time</p>
+         * 
          * <strong>example:</strong>
          * <p>1740479834</p>
          */
@@ -312,6 +375,8 @@ public class ListAppAssistantAgentsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>Updated At</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-08-28T02:25:41Z</p>
          */
@@ -319,6 +384,8 @@ public class ListAppAssistantAgentsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>Agent platform appId</p>
+         * 
          * <strong>example:</strong>
          * <p>WA12313123131</p>
          */
@@ -326,6 +393,8 @@ public class ListAppAssistantAgentsResponseBody extends TeaModel {
         public String platformAppId;
 
         /**
+         * <p>Platform Type</p>
+         * 
          * <strong>example:</strong>
          * <p>VMWARE</p>
          */
@@ -333,6 +402,8 @@ public class ListAppAssistantAgentsResponseBody extends TeaModel {
         public String platformType;
 
         /**
+         * <p>Status</p>
+         * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
          */
@@ -340,6 +411,8 @@ public class ListAppAssistantAgentsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>User ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1231311312</p>
          */

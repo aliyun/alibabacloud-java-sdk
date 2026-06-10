@@ -48,7 +48,7 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
      * <p>Dynamic message.</p>
      * 
      * <strong>example:</strong>
-     * <p>SYSTEM_ERROR</p>
+     * <p><a href="https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/uoa11auyf2565k6/uoa11auyf2565k6.sql.zip?Expires=1730520371&OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&Signature=WIutxAQYbbwxX0aeKmdObduLnDg%3D">https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/uoa11auyf2565k6/uoa11auyf2565k6.sql.zip?Expires=1730520371&amp;OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&amp;Signature=WIutxAQYbbwxX0aeKmdObduLnDg%3D</a></p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;

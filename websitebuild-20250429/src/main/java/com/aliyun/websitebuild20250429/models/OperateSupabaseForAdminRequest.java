@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class OperateSupabaseForAdminRequest extends TeaModel {
     /**
+     * <p>Business ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,8 @@ public class OperateSupabaseForAdminRequest extends TeaModel {
     public String env;
 
     /**
+     * <p>SQL statement</p>
+     * 
      * <strong>example:</strong>
      * <p>select * from profiles</p>
      */
@@ -24,6 +27,8 @@ public class OperateSupabaseForAdminRequest extends TeaModel {
     public String executeSql;
 
     /**
+     * <p>Operation Type</p>
+     * 
      * <strong>example:</strong>
      * <p>vul_fix</p>
      */
@@ -31,6 +36,8 @@ public class OperateSupabaseForAdminRequest extends TeaModel {
     public String operateType;
 
     /**
+     * <p>ORDER BY clause</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -38,6 +45,8 @@ public class OperateSupabaseForAdminRequest extends TeaModel {
     public String orderByClause;
 
     /**
+     * <p>Sorting field</p>
+     * 
      * <strong>example:</strong>
      * <p>CreationTime</p>
      */
@@ -45,6 +54,8 @@ public class OperateSupabaseForAdminRequest extends TeaModel {
     public String orderColumn;
 
     /**
+     * <p>Sorting type: ASC|DESC</p>
+     * 
      * <strong>example:</strong>
      * <p>DESC</p>
      */
@@ -52,6 +63,8 @@ public class OperateSupabaseForAdminRequest extends TeaModel {
     public String orderType;
 
     /**
+     * <p>Page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -59,6 +72,8 @@ public class OperateSupabaseForAdminRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>Page size</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -66,6 +81,8 @@ public class OperateSupabaseForAdminRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Table name</p>
+     * 
      * <strong>example:</strong>
      * <p>default.ai_advertising_material_rec_train_v1103</p>
      */
@@ -73,6 +90,8 @@ public class OperateSupabaseForAdminRequest extends TeaModel {
     public String tableName;
 
     /**
+     * <p>User ID</p>
+     * 
      * <strong>example:</strong>
      * <p>111</p>
      */
@@ -80,6 +99,8 @@ public class OperateSupabaseForAdminRequest extends TeaModel {
     public String userId;
 
     /**
+     * <p>WHERE clause</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */

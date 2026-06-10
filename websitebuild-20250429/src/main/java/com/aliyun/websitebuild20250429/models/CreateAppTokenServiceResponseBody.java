@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAppTokenServiceResponseBody extends TeaModel {
     /**
+     * <p>Detailed reason for access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class CreateAppTokenServiceResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Is retry allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class CreateAppTokenServiceResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>App Name.</p>
+     * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
      */
@@ -26,6 +32,8 @@ public class CreateAppTokenServiceResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>Dynamic code. Not currently used. Ignore it.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,15 +41,23 @@ public class CreateAppTokenServiceResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>Dynamic message.</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>Returned error parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>Whether the shift succeeded</p>
+     */
     @NameInMap("Module")
     public CreateAppTokenServiceResponseBodyModule module;
 
@@ -55,16 +71,26 @@ public class CreateAppTokenServiceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>Abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Is processing synchronous</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -166,6 +192,8 @@ public class CreateAppTokenServiceResponseBody extends TeaModel {
 
     public static class CreateAppTokenServiceResponseBodyModule extends TeaModel {
         /**
+         * <p>Migration extension information (optional)</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;serviceApi\&quot;:\&quot;sendUserMsg\&quot;,\&quot;bizId\&quot;:\&quot;sp\&quot;}</p>
          */

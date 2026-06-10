@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAppSupabaseSecretsRequest extends TeaModel {
     /**
+     * <p>Business ID</p>
+     * 
      * <strong>example:</strong>
      * <p>WS20250801154628000001</p>
      */
@@ -12,6 +14,8 @@ public class GetAppSupabaseSecretsRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Search keyword</p>
+     * 
      * <strong>example:</strong>
      * <p>v2_</p>
      */

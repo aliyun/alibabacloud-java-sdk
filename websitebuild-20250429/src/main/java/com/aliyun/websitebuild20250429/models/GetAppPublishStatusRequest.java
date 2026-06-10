@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAppPublishStatusRequest extends TeaModel {
     /**
+     * <p>Business ID</p>
+     * 
      * <strong>example:</strong>
      * <p>WS20250731233102000001</p>
      */
@@ -12,6 +14,8 @@ public class GetAppPublishStatusRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Deployment ticket ID</p>
+     * 
      * <strong>example:</strong>
      * <p>4998717</p>
      */
@@ -19,6 +23,8 @@ public class GetAppPublishStatusRequest extends TeaModel {
     public Long deployOrderId;
 
     /**
+     * <p>Website domain name</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
      */

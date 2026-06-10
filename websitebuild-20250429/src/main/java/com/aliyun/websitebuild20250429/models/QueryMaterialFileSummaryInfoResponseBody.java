@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryMaterialFileSummaryInfoResponseBody extends TeaModel {
     /**
+     * <p>Detailed reason for access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class QueryMaterialFileSummaryInfoResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Is retry allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class QueryMaterialFileSummaryInfoResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>The application name. It can contain digits, letters, and hyphens (-). It must start with a letter and cannot end with a hyphen (-). The name must not exceed 36 characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
      */
@@ -26,6 +32,8 @@ public class QueryMaterialFileSummaryInfoResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>Dynamic error code</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,15 +41,23 @@ public class QueryMaterialFileSummaryInfoResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>Dynamic message.</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>Returned error parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>Response data</p>
+     */
     @NameInMap("Module")
     public QueryMaterialFileSummaryInfoResponseBodyModule module;
 
@@ -55,16 +71,26 @@ public class QueryMaterialFileSummaryInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.EROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>Abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Is processed synchronously</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -166,6 +192,8 @@ public class QueryMaterialFileSummaryInfoResponseBody extends TeaModel {
 
     public static class QueryMaterialFileSummaryInfoResponseBodyModule extends TeaModel {
         /**
+         * <p>Total file quantity</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -173,6 +201,8 @@ public class QueryMaterialFileSummaryInfoResponseBody extends TeaModel {
         public Long fileNum;
 
         /**
+         * <p>Occupied bucket space</p>
+         * 
          * <strong>example:</strong>
          * <p>23M</p>
          */

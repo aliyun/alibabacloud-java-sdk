@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAIStaffChatEventsResponseBody extends TeaModel {
     /**
+     * <p>Detailed reason for access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>is retry allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>App Name.</p>
+     * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
      */
@@ -26,6 +32,8 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,15 +41,26 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>dynamic error message, used to replace <code>%s</code> in the <strong>ErrMessage</strong> error message.  </p>
+     * <blockquote>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>faulty parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>returned object.</p>
+     */
     @NameInMap("Module")
     public ListAIStaffChatEventsResponseBodyModule module;
 
@@ -55,16 +74,26 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>is processed synchronously</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -166,6 +195,8 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
 
     public static class ListAIStaffChatEventsResponseBodyModuleEvents extends TeaModel {
         /**
+         * <p>error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;Recorded\&quot;: False}</p>
          */
@@ -173,12 +204,20 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
         public String data;
 
         /**
+         * <p>primary key</p>
+         * 
          * <strong>example:</strong>
          * <p>10426</p>
          */
         @NameInMap("Id")
         public Integer id;
 
+        /**
+         * <p>Website Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文章素材2026050704</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -215,6 +254,8 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
 
     public static class ListAIStaffChatEventsResponseBodyModule extends TeaModel {
         /**
+         * <p>Unique ID of the sentence</p>
+         * 
          * <strong>example:</strong>
          * <p>chat-xrz3etcl2bsygwlx8g</p>
          */
@@ -222,16 +263,23 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
         public String chatId;
 
         /**
+         * <p>session ID</p>
+         * 
          * <strong>example:</strong>
          * <p>872be9bc-3097-433d-b462-596202455102</p>
          */
         @NameInMap("ConversationId")
         public String conversationId;
 
+        /**
+         * <p>object ID</p>
+         */
         @NameInMap("Events")
         public java.util.List<ListAIStaffChatEventsResponseBodyModuleEvents> events;
 
         /**
+         * <p>ID of the last SSE event</p>
+         * 
          * <strong>example:</strong>
          * <p>event-21dd6124760a4a259ae33bbd878f6e20</p>
          */

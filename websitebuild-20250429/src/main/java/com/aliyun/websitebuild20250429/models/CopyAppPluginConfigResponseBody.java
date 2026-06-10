@@ -50,8 +50,6 @@ public class CopyAppPluginConfigResponseBody extends TeaModel {
     public Boolean module;
 
     /**
-     * <p>Id of the request</p>
-     * 
      * <strong>example:</strong>
      * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
      */

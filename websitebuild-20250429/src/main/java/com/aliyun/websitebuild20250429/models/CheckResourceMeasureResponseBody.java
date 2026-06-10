@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CheckResourceMeasureResponseBody extends TeaModel {
     /**
+     * <p>Detailed reason for access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Is retry allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>App Name.</p>
+     * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
      */
@@ -26,6 +32,8 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>Dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,15 +41,26 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>Dynamic error message used to replace <code>%s</code> in the <strong>ErrMessage</strong> error message.  </p>
+     * <blockquote>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the provided request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>Returned error parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>Application module</p>
+     */
     @NameInMap("Module")
     public CheckResourceMeasureResponseBodyModule module;
 
@@ -55,16 +74,26 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>Abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Reserved parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -166,6 +195,8 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
 
     public static class CheckResourceMeasureResponseBodyModule extends TeaModel {
         /**
+         * <p>Error code when failed; null when passed</p>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -173,6 +204,8 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>Error message when failed; null when passed</p>
+         * 
          * <strong>example:</strong>
          * <p>stream push failed</p>
          */
@@ -180,6 +213,8 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>Is the check passed</p>
+         * 
          * <strong>example:</strong>
          * <p>False</p>
          */
@@ -187,6 +222,8 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
         public Boolean passed;
 
         /**
+         * <p>Resource identity</p>
+         * 
          * <strong>example:</strong>
          * <p>TransitRouterVpcAttachment</p>
          */

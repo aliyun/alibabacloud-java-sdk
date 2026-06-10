@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAppConversationMessagesResponseBody extends TeaModel {
     /**
+     * <p>permission denied information</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>is retry allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>App Name.</p>
+     * 
      * <strong>example:</strong>
      * <p>or</p>
      */
@@ -26,6 +32,8 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,26 +41,42 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>dynamic error message used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> response parameter.  </p>
+     * <blockquote>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>faulty parameter(s).</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
+     * <p>Number of results per query.  </p>
+     * <p>Value range: 10–100. Default Value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>Response Data</p>
+     */
     @NameInMap("Module")
     public java.util.List<ListAppConversationMessagesResponseBodyModule> module;
 
     /**
+     * <p>Token for the start of the next query. It is empty if there is no next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>FFh3Xqm+JgZ/U9Jyb7wdVr9LWk80Tghn5UZjbcWEVEderBcbVF+Y6PS0i8PpCL4PQZ3e0C9oEH0Asd4tJEuGtkl2WuKdiWZpEwadNydQdJPFM=</p>
      */
@@ -69,16 +93,26 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Reserved parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -196,6 +230,8 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
 
     public static class ListAppConversationMessagesResponseBodyModule extends TeaModel {
         /**
+         * <p>Bot ID</p>
+         * 
          * <strong>example:</strong>
          * <p>Zero2</p>
          */
@@ -203,6 +239,8 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         public String botId;
 
         /**
+         * <p>Chat ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>chat-xrz3etcl2bsygwlx8g</p>
          */
@@ -210,6 +248,8 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         public String chatId;
 
         /**
+         * <p>Current chat status.</p>
+         * 
          * <strong>example:</strong>
          * <p>created</p>
          */
@@ -217,6 +257,8 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         public String chatStatus;
 
         /**
+         * <p>The ID of the data class API invoked.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;DeviceName\&quot;: u\&quot;\u667a\u80fd\u63d2\u5ea716A\&quot;, \&quot;BlidMac\&quot;: \&quot;18bc5a53351c\&quot;, \&quot;DeviceModel\&quot;: \&quot;ABSP21-16M\&quot;, \&quot;DeviceCategory\&quot;: u\&quot;\u63d2\u5ea7\&quot;, \&quot;DeviceManufacturer\&quot;: \&quot;\&quot;, \&quot;DeviceType\&quot;: 140}</p>
          */
@@ -224,6 +266,8 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>Content type</p>
+         * 
          * <strong>example:</strong>
          * <p>image/png</p>
          */
@@ -231,6 +275,8 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         public String contentType;
 
         /**
+         * <p>Session ID</p>
+         * 
          * <strong>example:</strong>
          * <p>872be9bc-3097-433d-b462-596202455102</p>
          */
@@ -238,6 +284,8 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         public String conversationId;
 
         /**
+         * <p>Creation Time</p>
+         * 
          * <strong>example:</strong>
          * <p>1740479834</p>
          */
@@ -245,6 +293,8 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>Updated At</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-08-28T02:25:41Z</p>
          */
@@ -252,6 +302,8 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>Message ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>5f9e88ce-f223-4447-a23e-cb574df6c97a</p>
          */
@@ -259,6 +311,8 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         public String messageId;
 
         /**
+         * <p>Business extension metadata (in Map format, must be a JSON string).</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;appId\&quot;:\&quot;WS20260507200853000001\&quot;,\&quot;inputTokens\&quot;:1411,\&quot;outputTokens\&quot;:51}</p>
          */
@@ -266,6 +320,8 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         public String metaData;
 
         /**
+         * <p>Region ordinal number. This parameter is deprecated.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -273,6 +329,22 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         public Integer no;
 
         /**
+         * <p>Role of the conversation participant. Valid values include:</p>
+         * <ul>
+         * <li><p>user: User</p>
+         * </li>
+         * <li><p>assistant: Assistant</p>
+         * </li>
+         * <li><p>system: System</p>
+         * </li>
+         * <li><p>function: Function</p>
+         * </li>
+         * <li><p>plugin: Plugin</p>
+         * </li>
+         * <li><p>tool: Tool</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>user</p>
          */
@@ -280,6 +352,8 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         public String role;
 
         /**
+         * <p>Section ID of the inspection item.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -287,6 +361,8 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         public String sectionId;
 
         /**
+         * <p>Site ID, which can be obtained by invoking the <a href="~~ListSites~~">ListSites</a> API.</p>
+         * 
          * <strong>example:</strong>
          * <p>865181640657408</p>
          */
@@ -294,6 +370,8 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         public String siteId;
 
         /**
+         * <p>File type</p>
+         * 
          * <strong>example:</strong>
          * <p>IMAGE</p>
          */

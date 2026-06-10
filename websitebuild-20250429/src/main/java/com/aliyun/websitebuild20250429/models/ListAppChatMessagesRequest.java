@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAppChatMessagesRequest extends TeaModel {
     /**
+     * <p>Chat ID</p>
+     * 
      * <strong>example:</strong>
      * <p>20833ba4-d189-4c50-9a44-a6bcbda2c93b</p>
      */
@@ -12,6 +14,8 @@ public class ListAppChatMessagesRequest extends TeaModel {
     public String chatId;
 
     /**
+     * <p>Session ID</p>
+     * 
      * <strong>example:</strong>
      * <p>593fe1a2-d0b4-4fde-a2b0-78ad6a438d41</p>
      */
@@ -19,6 +23,9 @@ public class ListAppChatMessagesRequest extends TeaModel {
     public String conversationId;
 
     /**
+     * <p>Number of results per query.  </p>
+     * <p>Valid range: 10 to 100. Default Value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +33,8 @@ public class ListAppChatMessagesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Token indicating the start of the next query. This value is empty if there is no subsequent query.</p>
+     * 
      * <strong>example:</strong>
      * <p>FFh3Xqm+JgZ/U9Jyb7wdVr9LWk80Tghn5UZjbcWEVEderBcbVF+Y6PS0i8PpCL4PQZ3e0C9oEH0Asd4tJEuGtkl2WuKdiWZpEwadNydQdJPFM=</p>
      */
@@ -33,6 +42,8 @@ public class ListAppChatMessagesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Segment ID</p>
+     * 
      * <strong>example:</strong>
      * <p>169</p>
      */

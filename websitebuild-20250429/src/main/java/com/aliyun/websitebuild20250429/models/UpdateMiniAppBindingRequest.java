@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateMiniAppBindingRequest extends TeaModel {
     /**
+     * <p>Business ID</p>
+     * 
      * <strong>example:</strong>
      * <p>WS20250801154628000001</p>
      */
@@ -12,6 +14,8 @@ public class UpdateMiniAppBindingRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Channel</p>
+     * 
      * <strong>example:</strong>
      * <p>WECHAT</p>
      */
@@ -19,6 +23,8 @@ public class UpdateMiniAppBindingRequest extends TeaModel {
     public String channel;
 
     /**
+     * <p>Configuration key</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */
@@ -26,6 +32,8 @@ public class UpdateMiniAppBindingRequest extends TeaModel {
     public String settingKey;
 
     /**
+     * <p>Configuration value</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */

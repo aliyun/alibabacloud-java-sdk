@@ -11,6 +11,14 @@ public class DispatchConsoleAPIForPartnerRequest extends TeaModel {
     public String liveToken;
 
     /**
+     * <p>Set the operation to perform on the alert. Valid values:</p>
+     * <ul>
+     * <li><strong>deal</strong>: Handle the alert (fencing)</li>
+     * <li><strong>ignore</strong>: Ignore</li>
+     * <li><strong>mark_mis_info</strong>: Mark as false positive (add to whitelist)</li>
+     * <li><strong>rm_mark_mis_info</strong>: Unmark as false positive (remove from whitelist)</li>
+     * <li><strong>offline_handled</strong>: Mark as Completed</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +28,8 @@ public class DispatchConsoleAPIForPartnerRequest extends TeaModel {
     public String operation;
 
     /**
+     * <p>Error parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>[\&quot;\&quot;]</p>
      */
@@ -27,6 +37,7 @@ public class DispatchConsoleAPIForPartnerRequest extends TeaModel {
     public String params;
 
     /**
+     * <p>Product code</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

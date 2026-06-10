@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RenewAppSandboxResponseBody extends TeaModel {
     /**
+     * <p>Detailed reason for access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class RenewAppSandboxResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Is retry allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class RenewAppSandboxResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>App Name.</p>
+     * 
      * <strong>example:</strong>
      * <p>watermark</p>
      */
@@ -26,6 +32,8 @@ public class RenewAppSandboxResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>Dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,15 +41,23 @@ public class RenewAppSandboxResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>Dynamic message; currently unused, please ignore</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>Returned error parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>Whether the shift succeeded</p>
+     */
     @NameInMap("Module")
     public RenewAppSandboxResponseBodyModule module;
 
@@ -55,16 +71,26 @@ public class RenewAppSandboxResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>Abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Reserved parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -165,6 +191,9 @@ public class RenewAppSandboxResponseBody extends TeaModel {
     }
 
     public static class RenewAppSandboxResponseBodyModule extends TeaModel {
+        /**
+         * <p>Preview URLs</p>
+         */
         @NameInMap("PreviewUrls")
         public java.util.Map<String, String> previewUrls;
 

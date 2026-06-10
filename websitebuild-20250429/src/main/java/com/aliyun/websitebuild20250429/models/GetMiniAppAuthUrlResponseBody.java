@@ -4,10 +4,15 @@ package com.aliyun.websitebuild20250429.models;
 import com.aliyun.tea.*;
 
 public class GetMiniAppAuthUrlResponseBody extends TeaModel {
+    /**
+     * <p>Result of the request.</p>
+     */
     @NameInMap("Data")
     public GetMiniAppAuthUrlResponseBodyData data;
 
     /**
+     * <p>request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
      */
@@ -36,6 +41,12 @@ public class GetMiniAppAuthUrlResponseBody extends TeaModel {
     }
 
     public static class GetMiniAppAuthUrlResponseBodyData extends TeaModel {
+        /**
+         * <p>authorized address</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://nschiper.oneclick.accounts.logi.com/identity/oauth2/token">https://nschiper.oneclick.accounts.logi.com/identity/oauth2/token</a></p>
+         */
         @NameInMap("AuthUrl")
         public String authUrl;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAppWorkspaceDirectoryRequest extends TeaModel {
     /**
+     * <p>Session ID</p>
+     * 
      * <strong>example:</strong>
      * <p>5b7105a2-2999-430b-ba23-ba09149d5434</p>
      */
@@ -12,6 +14,8 @@ public class GetAppWorkspaceDirectoryRequest extends TeaModel {
     public String conversationId;
 
     /**
+     * <p>Directory depth (optional; null or 0 returns all levels)</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class GetAppWorkspaceDirectoryRequest extends TeaModel {
     public Integer deep;
 
     /**
+     * <p>Directory path (optional)</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

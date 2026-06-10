@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAppAssistantAgentSsoLoginRequest extends TeaModel {
     /**
+     * <p>Business ID</p>
+     * 
      * <strong>example:</strong>
      * <p>WD20250821161210000001</p>
      */
@@ -12,6 +14,8 @@ public class CreateAppAssistantAgentSsoLoginRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Platform Type</p>
+     * 
      * <strong>example:</strong>
      * <p>all</p>
      */
@@ -19,6 +23,8 @@ public class CreateAppAssistantAgentSsoLoginRequest extends TeaModel {
     public String platformType;
 
     /**
+     * <p>Target URL</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://172.16.70.16:9410/metrics">http://172.16.70.16:9410/metrics</a></p>
      */

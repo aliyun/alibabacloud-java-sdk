@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAppSupabaseInstanceResponseBody extends TeaModel {
     /**
+     * <p>Detailed reason for access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Is retry allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>App Name.</p>
+     * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
      */
@@ -26,6 +32,8 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>Dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,15 +41,26 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>Dynamic error message, used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> error message.  </p>
+     * <blockquote>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the provided request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>Returned error parameters</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>Task object</p>
+     */
     @NameInMap("Module")
     public GetAppSupabaseInstanceResponseBodyModule module;
 
@@ -55,16 +74,26 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>error code</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>Abnormal message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Spare parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -166,6 +195,8 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
 
     public static class GetAppSupabaseInstanceResponseBodyModule extends TeaModel {
         /**
+         * <p>anonymity key</p>
+         * 
          * <strong>example:</strong>
          * <p>1111</p>
          */
@@ -173,6 +204,8 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
         public String anonKey;
 
         /**
+         * <p>application instance business ID</p>
+         * 
          * <strong>example:</strong>
          * <p>WS20250915163734000001</p>
          */
@@ -180,6 +213,8 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
         public String bizId;
 
         /**
+         * <p>database instance ID</p>
+         * 
          * <strong>example:</strong>
          * <p>selectdb-cn-2bl4djolb02</p>
          */
@@ -187,6 +222,8 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
         public String dbInstanceId;
 
         /**
+         * <p>Database public URL</p>
+         * 
          * <strong>example:</strong>
          * <p>111</p>
          */
@@ -194,6 +231,8 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
         public String dbPublicUrl;
 
         /**
+         * <p>instance creation status</p>
+         * 
          * <strong>example:</strong>
          * <p>1111</p>
          */
@@ -201,6 +240,8 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
         public String instanceCreateStatus;
 
         /**
+         * <p>service key</p>
+         * 
          * <strong>example:</strong>
          * <p>e80f5a7a08514709a2fb</p>
          */
@@ -208,7 +249,7 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
         public String serviceKey;
 
         /**
-         * <p>trial,draft,live,refunded,expired,released</p>
+         * <p>trial, draft, live, refunded, expired, released</p>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
@@ -217,6 +258,8 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>Supabase instance ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1111</p>
          */
@@ -224,6 +267,8 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
         public String supabaseInstanceId;
 
         /**
+         * <p>Supabase public URL</p>
+         * 
          * <strong>example:</strong>
          * <p>111</p>
          */
