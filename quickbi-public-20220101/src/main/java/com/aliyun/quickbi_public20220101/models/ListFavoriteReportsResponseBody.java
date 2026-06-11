@@ -120,7 +120,7 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
          * <p>Name of the work.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>测试报表</p>
          */
         @NameInMap("Name")
         public String name;
@@ -129,7 +129,7 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
          * <p>Alibaba Cloud account name of the work owner.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>luyaotest的昵称非管理员</p>
          */
         @NameInMap("OwnerName")
         public String ownerName;
@@ -194,7 +194,7 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
          * <p>The name of the workspace to which the work belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>测试工作空间</p>
          */
         @NameInMap("WorkspaceName")
         public String workspaceName;

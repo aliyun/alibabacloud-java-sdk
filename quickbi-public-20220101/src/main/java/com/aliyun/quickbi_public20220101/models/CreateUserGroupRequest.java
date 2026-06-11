@@ -26,7 +26,7 @@ public class CreateUserGroupRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>User group description</p>
+     * <p>用户分组描述</p>
      */
     @NameInMap("UserGroupDescription")
     public String userGroupDescription;
@@ -53,7 +53,7 @@ public class CreateUserGroupRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Hangzhou Financial Report</p>
+     * <p>杭州财报</p>
      */
     @NameInMap("UserGroupName")
     public String userGroupName;

@@ -5,11 +5,17 @@ import com.aliyun.tea.*;
 
 public class UpdateUserRequest extends TeaModel {
     /**
-     * <p>Indicates whether the organization administrator. Valid values:</p>
+     * <p>Whether to assign the organization administrator role to the user. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p><code>true</code></p>
+     * </li>
+     * <li><p><code>false</code></p>
+     * </li>
      * </ul>
+     * <blockquote>
+     * <p>Notice: </p>
+     * </blockquote>
+     * <p>This parameter is deprecated and is ignored if RoleIds is also specified.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -21,11 +27,17 @@ public class UpdateUserRequest extends TeaModel {
     public Boolean adminUser;
 
     /**
-     * <p>Indicate whether the RAM user is a permission administrator. Valid values:</p>
+     * <p>Whether to assign the permission administrator role to the user. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p><code>true</code></p>
+     * </li>
+     * <li><p><code>false</code></p>
+     * </li>
      * </ul>
+     * <blockquote>
+     * <p>Notice: </p>
+     * </blockquote>
+     * <p>This parameter is deprecated and is ignored if RoleIds is also specified.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -33,14 +45,29 @@ public class UpdateUserRequest extends TeaModel {
     @NameInMap("AuthAdminUser")
     public Boolean authAdminUser;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[
+     *     {
+     *         &quot;moduleType&quot;: &quot;smartQAskNum&quot;,
+     *         &quot;status&quot;: 1
+     *     },
+     *     {
+     *         &quot;moduleType&quot;: &quot;smartQDevNum&quot;,
+     *         &quot;status&quot;: 0
+     *     }
+     * ]</p>
+     */
     @NameInMap("CopilotModules")
     public String copilotModules;
 
     /**
-     * <p>User status: </p>
+     * <p>The user status:</p>
      * <ul>
-     * <li><strong>false</strong>: Active</li>
-     * <li><strong>true</strong>: Inactive</li>
+     * <li><p><strong><code>false</code></strong>: active</p>
+     * </li>
+     * <li><p><strong><code>true</code></strong>: inactive</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,20 +77,30 @@ public class UpdateUserRequest extends TeaModel {
     public Boolean isDeleted;
 
     /**
-     * <p>The nickname of the account.</p>
+     * <p>The nickname of the user.</p>
      * <ul>
-     * <li>Format check: The value can be up to 50 characters in length.</li>
-     * <li>Special format verification: Chinese and English digits_ \ / | () ] [</li>
+     * <li><p>The nickname can be up to 50 characters in length.</p>
+     * </li>
+     * <li><p>The nickname can contain Chinese characters, letters, digits, and the following special characters: <code>_ \\ / | () ] [</code></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Xiao Zhang</p>
+     * <p>test</p>
      */
     @NameInMap("NickName")
     public String nickName;
 
     /**
-     * <p>The IDs of the preset or custom organization roles bound to the user, separated by English commas \&quot;,\&quot;, with a maximum of 3. The value range is as follows: - Organization Administrator (preset role): 111111111 - Permission Administrator (preset role): 111111112 - Regular User (preset role): 111111113</p>
+     * <p>The IDs of the built-in or custom organization roles to assign to the user. Specify up to three comma-separated role IDs.</p>
+     * <ul>
+     * <li><p>organization administrator (built-in role): 111111111</p>
+     * </li>
+     * <li><p>permission administrator (built-in role): 111111112</p>
+     * </li>
+     * <li><p>standard user (built-in role): 111111113</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>111111111,456</p>
@@ -72,7 +109,7 @@ public class UpdateUserRequest extends TeaModel {
     public String roleIds;
 
     /**
-     * <p>The ID of the user to be updated. The user ID is the UserID of the Quick BI, not the UID of Alibaba Cloud.</p>
+     * <p>The ID of the Quick BI user to update. This is not an Alibaba Cloud UID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,11 +119,14 @@ public class UpdateUserRequest extends TeaModel {
     public String userId;
 
     /**
-     * <p>The type of user who is a member of the organization. Valid values:</p>
+     * <p>The user type of the organization member. Valid values:</p>
      * <ul>
-     * <li>1 : developer</li>
-     * <li>2 : visitors</li>
-     * <li>3 : Analyst</li>
+     * <li><p><code>1</code>: developer</p>
+     * </li>
+     * <li><p><code>2</code>: viewer</p>
+     * </li>
+     * <li><p><code>3</code>: analyst</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,16 +5,29 @@ import com.aliyun.tea.*;
 
 public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D787E****************05DF8D885</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The acceleration task model.</p>
+     */
     @NameInMap("Result")
     public ListAccelerationOfWorkspaceResponseBodyResult result;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +65,8 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
 
     public static class ListAccelerationOfWorkspaceResponseBodyResultData extends TeaModel {
         /**
+         * <p>The name of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>system</p>
          */
@@ -59,16 +74,26 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
         public String creatorName;
 
         /**
+         * <p>The dataset ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>d14e*********fef8de29fd</p>
          */
         @NameInMap("CubeId")
         public String cubeId;
 
+        /**
+         * <p>The dataset name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("CubeName")
         public String cubeName;
 
         /**
+         * <p>The time when acceleration was enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>20250911 00:00:00</p>
          */
@@ -76,6 +101,8 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
         public String enableQuickindexTime;
 
         /**
+         * <p>The task history ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>QWDAASG*******8SAD</p>
          */
@@ -83,6 +110,8 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
         public String jobHistoryId;
 
         /**
+         * <p>The acceleration task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>b30b74**********b3b</p>
          */
@@ -90,6 +119,22 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The status of the task. Valid values:</p>
+         * <ul>
+         * <li><p>0: Pending</p>
+         * </li>
+         * <li><p>1: Running</p>
+         * </li>
+         * <li><p>2: Succeeded</p>
+         * </li>
+         * <li><p>3: Failed</p>
+         * </li>
+         * <li><p>4: Canceled</p>
+         * </li>
+         * <li><p>5: Warning</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -97,6 +142,8 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
         public Integer jobStatus;
 
         /**
+         * <p>The time when the task was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>20250911 00:00:00</p>
          */
@@ -104,6 +151,8 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
         public String lastModifyTime;
 
         /**
+         * <p>The size.</p>
+         * 
          * <strong>example:</strong>
          * <p>47045632</p>
          */
@@ -190,10 +239,15 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
     }
 
     public static class ListAccelerationOfWorkspaceResponseBodyResult extends TeaModel {
+        /**
+         * <p>An array of acceleration task information.</p>
+         */
         @NameInMap("Data")
         public java.util.List<ListAccelerationOfWorkspaceResponseBodyResultData> data;
 
         /**
+         * <p>The next page. A value of NULL or 0 indicates that there is no next page.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -201,6 +255,8 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
         public Integer next;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -208,6 +264,8 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
+         * <p>The number of rows per page that you set when you call the operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -215,6 +273,8 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The previous page. A value of NULL or 0 indicates that there is no previous page.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -222,6 +282,8 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
         public Integer pre;
 
         /**
+         * <p>The total number of rows.</p>
+         * 
          * <strong>example:</strong>
          * <p>18</p>
          */
@@ -229,6 +291,8 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
         public Integer totalNum;
 
         /**
+         * <p>The total number of pages.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListWorkspaceUserRolesByUserIdResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DC4E***************F67E2C3</p>
      */
@@ -12,12 +14,21 @@ public class ListWorkspaceUserRolesByUserIdResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The list of all workspace role information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListWorkspaceUserRolesByUserIdResponseBodyResult> result;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -55,6 +66,8 @@ public class ListWorkspaceUserRolesByUserIdResponseBody extends TeaModel {
 
     public static class ListWorkspaceUserRolesByUserIdResponseBodyResultRoleModel extends TeaModel {
         /**
+         * <p>The code that corresponds to the preset workspace role. This parameter is not returned for custom roles.</p>
+         * 
          * <strong>example:</strong>
          * <p>34637***35</p>
          */
@@ -62,6 +75,18 @@ public class ListWorkspaceUserRolesByUserIdResponseBody extends TeaModel {
         public String roleCode;
 
         /**
+         * <p>The workspace role ID. This includes, but is not limited to, the following preset workspace roles:</p>
+         * <ul>
+         * <li><p>25: Workspace Admin (preset role)</p>
+         * </li>
+         * <li><p>26: Workspace Developer (preset role)</p>
+         * </li>
+         * <li><p>27: Workspace Analyst (preset role)</p>
+         * </li>
+         * <li><p>30: Workspace Viewer (preset role)</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>111111111</p>
          */
@@ -69,6 +94,8 @@ public class ListWorkspaceUserRolesByUserIdResponseBody extends TeaModel {
         public String roleId;
 
         /**
+         * <p>The name of the workspace role.</p>
+         * 
          * <strong>example:</strong>
          * <p>arms-admin</p>
          */
@@ -107,16 +134,27 @@ public class ListWorkspaceUserRolesByUserIdResponseBody extends TeaModel {
     }
 
     public static class ListWorkspaceUserRolesByUserIdResponseBodyResult extends TeaModel {
+        /**
+         * <p>The workspace role information.</p>
+         */
         @NameInMap("RoleModel")
         public ListWorkspaceUserRolesByUserIdResponseBodyResultRoleModel roleModel;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>9337d121-a78f-4c1b-a8bc-f81de117****</p>
          */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 
+        /**
+         * <p>The workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("WorkspaceName")
         public String workspaceName;
 

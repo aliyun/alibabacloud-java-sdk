@@ -8,7 +8,7 @@ public class QueryWorkspaceUserListRequest extends TeaModel {
      * <p>Keyword for the username of the workspace member.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>分析</p>
      */
     @NameInMap("Keyword")
     public String keyword;

@@ -8,7 +8,7 @@ public class ListSharedReportsRequest extends TeaModel {
      * <p>Keyword of the name of the work.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test report</p>
+     * <p>测试报表</p>
      */
     @NameInMap("Keyword")
     public String keyword;

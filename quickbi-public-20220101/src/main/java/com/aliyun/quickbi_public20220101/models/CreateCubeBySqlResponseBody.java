@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateCubeBySqlResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>05739b************02522b9</p>
      */
@@ -12,6 +14,14 @@ public class CreateCubeBySqlResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The result of the API call. Valid values:</p>
+     * <ul>
+     * <li><p>true: The request is successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +29,14 @@ public class CreateCubeBySqlResponseBody extends TeaModel {
     public String result;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

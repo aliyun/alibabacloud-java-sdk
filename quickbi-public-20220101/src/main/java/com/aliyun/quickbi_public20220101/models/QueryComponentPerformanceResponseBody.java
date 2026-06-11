@@ -93,7 +93,7 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
          * <p>The name of the add-on.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>线图</p>
          */
         @NameInMap("ComponentName")
         public String componentName;
@@ -273,7 +273,7 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
          * <p>The name of the group.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>测试空间</p>
          */
         @NameInMap("WorkspaceName")
         public String workspaceName;

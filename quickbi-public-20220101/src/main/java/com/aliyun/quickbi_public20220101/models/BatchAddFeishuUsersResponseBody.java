@@ -82,7 +82,7 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
          * <p>Description of the error code.</p>
          * 
          * <strong>example:</strong>
-         * <p>TEST</p>
+         * <p>账号已存在</p>
          */
         @NameInMap("CodeDesc")
         public String codeDesc;

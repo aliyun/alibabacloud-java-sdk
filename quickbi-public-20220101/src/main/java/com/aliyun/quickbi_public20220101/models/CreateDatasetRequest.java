@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDatasetRequest extends TeaModel {
     /**
+     * <p>The ID of the data source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateDatasetRequest extends TeaModel {
     public String dsId;
 
     /**
+     * <p>The name of the table.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class CreateDatasetRequest extends TeaModel {
     public String tableName;
 
     /**
+     * <p>The ID of the destination folder.</p>
+     * 
      * <strong>example:</strong>
      * <p>asah-fsdfsf*****92342</p>
      */
@@ -30,12 +34,17 @@ public class CreateDatasetRequest extends TeaModel {
     public String targetDirectoryId;
 
     /**
+     * <p>The name of the dataset.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("UserDefineCubeName")
     public String userDefineCubeName;
 
     /**
+     * <p>The user ID of a Quick BI user who has permissions to create datasets. This is not your Alibaba Cloud account ID. To obtain the user ID, call the <a href="https://next.api.aliyun.com/api/quickbi-public/2022-01-01/QueryUserInfoByAccount?spm=api-workbench.api_explorer.0.0.672f50daGq9ooV%5C&params=%7B%7D%5C&tab=DOC%5C&sdkStyle=old%5C&RegionId=cn-hangzhou">QueryUserInfoByAccount</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +54,7 @@ public class CreateDatasetRequest extends TeaModel {
     public String userId;
 
     /**
+     * <p>The ID of the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

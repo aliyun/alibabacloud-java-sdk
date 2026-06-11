@@ -120,7 +120,7 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
          * <p>The description of the user group.</p>
          * 
          * <strong>example:</strong>
-         * <p>Description</p>
+         * <p>描述信息</p>
          */
         @NameInMap("UsergroupDesc")
         public String usergroupDesc;
@@ -138,7 +138,7 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
          * <p>The name of the user group.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test user group</p>
+         * <p>测试用户组</p>
          */
         @NameInMap("UsergroupName")
         public String usergroupName;

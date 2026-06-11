@@ -5,19 +5,21 @@ import com.aliyun.tea.*;
 
 public class QueryUserListRequest extends TeaModel {
     /**
-     * <p>The keyword of the username or nickname of the organization member.</p>
+     * <p>The keyword to search for organization members by username or nickname.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test user</p>
+     * <p>test</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
-     * <p>Current page number for organization member list:</p>
+     * <p>The page number to return.</p>
      * <ul>
-     * <li>Pages start from page 1.</li>
-     * <li>Default value: 1.</li>
+     * <li><p>Starting value: 1</p>
+     * </li>
+     * <li><p>Default value: 1</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,10 +29,12 @@ public class QueryUserListRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of rows per page in a paged query.</p>
+     * <p>The number of organization members to return per page.</p>
      * <ul>
-     * <li>Default value: 10.</li>
-     * <li>Maximum value: 1,000.</li>
+     * <li><p>Default value: 10</p>
+     * </li>
+     * <li><p>Maximum value: 1000</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

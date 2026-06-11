@@ -88,7 +88,7 @@ public class QueryUserGroupMemberResponseBody extends TeaModel {
          * <p>Name or nickname of the user group or its member.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>小刘的测试用户组</p>
          */
         @NameInMap("Name")
         public String name;
@@ -106,7 +106,7 @@ public class QueryUserGroupMemberResponseBody extends TeaModel {
          * <p>Name of the parent user group.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>财务组</p>
          */
         @NameInMap("ParentUserGroupName")
         public String parentUserGroupName;

@@ -75,7 +75,7 @@ public class QuerySharesToUserListResponseBody extends TeaModel {
          * <p>The name of the resource.</p>
          * 
          * <strong>example:</strong>
-         * <p>Chart Report</p>
+         * <p>图表报表</p>
          */
         @NameInMap("Name")
         public String name;
@@ -90,7 +90,7 @@ public class QuerySharesToUserListResponseBody extends TeaModel {
          * <p>The path name of the directory where the resource is located.</p>
          * 
          * <strong>example:</strong>
-         * <p>Level -1 Directory /Level -2 Directory</p>
+         * <p>一级目录/二级目录</p>
          */
         @NameInMap("PathName")
         public String pathName;
@@ -148,7 +148,7 @@ public class QuerySharesToUserListResponseBody extends TeaModel {
          * <p>Remarks on the work.</p>
          * 
          * <strong>example:</strong>
-         * <p>Description of the test report</p>
+         * <p>测试报表的描述</p>
          */
         @NameInMap("Description")
         public String description;
@@ -249,7 +249,7 @@ public class QuerySharesToUserListResponseBody extends TeaModel {
          * <p>The name of the report.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test report</p>
+         * <p>测试报表</p>
          */
         @NameInMap("WorkName")
         public String workName;
@@ -292,7 +292,7 @@ public class QuerySharesToUserListResponseBody extends TeaModel {
          * <p>The name of the workspace to which the report belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>Return to Professional Edition</p>
+         * <p>专业版回归</p>
          */
         @NameInMap("WorkspaceName")
         public String workspaceName;

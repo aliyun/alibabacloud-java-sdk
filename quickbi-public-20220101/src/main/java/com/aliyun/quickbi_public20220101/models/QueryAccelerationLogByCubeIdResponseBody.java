@@ -5,16 +5,35 @@ import com.aliyun.tea.*;
 
 public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D8749D********80FF3B4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result of the API request.</p>
+     * <ul>
+     * <li><p>true: The execution succeeded.</p>
+     * </li>
+     * <li><p>false: The execution failed.</p>
+     * </li>
+     * </ul>
+     */
     @NameInMap("Result")
     public QueryAccelerationLogByCubeIdResponseBodyResult result;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +71,8 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
 
     public static class QueryAccelerationLogByCubeIdResponseBodyResultData extends TeaModel {
         /**
+         * <p>The task duration in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -59,6 +80,8 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
         public String duration;
 
         /**
+         * <p>The task history ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>REST_A***************6a8</p>
          */
@@ -66,6 +89,8 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
         public String jobHistoryId;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>REST_A***************6a8</p>
          */
@@ -73,6 +98,22 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The status of the task.</p>
+         * <ul>
+         * <li><p>0: Pending</p>
+         * </li>
+         * <li><p>1: Running</p>
+         * </li>
+         * <li><p>2: Succeeded</p>
+         * </li>
+         * <li><p>3: Failed</p>
+         * </li>
+         * <li><p>4: Canceled</p>
+         * </li>
+         * <li><p>5: Warning</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -80,6 +121,8 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
         public String jobStatus;
 
         /**
+         * <p>The start time of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>REST_A***************6a8</p>
          */
@@ -87,6 +130,8 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
         public String jonStartDate;
 
         /**
+         * <p>The log content.</p>
+         * 
          * <strong>example:</strong>
          * <p>asdav************</p>
          */
@@ -149,10 +194,15 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
     }
 
     public static class QueryAccelerationLogByCubeIdResponseBodyResult extends TeaModel {
+        /**
+         * <p>An array of acceleration task logs.</p>
+         */
         @NameInMap("Data")
         public java.util.List<QueryAccelerationLogByCubeIdResponseBodyResultData> data;
 
         /**
+         * <p>The next page. A value of NULL or 0 indicates that no next page exists.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -160,6 +210,8 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
         public Integer next;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -167,6 +219,8 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -174,6 +228,8 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The previous page. A value of NULL or 0 indicates that no previous page exists.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -181,6 +237,8 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
         public Integer pre;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -188,6 +246,8 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
         public Integer totalNum;
 
         /**
+         * <p>The total number of pages.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

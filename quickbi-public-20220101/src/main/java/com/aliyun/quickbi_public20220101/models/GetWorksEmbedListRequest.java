@@ -8,7 +8,7 @@ public class GetWorksEmbedListRequest extends TeaModel {
      * <p>Report name (fuzzy match)</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>测试数据集</p>
      */
     @NameInMap("Keyword")
     public String keyword;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateWorkspaceRequest extends TeaModel {
     /**
+     * <p>Specifies whether reports in the workspace can be made public. Default value: true.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class CreateWorkspaceRequest extends TeaModel {
     public Boolean allowPublish;
 
     /**
+     * <p>Specifies whether reports in the workspace can be shared. Default value: true.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class CreateWorkspaceRequest extends TeaModel {
     public Boolean allowShare;
 
     /**
+     * <p>Specifies whether the workspace is in collaboration mode. Default value: true.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -26,6 +32,8 @@ public class CreateWorkspaceRequest extends TeaModel {
     public Boolean allowViewAll;
 
     /**
+     * <p>Specifies whether to grant read permissions on the works in the workspace to all workspace members by default. Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -33,6 +41,8 @@ public class CreateWorkspaceRequest extends TeaModel {
     public Boolean defaultShareToAll;
 
     /**
+     * <p>Specifies whether only administrators can create data sources in the workspace. Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -40,17 +50,29 @@ public class CreateWorkspaceRequest extends TeaModel {
     public Boolean onlyAdminCreateDatasource;
 
     /**
+     * <p>Specifies whether to use table remarks when you create a dataset in the workspace. Default value: true.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("UseComment")
     public Boolean useComment;
 
+    /**
+     * <p>The description of the workspace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("WorkspaceDescription")
     public String workspaceDescription;
 
     /**
+     * <p>The name of the workspace.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("WorkspaceName")
     public String workspaceName;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDataSourceResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>D787E1A***********5DF8D885</p>
@@ -14,10 +14,12 @@ public class UpdateDataSourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Result of the API call. Possible values:</p>
+     * <p>The result of the operation. Valid values:</p>
      * <ul>
-     * <li>true: Request successful</li>
-     * <li>false: Request failed</li>
+     * <li><p><code>true</code>: The operation was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The operation failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,10 +29,12 @@ public class UpdateDataSourceResponseBody extends TeaModel {
     public Boolean result;
 
     /**
-     * <p>Indicates whether the request was successful. Possible values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true: Request successful</li>
-     * <li>false: Request failed</li>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

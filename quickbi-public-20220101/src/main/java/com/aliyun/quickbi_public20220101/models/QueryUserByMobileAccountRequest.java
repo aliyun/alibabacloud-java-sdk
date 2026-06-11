@@ -6,18 +6,12 @@ import com.aliyun.tea.*;
 public class QueryUserByMobileAccountRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ding</p>
      */
     @NameInMap("MobileType")
     public String mobileType;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>sasda</p>
      */
     @NameInMap("MobileUserId")
     public String mobileUserId;

@@ -12,7 +12,7 @@ public class UpdateUserGroupRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Description</p>
+     * <p>描述信息</p>
      */
     @NameInMap("UserGroupDescription")
     public String userGroupDescription;

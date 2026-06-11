@@ -7,8 +7,10 @@ public class CreateTicketRequest extends TeaModel {
     /**
      * <p>The user\&quot;s account name.</p>
      * <ul>
-     * <li>If the user is an Alibaba Cloud primary account <strong>wangwu</strong>, the format is <strong>[Primary Account]</strong>, for example, <strong>wangwu</strong>.</li>
-     * <li>If the user is a RAM account <strong>zhangsan</strong>@aliyun.cn**, the format is <strong>[Primary Account: Sub-Account]</strong>, for example, <strong>wangwu:zhangsan</strong>.</li>
+     * <li><p>If the user is an Alibaba Cloud primary account <strong>wangwu</strong>, the format is <strong>[Primary Account]</strong>, for example, <strong>wangwu</strong>.</p>
+     * </li>
+     * <li><p>If the user is a RAM account <strong>zhangsan</strong>@aliyun.cn\<em>\</em>, the format is <strong>[Primary Account: Sub-Account]</strong>, for example, <strong>wangwu:zhangsan</strong>.</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <p>Only one of UserId and AccountName needs to be filled in. If neither is filled in, it will default to binding the report\&quot;s Owner, and the report will be accessed with that user\&quot;s identity. If you need to configure row-level permissions, please refer to <a href="https://help.aliyun.com/document_detail/322783.html">Row-Level Permissions</a>.</p>
@@ -24,16 +26,22 @@ public class CreateTicketRequest extends TeaModel {
     /**
      * <p>The type of the user\&quot;s account.</p>
      * <ul>
-     * <li>1: Alibaba Cloud account</li>
-     * <li>3: Quick BI self-built account</li>
-     * <li>4: DingTalk</li>
-     * <li>5: RAM sub-account</li>
-     * <li>9: WeCom</li>
-     * <li>10: Feishu<blockquote>
-     * <p>If AccountName is not empty, then AccountType must also not be empty.</p>
-     * </blockquote>
+     * <li><p>1: Alibaba Cloud account</p>
+     * </li>
+     * <li><p>3: Quick BI self-built account</p>
+     * </li>
+     * <li><p>4: DingTalk</p>
+     * </li>
+     * <li><p>5: RAM sub-account</p>
+     * </li>
+     * <li><p>9: WeCom</p>
+     * </li>
+     * <li><p>10: Feishu</p>
      * </li>
      * </ul>
+     * <blockquote>
+     * <p>If AccountName is not empty, then AccountType must also not be empty.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,7 +52,7 @@ public class CreateTicketRequest extends TeaModel {
 
     /**
      * <p>Component ID. This is the ID of a component within the above-mentioned dashboard; other types of works do not support this.
-     * Refer to <a href="https://next.api.aliyun.com/api/quickbi-public/2022-01-01/QueryWorksBloodRelationship?spm=a2c4g.11186623.0.0.15615d7aWVvWAl&params=%7B%7D&lang=JAVA&tab=DOC&sdkStyle=old">QueryWorksBloodRelationship</a> for the API to get the component ID.</p>
+     * Refer to <a href="https://next.api.aliyun.com/api/quickbi-public/2022-01-01/QueryWorksBloodRelationship?spm=a2c4g.11186623.0.0.15615d7aWVvWAl%5C&params=%7B%7D%5C&lang=JAVA%5C&tab=DOC%5C&sdkStyle=old">QueryWorksBloodRelationship</a> for the API to get the component ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0fc6a275c7f64f17b1****a306ce0f31</p>
@@ -55,8 +63,10 @@ public class CreateTicketRequest extends TeaModel {
     /**
      * <p>Expiration time</p>
      * <ul>
-     * <li>Unit: minutes</li>
-     * <li>Default: 240</li>
+     * <li><p>Unit: minutes</p>
+     * </li>
+     * <li><p>Default: 240</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +81,7 @@ public class CreateTicketRequest extends TeaModel {
      * <li>A string in JsonArray format.</li>
      * </ul>
      * <blockquote>
-     * <p>If you need to use global parameter capabilities, please contact the <a href="https://h5-alimebot.dingtalk.com/intl/index.htm?spm=a2c4g.11186623.0.0.3da14f6chrDv9e&sourceType=ding_talk&from=DEFFB9G5KBByQkwq23wneFIOmaJ">Quick BI Operations Manager</a>.</p>
+     * <p>If you need to use global parameter capabilities, please contact the <a href="https://h5-alimebot.dingtalk.com/intl/index.htm?spm=a2c4g.11186623.0.0.3da14f6chrDv9e%5C&sourceType=ding_talk%5C&from=DEFFB9G5KBByQkwq23wneFIOmaJ">Quick BI Operations Manager</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -83,9 +93,12 @@ public class CreateTicketRequest extends TeaModel {
     /**
      * <p>The number of tickets. Each time a ticket is used, the number of tickets decreases by 1.</p>
      * <ul>
-     * <li>Default value: 1</li>
-     * <li>Recommended value: 1</li>
-     * <li>Maximum value: 99999</li>
+     * <li><p>Default value: 1</p>
+     * </li>
+     * <li><p>Recommended value: 1</p>
+     * </li>
+     * <li><p>Maximum value: 99999</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -96,7 +109,7 @@ public class CreateTicketRequest extends TeaModel {
 
     /**
      * <p>Quick BI\&quot;s UserId, which is not your Alibaba Cloud account ID.
-     * You can call the <a href="https://next.api.aliyun.com/api/quickbi-public/2022-01-01/QueryUserInfoByAccount?spm=a2c4g.11186623.0.0.15615d7aWVvWAl&params=%7B%7D&tab=DOC&sdkStyle=old">QueryUserInfoByAccount</a> interface to obtain the UserId. An example of a UserId is fe67f61a35a94b7da1a34ba174a7****.</p>
+     * You can call the <a href="https://next.api.aliyun.com/api/quickbi-public/2022-01-01/QueryUserInfoByAccount?spm=a2c4g.11186623.0.0.15615d7aWVvWAl%5C&params=%7B%7D%5C&tab=DOC%5C&sdkStyle=old">QueryUserInfoByAccount</a> interface to obtain the UserId. An example of a UserId is fe67f61a35a94b7da1a34ba174a7\<em>\</em>\<em>\</em>.</p>
      * <blockquote>
      * <p>Only one of UserId and AccountName needs to be filled in. If neither is filled in, it will default to binding the report\&quot;s Owner, and the report will be accessed with that user\&quot;s identity. If you need to configure row-level permissions, please refer to <a href="https://help.aliyun.com/document_detail/322783.html">Row-Level Permissions</a>.</p>
      * </blockquote>
@@ -110,12 +123,14 @@ public class CreateTicketRequest extends TeaModel {
     /**
      * <p>Watermark parameters for the report.</p>
      * <ul>
-     * <li>Must not exceed 50 characters.</li>
-     * <li>When the report type is a large screen, watermark parameter passing is not supported.</li>
+     * <li><p>Must not exceed 50 characters.</p>
+     * </li>
+     * <li><p>When the report type is a large screen, watermark parameter passing is not supported.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>ticket embed</p>
      */
     @NameInMap("WatermarkParam")
     public String watermarkParam;

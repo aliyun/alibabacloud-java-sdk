@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class QueryDatasetListRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the folder.</p>
+     * <ul>
+     * <li>If you specify this parameter, all datasets in the folder are returned.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>schemaad8aad00-9c55-4984-a767-b4e0ec60****</p>
@@ -14,16 +17,22 @@ public class QueryDatasetListRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>Information about the directory where the dataset is located</p>
+     * <p>The keyword used to search for datasets by name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Queries the datasets of a specified workspace. The datasets are sorted in descending order by creation time.</p>
+     * <p>test</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The page number of the dataset list.</p>
+     * <ul>
+     * <li><p>Start value: 1</p>
+     * </li>
+     * <li><p>Default value: 1</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,9 +41,12 @@ public class QueryDatasetListRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>Specifies the directory ID.</p>
+     * <p>The number of entries to return on each page.</p>
      * <ul>
-     * <li>If this field is not empty, all datasets in the directory are obtained.</li>
+     * <li><p>Default value: 10</p>
+     * </li>
+     * <li><p>Maximum value: 1000</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +56,13 @@ public class QueryDatasetListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The total number of pages returned.</p>
+     * <p>Specifies whether to recursively include datasets in subdirectories. Valid values:</p>
+     * <ul>
+     * <li><p>true: Returns all datasets in the folder specified by DirectoryId and its subdirectories.</p>
+     * </li>
+     * <li><p>false: Returns only the datasets in the folder specified by DirectoryId.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -53,7 +71,7 @@ public class QueryDatasetListRequest extends TeaModel {
     public Boolean withChildren;
 
     /**
-     * <p>The name of the data source.</p>
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

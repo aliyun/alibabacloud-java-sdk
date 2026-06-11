@@ -7,8 +7,10 @@ public class DelayTicketExpireTimeRequest extends TeaModel {
     /**
      * <p>The time to postpone.</p>
      * <ul>
-     * <li>Unit: minutes. Valid values: 0 to 240. Unit: minutes. Valid values: 4 hours.</li>
-     * <li>Expired bills cannot be extended.</li>
+     * <li><p>Unit: minutes. Valid values: 0 to 240. Unit: minutes. Valid values: 4 hours.</p>
+     * </li>
+     * <li><p>Expired bills cannot be extended.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

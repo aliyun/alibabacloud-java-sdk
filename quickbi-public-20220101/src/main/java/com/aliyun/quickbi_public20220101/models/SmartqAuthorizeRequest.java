@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class SmartqAuthorizeRequest extends TeaModel {
     /**
-     * <p>Array of dataset IDs, separated by English commas. <notice>This parameter will be converted to the corresponding question resource ID for authorization. Therefore, if the input cubeId does not correspond to any question resource, an error indicating that the question resource does not exist will be reported. Please ensure the correctness of the cubeId.</notice></p>
+     * <p>An array of dataset IDs. Separate multiple IDs with commas.</p>
+     * <blockquote>
+     * <p>Notice: This parameter is converted to the corresponding Q\&amp;A resource ID for authorization. If a \<code>cubeId\\</code> does not correspond to an existing Q\&amp;A resource, an error is reported that the Q\&amp;A resource does not exist. Ensure that the \<code>cubeId\\</code> is correct.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>wasdasd<em><strong><strong><strong>1235235sd,ASDAS</strong></strong></strong></em>**ASDAW123</p>
@@ -14,7 +17,7 @@ public class SmartqAuthorizeRequest extends TeaModel {
     public String cubeIds;
 
     /**
-     * <p>Expiration time, with a default of seven days.
+     * <p>The expiration time. The default is seven days.
      * Format: 2099-12-31</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +27,7 @@ public class SmartqAuthorizeRequest extends TeaModel {
     public String expireDay;
 
     /**
-     * <p>Array of analysis theme IDs, separated by English commas.</p>
+     * <p>An array of analysis subject IDs. Separate multiple IDs with commas.</p>
      * 
      * <strong>example:</strong>
      * <p>wasdasd<em><strong><strong><strong>1235235sd,ASDAS</strong></strong></strong></em>**ASDAW123</p>
@@ -33,7 +36,7 @@ public class SmartqAuthorizeRequest extends TeaModel {
     public String llmCubeThemes;
 
     /**
-     * <p>Array of Q&amp;A resource IDs, separated by English commas.</p>
+     * <p>An array of Q\&amp;A resource IDs. Separate multiple IDs with commas.</p>
      * 
      * <strong>example:</strong>
      * <p>wasdasd<em><strong><strong><strong>1235235sd,ASDAS</strong></strong></strong></em>**ASDAW123</p>
@@ -42,10 +45,12 @@ public class SmartqAuthorizeRequest extends TeaModel {
     public String llmCubes;
 
     /**
-     * <p>Operation type. The values are as follows:</p>
+     * <p>The operation type. Valid values:</p>
      * <ul>
-     * <li>0: Add authorization</li>
-     * <li>1: Remove authorization</li>
+     * <li><p>0: Grant authorization</p>
+     * </li>
+     * <li><p>1: Delete authorization</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -56,9 +61,9 @@ public class SmartqAuthorizeRequest extends TeaModel {
     public Integer operationType;
 
     /**
-     * <p>Array of user IDs, separated by English commas.</p>
+     * <p>An array of user IDs. Separate multiple IDs with commas.</p>
      * <blockquote>
-     * <p>Notice: The number of user IDs per request * (number of Q&amp;A resources + number of analysis themes) cannot exceed 100.</p>
+     * <p>Notice: The number of user IDs × (the number of Q\&amp;A resources + the number of analysis subjects) in a single request cannot exceed 100.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

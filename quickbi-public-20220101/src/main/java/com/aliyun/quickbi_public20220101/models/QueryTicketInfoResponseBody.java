@@ -22,8 +22,10 @@ public class QueryTicketInfoResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,7 +86,7 @@ public class QueryTicketInfoResponseBody extends TeaModel {
          * <p>Global parameters.</p>
          * 
          * <strong>example:</strong>
-         * <p>[&amp;{quot;paramKey\&quot;:\&quot;price\&quot;,\&quot;joinType\&quot;and\&quot;,\&quot;conditionList\&quot;:[{\&quot; operation\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;value ;&amp; quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&amp;quot product_type\&quot;,\&quot;joinType\&quot;:\&quot;and &quot;;,&amp; quot;conditionList\&quot;, the conditions must be:[{\&quot;operate&quot; ;:&amp; quot;in\&quot;,\&quot;value\&quot;, the conditions must be:[\&quot; office supplies\&quot;,\&quot; furniture products\&quot;]}]}]\n</p>
+         * <p>[{&quot;paramKey&quot;:&quot;price&quot;,&quot;joinType&quot;:&quot;and&quot;,&quot;conditionList&quot;:[{&quot;operate&quot;:&quot;&gt;&quot;,&quot;value&quot;:&quot;0&quot;}]},{&quot;paramKey&quot;:&quot;product_type&quot;,&quot;joinType&quot;:&quot;and&quot;,&quot;conditionList&quot;:[{&quot;operate&quot;:&quot;in&quot;,&quot;value&quot;:[&quot;]}]}]\n</p>
          */
         @NameInMap("GlobalParam")
         public String globalParam;
@@ -147,7 +149,7 @@ public class QueryTicketInfoResponseBody extends TeaModel {
          * <p>Set the watermarking parameters.</p>
          * 
          * <strong>example:</strong>
-         * <p>Tripartite embedding of Ticket</p>
+         * <p>ticket</p>
          */
         @NameInMap("WatermarkParam")
         public String watermarkParam;

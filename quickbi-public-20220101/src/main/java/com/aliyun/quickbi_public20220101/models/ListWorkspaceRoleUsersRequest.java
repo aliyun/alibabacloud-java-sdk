@@ -8,7 +8,7 @@ public class ListWorkspaceRoleUsersRequest extends TeaModel {
      * <p>Keyword for the user\&quot;s nickname.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>测试pop用户</p>
      */
     @NameInMap("Keyword")
     public String keyword;

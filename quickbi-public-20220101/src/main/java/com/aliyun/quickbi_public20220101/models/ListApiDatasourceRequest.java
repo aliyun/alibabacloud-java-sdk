@@ -8,7 +8,7 @@ public class ListApiDatasourceRequest extends TeaModel {
      * <p>The keyword of the API data source name.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>测试</p>
      */
     @NameInMap("KeyWord")
     public String keyWord;

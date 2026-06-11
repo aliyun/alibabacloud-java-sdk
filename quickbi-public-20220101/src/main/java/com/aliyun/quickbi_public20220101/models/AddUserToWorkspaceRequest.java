@@ -5,13 +5,20 @@ import com.aliyun.tea.*;
 
 public class AddUserToWorkspaceRequest extends TeaModel {
     /**
-     * <p>The preset space role ID. Value range:</p>
+     * <p>The ID of the role in the workspace. Predefined roles:</p>
      * <ul>
-     * <li>25: Space Administrator</li>
-     * <li>26: Space Developer</li>
-     * <li>27: Space Analyst</li>
-     * <li>30: Space Viewer</li>
+     * <li><p>25: workspace administrator</p>
+     * </li>
+     * <li><p>26: workspace developer</p>
+     * </li>
+     * <li><p>27: workspace analyst</p>
+     * </li>
+     * <li><p>30: workspace viewer</p>
+     * </li>
      * </ul>
+     * <blockquote>
+     * <p>Custom role IDs are supported in version 6.0.3 and later.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

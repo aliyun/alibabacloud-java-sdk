@@ -8,7 +8,7 @@ public class ModifyCopilotEmbedConfigResponseBody extends TeaModel {
      * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>4BAA469******A9289FEE</p>
+     * <p>4BAA4694-CC27-555F-B15A-688AA9289FEE</p>
      */
     @NameInMap("RequestId")
     public String requestId;

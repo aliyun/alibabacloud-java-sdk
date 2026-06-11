@@ -118,7 +118,7 @@ public class QueryShareListResponseBody extends TeaModel {
          * <p>The name of the sharing target.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>小张</p>
          */
         @NameInMap("ShareToName")
         public String shareToName;

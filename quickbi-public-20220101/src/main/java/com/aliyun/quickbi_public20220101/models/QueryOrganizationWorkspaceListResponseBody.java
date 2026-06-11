@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
@@ -14,16 +14,18 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returns the paginated result of the workspace list, with detailed information about the workspaces stored in the Data parameter.</p>
+     * <p>The paginated query results. The Data parameter contains the details of each workspace.</p>
      */
     @NameInMap("Result")
     public QueryOrganizationWorkspaceListResponseBodyResult result;
 
     /**
-     * <p>Indicates whether the request was successful. Possible values:</p>
+     * <p>Whether the request succeeded. Valid values:</p>
      * <ul>
-     * <li>true: Request succeeded</li>
-     * <li>false: Request failed</li>
+     * <li><p>true: The request succeeded.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,10 +65,12 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
 
     public static class QueryOrganizationWorkspaceListResponseBodyResultData extends TeaModel {
         /**
-         * <p>Whether the work can be made public. Value range:</p>
+         * <p>Whether works in the workspace can be published. Valid values:</p>
          * <ul>
-         * <li>true: Public</li>
-         * <li>false: Not public</li>
+         * <li><p>true: Publishing is allowed.</p>
+         * </li>
+         * <li><p>false: Publishing is not allowed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -76,10 +80,12 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public Boolean allowPublishOperation;
 
         /**
-         * <p>Indicates whether the work can be authorized for sharing. Possible values:</p>
+         * <p>Whether works in the workspace can be shared. Valid values:</p>
          * <ul>
-         * <li>true: Authorized</li>
-         * <li>false: Not authorized</li>
+         * <li><p>true: Sharing is allowed.</p>
+         * </li>
+         * <li><p>false: Sharing is not allowed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -89,7 +95,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public Boolean allowShareOperation;
 
         /**
-         * <p>Creation time of the workspace.</p>
+         * <p>The time when the workspace was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-10 17:51:07</p>
@@ -98,7 +104,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Quick BI user ID of the creator.</p>
+         * <p>The creator\&quot;s Quick BI user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>de4bc5f9429141cc8091cdd1c15b****</p>
@@ -107,7 +113,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public String createUser;
 
         /**
-         * <p>Aliyun account name of the creator.</p>
+         * <p>The creator\&quot;s Alibaba Cloud account name.</p>
          * 
          * <strong>example:</strong>
          * <p>pop****@aliyun.com</p>
@@ -116,7 +122,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public String createUserAccountName;
 
         /**
-         * <p>Last modified time of the workspace.</p>
+         * <p>The time when the workspace was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-10 17:51:07</p>
@@ -125,7 +131,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>ID of the Quick BI user who modified the workspace.</p>
+         * <p>The modifier\&quot;s Quick BI user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>de4bc5f9429141cc8091cdd1c15b****</p>
@@ -134,7 +140,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public String modifyUser;
 
         /**
-         * <p>Aliyun account name of the modifier.</p>
+         * <p>The modifier\&quot;s Alibaba Cloud account name.</p>
          * 
          * <strong>example:</strong>
          * <p>pop****@aliyun.com</p>
@@ -143,7 +149,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public String modifyUserAccountName;
 
         /**
-         * <p>ID of the organization to which the workspace belongs.</p>
+         * <p>The ID of the workspace\&quot;s organization.</p>
          * 
          * <strong>example:</strong>
          * <p>2fe4fbd8-588f-489a-b3e1-e92c7af0****</p>
@@ -152,7 +158,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public String organizationId;
 
         /**
-         * <p>Quick BI user ID of the workspace owner.</p>
+         * <p>The workspace owner\&quot;s Quick BI user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>de4bc5f9429141cc8091cdd1c15b****</p>
@@ -161,7 +167,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>Aliyun account name of the workspace owner.</p>
+         * <p>The workspace owner\&quot;s Alibaba Cloud account name.</p>
          * 
          * <strong>example:</strong>
          * <p>pop****@aliyun.com</p>
@@ -170,6 +176,8 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public String ownerAccountName;
 
         /**
+         * <p>The workspace owner\&quot;s Quick BI account name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -177,16 +185,16 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public String realOwnerAccountName;
 
         /**
-         * <p>Workspace description.</p>
+         * <p>The workspace description.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>该空间是测试空间</p>
          */
         @NameInMap("WorkspaceDescription")
         public String workspaceDescription;
 
         /**
-         * <p>Workspace ID.</p>
+         * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7350a155-0e94-4c6c-8620-57bbec38****</p>
@@ -195,10 +203,10 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public String workspaceId;
 
         /**
-         * <p>Name of the workspace.</p>
+         * <p>The workspace name.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>测试空间</p>
          */
         @NameInMap("WorkspaceName")
         public String workspaceName;
@@ -332,13 +340,13 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
 
     public static class QueryOrganizationWorkspaceListResponseBodyResult extends TeaModel {
         /**
-         * <p>List of workspaces.</p>
+         * <p>An array of workspace objects.</p>
          */
         @NameInMap("Data")
         public java.util.List<QueryOrganizationWorkspaceListResponseBodyResultData> data;
 
         /**
-         * <p>Page number.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -347,7 +355,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
-         * <p>Number of rows per page as set in the request.</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -356,7 +364,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>Total number of rows.</p>
+         * <p>The total number of workspaces.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -365,7 +373,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public Integer totalNum;
 
         /**
-         * <p>Total number of pages.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -8,7 +8,7 @@ public class QueryDataRangeResponseBody extends TeaModel {
      * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>D787E1A3-A93C-****-B626-C2B05DF8D885</p>
+     * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -66,7 +66,7 @@ public class QueryDataRangeResponseBody extends TeaModel {
          * <p>Alias of the LlmCube resource.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>测试</p>
          */
         @NameInMap("Alias")
         public String alias;
@@ -75,7 +75,7 @@ public class QueryDataRangeResponseBody extends TeaModel {
          * <p>Nickname of the creator.</p>
          * 
          * <strong>example:</strong>
-         * <p>zhuge</p>
+         * <p>诸葛</p>
          */
         @NameInMap("CreateUser")
         public String createUser;
@@ -125,7 +125,7 @@ public class QueryDataRangeResponseBody extends TeaModel {
          * <p>Alias of the LLM cube resource.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>测哈</p>
          */
         @NameInMap("Alias")
         public String alias;
@@ -134,7 +134,7 @@ public class QueryDataRangeResponseBody extends TeaModel {
          * <p>Nickname of the creator.</p>
          * 
          * <strong>example:</strong>
-         * <p>zhuge</p>
+         * <p>诸葛</p>
          */
         @NameInMap("CreateUser")
         public String createUser;
@@ -190,7 +190,7 @@ public class QueryDataRangeResponseBody extends TeaModel {
          * <p>Nickname of the creator.</p>
          * 
          * <strong>example:</strong>
-         * <p>zhuge</p>
+         * <p>诸葛</p>
          */
         @NameInMap("CreateUser")
         public String createUser;
@@ -208,7 +208,7 @@ public class QueryDataRangeResponseBody extends TeaModel {
          * <p>Nickname of the analysis theme.</p>
          * 
          * <strong>example:</strong>
-         * <p>test theme</p>
+         * <p>测试主题</p>
          */
         @NameInMap("ThemeName")
         public String themeName;

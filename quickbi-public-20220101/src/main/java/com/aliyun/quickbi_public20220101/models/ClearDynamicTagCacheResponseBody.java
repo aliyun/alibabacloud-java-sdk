@@ -3,40 +3,34 @@ package com.aliyun.quickbi_public20220101.models;
 
 import com.aliyun.tea.*;
 
-public class AddWorksAuthorizationResponseBody extends TeaModel {
+public class ClearDynamicTagCacheResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
-     * <p>78C1AA***************C462E57A95</p>
+     * <p>78C17888****C462E57A95</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The authorization ID.</p>
-     * 
      * <strong>example:</strong>
-     * <p>asdasf8****sda</p>
+     * <p>true</p>
      */
     @NameInMap("Result")
-    public String result;
+    public Boolean result;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
-    public static AddWorksAuthorizationResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        AddWorksAuthorizationResponseBody self = new AddWorksAuthorizationResponseBody();
+    public static ClearDynamicTagCacheResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ClearDynamicTagCacheResponseBody self = new ClearDynamicTagCacheResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public AddWorksAuthorizationResponseBody setRequestId(String requestId) {
+    public ClearDynamicTagCacheResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -44,15 +38,15 @@ public class AddWorksAuthorizationResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public AddWorksAuthorizationResponseBody setResult(String result) {
+    public ClearDynamicTagCacheResponseBody setResult(Boolean result) {
         this.result = result;
         return this;
     }
-    public String getResult() {
+    public Boolean getResult() {
         return this.result;
     }
 
-    public AddWorksAuthorizationResponseBody setSuccess(Boolean success) {
+    public ClearDynamicTagCacheResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

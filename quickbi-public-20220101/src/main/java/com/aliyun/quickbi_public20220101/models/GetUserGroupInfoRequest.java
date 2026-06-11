@@ -9,7 +9,7 @@ public class GetUserGroupInfoRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>测试用户组</p>
      */
     @NameInMap("Keyword")
     public String keyword;

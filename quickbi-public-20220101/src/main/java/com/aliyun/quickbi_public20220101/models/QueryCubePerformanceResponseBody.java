@@ -246,7 +246,7 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
          * <p>The name of the group.</p>
          * 
          * <strong>example:</strong>
-         * <p>taascontainerprod</p>
+         * <p>测试工作空间</p>
          */
         @NameInMap("WorkspaceName")
         public String workspaceName;

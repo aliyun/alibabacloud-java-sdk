@@ -5,16 +5,29 @@ import com.aliyun.tea.*;
 
 public class ListWhitePortalMenuResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DC4E1**********0DF67E2C3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The whitelist.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListWhitePortalMenuResponseBodyResult> result;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +65,14 @@ public class ListWhitePortalMenuResponseBody extends TeaModel {
 
     public static class ListWhitePortalMenuResponseBodyResult extends TeaModel {
         /**
+         * <p>The authorization type for the menu. Valid values:</p>
+         * <ul>
+         * <li><p>1: View</p>
+         * </li>
+         * <li><p>3: Export and view</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -59,6 +80,8 @@ public class ListWhitePortalMenuResponseBody extends TeaModel {
         public Integer authPointsValue;
 
         /**
+         * <p>The ID of the authorization object. If the authorization is at the workspace or organization level, this parameter returns the workspace ID or organization ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>8a4***********1e769</p>
          */
@@ -66,6 +89,16 @@ public class ListWhitePortalMenuResponseBody extends TeaModel {
         public String receiverId;
 
         /**
+         * <p>The type of the authorization object. Valid values:</p>
+         * <ul>
+         * <li><p>0: User</p>
+         * </li>
+         * <li><p>1: User group</p>
+         * </li>
+         * <li><p>3: Workspace or organization level</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

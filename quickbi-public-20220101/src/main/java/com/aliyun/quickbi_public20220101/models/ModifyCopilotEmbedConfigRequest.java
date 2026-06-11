@@ -8,7 +8,7 @@ public class ModifyCopilotEmbedConfigRequest extends TeaModel {
      * <p>Agent nickname.</p>
      * 
      * <strong>example:</strong>
-     * <p>smartq</p>
+     * <p>小Q</p>
      */
     @NameInMap("AgentName")
     public String agentName;
@@ -30,12 +30,10 @@ public class ModifyCopilotEmbedConfigRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>Map&lt;String,Object&gt; data=new HashMap&lt;&gt;();
-     *         data.put(&quot;allTheme&quot;,true);
-     *         //data.put(&quot;allCube&quot;,true);
-     *         //data.put(&quot;themes&quot;,Lists.newArrayList(&quot;1111&quot;,&quot;22222&quot;));
-     *         //data.put(&quot;llmCubes&quot;,Lists.newArrayList(&quot;33333&quot;,&quot;44444&quot;));
-     *         request.setDataRange(JSON.toJSONString(data));</p>
+     * <p>如果客户要授权所有分析主题，则 {allTheme: true}
+     * 如果客户要授权所有问数资源，则 {allCube: true}
+     * 如果客户要授权部分问数资源，则 {llmCubes: [12314,12345]}
+     * 如果客户要授权部分分析主题，则 {themes: [12314,12345]}</p>
      */
     @NameInMap("DataRange")
     public String dataRange;
@@ -44,7 +42,7 @@ public class ModifyCopilotEmbedConfigRequest extends TeaModel {
      * <p>Module name.</p>
      * 
      * <strong>example:</strong>
-     * <p>smartq</p>
+     * <p>小Q</p>
      */
     @NameInMap("ModuleName")
     public String moduleName;

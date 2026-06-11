@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateCubeBySqlRequest extends TeaModel {
     /**
+     * <p>The name of the custom dataset.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Caption")
     public String caption;
 
     /**
+     * <p>The custom SQL statement.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +25,7 @@ public class CreateCubeBySqlRequest extends TeaModel {
     public String customSql;
 
     /**
+     * <p>The ID of the data source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +35,7 @@ public class CreateCubeBySqlRequest extends TeaModel {
     public String dsId;
 
     /**
+     * <p>The ID of a Quick BI user with permissions to create datasets. This is not your Alibaba Cloud account ID. Call the <a href="https://next.api.aliyun.com/api/quickbi-public/2022-01-01/QueryUserInfoByAccount?spm=api-workbench.api_explorer.0.0.672f50daGq9ooV%5C&params=%7B%7D%5C&tab=DOC%5C&sdkStyle=old%5C&RegionId=cn-hangzhou">QueryUserInfoByAccount</a> operation to obtain the user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +45,7 @@ public class CreateCubeBySqlRequest extends TeaModel {
     public String userId;
 
     /**
+     * <p>The ID of the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

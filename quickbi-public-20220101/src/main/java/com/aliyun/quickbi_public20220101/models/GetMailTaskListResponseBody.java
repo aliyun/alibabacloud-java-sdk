@@ -5,16 +5,29 @@ import com.aliyun.tea.*;
 
 public class GetMailTaskListResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>0c52************8e1952a3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The paging information for the tracking tasks.</p>
+     */
     @NameInMap("Result")
     public GetMailTaskListResponseBodyResult result;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +65,8 @@ public class GetMailTaskListResponseBody extends TeaModel {
 
     public static class GetMailTaskListResponseBodyResultData extends TeaModel {
         /**
+         * <p>The nickname of the owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -59,6 +74,8 @@ public class GetMailTaskListResponseBody extends TeaModel {
         public String bizOwnerName;
 
         /**
+         * <p>The user ID of the owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>asag****2423</p>
          */
@@ -66,6 +83,8 @@ public class GetMailTaskListResponseBody extends TeaModel {
         public String bizOwnerUserId;
 
         /**
+         * <p>The mail ID of the tracking task.</p>
+         * 
          * <strong>example:</strong>
          * <p>2342526</p>
          */
@@ -73,6 +92,14 @@ public class GetMailTaskListResponseBody extends TeaModel {
         public String mailId;
 
         /**
+         * <p>Indicates whether the task is paused.</p>
+         * <ul>
+         * <li><p>true: The task is paused.</p>
+         * </li>
+         * <li><p>false: The task is not paused.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -80,6 +107,8 @@ public class GetMailTaskListResponseBody extends TeaModel {
         public Boolean paused;
 
         /**
+         * <p>The name of the tracking task.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -134,10 +163,15 @@ public class GetMailTaskListResponseBody extends TeaModel {
     }
 
     public static class GetMailTaskListResponseBodyResult extends TeaModel {
+        /**
+         * <p>An array of tracking task models.</p>
+         */
         @NameInMap("Data")
         public java.util.List<GetMailTaskListResponseBodyResultData> data;
 
         /**
+         * <p>The next page number. A value of null or 0 indicates that there is no next page.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -145,6 +179,8 @@ public class GetMailTaskListResponseBody extends TeaModel {
         public Integer next;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -152,6 +188,8 @@ public class GetMailTaskListResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
+         * <p>The number of entries per page that was set for the request.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -159,6 +197,8 @@ public class GetMailTaskListResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The previous page number. A value of null or 0 indicates that there is no previous page.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -166,6 +206,8 @@ public class GetMailTaskListResponseBody extends TeaModel {
         public Integer pre;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -173,6 +215,8 @@ public class GetMailTaskListResponseBody extends TeaModel {
         public Integer totalNum;
 
         /**
+         * <p>The total number of pages.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetMailTaskListRequest extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * <ul>
+     * <li><p>Starts from: 1</p>
+     * </li>
+     * <li><p>Default value: 1</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +20,11 @@ public class GetMailTaskListRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The number of entries to return on each page.</p>
+     * <ul>
+     * <li>Default value: 25</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +32,8 @@ public class GetMailTaskListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Specifies whether the tracking task is paused.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -26,6 +41,8 @@ public class GetMailTaskListRequest extends TeaModel {
     public Boolean paused;
 
     /**
+     * <p>The nickname of the user who owns the tracking task. If this parameter is not specified, all tasks are returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */

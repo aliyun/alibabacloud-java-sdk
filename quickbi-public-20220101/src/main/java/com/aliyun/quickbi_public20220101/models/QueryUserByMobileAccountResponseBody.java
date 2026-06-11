@@ -4,20 +4,12 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryUserByMobileAccountResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>46e53***********270</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public QueryUserByMobileAccountResponseBodyResult result;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -51,17 +43,9 @@ public class QueryUserByMobileAccountResponseBody extends TeaModel {
     }
 
     public static class QueryUserByMobileAccountResponseBodyResult extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("BoundUserId")
         public String boundUserId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("ThirdAccountName")
         public String thirdAccountName;
 

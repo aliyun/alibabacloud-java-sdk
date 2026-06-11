@@ -75,7 +75,7 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
          * <p>Applicant\&quot;s nickname.</p>
          * 
          * <strong>example:</strong>
-         * <p>Li Fei</p>
+         * <p>李飞</p>
          */
         @NameInMap("ApplicantName")
         public String applicantName;
@@ -93,7 +93,7 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
          * <p>Application reason.</p>
          * 
          * <strong>example:</strong>
-         * <p>Development needs</p>
+         * <p>开发需要</p>
          */
         @NameInMap("ApplyReason")
         public String applyReason;
@@ -174,7 +174,7 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
          * <p>Handling reason.</p>
          * 
          * <strong>example:</strong>
-         * <p>Development needs</p>
+         * <p>开发需要</p>
          */
         @NameInMap("HandleReason")
         public String handleReason;
@@ -192,7 +192,7 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
          * <p>The name of the resource for which permission is requested (e.g., report name, space name...).</p>
          * 
          * <strong>example:</strong>
-         * <p>Test Resources</p>
+         * <p>测试资源</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;
@@ -210,7 +210,7 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
          * <p>The name of the workspace.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test Workspace</p>
+         * <p>测试工作空间</p>
          */
         @NameInMap("WorkspaceName")
         public String workspaceName;

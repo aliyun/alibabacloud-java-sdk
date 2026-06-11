@@ -145,7 +145,7 @@ public class ListApiDatasourceResponseBody extends TeaModel {
          * <p>The name of the API data source.</p>
          * 
          * <strong>example:</strong>
-         * <p>test data source</p>
+         * <p>测试数据源</p>
          */
         @NameInMap("ShowName")
         public String showName;

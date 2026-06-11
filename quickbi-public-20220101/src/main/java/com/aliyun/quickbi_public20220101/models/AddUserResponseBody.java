@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddUserResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
@@ -14,16 +14,18 @@ public class AddUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returns detailed information about the newly added Aliyun user.</p>
+     * <p>The details of the newly added Alibaba Cloud user.</p>
      */
     @NameInMap("Result")
     public AddUserResponseBodyResult result;
 
     /**
-     * <p>Indicates whether the request was successful. Possible values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +65,7 @@ public class AddUserResponseBody extends TeaModel {
 
     public static class AddUserResponseBodyResult extends TeaModel {
         /**
-         * <p>Aliyun account.</p>
+         * <p>The Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:xxxxxx@163.com">xxxxxx@163.com</a></p>
@@ -72,12 +74,17 @@ public class AddUserResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>Whether the organization administrator role is assigned. Value range: </p>
+         * <p>Indicates whether the organization administrator role is assigned. Valid values:</p>
          * <ul>
-         * <li>true: Yes</li>
-         * <li>false: No</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
-         * <p><notice>This parameter is deprecated and not recommended for use. It is invalid when RoleIdList is provided.</notice></p>
+         * <blockquote>
+         * <p>Notice: </p>
+         * </blockquote>
+         * <p>This parameter is deprecated. It does not take effect when <code>RoleIdList</code> is specified.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -86,12 +93,17 @@ public class AddUserResponseBody extends TeaModel {
         public Boolean adminUser;
 
         /**
-         * <p>Whether the permission administrator role is assigned. Value range: </p>
+         * <p>Indicates whether the permission administrator role is assigned. Valid values:</p>
          * <ul>
-         * <li>true: Yes</li>
-         * <li>false: No</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
-         * <p><notice>This parameter is deprecated and not recommended for use. It is invalid when RoleIdList is provided.</notice></p>
+         * <blockquote>
+         * <p>Notice: </p>
+         * </blockquote>
+         * <p>This parameter is deprecated. It does not take effect when <code>RoleIdList</code> is specified.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -99,26 +111,29 @@ public class AddUserResponseBody extends TeaModel {
         @NameInMap("AuthAdminUser")
         public Boolean authAdminUser;
 
+        /**
+         * <p>The Copilot modules for which the user has a quota.</p>
+         */
         @NameInMap("CopilotModules")
         public java.util.List<String> copilotModules;
 
         /**
-         * <p>Aliyun account nickname.</p>
+         * <p>The nickname of the Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
-         * <p>ddd</p>
+         * <p>张三</p>
          */
         @NameInMap("NickName")
         public String nickName;
 
         /**
-         * <p>List of organization role IDs bound to the user.</p>
+         * <p>A list of organization role IDs assigned to the user.</p>
          */
         @NameInMap("RoleIdList")
         public java.util.List<Long> roleIdList;
 
         /**
-         * <p>UserID in Quick BI.</p>
+         * <p>The user ID in Quick BI.</p>
          * 
          * <strong>example:</strong>
          * <p>b5d8fd9348cc4327****afb604</p>
@@ -127,11 +142,14 @@ public class AddUserResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>User type of the organization member. Value range: </p>
+         * <p>The user type. Valid values:</p>
          * <ul>
-         * <li>1: Developer </li>
-         * <li>2: Visitor </li>
-         * <li>3: Analyst</li>
+         * <li><p>1: developer</p>
+         * </li>
+         * <li><p>2: viewer</p>
+         * </li>
+         * <li><p>3: analyst</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

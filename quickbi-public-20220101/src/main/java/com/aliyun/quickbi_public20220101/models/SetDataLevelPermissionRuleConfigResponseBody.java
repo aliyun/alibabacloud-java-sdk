@@ -33,7 +33,7 @@ public class SetDataLevelPermissionRuleConfigResponseBody extends TeaModel {
      *     },
      *     &quot;ruleId&quot;: &quot;3971fa8e-f7e0-</strong></strong>-b6e3-5b3167dd7247&quot;,
      *     &quot;ruleLevelType&quot;: &quot;COLUMN_LEVEL&quot;,
-     *     &quot;ruleName&quot;: &quot;test&quot;,
+     *     &quot;ruleName&quot;: &quot;name&quot;,
      *     &quot;ruleTargetScope&quot;: &quot;ALL&quot;
      * }</p>
      */
@@ -43,8 +43,10 @@ public class SetDataLevelPermissionRuleConfigResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. The value range is as follows:</p>
      * <ul>
-     * <li>true: The request succeeded</li>
-     * <li>false: The request failed</li>
+     * <li><p>true: The request succeeded</p>
+     * </li>
+     * <li><p>false: The request failed</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

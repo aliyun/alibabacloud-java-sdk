@@ -66,7 +66,7 @@ public class ListWorkspaceRoleUsersResponseBody extends TeaModel {
          * <p>Nickname of the organization member.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test user</p>
+         * <p>测试用户</p>
          */
         @NameInMap("NickName")
         public String nickName;
@@ -93,7 +93,7 @@ public class ListWorkspaceRoleUsersResponseBody extends TeaModel {
          * <p>Workspace name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test space</p>
+         * <p>测试空间</p>
          */
         @NameInMap("WorkspaceName")
         public String workspaceName;

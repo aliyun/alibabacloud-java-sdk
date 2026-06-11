@@ -5,34 +5,39 @@ import com.aliyun.tea.*;
 
 public class CreateTicket4CopilotRequest extends TeaModel {
     /**
-     * <p>User\&quot;s account name.
-     * <notice>Note: Only one of userId and accountName needs to be filled in. If neither is provided, it will default to the report owner, and the report will be accessed with that user\&quot;s identity.</notice></p>
+     * <p>The name of the user account.</p>
+     * <blockquote>
+     * <p>Notice: Note: Specify either UserId or AccountName. If you leave both parameters empty, the ticket is bound to the API caller by default. Access is then granted based on the caller\&quot;s identity.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>Test user</p>
+     * <p>测试用户</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
-     * <p>User\&quot;s account type:</p>
+     * <p>The type of the user account:</p>
      * <ul>
-     * <li><p>1: Alibaba Cloud Primary Account</p>
+     * <li><p>1: Alibaba Cloud account</p>
      * </li>
-     * <li><p>3: Quick BI Self-built Account</p>
+     * <li><p>3: Quick BI user</p>
      * </li>
      * <li><p>4: DingTalk</p>
      * </li>
-     * <li><p>5: Alibaba Cloud RAM Account</p>
+     * <li><p>5: RAM user</p>
      * </li>
-     * <li><p>6: Third-party Account (SAML, OAuth, etc.)</p>
+     * <li><p>6: Third-party account (an account integrated using protocols such as SAML or OAuth)</p>
      * </li>
      * <li><p>9: WeCom</p>
      * </li>
-     * <li><p>10: Feishu</p>
+     * <li><p>10: Lark</p>
      * </li>
      * </ul>
-     * <p><notice>Note: If accountName is not empty, then accountType must also be provided.</notice></p>
+     * <blockquote>
+     * <p>Notice: </p>
+     * </blockquote>
+     * <p>Note: This parameter is required if you specify AccountName.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,21 +46,21 @@ public class CreateTicket4CopilotRequest extends TeaModel {
     public Integer accountType;
 
     /**
-     * <p>ID of the Smart Q module to be embedded.</p>
+     * <p>The ID of the embedded Copilot module.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ccd3*********ae29dffee</p>
+     * <p>ccd3428c-dd23-460c-a608-26bae29dffee</p>
      */
     @NameInMap("CopilotId")
     public String copilotId;
 
     /**
-     * <p>Expiration time.</p>
+     * <p>The expiration time of the ticket.</p>
      * <ul>
-     * <li><p>Unit: minutes, maximum 240 (4 hours).</p>
+     * <li><p>Unit: minutes. The maximum validity period is 240 minutes (4 hours).</p>
      * </li>
-     * <li><p>Default: 240.</p>
+     * <li><p>Default: 240 minutes.</p>
      * </li>
      * </ul>
      * 
@@ -66,16 +71,16 @@ public class CreateTicket4CopilotRequest extends TeaModel {
     public Integer expireTime;
 
     /**
-     * <p>Range of ticket quantity:</p>
+     * <p>The number of times the ticket can be used. The value can range from 1 to 99,999.</p>
      * <ul>
-     * <li><p>Default value is 1.</p>
+     * <li><p>Default: 1.</p>
      * </li>
-     * <li><p>Recommended value is 1.</p>
+     * <li><p>Recommended: 1.</p>
      * </li>
-     * <li><p>Maximum value is 99999.</p>
+     * <li><p>Maximum: 99,999.</p>
      * </li>
      * </ul>
-     * <p>Each time a ticket is used, the ticket count decreases by 1.</p>
+     * <p>Each access decrements the ticket\&quot;s usage count by one.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -84,14 +89,14 @@ public class CreateTicket4CopilotRequest extends TeaModel {
     public Integer ticketNum;
 
     /**
-     * <p>Quick BI\&quot;s UserId.</p>
-     * <ul>
-     * <li>You can obtain this by calling [3.1.7 Get User Details Based on Third-Party Account] or other relevant APIs.</li>
-     * </ul>
-     * <p><notice>Note: Only one of userId and accountName needs to be filled in. If neither is provided, it will default to the report owner, and the report will be accessed with that user\&quot;s identity.</notice></p>
+     * <p>The ID of the Quick BI user. This is not your Alibaba Cloud account ID. Call the QueryUserInfoByAccount operation to obtain the user ID. Example: <code>fe67f61a35a94b7da1a34ba174a7****</code>.</p>
+     * <blockquote>
+     * <p>Notice: </p>
+     * </blockquote>
+     * <p>Note: Specify either UserId or AccountName. If you leave both parameters empty, the ticket is bound to the API caller by default. Access is then granted based on the caller\&quot;s identity.</p>
      * 
      * <strong>example:</strong>
-     * <p>9c-asd*****asd-asdasd</p>
+     * <p>9c-asdawf-casxcasd-asdasd</p>
      */
     @NameInMap("UserId")
     public String userId;

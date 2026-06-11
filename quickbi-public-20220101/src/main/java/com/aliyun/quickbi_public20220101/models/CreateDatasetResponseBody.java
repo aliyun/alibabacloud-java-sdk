@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDatasetResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>F68B***********A3DF743</p>
      */
@@ -12,6 +14,14 @@ public class CreateDatasetResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The result of the operation. Valid values:</p>
+     * <ul>
+     * <li><p>true: The request is successful.</p>
+     * </li>
+     * <li><p>false: The request fails.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +29,14 @@ public class CreateDatasetResponseBody extends TeaModel {
     public String result;
 
     /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: The request is successful.</p>
+     * </li>
+     * <li><p>false: The request fails.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

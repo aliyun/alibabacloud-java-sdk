@@ -441,7 +441,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
          * <p>Test directory</p>
          * 
          * <strong>example:</strong>
-         * <p>The name of the directory.</p>
+         * <p>测试目录</p>
          */
         @NameInMap("Name")
         public String name;
@@ -459,7 +459,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
          * <p>The path of the directory ID, for example, aa/bb/cc/dd.</p>
          * 
          * <strong>example:</strong>
-         * <p>The path name of the directory ID, for example, one-level directory /two-level directory.</p>
+         * <p>测试目录</p>
          */
         @NameInMap("PathName")
         public String pathName;
@@ -809,7 +809,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
          * <p>The unique ID of the data source.</p>
          * 
          * <strong>example:</strong>
-         * <p>The name of the dataset owner.</p>
+         * <p>大娃</p>
          */
         @NameInMap("OwnerName")
         public String ownerName;
@@ -840,7 +840,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
          * <p>Big Baby</p>
          * 
          * <strong>example:</strong>
-         * <p>The name of the workspace in which the dataset resides.</p>
+         * <p>测试空间</p>
          */
         @NameInMap("WorkspaceName")
         public String workspaceName;

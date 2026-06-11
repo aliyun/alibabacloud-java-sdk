@@ -75,7 +75,7 @@ public class QueryUserTagValueListResponseBody extends TeaModel {
          * <p>Tag name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Position</p>
+         * <p>职位</p>
          */
         @NameInMap("TagName")
         public String tagName;
@@ -84,7 +84,7 @@ public class QueryUserTagValueListResponseBody extends TeaModel {
          * <p>The value of the tag.</p>
          * 
          * <strong>example:</strong>
-         * <p>Supervisor</p>
+         * <p>主管</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

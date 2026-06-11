@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryDatasetDetailInfoRequest extends TeaModel {
     /**
-     * <p>The ID of the training dataset that you want to remove from the specified custom linguistic model.</p>
+     * <p>The dataset ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -8,7 +8,7 @@ public class QueryDataServiceListRequest extends TeaModel {
      * <p>Data service name.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>测试sql</p>
      */
     @NameInMap("Name")
     public String name;

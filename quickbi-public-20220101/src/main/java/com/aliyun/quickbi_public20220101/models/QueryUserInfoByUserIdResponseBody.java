@@ -14,7 +14,7 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned organization user information.</p>
+     * <p>The information about the organization user.</p>
      */
     @NameInMap("Result")
     public QueryUserInfoByUserIdResponseBodyResult result;
@@ -22,8 +22,10 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
+     * <li><p>true: The request is successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +65,7 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
 
     public static class QueryUserInfoByUserIdResponseBodyResult extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>The Alibaba Cloud account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>135****5848</p>
@@ -72,7 +74,7 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The name of the Alibaba Cloud account that corresponds to the member.</p>
+         * <p>The Alibaba Cloud account name.</p>
          * 
          * <strong>example:</strong>
          * <p>1386587****@163.com</p>
@@ -81,11 +83,17 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>Whether you are an administrator of the organization. Valid values:</p>
+         * <p>Indicates whether the organization administrator role is assigned to the user. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The role is assigned.</p>
+         * </li>
+         * <li><p>false: The role is not assigned.</p>
+         * </li>
          * </ul>
+         * <blockquote>
+         * <p>Notice: </p>
+         * </blockquote>
+         * <p>This parameter is deprecated. Use the <code>RoleIdList</code> parameter instead.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -94,11 +102,17 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
         public Boolean adminUser;
 
         /**
-         * <p>Whether you are a permission administrator. Valid values:</p>
+         * <p>Indicates whether the permission administrator role is assigned to the user. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The role is assigned.</p>
+         * </li>
+         * <li><p>false: The role is not assigned.</p>
+         * </li>
          * </ul>
+         * <blockquote>
+         * <p>Notice: </p>
+         * </blockquote>
+         * <p>This parameter is deprecated. Use the <code>RoleIdList</code> parameter instead.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -106,6 +120,9 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
         @NameInMap("AuthAdminUser")
         public Boolean authAdminUser;
 
+        /**
+         * <p>The list of <code>CopilotModules</code> available to the user.</p>
+         */
         @NameInMap("CopilotModules")
         public java.util.List<String> copilotModules;
 
@@ -119,16 +136,16 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
         public String email;
 
         /**
-         * <p>The nickname of the account.</p>
+         * <p>The nickname of the user.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test user</p>
+         * <p>测试用户</p>
          */
         @NameInMap("NickName")
         public String nickName;
 
         /**
-         * <p>The phone number of the alert contact.</p>
+         * <p>The phone number of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>1386587****</p>
@@ -136,11 +153,14 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
         @NameInMap("Phone")
         public String phone;
 
+        /**
+         * <p>The list of organization role IDs that are assigned to the user.</p>
+         */
         @NameInMap("RoleIdList")
         public java.util.List<Long> roleIdList;
 
         /**
-         * <p>The UserID in the Quick BI.</p>
+         * <p>The user ID in Quick BI.</p>
          * 
          * <strong>example:</strong>
          * <p>fe67f61a35a94b7da1a34ba174a7****</p>
@@ -149,11 +169,14 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>The role type of the organization member. Valid values:</p>
+         * <p>The user type of the organization member. Valid values:</p>
          * <ul>
-         * <li>1 : developer</li>
-         * <li>2 : visitors</li>
-         * <li>3 : Analyst</li>
+         * <li><p><code>1</code>: developer</p>
+         * </li>
+         * <li><p><code>2</code>: viewer</p>
+         * </li>
+         * <li><p><code>3</code>: analyst</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

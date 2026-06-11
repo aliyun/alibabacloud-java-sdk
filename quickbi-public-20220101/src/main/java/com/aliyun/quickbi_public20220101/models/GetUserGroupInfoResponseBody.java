@@ -117,7 +117,7 @@ public class GetUserGroupInfoResponseBody extends TeaModel {
          * <p>Description of the user group.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>测试描述</p>
          */
         @NameInMap("UsergroupDesc")
         public String usergroupDesc;
@@ -135,7 +135,7 @@ public class GetUserGroupInfoResponseBody extends TeaModel {
          * <p>Name of the user group.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>测试用户组01</p>
          */
         @NameInMap("UsergroupName")
         public String usergroupName;

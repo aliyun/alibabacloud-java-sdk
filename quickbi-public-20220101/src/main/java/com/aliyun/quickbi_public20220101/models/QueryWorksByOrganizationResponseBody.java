@@ -75,7 +75,7 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
          * <p>Name of the directory to which it belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>测试目录</p>
          */
         @NameInMap("Name")
         public String name;
@@ -93,7 +93,7 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
          * <p>Hierarchical structure of the directory name, separated by『/』.</p>
          * 
          * <strong>example:</strong>
-         * <p>Attention</p>
+         * <p>测试目录</p>
          */
         @NameInMap("PathName")
         public String pathName;
@@ -155,7 +155,7 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
          * <p>Notes for the work.</p>
          * 
          * <strong>example:</strong>
-         * <p>Attention</p>
+         * <p>备注</p>
          */
         @NameInMap("Description")
         public String description;
@@ -188,7 +188,7 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
          * <p>The Alibaba Cloud account name of the work modifier.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>张三</p>
          */
         @NameInMap("ModifyName")
         public String modifyName;
@@ -197,7 +197,7 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
          * <p>The UserID of the work\&quot;s owner in Quick BI.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>作品所属工作空间名称。</p>
          */
         @NameInMap("OwnerId")
         public String ownerId;
@@ -206,7 +206,7 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
          * <p>The Alibaba Cloud account name of the work\&quot;s owner.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>李四</p>
          */
         @NameInMap("OwnerName")
         public String ownerName;
@@ -268,7 +268,7 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
          * <p>The name of the work.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>测试报表</p>
          */
         @NameInMap("WorkName")
         public String workName;
@@ -301,7 +301,7 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
          * <p>The ID of the workspace to which the work belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>作品修改者的阿里云账户名。</p>
          */
         @NameInMap("WorkspaceId")
         public String workspaceId;
@@ -310,7 +310,7 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
          * <p>The name of the workspace to which the work belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>测试工作空间</p>
          */
         @NameInMap("WorkspaceName")
         public String workspaceName;

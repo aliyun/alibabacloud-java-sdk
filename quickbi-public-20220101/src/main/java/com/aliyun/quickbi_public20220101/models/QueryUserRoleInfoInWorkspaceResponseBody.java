@@ -90,7 +90,7 @@ public class QueryUserRoleInfoInWorkspaceResponseBody extends TeaModel {
          * <p>Preset role name.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>空间管理员</p>
          */
         @NameInMap("RoleName")
         public String roleName;

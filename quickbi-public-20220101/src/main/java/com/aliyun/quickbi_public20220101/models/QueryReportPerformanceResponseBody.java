@@ -273,7 +273,7 @@ public class QueryReportPerformanceResponseBody extends TeaModel {
          * <p>The name of the group.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>自定义模板</p>
          */
         @NameInMap("WorkspaceName")
         public String workspaceName;

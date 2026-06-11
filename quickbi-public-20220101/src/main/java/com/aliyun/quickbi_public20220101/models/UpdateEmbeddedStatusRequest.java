@@ -7,8 +7,10 @@ public class UpdateEmbeddedStatusRequest extends TeaModel {
     /**
      * <p>Whether to enable the embedding feature for the work. Valid values:</p>
      * <ul>
-     * <li>true: enables embedding.</li>
-     * <li>false: disables embedding.</li>
+     * <li><p>true: enables embedding.</p>
+     * </li>
+     * <li><p>false: disables embedding.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

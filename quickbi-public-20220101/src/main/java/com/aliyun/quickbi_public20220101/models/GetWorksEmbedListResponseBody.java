@@ -80,7 +80,7 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
          * <p>Report name</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>测试哦</p>
          */
         @NameInMap("WorksName")
         public String worksName;

@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddUserRequest extends TeaModel {
     /**
-     * <p>Aliyun account ID.</p>
-     * <blockquote>
-     * <p>Warning: For versions of Quick BI released after December 31, 2024, AccountId will be a required parameter. Please modify your API before this date.</p>
-     * </blockquote>
-     * <p>&lt;props=&quot;china&quot;&gt;Published only on the China site</p>
+     * <p>The ID of the Alibaba Cloud account.&gt;Warning: The <code>AccountId</code> parameter will be required in Quick BI versions released after December 31, 2024. We recommend that you update your API calls to include this parameter before then.</p>
      * 
      * <strong>example:</strong>
      * <p>191476xxxxx23754</p>
@@ -18,10 +14,12 @@ public class AddUserRequest extends TeaModel {
     public String accountId;
 
     /**
-     * <p>Aliyun account name.</p>
+     * <p>The name of the Alibaba Cloud account.</p>
      * <ul>
-     * <li>Note: If it is a sub-account, the format should be \&quot;primary account: sub-account\&quot;. For example: <a href="mailto:master_test@aliyun.com">master_test@aliyun.com</a>:subaccount</li>
-     * <li>Format check: Maximum length of 50 characters.</li>
+     * <li><p>For a sub-account, use the format <code>master account:sub-account</code>. Example: <code>master_test@aliyun.com:subaccount</code>.</p>
+     * </li>
+     * <li><p>The maximum length is 50 characters.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,12 +30,17 @@ public class AddUserRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>Whether to assign the organization administrator role. Value range: </p>
+     * <p>Specifies whether to assign the organization administrator role. Valid values:</p>
      * <ul>
-     * <li>true: Yes </li>
-     * <li>false: No</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
-     * <p><notice>This parameter is deprecated and not recommended for use. It is invalid when RoleIds is provided.</notice></p>
+     * <blockquote>
+     * <p>Notice: </p>
+     * </blockquote>
+     * <p>This parameter is deprecated. It is ignored if <code>RoleIds</code> is specified.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,12 +53,17 @@ public class AddUserRequest extends TeaModel {
     public Boolean adminUser;
 
     /**
-     * <p>Whether to assign the organization permission administrator role. Value range: </p>
+     * <p>Specifies whether to assign the permission administrator role. Valid values:</p>
      * <ul>
-     * <li>true: Yes </li>
-     * <li>false: No</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
-     * <p><notice>This parameter is deprecated and not recommended for use. It is invalid when RoleIds is provided.</notice></p>
+     * <blockquote>
+     * <p>Notice: </p>
+     * </blockquote>
+     * <p>This parameter is deprecated. It is ignored if <code>RoleIds</code> is specified.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -64,29 +72,50 @@ public class AddUserRequest extends TeaModel {
     @Deprecated
     public Boolean authAdminUser;
 
+    /**
+     * <p>The Copilot modules to enable for the user. To enable multiple modules, specify their codes separated by a comma (,).</p>
+     * <ul>
+     * <li><p><code>qreport</code>: Q Report</p>
+     * </li>
+     * <li><p><code>qExploreNum</code>: Q Explore</p>
+     * </li>
+     * <li><p><code>smartQAskNum</code>: Q\&amp;A with Data</p>
+     * </li>
+     * <li><p><code>smartQDevNum</code>: Q-assisted Building</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>qreport,qExploreNum</p>
+     */
     @NameInMap("CopilotModules")
     public String copilotModules;
 
     /**
-     * <p>Aliyun account nickname.</p>
+     * <p>The user\&quot;s nickname.</p>
      * <ul>
-     * <li>Format check: Maximum length of 50 characters.</li>
-     * <li>Special format validation: Chinese and English characters, numbers, _ \ / | () ] [</li>
+     * <li><p>The maximum length is 50 characters.</p>
+     * </li>
+     * <li><p>The nickname can contain Chinese characters, letters, digits, and the following special characters: <code>_ \\ / | () []</code>.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ddd</p>
+     * <p>张三</p>
      */
     @NameInMap("NickName")
     public String nickName;
 
     /**
-     * <p>Preset or custom organization role IDs bound to the user, separated by commas, with a maximum of 3. Value range:</p>
+     * <p>The IDs of the predefined or custom organization roles to assign. You can specify up to three role IDs, separated by commas (,). Valid values for predefined roles:</p>
      * <ul>
-     * <li>Organization Administrator (preset role): 111111111</li>
-     * <li>Permission Administrator (preset role): 111111112</li>
-     * <li>Regular User (preset role): 111111113</li>
+     * <li><p><code>111111111</code>: organization administrator</p>
+     * </li>
+     * <li><p><code>111111112</code>: permission administrator</p>
+     * </li>
+     * <li><p><code>111111113</code>: regular user</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -96,11 +125,14 @@ public class AddUserRequest extends TeaModel {
     public String roleIds;
 
     /**
-     * <p>The user type of the organization member. Value range:</p>
+     * <p>The type of the organization member. Valid values:</p>
      * <ul>
-     * <li>1: Developer</li>
-     * <li>2: Visitor</li>
-     * <li>3: Analyst</li>
+     * <li><p>1: developer</p>
+     * </li>
+     * <li><p>2: viewer</p>
+     * </li>
+     * <li><p>3: analyst</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

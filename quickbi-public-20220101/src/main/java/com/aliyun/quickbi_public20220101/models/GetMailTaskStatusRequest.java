@@ -9,7 +9,7 @@ public class GetMailTaskStatusRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>d5a5<strong><strong>8b634d</strong></strong>5584f8dc159c62</p>
+     * <p>d5a59a898b634d75be5584f8dc159c62</p>
      */
     @NameInMap("MailId")
     public String mailId;
@@ -24,7 +24,7 @@ public class GetMailTaskStatusRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>7218<strong><strong>0392</strong></strong>212</p>
+     * <p>7218865303929605212</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

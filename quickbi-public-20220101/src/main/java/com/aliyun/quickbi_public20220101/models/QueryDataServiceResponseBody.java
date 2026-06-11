@@ -77,7 +77,7 @@ public class QueryDataServiceResponseBody extends TeaModel {
          * <p>Field name, corresponding to the physical table field name.</p>
          * 
          * <strong>example:</strong>
-         * <p>The alias of the field. The key of the map data row in the result parameter values.</p>
+         * <p>具体的物理字段名</p>
          */
         @NameInMap("Column")
         public String column;
@@ -191,7 +191,7 @@ public class QueryDataServiceResponseBody extends TeaModel {
          * <p>The SQL of the query request.</p>
          * 
          * <strong>example:</strong>
-         * <p>SELECT COMPANY_T_1_.<code>area</code> AS D_AREA_2_, COMPANY_T_1_.<code>city</code> AS D_CITY_3_, SUM(COMPANY_T_1_.<code>profit_amt</code>) AS D_PROFIT_4_ FROM <code>quickbi_test</code>.<code>company_sales_record_copy</code> AS COMPANY_T_1_   LIMIT 0, 10</p>
+         * <p>SELECT COMPANY_T_1_.<code>area</code> AS D_AREA_2_, COMPANY_T_1_.<code>city</code> AS D_CITY_3_, SUM(COMPANY_T_1_.<code>profit_amt</code>) AS D_PROFIT_4_ FROM <code>quickbi_test</code>.<code>company_sales_record_copy</code> AS COMPANY_T_1_ WHERE COMPANY_T_1_.<code>area</code> LIKE \&quot;%华东%\&quot; GROUP BY COMPANY_T_1_.<code>area</code>, COMPANY_T_1_.<code>city</code> HAVING SUM(COMPANY_T_1_.<code>order_amt</code>) &gt; 1 LIMIT 0, 10</p>
          */
         @NameInMap("Sql")
         public String sql;

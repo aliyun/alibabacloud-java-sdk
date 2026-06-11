@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryUserInfoByAccountResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
@@ -14,16 +14,18 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned organization user information.</p>
+     * <p>The user information of the organization member.</p>
      */
     @NameInMap("Result")
     public QueryUserInfoByAccountResponseBodyResult result;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +65,7 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
 
     public static class QueryUserInfoByAccountResponseBodyResult extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>The Alibaba Cloud ID. For users not added through RAM self-service, this ID becomes available only after the user\&quot;s first login.</p>
          * 
          * <strong>example:</strong>
          * <p>135****5848</p>
@@ -72,7 +74,7 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The name of the Alibaba Cloud account that corresponds to the member. (If you use a RAM user, the domain name information that follows @ is removed. For example, if you use a <a href="mailto:test@test.com">test@test.com</a>, test is returned.)</p>
+         * <p>The Alibaba Cloud account name. For a RAM user, the domain suffix (the part after the @ symbol) is omitted. For example, for the user <code>test@test.com</code>, the value <code>test</code> is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1386587****@163.com</p>
@@ -81,11 +83,17 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>Whether you are an administrator of the organization. Valid values:</p>
+         * <p>Indicates whether the user is assigned the organization administrator role. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: Yes</p>
+         * </li>
+         * <li><p>false: No</p>
+         * </li>
          * </ul>
+         * <blockquote>
+         * <p>Notice: </p>
+         * </blockquote>
+         * <p>This parameter is deprecated. Use the <code>RoleIdList</code> parameter instead.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -94,11 +102,17 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
         public Boolean adminUser;
 
         /**
-         * <p>Whether you are a permission administrator. Valid values:</p>
+         * <p>Indicates whether the user is assigned the permission administrator role. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: Yes</p>
+         * </li>
+         * <li><p>false: No</p>
+         * </li>
          * </ul>
+         * <blockquote>
+         * <p>Notice: </p>
+         * </blockquote>
+         * <p>This parameter is deprecated. Use the <code>RoleIdList</code> parameter instead.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -106,11 +120,14 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
         @NameInMap("AuthAdminUser")
         public Boolean authAdminUser;
 
+        /**
+         * <p>The intelligent modules for which the user has a quota.</p>
+         */
         @NameInMap("CopilotModules")
         public java.util.List<String> copilotModules;
 
         /**
-         * <p>The email address of the user.</p>
+         * <p>The user\&quot;s email address.</p>
          * 
          * <strong>example:</strong>
          * <p>1386587****@163.com</p>
@@ -119,16 +136,16 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
         public String email;
 
         /**
-         * <p>The nickname of the account.</p>
+         * <p>The user\&quot;s nickname.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test user</p>
+         * <p>测试用户</p>
          */
         @NameInMap("NickName")
         public String nickName;
 
         /**
-         * <p>The phone number of the alert contact.</p>
+         * <p>The user\&quot;s phone number.</p>
          * 
          * <strong>example:</strong>
          * <p>1386587****</p>
@@ -137,13 +154,13 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
         public String phone;
 
         /**
-         * <p>List of organization role IDs bound to the user.</p>
+         * <p>The IDs of the organization roles assigned to the user.</p>
          */
         @NameInMap("RoleIdList")
         public java.util.List<Long> roleIdList;
 
         /**
-         * <p>The UserID in the Quick BI.</p>
+         * <p>The user ID in Quick BI.</p>
          * 
          * <strong>example:</strong>
          * <p>fe67f61a35a94b7da1a34ba174a7****</p>
@@ -152,11 +169,14 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>The role type of the organization member. Valid values:</p>
+         * <p>The user type of the organization member. Valid values:</p>
          * <ul>
-         * <li>1 : developer</li>
-         * <li>2 : visitors</li>
-         * <li>3 : Analyst</li>
+         * <li><p>1: developer</p>
+         * </li>
+         * <li><p>2: viewer</p>
+         * </li>
+         * <li><p>3: analyst</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

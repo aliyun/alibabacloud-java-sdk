@@ -8,7 +8,7 @@ public class BatchAddFeishuUsersRequest extends TeaModel {
      * <p>Information of the users to be added</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;ad<strong><strong>fd&quot;: &quot;TEST&quot;, &quot;82</strong></strong>5a&quot;: &quot;TEST&quot;}&quot;</p>
+     * <p>{&quot;ad<strong><strong>fd&quot;: &quot;张三&quot;, &quot;82</strong></strong>5a&quot;: &quot;李四&quot;}&quot;</p>
      */
     @NameInMap("FeishuUsers")
     public String feishuUsers;

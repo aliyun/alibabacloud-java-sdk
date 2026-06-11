@@ -8,7 +8,7 @@ public class QueryDataRangeRequest extends TeaModel {
      * <p>Name, for fuzzy search.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>测试</p>
      */
     @NameInMap("Keyword")
     public String keyword;

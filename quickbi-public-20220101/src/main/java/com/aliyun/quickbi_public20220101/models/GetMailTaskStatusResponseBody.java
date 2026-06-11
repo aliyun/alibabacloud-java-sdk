@@ -8,7 +8,7 @@ public class GetMailTaskStatusResponseBody extends TeaModel {
      * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>38C0FEC8-****-415C-A9F1-****422BDB65</p>
+     * <p>38C0FEC8-1510-415C-A9F1-9AE9422BDB65</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -75,7 +75,7 @@ public class GetMailTaskStatusResponseBody extends TeaModel {
          * <p>Mail ID</p>
          * 
          * <strong>example:</strong>
-         * <p>c38f73f4c5*****c808c41b3f4d23b7852</p>
+         * <p>c38f73f4c5xxxxxc808c41b3f4d23b7852</p>
          */
         @NameInMap("mailId")
         public String mailId;

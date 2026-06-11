@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class SmartqQueryAbilityRequest extends TeaModel {
     /**
-     * <p>Dataset ID.</p>
+     * <p>The ID of the dataset. To obtain the ID, navigate to \<em>\<em>Workbench\</em>\</em> &gt; \<em>\<em>Dataset\</em>\</em> in the Quick BI console. Open the dataset and find the \<code>cubeId\\</code> in the URL.</p>
+     * <p>In multi-table scenarios, this parameter must be empty.</p>
      * 
      * <strong>example:</strong>
      * <p>7c7223ae-****-3c744528014b</p>
@@ -14,16 +15,18 @@ public class SmartqQueryAbilityRequest extends TeaModel {
     public String cubeId;
 
     /**
+     * <p>A list of dataset IDs. The model selects one or more tables from the list to generate an answer based on the question. This parameter is required for multi-table scenarios and is not used for single-table scenarios.</p>
+     * 
      * <strong>example:</strong>
-     * <p>123124</p>
+     * <p>7c7****-3c744528014b,a876asd***yhashd2</p>
      */
     @NameInMap("MultipleCubeIds")
     public String multipleCubeIds;
 
     /**
-     * <p>User ID.</p>
+     * <p>The ID of the user.</p>
      * <blockquote>
-     * <p>Notice: If this field is not filled, the data will be queried by default as the organization owner.</p>
+     * <p>Notice: If you do not specify this parameter, data is queried as the organization owner by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -33,11 +36,11 @@ public class SmartqQueryAbilityRequest extends TeaModel {
     public String userId;
 
     /**
-     * <p>Question text.</p>
+     * <p>The question in text format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>This year\&quot;s sales data</p>
+     * <p>test</p>
      */
     @NameInMap("UserQuestion")
     public String userQuestion;

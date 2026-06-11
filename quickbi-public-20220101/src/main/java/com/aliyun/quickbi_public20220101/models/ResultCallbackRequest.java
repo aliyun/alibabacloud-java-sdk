@@ -19,7 +19,7 @@ public class ResultCallbackRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>You are not a Division A analyst.</p>
+     * <p>你不是A部门分析师。</p>
      */
     @NameInMap("HandleReason")
     public String handleReason;

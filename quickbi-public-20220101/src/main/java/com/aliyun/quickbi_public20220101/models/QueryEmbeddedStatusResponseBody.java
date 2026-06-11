@@ -16,8 +16,10 @@ public class QueryEmbeddedStatusResponseBody extends TeaModel {
     /**
      * <p>Whether the work is enabled for embedding. Valid values:</p>
      * <ul>
-     * <li>true: embedded</li>
-     * <li>false: not embedded</li>
+     * <li><p>true: embedded</p>
+     * </li>
+     * <li><p>false: not embedded</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,8 +31,10 @@ public class QueryEmbeddedStatusResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

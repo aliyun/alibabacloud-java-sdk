@@ -8,7 +8,7 @@ public class DeleteUserGroupMembersResponseBody extends TeaModel {
      * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>ABBAD906-****-5D18-B23D-****53AB0AA2</p>
+     * <p>ABBAD906-3925-5D18-B23D-714053AB0AA2</p>
      */
     @NameInMap("RequestId")
     public String requestId;

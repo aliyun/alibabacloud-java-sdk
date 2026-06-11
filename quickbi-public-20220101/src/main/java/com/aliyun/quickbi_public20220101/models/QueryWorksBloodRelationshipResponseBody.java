@@ -75,7 +75,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
          * <p>The name of the owning location.</p>
          * 
          * <strong>example:</strong>
-         * <p>Column (Measure)</p>
+         * <p>列（度量）</p>
          */
         @NameInMap("AreaName")
         public String areaName;
@@ -114,7 +114,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
          * <p>Calculate field expression.</p>
          * 
          * <strong>example:</strong>
-         * <p>BI_DATEADD([date], 100, \&quot;day\&quot;)</p>
+         * <p>BI_DATEADD([时间], 100, \&quot;day\&quot;)</p>
          */
         @NameInMap("Expression")
         public String expression;
@@ -232,7 +232,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
          * <p>The name of the component.</p>
          * 
          * <strong>example:</strong>
-         * <p>Line</p>
+         * <p>线图</p>
          */
         @NameInMap("ComponentName")
         public String componentName;
@@ -250,7 +250,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
          * <p>Chinese name of the component type</p>
          * 
          * <strong>example:</strong>
-         * <p>ddd</p>
+         * <p>交叉表</p>
          */
         @NameInMap("ComponentTypeCnName")
         public String componentTypeCnName;

@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyDashboardNl2sqlStatusRequest extends TeaModel {
     /**
+     * <p>An array of dashboard IDs. Separate multiple IDs with commas.</p>
+     * <blockquote>
+     * <p>Notice: The number of IDs cannot exceed 50.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,7 @@ public class ModifyDashboardNl2sqlStatusRequest extends TeaModel {
     public String dashboardIds;
 
     /**
+     * <p>The status identifier. 0 indicates disabled and 1 indicates enabled.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

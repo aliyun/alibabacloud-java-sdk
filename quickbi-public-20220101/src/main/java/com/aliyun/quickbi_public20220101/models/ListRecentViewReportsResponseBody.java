@@ -120,7 +120,7 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
          * <p>The name of the work.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test report</p>
+         * <p>测试报表</p>
          */
         @NameInMap("Name")
         public String name;
@@ -129,7 +129,7 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
          * <p>The Alibaba Cloud account name of the work owner.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>李四</p>
          */
         @NameInMap("OwnerName")
         public String ownerName;
@@ -203,7 +203,7 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
          * <p>The name of the workspace to which the work belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test Workspace</p>
+         * <p>测试工作空间</p>
          */
         @NameInMap("WorkspaceName")
         public String workspaceName;
@@ -340,7 +340,7 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
          * <p>Attention</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>当前API返回的分页参数如TotalNum等即将下线，如有使用请及时修改</p>
          */
         @NameInMap("Attention")
         public String attention;

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDataLevelRuleConfigRequest extends TeaModel {
     /**
+     * <p>The ID of the dataset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteDataLevelRuleConfigRequest extends TeaModel {
     public String cubeId;
 
     /**
+     * <p>The ID of the row-level permission rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

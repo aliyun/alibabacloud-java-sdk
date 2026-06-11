@@ -130,7 +130,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
          * <p>Display name in the cube model (can be in Chinese or English).</p>
          * 
          * <strong>example:</strong>
-         * <p>date(year)</p>
+         * <p>日期(year)</p>
          */
         @NameInMap("Caption")
         public String caption;
@@ -289,7 +289,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
          * <p>Remark for the returned field.</p>
          * 
          * <strong>example:</strong>
-         * <p>Theme Configuration already exists</p>
+         * <p>主题配置已存在。</p>
          */
         @NameInMap("Desc")
         public String desc;
@@ -375,7 +375,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
          * <p>Dataset name.</p>
          * 
          * <strong>example:</strong>
-         * <p>test data source</p>
+         * <p>测试数据集</p>
          */
         @NameInMap("CubeName")
         public String cubeName;
@@ -468,7 +468,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
          * <p>Creator\&quot;s name.</p>
          * 
          * <strong>example:</strong>
-         * <p>zhangsan</p>
+         * <p>张仔龙</p>
          */
         @NameInMap("CreatorName")
         public String creatorName;
@@ -486,7 +486,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
          * <p>Dataset name.</p>
          * 
          * <strong>example:</strong>
-         * <p>test data source</p>
+         * <p>测试数据集</p>
          */
         @NameInMap("CubeName")
         public String cubeName;
@@ -495,7 +495,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
          * <p>Description</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>测试用</p>
          */
         @NameInMap("Desc")
         public String desc;
@@ -531,7 +531,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
          * <p>Modifier\&quot;s name</p>
          * 
          * <strong>example:</strong>
-         * <p>zhangsan</p>
+         * <p>张仔龙</p>
          */
         @NameInMap("ModifierName")
         public String modifierName;
@@ -540,7 +540,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
          * <p>Data service name.</p>
          * 
          * <strong>example:</strong>
-         * <p>test report</p>
+         * <p>测试报表</p>
          */
         @NameInMap("Name")
         public String name;
@@ -558,7 +558,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
          * <p>Owner\&quot;s name</p>
          * 
          * <strong>example:</strong>
-         * <p>lisi</p>
+         * <p>李四</p>
          */
         @NameInMap("OwnerName")
         public String ownerName;
@@ -585,7 +585,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
          * <p>Workspace name.</p>
          * 
          * <strong>example:</strong>
-         * <p>test workspace</p>
+         * <p>测试工作空间</p>
          */
         @NameInMap("WorkspaceName")
         public String workspaceName;

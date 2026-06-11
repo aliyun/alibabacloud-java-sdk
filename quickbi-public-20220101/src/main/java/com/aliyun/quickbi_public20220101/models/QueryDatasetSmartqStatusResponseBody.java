@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryDatasetSmartqStatusResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7c7223ae-****-3c744528014b</p>
@@ -14,10 +14,12 @@ public class QueryDatasetSmartqStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Result of the API execution. Possible values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true: Request succeeded</li>
-     * <li>false: Request failed</li>
+     * <li><p>true: The request succeeded.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,10 +29,12 @@ public class QueryDatasetSmartqStatusResponseBody extends TeaModel {
     public Boolean result;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

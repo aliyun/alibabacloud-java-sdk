@@ -14,10 +14,12 @@ public class AddUserToWorkspaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returns the result of the interface execution. Value range:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li>true: Execution successful</li>
-     * <li>false: Execution failed</li>
+     * <li><p>true: The operation succeeded.</p>
+     * </li>
+     * <li><p>false: The operation failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,10 +29,12 @@ public class AddUserToWorkspaceResponseBody extends TeaModel {
     public Boolean result;
 
     /**
-     * <p>Indicates whether the request was successful. Value range:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true: Request successful</li>
-     * <li>false: Request failed</li>
+     * <li><p>true: The request succeeded.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

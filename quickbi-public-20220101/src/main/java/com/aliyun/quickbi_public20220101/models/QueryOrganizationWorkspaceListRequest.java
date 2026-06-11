@@ -5,19 +5,21 @@ import com.aliyun.tea.*;
 
 public class QueryOrganizationWorkspaceListRequest extends TeaModel {
     /**
-     * <p>Keyword for the workspace name.</p>
+     * <p>The keyword for searching workspaces.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>程序</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
-     * <p>Current page number of the workspace list:</p>
+     * <p>The page number to return.</p>
      * <ul>
-     * <li>Starting value: 1</li>
-     * <li>Default value: 1</li>
+     * <li><p>Start value: 1</p>
+     * </li>
+     * <li><p>Default value: 1</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,10 +29,12 @@ public class QueryOrganizationWorkspaceListRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>Number of rows per page in a paginated query:</p>
+     * <p>The number of workspaces per page.</p>
      * <ul>
-     * <li>Default value: 10</li>
-     * <li>Maximum value: 1000</li>
+     * <li><p>Default value: 10</p>
+     * </li>
+     * <li><p>Maximum value: 1000</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +44,7 @@ public class QueryOrganizationWorkspaceListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>User ID in Quick BI.</p>
+     * <p>The user ID in Quick BI.</p>
      * 
      * <strong>example:</strong>
      * <p>fe67f61a35a94b7da1a34ba174a7****</p>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryAccelerationLogByCubeIdRequest extends TeaModel {
     /**
+     * <p>The ID of the dataset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class QueryAccelerationLogByCubeIdRequest extends TeaModel {
     public String cubeId;
 
     /**
+     * <p>The end time. The format is yyyy-MM-dd HH:mm:ss.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class QueryAccelerationLogByCubeIdRequest extends TeaModel {
     public String endDate;
 
     /**
+     * <p>The page number. The default value is <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -30,6 +34,11 @@ public class QueryAccelerationLogByCubeIdRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * <ul>
+     * <li>Default value: 10.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -37,6 +46,7 @@ public class QueryAccelerationLogByCubeIdRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The start time. The format is yyyy-MM-dd HH:mm:ss.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

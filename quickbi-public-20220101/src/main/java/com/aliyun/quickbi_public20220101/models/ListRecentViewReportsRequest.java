@@ -8,7 +8,7 @@ public class ListRecentViewReportsRequest extends TeaModel {
      * <p>Keyword of the name of the work.</p>
      * 
      * <strong>example:</strong>
-     * <p>Financial Statements</p>
+     * <p>财务报表</p>
      */
     @NameInMap("Keyword")
     public String keyword;

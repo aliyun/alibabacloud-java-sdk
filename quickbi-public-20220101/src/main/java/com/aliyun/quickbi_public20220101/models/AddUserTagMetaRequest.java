@@ -8,7 +8,7 @@ public class AddUserTagMetaRequest extends TeaModel {
      * <p>Tag description. Format check: maximum length of 255 characters.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>部门内的职位</p>
      */
     @NameInMap("TagDescription")
     public String tagDescription;
@@ -22,7 +22,7 @@ public class AddUserTagMetaRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>职位</p>
      */
     @NameInMap("TagName")
     public String tagName;
