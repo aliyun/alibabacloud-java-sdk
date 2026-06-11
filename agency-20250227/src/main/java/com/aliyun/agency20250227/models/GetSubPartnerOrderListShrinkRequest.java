@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSubPartnerOrderListShrinkRequest extends TeaModel {
     /**
+     * <p>The UNIX timestamp of the start time for order creation. The time range must not exceed six months.<br>The time range for order creation and the time range for order payment cannot both be empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>1727789348000</p>
      */
@@ -12,6 +14,8 @@ public class GetSubPartnerOrderListShrinkRequest extends TeaModel {
     public Long orderCreateAfter;
 
     /**
+     * <p>The UNIX timestamp of the end time for order creation. The time range must not exceed six months.<br>The time range for order creation and the time range for order payment cannot both be empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>1741008566000</p>
      */
@@ -19,6 +23,8 @@ public class GetSubPartnerOrderListShrinkRequest extends TeaModel {
     public Long orderCreateBefore;
 
     /**
+     * <p>Order ID</p>
+     * 
      * <strong>example:</strong>
      * <p>209335720330622</p>
      */
@@ -26,6 +32,8 @@ public class GetSubPartnerOrderListShrinkRequest extends TeaModel {
     public Long orderId;
 
     /**
+     * <p>The UNIX timestamp of the start time for order payment. The time range must not exceed six months.<br>The time range for order creation and the time range for order payment cannot both be empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>1727789348000</p>
      */
@@ -33,6 +41,9 @@ public class GetSubPartnerOrderListShrinkRequest extends TeaModel {
     public Long orderPayAfter;
 
     /**
+     * <p>UNIX timestamp of the order payment deadline. The time range cannot exceed six months.
+     * The time range for order creation and the time range for order payment cannot both be empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>1741008566000</p>
      */
@@ -40,16 +51,26 @@ public class GetSubPartnerOrderListShrinkRequest extends TeaModel {
     public Long orderPayBefore;
 
     /**
+     * <p>Order status. Valid values:
+     * 1: Unpaid
+     * 2: Paid
+     * 3: Canceled</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
     @NameInMap("OrderStatus")
     public Long orderStatus;
 
+    /**
+     * <p>List of order types.
+     * Valid order types include: BUY, UPGRADE, DOWNGRADE, RENEW, REFUND, OTHERS</p>
+     */
     @NameInMap("OrderTypeList")
     public String orderTypeListShrink;
 
     /**
+     * <p>Page number</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +80,7 @@ public class GetSubPartnerOrderListShrinkRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>Page size</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,6 +90,8 @@ public class GetSubPartnerOrderListShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Minimum paid amount</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -75,6 +99,8 @@ public class GetSubPartnerOrderListShrinkRequest extends TeaModel {
     public Long payAmountAfter;
 
     /**
+     * <p>Maximum paid amount</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -82,6 +108,8 @@ public class GetSubPartnerOrderListShrinkRequest extends TeaModel {
     public Long payAmountBefore;
 
     /**
+     * <p>Payment Type:<br>1: Non-agent payment<br>2: Agent payment</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -89,26 +117,44 @@ public class GetSubPartnerOrderListShrinkRequest extends TeaModel {
     public Long payType;
 
     /**
+     * <p>Product code</p>
+     * 
      * <strong>example:</strong>
      * <p>ecs</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <p>Product Name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>弹性计算</p>
+     */
     @NameInMap("ProductName")
     public String productName;
 
     /**
+     * <p>Opportunity ID</p>
+     * 
      * <strong>example:</strong>
      * <p>202501101023</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>Sub-partner name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>XXX有限公司</p>
+     */
     @NameInMap("SubPartnerName")
     public String subPartnerName;
 
     /**
+     * <p>Sub-partner UID</p>
+     * 
      * <strong>example:</strong>
      * <p>123432311</p>
      */

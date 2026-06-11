@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetCustomerOrderListRequest extends TeaModel {
     /**
+     * <p>Customer Account</p>
+     * 
      * <strong>example:</strong>
      * <p>test_123</p>
      */
@@ -12,6 +14,8 @@ public class GetCustomerOrderListRequest extends TeaModel {
     public String customerAccount;
 
     /**
+     * <p>Customer UID</p>
+     * 
      * <strong>example:</strong>
      * <p>123456</p>
      */
@@ -19,6 +23,8 @@ public class GetCustomerOrderListRequest extends TeaModel {
     public Long customerUid;
 
     /**
+     * <p>The UNIX timestamp indicating the start time of order creation. The time range must not exceed six months.<br>The time range for order creation and the time range for order payment cannot both be empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>1727789348000</p>
      */
@@ -26,6 +32,8 @@ public class GetCustomerOrderListRequest extends TeaModel {
     public Long orderCreateAfter;
 
     /**
+     * <p>The UNIX timestamp indicating the end time of order creation. The time range must not exceed six months.<br>The time range for order creation and the time range for order payment cannot both be empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>1741008566000</p>
      */
@@ -33,6 +41,8 @@ public class GetCustomerOrderListRequest extends TeaModel {
     public Long orderCreateBefore;
 
     /**
+     * <p>Order ID</p>
+     * 
      * <strong>example:</strong>
      * <p>13595216</p>
      */
@@ -40,6 +50,9 @@ public class GetCustomerOrderListRequest extends TeaModel {
     public Long orderId;
 
     /**
+     * <p>Order payment start UNIX timestamp. The time range must not exceed six months.
+     * The order creation time range and the order payment time range cannot both be empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>1727789348000</p>
      */
@@ -47,6 +60,9 @@ public class GetCustomerOrderListRequest extends TeaModel {
     public Long orderPayAfter;
 
     /**
+     * <p>Order payment end UNIX timestamp. The time range must not exceed six months.
+     * The order creation time range and the order payment time range cannot both be empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>1741008566000</p>
      */
@@ -54,16 +70,27 @@ public class GetCustomerOrderListRequest extends TeaModel {
     public Long orderPayBefore;
 
     /**
+     * <p>Order status:</p>
+     * <ul>
+     * <li>1 Unpaid</li>
+     * <li>2 Discarded</li>
+     * <li>3 Paid</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
     @NameInMap("OrderStatus")
     public Integer orderStatus;
 
+    /**
+     * <p>Order type List</p>
+     */
     @NameInMap("OrderTypeList")
     public java.util.List<String> orderTypeList;
 
     /**
+     * <p>Page number</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,6 +100,7 @@ public class GetCustomerOrderListRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>Page size</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,6 +110,8 @@ public class GetCustomerOrderListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Minimum paid amount</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -89,6 +119,8 @@ public class GetCustomerOrderListRequest extends TeaModel {
     public Double payAmountAfter;
 
     /**
+     * <p>Actual payment amount up to this point</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -96,6 +128,10 @@ public class GetCustomerOrderListRequest extends TeaModel {
     public Double payAmountBefore;
 
     /**
+     * <p>Payment Type:
+     * 1: Non-agent payment;
+     * 2: Agent payment</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -103,16 +139,26 @@ public class GetCustomerOrderListRequest extends TeaModel {
     public Integer payType;
 
     /**
+     * <p>Product code</p>
+     * 
      * <strong>example:</strong>
      * <p>ecs</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <p>Product Name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>弹性计算</p>
+     */
     @NameInMap("ProductName")
     public String productName;
 
     /**
+     * <p>Opportunity ID</p>
+     * 
      * <strong>example:</strong>
      * <p>202502002231</p>
      */
@@ -120,6 +166,8 @@ public class GetCustomerOrderListRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>Customer follow-up staff</p>
+     * 
      * <strong>example:</strong>
      * <p>1234532</p>
      */

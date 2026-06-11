@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSubPartnerListRequest extends TeaModel {
     /**
+     * <p>Page index, starting from the first page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetSubPartnerListRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>Number of entries returned per page. Maximum value supported is 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,10 +24,18 @@ public class GetSubPartnerListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Tier-2 partner company name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx有限公司</p>
+     */
     @NameInMap("SubPartnerCompanyName")
     public String subPartnerCompanyName;
 
     /**
+     * <p>Tier-2 partner PID</p>
+     * 
      * <strong>example:</strong>
      * <p>2323431211</p>
      */

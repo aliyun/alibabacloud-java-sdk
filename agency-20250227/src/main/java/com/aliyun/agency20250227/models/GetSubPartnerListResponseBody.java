@@ -4,10 +4,18 @@ package com.aliyun.agency20250227.models;
 import com.aliyun.tea.*;
 
 public class GetSubPartnerListResponseBody extends TeaModel {
+    /**
+     * <p>Message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Current page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +23,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
     public String pageNo;
 
     /**
+     * <p>Number of second-tier distributors returned per page, up to 100</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,16 +33,23 @@ public class GetSubPartnerListResponseBody extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>List of second-tier distributors</p>
+     */
     @NameInMap("SubPartnerList")
     public java.util.List<GetSubPartnerListResponseBodySubPartnerList> subPartnerList;
 
     /**
+     * <p>Indicates whether the invocation succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -41,6 +57,8 @@ public class GetSubPartnerListResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Total amount of data under the current request conditions</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -109,39 +127,111 @@ public class GetSubPartnerListResponseBody extends TeaModel {
     }
 
     public static class GetSubPartnerListResponseBodySubPartnerList extends TeaModel {
+        /**
+         * <p>Detailed address of registration</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx街道xxx号</p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <p>Contract status encoding</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVE_PERIOD</p>
+         */
         @NameInMap("AgreementStatus")
         public String agreementStatus;
 
+        /**
+         * <p>Agreement status description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>生效期</p>
+         */
         @NameInMap("AgreementStatusDesc")
         public String agreementStatusDesc;
 
+        /**
+         * <p>City of registration</p>
+         * 
+         * <strong>example:</strong>
+         * <p>杭州市</p>
+         */
         @NameInMap("City")
         public String city;
 
+        /**
+         * <p>Name of the second-tier distributor</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx有限公司</p>
+         */
         @NameInMap("CompanyName")
         public String companyName;
 
+        /**
+         * <p>Contact name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("Contact")
         public String contact;
 
+        /**
+         * <p>District or county of registration</p>
+         * 
+         * <strong>example:</strong>
+         * <p>西湖区</p>
+         */
         @NameInMap("District")
         public String district;
 
+        /**
+         * <p>Initial onboarding time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000-01-01</p>
+         */
         @NameInMap("JoinTime")
         public String joinTime;
 
+        /**
+         * <p>Master account name of the secondary distributor</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx有限公司主账号</p>
+         */
         @NameInMap("MasterAccount")
         public String masterAccount;
 
+        /**
+         * <p>UID of the Master account of the second-tier distributor</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("MasterUid")
         public String masterUid;
 
+        /**
+         * <p>PID of the secondary distributor</p>
+         * 
+         * <strong>example:</strong>
+         * <p>P123456</p>
+         */
         @NameInMap("Pid")
         public String pid;
 
+        /**
+         * <p>Province of registration</p>
+         * 
+         * <strong>example:</strong>
+         * <p>浙江省</p>
+         */
         @NameInMap("Province")
         public String province;
 

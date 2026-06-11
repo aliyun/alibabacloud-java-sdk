@@ -86,7 +86,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询账单导出文件</p>
+     * <p>Query bill export files.</p>
      * 
      * @param request GetBillDetailFileListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -142,7 +142,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询账单导出文件</p>
+     * <p>Query bill export files.</p>
      * 
      * @param request GetBillDetailFileListRequest
      * @return GetBillDetailFileListResponse
@@ -154,7 +154,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询伙伴佣金明细</p>
+     * <p>Query partner commission details.</p>
      * 
      * @param request GetCommissionDetailFileListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -210,7 +210,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询伙伴佣金明细</p>
+     * <p>Query partner commission details.</p>
      * 
      * @param request GetCommissionDetailFileListRequest
      * @return GetCommissionDetailFileListResponse
@@ -222,7 +222,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询伙伴拓客订单</p>
+     * <p>Query partner customer acquisition orders.</p>
      * 
      * @param tmpReq GetCustomerOrderListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -328,7 +328,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询伙伴拓客订单</p>
+     * <p>Query partner customer acquisition orders.</p>
      * 
      * @param request GetCustomerOrderListRequest
      * @return GetCustomerOrderListResponse
@@ -340,7 +340,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询伙伴续费率</p>
+     * <p>Query partner renewal rate.</p>
      * 
      * @param request GetRenewalRateListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -372,7 +372,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询伙伴续费率</p>
+     * <p>Query partner renewal rate.</p>
      * 
      * @param request GetRenewalRateListRequest
      * @return GetRenewalRateListResponse
@@ -384,7 +384,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询二级分销商列表</p>
+     * <p>Query the list of second-tier distributors.</p>
      * 
      * @param request GetSubPartnerListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -428,7 +428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询二级分销商列表</p>
+     * <p>Query the list of second-tier distributors.</p>
      * 
      * @param request GetSubPartnerListRequest
      * @return GetSubPartnerListResponse
@@ -440,7 +440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询拓渠订单</p>
+     * <p>Query channel expansion orders.</p>
      * 
      * @param tmpReq GetSubPartnerOrderListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -542,7 +542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询拓渠订单</p>
+     * <p>Query channel expansion orders.</p>
      * 
      * @param request GetSubPartnerOrderListRequest
      * @return GetSubPartnerOrderListResponse

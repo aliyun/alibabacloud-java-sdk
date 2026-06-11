@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRenewalRateListRequest extends TeaModel {
     /**
+     * <p>Fiscal year and quarter</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

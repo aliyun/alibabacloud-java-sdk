@@ -13,9 +13,18 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Returned data</p>
+     */
     @NameInMap("Data")
     public GetCommissionDetailFileListResponseBodyData data;
 
+    /**
+     * <p>Message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("Message")
     public String message;
 
@@ -29,6 +38,8 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the invocation succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -81,19 +92,45 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
     }
 
     public static class GetCommissionDetailFileListResponseBodyDataFileList extends TeaModel {
+        /**
+         * <p>OSS file push status: Processing, Succeeded, or failed</p>
+         * 
+         * <strong>example:</strong>
+         * <p>处理中</p>
+         */
         @NameInMap("BucketSyncStatus")
         public String bucketSyncStatus;
 
+        /**
+         * <p>Policy name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>参考【APS佣金查询下载功能】的政策名称</p>
+         */
         @NameInMap("CommissionPolicyName")
         public String commissionPolicyName;
 
+        /**
+         * <p>File name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>佣金202502021112</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <p>File type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>总代政策为拓渠、普通政策为拓客</p>
+         */
         @NameInMap("FileType")
         public String fileType;
 
         /**
+         * <p>File URL</p>
+         * 
          * <strong>example:</strong>
          * <p>aps.ailyun.com/file/download?resourceId=1234&amp;type=1</p>
          */
@@ -149,16 +186,23 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
 
     public static class GetCommissionDetailFileListResponseBodyData extends TeaModel {
         /**
+         * <p>Bill month</p>
+         * 
          * <strong>example:</strong>
          * <p>202502</p>
          */
         @NameInMap("BillMonth")
         public String billMonth;
 
+        /**
+         * <p>File list</p>
+         */
         @NameInMap("FileList")
         public java.util.List<GetCommissionDetailFileListResponseBodyDataFileList> fileList;
 
         /**
+         * <p>Partner UID</p>
+         * 
          * <strong>example:</strong>
          * <p>1112332432</p>
          */

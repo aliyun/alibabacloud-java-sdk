@@ -5,15 +5,26 @@ import com.aliyun.tea.*;
 
 public class GetRenewalRateListResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Returned data</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetRenewalRateListResponseBodyData> data;
 
+    /**
+     * <p>Message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("Message")
     public String message;
 
@@ -27,6 +38,8 @@ public class GetRenewalRateListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the invocation succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -80,6 +93,8 @@ public class GetRenewalRateListResponseBody extends TeaModel {
 
     public static class GetRenewalRateListResponseBodyData extends TeaModel {
         /**
+         * <p>Adjusted amount due for Gold customer renewal</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -87,6 +102,8 @@ public class GetRenewalRateListResponseBody extends TeaModel {
         public Double customerAdjustedRenewalAmountDue;
 
         /**
+         * <p>Rewind amount for new customer acquisition upgrade</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -94,6 +111,8 @@ public class GetRenewalRateListResponseBody extends TeaModel {
         public Double customerOtherBillAmount;
 
         /**
+         * <p>Amount due for Gold customer renewal</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -101,6 +120,8 @@ public class GetRenewalRateListResponseBody extends TeaModel {
         public Double finalCustomerRenewalAmountDue;
 
         /**
+         * <p>Gold customer commission renewal rate</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9</p>
          */
@@ -108,6 +129,8 @@ public class GetRenewalRateListResponseBody extends TeaModel {
         public Double finalCustomerRenewalRate;
 
         /**
+         * <p>Renewed amount from customer acquisition</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -115,6 +138,8 @@ public class GetRenewalRateListResponseBody extends TeaModel {
         public Double finalCustomerRenewedAmount;
 
         /**
+         * <p>Total rewind amount for new upgrades</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -122,6 +147,8 @@ public class GetRenewalRateListResponseBody extends TeaModel {
         public Double finalOtherBillAmount;
 
         /**
+         * <p>Final amount due for renewal</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -129,6 +156,8 @@ public class GetRenewalRateListResponseBody extends TeaModel {
         public Double finalRenewalAmountDue;
 
         /**
+         * <p>Final commission renewal rate</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9</p>
          */
@@ -136,6 +165,8 @@ public class GetRenewalRateListResponseBody extends TeaModel {
         public Double finalRenewalRate;
 
         /**
+         * <p>Final renewed amount</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -143,6 +174,8 @@ public class GetRenewalRateListResponseBody extends TeaModel {
         public Double finalRenewedAmount;
 
         /**
+         * <p>Renewal amount due from channel partner acquisition</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -150,6 +183,8 @@ public class GetRenewalRateListResponseBody extends TeaModel {
         public Double finalSubPartnerRenewalAmountDue;
 
         /**
+         * <p>Channel expansion commission renewal rate</p>
+         * 
          * <strong>example:</strong>
          * <p>0.85</p>
          */
@@ -157,6 +192,8 @@ public class GetRenewalRateListResponseBody extends TeaModel {
         public Double finalSubPartnerRenewalRate;
 
         /**
+         * <p>Renewed amount from channel partner acquisition</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -164,6 +201,8 @@ public class GetRenewalRateListResponseBody extends TeaModel {
         public Double finalSubPartnerRenewedAmount;
 
         /**
+         * <p>Fiscal year and quarter</p>
+         * 
          * <strong>example:</strong>
          * <p>2025Q4</p>
          */
@@ -171,16 +210,26 @@ public class GetRenewalRateListResponseBody extends TeaModel {
         public String fiscalYearAndQuarter;
 
         /**
+         * <p>Partner PID</p>
+         * 
          * <strong>example:</strong>
          * <p>P123423453</p>
          */
         @NameInMap("MasterPid")
         public String masterPid;
 
+        /**
+         * <p>Partner PID name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XX有限公司</p>
+         */
         @NameInMap("MasterPidName")
         public String masterPidName;
 
         /**
+         * <p>Gold customer commission renewal rate including special approval</p>
+         * 
          * <strong>example:</strong>
          * <p>0.7</p>
          */
@@ -188,6 +237,8 @@ public class GetRenewalRateListResponseBody extends TeaModel {
         public Double specialCustomerRenewRatio;
 
         /**
+         * <p>Renewal amount due including specially approved customer acquisition</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -195,6 +246,8 @@ public class GetRenewalRateListResponseBody extends TeaModel {
         public Double specialCustomerRenewalAmountDue;
 
         /**
+         * <p>Renewed amount including specially approved customer acquisition</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -202,6 +255,8 @@ public class GetRenewalRateListResponseBody extends TeaModel {
         public Double specialCustomerRenewedAmount;
 
         /**
+         * <p>Renewal rate including specially approved final quarter commission</p>
+         * 
          * <strong>example:</strong>
          * <p>0.7</p>
          */
@@ -209,6 +264,8 @@ public class GetRenewalRateListResponseBody extends TeaModel {
         public Double specialFinalRenewRatio;
 
         /**
+         * <p>Renewal amount due for final quarterly commission including special approvals</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -216,6 +273,8 @@ public class GetRenewalRateListResponseBody extends TeaModel {
         public Double specialFinalRenewalAmountDue;
 
         /**
+         * <p>Renewed amount including specially approved final quarter commission</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -223,6 +282,8 @@ public class GetRenewalRateListResponseBody extends TeaModel {
         public Double specialFinalRenewedAmount;
 
         /**
+         * <p>Channel expansion commission renewal rate including special approval</p>
+         * 
          * <strong>example:</strong>
          * <p>0.8</p>
          */
@@ -230,6 +291,8 @@ public class GetRenewalRateListResponseBody extends TeaModel {
         public Double specialSubPartnerRenewRatio;
 
         /**
+         * <p>Amount due for renewal including specially approved channel partner</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -237,6 +300,8 @@ public class GetRenewalRateListResponseBody extends TeaModel {
         public Double specialSubPartnerRenewalAmountDue;
 
         /**
+         * <p>Renewed amount including specially approved channel partner renewals</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -244,6 +309,8 @@ public class GetRenewalRateListResponseBody extends TeaModel {
         public Double specialSubPartnerRenewedAmount;
 
         /**
+         * <p>Adjusted amount due for channel partner renewal</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -251,6 +318,8 @@ public class GetRenewalRateListResponseBody extends TeaModel {
         public Double subPartnerAdjustedRenewalAmountDue;
 
         /**
+         * <p>Channel partner new upgrade rewind amount</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

@@ -5,18 +5,35 @@ import com.aliyun.tea.*;
 
 public class GetBillDetailFileListResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Returned data</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetBillDetailFileListResponseBodyData> data;
 
+    /**
+     * <p>Prompt message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Same as message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("Msg")
     public String msg;
 
@@ -30,6 +47,8 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -91,25 +110,47 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
 
     public static class GetBillDetailFileListResponseBodyData extends TeaModel {
         /**
+         * <p>Month</p>
+         * 
          * <strong>example:</strong>
          * <p>202502</p>
          */
         @NameInMap("BillMonth")
         public String billMonth;
 
+        /**
+         * <p>File Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>账单202502021112</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
         /**
+         * <p>File URL</p>
+         * 
          * <strong>example:</strong>
          * <p>aps.ailyun.com/file/download?resourceId=1234&amp;type=1</p>
          */
         @NameInMap("FileUrl")
         public String fileUrl;
 
+        /**
+         * <p>OSS file push status. 1: Pending, 2: Processing, 3: Succeeded</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>Type: customer acquisition, channel expansion</p>
+         * 
+         * <strong>example:</strong>
+         * <p>拓渠</p>
+         */
         @NameInMap("Type")
         public String type;
 

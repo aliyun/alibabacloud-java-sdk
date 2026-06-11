@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBillDetailFileListRequest extends TeaModel {
     /**
+     * <p>Month</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,21 +14,57 @@ public class GetBillDetailFileListRequest extends TeaModel {
     @NameInMap("BillMonth")
     public String billMonth;
 
+    /**
+     * <p>The AccessKeyID used to upload files to OSS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourAccessKeyID</p>
+     */
     @NameInMap("OssAccessKeyId")
     public String ossAccessKeyId;
 
+    /**
+     * <p>The AccessKeySecret used to upload files to OSS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourAccessKeySecret</p>
+     */
     @NameInMap("OssAccessKeySecret")
     public String ossAccessKeySecret;
 
+    /**
+     * <p>OSS bucket.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourBucketName</p>
+     */
     @NameInMap("OssBucketName")
     public String ossBucketName;
 
+    /**
+     * <p>The Region of the edge zone where the OSS bucket corresponding to the file sharing is located.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://oss-cn-beijing.aliyuncs.com">http://oss-cn-beijing.aliyuncs.com</a></p>
+     */
     @NameInMap("OssEndpoint")
     public String ossEndpoint;
 
+    /**
+     * <p>The Region to which the current OSS bucket belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("OssRegion")
     public String ossRegion;
 
+    /**
+     * <p>STS token used to upload files to OSS</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourSecurityToken</p>
+     */
     @NameInMap("OssSecurityToken")
     public String ossSecurityToken;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetCustomerOrderListResponseBody extends TeaModel {
     /**
+     * <p>Access denied details</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -12,16 +14,23 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Status Code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Returned data</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetCustomerOrderListResponseBodyData> data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>400</p>
      */
@@ -29,6 +38,8 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -36,6 +47,8 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -43,6 +56,8 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>Page size</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -50,6 +65,8 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>2103a30617045934095083027d88c5</p>
      */
@@ -57,6 +74,8 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -64,6 +83,8 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Total number of entries</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -157,6 +178,8 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
 
     public static class GetCustomerOrderListResponseBodyData extends TeaModel {
         /**
+         * <p>Order discount</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -164,6 +187,8 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         public Double amountDiscount;
 
         /**
+         * <p>Actual payment amount</p>
+         * 
          * <strong>example:</strong>
          * <p>29137</p>
          */
@@ -171,6 +196,8 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         public Double amountDue;
 
         /**
+         * <p>Creation Time</p>
+         * 
          * <strong>example:</strong>
          * <p>2019-01-24 14:20:40</p>
          */
@@ -178,16 +205,26 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         public String createdAt;
 
         /**
+         * <p>Customer Account</p>
+         * 
          * <strong>example:</strong>
          * <p>test_123</p>
          */
         @NameInMap("CustomerAccount")
         public String customerAccount;
 
+        /**
+         * <p>Customer categorization</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C类</p>
+         */
         @NameInMap("CustomerClassification")
         public String customerClassification;
 
         /**
+         * <p>Customer UID</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
@@ -195,6 +232,8 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         public Long customerUid;
 
         /**
+         * <p>Coupon amount</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -202,6 +241,8 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         public Double deductedAmountByCoupons;
 
         /**
+         * <p>Discounted price</p>
+         * 
          * <strong>example:</strong>
          * <p>29137</p>
          */
@@ -209,6 +250,8 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         public Double discountedPrice;
 
         /**
+         * <p>Order ID</p>
+         * 
          * <strong>example:</strong>
          * <p>236414227150922</p>
          */
@@ -216,6 +259,8 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         public Long orderId;
 
         /**
+         * <p>Order status. Values include:<br>1: Unpaid<br>2: Paid<br>3: Voided</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -223,6 +268,8 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         public Integer orderStatus;
 
         /**
+         * <p>Order type. Values include: BUY, UPGRADE, DOWNGRADE, RENEW, REFUND, OTHERS</p>
+         * 
          * <strong>example:</strong>
          * <p>BUY</p>
          */
@@ -230,6 +277,8 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         public String orderType;
 
         /**
+         * <p>Payment Time</p>
+         * 
          * <strong>example:</strong>
          * <p>2019-01-24 14:20:40</p>
          */
@@ -237,6 +286,8 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         public String paidAt;
 
         /**
+         * <p>Payment type:<br>1: Non-agent payment<br>2: Agent payment</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -244,6 +295,8 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         public Integer payType;
 
         /**
+         * <p>Original Price/List Price</p>
+         * 
          * <strong>example:</strong>
          * <p>29137</p>
          */
@@ -251,6 +304,8 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         public Double price;
 
         /**
+         * <p>Product code</p>
+         * 
          * <strong>example:</strong>
          * <p>slb</p>
          */
@@ -258,6 +313,8 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         public String productCode;
 
         /**
+         * <p>Product name</p>
+         * 
          * <strong>example:</strong>
          * <p>slb</p>
          */
@@ -265,12 +322,17 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         public String productName;
 
         /**
+         * <p>Opportunity ID</p>
+         * 
          * <strong>example:</strong>
          * <p>202502230421</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>Customer-facing staff</p>
+         */
         @NameInMap("RamAccountForCustomerManagers")
         public java.util.List<String> ramAccountForCustomerManagers;
 

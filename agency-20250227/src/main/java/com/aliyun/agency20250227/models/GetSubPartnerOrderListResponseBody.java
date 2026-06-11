@@ -5,19 +5,32 @@ import com.aliyun.tea.*;
 
 public class GetSubPartnerOrderListResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Returned data</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetSubPartnerOrderListResponseBodyData> data;
 
+    /**
+     * <p>Message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -25,6 +38,8 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>Paging size</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -41,6 +56,8 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -48,6 +65,8 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>TotalCount indicates the total amount of data under the current request conditions. This parameter is optional and is not returned by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -125,6 +144,8 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
 
     public static class GetSubPartnerOrderListResponseBodyData extends TeaModel {
         /**
+         * <p>Order discount</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9</p>
          */
@@ -132,6 +153,8 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         public Double amountDiscount;
 
         /**
+         * <p>Actual payment amount</p>
+         * 
          * <strong>example:</strong>
          * <p>3750</p>
          */
@@ -139,16 +162,26 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         public Double amountDue;
 
         /**
+         * <p>Creation Time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-07-07 07:52:22</p>
          */
         @NameInMap("CreatedAt")
         public String createdAt;
 
+        /**
+         * <p>Customer classification</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C类</p>
+         */
         @NameInMap("CustomerClassification")
         public String customerClassification;
 
         /**
+         * <p>Coupon amount</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -156,6 +189,8 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         public Double deductedAmountByCoupons;
 
         /**
+         * <p>Discounted price</p>
+         * 
          * <strong>example:</strong>
          * <p>3750</p>
          */
@@ -163,6 +198,8 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         public Double discountedPrice;
 
         /**
+         * <p>Order ID</p>
+         * 
          * <strong>example:</strong>
          * <p>236414227150922</p>
          */
@@ -170,6 +207,13 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         public Long orderId;
 
         /**
+         * <p>Order status:  </p>
+         * <ul>
+         * <li>1 Unpaid  </li>
+         * <li>2 Abandoned  </li>
+         * <li>3 Paid</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -177,6 +221,16 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         public Integer orderStatus;
 
         /**
+         * <p>Order type:  </p>
+         * <ul>
+         * <li>BUY: New purchase  </li>
+         * <li>UPGRADE: Upgrade  </li>
+         * <li>DOWNGRADE: Downgrade  </li>
+         * <li>RENEW: Renewal  </li>
+         * <li>REFUND: Refund  </li>
+         * <li>OTHERS: Others</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>BUY</p>
          */
@@ -184,6 +238,8 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         public String orderType;
 
         /**
+         * <p>Payment Time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-07-07 07:52:22</p>
          */
@@ -191,6 +247,8 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         public String paidAt;
 
         /**
+         * <p>Payment type:<br>1: Non-agent payment<br>2: Agent payment</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -198,6 +256,8 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         public Integer payType;
 
         /**
+         * <p>Original price/List price</p>
+         * 
          * <strong>example:</strong>
          * <p>3750</p>
          */
@@ -205,26 +265,44 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         public Double price;
 
         /**
+         * <p>Product code</p>
+         * 
          * <strong>example:</strong>
          * <p>ecs</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
+        /**
+         * <p>Product name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>弹性计算</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 
         /**
+         * <p>Opportunity ID</p>
+         * 
          * <strong>example:</strong>
          * <p>202502233443</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>Sub-partner Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx有限公司</p>
+         */
         @NameInMap("SubPartnerName")
         public String subPartnerName;
 
         /**
+         * <p>Secondary partner UID</p>
+         * 
          * <strong>example:</strong>
          * <p>1123132</p>
          */
