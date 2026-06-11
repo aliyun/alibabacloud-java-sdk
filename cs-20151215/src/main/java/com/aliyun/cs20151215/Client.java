@@ -1375,7 +1375,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>A node pool is a logical collection of nodes that share the same properties, enabling unified management and O&amp;M operations such as node upgrades and Auto Scaling. You can further leverage the automated O&amp;M capabilities of node pools to reduce operational costs—for example, by automatically patching OS CVE vulnerabilities, automatically recovering failed nodes, and automatically upgrading kubelet and containerd versions. You can invoke CreateClusterNodePool to create a node pool for a cluster.</p>
+     * <p>A node pool is a logical group of nodes that share the same properties. Node pools allow you to manage nodes and perform operations and maintenance (O&amp;M) tasks, such as upgrades and auto scaling, on them as a group. You can use the automated O&amp;M features of a node pool to automatically fix operating system (OS) Common Vulnerabilities and Exposures (CVE) vulnerabilities, recover failed nodes, and upgrade kubelet and containerd versions. This helps reduce your O&amp;M costs. Call the CreateClusterNodePool operation to create a node pool for a cluster.</p>
      * 
      * @param request CreateClusterNodePoolRequest
      * @param headers map
@@ -1469,7 +1469,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>A node pool is a logical collection of nodes that share the same properties, enabling unified management and O&amp;M operations such as node upgrades and Auto Scaling. You can further leverage the automated O&amp;M capabilities of node pools to reduce operational costs—for example, by automatically patching OS CVE vulnerabilities, automatically recovering failed nodes, and automatically upgrading kubelet and containerd versions. You can invoke CreateClusterNodePool to create a node pool for a cluster.</p>
+     * <p>A node pool is a logical group of nodes that share the same properties. Node pools allow you to manage nodes and perform operations and maintenance (O&amp;M) tasks, such as upgrades and auto scaling, on them as a group. You can use the automated O&amp;M features of a node pool to automatically fix operating system (OS) Common Vulnerabilities and Exposures (CVE) vulnerabilities, recover failed nodes, and upgrade kubelet and containerd versions. This helps reduce your O&amp;M costs. Call the CreateClusterNodePool operation to create a node pool for a cluster.</p>
      * 
      * @param request CreateClusterNodePoolRequest
      * @return CreateClusterNodePoolResponse
@@ -2959,7 +2959,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the DescribeClusterNodePoolDetail operation with a node pool ID to query the configuration of a specific node pool in a cluster.</p>
+     * <p>You can call the DescribeClusterNodePoolDetail operation to query the details of a node pool in a cluster.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2985,7 +2985,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the DescribeClusterNodePoolDetail operation with a node pool ID to query the configuration of a specific node pool in a cluster.</p>
+     * <p>You can call the DescribeClusterNodePoolDetail operation to query the details of a node pool in a cluster.</p>
      * @return DescribeClusterNodePoolDetailResponse
      */
     public DescribeClusterNodePoolDetailResponse describeClusterNodePoolDetail(String ClusterId, String NodepoolId) throws Exception {
@@ -2996,7 +2996,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists all node pools in a cluster.</p>
+     * <p>Queries the node pools in a cluster.</p>
      * 
      * @param request DescribeClusterNodePoolsRequest
      * @param headers map
@@ -3030,7 +3030,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists all node pools in a cluster.</p>
+     * <p>Queries the node pools in a cluster.</p>
      * 
      * @param request DescribeClusterNodePoolsRequest
      * @return DescribeClusterNodePoolsResponse
@@ -6148,7 +6148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the ModifyClusterNodePool API to update the configuration of a node pool by specifying its node pool ID.</p>
+     * <p>Call the ModifyClusterNodePool operation to update the configurations of a node pool.</p>
      * 
      * @param request ModifyClusterNodePoolRequest
      * @param headers map
@@ -6210,7 +6210,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the ModifyClusterNodePool API to update the configuration of a node pool by specifying its node pool ID.</p>
+     * <p>Call the ModifyClusterNodePool operation to update the configurations of a node pool.</p>
      * 
      * @param request ModifyClusterNodePoolRequest
      * @return ModifyClusterNodePoolResponse
@@ -7064,6 +7064,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.runClusterInspectWithOptions(clusterId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>执行节点上的运维操作</p>
+     * 
+     * @param request RunNodeOperationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RunNodeOperationResponse
+     */
+    public RunNodeOperationResponse runNodeOperationWithOptions(String clusterId, String nodepoolId, String nodeName, RunNodeOperationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.operationAction)) {
+            body.put("operationAction", request.operationAction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operationArgs)) {
+            body.put("operationArgs", request.operationArgs);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RunNodeOperation"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/nodepools/" + com.aliyun.openapiutil.Client.getEncodeParam(nodepoolId) + "/nodes/" + com.aliyun.openapiutil.Client.getEncodeParam(nodeName) + "/operation"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RunNodeOperationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>执行节点上的运维操作</p>
+     * 
+     * @param request RunNodeOperationRequest
+     * @return RunNodeOperationResponse
+     */
+    public RunNodeOperationResponse runNodeOperation(String clusterId, String nodepoolId, String nodeName, RunNodeOperationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.runNodeOperationWithOptions(clusterId, nodepoolId, nodeName, request, headers, runtime);
     }
 
     /**
