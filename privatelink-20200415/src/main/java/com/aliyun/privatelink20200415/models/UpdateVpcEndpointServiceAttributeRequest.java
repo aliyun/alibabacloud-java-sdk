@@ -4,17 +4,22 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class UpdateVpcEndpointServiceAttributeRequest extends TeaModel {
+    /**
+     * <p>The remote regions to add to the list of supported regions.</p>
+     */
     @NameInMap("AddSupportedRegionSet")
     public java.util.List<String> addSupportedRegionSet;
 
     /**
-     * <p>The protocol. Valid values:</p>
+     * <p>The IP version. Valid values:</p>
      * <ul>
-     * <li><strong>IPv4</strong></li>
-     * <li><strong>DualStack</strong></li>
+     * <li><p><strong>IPv4</strong>: IPv4.</p>
+     * </li>
+     * <li><p><strong>DualStack</strong>: dual-stack.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can set the protocol to DualStack only for endpoint services whose backend resource type is NLB.</p>
+     * <p>Only endpoint services that use an NLB or GWLB instance as the service resource support the <strong>DualStack</strong> IP version.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -24,10 +29,12 @@ public class UpdateVpcEndpointServiceAttributeRequest extends TeaModel {
     public String addressIpVersion;
 
     /**
-     * <p>Specifies whether to automatically accept endpoint connection requests. Valid values:</p>
+     * <p>Specifies whether to automatically accept endpoint connections. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: automatically accepts endpoint connections.</p>
+     * </li>
+     * <li><p><strong>false</strong>: does not automatically accept endpoint connections.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,8 +44,8 @@ public class UpdateVpcEndpointServiceAttributeRequest extends TeaModel {
     public Boolean autoAcceptEnabled;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>A client-generated token that ensures the idempotence of the request.</p>
+     * <p>Your client must generate a unique token for each request. <strong>ClientToken</strong> can contain only ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
@@ -47,26 +54,31 @@ public class UpdateVpcEndpointServiceAttributeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The default maximum bandwidth of the endpoint connection. Unit: Mbit/s. Default value: <strong>3072</strong>.</p>
+     * <p>The default maximum connection bandwidth. The default value is <strong>3072</strong>. Unit: Mbps.</p>
      * <p>Valid values: <strong>100</strong> to <strong>10240</strong>.</p>
      * <blockquote>
-     * <p> You can specify this parameter only if you specify Classic Load Balancer (CLB) instances or Application Load Balancer (ALB) instances as service resources.</p>
+     * <p>You can set this parameter only if the service resource is a CLB or ALB instance, but not an NLB instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>200</p>
+     * <p>3072</p>
      */
     @NameInMap("ConnectBandwidth")
     public Integer connectBandwidth;
 
+    /**
+     * <p>The remote regions to remove from the list of supported regions.</p>
+     */
     @NameInMap("DeleteSupportedRegionSet")
     public java.util.List<String> deleteSupportedRegionSet;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><p><strong>true</strong>: performs a dry run. The system checks the required parameters, request format, and service limits. If the request fails the dry run, the system returns an error message. If the request passes the dry run, the system returns the <code>DryRunOperation</code> error code.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): sends a normal request. If the request passes the check, the system returns a 2xx HTTP status code and performs the operation.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -77,7 +89,7 @@ public class UpdateVpcEndpointServiceAttributeRequest extends TeaModel {
 
     /**
      * <p>The region ID of the endpoint service.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to get the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -96,7 +108,7 @@ public class UpdateVpcEndpointServiceAttributeRequest extends TeaModel {
     public String serviceDescription;
 
     /**
-     * <p>The endpoint service ID.</p>
+     * <p>The ID of the endpoint service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -106,10 +118,12 @@ public class UpdateVpcEndpointServiceAttributeRequest extends TeaModel {
     public String serviceId;
 
     /**
-     * <p>Specifies whether to enable IPv6. Valid values:</p>
+     * <p>Specifies whether to enable IPv6 for the endpoint service. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><p><strong>true</strong>: Enables IPv6.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): Disables IPv6.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -120,10 +134,12 @@ public class UpdateVpcEndpointServiceAttributeRequest extends TeaModel {
     public Boolean serviceSupportIPv6;
 
     /**
-     * <p>Specifies whether to first resolve the domain name of the nearest endpoint that is associated with the endpoint service. Valid values:</p>
+     * <p>Specifies whether to enable zone affinity for the endpoint service. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong> (default)</li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong> (default): Enables zone affinity.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Disables zone affinity.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

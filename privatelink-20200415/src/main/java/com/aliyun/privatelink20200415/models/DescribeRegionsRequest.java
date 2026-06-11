@@ -13,6 +13,24 @@ public class DescribeRegionsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The regions in which PrivateLink is available vary based on the service resource type. When you query the regions in which PrivateLink is available, you can specify a service resource type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>slb</strong> (default): indicates that the service resource type is Classic Load Balancer (CLB).</p>
+     * </li>
+     * <li><p><strong>alb</strong>: indicates that the service resource type is Application Load Balancer (ALB).</p>
+     * </li>
+     * <li><p><strong>nlb</strong>: indicates that the service resource type is Network Load Balancer (NLB).</p>
+     * </li>
+     * <li><p><strong>gwlb</strong>: indicates that the service resource type is Gateway Load Balancer (GWLB).</p>
+     * </li>
+     * <li><p><strong>ALL</strong>: indicates all of the preceding service resource types.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>slb</p>
+     */
     @NameInMap("ServiceResourceType")
     public String serviceResourceType;
 

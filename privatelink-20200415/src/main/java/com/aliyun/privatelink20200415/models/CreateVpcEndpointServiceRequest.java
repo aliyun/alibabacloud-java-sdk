@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateVpcEndpointServiceRequest extends TeaModel {
     /**
-     * <p>The protocol. Valid values:</p>
+     * <p>The IP version. Valid values:</p>
      * <ul>
-     * <li><strong>IPv4</strong> (default)</li>
-     * <li><strong>DualStack</strong></li>
-     * </ul>
-     * <blockquote>
-     * <p> You can set the protocol to DualStack only for endpoint services whose backend resource type is NLB. An endpoint service supports dual-stack only if its backend resources support dual-stack.</p>
+     * <li><strong>IPv4</strong> (default): IPv4.</li>
+     * <li><strong>DualStack</strong>: dual stack.<blockquote>
+     * <p>Only endpoint services whose backend resource type is nlb or gwlb support DualStack. If the endpoint service supports dual stack, its backend resources must also support dual stack.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>IPv4</p>
@@ -23,8 +23,10 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically accept endpoint connection requests. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><p><strong>true</strong>: automatically accepts endpoint connection requests.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): does not automatically accept endpoint connection requests.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,7 +37,7 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. <strong>ClientToken</strong> can contain only ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
@@ -44,10 +46,12 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request.</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><p><strong>true</strong>: performs only a dry run. The system checks the request for required parameters, request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,10 +61,12 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The payer. Valid values:</p>
+     * <p>The payer of the endpoint service. Valid values:</p>
      * <ul>
-     * <li><strong>Endpoint</strong>: service consumer</li>
-     * <li><strong>EndpointService</strong>: service provider</li>
+     * <li><p><strong>Endpoint</strong>: the service consumer.</p>
+     * </li>
+     * <li><p><strong>EndpointService</strong>: the service provider.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,8 +76,8 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
     public String payer;
 
     /**
-     * <p>The region ID of the endpoint service.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region where the endpoint service is created.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/469325.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,13 +87,13 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The service resources of the endpoint service. You can create at most 10 resources. After the resource is created, you can continue to add service resources to the endpoint.</p>
+     * <p>The list of service resources of the endpoint service. You can add at most 10 service resources when you create the endpoint service. After the endpoint service is created, you can continue to add service resources.</p>
      */
     @NameInMap("Resource")
     public java.util.List<CreateVpcEndpointServiceRequestResource> resource;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmy*****</p>
@@ -107,12 +113,17 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
     /**
      * <p>The type of the service resource. Valid values:</p>
      * <ul>
-     * <li><strong>slb</strong>: Classic Load Balancer (CLB) instance</li>
-     * <li><strong>alb</strong>: Application Load Balancer (ALB) instance</li>
-     * <li><strong>nlb</strong>: Network Load Balancer (NLB) instance</li>
+     * <li><p><strong>slb</strong>: a Classic Load Balancer (CLB) instance.</p>
+     * </li>
+     * <li><p><strong>alb</strong>: an Application Load Balancer (ALB) instance.</p>
+     * </li>
+     * <li><p><strong>nlb</strong>: a Network Load Balancer (NLB) instance.</p>
+     * </li>
+     * <li><p><strong>gwlb</strong>: a Gateway Load Balancer (GWLB) instance.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You cannot access TCP/SSL listeners configured for NLB instances.</p>
+     * <p>TCPSSL listeners of NLB instances cannot be accessed.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -122,10 +133,12 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
     public String serviceResourceType;
 
     /**
-     * <p>Specifies whether to enable IPv6 for the endpoint service. Valid values:</p>
+     * <p>Specifies whether the endpoint service supports IPv6. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><p><strong>true</strong>: yes.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): no.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -135,20 +148,25 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
     @Deprecated
     public Boolean serviceSupportIPv6;
 
+    /**
+     * <p>The list of regions in which the endpoint service is available. Service consumers can initiate endpoint connections from the regions in the list.</p>
+     */
     @NameInMap("SupportedRegionList")
     public java.util.List<String> supportedRegionList;
 
     /**
-     * <p>The tags to add to the resource.</p>
+     * <p>The tag list.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateVpcEndpointServiceRequestTag> tag;
 
     /**
-     * <p>Specifies whether to first resolve the domain name of the nearest endpoint that is associated with the endpoint service. Valid values:</p>
+     * <p>Specifies whether to enable zone affinity for endpoint domain name resolution. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><p><strong>true</strong>: yes.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): no.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -286,15 +304,17 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The type of the service resource that is added to the endpoint service. You can add up to 20 service resources to the endpoint service. Valid values:</p>
+         * <p>The type of the service resource that is added to the endpoint service. You can add at most 20 service resources to an endpoint service. Valid values:</p>
          * <ul>
-         * <li><strong>slb</strong>: CLB instance</li>
-         * <li><strong>alb</strong>: ALB instance</li>
-         * <li><strong>nlb</strong>: NLB instance</li>
+         * <li><p><strong>slb</strong>: a Classic Load Balancer (CLB) instance.</p>
+         * </li>
+         * <li><p><strong>alb</strong>: an Application Load Balancer (ALB) instance.</p>
+         * </li>
+         * <li><p><strong>nlb</strong>: a Network Load Balancer (NLB) instance.</p>
+         * </li>
+         * <li><p><strong>gwlb</strong>: a Gateway Load Balancer (GWLB) instance.</p>
+         * </li>
          * </ul>
-         * <blockquote>
-         * <p> In regions where PrivateLink is supported, CLB instances deployed in virtual private clouds (VPCs) can serve as the service resources of the endpoint service. You cannot access TCP/SSL listeners configured for NLB instances.</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>slb</p>
@@ -303,7 +323,7 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The zone ID of the cluster.</p>
+         * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-huhehaote-a</p>
@@ -344,8 +364,8 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
 
     public static class CreateVpcEndpointServiceRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be at most 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -354,8 +374,8 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be at most 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>prod</p>

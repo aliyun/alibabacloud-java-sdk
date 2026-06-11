@@ -17,8 +17,10 @@ public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
      * <ul>
-     * <li>If this is your first request or no next requests are to be sent, you do not need to specify this parameter.</li>
-     * <li>If a next request is to be sent, you must specify the token that is obtained from the previous request as the value of <strong>NextToken</strong>.</li>
+     * <li><p>If this is your first request or no next requests are to be sent, you do not need to specify this parameter.</p>
+     * </li>
+     * <li><p>If a next request is to be sent, you must specify the token that is obtained from the previous request as the value of <strong>NextToken</strong>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,8 +48,10 @@ public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The type of the resource. Valid values:</p>
      * <ul>
-     * <li><strong>vpcendpoint</strong>: endpoint</li>
-     * <li><strong>vpcendpointservice</strong>: endpoint service</li>
+     * <li><p><strong>vpcendpoint</strong>: endpoint</p>
+     * </li>
+     * <li><p><strong>vpcendpointservice</strong>: endpoint service</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

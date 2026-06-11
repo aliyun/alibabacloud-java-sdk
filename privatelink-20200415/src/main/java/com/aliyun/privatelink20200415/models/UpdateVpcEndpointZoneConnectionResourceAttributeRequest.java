@@ -17,8 +17,10 @@ public class UpdateVpcEndpointZoneConnectionResourceAttributeRequest extends Tea
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><p><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,8 +53,10 @@ public class UpdateVpcEndpointZoneConnectionResourceAttributeRequest extends Tea
     /**
      * <p>The resource allocation mode. You can change the resource allocation mode only if the endpoint connection is in the <strong>Disconnected</strong> state. Valid values:</p>
      * <ul>
-     * <li><strong>Auto</strong>: automatically and randomly allocates service resources. In this mode, the specified service resource is deleted.</li>
-     * <li><strong>Manual</strong>: manually allocates service resources. If you set the value to Manual, you must also specify the <strong>ResourceId</strong> and <strong>ResourceType</strong> parameters.</li>
+     * <li><p><strong>Auto</strong>: automatically and randomly allocates service resources. In this mode, the specified service resource is deleted.</p>
+     * </li>
+     * <li><p><strong>Manual</strong>: manually allocates service resources. If you set the value to Manual, you must also specify the <strong>ResourceId</strong> and <strong>ResourceType</strong> parameters.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,11 +80,13 @@ public class UpdateVpcEndpointZoneConnectionResourceAttributeRequest extends Tea
     /**
      * <p>The migration mode of the service resource. Valid values:</p>
      * <ul>
-     * <li><strong>Graceful</strong>: smooth migration. Service resources in the zone are smoothly migrated.</li>
-     * <li><strong>Force</strong>: forced migration. Service resources in the zone are forcefully migrated.</li>
+     * <li><p><strong>Graceful</strong>: smooth migration. Service resources in the zone are smoothly migrated.</p>
+     * </li>
+     * <li><p><strong>Force</strong>: forced migration. Service resources in the zone are forcefully migrated.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You need to specify this parameter only if you want to migrate service resources and the endpoint connection is in the <strong>Connected</strong> state. If you specify this parameter, you must also specify the <strong>ResourceId</strong> and <strong>ResourceType</strong> parameters.</p>
+     * <p>You need to specify this parameter only if you want to migrate service resources and the endpoint connection is in the <strong>Connected</strong> state. If you specify this parameter, you must also specify the <strong>ResourceId</strong> and <strong>ResourceType</strong> parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -92,8 +98,10 @@ public class UpdateVpcEndpointZoneConnectionResourceAttributeRequest extends Tea
     /**
      * <p>The type of the service resource. Valid values:</p>
      * <ul>
-     * <li><strong>slb</strong>: a CLB instance that supports PrivateLink. In addition, the CLB instance is deployed in a VPC.</li>
-     * <li><strong>alb</strong>: an Application Load Balancer (ALB) instance that supports PrivateLink. In addition, the ALB instance is deployed in a VPC.</li>
+     * <li><p><strong>slb</strong>: a CLB instance that supports PrivateLink. In addition, the CLB instance is deployed in a VPC.</p>
+     * </li>
+     * <li><p><strong>alb</strong>: an Application Load Balancer (ALB) instance that supports PrivateLink. In addition, the ALB instance is deployed in a VPC.</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <p>If <strong>ResourceAllocateMode</strong> is set to <strong>Mannual</strong>, or <strong>ResourceReplaceMode</strong> is set, this parameter is required.</p>

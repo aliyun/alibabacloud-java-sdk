@@ -27,8 +27,10 @@ public class ChangeResourceGroupRequest extends TeaModel {
     /**
      * <p>The type of resource. Valid values:</p>
      * <ul>
-     * <li><strong>VpcEndpoint</strong>: endpoint</li>
-     * <li><strong>VpcEndpointService</strong>: endpoint service</li>
+     * <li><p><strong>VpcEndpoint</strong>: endpoint</p>
+     * </li>
+     * <li><p><strong>VpcEndpointService</strong>: endpoint service</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

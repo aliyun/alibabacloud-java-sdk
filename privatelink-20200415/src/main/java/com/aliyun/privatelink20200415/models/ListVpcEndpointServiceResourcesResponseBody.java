@@ -16,8 +16,10 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
     /**
      * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
      * <ul>
-     * <li>If no value is returned for <strong>NextToken</strong>, no next requests are performed.</li>
-     * <li>If a value is returned for <strong>NextToken</strong>, the value can be used in the next request to retrieve a new page of results.</li>
+     * <li><p>If no value is returned for <strong>NextToken</strong>, no next requests are performed.</p>
+     * </li>
+     * <li><p>If a value is returned for <strong>NextToken</strong>, the value can be used in the next request to retrieve a new page of results.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,8 +84,10 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether automatic resource allocation is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -140,8 +144,10 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether IPv6 is enabled for the endpoint service. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

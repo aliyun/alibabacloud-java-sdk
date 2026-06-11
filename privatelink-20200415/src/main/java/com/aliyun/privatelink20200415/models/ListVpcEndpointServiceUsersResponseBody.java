@@ -16,8 +16,10 @@ public class ListVpcEndpointServiceUsersResponseBody extends TeaModel {
     /**
      * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
      * <ul>
-     * <li>If no value is returned for <strong>NextToken</strong>, no next requests are performed.</li>
-     * <li>If a value is returned for <strong>NextToken</strong>, the value can be used in the next request to retrieve a new page of results.</li>
+     * <li><p>If no value is returned for <strong>NextToken</strong>, no next requests are performed.</p>
+     * </li>
+     * <li><p>If a value is returned for <strong>NextToken</strong>, the value can be used in the next request to retrieve a new page of results.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

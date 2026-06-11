@@ -26,8 +26,10 @@ public class ListVpcEndpointSecurityGroupsRequest extends TeaModel {
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
      * <ul>
-     * <li>If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</li>
-     * <li>If a next request is to be performed, set the parameter to the value of <strong>NextToken</strong> that is returned from the last call.</li>
+     * <li><p>If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</p>
+     * </li>
+     * <li><p>If a next request is to be performed, set the parameter to the value of <strong>NextToken</strong> that is returned from the last call.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

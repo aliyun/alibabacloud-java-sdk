@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListVpcEndpointZonesRequest extends TeaModel {
     /**
-     * <p>The ID of the endpoint for which you want to query zones.</p>
-     * <p>After you specify an endpoint ID, the system queries the zones of the specified endpoint.</p>
+     * <p>The ID of the endpoint.</p>
+     * <p>After you specify the endpoint ID, the system queries the zones of the endpoint.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class ListVpcEndpointZonesRequest extends TeaModel {
     public String endpointId;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>50</strong>.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>1000</strong>. Default value: <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -25,10 +25,12 @@ public class ListVpcEndpointZonesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The token that is used to retrieve the next page of results. Valid values:</p>
      * <ul>
-     * <li>If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</li>
-     * <li>If a next request is to be performed, set the parameter to the value of <strong>NextToken</strong> that is returned from the last call.</li>
+     * <li><p>If this is your first query, you do not need to specify this parameter.</p>
+     * </li>
+     * <li><p>If a next page exists, set the value to the <strong>NextToken</strong> value that is returned from the previous call.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,8 +40,8 @@ public class ListVpcEndpointZonesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region ID of the endpoint.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

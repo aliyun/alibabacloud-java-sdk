@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
     /**
-     * <p>The protocol. Valid values:</p>
+     * <p>The IP address version. Valid values:</p>
      * <ul>
-     * <li><strong>IPv4</strong></li>
-     * <li><strong>DualStack</strong></li>
+     * <li><p><strong>IPv4</strong>: The IPv4 address family.</p>
+     * </li>
+     * <li><p><strong>DualStack</strong>: The dual stack IP address family.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +20,12 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
     public String addressIpVersion;
 
     /**
-     * <p>Indicates whether endpoint connection requests are automatically accepted. Valid values:</p>
+     * <p>Specifies whether to automatically accept endpoint connections. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: Endpoint connections are automatically accepted.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Endpoint connections are not automatically accepted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,16 +35,16 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
     public Boolean autoAcceptEnabled;
 
     /**
-     * <p>The default maximum bandwidth of the endpoint connection. Unit: Mbit/s. Valid values: <strong>100</strong> to 10240.</p>
+     * <p>The default maximum bandwidth of an endpoint connection, in Mbps. Valid values are <strong>100 to 10,240</strong>.</p>
      * 
      * <strong>example:</strong>
-     * <p>1024</p>
+     * <p>3072</p>
      */
     @NameInMap("ConnectBandwidth")
     public Integer connectBandwidth;
 
     /**
-     * <p>The time when the endpoint service was created.</p>
+     * <p>The time the service was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-01-02T19:11:12Z</p>
@@ -49,7 +53,7 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The maximum bandwidth of the endpoint connection. Unit: Mbit/s.</p>
+     * <p>The maximum bandwidth of the endpoint connection, in Mbps.</p>
      * 
      * <strong>example:</strong>
      * <p>1024</p>
@@ -58,7 +62,7 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
     public Integer maxBandwidth;
 
     /**
-     * <p>The minimum bandwidth of the endpoint connection. Unit: Mbit/s.</p>
+     * <p>The minimum bandwidth of the endpoint connection, in Mbps.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -67,10 +71,12 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
     public Integer minBandwidth;
 
     /**
-     * <p>The payer of the endpoint service. Valid values:</p>
+     * <p>The party that pays for the service. Valid values:</p>
      * <ul>
-     * <li><strong>Endpoint</strong>: the service consumer.</li>
-     * <li><strong>EndpointService</strong>: the service provider.</li>
+     * <li><p><strong>Endpoint</strong>: The service consumer.</p>
+     * </li>
+     * <li><p><strong>EndpointService</strong>: The service provider.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -80,7 +86,7 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
     public String payer;
 
     /**
-     * <p>The region ID of the endpoint service.</p>
+     * <p>The region where the service is deployed.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-huhehaote</p>
@@ -98,7 +104,7 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmy*****</p>
@@ -107,10 +113,12 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The service status of the endpoint service. Valid values:</p>
+     * <p>The business status of the service. Valid values:</p>
      * <ul>
-     * <li><strong>Normal</strong>: The endpoint service runs as expected.</li>
-     * <li><strong>FinancialLocked</strong>: The endpoint service is locked due to overdue payments.</li>
+     * <li><p><strong>Normal</strong>: The service is operating normally.</p>
+     * </li>
+     * <li><p><strong>FinancialLocked</strong>: The endpoint service is locked due to an overdue payment.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -120,7 +128,7 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
     public String serviceBusinessStatus;
 
     /**
-     * <p>The description of the endpoint service.</p>
+     * <p>The description of the service.</p>
      * 
      * <strong>example:</strong>
      * <p>This is my EndpointService.</p>
@@ -129,7 +137,7 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
     public String serviceDescription;
 
     /**
-     * <p>The domain name of the endpoint service.</p>
+     * <p>The domain name of the service.</p>
      * 
      * <strong>example:</strong>
      * <p>epsrv-hp3vpx8yqxblby3i****.cn-huhehaote.privatelink.aliyuncs.com</p>
@@ -138,7 +146,7 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
     public String serviceDomain;
 
     /**
-     * <p>The endpoint service ID.</p>
+     * <p>The ID of the service.</p>
      * 
      * <strong>example:</strong>
      * <p>epsrv-hp3vpx8yqxblby3i****</p>
@@ -147,7 +155,7 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
     public String serviceId;
 
     /**
-     * <p>The name of the endpoint service.</p>
+     * <p>The name of the service.</p>
      * 
      * <strong>example:</strong>
      * <p>com.aliyuncs.privatelink.cn-huhehaote.epsrv-hp3vpx8yqxblby3i****</p>
@@ -158,8 +166,14 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
     /**
      * <p>The type of the service resource. Valid values:</p>
      * <ul>
-     * <li><strong>slb</strong>: a CLB instance.</li>
-     * <li><strong>alb</strong>: an ALB instance.</li>
+     * <li><p><strong>slb</strong>: The service resource is a Classic Load Balancer (CLB).</p>
+     * </li>
+     * <li><p><strong>alb</strong>: The service resource is an Application Load Balancer (ALB).</p>
+     * </li>
+     * <li><p><strong>nlb</strong>: The service resource is a Network Load Balancer (NLB).</p>
+     * </li>
+     * <li><p><strong>gwlb</strong>: The service resource is a Gateway Load Balancer (GWLB).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -169,13 +183,16 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
     public String serviceResourceType;
 
     /**
-     * <p>The state of the endpoint service. Valid values:</p>
+     * <p>The status of the service. Valid values:</p>
      * <ul>
-     * <li><strong>Creating</strong>: The endpoint service is being created.</li>
-     * <li><strong>Pending</strong>: The endpoint service is being modified.</li>
-     * <li><strong>Active</strong>: The endpoint service is available.</li>
-     * <li><strong>Deleting</strong>: The endpoint service is being deleted.</li>
-     * <li><strong>Inactive</strong>: The endpoint service is unavailable.</li>
+     * <li><p><strong>Creating</strong>: The service is being created.</p>
+     * </li>
+     * <li><p><strong>Pending</strong>: The service is being updated.</p>
+     * </li>
+     * <li><p><strong>Active</strong>: The service is available.</p>
+     * </li>
+     * <li><p><strong>Deleting</strong>: The service is being deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -185,10 +202,12 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
     public String serviceStatus;
 
     /**
-     * <p>Specifies whether the endpoint service supports IPv6. Valid values:</p>
+     * <p>Specifies whether the service supports IPv6. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><p><strong>true</strong>: The service supports IPv6.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): The service does not support IPv6.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -199,8 +218,13 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
     public Boolean serviceSupportIPv6;
 
     /**
-     * <p>The type of the endpoint.</p>
-     * <p>Only <strong>Interface</strong> is returned. The value indicates the interface endpoint. Then, you can specify ALB and CLB instances as service resources for the endpoint service.</p>
+     * <p>The endpoint type.</p>
+     * <ul>
+     * <li><p><strong>Interface</strong>: An interface endpoint. You can add Classic Load Balancer (CLB), Application Load Balancer (ALB), and Network Load Balancer (NLB) instances as service resources.</p>
+     * </li>
+     * <li><p><strong>GatewayLoadBalancer</strong>: A gateway endpoint. You can add Gateway Load Balancer (GWLB) instances as service resources.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Interface</p>
@@ -208,14 +232,19 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
     @NameInMap("ServiceType")
     public String serviceType;
 
+    /**
+     * <p>The regions where the service is supported. Service consumers can create endpoint connections to the service from these regions.</p>
+     */
     @NameInMap("SupportedRegionSet")
     public java.util.List<GetVpcEndpointServiceAttributeResponseBodySupportedRegionSet> supportedRegionSet;
 
     /**
-     * <p>Indicates whether the domain name of the nearest endpoint that is associated with the endpoint service is resolved first. Valid values:</p>
+     * <p>Specifies whether zone affinity is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong> (default)</li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong> (default): Zone affinity is enabled.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Zone affinity is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -225,7 +254,7 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
     public Boolean zoneAffinityEnabled;
 
     /**
-     * <p>The zones to which the service resources belong.</p>
+     * <p>The zones where the service is available.</p>
      */
     @NameInMap("Zones")
     public java.util.List<String> zones;
@@ -413,9 +442,39 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
     }
 
     public static class GetVpcEndpointServiceAttributeResponseBodySupportedRegionSet extends TeaModel {
+        /**
+         * <p>The business status of the endpoint service in the supported region. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Normal</strong>: The service is operating normally in the supported region.</p>
+         * </li>
+         * <li><p><strong>FinancialLocked</strong>: The endpoint service is locked due to an overdue payment.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("RegionBusinessStatus")
         public String regionBusinessStatus;
 
+        /**
+         * <p>The status of the endpoint service in the supported region. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Pending</strong>: The supported region is being modified.</p>
+         * </li>
+         * <li><p><strong>Available</strong>: The service is available in the supported region.</p>
+         * </li>
+         * <li><p><strong>Deleting</strong>: The supported region is being deleted.</p>
+         * </li>
+         * <li><p><strong>Failed</strong>: The service failed to be deployed in the supported region.</p>
+         * </li>
+         * <li><p><strong>Closed</strong>: The endpoint service is not available in the supported region.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("RegionServiceStatus")
         public String regionServiceStatus;
 
@@ -423,6 +482,12 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
         @Deprecated
         public String serviceRegionId;
 
+        /**
+         * <p>The ID of the supported region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("SupportedRegionId")
         public String supportedRegionId;
 

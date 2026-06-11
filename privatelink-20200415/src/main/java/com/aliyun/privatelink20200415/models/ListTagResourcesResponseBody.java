@@ -7,8 +7,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
      * <ul>
-     * <li>If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</li>
-     * <li>If a next request is to be performed, set the parameter to the value of NextToken that is returned from the last call.</li>
+     * <li><p>If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</p>
+     * </li>
+     * <li><p>If a next request is to be performed, set the parameter to the value of NextToken that is returned from the last call.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,8 +76,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         /**
          * <p>The type of the resource. Valid values:</p>
          * <ul>
-         * <li><strong>vpcendpoint</strong>: endpoint</li>
-         * <li><strong>vpcendpointservice</strong>: endpoint service</li>
+         * <li><p><strong>vpcendpoint</strong>: endpoint</p>
+         * </li>
+         * <li><p><strong>vpcendpointservice</strong>: endpoint service</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

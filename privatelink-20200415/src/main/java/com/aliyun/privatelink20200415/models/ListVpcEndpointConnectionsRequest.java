@@ -7,13 +7,20 @@ public class ListVpcEndpointConnectionsRequest extends TeaModel {
     /**
      * <p>The state of the endpoint connection. Valid values:</p>
      * <ul>
-     * <li><strong>Pending</strong>: The endpoint connection is being modified.</li>
-     * <li><strong>Connecting</strong>: The endpoint connection is being established.</li>
-     * <li><strong>Connected</strong>: The endpoint connection is established.</li>
-     * <li><strong>Disconnecting</strong>: The endpoint is being disconnected from the endpoint service.</li>
-     * <li><strong>Disconnected</strong>: The endpoint is disconnected from the endpoint service.</li>
-     * <li><strong>Deleting</strong>: The connection is being deleted.</li>
-     * <li><strong>ServiceDeleted</strong>: The corresponding endpoint service has been deleted.</li>
+     * <li><p><strong>Pending</strong>: The endpoint connection is being modified.</p>
+     * </li>
+     * <li><p><strong>Connecting</strong>: The endpoint connection is being established.</p>
+     * </li>
+     * <li><p><strong>Connected</strong>: The endpoint is connected to the endpoint service.</p>
+     * </li>
+     * <li><p><strong>Disconnecting</strong>: The endpoint is being disconnected from the endpoint service.</p>
+     * </li>
+     * <li><p><strong>Disconnected</strong>: The endpoint is disconnected from the endpoint service.</p>
+     * </li>
+     * <li><p><strong>Deleting</strong>: The endpoint connection is being deleted.</p>
+     * </li>
+     * <li><p><strong>ServiceDeleted</strong>: The corresponding endpoint service is deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +48,7 @@ public class ListVpcEndpointConnectionsRequest extends TeaModel {
     public Long endpointOwnerId;
 
     /**
-     * <p>The ID of the endpoint elastic network interface (ENI).</p>
+     * <p>The endpoint elastic network interface (ENI) ID.</p>
      * 
      * <strong>example:</strong>
      * <p>eni-hp32lk0pyv6o94hs****</p>
@@ -50,7 +57,7 @@ public class ListVpcEndpointConnectionsRequest extends TeaModel {
     public String eniId;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>50</strong>.</p>
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>1000</strong>. Default value: <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -59,10 +66,10 @@ public class ListVpcEndpointConnectionsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The token that is used for the next query. Valid values:</p>
      * <ul>
-     * <li>If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</li>
-     * <li>If a next request is to be performed, set the value to the value of <strong>NextToken</strong> that is returned from the last call.</li>
+     * <li>You do not need to specify this parameter for the first query or if no next query is to be sent.</li>
+     * <li>If a next query is to be sent, set the value to the value of <strong>NextToken</strong> that is returned from the last API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,8 +79,8 @@ public class ListVpcEndpointConnectionsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region ID of the endpoint connection.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the endpoint connections that you want to query.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,7 +90,7 @@ public class ListVpcEndpointConnectionsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the replaced service resource in smooth migration scenarios.</p>
+     * <p>The ID of the service resource that is replaced in the smooth migration scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>lb-hp32z1wp5peaoox2q****</p>

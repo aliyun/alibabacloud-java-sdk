@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     /**
-     * <p>The protocol. Valid values:</p>
+     * <p>The IP version. Valid values:</p>
      * <ul>
-     * <li><strong>IPv4</strong></li>
-     * <li><strong>DualStack</strong></li>
+     * <li><p><strong>IPv4</strong>: Supports IPv4 only.</p>
+     * </li>
+     * <li><p><strong>DualStack</strong>: Supports both IPv4 and IPv6.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     public String addressIpVersion;
 
     /**
-     * <p>The bandwidth of the endpoint connection. Unit: Mbit/s.</p>
+     * <p>The connection bandwidth of the endpoint, in Mbps.</p>
      * 
      * <strong>example:</strong>
      * <p>1024</p>
@@ -29,12 +31,20 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     /**
      * <p>The state of the endpoint connection. Valid values:</p>
      * <ul>
-     * <li><strong>Pending</strong>: The connection is being modified.</li>
-     * <li><strong>Connecting</strong>: The connection is being established.</li>
-     * <li><strong>Connected</strong>: The connection is established.</li>
-     * <li><strong>Disconnecting</strong>: The endpoint is being disconnected from the endpoint service.</li>
-     * <li><strong>Disconnected</strong>: The endpoint is disconnected from the endpoint service.</li>
-     * <li><strong>Deleting</strong>: The connection is being deleted.</li>
+     * <li><p><strong>Pending</strong>: The connection is being modified.</p>
+     * </li>
+     * <li><p><strong>Connecting</strong>: The endpoint is connecting to the endpoint service.</p>
+     * </li>
+     * <li><p><strong>Connected</strong>: The endpoint is connected to the endpoint service.</p>
+     * </li>
+     * <li><p><strong>Disconnecting</strong>: The endpoint is disconnecting from the endpoint service.</p>
+     * </li>
+     * <li><p><strong>Disconnected</strong>: The endpoint is not connected to the endpoint service.</p>
+     * </li>
+     * <li><p><strong>Deleting</strong>: The endpoint is being deleted.</p>
+     * </li>
+     * <li><p><strong>ServiceDeleted</strong>: The associated endpoint service has been deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +54,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     public String connectionStatus;
 
     /**
-     * <p>The time when the endpoint was created.</p>
+     * <p>The time the endpoint was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-09-24T18:00:07Z</p>
@@ -52,14 +62,22 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The cross-region bandwidth, in Mbps.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("CrossRegionBandwidth")
     public Integer crossRegionBandwidth;
 
     /**
-     * <p>The service state of the endpoint. Valid values:</p>
+     * <p>The business status of the endpoint. Valid values:</p>
      * <ul>
-     * <li><strong>Normal</strong>: The endpoint runs as expected.</li>
-     * <li><strong>FinancialLocked</strong>: The endpoint is locked due to overdue payments.</li>
+     * <li><p><strong>Normal</strong>: The endpoint is running as expected.</p>
+     * </li>
+     * <li><p><strong>FinancialLocked</strong>: The endpoint is locked due to an overdue payment.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -105,12 +123,16 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     public String endpointName;
 
     /**
-     * <p>The state of the endpoint. Valid values:</p>
+     * <p>The status of the endpoint. Valid values:</p>
      * <ul>
-     * <li><strong>Creating</strong>: The endpoint is being created.</li>
-     * <li><strong>Active</strong>: The endpoint is available.</li>
-     * <li><strong>Pending</strong>: The endpoint is being modified.</li>
-     * <li><strong>Deleting</strong>: The endpoint is being deleted.</li>
+     * <li><p><strong>Creating</strong>: The endpoint is being created.</p>
+     * </li>
+     * <li><p><strong>Active</strong>: The endpoint is available.</p>
+     * </li>
+     * <li><p><strong>Pending</strong>: The endpoint is being modified.</p>
+     * </li>
+     * <li><p><strong>Deleting</strong>: The endpoint is being deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -120,8 +142,15 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     public String endpointStatus;
 
     /**
-     * <p>The type of the endpoint.</p>
-     * <p><strong>Interface</strong> is returned. The value indicates the interface endpoint with which the Classic Load Balancer (CLB) instances are associated.</p>
+     * <p>The type of the endpoint. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Interface</strong>: an interface endpoint.</p>
+     * </li>
+     * <li><p><strong>Reverse</strong>: a reverse endpoint.</p>
+     * </li>
+     * <li><p><strong>GatewayLoadBalancer</strong>: a Gateway Load Balancer endpoint (GWLBe).</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Interface</p>
@@ -132,8 +161,10 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     /**
      * <p>The payer. Valid values:</p>
      * <ul>
-     * <li><strong>Endpoint</strong>: the service consumer.</li>
-     * <li><strong>EndpointService</strong>: the service provider.</li>
+     * <li><p><strong>Endpoint</strong>: the service consumer.</p>
+     * </li>
+     * <li><p><strong>EndpointService</strong>: the service provider.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -143,6 +174,8 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     public String payer;
 
     /**
+     * <p>The RAM policy. For more information about policy elements, see <a href="https://help.aliyun.com/document_detail/93738.html">Basic elements of a policy</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *   &quot;Version&quot;: &quot;1&quot;,
@@ -170,7 +203,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     public String policyDocument;
 
     /**
-     * <p>The region ID of the endpoint.</p>
+     * <p>The ID of the region where the endpoint is located.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-huhehaote</p>
@@ -199,8 +232,10 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the endpoint and the endpoint service belong to the same Alibaba Cloud account. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The endpoint and the endpoint service belong to the same Alibaba Cloud account.</li>
-     * <li><strong>false</strong>: The endpoint and the endpoint service do not belong to the same Alibaba Cloud account.</li>
+     * <li><p><strong>true</strong>: Yes.</p>
+     * </li>
+     * <li><p><strong>false</strong>: No.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -210,7 +245,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     public Boolean resourceOwner;
 
     /**
-     * <p>The ID of the endpoint service with which the endpoint is associated.</p>
+     * <p>The ID of the associated endpoint service.</p>
      * 
      * <strong>example:</strong>
      * <p>epsrv-hp3vpx8yqxblby3i****</p>
@@ -219,7 +254,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     public String serviceId;
 
     /**
-     * <p>The name of the endpoint service with which the endpoint is associated.</p>
+     * <p>The name of the associated endpoint service.</p>
      * 
      * <strong>example:</strong>
      * <p>com.aliyuncs.privatelink.cn-huhehaote.epsrv-hp3xdsq46ael67lo****</p>
@@ -227,11 +262,17 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     @NameInMap("ServiceName")
     public String serviceName;
 
+    /**
+     * <p>The region ID of the associated endpoint service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("ServiceRegionId")
     public String serviceRegionId;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) to which the endpoint belongs.</p>
+     * <p>The ID of the VPC to which the endpoint belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-fdfhkjafhjvcvdjf****</p>
@@ -240,10 +281,12 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>Indicates whether the domain name of the nearest endpoint that is associated with the endpoint service is resolved first. Valid values:</p>
+     * <p>Indicates whether the endpoint service\&quot;s domain name resolves to the endpoint\&quot;s IP address in the nearest zone. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: Yes.</p>
+     * </li>
+     * <li><p><strong>false</strong>: No.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -253,7 +296,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     public Boolean zoneAffinityEnabled;
 
     /**
-     * <p>The number of private IP addresses that are assigned to an elastic network interface (ENI) in each zone. Only <strong>1</strong> is returned.</p>
+     * <p>The number of private IP addresses for the elastic network interface (ENI) in each zone. This value is always <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

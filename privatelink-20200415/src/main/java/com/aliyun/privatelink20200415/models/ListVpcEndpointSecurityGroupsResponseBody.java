@@ -16,8 +16,10 @@ public class ListVpcEndpointSecurityGroupsResponseBody extends TeaModel {
     /**
      * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
      * <ul>
-     * <li>If no value is returned for <strong>NextToken</strong>, no next requests are performed.</li>
-     * <li>If a value is returned for <strong>NextToken</strong>, the value can be used in the next request to retrieve a new page of results.</li>
+     * <li><p>If no value is returned for <strong>NextToken</strong>, no next requests are performed.</p>
+     * </li>
+     * <li><p>If a value is returned for <strong>NextToken</strong>, the value can be used in the next request to retrieve a new page of results.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -108,9 +110,12 @@ public class ListVpcEndpointSecurityGroupsResponseBody extends TeaModel {
         /**
          * <p>The associate status of the security group, valid values:</p>
          * <ul>
-         * <li>Attaching: The security group is being attached.</li>
-         * <li>Attached: The security group is attached.</li>
-         * <li>Detaching: The security group is being detached.</li>
+         * <li><p>Attaching: The security group is being attached.</p>
+         * </li>
+         * <li><p>Attached: The security group is attached.</p>
+         * </li>
+         * <li><p>Detaching: The security group is being detached.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

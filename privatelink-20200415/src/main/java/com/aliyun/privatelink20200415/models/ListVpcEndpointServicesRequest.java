@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListVpcEndpointServicesRequest extends TeaModel {
     /**
-     * <p>The protocol. Valid values:</p>
+     * <p>The IP address version. Valid values:</p>
      * <ul>
-     * <li><strong>IPv4</strong></li>
-     * <li><strong>DualStack</strong></li>
+     * <li><p><strong>IPv4</strong>: IPv4 type.</p>
+     * </li>
+     * <li><p><strong>DualStack</strong>: Dual-stack type.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +20,12 @@ public class ListVpcEndpointServicesRequest extends TeaModel {
     public String addressIpVersion;
 
     /**
-     * <p>Specifies whether to automatically accept endpoint connection requests. Valid values:</p>
+     * <p>Specifies whether to automatically accept endpoint connections. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><p><strong>true</strong>: Automatically accept endpoint connections.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Do not automatically accept endpoint connections.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +35,7 @@ public class ListVpcEndpointServicesRequest extends TeaModel {
     public Boolean autoAcceptEnabled;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>1000</strong>. Default value: <strong>50</strong>.</p>
+     * <p>The number of entries to return per page. Valid values: <strong>1</strong> to <strong>1000</strong>. Default value: <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -40,10 +44,12 @@ public class ListVpcEndpointServicesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>A pagination token for the next query. Valid values:</p>
      * <ul>
-     * <li>If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</li>
-     * <li>If a next request is to be performed, set the parameter to the value of NextToken that is returned from the last call.</li>
+     * <li><p>Leave this parameter empty for the first query or when no further results exist.</p>
+     * </li>
+     * <li><p>If another query is needed, set this parameter to the NextToken value returned in the previous API call.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,8 +59,8 @@ public class ListVpcEndpointServicesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region ID of the endpoint service.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region where the endpoint service is deployed.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,7 +70,7 @@ public class ListVpcEndpointServicesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmy*****</p>
@@ -73,7 +79,7 @@ public class ListVpcEndpointServicesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The service resource ID.</p>
+     * <p>The ID of the service resource.</p>
      * 
      * <strong>example:</strong>
      * <p>lb-hp32z1wp5peaoox2q****</p>
@@ -82,10 +88,12 @@ public class ListVpcEndpointServicesRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The service state of the endpoint service. Valid values:</p>
+     * <p>The business status of the endpoint service. Valid values:</p>
      * <ul>
-     * <li><strong>Normal</strong>: The endpoint service runs as expected.</li>
-     * <li><strong>FinancialLocked</strong>: The endpoint service is locked due to overdue payments.</li>
+     * <li><p><strong>Normal</strong>: The endpoint service is running as expected.</p>
+     * </li>
+     * <li><p><strong>FinancialLocked</strong>: The endpoint service is locked due to an overdue payment.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -95,7 +103,7 @@ public class ListVpcEndpointServicesRequest extends TeaModel {
     public String serviceBusinessStatus;
 
     /**
-     * <p>The endpoint service ID.</p>
+     * <p>The ID of the endpoint service.</p>
      * 
      * <strong>example:</strong>
      * <p>epsrv-hp3vpx8yqxblby3i****</p>
@@ -115,8 +123,14 @@ public class ListVpcEndpointServicesRequest extends TeaModel {
     /**
      * <p>The type of the service resource. Valid values:</p>
      * <ul>
-     * <li><strong>slb</strong>: a Classic Load Balancer (CLB) instance</li>
-     * <li><strong>alb</strong>: an Application Load Balancer (ALB) instance</li>
+     * <li><p><strong>slb</strong>: The service resource is a Classic Load Balancer (CLB) instance.</p>
+     * </li>
+     * <li><p><strong>alb</strong>: The service resource is an Application Load Balancer (ALB) instance.</p>
+     * </li>
+     * <li><p><strong>nlb</strong>: The service resource is a Network Load Balancer (NLB) instance.</p>
+     * </li>
+     * <li><p><strong>gwlb</strong>: The service resource is a Gateway Load Balancer (GWLB) instance.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -126,12 +140,16 @@ public class ListVpcEndpointServicesRequest extends TeaModel {
     public String serviceResourceType;
 
     /**
-     * <p>The state of the endpoint service. Valid values:</p>
+     * <p>The status of the endpoint service. Valid values:</p>
      * <ul>
-     * <li><strong>Creating</strong>: The endpoint service is being created.</li>
-     * <li><strong>Pending</strong>: The endpoint service is being modified.</li>
-     * <li><strong>Active</strong>: The endpoint service is available.</li>
-     * <li><strong>Deleting</strong>: The endpoint service is being deleted</li>
+     * <li><p><strong>Creating</strong>: The endpoint service is being created.</p>
+     * </li>
+     * <li><p><strong>Pending</strong>: The endpoint service is being modified.</p>
+     * </li>
+     * <li><p><strong>Active</strong>: The endpoint service is available.</p>
+     * </li>
+     * <li><p><strong>Deleting</strong>: The endpoint service is being deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -141,16 +159,18 @@ public class ListVpcEndpointServicesRequest extends TeaModel {
     public String serviceStatus;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListVpcEndpointServicesRequestTag> tag;
 
     /**
-     * <p>Specifies whether to first resolve the domain name of the nearest endpoint that is associated with the endpoint service. Valid values:</p>
+     * <p>Specifies whether zonal affinity is enabled for domain name resolution. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong> (default)</li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: Yes.</p>
+     * </li>
+     * <li><p><strong>false</strong>: No.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -278,8 +298,8 @@ public class ListVpcEndpointServicesRequest extends TeaModel {
 
     public static class ListVpcEndpointServicesRequestTag extends TeaModel {
         /**
-         * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>The tag key of the instance. You can specify up to 20 tag keys. The key cannot be an empty string.</p>
+         * <p>The key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -288,8 +308,8 @@ public class ListVpcEndpointServicesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the instance. You can specify up to 20 tag values. The value can be an empty string.</p>
+         * <p>The value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

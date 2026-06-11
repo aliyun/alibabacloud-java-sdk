@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateVpcEndpointResponseBody extends TeaModel {
     /**
-     * <p>The protocol. Valid values:</p>
+     * <p>The IP version of the endpoint. Valid values:</p>
      * <ul>
-     * <li><strong>IPv4</strong> (default)</li>
-     * <li><strong>DualStack</strong></li>
+     * <li><p><strong>IPv4</strong>: IPv4 (default).</p>
+     * </li>
+     * <li><p><strong>DualStack</strong>: Dual-stack.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
     public String addressIpVersion;
 
     /**
-     * <p>The bandwidth of the endpoint connection. Unit: Mbit/s.</p>
+     * <p>The bandwidth of the endpoint connection, in Mbps.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -27,14 +29,20 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
     public Long bandwidth;
 
     /**
-     * <p>The state of the endpoint connection. Valid values:</p>
+     * <p>The connection status of the endpoint. Valid values:</p>
      * <ul>
-     * <li><strong>Pending</strong>: The connection is being modified.</li>
-     * <li><strong>Connecting</strong>: The connection is being established.</li>
-     * <li><strong>Connected</strong>: The connection is established.</li>
-     * <li><strong>Disconnecting</strong>: The endpoint is being disconnected from the endpoint service.</li>
-     * <li><strong>Disconnected</strong>: The endpoint is disconnected from the endpoint service.</li>
-     * <li><strong>Deleting</strong>: The connection is being deleted.</li>
+     * <li><p><strong>Pending</strong>: The endpoint is being modified.</p>
+     * </li>
+     * <li><p><strong>Connecting</strong>: The endpoint is being connected.</p>
+     * </li>
+     * <li><p><strong>Connected</strong>: The endpoint is connected.</p>
+     * </li>
+     * <li><p><strong>Disconnecting</strong>: The endpoint is being disconnected.</p>
+     * </li>
+     * <li><p><strong>Disconnected</strong>: The endpoint is disconnected.</p>
+     * </li>
+     * <li><p><strong>Deleting</strong>: The endpoint is being deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +52,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
     public String connectionStatus;
 
     /**
-     * <p>The time when the endpoint was created.</p>
+     * <p>The time the endpoint was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-01-02T19:11:12Z</p>
@@ -52,14 +60,22 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The cross-region bandwidth in Mbps. This parameter is returned only when the endpoint and the endpoint service are in different regions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("CrossRegionBandwidth")
     public Integer crossRegionBandwidth;
 
     /**
-     * <p>The service state of the endpoint. Valid values:</p>
+     * <p>The business status of the endpoint. Valid values:</p>
      * <ul>
-     * <li><strong>Normal</strong>: The endpoint runs as expected.</li>
-     * <li><strong>FinancialLocked</strong>: The endpoint is locked due to overdue payments.</li>
+     * <li><p><strong>Normal</strong>: The endpoint is running as expected.</p>
+     * </li>
+     * <li><p><strong>FinancialLocked</strong>: The endpoint is locked due to overdue payments.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -78,7 +94,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
     public String endpointDescription;
 
     /**
-     * <p>The domain name of the endpoint.</p>
+     * <p>The endpoint domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>ep-hp33b2e43fays7s8****.epsrv-hp3xdsq46ael67lo****.cn-huhehaote.privatelink.aliyuncs.com</p>
@@ -87,7 +103,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
     public String endpointDomain;
 
     /**
-     * <p>The endpoint ID.</p>
+     * <p>The ID of the endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p>ep-hp33b2e43fays7s8****</p>
@@ -105,12 +121,16 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
     public String endpointName;
 
     /**
-     * <p>The state of the endpoint. Valid values:</p>
+     * <p>The status of the endpoint. Valid values:</p>
      * <ul>
-     * <li><strong>Creating</strong>: The endpoint is being created.</li>
-     * <li><strong>Active</strong>: The endpoint is available.</li>
-     * <li><strong>Pending</strong>: The endpoint is being modified.</li>
-     * <li><strong>Deleting</strong>: The endpoint is being deleted.</li>
+     * <li><p><strong>Creating</strong>: The endpoint is being created.</p>
+     * </li>
+     * <li><p><strong>Active</strong>: The endpoint is available.</p>
+     * </li>
+     * <li><p><strong>Pending</strong>: The endpoint is being modified.</p>
+     * </li>
+     * <li><p><strong>Deleting</strong>: The endpoint is being deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -129,7 +149,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the endpoint service with which the endpoint is associated.</p>
+     * <p>The ID of the associated endpoint service.</p>
      * 
      * <strong>example:</strong>
      * <p>epsrv-hp3vpx8yqxblby3i****</p>
@@ -138,7 +158,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
     public String serviceId;
 
     /**
-     * <p>The name of the endpoint service with which the endpoint is associated.</p>
+     * <p>The name of the associated endpoint service.</p>
      * 
      * <strong>example:</strong>
      * <p>com.aliyuncs.privatelink.cn-huhehaote.epsrv-hp3xdsq46ael67lo****</p>
@@ -146,11 +166,17 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
     @NameInMap("ServiceName")
     public String serviceName;
 
+    /**
+     * <p>The region ID of the endpoint service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-huhehaote</p>
+     */
     @NameInMap("ServiceRegionId")
     public String serviceRegionId;
 
     /**
-     * <p>The ID of the VPC to which the endpoint belongs.</p>
+     * <p>The ID of the VPC that contains the endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-hp356stwkxg3fn2xe****</p>
@@ -158,6 +184,18 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>Indicates whether zone affinity is enabled. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: Zone affinity is enabled.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Zone affinity is disabled.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ZoneAffinityEnabled")
     public Boolean zoneAffinityEnabled;
 

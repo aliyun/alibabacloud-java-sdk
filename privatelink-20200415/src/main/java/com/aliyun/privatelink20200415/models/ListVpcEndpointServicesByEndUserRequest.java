@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVpcEndpointServicesByEndUserRequest extends TeaModel {
     /**
-     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>1000</strong>. Default value: <strong>50</strong>.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>1000</strong>. Default value: <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -14,10 +14,12 @@ public class ListVpcEndpointServicesByEndUserRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The pagination token.</p>
      * <ul>
-     * <li>If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</li>
-     * <li>If a next request is to be performed, set the value to the value of <strong>NextToken</strong> that is returned from the last call.</li>
+     * <li><p>If this is your first request, do not specify this parameter.</p>
+     * </li>
+     * <li><p>If more results are available, set this parameter to the <strong>NextToken</strong> value from the previous response to retrieve the next page.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,8 +29,8 @@ public class ListVpcEndpointServicesByEndUserRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region ID of the endpoint.</p>
-     * <p>You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +49,7 @@ public class ListVpcEndpointServicesByEndUserRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the endpoint service that you want to query.</p>
+     * <p>The ID of the endpoint service.</p>
      * 
      * <strong>example:</strong>
      * <p>epsrv-hp3vpx8yqxblby3i****</p>
@@ -56,7 +58,7 @@ public class ListVpcEndpointServicesByEndUserRequest extends TeaModel {
     public String serviceId;
 
     /**
-     * <p>The name of the endpoint service that you want to query.</p>
+     * <p>The name of the endpoint service.</p>
      * 
      * <strong>example:</strong>
      * <p>com.aliyuncs.privatelink.cn-huhehaote.epsrv-hp3xdsq46ael67lo****</p>
@@ -64,12 +66,18 @@ public class ListVpcEndpointServicesByEndUserRequest extends TeaModel {
     @NameInMap("ServiceName")
     public String serviceName;
 
+    /**
+     * <p>The region ID of the endpoint service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("ServiceRegionId")
     public String serviceRegionId;
 
     /**
      * <p>The type of the endpoint service.</p>
-     * <p>Set the value to <strong>Interface</strong>. You can specify CLB and ALB instances as service resources for the endpoint service.</p>
+     * <p>Only <strong>Interface</strong> is supported. An interface endpoint allows you to use Application Load Balancers (ALBs), Classic Load Balancers (CLBs), and Network Load Balancers (NLBs) as service resources.</p>
      * 
      * <strong>example:</strong>
      * <p>Interface</p>
@@ -78,7 +86,7 @@ public class ListVpcEndpointServicesByEndUserRequest extends TeaModel {
     public String serviceType;
 
     /**
-     * <p>The tags.</p>
+     * <p>A list of tags to filter resources. You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListVpcEndpointServicesByEndUserRequestTag> tag;
@@ -162,8 +170,8 @@ public class ListVpcEndpointServicesByEndUserRequest extends TeaModel {
 
     public static class ListVpcEndpointServicesByEndUserRequestTag extends TeaModel {
         /**
-         * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>The key of the tag. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -172,8 +180,8 @@ public class ListVpcEndpointServicesByEndUserRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The value of the tag. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

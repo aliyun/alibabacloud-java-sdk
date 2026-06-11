@@ -5,20 +5,26 @@ import com.aliyun.tea.*;
 
 public class EnableVpcEndpointConnectionRequest extends TeaModel {
     /**
-     * <p>The bandwidth of the endpoint connection. Unit: Mbit/s. Valid values: <strong>3072 to 10240</strong>.</p>
+     * <p>The bandwidth of the endpoint connection. Unit: Mbit/s.</p>
      * <blockquote>
-     * <p> The bandwidth of an endpoint connection is in the range of <strong>100 to 10,240</strong> Mbit/s. The default bandwidth is <strong>3,072</strong> Mbit/s. When the endpoint is connected to the endpoint service, the default bandwidth is the minimum bandwidth. In this case, the connection bandwidth range is <strong>3,072 to 10,240</strong> Mbit/s. If Classic Load Balancer (CLB) instances or Application Load Balancer (ALB) instances are specified as service resources, you can modify the endpoint connection bandwidth based on your business requirements. This parameter is invalid if Network Load Balancer (NLB) instances are specified as service resources.</p>
+     * <p>The valid values vary depending on the service resource type:</p>
+     * <ul>
+     * <li>NLB: 100 to 50000.</li>
+     * <li>ALB: 100 to 25000.</li>
+     * <li>CLB: 100 to 10240. Default value: 3072.</li>
+     * <li>GWLB: 100 to 25000.</li>
+     * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>1024</p>
+     * <p>3072</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. <strong>ClientToken</strong> can contain only ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
@@ -29,8 +35,10 @@ public class EnableVpcEndpointConnectionRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><p><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing required parameters, the request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, an HTTP 2xx status code is returned and the connection request is accepted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,8 +58,8 @@ public class EnableVpcEndpointConnectionRequest extends TeaModel {
     public String endpointId;
 
     /**
-     * <p>The ID of the region where the connection request is accepted.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the endpoint connection to be accepted.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,6 +78,24 @@ public class EnableVpcEndpointConnectionRequest extends TeaModel {
     @NameInMap("ServiceId")
     public String serviceId;
 
+    /**
+     * <ul>
+     * <li><p>Scalability: automatic scaling. In this mode, the connection bandwidth configured for the endpoint connection does not take effect.</p>
+     * </li>
+     * <li><p>BandwidthLimit: supports setting a bandwidth upper limit for the endpoint connection. The bandwidth upper limit is the value of Bandwidth.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>When the service resource is NLB, TrafficControlMode is set to Scalability by default. You can set it to BandwidthLimit and modify the value of Bandwidth to provide a bandwidth upper limit.</li>
+     * <li>When the service resource is CLB, TrafficControlMode can only be set to BandwidthLimit, which indicates that the service provider provides default bandwidth throttling for each endpoint.</li>
+     * <li>When the service resource is GWLB, TrafficControlMode can only be set to Scalability.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>BandwidthLimit</p>
+     */
     @NameInMap("TrafficControlMode")
     public String trafficControlMode;
 

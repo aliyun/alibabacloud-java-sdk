@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeZonesResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>请求ID。</p>
      * 
      * <strong>example:</strong>
      * <p>611CB80C-B6A9-43DB-9E38-0B0AC3D9B58F</p>
@@ -13,9 +13,6 @@ public class DescribeZonesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The returned zones.</p>
-     */
     @NameInMap("Zones")
     public DescribeZonesResponseBodyZones zones;
 
@@ -41,21 +38,9 @@ public class DescribeZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeZonesResponseBodyZonesZone extends TeaModel {
-        /**
-         * <p>The name of the zone.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Hangzhou Zone B</p>
-         */
         @NameInMap("LocalName")
         public String localName;
 
-        /**
-         * <p>The zone ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-b</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 

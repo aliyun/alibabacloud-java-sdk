@@ -14,10 +14,12 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The token that is used to retrieve the next page of results. Valid values:</p>
      * <ul>
-     * <li>If no value is returned for <strong>NextToken</strong>, no next requests are performed.</li>
-     * <li>If a value is returned for <strong>NextToken</strong>, the value can be used in the next request to retrieve a new page of results.</li>
+     * <li><p>If this parameter is empty, no next page exists.</p>
+     * </li>
+     * <li><p>If a value is returned, use the value to retrieve the next page of results.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,13 +41,13 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
      * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>3</p>
+     * <p>12</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
     /**
-     * <p>The information about the zones.</p>
+     * <p>The collection of zone information.</p>
      */
     @NameInMap("Zones")
     public java.util.List<ListVpcEndpointZonesResponseBodyZones> zones;
@@ -115,7 +117,7 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
         public String eniIp;
 
         /**
-         * <p>The region ID of the endpoint.</p>
+         * <p>The ID of the region where the endpoint is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-huhehaote</p>
@@ -124,7 +126,7 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the vSwitch in the zone. The system automatically creates an endpoint elastic network interface (ENI) in the vSwitch.</p>
+         * <p>The vSwitch in the zone. The system automatically creates an endpoint elastic network interface (ENI) in the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-hjkshjvdkdvd****</p>
@@ -134,10 +136,10 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
 
         /**
          * <p>The domain name of the zone.</p>
-         * <p>After the endpoint in the zone is connected to the endpoint service, you can access the service resources of the endpoint service by using the domain name of the zone.</p>
+         * <p>After an endpoint connection is established, use this domain name to access the service resources of the endpoint service.</p>
          * 
          * <strong>example:</strong>
-         * <p>ep-hp3f033dp24c5yc9****-cn-huhehaote.epsrv-hp3itcpowf37m3d5****.cn-huhehaote-a.privatelink.aliyuncs.com</p>
+         * <p>ep-hp3f033dp24c5yc9****-cn-huhehaote-a.epsrv-hp3itcpowf37m3d5****.cn-huhehaote.privatelink.aliyuncs.com</p>
          */
         @NameInMap("ZoneDomain")
         public String zoneDomain;
@@ -152,28 +154,31 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
         public String zoneId;
 
         /**
-         * <p>Indicates whether the endpoint service supports IPv6. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
-         * </ul>
+         * <p>The IPv6 address of the endpoint ENI.</p>
          * 
          * <strong>example:</strong>
-         * <p>false</p>
+         * <p>2408:4005:3b6:<strong><strong>:6955:c3cb:34c:</strong></strong></p>
          */
         @NameInMap("ZoneIpv6Address")
         public String zoneIpv6Address;
 
         /**
-         * <p>The state of the zone. Valid values:</p>
+         * <p>The status of the zone. Valid values:</p>
          * <ul>
-         * <li><strong>Creating</strong>: The zone is being created.</li>
-         * <li><strong>Wait</strong>: The zone is to be connected.</li>
-         * <li><strong>Connected</strong>: The zone is connected.</li>
-         * <li><strong>Deleting</strong>: The zone is being deleted.</li>
-         * <li><strong>Disconnecting</strong>: The zone is being disconnected.</li>
-         * <li><strong>Disconnected</strong>: The zone is disconnected.</li>
-         * <li><strong>Connecting</strong>: The zone is being connected.</li>
+         * <li><p><strong>Creating</strong>: The zone is being created.</p>
+         * </li>
+         * <li><p><strong>Wait</strong>: The zone is waiting to be connected.</p>
+         * </li>
+         * <li><p><strong>Connected</strong>: The zone is connected.</p>
+         * </li>
+         * <li><p><strong>Deleting</strong>: The zone is being deleted.</p>
+         * </li>
+         * <li><p><strong>Disconnecting</strong>: The zone is being disconnected.</p>
+         * </li>
+         * <li><p><strong>Disconnected</strong>: The zone is disconnected.</p>
+         * </li>
+         * <li><p><strong>Connecting</strong>: The zone is being connected.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

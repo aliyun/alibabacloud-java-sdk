@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateVpcEndpointServiceAttributeResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>8D8992C1-6712-423C-BAC5-E5E817484C6B</p>

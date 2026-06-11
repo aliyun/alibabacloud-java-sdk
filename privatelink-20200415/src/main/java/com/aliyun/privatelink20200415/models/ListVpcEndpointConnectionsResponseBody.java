@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
     /**
-     * <p>The endpoint connections.</p>
+     * <p>The information about the endpoint connections.</p>
      */
     @NameInMap("Connections")
     public java.util.List<ListVpcEndpointConnectionsResponseBodyConnections> connections;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -20,10 +20,10 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The token that is used for the next query. Valid values:</p>
      * <ul>
-     * <li>If no value is returned for <strong>NextToken</strong>, no next requests are performed.</li>
-     * <li>If a value is returned for <strong>NextToken</strong>, the value can be used in the next request to retrieve a new page of results.</li>
+     * <li>If <strong>NextToken</strong> is empty, no next query is to be sent.</li>
+     * <li>If a value of <strong>NextToken</strong> is returned, the value is the token that is used for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The number of entries returned in the endpoint connection list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -106,7 +106,7 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         public String eniId;
 
         /**
-         * <p>The ID of the replaced endpoint ENI in smooth migration scenarios.</p>
+         * <p>The ID of the endpoint ENI that is replaced in the smooth migration scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>eni-hp32lk0pyv6o94hs****</p>
@@ -115,7 +115,7 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         public String replacedEniId;
 
         /**
-         * <p>The ID of the replaced service resource in smooth migration scenarios.</p>
+         * <p>The ID of the service resource that is replaced in the smooth migration scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>lb-hp32z1wp5peaoox2q****</p>
@@ -133,7 +133,7 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The ID of the vSwitch to which the endpoint belongs.</p>
+         * <p>The vSwitch to which the endpoint belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-hp3uf6045ljdhd5zr****</p>
@@ -163,7 +163,7 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
          * <p>The state of the zone. Valid values:</p>
          * <ul>
          * <li><strong>Creating</strong>: The zone is being created.</li>
-         * <li><strong>Wait</strong>: The zone is to be connected.</li>
+         * <li><strong>Wait</strong>: The zone is waiting to be connected.</li>
          * <li><strong>Connected</strong>: The zone is connected.</li>
          * <li><strong>Deleting</strong>: The zone is being deleted.</li>
          * <li><strong>Disconnecting</strong>: The zone is being disconnected.</li>
@@ -252,10 +252,10 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
 
     public static class ListVpcEndpointConnectionsResponseBodyConnections extends TeaModel {
         /**
-         * <p>The bandwidth of the endpoint connection. Valid values: <strong>1024 to 10240</strong>. Unit: Mbit/s.</p>
+         * <p>The bandwidth of the endpoint connection. Unit: Mbit/s.</p>
          * 
          * <strong>example:</strong>
-         * <p>1024</p>
+         * <p>3072</p>
          */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
@@ -263,13 +263,20 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         /**
          * <p>The state of the endpoint connection. Valid values:</p>
          * <ul>
-         * <li><strong>Pending</strong>: The connection is being modified.</li>
-         * <li><strong>Connecting</strong>: The connection is being established.</li>
-         * <li><strong>Connected</strong>: The connection is established.</li>
-         * <li><strong>Disconnecting</strong>: The endpoint is being disconnected from the endpoint service.</li>
-         * <li><strong>Disconnected</strong>: The endpoint is disconnected from the endpoint service.</li>
-         * <li><strong>Deleting</strong>: The connection is being deleted.</li>
-         * <li><strong>ServiceDeleted</strong>: The corresponding endpoint service has been deleted.</li>
+         * <li><p><strong>Pending</strong>: The endpoint connection is being modified.</p>
+         * </li>
+         * <li><p><strong>Connecting</strong>: The endpoint connection is being established.</p>
+         * </li>
+         * <li><p><strong>Connected</strong>: The endpoint is connected to the endpoint service.</p>
+         * </li>
+         * <li><p><strong>Disconnecting</strong>: The endpoint is being disconnected from the endpoint service.</p>
+         * </li>
+         * <li><p><strong>Disconnected</strong>: The endpoint is disconnected from the endpoint service.</p>
+         * </li>
+         * <li><p><strong>Deleting</strong>: The endpoint connection is being deleted.</p>
+         * </li>
+         * <li><p><strong>ServiceDeleted</strong>: The corresponding endpoint service is deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -296,6 +303,12 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         @NameInMap("EndpointOwnerId")
         public Long endpointOwnerId;
 
+        /**
+         * <p>The region ID of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("EndpointRegionId")
         public String endpointRegionId;
 
@@ -309,7 +322,7 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         public String endpointVpcId;
 
         /**
-         * <p>The time when the endpoint connection was modified.</p>
+         * <p>The time when the connection was modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-09-28T10:34:46Z</p>
@@ -329,8 +342,10 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the endpoint and the endpoint service belong to the same Alibaba Cloud account. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -348,14 +363,31 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         @NameInMap("ServiceId")
         public String serviceId;
 
+        /**
+         * <p>The region ID of the endpoint service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-huhehaote</p>
+         */
         @NameInMap("ServiceRegionId")
         public String serviceRegionId;
 
+        /**
+         * <ul>
+         * <li><p>Scalability: automatic scaling. In this mode, the bandwidth configured for the endpoint connection does not take effect.</p>
+         * </li>
+         * <li><p>BandwidthLimit: the bandwidth limit of the endpoint connection. The bandwidth limit is the value of Bandwidth.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BandwidthLimit</p>
+         */
         @NameInMap("TrafficControlMode")
         public String trafficControlMode;
 
         /**
-         * <p>The zones.</p>
+         * <p>The zone information.</p>
          */
         @NameInMap("Zones")
         public java.util.List<ListVpcEndpointConnectionsResponseBodyConnectionsZones> zones;
