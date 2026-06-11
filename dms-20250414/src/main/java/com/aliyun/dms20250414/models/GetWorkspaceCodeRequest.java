@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetWorkspaceCodeRequest extends TeaModel {
     /**
-     * <p>If the file is in JSON format, set this parameter to <code>true</code> to convert the returned content to YAML format.</p>
+     * <p>If the file is a JSON file and Iac is set to true, the returned content is converted from JSON format to YAML format.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,7 +14,8 @@ public class GetWorkspaceCodeRequest extends TeaModel {
     public String iac;
 
     /**
-     * <p>The path to the code file. For example: <code>/Workspace/code/test.py</code>.</p>
+     * <p>The code file path: /Workspace/code/test.py
+     * Request path.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +25,7 @@ public class GetWorkspaceCodeRequest extends TeaModel {
     public String path;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

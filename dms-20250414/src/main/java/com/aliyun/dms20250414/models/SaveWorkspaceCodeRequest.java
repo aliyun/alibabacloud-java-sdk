@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class SaveWorkspaceCodeRequest extends TeaModel {
     /**
-     * <p>The content of the file.</p>
+     * <p>The code content.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Description: \&quot;Example template, describe instances in some status\&quot;nFormatVersion: OOS-2019-06-01nTasks:n  - Name: SleepTaskn    Action: ACS::Sleepn    Properties:n      Duration: PT1Mn</p>
+     * <p>print(123)</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
-     * <p>Specifies whether to overwrite the file if it already exists. The default value is <code>true</code>.</p>
+     * <p>Specifies whether to forcibly overwrite the file. If set to true, the file is overwritten regardless of whether it has been modified by others.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -24,7 +24,7 @@ public class SaveWorkspaceCodeRequest extends TeaModel {
     public Boolean force;
 
     /**
-     * <p>Specifies whether the file is an IaC template.</p>
+     * <p>Specifies whether the file is an infrastructure as code template file. Set this parameter to true for YAML configuration files that are edited in the visual editor.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -33,8 +33,7 @@ public class SaveWorkspaceCodeRequest extends TeaModel {
     public Boolean iac;
 
     /**
-     * <p>The modification time of the file.</p>
-     * <p>The time must be in the ISO 8601 format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
+     * <p>The file modification time. The GetWorkspaceCode operation returns this mtime value. When you call SaveWorkspaceCode, include this mtime value to check whether the file has been changed on the server. If the mtime values do not match, the save operation fails, which indicates that the server-side version has been modified.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-01-01T10:11:12Z</p>
@@ -43,26 +42,26 @@ public class SaveWorkspaceCodeRequest extends TeaModel {
     public String mtime;
 
     /**
-     * <p>The publishing configuration, specified as a JSON string. The <code>repos</code> array specifies the target repository and branch. The <code>exclude</code> array specifies the directories to ignore.</p>
+     * <p>The file path to save.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;repos&quot;:[{&quot;repo&quot;:&quot;<a href="mailto:git@xxxx.git">git@xxxx.git</a>&quot;, &quot;branch&quot;:&quot;master&quot;}], &quot;exclude&quot;:[&quot;/.dms&quot;, &quot;/username&quot;]}</p>
+     * <p>/Workspace/code/test.py</p>
      */
     @NameInMap("Path")
     public String path;
 
     /**
-     * <p>Information about the repository.</p>
+     * <p>The repository information. Specify this parameter when creating a git repository directory during the save operation.</p>
      * 
      * <strong>example:</strong>
-     * <p>computing/ecs</p>
+     * <p><a href="mailto:git@codeup.aliyun.com">git@codeup.aliyun.com</a>:test/abc.git</p>
      */
     @NameInMap("Repo")
     public String repo;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The workspace ID (numeric ID).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

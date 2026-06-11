@@ -2774,10 +2774,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the content of a specified code file from a workspace.</p>
+     * <p>Obtains the resource configuration limit information and the instance purchase status of the workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the content of a code file from a workspace. The response header includes the file\&quot;s modification time (<code>mtime</code>).</p>
+     * <p>Reads the content of a code file in the workspace and returns the file content along with mtime (in the header).</p>
      * 
      * @param request GetWorkspaceCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2817,10 +2817,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the content of a specified code file from a workspace.</p>
+     * <p>Obtains the resource configuration limit information and the instance purchase status of the workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the content of a code file from a workspace. The response header includes the file\&quot;s modification time (<code>mtime</code>).</p>
+     * <p>Reads the content of a code file in the workspace and returns the file content along with mtime (in the header).</p>
      * 
      * @param request GetWorkspaceCodeRequest
      * @return GetWorkspaceCodeResponse
@@ -4866,10 +4866,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Saves code in a workspace and optionally publishes it to a repository.</p>
+     * <p>发布工作空间的代码</p>
      * 
      * <b>summary</b> : 
-     * <p>Saves code in a workspace and creates the file if it does not exist.</p>
+     * <p>Saves workspace code. If the file does not exist, a new file is automatically created.</p>
      * 
      * @param request SaveWorkspaceCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4927,10 +4927,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Saves code in a workspace and optionally publishes it to a repository.</p>
+     * <p>发布工作空间的代码</p>
      * 
      * <b>summary</b> : 
-     * <p>Saves code in a workspace and creates the file if it does not exist.</p>
+     * <p>Saves workspace code. If the file does not exist, a new file is automatically created.</p>
      * 
      * @param request SaveWorkspaceCodeRequest
      * @return SaveWorkspaceCodeResponse

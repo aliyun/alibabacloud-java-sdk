@@ -32,7 +32,7 @@ public class GetWorkspaceCodeResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message returned if the request fails.</p>
+     * <p>The error message returned when the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>This record is being collected, please wait for a moment.</p>
@@ -50,7 +50,7 @@ public class GetWorkspaceCodeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates if the request succeeded.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
