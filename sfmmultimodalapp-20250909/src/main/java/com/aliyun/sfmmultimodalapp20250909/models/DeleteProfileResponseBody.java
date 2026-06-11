@@ -4,41 +4,21 @@ package com.aliyun.sfmmultimodalapp20250909.models;
 import com.aliyun.tea.*;
 
 public class DeleteProfileResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public DeleteProfileResponseBodyData data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <strong>example:</strong>
-     * <p>EC4762F9-8109-5DE0-A3E2-27957A4F4183</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>True</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -102,12 +82,6 @@ public class DeleteProfileResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>schema id</p>
-         * 
-         * <strong>example:</strong>
-         * <p>f7e110b6d4359977d1</p>
-         */
         @NameInMap("SchemaId")
         public String schemaId;
 

@@ -4,43 +4,21 @@ package com.aliyun.sfmmultimodalapp20250909.models;
 import com.aliyun.tea.*;
 
 public class UpdateProfileResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public UpdateProfileResponseBodyData data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>539759F7-A281-577D-9962-6E69AEBD3AB9</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>True</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,24 +76,12 @@ public class UpdateProfileResponseBody extends TeaModel {
     }
 
     public static class UpdateProfileResponseBodyData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>M21436N3000X</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ceshi</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>39536</p>
-         */
         @NameInMap("SchemaId")
         public String schemaId;
 

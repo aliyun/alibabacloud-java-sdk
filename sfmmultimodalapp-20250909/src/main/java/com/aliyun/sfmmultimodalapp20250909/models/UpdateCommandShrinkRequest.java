@@ -27,6 +27,9 @@ public class UpdateCommandShrinkRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
+    @NameInMap("ReplyMode")
+    public String replyMode;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -94,6 +97,14 @@ public class UpdateCommandShrinkRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
+    }
+
+    public UpdateCommandShrinkRequest setReplyMode(String replyMode) {
+        this.replyMode = replyMode;
+        return this;
+    }
+    public String getReplyMode() {
+        return this.replyMode;
     }
 
     public UpdateCommandShrinkRequest setToolDescription(String toolDescription) {

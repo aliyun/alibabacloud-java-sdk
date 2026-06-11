@@ -4,41 +4,21 @@ package com.aliyun.sfmmultimodalapp20250909.models;
 import com.aliyun.tea.*;
 
 public class CreateProfileResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public CreateProfileResponseBodyData data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>400</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <strong>example:</strong>
-     * <p>F62225F8-DDE4-526E-A88B-08906DED5060</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>True</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -96,26 +76,12 @@ public class CreateProfileResponseBody extends TeaModel {
     }
 
     public static class CreateProfileResponseBodyData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>210235A52L5248C0000N</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ST-JobTemplate</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>schema id</p>
-         * 
-         * <strong>example:</strong>
-         * <p>33440</p>
-         */
         @NameInMap("SchemaId")
         public String schemaId;
 

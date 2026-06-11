@@ -27,6 +27,9 @@ public class UpdateCommandRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
+    @NameInMap("ReplyMode")
+    public String replyMode;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -96,6 +99,14 @@ public class UpdateCommandRequest extends TeaModel {
         return this.domainName;
     }
 
+    public UpdateCommandRequest setReplyMode(String replyMode) {
+        this.replyMode = replyMode;
+        return this;
+    }
+    public String getReplyMode() {
+        return this.replyMode;
+    }
+
     public UpdateCommandRequest setToolDescription(String toolDescription) {
         this.toolDescription = toolDescription;
         return this;
@@ -145,6 +156,9 @@ public class UpdateCommandRequest extends TeaModel {
     }
 
     public static class UpdateCommandRequestToolExamples extends TeaModel {
+        @NameInMap("Parameters")
+        public java.util.Map<String, String> parameters;
+
         /**
          * <strong>example:</strong>
          * <p>给我xxx</p>
@@ -155,6 +169,14 @@ public class UpdateCommandRequest extends TeaModel {
         public static UpdateCommandRequestToolExamples build(java.util.Map<String, ?> map) throws Exception {
             UpdateCommandRequestToolExamples self = new UpdateCommandRequestToolExamples();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateCommandRequestToolExamples setParameters(java.util.Map<String, String> parameters) {
+            this.parameters = parameters;
+            return this;
+        }
+        public java.util.Map<String, String> getParameters() {
+            return this.parameters;
         }
 
         public UpdateCommandRequestToolExamples setQuery(String query) {
@@ -189,6 +211,12 @@ public class UpdateCommandRequest extends TeaModel {
         @NameInMap("ParamName")
         public String paramName;
 
+        @NameInMap("ParamType")
+        public String paramType;
+
+        @NameInMap("Required")
+        public Boolean required;
+
         public static UpdateCommandRequestToolParams build(java.util.Map<String, ?> map) throws Exception {
             UpdateCommandRequestToolParams self = new UpdateCommandRequestToolParams();
             return TeaModel.build(map, self);
@@ -216,6 +244,22 @@ public class UpdateCommandRequest extends TeaModel {
         }
         public String getParamName() {
             return this.paramName;
+        }
+
+        public UpdateCommandRequestToolParams setParamType(String paramType) {
+            this.paramType = paramType;
+            return this;
+        }
+        public String getParamType() {
+            return this.paramType;
+        }
+
+        public UpdateCommandRequestToolParams setRequired(Boolean required) {
+            this.required = required;
+            return this;
+        }
+        public Boolean getRequired() {
+            return this.required;
         }
 
     }

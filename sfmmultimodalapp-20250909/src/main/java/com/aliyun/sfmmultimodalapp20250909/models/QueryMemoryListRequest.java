@@ -6,52 +6,33 @@ import com.aliyun.tea.*;
 public class QueryMemoryListRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>mm_bfaf7e110b6d4359977d1686a3f8</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <strong>example:</strong>
-     * <p>profile_project</p>
-     */
     @NameInMap("ProjectId")
     public String projectId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>b6d4359977d16</p>
      */
     @NameInMap("UserDefinedId")
     public String userDefinedId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>llm-jb5sabg80b4ts71g</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;

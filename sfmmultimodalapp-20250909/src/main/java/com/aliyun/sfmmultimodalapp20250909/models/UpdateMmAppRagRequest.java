@@ -6,27 +6,18 @@ import com.aliyun.tea.*;
 public class UpdateMmAppRagRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>mm_c617650fbd9e49e8916189e23c62</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
      */
     @NameInMap("Status")
     public Boolean status;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>llm-6uhm7nfev4k8pwcz</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;

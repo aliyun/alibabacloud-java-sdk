@@ -4,43 +4,21 @@ package com.aliyun.sfmmultimodalapp20250909.models;
 import com.aliyun.tea.*;
 
 public class DeleteMemoryResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>SUCCEED</p>
-     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public DeleteMemoryResponseBodyData data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>successful</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>5979B783-0AF5-547E-A549-8659F8A2A12A</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>True</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,10 +76,6 @@ public class DeleteMemoryResponseBody extends TeaModel {
     }
 
     public static class DeleteMemoryResponseBodyData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>A90B1930-D2CC-57ED-A2F6-079466EB16F6</p>
-         */
         @NameInMap("RequestId")
         public String requestId;
 

@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class MmAppBindingRagRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>mm_a2eb4e04b48041108edb1f6de815</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -18,9 +15,6 @@ public class MmAppBindingRagRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>llm-6uhm7nfev4k8pwcz</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;

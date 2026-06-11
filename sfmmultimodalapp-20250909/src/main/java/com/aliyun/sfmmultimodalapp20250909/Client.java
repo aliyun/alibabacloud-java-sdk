@@ -59,6 +59,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DomainName", request.domainName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.replyMode)) {
+            query.put("ReplyMode", request.replyMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.toolDescription)) {
             query.put("ToolDescription", request.toolDescription);
         }
@@ -660,6 +664,118 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>设备信息查询</p>
+     * 
+     * @param request DevicePageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DevicePageResponse
+     */
+    public DevicePageResponse devicePageWithOptions(DevicePageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceName)) {
+            query.put("DeviceName", request.deviceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DevicePage"),
+            new TeaPair("version", "2025-09-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DevicePageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>设备信息查询</p>
+     * 
+     * @param request DevicePageRequest
+     * @return DevicePageResponse
+     */
+    public DevicePageResponse devicePage(DevicePageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.devicePageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改设备状态</p>
+     * 
+     * @param request DeviceUpdateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeviceUpdateResponse
+     */
+    public DeviceUpdateResponse deviceUpdateWithOptions(DeviceUpdateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceName)) {
+            query.put("DeviceName", request.deviceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeviceUpdate"),
+            new TeaPair("version", "2025-09-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeviceUpdateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改设备状态</p>
+     * 
+     * @param request DeviceUpdateRequest
+     * @return DeviceUpdateResponse
+     */
+    public DeviceUpdateResponse deviceUpdate(DeviceUpdateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deviceUpdateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>指令列表</p>
      * 
      * @param request ListCommandRequest
@@ -1080,6 +1196,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>额度使用量查询</p>
+     * 
+     * @param request QueryAppQuotaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryAppQuotaResponse
+     */
+    public QueryAppQuotaResponse queryAppQuotaWithOptions(QueryAppQuotaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryAppQuota"),
+            new TeaPair("version", "2025-09-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryAppQuotaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>额度使用量查询</p>
+     * 
+     * @param request QueryAppQuotaRequest
+     * @return QueryAppQuotaResponse
+     */
+    public QueryAppQuotaResponse queryAppQuota(QueryAppQuotaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryAppQuotaWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询用户记忆配置</p>
      * 
      * @param request QueryMemoryConfigRequest
@@ -1329,6 +1493,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
             query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.replyMode)) {
+            query.put("ReplyMode", request.replyMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.toolDescription)) {

@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class CreateProfileRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>mm_bfaf7e110b6d4359977d1686a3f8</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -31,18 +28,11 @@ public class CreateProfileRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    /**
-     * <strong>example:</strong>
-     * <p>6e18191727f747ec9de06a2</p>
-     */
     @NameInMap("UserDefinedId")
     public String userDefinedId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>llm-jb5sabg80b4ts71g</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;
@@ -107,10 +97,6 @@ public class CreateProfileRequest extends TeaModel {
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <strong>example:</strong>
-         * <p>False</p>
-         */
         @NameInMap("Immutable")
         public Boolean immutable;
 

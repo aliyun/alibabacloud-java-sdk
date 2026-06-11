@@ -4,43 +4,21 @@ package com.aliyun.sfmmultimodalapp20250909.models;
 import com.aliyun.tea.*;
 
 public class QueryUserProfileResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public QueryUserProfileResponseBodyData data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>BE6BCB9B-7D90-5A56-96C8-A5E990D85B21</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>True</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,26 +76,12 @@ public class QueryUserProfileResponseBody extends TeaModel {
     }
 
     public static class QueryUserProfileResponseBodyDataAttributes extends TeaModel {
-        /**
-         * <p>id</p>
-         * 
-         * <strong>example:</strong>
-         * <p>babadd60b9e74d4f9d12cdf954f2c667</p>
-         */
         @NameInMap("Id")
         public String id;
 
-        /**
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>18</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -156,17 +120,9 @@ public class QueryUserProfileResponseBody extends TeaModel {
         @NameInMap("Attributes")
         public java.util.List<QueryUserProfileResponseBodyDataAttributes> attributes;
 
-        /**
-         * <strong>example:</strong>
-         * <p>project name pass the check</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cert-15192707</p>
-         */
         @NameInMap("Name")
         public String name;
 

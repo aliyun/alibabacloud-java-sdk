@@ -6,43 +6,27 @@ import com.aliyun.tea.*;
 public class UpdateMmAppRagConfigRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>mm_a2eb4e04b48041108edb1f6de815</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>top_k</p>
      */
     @NameInMap("PromptStrategy")
     public String promptStrategy;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1000</p>
      */
     @NameInMap("RetrieveMaxLength")
     public Integer retrieveMaxLength;
 
-    /**
-     * <strong>example:</strong>
-     * <p>5</p>
-     */
     @NameInMap("TopK")
     public Integer topK;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>llm-6uhm7nfev4k8pwcz</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;

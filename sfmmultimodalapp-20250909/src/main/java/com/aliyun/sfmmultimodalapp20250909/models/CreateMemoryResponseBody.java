@@ -4,41 +4,21 @@ package com.aliyun.sfmmultimodalapp20250909.models;
 import com.aliyun.tea.*;
 
 public class CreateMemoryResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public CreateMemoryResponseBodyData data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>Instance instance-002\&quot;<code>curl h33E1En5.popscan.xaliyun.com</code> does not exist.</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <strong>example:</strong>
-     * <p>31033EC0-6968-5610-8328-708B59508E5A</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>True</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -99,17 +79,9 @@ public class CreateMemoryResponseBody extends TeaModel {
         @NameInMap("Content")
         public String content;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ADD</p>
-         */
         @NameInMap("Event")
         public String event;
 
-        /**
-         * <strong>example:</strong>
-         * <p>384dc4786b9d4f5a8cab0d83112cd5a8</p>
-         */
         @NameInMap("MemoryNodeId")
         public String memoryNodeId;
 

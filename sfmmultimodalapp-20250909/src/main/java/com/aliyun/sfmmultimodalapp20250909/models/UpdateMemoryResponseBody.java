@@ -4,43 +4,21 @@ package com.aliyun.sfmmultimodalapp20250909.models;
 import com.aliyun.tea.*;
 
 public class UpdateMemoryResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public UpdateMemoryResponseBodyData data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>37C73FCC-E9EB-57D3-9413-651F5FCAE1D0</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>True</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,10 +76,6 @@ public class UpdateMemoryResponseBody extends TeaModel {
     }
 
     public static class UpdateMemoryResponseBodyData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>37C73FCC-E9EB-57D3-9413-651F5FCAE1D0</p>
-         */
         @NameInMap("RequestId")
         public String requestId;
 

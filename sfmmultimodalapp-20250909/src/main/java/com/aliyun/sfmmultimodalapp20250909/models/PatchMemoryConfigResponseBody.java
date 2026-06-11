@@ -4,41 +4,21 @@ package com.aliyun.sfmmultimodalapp20250909.models;
 import com.aliyun.tea.*;
 
 public class PatchMemoryConfigResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public PatchMemoryConfigResponseBodyData data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <strong>example:</strong>
-     * <p>82296D89-6895-574B-8AA1-64959957CB41</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>True</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -96,55 +76,27 @@ public class PatchMemoryConfigResponseBody extends TeaModel {
     }
 
     public static class PatchMemoryConfigResponseBodyData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1020d93c-9f17-4a39-9fe8-50b1fb1198d7</p>
-         */
         @NameInMap("AppId")
         public String appId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("AutoUpdate")
         public Boolean autoUpdate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>30</p>
-         */
         @NameInMap("ExpirationTime")
         public Integer expirationTime;
 
         @NameInMap("Prompt")
         public String prompt;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0.03</p>
-         */
         @NameInMap("Threshold")
         public Double threshold;
 
-        /**
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("TopK")
         public Integer topK;
 
-        /**
-         * <strong>example:</strong>
-         * <p>4a39-9fe8-50b1fb1</p>
-         */
         @NameInMap("UserDefinedId")
         public String userDefinedId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>llm-ycc5m37pi2if9nwu</p>
-         */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 

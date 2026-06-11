@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class UpdateProfileRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>mm_bfaf7e110b6d4359977d1686a3f8</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -19,25 +16,14 @@ public class UpdateProfileRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <strong>example:</strong>
-     * <p>example</p>
-     */
     @NameInMap("Name")
     public String name;
 
-    /**
-     * <strong>example:</strong>
-     * <p>10b6d435</p>
-     */
     @NameInMap("UserDefinedId")
     public String userDefinedId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>llm-jb5sabg80b4ts71g</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;
@@ -96,17 +82,9 @@ public class UpdateProfileRequest extends TeaModel {
     }
 
     public static class UpdateProfileRequestAttributesOperations extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>48944</p>
-         */
         @NameInMap("AttributeId")
         public String attributeId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>18</p>
-         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
@@ -116,10 +94,6 @@ public class UpdateProfileRequest extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>add</p>
-         */
         @NameInMap("Op")
         public String op;
 

@@ -4,41 +4,21 @@ package com.aliyun.sfmmultimodalapp20250909.models;
 import com.aliyun.tea.*;
 
 public class QueryMemoryListResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public QueryMemoryListResponseBodyData data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <strong>example:</strong>
-     * <p>A42FFCBD-33A9-54AA-9351-86E3C3B316A7</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>True</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -96,69 +76,33 @@ public class QueryMemoryListResponseBody extends TeaModel {
     }
 
     public static class QueryMemoryListResponseBodyDataMemoryNodes extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>[]</p>
-         */
         @NameInMap("Content")
         public String content;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1743991502383</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ADD</p>
-         */
         @NameInMap("Event")
         public String event;
 
-        /**
-         * <strong>example:</strong>
-         * <p>384dc4786b9d4f5a8cab0d83112cd5a8</p>
-         */
         @NameInMap("MemoryNodeId")
         public String memoryNodeId;
 
         @NameInMap("MetaData")
         public java.util.Map<String, ?> metaData;
 
-        /**
-         * <strong>example:</strong>
-         * <p>[]</p>
-         */
         @NameInMap("MetaDataJson")
         public String metaDataJson;
 
-        /**
-         * <strong>example:</strong>
-         * <p>[]</p>
-         */
         @NameInMap("OldContent")
         public String oldContent;
 
-        /**
-         * <strong>example:</strong>
-         * <p>profile_project</p>
-         */
         @NameInMap("ProjectId")
         public String projectId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1743991502383</p>
-         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1743991502383</p>
-         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
@@ -253,24 +197,12 @@ public class QueryMemoryListResponseBody extends TeaModel {
         @NameInMap("MemoryNodes")
         public java.util.List<QueryMemoryListResponseBodyDataMemoryNodes> memoryNodes;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("PageNum")
         public String pageNum;
 
-        /**
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("PageSize")
         public String pageSize;
 
-        /**
-         * <strong>example:</strong>
-         * <p>60</p>
-         */
         @NameInMap("Total")
         public String total;
 

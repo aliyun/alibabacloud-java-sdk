@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class CreateMemoryRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>mm_bfaf7e110b6d4359977d1686a3f8</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -28,10 +25,6 @@ public class CreateMemoryRequest extends TeaModel {
     @NameInMap("MetaData")
     public java.util.Map<String, String> metaData;
 
-    /**
-     * <strong>example:</strong>
-     * <p>profile_project</p>
-     */
     @NameInMap("ProjectId")
     public String projectId;
 
@@ -40,18 +33,12 @@ public class CreateMemoryRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>CD51C0ED-4666-13DA-BC7D-C0D21CBE16C9</p>
      */
     @NameInMap("UserDefinedId")
     public String userDefinedId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>llm-jb5sabg80b4ts71g</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;

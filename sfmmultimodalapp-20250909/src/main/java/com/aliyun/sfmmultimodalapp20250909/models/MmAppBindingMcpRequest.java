@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class MmAppBindingMcpRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>mm_a2eb4e04b48041108edb1f6de815</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -18,9 +15,6 @@ public class MmAppBindingMcpRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>llm-o8ixktz41iyd2b6p</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;
@@ -55,20 +49,12 @@ public class MmAppBindingMcpRequest extends TeaModel {
     }
 
     public static class MmAppBindingMcpRequestMcps extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>mcp-ZDI1MDU2ZTExZGZh</p>
-         */
         @NameInMap("Code")
         public String code;
 
         @NameInMap("ToolList")
         public java.util.List<String> toolList;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CUSTOM</p>
-         */
         @NameInMap("Type")
         public String type;
 

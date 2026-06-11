@@ -74,6 +74,9 @@ public class DescribeCommandResponseBody extends TeaModel {
     @NameInMap("ModifyUserName")
     public String modifyUserName;
 
+    @NameInMap("ReplyMode")
+    public String replyMode;
+
     /**
      * <strong>example:</strong>
      * <p>xxxx</p>
@@ -186,6 +189,14 @@ public class DescribeCommandResponseBody extends TeaModel {
         return this.modifyUserName;
     }
 
+    public DescribeCommandResponseBody setReplyMode(String replyMode) {
+        this.replyMode = replyMode;
+        return this;
+    }
+    public String getReplyMode() {
+        return this.replyMode;
+    }
+
     public DescribeCommandResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -227,6 +238,9 @@ public class DescribeCommandResponseBody extends TeaModel {
     }
 
     public static class DescribeCommandResponseBodyToolExamples extends TeaModel {
+        @NameInMap("Parameters")
+        public java.util.Map<String, String> parameters;
+
         /**
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -237,6 +251,14 @@ public class DescribeCommandResponseBody extends TeaModel {
         public static DescribeCommandResponseBodyToolExamples build(java.util.Map<String, ?> map) throws Exception {
             DescribeCommandResponseBodyToolExamples self = new DescribeCommandResponseBodyToolExamples();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeCommandResponseBodyToolExamples setParameters(java.util.Map<String, String> parameters) {
+            this.parameters = parameters;
+            return this;
+        }
+        public java.util.Map<String, String> getParameters() {
+            return this.parameters;
         }
 
         public DescribeCommandResponseBodyToolExamples setQuery(String query) {
@@ -271,6 +293,12 @@ public class DescribeCommandResponseBody extends TeaModel {
         @NameInMap("ParamName")
         public String paramName;
 
+        @NameInMap("ParamType")
+        public String paramType;
+
+        @NameInMap("Required")
+        public Boolean required;
+
         public static DescribeCommandResponseBodyToolParams build(java.util.Map<String, ?> map) throws Exception {
             DescribeCommandResponseBodyToolParams self = new DescribeCommandResponseBodyToolParams();
             return TeaModel.build(map, self);
@@ -298,6 +326,22 @@ public class DescribeCommandResponseBody extends TeaModel {
         }
         public String getParamName() {
             return this.paramName;
+        }
+
+        public DescribeCommandResponseBodyToolParams setParamType(String paramType) {
+            this.paramType = paramType;
+            return this;
+        }
+        public String getParamType() {
+            return this.paramType;
+        }
+
+        public DescribeCommandResponseBodyToolParams setRequired(Boolean required) {
+            this.required = required;
+            return this;
+        }
+        public Boolean getRequired() {
+            return this.required;
         }
 
     }

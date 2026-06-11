@@ -81,6 +81,9 @@ public class ListCommandResponseBody extends TeaModel {
     }
 
     public static class ListCommandResponseBodyToolInfoListToolExamples extends TeaModel {
+        @NameInMap("Parameters")
+        public java.util.Map<String, ?> parameters;
+
         /**
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -91,6 +94,14 @@ public class ListCommandResponseBody extends TeaModel {
         public static ListCommandResponseBodyToolInfoListToolExamples build(java.util.Map<String, ?> map) throws Exception {
             ListCommandResponseBodyToolInfoListToolExamples self = new ListCommandResponseBodyToolInfoListToolExamples();
             return TeaModel.build(map, self);
+        }
+
+        public ListCommandResponseBodyToolInfoListToolExamples setParameters(java.util.Map<String, ?> parameters) {
+            this.parameters = parameters;
+            return this;
+        }
+        public java.util.Map<String, ?> getParameters() {
+            return this.parameters;
         }
 
         public ListCommandResponseBodyToolInfoListToolExamples setQuery(String query) {
@@ -125,6 +136,12 @@ public class ListCommandResponseBody extends TeaModel {
         @NameInMap("ParamName")
         public String paramName;
 
+        @NameInMap("ParamType")
+        public String paramType;
+
+        @NameInMap("Required")
+        public Boolean required;
+
         public static ListCommandResponseBodyToolInfoListToolParams build(java.util.Map<String, ?> map) throws Exception {
             ListCommandResponseBodyToolInfoListToolParams self = new ListCommandResponseBodyToolInfoListToolParams();
             return TeaModel.build(map, self);
@@ -152,6 +169,22 @@ public class ListCommandResponseBody extends TeaModel {
         }
         public String getParamName() {
             return this.paramName;
+        }
+
+        public ListCommandResponseBodyToolInfoListToolParams setParamType(String paramType) {
+            this.paramType = paramType;
+            return this;
+        }
+        public String getParamType() {
+            return this.paramType;
+        }
+
+        public ListCommandResponseBodyToolInfoListToolParams setRequired(Boolean required) {
+            this.required = required;
+            return this;
+        }
+        public Boolean getRequired() {
+            return this.required;
         }
 
     }
@@ -226,6 +259,9 @@ public class ListCommandResponseBody extends TeaModel {
          */
         @NameInMap("ModifyUserName")
         public String modifyUserName;
+
+        @NameInMap("ReplyMode")
+        public String replyMode;
 
         @NameInMap("ToolExamples")
         public java.util.List<ListCommandResponseBodyToolInfoListToolExamples> toolExamples;
@@ -330,6 +366,14 @@ public class ListCommandResponseBody extends TeaModel {
         }
         public String getModifyUserName() {
             return this.modifyUserName;
+        }
+
+        public ListCommandResponseBodyToolInfoList setReplyMode(String replyMode) {
+            this.replyMode = replyMode;
+            return this;
+        }
+        public String getReplyMode() {
+            return this.replyMode;
         }
 
         public ListCommandResponseBodyToolInfoList setToolExamples(java.util.List<ListCommandResponseBodyToolInfoListToolExamples> toolExamples) {

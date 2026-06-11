@@ -27,6 +27,9 @@ public class CreateCommandRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
+    @NameInMap("ReplyMode")
+    public String replyMode;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -87,6 +90,14 @@ public class CreateCommandRequest extends TeaModel {
         return this.domainName;
     }
 
+    public CreateCommandRequest setReplyMode(String replyMode) {
+        this.replyMode = replyMode;
+        return this;
+    }
+    public String getReplyMode() {
+        return this.replyMode;
+    }
+
     public CreateCommandRequest setToolDescription(String toolDescription) {
         this.toolDescription = toolDescription;
         return this;
@@ -128,6 +139,9 @@ public class CreateCommandRequest extends TeaModel {
     }
 
     public static class CreateCommandRequestToolExamples extends TeaModel {
+        @NameInMap("Parameters")
+        public java.util.Map<String, String> parameters;
+
         /**
          * <strong>example:</strong>
          * <p>给我xxx</p>
@@ -138,6 +152,14 @@ public class CreateCommandRequest extends TeaModel {
         public static CreateCommandRequestToolExamples build(java.util.Map<String, ?> map) throws Exception {
             CreateCommandRequestToolExamples self = new CreateCommandRequestToolExamples();
             return TeaModel.build(map, self);
+        }
+
+        public CreateCommandRequestToolExamples setParameters(java.util.Map<String, String> parameters) {
+            this.parameters = parameters;
+            return this;
+        }
+        public java.util.Map<String, String> getParameters() {
+            return this.parameters;
         }
 
         public CreateCommandRequestToolExamples setQuery(String query) {
@@ -172,6 +194,12 @@ public class CreateCommandRequest extends TeaModel {
         @NameInMap("ParamName")
         public String paramName;
 
+        @NameInMap("ParamType")
+        public String paramType;
+
+        @NameInMap("Required")
+        public Boolean required;
+
         public static CreateCommandRequestToolParams build(java.util.Map<String, ?> map) throws Exception {
             CreateCommandRequestToolParams self = new CreateCommandRequestToolParams();
             return TeaModel.build(map, self);
@@ -199,6 +227,22 @@ public class CreateCommandRequest extends TeaModel {
         }
         public String getParamName() {
             return this.paramName;
+        }
+
+        public CreateCommandRequestToolParams setParamType(String paramType) {
+            this.paramType = paramType;
+            return this;
+        }
+        public String getParamType() {
+            return this.paramType;
+        }
+
+        public CreateCommandRequestToolParams setRequired(Boolean required) {
+            this.required = required;
+            return this;
+        }
+        public Boolean getRequired() {
+            return this.required;
         }
 
     }

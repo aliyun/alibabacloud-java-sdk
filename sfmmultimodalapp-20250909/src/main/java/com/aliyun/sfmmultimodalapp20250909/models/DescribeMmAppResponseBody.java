@@ -87,8 +87,6 @@ public class DescribeMmAppResponseBody extends TeaModel {
     public Long publishVersion;
 
     /**
-     * <p>Id of the request</p>
-     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */
@@ -236,10 +234,6 @@ public class DescribeMmAppResponseBody extends TeaModel {
     }
 
     public static class DescribeMmAppResponseBodyAppConfig extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("EnableTransition")
         public Boolean enableTransition;
 
@@ -310,7 +304,7 @@ public class DescribeMmAppResponseBody extends TeaModel {
     public static class DescribeMmAppResponseBodyBindingConfigMcps extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>mcp-xxxx</p>
+         * <p>xxx</p>
          */
         @NameInMap("Code")
         public String code;

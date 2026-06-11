@@ -4,43 +4,21 @@ package com.aliyun.sfmmultimodalapp20250909.models;
 import com.aliyun.tea.*;
 
 public class UpdateMmAppRagConfigResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public UpdateMmAppRagConfigResponseBodyData data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>E0C89417-089D-5C58-881E-40F88171EC51</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,10 +76,6 @@ public class UpdateMmAppRagConfigResponseBody extends TeaModel {
     }
 
     public static class UpdateMmAppRagConfigResponseBodyData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Success")
         public Boolean success;
 

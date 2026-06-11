@@ -4,41 +4,21 @@ package com.aliyun.sfmmultimodalapp20250909.models;
 import com.aliyun.tea.*;
 
 public class QueryProfileResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public QueryProfileResponseBodyData data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <strong>example:</strong>
-     * <p>EDD6123F-0122-5FBF-9A7E-097F319CF478</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>True</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -96,38 +76,18 @@ public class QueryProfileResponseBody extends TeaModel {
     }
 
     public static class QueryProfileResponseBodyDataAttributes extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>147235</p>
-         */
         @NameInMap("AttributeId")
         public String attributeId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>[]</p>
-         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
-        /**
-         * <strong>example:</strong>
-         * <p>21D419945-01</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <strong>example:</strong>
-         * <p>False</p>
-         */
         @NameInMap("Immutable")
         public String immutable;
 
-        /**
-         * <strong>example:</strong>
-         * <p>20250724</p>
-         */
         @NameInMap("Name")
         public String name;
 
@@ -182,24 +142,12 @@ public class QueryProfileResponseBody extends TeaModel {
         @NameInMap("Attributes")
         public java.util.List<QueryProfileResponseBodyDataAttributes> attributes;
 
-        /**
-         * <strong>example:</strong>
-         * <p>29C606055</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ttt</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>384dc4786b9d4f5a8cab0d83112cd5a8</p>
-         */
         @NameInMap("SchemaId")
         public String schemaId;
 

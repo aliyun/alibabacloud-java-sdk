@@ -6,51 +6,30 @@ import com.aliyun.tea.*;
 public class UpdateMemoryRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>mm_bfaf7e110b6d4359977d1686a3f8</p>
      */
     @NameInMap("AppId")
     public String appId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>True</p>
-     */
     @NameInMap("Content")
     public String content;
 
-    /**
-     * <strong>example:</strong>
-     * <p>384dc4786b9d4f5a8cab0d83112cd5a8</p>
-     */
     @NameInMap("MemoryNodeId")
     public String memoryNodeId;
 
     @NameInMap("MetaData")
     public java.util.Map<String, String> metaData;
 
-    /**
-     * <strong>example:</strong>
-     * <p>[]</p>
-     */
     @NameInMap("Source")
     public String source;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>bfaf7e110b6d435997</p>
      */
     @NameInMap("UserDefinedId")
     public String userDefinedId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>llm-jb5sabg80b4ts71g</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;
